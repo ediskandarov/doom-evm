@@ -8,6 +8,9 @@ import assert from 'node:assert/strict';
 import {canonical} from '../../wad/wad.ts';
 import {validateSchema} from '../../wad/schema.ts';
 import {instrumentGasMarkers,traceMemory,sha} from './instrument.mjs';
+import {loadGasBudget, executionEnv} from '../../execution-budget.mjs';
+const {gasLimit, gasHex, source: gasBudgetSource} = loadGasBudget();
+const budgetEnv = executionEnv({...process.env, DOOM_GAS_LIMIT: String(gasLimit)});
 const root=resolve(dirname(fileURLToPath(import.meta.url)),'../../..');process.chdir(root);
 const args=process.argv.slice(2),option=(name,fallback)=>{const i=args.indexOf(name);return i<0?fallback:args[i+1];};
 const port=Number(option('--port','18561')),output=option('--output','artifacts/local/phase2-resource-access.json');
@@ -20,7 +23,7 @@ const pinned=JSON.parse(await readFile('test/fixtures/wad/snapshot.json','utf8')
 const directory=Buffer.alloc(bundle.lumps.length*16);let cursor=0;
 for(const[i,l]of bundle.lumps.entries()){assert.equal(l.id,i);assert.equal(l.offset,cursor);cursor+=l.length;assert(cursor<=blob.length);Buffer.from(l.nameHex,'hex').copy(directory,i*16);directory.writeUInt32LE(l.offset,i*16+8);directory.writeUInt32LE(l.length,i*16+12);}
 assert.equal(cursor,blob.length);assert.deepEqual(directory,await readFile('test/fixtures/phase2_data/directory.bin'));
-execFileSync(resolve('.toolchain/bin/forge'),['build'],{stdio:'pipe',timeout:120000});
+execFileSync(resolve('.toolchain/bin/forge'),['build'],{env:budgetEnv,stdio:'pipe',timeout:120000});
 const artifact=JSON.parse(await readFile('out/ResourceAccessProbe.sol/ResourceAccessProbe.json','utf8'));
 const chunkArtifact=JSON.parse(await readFile('out/ResourceStore.sol/ResourceStore.json','utf8'));
 const instrumented=instrumentGasMarkers(artifact,await readFile('src/support/ResourceAccessProbe.sol','utf8'));
@@ -35,8 +38,8 @@ try {
   let occupied=false;try{await rpc('web3_clientVersion');occupied=true;}catch{}assert(!occupied,'benchmark port already in use');
   server=spawn(resolve('.toolchain/bin/anvil'),serverArgs,{stdio:['ignore','ignore','pipe']});let error='';server.stderr.on('data',b=>error+=b);
   for(let n=0;;n++){assert.equal(server.exitCode,null,error);try{await rpc('web3_clientVersion');break;}catch{}assert(n<200,'Anvil readiness timeout');await new Promise(r=>setTimeout(r,25));}
-  await rpc('anvil_setBlockGasLimit',['0x3b9aca00']);await rpc('evm_mine');const[from]=await rpc('eth_accounts');
-  const send=async(data,to)=>receipt(await rpc('eth_sendTransaction',[{from,...(to?{to}:{}),data,gas:'0x3b9aca00'}]));
+  await rpc('anvil_setBlockGasLimit',[gasHex]);await rpc('evm_mine');const[from]=await rpc('eth_accounts');
+  const send=async(data,to)=>receipt(await rpc('eth_sendTransaction',[{from,...(to?{to}:{}),data,gas:gasHex}]));
   const chunks=[];const began=performance.now();
   for(let off=0;off<blob.length;off+=16384){
     const payload=blob.subarray(off,Math.min(off+16384,blob.length));
@@ -67,7 +70,7 @@ try {
   const results=[];
   for(let mode=0;mode<6;mode++) {
     const signatures=['probeRead()','probeInit(bool)','probeInit(bool)','probeMap()','probeColumns()','probeFlats()'];
-    const data='0x'+artifact.methodIdentifiers[signatures[mode]]+((mode===1||mode===2)?word(mode===2?1:0):''),base={from,data,gas:'0x3b9aca00'};
+    const data='0x'+artifact.methodIdentifiers[signatures[mode]]+((mode===1||mode===2)?word(mode===2?1:0):''),base={from,data,gas:gasHex};
     const decode=result=>{const w=result.slice(2).match(/.{64}/g);assert.equal(w.length,12);return {operationGas:w.slice(0,5).map(x=>Number(BigInt('0x'+x))),memory:w.slice(5,11).map(x=>Number(BigInt('0x'+x))),digest:w[11]};};
     const regular=decode(await rpc('eth_call',[{...base,to:normal.contractAddress},'latest']));
     const measured=decode(await rpc('eth_call',[{...base,to:telemetry.contractAddress},'latest']));
@@ -80,10 +83,10 @@ try {
   // A tiny independent actual-MSIZE calibration exercises code-copy expansion and a literal return.
   const calibrationRuntime='6000610123535960005260206000f3'; // MSTORE8[0x123], MSIZE=0x140.
   const n=word(calibrationRuntime.length/2).slice(-2);const cal=await send('0x60'+n+'600c60003960'+n+'6000f3'+calibrationRuntime);
-  const calCall={from,to:cal.contractAddress,gas:'0x989680'};const actual=Number(BigInt(await rpc('eth_call',[calCall,'latest'])));
+  const calCall={from,to:cal.contractAddress,gas:gasHex};const actual=Number(BigInt(await rpc('eth_call',[calCall,'latest'])));
   const trace=await rpc('debug_traceCall',[calCall,'latest',{disableStorage:true,disableStack:false,enableMemory:false}]);assert(!trace.failed);
   const calibration=traceMemory(trace.structLogs);assert.equal(actual,320);assert.equal(calibration.highWaterBytes,actual);
-  const sourceFiles=['src/support/ResourceAccessProbe.sol','src/doom/r_data.sol','src/doom/r_data_types.sol','src/evm/ResourceStore.sol','tools/reference/phase2_data/benchmark.mjs','tools/reference/phase2_data/instrument.mjs','foundry.toml'];
-  const report={kind:'phase2-resource-ordinary-evm-access',identity:bundle.resourceIdentity,blobSha256:sha(blob),directorySha256:sha(directory),client:await rpc('web3_clientVersion'),serverArgs,compiler:'solc0.8.37 viaIR optimizer200 Cancun',sources:Object.fromEntries(await Promise.all(sourceFiles.map(async p=>[p,sha(await readFile(p))]))),instrumentation:instrumented.report,calibration:{actualMsize:actual,derivedHighWater:calibration.highWaterBytes,runtime:calibrationRuntime},deployment:{all1755RuntimeBytesVerified:true,totalChunkGas:chunks.reduce((n,c)=>n+c.gasUsed,0),chunkDeploymentMs,normalProbe:{address:normal.contractAddress,transactionHash:normal.transactionHash,gas:Number(BigInt(normal.gasUsed))},instrumentedProbe:{address:telemetry.contractAddress,transactionHash:telemetry.transactionHash,gas:Number(BigInt(telemetry.gasUsed))},chunks},results,notes:['All code contracts deployed by ordinary eth_sendTransaction CREATE. No etch/setCode or custom VM opcodes.','Only a separate measurement probe has dedicated source-mapped GAS instructions replaced with ordinary MSIZE; unchanged operation/transaction gas and independently verified resource output hashes are asserted for all six operations.','ActualMemoryBytes slots: function entry, after storage ResourceView copy, after first operation/init, after second operation, after third operation, after output digest. Unused slots are zero.','OperationGas slots: storage ResourceView copy, first operation/init, second operation, third operation, unused. Transaction gas includes calldata/dispatcher/storage copy/checksums/ABI result encoding.','Uncached column/flat means first allocation within that frame; initialization may already warm code accounts. Two probe deployments contain identical resource pointers and metadata.','MSIZE is actual interpreter memory rounded to32bytes; allocator bounds are not used as substitutes. No full-renderer timing claim.']};
+  const sourceFiles=['src/support/ResourceAccessProbe.sol','src/doom/r_data.sol','src/doom/r_data_types.sol','src/evm/ResourceStore.sol','tools/reference/phase2_data/benchmark.mjs','tools/reference/phase2_data/instrument.mjs','foundry.toml','tools/execution-budget.mjs','execution-budget.json'];
+  const report={gasLimit,gasBudgetSource,kind:'phase2-resource-ordinary-evm-access',identity:bundle.resourceIdentity,blobSha256:sha(blob),directorySha256:sha(directory),client:await rpc('web3_clientVersion'),serverArgs,compiler:'solc0.8.37 viaIR optimizer200 Cancun',sources:Object.fromEntries(await Promise.all(sourceFiles.map(async p=>[p,sha(await readFile(p))]))),instrumentation:instrumented.report,calibration:{actualMsize:actual,derivedHighWater:calibration.highWaterBytes,runtime:calibrationRuntime},deployment:{all1755RuntimeBytesVerified:true,totalChunkGas:chunks.reduce((n,c)=>n+c.gasUsed,0),chunkDeploymentMs,normalProbe:{address:normal.contractAddress,transactionHash:normal.transactionHash,gas:Number(BigInt(normal.gasUsed))},instrumentedProbe:{address:telemetry.contractAddress,transactionHash:telemetry.transactionHash,gas:Number(BigInt(telemetry.gasUsed))},chunks},results,notes:['All code contracts deployed by ordinary eth_sendTransaction CREATE. No etch/setCode or custom VM opcodes.','Only a separate measurement probe has dedicated source-mapped GAS instructions replaced with ordinary MSIZE; unchanged operation/transaction gas and independently verified resource output hashes are asserted for all six operations.','ActualMemoryBytes slots: function entry, after storage ResourceView copy, after first operation/init, after second operation, after third operation, after output digest. Unused slots are zero.','OperationGas slots: storage ResourceView copy, first operation/init, second operation, third operation, unused. Transaction gas includes calldata/dispatcher/storage copy/checksums/ABI result encoding.','Uncached column/flat means first allocation within that frame; initialization may already warm code accounts. Two probe deployments contain identical resource pointers and metadata.','MSIZE is actual interpreter memory rounded to32bytes; allocator bounds are not used as substitutes. No full-renderer timing claim.']};
   await mkdir(dirname(output),{recursive:true});await writeFile(output,JSON.stringify(report,null,2)+'\n');console.log(`Saved ${output}`);
 } finally {if(server?.pid&&server.exitCode===null){server.kill('SIGTERM');await new Promise(done=>{const t=setTimeout(()=>{server.kill('SIGKILL');done();},2000);server.once('exit',()=>{clearTimeout(t);done();});});}}

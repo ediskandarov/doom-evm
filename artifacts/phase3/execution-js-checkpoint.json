@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "scope": "Shared-budget wiring/syntax/configuration checkpoint; final legacy runtime gates remain pending. Historical evidence unchanged.",
+  "defaultGasLimit": 10000000000,
+  "checks": [
+    "Eight active legacy JS consumers use shared gasHex for ordinary calls/transactions/block budget",
+    "Forge and nested verifier child environments normalize DOOM_GAS_LIMIT and FOUNDRY_GAS_LIMIT",
+    "Generated browser configs include gasLimit; explicit legacy config values remain respected",
+    "Intentional 100000-gas rejection remains separate and recorded",
+    "Node syntax checks all eight files pass",
+    "Shared budget five-test parity gate passes"
+  ],
+  "sourceHashes": {
+    "tools/renderer/verify.mjs": "3eb5cc6a749d9a88b64356c18321681719659d76478ab78f0a9c6dacc9994f2a",
+    "tools/resources/benchmark.mjs": "0274bb7f2d6f65b897157c41418afd9dec059eae841405859e689230abc3f666",
+    "tools/transport/benchmark.mjs": "cb06eb64504b63bf98396047aa6e1baae23bd295ed5cd6ed479fefecdc4cb3c6",
+    "tools/transport/browser-check.mjs": "01f2f2e677599e0aa5f43f856ce47e5fd8dac6c4802f040870cc7f47508adb01",
+    "tools/reference/phase2_data/benchmark.mjs": "5f760bfee17eea34b6482dcbdde835291c459b95e15f0e21177a8d479604ce9c",
+    "tools/reference/phase2_segs/benchmark.mjs": "f2e7f0642135b7e3068b67781729cbceea44d0ee58bbaaa31791cf733188a693",
+    "tools/reference/phase2_source/verify.mjs": "97785b46710760aa7f03ada86b3ecc2865641e93fe518ab97794f32a155f13f2",
+    "tools/reference/phase2_draw/measure.mjs": "d8245552ea22e7b8c373c29c2b7bb26497593deafc4b93e3dfdd80b96f5ef2f5",
+    "tools/execution-budget.mjs": "dbf68241139422195203f57a08d8e382afa6d1d493848ae68fbebca9265eec78",
+    "execution-budget.json": "acde01f1b9cf248f9265f1ffcff7181d01d77620a2dfcd9a4d4d0b1c79df2be7"
+  }
+}

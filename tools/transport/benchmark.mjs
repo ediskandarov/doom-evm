@@ -8,6 +8,9 @@ import { resolve } from 'node:path';
 import assert from 'node:assert/strict';
 import { FRAME_TOPIC, stepData, decodeFrame, FrameInbox, FrameSubscription, makeRpc, receipt, backfill } from '../../web/protocol.mjs';
 import { validatePalette } from '../../web/palette.mjs';
+import {loadGasBudget, executionEnv} from '../execution-budget.mjs';
+const {gasLimit, gasHex, source: gasBudgetSource} = loadGasBudget();
+const budgetEnv = executionEnv({...process.env, DOOM_GAS_LIMIT: String(gasLimit)});
 const root = fileURLToPath(new URL('../../', import.meta.url));
 process.chdir(root);
 const argv = process.argv.slice(2), option = (name, fallback) => { const i=argv.indexOf(name); return i<0?fallback:argv[i+1]; };
@@ -35,7 +38,7 @@ async function waitFor(test, description) {
   throw Error(`Timeout: ${description}`);
 }
 try {
-  execFileSync(resolve('.toolchain/bin/forge'),['build','src/support/FrameFixture.sol'],{stdio:'inherit',timeout:60000});
+  execFileSync(resolve('.toolchain/bin/forge'),['build','src/support/FrameFixture.sol'],{env:budgetEnv,stdio:'inherit',timeout:60000});
   if (!external) {
     // Refuse to accidentally attach to an existing process when claiming self-managed node settings.
     try { await rpc('web3_clientVersion'); throw Error('Port already has an RPC server; choose --port or explicit --rpc'); }
@@ -49,11 +52,11 @@ try {
       try { await rpc('web3_clientVersion'); return true; } catch { return false; }
     },'Anvil readiness');
   }
-  if (!external) await rpc('anvil_setBlockGasLimit',['0x3b9aca00']);
+  if (!external) await rpc('anvil_setBlockGasLimit',[gasHex]);
   sampler=setInterval(sample,100); sample();
   const accounts=await rpc('eth_accounts'); assert(accounts.length>=2,'needs local unlocked accounts');
   const artifact=JSON.parse(await readFile('out/FrameFixture.sol/FrameFixture.json','utf8'));
-  const deployHash=await rpc('eth_sendTransaction',[{from:accounts[0],data:artifact.bytecode.object,gas:'0x3b9aca00'}]);
+  const deployHash=await rpc('eth_sendTransaction',[{from:accounts[0],data:artifact.bytecode.object,gas:gasHex}]);
   const deployment=await receipt(rpc,deployHash); assert.equal(deployment.status,'0x1');
   const address=deployment.contractAddress;
   const wsLogs=new Map(), delivered=[];
@@ -65,7 +68,7 @@ try {
   const frames=[];
   for(let sequence=1;sequence<=count;sequence++) {
     const start=performance.now();
-    const hash=await rpc('eth_sendTransaction',[{from:accounts[0],to:address,data:stepData(sequence),gas:'0x3b9aca00'}]);
+    const hash=await rpc('eth_sendTransaction',[{from:accounts[0],to:address,data:stepData(sequence),gas:gasHex}]);
     const submitted=performance.now();
     const mined=await receipt(rpc,hash), receiptAt=performance.now();
     assert.equal(mined.status,'0x1'); assert.equal(mined.logs.length,1);
@@ -78,12 +81,12 @@ try {
     const frame=decodeFrame(log); assert.equal(frame.pixels.length,64000);
     assert.equal(frame.frameId,BigInt(sequence)); assert.equal(frame.inputSeq,sequence);
     for(let i=0;i<frame.pixels.length;i++) assert.equal(frame.pixels[i],(i+sequence)%256,`pixel ${i}`);
-    frames.push({sequence,transactionHash:hash,frameId:String(frame.frameId),pixelBytes:frame.pixels.length,abiDataBytes:(log.data.length-2)/2,pixelsSha256:sha(frame.pixels),gasUsed:Number(BigInt(mined.gasUsed)),gasLimit:1000000000,submitResponseMs:submitted-start,receiptMs:receiptAt-start,wsDeliveryMs:notification.time-start,wsEqualsReceipt:true});
+    frames.push({sequence,transactionHash:hash,frameId:String(frame.frameId),pixelBytes:frame.pixels.length,abiDataBytes:(log.data.length-2)/2,pixelsSha256:sha(frame.pixels),gasUsed:Number(BigInt(mined.gasUsed)),gasLimit,submitResponseMs:submitted-start,receiptMs:receiptAt-start,wsDeliveryMs:notification.time-start,wsEqualsReceipt:true});
   }
   // Deliberately lose the subscription for one transaction, then recover from its receipt.
   subscription.close();
   const fallbackSequence=count+1;
-  const fallbackHash=await rpc('eth_sendTransaction',[{from:accounts[0],to:address,data:stepData(fallbackSequence),gas:'0x3b9aca00'}]);
+  const fallbackHash=await rpc('eth_sendTransaction',[{from:accounts[0],to:address,data:stepData(fallbackSequence),gas:gasHex}]);
   const fallbackReceipt=await receipt(rpc,fallbackHash); assert.equal(fallbackReceipt.status,'0x1');
   assert.equal(fallbackReceipt.logs.length,1); assert(inbox.accept(fallbackReceipt.logs[0],'receipt'));
   const shownBeforeBackfill=delivered.length;
@@ -96,23 +99,23 @@ try {
   const sequenceSelector=execFileSync(resolve('.toolchain/bin/cast'),['sig','inputSeq()'],{encoding:'utf8'}).trim();
   const failures=[];
   for(const [name,from,data,gas] of [
-    ['wrong-driver',accounts[1],stepData(next),'0x3b9aca00'],
-    ['replayed-sequence',accounts[0],stepData(fallbackSequence),'0x3b9aca00'],
-    ['skipped-sequence',accounts[0],stepData(next+1),'0x3b9aca00'],
+    ['wrong-driver',accounts[1],stepData(next),gasHex],
+    ['replayed-sequence',accounts[0],stepData(fallbackSequence),gasHex],
+    ['skipped-sequence',accounts[0],stepData(next+1),gasHex],
     ['out-of-gas',accounts[0],stepData(next),'0x186a0'],
-    ['revert-after-log',accounts[0],selector+next.toString(16).padStart(64,'0'),'0x3b9aca00']]) {
+    ['revert-after-log',accounts[0],selector+next.toString(16).padStart(64,'0'),gasHex]]) {
     const hash=await rpc('eth_sendTransaction',[{from,to:address,data,gas}]); const failed=await receipt(rpc,hash);
     assert.equal(failed.status,'0x0',name); assert.equal(failed.logs.length,0,name);
     assert.equal(BigInt(await rpc('eth_call',[{to:address,data:stateSelector},'latest'])),BigInt(fallbackSequence));
     assert.equal(BigInt(await rpc('eth_call',[{to:address,data:sequenceSelector},'latest'])),BigInt(fallbackSequence));
-    failures.push({name,transactionHash:hash,status:failed.status,logCount:failed.logs.length,gasUsed:Number(BigInt(failed.gasUsed))});
+    failures.push({name,transactionHash:hash,status:failed.status,logCount:failed.logs.length,gasLimit:Number(BigInt(gas)),gasUsed:Number(BigInt(failed.gasUsed))});
   }
   sample();
   const block=await rpc('eth_getBlockByNumber',[deployment.blockNumber,false]);
   const paletteUrl=palettePath==='web/palette.synthetic.json'?'/palette.synthetic.json':'/palette.local.json';
   if(paletteUrl==='/palette.local.json')await writeFile('web/palette.local.json',JSON.stringify(palette,null,2)+'\n');
-  const config={rpcUrl:url,wsUrl,address,driver:accounts[0],deploymentBlock:deployment.blockNumber,paletteUrl,paletteKind:palette.kind,resourceIdentity:palette.resourceIdentity};
-  const report={kind:'synthetic-transport-experiment',paletteKind:palette.kind,resourceIdentity:palette.resourceIdentity,timestamp:new Date().toISOString(),nodeVersion:process.version,anvilVersion:await rpc('web3_clientVersion'),compilerVersion:execFileSync(resolve('.toolchain/bin/solc'),['--version'],{encoding:'utf8'}).trim(),nodeArgs:external?null:args,externalNodeSettingsUnverified:Boolean(external),postLaunchRpc:external?null:{method:'anvil_setBlockGasLimit',params:['0x3b9aca00']},blockGasLimit:Number(BigInt(block.gasLimit)),deployment:{transactionHash:deployHash,address,gasUsed:Number(BigInt(deployment.gasUsed)),runtimeBytes:(artifact.deployedBytecode.object.length-2)/2},frames,fallback:{sequence:fallbackSequence,source:'receipt',recoveredLogs:recovered,duplicates:inbox.duplicates,displayed:delivered},failedTransactions:failures,memory:{samplingIntervalMs:100,nodePeakSampledRssBytes:Math.max(...memory.map(x=>x.rss)),nodePeakSampledHeapUsedBytes:Math.max(...memory.map(x=>x.heapUsed)),nodePeakSampledExternalBytes:Math.max(...memory.map(x=>x.external)),anvilPeakSampledRssBytes:node?peakAnvilRssBytes:null,samples:memory.length},notes:['Timings are wall-clock client observations including JSON-RPC, execution and mining; no isolated EVM execution-time claim.','Memory peaks are sampled, not guaranteed exact maxima. External-node Anvil RSS is unavailable.','Synthetic frame fixture only; palette may be WAD-derived. No original C rendering equivalence or engine implementation.']};
+  const config={gasLimit,rpcUrl:url,wsUrl,address,driver:accounts[0],deploymentBlock:deployment.blockNumber,paletteUrl,paletteKind:palette.kind,resourceIdentity:palette.resourceIdentity};
+  const report={gasLimit,gasBudgetSource,kind:'synthetic-transport-experiment',paletteKind:palette.kind,resourceIdentity:palette.resourceIdentity,timestamp:new Date().toISOString(),nodeVersion:process.version,anvilVersion:await rpc('web3_clientVersion'),compilerVersion:execFileSync(resolve('.toolchain/bin/solc'),['--version'],{encoding:'utf8'}).trim(),nodeArgs:external?null:args,externalNodeSettingsUnverified:Boolean(external),postLaunchRpc:external?null:{method:'anvil_setBlockGasLimit',params:[gasHex]},blockGasLimit:Number(BigInt(block.gasLimit)),deployment:{transactionHash:deployHash,address,gasUsed:Number(BigInt(deployment.gasUsed)),runtimeBytes:(artifact.deployedBytecode.object.length-2)/2},frames,fallback:{sequence:fallbackSequence,source:'receipt',recoveredLogs:recovered,duplicates:inbox.duplicates,displayed:delivered},failedTransactions:failures,memory:{samplingIntervalMs:100,nodePeakSampledRssBytes:Math.max(...memory.map(x=>x.rss)),nodePeakSampledHeapUsedBytes:Math.max(...memory.map(x=>x.heapUsed)),nodePeakSampledExternalBytes:Math.max(...memory.map(x=>x.external)),anvilPeakSampledRssBytes:node?peakAnvilRssBytes:null,samples:memory.length},notes:['Timings are wall-clock client observations including JSON-RPC, execution and mining; no isolated EVM execution-time claim.','Memory peaks are sampled, not guaranteed exact maxima. External-node Anvil RSS is unavailable.','Synthetic frame fixture only; palette may be WAD-derived. No original C rendering equivalence or engine implementation.']};
   await mkdir('artifacts/local',{recursive:true});
   await writeFile(option('--output','artifacts/local/transport.json'),JSON.stringify(report,null,2)+'\n');
   await writeFile('web/config.local.json',JSON.stringify(config,null,2)+'\n');

@@ -7,11 +7,14 @@ import crypto from 'node:crypto';
 import {fileURLToPath} from 'node:url';
 import {spawn, spawnSync} from 'node:child_process';
 import assert from 'node:assert/strict';
+import {loadGasBudget, executionEnv} from '../../execution-budget.mjs';
+const {gasLimit, gasHex, source: gasBudgetSource} = loadGasBudget();
+const budgetEnv = executionEnv({...process.env, DOOM_GAS_LIMIT: String(gasLimit)});
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '../../..');
 const output = path.resolve(process.argv[2] ?? path.join(root, 'artifacts/local/phase2-draw-measurements.json'));
 const port = Number(process.env.DRAW_ANVIL_PORT ?? 18557);
 assert(Number.isInteger(port) && port > 1024 && port < 65536);
-const build = spawnSync(path.join(root, '.toolchain/bin/forge'), ['build'], {cwd: root, encoding: 'utf8'});
+const build = spawnSync(path.join(root, '.toolchain/bin/forge'), ['build'], {env:budgetEnv, cwd: root, encoding: 'utf8'});
 if(build.status !== 0) throw new Error(build.stderr + build.stdout);
 const artifact = JSON.parse(fs.readFileSync(path.join(root, 'out/r_draw.t.sol/RDrawTest.json')));
 const server = spawn(path.join(root, '.toolchain/bin/anvil'), ['--host','127.0.0.1','--port',String(port),'--hardfork','cancun','--disable-code-size-limit','--disable-block-gas-limit','--memory-limit','1073741824','--silent'], {cwd:root, stdio:['ignore','ignore','pipe']});
@@ -55,7 +58,7 @@ try {
     try { await rpc('web3_clientVersion'); ready=true;break; } catch { await new Promise(r=>setTimeout(r,50)); }
   }
   assert(ready,'Anvil did not start');
-  await rpc('anvil_setBlockGasLimit',['0x3b9aca00']); await rpc('evm_mine');
+  await rpc('anvil_setBlockGasLimit',[gasHex]); await rpc('evm_mine');
   const [from]=await rpc('eth_accounts');
   // Calibrate the decoder against literal MSIZE in a small ordinary EVM contract.
   // Solc's viaIR optimizer disallows MSIZE, so this independent probe exercises
@@ -63,23 +66,23 @@ try {
   const calibrationRuntime='5a50606060405260aa6020536020608060a05e602060c02050601060006101003961012c51506000600061ffff376020610180602060006002620186a0fa505a505960005260206000f3';
   const calibrationLength=(calibrationRuntime.length/2).toString(16).padStart(2,'0');
   const calibrationCreation='0x60'+calibrationLength+'600c60003960'+calibrationLength+'6000f3'+calibrationRuntime;
-  const calibrationTx=await rpc('eth_sendTransaction',[{from,data:calibrationCreation,gas:'0x989680'}]);
+  const calibrationTx=await rpc('eth_sendTransaction',[{from,data:calibrationCreation,gas:gasHex}]);
   let calibrationReceipt;
   for(let n=0;n<100;n++) { calibrationReceipt=await rpc('eth_getTransactionReceipt',[calibrationTx]); if(calibrationReceipt)break; await new Promise(r=>setTimeout(r,50)); }
   assert.equal(calibrationReceipt?.status,'0x1');
-  const calibrationCall={from,to:calibrationReceipt.contractAddress,gas:'0x989680'};
+  const calibrationCall={from,to:calibrationReceipt.contractAddress,gas:gasHex};
   const calibrationResult=Number(BigInt(await rpc('eth_call',[calibrationCall,'latest'])));
   const calibrationTrace=await rpc('debug_traceCall',[calibrationCall,'latest',{disableStorage:true,disableStack:false,enableMemory:false}]);
   const calibration=traceMemory(calibrationTrace.structLogs);
   assert.equal(calibration.wholeCallHighWaterBytes,calibrationResult,'decoder disagrees with actual MSIZE');
   assert.equal(calibrationResult,416,'unexpected calibration footprint');
-  const tx=await rpc('eth_sendTransaction',[{from,data:artifact.bytecode.object,gas:'0x5f5e100'}]);
+  const tx=await rpc('eth_sendTransaction',[{from,data:artifact.bytecode.object,gas:gasHex}]);
   let receipt;
   for(let attempt=0;attempt<100;attempt++) { receipt=await rpc('eth_getTransactionReceipt',[tx]); if(receipt) break; await new Promise(r=>setTimeout(r,50)); }
   assert(receipt,'deployment did not mine'); assert.equal(receipt.status,'0x1');
   const measurements=[];
   for(let op=0;op<6;op++) {
-    const call={from,to:receipt.contractAddress,data:'0x'+artifact.methodIdentifiers['probe(uint32)']+op.toString(16).padStart(64,'0'),gas:'0x5f5e100'};
+    const call={from,to:receipt.contractAddress,data:'0x'+artifact.methodIdentifiers['probe(uint32)']+op.toString(16).padStart(64,'0'),gas:gasHex};
     const result=await rpc('eth_call',[call,'latest']);
     const words=result.slice(2).match(/.{64}/g); assert.equal(words.length,4);
     const trace=await rpc('debug_traceCall',[call,'latest',{disableStorage:true,disableStack:false,enableMemory:false,enableReturnData:false}]);
@@ -90,8 +93,8 @@ try {
     measurements.push(item);
     console.log(`${item.operation}: ${item.drawGas} gas; EVM memory ${item.primitiveBeforeBytes} -> ${item.primitiveAfterBytes} bytes`);
   }
-  const sourceHashes=Object.fromEntries(['src/doom/r_draw.sol','src/doom/r_state.sol','test/unit/r_draw.t.sol','tools/reference/phase2_draw/measure.mjs','foundry.toml'].map(p=>[p,crypto.createHash('sha256').update(fs.readFileSync(path.join(root,p))).digest('hex')]));
-  const report={calibration:{actualMsize:calibrationResult,derivedHighWater:calibration.wholeCallHighWaterBytes,runtime:calibrationRuntime},deployedBytecodeSha256:crypto.createHash('sha256').update(Buffer.from(artifact.deployedBytecode.object.replace(/^0x/,''),'hex')).digest('hex'),kind:'phase2-draw-evm-measurements',client:await rpc('web3_clientVersion'),compiler:'solc 0.8.37 viaIR optimizer 200 Cancun',sourceHashes,scope:'Primitive gas and actual EVM memory expansion from stack-only opcode trace. Setup and final framebuffer SHA excluded from primitive segment; whole-call high-water includes them. Local synthetic input patterns match original-C fixtures. No whole-renderer performance claim.',measurements};
+  const sourceHashes=Object.fromEntries(['src/doom/r_draw.sol','src/doom/r_state.sol','test/unit/r_draw.t.sol','tools/reference/phase2_draw/measure.mjs','foundry.toml','tools/execution-budget.mjs','execution-budget.json'].map(p=>[p,crypto.createHash('sha256').update(fs.readFileSync(path.join(root,p))).digest('hex')]));
+  const report={gasLimit,gasBudgetSource,calibration:{actualMsize:calibrationResult,derivedHighWater:calibration.wholeCallHighWaterBytes,runtime:calibrationRuntime},deployedBytecodeSha256:crypto.createHash('sha256').update(Buffer.from(artifact.deployedBytecode.object.replace(/^0x/,''),'hex')).digest('hex'),kind:'phase2-draw-evm-measurements',client:await rpc('web3_clientVersion'),compiler:'solc 0.8.37 viaIR optimizer 200 Cancun',sourceHashes,scope:'Primitive gas and actual EVM memory expansion from stack-only opcode trace. Setup and final framebuffer SHA excluded from primitive segment; whole-call high-water includes them. Local synthetic input patterns match original-C fixtures. No whole-renderer performance claim.',measurements};
   fs.mkdirSync(path.dirname(output),{recursive:true}); fs.writeFileSync(output,JSON.stringify(report,null,2)+'\n');
   console.log(`Saved ${output}`);
 } finally { server.kill('SIGTERM'); }

@@ -9,6 +9,9 @@ import { createHash } from 'node:crypto';
 import assert from 'node:assert/strict';
 import { serve } from './serve.mjs';
 import { makeRpc,decodeFrame,expandPalette } from '../../web/protocol.mjs';
+import {loadGasBudget, executionEnv} from '../execution-budget.mjs';
+const {gasLimit, gasHex, source: gasBudgetSource} = loadGasBudget();
+const budgetEnv = executionEnv({...process.env, DOOM_GAS_LIMIT: String(gasLimit)});
 process.chdir(fileURLToPath(new URL('../../',import.meta.url)));
 const argv=process.argv.slice(2),option=(name,fallback)=>{const i=argv.indexOf(name);return i<0?fallback:argv[i+1];};
 const palettePath=option('--palette','web/palette.synthetic.json');
@@ -17,6 +20,8 @@ const outputPrefix=option('--output-prefix','artifacts/local/transport-browser')
 const existingConfigPath=option('--existing-config',null);
 const timingScriptPath=option('--timing-script',null);
 const existingConfig=existingConfigPath?JSON.parse(await readFile(existingConfigPath,'utf8')):null;
+const browserBudget=existingConfig?.gasLimit === undefined ? {gasLimit,source:gasBudgetSource}
+  : {...loadGasBudget({env:{DOOM_GAS_LIMIT:String(existingConfig.gasLimit)}}),source:existingConfigPath};
 const chromePath=process.env.CHROME_BIN??'/Applications/Google Chrome.app/Contents/MacOS/Google Chrome';
 const port=Number(process.env.BROWSER_ANVIL_PORT??18549),rpcUrl=existingConfig?.rpcUrl??`http://127.0.0.1:${port}`,rpc=makeRpc(rpcUrl);
 let anvil,chrome,server,cdp,profile;
@@ -42,15 +47,15 @@ try {
     assert(expectedCase);assert.equal(expectedCase.mode,'full','browser M1 requires the complete world-view pass');
     assert.deepEqual(existingConfig.resourceIdentity,manifest.resourceIdentity);
     await rpc('web3_clientVersion');
-    await writeFile('web/config.local.json',JSON.stringify(existingConfig,null,2)+'\n');
+    await writeFile('web/config.local.json',JSON.stringify({...existingConfig,gasLimit:browserBudget.gasLimit},null,2)+'\n');
   }else{
   try {await rpc('web3_clientVersion');throw Error('Anvil port in use');}catch(e){if(e.message.includes('port in use'))throw e;}
   anvil=spawn(resolve('.toolchain/bin/anvil'),['--host','127.0.0.1','--port',String(port),'--hardfork','cancun','--disable-code-size-limit','--disable-block-gas-limit','--memory-limit','1073741824','--silent'],{stdio:['ignore','ignore','pipe']});
   let anvilError='',anvilStartError;anvil.on('error',error=>anvilStartError=error);
   anvil.stderr.on('data',x=>anvilError+=x);
   await waitFor(async()=>{if(anvilStartError)throw anvilStartError;if(anvil.exitCode!==null)throw Error(anvilError);try{return await rpc('web3_clientVersion');}catch{return false;}},'Anvil');
-  await rpc('anvil_setBlockGasLimit',['0x3b9aca00']);
-  execFileSync(process.execPath,['tools/transport/benchmark.mjs','--palette',palettePath,'--rpc',rpcUrl,'--output','artifacts/local/transport-browser-node.json'],{timeout:60000,stdio:['ignore','pipe','inherit']});
+  await rpc('anvil_setBlockGasLimit',[gasHex]);
+  execFileSync(process.execPath,['tools/transport/benchmark.mjs','--palette',palettePath,'--rpc',rpcUrl,'--output','artifacts/local/transport-browser-node.json'],{env:budgetEnv,timeout:60000,stdio:['ignore','pipe','inherit']});
   }
   server=await serve(0);
   profile=await mkdtemp(join(tmpdir(),'doom-evm-chrome-'));
@@ -90,7 +95,7 @@ try {
   const screenshot=await command('Page.captureScreenshot',{format:'png'});
   await mkdir(dirname(outputPrefix),{recursive:true});await writeFile(outputPrefix+'.png',Buffer.from(screenshot.data,'base64'));
   delete proof.latestPixelsHex;
-  const result={timestamp:new Date().toISOString(),kind:expectedCase?'doom-world-view-browser':'synthetic-browser-transport',referenceCase:expectedCase?.name,browser:await command('Browser.getVersion'),config,proof,receiptPixelsSha256:createHash('sha256').update(frame.pixels).digest('hex'),allCanvasPixelsMatchReceipt:true,screenshot:outputPrefix+'.png'};
+  const result={gasLimit:config.gasLimit,gasBudgetSource:browserBudget.source,timestamp:new Date().toISOString(),kind:expectedCase?'doom-world-view-browser':'synthetic-browser-transport',referenceCase:expectedCase?.name,browser:await command('Browser.getVersion'),config,proof,receiptPixelsSha256:createHash('sha256').update(frame.pixels).digest('hex'),allCanvasPixelsMatchReceipt:true,screenshot:outputPrefix+'.png'};
   if(timingScriptPath){const timing=await command('Runtime.evaluate',{expression:'window.__rendererTiming',returnByValue:true});result.timing=timing.result.value;assert(result.timing,'timing script did not produce evidence');}
   await writeFile(outputPrefix+'.json',JSON.stringify(result,null,2)+'\n');console.log(JSON.stringify(result,null,2));
 }catch(error){

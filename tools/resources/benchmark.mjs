@@ -9,6 +9,9 @@ import assert from 'node:assert/strict';
 import {makeRpc,receipt} from '../../web/protocol.mjs';
 import {canonical} from '../wad/wad.ts';
 import {validateSchema} from '../wad/schema.ts';
+import {loadGasBudget, executionEnv} from '../execution-budget.mjs';
+const {gasLimit, gasHex, source: gasBudgetSource} = loadGasBudget();
+const budgetEnv = executionEnv({...process.env, DOOM_GAS_LIMIT: String(gasLimit)});
 process.chdir(fileURLToPath(new URL('../../',import.meta.url)));
 const args=process.argv.slice(2),option=(name,fallback)=>{const i=args.indexOf(name);return i<0?fallback:args[i+1];};
 const bundlePath=option('--bundle',null);
@@ -46,7 +49,7 @@ let node;
 const results=[];
 try {
   try {await rpc('web3_clientVersion');throw Error('Port in use');}catch(e){if(e.message==='Port in use')throw e;}
-  execFileSync(resolve('.toolchain/bin/forge'),['build'],{stdio:'pipe',timeout:120000});
+  execFileSync(resolve('.toolchain/bin/forge'),['build'],{env:budgetEnv,stdio:'pipe',timeout:120000});
   node=spawn(resolve('.toolchain/bin/anvil'),nodeArgs,{stdio:['ignore','ignore','pipe']});
   let startError,output='';node.on('error',e=>startError=e);node.stderr.on('data',x=>output+=x);
   const deadline=Date.now()+30000;
@@ -56,7 +59,7 @@ try {
     if(Date.now()>deadline)throw Error('Anvil readiness timeout');
     await new Promise(r=>setTimeout(r,50));
   }
-  await rpc('anvil_setBlockGasLimit',['0x3b9aca00']);
+  await rpc('anvil_setBlockGasLimit',[gasHex]);
   const [from]=await rpc('eth_accounts');
   for(const {lump,payload} of selected) {
     const strategies=[];
@@ -64,18 +67,18 @@ try {
       const artifact=JSON.parse(await readFile(`out/ResourcePlacement.sol/${contract}.json`,'utf8'));
       const data=artifact.bytecode.object+bytesAbi(payload);
       const start=performance.now();
-      const deployment=await receipt(rpc,await rpc('eth_sendTransaction',[{from,data,gas:'0x3b9aca00'}]));
+      const deployment=await receipt(rpc,await rpc('eth_sendTransaction',[{from,data,gas:gasHex}]));
       assert.equal(deployment.status,'0x1');
       const uploadMs=performance.now()-start,to=deployment.contractAddress,reads=[];
       for(const [offset,length] of [[0,Math.min(32,payload.length)],[Math.min(17,payload.length),Math.min(768,Math.max(0,payload.length-17))],[0,payload.length],[payload.length,0]]) {
         const argumentsAbi=word(offset)+word(length);
-        const response=await rpc('eth_call',[{from,to,data:readSig+argumentsAbi,gas:'0x3b9aca00'},'latest']);
+        const response=await rpc('eth_call',[{from,to,data:readSig+argumentsAbi,gas:gasHex},'latest']);
         assert.equal(BigInt('0x'+response.slice(2,66)),32n);
         assert.equal(Number(BigInt('0x'+response.slice(66,130))),length);
         const bytes=Buffer.from(response.slice(130,130+length*2),'hex');
         assert.deepEqual(bytes,payload.subarray(offset,offset+length));
         const began=performance.now();
-        const mined=await receipt(rpc,await rpc('eth_sendTransaction',[{from,to,data:sampleSig+argumentsAbi,gas:'0x3b9aca00'}]));
+        const mined=await receipt(rpc,await rpc('eth_sendTransaction',[{from,to,data:sampleSig+argumentsAbi,gas:gasHex}]));
         assert.equal(mined.status,'0x1');assert.equal(mined.logs.length,1);
         assert.equal(mined.logs[0].data,'0x'+sha(bytes));
         reads.push({offset,length,sha256:sha(bytes),gasUsed:Number(BigInt(mined.gasUsed)),receiptMs:performance.now()-began,transactionHash:mined.transactionHash});
@@ -91,7 +94,7 @@ try {
     }
     results.push({lumpId:lump.id,lumpName:name(lump),sourceLength:lump.length,measuredBytes:payload.length,payloadSha256:sha(payload),strategies});
   }
-  const report={scope:'Phase 1 static WAD resource placement; no renderer/frame-access measurement',wadSha256:bundle.resourceIdentity.wadSha256,bundleSha256:bundle.resourceIdentity.bundleSha256,anvilVersion:await rpc('web3_clientVersion'),nodeArgs,timestamp:new Date().toISOString(),results,notes:['Each read transaction has cold storage/account access; read() output is checked against actual WAD bytes before measuring sample().','sample() includes SHA-256 and one event; upload includes ordinary constructor deployment and initialization.','Code strategy includes deployment of both reader and STOP-prefixed payload contract.','Timings include client/RPC/mining overhead; these are not isolated EVM execution times.','No anvil_setCode, custom opcode or frame/view precomputation. Full renderer access patterns remain a Phase 2+ measurement.']};
+  const report={gasLimit,gasBudgetSource,scope:'Phase 1 static WAD resource placement; no renderer/frame-access measurement',wadSha256:bundle.resourceIdentity.wadSha256,bundleSha256:bundle.resourceIdentity.bundleSha256,anvilVersion:await rpc('web3_clientVersion'),nodeArgs,timestamp:new Date().toISOString(),results,notes:['Each read transaction has cold storage/account access; read() output is checked against actual WAD bytes before measuring sample().','sample() includes SHA-256 and one event; upload includes ordinary constructor deployment and initialization.','Code strategy includes deployment of both reader and STOP-prefixed payload contract.','Timings include client/RPC/mining overhead; these are not isolated EVM execution times.','No anvil_setCode, custom opcode or frame/view precomputation. Full renderer access patterns remain a Phase 2+ measurement.']};
   const out=option('--output','artifacts/local/resource-placement.json');await mkdir(dirname(out),{recursive:true});
   await writeFile(out,JSON.stringify(report,null,2)+'\n');
   console.log(JSON.stringify(report,null,2));
