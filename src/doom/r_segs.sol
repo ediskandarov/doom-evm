@@ -40,6 +40,85 @@ library R_Segs {
         else R_Draw.R_DrawColumnLow(c.rs, c.dc);
     }
 
+    /// @notice Original masked-wall pass, invoked during sprite clipping and final backdrawing.
+    function R_RenderMaskedSegRange(
+        RenderContext memory c,
+        uint32 drawseg,
+        int32 x1,
+        int32 x2,
+        function(RenderContext memory, ColumnView memory) internal view drawMaskedColumn
+    ) internal view {
+        if (drawseg >= c.drawsegCount || drawseg >= c.drawsegs.length) {
+            revert WallBounds();
+        }
+        DrawSeg memory ds = c.drawsegs[drawseg];
+        if (
+            x1 <= x2
+                && (x1 < 0
+                    || x2 >= int32(uint32(c.rs.width))
+                    || x1 < ds.x1
+                    || x2 > ds.x2
+                    || ds.maskedtexturecol.length != c.rs.width)
+        ) revert WallBounds();
+        c.curline = ds.curline;
+        Seg memory seg = c.map.segs[c.curline];
+        c.frontsector = seg.frontsector;
+        c.backsector = seg.backsector;
+        if (c.backsector == NULL) revert WallBounds();
+        Sector memory front = c.map.sectors[c.frontsector];
+        Sector memory back = c.map.sectors[c.backsector];
+        Side memory side = c.map.sides[seg.sidedef];
+        uint32 texnum = c.resources.texturetranslation[side.midtexture];
+        unchecked {
+            int32 lightnum = (int32(front.lightlevel) >> 4) + c.rs.extralight;
+            Vertex memory v1 = c.map.vertexes[seg.v1];
+            Vertex memory v2 = c.map.vertexes[seg.v2];
+            if (v1.y == v2.y) --lightnum;
+            else if (v1.x == v2.x) ++lightnum;
+            c.wall.lightnum = lightnum < 0 ? int32(0) : lightnum >= 16 ? int32(15) : lightnum;
+            c.wall.rw_scalestep = ds.scalestep;
+            c.sprite.spryscale = ds.scale1 + (x1 - ds.x1) * c.wall.rw_scalestep;
+            c.sprite.mfloorclip = ds.sprbottomclip;
+            c.sprite.mceilingclip = ds.sprtopclip;
+            if (c.map.lines[seg.linedef].flags & 16 != 0) {
+                c.dc.texturemid = front.floorheight > back.floorheight ? front.floorheight : back.floorheight;
+                c.dc.texturemid = c.dc.texturemid + _height(c, texnum) - c.rs.viewz;
+            } else {
+                c.dc.texturemid =
+                    front.ceilingheight < back.ceilingheight ? front.ceilingheight : back.ceilingheight;
+                c.dc.texturemid -= c.rs.viewz;
+            }
+            c.dc.texturemid += side.rowoffset;
+            if (c.rs.fixedcolormap != -1) {
+                c.dc.colormap = R_Data.R_GetColormap(c.resources, uint32(c.rs.fixedcolormap));
+            }
+            for (c.dc.x = x1; c.dc.x <= x2; ++c.dc.x) {
+                uint32 x = uint32(c.dc.x);
+                if (ds.maskedtexturecol[x] != 32767) {
+                    if (c.rs.fixedcolormap == -1) {
+                        uint32 index = uint32(c.sprite.spryscale >> 12);
+                        if (index >= 48) index = 47;
+                        c.dc.colormap = R_Data.R_GetColormap(
+                            c.resources, uint8(c.rs.scalelight[uint32(c.wall.lightnum) * 48 + index])
+                        );
+                    }
+                    c.sprite.sprtopscreen =
+                        c.rs.centeryfrac - M_Fixed.FixedMul(c.dc.texturemid, c.sprite.spryscale);
+                    if (c.sprite.spryscale == 0) revert WallBounds();
+                    c.dc.iscale = int32(type(uint32).max / uint32(c.sprite.spryscale));
+                    ColumnView memory post = R_Data.R_GetColumn(c.resources, texnum, ds.maskedtexturecol[x]);
+                    if (post.offset < 3) revert WallBounds();
+                    post.offset -= 3;
+                    if (post.offset >= post.data.length) revert WallBounds();
+                    drawMaskedColumn(c, post);
+                    // Deliberately use dc_x after the callback, as the original does.
+                    ds.maskedtexturecol[uint32(c.dc.x)] = 32767;
+                }
+                c.sprite.spryscale += c.wall.rw_scalestep;
+            }
+        }
+    }
+
     function R_RenderSegLoop(RenderContext memory c) internal view {
         WallState memory w = c.wall;
         unchecked {

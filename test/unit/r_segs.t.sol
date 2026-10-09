@@ -8,7 +8,7 @@ import {R_Segs} from "../../src/doom/r_segs.sol";
 import {ResourceView} from "../../src/doom/r_data_types.sol";
 import {LumpDescriptor} from "../../src/evm/ResourceTypes.sol";
 import {Seg, Side, Line, Sector, Vertex} from "../../src/doom/r_defs.sol";
-import {RenderResources} from "../../src/doom/r_data_types.sol";
+import {RenderResources, ColumnView, Texture} from "../../src/doom/r_data_types.sol";
 import {RenderContext, DrawSeg, Visplane} from "../../src/doom/r_render_state.sol";
 
 interface SegsVm {
@@ -578,5 +578,186 @@ contract RSegsTest {
         this.openingBoundary(false);
         (bool ok, bytes memory reason) = address(this).call(abi.encodeCall(this.openingBoundary, (true)));
         require(!ok && bytes4(reason) == R_Segs.OpeningOverflow.selector, "missing explicit opening cap");
+    }
+
+    function observeMasked(RenderContext memory c, ColumnView memory post) internal pure {
+        bytes memory expected = c.ds.source;
+        uint256 p = c.rs.fuzzpos;
+        p = word(expected, p, c.dc.x, "masked x");
+        p = word(expected, p, c.dc.texturemid, "masked texturemid");
+        p = word(expected, p, c.dc.iscale, "masked iscale");
+        p = word(expected, p, c.sprite.spryscale, "masked spryscale");
+        p = word(expected, p, c.sprite.sprtopscreen, "masked topscreen");
+        p = word(expected, p, c.sprite.mfloorclip[uint32(c.dc.x)], "masked floorclip");
+        p = word(expected, p, c.sprite.mceilingclip[uint32(c.dc.x)], "masked ceilingclip");
+        uint32 count = be32(expected, p);
+        p += 4;
+        for (uint256 i; i < 256; ++i) {
+            if (c.dc.colormap[i] != expected[p]) {
+                revert NativePixelMismatch(p, c.dc.colormap[i], expected[p]);
+            }
+            ++p;
+        }
+        uint256 end = post.offset;
+        while (post.data[end] != 0xff) end += uint8(post.data[end + 1]) + 4;
+        ++end;
+        require(end - post.offset == count, "native post stream length");
+        for (uint256 i = post.offset; i < end; ++i) {
+            if (post.data[i] != expected[p]) revert NativePixelMismatch(p, post.data[i], expected[p]);
+            ++p;
+        }
+        c.rs.fuzzpos = uint32(p);
+        if (c.rs.framecount == 4) c.dc.x *= 2;
+    }
+
+    function maskedCase(uint256 k) private view {
+        RenderResources memory resources = R_Data.R_InitDataLazy(source());
+        bytes memory cases = vm.readFileBinary("test/fixtures/phase2_segs/masked-cases.bin");
+        require(cases.length == 6 * 96);
+        int32[23] memory a;
+        for (uint256 j; j < 23; ++j) {
+            a[j] = int32(be32(cases, k * 96 + j * 4));
+        }
+        uint32 mode = be32(cases, k * 96 + 92);
+        RenderContext memory c = syntheticContext(resources, a);
+        R_Segs.R_StoreWallRange(c, a[16], a[17]);
+        string memory dir = string.concat("test/fixtures/phase2_segs/masked-", vm.toString(k), "/");
+        c.ds.source = vm.readFileBinary(string.concat(dir, "masked-trace.bin"));
+        c.rs.fuzzpos = 0;
+        c.rs.framecount = mode;
+        if (mode == 3) {
+            for (int32 x = a[16]; x <= a[17]; x += 2) {
+                c.drawsegs[0].maskedtexturecol[uint32(x)] = 32767;
+            }
+        }
+        if (mode == 2) {
+            R_Segs.R_RenderMaskedSegRange(c, 0, a[16] + 10, a[17] - 10, observeMasked);
+            R_Segs.R_RenderMaskedSegRange(c, 0, a[16], a[17], observeMasked);
+            R_Segs.R_RenderMaskedSegRange(c, 0, a[17] + 1, a[17], observeMasked);
+        } else {
+            R_Segs.R_RenderMaskedSegRange(c, 0, a[16], a[17], observeMasked);
+            if (mode == 1) R_Segs.R_RenderMaskedSegRange(c, 0, a[16], a[17], observeMasked);
+        }
+        require(c.rs.fuzzpos == c.ds.source.length, "native masked callback count");
+        intermediates(c, dir);
+        syntheticGlobals(c, vm.readFileBinary(string.concat(dir, "globals.bin")));
+        bytes memory state = vm.readFileBinary(string.concat(dir, "masked-state.bin"));
+        uint256 p;
+        p = word(state, p, c.dc.x, "masked final x");
+        p = word(state, p, c.dc.texturemid, "masked final texturemid");
+        p = word(state, p, c.dc.iscale, "masked final iscale");
+        p = word(state, p, c.sprite.spryscale, "masked final scale");
+        p = word(state, p, c.sprite.sprtopscreen, "masked final screen");
+        p = word(state, p, c.wall.rw_scalestep, "masked final step");
+        p = word(state, p, c.wall.lightnum, "masked light row");
+        for (uint256 i; i < 256; ++i) {
+            require(c.dc.colormap[i] == state[p++], "masked final colormap");
+        }
+        require(p == state.length);
+        int32[] memory floor = c.sprite.mfloorclip;
+        int32[] memory bottom = c.drawsegs[0].sprbottomclip;
+        int32[] memory ceiling = c.sprite.mceilingclip;
+        int32[] memory top = c.drawsegs[0].sprtopclip;
+        bool aliases;
+        assembly ("memory-safe") { aliases := and(eq(floor, bottom), eq(ceiling, top)) }
+        require(aliases, "masked clip pointer aliases");
+    }
+
+    function testNativeMaskedRepeatedRange() public view {
+        maskedCase(0);
+    }
+
+    function testNativeMaskedPartialFinalAndEmptyRanges() public view {
+        maskedCase(1);
+    }
+
+    function testNativeMaskedSentinelsFixedLightBottomPeg() public view {
+        maskedCase(2);
+    }
+
+    function testNativeMaskedCallbackXMutation() public view {
+        maskedCase(3);
+    }
+
+    function testNativeMaskedTranslatedPeggingHeight() public view {
+        maskedCase(4);
+    }
+
+    function testNativeMaskedDiagonalLight() public view {
+        maskedCase(5);
+    }
+
+    function terminalContext() private pure returns (RenderContext memory c) {
+        c.rs.width = 1;
+        c.rs.height = 200;
+        c.rs.scalelight = new bytes(16 * 48);
+        c.rs.fixedcolormap = -1;
+        c.resources.colormaps = new bytes(256);
+        c.resources.textures = new Texture[](1);
+        c.resources.texturetranslation = new uint32[](1);
+        c.resources.textures[0].height = 128;
+        c.resources.textures[0].width = 1;
+        c.resources.textures[0].columnlump = new int32[](1);
+        c.resources.textures[0].columnlump[0] = 1;
+        c.resources.textures[0].columnofs = new uint32[](1);
+        c.resources.textures[0].columnofs[0] = 3;
+        c.resources.lumpcache = new bytes[](2);
+        c.resources.lumpcache[1] = hex"ff";
+        c.map.vertexes = new Vertex[](1);
+        c.map.segs = new Seg[](1);
+        c.map.segs[0].backsector = 1;
+        c.map.sides = new Side[](1);
+        c.map.lines = new Line[](1);
+        c.map.sectors = new Sector[](2);
+        c.map.sectors[0].ceilingheight = 128 * 65536;
+        c.map.sectors[1].ceilingheight = 128 * 65536;
+        c.drawsegs = new DrawSeg[](1);
+        c.drawsegCount = 1;
+        c.drawsegs[0].scale1 = 65536;
+        c.drawsegs[0].maskedtexturecol = new int32[](1);
+        c.drawsegs[0].sprtopclip = new int32[](1);
+        c.drawsegs[0].sprtopclip[0] = -1;
+        c.drawsegs[0].sprbottomclip = new int32[](1);
+        c.drawsegs[0].sprbottomclip[0] = 200;
+    }
+
+    function terminal(RenderContext memory c, ColumnView memory post) internal pure {
+        require(
+            post.offset == 0 && post.data.length == 1 && post.data[0] == 0xff, "empty virtual pixel pointer"
+        );
+        ++c.rs.fuzzpos;
+    }
+
+    function testMaskedVirtualTerminalAndConsumedSentinel() public view {
+        RenderContext memory c = terminalContext();
+        R_Segs.R_RenderMaskedSegRange(c, 0, 0, 0, terminal);
+        R_Segs.R_RenderMaskedSegRange(c, 0, 0, 0, terminal);
+        require(c.rs.fuzzpos == 1 && c.drawsegs[0].maskedtexturecol[0] == 32767);
+    }
+
+    function malformedMasked(uint8 op) external view {
+        RenderContext memory c = terminalContext();
+        if (op == 0) {
+            R_Segs.R_RenderMaskedSegRange(c, 1, 0, 0, terminal);
+            return;
+        }
+        if (op == 1) {
+            R_Segs.R_RenderMaskedSegRange(c, 0, -1, 0, terminal);
+            return;
+        }
+        if (op == 2) {
+            R_Segs.R_RenderMaskedSegRange(c, 0, 0, 1, terminal);
+            return;
+        }
+        if (op == 3) c.map.segs[0].backsector = type(uint32).max;
+        if (op == 4) c.drawsegs[0].scale1 = 0;
+        R_Segs.R_RenderMaskedSegRange(c, 0, 0, 0, terminal);
+    }
+
+    function testMaskedRangeBoundsAndZeroScale() public {
+        for (uint8 i; i < 5; ++i) {
+            (bool ok, bytes memory reason) = address(this).call(abi.encodeCall(this.malformedMasked, (i)));
+            require(!ok && bytes4(reason) == R_Segs.WallBounds.selector, "masked undefined domain accepted");
+        }
     }
 }

@@ -42,10 +42,16 @@ def main():
             if upstream[end]=='{':depth+=1
             if upstream[end]=='}':depth-=1
             end+=1
-        body=upstream[start:end];units.append(body);records.append(dict(function=name,startLine=upstream[:start].count('\n')+1,endLine=upstream[:end].count('\n')+1,sha256=ref.sha(body.encode())))
+        body=upstream[start:end];units.append(('void ObserveMaskedColumn(void*);\n#define R_DrawMaskedColumn ObserveMaskedColumn\n'+body+'\n#undef R_DrawMaskedColumn' if name=='R_RenderMaskedSegRange' else body));records.append(dict(function=name,startLine=upstream[:start].count('\n')+1,endLine=upstream[:end].count('\n')+1,sha256=ref.sha(body.encode())))
     generated=prefix+'\n#define HEIGHTBITS 12\n#define HEIGHTUNIT (1<<HEIGHTBITS)\n'+'\n'.join(units)+'\n'
     original_here=builder.HERE;host=(original_here/'host.c').read_text();host=host[:host.index('int main(')]+(HERE/'driver.c').read_text()
     rows=cases();outputs={};profiles={}
+    masked=[]
+    for source,mode in [(8,1),(9,2),(8,3),(9,4),(3,1),(24,1)]:
+        a=list(rows[source]['inputs']);a[4]=1
+        if mode==3:a[18]=6;a[5]=16;a[9]=13
+        if mode==4:a[16]=20;a[17]=40
+        masked.append({'sourceCase':source,'mode':mode,'inputs':a})
     with tempfile.TemporaryDirectory(prefix='doom-segs-') as temporary:
         tmp=pathlib.Path(temporary);custom=tmp/'host';custom.mkdir();(custom/'host.c').write_text(host);(custom/'trace.h').write_bytes((original_here/'trace.h').read_bytes());builder.HERE=custom
         for profile in ['O0','O2','sanitize']:
@@ -60,15 +66,22 @@ def main():
                 try:ref.invoke([str(binary),str(wad),str(dest),*map(str,row['inputs'])])
                 except subprocess.CalledProcessError as error:print(error.stderr);raise
                 for name in ['pixels.bin','clips.bin','planes.bin','drawsegs.bin','globals.bin']:profilefiles[str(index)+'/'+name]=(dest/name).read_bytes()
+            for index,row in enumerate(masked):
+                dest=tmp/(profile+'-masked-'+str(index));dest.mkdir()
+                try:ref.invoke([str(binary),str(wad),str(dest),*map(str,row['inputs']),str(row['mode'])])
+                except subprocess.CalledProcessError as error:print(error.stderr);raise
+                for name in ['pixels.bin','clips.bin','planes.bin','drawsegs.bin','globals.bin','masked-trace.bin','masked-state.bin']:profilefiles['masked-'+str(index)+'/'+name]=(dest/name).read_bytes()
             profiles[profile]=profilefiles
         assert profiles['O0']==profiles['O2']==profiles['sanitize'],'native optimization/sanitizer mismatch'
         outputs.update(profiles['O2'])
     rows=[dict(row,files={n:ref.sha(outputs[str(i)+'/'+n]) for n in ['pixels.bin','clips.bin','planes.bin','drawsegs.bin','globals.bin']}) for i,row in enumerate(rows)]
+    outputs['masked-cases.bin']=b''.join(struct.pack('>24i',*r['inputs'],r['mode']) for r in masked)
+    outputs['masked-manifest.json']=(json.dumps({'cases':[dict(r,files={name:ref.sha(outputs['masked-'+str(i)+'/'+name]) for name in ['pixels.bin','clips.bin','planes.bin','drawsegs.bin','globals.bin','masked-trace.bin','masked-state.bin']}) for i,r in enumerate(masked)],'observation':'Original R_RenderMaskedSegRange calls an observation callback in place of R_DrawMaskedColumn. It records every passed post byte, complete selected colormap, clip values and numerical globals; mode4 additionally doubles dc_x to prove preservation of callback side effects. Full renderer golden gate separately uses genuine R_Things drawing.'},indent=2)+'\n').encode()
     outputs['cases.bin']=b''.join(struct.pack('>23i',*r['inputs']) for r in rows)
     outputs['manifest.json']=(json.dumps({'upstreamCommit':ref.UPSTREAM,'wadSha256':ref.sha(wad.read_bytes()),'rSegsSha256':ref.sha(upstream.encode()),'extractions':records,'generatedSourceSha256':ref.sha(generated.encode()),'hostSha256':ref.sha(host.encode()),'harnessSha256':ref.sha(pathlib.Path(__file__).read_bytes()),'sharedRendererBuilderSha256':ref.sha((original_here/'build.py').read_bytes()),'compiler':ref.VERSION,'target':ref.TARGET,'profiles':['O0 -fwrapv','O2 -fwrapv','O2 ASan/UBSan -fwrapv'],'fields':FIELDS,'cases':rows,'scope':'Original wall functions with original r_main/r_data/r_draw/r_plane dependencies. Host initializes synthetic scene globals only; no host visibility or drawing. Native inputs preserve signed arithmetic pinned -fwrapv behavior; this is not a claim of ISO C overflow validity.'},indent=2)+'\n').encode()
     for name,data in outputs.items():
         p=ROOT/'test/fixtures/phase2_segs'/name
         if args.check:assert p.read_bytes()==data,'drift '+str(p)
         else:p.parent.mkdir(parents=True,exist_ok=True);p.write_bytes(data)
-    print(json.dumps({'cases':len(rows),'profiles':'byte-identical O0/O2/ASan+UBSan -fwrapv','files':len(outputs)}))
+    print(json.dumps({'cases':len(rows),'maskedCases':len(masked),'profiles':'byte-identical O0/O2/ASan+UBSan -fwrapv','files':len(outputs)}))
 if __name__=='__main__':main()
