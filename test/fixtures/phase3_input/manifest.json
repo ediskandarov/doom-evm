@@ -1,0 +1,53 @@
+{
+  "schemaVersion": 1,
+  "upstreamCommit": "a77dfb96cb91780ca334d0d4cfd86957558007e0",
+  "compiler": "Apple clang version 17.0.0 (clang-1700.0.13.5)",
+  "target": "arm64-apple-darwin24.6.0",
+  "flags": [
+    "-std=c11",
+    "-fsigned-char",
+    "-fno-strict-aliasing",
+    "-ffp-contract=off",
+    "-fno-fast-math"
+  ],
+  "profiles": {
+    "O0": [
+      "-O0"
+    ],
+    "O2": [
+      "-O2"
+    ],
+    "sanitize": [
+      "-O2",
+      "-fsanitize=address,undefined",
+      "-fno-sanitize-recover=all"
+    ]
+  },
+  "caseCount": 41007,
+  "independentCases": 40960,
+  "sequenceCases": 47,
+  "scope": "keyboard masks 0..1023 x requests 0..9 x turnheld 0,4,5,20; persistent sequence; ticdup=1; zero base/chat/consistency/mouse/joystick/special inputs",
+  "extraction": {
+    "file": "g_game.c",
+    "function": "G_BuildTiccmd",
+    "startLine": 237,
+    "endLine": 437,
+    "sha256": "59fcd9cdeef89c6abc5b8021b3caa2ed7c4d69ffc1fc8ee2a11b55c6073c94d1"
+  },
+  "sources": {
+    "g_game.c": "bc8e2e0d76a70f8120174946641a82c46f0116a624f51c011b292e2ffcb78a29",
+    "doomdef.h": "643daca966fb762fa86f39ce9a1779355117578527bf2e295163647f9ad0d74e",
+    "doomtype.h": "e2b8da9ed44c6686a282af8e14a53b605ecc781d05ccd78579fcf57c720297e6",
+    "d_ticcmd.h": "2f70caa7c187365850e467254d8b0a31c07ea304d59339c68fde63d05274d146",
+    "d_event.h": "24ba8629e157f4f76c4da0821a9f1bf71c34c2aec5cbc1ee4ec5898751225d22",
+    "m_fixed.h": "67aa3925a905d448fb947fb7358093a39367f534c3e26e3f8b06228f553227ef",
+    "d_net.h": "54d77e10fe98e7ad640c711e7146f1440e4bd3f73e46d27905f9c19b8117ac3d"
+  },
+  "harnessSha256": {
+    "reference.py": "e8c482ce14abcc844904c410671b1f1a328c293aa5eab837ab286bf1e430da77",
+    "host.c": "a7ceae96acb9d71147ccf3c3aad35181fb25ede38556dc90ecfbc721b9316492",
+    "driver.c": "178431f065454bdb8bd5e908869734a548ac3697eb333efec18d9e632cdac0b5"
+  },
+  "generatedSourceSha256": "b3828d6d4d9c50c1f71a5ee1a7aae6ce9671a47e1ffa40853cdd1c4f5a3c220e",
+  "vectorsSha256": "30d1fa672276679b257fc1a7a83ed923b8ccd451be8423fcae279aeda030f3b3"
+}

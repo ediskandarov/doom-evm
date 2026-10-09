@@ -1,0 +1,22 @@
+{
+  "version": 1,
+  "status": "verified-isolated-checkpoint",
+  "checks": [
+    "python3 tools/reference/phase3_input/reference.py --check:41007 exact original C cases",
+    "forge g_game.t.sol:14 tests passed",
+    "node --test web/input.test.mjs:5 tests passed"
+  ],
+  "sourceSha256": {
+    "src/doom/g_game.sol": "056660755ffcb3b7841a8874486efa872880da4484c466aa38896a496b94a359",
+    "src/evm/InputProtocol.sol": "df068ec9030d7241de7d6160059f8e46fe647f6655123f03849789b359bee51b",
+    "test/unit/g_game.t.sol": "24d699094e37388a6830923e2198719a360d6fd4e70a80257ed467eb77055bee",
+    "web/input.mjs": "ede4a9f7917807780ed046524dde45185e6668afbbabafe31b8ba0e5ece3fbf6",
+    "web/input.test.mjs": "b4b03e3960abf5da7815d741571b9d658a5139d29a93b3be68823a2d35412ab8",
+    "tools/reference/phase3_input/reference.py": "e8c482ce14abcc844904c410671b1f1a328c293aa5eab837ab286bf1e430da77",
+    "tools/reference/phase3_input/host.c": "a7ceae96acb9d71147ccf3c3aad35181fb25ede38556dc90ecfbc721b9316492",
+    "tools/reference/phase3_input/driver.c": "178431f065454bdb8bd5e908869734a548ac3697eb333efec18d9e632cdac0b5",
+    "test/fixtures/phase3_input/manifest.json": "6c744244b2254d7a7bfcd1475df3e965c6dc281af08e6d0791b06b9c010f040d",
+    "test/fixtures/phase3_input/vectors.bin": "30d1fa672276679b257fc1a7a83ed923b8ccd451be8423fcae279aeda030f3b3"
+  },
+  "limitations": "Isolated checkpoint; M2/M3 engine integration and inherited final gates remain outstanding."
+}
