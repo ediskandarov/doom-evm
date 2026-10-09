@@ -10,7 +10,8 @@ does not count as accepted Phase 3 implementation.
 Last implementation checkpoint: `ab316f8`, physical actor/mover allocation and lazy free;
 verified source-derived renderer allocator startup is `d9ca352`;
 zone core is `2392f4a`.
-Last native observation checkpoint: `ba53a4b`, exact map/setup heap boundaries;
+Last native observation checkpoint: `4d06c03`, generic physical-byte/column proof;
+`ba53a4b` supplies exact map/setup heap boundaries;
 `5ffd10a` supplies the original zone lifecycle/layout evidence;
 `7fc2cab` remains the exact post-render state extension.
 Last audit checkpoint: `6302955`, original definition/feature inventory.
@@ -142,6 +143,11 @@ Verified recovery checkpoints:
   outputs unchanged. Geometry has 25 completed outer operations, 4,924 headers
   and 4,126 owner marks. [Native validation](../tools/reference/phase3_zone_setup/validation.json).
   Solidity setup assertions have not yet run successfully; no EVM acceptance.
+- `4d06c03`: native-only backing proof, 80 cases / 10,240 byte-knownness positions
+  and 18 unchanged original negative-frac column draws across O0/O2/full sanitizers.
+  Source-written header/resource bytes are distinguished from unknown pointers,
+  padding and slack. Generation and fresh `--check` pass. [Validation](../test/fixtures/phase3_zone_backing/validation.json).
+  Renderer/cache source exists but its EVM component gate is still running.
 
 Next dependency order:
 
@@ -168,11 +174,14 @@ their separate verified integration checkpoints. Native ABI constant generation 
 committed in `1e6227d`. Live Anvil port 18579 is retained for
 production/browser verification; current failed browser instance cannot reinitialize.
 
-Current compile status: the first new PZoneSetup gate failed during code generation,
-before any EVM assertions. Optimized IR identifies duplicate map-lump scalar
-lifetimes across the line loader. A source-order-preserving SetupWork memory
-scratch amendment is under the serialized compiler gate. Four-profile native
-geometry/setup evidence passed independently and is committed in `ba53a4b`.
+Current compile status: setup attempts 80103/80877/31289 failed during code
+generation before assertions, at the same R_LoadMap line-loop lifetime pressure.
+Ineffective P_Setup scratch/call-boundary experiments were removed. An approved
+call-local MapLineWork in R_Data now retains line/vertex aliases and offset,
+preserving every read/write/order. The serialized 12089 gate compiles backing,
+whole setup and inherited resource/draw/sprite/wall/plane tests. A test-only hex
+literal inference error was fixed before this run; no assertions were skipped.
+Four-profile native geometry/setup evidence passed and is committed in `ba53a4b`.
 Do not count this native proof or a successful IR export as EVM verification.
 
 At each verified integration checkpoint, update and commit this ledger with exact
