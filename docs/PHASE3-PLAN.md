@@ -7,7 +7,9 @@ does not count as accepted Phase 3 implementation.
 
 ## Recovery checkpoint
 
-Last reviewed checkpoint: `b2bb3b1`, original monster-action module. **Phase 3 is
+Last committed implementation checkpoint: `38a4d0e`, original player/actor lifecycle.
+The world, bbox and persistence proofs below are verified but await their separate
+integration commits. **Phase 3 is
 active; M2 and M3 are unaccepted.** The production `Doom.sol` still exposes the
 accepted Phase 2 static renderer. Gameplay modules have substantial isolated
 proofs, but they are not yet connected to production transactions, storage or
@@ -29,11 +31,13 @@ mock-neighbor module proof does not imply whole-engine verification.
 | Weapons, pickups and damage | Complete original p_pspr/p_inter functions | Real PSprite action transitions tested; line attacks/missiles/neighbor effects mocked in isolated proof | 72 weapon scenarios/11,520 tics and 6,025 interaction cases; 24 Forge tests pass. `e7d58a8`. [Combat report](PHASE3-COMBAT.md). |
 | Live thinkers/ticker | All six active original functions implemented | List/ticker callbacks exercised; actual world and storage pending | Eight original scheduling snapshots, same-tic spawn/stasis/lazy removal/pause order; TickTest passes. `ba901c2`. [Tick report](PHASE3-TICK.md). |
 | Monster AI/actions | All 64 active original definitions implemented | Ordered neighboring calls tested with explicit doubles; real EVM species/world effects pending | 1,137 native cases and 64 Forge tests pass. `b2bb3b1`. [AI matrix](PHASE3-AI.md). |
-| Player movement, actor lifecycle and G_Game lifecycle | Source written; uncommitted | Original spatial helpers and frozen hooks wired in module tests | Native oracle reports 772 cases; Solidity verification requested, not yet accepted. Owned by `/root/p3_reference_audit`; [working report](PHASE3-LIFECYCLE.md). |
-| Doors, floors, ceilings, platforms and lights | All five original source modules written; uncommitted | Paired with P_Spec helper APIs; engine dispatcher draft exists | Native 357 scenarios/78,699 snapshots; Solidity tests prepared but pending. `/root/p3_input` owns verification. Original uninitialized-field and manual-door/plat reinterpretation domains under audit. |
-| Sector specials, switches, teleport and animations | All 23 active functions written; uncommitted | World-module dispatch written; persistent translations agreed | Native 416 helper cases; whole special-dispatch proof and Solidity verification pending. `/root/p3_interface_audit` owns verification. |
+| Player movement, actor lifecycle and G_Game lifecycle | All 24 active definitions complete | Original spatial helpers and frozen hooks wired in module tests; production pending | 784 native cases across O0/O2/ASan/allocation-fill profiles; 24 Forge tests pass, including corrected positive aged-respawn case. `38a4d0e`. [Lifecycle report](PHASE3-LIFECYCLE.md), [validation](../test/fixtures/phase3_lifecycle/validation.json). |
+| Doors, floors, ceilings, platforms and lights | All 33 active functions complete; verified files await commit | Paired with P_Spec APIs in module tests; production pending | 359 native scenarios/79,021 snapshots, 2,160 plane cases and measured LP64 mover casts; all 28 Forge tests pass. [World report](PHASE3-WORLD-ACTIONS.md), [validation](../test/fixtures/phase3_world/validation.json). Undefined domains remain explicit. |
+| Sector specials, switches, teleport and animations | All 23 active functions complete; verified files await commit | Real world-module dispatch tested on controlled maps; production pending | 416 helper cases plus 1,007 dispatch scenarios/4,048 paired snapshots; all 25 Forge tests pass. [Specials report](PHASE3-WORLD-SPECIALS.md), [validation](../test/fixtures/phase3_specials/validation.json). |
+| Original bounding-box helpers | Both functions complete; verified files await commit | Startup draft uses exact original else-if ordering | 521 streams/8,299 points match O0/O2/full sanitizers; MBBoxTest passes. [Validation](../test/fixtures/phase3_bbox/validation.json). Full startup pending. |
+| Gameplay persistence layout | Approved extensions implemented; verified files await commit | Real memory/storage/memory copy tested on synthetic nonempty actor/thinker/door state | GameStorageTest passes (9,959,477 test gas), including map/resource/scratch aliases, renderer caches and framebuffer. Authenticated full-level round trip and production cost remain pending. |
 | P_Setup gameplay startup | Draft implemented; uncommitted | Real BLOCKMAP/REJECT, sector grouping and THINGS order connected to gameplay; not exercised yet | Pending startup/native state proof. Integrator owns `src/doom/p_setup.sol`. Existing disk loader reused with explicit attribution. |
-| DoomGame state/action/render adapter | Draft implemented; uncommitted | All gameplay hooks and renderer projection written; no production caller yet | Pending compile, whole-tic comparison, persistent state round trips and pixel proof. Integrator owns `src/evm/DoomGame.sol`. |
+| DoomGame state/action/render adapter | Draft implemented; uncommitted | All gameplay hooks and renderer projection written; no production caller yet | Type-checks in module batch; full public-caller code generation, whole-tic comparison and pixel proof pending. Integrator owns `src/evm/DoomGame.sol`. |
 | Production Doom adapter and browser gameplay | Pending | Existing static engine remains baseline | Pending driver/sequence/tic/storage/frame/Canvas gates. |
 | Usage telemetry | Complete collector; active collection | Local Codex logs only, no engine dependency or services | 20 collector tests pass; historical Phase 0–2 totals remain stable. Phase 3 boundary `d47dd86`. Latest snapshots are ignored `artifacts/local/codex-usage/`. |
 
@@ -46,11 +50,16 @@ The executed mixed module batch was:
 It passed 22 tests in seven suites. Combat and AI have separate recorded passing
 commands. This is **not** a fresh complete inherited-gate run.
 
+Subsequent verified runs: 52 tests in the lifecycle/world batch (lifecycle 24),
+then all 55 tests in `WorldActionsTest|WorldSpecials_Test|MBBoxTest|GameStorageTest`
+(28/25/1/1). The strengthened nonempty `GameStorageTest` passed separately.
+These are module and synthetic-storage evidence, not production acceptance.
+
 ## Remaining work and current constraints
 
-1. Verify and incrementally commit lifecycle and world workstreams; preserve their
+1. Incrementally commit the verified world, bbox and persistence workstreams; preserve their
    original callback ordering, special-number coverage and undefined-domain audit.
-2. Compile and verify the new persistence interfaces. Original scratch globals,
+2. Verify authenticated full-level persistence. Original scratch globals,
    translation arrays, renderer wall/plane caches, fuzz/frame counters and screens[0]
    must survive transactions. Check aliases through a real storage round trip.
 3. Validate original E1M1 startup and wire production tick/render/driver/sequence
@@ -61,7 +70,7 @@ commands. This is **not** a fresh complete inherited-gate run.
 5. Measure production gas/memory and limits, verify transport/Canvas, audit the
    feature matrix, then run every inherited gate against frozen final sources.
 
-There is no external blocker. The current dependencies are pending module tests,
+There is no external blocker. The current dependencies are checkpoint commits,
 startup/storage integration and whole-engine comparisons. Previous test-only
 via-IR stack pressure and one-billion-gas batching failures were resolved with
 scratch contexts and smaller test bands without dropping cases or changing engine
@@ -110,8 +119,8 @@ source spans and reproducibility evidence.
 | Live thinkers | Append/remove/stasis and same-tic spawn order, native actor/state and RNG traces | Scheduling module verified; full-world/storage traces pending |
 | Weapons/shooting | All nine original weapon definitions/actions covered; ammo, refire, hitscan, projectiles and psprite traces | Module evidence verified; real projectile/damage/frame effects pending |
 | Monster AI | Real state actions, sight/noise, chase/attack and RNG; feature matrix for all original actor families | Module evidence/matrix verified; EVM world effects pending |
-| Damage/lifecycle | Armor/powers, pain/death, drops, missiles, radius damage, pickup and removal traces | Interaction module verified; lifecycle tests and integration pending |
-| Doors/interactions | Doors, floors, ceilings, platforms, switches, lights, teleport and sector damage; per-special coverage | Implemented; native unit evidence partly available; EVM proof pending |
+| Damage/lifecycle | Armor/powers, pain/death, drops, missiles, radius damage, pickup and removal traces | Interaction and lifecycle modules verified; integrated traces pending |
+| Doors/interactions | Doors, floors, ceilings, platforms, switches, lights, teleport and sector damage; per-special coverage | Native and EVM module/dispatch proofs verified; real-level persistence pending |
 | Gameplay rendering | Runtime sector/side/actor/psprite state reaches renderer; exact native frames | Adapter draft written; comparison pending |
 | Production transport | Authenticated resources, authorized driver, consecutive input sequence, WS/receipt/Canvas pixel readback | Pending |
 | Inherited gates | Phase 0, Phase 1 and complete Phase 2 verification commands against the frozen final source | Pending final run |
