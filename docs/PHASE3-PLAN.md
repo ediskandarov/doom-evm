@@ -450,3 +450,14 @@ The inherited forced build cleaned the ignored memory-clone artifact. Current
 MSIZE attempt stopped at missing-artifact preflight (no runtime measurements);
 rebuild only the separate clone, assert production artifact stays identical,
 then run both memory streams sequentially. Engine sources/settings unchanged.
+
+Final artifact memory checkpoint `ffb147e` PASS: isolated clone build44843
+(46.64s) preserves the production artifact hash; sequential runtime81374
+completes both streams. All three-way storage/fields/native Frames and paired
+clone gas checks pass. Literal clone high-water: init19,665,056B;
+no-render8,749,760–8,753,856B; liveFrames11,918,816–11,956,800B.
+[Current memory proof](../tools/reference/gameplay/production-release-memory-evidence.json).
+These are clone boundary measurements, not exact untouched-production peaks.
+All engine, transport, native and inherited gates are terminal PASS. No active
+process/compiler/agent work. Final requirement review, evidence/documentation
+reconciliation, usage snapshot and push remain; no acceptance mark yet.
