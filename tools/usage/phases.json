@@ -78,10 +78,20 @@
       "phase": "telemetry",
       "session_id": "01a11fdf-1d25-7201-abb8-1afdaaab6b9c",
       "start": "2026-10-09T13:30:39.695Z",
-      "end": null,
+      "end": "2026-10-09T14:10:28.000Z",
       "start_evidence": {
         "kind": "explicit_marker",
         "note": "Timestamp of explicit user telemetry request; recovered programmatically without exporting message text"
+      }
+    },
+    {
+      "phase": "phase3",
+      "session_id": "01a11fdf-1d25-7201-abb8-1afdaaab6b9c",
+      "start": "2026-10-09T14:10:28.000Z",
+      "end": null,
+      "start_evidence": {
+        "kind": "explicit_marker",
+        "note": "Explicit active Phase 3 goal created at Unix 1791555028; prior abandoned scaffolding remains outside this phase"
       }
     }
   ],
