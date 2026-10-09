@@ -16,7 +16,10 @@ fuzz seed 0x44. [Format evidence](../artifacts/phase3/format-checkpoint.json).
 Compiled engine bytecode changed beyond metadata, despite unchanged compiler
 settings. Do not relabel prior kernel/production/browser/memory receipts current;
 Fresh production 84848 passes all 129 tics, six native Frames and thirteen
-whole-storage rollback guards. Full kernel 60930 remains running; Chrome/repeat/
+whole-storage rollback guards. Checkpoint `f0bce73` [fresh production evidence](../tools/reference/gameplay/production-final-evidence.json)
+records current init 1,621,885,757 gas and runtime 503,731 bytes; old receipts
+remain historical. [Native reconciliation](../tools/reference/gameplay/production-native-reconciliation.json)
+proves every original data file/Frame unchanged. Full kernel 60930 remains running; Chrome/repeat/
 clone memory and final inherited gates remain. No current bytecode-identity claim. The 388-function
 audit snapshot also needs refresh after the new evidence checkpoint.
 
