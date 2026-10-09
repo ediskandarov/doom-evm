@@ -15,6 +15,8 @@ Last native observation checkpoint: `5ffd10a`, original zone lifecycle/layout ev
 Last audit checkpoint: `6302955`, original definition/feature inventory.
 Last ABI checkpoint: `1e6227d`, generated native sizeof/offsetof constants;
 `python3 tools/zone/generate-layout.py --check` and standalone Forge build pass.
+Last browser component checkpoint: `9d1b567`, staged startup/Stop/reload lifecycle,
+37 isolated Node tests pass; actual staged EVM/browser integration remains pending.
 All completed module/kernel proofs below are committed. Production adapter and real gameplay browser tooling remain pending their separate checkpoint commits. **Phase 3 is
 active; M2 and M3 are unaccepted.** Committed production `Doom.sol` remains the
 accepted Phase 2 static renderer; its working-tree gameplay adapter is a draft.
@@ -33,7 +35,7 @@ mock-neighbor module proof does not imply whole-engine verification.
 |---|---|---|---|
 | Shared player/actor/thinker/world interfaces and heap | Base, persistence and native allocation extensions complete | All gameplay modules use stable IDs; native payload blocks now allocated/freed by heap/ticker, storage/resource aliases verified | `d793fd1`, `0960141`, `ab316f8`: all nine original payload sizes/tags, no embedded-thinker double allocation, lazy physical reuse with stable actor IDs; 21 focused tests pass. [Allocation checkpoint](../artifacts/phase3/zone-heap-checkpoint.json). Full native map/backing and production integration pending. |
 | Original state/action, actor, weapon tables and RNG | Complete | Imported by gameplay modules | Every field of 967 states/137 actor types/9 weapons and both RNG streams matches native; O0/O2/sanitizers. `f1081fd`. [Foundation checkpoint](../artifacts/phase3/foundation-checkpoint.json). |
-| Keyboard commands and browser sampler | Complete declared keyboard profile | Standalone helper/decoder and serialized browser lifecycle tested; real production browser connection pending | 41,007 original-C cases, 14 Forge tests, five browser tests. `0a7d839`; browser lifecycle `a67f435` adds a 29-test isolated gate. [Input checkpoint](../artifacts/phase3/input-checkpoint.json). |
+| Keyboard commands and browser sampler | Complete declared keyboard profile and optional staged startup | Helper/decoder and serialized browser lifecycle tested; real production keyboard path verifies 129 tics; Chrome rendering blocked at tic five | `0a7d839`: 41,007 original-C cases, 14 Forge tests, five browser tests. `a67f435`: 29 isolated lifecycle tests. `9d1b567`: 37 tests retain all prior cases and verify optional prepare/init, Stop and reload. [Staged evidence](../tools/transport/evidence/gameplay-staged-input.json). Actual staged browser/EVM gate pending. |
 | Original-C full gameplay/frame oracle | Complete eight reference scenarios | Ready as EVM comparison oracle; no EVM conformance claim | 2,205 original tics and 24 live frames match O0/O2/ASan and alternate allocation fill. `6af2ec2`. [Native checkpoint](../artifacts/phase3/native-reference-checkpoint.json). |
 | Collision, traversal and sight | All 40 active original functions implemented | Internal hooks and spatial links exercised with declared unit neighbors; actual gameplay integration pending | 4,310 geometry cases and 71 scenarios match C; three Forge tests pass. `be86b4b`; fresh call-local traversal amendment `659ee64` passes unchanged goldens and full public-probe code generation. [Collision report](PHASE3-COLLISION.md). |
 | Weapons, pickups and damage | Complete original p_pspr/p_inter functions | Real PSprite action transitions tested; line attacks/missiles/neighbor effects mocked in isolated proof | 72 weapon scenarios/11,520 tics and 6,025 interaction cases; 24 Forge tests pass. `e7d58a8`. [Combat report](PHASE3-COMBAT.md). |
@@ -127,6 +129,10 @@ Verified recovery checkpoints:
   aliases verified. Eight shared/startup tests and 13 inherited primitive/heap
   tests pass. [Bounded evidence](../artifacts/phase3/zone-heap-checkpoint.json).
   Tail fields are interface-only here; drawing still has its original strict guard.
+- `9d1b567`: capability-gated staged browser startup; 37 isolated Node tests pass,
+  including all prior 29 tests and eight preparation/Stop/reload cases. Both stages
+  require confirmation without a Frame or input sequence change. Root reran the
+  command and validated all 11 source bindings. This is component proof only.
 
 Next dependency order:
 
