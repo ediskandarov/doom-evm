@@ -8,14 +8,16 @@ does not count as accepted Phase 3 implementation.
 ## Recovery checkpoint
 
 Last implementation checkpoint: `2392f4a`, verified original zone allocator core.
-Last native observation checkpoint: `7fc2cab`, exact post-render state extension.
+Last native observation checkpoint: `5ffd10a`, original zone lifecycle/layout evidence;
+`7fc2cab` remains the exact post-render state extension.
 Last audit checkpoint: `6302955`, original definition/feature inventory.
 All completed module/kernel proofs below are committed. Production adapter and real gameplay browser tooling remain pending their separate checkpoint commits. **Phase 3 is
 active; M2 and M3 are unaccepted.** Committed production `Doom.sol` remains the
 accepted Phase 2 static renderer; its working-tree gameplay adapter is a draft.
-Gameplay modules have substantial isolated proofs and the full public test-probe
-graph now compiles, but production transactions and real browser gameplay remain
-unverified. Do not infer engine acceptance from completed module ports.
+The complete public test-probe verifies eight scenarios, 2,205 tics and 24 frames.
+The draft production adapter verifies 129 keyboard tics and six frames. Real
+Chrome gameplay currently fails at tic five; final acceptance remains pending.
+Do not infer engine acceptance from completed module ports or finite passing streams.
 
 `Implemented` means source exists; `integrated` means the stated consumer really
 uses it; `verified` names the actual scope of executed evidence. Native-only or
@@ -42,7 +44,7 @@ mock-neighbor module proof does not imply whole-engine verification.
 | DoomGame state/action/render adapter | Implemented and committed | All gameplay hooks and renderer projection written; compiled draft production caller and test probe | Type-checks in module batch; full public probe graph compiles; all eight startup states, 2,205 full logical tics, 24 exact 64,000-byte frames and eight final post-render stored snapshots pass. `b1c2735`: [comparison](../tools/reference/gameplay/COMPARISON.md), [validation](../test/fixtures/gameplay_evm/validation.json). Integrator owns `src/evm/DoomGame.sol`. |
 | Production Doom adapter and browser gameplay | Draft adapter implements startup and sequenced command/tic/frame paths; browser loop committed with isolated proof | Production artifact compiles; actual production keyboard/EVM/browser integration pending | `a67f435`: [browser checkpoint](../artifacts/phase3/browser-input-checkpoint.json). Browser 29 isolated tests pass; no real gameplay browser claim. Production compile and 129 keyboard tics/14 state fields/six exact frames/13 rejection-storage rollback checks pass. Static real Chrome/WS/receipt/Canvas gate passes after config-only repair. Gameplay Chrome passes four exact frames/14 fields then hits DrawBounds on tic five; diagnosis and final inherited gates pending. |
 | Full native/EVM gameplay comparison | Test-only public probe and runner implemented and committed | Ordinary deployment, all 1,755 authenticated resource runtimes checked; real original hooks and stored state | Idle 70 and movement 275 per-tic DSG1 states plus three full native frames each pass. Movement final persistence comparison exposed PRE/POST-render ML_MAPPED observer mismatch; exact native post-render observer is being added. Full corrected run passes all 2,205 tics/24 frames/eight exact final post-render stored snapshots; `b1c2735`: [retained evidence](../test/fixtures/gameplay_evm/evidence.json) and all 55 consumed source hashes verified. |
-| Native allocation/backing-memory adapter | Zone types/core committed; source-driven renderer startup replay compiles and awaits native proof | Not connected to production yet; existing sources remain frozen during component proofs | Diagnostic C/EVM inputs match exactly. Native PLAYW0 sample lies at next LP64 zone block ID offset 20 and reads byte 17; four profiles confirm. `2392f4a`: 1,624 exact native allocation snapshots, 15 native fatal probes and two Forge tests pass. [Zone proof](PHASE3-ZONE.md). Full native allocation/lifecycle and renderer replay proof remain underway. No clamp, padding, special-lump pixel lookup or guard removal. |
+| Native allocation/backing-memory adapter | Zone types/core committed; source-driven startup replay component verified, awaiting separate commit | Core used by startup component; map/runtime allocation and renderer backing remain unintegrated | `2392f4a`: 1,624 exact snapshots, 15 fatal probes, two Forge tests. `5ffd10a`: nine native contexts/four profiles, 83,054 events, 84 snapshots and 63,975 sprite-adjacency checks; all prior native outputs unchanged. [Lifecycle validation](../test/fixtures/phase3_zone_lifecycle/validation.json). Startup proof: 6,498 calls/4,913 headers/4,126 owners, three Forge tests; pending component checkpoint. No runtime allocation tape, clamp, invented padding or guard removal. |
 | Resource initializer integration amendment | Complete and committed | Complete public test-probe graph compiles | `abfb38c`: all 20 inherited RData tests pass, including all native lookup/sprite/map/composite fields. [Checkpoint](../artifacts/phase3/resource-init-checkpoint.json). Final inherited gate remains pending. |
 | Original feature/function audit | 287 original definitions inventoried with spans/body hashes and port mappings | Audit-time source snapshot; refresh on final freeze | `6302955`: [feature matrix](PHASE3-FEATURE-MATRIX.md), [JSON inventory](../artifacts/phase3/feature-matrix.json). Evidence scope and unsupported/undefined domains explicit; no new runtime acceptance claim. |
 | Usage telemetry | Complete collector; active collection | Local Codex logs only, no engine dependency or services | 20 collector tests pass; historical Phase 0–2 totals remain stable. Phase 3 boundary `d47dd86`. Latest snapshots are ignored `artifacts/local/codex-usage/`. |
@@ -123,7 +125,7 @@ and lifecycle observations. The EVM must compute layout from original algorithms
 and authenticated resources; native allocation tapes remain test evidence only.
 Unknown pointer/padding bytes cannot silently become pixels. No compiler limits
 will be raised to pass the profile. The zone core is committed in `2392f4a` after native/Forge conformance;
-renderer startup replay compiles but is not yet verified. The production adapter
+renderer startup replay is now independently verified but not yet connected to production. The production adapter
 stays uncommitted. Further dependencies are repeated streams, actual memory
 measurements, final source audit and frozen inherited gates. The full probe compiles after a test-only immutable
 scenario reread, a verified resource patch field-assignment amendment (20 RData tests pass,
