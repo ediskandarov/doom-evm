@@ -15,7 +15,7 @@
 
 Official release sources: [Foundry v1.8.5](https://github.com/foundry-rs/foundry/releases/tag/v1.8.5), [Solidity v0.8.37](https://github.com/argotorg/solidity/releases/tag/v0.8.37). `python3 scripts/check-toolchain.py` verifies local tool versions/commits, upstream SHA, Node, and effective Forge compiler settings. The lock also provides Linux binary digests; Linux execution has not been verified in this run.
 
-Use `.toolchain/bin/forge` directly or `export PATH="$PWD/.toolchain/bin:$PATH"` from the repository root. Bare global `forge` may still refer to the previous installation. `foundry.toml` pins the project-local compiler path; its exact version is guarded by Solidity pragmas and the check script.
+Use `source scripts/env.sh` from the repository root to select the project-local tools and shared gas policy, or `.toolchain/bin/forge` directly with its configured default. Bare global `forge` may still refer to the previous installation. `foundry.toml` pins the project-local compiler path; its exact version is guarded by Solidity pragmas and the check script.
 
 ## Working Anvil startup
 
@@ -32,23 +32,23 @@ The launcher binds localhost and starts the pinned binary with:
 --disable-code-size-limit --disable-block-gas-limit --memory-limit 1073741824
 ```
 
-Then it calls `anvil_setBlockGasLimit("0x3b9aca00")`, mines one empty initialization block with `evm_mine`, and verifies the resulting header reports 1,000,000,000 gas. It waits for the owned child, forwards signals, and cleans up on error. It refuses to attach to an already occupied port.
+Then it loads `execution-budget.json` (default **10,000,000,000 gas**), applies `DOOM_GAS_LIMIT` or `FOUNDRY_GAS_LIMIT` overrides, calls `anvil_setBlockGasLimit` with the selected value (default `0x2540be400`), mines one empty initialization block with `evm_mine`, and verifies that header budget. It waits for the owned child, forwards signals, and cleans up on error. It refuses to attach to an already occupied port.
 
 **Measured correction to the design's illustrative command:** Anvil 1.8.5 rejects `--gas-limit` together with `--disable-block-gas-limit`. Furthermore, setting the gas limit by RPC affects the next mined block, not the already-existing genesis header. This is why the launcher uses an RPC and initialization block. The transport benchmark verifies the limit in its deployment block.
 
 ## Executable limit checks
 
-`python3 scripts/probe-limits.py` starts separate temporary control and relaxed nodes, uses ordinary EVM initcode/runtime bytecode, records results in `artifacts/local/runtime-limits.json`, and stops each node. The retained run is `artifacts/phase0/runtime-limits.json`.
+`python3 scripts/probe-limits.py` starts separate temporary control and relaxed nodes, uses ordinary EVM initcode/runtime bytecode, records results in `artifacts/local/runtime-limits.json`, and stops each node. The historical one-billion run is retained unchanged in `artifacts/phase0/runtime-limits.json`; current 10-billion launcher/probe evidence is [separate](artifacts/phase3/execution-python-checkpoint.json).
 
 | Probe | Control | Relaxed configuration |
 |---|---|---|
 | 25,000-byte runtime, 25,014-byte initcode | Deployment receipt fails | Normal deployment succeeds; on-chain code length checked |
 | 50,000-byte runtime, 50,014-byte initcode | RPC rejects max initcode size | Normal deployment succeeds; on-chain code length checked |
 | Touch memory at 65,536 and return word 42 | 1 KiB control fails `MemoryLimitOOG` | 1 GiB configured limit permits it |
-| Self-transfer gas allowance 1,000,000,001 vs block budget 1e9 | RPC rejects allowance | RPC returns hash, but no receipt within about 2.5 seconds; subsequent transaction lookup is null |
-| Small `eth_call` with allowance 1,000,000,001 | Returns word 42 with ordinary memory setting | Returns word 42 |
+| Self-transfer allowance selected budget + 1 (historically 1,000,000,001) | RPC rejects allowance | RPC returns hash, but no receipt within about 2.5 seconds; subsequent transaction lookup is null |
+| Small `eth_call` with allowance selected budget + 1 | Returns word 42 with ordinary memory setting | Returns word 42 |
 
-The gas allowance probe does not consume 1e9 gas. It shows that disabling admission checks does not guarantee successful mining. The fixture transactions request at most the configured block budget. No claim of unlimited execution is made. A 1 GiB memory setting is not a measurement of host memory capacity, and the probe deliberately allocates only about 64 KiB. Large engine deployments and real BSP recursion must still be measured later.
+The gas allowance probe does not consume the selected budget. It shows that disabling admission checks does not guarantee successful mining. The fixture transactions request at most the configured block budget. No claim of unlimited execution is made. A 1 GiB memory setting is not a measurement of host memory capacity, and the probe deliberately allocates only about 64 KiB. Large engine deployments and real BSP recursion must still be measured later.
 
 No `anvil_setCode`, special precompile, EVM fork, or native renderer is used. In this exact pinned Anvil version, disabling the code-size limit also allowed the tested initcode above 49,152 bytes; do not assume other versions behave the same way.
 
@@ -63,3 +63,26 @@ Foundry may print informational AST notices for header-only struct modules and c
 `python3 scripts/verify-phase1.py` runs the complete foundation gate, including every Phase 0 check. The C baseline flags are `-std=c99 -O2 -fwrapv -fno-strict-aliasing -ffp-contract=off -fno-fast-math`; the O0 comparison changes only optimization, while the sanitizer build removes `-fwrapv` and adds `-fsanitize=undefined,float-cast-overflow -fno-sanitize-recover=all`. Compiler/target drift fails explicitly. See `tools/reference/README.md` for original source extraction and undefined-domain audits. Node 24 native type stripping executes the TypeScript WAD tools without npm dependencies.
 
 Additional cast warnings in numerical tests concern explicit narrowing to the frozen ABI; production narrowing is documented and compared with the C oracle. The placement fixture may trigger an event-after-external-call lint at SHA-256: its only call is the standard SHA-256 precompile, with no arbitrary callback. Memory-safe table loads and EXTCODECOPY writes are bounded and documented beside their assembly.
+
+## Configurable local gameplay execution budget
+
+```sh
+source scripts/env.sh
+DOOM_GAS_LIMIT=20000000000 ./scripts/start-anvil.sh
+DOOM_GAS_LIMIT=20000000000 python3 scripts/verify-phase2.py
+# Direct Forge overrides use its native environment variable:
+FOUNDRY_GAS_LIMIT=20000000000 .toolchain/bin/forge test
+```
+
+The shared JSON default is 10 billion. Node/Python tools normalize child
+environments to both variables; the shell setup does the same. A direct Forge
+command reads `foundry.toml` or `FOUNDRY_GAS_LIMIT`; source `scripts/env.sh` after
+changing the JSON policy to propagate it to direct commands. Explicit browser
+configs carry the selected budget, with a current-block fallback for old configs.
+
+The local budget is independent of economic gas efficiency. Original production
+resource preparation and level startup run in one transaction, measured at
+1,621,868,997 gas. Historical one-billion measurements remain unchanged. Solc
+0.8.37, viaIR, optimizer 200 and Cancun, the code-size policy and 1 GiB memory
+limit remain unchanged. Stack/code-generation errors, invalid memory access and
+unknown physical backing bytes remain separate failure categories.

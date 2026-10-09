@@ -1,6 +1,6 @@
 # Porting map
 
-Baseline: `original/DOOM/linuxdoom-1.10`, upstream `a77dfb96cb91780ca334d0d4cfd86957558007e0`. The complete static E1M1 renderer is implemented and matches all eight original-C world-view frames byte for byte. Phase 2 is accepted: ordinary deployment, Frame delivery, browser verification and every inherited regression gate pass. Gameplay remains Phase 3; see the [acceptance report](docs/PHASE2-REPORT.md).
+Baseline: `original/DOOM/linuxdoom-1.10`, upstream `a77dfb96cb91780ca334d0d4cfd86957558007e0`. The complete static E1M1 renderer is implemented and matches all eight original-C world-view frames byte for byte. Phase 2 is accepted: ordinary deployment, Frame delivery, browser verification and every inherited regression gate pass. Phase 3 gameplay is integrated with completed native/kernel/production/browser proofs; M2/M3 await final inherited gates. See the [Phase 3 ledger](docs/PHASE3-PLAN.md) and [source/feature audit](docs/PHASE3-FEATURE-MATRIX.md); historical Phase 2 acceptance remains [separate](docs/PHASE2-REPORT.md).
 
 | Upstream source | Solidity destination | Status and deliberate adaptation |
 |---|---|---|
@@ -22,8 +22,10 @@ Baseline: `original/DOOM/linuxdoom-1.10`, upstream `a77dfb96cb91780ca334d0d4cfd8
 | P_LoadThings, P_SpawnMapThing/P_SpawnMobj, P_SetThingPosition rendering subset | `src/doom/p_setup_static.sol` | Declared medium-skill single-player static adapter: 209 E1M1 things, original flags/frames/placement and reverse sector insertion. No gameplay/collision/sound/actions. |
 | `r_sky.c:R_InitSkyMap`, startup selection | `src/evm/DoomScene.sol` | E1M1 SKY1/F_SKY1 and original 100*FRACUNIT midpoint; camera derived from raw THINGS and EVM BSP lookup. Explicit orchestration adapter. |
 | Original cross-module calls | `r_render_hooks.sol`, `src/evm/DoomRenderer.sol` | Genuine setup → clears → BSP/walls/collection → planes → masked walls/sprites/psprites; internal memory callbacks only. |
-| `p_*.c`, other gameplay modules | Corresponding `src/doom/p_*.sol` etc. | Not started; M2/M3. |
-| No C counterpart | `src/evm/Doom.sol` | Concrete authenticated static renderer; driver/consecutive-input checks, retained fuzz position and one indexed8 Frame event. Context setup is recreated in memory per transaction; no nonzero-button gameplay yet. |
+| Active `p_*.c` gameplay | Corresponding `src/doom/p_*.sol` | All 238 active definitions mapped (231 named, seven delegated disk loaders); collision, lifecycle, thinkers, weapons, AI and world specials integrated. [Function/domain audit](docs/PHASE3-FEATURE-MATRIX.md) separates module and full-world coverage. |
+| `g_game.c`, `info.c`, `m_random.c`, `m_bbox.c` | `g_game.sol`, `p_info.sol`, `m_random.sol`, `m_bbox.sol` | Original keyboard/reborn/finish/exit helpers, 967 states/137 actors/nine weapons, RNG and bbox. Full gameflow, demos and save/archive remain absent. |
+| `z_zone.c`, semantic WAD cache | `z_zone.sol`, `w_zone_cache.sol`, `z_zone_backing.sol`, `DoomZoneStartup.sol` | Source-driven physical allocation ledger and known-byte backing, measured LP64 adapters; no native runtime tape or invented pointer/padding bytes. [Zone](docs/PHASE3-ZONE.md), [backing](docs/PHASE3-BACKING-INTEGRATION.md). |
+| No C counterpart | `src/evm/Doom.sol` | Atomic authenticated gameplay startup, original keyboard/ticker/render hooks, persistent world and one indexed8 Frame per successful rendered command; no-render step supported. Pre-start static rendering retained. Adapter DoomGame wires original functions; no native state/pixels injected. |
 | No C counterpart | `src/evm/WadResources.sol`, `ResourceStore.sol` | Directory and every ordered immutable runtime authenticated before storage writes. [Ordinary CREATE and corruption proofs](docs/PHASE2-SOURCE.md). |
 | No C counterpart | `src/support/ResourcePlacement.sol` | Static WAD upload/read comparison: storage bytes versus immutable STOP-prefixed code. Ordinary CREATE, bounded memory-safe EXTCODECOPY. Experiment, not r_data adapter. |
 | No C counterpart | `src/evm/FrameProtocol.sol`, `ResourceTypes.sol` | EVM transport/resource identity adapters. |
@@ -43,8 +45,8 @@ Module reports identify the pinned source, mapped functions, numeric/algorithmic
 | Authenticated full WAD source | passed | [Source report](docs/PHASE2-SOURCE.md), every runtime/corruption check and actual production deployment | Immutable code/resource adapter | None |
 | BSP walls render | passed | [Wall report](docs/PHASE2-SEGS.md), eight native-matching ordinary calls and wall-only Frame receipt | Intermediate wall-only scope | None |
 | M1 full static frame | passed | Eight bytewise full-frame comparisons, production Frame/WS/Canvas, 196 tests and all prior gates; [report](docs/PHASE2-REPORT.md) | Static full-screen world view | None for declared static scope |
-| M2 movement | not started | — | — | M1 |
-| M3 basic gameplay | not started | — | — | M2 |
+| M2 movement | in progress | Atomic nine-scenario kernel, repeated 129-tic production and real Chrome six-frame proof; [ledger](docs/PHASE3-PLAN.md) | Fixed E1M1 single-player profile; complete source/domain matrix | Final inherited gates |
+| M3 basic gameplay | in progress | Integrated combat/AI/damage/door/projectile state/frame proofs; all-action controlled module proofs | Full DOOM/gameflow is not claimed | Final inherited gates and integrator acceptance |
 
 The full-frame target is the pinned Freedoom 0.13.0 E1M1 player start, stationary floor+41 camera clamped to ceiling−4, medium-skill single-player spawn states, tic zero, high detail and 320×200. Eight ANG45 headings match native pixels. Floors, ceilings, sky, walls, masked textures and world sprites are included. Weapon/HUD overlays are inactive in this scene; active psprite algorithms have separate original-C pixel proofs. Static equivalence is not a gameplay or FPS claim.
 
