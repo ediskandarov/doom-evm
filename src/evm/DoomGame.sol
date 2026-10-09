@@ -37,6 +37,9 @@ import {P_Plats} from "../doom/p_plats.sol";
 import {P_Lights} from "../doom/p_lights.sol";
 import {G_Game} from "../doom/g_game.sol";
 import {DoomRenderer} from "./DoomRenderer.sol";
+import {DoomZoneStartup} from "./DoomZoneStartup.sol";
+import {ZoneState} from "../doom/z_zone_types.sol";
+import {Z_Zone} from "../doom/z_zone.sol";
 
 /// @notice Integrator adapter for original gameplay, persistent globals and renderer projection.
 /// @dev No world decisions or pixels are accepted from a host. Hooks are internal calls only.
@@ -90,6 +93,19 @@ library DoomGame {
         c.path = c.state.path;
         c.resources.texturetranslation = c.state.texturetranslation;
         c.resources.flattranslation = c.state.flattranslation;
+        c.resources.nativeZone = c.state.nativeZone;
+    }
+
+    /// @dev Original R_Init/R_InitSprites allocation phase precedes G_InitNew.
+    /// No gameplay state, RNG, command, tic or frame is consumed by preparation.
+    function prepareZone(ResourceView memory source) internal view returns (ZoneState memory zone) {
+        RenderContext memory renderer;
+        renderer.resources = R_Data.R_InitDataLazy(source);
+        R_Things.R_InitSprites(renderer, Info.load().spriteNames);
+        zone = Z_Zone.Z_Init(
+            64 * 1024 * 1024, uint32(source.lumps.length + renderer.resources.textures.length)
+        );
+        DoomZoneStartup.replay(zone, renderer.resources, renderer.sprite.definitions);
     }
 
     /// @dev Original G_InitNew profile: retail E1M1, medium skill, one player, deterministic seed.
@@ -98,7 +114,17 @@ library DoomGame {
         view
         returns (GameContext memory c)
     {
+        ZoneState memory disabled;
+        return initializeWithZone(source, nomonsters, disabled);
+    }
+
+    function initializeWithZone(ResourceView memory source, bool nomonsters, ZoneState memory zone)
+        internal
+        view
+        returns (GameContext memory c)
+    {
         c.resources = R_Data.R_InitDataLazy(source);
+        c.state.nativeZone = zone;
         c.definitions = P_Info.load();
         c.state.gameskill = 2;
         c.state.gamemode = 3;

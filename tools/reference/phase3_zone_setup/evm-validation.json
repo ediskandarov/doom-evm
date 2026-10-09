@@ -1,0 +1,63 @@
+{
+  "executedCommand": ".toolchain/bin/forge test --match-contract PZoneSetupTest -vv > artifacts/local/zone-setup-forge.log 2>&1",
+  "session": 73296,
+  "exitCode": 0,
+  "testsPassed": 3,
+  "testsFailed": 0,
+  "testsSkipped": 0,
+  "gasLimit": 1000000000,
+  "tests": [
+    {
+      "name": "testActualSetupGeometryFunctionsMatchNativeHeaders",
+      "gas": 841226923,
+      "scope": "Actual setup geometry calls; all normalized pre-THINGS headers/owners and all9 typed allocation slots."
+    },
+    {
+      "name": "testOriginalGeometryOperationOrderAndHeaders",
+      "gas": 756455921,
+      "scope": "Same source-derived recipe,25 outer operations and rolling digest, all normalized geometry headers/owners."
+    },
+    {
+      "name": "testWholeOriginalSetupWithRealSpawnHooksMatchesNativeHeaders",
+      "gas": 921597231,
+      "scope": "Actual DoomGame initializer and real original spawn hooks, full normalized setup headers/owners,210 actors/3 flashes/6 strobes."
+    }
+  ],
+  "nativeManifestSha256": "6c9f225e58606f629585f6840a9079122852e657ea516e29068cbba6f6d33f5e",
+  "sourceHashes": {
+    "src/doom/p_setup.sol": "9498e1298bf4e53ccedc484a50d4c7f9f85315f6cb700719d474b721e382243b",
+    "src/doom/p_zone_setup.sol": "e0308bd1197fd84a01eb1ee208be73c711851d6b0bc30be1d07a7c61b18b223d",
+    "test/unit/p_zone_setup.t.sol": "ce39206f4af77fb9779864d9c3606d3e3885bc131771123e802283ce0b3f98b1",
+    "src/doom/r_data.sol": "5b404d561f8bce538e8a8221b4f36d62c9b9826fc833307640d96fcbfdca2d0a",
+    "src/doom/z_zone_backing.sol": "902ea03bc32af6b7443461ff64d21e780d9a0ef6c6bbe2dd1262216bfc37a3f8",
+    "src/doom/w_zone_cache.sol": "03c07404765de9620b3d1ff15727809cdad911c8a78d822019b63500fa5018c2",
+    "src/doom/z_zone.sol": "47fe4cd4ce09d37d21d9d3cedd349004c8e3a1941f939a1ddbc5ec2e1d67b1ca",
+    "src/doom/p_heap.sol": "5aee980933971a0eba6e221191e736619f4cb73148c9973c3f578408163c7b4a",
+    "src/doom/p_tick.sol": "1993dd0c94853dabc4db554dfa0ca04375cef0a22075400ba0e7b56b525022ab",
+    "src/doom/p_game_state.sol": "0f9d60aae9424cad17c614d4fcc93c9eb6fe8a43c7bce070d2460fcf2c34f649",
+    "src/evm/DoomGame.sol": "a194b00ce5133b9a9983dcfb72003d32a02dfddedf70ef9ee861b3f0fba4f1ba",
+    "src/evm/DoomZoneStartup.sol": "2d178494456a7ae3c730310f257ce2aa635d37d18c90cac039cf002cdb3f50dc",
+    "src/doom/native_zone_layout.sol": "118b2d17165826fb0857d9cb296e2214db2a28917769299a82e70d0c0790f6e8"
+  },
+  "limitations": [
+    "Component test uses pinned resource chunk etch adapter; does not claim ordinary authenticated deployment.",
+    "No runtime allocation tape/native gameplay or pixel input.",
+    "No browser or M2/M3 acceptance claimed."
+  ],
+  "priorFailures": [
+    {
+      "sessions": [
+        80103,
+        80877,
+        31289
+      ],
+      "kind": "codegen only; no tests executed",
+      "site": "Inlined R_Data.R_LoadMap line-loop locals held across setup lump lifetime."
+    },
+    {
+      "session": 6162,
+      "kind": "Full real-spawn test MemoryOOG at999978936gas; geometry2PASS.",
+      "remedy": "Test-only duplicate resource parse replaced with one actual DoomGame.initializeWithZone call; cap/assertions unchanged."
+    }
+  ]
+}

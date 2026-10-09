@@ -24,6 +24,7 @@ import {P_Mobj} from "./p_mobj.sol";
 import {P_Spec} from "./p_spec.sol";
 import {P_Switch} from "./p_switch.sol";
 import {M_BBox} from "./m_bbox.sol";
+import {P_Zone_Setup} from "./p_zone_setup.sol";
 
 /// @custom:source linuxdoom-1.10/p_setup.c at a77dfb96cb91780ca334d0d4cfd86957558007e0
 /// @dev Existing R_Data.R_LoadMap owns the exact original disk-loader adaptations.
@@ -55,6 +56,7 @@ library P_Setup {
         for (uint256 i; i < blocks; ++i) {
             c.state.blockmap.heads[i] = GameConst.NULL;
         }
+        P_Zone_Setup.blockmap(c, lump);
     }
 
     /// @dev Original P_LoadSectors fields absent from the renderer's Sector are loaded here.
@@ -82,13 +84,17 @@ library P_Setup {
             c.map.subsectors[i].sector = c.map.sides[c.map.segs[c.map.subsectors[i].firstline].sidedef].sector;
         }
         uint32[] memory counts = new uint32[](c.map.sectors.length);
+        uint256 references;
         for (uint256 i; i < c.map.lines.length; ++i) {
             Line memory line = c.map.lines[i];
             ++counts[line.frontsector];
+            ++references;
             if (line.backsector != GameConst.NULL && line.backsector != line.frontsector) {
                 ++counts[line.backsector];
+                ++references;
             }
         }
+        P_Zone_Setup.groupLines(c, references);
         for (uint32 i; i < c.state.sectors.length; ++i) {
             GameSector memory sector = c.state.sectors[i];
             sector.lines = new uint32[](counts[i]);
@@ -170,7 +176,8 @@ library P_Setup {
             c.state.players[i].itemcount = 0;
         }
         c.state.players[uint32(c.state.consoleplayer)].viewz = 1;
-        // Z_FreeTags for the level becomes fresh pools; inventory/player globals are retained.
+        P_Zone_Setup.begin(c);
+        // Fresh logical pools retain inventory/player globals; physical FreeTags preserves caches.
         c.state.mobjs = new Mobj[](8);
         c.state.mobjCount = 0;
         c.state.doors = new Door[](0);
@@ -196,11 +203,15 @@ library P_Setup {
         P_LoadBlockMap(c, lump + 10); // ML_BLOCKMAP
         c.map = R_Data.R_LoadMap(c.resources, name);
         c.state.map = c.map;
+        P_Zone_Setup.geometry(c, lump);
         P_LoadSectorRuntime(c, lump + 8); // ML_SECTORS
         c.state.rejectmatrix = R_Data.W_CacheLumpNum(c.resources.source, lump + 9);
+        P_Zone_Setup.reject(c, lump + 9);
         P_GroupLines(c);
         c.state.deathmatchStartCount = 0;
+        uint32 thingsBlock = P_Zone_Setup.things(c, lump + 1);
         P_LoadThings(c);
+        P_Zone_Setup.freeThings(c, thingsBlock);
         c.state.iquehead = 0;
         c.state.iquetail = 0;
         c.hooks.spawnSpecials(c);
