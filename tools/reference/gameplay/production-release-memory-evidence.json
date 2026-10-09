@@ -1,0 +1,588 @@
+{
+  "schemaVersion": 1,
+  "kind": "release-artifact-engine-boundary-memory",
+  "pass": true,
+  "reports": [
+    {
+      "path": "artifacts/local/gameplay-production-release-memory.json",
+      "sha256": "140d2c1074bf98ffed6631e0f8d70254fa9c1efcf5e3f43d881bd3ea03f72d61",
+      "executedTics": 6,
+      "nativeStreamTics": 6,
+      "completeNativeStream": true,
+      "deployments": [
+        {
+          "kind": "ordinary",
+          "address": "0x6cd18d28e4843d6f7795208d3774fb43588b2798",
+          "gas": 249646689,
+          "transactionHash": "0x81cfb033fefeed8be9abd215e34d0f10128c1a8a24dd21e9c98521ef9ab3305b"
+        },
+        {
+          "kind": "marker-gas",
+          "address": "0xf6d7708067a3156e90eb39caa57e1460d4ea61a3",
+          "gas": 249960478,
+          "transactionHash": "0x4e4f1d3e0e4c4a0906a36568bfb2aba6603a84853bfd028239a9bf1da9772f39"
+        },
+        {
+          "kind": "marker-msize",
+          "address": "0x034bbba4c5cdfa77674e08944330ed197d34398d",
+          "gas": 249960478,
+          "transactionHash": "0xfb5af44c9150e28dfd246dbf3ae99bcd38c4157155115d0c09a3b4d420b3a01c"
+        }
+      ],
+      "boundaries": [
+        {
+          "method": "renderFrame()",
+          "stage": 5,
+          "tic": 0,
+          "highWaterBytes": 8841664,
+          "ordinaryGas": 579266533,
+          "cloneGas": 579254343,
+          "transactionHash": "0xc4ff3bb62af174f89cfdfeedabba641e47265defe210a6eb02469d2099c28f03"
+        },
+        {
+          "method": "initializeGame()",
+          "stage": 2,
+          "tic": 0,
+          "highWaterBytes": 19665056,
+          "ordinaryGas": 1621885757,
+          "cloneGas": 1621872378,
+          "transactionHash": "0x7da6168730ac52ffc9c6be62669087a29ff01bc59e02b8ffdbcbde0d45c80d56"
+        },
+        {
+          "method": "stepAndRender(uint32,uint32)",
+          "stage": 4,
+          "tic": 1,
+          "highWaterBytes": 11956800,
+          "ordinaryGas": 781684253,
+          "cloneGas": 781681734,
+          "transactionHash": "0xe3d0d817976a1b473ceb85c79d57c574a85a17e70aafa7c8aa040d03f0a9cd6e"
+        },
+        {
+          "method": "stepAndRender(uint32,uint32)",
+          "stage": 4,
+          "tic": 2,
+          "highWaterBytes": 11938688,
+          "ordinaryGas": 744075606,
+          "cloneGas": 744073087,
+          "transactionHash": "0xcb6053efffbe7b73fcdae4b6afce84961b357c6191e563903a5349e6f36c2d92"
+        },
+        {
+          "method": "stepAndRender(uint32,uint32)",
+          "stage": 4,
+          "tic": 3,
+          "highWaterBytes": 11931584,
+          "ordinaryGas": 743445099,
+          "cloneGas": 743442580,
+          "transactionHash": "0x15347d376ec561077e82787f43a6b4e4828610ca8066c10ee4aaef35975d8ab4"
+        },
+        {
+          "method": "stepAndRender(uint32,uint32)",
+          "stage": 4,
+          "tic": 4,
+          "highWaterBytes": 11918816,
+          "ordinaryGas": 743210790,
+          "cloneGas": 743208271,
+          "transactionHash": "0xa573b5dc88bb2fa31777170b6a1985e4645f7d28022ae6299a8d111fadf47c1c"
+        },
+        {
+          "method": "stepAndRender(uint32,uint32)",
+          "stage": 4,
+          "tic": 5,
+          "highWaterBytes": 11919424,
+          "ordinaryGas": 742033281,
+          "cloneGas": 742030762,
+          "transactionHash": "0x3af4beed391439fa6e32937eba1e62d0371b4d2aa6ef5fce3e7d3919c95c1789"
+        },
+        {
+          "method": "stepAndRender(uint32,uint32)",
+          "stage": 4,
+          "tic": 6,
+          "highWaterBytes": 11937632,
+          "ordinaryGas": 743496230,
+          "cloneGas": 743493711,
+          "transactionHash": "0xc276b77655f3e66afa63696275a6b97fea3e8f53e2ff5287047b0ee317df8a78"
+        }
+      ],
+      "comparisons": [
+        {
+          "method": "renderFrame()",
+          "tic": 0,
+          "allStorageRootsEqual": true,
+          "allExportedStateEqual": true,
+          "frameCount": 1,
+          "cloneGasEqual": true,
+          "nativeStatusCameraExact": false
+        },
+        {
+          "method": "initializeGame()",
+          "tic": 0,
+          "allStorageRootsEqual": true,
+          "allExportedStateEqual": true,
+          "frameCount": 0,
+          "cloneGasEqual": true,
+          "nativeStatusCameraExact": true
+        },
+        {
+          "method": "stepAndRender(uint32,uint32)",
+          "tic": 1,
+          "allStorageRootsEqual": true,
+          "allExportedStateEqual": true,
+          "frameCount": 1,
+          "cloneGasEqual": true,
+          "nativeStatusCameraExact": true
+        },
+        {
+          "method": "stepAndRender(uint32,uint32)",
+          "tic": 2,
+          "allStorageRootsEqual": true,
+          "allExportedStateEqual": true,
+          "frameCount": 1,
+          "cloneGasEqual": true,
+          "nativeStatusCameraExact": true
+        },
+        {
+          "method": "stepAndRender(uint32,uint32)",
+          "tic": 3,
+          "allStorageRootsEqual": true,
+          "allExportedStateEqual": true,
+          "frameCount": 1,
+          "cloneGasEqual": true,
+          "nativeStatusCameraExact": true
+        },
+        {
+          "method": "stepAndRender(uint32,uint32)",
+          "tic": 4,
+          "allStorageRootsEqual": true,
+          "allExportedStateEqual": true,
+          "frameCount": 1,
+          "cloneGasEqual": true,
+          "nativeStatusCameraExact": true
+        },
+        {
+          "method": "stepAndRender(uint32,uint32)",
+          "tic": 5,
+          "allStorageRootsEqual": true,
+          "allExportedStateEqual": true,
+          "frameCount": 1,
+          "cloneGasEqual": true,
+          "nativeStatusCameraExact": true
+        },
+        {
+          "method": "stepAndRender(uint32,uint32)",
+          "tic": 6,
+          "allStorageRootsEqual": true,
+          "allExportedStateEqual": true,
+          "frameCount": 1,
+          "cloneGasEqual": true,
+          "nativeStatusCameraExact": true
+        }
+      ]
+    },
+    {
+      "path": "artifacts/local/gameplay-production-release-memory-cadence.json",
+      "sha256": "82e0a55f5dc77b9e892ecb5ce4cbf27996254c3fb0ef0841f5a2ae6537ad7e3e",
+      "executedTics": 6,
+      "nativeStreamTics": 129,
+      "completeNativeStream": false,
+      "deployments": [
+        {
+          "kind": "ordinary",
+          "address": "0x6eafa973d31d4d43bf60100444924d0b4c3a81dd",
+          "gas": 249646689,
+          "transactionHash": "0x6bb1796af5f3fbf2eb0e1d2617f7bb4e1d5127806ea6b72edc95df92eff3b44d"
+        },
+        {
+          "kind": "marker-gas",
+          "address": "0x2eb9a1b49029fdba678fbefc78dc8e6f9562483f",
+          "gas": 249960478,
+          "transactionHash": "0x6cdc80a927504995795780f8dd1b04cfa5c30d1d2a609565db0e0d6b173d4bbd"
+        },
+        {
+          "kind": "marker-msize",
+          "address": "0xbd5349b52a9aa3516c432a08aeeebb035b6cd07f",
+          "gas": 249960478,
+          "transactionHash": "0x787a7553b93fedea05a8d98b09a3f1c080c20e7430c1d6b778ac3c9d3f08d68a"
+        }
+      ],
+      "boundaries": [
+        {
+          "method": "renderFrame()",
+          "stage": 5,
+          "tic": 0,
+          "highWaterBytes": 8841664,
+          "ordinaryGas": 579266533,
+          "cloneGas": 579254343,
+          "transactionHash": "0xf86ee3276cf437699d49b97b663722cb414b196be4b48327c0c8fbeba1d9900a"
+        },
+        {
+          "method": "initializeGame()",
+          "stage": 2,
+          "tic": 0,
+          "highWaterBytes": 19665056,
+          "ordinaryGas": 1621885757,
+          "cloneGas": 1621872378,
+          "transactionHash": "0x0180f83e0fcdb1f84618fda72b410224b4498b4cc4d30ff397a64c6e6911950a"
+        },
+        {
+          "method": "stepAndRender(uint32,uint32)",
+          "stage": 4,
+          "tic": 1,
+          "highWaterBytes": 11956800,
+          "ordinaryGas": 781684253,
+          "cloneGas": 781681734,
+          "transactionHash": "0xf10f93256d8771a1d03ad224d1d8831f5fefcb4b089a67bc315cae94c74483ab"
+        },
+        {
+          "method": "step(uint32,uint32)",
+          "stage": 3,
+          "tic": 2,
+          "highWaterBytes": 8749760,
+          "ordinaryGas": 309182221,
+          "cloneGas": 309180774,
+          "transactionHash": "0x7f494d863c5fcd58e54cc3a91bf9c604911d36f6ca13def7d5a5c532ad5d36d4"
+        },
+        {
+          "method": "step(uint32,uint32)",
+          "stage": 3,
+          "tic": 3,
+          "highWaterBytes": 8749760,
+          "ordinaryGas": 309241485,
+          "cloneGas": 309240038,
+          "transactionHash": "0x5fa4c41369a55c966e147666639749445ad646a0f4ffff4a1ff0943988e8740b"
+        },
+        {
+          "method": "step(uint32,uint32)",
+          "stage": 3,
+          "tic": 4,
+          "highWaterBytes": 8749760,
+          "ordinaryGas": 309235339,
+          "cloneGas": 309233892,
+          "transactionHash": "0xa133804f08febc7dce9ad7cd8d90db6eed48784dbc8fd407d396765d3759d95d"
+        },
+        {
+          "method": "step(uint32,uint32)",
+          "stage": 3,
+          "tic": 5,
+          "highWaterBytes": 8753856,
+          "ordinaryGas": 309559301,
+          "cloneGas": 309557854,
+          "transactionHash": "0xb957b365bb52a1e8fcd4cb0ed22d9adc09630fc8d0acd873c7622c59f95ab807"
+        },
+        {
+          "method": "step(uint32,uint32)",
+          "stage": 3,
+          "tic": 6,
+          "highWaterBytes": 8749760,
+          "ordinaryGas": 309256203,
+          "cloneGas": 309254756,
+          "transactionHash": "0xa74202ec941138e67a68a07bb5699ba90de28e0415734cb79f56f9ede0180794"
+        }
+      ],
+      "comparisons": [
+        {
+          "method": "renderFrame()",
+          "tic": 0,
+          "allStorageRootsEqual": true,
+          "allExportedStateEqual": true,
+          "frameCount": 1,
+          "cloneGasEqual": true,
+          "nativeStatusCameraExact": false
+        },
+        {
+          "method": "initializeGame()",
+          "tic": 0,
+          "allStorageRootsEqual": true,
+          "allExportedStateEqual": true,
+          "frameCount": 0,
+          "cloneGasEqual": true,
+          "nativeStatusCameraExact": true
+        },
+        {
+          "method": "stepAndRender(uint32,uint32)",
+          "tic": 1,
+          "allStorageRootsEqual": true,
+          "allExportedStateEqual": true,
+          "frameCount": 1,
+          "cloneGasEqual": true,
+          "nativeStatusCameraExact": true
+        },
+        {
+          "method": "step(uint32,uint32)",
+          "tic": 2,
+          "allStorageRootsEqual": true,
+          "allExportedStateEqual": true,
+          "frameCount": 0,
+          "cloneGasEqual": true,
+          "nativeStatusCameraExact": true
+        },
+        {
+          "method": "step(uint32,uint32)",
+          "tic": 3,
+          "allStorageRootsEqual": true,
+          "allExportedStateEqual": true,
+          "frameCount": 0,
+          "cloneGasEqual": true,
+          "nativeStatusCameraExact": true
+        },
+        {
+          "method": "step(uint32,uint32)",
+          "tic": 4,
+          "allStorageRootsEqual": true,
+          "allExportedStateEqual": true,
+          "frameCount": 0,
+          "cloneGasEqual": true,
+          "nativeStatusCameraExact": true
+        },
+        {
+          "method": "step(uint32,uint32)",
+          "tic": 5,
+          "allStorageRootsEqual": true,
+          "allExportedStateEqual": true,
+          "frameCount": 0,
+          "cloneGasEqual": true,
+          "nativeStatusCameraExact": true
+        },
+        {
+          "method": "step(uint32,uint32)",
+          "tic": 6,
+          "allStorageRootsEqual": true,
+          "allExportedStateEqual": true,
+          "frameCount": 0,
+          "cloneGasEqual": true,
+          "nativeStatusCameraExact": true
+        }
+      ]
+    }
+  ],
+  "compile": {
+    "command": ".toolchain/bin/forge build artifacts/local/production-memory/DoomMemoryProbe.sol",
+    "exitCode": 0,
+    "compilerSeconds": 46.64,
+    "logSha256": "2b976d096699cdc4aad9f837b70973ec9699be7d5a57073f12c2c518b4f86040",
+    "productionArtifactUnchanged": true
+  },
+  "isolatedTests": {
+    "command": "node --test tools/reference/gameplay/production-memory.test.mjs tools/reference/phase2_data/instrument.test.mjs",
+    "pass": 7,
+    "fail": 0,
+    "logSha256": "f54c0a7abc5cb18f7dce8cffacb7d7f0bd238c167a6451d8b8789c54089dee2b"
+  },
+  "measurementSummaryBytes": {
+    "initialization": {
+      "min": 19665056,
+      "max": 19665056
+    },
+    "static": {
+      "min": 8841664,
+      "max": 8841664
+    },
+    "noRender": {
+      "min": 8749760,
+      "max": 8753856
+    },
+    "liveRender": {
+      "min": 11918816,
+      "max": 11956800
+    }
+  },
+  "scope": [
+    "Separate ordinary CREATE only, same authenticated resource chunks rechecked byte-for-byte. No etch/setCode or supplied gameplay/pixels.",
+    "Final MSIZE is monotonic high-water of the current EVM call frame through the marker. It excludes later observer log encoding and memory of separate external/precompile frames.",
+    "Marker clone source/code generation may alter memory reuse relative to untouched production. These are measured clone engine-boundary peaks, not exact untouched-production peaks.",
+    "Patched and unpatched clone differ only in source-mapped GAS->MSIZE, identical2gas/+1stack and bytecode layout; gas/state/frame equality is checked. Ordinary production is compared separately."
+  ],
+  "source": {
+    "productionPath": "src/evm/Doom.sol",
+    "productionSourceSha256": "e4f99d3d5a9d585f239828f8ebf9c376f098e367afb1eae37431b6c2bc4e0d5d",
+    "cloneSourceSha256": "7bcb33f272e7f7697c6f43c4525685e3e450740863ad123a350773564fe88251",
+    "boundaries": [
+      {
+        "name": "initializeGame",
+        "stage": 2,
+        "sourceStart": 1475,
+        "sourceEnd": 1764
+      },
+      {
+        "name": "step",
+        "stage": 3,
+        "sourceStart": 2211,
+        "sourceEnd": 2366
+      },
+      {
+        "name": "stepAndRender",
+        "stage": 4,
+        "sourceStart": 1917,
+        "sourceEnd": 2100
+      },
+      {
+        "name": "renderFrame",
+        "stage": 5,
+        "sourceStart": 1770,
+        "sourceEnd": 1911
+      }
+    ],
+    "changes": [
+      "Project-root import paths, contract name only, end-of-external-call marker, private observer helper/event. No original statement replaced or reordered."
+    ],
+    "scope": "Engine-boundary clone high-water excludes following observer log encoding and separate external call/precompile frames; not an exact untouched-production peak."
+  },
+  "instrumentation": {
+    "functionName": "memorySize",
+    "sourceId": 0,
+    "sourceSha256": "7bcb33f272e7f7697c6f43c4525685e3e450740863ad123a350773564fe88251",
+    "originalRuntimeSha256": "8b9032ddca1d753117d853a1a3794e60ed2e4de424186793d07fadf7a4067d75",
+    "instrumentedRuntimeSha256": "be8fc934229863e21768b822f770334e5bc84c98c50bf5df62a072705e7a2045",
+    "runtimeBytes": 503869,
+    "runtimeOffsetInCreation": 1735,
+    "patches": [
+      {
+        "pc": 22294,
+        "sourceStart": 5295,
+        "sourceLength": 9,
+        "line": 148,
+        "sourceText": "gasleft()",
+        "before": "GAS 0x5a",
+        "after": "MSIZE 0x59"
+      },
+      {
+        "pc": 38834,
+        "sourceStart": 5295,
+        "sourceLength": 9,
+        "line": 148,
+        "sourceText": "gasleft()",
+        "before": "GAS 0x5a",
+        "after": "MSIZE 0x59"
+      },
+      {
+        "pc": 39306,
+        "sourceStart": 5295,
+        "sourceLength": 9,
+        "line": 148,
+        "sourceText": "gasleft()",
+        "before": "GAS 0x5a",
+        "after": "MSIZE 0x59"
+      },
+      {
+        "pc": 39429,
+        "sourceStart": 5295,
+        "sourceLength": 9,
+        "line": 148,
+        "sourceText": "gasleft()",
+        "before": "GAS 0x5a",
+        "after": "MSIZE 0x59"
+      }
+    ],
+    "semantics": "Separate probe deployment only. GAS\u2192MSIZE, identical2gas and +1stack effect, unchanged bytecode layout/jump destinations. Operation gas and output digests must match ordinary uninstrumented deployment."
+  },
+  "executionBudget": {
+    "gasLimit": 10000000000,
+    "gasHex": "0x2540be400",
+    "source": "/Users/eduard/sandbox/doom-evm/execution-budget.json"
+  },
+  "resourceIdentity": {
+    "schemaVersion": 0,
+    "wadSha256": "7323bcc168c5a45ff10749b339960e98314740a734c30d4b9f3337001f9e703d",
+    "bundleSha256": "d379076f21645cf7cc5acb056663d0faacc4065489a0ca99738479323c9f7a47",
+    "paletteSha256": "fd895921b5d0a394612bb29852ed003d44d69f76dec31c0dc6b5d5fc7d63f7bb",
+    "paletteVariant": 0
+  },
+  "sourceHashes": {
+    "src/doom/d_ticcmd.sol": "508d0332d3e8b83e1b68d37581a3befc100a9974fcaa0900cc44116cd75ff2ef",
+    "src/doom/doomstat.sol": "4c40da3914c629017959a0a4c0516d83346900674c92f5e55a766aba1b506fea",
+    "src/doom/g_game.sol": "2714f783a532bc2a525d7f50813c472f299c541ee9062a7a5d078e1818791e70",
+    "src/doom/info.sol": "4611205149173e42d3b0f1d91820c8042f6bc5fc48fb53aec84ad4bc501dca8e",
+    "src/doom/m_bbox.sol": "f4c60efe3627a97d0288fc5cd0283535527b1f51029568534c80bb8fbbf8f272",
+    "src/doom/m_fixed.sol": "3f64bef1f62f61faead3a5b8f382bf1c66e1b3739ce4ac8d59a6fcef0451ef9f",
+    "src/doom/m_random.sol": "5267b881138cfb7e0d683449005619513006c70e3ed557f64697b36c4ed40c7b",
+    "src/doom/native_zone_layout.sol": "118b2d17165826fb0857d9cb296e2214db2a28917769299a82e70d0c0790f6e8",
+    "src/doom/p_ceilng.sol": "696f3f620f5bddb3cea64fda824e3203c780f53db890630f0685794454dc37f9",
+    "src/doom/p_doors.sol": "945bf600ce86d8286718fb75ecaf905a0c4631d79d2dac7260c91c9dc2013f8d",
+    "src/doom/p_enemy.sol": "eff76cce23b0877833a5c446a1a09d8ae01918a6925b6d3265240b144c09dfe7",
+    "src/doom/p_floor.sol": "b7c90baafa0b74fd7ff80cf60dcbc430148f6d6d068ba54ca0fbc7ba1bca7069",
+    "src/doom/p_game_state.sol": "0f9d60aae9424cad17c614d4fcc93c9eb6fe8a43c7bce070d2460fcf2c34f649",
+    "src/doom/p_heap.sol": "3cc2e0a8c3239523db66c07fea33720f931754baedd312b5ca7cc2ebe763d2e0",
+    "src/doom/p_info.sol": "a48840479115ea8bf849ca5ec448d1b2bec7a6cfe58c5314e140635a898de792",
+    "src/doom/p_inter.sol": "8be27f9bba47beb46b3edf2a8a2674b3cd7218d2abb8ef5f8855803393d067de",
+    "src/doom/p_lights.sol": "6f63cbc6b41fc492a46ce43aef464deb9d08b7fa1dd8b213b546eec3e4f08276",
+    "src/doom/p_map.sol": "6b6d48523a45acab9090dfb0ec3d6dbab4e6de18afa89453df8b5a87088da0f3",
+    "src/doom/p_maputl.sol": "ac5ac60e7e058a5fc537e7042c7254bc0f51c77165149a22e141437b4e0ad0b6",
+    "src/doom/p_mobj.sol": "78e9c05b327100bd34cafe086454e3a5499beb92af878ad4756baeca18445ffa",
+    "src/doom/p_plats.sol": "6904df762b270f840daa99b34d2a5c689dbb2fef3aed3d33c2ac1a3f3e4d5722",
+    "src/doom/p_pspr.sol": "cfa2db3438d689c38d9c957fc4aee598c58740f025d6efead2b5f9671eb0c863",
+    "src/doom/p_setup.sol": "9498e1298bf4e53ccedc484a50d4c7f9f85315f6cb700719d474b721e382243b",
+    "src/doom/p_setup_static.sol": "c8100a42bb0bac190c583bbb2c82168599009f88a766e4c05b9a9231a5f69792",
+    "src/doom/p_sight.sol": "7ed366237fc3fec069ffb6336e95e038004d1f379622cf67f55fb8c6b1a6488c",
+    "src/doom/p_spec.sol": "2363640e75c22c9d017db677dda7148ad221380f0a23639167e145e933fc72b7",
+    "src/doom/p_switch.sol": "5404d359793e05c6c24a7804c07632150009b46f38d03068412d7ac53260dfe2",
+    "src/doom/p_telept.sol": "745f0fa4ed6f0515c398bfd2469c59aac82316965b7bac25263aeb82555d61b8",
+    "src/doom/p_tick.sol": "1993dd0c94853dabc4db554dfa0ca04375cef0a22075400ba0e7b56b525022ab",
+    "src/doom/p_user.sol": "963a46850e1b17171f79dd65bff9b5006ce6f97a935ad2023d1d526a6ec35c37",
+    "src/doom/p_zone_setup.sol": "e0308bd1197fd84a01eb1ee208be73c711851d6b0bc30be1d07a7c61b18b223d",
+    "src/doom/r_bsp.sol": "0ae5df313515692d0b2b970d5d39d107e014629cff2305fb37c14371a9524040",
+    "src/doom/r_data.sol": "5b404d561f8bce538e8a8221b4f36d62c9b9826fc833307640d96fcbfdca2d0a",
+    "src/doom/r_data_types.sol": "0448302d68447c8a5a4c46df4016e8845863e42bf6eaca8bcab8ab0c9707fdf8",
+    "src/doom/r_defs.sol": "558d5a9bfd131e816bbe28986e2dad6144a08e5a16ccfed1b199d7558a1ea0e2",
+    "src/doom/r_draw.sol": "afe958ea0c2962b739bff58b98d8bccc25c48d3d0838cacd46142c242b5d6477",
+    "src/doom/r_main.sol": "df403bf04fdbbcfc68c4fd9c5e19b5201ca711498efc34db406a4010ad3b2af5",
+    "src/doom/r_plane.sol": "c7a5abcbca84dddcd2a3c8bb160a609605c5c1842e73704dff4860df3280e463",
+    "src/doom/r_render_hooks.sol": "f026ccb8fffb68d8fbcb0966103212f52884b86350fe3fb52a401d146f3fb312",
+    "src/doom/r_render_state.sol": "072bd2f73b98e1eb775fc8093e95a69c184f3fa50a89a5d64a7beccd59493398",
+    "src/doom/r_segs.sol": "9d4e4dea06739278aab3698fb422818de6dd7726359c8822d60a162e886621cb",
+    "src/doom/r_sprite_state.sol": "735b3de85cbf455e05d3cb8e992cf4e477960bd4192bbd367f5c66c803b96363",
+    "src/doom/r_state.sol": "80951a13733e3a08f4182937a37def33ffda21eaae4b43a2a1bdba2043adab6b",
+    "src/doom/r_things.sol": "86705ab6b1f79b7ef07798b881cc547502d9911c97b57dc516a744e17c1977f5",
+    "src/doom/tables.sol": "bf14202b419075f6d187653205a37e211d8267c7fc4c0bebf5a8c5713afddf38",
+    "src/doom/w_zone_cache.sol": "03c07404765de9620b3d1ff15727809cdad911c8a78d822019b63500fa5018c2",
+    "src/doom/z_zone.sol": "47fe4cd4ce09d37d21d9d3cedd349004c8e3a1941f939a1ddbc5ec2e1d67b1ca",
+    "src/doom/z_zone_backing.sol": "902ea03bc32af6b7443461ff64d21e780d9a0ef6c6bbe2dd1262216bfc37a3f8",
+    "src/doom/z_zone_types.sol": "d6c5d8680e08bd8989042cb42a934a3323818e4c2b94c11dc38196911dadc08b",
+    "src/evm/Doom.sol": "e4f99d3d5a9d585f239828f8ebf9c376f098e367afb1eae37431b6c2bc4e0d5d",
+    "src/evm/DoomGame.sol": "353898c9547b1bcd619d51318aef505b0beb23374043660af9eeb18f4a15208d",
+    "src/evm/DoomRenderer.sol": "5639d82431350ea76c26d43457d26d0c3c0f410eaddf02db6adbcfb03a569ba0",
+    "src/evm/DoomScene.sol": "9ad7c8ccee4c9e05deb5608326baabacfa40f686b8d8445fb8aaa7352ab64569",
+    "src/evm/DoomZoneStartup.sol": "2d178494456a7ae3c730310f257ce2aa635d37d18c90cac039cf002cdb3f50dc",
+    "src/evm/FrameProtocol.sol": "4665be3f613b8e817d616d2db1dc4a644325c44a6ade476a35d7d9d003625ace",
+    "src/evm/InputProtocol.sol": "df068ec9030d7241de7d6160059f8e46fe647f6655123f03849789b359bee51b",
+    "src/evm/ResourceTypes.sol": "159865364cfa57aae508cd94c49509cbccabd6aeeba55e92b9fcf816bdec4d6b",
+    "src/evm/WadResources.sol": "25a1acc0a44ac35cc29e5f9bd953ba66b85db4f665b732430571b416ef927895",
+    "artifacts/local/production-memory/DoomMemoryProbe.sol": "7bcb33f272e7f7697c6f43c4525685e3e450740863ad123a350773564fe88251",
+    "tools/reference/gameplay/production-memory.mjs": "b5097b46cac8698bb234b1883954415ae204b0bb9bf2b54f2f25d0f4bbc044fd",
+    "tools/reference/phase2_data/instrument.mjs": "728f154d347a93d1e6c353187b2212ebdbfa1ce571207ec775470526864cb89b",
+    "tools/execution-budget.mjs": "dbf68241139422195203f57a08d8e382afa6d1d493848ae68fbebca9265eec78",
+    "execution-budget.json": "acde01f1b9cf248f9265f1ffcff7181d01d77620a2dfcd9a4d4d0b1c79df2be7"
+  },
+  "nativeOracles": [
+    {
+      "path": "artifacts/local/gameplay-production-native-final/manifest.json",
+      "sha256": "da40ec18771d1d4e4332080a7c3e2830f6524ca9b8c51987efaf1beb4d6007c8"
+    },
+    {
+      "path": "artifacts/local/gameplay-browser-native-final/manifest.json",
+      "sha256": "d05bb58546cadc3e0e175b30b2691ec11024860c9176a105196401da788b02e9"
+    }
+  ],
+  "artifactSha256": "aff07a0904ba622c25c10ce79ab395d69e3b27b3aa4e21e55a6061a63afc7e1d",
+  "commands": [
+    "node tools/reference/gameplay/production-memory.mjs --resources-report artifacts/local/gameplay-production-release.json --rpc http://127.0.0.1:18579 --native artifacts/local/gameplay-browser-native-final --output-prefix artifacts/local/gameplay-production-release-memory",
+    "node tools/reference/gameplay/production-memory.mjs --resources-report artifacts/local/gameplay-production-release.json --rpc http://127.0.0.1:18579 --native artifacts/local/gameplay-production-native-final --limit 6 --output-prefix artifacts/local/gameplay-production-release-memory-cadence"
+  ],
+  "previousAttempt": {
+    "kind": "receipt-timeout",
+    "preserved": "artifacts/local/phase3-memory-concurrent-failure/diagnosis.json",
+    "sha256": "7b361c29fe76f433d067966dc8fe9e1a66e5366ec00f91c005a9b8d4d4553bf3",
+    "cause": "Concurrent unlocked-sender writers suspected, not proven; pending hash/nonce missing in original runner. No gas-exhaustion or engine-revert evidence.",
+    "nodeAfterFailure": {
+      "pending": 0,
+      "queued": 0,
+      "latestNonce": "0xab4",
+      "pendingNonce": "0xab4"
+    },
+    "resolution": "Sequential fresh three-deployment replay completes every measurement/comparison."
+  },
+  "priorPreflight": {
+    "reason": "Inherited forced build cleaned ignored clone artifact; subsequent measurement preflight ENOENT, no runtime measurement.",
+    "retainedLog": "artifacts/local/phase3-release-memory-preflight/missing-artifact.log",
+    "sha256": "3fd9d59c716d248c3f45557483762219687c5a80325ce003d81c49f7b3bfa97d",
+    "resolution": "Rebuilt separate clone; production artifact hash identical. Both measurement streams passed sequentially."
+  }
+}
