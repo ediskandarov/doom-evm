@@ -1,0 +1,274 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://doom-evm.local/schemas/reference-v0.schema.json",
+  "title": "DOOM EVM reference v0",
+  "type": "object",
+  "properties": {
+    "schemaVersion": {
+      "const": 0
+    },
+    "resourceIdentity": {
+      "type": "object",
+      "properties": {
+        "schemaVersion": {
+          "const": 0
+        },
+        "wadSha256": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "bundleSha256": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "paletteSha256": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "paletteVariant": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 255
+        }
+      },
+      "required": [
+        "schemaVersion",
+        "wadSha256",
+        "bundleSha256",
+        "paletteSha256",
+        "paletteVariant"
+      ],
+      "additionalProperties": false
+    },
+    "provenance": {
+      "anyOf": [
+        {
+          "type": "object",
+          "properties": {
+            "kind": {
+              "const": "synthetic"
+            },
+            "label": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "required": [
+            "kind",
+            "label"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "kind": {
+              "const": "wad"
+            },
+            "wadName": {
+              "type": "string",
+              "minLength": 1
+            },
+            "wadSha256": {
+              "type": "string",
+              "minLength": 1,
+              "pattern": "^[0-9a-f]{64}$"
+            },
+            "upstreamCommit": {
+              "type": "string",
+              "minLength": 1,
+              "pattern": "^[0-9a-f]{40}$"
+            },
+            "license": {
+              "type": "string",
+              "minLength": 1
+            },
+            "map": {
+              "type": "string",
+              "minLength": 1
+            },
+            "build": {
+              "type": "object",
+              "properties": {
+                "compiler": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "version": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "target": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "flags": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "minLength": 1
+                  }
+                },
+                "patchSha256": {
+                  "type": "string",
+                  "minLength": 1,
+                  "pattern": "^[0-9a-f]{64}$"
+                },
+                "harnessSha256": {
+                  "type": "string",
+                  "minLength": 1,
+                  "pattern": "^[0-9a-f]{64}$"
+                },
+                "integerSemantics": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "doubleSemantics": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              },
+              "required": [
+                "compiler",
+                "version",
+                "target",
+                "flags",
+                "patchSha256",
+                "harnessSha256",
+                "integerSemantics",
+                "doubleSemantics"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "required": [
+            "kind",
+            "wadName",
+            "wadSha256",
+            "upstreamCommit",
+            "license",
+            "map",
+            "build"
+          ],
+          "additionalProperties": false
+        }
+      ]
+    },
+    "scope": {
+      "enum": [
+        "synthetic-transport",
+        "world-view",
+        "full-frame"
+      ]
+    },
+    "camera": {
+      "type": "object",
+      "properties": {
+        "x": {
+          "type": "integer",
+          "minimum": -2147483648,
+          "maximum": 2147483647
+        },
+        "y": {
+          "type": "integer",
+          "minimum": -2147483648,
+          "maximum": 2147483647
+        },
+        "z": {
+          "type": "integer",
+          "minimum": -2147483648,
+          "maximum": 2147483647
+        },
+        "angle": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 4294967295
+        },
+        "coordinateFormat": {
+          "const": "signed-16.16"
+        },
+        "angleFormat": {
+          "const": "binary-angle-uint32"
+        }
+      },
+      "required": [
+        "x",
+        "y",
+        "z",
+        "angle",
+        "coordinateFormat",
+        "angleFormat"
+      ],
+      "additionalProperties": false
+    },
+    "detail": {
+      "enum": [
+        "high",
+        "low"
+      ]
+    },
+    "colormap": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 4294967295
+    },
+    "lighting": {
+      "type": "object",
+      "properties": {
+        "extraLight": {
+          "type": "integer",
+          "minimum": -2147483648,
+          "maximum": 2147483647
+        },
+        "fixedColormap": {
+          "type": "integer",
+          "minimum": -1,
+          "maximum": 255
+        }
+      },
+      "required": [
+        "extraLight",
+        "fixedColormap"
+      ],
+      "additionalProperties": false
+    },
+    "gametic": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 18446744073709551615
+    },
+    "width": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 65535
+    },
+    "height": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 65535
+    },
+    "frameSha256": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "^[0-9a-f]{64}$"
+    }
+  },
+  "required": [
+    "schemaVersion",
+    "resourceIdentity",
+    "provenance",
+    "scope",
+    "camera",
+    "detail",
+    "colormap",
+    "lighting",
+    "gametic",
+    "width",
+    "height",
+    "frameSha256"
+  ],
+  "additionalProperties": false
+}

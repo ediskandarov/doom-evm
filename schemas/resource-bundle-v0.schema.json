@@ -1,0 +1,166 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://doom-evm.local/schemas/resource-bundle-v0.schema.json",
+  "title": "DOOM EVM resource-bundle v0",
+  "type": "object",
+  "properties": {
+    "schemaVersion": {
+      "const": 0
+    },
+    "resourceIdentity": {
+      "type": "object",
+      "properties": {
+        "schemaVersion": {
+          "const": 0
+        },
+        "wadSha256": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "bundleSha256": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "paletteSha256": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "paletteVariant": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 255
+        }
+      },
+      "required": [
+        "schemaVersion",
+        "wadSha256",
+        "bundleSha256",
+        "paletteSha256",
+        "paletteVariant"
+      ],
+      "additionalProperties": false
+    },
+    "provenance": {
+      "anyOf": [
+        {
+          "type": "object",
+          "properties": {
+            "kind": {
+              "const": "synthetic"
+            },
+            "label": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "required": [
+            "kind",
+            "label"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "kind": {
+              "const": "wad"
+            },
+            "wadName": {
+              "type": "string",
+              "minLength": 1
+            },
+            "wadSha256": {
+              "type": "string",
+              "minLength": 1,
+              "pattern": "^[0-9a-f]{64}$"
+            },
+            "upstreamCommit": {
+              "type": "string",
+              "minLength": 1,
+              "pattern": "^[0-9a-f]{40}$"
+            },
+            "license": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "required": [
+            "kind",
+            "wadName",
+            "wadSha256",
+            "upstreamCommit",
+            "license"
+          ],
+          "additionalProperties": false
+        }
+      ]
+    },
+    "byteOrder": {
+      "const": "little-endian"
+    },
+    "blobFile": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9_.-]*$"
+    },
+    "blobByteLength": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 4294967295
+    },
+    "blobSha256": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "lumps": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 4294967295
+          },
+          "nameHex": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "^[0-9a-f]{16}$"
+          },
+          "offset": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 4294967295
+          },
+          "length": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 4294967295
+          }
+        },
+        "required": [
+          "id",
+          "nameHex",
+          "offset",
+          "length"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  "required": [
+    "schemaVersion",
+    "resourceIdentity",
+    "provenance",
+    "byteOrder",
+    "blobFile",
+    "blobByteLength",
+    "blobSha256",
+    "lumps"
+  ],
+  "additionalProperties": false
+}

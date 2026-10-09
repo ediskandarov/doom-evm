@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 0,
+  "resourceIdentity": {
+    "schemaVersion": 0,
+    "wadSha256": "0000000000000000000000000000000000000000000000000000000000000000",
+    "bundleSha256": "2db6193cb57788fbfa2db6829b3c5a9e7dbb456cc76637891cc3a44052ccc159",
+    "paletteSha256": "72432263dbfe17abc40ed269f24c7a344e077e3671007dfc8a2f3851f8193dc2",
+    "paletteVariant": 0
+  },
+  "provenance": {
+    "kind": "synthetic",
+    "label": "Phase 0 serialization/transport fixture; not a WAD or C oracle"
+  },
+  "scope": "synthetic-transport",
+  "camera": {
+    "x": 0,
+    "y": 0,
+    "z": 0,
+    "angle": 0,
+    "coordinateFormat": "signed-16.16",
+    "angleFormat": "binary-angle-uint32"
+  },
+  "detail": "high",
+  "colormap": 0,
+  "lighting": {
+    "extraLight": 0,
+    "fixedColormap": -1
+  },
+  "gametic": 0,
+  "width": 320,
+  "height": 200,
+  "frameSha256": "499ee3bbb8bb50ccdb67d2987394008886186d1d04213dcec273e728abc6e56c"
+}

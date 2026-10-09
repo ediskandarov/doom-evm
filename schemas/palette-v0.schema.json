@@ -1,0 +1,73 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://doom-evm.local/schemas/palette-v0.schema.json",
+  "title": "DOOM EVM palette v0",
+  "type": "object",
+  "properties": {
+    "schemaVersion": {
+      "const": 0
+    },
+    "resourceIdentity": {
+      "type": "object",
+      "properties": {
+        "schemaVersion": {
+          "const": 0
+        },
+        "wadSha256": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "bundleSha256": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "paletteSha256": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "paletteVariant": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 255
+        }
+      },
+      "required": [
+        "schemaVersion",
+        "wadSha256",
+        "bundleSha256",
+        "paletteSha256",
+        "paletteVariant"
+      ],
+      "additionalProperties": false
+    },
+    "kind": {
+      "enum": [
+        "synthetic",
+        "wad"
+      ]
+    },
+    "encoding": {
+      "const": "rgb8"
+    },
+    "colorCount": {
+      "const": 256
+    },
+    "rgbHex": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "^[0-9a-f]{1536}$"
+    }
+  },
+  "required": [
+    "schemaVersion",
+    "resourceIdentity",
+    "kind",
+    "encoding",
+    "colorCount",
+    "rgbHex"
+  ],
+  "additionalProperties": false
+}

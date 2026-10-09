@@ -1,0 +1,109 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://doom-evm.local/schemas/frame-v0.schema.json",
+  "title": "DOOM EVM frame v0",
+  "type": "object",
+  "properties": {
+    "schemaVersion": {
+      "const": 0
+    },
+    "resourceIdentity": {
+      "type": "object",
+      "properties": {
+        "schemaVersion": {
+          "const": 0
+        },
+        "wadSha256": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "bundleSha256": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "paletteSha256": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "paletteVariant": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 255
+        }
+      },
+      "required": [
+        "schemaVersion",
+        "wadSha256",
+        "bundleSha256",
+        "paletteSha256",
+        "paletteVariant"
+      ],
+      "additionalProperties": false
+    },
+    "kind": {
+      "enum": [
+        "synthetic",
+        "wad"
+      ]
+    },
+    "frameId": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 18446744073709551615
+    },
+    "inputSeq": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 4294967295
+    },
+    "width": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 65535
+    },
+    "height": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 65535
+    },
+    "format": {
+      "const": "indexed8"
+    },
+    "order": {
+      "const": "row-major-top-left"
+    },
+    "pixelsFile": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9_.-]*$"
+    },
+    "pixelsSha256": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "pixelsByteLength": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 4294967295
+    }
+  },
+  "required": [
+    "schemaVersion",
+    "resourceIdentity",
+    "kind",
+    "frameId",
+    "inputSeq",
+    "width",
+    "height",
+    "format",
+    "order",
+    "pixelsFile",
+    "pixelsSha256",
+    "pixelsByteLength"
+  ],
+  "additionalProperties": false
+}

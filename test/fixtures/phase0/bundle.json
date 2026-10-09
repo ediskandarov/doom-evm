@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 0,
+  "resourceIdentity": {
+    "schemaVersion": 0,
+    "wadSha256": "0000000000000000000000000000000000000000000000000000000000000000",
+    "bundleSha256": "2db6193cb57788fbfa2db6829b3c5a9e7dbb456cc76637891cc3a44052ccc159",
+    "paletteSha256": "72432263dbfe17abc40ed269f24c7a344e077e3671007dfc8a2f3851f8193dc2",
+    "paletteVariant": 0
+  },
+  "provenance": {
+    "kind": "synthetic",
+    "label": "Phase 0 serialization/transport fixture; not a WAD or C oracle"
+  },
+  "byteOrder": "little-endian",
+  "blobFile": "bundle.bin",
+  "blobByteLength": 16,
+  "blobSha256": "5c6ee0df7c6c7f49691529c0bff0bebe3d14d2d11b567d4ccbf1864354441201",
+  "lumps": [
+    {
+      "id": 0,
+      "nameHex": "54455354494e5453",
+      "offset": 0,
+      "length": 8
+    },
+    {
+      "id": 1,
+      "nameHex": "5445535446495844",
+      "offset": 8,
+      "length": 8
+    }
+  ]
+}
