@@ -7,6 +7,10 @@ The committed report is `tools/renderer/evidence/renderer.json`; all eight
 frame artifacts, an intermediate wall frame, raw production/rejection receipts,
 and the actual browser screenshot are adjacent to it.
 
+Generated images contain Freedoom artwork, copyright the Freedoom contributors,
+redistributed under the [Freedoom BSD license](../test/fixtures/wad/COPYING.txt).
+The source WAD identity and attribution remain in each reference artifact.
+
 ## Reproduce or run interactively
 
 After the normal toolchain and pinned WAD preparation:
