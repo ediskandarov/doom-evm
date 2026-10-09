@@ -1,0 +1,53 @@
+{
+  "counts": {
+    "contexts": 9,
+    "events": 83054,
+    "nativeTics": 2211,
+    "profilesPerContext": 4,
+    "selectedFrames": 30,
+    "snapshots": 84,
+    "spriteAdjacencyChecks": 63975,
+    "startupBlocks": 4913,
+    "startupOuterOperations": 6498,
+    "startupOwners": 4126
+  },
+  "executed": [
+    {
+      "command": "python3 tools/reference/phase3_zone_lifecycle/layout.py",
+      "result": "PASS"
+    },
+    {
+      "command": "python3 tools/reference/phase3_zone_lifecycle/reference.py --quick",
+      "result": "O2 interim; superseded by four-profile generation",
+      "run": "20345"
+    },
+    {
+      "command": "python3 tools/reference/phase3_zone_lifecycle/reference.py",
+      "operation": "generation, not --check",
+      "result": "PASS",
+      "run": "38145"
+    }
+  ],
+  "files": {
+    "test/fixtures/phase3_zone_lifecycle/adjacency-summary.json": "871c353fe1a1737ef38c78d704f452bcf6967d30c6a83c462cba82a7bffe5033",
+    "test/fixtures/phase3_zone_lifecycle/layout.json": "81e871d8639a55ee9058e8a12e8f5bbeeab8bdd55675ed7c3fc938a4147275f4",
+    "test/fixtures/phase3_zone_lifecycle/manifest.json": "3dd82addb86a9684666212c3c4c4f0a1024d6d43b4284f5630e88148d57be95c",
+    "test/fixtures/phase3_zone_lifecycle/startup-headers.bin": "28c5dde8f2bb44d8819503e2fdd09ee941a32b31d0947821a1c6ac61ce4d08ca",
+    "test/fixtures/phase3_zone_lifecycle/startup-operations.bin": "eff4e112820907dde483e78c844b4519f7b6dcac2f0fa9d61c36cd97b13ff418",
+    "test/fixtures/phase3_zone_lifecycle/startup-summary.bin": "ca43ba800aa6e21ccfb2dd7d0131f175482fe17ba0c64901445c9a24743b759d",
+    "tools/reference/phase3_zone_lifecycle/README.md": "b9e66adba2b9bc39d145701da8a49725c500d57340401b4b0ecb3ddc6e4c1dee",
+    "tools/reference/phase3_zone_lifecycle/calls.h": "9d59f4849242c5912a0f766804f17a8046b4c66b65af013ae32f78de53870421",
+    "tools/reference/phase3_zone_lifecycle/host.c": "8e33438036228ad0d619bc80bcf912866dc47da0140a729dc4e129358d32820b",
+    "tools/reference/phase3_zone_lifecycle/layout.py": "c6b1625239433e54ab25de305ce6c3cc701fb483b8094500606b83042f37d259",
+    "tools/reference/phase3_zone_lifecycle/observe.h": "cdee09a1309ea37ad95a8b97f3ea870c8c047188be1c4acf8e5cd4547c1ea3ae",
+    "tools/reference/phase3_zone_lifecycle/observe.inc": "8bdeb13852b5d171b31c5aca02740f335c7860f7fdc361210c95adf2d5e5e3f7",
+    "tools/reference/phase3_zone_lifecycle/reference.py": "0a1bdd685eee95bb8876f5c1484bebca5354fdd6d3d88d40145807253d9da4da"
+  },
+  "knownness": "Source-write-known only; unknown initial/newfragment/freeheader bytes not read or asserted portable. Pointer addresses normalized, not imported as runtime bytes.",
+  "originalOutputs": "Every pre-render state, tick, diagnostic, original event count, summary and frame unchanged in all4profiles.",
+  "peakLiveZoneBytes": 13901664,
+  "purgesObserved": 0,
+  "result": "PASS",
+  "scope": "Original native allocation/layout/cache lifecycle observations only. Comparative gold drives independent source algorithms, never runtime tape/pixel inputs.",
+  "zoneBackingBytes": 67108864
+}

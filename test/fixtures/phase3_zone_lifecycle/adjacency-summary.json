@@ -1,0 +1,558 @@
+{
+  "scope": "All cached sprite cohort immediate successor headers at actual observed stages; finite9contexts only.",
+  "contexts": 9,
+  "snapshots": 84,
+  "adjacencyChecks": 63975,
+  "allObservedSuccessorsAllocatedKnownZONEID": true,
+  "cases": [
+    {
+      "case": "browser",
+      "snapshots": [
+        {
+          "stage": "after_Z_Init",
+          "tic": 0,
+          "cachedSprites": 0,
+          "allocatedKnownIdSuccessors": 0
+        },
+        {
+          "stage": "after_R_Init",
+          "tic": 0,
+          "cachedSprites": 853,
+          "allocatedKnownIdSuccessors": 853
+        },
+        {
+          "stage": "after_R_InitSprites",
+          "tic": 0,
+          "cachedSprites": 853,
+          "allocatedKnownIdSuccessors": 853
+        },
+        {
+          "stage": "after_P_Setup",
+          "tic": 0,
+          "cachedSprites": 853,
+          "allocatedKnownIdSuccessors": 853
+        },
+        {
+          "stage": "after_scenario_setup",
+          "tic": 0,
+          "cachedSprites": 853,
+          "allocatedKnownIdSuccessors": 853
+        },
+        {
+          "stage": "after_render",
+          "tic": 1,
+          "cachedSprites": 853,
+          "allocatedKnownIdSuccessors": 853
+        },
+        {
+          "stage": "after_render",
+          "tic": 2,
+          "cachedSprites": 853,
+          "allocatedKnownIdSuccessors": 853
+        },
+        {
+          "stage": "after_render",
+          "tic": 3,
+          "cachedSprites": 853,
+          "allocatedKnownIdSuccessors": 853
+        },
+        {
+          "stage": "after_render",
+          "tic": 4,
+          "cachedSprites": 853,
+          "allocatedKnownIdSuccessors": 853
+        },
+        {
+          "stage": "after_render",
+          "tic": 5,
+          "cachedSprites": 853,
+          "allocatedKnownIdSuccessors": 853
+        },
+        {
+          "stage": "after_render",
+          "tic": 6,
+          "cachedSprites": 853,
+          "allocatedKnownIdSuccessors": 853
+        },
+        {
+          "stage": "final",
+          "tic": 6,
+          "cachedSprites": 853,
+          "allocatedKnownIdSuccessors": 853
+        }
+      ]
+    },
+    {
+      "case": "idle",
+      "snapshots": [
+        {
+          "stage": "after_Z_Init",
+          "tic": 0,
+          "cachedSprites": 0,
+          "allocatedKnownIdSuccessors": 0
+        },
+        {
+          "stage": "after_R_Init",
+          "tic": 0,
+          "cachedSprites": 853,
+          "allocatedKnownIdSuccessors": 853
+        },
+        {
+          "stage": "after_R_InitSprites",
+          "tic": 0,
+          "cachedSprites": 853,
+          "allocatedKnownIdSuccessors": 853
+        },
+        {
+          "stage": "after_P_Setup",
+          "tic": 0,
+          "cachedSprites": 853,
+          "allocatedKnownIdSuccessors": 853
+        },
+        {
+          "stage": "after_scenario_setup",
+          "tic": 0,
+          "cachedSprites": 853,
+          "allocatedKnownIdSuccessors": 853
+        },
+        {
+          "stage": "after_render",
+          "tic": 1,
+          "cachedSprites": 853,
+          "allocatedKnownIdSuccessors": 853
+        },
+        {
+          "stage": "after_render",
+          "tic": 35,
+          "cachedSprites": 853,
+          "allocatedKnownIdSuccessors": 853
+        },
+        {
+          "stage": "after_render",
+          "tic": 70,
+          "cachedSprites": 853,
+          "allocatedKnownIdSuccessors": 853
+        },
+        {
+          "stage": "final",
+          "tic": 70,
+          "cachedSprites": 853,
+          "allocatedKnownIdSuccessors": 853
+        }
+      ]
+    },
+    {
+      "case": "movement",
+      "snapshots": [
+        {
+          "stage": "after_Z_Init",
+          "tic": 0,
+          "cachedSprites": 0,
+          "allocatedKnownIdSuccessors": 0
+        },
+        {
+          "stage": "after_R_Init",
+          "tic": 0,
+          "cachedSprites": 853,
+          "allocatedKnownIdSuccessors": 853
+        },
+        {
+          "stage": "after_R_InitSprites",
+          "tic": 0,
+          "cachedSprites": 853,
+          "allocatedKnownIdSuccessors": 853
+        },
+        {
+          "stage": "after_P_Setup",
+          "tic": 0,
+          "cachedSprites": 853,
+          "allocatedKnownIdSuccessors": 853
+        },
+        {
+          "stage": "after_scenario_setup",
+          "tic": 0,
+          "cachedSprites": 853,
+          "allocatedKnownIdSuccessors": 853
+        },
+        {
+          "stage": "after_render",
+          "tic": 1,
+          "cachedSprites": 853,
+          "allocatedKnownIdSuccessors": 853
+        },
+        {
+          "stage": "after_render",
+          "tic": 137,
+          "cachedSprites": 853,
+          "allocatedKnownIdSuccessors": 853
+        },
+        {
+          "stage": "after_render",
+          "tic": 275,
+          "cachedSprites": 853,
+          "allocatedKnownIdSuccessors": 853
+        },
+        {
+          "stage": "final",
+          "tic": 275,
+          "cachedSprites": 853,
+          "allocatedKnownIdSuccessors": 853
+        }
+      ]
+    },
+    {
+      "case": "combat-arena",
+      "snapshots": [
+        {
+          "stage": "after_Z_Init",
+          "tic": 0,
+          "cachedSprites": 0,
+          "allocatedKnownIdSuccessors": 0
+        },
+        {
+          "stage": "after_R_Init",
+          "tic": 0,
+          "cachedSprites": 853,
+          "allocatedKnownIdSuccessors": 853
+        },
+        {
+          "stage": "after_R_InitSprites",
+          "tic": 0,
+          "cachedSprites": 853,
+          "allocatedKnownIdSuccessors": 853
+        },
+        {
+          "stage": "after_P_Setup",
+          "tic": 0,
+          "cachedSprites": 853,
+          "allocatedKnownIdSuccessors": 853
+        },
+        {
+          "stage": "after_scenario_setup",
+          "tic": 0,
+          "cachedSprites": 853,
+          "allocatedKnownIdSuccessors": 853
+        },
+        {
+          "stage": "after_render",
+          "tic": 1,
+          "cachedSprites": 853,
+          "allocatedKnownIdSuccessors": 853
+        },
+        {
+          "stage": "after_render",
+          "tic": 87,
+          "cachedSprites": 853,
+          "allocatedKnownIdSuccessors": 853
+        },
+        {
+          "stage": "after_render",
+          "tic": 175,
+          "cachedSprites": 853,
+          "allocatedKnownIdSuccessors": 853
+        },
+        {
+          "stage": "final",
+          "tic": 175,
+          "cachedSprites": 853,
+          "allocatedKnownIdSuccessors": 853
+        }
+      ]
+    },
+    {
+      "case": "damage-arena",
+      "snapshots": [
+        {
+          "stage": "after_Z_Init",
+          "tic": 0,
+          "cachedSprites": 0,
+          "allocatedKnownIdSuccessors": 0
+        },
+        {
+          "stage": "after_R_Init",
+          "tic": 0,
+          "cachedSprites": 853,
+          "allocatedKnownIdSuccessors": 853
+        },
+        {
+          "stage": "after_R_InitSprites",
+          "tic": 0,
+          "cachedSprites": 853,
+          "allocatedKnownIdSuccessors": 853
+        },
+        {
+          "stage": "after_P_Setup",
+          "tic": 0,
+          "cachedSprites": 853,
+          "allocatedKnownIdSuccessors": 853
+        },
+        {
+          "stage": "after_scenario_setup",
+          "tic": 0,
+          "cachedSprites": 853,
+          "allocatedKnownIdSuccessors": 853
+        },
+        {
+          "stage": "after_render",
+          "tic": 1,
+          "cachedSprites": 853,
+          "allocatedKnownIdSuccessors": 853
+        },
+        {
+          "stage": "after_render",
+          "tic": 175,
+          "cachedSprites": 853,
+          "allocatedKnownIdSuccessors": 853
+        },
+        {
+          "stage": "after_render",
+          "tic": 350,
+          "cachedSprites": 853,
+          "allocatedKnownIdSuccessors": 853
+        },
+        {
+          "stage": "final",
+          "tic": 350,
+          "cachedSprites": 853,
+          "allocatedKnownIdSuccessors": 853
+        }
+      ]
+    },
+    {
+      "case": "death-arena",
+      "snapshots": [
+        {
+          "stage": "after_Z_Init",
+          "tic": 0,
+          "cachedSprites": 0,
+          "allocatedKnownIdSuccessors": 0
+        },
+        {
+          "stage": "after_R_Init",
+          "tic": 0,
+          "cachedSprites": 853,
+          "allocatedKnownIdSuccessors": 853
+        },
+        {
+          "stage": "after_R_InitSprites",
+          "tic": 0,
+          "cachedSprites": 853,
+          "allocatedKnownIdSuccessors": 853
+        },
+        {
+          "stage": "after_P_Setup",
+          "tic": 0,
+          "cachedSprites": 853,
+          "allocatedKnownIdSuccessors": 853
+        },
+        {
+          "stage": "after_scenario_setup",
+          "tic": 0,
+          "cachedSprites": 853,
+          "allocatedKnownIdSuccessors": 853
+        },
+        {
+          "stage": "after_render",
+          "tic": 1,
+          "cachedSprites": 853,
+          "allocatedKnownIdSuccessors": 853
+        },
+        {
+          "stage": "after_render",
+          "tic": 175,
+          "cachedSprites": 853,
+          "allocatedKnownIdSuccessors": 853
+        },
+        {
+          "stage": "after_render",
+          "tic": 350,
+          "cachedSprites": 853,
+          "allocatedKnownIdSuccessors": 853
+        },
+        {
+          "stage": "final",
+          "tic": 350,
+          "cachedSprites": 853,
+          "allocatedKnownIdSuccessors": 853
+        }
+      ]
+    },
+    {
+      "case": "door-use",
+      "snapshots": [
+        {
+          "stage": "after_Z_Init",
+          "tic": 0,
+          "cachedSprites": 0,
+          "allocatedKnownIdSuccessors": 0
+        },
+        {
+          "stage": "after_R_Init",
+          "tic": 0,
+          "cachedSprites": 853,
+          "allocatedKnownIdSuccessors": 853
+        },
+        {
+          "stage": "after_R_InitSprites",
+          "tic": 0,
+          "cachedSprites": 853,
+          "allocatedKnownIdSuccessors": 853
+        },
+        {
+          "stage": "after_P_Setup",
+          "tic": 0,
+          "cachedSprites": 853,
+          "allocatedKnownIdSuccessors": 853
+        },
+        {
+          "stage": "after_scenario_setup",
+          "tic": 0,
+          "cachedSprites": 853,
+          "allocatedKnownIdSuccessors": 853
+        },
+        {
+          "stage": "after_render",
+          "tic": 1,
+          "cachedSprites": 853,
+          "allocatedKnownIdSuccessors": 853
+        },
+        {
+          "stage": "after_render",
+          "tic": 187,
+          "cachedSprites": 853,
+          "allocatedKnownIdSuccessors": 853
+        },
+        {
+          "stage": "after_render",
+          "tic": 375,
+          "cachedSprites": 853,
+          "allocatedKnownIdSuccessors": 853
+        },
+        {
+          "stage": "final",
+          "tic": 375,
+          "cachedSprites": 853,
+          "allocatedKnownIdSuccessors": 853
+        }
+      ]
+    },
+    {
+      "case": "door-obstructed",
+      "snapshots": [
+        {
+          "stage": "after_Z_Init",
+          "tic": 0,
+          "cachedSprites": 0,
+          "allocatedKnownIdSuccessors": 0
+        },
+        {
+          "stage": "after_R_Init",
+          "tic": 0,
+          "cachedSprites": 853,
+          "allocatedKnownIdSuccessors": 853
+        },
+        {
+          "stage": "after_R_InitSprites",
+          "tic": 0,
+          "cachedSprites": 853,
+          "allocatedKnownIdSuccessors": 853
+        },
+        {
+          "stage": "after_P_Setup",
+          "tic": 0,
+          "cachedSprites": 853,
+          "allocatedKnownIdSuccessors": 853
+        },
+        {
+          "stage": "after_scenario_setup",
+          "tic": 0,
+          "cachedSprites": 853,
+          "allocatedKnownIdSuccessors": 853
+        },
+        {
+          "stage": "after_render",
+          "tic": 1,
+          "cachedSprites": 853,
+          "allocatedKnownIdSuccessors": 853
+        },
+        {
+          "stage": "after_render",
+          "tic": 187,
+          "cachedSprites": 853,
+          "allocatedKnownIdSuccessors": 853
+        },
+        {
+          "stage": "after_render",
+          "tic": 375,
+          "cachedSprites": 853,
+          "allocatedKnownIdSuccessors": 853
+        },
+        {
+          "stage": "final",
+          "tic": 375,
+          "cachedSprites": 853,
+          "allocatedKnownIdSuccessors": 853
+        }
+      ]
+    },
+    {
+      "case": "pistol",
+      "snapshots": [
+        {
+          "stage": "after_Z_Init",
+          "tic": 0,
+          "cachedSprites": 0,
+          "allocatedKnownIdSuccessors": 0
+        },
+        {
+          "stage": "after_R_Init",
+          "tic": 0,
+          "cachedSprites": 853,
+          "allocatedKnownIdSuccessors": 853
+        },
+        {
+          "stage": "after_R_InitSprites",
+          "tic": 0,
+          "cachedSprites": 853,
+          "allocatedKnownIdSuccessors": 853
+        },
+        {
+          "stage": "after_P_Setup",
+          "tic": 0,
+          "cachedSprites": 853,
+          "allocatedKnownIdSuccessors": 853
+        },
+        {
+          "stage": "after_scenario_setup",
+          "tic": 0,
+          "cachedSprites": 853,
+          "allocatedKnownIdSuccessors": 853
+        },
+        {
+          "stage": "after_render",
+          "tic": 1,
+          "cachedSprites": 853,
+          "allocatedKnownIdSuccessors": 853
+        },
+        {
+          "stage": "after_render",
+          "tic": 117,
+          "cachedSprites": 853,
+          "allocatedKnownIdSuccessors": 853
+        },
+        {
+          "stage": "after_render",
+          "tic": 235,
+          "cachedSprites": 853,
+          "allocatedKnownIdSuccessors": 853
+        },
+        {
+          "stage": "final",
+          "tic": 235,
+          "cachedSprites": 853,
+          "allocatedKnownIdSuccessors": 853
+        }
+      ]
+    }
+  ]
+}
