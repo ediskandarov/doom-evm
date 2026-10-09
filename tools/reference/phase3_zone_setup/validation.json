@@ -1,0 +1,16 @@
+{
+  "executedCommand": "python3 tools/reference/phase3_zone_setup/reference.py > artifacts/local/zone-setup-native.log 2>&1",
+  "session": 47812,
+  "exitCode": 0,
+  "kind": "generation",
+  "profiles": [
+    "O0",
+    "O2",
+    "ASan+UBSan",
+    "ASan+UBSan fill0xa5"
+  ],
+  "geometryOuterOperations": 25,
+  "scope": "Original native P_GroupLines pre-THINGS boundary and complete P_Setup headers/owners, with all six browser frame/world outputs unchanged. No EVM setup acceptance claimed by this native checkpoint.",
+  "manifestSha256": "6c9f225e58606f629585f6840a9079122852e657ea516e29068cbba6f6d33f5e",
+  "reproductionCommand": "python3 tools/reference/phase3_zone_setup/reference.py --check"
+}
