@@ -7,6 +7,8 @@ import {R_Data} from "../../src/doom/r_data.sol";
 import {R_Segs} from "../../src/doom/r_segs.sol";
 import {ResourceView} from "../../src/doom/r_data_types.sol";
 import {LumpDescriptor} from "../../src/evm/ResourceTypes.sol";
+import {Seg, Side, Line, Sector, Vertex} from "../../src/doom/r_defs.sol";
+import {RenderResources} from "../../src/doom/r_data_types.sol";
 import {RenderContext, DrawSeg, Visplane} from "../../src/doom/r_render_state.sol";
 
 interface SegsVm {
@@ -297,5 +299,284 @@ contract RSegsTest {
 
     function testOriginalWallAngle7() public {
         check(7);
+    }
+
+    function syntheticContext(RenderResources memory resources, int32[23] memory a)
+        private
+        pure
+        returns (RenderContext memory c)
+    {
+        c.resources = resources;
+        c.map.vertexes = new Vertex[](2);
+        c.map.vertexes[0] = Vertex(128 * 65536, 128 * 65536);
+        c.map.vertexes[1] = Vertex(128 * 65536, -128 * 65536);
+        if (a[21] == 1) {
+            c.map.vertexes[0] = Vertex(-128 * 65536, 128 * 65536);
+            c.map.vertexes[1] = Vertex(128 * 65536, 128 * 65536);
+        }
+        if (a[21] == 2) {
+            c.map.vertexes[0].x = 192 * 65536;
+            c.map.vertexes[1].x = 64 * 65536;
+        }
+        c.skyflatnum = R_Data.R_FlatNumForName(resources, "F_SKY1");
+        c.map.sectors = new Sector[](2);
+        c.map.sectors[0] = Sector(a[0] * 65536, a[1] * 65536, 1, a[12] != 0 ? c.skyflatnum : 2, int16(a[14]));
+        c.map.sectors[1] = Sector(a[2] * 65536, a[3] * 65536, 1, a[13] != 0 ? c.skyflatnum : 2, int16(a[15]));
+        c.map.sides = new Side[](1);
+        c.map.sides[0] = Side(a[10] * 65536, a[9] * 65536, uint32(a[7]), uint32(a[8]), uint32(a[6]), 0);
+        c.map.lines = new Line[](1);
+        c.map.lines[0].flags = uint16(uint32(a[5]));
+        c.map.lines[0].v2 = 1;
+        c.map.segs = new Seg[](1);
+        c.map.segs[0].v2 = 1;
+        c.map.segs[0].offset = a[11] * 65536;
+        c.map.segs[0].angle = R_Main.R_PointToAngle2(
+            c.rs, c.map.vertexes[0].x, c.map.vertexes[0].y, c.map.vertexes[1].x, c.map.vertexes[1].y
+        );
+        c.map.segs[0].backsector = a[4] != 0 ? 1 : type(uint32).max;
+        c.resources.texturetranslation[1] = a[20] != 0 ? 2 : 1;
+        R_Main.R_ExecuteSetViewSize(c.rs, 11, 0);
+        R_Main.R_SetupFrame(c.rs, 0, 0, 41 * 65536, a[21] == 1 ? uint32(0x40000000) : 0, a[19], a[18]);
+        c.rs.framebuffer = new bytes(64000);
+        R_BSP.R_ClearClipSegs(c);
+        R_BSP.R_ClearDrawSegs(c);
+        R_Plane.R_ClearPlanes(c);
+        c.backsector = c.map.segs[0].backsector;
+        if (c.map.sectors[0].floorheight < c.rs.viewz) {
+            c.floorplane =
+                R_Plane.R_FindPlane(c, c.map.sectors[0].floorheight, 1, c.map.sectors[0].lightlevel);
+        }
+        if (c.map.sectors[0].ceilingheight > c.rs.viewz || a[12] != 0) {
+            c.ceilingplane = R_Plane.R_FindPlane(
+                c, c.map.sectors[0].ceilingheight, c.map.sectors[0].ceilingpic, c.map.sectors[0].lightlevel
+            );
+        }
+        c.wall.rw_angle1 = R_Main.R_PointToAngle(c.rs, c.map.vertexes[0].x, c.map.vertexes[0].y);
+        if (a[22] != 0) {
+            c.wall.rw_scalestep = 12345;
+            c.drawsegs[0].scalestep = 54321;
+        }
+    }
+
+    function syntheticGlobals(RenderContext memory c, bytes memory expected) private pure {
+        int32[33] memory values = [
+            c.wall.segtextured ? int32(1) : int32(0),
+            c.wall.markfloor ? int32(1) : int32(0),
+            c.wall.markceiling ? int32(1) : int32(0),
+            c.wall.maskedtexture ? int32(1) : int32(0),
+            int32(c.wall.toptexture),
+            int32(c.wall.bottomtexture),
+            int32(c.wall.midtexture),
+            int32(c.wall.rw_normalangle),
+            int32(c.wall.rw_angle1),
+            c.wall.rw_x,
+            c.wall.rw_stopx,
+            int32(c.wall.rw_centerangle),
+            c.wall.rw_offset,
+            c.wall.rw_distance,
+            c.wall.rw_scale,
+            c.wall.rw_scalestep,
+            c.wall.rw_midtexturemid,
+            c.wall.rw_toptexturemid,
+            c.wall.rw_bottomtexturemid,
+            c.wall.worldtop,
+            c.wall.worldbottom,
+            c.wall.worldhigh,
+            c.wall.worldlow,
+            c.wall.pixhigh,
+            c.wall.pixlow,
+            c.wall.pixhighstep,
+            c.wall.pixlowstep,
+            c.wall.topfrac,
+            c.wall.topstep,
+            c.wall.bottomfrac,
+            c.wall.bottomstep,
+            int32(uint32(c.map.lines[0].flags)),
+            int32(c.openingCount)
+        ];
+        uint256 p;
+        for (uint256 i; i < 33; ++i) {
+            if (i == 0) {
+                require((int32(be32(expected, p)) != 0) == c.wall.segtextured, "native segtextured truth");
+                p += 4;
+            } else {
+                p = word(expected, p, values[i], "wall global");
+            }
+        }
+        require(p == expected.length);
+    }
+
+    function syntheticRange(uint256 begin, uint256 end) private view {
+        RenderResources memory resources = R_Data.R_InitDataLazy(source());
+        bytes memory cases = vm.readFileBinary("test/fixtures/phase2_segs/cases.bin");
+        require(cases.length == 25 * 23 * 4);
+        for (uint256 k = begin; k < end; ++k) {
+            int32[23] memory a;
+            for (uint256 j; j < 23; ++j) {
+                a[j] = int32(be32(cases, k * 92 + j * 4));
+            }
+            RenderContext memory c = syntheticContext(resources, a);
+            R_Segs.R_StoreWallRange(c, a[16], a[17]);
+            string memory dir = string.concat("test/fixtures/phase2_segs/", vm.toString(k), "/");
+            bytes memory expected = vm.readFileBinary(string.concat(dir, "pixels.bin"));
+            require(expected.length == 64000);
+            for (uint256 i; i < 64000; ++i) {
+                if (c.rs.framebuffer[i] != expected[i]) {
+                    revert NativePixelMismatch(i, c.rs.framebuffer[i], expected[i]);
+                }
+            }
+            intermediates(c, dir);
+            syntheticGlobals(c, vm.readFileBinary(string.concat(dir, "globals.bin")));
+        }
+    }
+
+    function testNativeSyntheticOneSided() public view {
+        syntheticRange(0, 1);
+    }
+
+    function testNativeSyntheticBottomPegged() public view {
+        syntheticRange(1, 2);
+    }
+
+    function testNativeSyntheticNegativeRowoffset() public view {
+        syntheticRange(2, 3);
+    }
+
+    function testNativeSyntheticTranslatedHeightOriginal() public view {
+        syntheticRange(3, 4);
+    }
+
+    function testNativeSyntheticWindowPegging0() public view {
+        syntheticRange(4, 5);
+    }
+
+    function testNativeSyntheticWindowPegging8() public view {
+        syntheticRange(5, 6);
+    }
+
+    function testNativeSyntheticWindowPegging16() public view {
+        syntheticRange(6, 7);
+    }
+
+    function testNativeSyntheticWindowPegging24() public view {
+        syntheticRange(7, 8);
+    }
+
+    function testNativeSyntheticMaskedWindow() public view {
+        syntheticRange(8, 9);
+    }
+
+    function testNativeSyntheticMaskedIdentical() public view {
+        syntheticRange(9, 10);
+    }
+
+    function testNativeSyntheticBothSilhouettes() public view {
+        syntheticRange(10, 11);
+    }
+
+    function testNativeSyntheticFloorAboveEye() public view {
+        syntheticRange(11, 12);
+    }
+
+    function testNativeSyntheticCeilingBelowEye() public view {
+        syntheticRange(12, 13);
+    }
+
+    function testNativeSyntheticClosedBottom() public view {
+        syntheticRange(13, 14);
+    }
+
+    function testNativeSyntheticClosedTop() public view {
+        syntheticRange(14, 15);
+    }
+
+    function testNativeSyntheticJoinedSky() public view {
+        syntheticRange(15, 16);
+    }
+
+    function testNativeSyntheticFrontOnlySky() public view {
+        syntheticRange(16, 17);
+    }
+
+    function testNativeSyntheticFrontFloorAboveEye() public view {
+        syntheticRange(17, 18);
+    }
+
+    function testNativeSyntheticFrontCeilingBelowEye() public view {
+        syntheticRange(18, 19);
+    }
+
+    function testNativeSyntheticFixedColormap() public view {
+        syntheticRange(19, 20);
+    }
+
+    function testNativeSyntheticBrightClamp() public view {
+        syntheticRange(20, 21);
+    }
+
+    function testNativeSyntheticDarkClamp() public view {
+        syntheticRange(21, 22);
+    }
+
+    function testNativeSyntheticSingleColumnStaleStep() public view {
+        syntheticRange(22, 23);
+    }
+
+    function testNativeSyntheticHorizontalLight() public view {
+        syntheticRange(23, 24);
+    }
+
+    function testNativeSyntheticDiagonalLight() public view {
+        syntheticRange(24, 25);
+    }
+
+    function malformed(uint8 kind) external view {
+        RenderContext memory c;
+        c.rs.width = 320;
+        c.drawsegs = new DrawSeg[](256);
+        if (kind < 3) {
+            R_Segs.R_StoreWallRange(c, kind == 0 ? int32(-1) : int32(1), kind == 1 ? int32(0) : int32(320));
+            return;
+        }
+        c.map.segs = new Seg[](1);
+        c.map.vertexes = new Vertex[](1);
+        c.map.sides = new Side[](1);
+        c.map.lines = new Line[](1);
+        c.map.sectors = new Sector[](1);
+        c.wall.rw_angle1 = 0xc0000000; // normal90-angle270 -> wrapped signed INT_MIN.
+        R_Segs.R_StoreWallRange(c, 1, 1);
+    }
+
+    function testExplicitWallBoundsAndUndefinedAbs() public {
+        for (uint8 kind; kind < 4; ++kind) {
+            (bool ok, bytes memory reason) = address(this).call(abi.encodeCall(this.malformed, (kind)));
+            require(!ok);
+            require(
+                bytes4(reason) == (kind < 3 ? R_Segs.WallBounds.selector : R_Segs.UndefinedWallAngle.selector)
+            );
+        }
+        RenderContext memory c;
+        c.drawsegCount = 256;
+        R_Segs.R_StoreWallRange(c, -1, -1);
+        require(c.drawsegCount == 256, "original exhaustion no-op");
+    }
+
+    function openingBoundary(bool overflow) external view {
+        RenderResources memory resources = R_Data.R_InitDataLazy(source());
+        bytes memory cases = vm.readFileBinary("test/fixtures/phase2_segs/cases.bin");
+        int32[23] memory a;
+        for (uint256 j; j < 23; ++j) {
+            a[j] = int32(be32(cases, 8 * 92 + j * 4));
+        }
+        RenderContext memory c = syntheticContext(resources, a);
+        c.openingCount = overflow ? uint32(20480) : uint32(20000);
+        R_Segs.R_StoreWallRange(c, a[16], a[17]);
+        require(c.openingCount == 20480, "original short allocation accounting");
+    }
+
+    function testOpeningCapacityExactBoundaryAndOverflow() public {
+        this.openingBoundary(false);
+        (bool ok, bytes memory reason) = address(this).call(abi.encodeCall(this.openingBoundary, (true)));
+        require(!ok && bytes4(reason) == R_Segs.OpeningOverflow.selector, "missing explicit opening cap");
     }
 }
