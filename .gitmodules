@@ -1,0 +1,3 @@
+[submodule "original/DOOM"]
+	path = original/DOOM
+	url = https://github.com/id-Software/DOOM.git
