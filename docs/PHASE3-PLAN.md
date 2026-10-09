@@ -42,6 +42,7 @@ mock-neighbor module proof does not imply whole-engine verification.
 | DoomGame state/action/render adapter | Implemented and committed | All gameplay hooks and renderer projection written; compiled draft production caller and test probe | Type-checks in module batch; full public probe graph compiles; all eight startup states, 2,205 full logical tics, 24 exact 64,000-byte frames and eight final post-render stored snapshots pass. `b1c2735`: [comparison](../tools/reference/gameplay/COMPARISON.md), [validation](../test/fixtures/gameplay_evm/validation.json). Integrator owns `src/evm/DoomGame.sol`. |
 | Production Doom adapter and browser gameplay | Draft adapter implements startup and sequenced command/tic/frame paths; browser loop committed with isolated proof | Production artifact compiles; actual production keyboard/EVM/browser integration pending | `a67f435`: [browser checkpoint](../artifacts/phase3/browser-input-checkpoint.json). Browser 29 isolated tests pass; no real gameplay browser claim. Production compile and 129 keyboard tics/14 state fields/six exact frames/13 rejection-storage rollback checks pass. Static real Chrome/WS/receipt/Canvas gate passes after config-only repair. Gameplay Chrome passes four exact frames/14 fields then hits DrawBounds on tic five; diagnosis and final inherited gates pending. |
 | Full native/EVM gameplay comparison | Test-only public probe and runner implemented and committed | Ordinary deployment, all 1,755 authenticated resource runtimes checked; real original hooks and stored state | Idle 70 and movement 275 per-tic DSG1 states plus three full native frames each pass. Movement final persistence comparison exposed PRE/POST-render ML_MAPPED observer mismatch; exact native post-render observer is being added. Full corrected run passes all 2,205 tics/24 frames/eight exact final post-render stored snapshots; `b1c2735`: [retained evidence](../test/fixtures/gameplay_evm/evidence.json) and all 55 consumed source hashes verified. |
+| Native allocation/backing-memory adapter | Approved zone types compile; allocator core and source-driven renderer startup replay are drafts | Not connected to production yet; existing sources remain frozen during component proofs | Diagnostic C/EVM inputs match exactly. Native PLAYW0 sample lies at next LP64 zone block ID offset 20 and reads byte 17; four profiles confirm. Full native allocation/lifecycle traces and allocator tests are underway. No clamp, padding, special-lump pixel lookup or guard removal. |
 | Resource initializer integration amendment | Complete and committed | Complete public test-probe graph compiles | `abfb38c`: all 20 inherited RData tests pass, including all native lookup/sprite/map/composite fields. [Checkpoint](../artifacts/phase3/resource-init-checkpoint.json). Final inherited gate remains pending. |
 | Original feature/function audit | 287 original definitions inventoried with spans/body hashes and port mappings | Audit-time source snapshot; refresh on final freeze | `6302955`: [feature matrix](PHASE3-FEATURE-MATRIX.md), [JSON inventory](../artifacts/phase3/feature-matrix.json). Evidence scope and unsupported/undefined domains explicit; no new runtime acceptance claim. |
 | Usage telemetry | Complete collector; active collection | Local Codex logs only, no engine dependency or services | 20 collector tests pass; historical Phase 0–2 totals remain stable. Phase 3 boundary `d47dd86`. Latest snapshots are ignored `artifacts/local/codex-usage/`. |
@@ -106,8 +107,22 @@ Failed transaction: `0xd28123618d70997eb485b1f4bce9126b6567a8ec064ab6542506f550e
 selector `0x5b9a48fe` is DrawBounds(). Contract storage remains at inputSeq 6 /
 gametic 4. Report: `artifacts/local/phase3-gameplay-browser.json`. The reference
 agent owns a test-only diagnostic source clone, the interface agent reviews
-original drawing/clipping logic, and root owns any production fix. No guards or
-compiler limits will be weakened to pass the profile. The production adapter
+original drawing/clipping logic, and root owns any production fix. The exact cause is now measured: frac -1 samples offset 1148 of a 1128-byte
+PLAYW0 lump, landing at offset 20 of the next initialized native zone header.
+The native byte is the low byte of ZONEID 0x1d4a11 (17), mapped to palette index
+139. All four profiles use the same draw inputs and header field; this is a
+logical asset overread inside the larger 64 MiB allocation, not proven ISO C UB.
+Evidence: `artifacts/local/draw-diagnostic/conclusion.json`.
+
+The integrator is implementing a source-driven allocator/backing adapter rather
+than changing drawing math or inventing tail bytes. Approved types are in
+`src/doom/z_zone_types.sol`; `/root/p3_interface_audit` owns the original allocator
+core/native unit proof, `/root/p3_input` owns original renderer allocation/cache
+startup replay, and `/root/p3_reference_audit` owns normalized native allocation
+and lifecycle observations. The EVM must compute layout from original algorithms
+and authenticated resources; native allocation tapes remain test evidence only.
+Unknown pointer/padding bytes cannot silently become pixels. No compiler limits
+will be raised to pass the profile. The production adapter
 stays uncommitted. Further dependencies are repeated streams, actual memory
 measurements, final source audit and frozen inherited gates. The full probe compiles after a test-only immutable
 scenario reread, a verified resource patch field-assignment amendment (20 RData tests pass,
