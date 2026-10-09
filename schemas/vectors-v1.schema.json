@@ -1,0 +1,147 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "schemaVersion": {
+      "const": 1
+    },
+    "upstreamCommit": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{40}$"
+    },
+    "wadSha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "scope": {
+      "enum": [
+        "numeric",
+        "geometry-synthetic",
+        "geometry-wad"
+      ]
+    },
+    "map": {
+      "type": "string"
+    },
+    "build": {
+      "type": "object",
+      "properties": {
+        "compiler": {
+          "type": "string",
+          "minLength": 1
+        },
+        "version": {
+          "type": "string",
+          "minLength": 1
+        },
+        "target": {
+          "type": "string",
+          "minLength": 1
+        },
+        "flags": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "sourceSha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "harnessSha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "patchSha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "integerSemantics": {
+          "type": "string",
+          "minLength": 1
+        },
+        "doubleSemantics": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "compiler",
+        "version",
+        "target",
+        "flags",
+        "sourceSha256",
+        "harnessSha256",
+        "patchSha256",
+        "integerSemantics",
+        "doubleSemantics"
+      ],
+      "additionalProperties": false
+    },
+    "vectors": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "function": {
+            "enum": [
+              "FixedMul",
+              "FixedDiv",
+              "FixedDiv2",
+              "SlopeDiv",
+              "R_PointOnSide",
+              "R_PointToAngle2",
+              "R_PointInSubsector",
+              "BSPPath"
+            ]
+          },
+          "inputs": {
+            "type": "array",
+            "items": {
+              "type": "integer",
+              "minimum": -2147483648,
+              "maximum": 4294967295
+            }
+          },
+          "outputs": {
+            "type": "array",
+            "items": {
+              "type": "integer",
+              "minimum": -2147483648,
+              "maximum": 4294967295
+            }
+          },
+          "status": {
+            "enum": [
+              "ok",
+              "error",
+              "undefined"
+            ]
+          },
+          "note": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "function",
+          "inputs",
+          "outputs",
+          "status",
+          "note"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  "required": [
+    "schemaVersion",
+    "upstreamCommit",
+    "wadSha256",
+    "scope",
+    "map",
+    "build",
+    "vectors"
+  ],
+  "additionalProperties": false
+}

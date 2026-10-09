@@ -1,0 +1,244 @@
+{
+  "schemaVersion": 1,
+  "upstreamCommit": "a77dfb96cb91780ca334d0d4cfd86957558007e0",
+  "source": "linuxdoom-1.10/doomdata.h",
+  "byteOrder": "little-endian",
+  "records": {
+    "THINGS": {
+      "stride": 10,
+      "fields": [
+        {
+          "name": "x",
+          "type": "i16"
+        },
+        {
+          "name": "y",
+          "type": "i16"
+        },
+        {
+          "name": "angle",
+          "type": "i16"
+        },
+        {
+          "name": "type",
+          "type": "i16"
+        },
+        {
+          "name": "options",
+          "type": "i16"
+        }
+      ]
+    },
+    "LINEDEFS": {
+      "stride": 14,
+      "fields": [
+        {
+          "name": "v1",
+          "type": "i16"
+        },
+        {
+          "name": "v2",
+          "type": "i16"
+        },
+        {
+          "name": "flags",
+          "type": "i16"
+        },
+        {
+          "name": "special",
+          "type": "i16"
+        },
+        {
+          "name": "tag",
+          "type": "i16"
+        },
+        {
+          "name": "sidenum0",
+          "type": "i16"
+        },
+        {
+          "name": "sidenum1",
+          "type": "i16"
+        }
+      ]
+    },
+    "SIDEDEFS": {
+      "stride": 30,
+      "fields": [
+        {
+          "name": "textureoffset",
+          "type": "i16"
+        },
+        {
+          "name": "rowoffset",
+          "type": "i16"
+        },
+        {
+          "name": "toptexture",
+          "type": "bytes8"
+        },
+        {
+          "name": "bottomtexture",
+          "type": "bytes8"
+        },
+        {
+          "name": "midtexture",
+          "type": "bytes8"
+        },
+        {
+          "name": "sector",
+          "type": "i16"
+        }
+      ]
+    },
+    "VERTEXES": {
+      "stride": 4,
+      "fields": [
+        {
+          "name": "x",
+          "type": "i16"
+        },
+        {
+          "name": "y",
+          "type": "i16"
+        }
+      ]
+    },
+    "SEGS": {
+      "stride": 12,
+      "fields": [
+        {
+          "name": "v1",
+          "type": "i16"
+        },
+        {
+          "name": "v2",
+          "type": "i16"
+        },
+        {
+          "name": "angle",
+          "type": "i16"
+        },
+        {
+          "name": "linedef",
+          "type": "i16"
+        },
+        {
+          "name": "side",
+          "type": "i16"
+        },
+        {
+          "name": "offset",
+          "type": "i16"
+        }
+      ]
+    },
+    "SSECTORS": {
+      "stride": 4,
+      "fields": [
+        {
+          "name": "numsegs",
+          "type": "i16"
+        },
+        {
+          "name": "firstseg",
+          "type": "i16"
+        }
+      ]
+    },
+    "NODES": {
+      "stride": 28,
+      "fields": [
+        {
+          "name": "x",
+          "type": "i16"
+        },
+        {
+          "name": "y",
+          "type": "i16"
+        },
+        {
+          "name": "dx",
+          "type": "i16"
+        },
+        {
+          "name": "dy",
+          "type": "i16"
+        },
+        {
+          "name": "bbox0top",
+          "type": "i16"
+        },
+        {
+          "name": "bbox0bottom",
+          "type": "i16"
+        },
+        {
+          "name": "bbox0left",
+          "type": "i16"
+        },
+        {
+          "name": "bbox0right",
+          "type": "i16"
+        },
+        {
+          "name": "bbox1top",
+          "type": "i16"
+        },
+        {
+          "name": "bbox1bottom",
+          "type": "i16"
+        },
+        {
+          "name": "bbox1left",
+          "type": "i16"
+        },
+        {
+          "name": "bbox1right",
+          "type": "i16"
+        },
+        {
+          "name": "child0",
+          "type": "u16"
+        },
+        {
+          "name": "child1",
+          "type": "u16"
+        }
+      ]
+    },
+    "SECTORS": {
+      "stride": 26,
+      "fields": [
+        {
+          "name": "floorheight",
+          "type": "i16"
+        },
+        {
+          "name": "ceilingheight",
+          "type": "i16"
+        },
+        {
+          "name": "floorpic",
+          "type": "bytes8"
+        },
+        {
+          "name": "ceilingpic",
+          "type": "bytes8"
+        },
+        {
+          "name": "lightlevel",
+          "type": "i16"
+        },
+        {
+          "name": "special",
+          "type": "i16"
+        },
+        {
+          "name": "tag",
+          "type": "i16"
+        }
+      ]
+    }
+  }
+}
