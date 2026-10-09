@@ -1,0 +1,112 @@
+{
+  "schemaVersion": 1,
+  "verifiedAt": "2026-10-09T17:56:46.373674+00:00",
+  "upstreamCommit": "a77dfb96cb91780ca334d0d4cfd86957558007e0",
+  "scope": "Eight core original allocator functions; declared zero backing/known-ID observation masks; no raw pointer/padding/payload/header-overread or production gameplay acceptance",
+  "native": {
+    "command": "python3 tools/reference/phase3_zone_allocator/reference.py --check",
+    "result": "PASS",
+    "snapshots": 1624,
+    "fatalConditions": 5,
+    "fatalProbeRuns": 15,
+    "profiles": [
+      "O0",
+      "O2",
+      "full ASan/UBSan"
+    ],
+    "layoutAssertions": {
+      "memblock": 40,
+      "memzone": 56,
+      "alignment": 8,
+      "sentinelOffset": 8,
+      "idOffset": 20
+    }
+  },
+  "forge": {
+    "command": ".toolchain/bin/forge test --match-contract ZoneTest -vv",
+    "runHandle": 86053,
+    "exitCode": 0,
+    "passed": 2,
+    "failed": 0,
+    "skipped": 0,
+    "suites": 1,
+    "snapshotTestGas": 451535952,
+    "fatalTestGas": 80120,
+    "gasScope": "Aggregate fixture setup/comparison; not production cost",
+    "initialRun": {
+      "handle": 4031,
+      "snapshotResult": "PASS all1624",
+      "failure": "Harness expected AllocationFailed selector without uint32(40); corrected expectation, core unchanged"
+    }
+  },
+  "sourceFunctionCoverage": [
+    {
+      "function": "Z_ClearZone",
+      "path": "original/DOOM/linuxdoom-1.10/z_zone.c",
+      "startLine": 67,
+      "endLine": 86
+    },
+    {
+      "function": "Z_Init",
+      "path": "original/DOOM/linuxdoom-1.10/z_zone.c",
+      "startLine": 93,
+      "endLine": 116
+    },
+    {
+      "function": "Z_Free",
+      "path": "original/DOOM/linuxdoom-1.10/z_zone.c",
+      "startLine": 122,
+      "endLine": 172
+    },
+    {
+      "function": "Z_Malloc",
+      "path": "original/DOOM/linuxdoom-1.10/z_zone.c",
+      "startLine": 184,
+      "endLine": 289
+    },
+    {
+      "function": "Z_FreeTags",
+      "path": "original/DOOM/linuxdoom-1.10/z_zone.c",
+      "startLine": 297,
+      "endLine": 318
+    },
+    {
+      "function": "Z_CheckHeap",
+      "path": "original/DOOM/linuxdoom-1.10/z_zone.c",
+      "startLine": 399,
+      "endLine": 420
+    },
+    {
+      "function": "Z_ChangeTag2",
+      "path": "original/DOOM/linuxdoom-1.10/z_zone.c",
+      "startLine": 429,
+      "endLine": 444
+    },
+    {
+      "function": "Z_FreeMemory",
+      "path": "original/DOOM/linuxdoom-1.10/z_zone.c",
+      "startLine": 451,
+      "endLine": 466
+    }
+  ],
+  "fileHashes": {
+    "src/doom/z_zone.sol": "47fe4cd4ce09d37d21d9d3cedd349004c8e3a1941f939a1ddbc5ec2e1d67b1ca",
+    "test/unit/z_zone.t.sol": "4a634f00510a014ed41df2cfce1023038c5b4ce3ff574841fd46d8e69af03f8a",
+    "docs/PHASE3-ZONE.md": "2dc1aa95352b36fc28918bc81ca0b8b1e4386fd40f2e9d01fcb5f0eab3ac76eb",
+    "tools/reference/phase3_zone_allocator/host.c": "2d1200dac107372fbd639dc7ff371d4598aa9a7711f61d10c5900d4e5adf7424",
+    "tools/reference/phase3_zone_allocator/reference.py": "264be33c47f4ec6f7d4fb90c145b58b4a2d8634ebcc62891dbdad4527fa577da",
+    "test/fixtures/phase3_zone_allocator/commands.txt": "5ceab1cba9ee37ed77b4d8950e1f9443f7de322a9cf7c824bf995c816aca9906",
+    "test/fixtures/phase3_zone_allocator/manifest.json": "af442130eb9af117213ea1756fe81090d0d6e8be88ac72c92c7212723de0b22d",
+    "test/fixtures/phase3_zone_allocator/vectors.bin": "485aa3353e453a187bc4599160b237fbfc02d399035bf799c47eebe61a22cf4b"
+  },
+  "dependencyHashes": {
+    "src/doom/z_zone_types.sol": "d6c5d8680e08bd8989042cb42a934a3323818e4c2b94c11dc38196911dadc08b"
+  },
+  "knownDomainNotes": [
+    "Initial/free split ID bytes unknown; alloc/free writes ID/0; Clear preserves first-header ID/tag and stale owners",
+    "Original size rounding4 adapted8 in pinned LP64 profile",
+    "Logical owner keys replace pointers; actual pointer and padding bytes excluded",
+    "Original rover/start stop and cache purge order unchanged",
+    "No sprite/frame/column/sample-specific branch or raw17 hardcode"
+  ]
+}
