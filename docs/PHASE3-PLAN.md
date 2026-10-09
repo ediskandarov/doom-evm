@@ -427,3 +427,11 @@ Do not conflate these compiled artifacts or gas receipts. Latest production
 variant complete129-tic run 38271 is active; repeat, Chrome and paired-clone
 measurements will run sequentially afterward. M2/M3 remain unaccepted until
 this final runnable artifact is verified. No source or compiler changes required.
+
+Current artifact checkpoint `a4f53b5`: latest renderer-emitted Doom variant
+passes all129 tics /130×14 fields /six live Frames /thirteen rollback guards;
+[release production proof](../tools/reference/gameplay/production-release-evidence.json)
+records the exact three-root build context and runtime identity. Init remains
+1,621,885,757 gas. Chrome24522 separately passes all six native/Canvas frames;
+its evidence checkpoint is next. Independent current replay47208 is active;
+sequential paired-clone measurements follow. No source/compiler/gate changes.
