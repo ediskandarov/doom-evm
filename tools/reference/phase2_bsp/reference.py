@@ -19,6 +19,10 @@ def commands():
  def add(op,a,b=0):rows.append([op,a,b])
  for width in [1,2,32,160,320]:
   add('clear',width);add('pass',0,width-1);add('solid',0,width-1);add('pass',0,width-1);add('solid',0,width-1)
+ for width in [1,2,32,160,320]:
+  add('clear',width)
+  for op in ['pass','solid']:
+   for first,last in [(-2147483647,-2147483647),(-100,-1),(-100,0),(width-1,width+100),(width,width+100),(-100,width+100),(2147483647,2147483647)]:add(op,first,last)
  for scenario in range(30):
   add('clear',320)
   for first,last in [(20,40),(80,100),(140,160),(200,220)]:add('solid',first,last)

@@ -1,72 +1,72 @@
 {
   "scope": "Isolated Foundry harness. initGas includes real lazy resource init/map/view setup. productionGas includes observation-only callbacks and plane construction, not wall drawing. instrumentedGas follows production in same call at a higher memory watermark. allocatorAfter is free-memory pointer after both runs and state/trace checks, not direct MSIZE.",
   "sourceSha256": {
-    "src/doom/r_bsp.sol": "170770c715e527fdd3fdc3aff7070bb3bbdedbce78b62fba18f2013c4e09107d",
+    "src/doom/r_bsp.sol": "0ae5df313515692d0b2b970d5d39d107e014629cff2305fb37c14371a9524040",
     "src/doom/r_main.sol": "014c3f9afe19406b18b630da2dae6c5d8354cd7af4d50eb0676d7ce298eb7d99",
     "src/doom/r_data.sol": "6c967cf81b84e07485d8bb8c76eb4895dda443dfb69a9f5e72dea70e4b473df6",
     "src/doom/r_plane.sol": "9b71d18a2c8b58cd561f7889a54e28af141ab4c23ddb5896d635527240e4c7b7",
     "src/doom/r_render_state.sol": "487bb995dd6c5a93b830b89c56c8df0fdce8efa6e106378d2bb4899ffc6aa959",
     "src/doom/r_state.sol": "e87ff9d88345a53d1f8825fb07b485c782c7bcb55e2de1dc56c876f9b26ab966",
     "src/doom/r_defs.sol": "558d5a9bfd131e816bbe28986e2dad6144a08e5a16ccfed1b199d7558a1ea0e2",
-    "test/unit/r_bsp.t.sol": "750e9d231088e7394932b25d4f91b5e0801fc80cae744fd46d3645c523f2d1e9",
-    "test/fixtures/phase2_bsp/InstrumentedR_BSP.sol": "6463d32d2ee1f2eb225185c3b1acafd616de17aaaad68eab05b77c849b9ca4f7",
+    "test/unit/r_bsp.t.sol": "e3debfd58e1de8e0290e7f2b12542c1829748c5fe886950053bc765fd25d3fb6",
+    "test/fixtures/phase2_bsp/InstrumentedR_BSP.sol": "7df4a68f14fcd1bdac94fae039dbeed8ac385737e9f59cc6ad6823d26ef18275",
     "foundry.toml": "084d5192108931325837611f9d1339796a6ffd64ed570e31907afe718f191226"
   },
   "cases": [
     {
       "angle": 0,
-      "initGas": 515227186,
-      "productionGas": 46982930,
-      "instrumentedGas": 52316815,
+      "initGas": 515380945,
+      "productionGas": 46970468,
+      "instrumentedGas": 52304353,
       "allocatorAfter": 13843904
     },
     {
       "angle": 1,
-      "initGas": 515227384,
-      "productionGas": 34040385,
-      "instrumentedGas": 37261160,
+      "initGas": 515381143,
+      "productionGas": 34031922,
+      "instrumentedGas": 37252697,
       "allocatorAfter": 13349248
     },
     {
       "angle": 2,
-      "initGas": 515227568,
-      "productionGas": 9398255,
-      "instrumentedGas": 9933102,
+      "initGas": 515381327,
+      "productionGas": 9396302,
+      "instrumentedGas": 9931149,
       "allocatorAfter": 12373184
     },
     {
       "angle": 3,
-      "initGas": 515227752,
-      "productionGas": 6237620,
-      "instrumentedGas": 6541272,
+      "initGas": 515381511,
+      "productionGas": 6236411,
+      "instrumentedGas": 6540063,
       "allocatorAfter": 12244736
     },
     {
       "angle": 4,
-      "initGas": 515227936,
-      "productionGas": 6418112,
-      "instrumentedGas": 6738013,
+      "initGas": 515381695,
+      "productionGas": 6416810,
+      "instrumentedGas": 6736711,
       "allocatorAfter": 12252032
     },
     {
       "angle": 5,
-      "initGas": 515228120,
-      "productionGas": 7700720,
-      "instrumentedGas": 8097153,
+      "initGas": 515381879,
+      "productionGas": 7699325,
+      "instrumentedGas": 8095758,
       "allocatorAfter": 12305472
     },
     {
       "angle": 6,
-      "initGas": 515228304,
-      "productionGas": 10390126,
-      "instrumentedGas": 10993215,
+      "initGas": 515382063,
+      "productionGas": 10388173,
+      "instrumentedGas": 10991262,
       "allocatorAfter": 12414336
     },
     {
       "angle": 7,
-      "initGas": 515228488,
-      "productionGas": 36744019,
-      "instrumentedGas": 40351267,
+      "initGas": 515382247,
+      "productionGas": 36735463,
+      "instrumentedGas": 40342711,
       "allocatorAfter": 13454016
     }
   ]

@@ -34,8 +34,8 @@ library InstrumentedR_BSP {
 
     function _range(RenderContext memory ctx, int32 first, int32 last) private pure {
         if (
-            first < 0 || last < first || last >= int32(uint32(ctx.rs.width)) || ctx.solidsegCount < 1
-                || ctx.solidsegCount > 32 || ctx.solidsegs.length != 32
+            first == type(int32).min || last < first || ctx.solidsegCount < 1 || ctx.solidsegCount > 32
+                || ctx.solidsegs.length != 32
         ) revert BSPBounds();
     }
 

@@ -241,7 +241,7 @@ contract RBspTest {
             }
             ++rows;
         }
-        require(rows == 1045, "incomplete native clip fixture");
+        require(rows == 1120, "incomplete native clip fixture");
     }
 
     function tinyContext() private pure returns (RenderContext memory c) {
@@ -283,11 +283,11 @@ contract RBspTest {
     function malformed(uint8 op) external view {
         RenderContext memory c = tinyContext();
         if (op == 0) {
-            R_BSP.R_ClipSolidWallSegment(c, -1, 0, noStore);
+            R_BSP.R_ClipSolidWallSegment(c, type(int32).min, 0, noStore);
             return;
         }
         if (op == 1) {
-            R_BSP.R_ClipPassWallSegment(c, 0, 320, noStore);
+            R_BSP.R_ClipPassWallSegment(c, 10, 9, noStore);
             return;
         }
         if (op == 2) {

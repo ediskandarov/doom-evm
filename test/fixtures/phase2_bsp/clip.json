@@ -382,6 +382,1137 @@
   {
     "operation": "clear",
     "inputs": [
+      1,
+      0
+    ],
+    "wallRanges": [],
+    "solidRanges": [
+      -2147483647,
+      -1,
+      1,
+      2147483647
+    ]
+  },
+  {
+    "operation": "pass",
+    "inputs": [
+      -2147483647,
+      -2147483647
+    ],
+    "wallRanges": [],
+    "solidRanges": [
+      -2147483647,
+      -1,
+      1,
+      2147483647
+    ]
+  },
+  {
+    "operation": "pass",
+    "inputs": [
+      -100,
+      -1
+    ],
+    "wallRanges": [],
+    "solidRanges": [
+      -2147483647,
+      -1,
+      1,
+      2147483647
+    ]
+  },
+  {
+    "operation": "pass",
+    "inputs": [
+      -100,
+      0
+    ],
+    "wallRanges": [
+      0,
+      0
+    ],
+    "solidRanges": [
+      -2147483647,
+      -1,
+      1,
+      2147483647
+    ]
+  },
+  {
+    "operation": "pass",
+    "inputs": [
+      0,
+      101
+    ],
+    "wallRanges": [
+      0,
+      0
+    ],
+    "solidRanges": [
+      -2147483647,
+      -1,
+      1,
+      2147483647
+    ]
+  },
+  {
+    "operation": "pass",
+    "inputs": [
+      1,
+      101
+    ],
+    "wallRanges": [],
+    "solidRanges": [
+      -2147483647,
+      -1,
+      1,
+      2147483647
+    ]
+  },
+  {
+    "operation": "pass",
+    "inputs": [
+      -100,
+      101
+    ],
+    "wallRanges": [
+      0,
+      0
+    ],
+    "solidRanges": [
+      -2147483647,
+      -1,
+      1,
+      2147483647
+    ]
+  },
+  {
+    "operation": "pass",
+    "inputs": [
+      2147483647,
+      2147483647
+    ],
+    "wallRanges": [],
+    "solidRanges": [
+      -2147483647,
+      -1,
+      1,
+      2147483647
+    ]
+  },
+  {
+    "operation": "solid",
+    "inputs": [
+      -2147483647,
+      -2147483647
+    ],
+    "wallRanges": [],
+    "solidRanges": [
+      -2147483647,
+      -1,
+      1,
+      2147483647
+    ]
+  },
+  {
+    "operation": "solid",
+    "inputs": [
+      -100,
+      -1
+    ],
+    "wallRanges": [],
+    "solidRanges": [
+      -2147483647,
+      -1,
+      1,
+      2147483647
+    ]
+  },
+  {
+    "operation": "solid",
+    "inputs": [
+      -100,
+      0
+    ],
+    "wallRanges": [
+      0,
+      0
+    ],
+    "solidRanges": [
+      -2147483647,
+      2147483647,
+      0,
+      0
+    ]
+  },
+  {
+    "operation": "solid",
+    "inputs": [
+      0,
+      101
+    ],
+    "wallRanges": [],
+    "solidRanges": [
+      -2147483647,
+      2147483647,
+      0,
+      0
+    ]
+  },
+  {
+    "operation": "solid",
+    "inputs": [
+      1,
+      101
+    ],
+    "wallRanges": [],
+    "solidRanges": [
+      -2147483647,
+      2147483647,
+      0,
+      0
+    ]
+  },
+  {
+    "operation": "solid",
+    "inputs": [
+      -100,
+      101
+    ],
+    "wallRanges": [],
+    "solidRanges": [
+      -2147483647,
+      2147483647,
+      0,
+      0
+    ]
+  },
+  {
+    "operation": "solid",
+    "inputs": [
+      2147483647,
+      2147483647
+    ],
+    "wallRanges": [],
+    "solidRanges": [
+      -2147483647,
+      2147483647,
+      0,
+      0
+    ]
+  },
+  {
+    "operation": "clear",
+    "inputs": [
+      2,
+      0
+    ],
+    "wallRanges": [],
+    "solidRanges": [
+      -2147483647,
+      -1,
+      2,
+      2147483647
+    ]
+  },
+  {
+    "operation": "pass",
+    "inputs": [
+      -2147483647,
+      -2147483647
+    ],
+    "wallRanges": [],
+    "solidRanges": [
+      -2147483647,
+      -1,
+      2,
+      2147483647
+    ]
+  },
+  {
+    "operation": "pass",
+    "inputs": [
+      -100,
+      -1
+    ],
+    "wallRanges": [],
+    "solidRanges": [
+      -2147483647,
+      -1,
+      2,
+      2147483647
+    ]
+  },
+  {
+    "operation": "pass",
+    "inputs": [
+      -100,
+      0
+    ],
+    "wallRanges": [
+      0,
+      0
+    ],
+    "solidRanges": [
+      -2147483647,
+      -1,
+      2,
+      2147483647
+    ]
+  },
+  {
+    "operation": "pass",
+    "inputs": [
+      1,
+      102
+    ],
+    "wallRanges": [
+      1,
+      1
+    ],
+    "solidRanges": [
+      -2147483647,
+      -1,
+      2,
+      2147483647
+    ]
+  },
+  {
+    "operation": "pass",
+    "inputs": [
+      2,
+      102
+    ],
+    "wallRanges": [],
+    "solidRanges": [
+      -2147483647,
+      -1,
+      2,
+      2147483647
+    ]
+  },
+  {
+    "operation": "pass",
+    "inputs": [
+      -100,
+      102
+    ],
+    "wallRanges": [
+      0,
+      1
+    ],
+    "solidRanges": [
+      -2147483647,
+      -1,
+      2,
+      2147483647
+    ]
+  },
+  {
+    "operation": "pass",
+    "inputs": [
+      2147483647,
+      2147483647
+    ],
+    "wallRanges": [],
+    "solidRanges": [
+      -2147483647,
+      -1,
+      2,
+      2147483647
+    ]
+  },
+  {
+    "operation": "solid",
+    "inputs": [
+      -2147483647,
+      -2147483647
+    ],
+    "wallRanges": [],
+    "solidRanges": [
+      -2147483647,
+      -1,
+      2,
+      2147483647
+    ]
+  },
+  {
+    "operation": "solid",
+    "inputs": [
+      -100,
+      -1
+    ],
+    "wallRanges": [],
+    "solidRanges": [
+      -2147483647,
+      -1,
+      2,
+      2147483647
+    ]
+  },
+  {
+    "operation": "solid",
+    "inputs": [
+      -100,
+      0
+    ],
+    "wallRanges": [
+      0,
+      0
+    ],
+    "solidRanges": [
+      -2147483647,
+      0,
+      2,
+      2147483647
+    ]
+  },
+  {
+    "operation": "solid",
+    "inputs": [
+      1,
+      102
+    ],
+    "wallRanges": [
+      1,
+      1
+    ],
+    "solidRanges": [
+      -2147483647,
+      2147483647,
+      0,
+      0
+    ]
+  },
+  {
+    "operation": "solid",
+    "inputs": [
+      2,
+      102
+    ],
+    "wallRanges": [],
+    "solidRanges": [
+      -2147483647,
+      2147483647,
+      0,
+      0
+    ]
+  },
+  {
+    "operation": "solid",
+    "inputs": [
+      -100,
+      102
+    ],
+    "wallRanges": [],
+    "solidRanges": [
+      -2147483647,
+      2147483647,
+      0,
+      0
+    ]
+  },
+  {
+    "operation": "solid",
+    "inputs": [
+      2147483647,
+      2147483647
+    ],
+    "wallRanges": [],
+    "solidRanges": [
+      -2147483647,
+      2147483647,
+      0,
+      0
+    ]
+  },
+  {
+    "operation": "clear",
+    "inputs": [
+      32,
+      0
+    ],
+    "wallRanges": [],
+    "solidRanges": [
+      -2147483647,
+      -1,
+      32,
+      2147483647
+    ]
+  },
+  {
+    "operation": "pass",
+    "inputs": [
+      -2147483647,
+      -2147483647
+    ],
+    "wallRanges": [],
+    "solidRanges": [
+      -2147483647,
+      -1,
+      32,
+      2147483647
+    ]
+  },
+  {
+    "operation": "pass",
+    "inputs": [
+      -100,
+      -1
+    ],
+    "wallRanges": [],
+    "solidRanges": [
+      -2147483647,
+      -1,
+      32,
+      2147483647
+    ]
+  },
+  {
+    "operation": "pass",
+    "inputs": [
+      -100,
+      0
+    ],
+    "wallRanges": [
+      0,
+      0
+    ],
+    "solidRanges": [
+      -2147483647,
+      -1,
+      32,
+      2147483647
+    ]
+  },
+  {
+    "operation": "pass",
+    "inputs": [
+      31,
+      132
+    ],
+    "wallRanges": [
+      31,
+      31
+    ],
+    "solidRanges": [
+      -2147483647,
+      -1,
+      32,
+      2147483647
+    ]
+  },
+  {
+    "operation": "pass",
+    "inputs": [
+      32,
+      132
+    ],
+    "wallRanges": [],
+    "solidRanges": [
+      -2147483647,
+      -1,
+      32,
+      2147483647
+    ]
+  },
+  {
+    "operation": "pass",
+    "inputs": [
+      -100,
+      132
+    ],
+    "wallRanges": [
+      0,
+      31
+    ],
+    "solidRanges": [
+      -2147483647,
+      -1,
+      32,
+      2147483647
+    ]
+  },
+  {
+    "operation": "pass",
+    "inputs": [
+      2147483647,
+      2147483647
+    ],
+    "wallRanges": [],
+    "solidRanges": [
+      -2147483647,
+      -1,
+      32,
+      2147483647
+    ]
+  },
+  {
+    "operation": "solid",
+    "inputs": [
+      -2147483647,
+      -2147483647
+    ],
+    "wallRanges": [],
+    "solidRanges": [
+      -2147483647,
+      -1,
+      32,
+      2147483647
+    ]
+  },
+  {
+    "operation": "solid",
+    "inputs": [
+      -100,
+      -1
+    ],
+    "wallRanges": [],
+    "solidRanges": [
+      -2147483647,
+      -1,
+      32,
+      2147483647
+    ]
+  },
+  {
+    "operation": "solid",
+    "inputs": [
+      -100,
+      0
+    ],
+    "wallRanges": [
+      0,
+      0
+    ],
+    "solidRanges": [
+      -2147483647,
+      0,
+      32,
+      2147483647
+    ]
+  },
+  {
+    "operation": "solid",
+    "inputs": [
+      31,
+      132
+    ],
+    "wallRanges": [
+      31,
+      31
+    ],
+    "solidRanges": [
+      -2147483647,
+      0,
+      31,
+      2147483647
+    ]
+  },
+  {
+    "operation": "solid",
+    "inputs": [
+      32,
+      132
+    ],
+    "wallRanges": [],
+    "solidRanges": [
+      -2147483647,
+      0,
+      31,
+      2147483647
+    ]
+  },
+  {
+    "operation": "solid",
+    "inputs": [
+      -100,
+      132
+    ],
+    "wallRanges": [
+      1,
+      30
+    ],
+    "solidRanges": [
+      -2147483647,
+      2147483647,
+      0,
+      0
+    ]
+  },
+  {
+    "operation": "solid",
+    "inputs": [
+      2147483647,
+      2147483647
+    ],
+    "wallRanges": [],
+    "solidRanges": [
+      -2147483647,
+      2147483647,
+      0,
+      0
+    ]
+  },
+  {
+    "operation": "clear",
+    "inputs": [
+      160,
+      0
+    ],
+    "wallRanges": [],
+    "solidRanges": [
+      -2147483647,
+      -1,
+      160,
+      2147483647
+    ]
+  },
+  {
+    "operation": "pass",
+    "inputs": [
+      -2147483647,
+      -2147483647
+    ],
+    "wallRanges": [],
+    "solidRanges": [
+      -2147483647,
+      -1,
+      160,
+      2147483647
+    ]
+  },
+  {
+    "operation": "pass",
+    "inputs": [
+      -100,
+      -1
+    ],
+    "wallRanges": [],
+    "solidRanges": [
+      -2147483647,
+      -1,
+      160,
+      2147483647
+    ]
+  },
+  {
+    "operation": "pass",
+    "inputs": [
+      -100,
+      0
+    ],
+    "wallRanges": [
+      0,
+      0
+    ],
+    "solidRanges": [
+      -2147483647,
+      -1,
+      160,
+      2147483647
+    ]
+  },
+  {
+    "operation": "pass",
+    "inputs": [
+      159,
+      260
+    ],
+    "wallRanges": [
+      159,
+      159
+    ],
+    "solidRanges": [
+      -2147483647,
+      -1,
+      160,
+      2147483647
+    ]
+  },
+  {
+    "operation": "pass",
+    "inputs": [
+      160,
+      260
+    ],
+    "wallRanges": [],
+    "solidRanges": [
+      -2147483647,
+      -1,
+      160,
+      2147483647
+    ]
+  },
+  {
+    "operation": "pass",
+    "inputs": [
+      -100,
+      260
+    ],
+    "wallRanges": [
+      0,
+      159
+    ],
+    "solidRanges": [
+      -2147483647,
+      -1,
+      160,
+      2147483647
+    ]
+  },
+  {
+    "operation": "pass",
+    "inputs": [
+      2147483647,
+      2147483647
+    ],
+    "wallRanges": [],
+    "solidRanges": [
+      -2147483647,
+      -1,
+      160,
+      2147483647
+    ]
+  },
+  {
+    "operation": "solid",
+    "inputs": [
+      -2147483647,
+      -2147483647
+    ],
+    "wallRanges": [],
+    "solidRanges": [
+      -2147483647,
+      -1,
+      160,
+      2147483647
+    ]
+  },
+  {
+    "operation": "solid",
+    "inputs": [
+      -100,
+      -1
+    ],
+    "wallRanges": [],
+    "solidRanges": [
+      -2147483647,
+      -1,
+      160,
+      2147483647
+    ]
+  },
+  {
+    "operation": "solid",
+    "inputs": [
+      -100,
+      0
+    ],
+    "wallRanges": [
+      0,
+      0
+    ],
+    "solidRanges": [
+      -2147483647,
+      0,
+      160,
+      2147483647
+    ]
+  },
+  {
+    "operation": "solid",
+    "inputs": [
+      159,
+      260
+    ],
+    "wallRanges": [
+      159,
+      159
+    ],
+    "solidRanges": [
+      -2147483647,
+      0,
+      159,
+      2147483647
+    ]
+  },
+  {
+    "operation": "solid",
+    "inputs": [
+      160,
+      260
+    ],
+    "wallRanges": [],
+    "solidRanges": [
+      -2147483647,
+      0,
+      159,
+      2147483647
+    ]
+  },
+  {
+    "operation": "solid",
+    "inputs": [
+      -100,
+      260
+    ],
+    "wallRanges": [
+      1,
+      158
+    ],
+    "solidRanges": [
+      -2147483647,
+      2147483647,
+      0,
+      0
+    ]
+  },
+  {
+    "operation": "solid",
+    "inputs": [
+      2147483647,
+      2147483647
+    ],
+    "wallRanges": [],
+    "solidRanges": [
+      -2147483647,
+      2147483647,
+      0,
+      0
+    ]
+  },
+  {
+    "operation": "clear",
+    "inputs": [
+      320,
+      0
+    ],
+    "wallRanges": [],
+    "solidRanges": [
+      -2147483647,
+      -1,
+      320,
+      2147483647
+    ]
+  },
+  {
+    "operation": "pass",
+    "inputs": [
+      -2147483647,
+      -2147483647
+    ],
+    "wallRanges": [],
+    "solidRanges": [
+      -2147483647,
+      -1,
+      320,
+      2147483647
+    ]
+  },
+  {
+    "operation": "pass",
+    "inputs": [
+      -100,
+      -1
+    ],
+    "wallRanges": [],
+    "solidRanges": [
+      -2147483647,
+      -1,
+      320,
+      2147483647
+    ]
+  },
+  {
+    "operation": "pass",
+    "inputs": [
+      -100,
+      0
+    ],
+    "wallRanges": [
+      0,
+      0
+    ],
+    "solidRanges": [
+      -2147483647,
+      -1,
+      320,
+      2147483647
+    ]
+  },
+  {
+    "operation": "pass",
+    "inputs": [
+      319,
+      420
+    ],
+    "wallRanges": [
+      319,
+      319
+    ],
+    "solidRanges": [
+      -2147483647,
+      -1,
+      320,
+      2147483647
+    ]
+  },
+  {
+    "operation": "pass",
+    "inputs": [
+      320,
+      420
+    ],
+    "wallRanges": [],
+    "solidRanges": [
+      -2147483647,
+      -1,
+      320,
+      2147483647
+    ]
+  },
+  {
+    "operation": "pass",
+    "inputs": [
+      -100,
+      420
+    ],
+    "wallRanges": [
+      0,
+      319
+    ],
+    "solidRanges": [
+      -2147483647,
+      -1,
+      320,
+      2147483647
+    ]
+  },
+  {
+    "operation": "pass",
+    "inputs": [
+      2147483647,
+      2147483647
+    ],
+    "wallRanges": [],
+    "solidRanges": [
+      -2147483647,
+      -1,
+      320,
+      2147483647
+    ]
+  },
+  {
+    "operation": "solid",
+    "inputs": [
+      -2147483647,
+      -2147483647
+    ],
+    "wallRanges": [],
+    "solidRanges": [
+      -2147483647,
+      -1,
+      320,
+      2147483647
+    ]
+  },
+  {
+    "operation": "solid",
+    "inputs": [
+      -100,
+      -1
+    ],
+    "wallRanges": [],
+    "solidRanges": [
+      -2147483647,
+      -1,
+      320,
+      2147483647
+    ]
+  },
+  {
+    "operation": "solid",
+    "inputs": [
+      -100,
+      0
+    ],
+    "wallRanges": [
+      0,
+      0
+    ],
+    "solidRanges": [
+      -2147483647,
+      0,
+      320,
+      2147483647
+    ]
+  },
+  {
+    "operation": "solid",
+    "inputs": [
+      319,
+      420
+    ],
+    "wallRanges": [
+      319,
+      319
+    ],
+    "solidRanges": [
+      -2147483647,
+      0,
+      319,
+      2147483647
+    ]
+  },
+  {
+    "operation": "solid",
+    "inputs": [
+      320,
+      420
+    ],
+    "wallRanges": [],
+    "solidRanges": [
+      -2147483647,
+      0,
+      319,
+      2147483647
+    ]
+  },
+  {
+    "operation": "solid",
+    "inputs": [
+      -100,
+      420
+    ],
+    "wallRanges": [
+      1,
+      318
+    ],
+    "solidRanges": [
+      -2147483647,
+      2147483647,
+      0,
+      0
+    ]
+  },
+  {
+    "operation": "solid",
+    "inputs": [
+      2147483647,
+      2147483647
+    ],
+    "wallRanges": [],
+    "solidRanges": [
+      -2147483647,
+      2147483647,
+      0,
+      0
+    ]
+  },
+  {
+    "operation": "clear",
+    "inputs": [
       320,
       0
     ],

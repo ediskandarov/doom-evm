@@ -28,11 +28,11 @@
   ],
   "generatedSourceSha256": "4feb86eee0e8d1b1295091bb6940b4fd74a623f60b257d54fb1c4a90d9b72857",
   "harnessSha256": {
-    "reference.py": "cf6e6f0480f727dc31437d8036bb0ffc678e73845028c453ebedc0b054dceaa0",
+    "reference.py": "a0ce51c27dfc0724d5230a1794d9d6e9cd3376e80363348a96f74eeba4b6af0d",
     "compat.h": "bd5175a8bb5b7d9999c9e7ac2c384f69e26e1cf255f1e25a92368f63c274a425",
     "driver.c": "d7e46ed9be4c603249d97a319e265d79d6f040ebbddb0b791fe8ffd9e6c50517"
   },
-  "clipRows": 1045,
+  "clipRows": 1120,
   "clipProfiles": "O0/O2 and ASan/UBSan without fwrapv identical",
   "rendererManifestSha256": "71fbc9bf072bc5896de35038ee442bdc4b807826c934183ffac6e11a1901a5a0",
   "cases": [
