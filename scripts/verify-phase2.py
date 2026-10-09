@@ -31,7 +31,7 @@ DOCUMENTS = ['PORTING.md', 'docs/02-TECHNICAL-SPECIFICATION.md',
              'docs/03-IMPLEMENTATION-PLAN.md', 'docs/PHASE2-INTERFACES.md',
              *['docs/PHASE2-' + part + '.md' for part in
                ['GEOMETRY', 'DATA', 'DRAW', 'BSP', 'SEGS', 'PLANES', 'SPRITES',
-                'SOURCE', 'TABLES', 'REPORT']]]
+                'SOURCE', 'TABLES', 'E2E', 'REPORT']]]
 COVERAGE = {
     'plan 5 / 2A F geometry': ['geometry-native', 'foundry-tests'],
     'plan 5 / 2A G resource access': ['data-native', 'source-commitments', 'resource-measurements'],
@@ -350,7 +350,8 @@ def renderer_evidence(prefix, started_ns, baseline):
     require({r['name'] for r in report['rejections']} == {'wrong-driver', 'buttons', 'sequence-replay', 'sequence-skip'}
             and len(report['rejections']) == 4, 'Missing mined rollback cases')
     for rejection in report['rejections']:
-        require(rejection['logs'] == 0 and rejection['countersUnchanged'] is True, 'Failed transaction changed frame state')
+        require(rejection['status'] == '0x0' and rejection['logs'] == 0
+                and rejection['countersUnchanged'] is True, 'Missing mined failure or changed frame state')
         transaction_hash(rejection['transactionHash'])
         positive(rejection['gasUsed'], 'mined rejection gas')
     wall = report['wallFrame']
@@ -477,7 +478,9 @@ def self_test():
         ]:
             result = run_command(dict(name=name, args=args, timeout=timeout), folder / (name + '.log'))
             require(result['exit_code'] == expected and result['log_sha256'], 'Command failure handling regressed')
-        for operation in [lambda: unchanged({'source_sha256': {'a': '1'}}, {'source_sha256': {'a': '2'}}),
+        (folder / 'renderer.json').write_text(json.dumps({'kind': 'doom-world-view-ordinary-e2e', 'pass': False}))
+        for operation in [lambda: renderer_evidence(folder / 'renderer', 0, {}),
+                          lambda: unchanged({'source_sha256': {'a': '1'}}, {'source_sha256': {'a': '2'}}),
                           lambda: fresh(folder / 'missing.json', 0),
                           lambda: fresh(folder / 'success.log', time.time_ns() + 1000000),
                           lambda: check_report_sources({'sources': {'bad': '0'}}, {'source_sha256': {}})]:
@@ -519,6 +522,8 @@ def main():
     report = {'scope': 'Complete static E1M1 world views; Phase2 and all inherited Phase0/1 gates; no gameplay ticks/HUD',
               'run_id': str(uuid.uuid4()), 'utc': time.strftime('%Y-%m-%dT%H:%M:%SZ', time.gmtime()),
               'coverage': COVERAGE, 'planned_gates': [x['name'] for x in commands], 'results': [], 'passed': False}
+    # Invalidate a prior success before scanning inputs or starting any child.
+    write_report(output, report, started)
     try:
         baseline = snapshot()
         report.update(baseline)
