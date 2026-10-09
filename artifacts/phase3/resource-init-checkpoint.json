@@ -1,0 +1,27 @@
+{
+  "version": 1,
+  "scope": "Minimal resource-initialization working-set amendment; inherited RData regressions only",
+  "result": "PASS",
+  "change": "TexPatch constructor changed to sequential originx/originy/patch field assignment through an array-element memory alias, in original order; lookup/decoding/bounds/lump order unchanged.",
+  "forge": {
+    "command": ".toolchain/bin/forge test --match-path test/unit/r_data.t.sol -vv",
+    "runHandle": 39856,
+    "passed": 20,
+    "failed": 0,
+    "skipped": 0,
+    "suites": 1,
+    "nativeAllMapFieldsTestGas": 239987326,
+    "nativeAllLookupSpriteMetadataTestGas": 884601759,
+    "gasScope": "Fixture setup/comparison costs, not production startup or tic gas"
+  },
+  "fullGraphBuildRun": 90948,
+  "remaining": [
+    "Final inherited Phase0/1/2 gates",
+    "Actual production gameplay acceptance"
+  ],
+  "sourceSha256": {
+    "src/doom/r_data.sol": "ab45e09771ea0f3c8ef3c23896c146a6d1a6a0a31f97e0a66ae9dd1e2d612745",
+    "test/unit/r_data.t.sol": "98bb1ba8d7c50b298f923cd4c099503a2649a4cfad78d1df2c2b87f930455853",
+    "test/fixtures/phase2_data/manifest.json": "9ea7c4bd041b0ab21e266a8246538fc581e744e1f9a6e5d1c45c7fa59ffe3060"
+  }
+}

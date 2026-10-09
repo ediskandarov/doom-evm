@@ -81,3 +81,14 @@ Host adaptation is documented rather than hidden: disk structures retain origina
 - `R_DrawColumnInCache` checks complete source post bounds, clipped count, cache destination and coverage destination before `MCOPY`. Coverage stores use 32-byte words only when the entire word fits, then byte stores for the tail. No header, padding or neighboring object is modified.
 - Coverage verification reads full words only when their complete 32-byte range is inside the coverage allocation; the remainder uses Solidity byte indexing.
 - Test-only binary hash and name loads read inside prechecked fixtures; measurement reads the free-memory pointer. No production scratch-space aliasing or free-pointer rewinding occurs.
+
+## Phase 3 integration amendment
+
+Compiling the complete gameplay hook graph exposed a via-IR stack limit in the
+three-field TexPatch constructor. The loader now assigns originx, originy and
+patch through the existing array-element memory alias, in the same original
+order. Decoding, lookup, bounds and resource read order are unchanged. Fresh
+RDataTest verification passes all 20 tests, including every native lookup/sprite
+field, map field, composite and signed-subsector boundary. The
+[amendment checkpoint](../artifacts/phase3/resource-init-checkpoint.json) binds the
+current source. Final integrated Phase 0/1/2 gates remain required separately.

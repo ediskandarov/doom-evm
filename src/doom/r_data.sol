@@ -157,7 +157,12 @@ library R_Data {
                 uint256 q = p + 22 + j * 10;
                 int32 pi = s16(data, q + 4);
                 if (pi < 0 || uint32(pi) >= np || lookup[uint32(pi)] < 0) revert Malformed();
-                t.patches[j] = TexPatch(s16(data, q), s16(data, q + 2), uint32(lookup[uint32(pi)]));
+                // Original field order; avoid retaining three decoded constructor values
+                // during full gameplay hook-graph code generation.
+                TexPatch memory patch = t.patches[j];
+                patch.originx = s16(data, q);
+                patch.originy = s16(data, q + 2);
+                patch.patch = uint32(lookup[uint32(pi)]);
             }
             uint32 power = 1;
             while (power * 2 <= t.width) power *= 2;
