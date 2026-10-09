@@ -435,3 +435,9 @@ records the exact three-root build context and runtime identity. Init remains
 1,621,885,757 gas. Chrome24522 separately passes all six native/Canvas frames;
 its evidence checkpoint is next. Independent current replay47208 is active;
 sequential paired-clone measurements follow. No source/compiler/gate changes.
+
+Current real-browser checkpoint `ce7f0de` commits Chrome24522 evidence: all six
+actual native indexed/Canvas frames, all84 player fields, keyboard/blur/dedup
+and controlled receipt fallback PASS.
+[Current artifact browser proof](../tools/transport/evidence/gameplay-browser-release.json).
+Repeat47208 and sequential memory remain; M2/M3 still unaccepted.
