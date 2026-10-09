@@ -1,0 +1,39 @@
+{
+  "version": 1,
+  "scope": "Browser command queue, keyboard, legacy static DOM and isolated gameplay wiring; no real browser/EVM gameplay acceptance",
+  "result": "PASS",
+  "command": "node --test web/input.test.mjs web/input-loop.test.mjs web/input-app.test.mjs tools/transport/protocol.test.mjs tools/transport/palette.test.mjs",
+  "tests": 29,
+  "failed": 0,
+  "skipped": 0,
+  "capability": "Explicit config.gameplay=true; no initialization on page load/autotest",
+  "api": [
+    "inputSeq()",
+    "gameStarted()",
+    "initializeGame()",
+    "stepAndRender(uint32,uint32)"
+  ],
+  "evidence": [
+    "Single in-flight transaction and held sample per accepted tic",
+    "Initialize once, explicit start/resume/stop/blur/hidden handling",
+    "Revert/uncertainty/chain invalidation and consecutive sequence handling",
+    "Legacy zero-input WS/receipt/static behavior retained",
+    "Isolated DOM Canvas full64000-byte presentation through declared RPC/WS doubles"
+  ],
+  "remaining": [
+    "Production adapter verification",
+    "Actual Anvil/WS/receipt/browser game frames compared to native C",
+    "Final inherited browser gate"
+  ],
+  "sourceSha256": {
+    "web/app.mjs": "ddcb13af098b9a453f794bc20cc3337459c0a1b7665c5aa385291f6dbbe2f457",
+    "web/input.mjs": "f9ed0064ccdccc4588632798aa0a1ce99e4bfc83a4e7c910450c48328ea729f6",
+    "web/input-loop.mjs": "08c0384712c14bf86bdfe25fefedb3b4279b99272a41654ddfcb309f7cedbb03",
+    "web/input-loop.test.mjs": "0e72355780e561d150c1353aaaf993b272eb9af514e72731ac673bf472cb89a9",
+    "web/input-app.test.mjs": "4bf5a17ccf4e3584b7e690d1be9adc8b2388f4ed9b35c3d4fa128474b3ea9f06",
+    "web/input.test.mjs": "b4b03e3960abf5da7815d741571b9d658a5139d29a93b3be68823a2d35412ab8",
+    "docs/PHASE3-GAMEPLAY-TRANSPORT.md": "6172b672a93d748f5d1979d5d16a0d68373f41d8aa160e115f355f14e3ccaee2",
+    "web/protocol.mjs": "fec5104a0e13b7ca8666200431a1804d53cdb6537c1f0f8f02fb5b69dd70f47e",
+    "web/palette.mjs": "110c2c0af974ecfa935d37da60d32eedc47114484fc7b994043bfd24e95bc8ae"
+  }
+}

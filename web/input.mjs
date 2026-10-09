@@ -54,11 +54,12 @@ export class KeyboardInput {
 
 // Optional native DOM binding; blur/hidden resets held keys to avoid stuck input.
 // Caller samples once per accepted tic and submits via its existing transaction queue.
-export function bindKeyboard(target, keyboard = new KeyboardInput(), visibilityTarget = target.document) {
-  const keydown = event => { if (keyboard.update(event.code, true)) event.preventDefault(); };
-  const keyup = event => { if (keyboard.update(event.code, false)) event.preventDefault(); };
-  const clear = () => keyboard.clear();
-  const visibility = () => { if (visibilityTarget.hidden) clear(); };
+export function bindKeyboard(target, keyboard = new KeyboardInput(), visibilityTarget = target.document,
+  { enabled = () => true, onReset = () => {} } = {}) {
+  const keydown = event => { if (enabled() && keyboard.update(event.code, true)) event.preventDefault(); };
+  const keyup = event => { if (keyboard.update(event.code, false) && enabled()) event.preventDefault(); };
+  const clear = () => { keyboard.clear(); onReset('blur'); };
+  const visibility = () => { if (visibilityTarget.hidden) { keyboard.clear(); onReset('hidden'); } };
   target.addEventListener('keydown', keydown);
   target.addEventListener('keyup', keyup);
   target.addEventListener('blur', clear);
@@ -68,6 +69,6 @@ export function bindKeyboard(target, keyboard = new KeyboardInput(), visibilityT
     target.removeEventListener('keyup', keyup);
     target.removeEventListener('blur', clear);
     visibilityTarget?.removeEventListener('visibilitychange', visibility);
-    clear();
+    keyboard.clear(); onReset('dispose');
   } };
 }
