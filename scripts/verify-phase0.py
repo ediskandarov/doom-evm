@@ -32,7 +32,9 @@ for name,args in commands:
  started=time.monotonic()
  with (OUT/(name+'.log')).open('w') as log:
   process=subprocess.Popen(args,cwd=ROOT,env=env,stdout=log,stderr=subprocess.STDOUT,start_new_session=True)
-  try: code=process.wait(timeout=180)
+  # The integrated Phase 2 sources took 207s to compile on the pinned host.
+  # Allow headroom for a forced build; preserve every gate and other timeout.
+  try: code=process.wait(timeout=600 if name=='build' else 180)
   except subprocess.TimeoutExpired:
    os.killpg(process.pid,signal.SIGTERM)
    try: process.wait(timeout=5)

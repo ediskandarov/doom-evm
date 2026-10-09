@@ -1,8 +1,8 @@
 # DOOM on EVM 👹
 
-But can it run DOOM? That's the mission. The foundation now includes original-C-checked fixed math and tables, a pinned Freedoom resource pipeline, and a Solidity-generated 64 KB test frame delivered through Anvil events to Canvas. **The renderer and gameplay are not implemented yet.**
+But can it run DOOM? The static renderer now produces eight Freedoom E1M1 views inside the EVM, matching all 64,000 pixels from the original C renderer. BSP, textured walls, floors, ceilings, sky and sprites are implemented. **Phase 2's ordinary deployment, event/browser and final regression gates are still underway; gameplay comes next.**
 
-The destination is a readable port of original `linuxdoom-1.10` to Solidity/Yul, with C-to-Solidity file/function traceability. The browser sends input and displays pixels; the EVM will do the rendering and simulation.
+The destination is a readable port of original `linuxdoom-1.10` to Solidity/Yul, with C-to-Solidity file/function traceability. The browser displays transaction pixels; the EVM computes the scene. Movement, weapons and game simulation belong to Phase 3.
 
 ## Press start
 
@@ -13,9 +13,11 @@ git submodule update --init --recursive
 python3 scripts/install-toolchain.py
 export PATH="$PWD/.toolchain/bin:$PATH"
 python3 scripts/check-toolchain.py
+node tools/wad/download.ts artifacts/local/freedoom
+node tools/wad/pack.ts artifacts/local/freedoom/freedoom1.wad artifacts/local/wad
+python3 tools/reference/phase2_data/prepare_chunks.py
 forge build
 forge test
-python3 scripts/verify-phase1.py
 ```
 
 Tools install under ignored `.toolchain/`; global Foundry is left alone. No npm dependencies are required. Set `CHROME_BIN` if Chrome is not at its standard macOS path. The full verifier downloads and checks the pinned Freedoom archive, builds the original C oracle, preserves every Phase 0 gate, starts and stops temporary localhost nodes and a headless browser, and writes fresh results to `artifacts/local/`. The original `python3 scripts/verify-phase0.py` command remains available.
@@ -42,6 +44,7 @@ Reload the browser. The image is still a transport test, now colored by PLAYPAL.
 
 ## Mission briefing
 
+- [Phase 2 acceptance ledger](docs/PHASE2-REPORT.md) and [frozen renderer interfaces](docs/PHASE2-INTERFACES.md)
 - [Phase 1 report and acceptance evidence](docs/PHASE1-REPORT.md)
 - [Phase 0 report and acceptance evidence](docs/PHASE0-REPORT.md)
 - [Toolchain and measured Anvil limits](TOOLCHAIN.md)
@@ -51,4 +54,4 @@ Reload the browser. The image is still a transport test, now colored by PLAYPAL.
 - [Transport experiment](docs/EVENT-TRANSPORT.md), [stack experiment](docs/STACK-PRESSURE.md)
 - [Pinned upstream and attribution](UPSTREAM.md), [GPL-2.0 license](LICENSE)
 
-No proprietary WAD assets are included. Small Freedoom Phase 1 snapshots carry their own license and checksums; the full WAD stays in ignored local artifacts. Phase 2 has not started.
+No proprietary WAD assets are included. Freedoom fixtures carry their own license and checksums; the full WAD stays in ignored local artifacts.
