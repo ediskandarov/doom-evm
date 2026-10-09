@@ -1,0 +1,18 @@
+{
+  "version": 1,
+  "upstreamCommit": "a77dfb96cb91780ca334d0d4cfd86957558007e0",
+  "status": "integrator-approved",
+  "tests": [
+    "GameHeapTest:testActorAliasSurvivesNestedSpawnGrowth",
+    "GameHeapTest:testThinkerAliasSurvivesGrowth"
+  ],
+  "sourceSha256": {
+    "src/doom/p_game_state.sol": "66be9c3824a1ba4e39ab64276ce1a5a64a5262391735ddcc05e8ecdcd7dbdc0e",
+    "src/doom/d_ticcmd.sol": "508d0332d3e8b83e1b68d37581a3befc100a9974fcaa0900cc44116cd75ff2ef",
+    "src/doom/p_heap.sol": "29f216eedc153e34edcd7be9b79be695c7e534b0a1b307222702e9bd7fafe730",
+    "docs/PHASE3-INTERFACES.md": "5818da42c0d1a1de8fb525dad125920f2f7a3851e733c6b0ca9584176e53afa9",
+    "INPUT_PROTOCOL.md": "586a1496b2887c6af28f50f55baf43b78fa6bc88df85856c7c14b770d4bfc349"
+  },
+  "limitations": "Interface freeze only; storage round-trip and M2/M3 acceptance remain unverified.",
+  "nativePrerequisites": "All gameplay table fields and both RNG streams match O0/O2/ASan/UBSan; recorded in separate foundation checkpoint."
+}
