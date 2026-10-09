@@ -2,6 +2,7 @@
 // One accepted packet advances one EVM tic. No movement/world/pixel computation here.
 import { FRAME_TOPIC, decodeFrame, receipt } from './protocol.mjs';
 import { inputStepData } from './input.mjs';
+import { resolveGasBudget } from './budget.mjs';
 
 // Generated with pinned cast sig. Existing Frame/step ABI remains unchanged.
 export const GAME_STARTED_SELECTOR = '0x5e123ce4';
@@ -46,9 +47,11 @@ export class InputTransactions {
     if (this.busy || this.uncertain || this.invalidated) throw Error('Input channel unavailable');
     this.busy = true; this.pending = true; this._state();
     try {
+      const budget = await resolveGasBudget(this.rpc, this.config);
+      this.gas = budget.gas; this.gasSource = budget.source;
       this.sequence = await this._counter();
       if (this.config.gameplay === true) this.started = await this._started();
-      if (this.config.gameplay === true && this.config.nativeZone === true) this.prepared = await this._prepared();
+      if (this.config.gameplay === true && this.config.stagedInitialization === true) this.prepared = await this._prepared();
       this.loaded = true;
     } finally { this.busy = false; this.pending = false; this._state(); }
   }
@@ -58,7 +61,7 @@ export class InputTransactions {
     // A transport failure may follow submission: retain the lock until a reload
     // reconciles counters. Only an actual mined receipt settles the transaction.
     this.uncertain = true;
-    const hash = await this.rpc('eth_sendTransaction', [{ from: this.config.driver, to: this.config.address, data, gas: '0x3b9aca00' }]);
+    const hash = await this.rpc('eth_sendTransaction', [{ from: this.config.driver, to: this.config.address, data, gas: this.gas }]);
     const mined = await this.waitReceipt(this.rpc, hash);
     if (mined?.status !== '0x0' && mined?.status !== '0x1') throw Error('Malformed transaction receipt');
     this.uncertain = false;
@@ -86,7 +89,7 @@ export class InputTransactions {
       this.started = await this._started();
       this._startupValid();
       if (!this.started) {
-        if (this.config.nativeZone === true) {
+        if (this.config.stagedInitialization === true) {
           this.prepared = await this._prepared();
           if (!this.prepared) {
             if (!shouldContinue()) return;

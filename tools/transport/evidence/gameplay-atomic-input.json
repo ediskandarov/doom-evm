@@ -1,0 +1,50 @@
+{
+  "schemaVersion": 1,
+  "kind": "atomic-startup-browser-configurable-budget-component",
+  "pass": true,
+  "command": "node --test web/budget.test.mjs web/input-app.test.mjs web/input-loop.test.mjs web/input.test.mjs tools/transport/protocol.test.mjs tools/transport/palette.test.mjs",
+  "tests": {
+    "passed": 44,
+    "failed": 0,
+    "skipped": 0,
+    "priorRetained": 38,
+    "newAtomicBudget": 6
+  },
+  "startup": {
+    "default": "one initializeGame transaction",
+    "nativeZoneDoesNotImplyStaging": true,
+    "historicalStagingRequires": "config.stagedInitialization === true"
+  },
+  "gasPolicy": {
+    "configured": "config.gasLimit",
+    "oldConfigFallback": "eth_getBlockByNumber latest gasLimit",
+    "fixedBrowserGasLimit": null
+  },
+  "checks": [
+    "All previous 38 tests retained with historical staged fixtures explicitly flagged.",
+    "Allocator-native default queries only counter+gameStarted and submits exactly one initialization; no preparation ABI access.",
+    "App retains static-before-start/autotest and held-key Frame behavior with atomic initialization.",
+    "Every client transaction budget follows config or discovered node budget, including legacy static path.",
+    "Malformed/zero/fractional/unsafe budgets fail without silent fixed-limit substitution.",
+    "Original key/reset/one-flight/uncertainty/invalidation/sequence/palette/Canvas gates remain."
+  ],
+  "scope": "Isolated Node component tests only; actual atomic EVM/browser integration and memory clone measurements remain separate pending gates. No production Solidity, native fixture, Forge or runtime change here.",
+  "sourceHashes": {
+    "web/app.mjs": "ae30ac37dbb1a65d5aa025ffab45d96bd8d3a3d8e9b035d05577e17e37433f9b",
+    "web/input-loop.mjs": "80dee14e694c77d30a80f607aaca4c7508266dfa5651549ded4cecb671eb47f3",
+    "web/input-loop.test.mjs": "869e0dfe1de1975f133e7b53300283fa98eb3c366af19c044231b9cf91af1c2b",
+    "web/input-app.test.mjs": "127b8535de4e61803e7c23a5daeac2b22368fb23bf69f49731a04792abae6fd5",
+    "web/budget.mjs": "b24e411daa2933c20e9d61d4ba3d54cbce4d76b3287d2b0faad06ce8c1606778",
+    "web/budget.test.mjs": "0d9dae2ec3e2167ff81e177d24d1ce12498110407fe8cfd3bb47e546d427b2a0",
+    "web/input.mjs": "f9ed0064ccdccc4588632798aa0a1ce99e4bfc83a4e7c910450c48328ea729f6",
+    "web/input.test.mjs": "b4b03e3960abf5da7815d741571b9d658a5139d29a93b3be68823a2d35412ab8",
+    "web/protocol.mjs": "fec5104a0e13b7ca8666200431a1804d53cdb6537c1f0f8f02fb5b69dd70f47e",
+    "web/palette.mjs": "110c2c0af974ecfa935d37da60d32eedc47114484fc7b994043bfd24e95bc8ae",
+    "tools/transport/protocol.test.mjs": "1fe7ef1b3275bf4c41d30cb6171e0ce08146a536ee69ef0f4467aac7faeb7b38",
+    "tools/transport/palette.test.mjs": "1e9ca82b5397e18ea65183fe8834f7c91f5feffbe3d90215054b85f62af4ab39",
+    "docs/PHASE3-GAMEPLAY-TRANSPORT.md": "a495215b51f4c0abf098939c4af24ab23d9dda5393adc8384ff2b42bfb67e44a"
+  },
+  "localLog": "artifacts/local/gameplay-atomic-input.log",
+  "localLogSha256": "ae2a1f28188da491cf18f524a29c4c4f4b29dd5b5b20eb34bda21889a8982a91",
+  "checkpointSha256": "76271ea64f357476fa0179c9f0041f822dc0b622b7d088c2ec9b2e6a57f9f216"
+}

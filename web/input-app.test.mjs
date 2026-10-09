@@ -11,7 +11,7 @@ const word = value => BigInt(value).toString(16).padStart(64, '0');
 const until = async predicate => { for (let i = 0; i < 1000 && !predicate(); ++i) await Promise.resolve(); assert(predicate(), 'expected asynchronous control state'); };
 let version = 0;
 
-async function appFixture({ gameplay = false, autotest = false, started = false, nativeZone = false, prepared = started } = {}) {
+async function appFixture({ gameplay = false, autotest = false, started = false, nativeZone = false, stagedInitialization = false, gasLimit = 90000000000, omitGasLimit = false, prepared = started } = {}) {
   const saved = Object.fromEntries(['window', 'document', 'location', 'fetch', 'WebSocket', 'ImageData'].map(key => [key, globalThis[key]]));
   const nodes = [], selectors = new Map(), sockets = new Set(), logs = [], transactions = [];
   const window = new EventTarget(), document = new EventTarget(); document.hidden = false;
@@ -32,6 +32,8 @@ async function appFixture({ gameplay = false, autotest = false, started = false,
     deploymentBlock: '0x0', rendererKind: 'doom-world-view', paletteUrl: '/palette.json', paletteKind: 'synthetic', resourceIdentity: palette.resourceIdentity };
   if (gameplay) config.gameplay = true;
   if (nativeZone) config.nativeZone = true;
+  if (stagedInitialization) config.stagedInitialization = true;
+  if (!omitGasLimit && gasLimit !== undefined) config.gasLimit = gasLimit;
   const chain = { started, prepared, sequence: 0, frame: 0 }, pending = new Map();
   function notify(socket, object) { const event = new Event('message'); event.data = JSON.stringify(object); socket.dispatchEvent(event); }
   class Socket extends EventTarget {
@@ -67,9 +69,10 @@ async function appFixture({ gameplay = false, autotest = false, started = false,
       const data = request.params[0].data;
       if (data === LAST_INPUT_SELECTOR) result = '0x' + word(chain.sequence);
       else if (data === GAME_STARTED_SELECTOR && gameplay) result = '0x' + word(chain.started ? 1 : 0);
-      else if (data === GAME_RESOURCES_PREPARED_SELECTOR && gameplay && nativeZone) result = '0x' + word(chain.prepared ? 1 : 0);
+      else if (data === GAME_RESOURCES_PREPARED_SELECTOR && gameplay && stagedInitialization) result = '0x' + word(chain.prepared ? 1 : 0);
       else throw Error('Unexpected metadata selector');
-    } else if (request.method === 'eth_getLogs') result = [...logs];
+    } else if (request.method === 'eth_getBlockByNumber') result = { gasLimit: '0x14562ae46d' };
+    else if (request.method === 'eth_getLogs') result = [...logs];
     else if (request.method === 'eth_sendTransaction') {
       const hash = '0x' + word(pending.size + 1), tx = { ...request.params[0], hash };
       transactions.push(tx); pending.set(hash, tx); result = hash;
@@ -140,7 +143,7 @@ test('actual Start/Stop wiring samples DOM keyboard, pauses on blur, and resumes
 });
 
 test('native-zone capable autotest remains static; explicit Start serializes preparation and initialization', async () => {
-  const f = await appFixture({ gameplay: true, nativeZone: true, autotest: true });
+  const f = await appFixture({ gameplay: true, nativeZone: true, stagedInitialization: true, autotest: true });
   try {
     assert(f.proof.done && f.proof.nativeZoneAvailable); assert(!f.chain.prepared && !f.chain.started);
     assert.equal(f.transactions.length, 2); assert.equal(f.chain.sequence, 2); assert.equal(f.chain.frame, 2);
@@ -153,10 +156,29 @@ test('native-zone capable autotest remains static; explicit Start serializes pre
 });
 
 test('native-zone prepared reload starts without preparing again', async () => {
-  const f = await appFixture({ gameplay: true, nativeZone: true, prepared: true });
+  const f = await appFixture({ gameplay: true, nativeZone: true, stagedInitialization: true, prepared: true });
   try {
     assert(f.proof.resourcesPrepared && !f.proof.gameStarted);
     await f.client.startGame({ run: false });
     assert.deepEqual(f.transactions.map(tx => tx.data), [INITIALIZE_GAME_SELECTOR]);
   } finally { f.cleanup(); }
+});
+
+test('nativeZone atomic app needs one startup transaction and retains static/held-frame transport', async () => {
+  const f = await appFixture({ gameplay: true, nativeZone: true, stagedInitialization: false, autotest: true, gasLimit: '91234567890' });
+  try {
+    assert(f.proof.nativeZoneAvailable && !f.proof.stagedInitialization && f.proof.done);
+    assert.equal(f.transactions.length, 2); await f.client.startGame({ run: false });
+    assert.deepEqual(f.transactions.slice(2).map(tx => tx.data), [INITIALIZE_GAME_SELECTOR]);
+    assert.equal(f.proof.resourcesPrepared, undefined); assert(f.proof.gameStarted);
+    await f.client.nextFrame({ buttons: 257 }); assert.equal(f.proof.frames.at(-1).inputSeq, 3);
+    assert(f.transactions.every(tx => tx.gas === '0x' + BigInt('91234567890').toString(16)));
+  } finally { f.cleanup(); }
+});
+
+test('old static app without gas config discovers node budget and preserves zero-input Frames', async () => {
+  const f = await appFixture({ autotest: true, omitGasLimit: true });
+  try { assert(f.proof.done); assert.equal(f.proof.gasBudgetSource, 'latest block gasLimit');
+    assert(f.transactions.every(tx => tx.gas === '0x14562ae46d')); }
+  finally { f.cleanup(); }
 });

@@ -26,6 +26,7 @@ try {
   proof.rendererKind = genuine ? 'doom-world-view' : 'synthetic';
   proof.gameplayAvailable = gameplay;
   proof.nativeZoneAvailable = gameplay && config.nativeZone === true;
+  proof.stagedInitialization = gameplay && config.stagedInitialization === true;
   const rpc = makeRpc(config.rpcUrl);
   const palette = await (await fetch(config.paletteUrl)).json();
   const rgb = await validatePalette(palette, config.resourceIdentity, config.paletteKind ?? 'synthetic');
@@ -61,6 +62,7 @@ try {
     onFrame: input => { proof.inputs.push(input); proof.duplicates = inbox.duplicates; },
   });
   await transactions.load();
+  proof.gasLimit = transactions.gas; proof.gasBudgetSource = transactions.gasSource;
   const keyboard = new KeyboardInput();
   const nextFrame = async ({ disconnect = false, buttons = 0 } = {}) => {
     if (stopped) throw Error('Session invalidated; reload after checking the local chain');
@@ -84,7 +86,8 @@ try {
     controls.append(startButton, stopButton); status.before(controls);
     loop = new GameplayLoop(transactions, keyboard, { onState: () => updateControls(), onError: fail });
     updateControls = () => {
-      proof.gameStarted = transactions.started; proof.resourcesPrepared = transactions.prepared;
+      proof.gameStarted = transactions.started;
+      if (config.stagedInitialization === true) proof.resourcesPrepared = transactions.prepared;
       proof.gameplayRunning = loop.running;
       button.disabled = stopped || !transactions.canSend || loop.running;
       button.textContent = transactions.started ? 'Step one tic →' : 'Run DOOM →';
