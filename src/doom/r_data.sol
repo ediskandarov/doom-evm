@@ -135,9 +135,13 @@ library R_Data {
         bytes memory t2 = t2num < 0 ? new bytes(0) : W_CacheLumpNum(v, uint32(t2num));
         uint32 n1 = u32(t1, 0);
         uint32 n2 = t2num < 0 ? 0 : u32(t2, 0);
-        if (uint256(n1) * 4 + 4 > t1.length || (n2 > 0 && uint256(n2) * 4 + 4 > t2.length)) revert Malformed();
+        if (uint256(n1) * 4 + 4 > t1.length || (n2 > 0 && uint256(n2) * 4 + 4 > t2.length)) {
+            revert Malformed();
+        }
         r.textures = new Texture[](uint256(n1) + n2);
+        r.texturetranslation = new uint32[](r.textures.length);
         for (uint256 i; i < r.textures.length; ++i) {
+            r.texturetranslation[i] = uint32(i);
             bytes memory data = i < n1 ? t1 : t2;
             uint256 p = u32(data, 4 + (i < n1 ? i : i - n1) * 4);
             Texture memory t = r.textures[i];
@@ -164,6 +168,10 @@ library R_Data {
         uint32 end = W_GetNumForName(v, "F_END");
         if (end < r.firstflat) revert Malformed();
         r.numflats = end - r.firstflat;
+        r.flattranslation = new uint32[](r.numflats);
+        for (uint32 i; i < r.numflats; ++i) {
+            r.flattranslation[i] = i;
+        }
         r.firstspritelump = W_GetNumForName(v, "S_START") + 1;
         end = W_GetNumForName(v, "S_END");
         if (end < r.firstspritelump) revert Malformed();

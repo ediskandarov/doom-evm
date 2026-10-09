@@ -105,6 +105,7 @@ struct RenderContext {
     uint32 ceilingplane;
     int32[] floorclip;
     int32[] ceilingclip;
+    int32[] negonearray; // shared original r_things clip constant, all -1
     uint32 openingCount; // enforce original 320*64 shorts even with independent memory slices
     uint32 curline;
     uint32 frontsector;

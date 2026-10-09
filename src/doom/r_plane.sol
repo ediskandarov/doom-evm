@@ -17,9 +17,11 @@ library R_Plane {
         if (width == 0 || width > 320 || ctx.rs.height == 0 || ctx.rs.height > 200) revert PlaneBounds();
         ctx.floorclip = new int32[](width);
         ctx.ceilingclip = new int32[](width);
+        ctx.negonearray = new int32[](width);
         for (uint256 i; i < width; ++i) {
             ctx.floorclip[i] = int32(uint32(ctx.rs.height));
             ctx.ceilingclip[i] = -1;
+            ctx.negonearray[i] = -1;
         }
         ctx.visplanes = new Visplane[](128);
         ctx.visplaneCount = 0;
