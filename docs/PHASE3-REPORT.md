@@ -88,6 +88,8 @@ python3 tools/reference/gameplay/production.py --profile browser --output artifa
 node tools/reference/gameplay/production.mjs --native-zone \
   --native artifacts/local/gameplay-production-native-final \
   --output-prefix artifacts/local/gameplay-production-new --keep-node
+cp artifacts/local/gameplay-production-new.config.json web/config.local.json
+cp artifacts/local/gameplay-production-new.palette.json web/palette.local.json
 node tools/transport/serve.mjs
 ```
 
@@ -97,7 +99,9 @@ report. Use those explicit files with the browser gate:
 ```sh
 node tools/transport/gameplay-browser-check.mjs \
   --config artifacts/local/gameplay-production-new.config.json \
-  --palette artifacts/local/gameplay-production-new.palette.json
+  --palette artifacts/local/gameplay-production-new.palette.json \
+  --native artifacts/local/gameplay-browser-native-final \
+  --output-prefix artifacts/local/gameplay-browser-new
 ```
 
 For interactive use, copy the exported config/palette to

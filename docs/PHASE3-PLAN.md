@@ -183,8 +183,8 @@ arbitrary-map, multiplayer, sound-device, menu/intermission or all-branch claim.
 Engineering implementation/integration/verification is complete; no blockers or
 active agents/compiler/verification jobs. The shared local Anvil18579 is retained
 for interactive gameplay. Aggregate-only usage snapshot and explicit engineering closure are committed
-separately in `a711398`; historical Phase 0/1/2 totals remain stable. Final report/audit
-publication commit and push are the remaining housekeeping at this checkpoint. Do not restart
+separately in `a711398`; historical Phase 0/1/2 totals remain stable. Final acceptance/report/audit publication is committed in `e30f522` and
+published to origin/main. No engineering or publication blockers remain. Do not restart
 completed ports. A future phase must retain every existing correctness gate and
 add its own explicit usage boundary.
 
@@ -193,3 +193,12 @@ add its own explicit usage boundary.
 The integrator owns shared interfaces, adapter, integration, gate runner and
 acceptance. Non-overlapping gameplay workstreams used frozen interfaces. Original
 submodule remains pristine at a77dfb96cb91780ca334d0d4cfd86957558007e0.
+
+## Publication checkpoint
+
+`e30f522` publishes the checked M2/M3 certificate, report, current source audit,
+port mapping and project instructions. `a711398` publishes aggregate-only usage
+JSON/CSV and explicit engineering closure. Repository push is verified against
+origin/main; final documentation handoff records the ready local browser config.
+All requested implementation, integration, verification and telemetry work is
+complete. Engine sources remain identical to the frozen accepted hashes.
