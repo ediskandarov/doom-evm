@@ -1,0 +1,8 @@
+{
+  "width": 320,
+  "height": 200,
+  "mismatchCount": 0,
+  "mismatches": [],
+  "expectedSha256": "a8faf7b9137ccf3e5c9614b53daad8f0aeeef533d1ca6caadccac42224095010",
+  "actualSha256": "a8faf7b9137ccf3e5c9614b53daad8f0aeeef533d1ca6caadccac42224095010"
+}

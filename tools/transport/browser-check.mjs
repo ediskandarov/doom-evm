@@ -15,6 +15,7 @@ const palettePath=option('--palette','web/palette.synthetic.json');
 const outputPrefix=option('--output-prefix','artifacts/local/transport-browser');
 // A renderer deployment supplies its live node/config; default remains the original mock gate.
 const existingConfigPath=option('--existing-config',null);
+const timingScriptPath=option('--timing-script',null);
 const existingConfig=existingConfigPath?JSON.parse(await readFile(existingConfigPath,'utf8')):null;
 const chromePath=process.env.CHROME_BIN??'/Applications/Google Chrome.app/Contents/MacOS/Google Chrome';
 const port=Number(process.env.BROWSER_ANVIL_PORT??18549),rpcUrl=existingConfig?.rpcUrl??`http://127.0.0.1:${port}`,rpc=makeRpc(rpcUrl);
@@ -64,6 +65,7 @@ try {
   cdp.addEventListener('message',event=>{const msg=JSON.parse(event.data);if(msg.id){const entry=requests.get(msg.id);if(entry){requests.delete(msg.id);clearTimeout(entry.timer);msg.error?entry.reject(Error(JSON.stringify(msg.error))):entry.resolve(msg.result);}}});
   const command=(method,params={})=>new Promise((resolve,reject)=>{const key=++id;requests.set(key,{resolve,reject,timer:setTimeout(()=>{requests.delete(key);reject(Error(`CDP timeout ${method}`));},10000)});cdp.send(JSON.stringify({id:key,method,params}));});
   await command('Page.enable');
+  if(timingScriptPath)await command('Page.addScriptToEvaluateOnNewDocument',{source:await readFile(timingScriptPath,'utf8')});
   await command('Emulation.setDeviceMetricsOverride',{width:1100,height:900,deviceScaleFactor:1,mobile:false});
   await command('Page.navigate',{url:`http://127.0.0.1:${server.address().port}/?autotest=1`});
   const proof=await waitFor(async()=>{
@@ -89,6 +91,7 @@ try {
   await mkdir(dirname(outputPrefix),{recursive:true});await writeFile(outputPrefix+'.png',Buffer.from(screenshot.data,'base64'));
   delete proof.latestPixelsHex;
   const result={timestamp:new Date().toISOString(),kind:expectedCase?'doom-world-view-browser':'synthetic-browser-transport',referenceCase:expectedCase?.name,browser:await command('Browser.getVersion'),config,proof,receiptPixelsSha256:createHash('sha256').update(frame.pixels).digest('hex'),allCanvasPixelsMatchReceipt:true,screenshot:outputPrefix+'.png'};
+  if(timingScriptPath){const timing=await command('Runtime.evaluate',{expression:'window.__rendererTiming',returnByValue:true});result.timing=timing.result.value;assert(result.timing,'timing script did not produce evidence');}
   await writeFile(outputPrefix+'.json',JSON.stringify(result,null,2)+'\n');console.log(JSON.stringify(result,null,2));
 }catch(error){
   console.error(`Browser check failed: ${error.message}`);process.exitCode=1;
