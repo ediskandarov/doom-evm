@@ -10,7 +10,8 @@ does not count as accepted Phase 3 implementation.
 Last implementation checkpoint: `ab316f8`, physical actor/mover allocation and lazy free;
 verified source-derived renderer allocator startup is `d9ca352`;
 zone core is `2392f4a`.
-Last native observation checkpoint: `5ffd10a`, original zone lifecycle/layout evidence;
+Last native observation checkpoint: `ba53a4b`, exact map/setup heap boundaries;
+`5ffd10a` supplies the original zone lifecycle/layout evidence;
 `7fc2cab` remains the exact post-render state extension.
 Last audit checkpoint: `6302955`, original definition/feature inventory.
 Last ABI checkpoint: `1e6227d`, generated native sizeof/offsetof constants;
@@ -136,6 +137,12 @@ Verified recovery checkpoints:
   require confirmation without a Frame or input sequence change. Root reran the
   command and validated all 11 source bindings. This is component proof only.
 
+- `ba53a4b`: original native map chronology / pre-THINGS and complete setup
+  boundaries, four profiles exact; original six browser frames and all world
+  outputs unchanged. Geometry has 25 completed outer operations, 4,924 headers
+  and 4,126 owner marks. [Native validation](../tools/reference/phase3_zone_setup/validation.json).
+  Solidity setup assertions have not yet run successfully; no EVM acceptance.
+
 Next dependency order:
 
 1. Native zone persistence, actor/mover and lazy-free component integration is
@@ -165,7 +172,7 @@ Current compile status: the first new PZoneSetup gate failed during code generat
 before any EVM assertions. Optimized IR identifies duplicate map-lump scalar
 lifetimes across the line loader. A source-order-preserving SetupWork memory
 scratch amendment is under the serialized compiler gate. Four-profile native
-geometry/setup evidence passed independently; its native-only checkpoint is next.
+geometry/setup evidence passed independently and is committed in `ba53a4b`.
 Do not count this native proof or a successful IR export as EVM verification.
 
 At each verified integration checkpoint, update and commit this ledger with exact
