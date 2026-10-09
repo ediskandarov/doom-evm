@@ -1,0 +1,7 @@
+phase,records,input_tokens,input_tokens_missing_records,cached_input_tokens,cached_input_tokens_missing_records,cache_write_input_tokens,cache_write_input_tokens_missing_records,output_tokens,output_tokens_missing_records,reasoning_tokens,reasoning_tokens_missing_records,total_tokens,total_tokens_missing_records
+phase0,154,11909177,0,11620608,0,0,0,69292,0,8895,0,11978469,0
+phase1,191,13954577,0,13629696,0,0,0,88519,0,14701,0,14043096,0
+phase2,868,99331154,0,97628672,0,0,0,477186,0,135777,0,99808340,0
+phase3,1885,327953798,0,322382080,0,0,0,1363816,0,605056,0,329317614,0
+telemetry,37,5034184,0,4793600,0,0,0,51157,0,19753,0,5085341,0
+unattributed,25,2625209,0,2585344,0,0,0,17342,0,3801,0,2642551,0

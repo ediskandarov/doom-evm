@@ -100,3 +100,36 @@ For the public terminology, see the official
 and [Codex thread usage notifications](https://learn.chatgpt.com/docs/app-server#turn-events).
 The private local JSONL adapters are based on observed CLI 0.162.0 records; the
 public documentation is not treated as a stable schema guarantee for those logs.
+
+## Phase 3 engineering snapshot
+
+The [aggregate-only JSON](../artifacts/usage/phase3/usage.json),
+[session/agent/phase/model CSV](../artifacts/usage/phase3/metrics.csv) and
+[phase totals CSV](../artifacts/usage/phase3/phase-totals.csv) preserve the observed
+model switches and agent ownership. Historical Phase 0/1/2 totals are unchanged.
+No raw transcript or per-response message body is included.
+
+| Phase | Responses | Input | Cached input | Output | Reasoning | Total |
+|---|---:|---:|---:|---:|---:|---:|
+| 3 | 1,885 | 327,953,798 | 322,382,080 | 1,363,816 | 605,056 | 329,317,614 |
+
+The window ends at **2026-10-09T21:13:08Z**, an explicit integrator M2/M3
+engineering acceptance marker backed by `artifacts/phase3/acceptance.json`. It
+is not an inferred goal-counter completion timestamp. Documentation publication,
+push bookkeeping and the current unflushed response can fall outside this window
+and remain unattributed. Inference time crossing a boundary cannot be split
+exactly from these event timestamps. The snapshot is observed evidence, not a
+final bill or an estimate of absent usage.
+
+This scan discovered24 rollouts and selected14 project-owned threads;3,160
+response usage records were retained. All requested token fields are present in
+these observed records. **3,554 cumulative events were not added** to response
+usage, preventing overlapping counters from being counted twice. Three model
+contexts were recovered from unique later metadata in the same turn; unknown
+backend reroutes are still unmeasured. Cached input remains part of input and
+reasoning remains part of output. No prices or missing-token estimates are made.
+
+The historical goal counters and current goal accounting use separate semantics;
+never add them to these response totals. The reusable local collector and all
+twenty accounting/attribution/privacy regression tests remain separate from the
+DOOM engine and use no external telemetry service.

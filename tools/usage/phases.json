@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "policy": "Half-open windows from recorded goal start/completion events; gaps remain unattributed. Goal counters are retained separately and never summed with response usage.",
+  "policy": "Half-open windows from recorded goal start/completion events or explicit engineering acceptance markers; gaps and later publication bookkeeping remain unattributed. Goal counters are separate and never summed with response usage.",
   "windows": [
     {
       "phase": "phase0",
@@ -88,10 +88,16 @@
       "phase": "phase3",
       "session_id": "01a11fdf-1d25-7201-abb8-1afdaaab6b9c",
       "start": "2026-10-09T14:10:28.000Z",
-      "end": null,
+      "end": "2026-10-09T21:13:08Z",
       "start_evidence": {
         "kind": "explicit_marker",
         "note": "Explicit active Phase 3 goal created at Unix 1791555028; prior abandoned scaffolding remains outside this phase"
+      },
+      "end_evidence": {
+        "kind": "explicit_marker",
+        "timestamp": "2026-10-09T21:13:08Z",
+        "source": "artifacts/phase3/acceptance.json",
+        "note": "Integrator M2/M3 engineering acceptance after all required gates and final artifact proofs. Later publication/bookkeeping and current unflushed response may remain unattributed; not an inferred goal completion counter."
       }
     }
   ],
