@@ -7,9 +7,8 @@ does not count as accepted Phase 3 implementation.
 
 ## Recovery checkpoint
 
-Last committed implementation checkpoint: `38a4d0e`, original player/actor lifecycle.
-The world, bbox and persistence proofs below are verified but await their separate
-integration commits. **Phase 3 is
+Last committed implementation checkpoint: `9bcc6af`, persistent gameplay/render interfaces.
+The world and bbox proofs below are verified but await their separate integration commits. **Phase 3 is
 active; M2 and M3 are unaccepted.** The production `Doom.sol` still exposes the
 accepted Phase 2 static renderer. Gameplay modules have substantial isolated
 proofs, but they are not yet connected to production transactions, storage or
@@ -23,7 +22,7 @@ mock-neighbor module proof does not imply whole-engine verification.
 
 | Workstream | Implementation | Integration | Verification and commit |
 |---|---|---|---|
-| Shared player/actor/thinker/world interfaces and heap | Base complete; approved persistence extensions are currently uncommitted | Used by all gameplay module proofs; production storage copy pending | Compiles; actor/thinker aliases survive pool growth. `d793fd1`; tag-only boss callbacks `0960141`. [Interface checkpoint](../artifacts/phase3/interface-freeze.json). |
+| Shared player/actor/thinker/world interfaces and heap | Base and approved persistence extensions complete | Used by all gameplay module proofs; synthetic storage copy verified; full-level production copy pending | Compiles; actor/thinker aliases survive pool growth. `d793fd1`; tag-only boss callbacks `0960141`. [Interface checkpoint](../artifacts/phase3/interface-freeze.json). |
 | Original state/action, actor, weapon tables and RNG | Complete | Imported by gameplay modules | Every field of 967 states/137 actor types/9 weapons and both RNG streams matches native; O0/O2/sanitizers. `f1081fd`. [Foundation checkpoint](../artifacts/phase3/foundation-checkpoint.json). |
 | Keyboard commands and browser sampler | Complete declared keyboard profile | Standalone helper and decoder tested; production browser/engine connection pending | 41,007 original-C cases, 14 Forge tests, five browser tests. `0a7d839`. [Input checkpoint](../artifacts/phase3/input-checkpoint.json). |
 | Original-C full gameplay/frame oracle | Complete eight reference scenarios | Ready as EVM comparison oracle; no EVM conformance claim | 2,205 original tics and 24 live frames match O0/O2/ASan and alternate allocation fill. `6af2ec2`. [Native checkpoint](../artifacts/phase3/native-reference-checkpoint.json). |
@@ -35,7 +34,7 @@ mock-neighbor module proof does not imply whole-engine verification.
 | Doors, floors, ceilings, platforms and lights | All 33 active functions complete; verified files await commit | Paired with P_Spec APIs in module tests; production pending | 359 native scenarios/79,021 snapshots, 2,160 plane cases and measured LP64 mover casts; all 28 Forge tests pass. [World report](PHASE3-WORLD-ACTIONS.md), [validation](../test/fixtures/phase3_world/validation.json). Undefined domains remain explicit. |
 | Sector specials, switches, teleport and animations | All 23 active functions complete; verified files await commit | Real world-module dispatch tested on controlled maps; production pending | 416 helper cases plus 1,007 dispatch scenarios/4,048 paired snapshots; all 25 Forge tests pass. [Specials report](PHASE3-WORLD-SPECIALS.md), [validation](../test/fixtures/phase3_specials/validation.json). |
 | Original bounding-box helpers | Both functions complete; verified files await commit | Startup draft uses exact original else-if ordering | 521 streams/8,299 points match O0/O2/full sanitizers; MBBoxTest passes. [Validation](../test/fixtures/phase3_bbox/validation.json). Full startup pending. |
-| Gameplay persistence layout | Approved extensions implemented; verified files await commit | Real memory/storage/memory copy tested on synthetic nonempty actor/thinker/door state | GameStorageTest passes (9,959,477 test gas), including map/resource/scratch aliases, renderer caches and framebuffer. Authenticated full-level round trip and production cost remain pending. |
+| Gameplay persistence layout | Approved extensions implemented and committed | Real memory/storage/memory copy tested on synthetic nonempty actor/thinker/door state | `9bcc6af`: [storage checkpoint](../artifacts/phase3/storage-checkpoint.json). GameStorageTest passes (9,959,477 test gas), including map/resource/scratch aliases, renderer caches and framebuffer. Authenticated full-level round trip and production cost remain pending. |
 | P_Setup gameplay startup | Draft implemented; uncommitted | Real BLOCKMAP/REJECT, sector grouping and THINGS order connected to gameplay; not exercised yet | Pending startup/native state proof. Integrator owns `src/doom/p_setup.sol`. Existing disk loader reused with explicit attribution. |
 | DoomGame state/action/render adapter | Draft implemented; uncommitted | All gameplay hooks and renderer projection written; no production caller yet | Type-checks in module batch; full public-caller code generation, whole-tic comparison and pixel proof pending. Integrator owns `src/evm/DoomGame.sol`. |
 | Production Doom adapter and browser gameplay | Pending | Existing static engine remains baseline | Pending driver/sequence/tic/storage/frame/Canvas gates. |
@@ -57,7 +56,7 @@ These are module and synthetic-storage evidence, not production acceptance.
 
 ## Remaining work and current constraints
 
-1. Incrementally commit the verified world, bbox and persistence workstreams; preserve their
+1. Incrementally commit the verified world and bbox workstreams; preserve their
    original callback ordering, special-number coverage and undefined-domain audit.
 2. Verify authenticated full-level persistence. Original scratch globals,
    translation arrays, renderer wall/plane caches, fuzz/frame counters and screens[0]
