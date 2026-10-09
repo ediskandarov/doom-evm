@@ -8,6 +8,7 @@ does not count as accepted Phase 3 implementation.
 ## Recovery checkpoint
 
 Last implementation checkpoint: `a67f435`, verified browser input lifecycle.
+Last native observation checkpoint: `7fc2cab`, exact post-render state extension.
 Last audit checkpoint: `6302955`, original definition/feature inventory.
 All completed module proofs below are committed; startup and the gameplay adapter remain drafts. **Phase 3 is
 active; M2 and M3 are unaccepted.** Committed production `Doom.sol` remains the
@@ -38,9 +39,9 @@ mock-neighbor module proof does not imply whole-engine verification.
 | Original bounding-box helpers | Both functions complete and committed | Startup draft uses exact original else-if ordering | `bc74405`: 521 streams/8,299 points match O0/O2/full sanitizers; MBBoxTest passes. [Validation](../test/fixtures/phase3_bbox/validation.json). Full startup pending. |
 | Gameplay persistence layout | Approved extensions implemented and committed | Real memory/storage/memory copy tested on synthetic nonempty actor/thinker/door state | `9bcc6af`: [storage checkpoint](../artifacts/phase3/storage-checkpoint.json). GameStorageTest passes (9,959,477 test gas), including map/resource/scratch aliases, renderer caches and framebuffer. Authenticated full-level round trip and production cost remain pending. |
 | P_Setup gameplay startup | Draft implemented; uncommitted | Real BLOCKMAP/REJECT, sector grouping and THINGS order connected to gameplay; ordinary authenticated EVM startup matches the original 102,468-byte DSG1 state; persisted tic/frame run underway | Startup logical-state proof passes through the test probe; 70 persisted idle tics and three native frames verified; full scenario set underway. Integrator owns `src/doom/p_setup.sol`. Existing disk loader reused with explicit attribution. |
-| DoomGame state/action/render adapter | Draft implemented; uncommitted | All gameplay hooks and renderer projection written; no production caller yet | Type-checks in module batch; full public test-probe code generation passes (49 files, solc 0.8.37); ordinary startup state matches C exactly. Idle 70 full logical tics/three exact 64,000-byte frames and final stored snapshot pass; all eight scenarios underway. Integrator owns `src/evm/DoomGame.sol`. |
-| Production Doom adapter and browser gameplay | Draft adapter implements startup and sequenced command/tic/frame paths; browser loop committed with isolated proof | Production artifact compiles; actual production keyboard/EVM/browser integration pending | `a67f435`: [browser checkpoint](../artifacts/phase3/browser-input-checkpoint.json). Browser 29 isolated tests pass; no real gameplay browser claim. Production compile passes; driver/sequence/tic/storage/frame/Canvas gates pending. |
-| Full native/EVM gameplay comparison | Test-only public probe and runner implemented; uncommitted until verified integration | Ordinary deployment, all 1,755 authenticated resource runtimes checked; real original hooks and stored state | Idle 70 and movement 275 per-tic DSG1 states plus three full native frames each pass. Movement final persistence comparison exposed PRE/POST-render ML_MAPPED observer mismatch; exact native post-render observer is being added. Full 2,205 tics/24 frames pending. |
+| DoomGame state/action/render adapter | Draft implemented; uncommitted | All gameplay hooks and renderer projection written; compiled draft production caller and test probe | Type-checks in module batch; full public probe graph compiles; all eight startup states, 2,205 full logical tics, 24 exact 64,000-byte frames and eight final post-render stored snapshots pass. Integration commit being prepared. Integrator owns `src/evm/DoomGame.sol`. |
+| Production Doom adapter and browser gameplay | Draft adapter implements startup and sequenced command/tic/frame paths; browser loop committed with isolated proof | Production artifact compiles; actual production keyboard/EVM/browser integration pending | `a67f435`: [browser checkpoint](../artifacts/phase3/browser-input-checkpoint.json). Browser 29 isolated tests pass; no real gameplay browser claim. Production compile and 129 keyboard tics/14 state fields/six exact frames/13 rejection-storage rollback checks pass. Real browser and final inherited gates pending. |
+| Full native/EVM gameplay comparison | Test-only public probe and runner implemented; uncommitted until verified integration | Ordinary deployment, all 1,755 authenticated resource runtimes checked; real original hooks and stored state | Idle 70 and movement 275 per-tic DSG1 states plus three full native frames each pass. Movement final persistence comparison exposed PRE/POST-render ML_MAPPED observer mismatch; exact native post-render observer is being added. Full corrected run passes all 2,205 tics/24 frames/eight exact final post-render stored snapshots; retained evidence and source checkpoint being prepared. |
 | Resource initializer integration amendment | Complete and committed | Complete public test-probe graph compiles | `abfb38c`: all 20 inherited RData tests pass, including all native lookup/sprite/map/composite fields. [Checkpoint](../artifacts/phase3/resource-init-checkpoint.json). Final inherited gate remains pending. |
 | Original feature/function audit | 287 original definitions inventoried with spans/body hashes and port mappings | Audit-time source snapshot; refresh on final freeze | `6302955`: [feature matrix](PHASE3-FEATURE-MATRIX.md), [JSON inventory](../artifacts/phase3/feature-matrix.json). Evidence scope and unsupported/undefined domains explicit; no new runtime acceptance claim. |
 | Usage telemetry | Complete collector; active collection | Local Codex logs only, no engine dependency or services | 20 collector tests pass; historical Phase 0–2 totals remain stable. Phase 3 boundary `d47dd86`. Latest snapshots are ignored `artifacts/local/codex-usage/`. |
@@ -113,7 +114,16 @@ passed movement 275 full states/three frames, then stopped at a final observer
 boundary error: the native final snapshot is before rendering while stored EVM
 state is after rendering (line 543 ML_MAPPED). No engine correction is indicated.
 A separate exact C post-render observer will replace that invalid comparison;
-this failure is retained, not masked or counted as a passed final snapshot. The reference agent now owns a
+this failure is retained, not masked or counted as a passed final snapshot.
+
+The separate native post-render extension (`7fc2cab`) verifies all 24 new records
+across four profiles and every existing pre-state/diagnostic/event/summary/frame
+byte unchanged. Its executed run was generation; `--check` is documented as
+reproduction, not an executed claim. The corrected complete EVM run now passes
+all eight startups/2,205 tics/24 frames/eight exact final stored states. Production
+keyboard verification separately passes 129 tics, 14 exported fields, six exact
+frames and 13 rejections with complete storage-root rollback. Neither closes
+M2/M3 before real browser, repeated streams, limits and frozen inherited gates. The reference agent now owns a
 test-only public gameplay probe/canonical serializer and native/EVM runner; the input
 agent owns browser wiring; the interface agent owns the feature/fidelity matrix.
 No completed module ports are being restarted. Previous test-only

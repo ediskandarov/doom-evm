@@ -3,7 +3,7 @@
   "scope": "Native observation-boundary extension only; no new EVM acceptance",
   "result": "PASS",
   "nativeRunHandle": 46253,
-  "command": "python3 tools/reference/gameplay/post_render.py --check",
+  "command": "python3 tools/reference/gameplay/post_render.py",
   "records": 24,
   "scenarios": 8,
   "profiles": [
@@ -19,5 +19,7 @@
     "tools/reference/gameplay/post_render_host.c": "d8dac846947d3c64b9878ecbcb6821d63ccfc7ea8b1c405e7d5d70ed4baead41",
     "tools/reference/gameplay/post_render.py": "08eb1e34607b77c0fab1b05d28dfac2a3012a613cd6cf0513c4b93e87f427119",
     "test/fixtures/gameplay_post/manifest.json": "94a2b3376b218cd0883d404a03a50328fc45fa1b6c4f5ff352087cdc53911f4c"
-  }
+  },
+  "reproductionCommand": "python3 tools/reference/gameplay/post_render.py --check",
+  "mode": "Generation run: all four profile and unchanged-baseline assertions executed; new records written. --check is the reproduction command, not a claimed executed run."
 }
