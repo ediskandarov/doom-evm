@@ -175,6 +175,10 @@ launcher/probes confirm the new default; all verification consumers are being
 updated consistently. Compiler settings, original semantics, code/memory limits
 and every correctness gate are preserved. Stack/code-generation errors and
 unknown-byte drawing guards are separate from gas exhaustion.
+Core policy checkpoint `bb0c375` is committed: five default/override/invalid-input/
+Node/Python/Bash/Zsh parity tests pass, and a TOML comparison proves only the gas
+default changed. Consumers are separate pending checkpoints; full 10B acceptance
+has not run.
 
 Production and probe initialization drafts now call `DoomGame.initializeNative`
 for original R_Init/R_InitSprites then G_InitNew/P_Setup in **one transaction**.
