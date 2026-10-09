@@ -7,7 +7,8 @@ does not count as accepted Phase 3 implementation.
 
 ## Recovery checkpoint
 
-Last implementation checkpoint: `2392f4a`, verified original zone allocator core.
+Last implementation checkpoint: `d9ca352`, verified source-derived renderer allocator startup;
+zone core is `2392f4a`.
 Last native observation checkpoint: `5ffd10a`, original zone lifecycle/layout evidence;
 `7fc2cab` remains the exact post-render state extension.
 Last audit checkpoint: `6302955`, original definition/feature inventory.
@@ -44,7 +45,7 @@ mock-neighbor module proof does not imply whole-engine verification.
 | DoomGame state/action/render adapter | Implemented and committed | All gameplay hooks and renderer projection written; compiled draft production caller and test probe | Type-checks in module batch; full public probe graph compiles; all eight startup states, 2,205 full logical tics, 24 exact 64,000-byte frames and eight final post-render stored snapshots pass. `b1c2735`: [comparison](../tools/reference/gameplay/COMPARISON.md), [validation](../test/fixtures/gameplay_evm/validation.json). Integrator owns `src/evm/DoomGame.sol`. |
 | Production Doom adapter and browser gameplay | Draft adapter implements startup and sequenced command/tic/frame paths; browser loop committed with isolated proof | Production artifact compiles; actual production keyboard/EVM/browser integration pending | `a67f435`: [browser checkpoint](../artifacts/phase3/browser-input-checkpoint.json). Browser 29 isolated tests pass; no real gameplay browser claim. Production compile and 129 keyboard tics/14 state fields/six exact frames/13 rejection-storage rollback checks pass. Static real Chrome/WS/receipt/Canvas gate passes after config-only repair. Gameplay Chrome passes four exact frames/14 fields then hits DrawBounds on tic five; diagnosis and final inherited gates pending. |
 | Full native/EVM gameplay comparison | Test-only public probe and runner implemented and committed | Ordinary deployment, all 1,755 authenticated resource runtimes checked; real original hooks and stored state | Idle 70 and movement 275 per-tic DSG1 states plus three full native frames each pass. Movement final persistence comparison exposed PRE/POST-render ML_MAPPED observer mismatch; exact native post-render observer is being added. Full corrected run passes all 2,205 tics/24 frames/eight exact final post-render stored snapshots; `b1c2735`: [retained evidence](../test/fixtures/gameplay_evm/evidence.json) and all 55 consumed source hashes verified. |
-| Native allocation/backing-memory adapter | Zone types/core committed; source-driven startup replay component verified, awaiting separate commit | Core used by startup component; map/runtime allocation and renderer backing remain unintegrated | `2392f4a`: 1,624 exact snapshots, 15 fatal probes, two Forge tests. `5ffd10a`: nine native contexts/four profiles, 83,054 events, 84 snapshots and 63,975 sprite-adjacency checks; all prior native outputs unchanged. [Lifecycle validation](../test/fixtures/phase3_zone_lifecycle/validation.json). Startup proof: 6,498 calls/4,913 headers/4,126 owners, three Forge tests; pending component checkpoint. No runtime allocation tape, clamp, invented padding or guard removal. |
+| Native allocation/backing-memory adapter | Zone types/core committed; source-driven startup replay component verified and committed | Core used by startup component; map/runtime allocation and renderer backing remain unintegrated | `2392f4a`: 1,624 exact snapshots, 15 fatal probes, two Forge tests. `5ffd10a`: nine native contexts/four profiles, 83,054 events, 84 snapshots and 63,975 sprite-adjacency checks; all prior native outputs unchanged. [Lifecycle validation](../test/fixtures/phase3_zone_lifecycle/validation.json). `d9ca352`: 6,498 startup calls/4,913 headers/4,126 owners and three Forge tests; [startup validation](../test/fixtures/phase3_zone_startup/validation.json). No runtime allocation tape, clamp, invented padding or guard removal. |
 | Resource initializer integration amendment | Complete and committed | Complete public test-probe graph compiles | `abfb38c`: all 20 inherited RData tests pass, including all native lookup/sprite/map/composite fields. [Checkpoint](../artifacts/phase3/resource-init-checkpoint.json). Final inherited gate remains pending. |
 | Original feature/function audit | 287 original definitions inventoried with spans/body hashes and port mappings | Audit-time source snapshot; refresh on final freeze | `6302955`: [feature matrix](PHASE3-FEATURE-MATRIX.md), [JSON inventory](../artifacts/phase3/feature-matrix.json). Evidence scope and unsupported/undefined domains explicit; no new runtime acceptance claim. |
 | Usage telemetry | Complete collector; active collection | Local Codex logs only, no engine dependency or services | 20 collector tests pass; historical Phase 0–2 totals remain stable. Phase 3 boundary `d47dd86`. Latest snapshots are ignored `artifacts/local/codex-usage/`. |
@@ -86,90 +87,67 @@ reproducible conformance evidence; build products and local console logs are ign
 
 ## Remaining work and current constraints
 
-1. Verify original E1M1 startup and the complete adapter; module checkpoints are
-   committed. World movers and special dispatch share imports and a test fixture
-   base, so their verified integration is atomic in `fdadcb5`. Lifecycle, interfaces
-   and bbox remain separate commits; unverified startup/adapter code is excluded.
-2. Verify authenticated full-level persistence. Original scratch globals,
-   translation arrays, renderer wall/plane caches, fuzz/frame counters and screens[0]
-   must survive transactions. Check aliases through a real storage round trip.
-3. Validate original E1M1 startup and wire production tick/render/driver/sequence
-   operations; connect browser keyboard state without host movement or rendering.
-4. Compare identical native/EVM input streams, with matching render cadence,
-   canonical world state and exact 64,000-byte selected frames. Cover real movement,
-   blocking/sliding, pickup, firing, monster damage/death, doors and obstruction.
-5. Measure production gas/memory and limits, verify transport/Canvas, audit the
-   feature matrix, then run every inherited gate against frozen final sources.
+Completed integrated probe evidence (`b1c2735`) covers all eight original E1M1
+startups, 2,205 complete logical tic states, 24 exact 64,000-byte frames and eight
+final post-render persisted snapshots. The PRE/POST-render ML_MAPPED observer
+failure was resolved by the independent native extension `7fc2cab`; it required
+no engine change. Production draft evidence separately covers 129 keyboard tics,
+14 exported fields, six frames and 13 rejected calls with full storage-root rollback.
+The static real Chrome transport/Canvas gate also passes. These scopes are evidence,
+not M2/M3 closure, and will require rechecking after allocator integration.
 
-There is no external blocker. The current blocker is an actual production DrawBounds revert in the new
-six-tic all-render Chrome profile; the native profile passes four compiler/fill
-profiles. Commands 1–4 match all frame bytes and 14 player/status fields. Tic 5
-(mask 128, sequence 7) reverts at 538,537,735 gas, so this is not the gas cap.
-Failed transaction: `0xd28123618d70997eb485b1f4bce9126b6567a8ec064ab6542506f550e4caa677`;
-selector `0x5b9a48fe` is DrawBounds(). Contract storage remains at inputSeq 6 /
-gametic 4. Report: `artifacts/local/phase3-gameplay-browser.json`. The reference
-agent owns a test-only diagnostic source clone, the interface agent reviews
-original drawing/clipping logic, and root owns any production fix. The exact cause is now measured: frac -1 samples offset 1148 of a 1128-byte
-PLAYW0 lump, landing at offset 20 of the next initialized native zone header.
-The native byte is the low byte of ZONEID 0x1d4a11 (17), mapped to palette index
-139. All four profiles use the same draw inputs and header field; this is a
-logical asset overread inside the larger 64 MiB allocation, not proven ISO C UB.
-Evidence: `artifacts/local/draw-diagnostic/conclusion.json`.
+Current engine blocker: real gameplay Chrome passes four exact frames and 14
+fields, then tic five (mask 128, sequence 7) reverts with DrawBounds at
+538,537,735 gas. Failed transaction:
+`0xd28123618d70997eb485b1f4bce9126b6567a8ec064ab6542506f550e4caa677`.
+Storage remains inputSeq 6 / gametic 4. Report:
+`artifacts/local/phase3-gameplay-browser.json`. Four native profiles reproduce
+frac −1 sampling PLAYW0 offset 1148 of a 1128-byte lump: next LP64 zone-header ID
+offset 20, written ZONEID low byte 17, mapped to palette index 139. This is a
+logical asset overread inside the larger zone allocation, not proven ISO C UB.
+Cause evidence: `artifacts/local/draw-diagnostic/conclusion.json`.
 
-The integrator is implementing a source-driven allocator/backing adapter rather
-than changing drawing math or inventing tail bytes. Approved types are in
-`src/doom/z_zone_types.sol`; `/root/p3_interface_audit` owns the original allocator
-core/native unit proof, `/root/p3_input` owns original renderer allocation/cache
-startup replay, and `/root/p3_reference_audit` owns normalized native allocation
-and lifecycle observations. The EVM must compute layout from original algorithms
-and authenticated resources; native allocation tapes remain test evidence only.
-Unknown pointer/padding bytes cannot silently become pixels. No compiler limits
-will be raised to pass the profile. The zone core is committed in `2392f4a` after native/Forge conformance;
-renderer startup replay is now independently verified but not yet connected to production. The production adapter
-stays uncommitted. Further dependencies are repeated streams, actual memory
-measurements, final source audit and frozen inherited gates. The full probe compiles after a test-only immutable
-scenario reread, a verified resource patch field-assignment amendment (20 RData tests pass,
-`abfb38c`), and committed call-local traversal work. No compiler settings or limits
-changed. The loopback Anvil sandbox retry was approved. Startup matches original C
-byte-for-byte after ordinary deployment and exact verification of all 1,755
-resource runtimes. The subsequent idle run verifies 70 full logical tic states, three selected
-64,000-byte frames and final stored snapshot exactly. Reset gas is 761,217,276;
-five-tic test batches use 251,505,408–680,980,862 gas, including observation costs.
-This proves only the idle probe profile; all eight scenarios are now executing. The ignored report is `artifacts/local/gameplay-evm.json`
-(startup-only), plus `artifacts/local/gameplay-idle.json` and its compressed
-state stream. Both have `completeNativeScenarioSet=false`. The first all-scenario run additionally
-passed movement 275 full states/three frames, then stopped at a final observer
-boundary error: the native final snapshot is before rendering while stored EVM
-state is after rendering (line 543 ML_MAPPED). No engine correction is indicated.
-A separate exact C post-render observer will replace that invalid comparison;
-this failure is retained, not masked or counted as a passed final snapshot.
+Verified recovery checkpoints:
 
-The separate native post-render extension (`7fc2cab`) verifies all 24 new records
-across four profiles and every existing pre-state/diagnostic/event/summary/frame
-byte unchanged. Its executed run was generation; `--check` is documented as
-reproduction, not an executed claim. The corrected complete EVM run now passes
-all eight startups/2,205 tics/24 frames/eight exact final stored states. Production
-keyboard verification separately passes 129 tics, 14 exported fields, six exact
-frames and 13 rejections with complete storage-root rollback. Neither closes
-M2/M3 before real gameplay browser, repeated streams, limits and frozen inherited gates.
+- `2392f4a`: original allocator core, 1,624 snapshots / 15 fatal probes / two Forge tests.
+- `5ffd10a`: complete native lifecycle and actual LP64 sizeof/offsetof, nine contexts
+  × four profiles; 83,054 events / 84 snapshots / 63,975 adjacency checks.
+  All prior native outputs unchanged. Peak live bytes 13,901,664 of 67,108,864;
+  zero purges in these finite runs. Native tapes are comparison evidence only.
+- `d9ca352`: EVM startup derives all 6,498 allocation/cache calls from authenticated
+  metadata and original parsed definitions. All 4,913 headers and 4,126 owner marks
+  match native. Three Forge tests pass under unchanged limits. Normal replay stage
+  costs 344,974,734 test gas; fixture-inclusive normal test costs 808,761,041.
+  These are component measurements, not integrated production estimates.
 
-The kernel and its observer/runner/evidence are committed atomically in `b1c2735`.
-The production adapter remains a separate uncommitted verified workstream until
-its retained production evidence is reviewed. Real static Chrome transport now
-passes against the production candidate, including exact original pixels and
-all Canvas bytes. The earlier missing config metadata was repaired without
-changing engine state or code; real gameplay Chrome verification is next. The reference agent now owns a
-test-only public gameplay probe/canonical serializer and native/EVM runner; the input
-agent owns browser wiring; the interface agent owns the feature/fidelity matrix.
-No completed module ports are being restarted. Previous test-only
-via-IR stack pressure and one-billion-gas batching failures were resolved with
-scratch contexts and smaller test bands without dropping cases or changing engine
-algorithms/resource limits. Compiler runs are serialized across agents.
+Next dependency order:
 
-At each verified integration checkpoint, update this ledger with implementation,
-integration and verification scope, evidence, code commit hashes, remaining work
-and current blockers; commit the ledger separately. Keep acceptance criteria below
-unchanged and require their actual evidence before marking them passed.
+1. Integrate zone state into persistence and mirror original P_Setup, actor/mover,
+   lazy-free and semantic resource-cache operations. Preserve stable actor IDs.
+2. Materialize only source-written known physical backing bytes for renderer reads.
+   Pointer, padding and unwritten bytes remain unknown; no clamp, invented tail,
+   special-lump pixel table, native runtime allocation tape or guard removal.
+3. Measure integrated startup gas. Existing production initialization costs
+   740,635,413 gas before the new replay. If necessary, stage original resource
+   preparation before level initialization, without gameplay tics or host state.
+   Keep the one-billion-gas/code/memory gates unchanged.
+4. Recheck native/EVM scenarios and production/browser streams, repeated-command
+   determinism, storage rollback and actual memory/gas measurements.
+5. Refresh the source/feature audit, run all Phase 0/1/2 inherited gates against
+   frozen final sources, then assess each original acceptance criterion below.
+
+No external blocker or active compiler run. Native lifecycle and startup agents
+finished their isolated work; do not restart completed ports. Root owns shared
+headers/glue and the production rendering fix. The production adapter, real-browser
+runner, production proof tooling and diagnostic tools remain uncommitted pending
+their separate verified integration checkpoints. Native ABI constant generation is
+ready for a separate architecture checkpoint. Live Anvil port 18579 is retained for
+production/browser verification; current failed browser instance cannot reinitialize.
+
+At each verified integration checkpoint, update and commit this ledger with exact
+implementation/integration/verification scope, evidence and code hashes, remaining
+work and blockers. Acceptance criteria below are preserved; no unsupported pass
+claim is implied by any partial or component result.
 
 ## Shared state and work order
 
