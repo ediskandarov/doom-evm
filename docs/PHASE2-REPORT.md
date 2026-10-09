@@ -36,4 +36,6 @@ Initial eager resource initialization cost roughly 894 million gas, before exact
 
 Initial full-screen geometry setup costs roughly 180 million gas and advances the allocator to 4.85 MB. It still uses original repeated inverse scans and the existing verified table accessors. The complete combined frame may cost more than the sum of isolated regions because EVM memory expansion is quadratic; no full-frame feasibility claim follows from these figures.
 
+Integration subsequently replaced temporary per-lookup table allocations with generated scalar packed-word switches, preserving all original integers and numerical fixtures. All 149 integrated tests pass; ordinary wall probes now use 391–443 million transaction gas and 6.79–7.94 MB after walls. [The table-access report](PHASE2-TABLES.md) retains source-bound measurements and the unchanged all-index proof. Full-frame costs remain unverified.
+
 The drawing benchmark measures actual interpreter memory expansion using stack-only opcode traces and validates its decoder against an ordinarily deployed literal-MSIZE probe. Resource and full-frame telemetry must likewise distinguish allocator positions from actual EVM memory. Ordinary resource deployment is mandatory for end-to-end evidence; unit tests' fixture-only `vm.etch` shortcut does not satisfy that gate.

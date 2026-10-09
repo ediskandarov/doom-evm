@@ -1,0 +1,443 @@
+{
+  "kind": "phase2-genuine-walls-ordinary-EVM",
+  "client": "anvil/v1.8.5",
+  "resourceIdentity": {
+    "schemaVersion": 0,
+    "wadSha256": "7323bcc168c5a45ff10749b339960e98314740a734c30d4b9f3337001f9e703d",
+    "bundleSha256": "d379076f21645cf7cc5acb056663d0faacc4065489a0ca99738479323c9f7a47",
+    "paletteSha256": "fd895921b5d0a394612bb29852ed003d44d69f76dec31c0dc6b5d5fc7d63f7bb",
+    "paletteVariant": 0
+  },
+  "sourceHashes": {
+    "src/doom/doomstat.sol": "4c40da3914c629017959a0a4c0516d83346900674c92f5e55a766aba1b506fea",
+    "src/doom/doomtype.sol": "5fbe4b1d0fe96d04453b00d1c3f1c6781c6c8ab5147ee0ac512d17597a5a3c56",
+    "src/doom/info.sol": "4611205149173e42d3b0f1d91820c8042f6bc5fc48fb53aec84ad4bc501dca8e",
+    "src/doom/m_fixed.sol": "3f64bef1f62f61faead3a5b8f382bf1c66e1b3739ce4ac8d59a6fcef0451ef9f",
+    "src/doom/r_bsp.sol": "0ae5df313515692d0b2b970d5d39d107e014629cff2305fb37c14371a9524040",
+    "src/doom/r_data.sol": "2e3af7d36e37d00734826e0b04ed08fd7bb70587b10a0c1b66841b2bd8c10a3a",
+    "src/doom/r_data_types.sol": "f5ae6de0f06a25dfccd9421580d8f3fca8d2457507cca2d13fce586b3334d02f",
+    "src/doom/r_defs.sol": "558d5a9bfd131e816bbe28986e2dad6144a08e5a16ccfed1b199d7558a1ea0e2",
+    "src/doom/r_draw.sol": "7cdef01556fccc767df44f842f7ce03efea0ec34bd9cfeb6848d30074fb17e06",
+    "src/doom/r_main.sol": "df403bf04fdbbcfc68c4fd9c5e19b5201ca711498efc34db406a4010ad3b2af5",
+    "src/doom/r_plane.sol": "9b71d18a2c8b58cd561f7889a54e28af141ab4c23ddb5896d635527240e4c7b7",
+    "src/doom/r_render_hooks.sol": "f026ccb8fffb68d8fbcb0966103212f52884b86350fe3fb52a401d146f3fb312",
+    "src/doom/r_render_state.sol": "072bd2f73b98e1eb775fc8093e95a69c184f3fa50a89a5d64a7beccd59493398",
+    "src/doom/r_segs.sol": "4ec76e347641ff6da419e02dba3557083f89e5b01a620648c3ec2f685d83d97d",
+    "src/doom/r_sprite_state.sol": "735b3de85cbf455e05d3cb8e992cf4e477960bd4192bbd367f5c66c803b96363",
+    "src/doom/r_state.sol": "e87ff9d88345a53d1f8825fb07b485c782c7bcb55e2de1dc56c876f9b26ab966",
+    "src/doom/tables.sol": "bf14202b419075f6d187653205a37e211d8267c7fc4c0bebf5a8c5713afddf38",
+    "src/evm/Doom.sol": "19fffec0ad30656826893bc603164299e87ea55abc771dff03b863acd96e2cf1",
+    "src/evm/DoomScene.sol": "9ad7c8ccee4c9e05deb5608326baabacfa40f686b8d8445fb8aaa7352ab64569",
+    "src/evm/FrameProtocol.sol": "4665be3f613b8e817d616d2db1dc4a644325c44a6ade476a35d7d9d003625ace",
+    "src/evm/ResourceStore.sol": "5ab3acc5d09f155a4cf25973c847f23e47f386a364704b76996c86be5862e3a8",
+    "src/evm/ResourceTypes.sol": "159865364cfa57aae508cd94c49509cbccabd6aeeba55e92b9fcf816bdec4d6b",
+    "src/evm/WadResources.sol": "25a1acc0a44ac35cc29e5f9bd953ba66b85db4f665b732430571b416ef927895",
+    "src/support/FrameFixture.sol": "1de9a0f7c1ae276041f6d71111da36413f2604b9a43a95176dd4dfae82bbc799",
+    "src/support/ResourceAccessProbe.sol": "4aa343501917ddfc0117cbb9fc543b543ce16124c7b25127dcf41d22cab10e3c",
+    "src/support/ResourcePlacement.sol": "3febd551f07205b96c4960d496acb27ab06c571bf8e4ce1983595491b0acd6ab",
+    "src/support/StackPressure.sol": "fa49240fd75c2810e813e3b7620492f24270a0e985ef900e88e8b81fd1fb41af",
+    "src/support/WadResourcesProbe.sol": "c05e160a1c62e5d2e71159466e7d0c5f030166501d986a7059c3f4c9870dc973",
+    "tools/tables/generate.py": "629a9a628c5cf314e9ff368595bc90cd114d188ab6c831fd9419b812383720b3",
+    "tools/reference/phase2_segs/WallProbe.sol": "46b9ba0d9092358c681c6070f2b5e5c20c189b66da36b3c6c799e1108bfefafb",
+    "tools/reference/phase2_segs/benchmark.mjs": "d9a590b9ef5d853021d4caafd3f9f7fdbc366482ab008d9377b091ccac2f0f71",
+    "tools/reference/phase2_data/instrument.mjs": "728f154d347a93d1e6c353187b2212ebdbfa1ce571207ec775470526864cb89b",
+    "foundry.toml": "084d5192108931325837611f9d1339796a6ffd64ed570e31907afe718f191226"
+  },
+  "instrumentation": {
+    "functionName": "memorySize",
+    "sourceId": 15,
+    "sourceSha256": "46b9ba0d9092358c681c6070f2b5e5c20c189b66da36b3c6c799e1108bfefafb",
+    "originalRuntimeSha256": "ef952f6a31695528eae6cf363df145ed15f2039ab73a6fbb93c103760f0c2df4",
+    "instrumentedRuntimeSha256": "9977ed02e262f924f1b04612dfc0efbcf3144e1d411d80b04f00d438d5612ee0",
+    "runtimeBytes": 130049,
+    "runtimeOffsetInCreation": 1274,
+    "patches": [
+      {
+        "pc": 193,
+        "sourceStart": 2321,
+        "sourceLength": 42,
+        "line": 54,
+        "sourceText": "assembly (\"memory-safe\") { size := gas() }",
+        "before": "GAS 0x5a",
+        "after": "MSIZE 0x59"
+      },
+      {
+        "pc": 460,
+        "sourceStart": 2321,
+        "sourceLength": 42,
+        "line": 54,
+        "sourceText": "assembly (\"memory-safe\") { size := gas() }",
+        "before": "GAS 0x5a",
+        "after": "MSIZE 0x59"
+      },
+      {
+        "pc": 11443,
+        "sourceStart": 2321,
+        "sourceLength": 42,
+        "line": 54,
+        "sourceText": "assembly (\"memory-safe\") { size := gas() }",
+        "before": "GAS 0x5a",
+        "after": "MSIZE 0x59"
+      },
+      {
+        "pc": 11746,
+        "sourceStart": 2321,
+        "sourceLength": 42,
+        "line": 54,
+        "sourceText": "assembly (\"memory-safe\") { size := gas() }",
+        "before": "GAS 0x5a",
+        "after": "MSIZE 0x59"
+      },
+      {
+        "pc": 11814,
+        "sourceStart": 2321,
+        "sourceLength": 42,
+        "line": 54,
+        "sourceText": "assembly (\"memory-safe\") { size := gas() }",
+        "before": "GAS 0x5a",
+        "after": "MSIZE 0x59"
+      }
+    ],
+    "semantics": "Separate probe deployment only. GAS\u2192MSIZE, identical2gas and +1stack effect, unchanged bytecode layout/jump destinations. Operation gas and output digests must match ordinary uninstrumented deployment."
+  },
+  "calibration": {
+    "actualMsize": 320,
+    "decodedHighWater": 320
+  },
+  "scope": "All WAD chunks and both probes ordinarily CREATE-deployed; no etch/setCode. Telemetry changes source-mapped GAS helper only. Every call and mined transaction retains identical gas and original-C pixels. No full-plane/sprite performance claim.",
+  "upload": {
+    "chunkCount": 1755,
+    "chunkBytes": 28741889,
+    "chunkDeploymentMs": 48164.841625,
+    "totalGas": 6271928016,
+    "deploymentRecordsSha256": "ff5bae903deefafc6c309e7644096779687cb2f2a45778db108a16f577ab5a7e",
+    "recordsNote": "Full verified deployment receipts/runtime hashes remain in the benchmark output; this committed summary records their canonical JSON SHA-256."
+  },
+  "probeDeployments": {
+    "normal": {
+      "type": "0x2",
+      "status": "0x1",
+      "cumulativeGasUsed": "0x8ff68fa",
+      "logs": [],
+      "logsBloom": "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "transactionHash": "0xb528b1df994a3c7c357c1a26644ea2289d2f78a0202b9c231b3223393b1b49f4",
+      "transactionIndex": "0x0",
+      "blockHash": "0xc24854ee9198e8297db85288429c65d05139689dc8588c8a5118e7116a93fb81",
+      "blockNumber": "0x6dd",
+      "gasUsed": "0x8ff68fa",
+      "effectiveGasPrice": "0x3b9aca08",
+      "from": "0xf39fd6e51aad88f6f4ce6ab8827279cfffb92266",
+      "to": null,
+      "contractAddress": "0x5ae1f4bb68f8eac39cfdbdfda2b7344ccbd80faf",
+      "blockTimestamp": 1791548645
+    },
+    "telemetry": {
+      "type": "0x2",
+      "status": "0x1",
+      "cumulativeGasUsed": "0x8ff68fa",
+      "logs": [],
+      "logsBloom": "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "transactionHash": "0x9ed00febecbda0a767df879abff1947137b52a19dff1c5a0703510e82a2ee64e",
+      "transactionIndex": "0x0",
+      "blockHash": "0x2e9ed671370d2b85e4d980a8da1078be4f30d29f547f9e675fbe3f463f757d3d",
+      "blockNumber": "0x6de",
+      "gasUsed": "0x8ff68fa",
+      "effectiveGasPrice": "0x3b9aca08",
+      "from": "0xf39fd6e51aad88f6f4ce6ab8827279cfffb92266",
+      "to": null,
+      "contractAddress": "0x1e493b995b2b9afed46e60bd163d12f23cf628ba",
+      "blockTimestamp": 1791548645
+    }
+  },
+  "results": [
+    {
+      "name": "walls-angle0",
+      "mode": "walls",
+      "angle": 0,
+      "gasStages": [
+        "resource-storage-copy",
+        "resource-map-view-initialization",
+        "BSP-and-wall-rendering"
+      ],
+      "operationGas": [
+        11812407,
+        342885954,
+        86766473
+      ],
+      "memoryStages": [
+        "entry",
+        "resource-storage-copy",
+        "resource-map-view-initialization",
+        "BSP-and-wall-rendering",
+        "framebuffer-SHA"
+      ],
+      "actualMemoryBytes": [
+        1088,
+        462464,
+        6624576,
+        7940128,
+        8004160
+      ],
+      "pixelsSha256": "342290d0167c46fcfcacf7c0cf9cb08b796b7f1860c14284ca78174c5160ee19",
+      "drawsegs": 129,
+      "visplanes": 67,
+      "openingShorts": 891,
+      "transactionGas": 443471585,
+      "normalTransactionHash": "0xd7f7a411376d5db8d79d0dee143aabb666dadda0c543ded4efe2c3c78ec17e6a",
+      "telemetryTransactionHash": "0x65e41838619e2e2efdefc4b7f2b9be88c87566204431547ee33bcff95381c371"
+    },
+    {
+      "name": "walls-angle1",
+      "mode": "walls",
+      "angle": 536870912,
+      "gasStages": [
+        "resource-storage-copy",
+        "resource-map-view-initialization",
+        "BSP-and-wall-rendering"
+      ],
+      "operationGas": [
+        11812407,
+        342886306,
+        75608869
+      ],
+      "memoryStages": [
+        "entry",
+        "resource-storage-copy",
+        "resource-map-view-initialization",
+        "BSP-and-wall-rendering",
+        "framebuffer-SHA"
+      ],
+      "actualMemoryBytes": [
+        1088,
+        462464,
+        6624576,
+        7600704,
+        7664736
+      ],
+      "pixelsSha256": "f9ed3b4e1aa33a0f4e3362514db4a2ffcfae70f4db32e953b9918979c4abea76",
+      "drawsegs": 85,
+      "visplanes": 50,
+      "openingShorts": 632,
+      "transactionGas": 432231436,
+      "normalTransactionHash": "0x50bd39688c6b30f41206fe6ffd1f6a3c0d0f71dd1227b8b116260344309ddfd6",
+      "telemetryTransactionHash": "0xecbc3b420f6a111e1b22a74b1f2ae9b856cb1e5099424375c86a053d8e106166"
+    },
+    {
+      "name": "walls-angle2",
+      "mode": "walls",
+      "angle": 1073741824,
+      "gasStages": [
+        "resource-storage-copy",
+        "resource-map-view-initialization",
+        "BSP-and-wall-rendering"
+      ],
+      "operationGas": [
+        11812407,
+        342885197,
+        34840360
+      ],
+      "memoryStages": [
+        "entry",
+        "resource-storage-copy",
+        "resource-map-view-initialization",
+        "BSP-and-wall-rendering",
+        "framebuffer-SHA"
+      ],
+      "actualMemoryBytes": [
+        1088,
+        462464,
+        6624576,
+        6789632,
+        6853664
+      ],
+      "pixelsSha256": "a961fb640c8e56b8b9f8923b53437a4335038d5ce2d29b184e0be29e19593343",
+      "drawsegs": 21,
+      "visplanes": 7,
+      "openingShorts": 80,
+      "transactionGas": 391263704,
+      "normalTransactionHash": "0x820590b04399fbf58ccaeb3d1a738b7966a502df69e65442bf483ec76d87b27a",
+      "telemetryTransactionHash": "0x813e9c98c6d1180c35a837bb39d1a09ea51f469a7050daec5b78da063f7fff76"
+    },
+    {
+      "name": "walls-angle3",
+      "mode": "walls",
+      "angle": 1610612736,
+      "gasStages": [
+        "resource-storage-copy",
+        "resource-map-view-initialization",
+        "BSP-and-wall-rendering"
+      ],
+      "operationGas": [
+        11812407,
+        342885549,
+        38836460
+      ],
+      "memoryStages": [
+        "entry",
+        "resource-storage-copy",
+        "resource-map-view-initialization",
+        "BSP-and-wall-rendering",
+        "framebuffer-SHA"
+      ],
+      "actualMemoryBytes": [
+        1088,
+        462464,
+        6624576,
+        6847616,
+        6911648
+      ],
+      "pixelsSha256": "bc42481af6334b3dd7c38ef7d387138efb9b9ab94bb29058726401ee626dc49b",
+      "drawsegs": 12,
+      "visplanes": 6,
+      "openingShorts": 492,
+      "transactionGas": 395274319,
+      "normalTransactionHash": "0x2ad01c5a64107690360db73693bad176aea7f52c7546ef2dc3bf7ffd22724130",
+      "telemetryTransactionHash": "0x6f000331adc085b067ae274943b4bb524f54c6ad3e12a081dbf9d1d096244262"
+    },
+    {
+      "name": "walls-angle4",
+      "mode": "walls",
+      "angle": 2147483648,
+      "gasStages": [
+        "resource-storage-copy",
+        "resource-map-view-initialization",
+        "BSP-and-wall-rendering"
+      ],
+      "operationGas": [
+        11812407,
+        342885954,
+        40599073
+      ],
+      "memoryStages": [
+        "entry",
+        "resource-storage-copy",
+        "resource-map-view-initialization",
+        "BSP-and-wall-rendering",
+        "framebuffer-SHA"
+      ],
+      "actualMemoryBytes": [
+        1088,
+        462464,
+        6624576,
+        6838880,
+        6902912
+      ],
+      "pixelsSha256": "03beadeed19220597493fec086796758f474c3965bef7b64d43d2ffccfa54b36",
+      "drawsegs": 12,
+      "visplanes": 6,
+      "openingShorts": 617,
+      "transactionGas": 397035204,
+      "normalTransactionHash": "0x2c94ffc8df87b363f8b5c584a409fdfb211c519220ed7c1bb270288825030a9a",
+      "telemetryTransactionHash": "0x699baa02de0f22eefa3147a7926aff481acd7cc1bcd214ad5f4aece4fe077674"
+    },
+    {
+      "name": "walls-angle5",
+      "mode": "walls",
+      "angle": 2684354560,
+      "gasStages": [
+        "resource-storage-copy",
+        "resource-map-view-initialization",
+        "BSP-and-wall-rendering"
+      ],
+      "operationGas": [
+        11812407,
+        342886306,
+        38973419
+      ],
+      "memoryStages": [
+        "entry",
+        "resource-storage-copy",
+        "resource-map-view-initialization",
+        "BSP-and-wall-rendering",
+        "framebuffer-SHA"
+      ],
+      "actualMemoryBytes": [
+        1088,
+        462464,
+        6624576,
+        6848192,
+        6912224
+      ],
+      "pixelsSha256": "943594fa6a00d60f277ff933d23e89e279361fffffbea259077cc97a8d06633f",
+      "drawsegs": 14,
+      "visplanes": 6,
+      "openingShorts": 485,
+      "transactionGas": 395412176,
+      "normalTransactionHash": "0x0f9e65fcdcbc1623b1826ffc9f356dda53abbe838cc56026561fd00526b745a4",
+      "telemetryTransactionHash": "0x3dfc365bf0b69c81cbc5c179f00e60748ec0f8b72170124d54af6ca41180cc3b"
+    },
+    {
+      "name": "walls-angle6",
+      "mode": "walls",
+      "angle": 3221225472,
+      "gasStages": [
+        "resource-storage-copy",
+        "resource-map-view-initialization",
+        "BSP-and-wall-rendering"
+      ],
+      "operationGas": [
+        11812407,
+        342886711,
+        34907680
+      ],
+      "memoryStages": [
+        "entry",
+        "resource-storage-copy",
+        "resource-map-view-initialization",
+        "BSP-and-wall-rendering",
+        "framebuffer-SHA"
+      ],
+      "actualMemoryBytes": [
+        1088,
+        462464,
+        6624576,
+        6790432,
+        6854464
+      ],
+      "pixelsSha256": "21e35291955a5fa8cd17c48936b6701b82be655f033f1c6be24980c82b3e9e34",
+      "drawsegs": 21,
+      "visplanes": 7,
+      "openingShorts": 81,
+      "transactionGas": 391332733,
+      "normalTransactionHash": "0xeca309eb8cac106356937af251c6b036d0381a9231f78f31d9690a0519aedaf1",
+      "telemetryTransactionHash": "0x0d6175b02eea695c34aa62e7e99b901c60018ad65b24c3b2e91486761823af34"
+    },
+    {
+      "name": "walls-angle7",
+      "mode": "walls",
+      "angle": 3758096384,
+      "gasStages": [
+        "resource-storage-copy",
+        "resource-map-view-initialization",
+        "BSP-and-wall-rendering"
+      ],
+      "operationGas": [
+        11812407,
+        342887063,
+        70239634
+      ],
+      "memoryStages": [
+        "entry",
+        "resource-storage-copy",
+        "resource-map-view-initialization",
+        "BSP-and-wall-rendering",
+        "framebuffer-SHA"
+      ],
+      "actualMemoryBytes": [
+        1088,
+        462464,
+        6624576,
+        7514464,
+        7578496
+      ],
+      "pixelsSha256": "91ff88a1c8f7b0383afac3a90211b978c9a852961b5e6e5cbddc26c868bae43f",
+      "drawsegs": 92,
+      "visplanes": 53,
+      "openingShorts": 648,
+      "transactionGas": 426841894,
+      "normalTransactionHash": "0x3bb26e8d5b55f1c7f20ce9fb78b54a56980c37761f341b472f92f79982307e8a",
+      "telemetryTransactionHash": "0xcf3f158aa1b18c9bbe0cf1e90302ca79446d0f2090219e4d1b83667344386a35"
+    }
+  ],
+  "fullReportSha256": "f1181a0f7fd21e1a713bc80865cb6ea4a1bbd254f1c19090b575b5a45ced40c4"
+}

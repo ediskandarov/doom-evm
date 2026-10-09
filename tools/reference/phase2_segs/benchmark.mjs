@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 // Full pinned WAD ordinary deployment + actual opcode MSIZE telemetry in a separate probe.
-import {readFile,writeFile,mkdir} from 'node:fs/promises';
+import {readFile,writeFile,mkdir,readdir} from 'node:fs/promises';
 import {spawn,execFileSync} from 'node:child_process';
 import {resolve,dirname} from 'node:path';
 import {fileURLToPath} from 'node:url';
@@ -73,7 +73,8 @@ try {
   const calCall={from,to:cal.contractAddress,gas:'0x989680'};const actual=Number(BigInt(await rpc('eth_call',[calCall,'latest'])));
   const trace=await rpc('debug_traceCall',[calCall,'latest',{disableStorage:true,disableStack:false,enableMemory:false}]);assert(!trace.failed);
   const calibration=traceMemory(trace.structLogs);assert.equal(actual,320);assert.equal(calibration.highWaterBytes,actual);
-  const sourceHashes={};for(const file of ['src/doom/r_segs.sol','src/doom/r_bsp.sol','src/doom/r_plane.sol','src/doom/r_data.sol','src/doom/r_draw.sol','src/doom/r_main.sol','src/doom/r_render_state.sol','src/doom/r_state.sol','tools/reference/phase2_segs/WallProbe.sol','tools/reference/phase2_segs/benchmark.mjs','tools/reference/phase2_data/instrument.mjs','foundry.toml'])sourceHashes[file]=sha(await readFile(file));
+  const soliditySources=(await readdir('src',{recursive:true})).filter(file=>file.endsWith('.sol')).map(file=>'src/'+file).sort();
+  const sourceHashes={};for(const file of [...soliditySources,'tools/tables/generate.py','tools/reference/phase2_segs/WallProbe.sol','tools/reference/phase2_segs/benchmark.mjs','tools/reference/phase2_data/instrument.mjs','foundry.toml'])sourceHashes[file]=sha(await readFile(file));
   const report={kind:'phase2-genuine-walls-ordinary-EVM',client:await rpc('web3_clientVersion'),resourceIdentity:bundle.resourceIdentity,sourceHashes,instrumentation:instrumented.report,calibration:{actualMsize:actual,decodedHighWater:calibration.highWaterBytes},scope:'All WAD chunks and both probes ordinarily CREATE-deployed; no etch/setCode. Telemetry changes source-mapped GAS helper only. Every call and mined transaction retains identical gas and original-C pixels. No full-plane/sprite performance claim.',upload:{chunkCount:chunks.length,chunkBytes:blob.length,chunkDeploymentMs,totalGas:chunks.reduce((s,c)=>s+c.gasUsed,0),chunks},probeDeployments:{normal,telemetry},results};
   await mkdir(dirname(resolve(output)),{recursive:true});await writeFile(output,JSON.stringify(report,null,2)+'\n');console.log('Saved '+output);
 } finally {if(server){server.kill('SIGTERM');await new Promise(resolve=>{if(server.exitCode!==null)return resolve();server.once('exit',resolve);setTimeout(()=>{server.kill('SIGKILL');resolve();},1000);});}}

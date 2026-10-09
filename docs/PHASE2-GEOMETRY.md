@@ -40,7 +40,7 @@ Explicit boundaries:
 6. View sizes outside original menu-supported blocks 3–11 and detail 0/1 are rejected. Setup accepts 34 available colormap indexes, with `-1` replacing original NULL. Index 0 explicitly selects colormap 0 in this adapter; original player field 0 maps to -1 in native comparison.
 7. Invalid BSP children, traversed cycles, missing subsectors and more than 32,768 nodes reject. Zero nodes selects the first subsector as in C. A valid root index 32,767 must remain usable. Unvisited malformed graph branches belong to whole-map validation; this function validates its actual traversal.
 
-No new assembly exists in the geometry implementation. Table lookups use the already verified Phase 1 aligned-word loader; no trigonometry is regenerated. The only test assembly reads Solidity's free-memory pointer for allocation telemetry.
+No new assembly exists in the geometry implementation. The initial isolated build used the Phase 1 aligned-word table loader; integrated Phase 2 now uses [verified scalar packed-word access](PHASE2-TABLES.md) with the same original integers and API. No trigonometry is regenerated. The only test assembly reads Solidity's free-memory pointer for allocation telemetry.
 
 ## Verification and cost
 

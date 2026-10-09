@@ -23,7 +23,7 @@
     }
   ],
   "generatedSourceSha256": "cea5466e69dd774e93c4e6c8dc6814d448abab858d9b2efbca73da9bb36f9b0a",
-  "hostSha256": "a07aaf570e26031fca931bcf2a6617d15fce6f88a977c61a73af9f24ddc69d0c",
+  "hostSha256": "2d03932975e3da8a954d2451ac9c567f3da159a952e3d9a6b17d2d08997a7471",
   "harnessSha256": "59f699bb0ed3a2d128102357fd6e29705a56397d117759f5c758804b32d2cf8f",
   "sharedRendererBuilderSha256": "f699de7c8089962588d5a4d46ce314892e53d583a01dc4c6d315123b63a08918",
   "compiler": "Apple clang version 17.0.0 (clang-1700.0.13.5)",
