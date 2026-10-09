@@ -7,6 +7,7 @@ from pathlib import Path
 import signal
 import subprocess
 import time
+from execution_budget import CONFIG, execution_env, load_gas_budget
 
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / 'artifacts/local/phase1-verification'
@@ -37,7 +38,7 @@ def source_hashes():
                 continue
             if path.suffix in ('.sol', '.py', '.sh', '.c', '.h', '.ts', '.mjs', '.json', '.bin', '.html'):
                 result[str(path.relative_to(ROOT))] = hashlib.sha256(path.read_bytes()).hexdigest()
-    for name in ('foundry.toml', 'toolchain.lock.json'):
+    for name in ('foundry.toml', 'toolchain.lock.json', 'execution-budget.json'):
         result[name] = hashlib.sha256((ROOT/name).read_bytes()).hexdigest()
     return result
 
@@ -47,13 +48,18 @@ def main():
     report = {'scope': 'Phase 1 foundations and all Phase 0 regressions; no Phase 2 renderer',
               'utc': time.strftime('%Y-%m-%dT%H:%M:%SZ', time.gmtime()),
               'git_head': subprocess.check_output(['git', 'rev-parse', 'HEAD'], cwd=ROOT, text=True).strip(),
-              'source_sha256': source_hashes(), 'results': [], 'passed': False}
+              'source_sha256': source_hashes(), 'results': [], 'passed': False,
+              'execution_budget': dict(load_gas_budget(), config_path='execution-budget.json',
+                                       config_sha256=hashlib.sha256(CONFIG.read_bytes()).hexdigest(),
+                                       python_helper_sha256=hashlib.sha256((ROOT/'scripts/execution_budget.py').read_bytes()).hexdigest(),
+                                       node_helper_sha256=hashlib.sha256((ROOT/'tools/execution-budget.mjs').read_bytes()).hexdigest())}
+    env = execution_env()
     for name, args, timeout in commands:
         print(f'Running {name}...', flush=True)
         start = time.monotonic()
         log_path = OUT/(name+'.log')
         with log_path.open('w') as log:
-            process = subprocess.Popen(args, cwd=ROOT, stdout=log, stderr=subprocess.STDOUT, start_new_session=True)
+            process = subprocess.Popen(args, cwd=ROOT, env=env, stdout=log, stderr=subprocess.STDOUT, start_new_session=True)
             try: code = process.wait(timeout=timeout)
             except subprocess.TimeoutExpired:
                 os.killpg(process.pid, signal.SIGTERM)

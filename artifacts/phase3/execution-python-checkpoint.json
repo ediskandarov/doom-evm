@@ -1,0 +1,59 @@
+{
+  "kind": "current-configurable-gas-python-verification",
+  "scope": "Five Python script conversions, launcher/probes and runner/self-test only; full inherited acceptance is not claimed.",
+  "budget": {
+    "gasLimit": 10000000000,
+    "gasHex": "0x2540be400",
+    "source": "/Users/eduard/sandbox/doom-evm/execution-budget.json",
+    "config_path": "execution-budget.json",
+    "config_sha256": "acde01f1b9cf248f9265f1ffcff7181d01d77620a2dfcd9a4d4d0b1c79df2be7",
+    "python_helper_sha256": "b7e111be390383b0a2e487bcc0f123c0dbbe5f6f552a79f05acb6d07bdc53879"
+  },
+  "sourceHashes": {
+    "scripts/start-anvil.py": "03c00f7f261cc2fe78e2e62306914289197f73b963420e405ccbbf3eadc3033c",
+    "scripts/probe-limits.py": "7f020350f5f0d45cc38c8058e989226f9db28a423c99d34555c3f7074b557cd8",
+    "scripts/verify-phase0.py": "c68364832202fb5e4b9a0119f9f17ac511192f80266fc43144986da9fa895c61",
+    "scripts/verify-phase1.py": "4c634b50a336feb4fa793388db3e76e40e0464ef9d9966bae50e9f053f0222dd",
+    "scripts/verify-phase2.py": "0294556b4c238929721ad2cf05b8c4e2567d5d2e095eaed82764337b80f9d040",
+    "scripts/execution_budget.py": "b7e111be390383b0a2e487bcc0f123c0dbbe5f6f552a79f05acb6d07bdc53879",
+    "tools/execution-budget.mjs": "dbf68241139422195203f57a08d8e382afa6d1d493848ae68fbebca9265eec78",
+    "execution-budget.json": "acde01f1b9cf248f9265f1ffcff7181d01d77620a2dfcd9a4d4d0b1c79df2be7"
+  },
+  "commands": [
+    {
+      "command": "python3 -m py_compile scripts/start-anvil.py scripts/probe-limits.py scripts/verify-phase0.py scripts/verify-phase1.py scripts/verify-phase2.py",
+      "result": "PASS"
+    },
+    {
+      "command": "python3 scripts/verify-phase2.py --self-test",
+      "result": "PASS"
+    },
+    {
+      "command": "python3 scripts/verify-phase2.py --list",
+      "result": "PASS, no acceptance gates"
+    },
+    {
+      "command": "ANVIL_PORT=18613 python3 scripts/start-anvil.py --check --quiet > artifacts/local/configurable-gas-python-current-launcher.log 2>&1",
+      "result": "PASS fresh current helper,10B blockgas"
+    },
+    {
+      "command": "python3 scripts/probe-limits.py > artifacts/local/configurable-gas-probes.log 2>&1",
+      "session": 37966,
+      "result": "PASS fresh current helper, all original assertions at10B; above-block cases budget+1"
+    }
+  ],
+  "boundedChecks": [
+    "config/hex/decimal precedence; actual child DOOM/FOUNDRY normalized2B override and report budget",
+    "Phase0/1 still12/13 gates; Phase0/1/2 inventory root config and Node helper",
+    "Python and Node helper SHA retained in phase runner budget metadata",
+    "deliberate1M/100M probe gas retained"
+  ],
+  "sourceSnapshotUnchanged": true,
+  "runtimeLimitsSha256": "4e64f1e5bc59b397bc4fca7594224245d98107efa19b6b8410c6508111fa3ed9",
+  "launcherLogSha256": "17367e50df970014c2821bf1f8f0e1dabd9c661581796b4354ffcdbb19371817",
+  "historicalProofsPreserved": [
+    "artifacts/local/configurable-gas-python-validation.json",
+    "artifacts/local/runtime-limits-historical-64bb9bdd364ec012.json",
+    "artifacts/local/runtime-limits-historical-c023f1bf5b81d5b5.json"
+  ]
+}

@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Run all Phase 0 gates; retain command logs, exit codes and source identities."""
 import hashlib,json,os,pathlib,signal,subprocess,sys,time
+from execution_budget import CONFIG, execution_env, load_gas_budget
 ROOT=pathlib.Path(__file__).resolve().parents[1]
 OUT=ROOT/'artifacts/local/verification'
 OUT.mkdir(parents=True,exist_ok=True)
@@ -18,15 +19,15 @@ commands=[
  ('transport',['node','tools/transport/benchmark.mjs']),
  ('browser',['node','tools/transport/browser-check.mjs']),
 ]
-report={'scope':'Phase 0 only; no engine port or C equivalence','utc':time.strftime('%Y-%m-%dT%H:%M:%SZ',time.gmtime()),'git_head':subprocess.check_output(['git','rev-parse','HEAD'],cwd=ROOT,text=True).strip(),'results':[]}
+report={'scope':'Phase 0 only; no engine port or C equivalence','utc':time.strftime('%Y-%m-%dT%H:%M:%SZ',time.gmtime()),'git_head':subprocess.check_output(['git','rev-parse','HEAD'],cwd=ROOT,text=True).strip(),'results':[], 'execution_budget':dict(load_gas_budget(),config_path='execution-budget.json',config_sha256=hashlib.sha256(CONFIG.read_bytes()).hexdigest(),python_helper_sha256=hashlib.sha256((ROOT/'scripts/execution_budget.py').read_bytes()).hexdigest(),node_helper_sha256=hashlib.sha256((ROOT/'tools/execution-budget.mjs').read_bytes()).hexdigest())}
 report['source_sha256']={}
 for directory,patterns in [('src',['*.sol']),('test',['*.sol']),('scripts',['*.py','*.sh']),('tools/transport',['*.mjs']),('web',['*.mjs','*.html','palette.synthetic.json']),('schemas',['*.json'])]:
  for pattern in patterns:
   for path in sorted((ROOT/directory).rglob(pattern)):
    report['source_sha256'][str(path.relative_to(ROOT))]=hashlib.sha256(path.read_bytes()).hexdigest()
-for name in ('foundry.toml','toolchain.lock.json'):
+for name in ('foundry.toml','toolchain.lock.json','execution-budget.json','tools/execution-budget.mjs'):
  report['source_sha256'][name]=hashlib.sha256((ROOT/name).read_bytes()).hexdigest()
-env=dict(os.environ,ANVIL_PORT='18545')
+env=execution_env(dict(os.environ,ANVIL_PORT='18545'))
 for name,args in commands:
  print(f'Running {name}...',flush=True)
  started=time.monotonic()

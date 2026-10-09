@@ -21,6 +21,7 @@ import sys
 import tempfile
 import time
 import uuid
+from execution_budget import CONFIG, execution_env, load_gas_budget
 
 ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_OUTPUT = ROOT / 'artifacts/local/phase2-verification/summary.json'
@@ -81,6 +82,8 @@ def source_hashes(root=ROOT):
         else:
             require(path.is_file(), f'Missing source input: {name}')
             result[name] = sha(path)
+    # Explicit policy input remains frozen even if a future ignore rule omits it.
+    result['execution-budget.json'] = sha(root / 'execution-budget.json')
     return result
 
 
@@ -439,11 +442,18 @@ def stop(process):
 
 def run_command(gate, log_path, cwd=ROOT):
     started = time.monotonic()
+    requested_env = dict(os.environ, **gate.get('env', {}))
+    child_env = execution_env(requested_env)
     result = {'gate': gate['name'], 'command': gate['args'], 'timeout_seconds': gate['timeout'],
-              'environment_overrides': gate.get('env', {}), 'log': str(log_path), 'exit_code': None}
+              'environment_overrides': gate.get('env', {}), 'log': str(log_path), 'exit_code': None,
+              'execution_budget': dict(load_gas_budget(requested_env), config_path='execution-budget.json',
+                                       config_sha256=sha(CONFIG),
+                                       python_helper_sha256=sha(ROOT/'scripts/execution_budget.py'),
+                                       node_helper_sha256=sha(ROOT/'tools/execution-budget.mjs'))}
     with log_path.open('w') as log:
         try:
-            process = subprocess.Popen(gate['args'], cwd=cwd, env=dict(os.environ, **gate.get('env', {})),
+            process = subprocess.Popen(gate['args'], cwd=cwd,
+                                       env=child_env,
                                        stdout=log, stderr=subprocess.STDOUT, start_new_session=True)
         except OSError as error:
             log.write(str(error) + '\n')
@@ -528,7 +538,11 @@ def main():
     started = time.monotonic()
     report = {'scope': 'Complete static E1M1 world views; Phase2 and all inherited Phase0/1 gates; no gameplay ticks/HUD',
               'run_id': str(uuid.uuid4()), 'utc': time.strftime('%Y-%m-%dT%H:%M:%SZ', time.gmtime()),
-              'coverage': COVERAGE, 'planned_gates': [x['name'] for x in commands], 'results': [], 'passed': False}
+              'coverage': COVERAGE, 'planned_gates': [x['name'] for x in commands], 'results': [], 'passed': False,
+              'execution_budget': dict(load_gas_budget(), config_path='execution-budget.json',
+                                       config_sha256=sha(CONFIG),
+                                       python_helper_sha256=sha(ROOT/'scripts/execution_budget.py'),
+                                       node_helper_sha256=sha(ROOT/'tools/execution-budget.mjs'))}
     # Invalidate a prior success before scanning inputs or starting any child.
     write_report(output, report, started)
     try:
