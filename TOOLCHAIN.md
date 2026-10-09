@@ -86,3 +86,9 @@ resource preparation and level startup run in one transaction, measured at
 0.8.37, viaIR, optimizer 200 and Cancun, the code-size policy and 1 GiB memory
 limit remain unchanged. Stack/code-generation errors, invalid memory access and
 unknown physical backing bytes remain separate failure categories.
+
+The Phase 3 formatting dependency build compiled 70 files in 497.56 seconds.
+The inherited forced full-build timeout now allows 1,200 seconds, with enclosing
+Phase 0 and Phase 1 wrappers at 1,800 and 3,600 seconds respectively. Every
+command, assertion and other individual timeout remains intact. Compile duration
+is separate from the configurable EVM execution gas budget.

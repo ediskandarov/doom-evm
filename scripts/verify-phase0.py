@@ -33,9 +33,9 @@ for name,args in commands:
  started=time.monotonic()
  with (OUT/(name+'.log')).open('w') as log:
   process=subprocess.Popen(args,cwd=ROOT,env=env,stdout=log,stderr=subprocess.STDOUT,start_new_session=True)
-  # The integrated Phase 2 sources took 207s to compile on the pinned host.
-  # Allow headroom for a forced build; preserve every gate and other timeout.
-  try: code=process.wait(timeout=600 if name=='build' else 180)
+  # The formatted Phase 3 dependency build took 497.56s for 70 files.
+  # Allow forced full-build headroom; preserve every gate and other timeout.
+  try: code=process.wait(timeout=1200 if name=='build' else 180)
   except subprocess.TimeoutExpired:
    os.killpg(process.pid,signal.SIGTERM)
    try: process.wait(timeout=5)

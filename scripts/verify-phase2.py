@@ -394,7 +394,7 @@ def gates(output, port):
         command('wad-bootstrap-download', ['node', 'tools/wad/download.ts', 'artifacts/local/freedoom'], 180),
         command('wad-bootstrap-pack', ['node', 'tools/wad/pack.ts', wad, 'artifacts/local/wad'], 120),
         command('pinned-test-chunks', ['python3', 'tools/reference/phase2_data/prepare_chunks.py'], 120),
-        command('unchanged-phase1', ['python3', 'scripts/verify-phase1.py'], 1800, lambda start, base: phase1_evidence(start, base, folder)),
+        command('unchanged-phase1', ['python3', 'scripts/verify-phase1.py'], 3600, lambda start, base: phase1_evidence(start, base, folder)),
         command('all-index-tables', ['python3', 'tools/tables/generate.py']),
     ]
     for name, path in [('geometry-native', 'phase2_geometry/reference.py'), ('data-native', 'phase2_data/reference.py'),

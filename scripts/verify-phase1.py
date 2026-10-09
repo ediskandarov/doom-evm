@@ -23,7 +23,7 @@ commands = [
     ('native-tables', ['python3', 'tools/tables/generate.py'], 60),
     ('phase1-schemas', ['python3', 'scripts/check-phase1-schemas.py'], 60),
     ('palette-validation', ['node', '--test', 'tools/transport/palette.test.mjs'], 60),
-    ('all-phase0-gates', ['python3', 'scripts/verify-phase0.py'], 600),
+    ('all-phase0-gates', ['python3', 'scripts/verify-phase0.py'], 1800),
     ('resource-identity-rejections', ['node', '--test', 'tools/resources/identity.test.mjs'], 60),
     ('resource-placement', ['node', 'tools/resources/benchmark.mjs', '--bundle', BUNDLE+'/bundle.json'], 120),
     ('wad-palette-browser', ['node', 'tools/transport/browser-check.mjs', '--palette', BUNDLE+'/palette.json', '--output-prefix', 'artifacts/local/wad-browser'], 120),
