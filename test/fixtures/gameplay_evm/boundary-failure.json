@@ -1,0 +1,655 @@
+{
+  "kind": "original-gameplay-ordinary-evm-comparison",
+  "pass": false,
+  "scope": "Startup, authoritative logical world after every original tic, and only native-selected live frames. Direct ticcmds; test-only scenario setup.",
+  "resourceIdentity": {
+    "schemaVersion": 0,
+    "wadSha256": "7323bcc168c5a45ff10749b339960e98314740a734c30d4b9f3337001f9e703d",
+    "bundleSha256": "d379076f21645cf7cc5acb056663d0faacc4065489a0ca99738479323c9f7a47",
+    "paletteSha256": "fd895921b5d0a394612bb29852ed003d44d69f76dec31c0dc6b5d5fc7d63f7bb",
+    "paletteVariant": 0
+  },
+  "gasLimit": 1000000000,
+  "notes": [
+    "Probe gas includes test-only DSG1 serialization and Observation events; this is not production Doom transaction cost.",
+    "The last source snapshot precedes selected rendering; renderer globals persist into subsequent real ticks.",
+    "No setCode, etch, alternate interpreter, or native-provided gameplay/pixels. Native bytes are comparison inputs only."
+  ],
+  "cases": [
+    {
+      "name": "idle",
+      "tics": 70,
+      "frames": [
+        {
+          "tic": 1,
+          "pixelDiffCount": 0,
+          "sha256": "b736bf38b2992db3851d33e7d8ea3bc7d6036d13d45d5030823829a6cdd62133"
+        },
+        {
+          "tic": 35,
+          "pixelDiffCount": 0,
+          "sha256": "2b8bd89dc727997eb00cb51676d08908bdd64f095bc7f211ec14f80c52d64323"
+        },
+        {
+          "tic": 70,
+          "pixelDiffCount": 0,
+          "sha256": "2b8bd89dc727997eb00cb51676d08908bdd64f095bc7f211ec14f80c52d64323"
+        }
+      ],
+      "startup": true,
+      "batches": [
+        {
+          "firstTic": 1,
+          "tics": 5,
+          "transactionHash": "0x39ecd21e7281b6a8bfdc7cda9a7fee890e77fe1f513080d3e54e86fe9d9647ff",
+          "gas": 680980862,
+          "ms": 516.2140409999993
+        },
+        {
+          "firstTic": 6,
+          "tics": 5,
+          "transactionHash": "0xbbe6a085152548def5c6288d5a5555ff2ab68aa5fc939631e260b86ea4d4e1a2",
+          "gas": 251595498,
+          "ms": 208.40195799998764
+        },
+        {
+          "firstTic": 11,
+          "tics": 5,
+          "transactionHash": "0xc407f5b99c37db83c991cfee5d33afe106dc437f5bde431debc5a54416dc05d4",
+          "gas": 251911849,
+          "ms": 208.1684169999935
+        },
+        {
+          "firstTic": 16,
+          "tics": 5,
+          "transactionHash": "0x9a38360137f646ec123ff70d8c05cf40b2666ce7e586760b16b47770e4e774e0",
+          "gas": 251556369,
+          "ms": 208.17895899999712
+        },
+        {
+          "firstTic": 21,
+          "tics": 5,
+          "transactionHash": "0xc2ec0e640e682ceb606e7bb87f106f91986eb604ababb99aee4bf6d6b91df370",
+          "gas": 251944902,
+          "ms": 209.348708000005
+        },
+        {
+          "firstTic": 26,
+          "tics": 5,
+          "transactionHash": "0x72b4e3e9393b1379165facc1491a94dac5e1df81a909e6232799b56a82f02d83",
+          "gas": 251517240,
+          "ms": 157.0955410000024
+        },
+        {
+          "firstTic": 31,
+          "tics": 5,
+          "transactionHash": "0x2cb3e8d8bcec265d23be2c24e847609b29b7e44d771cf14b39798aefa523a4d1",
+          "gas": 643481434,
+          "ms": 567.6294579999958
+        },
+        {
+          "firstTic": 36,
+          "tics": 5,
+          "transactionHash": "0xe294819f7c44d28125cb10f087fd0ce4be6c104749e9a4dea81305d44087914a",
+          "gas": 251505408,
+          "ms": 209.20404199999757
+        },
+        {
+          "firstTic": 41,
+          "tics": 5,
+          "transactionHash": "0x4f4fbd85a74a49993ff55354eb42dd8f72da9cfbd92b56279ca51dfbbb9526c7",
+          "gas": 251986280,
+          "ms": 156.75266700000793
+        },
+        {
+          "firstTic": 46,
+          "tics": 5,
+          "transactionHash": "0xa88ccb5faf14898eb94382f97e9dae060eaff2f87cc99996e3314373227ddecb",
+          "gas": 251559602,
+          "ms": 156.28845900000306
+        },
+        {
+          "firstTic": 51,
+          "tics": 5,
+          "transactionHash": "0x6008481f5492ad0da999d64acd6d5c1809bc56529ae283991a6031733bf30548",
+          "gas": 251886573,
+          "ms": 155.7244159999973
+        },
+        {
+          "firstTic": 56,
+          "tics": 5,
+          "transactionHash": "0x8f2abfe52f9afcc154cde9f7f693f5c2737c00e7680b16910d690a7cfbc8f580",
+          "gas": 251577264,
+          "ms": 208.37150000000838
+        },
+        {
+          "firstTic": 61,
+          "tics": 5,
+          "transactionHash": "0x948f650a3a7ed912732996b41be30be7a31b08dad3c0fcc45434ff32502da05b",
+          "gas": 251960890,
+          "ms": 156.56070800000452
+        },
+        {
+          "firstTic": 66,
+          "tics": 5,
+          "transactionHash": "0x697ee02ac8ddc0a07e9137d0078f664c9986a64285fbfda85cb42a0831893db7",
+          "gas": 642558058,
+          "ms": 514.2635000000009
+        }
+      ],
+      "startupCallMs": 214.4772920000105,
+      "startupGas": 365585788,
+      "resetGas": 761217276,
+      "stateStreamSha256": "f32ccbb0ab97f4c57ec92ff01eddb6b8e0f32eb9862b9c6b6ae0e50f5ebf9ede"
+    },
+    {
+      "name": "movement",
+      "tics": 275,
+      "frames": [
+        {
+          "tic": 1,
+          "pixelDiffCount": 0,
+          "sha256": "ea7fec925ba282885f486fc2aad243c8eda4abd2dc0383d093d7de04eed9af6f"
+        },
+        {
+          "tic": 137,
+          "pixelDiffCount": 0,
+          "sha256": "2e44608420970e81749d18bb964b61a906cdf293b6da92bb4a3cc8698eb5c31c"
+        },
+        {
+          "tic": 275,
+          "pixelDiffCount": 0,
+          "sha256": "202faf416d806507bf1189b5b57cd1c50125d9e5e979d60c21c88f073aa1fec4"
+        }
+      ],
+      "startup": true,
+      "batches": [
+        {
+          "firstTic": 1,
+          "tics": 5,
+          "transactionHash": "0x6f8fc1f9a1372bda2d7b2dfb13804b478eda343d6629ae0401762714e968f399",
+          "gas": 681107641,
+          "ms": 515.9910830000008
+        },
+        {
+          "firstTic": 6,
+          "tics": 5,
+          "transactionHash": "0xc64f76e7ec40b8ba74047f0d86baf1357444866005dc1b17d2ef3987881a2d4b",
+          "gas": 251761973,
+          "ms": 156.62324999998964
+        },
+        {
+          "firstTic": 11,
+          "tics": 5,
+          "transactionHash": "0x1973df609f59095ed745631d96784778b039c5a8eae912672be8e487bf577cf1",
+          "gas": 252121959,
+          "ms": 156.73716699999932
+        },
+        {
+          "firstTic": 16,
+          "tics": 5,
+          "transactionHash": "0x5d83e48f24e3e28ec9a97f6e13dc05c0166c905e2056d16942473acd677ae377",
+          "gas": 251762639,
+          "ms": 156.6234579999873
+        },
+        {
+          "firstTic": 21,
+          "tics": 5,
+          "transactionHash": "0x9ee9b868d345d17e2fac911a56d596dcee47018ec41c6e2bda4021aad9011ee0",
+          "gas": 252346302,
+          "ms": 155.18591600000218
+        },
+        {
+          "firstTic": 26,
+          "tics": 5,
+          "transactionHash": "0x46dd414f795c3b3006c6869ca131dca0fd552a24d04447a36a53cd2552120b66",
+          "gas": 252010304,
+          "ms": 156.23799999999756
+        },
+        {
+          "firstTic": 31,
+          "tics": 5,
+          "transactionHash": "0x26cb93680aed6519d823410a0f6a0032c08eb514830297514213fc5d7b5d73ff",
+          "gas": 252326654,
+          "ms": 206.80466699998942
+        },
+        {
+          "firstTic": 36,
+          "tics": 5,
+          "transactionHash": "0xd4ef4ef347ec09c03a1a93a05f60cba9e5e4481dee6a74faf11a84132d0a9b73",
+          "gas": 252908558,
+          "ms": 156.6438749999943
+        },
+        {
+          "firstTic": 41,
+          "tics": 5,
+          "transactionHash": "0x525751f696670be7b88293091297454f607cb54d198f5f822ce45b04e8f69654",
+          "gas": 252959032,
+          "ms": 156.09658299999137
+        },
+        {
+          "firstTic": 46,
+          "tics": 5,
+          "transactionHash": "0xc66efb373349a8aa825750ecb7476ac5cce8598fa30126620a3cc765d19fecd2",
+          "gas": 253090826,
+          "ms": 208.71241700000246
+        },
+        {
+          "firstTic": 51,
+          "tics": 5,
+          "transactionHash": "0x560f9aae85ad104b625f159c6ea9f2d7f7429f6e8f345e6bf7ce5c2a09245076",
+          "gas": 257221757,
+          "ms": 208.439916000003
+        },
+        {
+          "firstTic": 56,
+          "tics": 5,
+          "transactionHash": "0x40d922e2615792529c644db4efe5c66f57b202e359ea77bad4c6ee808ac44da2",
+          "gas": 254343707,
+          "ms": 208.25183300000208
+        },
+        {
+          "firstTic": 61,
+          "tics": 5,
+          "transactionHash": "0x627aae1664a27f8bd17d392fd336b61f5a8039eeb97ec9d5e55d341f1445f45b",
+          "gas": 255618036,
+          "ms": 207.71595800000068
+        },
+        {
+          "firstTic": 66,
+          "tics": 5,
+          "transactionHash": "0x90cb52a9ca3924db35edca63ab1791d5f562157cedfa20dd5ced33f8c8d6c0b9",
+          "gas": 253791392,
+          "ms": 156.29079199999978
+        },
+        {
+          "firstTic": 71,
+          "tics": 5,
+          "transactionHash": "0xd799f029b83e31fd33dbeeabc0355a73821b0d1a270613bbefcd0dcb83ca2ab0",
+          "gas": 255394477,
+          "ms": 156.35537499999919
+        },
+        {
+          "firstTic": 76,
+          "tics": 5,
+          "transactionHash": "0xc7964e165cca5085f23045fd6e6b03d9be82b93cc482343fd87c1515b5bce6d0",
+          "gas": 253633711,
+          "ms": 156.4088749999937
+        },
+        {
+          "firstTic": 81,
+          "tics": 5,
+          "transactionHash": "0xaa7b4011e4b0195853d8b4aa0cc933acc0e9d52cd9562640cdd4d5346609460b",
+          "gas": 255030118,
+          "ms": 156.08929199998965
+        },
+        {
+          "firstTic": 86,
+          "tics": 5,
+          "transactionHash": "0xf9f8d2db4fd27453307e0dd012317f96db808939775eb656a80a851107311d11",
+          "gas": 253799364,
+          "ms": 155.97550000000047
+        },
+        {
+          "firstTic": 91,
+          "tics": 5,
+          "transactionHash": "0x15e963de1229565c87ffdeb7daedeaa90110450e61cf0392d52047695b3a6e79",
+          "gas": 255195611,
+          "ms": 208.27679199998965
+        },
+        {
+          "firstTic": 96,
+          "tics": 5,
+          "transactionHash": "0x78c729a6cb5c31b82a6e960933306c26084995a1e78fe24e38770d864729b818",
+          "gas": 254234334,
+          "ms": 155.64633299999696
+        },
+        {
+          "firstTic": 101,
+          "tics": 5,
+          "transactionHash": "0x92622eccf79bac24a2f4d542e94f8cce39f7efbc21319cab5a903f59be8ac765",
+          "gas": 255910097,
+          "ms": 206.21808299999975
+        },
+        {
+          "firstTic": 106,
+          "tics": 5,
+          "transactionHash": "0xac51a58cc4a0b0010f28926873bf328ddc4a714e49bb6d3dd0dfb6096dd2b97c",
+          "gas": 254497043,
+          "ms": 208.01433299999917
+        },
+        {
+          "firstTic": 111,
+          "tics": 5,
+          "transactionHash": "0x35b51254d2fd66a35e89604dd6a89d5d81b4fd28d00c1d55468e38bf27b23333",
+          "gas": 255954967,
+          "ms": 208.53649999998743
+        },
+        {
+          "firstTic": 116,
+          "tics": 5,
+          "transactionHash": "0x0d332fa1630d43ad93b228d2c17cfa064e1243585239d70bfcf77f986edc50fb",
+          "gas": 254524948,
+          "ms": 156.20699999999488
+        },
+        {
+          "firstTic": 121,
+          "tics": 5,
+          "transactionHash": "0xb2727af192e93029f0818da131f0f6ea9d2dd8ece7496b4d0efebf8b94eff677",
+          "gas": 255237160,
+          "ms": 156.0420840000006
+        },
+        {
+          "firstTic": 126,
+          "tics": 5,
+          "transactionHash": "0x61a287a0206ee0028ac492a208156b15a79cabc03ab42096c115fe88adec5468",
+          "gas": 253736880,
+          "ms": 208.49716699999408
+        },
+        {
+          "firstTic": 131,
+          "tics": 5,
+          "transactionHash": "0xf1662b3514690ae91f02d288f7ed2cec1586ee689c26ac8b09a40d132c4e36eb",
+          "gas": 256887771,
+          "ms": 208.66825000000244
+        },
+        {
+          "firstTic": 136,
+          "tics": 5,
+          "transactionHash": "0xcb0aa7128b867d003c091ffd4b6f924e5931ffe34e37e4c49b62317560679187",
+          "gas": 614036778,
+          "ms": 516.1797920000099
+        },
+        {
+          "firstTic": 141,
+          "tics": 5,
+          "transactionHash": "0xef8ef50b48556f807d4fb94074f091870d949c614cc0fd53b08aa2caaa626bc2",
+          "gas": 255828399,
+          "ms": 207.9262919999892
+        },
+        {
+          "firstTic": 146,
+          "tics": 5,
+          "transactionHash": "0xfe811a39bdf3e2156e1e9c9a63a0a7eda33e54fc244086c2f273cff918f1fe36",
+          "gas": 254489987,
+          "ms": 208.67829200001142
+        },
+        {
+          "firstTic": 151,
+          "tics": 5,
+          "transactionHash": "0x1fbdad8170a8150c6c7966633d3abb143ae5134beda227d0a4f39195a155bc32",
+          "gas": 255788293,
+          "ms": 209.52229100000113
+        },
+        {
+          "firstTic": 156,
+          "tics": 5,
+          "transactionHash": "0x23451d8a680045447730f135a6b190ebc53b0628d3eaf9430b3e40f1a81cb5b4",
+          "gas": 253745207,
+          "ms": 209.14691600001242
+        },
+        {
+          "firstTic": 161,
+          "tics": 5,
+          "transactionHash": "0x81c66ec4b560c06b66ca57e2e3640e8a5eab590f095d497e38be49ec6fae47cc",
+          "gas": 255017695,
+          "ms": 209.03383400000166
+        },
+        {
+          "firstTic": 166,
+          "tics": 5,
+          "transactionHash": "0x5673b6f4c313b1c0072cf4026fa5fef51d411fde371beee46cf4977b895cd32d",
+          "gas": 253589556,
+          "ms": 156.34920799999963
+        },
+        {
+          "firstTic": 171,
+          "tics": 5,
+          "transactionHash": "0x3bc561005363ea86cc88e33e81c77bf50dab2eaac0c7759bd8b295d77030b0fa",
+          "gas": 254809961,
+          "ms": 156.2027919999964
+        },
+        {
+          "firstTic": 176,
+          "tics": 5,
+          "transactionHash": "0x36d69f1169f2e621d93f7f6e1495248f2d6ecc5123bca8bea2cef9dc017ad0c2",
+          "gas": 253691218,
+          "ms": 155.82329099999333
+        },
+        {
+          "firstTic": 181,
+          "tics": 5,
+          "transactionHash": "0x2fc19a990af3483535b101d9deb386168e6463506e3af55fb5d7256d01e19159",
+          "gas": 255163170,
+          "ms": 207.54795900000317
+        },
+        {
+          "firstTic": 186,
+          "tics": 5,
+          "transactionHash": "0x30cbfa3379af742bef3429846b5f802205a46ae7519cf4628bbd27db53cebdf4",
+          "gas": 253794516,
+          "ms": 207.37816700000258
+        },
+        {
+          "firstTic": 191,
+          "tics": 5,
+          "transactionHash": "0x32fea326c14a3353f1eb847a490e8c7e8de7428e54143828a1ca2158b6b85b9b",
+          "gas": 255054953,
+          "ms": 211.00708400001167
+        },
+        {
+          "firstTic": 196,
+          "tics": 5,
+          "transactionHash": "0xa9d6e3410eb1da1bd9f88b80978833b6dd38c093c8ecb66294a3f4a703f71c1c",
+          "gas": 253696939,
+          "ms": 207.97512500001176
+        },
+        {
+          "firstTic": 201,
+          "tics": 5,
+          "transactionHash": "0x94d72b67faa315d7d05d3009c334b5eff3113a26fed1519861e76f4049bc92ab",
+          "gas": 256102525,
+          "ms": 205.78562499998952
+        },
+        {
+          "firstTic": 206,
+          "tics": 5,
+          "transactionHash": "0x0df141e23e95e75d170f62849d4a4cc138723b92c69798c80bbfc605f19a407b",
+          "gas": 254721450,
+          "ms": 207.9005829999951
+        },
+        {
+          "firstTic": 211,
+          "tics": 5,
+          "transactionHash": "0x41f2df894462b04cd00954713cac1d92b51f6b472bf46f165265c3168fc40906",
+          "gas": 255834461,
+          "ms": 207.93741700000828
+        },
+        {
+          "firstTic": 216,
+          "tics": 5,
+          "transactionHash": "0xd2ed0f57a58656d10f41abda7c783716a0ff7a1e613774befa045e972b3d9279",
+          "gas": 254755077,
+          "ms": 156.0059159999946
+        },
+        {
+          "firstTic": 221,
+          "tics": 5,
+          "transactionHash": "0xfdc259e48d01770f13c9d6e66abdc64e3473e7a380c34c64b154966fe2f90a47",
+          "gas": 256339410,
+          "ms": 155.72108300001128
+        },
+        {
+          "firstTic": 226,
+          "tics": 5,
+          "transactionHash": "0x659e3804b7590a15e4180f170e7d22a70ed242631afbae226c1150d0ffb498f8",
+          "gas": 254581094,
+          "ms": 207.90350000000035
+        },
+        {
+          "firstTic": 231,
+          "tics": 5,
+          "transactionHash": "0x7257b5c7afc87f6f026831edccf79a4dc99b5c47868898b1a1b7d2490dcfb77c",
+          "gas": 257383387,
+          "ms": 207.85987499999464
+        },
+        {
+          "firstTic": 236,
+          "tics": 5,
+          "transactionHash": "0xb3942a44f667e3a6d143867e98e8c02ddb9932c236c2cfd1a2a8680b2b4e5378",
+          "gas": 254114511,
+          "ms": 155.9827920000098
+        },
+        {
+          "firstTic": 241,
+          "tics": 5,
+          "transactionHash": "0x063061d926ea798b6ab4a95109377b42e1d409d693edccaf806d53f38a5f5a2a",
+          "gas": 255497687,
+          "ms": 206.55554200000188
+        },
+        {
+          "firstTic": 246,
+          "tics": 5,
+          "transactionHash": "0x300bca5f1a98973d178db8722f7cf28c491f5f3592d4cf04af14e42fcc458d62",
+          "gas": 254040295,
+          "ms": 209.3248339999991
+        },
+        {
+          "firstTic": 251,
+          "tics": 5,
+          "transactionHash": "0x98d54b540f9c3e3fa1d3ef2766267c9613d1dfbeb989a04906460c61af8fb478",
+          "gas": 255658097,
+          "ms": 207.67725000000792
+        },
+        {
+          "firstTic": 256,
+          "tics": 5,
+          "transactionHash": "0x2af8fb4579d160f8d9161128b0b929d98c874936c6c76ba63c589a169195a214",
+          "gas": 254100782,
+          "ms": 208.25991700000304
+        },
+        {
+          "firstTic": 261,
+          "tics": 5,
+          "transactionHash": "0x426b86fc25850551f11805eb2a6e64993dd79f8904f363a55f5ab2bb0f4da4c1",
+          "gas": 255598268,
+          "ms": 206.8200829999987
+        },
+        {
+          "firstTic": 266,
+          "tics": 5,
+          "transactionHash": "0xdae140f56854512ec8c0ee5364537eecd69bec27b2053dcf116a04c0ece850d5",
+          "gas": 254046169,
+          "ms": 155.94749999999476
+        },
+        {
+          "firstTic": 271,
+          "tics": 5,
+          "transactionHash": "0x478acada0a1157f011abf8fa2d7970e3e9ed404938d4101fab38572323c1e53e",
+          "gas": 598176019,
+          "ms": 464.2563749999972
+        }
+      ],
+      "startupCallMs": 211.66120899999805,
+      "startupGas": 365585788,
+      "resetGas": 422948933
+    }
+  ],
+  "sourceHashes": {
+    "src/doom/d_ticcmd.sol": "508d0332d3e8b83e1b68d37581a3befc100a9974fcaa0900cc44116cd75ff2ef",
+    "src/doom/g_game.sol": "2714f783a532bc2a525d7f50813c472f299c541ee9062a7a5d078e1818791e70",
+    "src/doom/info.sol": "4611205149173e42d3b0f1d91820c8042f6bc5fc48fb53aec84ad4bc501dca8e",
+    "src/doom/m_bbox.sol": "f4c60efe3627a97d0288fc5cd0283535527b1f51029568534c80bb8fbbf8f272",
+    "src/doom/m_fixed.sol": "3f64bef1f62f61faead3a5b8f382bf1c66e1b3739ce4ac8d59a6fcef0451ef9f",
+    "src/doom/m_random.sol": "5267b881138cfb7e0d683449005619513006c70e3ed557f64697b36c4ed40c7b",
+    "src/doom/p_ceilng.sol": "696f3f620f5bddb3cea64fda824e3203c780f53db890630f0685794454dc37f9",
+    "src/doom/p_doors.sol": "945bf600ce86d8286718fb75ecaf905a0c4631d79d2dac7260c91c9dc2013f8d",
+    "src/doom/p_enemy.sol": "eff76cce23b0877833a5c446a1a09d8ae01918a6925b6d3265240b144c09dfe7",
+    "src/doom/p_floor.sol": "b7c90baafa0b74fd7ff80cf60dcbc430148f6d6d068ba54ca0fbc7ba1bca7069",
+    "src/doom/p_game_state.sol": "3e8bd930c7a0aa173365d55d1aaed876207c7cf4c6d1ec57eb4b5c0abb21d252",
+    "src/doom/p_heap.sol": "29f216eedc153e34edcd7be9b79be695c7e534b0a1b307222702e9bd7fafe730",
+    "src/doom/p_info.sol": "a48840479115ea8bf849ca5ec448d1b2bec7a6cfe58c5314e140635a898de792",
+    "src/doom/p_inter.sol": "8be27f9bba47beb46b3edf2a8a2674b3cd7218d2abb8ef5f8855803393d067de",
+    "src/doom/p_lights.sol": "6f63cbc6b41fc492a46ce43aef464deb9d08b7fa1dd8b213b546eec3e4f08276",
+    "src/doom/p_map.sol": "6b6d48523a45acab9090dfb0ec3d6dbab4e6de18afa89453df8b5a87088da0f3",
+    "src/doom/p_maputl.sol": "93f5c0e37761e15675a2640e2be950d8056dcea335db36243f7df9e216069e93",
+    "src/doom/p_mobj.sol": "966cc7bf88a17adc30222f9ac7d735415afcb783dcb9367f5df9cced1df73ff8",
+    "src/doom/p_plats.sol": "6904df762b270f840daa99b34d2a5c689dbb2fef3aed3d33c2ac1a3f3e4d5722",
+    "src/doom/p_pspr.sol": "cfa2db3438d689c38d9c957fc4aee598c58740f025d6efead2b5f9671eb0c863",
+    "src/doom/p_setup.sol": "2da988ba10eac9ba2d905ad408426bfe7fc47c7ba152cebdc13f048f7d62b3d7",
+    "src/doom/p_setup_static.sol": "c8100a42bb0bac190c583bbb2c82168599009f88a766e4c05b9a9231a5f69792",
+    "src/doom/p_sight.sol": "335089a6b126c4be3aff3fbe8081c5968a3062c235fa6f023e6748eb3d9f41fb",
+    "src/doom/p_spec.sol": "2363640e75c22c9d017db677dda7148ad221380f0a23639167e145e933fc72b7",
+    "src/doom/p_switch.sol": "5404d359793e05c6c24a7804c07632150009b46f38d03068412d7ac53260dfe2",
+    "src/doom/p_telept.sol": "745f0fa4ed6f0515c398bfd2469c59aac82316965b7bac25263aeb82555d61b8",
+    "src/doom/p_tick.sol": "cde1c94f77a3ba1d0052cc4a72fb3e20c41a13b6e0c4bd5d359021aaa6a5af0b",
+    "src/doom/p_user.sol": "963a46850e1b17171f79dd65bff9b5006ce6f97a935ad2023d1d526a6ec35c37",
+    "src/doom/r_bsp.sol": "0ae5df313515692d0b2b970d5d39d107e014629cff2305fb37c14371a9524040",
+    "src/doom/r_data.sol": "ab45e09771ea0f3c8ef3c23896c146a6d1a6a0a31f97e0a66ae9dd1e2d612745",
+    "src/doom/r_data_types.sol": "f5ae6de0f06a25dfccd9421580d8f3fca8d2457507cca2d13fce586b3334d02f",
+    "src/doom/r_defs.sol": "558d5a9bfd131e816bbe28986e2dad6144a08e5a16ccfed1b199d7558a1ea0e2",
+    "src/doom/r_draw.sol": "7cdef01556fccc767df44f842f7ce03efea0ec34bd9cfeb6848d30074fb17e06",
+    "src/doom/r_main.sol": "df403bf04fdbbcfc68c4fd9c5e19b5201ca711498efc34db406a4010ad3b2af5",
+    "src/doom/r_plane.sol": "125633121ebe255912bb7f7d6543175cbe40b83eaa7b6d917a1d942c7b7177f1",
+    "src/doom/r_render_hooks.sol": "f026ccb8fffb68d8fbcb0966103212f52884b86350fe3fb52a401d146f3fb312",
+    "src/doom/r_render_state.sol": "072bd2f73b98e1eb775fc8093e95a69c184f3fa50a89a5d64a7beccd59493398",
+    "src/doom/r_segs.sol": "83d59a85fe06be61dcc53d48ef0becab449d97a38985481d7a0c6de6132d80c2",
+    "src/doom/r_sprite_state.sol": "735b3de85cbf455e05d3cb8e992cf4e477960bd4192bbd367f5c66c803b96363",
+    "src/doom/r_state.sol": "e87ff9d88345a53d1f8825fb07b485c782c7bcb55e2de1dc56c876f9b26ab966",
+    "src/doom/r_things.sol": "5d6099c8b388e9a26f63b9de1374fbbbc6bff338ca71c19970a9bb1b04c331f4",
+    "src/doom/tables.sol": "bf14202b419075f6d187653205a37e211d8267c7fc4c0bebf5a8c5713afddf38",
+    "src/evm/DoomGame.sol": "b2f3a5a90db775ffb5e1ad566661b1e3a140c9c7373e69f8ee88ff0b785ac169",
+    "src/evm/DoomRenderer.sol": "5639d82431350ea76c26d43457d26d0c3c0f410eaddf02db6adbcfb03a569ba0",
+    "src/evm/DoomScene.sol": "9ad7c8ccee4c9e05deb5608326baabacfa40f686b8d8445fb8aaa7352ab64569",
+    "src/evm/ResourceTypes.sol": "159865364cfa57aae508cd94c49509cbccabd6aeeba55e92b9fcf816bdec4d6b",
+    "src/evm/WadResources.sol": "25a1acc0a44ac35cc29e5f9bd953ba66b85db4f665b732430571b416ef927895",
+    "src/support/GameplayProbe.sol": "c7eba69f2949f6c003de3a5829db9f5ed4627ac9e0221d6942cc03ab21ac08fe",
+    "tools/reference/gameplay/compare.mjs": "27c3fb018baf6a8ea2d979fcf65d426947c2f6ecbba9b3e9d4d0cde77a89d83b",
+    "tools/reference/gameplay/observe.h": "7ae14775b4ebc05bb8da32cff6d1a23be66937640509fd515d35b49c60ee0abe",
+    "test/fixtures/gameplay/manifest.json": "43297a125c59e98539ca159020c19fa0465233a927e2d8e0eb62159219f9c973",
+    "foundry.toml": "084d5192108931325837611f9d1339796a6ffd64ed570e31907afe718f191226"
+  },
+  "client": "anvil/v1.8.5",
+  "nodeArgs": [
+    "--host",
+    "127.0.0.1",
+    "--port",
+    "18577",
+    "--hardfork",
+    "cancun",
+    "--disable-code-size-limit",
+    "--disable-block-gas-limit",
+    "--memory-limit",
+    "1073741824",
+    "--silent"
+  ],
+  "deployment": {
+    "address": "0x5ae1f4bb68f8eac39cfdbdfda2b7344ccbd80faf",
+    "transactionHash": "0x09096501fef506f9669acf5d3166854a004a15623ae189a8165d7ad989e739ef",
+    "gas": 231273534,
+    "runtimeBytes": 418858,
+    "all1755ResourceRuntimesVerified": true,
+    "uploadMs": 99084.714708,
+    "totalChunkGas": 6271928016
+  },
+  "compiler": {
+    "version": "0.8.37+commit.f401782d",
+    "settings": {
+      "remappings": [],
+      "optimizer": {
+        "enabled": true,
+        "runs": 200
+      },
+      "metadata": {
+        "bytecodeHash": "ipfs"
+      },
+      "compilationTarget": {
+        "src/support/GameplayProbe.sol": "GameplayProbe"
+      },
+      "evmVersion": "cancun",
+      "libraries": {},
+      "viaIR": true
+    }
+  },
+  "error": "AssertionError [ERR_ASSERTION]: stored logical state differs after final tick/render\n+ actual - expected\n\n+ {\n+   byte: 49520,\n+   evm: 257,\n+   evmBytes: 102328,\n+   evmSha256: 'fd294e0684837695957dc914216ad88ed72558829c317a67f1d1166c943241ba',\n+   field: 'line[543].flags',\n+   native: 1,\n+   nativeBytes: 102328,\n+   nativeSha256: '7bc833abd3d7de3befbfeda7fff51fe826c0f8f64a20b5078663039befd65b06'\n+ }\n- null\n"
+}

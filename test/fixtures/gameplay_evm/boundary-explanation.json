@@ -1,0 +1,24 @@
+{
+  "failureReport": "test/fixtures/gameplay_evm/boundary-failure.json",
+  "firstBoundaryDifference": {
+    "case": "movement",
+    "tic": 275,
+    "field": "line[543].flags",
+    "nativePreRender": 1,
+    "evmPostRender": 257,
+    "addedOriginalFlag": "ML_MAPPED=256"
+  },
+  "verifiedBeforeFinalBoundaryCheck": {
+    "idle": {
+      "ticks": 70,
+      "frames": 3
+    },
+    "movement": {
+      "ticks": 275,
+      "frames": 3
+    }
+  },
+  "cause": "Comparator erroneously compared final persisted post-render state with a native snapshot explicitly observed before selected render. Earlier per-tic pre-render states and all six frames matched exactly.",
+  "correction": "Compare final stored state with separate exact original-C post-render observations, independently checked across same four profiles; no production source changes or masked fields.",
+  "idleFinalSnapshotNote": "The former pre/post check happened to match idle because final rendering added no new mapped-line flags."
+}

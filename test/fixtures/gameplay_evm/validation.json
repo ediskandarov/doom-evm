@@ -1,0 +1,234 @@
+{
+  "actualStreamAudit": [
+    {
+      "actualCompressedSha256": "2e2c29ecf2f4250c9dcb6616c9db04d4855c8afdc2de35d27e9d97ca7af6b081",
+      "actualLocalArtifact": "artifacts/local/gameplay-complete.idle.states.bin.gz",
+      "case": "idle",
+      "decodedActualAndNativeSha256": "f32ccbb0ab97f4c57ec92ff01eddb6b8e0f32eb9862b9c6b6ae0e50f5ebf9ede",
+      "decodedBytes": 7275512,
+      "equal": true,
+      "records": 71
+    },
+    {
+      "actualCompressedSha256": "7de6bd1ac550fbf6ebea187090fef9119c10968420c765df7e494de6e74dc1d8",
+      "actualLocalArtifact": "artifacts/local/gameplay-complete.movement.states.bin.gz",
+      "case": "movement",
+      "decodedActualAndNativeSha256": "e261dc2d9105be6d04592188ade68cabc85bec2a137b1b4a24d1e33c5e4658fa",
+      "decodedBytes": 28268548,
+      "equal": true,
+      "records": 276
+    },
+    {
+      "actualCompressedSha256": "8f5666bd8ae472d411d9eaf114655bca2ad88dc245256969e3c58693b4e42120",
+      "actualLocalArtifact": "artifacts/local/gameplay-complete.pistol.states.bin.gz",
+      "case": "pistol",
+      "decodedActualAndNativeSha256": "63c73336967190a2b8fead291696dcc79a147682ad5e50ca2bdf053ea0fc02ac",
+      "decodedBytes": 24229740,
+      "equal": true,
+      "records": 236
+    },
+    {
+      "actualCompressedSha256": "09db301b44cda5e65298a1a11f7ceb229780cd86a5264943785fd78c2789073c",
+      "actualLocalArtifact": "artifacts/local/gameplay-complete.combat-arena.states.bin.gz",
+      "case": "combat-arena",
+      "decodedActualAndNativeSha256": "281ed3431a42d8dcdd558605e5babff08089baf32937f1d41e1b917a4326a22e",
+      "decodedBytes": 18108708,
+      "equal": true,
+      "records": 176
+    },
+    {
+      "actualCompressedSha256": "8c2ac9fd46f6a09a89019b349befbc4fd17a4f7b39d19e8a1faa8d730694db66",
+      "actualLocalArtifact": "artifacts/local/gameplay-complete.damage-arena.states.bin.gz",
+      "case": "damage-arena",
+      "decodedActualAndNativeSha256": "fc4b86720c461125cb3beb3adc611dc3d7d57ca31d1691f56c9d4a39ea88b2da",
+      "decodedBytes": 36035628,
+      "equal": true,
+      "records": 351
+    },
+    {
+      "actualCompressedSha256": "4444e5fab405cae8516b844662bfb67ad57b31883006b2e8539a812595e54363",
+      "actualLocalArtifact": "artifacts/local/gameplay-complete.death-arena.states.bin.gz",
+      "case": "death-arena",
+      "decodedActualAndNativeSha256": "0568ebd0e797930df1d1c309ade3d2bd385ab925f120bbf9ee4acb58f7ee975d",
+      "decodedBytes": 36031468,
+      "equal": true,
+      "records": 351
+    },
+    {
+      "actualCompressedSha256": "491782a2e2d1294b4f926dad6fbab8bb25e1257e1b29343a4549b956230b557c",
+      "actualLocalArtifact": "artifacts/local/gameplay-complete.door-use.states.bin.gz",
+      "case": "door-use",
+      "decodedActualAndNativeSha256": "0c1498ee52b0438a7a38f7d1fd1b8d8eadbeb65cff927adaae8ac3fcf50af2ef",
+      "decodedBytes": 36754464,
+      "equal": true,
+      "records": 376
+    },
+    {
+      "actualCompressedSha256": "a7f152bcc0162c02b39320628845161b173054eb45e0f0c8f1e8c85042767261",
+      "actualLocalArtifact": "artifacts/local/gameplay-complete.door-obstructed.states.bin.gz",
+      "case": "door-obstructed",
+      "decodedActualAndNativeSha256": "2dd22946d096d1df8417cbeea632daf47df982a5fa017f76c6e8c966167921b2",
+      "decodedBytes": 38680564,
+      "equal": true,
+      "records": 376
+    }
+  ],
+  "artifact": {
+    "compiler": {
+      "settings": {
+        "compilationTarget": {
+          "src/support/GameplayProbe.sol": "GameplayProbe"
+        },
+        "evmVersion": "cancun",
+        "libraries": {},
+        "metadata": {
+          "bytecodeHash": "ipfs"
+        },
+        "optimizer": {
+          "enabled": true,
+          "runs": 200
+        },
+        "remappings": [],
+        "viaIR": true
+      },
+      "version": "0.8.37+commit.f401782d"
+    },
+    "creationBytes": 420647,
+    "creationSha256": "6d7b91b6fe1c4e17971c1128ef7fdd22d164b91a28bef0edc45234e2b3e8cc8a",
+    "runtimeBytes": 418858,
+    "runtimeSha256": "0c8c3868c413f52d3949835afc248d33b45d17dd31672aeedcc79860d3fc2428",
+    "runtimeVerified": "ordinary eth_getCode exactly equal artifact during deployment"
+  },
+  "counts": {
+    "advanceTransactions": 441,
+    "finalStoredPostRenderStates": 8,
+    "frames": 24,
+    "pixelBytesPerFrame": 64000,
+    "pixelDiffCount": 0,
+    "preRenderStatesIncludingStartup": 2213,
+    "startupStates": 8,
+    "ticks": 2205
+  },
+  "executed": {
+    "build": {
+      "command": ".toolchain/bin/forge build src/support/GameplayProbe.sol src/evm/ResourceStore.sol",
+      "owner": "interface agent",
+      "result": "PASS",
+      "run": "90948",
+      "solcSeconds": 42.47
+    },
+    "evm": {
+      "command": "node tools/reference/gameplay/compare.mjs --skip-build --output-prefix artifacts/local/gameplay-complete",
+      "completeNativeScenarioSet": true,
+      "result": "PASS",
+      "run": "89335"
+    },
+    "nativePost": {
+      "command": "python3 tools/reference/gameplay/post_render.py",
+      "observations": 24,
+      "operation": "generation (not --check)",
+      "profiles": 4,
+      "result": "PASS",
+      "retainedExistingFixtureBytes": "all unchanged",
+      "run": "46253"
+    },
+    "nativeSchema": {
+      "command": "node tools/reference/gameplay/compare.mjs --decode-native-only",
+      "records": 2213,
+      "result": "PASS",
+      "run": "62522"
+    }
+  },
+  "files": {
+    "src/support/GameplayProbe.sol": "c7eba69f2949f6c003de3a5829db9f5ed4627ac9e0221d6942cc03ab21ac08fe",
+    "test/fixtures/gameplay_evm/boundary-explanation.json": "afb51a9afb105444e68cb6f239a8ce02b8f606a6f30e971b0720cf4ab6e823d8",
+    "test/fixtures/gameplay_evm/boundary-failure.json": "7583604e6631459595d647dabd72b49a61c96af5019ca91e0c88709a64618564",
+    "test/fixtures/gameplay_evm/evidence.json": "dd0ef79c693bfa6190ba1f0df6830d4e2178af3050a7364a4b9d361e795ae2e7",
+    "tools/reference/gameplay/COMPARISON.md": "4252e9365eb65b5967ae72a5370e7aadb3848582db870725024d1e1a7b1883e5",
+    "tools/reference/gameplay/compare.mjs": "96c81c5b30b96b987f332eb2285ae7ca322dd29eefd691948e07ac4b977adf43"
+  },
+  "missingMeasurements": [
+    "isolated production/module gas",
+    "isolated interpreter CPU time",
+    "actual peak EVM memory",
+    "peak host RSS",
+    "all unexercised original world/gameplay branches"
+  ],
+  "result": "PASS",
+  "scope": "Complete eight bounded original E1M1 direct-ticcmd scenarios, real DoomGame initialize/load/tick/render, ordinary authenticated resources, DSG1 snapshots before native-selected renders, exact final post-render storage. Does not close production keyboard/protocol/browser/performance or all-branch acceptance.",
+  "sourceHashes": {
+    "foundry.toml": "084d5192108931325837611f9d1339796a6ffd64ed570e31907afe718f191226",
+    "src/doom/d_ticcmd.sol": "508d0332d3e8b83e1b68d37581a3befc100a9974fcaa0900cc44116cd75ff2ef",
+    "src/doom/g_game.sol": "2714f783a532bc2a525d7f50813c472f299c541ee9062a7a5d078e1818791e70",
+    "src/doom/info.sol": "4611205149173e42d3b0f1d91820c8042f6bc5fc48fb53aec84ad4bc501dca8e",
+    "src/doom/m_bbox.sol": "f4c60efe3627a97d0288fc5cd0283535527b1f51029568534c80bb8fbbf8f272",
+    "src/doom/m_fixed.sol": "3f64bef1f62f61faead3a5b8f382bf1c66e1b3739ce4ac8d59a6fcef0451ef9f",
+    "src/doom/m_random.sol": "5267b881138cfb7e0d683449005619513006c70e3ed557f64697b36c4ed40c7b",
+    "src/doom/p_ceilng.sol": "696f3f620f5bddb3cea64fda824e3203c780f53db890630f0685794454dc37f9",
+    "src/doom/p_doors.sol": "945bf600ce86d8286718fb75ecaf905a0c4631d79d2dac7260c91c9dc2013f8d",
+    "src/doom/p_enemy.sol": "eff76cce23b0877833a5c446a1a09d8ae01918a6925b6d3265240b144c09dfe7",
+    "src/doom/p_floor.sol": "b7c90baafa0b74fd7ff80cf60dcbc430148f6d6d068ba54ca0fbc7ba1bca7069",
+    "src/doom/p_game_state.sol": "3e8bd930c7a0aa173365d55d1aaed876207c7cf4c6d1ec57eb4b5c0abb21d252",
+    "src/doom/p_heap.sol": "29f216eedc153e34edcd7be9b79be695c7e534b0a1b307222702e9bd7fafe730",
+    "src/doom/p_info.sol": "a48840479115ea8bf849ca5ec448d1b2bec7a6cfe58c5314e140635a898de792",
+    "src/doom/p_inter.sol": "8be27f9bba47beb46b3edf2a8a2674b3cd7218d2abb8ef5f8855803393d067de",
+    "src/doom/p_lights.sol": "6f63cbc6b41fc492a46ce43aef464deb9d08b7fa1dd8b213b546eec3e4f08276",
+    "src/doom/p_map.sol": "6b6d48523a45acab9090dfb0ec3d6dbab4e6de18afa89453df8b5a87088da0f3",
+    "src/doom/p_maputl.sol": "93f5c0e37761e15675a2640e2be950d8056dcea335db36243f7df9e216069e93",
+    "src/doom/p_mobj.sol": "966cc7bf88a17adc30222f9ac7d735415afcb783dcb9367f5df9cced1df73ff8",
+    "src/doom/p_plats.sol": "6904df762b270f840daa99b34d2a5c689dbb2fef3aed3d33c2ac1a3f3e4d5722",
+    "src/doom/p_pspr.sol": "cfa2db3438d689c38d9c957fc4aee598c58740f025d6efead2b5f9671eb0c863",
+    "src/doom/p_setup.sol": "2da988ba10eac9ba2d905ad408426bfe7fc47c7ba152cebdc13f048f7d62b3d7",
+    "src/doom/p_setup_static.sol": "c8100a42bb0bac190c583bbb2c82168599009f88a766e4c05b9a9231a5f69792",
+    "src/doom/p_sight.sol": "335089a6b126c4be3aff3fbe8081c5968a3062c235fa6f023e6748eb3d9f41fb",
+    "src/doom/p_spec.sol": "2363640e75c22c9d017db677dda7148ad221380f0a23639167e145e933fc72b7",
+    "src/doom/p_switch.sol": "5404d359793e05c6c24a7804c07632150009b46f38d03068412d7ac53260dfe2",
+    "src/doom/p_telept.sol": "745f0fa4ed6f0515c398bfd2469c59aac82316965b7bac25263aeb82555d61b8",
+    "src/doom/p_tick.sol": "cde1c94f77a3ba1d0052cc4a72fb3e20c41a13b6e0c4bd5d359021aaa6a5af0b",
+    "src/doom/p_user.sol": "963a46850e1b17171f79dd65bff9b5006ce6f97a935ad2023d1d526a6ec35c37",
+    "src/doom/r_bsp.sol": "0ae5df313515692d0b2b970d5d39d107e014629cff2305fb37c14371a9524040",
+    "src/doom/r_data.sol": "ab45e09771ea0f3c8ef3c23896c146a6d1a6a0a31f97e0a66ae9dd1e2d612745",
+    "src/doom/r_data_types.sol": "f5ae6de0f06a25dfccd9421580d8f3fca8d2457507cca2d13fce586b3334d02f",
+    "src/doom/r_defs.sol": "558d5a9bfd131e816bbe28986e2dad6144a08e5a16ccfed1b199d7558a1ea0e2",
+    "src/doom/r_draw.sol": "7cdef01556fccc767df44f842f7ce03efea0ec34bd9cfeb6848d30074fb17e06",
+    "src/doom/r_main.sol": "df403bf04fdbbcfc68c4fd9c5e19b5201ca711498efc34db406a4010ad3b2af5",
+    "src/doom/r_plane.sol": "125633121ebe255912bb7f7d6543175cbe40b83eaa7b6d917a1d942c7b7177f1",
+    "src/doom/r_render_hooks.sol": "f026ccb8fffb68d8fbcb0966103212f52884b86350fe3fb52a401d146f3fb312",
+    "src/doom/r_render_state.sol": "072bd2f73b98e1eb775fc8093e95a69c184f3fa50a89a5d64a7beccd59493398",
+    "src/doom/r_segs.sol": "83d59a85fe06be61dcc53d48ef0becab449d97a38985481d7a0c6de6132d80c2",
+    "src/doom/r_sprite_state.sol": "735b3de85cbf455e05d3cb8e992cf4e477960bd4192bbd367f5c66c803b96363",
+    "src/doom/r_state.sol": "e87ff9d88345a53d1f8825fb07b485c782c7bcb55e2de1dc56c876f9b26ab966",
+    "src/doom/r_things.sol": "5d6099c8b388e9a26f63b9de1374fbbbc6bff338ca71c19970a9bb1b04c331f4",
+    "src/doom/tables.sol": "bf14202b419075f6d187653205a37e211d8267c7fc4c0bebf5a8c5713afddf38",
+    "src/evm/DoomGame.sol": "b2f3a5a90db775ffb5e1ad566661b1e3a140c9c7373e69f8ee88ff0b785ac169",
+    "src/evm/DoomRenderer.sol": "5639d82431350ea76c26d43457d26d0c3c0f410eaddf02db6adbcfb03a569ba0",
+    "src/evm/DoomScene.sol": "9ad7c8ccee4c9e05deb5608326baabacfa40f686b8d8445fb8aaa7352ab64569",
+    "src/evm/ResourceTypes.sol": "159865364cfa57aae508cd94c49509cbccabd6aeeba55e92b9fcf816bdec4d6b",
+    "src/evm/WadResources.sol": "25a1acc0a44ac35cc29e5f9bd953ba66b85db4f665b732430571b416ef927895",
+    "src/support/GameplayProbe.sol": "c7eba69f2949f6c003de3a5829db9f5ed4627ac9e0221d6942cc03ab21ac08fe",
+    "test/fixtures/gameplay/manifest.json": "43297a125c59e98539ca159020c19fa0465233a927e2d8e0eb62159219f9c973",
+    "test/fixtures/gameplay_post/manifest.json": "94a2b3376b218cd0883d404a03a50328fc45fa1b6c4f5ff352087cdc53911f4c",
+    "tools/reference/gameplay/compare.mjs": "96c81c5b30b96b987f332eb2285ae7ca322dd29eefd691948e07ac4b977adf43",
+    "tools/reference/gameplay/observe.h": "7ae14775b4ebc05bb8da32cff6d1a23be66937640509fd515d35b49c60ee0abe",
+    "tools/reference/gameplay/post_render.py": "08eb1e34607b77c0fab1b05d28dfac2a3012a613cd6cf0513c4b93e87f427119",
+    "tools/reference/gameplay/post_render_host.c": "d8dac846947d3c64b9878ecbcb6821d63ccfc7ea8b1c405e7d5d70ed4baead41"
+  },
+  "toolchain": {
+    "anvil": {
+      "commit": "51a52c59cffd940f76eddd0b4bb1791aa4b5ac7f",
+      "version": "1.8.5"
+    },
+    "binarySha256": {
+      "anvil": "a082205c1b76cccc39516aeb784ea0478f66772451b9412dfaa271c23abf118a",
+      "forge": "1bd4b44465bedc89c546d3b7010e0a0ee2bc03c3f1e232f82587ecb24c512873",
+      "solc": "a27396e7732aa52e80ff89ad7bd8a2e46fec2a6dcc4ef20cd16e5e0c502d6821"
+    },
+    "forge": {
+      "commit": "51a52c59cffd940f76eddd0b4bb1791aa4b5ac7f",
+      "version": "1.8.5"
+    },
+    "solc": {
+      "version": "0.8.37+commit.f401782d.Darwin.appleclang"
+    }
+  }
+}

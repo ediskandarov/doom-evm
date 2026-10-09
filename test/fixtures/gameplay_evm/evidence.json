@@ -1,0 +1,3479 @@
+{
+  "kind": "original-gameplay-ordinary-evm-comparison",
+  "pass": true,
+  "scope": "Startup, authoritative logical world after every original tic, and only native-selected live frames. Direct ticcmds; test-only scenario setup.",
+  "resourceIdentity": {
+    "schemaVersion": 0,
+    "wadSha256": "7323bcc168c5a45ff10749b339960e98314740a734c30d4b9f3337001f9e703d",
+    "bundleSha256": "d379076f21645cf7cc5acb056663d0faacc4065489a0ca99738479323c9f7a47",
+    "paletteSha256": "fd895921b5d0a394612bb29852ed003d44d69f76dec31c0dc6b5d5fc7d63f7bb",
+    "paletteVariant": 0
+  },
+  "gasLimit": 1000000000,
+  "notes": [
+    "Probe gas includes test-only DSG1 serialization and Observation events; this is not production Doom transaction cost.",
+    "The last source snapshot precedes selected rendering; renderer globals persist into subsequent real ticks.",
+    "No setCode, etch, alternate interpreter, or native-provided gameplay/pixels. Native bytes are comparison inputs only."
+  ],
+  "cases": [
+    {
+      "name": "idle",
+      "tics": 70,
+      "frames": [
+        {
+          "tic": 1,
+          "pixelDiffCount": 0,
+          "sha256": "b736bf38b2992db3851d33e7d8ea3bc7d6036d13d45d5030823829a6cdd62133"
+        },
+        {
+          "tic": 35,
+          "pixelDiffCount": 0,
+          "sha256": "2b8bd89dc727997eb00cb51676d08908bdd64f095bc7f211ec14f80c52d64323"
+        },
+        {
+          "tic": 70,
+          "pixelDiffCount": 0,
+          "sha256": "2b8bd89dc727997eb00cb51676d08908bdd64f095bc7f211ec14f80c52d64323"
+        }
+      ],
+      "startup": true,
+      "batches": [
+        {
+          "firstTic": 1,
+          "tics": 5,
+          "transactionHash": "0x39ecd21e7281b6a8bfdc7cda9a7fee890e77fe1f513080d3e54e86fe9d9647ff",
+          "gas": 680980862,
+          "ms": 515.6940420000028
+        },
+        {
+          "firstTic": 6,
+          "tics": 5,
+          "transactionHash": "0xbbe6a085152548def5c6288d5a5555ff2ab68aa5fc939631e260b86ea4d4e1a2",
+          "gas": 251595498,
+          "ms": 156.68554099999892
+        },
+        {
+          "firstTic": 11,
+          "tics": 5,
+          "transactionHash": "0xc407f5b99c37db83c991cfee5d33afe106dc437f5bde431debc5a54416dc05d4",
+          "gas": 251911849,
+          "ms": 155.84304199999315
+        },
+        {
+          "firstTic": 16,
+          "tics": 5,
+          "transactionHash": "0x9a38360137f646ec123ff70d8c05cf40b2666ce7e586760b16b47770e4e774e0",
+          "gas": 251556369,
+          "ms": 155.96183300000848
+        },
+        {
+          "firstTic": 21,
+          "tics": 5,
+          "transactionHash": "0xc2ec0e640e682ceb606e7bb87f106f91986eb604ababb99aee4bf6d6b91df370",
+          "gas": 251944902,
+          "ms": 156.14641600000323
+        },
+        {
+          "firstTic": 26,
+          "tics": 5,
+          "transactionHash": "0x72b4e3e9393b1379165facc1491a94dac5e1df81a909e6232799b56a82f02d83",
+          "gas": 251517240,
+          "ms": 155.9699169999949
+        },
+        {
+          "firstTic": 31,
+          "tics": 5,
+          "transactionHash": "0x2cb3e8d8bcec265d23be2c24e847609b29b7e44d771cf14b39798aefa523a4d1",
+          "gas": 643481434,
+          "ms": 513.7012499999983
+        },
+        {
+          "firstTic": 36,
+          "tics": 5,
+          "transactionHash": "0xe294819f7c44d28125cb10f087fd0ce4be6c104749e9a4dea81305d44087914a",
+          "gas": 251505408,
+          "ms": 156.31966599999578
+        },
+        {
+          "firstTic": 41,
+          "tics": 5,
+          "transactionHash": "0x4f4fbd85a74a49993ff55354eb42dd8f72da9cfbd92b56279ca51dfbbb9526c7",
+          "gas": 251986280,
+          "ms": 156.88300000000163
+        },
+        {
+          "firstTic": 46,
+          "tics": 5,
+          "transactionHash": "0xa88ccb5faf14898eb94382f97e9dae060eaff2f87cc99996e3314373227ddecb",
+          "gas": 251559602,
+          "ms": 155.64929200000188
+        },
+        {
+          "firstTic": 51,
+          "tics": 5,
+          "transactionHash": "0x6008481f5492ad0da999d64acd6d5c1809bc56529ae283991a6031733bf30548",
+          "gas": 251886573,
+          "ms": 156.3423749999929
+        },
+        {
+          "firstTic": 56,
+          "tics": 5,
+          "transactionHash": "0x8f2abfe52f9afcc154cde9f7f693f5c2737c00e7680b16910d690a7cfbc8f580",
+          "gas": 251577264,
+          "ms": 156.0960839999898
+        },
+        {
+          "firstTic": 61,
+          "tics": 5,
+          "transactionHash": "0x948f650a3a7ed912732996b41be30be7a31b08dad3c0fcc45434ff32502da05b",
+          "gas": 251960890,
+          "ms": 156.16858300000604
+        },
+        {
+          "firstTic": 66,
+          "tics": 5,
+          "transactionHash": "0x697ee02ac8ddc0a07e9137d0078f664c9986a64285fbfda85cb42a0831893db7",
+          "gas": 642558058,
+          "ms": 514.4774579999939
+        }
+      ],
+      "startupCallMs": 209.43070799999987,
+      "startupGas": 365585788,
+      "resetGas": 761217276,
+      "finalStoredState": {
+        "boundary": "post-render",
+        "nativeSha256": "843209493c546d0e4658d673fe2f183d2d340a25e0c7b43402fae555f26f9929",
+        "evmSha256": "843209493c546d0e4658d673fe2f183d2d340a25e0c7b43402fae555f26f9929",
+        "exact": true
+      },
+      "stateStreamSha256": "f32ccbb0ab97f4c57ec92ff01eddb6b8e0f32eb9862b9c6b6ae0e50f5ebf9ede"
+    },
+    {
+      "name": "movement",
+      "tics": 275,
+      "frames": [
+        {
+          "tic": 1,
+          "pixelDiffCount": 0,
+          "sha256": "ea7fec925ba282885f486fc2aad243c8eda4abd2dc0383d093d7de04eed9af6f"
+        },
+        {
+          "tic": 137,
+          "pixelDiffCount": 0,
+          "sha256": "2e44608420970e81749d18bb964b61a906cdf293b6da92bb4a3cc8698eb5c31c"
+        },
+        {
+          "tic": 275,
+          "pixelDiffCount": 0,
+          "sha256": "202faf416d806507bf1189b5b57cd1c50125d9e5e979d60c21c88f073aa1fec4"
+        }
+      ],
+      "startup": true,
+      "batches": [
+        {
+          "firstTic": 1,
+          "tics": 5,
+          "transactionHash": "0x6f8fc1f9a1372bda2d7b2dfb13804b478eda343d6629ae0401762714e968f399",
+          "gas": 681107641,
+          "ms": 513.775667000009
+        },
+        {
+          "firstTic": 6,
+          "tics": 5,
+          "transactionHash": "0xc64f76e7ec40b8ba74047f0d86baf1357444866005dc1b17d2ef3987881a2d4b",
+          "gas": 251761973,
+          "ms": 156.42333299999882
+        },
+        {
+          "firstTic": 11,
+          "tics": 5,
+          "transactionHash": "0x1973df609f59095ed745631d96784778b039c5a8eae912672be8e487bf577cf1",
+          "gas": 252121959,
+          "ms": 155.80995900000562
+        },
+        {
+          "firstTic": 16,
+          "tics": 5,
+          "transactionHash": "0x5d83e48f24e3e28ec9a97f6e13dc05c0166c905e2056d16942473acd677ae377",
+          "gas": 251762639,
+          "ms": 156.26075000000128
+        },
+        {
+          "firstTic": 21,
+          "tics": 5,
+          "transactionHash": "0x9ee9b868d345d17e2fac911a56d596dcee47018ec41c6e2bda4021aad9011ee0",
+          "gas": 252346302,
+          "ms": 155.94395899999654
+        },
+        {
+          "firstTic": 26,
+          "tics": 5,
+          "transactionHash": "0x46dd414f795c3b3006c6869ca131dca0fd552a24d04447a36a53cd2552120b66",
+          "gas": 252010304,
+          "ms": 155.9820410000102
+        },
+        {
+          "firstTic": 31,
+          "tics": 5,
+          "transactionHash": "0x26cb93680aed6519d823410a0f6a0032c08eb514830297514213fc5d7b5d73ff",
+          "gas": 252326654,
+          "ms": 156.18741700000828
+        },
+        {
+          "firstTic": 36,
+          "tics": 5,
+          "transactionHash": "0xd4ef4ef347ec09c03a1a93a05f60cba9e5e4481dee6a74faf11a84132d0a9b73",
+          "gas": 252908558,
+          "ms": 207.90316599998914
+        },
+        {
+          "firstTic": 41,
+          "tics": 5,
+          "transactionHash": "0x525751f696670be7b88293091297454f607cb54d198f5f822ce45b04e8f69654",
+          "gas": 252959032,
+          "ms": 208.58895800000755
+        },
+        {
+          "firstTic": 46,
+          "tics": 5,
+          "transactionHash": "0xc66efb373349a8aa825750ecb7476ac5cce8598fa30126620a3cc765d19fecd2",
+          "gas": 253090826,
+          "ms": 157.24562499999593
+        },
+        {
+          "firstTic": 51,
+          "tics": 5,
+          "transactionHash": "0x560f9aae85ad104b625f159c6ea9f2d7f7429f6e8f345e6bf7ce5c2a09245076",
+          "gas": 257221757,
+          "ms": 156.2345420000056
+        },
+        {
+          "firstTic": 56,
+          "tics": 5,
+          "transactionHash": "0x40d922e2615792529c644db4efe5c66f57b202e359ea77bad4c6ee808ac44da2",
+          "gas": 254343707,
+          "ms": 207.18525000000955
+        },
+        {
+          "firstTic": 61,
+          "tics": 5,
+          "transactionHash": "0x627aae1664a27f8bd17d392fd336b61f5a8039eeb97ec9d5e55d341f1445f45b",
+          "gas": 255618036,
+          "ms": 207.2973340000026
+        },
+        {
+          "firstTic": 66,
+          "tics": 5,
+          "transactionHash": "0x90cb52a9ca3924db35edca63ab1791d5f562157cedfa20dd5ced33f8c8d6c0b9",
+          "gas": 253791392,
+          "ms": 155.39504200000374
+        },
+        {
+          "firstTic": 71,
+          "tics": 5,
+          "transactionHash": "0xd799f029b83e31fd33dbeeabc0355a73821b0d1a270613bbefcd0dcb83ca2ab0",
+          "gas": 255394477,
+          "ms": 155.70466699999815
+        },
+        {
+          "firstTic": 76,
+          "tics": 5,
+          "transactionHash": "0xc7964e165cca5085f23045fd6e6b03d9be82b93cc482343fd87c1515b5bce6d0",
+          "gas": 253633711,
+          "ms": 156.15441600000486
+        },
+        {
+          "firstTic": 81,
+          "tics": 5,
+          "transactionHash": "0xaa7b4011e4b0195853d8b4aa0cc933acc0e9d52cd9562640cdd4d5346609460b",
+          "gas": 255030118,
+          "ms": 207.35199999999895
+        },
+        {
+          "firstTic": 86,
+          "tics": 5,
+          "transactionHash": "0xf9f8d2db4fd27453307e0dd012317f96db808939775eb656a80a851107311d11",
+          "gas": 253799364,
+          "ms": 155.35970799998904
+        },
+        {
+          "firstTic": 91,
+          "tics": 5,
+          "transactionHash": "0x15e963de1229565c87ffdeb7daedeaa90110450e61cf0392d52047695b3a6e79",
+          "gas": 255195611,
+          "ms": 156.36033300000418
+        },
+        {
+          "firstTic": 96,
+          "tics": 5,
+          "transactionHash": "0x78c729a6cb5c31b82a6e960933306c26084995a1e78fe24e38770d864729b818",
+          "gas": 254234334,
+          "ms": 207.4991250000021
+        },
+        {
+          "firstTic": 101,
+          "tics": 5,
+          "transactionHash": "0x92622eccf79bac24a2f4d542e94f8cce39f7efbc21319cab5a903f59be8ac765",
+          "gas": 255910097,
+          "ms": 207.7138330000016
+        },
+        {
+          "firstTic": 106,
+          "tics": 5,
+          "transactionHash": "0xac51a58cc4a0b0010f28926873bf328ddc4a714e49bb6d3dd0dfb6096dd2b97c",
+          "gas": 254497043,
+          "ms": 206.8452910000051
+        },
+        {
+          "firstTic": 111,
+          "tics": 5,
+          "transactionHash": "0x35b51254d2fd66a35e89604dd6a89d5d81b4fd28d00c1d55468e38bf27b23333",
+          "gas": 255954967,
+          "ms": 155.86566599999787
+        },
+        {
+          "firstTic": 116,
+          "tics": 5,
+          "transactionHash": "0x0d332fa1630d43ad93b228d2c17cfa064e1243585239d70bfcf77f986edc50fb",
+          "gas": 254524948,
+          "ms": 206.63891700000386
+        },
+        {
+          "firstTic": 121,
+          "tics": 5,
+          "transactionHash": "0xb2727af192e93029f0818da131f0f6ea9d2dd8ece7496b4d0efebf8b94eff677",
+          "gas": 255237160,
+          "ms": 206.92229200000293
+        },
+        {
+          "firstTic": 126,
+          "tics": 5,
+          "transactionHash": "0x61a287a0206ee0028ac492a208156b15a79cabc03ab42096c115fe88adec5468",
+          "gas": 253736880,
+          "ms": 207.6083329999965
+        },
+        {
+          "firstTic": 131,
+          "tics": 5,
+          "transactionHash": "0xf1662b3514690ae91f02d288f7ed2cec1586ee689c26ac8b09a40d132c4e36eb",
+          "gas": 256887771,
+          "ms": 207.43554200000654
+        },
+        {
+          "firstTic": 136,
+          "tics": 5,
+          "transactionHash": "0xcb0aa7128b867d003c091ffd4b6f924e5931ffe34e37e4c49b62317560679187",
+          "gas": 614036778,
+          "ms": 516.2786660000129
+        },
+        {
+          "firstTic": 141,
+          "tics": 5,
+          "transactionHash": "0xef8ef50b48556f807d4fb94074f091870d949c614cc0fd53b08aa2caaa626bc2",
+          "gas": 255828399,
+          "ms": 207.01508299999114
+        },
+        {
+          "firstTic": 146,
+          "tics": 5,
+          "transactionHash": "0xfe811a39bdf3e2156e1e9c9a63a0a7eda33e54fc244086c2f273cff918f1fe36",
+          "gas": 254489987,
+          "ms": 156.0546250000043
+        },
+        {
+          "firstTic": 151,
+          "tics": 5,
+          "transactionHash": "0x1fbdad8170a8150c6c7966633d3abb143ae5134beda227d0a4f39195a155bc32",
+          "gas": 255788293,
+          "ms": 156.44133400000283
+        },
+        {
+          "firstTic": 156,
+          "tics": 5,
+          "transactionHash": "0x23451d8a680045447730f135a6b190ebc53b0628d3eaf9430b3e40f1a81cb5b4",
+          "gas": 253745207,
+          "ms": 155.96641599999566
+        },
+        {
+          "firstTic": 161,
+          "tics": 5,
+          "transactionHash": "0x81c66ec4b560c06b66ca57e2e3640e8a5eab590f095d497e38be49ec6fae47cc",
+          "gas": 255017695,
+          "ms": 155.80345900000248
+        },
+        {
+          "firstTic": 166,
+          "tics": 5,
+          "transactionHash": "0x5673b6f4c313b1c0072cf4026fa5fef51d411fde371beee46cf4977b895cd32d",
+          "gas": 253589556,
+          "ms": 156.4421250000014
+        },
+        {
+          "firstTic": 171,
+          "tics": 5,
+          "transactionHash": "0x3bc561005363ea86cc88e33e81c77bf50dab2eaac0c7759bd8b295d77030b0fa",
+          "gas": 254809961,
+          "ms": 156.30370800000674
+        },
+        {
+          "firstTic": 176,
+          "tics": 5,
+          "transactionHash": "0x36d69f1169f2e621d93f7f6e1495248f2d6ecc5123bca8bea2cef9dc017ad0c2",
+          "gas": 253691218,
+          "ms": 155.5598750000063
+        },
+        {
+          "firstTic": 181,
+          "tics": 5,
+          "transactionHash": "0x2fc19a990af3483535b101d9deb386168e6463506e3af55fb5d7256d01e19159",
+          "gas": 255163170,
+          "ms": 207.2048749999958
+        },
+        {
+          "firstTic": 186,
+          "tics": 5,
+          "transactionHash": "0x30cbfa3379af742bef3429846b5f802205a46ae7519cf4628bbd27db53cebdf4",
+          "gas": 253794516,
+          "ms": 208.48045899999852
+        },
+        {
+          "firstTic": 191,
+          "tics": 5,
+          "transactionHash": "0x32fea326c14a3353f1eb847a490e8c7e8de7428e54143828a1ca2158b6b85b9b",
+          "gas": 255054953,
+          "ms": 207.56395899999188
+        },
+        {
+          "firstTic": 196,
+          "tics": 5,
+          "transactionHash": "0xa9d6e3410eb1da1bd9f88b80978833b6dd38c093c8ecb66294a3f4a703f71c1c",
+          "gas": 253696939,
+          "ms": 207.4645840000012
+        },
+        {
+          "firstTic": 201,
+          "tics": 5,
+          "transactionHash": "0x94d72b67faa315d7d05d3009c334b5eff3113a26fed1519861e76f4049bc92ab",
+          "gas": 256102525,
+          "ms": 207.3680000000022
+        },
+        {
+          "firstTic": 206,
+          "tics": 5,
+          "transactionHash": "0x0df141e23e95e75d170f62849d4a4cc138723b92c69798c80bbfc605f19a407b",
+          "gas": 254721450,
+          "ms": 206.78341699999874
+        },
+        {
+          "firstTic": 211,
+          "tics": 5,
+          "transactionHash": "0x41f2df894462b04cd00954713cac1d92b51f6b472bf46f165265c3168fc40906",
+          "gas": 255834461,
+          "ms": 206.60950000000594
+        },
+        {
+          "firstTic": 216,
+          "tics": 5,
+          "transactionHash": "0xd2ed0f57a58656d10f41abda7c783716a0ff7a1e613774befa045e972b3d9279",
+          "gas": 254755077,
+          "ms": 156.12091699999291
+        },
+        {
+          "firstTic": 221,
+          "tics": 5,
+          "transactionHash": "0xfdc259e48d01770f13c9d6e66abdc64e3473e7a380c34c64b154966fe2f90a47",
+          "gas": 256339410,
+          "ms": 207.1375410000037
+        },
+        {
+          "firstTic": 226,
+          "tics": 5,
+          "transactionHash": "0x659e3804b7590a15e4180f170e7d22a70ed242631afbae226c1150d0ffb498f8",
+          "gas": 254581094,
+          "ms": 206.7994999999937
+        },
+        {
+          "firstTic": 231,
+          "tics": 5,
+          "transactionHash": "0x7257b5c7afc87f6f026831edccf79a4dc99b5c47868898b1a1b7d2490dcfb77c",
+          "gas": 257383387,
+          "ms": 207.3374579999945
+        },
+        {
+          "firstTic": 236,
+          "tics": 5,
+          "transactionHash": "0xb3942a44f667e3a6d143867e98e8c02ddb9932c236c2cfd1a2a8680b2b4e5378",
+          "gas": 254114511,
+          "ms": 207.88112499999988
+        },
+        {
+          "firstTic": 241,
+          "tics": 5,
+          "transactionHash": "0x063061d926ea798b6ab4a95109377b42e1d409d693edccaf806d53f38a5f5a2a",
+          "gas": 255497687,
+          "ms": 207.08933299999626
+        },
+        {
+          "firstTic": 246,
+          "tics": 5,
+          "transactionHash": "0x300bca5f1a98973d178db8722f7cf28c491f5f3592d4cf04af14e42fcc458d62",
+          "gas": 254040295,
+          "ms": 156.23141699998814
+        },
+        {
+          "firstTic": 251,
+          "tics": 5,
+          "transactionHash": "0x98d54b540f9c3e3fa1d3ef2766267c9613d1dfbeb989a04906460c61af8fb478",
+          "gas": 255658097,
+          "ms": 155.67566599999554
+        },
+        {
+          "firstTic": 256,
+          "tics": 5,
+          "transactionHash": "0x2af8fb4579d160f8d9161128b0b929d98c874936c6c76ba63c589a169195a214",
+          "gas": 254100782,
+          "ms": 207.08062500000233
+        },
+        {
+          "firstTic": 261,
+          "tics": 5,
+          "transactionHash": "0x426b86fc25850551f11805eb2a6e64993dd79f8904f363a55f5ab2bb0f4da4c1",
+          "gas": 255598268,
+          "ms": 156.26766599999974
+        },
+        {
+          "firstTic": 266,
+          "tics": 5,
+          "transactionHash": "0xdae140f56854512ec8c0ee5364537eecd69bec27b2053dcf116a04c0ece850d5",
+          "gas": 254046169,
+          "ms": 156.3447499999893
+        },
+        {
+          "firstTic": 271,
+          "tics": 5,
+          "transactionHash": "0x478acada0a1157f011abf8fa2d7970e3e9ed404938d4101fab38572323c1e53e",
+          "gas": 598176019,
+          "ms": 464.5812500000029
+        }
+      ],
+      "startupCallMs": 209.48158300000068,
+      "startupGas": 365585788,
+      "resetGas": 422948933,
+      "finalStoredState": {
+        "boundary": "post-render",
+        "nativeSha256": "fd294e0684837695957dc914216ad88ed72558829c317a67f1d1166c943241ba",
+        "evmSha256": "fd294e0684837695957dc914216ad88ed72558829c317a67f1d1166c943241ba",
+        "exact": true
+      },
+      "stateStreamSha256": "e261dc2d9105be6d04592188ade68cabc85bec2a137b1b4a24d1e33c5e4658fa"
+    },
+    {
+      "name": "pistol",
+      "tics": 235,
+      "frames": [
+        {
+          "tic": 1,
+          "pixelDiffCount": 0,
+          "sha256": "b736bf38b2992db3851d33e7d8ea3bc7d6036d13d45d5030823829a6cdd62133"
+        },
+        {
+          "tic": 117,
+          "pixelDiffCount": 0,
+          "sha256": "f9c2c5d2152e499a3aa577aed9063bbd704231ff02036f221084b6ea39e31a18"
+        },
+        {
+          "tic": 235,
+          "pixelDiffCount": 0,
+          "sha256": "731bebd5089ef0ba121719d58c3c32f342f63f6d8556d64359dd2c2bb32f264f"
+        }
+      ],
+      "startup": true,
+      "batches": [
+        {
+          "firstTic": 1,
+          "tics": 5,
+          "transactionHash": "0x1596ae5326f576ff7fa20bc167affdce7c40807030f1897f882447bb239bee5e",
+          "gas": 680980862,
+          "ms": 518.5014999999985
+        },
+        {
+          "firstTic": 6,
+          "tics": 5,
+          "transactionHash": "0x86ad9f1772399ffc3b33868586918d44e327758b97cb4c3ccd0e54b0f5e206d8",
+          "gas": 251830796,
+          "ms": 208.15320900001097
+        },
+        {
+          "firstTic": 11,
+          "tics": 5,
+          "transactionHash": "0x1941ed4f54f9ef3facdebb24365934df8d3221c28ee1456581ac4c8a122a4bb6",
+          "gas": 253127204,
+          "ms": 207.17354099999648
+        },
+        {
+          "firstTic": 16,
+          "tics": 5,
+          "transactionHash": "0x8d696a47f0be0fd993358a91aec0a9f49b27c042e4c2df3f79644f2a4842253c",
+          "gas": 254636010,
+          "ms": 207.20262500000536
+        },
+        {
+          "firstTic": 21,
+          "tics": 5,
+          "transactionHash": "0xe3de69a33bfaba1c9bebba355b085132bbe265a033ea5843e64f3d70db9d536d",
+          "gas": 252431320,
+          "ms": 157.1862919999985
+        },
+        {
+          "firstTic": 26,
+          "tics": 5,
+          "transactionHash": "0x85273215df0f329a81df0d7ed014b27b57a86e7a7c82313bd425ee7598ff18c3",
+          "gas": 252571973,
+          "ms": 155.3047089999891
+        },
+        {
+          "firstTic": 31,
+          "tics": 5,
+          "transactionHash": "0x976762d9ef88683174a8bdcc33992b431fb752dd0c812fad877fce0c7e2344ee",
+          "gas": 254557857,
+          "ms": 156.0027090000076
+        },
+        {
+          "firstTic": 36,
+          "tics": 5,
+          "transactionHash": "0xefb2a2738249127d8749ed029cf07b8991a71c5701c46cd01671e2d9de8551cb",
+          "gas": 251855144,
+          "ms": 156.23741699999664
+        },
+        {
+          "firstTic": 41,
+          "tics": 5,
+          "transactionHash": "0x454282ba326fba3ee9958953b8ff03f81d83e3b26ffd42c49e92e9c7eed1d721",
+          "gas": 253307947,
+          "ms": 156.2019169999985
+        },
+        {
+          "firstTic": 46,
+          "tics": 5,
+          "transactionHash": "0xeee7f67f57ebad06aabeffbfa792641adaa0b2148843c1c4cd439bc44f977b4e",
+          "gas": 253994451,
+          "ms": 156.41916700000002
+        },
+        {
+          "firstTic": 51,
+          "tics": 5,
+          "transactionHash": "0xaf7dff6f640db3e05bb914711ee6559780a1deac31fd5f126f5e17aa423e133d",
+          "gas": 252477740,
+          "ms": 207.44733400001132
+        },
+        {
+          "firstTic": 56,
+          "tics": 5,
+          "transactionHash": "0xbec43212ca22f6e6f04962ea61c30d342859501bae5e886016c08767add70e45",
+          "gas": 252708327,
+          "ms": 156.90908300000592
+        },
+        {
+          "firstTic": 61,
+          "tics": 5,
+          "transactionHash": "0x1adaf5703417ec50e6161e9c1a1d0f8f8c45d8bf19a0468a66e53340c4e03400",
+          "gas": 254366863,
+          "ms": 207.08641600000556
+        },
+        {
+          "firstTic": 66,
+          "tics": 5,
+          "transactionHash": "0x3d654f08fe57479879a22c9640a43929fddc4f7db9fde0cfed6e0be28d17dc1b",
+          "gas": 251921248,
+          "ms": 156.28908400000364
+        },
+        {
+          "firstTic": 71,
+          "tics": 5,
+          "transactionHash": "0x3d51aa3da35711a511d2ee1f33516ff87e54de3323232052ca698b99661bf3c8",
+          "gas": 255770870,
+          "ms": 155.49187500000698
+        },
+        {
+          "firstTic": 76,
+          "tics": 5,
+          "transactionHash": "0xed07e19e3664de8a9d3c6aeae0be9ffb03ee1b8033661bed869cfed6987000db",
+          "gas": 252433842,
+          "ms": 155.97104099999706
+        },
+        {
+          "firstTic": 81,
+          "tics": 5,
+          "transactionHash": "0xcfc7125d459aa5f1c150a1a7c9749dfa3d4f3b455159df110df42ea5ccc22836",
+          "gas": 253828880,
+          "ms": 207.9608329999901
+        },
+        {
+          "firstTic": 86,
+          "tics": 5,
+          "transactionHash": "0xa40162c93bbec049e480bf812f709631ad1a34cdaf684ca1ceda8a85859116d2",
+          "gas": 254630731,
+          "ms": 207.93858299999556
+        },
+        {
+          "firstTic": 91,
+          "tics": 5,
+          "transactionHash": "0x68513528b39c37fdf70299516e88e18d3e1ff57c82628fd97b404956c0efa658",
+          "gas": 257447618,
+          "ms": 207.76949999999488
+        },
+        {
+          "firstTic": 96,
+          "tics": 5,
+          "transactionHash": "0x2dfb21d3bc25a6a8ce81dcfaeda439cc64139f79b2166aaa3c42b5f4ebe4554f",
+          "gas": 255595577,
+          "ms": 207.71933399999398
+        },
+        {
+          "firstTic": 101,
+          "tics": 5,
+          "transactionHash": "0xe37cb10aac6273b1e63a398773dde903c50c9fd3a14f976112d893eb26e6b939",
+          "gas": 258540830,
+          "ms": 207.10391700000037
+        },
+        {
+          "firstTic": 106,
+          "tics": 5,
+          "transactionHash": "0xece2493794c586028e72983b463cac040a7b20361f4ac15e72cd48b09072fd7a",
+          "gas": 254539553,
+          "ms": 207.94837499999267
+        },
+        {
+          "firstTic": 111,
+          "tics": 5,
+          "transactionHash": "0xc610c97d0acc026bf6c5db1bf2be75ca14e22ff6c37c9444127920f404c985b2",
+          "gas": 256802015,
+          "ms": 207.84316599999147
+        },
+        {
+          "firstTic": 116,
+          "tics": 5,
+          "transactionHash": "0x8460194fa48884f6bb271d41aec6eb93575885d366e1027b0948e7165f7a1efa",
+          "gas": 563669002,
+          "ms": 463.710917000004
+        },
+        {
+          "firstTic": 121,
+          "tics": 5,
+          "transactionHash": "0xc2b88bf31279f6d8edd244377b22123221426c1b08c4247e88b66eaaae8635c5",
+          "gas": 255977723,
+          "ms": 207.5459589999955
+        },
+        {
+          "firstTic": 126,
+          "tics": 5,
+          "transactionHash": "0xd7055c5d9728cfdfc34f9c1e6cbf180550c79455935e0359405ef454771e26ad",
+          "gas": 254892741,
+          "ms": 206.74795900000026
+        },
+        {
+          "firstTic": 131,
+          "tics": 5,
+          "transactionHash": "0x3f5e49f991d77b99dfc6aadd8a9b7c5c933e07505825302376863b73fbb13f80",
+          "gas": 257077543,
+          "ms": 207.9653330000001
+        },
+        {
+          "firstTic": 136,
+          "tics": 5,
+          "transactionHash": "0x80323aadd6d86e3572e60d9e66d2791fcf64c1664bacb4cfea24fb49876a19c5",
+          "gas": 254156125,
+          "ms": 156.22962500000722
+        },
+        {
+          "firstTic": 141,
+          "tics": 5,
+          "transactionHash": "0xfea741b747dc2a2ccdca53496359e07f78c5d93a64f4053009e1bc266f5400a9",
+          "gas": 258985556,
+          "ms": 207.2604580000043
+        },
+        {
+          "firstTic": 146,
+          "tics": 5,
+          "transactionHash": "0x5762e82a1c948c5dde67a034b8a002744548c8571488e3f3bd5f6cb64ad864d1",
+          "gas": 254149699,
+          "ms": 156.32850000000326
+        },
+        {
+          "firstTic": 151,
+          "tics": 5,
+          "transactionHash": "0xf39035c419d8bd59f9ffefee942cca47d9763601efc4531c9cf364100e6391f8",
+          "gas": 256764237,
+          "ms": 207.0192079999979
+        },
+        {
+          "firstTic": 156,
+          "tics": 5,
+          "transactionHash": "0xe435f33c0da1e595214ae8028f557bd239e10ff8730a2dca8f668c0f7ceca571",
+          "gas": 255928710,
+          "ms": 208.1085000000021
+        },
+        {
+          "firstTic": 161,
+          "tics": 5,
+          "transactionHash": "0xe9dfa1a6b49199626641f178007388fdd24de942a56498441f826c6ead437115",
+          "gas": 255851338,
+          "ms": 207.73187499999767
+        },
+        {
+          "firstTic": 166,
+          "tics": 5,
+          "transactionHash": "0xd2cc476154ca961071092704f7b8fb3a3eaf2a4476e35fc012416f5ad986a0b8",
+          "gas": 254743913,
+          "ms": 207.11062500000116
+        },
+        {
+          "firstTic": 171,
+          "tics": 5,
+          "transactionHash": "0x9b193798572e7f1009dfb65f13369cfc5cd0233363df78ddf4bc9513d056e838",
+          "gas": 257863447,
+          "ms": 208.09141700000328
+        },
+        {
+          "firstTic": 176,
+          "tics": 5,
+          "transactionHash": "0x5b79d3002edac2b4a724c1a77243d528032cd25d24a51f7258a30bf7e659c115",
+          "gas": 254132437,
+          "ms": 156.6579999999958
+        },
+        {
+          "firstTic": 181,
+          "tics": 5,
+          "transactionHash": "0x24719113420150e712f89bb0fba2f2eb5c03a7e723293da8e556c10f219534d7",
+          "gas": 256598164,
+          "ms": 156.23133300000336
+        },
+        {
+          "firstTic": 186,
+          "tics": 5,
+          "transactionHash": "0x68b206c55de77cfbc355958125bb8ae232c0e2cd20b7c43723883003c51960fb",
+          "gas": 255926560,
+          "ms": 156.09875000000466
+        },
+        {
+          "firstTic": 191,
+          "tics": 5,
+          "transactionHash": "0x9902e58914102225ba0a584f29dd8ca80bd514d7be13be584f15ec297178b3d0",
+          "gas": 255999403,
+          "ms": 207.4479590000119
+        },
+        {
+          "firstTic": 196,
+          "tics": 5,
+          "transactionHash": "0x742fbf64ad16ee03b8257308d6251ee74047eb85979e84c1317e248465f9d95a",
+          "gas": 254720527,
+          "ms": 207.78579100000206
+        },
+        {
+          "firstTic": 201,
+          "tics": 5,
+          "transactionHash": "0x0bc08abfa9abaf1d5be00d130f963b99533645fb897b7b5f58711561dabc5d92",
+          "gas": 257905888,
+          "ms": 207.91587500000605
+        },
+        {
+          "firstTic": 206,
+          "tics": 5,
+          "transactionHash": "0x670ecc0a506dad2d4573a688c4fbcc5aec817cf215f00ec833e597e1af1e91bd",
+          "gas": 254084512,
+          "ms": 155.17612499999814
+        },
+        {
+          "firstTic": 211,
+          "tics": 5,
+          "transactionHash": "0xa0f330c0833388f10086aad5d8850608eb03b837efa467bab73aa4caf62fd23f",
+          "gas": 258801168,
+          "ms": 207.5801669999928
+        },
+        {
+          "firstTic": 216,
+          "tics": 5,
+          "transactionHash": "0xb00845c58ca15da698cff77e8c8281f8d82a5173ddbae24317dc1f9bdb64abd1",
+          "gas": 254287453,
+          "ms": 156.11604200000875
+        },
+        {
+          "firstTic": 221,
+          "tics": 5,
+          "transactionHash": "0x6e14d7b3b6b93705d5aadf92c5665c235ae09cc42374463166893ed78dcd0cf3",
+          "gas": 256096618,
+          "ms": 155.4020840000012
+        },
+        {
+          "firstTic": 226,
+          "tics": 5,
+          "transactionHash": "0x919fe58439a3d991f33d34a440bdedde1b010331c5e9065bd55a5019c5b4cd55",
+          "gas": 254157358,
+          "ms": 155.68000000000757
+        },
+        {
+          "firstTic": 231,
+          "tics": 5,
+          "transactionHash": "0x7b40a03f828a18fa4aa0fb7c91c382935aeeb446beadbb36db95030293e09e52",
+          "gas": 617840066,
+          "ms": 515.9433750000026
+        }
+      ],
+      "startupCallMs": 207.09383300000627,
+      "startupGas": 365585788,
+      "resetGas": 422925383,
+      "finalStoredState": {
+        "boundary": "post-render",
+        "nativeSha256": "04e10dab7100cb01e6416c24f03f2a179d13c251d7099aa19a9044cdfd7e529d",
+        "evmSha256": "04e10dab7100cb01e6416c24f03f2a179d13c251d7099aa19a9044cdfd7e529d",
+        "exact": true
+      },
+      "stateStreamSha256": "63c73336967190a2b8fead291696dcc79a147682ad5e50ca2bdf053ea0fc02ac"
+    },
+    {
+      "name": "combat-arena",
+      "tics": 175,
+      "frames": [
+        {
+          "tic": 1,
+          "pixelDiffCount": 0,
+          "sha256": "2aad15f7344ac8d4e91370533ec37e49987157ebb5fde8c4ad4a0b61d61c8a43"
+        },
+        {
+          "tic": 87,
+          "pixelDiffCount": 0,
+          "sha256": "f9ee42492cd47cccdd917ab8852677dc680ca9879a3079a03563e665e62f2095"
+        },
+        {
+          "tic": 175,
+          "pixelDiffCount": 0,
+          "sha256": "b6c44fa75c2d0bf52b049c4e1f36619c29ad4a785bb985b342d61bc3f12aa22b"
+        }
+      ],
+      "startup": true,
+      "batches": [
+        {
+          "firstTic": 1,
+          "tics": 5,
+          "transactionHash": "0x7b7b5546a8722a60379c9c4ba515278eb2dacda10e0ab9aac22bdb81d8c0d6eb",
+          "gas": 685367991,
+          "ms": 514.7271250000049
+        },
+        {
+          "firstTic": 6,
+          "tics": 5,
+          "transactionHash": "0x1573aa8cdc37a33b723b313733b286c7e3eaa80e21abf1b5cab6b5e5b434361d",
+          "gas": 251845307,
+          "ms": 156.45308300000033
+        },
+        {
+          "firstTic": 11,
+          "tics": 5,
+          "transactionHash": "0xd127995d3d5fad643a9a5a3388f0afc7dcf051cd6bfff2b7963d58cde5eb813e",
+          "gas": 253186632,
+          "ms": 156.1855829999986
+        },
+        {
+          "firstTic": 16,
+          "tics": 5,
+          "transactionHash": "0x525ddd8a84b70d0e82a709af471f3727f0c79750ef7460fd56626beb536f1419",
+          "gas": 253778142,
+          "ms": 207.0891249999986
+        },
+        {
+          "firstTic": 21,
+          "tics": 5,
+          "transactionHash": "0x9bc88997cd93c8eac6d29dda399511c2f463da950ab43fec860f1840b0416e44",
+          "gas": 252640429,
+          "ms": 206.92941599999904
+        },
+        {
+          "firstTic": 26,
+          "tics": 5,
+          "transactionHash": "0x22e814be14734c5cd5a5a0de2541502ec060a3877dd9a8e597ba6ca012fd8ff2",
+          "gas": 252731968,
+          "ms": 207.0717500000028
+        },
+        {
+          "firstTic": 31,
+          "tics": 5,
+          "transactionHash": "0x23e51724d099523a0909a73b7599f20a239408f0bc48158363a70f03a2eaf3b6",
+          "gas": 253904733,
+          "ms": 207.6971659999981
+        },
+        {
+          "firstTic": 36,
+          "tics": 5,
+          "transactionHash": "0xc50ed56ccb47c5896c40b24d7e5a9c7edeb5c57ac36142ba9a43fea1176eb448",
+          "gas": 252046872,
+          "ms": 155.9692919999943
+        },
+        {
+          "firstTic": 41,
+          "tics": 5,
+          "transactionHash": "0x53a59a379606b0f5dc41fa9ea992dc50c6c8702ad3bb440560035f8ac206dfa0",
+          "gas": 253345462,
+          "ms": 207.96033299999544
+        },
+        {
+          "firstTic": 46,
+          "tics": 5,
+          "transactionHash": "0xb810d29f49de0acc1caa76cadab21607d58f18a073ca2bfb8e427bd9bd7606c8",
+          "gas": 253446226,
+          "ms": 208.28283300000476
+        },
+        {
+          "firstTic": 51,
+          "tics": 5,
+          "transactionHash": "0x17ef6139c18bc429a4370350507ab8d8f4185ee478e2f465e9efc2c17dafb518",
+          "gas": 252616261,
+          "ms": 207.5854999999865
+        },
+        {
+          "firstTic": 56,
+          "tics": 5,
+          "transactionHash": "0x68d43a490dcc7e6b677542504ae126a9d01e1f60c69bfec431c5c7a6ba91eefe",
+          "gas": 252852215,
+          "ms": 207.97312499998952
+        },
+        {
+          "firstTic": 61,
+          "tics": 5,
+          "transactionHash": "0x97a9222d33b1b43e1cb31ad3bcc69cbd1626e67ae650faaec5298932f74c34a5",
+          "gas": 255017922,
+          "ms": 207.0269580000022
+        },
+        {
+          "firstTic": 66,
+          "tics": 5,
+          "transactionHash": "0x7f093def1702a302c426c4588d7752c9acf2d525bc2a5f5916d91dcf9f19128c",
+          "gas": 252121792,
+          "ms": 207.8394590000098
+        },
+        {
+          "firstTic": 71,
+          "tics": 5,
+          "transactionHash": "0x8b156eb1d9dfaa5fede56332a611be2a70412dd18cc68259b2cd02d63be1570e",
+          "gas": 255608201,
+          "ms": 207.96233300000313
+        },
+        {
+          "firstTic": 76,
+          "tics": 5,
+          "transactionHash": "0x1f2a83e44e15edde6d0ae0358c6ce92ec0c3a9bb7ad4c3aaf0eb979359c1f516",
+          "gas": 252056543,
+          "ms": 207.52616700000362
+        },
+        {
+          "firstTic": 81,
+          "tics": 5,
+          "transactionHash": "0xfb2f66e40dc0a7d6831d819b67db8e332439484d113e215f2fe884d8c1db4dec",
+          "gas": 253386095,
+          "ms": 206.89629199999035
+        },
+        {
+          "firstTic": 86,
+          "tics": 5,
+          "transactionHash": "0xd2ea69eca55e650f023b7c96e1f9b178d41e3c5e0f4f0a2ebbac05864090c54b",
+          "gas": 647731461,
+          "ms": 565.9183339999872
+        },
+        {
+          "firstTic": 91,
+          "tics": 5,
+          "transactionHash": "0x64b238fd42703a8fb300c8cff273af6a410d5d745603d8491ed2d89de92fbec0",
+          "gas": 252493443,
+          "ms": 155.20920799998567
+        },
+        {
+          "firstTic": 96,
+          "tics": 5,
+          "transactionHash": "0xfd550bc6542c0728c6ae28cb2cf310700acd00383e9176e1f7d0337926a56c99",
+          "gas": 252747692,
+          "ms": 156.90808300001663
+        },
+        {
+          "firstTic": 101,
+          "tics": 5,
+          "transactionHash": "0xeb8373925519cce65fc3c95b41d59e68589b33a8f253b78df5491ec1217e4305",
+          "gas": 254804551,
+          "ms": 208.09645800001454
+        },
+        {
+          "firstTic": 106,
+          "tics": 5,
+          "transactionHash": "0xbcaba3ba5eceeaf0b7517015392e2bddb79d43945ebd6b9a0d4450bcfc301a23",
+          "gas": 251932878,
+          "ms": 207.56079200000386
+        },
+        {
+          "firstTic": 111,
+          "tics": 5,
+          "transactionHash": "0xa0999b492db0a8c8858e11b22ef040acf021951701d95360e951f84a7d57b7ac",
+          "gas": 253299855,
+          "ms": 208.08833299999242
+        },
+        {
+          "firstTic": 116,
+          "tics": 5,
+          "transactionHash": "0xf8ef34c4ee0f78fe7bd2772556896870b13e8d398238a3f001521b7e84ad35ee",
+          "gas": 254269511,
+          "ms": 207.88929200000712
+        },
+        {
+          "firstTic": 121,
+          "tics": 5,
+          "transactionHash": "0x616287f883515614167d90ca848225c1665d3f4936d77fb21ff400afa8529edd",
+          "gas": 252602756,
+          "ms": 154.8983330000192
+        },
+        {
+          "firstTic": 126,
+          "tics": 5,
+          "transactionHash": "0xf94f4fd4ea57bf14bf7a18196e49de73b12e1db2e7dfe3ad54424c938b9c5e7a",
+          "gas": 252779577,
+          "ms": 156.1239999999816
+        },
+        {
+          "firstTic": 131,
+          "tics": 5,
+          "transactionHash": "0x91e31800eff01c22bcef84ab08b3cfcab758b0828c41eee6bb0ae87d72defbd8",
+          "gas": 254840449,
+          "ms": 207.970083000022
+        },
+        {
+          "firstTic": 136,
+          "tics": 5,
+          "transactionHash": "0xc373ce04d5183d9b997a2dfce14a01eda758268f2673d4afb9d48558abdb5ad9",
+          "gas": 252047132,
+          "ms": 207.81212499999674
+        },
+        {
+          "firstTic": 141,
+          "tics": 5,
+          "transactionHash": "0x32aa1bdbf35236ef83d0d6b82c8af0d8823d2522f2a3637fc61225ccaf038cbe",
+          "gas": 255527617,
+          "ms": 207.29837500001304
+        },
+        {
+          "firstTic": 146,
+          "tics": 5,
+          "transactionHash": "0xf37e2c057c5d90611a1637fe4308c80691c59f48ac8213f1e159444de4c65c61",
+          "gas": 252022337,
+          "ms": 208.0357499999809
+        },
+        {
+          "firstTic": 151,
+          "tics": 5,
+          "transactionHash": "0x9faf630720f0ed08270702599f4650b473920896df0c7ca3284d8d37db91646d",
+          "gas": 252633310,
+          "ms": 206.82033300001058
+        },
+        {
+          "firstTic": 156,
+          "tics": 5,
+          "transactionHash": "0xf2b0e7f795ef9320e6ba611198509ddfbc097485c4a6da7135042431d93d32b8",
+          "gas": 252035419,
+          "ms": 155.8603749999893
+        },
+        {
+          "firstTic": 161,
+          "tics": 5,
+          "transactionHash": "0x00b86d8c84f5cee5d36a9a1894dcbd80a8c03ea63dee8252d63c62fa8bd2a82b",
+          "gas": 252592856,
+          "ms": 205.95208299998194
+        },
+        {
+          "firstTic": 166,
+          "tics": 5,
+          "transactionHash": "0xbc75c909a62c14bbb744bfa39563c406d109ac09f61b9d49c5a38151dd20e556",
+          "gas": 251997319,
+          "ms": 207.77995900000678
+        },
+        {
+          "firstTic": 171,
+          "tics": 5,
+          "transactionHash": "0xccd4ec9e2235f6f420b54b5889eb72849ca6caa09c8c8240e2b50d741fd64cd2",
+          "gas": 647233412,
+          "ms": 515.0702499999898
+        }
+      ],
+      "startupCallMs": 206.75337500000023,
+      "startupGas": 365854400,
+      "resetGas": 423178678,
+      "finalStoredState": {
+        "boundary": "post-render",
+        "nativeSha256": "fa9721e08823bfbc943876e17e83a8c8a2ea35175ba00087ca61b9aaaace4c44",
+        "evmSha256": "fa9721e08823bfbc943876e17e83a8c8a2ea35175ba00087ca61b9aaaace4c44",
+        "exact": true
+      },
+      "stateStreamSha256": "281ed3431a42d8dcdd558605e5babff08089baf32937f1d41e1b917a4326a22e"
+    },
+    {
+      "name": "damage-arena",
+      "tics": 350,
+      "frames": [
+        {
+          "tic": 1,
+          "pixelDiffCount": 0,
+          "sha256": "2aad15f7344ac8d4e91370533ec37e49987157ebb5fde8c4ad4a0b61d61c8a43"
+        },
+        {
+          "tic": 175,
+          "pixelDiffCount": 0,
+          "sha256": "9438a734b8f86283004160dcb1532b88bb377404d6a3e22df9fd3b5ac7399158"
+        },
+        {
+          "tic": 350,
+          "pixelDiffCount": 0,
+          "sha256": "1009c433449585267275df07c71d8d8d4b89895022fecbfdea3cc7fd5b08f8c8"
+        }
+      ],
+      "startup": true,
+      "batches": [
+        {
+          "firstTic": 1,
+          "tics": 5,
+          "transactionHash": "0x474cbe4f5683e75b67ea38c94d30effef8e98d6c57e2619fa1c96b0d96fb9f88",
+          "gas": 685367991,
+          "ms": 515.7786250000063
+        },
+        {
+          "firstTic": 6,
+          "tics": 5,
+          "transactionHash": "0x2e01ccc1bf14092d17f516f6cf66ce2015d8879fc739d8e77111b29886e8392b",
+          "gas": 251825347,
+          "ms": 156.2911669999885
+        },
+        {
+          "firstTic": 11,
+          "tics": 5,
+          "transactionHash": "0x9d5d6e3b9e3a4a8b83a9a8b9bb3a82a6af495b0f91de5cc0ff405d12984c8eb0",
+          "gas": 252126501,
+          "ms": 156.12025000000722
+        },
+        {
+          "firstTic": 16,
+          "tics": 5,
+          "transactionHash": "0x8eb1c7ea30fc346a125213a98565a444d2fd5359556ab0b0d63d8e3450bfde77",
+          "gas": 251893333,
+          "ms": 155.31599999999162
+        },
+        {
+          "firstTic": 21,
+          "tics": 5,
+          "transactionHash": "0x573e0a284e9b628956ecc0fcbb88eaea82e6917bad5ac8e721dc6f1933c9779a",
+          "gas": 252166459,
+          "ms": 155.333209000004
+        },
+        {
+          "firstTic": 26,
+          "tics": 5,
+          "transactionHash": "0x83b4d0b032e4e8af3959e836100ee902b57f07fb87594a6d925d55d5afd1ebf6",
+          "gas": 251738677,
+          "ms": 156.1498750000028
+        },
+        {
+          "firstTic": 31,
+          "tics": 5,
+          "transactionHash": "0xea9880ecd45aa3c777fcba16b111cf5f58d9bc5192e102a7a586cee22124fab2",
+          "gas": 252178570,
+          "ms": 158.00400000001537
+        },
+        {
+          "firstTic": 36,
+          "tics": 5,
+          "transactionHash": "0xbe94ee49e3a6579aad65ef289be4ca82ced8b0b96ccd896267de377c143184c8",
+          "gas": 251853331,
+          "ms": 207.8320829999866
+        },
+        {
+          "firstTic": 41,
+          "tics": 5,
+          "transactionHash": "0xb9fc6e2bb1f6b98299a99cacf07f0197b7dd9849772747b36f88d29d333c5ef1",
+          "gas": 252323499,
+          "ms": 206.97837500000605
+        },
+        {
+          "firstTic": 46,
+          "tics": 5,
+          "transactionHash": "0x9560feb227855f7a226a22e7d1b9e7f9d3c3e6ece33aa5f910a90b82ef744f1f",
+          "gas": 251651354,
+          "ms": 209.44416600000113
+        },
+        {
+          "firstTic": 51,
+          "tics": 5,
+          "transactionHash": "0x67c16c48f69b0ed0b12146cc419f7ebff65050d820cb0407dd986674bab75ba7",
+          "gas": 252964410,
+          "ms": 207.94204199998057
+        },
+        {
+          "firstTic": 56,
+          "tics": 5,
+          "transactionHash": "0xfb9ec57c0d6835e1f413a88409fab5f54126ef9b8d16f539d69f5b62f7272ea7",
+          "gas": 251765275,
+          "ms": 207.66908300001523
+        },
+        {
+          "firstTic": 61,
+          "tics": 5,
+          "transactionHash": "0x5b167a145be0495938b0d09ded902a0309a25d9790b48cbeff978dfab1c83f10",
+          "gas": 252155483,
+          "ms": 206.6651669999992
+        },
+        {
+          "firstTic": 66,
+          "tics": 5,
+          "transactionHash": "0x9b2578d661d6266c560418851d206650fc86959a3899551c334e180e6208c29e",
+          "gas": 251778178,
+          "ms": 155.57320899999468
+        },
+        {
+          "firstTic": 71,
+          "tics": 5,
+          "transactionHash": "0x22c0378eed8b5e91881ff2c9eccd90564ecd12049d10d6c4a77484128b7b2429",
+          "gas": 252220157,
+          "ms": 156.15358399998513
+        },
+        {
+          "firstTic": 76,
+          "tics": 5,
+          "transactionHash": "0xc50f8489cab32e0efa34d0e8797043ed427cfb2eab00d5f7aca3411fe5a3c9d4",
+          "gas": 251742478,
+          "ms": 155.74995900000795
+        },
+        {
+          "firstTic": 81,
+          "tics": 5,
+          "transactionHash": "0x3ed4a58ee1b1ab529b727a0544c6e267fa0e68d30f892826641b0feb9f5f177d",
+          "gas": 252202605,
+          "ms": 156.32495899999049
+        },
+        {
+          "firstTic": 86,
+          "tics": 5,
+          "transactionHash": "0xc4530c2a28be58ee7cf90b8dedf2ffbf0f7ae5b1d27c3b8c915bf7257c05f0ec",
+          "gas": 251997516,
+          "ms": 208.15925000002608
+        },
+        {
+          "firstTic": 91,
+          "tics": 5,
+          "transactionHash": "0xced808758cd84575098d52466137eb77b053c338bc8c73ea5993a8f6e7a15a0a",
+          "gas": 252158288,
+          "ms": 156.7019169999985
+        },
+        {
+          "firstTic": 96,
+          "tics": 5,
+          "transactionHash": "0xe8506c45c053018cbf3cfebb236374b54b2bd4979edc4a8bb680fab396a8b401",
+          "gas": 251850153,
+          "ms": 155.46891700002016
+        },
+        {
+          "firstTic": 101,
+          "tics": 5,
+          "transactionHash": "0xd6b72d10969008de47ce4f4e49b5629c8b4f184f96633d9127966bc1223bfdc4",
+          "gas": 252226596,
+          "ms": 155.82491699999082
+        },
+        {
+          "firstTic": 106,
+          "tics": 5,
+          "transactionHash": "0x804f6fb58c9fb6164356e949f5f657a1dbb683d46ea2cd054f3a590aacce4b2e",
+          "gas": 251865238,
+          "ms": 155.63287500001024
+        },
+        {
+          "firstTic": 111,
+          "tics": 5,
+          "transactionHash": "0x02ab5d73c3158be4fbe7143f314c0d33b6987dea68efb2ec67b0cb179582fe91",
+          "gas": 252069635,
+          "ms": 206.8342920000141
+        },
+        {
+          "firstTic": 116,
+          "tics": 5,
+          "transactionHash": "0x4cf65379149ec96217c7cfc38e451adbed8f1827ca339ecbe0eb0283206a86e0",
+          "gas": 252561145,
+          "ms": 206.72904199999175
+        },
+        {
+          "firstTic": 121,
+          "tics": 5,
+          "transactionHash": "0x8d9ce4e86273a610514dafd5992a7985325f52defa0810bd85b74eed50ad2a8b",
+          "gas": 252193397,
+          "ms": 156.50304199999664
+        },
+        {
+          "firstTic": 126,
+          "tics": 5,
+          "transactionHash": "0x83938b883ffb1fe28bf31cbd64f738dc4bdcd292ed25000e347f27d08c7c8f4e",
+          "gas": 251781204,
+          "ms": 156.22770799999125
+        },
+        {
+          "firstTic": 131,
+          "tics": 5,
+          "transactionHash": "0x2a9b0375b00e2009e47cf0ee73b72e08b69a9e642e64ddd2dbbc35bc43d15e0f",
+          "gas": 252222244,
+          "ms": 155.3381249999802
+        },
+        {
+          "firstTic": 136,
+          "tics": 5,
+          "transactionHash": "0xa5654a298611be63a0f2670118eaffa14a0c66dc5ed37eba103fa71bc6d1ff58",
+          "gas": 251980043,
+          "ms": 207.32266599999275
+        },
+        {
+          "firstTic": 141,
+          "tics": 5,
+          "transactionHash": "0xaf24a96ea189ebe6823c6737cbe97355161e6e1e7015c9633dfa5c15ad8aac0d",
+          "gas": 252239157,
+          "ms": 207.88779099998646
+        },
+        {
+          "firstTic": 146,
+          "tics": 5,
+          "transactionHash": "0x55317b9d4eaad933b25bcd7349baaa037a874d331f6c7d08fc47ba7cb620dcce",
+          "gas": 251800349,
+          "ms": 208.07466600000043
+        },
+        {
+          "firstTic": 151,
+          "tics": 5,
+          "transactionHash": "0x1c507cc2ddf1f322280905ab13c74fdb15a9f3024012fe6cfa3ca6ca50ce2fba",
+          "gas": 252247855,
+          "ms": 208.22299999999814
+        },
+        {
+          "firstTic": 156,
+          "tics": 5,
+          "transactionHash": "0xaa983a44f5f11b58c87ef28af00625e98715c946a385fd3cbe309d2d9fdfd940",
+          "gas": 252154970,
+          "ms": 155.17745799999102
+        },
+        {
+          "firstTic": 161,
+          "tics": 5,
+          "transactionHash": "0xedcb5691aeebb1cc1fd861310f7f887d5c58d7c564708e797e9299d4c03a4e6f",
+          "gas": 252289122,
+          "ms": 206.9117499999993
+        },
+        {
+          "firstTic": 166,
+          "tics": 5,
+          "transactionHash": "0xa5f6b4a5c8df9f592b11af0a4cda2a92098b7f7f641b4adce85a2cd833210403",
+          "gas": 251838376,
+          "ms": 205.8286659999867
+        },
+        {
+          "firstTic": 171,
+          "tics": 5,
+          "transactionHash": "0x9f1e51e006071749d539bcb6bb2c1bf36872119d93b25e144079d8ba5f276313",
+          "gas": 645640482,
+          "ms": 516.1734170000127
+        },
+        {
+          "firstTic": 176,
+          "tics": 5,
+          "transactionHash": "0xfa4c2fd1bd41b51db70bd7266b4d75ee85def86761cb8b704e936c994360a16a",
+          "gas": 252073295,
+          "ms": 155.82220799999777
+        },
+        {
+          "firstTic": 181,
+          "tics": 5,
+          "transactionHash": "0x48ee733c7fc5f3990badddf3e67e1b47d3f75dc902a4fb2a353bc9b41914ad7f",
+          "gas": 252101295,
+          "ms": 156.8059170000197
+        },
+        {
+          "firstTic": 186,
+          "tics": 5,
+          "transactionHash": "0x1769910633c5833bb7b417637a00791ed919fc336915e9641f9469c5af872d6c",
+          "gas": 252887951,
+          "ms": 207.70391599999857
+        },
+        {
+          "firstTic": 191,
+          "tics": 5,
+          "transactionHash": "0xf99a07e1da54400207277b6c6db9c6ffea9e3122cb5957022ea3ae6d24b5489d",
+          "gas": 252360387,
+          "ms": 206.91283399998792
+        },
+        {
+          "firstTic": 196,
+          "tics": 5,
+          "transactionHash": "0x8bde403db8f386a89656aea5f26b02e5ab06214b3da62cf6509ce3765d82434a",
+          "gas": 251808698,
+          "ms": 208.06629200000316
+        },
+        {
+          "firstTic": 201,
+          "tics": 5,
+          "transactionHash": "0xa984cc6872c361b015f6af6d4980243de7de1539434a3d3641c398ec81955ac2",
+          "gas": 252408317,
+          "ms": 207.015625
+        },
+        {
+          "firstTic": 206,
+          "tics": 5,
+          "transactionHash": "0xf4d33bef9137523f8cd51e0df0ca2b61421c3726e09d88ae5d26b9a6061499e6",
+          "gas": 252082646,
+          "ms": 206.94654100001208
+        },
+        {
+          "firstTic": 211,
+          "tics": 5,
+          "transactionHash": "0xebeb24172cc5ef8c3fef984fa336490008f45333c0c761193c982d2c103a80f6",
+          "gas": 252212827,
+          "ms": 207.36754100001417
+        },
+        {
+          "firstTic": 216,
+          "tics": 5,
+          "transactionHash": "0x0ddc4cd547f5bead27990cddd6c6b0fb652b5d471e2f0c7dafadaab33ef86b34",
+          "gas": 251901255,
+          "ms": 207.03470899999957
+        },
+        {
+          "firstTic": 221,
+          "tics": 5,
+          "transactionHash": "0x88a54bd48f1d247545d0e6ed2285a29f55d172a9429fb582b28c349576da9f3a",
+          "gas": 252285013,
+          "ms": 207.65237500000512
+        },
+        {
+          "firstTic": 226,
+          "tics": 5,
+          "transactionHash": "0x5e407e5af6bf6c61efc7067a0ac3be0d6af68aca8576e7c9c9a3965cb16cdcc1",
+          "gas": 251904130,
+          "ms": 207.45637500000885
+        },
+        {
+          "firstTic": 231,
+          "tics": 5,
+          "transactionHash": "0xb4691c9eea3feea158d1d4c15853387039c3a5f82976279ec146ec16451e0ad4",
+          "gas": 252506468,
+          "ms": 205.53658299997915
+        },
+        {
+          "firstTic": 236,
+          "tics": 5,
+          "transactionHash": "0x6ca0cdfb22972c8ba4cfef3a3b381af6ca6d0f9fb602e553698b085ae965bc26",
+          "gas": 251819984,
+          "ms": 156.41975000000093
+        },
+        {
+          "firstTic": 241,
+          "tics": 5,
+          "transactionHash": "0xde9e7a97668ec65f52ed7b9f5faca6258d836e8fedd71bfd793c5c2654b5ee62",
+          "gas": 252274285,
+          "ms": 207.33191700000316
+        },
+        {
+          "firstTic": 246,
+          "tics": 5,
+          "transactionHash": "0x17512b0b360b5fbdc6e71b07e03eb2b2a865422839c298f7ee249bf3cc223cb9",
+          "gas": 251974519,
+          "ms": 207.24225000001024
+        },
+        {
+          "firstTic": 251,
+          "tics": 5,
+          "transactionHash": "0x44dfd6e71d3f5292bad80af9af2c73a0d975bf9d9cb95e1f4e0ea7113f30aac1",
+          "gas": 252207936,
+          "ms": 207.86120799998753
+        },
+        {
+          "firstTic": 256,
+          "tics": 5,
+          "transactionHash": "0x43587e51c5dba5cddae63ad70e310d633cda2cacbc3fea6c303912b6302752fe",
+          "gas": 251861513,
+          "ms": 207.21033299999544
+        },
+        {
+          "firstTic": 261,
+          "tics": 5,
+          "transactionHash": "0x075c5a91fa5c7ac7dbd56230b43157db3450140618e00a05e8dda3a24e0c77d6",
+          "gas": 252240871,
+          "ms": 207.24920900000143
+        },
+        {
+          "firstTic": 266,
+          "tics": 5,
+          "transactionHash": "0x6aadf7c9bfb3d205930929f8a292694b22578d6f891babf3b7be462a102822f7",
+          "gas": 251949228,
+          "ms": 207.6825420000241
+        },
+        {
+          "firstTic": 271,
+          "tics": 5,
+          "transactionHash": "0x0d536e4d34dcb2da0cdb12317652358dc5b79adf0477e7fb684dd80acefd6bbe",
+          "gas": 252301057,
+          "ms": 207.45637500000885
+        },
+        {
+          "firstTic": 276,
+          "tics": 5,
+          "transactionHash": "0xa1675f4f8c4f81c36638f8d2976e6ea3ac95785c0424add80eb269ab036015cc",
+          "gas": 252153366,
+          "ms": 207.745041999995
+        },
+        {
+          "firstTic": 281,
+          "tics": 5,
+          "transactionHash": "0xc65fdf8aad0e02030a5a52908e1de94ed3be2d6e4436f1624a8f3393997280fb",
+          "gas": 252309099,
+          "ms": 208.09058300001197
+        },
+        {
+          "firstTic": 286,
+          "tics": 5,
+          "transactionHash": "0x6ea6880bac33c3dd8bd8d05ae4ca73b709e5a23ace185f2c88ed11b05a28ed7a",
+          "gas": 253170849,
+          "ms": 207.4060419999878
+        },
+        {
+          "firstTic": 291,
+          "tics": 5,
+          "transactionHash": "0x484c85c1b659f5e602b744e810af358842abb06e1aeef0a674151275146587e1",
+          "gas": 252709231,
+          "ms": 207.6932080000115
+        },
+        {
+          "firstTic": 296,
+          "tics": 5,
+          "transactionHash": "0x234a0f7d768bea493502170684826874ac860d94f0d9320cc1a5fd5dd9601118",
+          "gas": 252375672,
+          "ms": 208.49783300000126
+        },
+        {
+          "firstTic": 301,
+          "tics": 5,
+          "transactionHash": "0xed93098449ce8f4d348c60786f85a48df082945c7e75f323a46a0b1b9f082e91",
+          "gas": 252751146,
+          "ms": 209.99400000000605
+        },
+        {
+          "firstTic": 306,
+          "tics": 5,
+          "transactionHash": "0xfedde885ea2b996c720097013ca75f052a7dbf452c559cb04f2c5d4e9f55d9bb",
+          "gas": 252413196,
+          "ms": 206.99849999998696
+        },
+        {
+          "firstTic": 311,
+          "tics": 5,
+          "transactionHash": "0xa2b8ee7e3e156e547db876eb73ea3a371cb14af66df0348d1f4cdb6302f0d179",
+          "gas": 252756600,
+          "ms": 207.48695799999405
+        },
+        {
+          "firstTic": 316,
+          "tics": 5,
+          "transactionHash": "0x40c16da44eaad40b7ad0e15bea1ef0e730d47ffb43cb27536fd6863d349ac187",
+          "gas": 252285746,
+          "ms": 206.44791700001224
+        },
+        {
+          "firstTic": 321,
+          "tics": 5,
+          "transactionHash": "0x3f7d6b4d38cec8afbbb448ef4728cb0018c3e65a1d54f5cd6204a21f1c0df64f",
+          "gas": 252469215,
+          "ms": 207.88958300001104
+        },
+        {
+          "firstTic": 326,
+          "tics": 5,
+          "transactionHash": "0x754e584e6064adad813bfbafa251356da8a9db026c22c1c13c61f3bfa5fbee67",
+          "gas": 252196995,
+          "ms": 207.674417000002
+        },
+        {
+          "firstTic": 331,
+          "tics": 5,
+          "transactionHash": "0x1ebfb8d4972f8e0c8ea34ebc2caeab057d44d67ad04dcb231500291b2ef589b6",
+          "gas": 252456774,
+          "ms": 207.63462499997695
+        },
+        {
+          "firstTic": 336,
+          "tics": 5,
+          "transactionHash": "0x2a066d2eba10fbc88519fbbb5add723e752d838cf57d2786d9cf90ed7e02c53d",
+          "gas": 252202985,
+          "ms": 207.0725000000093
+        },
+        {
+          "firstTic": 341,
+          "tics": 5,
+          "transactionHash": "0x9fba8bcd8253e146e21358473b333864e985553da5975806cc3bf2f05add6870",
+          "gas": 252492982,
+          "ms": 207.7120410000207
+        },
+        {
+          "firstTic": 346,
+          "tics": 5,
+          "transactionHash": "0x0b563c0d028dba50418c018febf21bfdf0ecd63e6de5f437ac6afdd813eea1ca",
+          "gas": 647934330,
+          "ms": 516.0090419999906
+        }
+      ],
+      "startupCallMs": 214.60779199999524,
+      "startupGas": 365854484,
+      "resetGas": 423224212,
+      "finalStoredState": {
+        "boundary": "post-render",
+        "nativeSha256": "e3c99a2802b74fee56017147b66dfd4e619b16af01181e80d8cd80a0adbda3c9",
+        "evmSha256": "e3c99a2802b74fee56017147b66dfd4e619b16af01181e80d8cd80a0adbda3c9",
+        "exact": true
+      },
+      "stateStreamSha256": "fc4b86720c461125cb3beb3adc611dc3d7d57ca31d1691f56c9d4a39ea88b2da"
+    },
+    {
+      "name": "death-arena",
+      "tics": 350,
+      "frames": [
+        {
+          "tic": 1,
+          "pixelDiffCount": 0,
+          "sha256": "2aad15f7344ac8d4e91370533ec37e49987157ebb5fde8c4ad4a0b61d61c8a43"
+        },
+        {
+          "tic": 175,
+          "pixelDiffCount": 0,
+          "sha256": "9438a734b8f86283004160dcb1532b88bb377404d6a3e22df9fd3b5ac7399158"
+        },
+        {
+          "tic": 350,
+          "pixelDiffCount": 0,
+          "sha256": "bf5b7f24fd825fddc3d7ac9e3578a56846c84d1a6811837ee16f297b2deaac42"
+        }
+      ],
+      "startup": true,
+      "batches": [
+        {
+          "firstTic": 1,
+          "tics": 5,
+          "transactionHash": "0x50b616d6f576b6dfaf452c8395d92970cdabe368af792f2a9f791c8c48156f6a",
+          "gas": 685367991,
+          "ms": 566.8071659999841
+        },
+        {
+          "firstTic": 6,
+          "tics": 5,
+          "transactionHash": "0x2d0bb74926b408100fea4c014ef5cefeb8981309c756db991c5cbe41f1246efa",
+          "gas": 251825347,
+          "ms": 208.03483299998334
+        },
+        {
+          "firstTic": 11,
+          "tics": 5,
+          "transactionHash": "0x81798b0bd5d65674cd3412e6fb99e87460cbb334fb66a35d8e6de7dfb5a1ce72",
+          "gas": 252126501,
+          "ms": 206.14008299997658
+        },
+        {
+          "firstTic": 16,
+          "tics": 5,
+          "transactionHash": "0x00de70ce1f00a0994bbbe2a04b9c46b3e15a0e8130839bba03147b422812b8a5",
+          "gas": 251893333,
+          "ms": 206.91816700002528
+        },
+        {
+          "firstTic": 21,
+          "tics": 5,
+          "transactionHash": "0x6d5d79f566a2e6960d0376cd06d2aec38c64c0d5fcd1f27d92ae731ddc494c15",
+          "gas": 252166459,
+          "ms": 206.31662500000675
+        },
+        {
+          "firstTic": 26,
+          "tics": 5,
+          "transactionHash": "0x6d3cafd132be32725e5eb1c279fc37b8f34099fb7c85fe4994dfa38e01377775",
+          "gas": 251738677,
+          "ms": 207.85499999998137
+        },
+        {
+          "firstTic": 31,
+          "tics": 5,
+          "transactionHash": "0x8e9af2b831c1ea769bd06ca48206d3044de6628bd1d1332167426a9e4d4c2365",
+          "gas": 252178570,
+          "ms": 207.79633299997658
+        },
+        {
+          "firstTic": 36,
+          "tics": 5,
+          "transactionHash": "0x60a4f88b9c673a8732b7ac20a790d246cf9a899d0f885ed0f98c91ee8041ca98",
+          "gas": 251853331,
+          "ms": 207.77525000000605
+        },
+        {
+          "firstTic": 41,
+          "tics": 5,
+          "transactionHash": "0xd1490155779949e57550711ce4925661545b4a457994ad0e85291a27fb210e39",
+          "gas": 252323499,
+          "ms": 206.65816700001596
+        },
+        {
+          "firstTic": 46,
+          "tics": 5,
+          "transactionHash": "0xe2489eb71915d5462b0136df95eea1983ae968fde05310fe78326eca427de325",
+          "gas": 251651354,
+          "ms": 206.8979999999865
+        },
+        {
+          "firstTic": 51,
+          "tics": 5,
+          "transactionHash": "0x4385c56e05b9df5669e94c13ed65a147424aaf531f56c50c538d3b1387d19e22",
+          "gas": 252964410,
+          "ms": 208.1351250000007
+        },
+        {
+          "firstTic": 56,
+          "tics": 5,
+          "transactionHash": "0x7d94dca9a08d0def9939ab7df43f828c73058a14d277f7af1e1ad6622a9b0757",
+          "gas": 251765275,
+          "ms": 207.95570899997256
+        },
+        {
+          "firstTic": 61,
+          "tics": 5,
+          "transactionHash": "0x2fba16a56c682158ecde5d69550bc58f0aae9a9dbb21bb0198979cc6940b15aa",
+          "gas": 252155483,
+          "ms": 207.47104199999012
+        },
+        {
+          "firstTic": 66,
+          "tics": 5,
+          "transactionHash": "0x1ba4a3812fef8b42d1cfe88c8810275fc524a1907d81da1a686d0f2e7c6b81b1",
+          "gas": 251778178,
+          "ms": 207.81445899998653
+        },
+        {
+          "firstTic": 71,
+          "tics": 5,
+          "transactionHash": "0x313095a2aa7127a1250c584c522deeb59b4c3d585b8ddc5619c15e74089157bd",
+          "gas": 252220157,
+          "ms": 207.7182909999974
+        },
+        {
+          "firstTic": 76,
+          "tics": 5,
+          "transactionHash": "0xed6993a1fe8598b0f37f664d1ba7cdca9feb1511c801b7ae83c5bdd65da8035b",
+          "gas": 251742478,
+          "ms": 208.36462500001653
+        },
+        {
+          "firstTic": 81,
+          "tics": 5,
+          "transactionHash": "0x7f9c4f7c8f82a3a18804c1d0e7820aae3182bf5039764dfe5ebdb5f34d0a1b8a",
+          "gas": 252202605,
+          "ms": 207.4996669999964
+        },
+        {
+          "firstTic": 86,
+          "tics": 5,
+          "transactionHash": "0x50f66c84cc36245c3fabbbebc6dbea2322535db4f523ded9b8289dc1ec8006d0",
+          "gas": 251997516,
+          "ms": 207.60479099999066
+        },
+        {
+          "firstTic": 91,
+          "tics": 5,
+          "transactionHash": "0x031a14b7dd6a9af75bc978020cc71b03dad078190cc52d50cae726d2b9261671",
+          "gas": 252158288,
+          "ms": 207.81166700000176
+        },
+        {
+          "firstTic": 96,
+          "tics": 5,
+          "transactionHash": "0xd50eca5091ca0dd0e2c3e31dbe0d3690571c85973b545e10ad2630742166fd7b",
+          "gas": 251850153,
+          "ms": 207.64175000000978
+        },
+        {
+          "firstTic": 101,
+          "tics": 5,
+          "transactionHash": "0x9b809477a59b3778c646280616e67928d3617945b88b11fcab141c73db05913f",
+          "gas": 252226596,
+          "ms": 206.22691599998507
+        },
+        {
+          "firstTic": 106,
+          "tics": 5,
+          "transactionHash": "0xc84c0e9ede692ef2a9d6a37fa746fab44b9e22cde9248ef6f619f144530de604",
+          "gas": 251865238,
+          "ms": 208.22087499999907
+        },
+        {
+          "firstTic": 111,
+          "tics": 5,
+          "transactionHash": "0xebde482ae37e91fdcbbc7b0bd20ed6808dfe6a101f605c3296fb29478fda3aed",
+          "gas": 252069635,
+          "ms": 207.91337500000373
+        },
+        {
+          "firstTic": 116,
+          "tics": 5,
+          "transactionHash": "0x0891a20b6fec83da27354b0e24d78e9f84749144bc14894522c340c1a7d12e02",
+          "gas": 252561145,
+          "ms": 207.43312500001048
+        },
+        {
+          "firstTic": 121,
+          "tics": 5,
+          "transactionHash": "0xbd34d8c648a21daeadc7336aa6ebdfe5afc7bd4f00edca6dd1b2501268e7f19f",
+          "gas": 252193397,
+          "ms": 207.33787499999744
+        },
+        {
+          "firstTic": 126,
+          "tics": 5,
+          "transactionHash": "0x13f18c1827f530da21483a4823d1d6be4cc7c73a14a7029709e96a2d14bf6593",
+          "gas": 251781204,
+          "ms": 207.94699999998556
+        },
+        {
+          "firstTic": 131,
+          "tics": 5,
+          "transactionHash": "0xdce90d8fc427555d622ef5bd6a3de3ba1caa1235240ebaabd055e34317298449",
+          "gas": 252222244,
+          "ms": 207.46608399998513
+        },
+        {
+          "firstTic": 136,
+          "tics": 5,
+          "transactionHash": "0xd69edafad96cbe34d543cd3c4e97ce4aa8eb7840876b9046a06bb3f593ed41fc",
+          "gas": 251980043,
+          "ms": 208.05549999998766
+        },
+        {
+          "firstTic": 141,
+          "tics": 5,
+          "transactionHash": "0x99b638de7f0c40a20e351cdd997b07240284b064d13b2badde422f6d4ec75cbd",
+          "gas": 252239157,
+          "ms": 207.31950000001234
+        },
+        {
+          "firstTic": 146,
+          "tics": 5,
+          "transactionHash": "0x0d3cc4d29f91ecb429c1e58bd51f1ea782cf00b0ee28cd737459e20cd75d3b74",
+          "gas": 251800349,
+          "ms": 207.76304200000595
+        },
+        {
+          "firstTic": 151,
+          "tics": 5,
+          "transactionHash": "0xbfe583082493e09f82c099978a129a0b2541e4eb7829390fd1a7dd82706befd4",
+          "gas": 252247855,
+          "ms": 207.08058400001028
+        },
+        {
+          "firstTic": 156,
+          "tics": 5,
+          "transactionHash": "0xbebbf0fd4dc8cf7987ed6dc09c0c00fe7e6a78af7ac35688a4d076f51f1bfbac",
+          "gas": 252154970,
+          "ms": 208.02650000000722
+        },
+        {
+          "firstTic": 161,
+          "tics": 5,
+          "transactionHash": "0x469b2f31dc14000b4e3eb99b576c469fb68a8a5960ce2cadd32df1cc8a04533d",
+          "gas": 252289122,
+          "ms": 207.7966669999878
+        },
+        {
+          "firstTic": 166,
+          "tics": 5,
+          "transactionHash": "0xfa529ed23088cd285d5f35a5643241569653900d35fa89ce7730bb009c59c1bf",
+          "gas": 251838376,
+          "ms": 208.1979580000043
+        },
+        {
+          "firstTic": 171,
+          "tics": 5,
+          "transactionHash": "0xe01e47003d19889a393f7f408549c0d654c28803ec49796472eafd2a44fd3310",
+          "gas": 645640482,
+          "ms": 515.0424160000111
+        },
+        {
+          "firstTic": 176,
+          "tics": 5,
+          "transactionHash": "0xbe48574d19e624bbd61e606ef4e6775930d29228fff483e61256b41360dbfa25",
+          "gas": 252073295,
+          "ms": 207.81104199998663
+        },
+        {
+          "firstTic": 181,
+          "tics": 5,
+          "transactionHash": "0xb76e528f1b6aaf68aa1d2fee6bfda0d37c8090b1e3172024a5b47cda2b341ba0",
+          "gas": 252101295,
+          "ms": 207.97620800000732
+        },
+        {
+          "firstTic": 186,
+          "tics": 5,
+          "transactionHash": "0xd976f618a0cf8ba5e3b27b3e1e16eb16a5e3df0e785483fd722fb44e52dd2a3f",
+          "gas": 252986459,
+          "ms": 207.68787500000326
+        },
+        {
+          "firstTic": 191,
+          "tics": 5,
+          "transactionHash": "0x24cf8de24a4fb17877b348a4ad38fd9b0256c0d54935280f64fb7f8f66680fa3",
+          "gas": 252128463,
+          "ms": 208.0863750000135
+        },
+        {
+          "firstTic": 196,
+          "tics": 5,
+          "transactionHash": "0xa475001abe82bca99b46490940c0d527729c48ef385e4129fd3409460df6bf6b",
+          "gas": 251922130,
+          "ms": 207.54404100001557
+        },
+        {
+          "firstTic": 201,
+          "tics": 5,
+          "transactionHash": "0xc647b9c2ef5109785b7c0ae4c640d09e6039aee7f5fa93eb62d32aa709ee09f4",
+          "gas": 252105308,
+          "ms": 206.17050000000745
+        },
+        {
+          "firstTic": 206,
+          "tics": 5,
+          "transactionHash": "0x4c610c78c4c94a19ebe8c0052746c220a4b4ff27a729985c73ac6e8575a13e6b",
+          "gas": 251902018,
+          "ms": 207.28441699998803
+        },
+        {
+          "firstTic": 211,
+          "tics": 5,
+          "transactionHash": "0x180e86447ac61153b9a1d6e5a0f480a36d0afb2ff72da15eb2e3c4e4b2d37289",
+          "gas": 251847795,
+          "ms": 207.93179100000998
+        },
+        {
+          "firstTic": 216,
+          "tics": 5,
+          "transactionHash": "0x78e3bbcea079d26771861b8c1a33089b4646f5450e9e1d2082503bd8a9394fd6",
+          "gas": 251859858,
+          "ms": 207.5828750000219
+        },
+        {
+          "firstTic": 221,
+          "tics": 5,
+          "transactionHash": "0x4e483a5bec8d6523fdeed8579b669cbe15ddb0b49d368a0cd56ff3acfe47922c",
+          "gas": 251932060,
+          "ms": 207.80145800000173
+        },
+        {
+          "firstTic": 226,
+          "tics": 5,
+          "transactionHash": "0x7a72fdfa7dddf8b7d8a4e56b74eae1cd49515e7ab5ef18ddc0c617848c115944",
+          "gas": 251778450,
+          "ms": 207.9613749999844
+        },
+        {
+          "firstTic": 231,
+          "tics": 5,
+          "transactionHash": "0x1664c6470661c9bf913cce753a85884f87757f9344df3215885eab9cb5607895",
+          "gas": 251897730,
+          "ms": 207.48145900000236
+        },
+        {
+          "firstTic": 236,
+          "tics": 5,
+          "transactionHash": "0x0a307aee9a7caf89d68b93a67d04063e91c99e3635ead01183701b4107fbc664",
+          "gas": 251802533,
+          "ms": 207.72691700002179
+        },
+        {
+          "firstTic": 241,
+          "tics": 5,
+          "transactionHash": "0xd57cde0f1083975823174b09fd0820c15d89ad1a602a9fae2f64673c9eb16019",
+          "gas": 251930161,
+          "ms": 210.11054100000183
+        },
+        {
+          "firstTic": 246,
+          "tics": 5,
+          "transactionHash": "0xdf2b4520b1e0e5491a0a3baf145a6da31e68784b7f77c56e069c4dc27675af88",
+          "gas": 251844181,
+          "ms": 207.54583299998194
+        },
+        {
+          "firstTic": 251,
+          "tics": 5,
+          "transactionHash": "0xa6c50643162c96438a3bc3a473ac578136fe02a25ca1a575200cd814dd96b6a3",
+          "gas": 251848524,
+          "ms": 207.63524999999208
+        },
+        {
+          "firstTic": 256,
+          "tics": 5,
+          "transactionHash": "0x8e7a6d62dc14e5039e543cbb9d33e244fcccafb5e92dc4763c48efb596225947",
+          "gas": 251834724,
+          "ms": 207.1099169999943
+        },
+        {
+          "firstTic": 261,
+          "tics": 5,
+          "transactionHash": "0xaca27e8695f2c9a86a28fba2bbdb044a65367b8989205188b1c18f4eee1167ea",
+          "gas": 251897588,
+          "ms": 207.53974999999627
+        },
+        {
+          "firstTic": 266,
+          "tics": 5,
+          "transactionHash": "0xb91abd8f98fa1806868ba711b9bbd3456d7cb35abbd6e165ba2b50a9fe5eb7e3",
+          "gas": 251787737,
+          "ms": 207.65270899998723
+        },
+        {
+          "firstTic": 271,
+          "tics": 5,
+          "transactionHash": "0xd078cd3e8e9c56dda390a9df91100de0f4569d460f001d88cc47fdc89c9b4af1",
+          "gas": 251906018,
+          "ms": 207.64791699999478
+        },
+        {
+          "firstTic": 276,
+          "tics": 5,
+          "transactionHash": "0xee5a72fc1e1f140b0a0343639c0b3d1f286be8bafa8ca196adce5bd3eb5be95d",
+          "gas": 251784005,
+          "ms": 206.01962499998626
+        },
+        {
+          "firstTic": 281,
+          "tics": 5,
+          "transactionHash": "0x4ee9a1e66418a5cbc6e1ec0b4e5e037b3ce761149a0870dd6865be893a24a0da",
+          "gas": 251934815,
+          "ms": 207.97691600001417
+        },
+        {
+          "firstTic": 286,
+          "tics": 5,
+          "transactionHash": "0xc930aa9f025cd791d8177ba09f70308ed2a491ae4ed37be502d7327d487db3b6",
+          "gas": 251836127,
+          "ms": 207.75112500000978
+        },
+        {
+          "firstTic": 291,
+          "tics": 5,
+          "transactionHash": "0x4b15c2b58ba19f36aa3a89902ba26c2b05caea7a3e1facdee2cb0f8623900ef6",
+          "gas": 251844122,
+          "ms": 206.98037499998463
+        },
+        {
+          "firstTic": 296,
+          "tics": 5,
+          "transactionHash": "0x0252e1b981fc623a99b179805d45339658b8b5445685a33de4f017fa8e037269",
+          "gas": 251858175,
+          "ms": 207.63579100000788
+        },
+        {
+          "firstTic": 301,
+          "tics": 5,
+          "transactionHash": "0x243098d74183ef290c2b14c65c979709521f1bf89ef027c77c6d15bae3a43811",
+          "gas": 251905495,
+          "ms": 208.38329199998407
+        },
+        {
+          "firstTic": 306,
+          "tics": 5,
+          "transactionHash": "0xb33b9966b72718d647ba38641bc4d8dd1107e31f6dd4adef55986d35a47d48d4",
+          "gas": 251793810,
+          "ms": 207.48837500001537
+        },
+        {
+          "firstTic": 311,
+          "tics": 5,
+          "transactionHash": "0x048bc2f501df23c6402febbb7c17d24d5ae76340b1ef57c52ef9d566ca48ef66",
+          "gas": 251923291,
+          "ms": 208.66683299999568
+        },
+        {
+          "firstTic": 316,
+          "tics": 5,
+          "transactionHash": "0xa4ae12d7e21a576814e567ed91c666902179a964a2f555af1e70a7e0b9a9ae8a",
+          "gas": 251765090,
+          "ms": 208.11516700001084
+        },
+        {
+          "firstTic": 321,
+          "tics": 5,
+          "transactionHash": "0x1bd1bf00d5dd0444e94df298ba11a3408290646f58e3f641c016d2c3ff68b056",
+          "gas": 251915900,
+          "ms": 207.64795899999444
+        },
+        {
+          "firstTic": 326,
+          "tics": 5,
+          "transactionHash": "0x4a2fb05378c68d34c8f6df17a5546975e435432889ababd4f312b64af0dcd65d",
+          "gas": 251855354,
+          "ms": 156.32604099999298
+        },
+        {
+          "firstTic": 331,
+          "tics": 5,
+          "transactionHash": "0xd0aa28ae3bd31b2c5fe4f3531410d441db80d906d414b8e38d0fb459b48f204c",
+          "gas": 251841112,
+          "ms": 207.83420799998567
+        },
+        {
+          "firstTic": 336,
+          "tics": 5,
+          "transactionHash": "0x1a6ddd2d7d617ccbb5478933b48d6d86b7d63374c237a2a84c9e501ecfd1a3cf",
+          "gas": 251845897,
+          "ms": 156.5413750000007
+        },
+        {
+          "firstTic": 341,
+          "tics": 5,
+          "transactionHash": "0x57c339b8d8ef285aaabf202a24481e11f29511fddcb2e4df00d8acca5d96665e",
+          "gas": 251912478,
+          "ms": 154.16212500000256
+        },
+        {
+          "firstTic": 346,
+          "tics": 5,
+          "transactionHash": "0xbaeb1a6edfdfb1885ae2631788420a11fe683922471f2e3749d0cb56731582da",
+          "gas": 656368490,
+          "ms": 515.891666999989
+        }
+      ],
+      "startupCallMs": 208.6023330000171,
+      "startupGas": 365854576,
+      "resetGas": 423312954,
+      "finalStoredState": {
+        "boundary": "post-render",
+        "nativeSha256": "0c760e46630ba678b486273bda00f2be5f5714dfef87edc2cce1d6b6f9086246",
+        "evmSha256": "0c760e46630ba678b486273bda00f2be5f5714dfef87edc2cce1d6b6f9086246",
+        "exact": true
+      },
+      "stateStreamSha256": "0568ebd0e797930df1d1c309ade3d2bd385ab925f120bbf9ee4acb58f7ee975d"
+    },
+    {
+      "name": "door-use",
+      "tics": 375,
+      "frames": [
+        {
+          "tic": 1,
+          "pixelDiffCount": 0,
+          "sha256": "a6eb4ed43a5077b0a655de0056ed9dd72fc97a2b26cd799a34ad89e019affc69"
+        },
+        {
+          "tic": 187,
+          "pixelDiffCount": 0,
+          "sha256": "f648c31f6683ebc00e1699de1fae3cafac8e739e8ed5329ca1e03d2d8e88e41d"
+        },
+        {
+          "tic": 375,
+          "pixelDiffCount": 0,
+          "sha256": "201590e7cb8bd83fdd1aa430e16564454c9e201962eb32c0837e309460b67050"
+        }
+      ],
+      "startup": true,
+      "batches": [
+        {
+          "firstTic": 1,
+          "tics": 5,
+          "transactionHash": "0x51aca6a4cb1dfe19ef6756d36f0e1641e561f6f376c2d7ab295a4c174536873d",
+          "gas": 568371723,
+          "ms": 464.8555000000051
+        },
+        {
+          "firstTic": 6,
+          "tics": 5,
+          "transactionHash": "0x3d4b2864fe784a92328c92bba870abc72e4515230778d25613f7763ca05a02fb",
+          "gas": 249890138,
+          "ms": 156.43491700000595
+        },
+        {
+          "firstTic": 11,
+          "tics": 5,
+          "transactionHash": "0xfb180957d7dff8954172b2db1d90d354c2ba95e39ef5a249f4f262e0c3765fc5",
+          "gas": 249293284,
+          "ms": 156.31687499998952
+        },
+        {
+          "firstTic": 16,
+          "tics": 5,
+          "transactionHash": "0xb59a966126ad0787861a68780a07a514489dc69ab7ff33b87730d2b51686a561",
+          "gas": 249354239,
+          "ms": 207.98816700000316
+        },
+        {
+          "firstTic": 21,
+          "tics": 5,
+          "transactionHash": "0x356aa92b6d8bd3a8509e6da011f440d63b5d5b8f21fac502d2617a2b9ab439dd",
+          "gas": 249344671,
+          "ms": 207.62541700000293
+        },
+        {
+          "firstTic": 26,
+          "tics": 5,
+          "transactionHash": "0x407af0b8f64c70fd699db6eb66130f191053d546f7ca758485d9ee369529ff6d",
+          "gas": 249277312,
+          "ms": 156.25008300002082
+        },
+        {
+          "firstTic": 31,
+          "tics": 5,
+          "transactionHash": "0xcb67d6f40005aa7bd48c9fa31f97154f5b5bf9c530085e9dbde040af65c663e0",
+          "gas": 249330492,
+          "ms": 156.40391699998872
+        },
+        {
+          "firstTic": 36,
+          "tics": 5,
+          "transactionHash": "0x583945bea29f1c1fbd940329dfaf72e6d9a7c36b4249eed7765a82822f556df7",
+          "gas": 249288065,
+          "ms": 156.15374999999767
+        },
+        {
+          "firstTic": 41,
+          "tics": 5,
+          "transactionHash": "0xfed83c26543231773e8a6eadda0c7056c6e55fcc4b65027b501295924e41b757",
+          "gas": 249374553,
+          "ms": 156.59600000001956
+        },
+        {
+          "firstTic": 46,
+          "tics": 5,
+          "transactionHash": "0x368182d1b185141ecacf0b6d260cfa856de1ef8edc1a7625c993983c6cd59b27",
+          "gas": 249349693,
+          "ms": 154.6370829999796
+        },
+        {
+          "firstTic": 51,
+          "tics": 5,
+          "transactionHash": "0xbd9740c1265b47d6e0a86e493d21bcd809361b620031a02114ced3d9e712ca1a",
+          "gas": 249282280,
+          "ms": 156.6034590000054
+        },
+        {
+          "firstTic": 56,
+          "tics": 5,
+          "transactionHash": "0xf5bc09f8e715c1d05372e4107bcb3c97ef7f72372c82d2237f6c5db058623b06",
+          "gas": 249352487,
+          "ms": 156.75108399998862
+        },
+        {
+          "firstTic": 61,
+          "tics": 5,
+          "transactionHash": "0x98707f9dd157d4869f83fc04ba4c15c09e2d6f55fda67fee80807ec0c3ba7248",
+          "gas": 249337038,
+          "ms": 156.02999999999884
+        },
+        {
+          "firstTic": 66,
+          "tics": 5,
+          "transactionHash": "0x64f884f07801b3d7d2807fa912170da2f7c552141fdb4ec719562d50a9bed358",
+          "gas": 249160248,
+          "ms": 155.85579199998756
+        },
+        {
+          "firstTic": 71,
+          "tics": 5,
+          "transactionHash": "0xa4f393b7c9fc91fea6e126e9f620ab74839ddc927faec409de0ea211ade358db",
+          "gas": 249001053,
+          "ms": 156.22120899998117
+        },
+        {
+          "firstTic": 76,
+          "tics": 5,
+          "transactionHash": "0x192ef15140941c1ccf68df59d591866087bc12463565e72dd3285230197e273e",
+          "gas": 248942274,
+          "ms": 209.41962500000955
+        },
+        {
+          "firstTic": 81,
+          "tics": 5,
+          "transactionHash": "0xd3df4c1983146c977ed972bd571c9ee660aae03da9ecfc89cbde4e78ef2b97bc",
+          "gas": 249013349,
+          "ms": 156.25333300000057
+        },
+        {
+          "firstTic": 86,
+          "tics": 5,
+          "transactionHash": "0x3d00cbf56704e278e5808dd6875ae5114c76e728a35734293c6343db213816c6",
+          "gas": 248996599,
+          "ms": 155.17499999998836
+        },
+        {
+          "firstTic": 91,
+          "tics": 5,
+          "transactionHash": "0x8cf057efb73818cdd5805441a9f5c190c02ad13c64908c1dceed282385af77d4",
+          "gas": 248906884,
+          "ms": 155.13770800002385
+        },
+        {
+          "firstTic": 96,
+          "tics": 5,
+          "transactionHash": "0x4ccec6300d2dc4d48518c5ef0d954716d7703932c30aa0fa56627fbe9498d619",
+          "gas": 249001702,
+          "ms": 155.99937499998487
+        },
+        {
+          "firstTic": 101,
+          "tics": 5,
+          "transactionHash": "0x54340a3706df2288a20422d4a644ca3616b6a09ece87c4e5754cee5d0cefc3cc",
+          "gas": 249002939,
+          "ms": 156.28625000000466
+        },
+        {
+          "firstTic": 106,
+          "tics": 5,
+          "transactionHash": "0xeed60fa87b10076e117e33daa16d66f31d939b25de5f2ef3d948c3c2c9d7a3d8",
+          "gas": 248932491,
+          "ms": 156.02116699999897
+        },
+        {
+          "firstTic": 111,
+          "tics": 5,
+          "transactionHash": "0x2934bf1a20886ca8935d5d9168c9e9cfa2faca2bdb4caa595320145c4807f775",
+          "gas": 248993878,
+          "ms": 156.06295800002408
+        },
+        {
+          "firstTic": 116,
+          "tics": 5,
+          "transactionHash": "0x78ea2e93d1bf1eee61a90139af441ac20327e260a10783b129f68400e675f852",
+          "gas": 248937287,
+          "ms": 156.3511249999865
+        },
+        {
+          "firstTic": 121,
+          "tics": 5,
+          "transactionHash": "0xb213b8e9b023394aea4fb07dfc6d6a566a57ed121e046f296309a1e470a7aeac",
+          "gas": 248994039,
+          "ms": 155.98141599999508
+        },
+        {
+          "firstTic": 126,
+          "tics": 5,
+          "transactionHash": "0x6ddcf3b323de94de479410ee7cee2df991c9c5da785ad1ca74e7401278ac51a0",
+          "gas": 249000510,
+          "ms": 155.83545799998683
+        },
+        {
+          "firstTic": 131,
+          "tics": 5,
+          "transactionHash": "0xe4d3b0e49ddc3820142d5cb32ac3808f61ddf597f88091630ed049e0ba41fcbe",
+          "gas": 248937373,
+          "ms": 156.25341599999228
+        },
+        {
+          "firstTic": 136,
+          "tics": 5,
+          "transactionHash": "0xb62f1500be2094e195885c1e247c47bffc376c5667165b546f0f209bee72f39e",
+          "gas": 249004227,
+          "ms": 156.44425000000047
+        },
+        {
+          "firstTic": 141,
+          "tics": 5,
+          "transactionHash": "0x3414eb1c3c3a8f5195ef3763b4c685f9531931bf2729c8813c4a4b67af2b269f",
+          "gas": 249000440,
+          "ms": 155.99133300001267
+        },
+        {
+          "firstTic": 146,
+          "tics": 5,
+          "transactionHash": "0x44f429731235dc167f1119071d4d7080d865d937637bc937cbc7625ed17b25a6",
+          "gas": 248937607,
+          "ms": 207.05641600000672
+        },
+        {
+          "firstTic": 151,
+          "tics": 5,
+          "transactionHash": "0x3dd9d5cd5f84237b1aac55371e67eb1db6cdd59ea21a9dedf1692dcc5924bb04",
+          "gas": 248977800,
+          "ms": 155.40016599997762
+        },
+        {
+          "firstTic": 156,
+          "tics": 5,
+          "transactionHash": "0xe64d453efa6c5bf22440ba9ba3a20ac2b9d6c288a37064bde7f01318c596461a",
+          "gas": 248936077,
+          "ms": 155.69325000001118
+        },
+        {
+          "firstTic": 161,
+          "tics": 5,
+          "transactionHash": "0xb50f7fdf41ef4b980dd54d735a140994345f95a46f80d231a44de07a7d349f45",
+          "gas": 249017088,
+          "ms": 156.29220799999894
+        },
+        {
+          "firstTic": 166,
+          "tics": 5,
+          "transactionHash": "0x80267ff53b85c3289cc397ca3dda9ec3dc3f591a317b055c3128d79aead15344",
+          "gas": 248999662,
+          "ms": 156.44358299998567
+        },
+        {
+          "firstTic": 171,
+          "tics": 5,
+          "transactionHash": "0xa2f3fc0aa99e3a89d631779d7a290c6ba9cf5a405b66e648b4e4669e86312e2a",
+          "gas": 248932925,
+          "ms": 156.4807499999879
+        },
+        {
+          "firstTic": 176,
+          "tics": 5,
+          "transactionHash": "0x0b8ba39437ad079a6932b443abea284c64d90bfd4eb58e9cf8c8034441ff1a41",
+          "gas": 248991981,
+          "ms": 156.5281670000113
+        },
+        {
+          "firstTic": 181,
+          "tics": 5,
+          "transactionHash": "0x7bd4e16b6a6c2930078d8a47f2bfb8ba5bc257be9bd3b0d19e82bda42e361b65",
+          "gas": 248978696,
+          "ms": 156.20833299998776
+        },
+        {
+          "firstTic": 186,
+          "tics": 5,
+          "transactionHash": "0x565fd6d452582ea6a5f24f753a1da6486e82ec5d5ecaf769fe2bae68e424d09c",
+          "gas": 591909099,
+          "ms": 515.9189999999944
+        },
+        {
+          "firstTic": 191,
+          "tics": 5,
+          "transactionHash": "0xdc3b86c3ddb8181fc7f009c25538813da7fa7b8316195b864ff53da0c419e59b",
+          "gas": 248999916,
+          "ms": 156.5415830000129
+        },
+        {
+          "firstTic": 196,
+          "tics": 5,
+          "transactionHash": "0xf40e48b4977976ba477a3e8991f1d8def7fc58aaa634da41600bf15110b155f9",
+          "gas": 248937506,
+          "ms": 154.40824999997858
+        },
+        {
+          "firstTic": 201,
+          "tics": 5,
+          "transactionHash": "0x51f1a03bb1362c20d0796d792ba0905424ca00d8568acbec1754efd756e8f791",
+          "gas": 249015462,
+          "ms": 155.9546670000127
+        },
+        {
+          "firstTic": 206,
+          "tics": 5,
+          "transactionHash": "0x1223b77ba6a8b8395644d0f7462f1d3daf8b0a2cdf12815136e6af405f8e85ed",
+          "gas": 249001141,
+          "ms": 155.99479100000462
+        },
+        {
+          "firstTic": 211,
+          "tics": 5,
+          "transactionHash": "0x65cef5a0bbb4ecb710f756969f6e64fb0903105dcbda7b9fb686601d731dd09c",
+          "gas": 248918679,
+          "ms": 155.99837499999558
+        },
+        {
+          "firstTic": 216,
+          "tics": 5,
+          "transactionHash": "0xfa2d3a7376a4f17bff94f1f4670547fac237de4e716cb6ccfe6c4466b98547cb",
+          "gas": 249165124,
+          "ms": 154.5999160000065
+        },
+        {
+          "firstTic": 221,
+          "tics": 5,
+          "transactionHash": "0x30a8e6101829ebb2ffd73afff9e1eabeb0afc8c622d5787296f68d2b5f1dc88a",
+          "gas": 249361284,
+          "ms": 156.16237500001444
+        },
+        {
+          "firstTic": 226,
+          "tics": 5,
+          "transactionHash": "0x6c431d5ac72a2daddca1c5437f0508f98b30dc8ff9f3310e2129fe51e51253d2",
+          "gas": 249290570,
+          "ms": 156.37983399999212
+        },
+        {
+          "firstTic": 231,
+          "tics": 5,
+          "transactionHash": "0x63b9d6184928170fa2b24e41865d5da30e94f7a16e55d15bac571728bfa7e842",
+          "gas": 249353070,
+          "ms": 155.79570899999817
+        },
+        {
+          "firstTic": 236,
+          "tics": 5,
+          "transactionHash": "0x26cb0a4aaecdc1f593aa1e712603ac9a4890c8997d962a73bf03e62de0b6c196",
+          "gas": 249290119,
+          "ms": 154.94129199997406
+        },
+        {
+          "firstTic": 241,
+          "tics": 5,
+          "transactionHash": "0xaa6c93761991d9fa74231c58745c778102a2ab931e01b3a9263b4925e1b8f668",
+          "gas": 249346871,
+          "ms": 155.96045799998683
+        },
+        {
+          "firstTic": 246,
+          "tics": 5,
+          "transactionHash": "0x14d677bfd73e08cedf4cd45481546c9971f6f9e6b10335b06cdb12bb57355426",
+          "gas": 249351747,
+          "ms": 155.98629199998686
+        },
+        {
+          "firstTic": 251,
+          "tics": 5,
+          "transactionHash": "0x82b61bafe7dc8948d383fe96b9e4a6bf94b4afef2cdaeab274b612798acf25ca",
+          "gas": 249295480,
+          "ms": 156.16024999998626
+        },
+        {
+          "firstTic": 256,
+          "tics": 5,
+          "transactionHash": "0x393e26dde7e10540d9a91258957c841d3a9bff223c144bf9b32f967b12c1da41",
+          "gas": 249354029,
+          "ms": 156.24145800000406
+        },
+        {
+          "firstTic": 261,
+          "tics": 5,
+          "transactionHash": "0x7e1a9d771763987d8849c849513b25fd4d55f7dc555f5a26b0fe18c7ea1405ac",
+          "gas": 249344086,
+          "ms": 156.58916699999827
+        },
+        {
+          "firstTic": 266,
+          "tics": 5,
+          "transactionHash": "0xb9a4bb8f33b22a6617789294fbdbccf3941971815f31ecd756bc1dd3e6934443",
+          "gas": 249281072,
+          "ms": 206.13829199998872
+        },
+        {
+          "firstTic": 271,
+          "tics": 5,
+          "transactionHash": "0xec5135ee6c89eb79141ab7114dcc202109c0f5e096c758f83ef4ed9bf89f5106",
+          "gas": 249331314,
+          "ms": 207.3599169999943
+        },
+        {
+          "firstTic": 276,
+          "tics": 5,
+          "transactionHash": "0xb1cb96b3c609ecf3fdd2ad44ed977116e119e5eedb954922fc86a7f014632e56",
+          "gas": 249299678,
+          "ms": 207.8287910000072
+        },
+        {
+          "firstTic": 281,
+          "tics": 5,
+          "transactionHash": "0x9c1724beb12393b0b9a7ffd2bcf8a281198744474ae4aa46cbf0a08c66603699",
+          "gas": 249108061,
+          "ms": 207.20833300001686
+        },
+        {
+          "firstTic": 286,
+          "tics": 5,
+          "transactionHash": "0x96ca27f28ee5be041edfa447c75801bd28775a834a1a03cd5f1b69e91b4ab9c6",
+          "gas": 248974575,
+          "ms": 156.0663329999952
+        },
+        {
+          "firstTic": 291,
+          "tics": 5,
+          "transactionHash": "0x80c9f391a73d8598ac0b2491b724c4d2365e5699a6a5dff4afad5e50bafbf6d0",
+          "gas": 248906253,
+          "ms": 155.95079199998872
+        },
+        {
+          "firstTic": 296,
+          "tics": 5,
+          "transactionHash": "0x58684b605a320063be69bfd909dff039bc40a2c0ce6bd48b1b362761f51385a1",
+          "gas": 248975543,
+          "ms": 156.12262499998906
+        },
+        {
+          "firstTic": 301,
+          "tics": 5,
+          "transactionHash": "0xa8f3a5ec32880badda3ecab09552b95c68b35fbf544fbae6a608f0dbe917f7ed",
+          "gas": 248950337,
+          "ms": 156.21141700001317
+        },
+        {
+          "firstTic": 306,
+          "tics": 5,
+          "transactionHash": "0x67df55c0e0f281616cb715adcc24550d53901df209616c4cf88914b31b1b5023",
+          "gas": 248903265,
+          "ms": 155.25029099997482
+        },
+        {
+          "firstTic": 311,
+          "tics": 5,
+          "transactionHash": "0x122870e24e7fce0124f77c461bb2c29f44bb07ac0afef7792cedf0bf4f693652",
+          "gas": 248975803,
+          "ms": 155.26962500001537
+        },
+        {
+          "firstTic": 316,
+          "tics": 5,
+          "transactionHash": "0xc369a5a44e4f99f917097b610948437dd24851a8ba2b4bbf166c6db73e4cfcb8",
+          "gas": 248908051,
+          "ms": 156.09195800000452
+        },
+        {
+          "firstTic": 321,
+          "tics": 5,
+          "transactionHash": "0x397e706f9275d3cc23ce6e527dd399f6ea5709ff014a193d9b43aa8f3c2a97e5",
+          "gas": 248981835,
+          "ms": 155.9598330000008
+        },
+        {
+          "firstTic": 326,
+          "tics": 5,
+          "transactionHash": "0x02448bd005a3fce8b12d341bab9a11365dd39d50eb45186e131551c1232d0ebd",
+          "gas": 248964409,
+          "ms": 156.08058300000266
+        },
+        {
+          "firstTic": 331,
+          "tics": 5,
+          "transactionHash": "0x9ac5239a9c51036299d3bacff27f0500c4069ba072661d24c6438086ba437f84",
+          "gas": 248874694,
+          "ms": 208.04574999999022
+        },
+        {
+          "firstTic": 336,
+          "tics": 5,
+          "transactionHash": "0x775a1ddb7613e40a048df062caa726aa5303d484ce25c12a1a89e2237b7c55b7",
+          "gas": 248970920,
+          "ms": 156.3918330000015
+        },
+        {
+          "firstTic": 341,
+          "tics": 5,
+          "transactionHash": "0xd02679fdadf4c7d63ed877a47ed2aa5078e07dfae3b59459d6bee063cd3dbec0",
+          "gas": 248973179,
+          "ms": 156.54779199999757
+        },
+        {
+          "firstTic": 346,
+          "tics": 5,
+          "transactionHash": "0x4ec2781ab6cde6e3914fcf57f7c82d2d8f6f70b852f2261cf435eb8adfa33823",
+          "gas": 248910018,
+          "ms": 156.25595799999428
+        },
+        {
+          "firstTic": 351,
+          "tics": 5,
+          "transactionHash": "0x1f1d09c5ab102b1e49191a3fc5521af398bb88b3aa782a299aa52831c9d8cc83",
+          "gas": 248965705,
+          "ms": 156.13858299999265
+        },
+        {
+          "firstTic": 356,
+          "tics": 5,
+          "transactionHash": "0xe9cc29af76b28ff601baa4253bf2e93ebbf66960419d479067e0c52d2abfbf19",
+          "gas": 248912143,
+          "ms": 156.3304589999898
+        },
+        {
+          "firstTic": 361,
+          "tics": 5,
+          "transactionHash": "0x4b78729bea571f2060c6d44dac477d2c09862e4c07aa522cc0306b317c514dac",
+          "gas": 248976172,
+          "ms": 156.1940829999803
+        },
+        {
+          "firstTic": 366,
+          "tics": 5,
+          "transactionHash": "0xcf1e9ffe3aef0d957c6f9e0cfcf50cb3e33aa1a5b6bbfec6d6e6668c38c186bc",
+          "gas": 248976218,
+          "ms": 155.70449999999255
+        },
+        {
+          "firstTic": 371,
+          "tics": 5,
+          "transactionHash": "0xbf3bc9f712176ffdc275f6e18836daba1b0e370f405e9c6c7ed14144538d425c",
+          "gas": 537867334,
+          "ms": 464.62404100000276
+        }
+      ],
+      "startupCallMs": 206.89945900000748,
+      "startupGas": 364674832,
+      "resetGas": 423777328,
+      "finalStoredState": {
+        "boundary": "post-render",
+        "nativeSha256": "8b933debbffbad5b20e0990b134fcbd693000bc9f621e684b64c56aba21d3c7f",
+        "evmSha256": "8b933debbffbad5b20e0990b134fcbd693000bc9f621e684b64c56aba21d3c7f",
+        "exact": true
+      },
+      "stateStreamSha256": "0c1498ee52b0438a7a38f7d1fd1b8d8eadbeb65cff927adaae8ac3fcf50af2ef"
+    },
+    {
+      "name": "door-obstructed",
+      "tics": 375,
+      "frames": [
+        {
+          "tic": 1,
+          "pixelDiffCount": 0,
+          "sha256": "a6eb4ed43a5077b0a655de0056ed9dd72fc97a2b26cd799a34ad89e019affc69"
+        },
+        {
+          "tic": 187,
+          "pixelDiffCount": 0,
+          "sha256": "5bc32c636b9447522d297204575b3a5205a85f241d5a656881adc48647aca15b"
+        },
+        {
+          "tic": 375,
+          "pixelDiffCount": 0,
+          "sha256": "b270792f7fb47d105eae938a2d3bc8b3fcd093084771995ac1120f7be122cc58"
+        }
+      ],
+      "startup": true,
+      "batches": [
+        {
+          "firstTic": 1,
+          "tics": 5,
+          "transactionHash": "0xa62027da5af43e01bf20b517f0dc092323c9f72190b004bb6f940aa1f665757f",
+          "gas": 573554340,
+          "ms": 464.7849580000038
+        },
+        {
+          "firstTic": 6,
+          "tics": 5,
+          "transactionHash": "0x2293597ed15e216c840ae8d3e065ae80309cb30b23097719de1c945cc9920c26",
+          "gas": 255918553,
+          "ms": 208.18900000001304
+        },
+        {
+          "firstTic": 11,
+          "tics": 5,
+          "transactionHash": "0x3cb74459fbc9f73c1a8e3bb057e96560ae29e7c8aeb42f8f46eaf7b7f98713c9",
+          "gas": 257095240,
+          "ms": 208.5054999999993
+        },
+        {
+          "firstTic": 16,
+          "tics": 5,
+          "transactionHash": "0xf971130021298f426452dbfc9a10e0d63ac2e1d47b5733e7e928fae0412e8c60",
+          "gas": 254615761,
+          "ms": 206.51550000000861
+        },
+        {
+          "firstTic": 21,
+          "tics": 5,
+          "transactionHash": "0x61a4924b689490b464f069239a983f9f65c17cca822f450914592903f7cc69ca",
+          "gas": 255193708,
+          "ms": 208.83787499999744
+        },
+        {
+          "firstTic": 26,
+          "tics": 5,
+          "transactionHash": "0x4b79cae554418e87bd4c6d5b127ebc9ae4c3ff22b8554772f1cca9cb363b1688",
+          "gas": 254843886,
+          "ms": 208.43016700001317
+        },
+        {
+          "firstTic": 31,
+          "tics": 5,
+          "transactionHash": "0x158b03a1a5844b7fa6aa0211c6ca70fc0b62a2fdb9574bcf66b421a63d350010",
+          "gas": 255427782,
+          "ms": 207.64650000000256
+        },
+        {
+          "firstTic": 36,
+          "tics": 5,
+          "transactionHash": "0xaed9829fcaad15e37bdaee54ecc46226ad10855bece0ecad372cf69d8b5af95c",
+          "gas": 254630426,
+          "ms": 207.58095800000592
+        },
+        {
+          "firstTic": 41,
+          "tics": 5,
+          "transactionHash": "0x06e9456e6caa69400c941fa2f063e6286aac0325d35247d2dd87a2d4171f50db",
+          "gas": 255682819,
+          "ms": 208.27841699999408
+        },
+        {
+          "firstTic": 46,
+          "tics": 5,
+          "transactionHash": "0x5b3e7c17f5de89049c037d73e245e7eddcd117613243200e08f32a9821c3df54",
+          "gas": 254833905,
+          "ms": 207.82874999998603
+        },
+        {
+          "firstTic": 51,
+          "tics": 5,
+          "transactionHash": "0x01c8c5bed3520eb73ac564abd72d8ee9f75e577b78c5d61503476839b437de0d",
+          "gas": 255148317,
+          "ms": 207.66608299998916
+        },
+        {
+          "firstTic": 56,
+          "tics": 5,
+          "transactionHash": "0xd5e700f19a7ed122ec50567048ed971214c7bb7223539cb5fe6d037dd900e960",
+          "gas": 254758611,
+          "ms": 207.37991600000532
+        },
+        {
+          "firstTic": 61,
+          "tics": 5,
+          "transactionHash": "0xd12a3388db9e0ef42051fadb114c50e6a31ef6d7b93ffb17c2bbb9b9fc69089a",
+          "gas": 255611155,
+          "ms": 207.9240840000275
+        },
+        {
+          "firstTic": 66,
+          "tics": 5,
+          "transactionHash": "0x1ea782cea866f21d6b73dac617a8afd6f19c6111fef46bef09a4d11353bbdef8",
+          "gas": 254319427,
+          "ms": 207.7468340000196
+        },
+        {
+          "firstTic": 71,
+          "tics": 5,
+          "transactionHash": "0x73ef11ff5ca8b6a2c15eb83a9bd95ea348fee1875b3b3a24eae719225ffaacac",
+          "gas": 254643698,
+          "ms": 208.2677079999994
+        },
+        {
+          "firstTic": 76,
+          "tics": 5,
+          "transactionHash": "0xe7cab0c06b4a214d3b4fa92a665ca78dc79a7598f40da2c4f185c2bf77de874a",
+          "gas": 254241845,
+          "ms": 208.19375000000582
+        },
+        {
+          "firstTic": 81,
+          "tics": 5,
+          "transactionHash": "0x2ad77bc5e65a90212d8eedeb16c357c627cadc4779e562ecf8702376887b0354",
+          "gas": 255476268,
+          "ms": 207.9690830000036
+        },
+        {
+          "firstTic": 86,
+          "tics": 5,
+          "transactionHash": "0x1b8c664b70f59f5aa9a59ef4ae9841b9782af82f27d474ec63bef2f5cb904eb7",
+          "gas": 254908793,
+          "ms": 208.3109579999873
+        },
+        {
+          "firstTic": 91,
+          "tics": 5,
+          "transactionHash": "0xbb82a5926ec57ac860a1352c9ced090aa32717cc5737c56862267cf862806586",
+          "gas": 255781898,
+          "ms": 206.49520800000755
+        },
+        {
+          "firstTic": 96,
+          "tics": 5,
+          "transactionHash": "0xa8ae9fa6cf280d739568973840a496ccfe5ad3cbccdfc4b1751c2dbafb9740d7",
+          "gas": 257649138,
+          "ms": 208.03670899997815
+        },
+        {
+          "firstTic": 101,
+          "tics": 5,
+          "transactionHash": "0x0a3b442f706424a8ed8e20349f3f9377e05c1809ed74a94e54f1c53ba80fb8e3",
+          "gas": 255505396,
+          "ms": 207.81762499999604
+        },
+        {
+          "firstTic": 106,
+          "tics": 5,
+          "transactionHash": "0x40c4ead51ebb3f4eba1244923d03a90e1ccb67bbbafb3bfb6dacdcb6f6b7e520",
+          "gas": 255161802,
+          "ms": 208.22983399999794
+        },
+        {
+          "firstTic": 111,
+          "tics": 5,
+          "transactionHash": "0x1d2b45442953914662aab801a6283c16b8e07a82cbb92e8911c33349e03b1f5c",
+          "gas": 255935933,
+          "ms": 208.03891699999804
+        },
+        {
+          "firstTic": 116,
+          "tics": 5,
+          "transactionHash": "0x64de3750425451fc95d6054b28c8178d3dd95417708bd0e33a2bca90b3024a48",
+          "gas": 255141854,
+          "ms": 208.06787500000792
+        },
+        {
+          "firstTic": 121,
+          "tics": 5,
+          "transactionHash": "0xbb8141d2545defc7f635abd40606800dd15499487fac8a82600e54de03ca87ef",
+          "gas": 255903073,
+          "ms": 208.56754200000432
+        },
+        {
+          "firstTic": 126,
+          "tics": 5,
+          "transactionHash": "0x876161ac4d8bff90265099f27a1bbcddf8896c802a017a2ab409b4d237be5a24",
+          "gas": 255011436,
+          "ms": 208.08200000002398
+        },
+        {
+          "firstTic": 131,
+          "tics": 5,
+          "transactionHash": "0xa0d38bf5548c0eb7254c04cbac9c368c44f34c268f9b72a4ac1641a8e27d4f35",
+          "gas": 257886677,
+          "ms": 208.18666599999415
+        },
+        {
+          "firstTic": 136,
+          "tics": 5,
+          "transactionHash": "0xd042755a89be631799e50bdc02ea08c657d1637fa77f3f6a2d296e6956b5b3b0",
+          "gas": 256013363,
+          "ms": 206.52483300000313
+        },
+        {
+          "firstTic": 141,
+          "tics": 5,
+          "transactionHash": "0xf43ee348b5e891a4e2c1dd9d4b7ecb3b6e4f22cd0cc3da78b9592760e4d926c1",
+          "gas": 256009571,
+          "ms": 207.69154200001503
+        },
+        {
+          "firstTic": 146,
+          "tics": 5,
+          "transactionHash": "0x9085f27d15bc4fcc1028fe29dcb1fd731fef34ba5592fbeeb905015f6ec5d60c",
+          "gas": 257359568,
+          "ms": 207.7505419999943
+        },
+        {
+          "firstTic": 151,
+          "tics": 5,
+          "transactionHash": "0x935ab325075d3ea74b0766823ff59133e7db2e72e7f5799f0f31d44617a63306",
+          "gas": 256228839,
+          "ms": 206.9134999999951
+        },
+        {
+          "firstTic": 156,
+          "tics": 5,
+          "transactionHash": "0xf106dc5d5c3546c168ec0b2994d17248edcab442e3835fd72c535f54a62978ad",
+          "gas": 256518139,
+          "ms": 208.01833299998543
+        },
+        {
+          "firstTic": 161,
+          "tics": 5,
+          "transactionHash": "0x995f2b94cf1a75ffc90608576fa3d6e1b861378e91af887faed008f7df075dd2",
+          "gas": 255994700,
+          "ms": 208.3800409999967
+        },
+        {
+          "firstTic": 166,
+          "tics": 5,
+          "transactionHash": "0x24b95f475ab77806eb2cf0cab95d7c02e2cbc51212d26e3652e1f8fdaae31b9b",
+          "gas": 256368243,
+          "ms": 207.9967079999915
+        },
+        {
+          "firstTic": 171,
+          "tics": 5,
+          "transactionHash": "0x5a5d7b89e79507fc7a4e9dae3950c2367ed8d83f73ff88f1ef2e24d7dfa1fbd0",
+          "gas": 255840734,
+          "ms": 208.03779200001736
+        },
+        {
+          "firstTic": 176,
+          "tics": 5,
+          "transactionHash": "0xaafdf3cd1a64122b5ae2adc527bdf3a38b7dc26580bab2d890493ea0c25e0a4b",
+          "gas": 256097173,
+          "ms": 208.1640409999818
+        },
+        {
+          "firstTic": 181,
+          "tics": 5,
+          "transactionHash": "0xab578e06a373f6848f00168b6239e6d6b2d9bb8ad9eccd4b0d95562b5d3269bc",
+          "gas": 255951812,
+          "ms": 208.23741699999664
+        },
+        {
+          "firstTic": 186,
+          "tics": 5,
+          "transactionHash": "0x6c90940bf9b42437b7fbd869ec5693f95b8654c709858009c68a0b86313c2803",
+          "gas": 609026636,
+          "ms": 515.4181249999965
+        },
+        {
+          "firstTic": 191,
+          "tics": 5,
+          "transactionHash": "0x7825feaf0281622039d79a834c5e7f3e326e27d9413ad590b65757a9112f7a3c",
+          "gas": 255238036,
+          "ms": 207.85329099997762
+        },
+        {
+          "firstTic": 196,
+          "tics": 5,
+          "transactionHash": "0x9310b96638c710ed3b410b67991c0059f3caf09626c479f7b498aba1509cf566",
+          "gas": 256317989,
+          "ms": 207.9898749999993
+        },
+        {
+          "firstTic": 201,
+          "tics": 5,
+          "transactionHash": "0xb60ac434de77b9752999c4b5f28c6cc9943a73afa20cf64888085d233390e7b1",
+          "gas": 255086804,
+          "ms": 207.9994589999842
+        },
+        {
+          "firstTic": 206,
+          "tics": 5,
+          "transactionHash": "0x1afb20c77ff29312d23994b2235e6883c65f4bcb79b978adf5d3c27523859a02",
+          "gas": 254632563,
+          "ms": 207.65045799998916
+        },
+        {
+          "firstTic": 211,
+          "tics": 5,
+          "transactionHash": "0x70dbfe12c11139f0d8393ee20e1c6c10c604eaa9a7368bb8c92c8a5029797e4e",
+          "gas": 256863969,
+          "ms": 207.88958300001104
+        },
+        {
+          "firstTic": 216,
+          "tics": 5,
+          "transactionHash": "0x30dae28e6239014e181635afaab93ff2e211a315a0fe3ef8c6b5babb65b01f0c",
+          "gas": 255425594,
+          "ms": 208.13245800000732
+        },
+        {
+          "firstTic": 221,
+          "tics": 5,
+          "transactionHash": "0x26555710c7ab006ee7ed40cc12fcf95300d01e7b04f5b7c11225420130af01d3",
+          "gas": 256128159,
+          "ms": 208.01570799999172
+        },
+        {
+          "firstTic": 226,
+          "tics": 5,
+          "transactionHash": "0x76bf16c61734c932b74841402fff694c59e2dd00f36bc40f03732e95095b32a8",
+          "gas": 255956121,
+          "ms": 207.87837500000023
+        },
+        {
+          "firstTic": 231,
+          "tics": 5,
+          "transactionHash": "0x54627eea536a65cefc4e660e29fdc79af94237d01a087e9cdd590425d9e42f01",
+          "gas": 256076605,
+          "ms": 207.76700000002165
+        },
+        {
+          "firstTic": 236,
+          "tics": 5,
+          "transactionHash": "0xfcabf46373aa944a7e33c173a051defff6f1c58be2f5b62f7d4aeddec88fe8e9",
+          "gas": 256004133,
+          "ms": 208.18500000002678
+        },
+        {
+          "firstTic": 241,
+          "tics": 5,
+          "transactionHash": "0xdfd43bf025cffeb55ec769df37db03660ce027c5543d873e4e92a14d48fd4bf1",
+          "gas": 255865781,
+          "ms": 208.05724999998347
+        },
+        {
+          "firstTic": 246,
+          "tics": 5,
+          "transactionHash": "0x118d676a882881ae9d3a6cb8c0d707f1ae78051a3bc8599958ab3888088e6ea7",
+          "gas": 255386165,
+          "ms": 207.48191699999734
+        },
+        {
+          "firstTic": 251,
+          "tics": 5,
+          "transactionHash": "0x0c00b8a5669a5a7acd2698b97390f51d287b221a3494b9d210df6d52d6697c91",
+          "gas": 256136240,
+          "ms": 208.2180839999928
+        },
+        {
+          "firstTic": 256,
+          "tics": 5,
+          "transactionHash": "0x24b3e58036f77209181da4f63cbac37d6fc637b0f5b0d0da200f568ee8cd6581",
+          "gas": 256037380,
+          "ms": 207.96854100000928
+        },
+        {
+          "firstTic": 261,
+          "tics": 5,
+          "transactionHash": "0x5b5182bc927e7db7415d8036aa0b44dbf6138ff68b86f2d5137f6123c8337f45",
+          "gas": 255937595,
+          "ms": 207.15154099999927
+        },
+        {
+          "firstTic": 266,
+          "tics": 5,
+          "transactionHash": "0x6bb2efb1b4dc7c65d0c04d600fb3f868c3b7dc8d86ed56e643751b0b628121b0",
+          "gas": 255818520,
+          "ms": 206.84404199998244
+        },
+        {
+          "firstTic": 271,
+          "tics": 5,
+          "transactionHash": "0x5a857cfa81a2f61784c88715c32d1f1181b78cdb2a8e94eaf26aa8b703dfe361",
+          "gas": 256371681,
+          "ms": 209.37908300000709
+        },
+        {
+          "firstTic": 276,
+          "tics": 5,
+          "transactionHash": "0xc97df21025c98b494e3c651b75df0a690338ece5c7e47a4860453f920fbb78f7",
+          "gas": 255869631,
+          "ms": 208.06637499999488
+        },
+        {
+          "firstTic": 281,
+          "tics": 5,
+          "transactionHash": "0x9374bffb1399290de7e555ae10b376527c491ea436f83fc7dce9a271f13cd1ae",
+          "gas": 256179753,
+          "ms": 208.51345800000126
+        },
+        {
+          "firstTic": 286,
+          "tics": 5,
+          "transactionHash": "0x8fea19fa2d275292bc797195271cd2eea64f1d45643d5d1bafc3f24eceab7e5c",
+          "gas": 254811701,
+          "ms": 208.12437499998487
+        },
+        {
+          "firstTic": 291,
+          "tics": 5,
+          "transactionHash": "0x70143120c51a7ae6b64b508048a0450c2db88d96f4ad3f2771325e2ca7080848",
+          "gas": 255631346,
+          "ms": 208.09379099999205
+        },
+        {
+          "firstTic": 296,
+          "tics": 5,
+          "transactionHash": "0x4190e63cc9fe5f6c6d554363fe79807bbf819d620edf5db3530c075be09d6de9",
+          "gas": 254666307,
+          "ms": 207.8679580000171
+        },
+        {
+          "firstTic": 301,
+          "tics": 5,
+          "transactionHash": "0xa9a5cf0db79eab2f5acf7c149fcafa50e4a3e089039b9f2fec057afcc46155a5",
+          "gas": 256962833,
+          "ms": 207.5542499999865
+        },
+        {
+          "firstTic": 306,
+          "tics": 5,
+          "transactionHash": "0x93f078726256343dfa263285d45e70dbee83d25d187eaa922ff93602ced941be",
+          "gas": 253840342,
+          "ms": 207.4228749999893
+        },
+        {
+          "firstTic": 311,
+          "tics": 5,
+          "transactionHash": "0x0c2baabfccc07b4cdbe4635c8935382e4ac7b0e82e11d97ba7987dccc69bb379",
+          "gas": 255461757,
+          "ms": 206.84029200000805
+        },
+        {
+          "firstTic": 316,
+          "tics": 5,
+          "transactionHash": "0x99026b702d32bb7c55e378f9491ac4926d4ebb85ef18da5ff04eb3b0491a2103",
+          "gas": 255293194,
+          "ms": 207.54274999999325
+        },
+        {
+          "firstTic": 321,
+          "tics": 5,
+          "transactionHash": "0x0ef8521e302d7f2293ccf5e9c018053bea255128362e285a6a1c30a66b0b7d25",
+          "gas": 256761367,
+          "ms": 208.32729200000176
+        },
+        {
+          "firstTic": 326,
+          "tics": 5,
+          "transactionHash": "0x76436a254c6567754daf1a04a9bd4ccad397b3717102918bc27ae24eaddc04a2",
+          "gas": 255452388,
+          "ms": 208.2650830000057
+        },
+        {
+          "firstTic": 331,
+          "tics": 5,
+          "transactionHash": "0xe83641c4828aaa7b6a89559cc4eb972a644a80583a32a1c12a0efd2d81360930",
+          "gas": 255568873,
+          "ms": 208.3499160000065
+        },
+        {
+          "firstTic": 336,
+          "tics": 5,
+          "transactionHash": "0x1f807a800eedfc6d68e987f34c349dfd0abe0d056a42946860dbd4bc8fe1e24a",
+          "gas": 254146162,
+          "ms": 208.05508399999235
+        },
+        {
+          "firstTic": 341,
+          "tics": 5,
+          "transactionHash": "0x76ad7a71ae7027106327531fdb57941418d0c45c0dd1f9330566dd958f78c001",
+          "gas": 256668308,
+          "ms": 208.3404580000206
+        },
+        {
+          "firstTic": 346,
+          "tics": 5,
+          "transactionHash": "0xb833c796177471b30a50d61dee43ea1c7b702a030ae71e66977683396e5f7197",
+          "gas": 254533216,
+          "ms": 208.23541600001045
+        },
+        {
+          "firstTic": 351,
+          "tics": 5,
+          "transactionHash": "0xa6ba767d071ee9ab11ee2211d25114ae96715fa204ecf51e60b2704d0cfbc599",
+          "gas": 255021486,
+          "ms": 207.68520799998078
+        },
+        {
+          "firstTic": 356,
+          "tics": 5,
+          "transactionHash": "0x1b876240c1752dcbb052d1a6679fe9b0a80e2fd948be31fafd4c2ef10b172eb6",
+          "gas": 254224626,
+          "ms": 208.6277499999851
+        },
+        {
+          "firstTic": 361,
+          "tics": 5,
+          "transactionHash": "0x77548c0ff4f54984a4a9c89c865661308f19ec196369a2fc4f9ffaf890de715e",
+          "gas": 255538632,
+          "ms": 208.07370899998932
+        },
+        {
+          "firstTic": 366,
+          "tics": 5,
+          "transactionHash": "0xd9829641be84770c16641c52d1966bb819155f67f1f9a4b25db74e49f53c9107",
+          "gas": 253405246,
+          "ms": 207.81541600002674
+        },
+        {
+          "firstTic": 371,
+          "tics": 5,
+          "transactionHash": "0xfaf98790b8a96b50b99b9c95a12810223fc53822e8b3720157c18a6723f2919d",
+          "gas": 584426104,
+          "ms": 465.6559999999881
+        }
+      ],
+      "startupCallMs": 203.8260420000006,
+      "startupGas": 365607160,
+      "resetGas": 429136151,
+      "finalStoredState": {
+        "boundary": "post-render",
+        "nativeSha256": "4ea3b410794dea341e1bbe7cea75fc4910771a54e01dff8350cbfc0dc877abe9",
+        "evmSha256": "4ea3b410794dea341e1bbe7cea75fc4910771a54e01dff8350cbfc0dc877abe9",
+        "exact": true
+      },
+      "stateStreamSha256": "2dd22946d096d1df8417cbeea632daf47df982a5fa017f76c6e8c966167921b2"
+    }
+  ],
+  "sourceHashes": {
+    "src/doom/d_ticcmd.sol": "508d0332d3e8b83e1b68d37581a3befc100a9974fcaa0900cc44116cd75ff2ef",
+    "src/doom/g_game.sol": "2714f783a532bc2a525d7f50813c472f299c541ee9062a7a5d078e1818791e70",
+    "src/doom/info.sol": "4611205149173e42d3b0f1d91820c8042f6bc5fc48fb53aec84ad4bc501dca8e",
+    "src/doom/m_bbox.sol": "f4c60efe3627a97d0288fc5cd0283535527b1f51029568534c80bb8fbbf8f272",
+    "src/doom/m_fixed.sol": "3f64bef1f62f61faead3a5b8f382bf1c66e1b3739ce4ac8d59a6fcef0451ef9f",
+    "src/doom/m_random.sol": "5267b881138cfb7e0d683449005619513006c70e3ed557f64697b36c4ed40c7b",
+    "src/doom/p_ceilng.sol": "696f3f620f5bddb3cea64fda824e3203c780f53db890630f0685794454dc37f9",
+    "src/doom/p_doors.sol": "945bf600ce86d8286718fb75ecaf905a0c4631d79d2dac7260c91c9dc2013f8d",
+    "src/doom/p_enemy.sol": "eff76cce23b0877833a5c446a1a09d8ae01918a6925b6d3265240b144c09dfe7",
+    "src/doom/p_floor.sol": "b7c90baafa0b74fd7ff80cf60dcbc430148f6d6d068ba54ca0fbc7ba1bca7069",
+    "src/doom/p_game_state.sol": "3e8bd930c7a0aa173365d55d1aaed876207c7cf4c6d1ec57eb4b5c0abb21d252",
+    "src/doom/p_heap.sol": "29f216eedc153e34edcd7be9b79be695c7e534b0a1b307222702e9bd7fafe730",
+    "src/doom/p_info.sol": "a48840479115ea8bf849ca5ec448d1b2bec7a6cfe58c5314e140635a898de792",
+    "src/doom/p_inter.sol": "8be27f9bba47beb46b3edf2a8a2674b3cd7218d2abb8ef5f8855803393d067de",
+    "src/doom/p_lights.sol": "6f63cbc6b41fc492a46ce43aef464deb9d08b7fa1dd8b213b546eec3e4f08276",
+    "src/doom/p_map.sol": "6b6d48523a45acab9090dfb0ec3d6dbab4e6de18afa89453df8b5a87088da0f3",
+    "src/doom/p_maputl.sol": "93f5c0e37761e15675a2640e2be950d8056dcea335db36243f7df9e216069e93",
+    "src/doom/p_mobj.sol": "966cc7bf88a17adc30222f9ac7d735415afcb783dcb9367f5df9cced1df73ff8",
+    "src/doom/p_plats.sol": "6904df762b270f840daa99b34d2a5c689dbb2fef3aed3d33c2ac1a3f3e4d5722",
+    "src/doom/p_pspr.sol": "cfa2db3438d689c38d9c957fc4aee598c58740f025d6efead2b5f9671eb0c863",
+    "src/doom/p_setup.sol": "2da988ba10eac9ba2d905ad408426bfe7fc47c7ba152cebdc13f048f7d62b3d7",
+    "src/doom/p_setup_static.sol": "c8100a42bb0bac190c583bbb2c82168599009f88a766e4c05b9a9231a5f69792",
+    "src/doom/p_sight.sol": "335089a6b126c4be3aff3fbe8081c5968a3062c235fa6f023e6748eb3d9f41fb",
+    "src/doom/p_spec.sol": "2363640e75c22c9d017db677dda7148ad221380f0a23639167e145e933fc72b7",
+    "src/doom/p_switch.sol": "5404d359793e05c6c24a7804c07632150009b46f38d03068412d7ac53260dfe2",
+    "src/doom/p_telept.sol": "745f0fa4ed6f0515c398bfd2469c59aac82316965b7bac25263aeb82555d61b8",
+    "src/doom/p_tick.sol": "cde1c94f77a3ba1d0052cc4a72fb3e20c41a13b6e0c4bd5d359021aaa6a5af0b",
+    "src/doom/p_user.sol": "963a46850e1b17171f79dd65bff9b5006ce6f97a935ad2023d1d526a6ec35c37",
+    "src/doom/r_bsp.sol": "0ae5df313515692d0b2b970d5d39d107e014629cff2305fb37c14371a9524040",
+    "src/doom/r_data.sol": "ab45e09771ea0f3c8ef3c23896c146a6d1a6a0a31f97e0a66ae9dd1e2d612745",
+    "src/doom/r_data_types.sol": "f5ae6de0f06a25dfccd9421580d8f3fca8d2457507cca2d13fce586b3334d02f",
+    "src/doom/r_defs.sol": "558d5a9bfd131e816bbe28986e2dad6144a08e5a16ccfed1b199d7558a1ea0e2",
+    "src/doom/r_draw.sol": "7cdef01556fccc767df44f842f7ce03efea0ec34bd9cfeb6848d30074fb17e06",
+    "src/doom/r_main.sol": "df403bf04fdbbcfc68c4fd9c5e19b5201ca711498efc34db406a4010ad3b2af5",
+    "src/doom/r_plane.sol": "125633121ebe255912bb7f7d6543175cbe40b83eaa7b6d917a1d942c7b7177f1",
+    "src/doom/r_render_hooks.sol": "f026ccb8fffb68d8fbcb0966103212f52884b86350fe3fb52a401d146f3fb312",
+    "src/doom/r_render_state.sol": "072bd2f73b98e1eb775fc8093e95a69c184f3fa50a89a5d64a7beccd59493398",
+    "src/doom/r_segs.sol": "83d59a85fe06be61dcc53d48ef0becab449d97a38985481d7a0c6de6132d80c2",
+    "src/doom/r_sprite_state.sol": "735b3de85cbf455e05d3cb8e992cf4e477960bd4192bbd367f5c66c803b96363",
+    "src/doom/r_state.sol": "e87ff9d88345a53d1f8825fb07b485c782c7bcb55e2de1dc56c876f9b26ab966",
+    "src/doom/r_things.sol": "5d6099c8b388e9a26f63b9de1374fbbbc6bff338ca71c19970a9bb1b04c331f4",
+    "src/doom/tables.sol": "bf14202b419075f6d187653205a37e211d8267c7fc4c0bebf5a8c5713afddf38",
+    "src/evm/DoomGame.sol": "b2f3a5a90db775ffb5e1ad566661b1e3a140c9c7373e69f8ee88ff0b785ac169",
+    "src/evm/DoomRenderer.sol": "5639d82431350ea76c26d43457d26d0c3c0f410eaddf02db6adbcfb03a569ba0",
+    "src/evm/DoomScene.sol": "9ad7c8ccee4c9e05deb5608326baabacfa40f686b8d8445fb8aaa7352ab64569",
+    "src/evm/ResourceTypes.sol": "159865364cfa57aae508cd94c49509cbccabd6aeeba55e92b9fcf816bdec4d6b",
+    "src/evm/WadResources.sol": "25a1acc0a44ac35cc29e5f9bd953ba66b85db4f665b732430571b416ef927895",
+    "src/support/GameplayProbe.sol": "c7eba69f2949f6c003de3a5829db9f5ed4627ac9e0221d6942cc03ab21ac08fe",
+    "tools/reference/gameplay/compare.mjs": "96c81c5b30b96b987f332eb2285ae7ca322dd29eefd691948e07ac4b977adf43",
+    "tools/reference/gameplay/observe.h": "7ae14775b4ebc05bb8da32cff6d1a23be66937640509fd515d35b49c60ee0abe",
+    "test/fixtures/gameplay/manifest.json": "43297a125c59e98539ca159020c19fa0465233a927e2d8e0eb62159219f9c973",
+    "test/fixtures/gameplay_post/manifest.json": "94a2b3376b218cd0883d404a03a50328fc45fa1b6c4f5ff352087cdc53911f4c",
+    "tools/reference/gameplay/post_render.py": "08eb1e34607b77c0fab1b05d28dfac2a3012a613cd6cf0513c4b93e87f427119",
+    "tools/reference/gameplay/post_render_host.c": "d8dac846947d3c64b9878ecbcb6821d63ccfc7ea8b1c405e7d5d70ed4baead41",
+    "foundry.toml": "084d5192108931325837611f9d1339796a6ffd64ed570e31907afe718f191226"
+  },
+  "client": "anvil/v1.8.5",
+  "nodeArgs": [
+    "--host",
+    "127.0.0.1",
+    "--port",
+    "18577",
+    "--hardfork",
+    "cancun",
+    "--disable-code-size-limit",
+    "--disable-block-gas-limit",
+    "--memory-limit",
+    "1073741824",
+    "--silent"
+  ],
+  "deployment": {
+    "address": "0x5ae1f4bb68f8eac39cfdbdfda2b7344ccbd80faf",
+    "transactionHash": "0x09096501fef506f9669acf5d3166854a004a15623ae189a8165d7ad989e739ef",
+    "gas": 231273534,
+    "runtimeBytes": 418858,
+    "all1755ResourceRuntimesVerified": true,
+    "uploadMs": 100412.63162500001,
+    "totalChunkGas": 6271928016
+  },
+  "compiler": {
+    "version": "0.8.37+commit.f401782d",
+    "settings": {
+      "remappings": [],
+      "optimizer": {
+        "enabled": true,
+        "runs": 200
+      },
+      "metadata": {
+        "bytecodeHash": "ipfs"
+      },
+      "compilationTarget": {
+        "src/support/GameplayProbe.sol": "GameplayProbe"
+      },
+      "evmVersion": "cancun",
+      "libraries": {},
+      "viaIR": true
+    }
+  },
+  "completeNativeScenarioSet": true
+}
