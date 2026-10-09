@@ -24,7 +24,7 @@ def main():
                 dest=temp/('scene'+str(angle));dest.mkdir(exist_ok=True)
                 env=dict(os.environ);env['ASAN_OPTIONS']='detect_leaks=0'
                 subprocess.run([str(exe),str(wad),str(dest),str(angle*0x20000000),'walls'],check=True,capture_output=True,env=env)
-                for name in ['definitions.bin','things.bin','vissprites.bin','sorted.bin']+(['projection-edges.bin']+[f'draw-edge{i}.bin' for i in range(6)] if angle==0 else []):
+                for name in ['definitions.bin','things.bin','vissprites.bin','sorted.bin']+(['projection-edges.bin']+[f'draw-edge{i}.bin' for i in range(14)] if angle==0 else []):
                     key=f'angle{angle}/{name}' if name in ['vissprites.bin','sorted.bin'] else name
                     data=(dest/name).read_bytes()
                     if key in profile:assert profile[key]==data

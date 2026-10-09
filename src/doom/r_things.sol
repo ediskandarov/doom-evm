@@ -48,7 +48,10 @@ library R_Things {
     function R_InitSpriteDefs(RenderContext memory c, bytes memory names) internal pure {
         if (names.length % 4 != 0) revert SpriteDefinition();
         uint256 count = names.length / 4;
-        if (count == 0) return;
+        if (count == 0) {
+            c.sprite.definitions = new SpriteDef[](0);
+            return;
+        }
         c.sprite.definitions = new SpriteDef[](count);
         SpriteBuild memory b;
         for (uint256 i; i < count; ++i) {
@@ -271,6 +274,7 @@ library R_Things {
         bytes memory patch = patchLump(c, uint32(v.patch) + c.resources.firstspritelump);
         if (patch.length < 8) revert SpriteBounds();
         if (v.colormap == -1) {
+            c.dc.colormap = new bytes(0); // Original assigns NULL before selecting fuzzcolfunc.
             c.sprite.columnMode = 1;
         } else {
             if (v.colormap < 0) revert SpriteBounds();

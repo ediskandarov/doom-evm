@@ -40,8 +40,10 @@ callback; full pixels require the real wall and masked-range callbacks.
 Synthetic native fixtures exercise near-plane/side rejection, the preserved
 empty projection at x1==viewwidth, left clipping, flip, shadow/fixed/fullbright
 precedence, translation flags, pool overflow, and stable equal-scale sorting.
-Separate synthetic patch frames exercise ordinary, fuzz, translated columns,
-and two active player psprites with ordinary/fullbright/invisibility lighting.
+Fourteen synthetic patch frames exercise ordinary, fuzz, translated columns,
+low-detail dc_x mutation, bottom/top/both silhouette clipping, height-based
+silhouette removal, behind-sprite drawsegs, and two active player psprites with
+ordinary/fullbright/invisibility lighting.
 These are independent native outputs, never inputs to a production frame.
 
 ## Preserved behavior and bounds
@@ -56,6 +58,12 @@ These are independent native outputs, never inputs to a production frame.
 - Masked columns receive a post-header offset. A terminal FF requires only one
   byte; drawn posts retain original integer rounding and clipping. Low-detail
   drawing mutations of dc_x remain visible to subsequent posts/callers.
+- Empty definition reinitialization resets the logical sprite count. Definition
+  error tests cover invalid frame/rotation, duplicate rotation-zero and rotated
+  slots, and mixing rotated/rotation-zero definitions. Terminal-only and malformed
+  post bounds are independently checked.
+- Shadow drawing also clears dc_colormap to NULL, including empty sprites;
+  dedicated scratch-state assertions cover this original side effect.
 - Shadow takes precedence over translation in drawing, and over fixed/fullbright
   lighting in projection. Translated and fuzz columns retain their original
   detail-mode quirks. The masked pass draws sorted sprites, remaining masked

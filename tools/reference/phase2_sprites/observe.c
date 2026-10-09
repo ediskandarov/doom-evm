@@ -73,14 +73,21 @@ static void sprite_edges(const char *directory) {
     patch[0]=8;patch[2]=8;patch[6]=8;
     for(int x=0;x<8;x++) {int offset=40+x*13;memcpy(patch+8+x*4,&offset,4);patch[offset]=0;patch[offset+1]=8;for(int y=0;y<8;y++)patch[offset+3+y]=0x70+(x+y)%16;patch[offset+12]=255;}
     lumpcache[firstspritelump]=patch;
-    for(int mode=0;mode<6;mode++) {
+    for(int mode=0;mode<14;mode++) {
         for(int p=0;p<64000;p++)screens[0][p]=(unsigned char)p;
-        fuzzpos=0;fixedcolormap=NULL;colfunc=basecolfunc=R_DrawColumn;
+        fuzzpos=0;fixedcolormap=NULL;detailshift=(mode>=6 && mode<=8);colfunc=basecolfunc=detailshift?R_DrawColumnLow:R_DrawColumn;
         mfloorclip=screenheightarray;mceilingclip=negonearray;
         vissprite_t v={0};v.x1=140;v.x2=147;v.scale=FRACUNIT;v.xiscale=FRACUNIT;v.texturemid=8*FRACUNIT;v.colormap=colormaps+256*7;
-        if(mode==1)v.colormap=NULL;
-        if(mode==2)v.mobjflags=1<<MF_TRANSSHIFT;
-        if(mode<3)R_DrawVisSprite(&v,0,0);
+        if(mode==1 || mode==8)v.colormap=NULL;
+        if(mode==2 || mode==7)v.mobjflags=1<<MF_TRANSSHIFT;
+        if(mode>=9) {
+            short bottom[320],top[320];for(int x=0;x<320;x++){bottom[x]=96;top[x]=93;}
+            drawseg_t *d=drawsegs;memset(d,0,sizeof(*d));d->x1=140;d->x2=147;d->scale1=d->scale2=2*FRACUNIT;
+            d->silhouette=mode==9?1:mode==10?2:3;d->bsilheight=FRACUNIT;d->tsilheight=7*FRACUNIT;d->sprbottomclip=bottom;d->sprtopclip=top;ds_p=drawsegs+1;
+            v.gzt=8*FRACUNIT;if(mode==12){v.gz=2*FRACUNIT;v.gzt=6*FRACUNIT;}if(mode==13)d->scale1=d->scale2=FRACUNIT/2;
+            R_DrawSprite(&v);
+        }
+        else if(mode<3 || mode>=6)R_DrawVisSprite(&v,0,0);
         else {
             state_t state={0};state.sprite=0;state.frame=mode==4?FF_FULLBRIGHT:0;
             players[0].psprites[0].state=&state;players[0].psprites[0].sx=160*FRACUNIT;players[0].psprites[0].sy=100*FRACUNIT;

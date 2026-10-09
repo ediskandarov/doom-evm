@@ -10,6 +10,8 @@ import {R_Main} from "../../src/doom/r_main.sol";
 import {R_Plane} from "../../src/doom/r_plane.sol";
 import {R_Data} from "../../src/doom/r_data.sol";
 import {R_Segs} from "../../src/doom/r_segs.sol";
+import {ColumnView} from "../../src/doom/r_data_types.sol";
+import {SpriteBuild} from "../../src/doom/r_sprite_state.sol";
 import {ResourceView} from "../../src/doom/r_data_types.sol";
 import {LumpDescriptor} from "../../src/evm/ResourceTypes.sol";
 import {RenderContext, DrawSeg, Visplane} from "../../src/doom/r_render_state.sol";
@@ -302,6 +304,10 @@ contract RThingsTest {
         require(p == data.length);
     }
 
+    function noMasked(RenderContext memory, uint32, int32, int32) internal pure {
+        revert("unexpected mask callback");
+    }
+
     function syntheticPatch() private pure returns (bytes memory patch) {
         patch = new bytes(144);
         patch[0] = 0x08;
@@ -318,7 +324,7 @@ contract RThingsTest {
         }
     }
 
-    function testOriginalDrawModesAndActivePSprites() public view {
+    function testOriginalDrawModesAndActivePSprites() public {
         (RenderContext memory c,) = init();
         c.sprite.definitions[0].frames = new SpriteFrame[](1);
         c.resources.spritewidth[0] = 8 * 65536;
@@ -329,13 +335,15 @@ contract RThingsTest {
         for (uint256 i; i < 48; ++i) {
             c.rs.scalelight[7 * 48 + i] = bytes1(uint8(i % 32));
         }
-        for (uint256 mode; mode < 6; ++mode) {
+        for (uint256 mode; mode < 14; ++mode) {
+            emit SpriteStage("draw mode", mode, 0);
             for (uint256 p; p < 64000; ++p) {
                 c.rs.framebuffer[p] = bytes1(uint8(p));
             }
             c.rs.fuzzpos = 0;
             c.rs.fixedcolormap = -1;
             c.sprite.columnMode = 0;
+            c.rs.detailshift = mode >= 6 && mode <= 8 ? uint8(1) : uint8(0);
             c.sprite.mfloorclip = c.rs.screenheightarray;
             c.sprite.mceilingclip = c.negonearray;
             VisSprite memory v;
@@ -345,9 +353,38 @@ contract RThingsTest {
             v.xiscale = 65536;
             v.texturemid = 8 * 65536;
             v.colormap = 7;
-            if (mode == 1) v.colormap = -1;
-            if (mode == 2) v.mobjflags = 1 << 26;
-            if (mode < 3) {
+            if (mode == 1 || mode == 8) v.colormap = -1;
+            if (mode == 2 || mode == 7) v.mobjflags = 1 << 26;
+            if (mode >= 9) {
+                c.drawsegs = new DrawSeg[](1);
+                c.drawsegCount = 1;
+                DrawSeg memory d = c.drawsegs[0];
+                d.x1 = 140;
+                d.x2 = 147;
+                d.scale1 = 2 * 65536;
+                d.scale2 = 2 * 65536;
+                d.silhouette = mode == 9 ? uint8(1) : mode == 10 ? uint8(2) : uint8(3);
+                d.bsilheight = 65536;
+                d.tsilheight = 7 * 65536;
+                d.sprbottomclip = new int32[](320);
+                d.sprtopclip = new int32[](320);
+                for (uint256 x; x < 320; ++x) {
+                    d.sprbottomclip[x] = 96;
+                    d.sprtopclip[x] = 93;
+                }
+                v.gzt = 8 * 65536;
+                if (mode == 12) {
+                    v.gz = 2 * 65536;
+                    v.gzt = 6 * 65536;
+                }
+                if (mode == 13) {
+                    d.scale1 = 32768;
+                    d.scale2 = 32768;
+                }
+                c.sprite.vissprites = new VisSprite[](1);
+                c.sprite.vissprites[0] = v;
+                R_Things.R_DrawSprite(c, 0, noMasked);
+            } else if (mode < 3 || mode >= 6) {
                 R_Things.R_DrawVisSprite(c, v, 0, 0);
             } else {
                 for (uint256 i; i < 2; ++i) {
@@ -360,11 +397,108 @@ contract RThingsTest {
                 c.sprite.invisibility = mode == 5 ? int32(129) : int32(0);
                 R_Things.R_DrawPlayerSprites(c);
             }
+            if (mode == 1 || mode == 5 || mode == 8) require(
+                c.dc.colormap.length == 0, "shadow NULL colormap"
+            );
             bytes memory expected = vm.readFileBinary(
                 string.concat("test/fixtures/phase2_sprites/draw-edge", vm.toString(mode), ".bin")
             );
             require(keccak256(expected) == keccak256(c.rs.framebuffer), "draw edge");
         }
+    }
+
+    function installDefinitionCase(uint256 which) external pure {
+        RenderContext memory c;
+        c.resources.firstspritelump = 10;
+        SpriteBuild memory b;
+        b.maxframe = -1;
+        for (uint256 f; f < 29; ++f) {
+            b.temp[f].rotate = -1;
+            for (uint256 r; r < 8; ++r) {
+                b.temp[f].lump[r] = -1;
+            }
+        }
+        if (which == 0) {
+            R_Things.R_InstallSpriteLump(c, b, 42, 29, 0, false);
+        } else if (which == 1) {
+            R_Things.R_InstallSpriteLump(c, b, 42, 0, 9, false);
+        } else if (which == 2) {
+            R_Things.R_InstallSpriteLump(c, b, 42, 0, 0, false);
+            R_Things.R_InstallSpriteLump(c, b, 43, 0, 0, false);
+        } else if (which == 3) {
+            R_Things.R_InstallSpriteLump(c, b, 42, 0, 1, false);
+            R_Things.R_InstallSpriteLump(c, b, 43, 0, 0, false);
+        } else if (which == 4) {
+            R_Things.R_InstallSpriteLump(c, b, 42, 0, 0, false);
+            R_Things.R_InstallSpriteLump(c, b, 43, 0, 1, false);
+        } else if (which == 5) {
+            R_Things.R_InstallSpriteLump(c, b, 42, 0, 1, false);
+            R_Things.R_InstallSpriteLump(c, b, 43, 0, 1, false);
+        } else {
+            R_Things.R_InstallSpriteLump(c, b, 42, 0, 0, true);
+            require(b.maxframe == 0 && b.temp[0].rotate == 0);
+            for (uint256 i; i < 8; ++i) {
+                require(b.temp[0].lump[i] == 32 && b.temp[0].flip[i] == 1);
+            }
+        }
+    }
+
+    function testDefinitionErrorsAndZeroRotation() public {
+        for (uint256 i; i < 6; ++i) {
+            try this.installDefinitionCase(i) {
+                revert("expected definition error");
+            } catch (bytes memory why) {
+                require(bytes4(why) == R_Things.SpriteDefinition.selector);
+            }
+        }
+        this.installDefinitionCase(6);
+        RenderContext memory c;
+        c.sprite.definitions = new SpriteDef[](1);
+        R_Things.R_InitSpriteDefs(c, hex"");
+        require(c.sprite.definitions.length == 0);
+    }
+
+    function maskedPost(bytes calldata post) external pure {
+        RenderContext memory c;
+        c.sprite.mfloorclip = new int32[](1);
+        c.sprite.mfloorclip[0] = 200;
+        c.sprite.mceilingclip = new int32[](1);
+        c.sprite.mceilingclip[0] = -1;
+        c.sprite.spryscale = 65536;
+        c.dc.texturemid = 123;
+        R_Things.R_DrawMaskedColumn(c, ColumnView(post, 0));
+        require(c.dc.texturemid == 123);
+    }
+
+    function testTerminalAndMalformedPosts() public {
+        this.maskedPost(hex"ff");
+        this.maskedPost(hex"00000000ff");
+        try this.maskedPost(hex"") {
+            revert("expected bounds");
+        } catch (bytes memory why) {
+            require(bytes4(why) == R_Things.SpriteBounds.selector);
+        }
+        try this.maskedPost(hex"0003ff") {
+            revert("expected bounds");
+        } catch (bytes memory why) {
+            require(bytes4(why) == R_Things.SpriteBounds.selector);
+        }
+    }
+
+    function testEmptyShadowPreservesNullColormap() public view {
+        RenderContext memory c;
+        c.resources.source.lumps = new LumpDescriptor[](1);
+        c.resources.lumpcache = new bytes[](1);
+        c.resources.lumpcache[0] = syntheticPatch();
+        c.dc.colormap = new bytes(256);
+        VisSprite memory v;
+        v.x1 = 320;
+        v.x2 = 319;
+        v.xiscale = 65536;
+        v.scale = 65536;
+        v.colormap = -1;
+        R_Things.R_DrawVisSprite(c, v, 0, 0);
+        require(c.dc.colormap.length == 0 && c.sprite.columnMode == 0 && c.dc.x == 320);
     }
 
     function testProjectionAngle0() public {

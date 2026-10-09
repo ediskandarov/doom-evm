@@ -8,8 +8,8 @@
     "paletteVariant": 0
   },
   "scope": "Original sprite definitions; static spawn fields and sector order; BSP-collected projected vissprites and original stable sort at eight E1M1 angles. Observation only; never renderer inputs.",
-  "observerSha256": "bbf7837083f364bf9c94792b9708d391b79b1f5d7e94bdc4b5490a4a853df7a7",
-  "generatorSha256": "0e75509a3e98483e6a43f7a57f91c1ab2ae67485f17d2880aeea4261900981f4",
+  "observerSha256": "48d16150123f139fed4e251a770e8b5c8ae8e33e9b3ea47be5da3478b9d30f3f",
+  "generatorSha256": "483bcba89d50ff59ea4daecaff163068b8c0a0972e1a95da40cf3483d7229feb",
   "baseHostSha256": "c6ed685b77767853ce8534b17f9c999573dddbb283e199dd5295143fe1b8eb4f",
   "profiles": [
     {
@@ -283,7 +283,7 @@
             }
           }
         ],
-        "hostSha256": "b150e64a67ad399e7a1292f018de32b23f01049d7f622874c5d187850da124d4",
+        "hostSha256": "c2b23db3e90bdf158f5bef197acc33ff72b3016f30907e4acacb1b359661368f",
         "builderSha256": "f699de7c8089962588d5a4d46ce314892e53d583a01dc4c6d315123b63a08918",
         "traceHeaderSha256": "48c52a94b9601cc8cbaa84da117c6fec77537051e2b2b1352e580a55668fe53a",
         "valuesHeaderSha256": "ec2400ddb8bebde33e6fc0873f24ef5cb1cca978916b1b58c52aaaeda0bbcc4f"
@@ -560,7 +560,7 @@
             }
           }
         ],
-        "hostSha256": "b150e64a67ad399e7a1292f018de32b23f01049d7f622874c5d187850da124d4",
+        "hostSha256": "c2b23db3e90bdf158f5bef197acc33ff72b3016f30907e4acacb1b359661368f",
         "builderSha256": "f699de7c8089962588d5a4d46ce314892e53d583a01dc4c6d315123b63a08918",
         "traceHeaderSha256": "48c52a94b9601cc8cbaa84da117c6fec77537051e2b2b1352e580a55668fe53a",
         "valuesHeaderSha256": "ec2400ddb8bebde33e6fc0873f24ef5cb1cca978916b1b58c52aaaeda0bbcc4f"
@@ -839,7 +839,7 @@
             }
           }
         ],
-        "hostSha256": "b150e64a67ad399e7a1292f018de32b23f01049d7f622874c5d187850da124d4",
+        "hostSha256": "c2b23db3e90bdf158f5bef197acc33ff72b3016f30907e4acacb1b359661368f",
         "builderSha256": "f699de7c8089962588d5a4d46ce314892e53d583a01dc4c6d315123b63a08918",
         "traceHeaderSha256": "48c52a94b9601cc8cbaa84da117c6fec77537051e2b2b1352e580a55668fe53a",
         "valuesHeaderSha256": "ec2400ddb8bebde33e6fc0873f24ef5cb1cca978916b1b58c52aaaeda0bbcc4f"
@@ -858,6 +858,14 @@
     "draw-edge3.bin": "faa5306cbc66409796c6b240d15c75322b0ebf8f4326aeb04765a9f62f3340aa",
     "draw-edge4.bin": "faa5306cbc66409796c6b240d15c75322b0ebf8f4326aeb04765a9f62f3340aa",
     "draw-edge5.bin": "264e2fca8d5d740968022d9609f3423f28eacb7e08a2b76d059661f21442435f",
+    "draw-edge6.bin": "5e4f3e0c3b9026975df4a17532e76010d08db61fdcc8a74d87ef2421f0429f44",
+    "draw-edge7.bin": "ed53b120841b23e85e0ba87c27a87dd8540aa0984d636778ba3537636e6a0f55",
+    "draw-edge8.bin": "174046b0efb713cb0893177dcfafea8105ef6097a6ce24309d3d54c455ec3ab1",
+    "draw-edge9.bin": "c238b83b942201cb9d6640ce354646cb8ed890057f4f3f2d2c21a365e83c6ded",
+    "draw-edge10.bin": "ea104f43ffef3320f67c1ae5927f5ca626fe1342f0df786cb0d13f9f2ff2e07f",
+    "draw-edge11.bin": "00b6470cbd1f757a2993d103799d05a61522457e767e17e1ce37c2789fbb19f3",
+    "draw-edge12.bin": "4643c8139ae96800493141dbbddc98096f44b5f991fadf20007bf0e57f83351b",
+    "draw-edge13.bin": "4643c8139ae96800493141dbbddc98096f44b5f991fadf20007bf0e57f83351b",
     "angle1/vissprites.bin": "4c857a9d9c33de312f4cb21788a9d0ff57c81a2759d6b9c0ac5c4a07ffbd1482",
     "angle1/sorted.bin": "489ff27ca3a137a397d343271bdf8cade453d7d559bd971df476bed2f162d78e",
     "angle2/vissprites.bin": "64b7efa736eb74e105a97ba61593cfb6927d58fa71426dfbcdb141c4af3bece0",
