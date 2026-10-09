@@ -397,9 +397,9 @@ contract RThingsTest {
                 c.sprite.invisibility = mode == 5 ? int32(129) : int32(0);
                 R_Things.R_DrawPlayerSprites(c);
             }
-            if (mode == 1 || mode == 5 || mode == 8) require(
-                c.dc.colormap.length == 0, "shadow NULL colormap"
-            );
+            if (mode == 1 || mode == 5 || mode == 8) {
+                require(c.dc.colormap.length == 0, "shadow NULL colormap");
+            }
             bytes memory expected = vm.readFileBinary(
                 string.concat("test/fixtures/phase2_sprites/draw-edge", vm.toString(mode), ".bin")
             );
