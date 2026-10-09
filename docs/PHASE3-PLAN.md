@@ -410,3 +410,20 @@ paths. Do not edit any sources or commit during those source-guarded runs. Bind
 fresh logs/source snapshots and ensure the forced build has not changed the
 engine artifact relative to the runtime proofs. M2/M3 remain unaccepted until
 all required gates and the final requirement-by-requirement review pass.
+
+## Frozen verification checkpoint `2810c8b`
+
+Both runs at `9279bf9` are terminal PASS: all 24 Phase2 commands plus required
+documentation, all 12 Phase0/13 Phase1 commands, 403 Foundry tests, and all 33
+Phase3 native/local commands (53 Node tests and 20 usage tests). All frozen
+source/HEAD/pristine-submodule guards pass.
+[Bounded gate evidence](../artifacts/phase3/final-verification.json).
+
+The forced full build exactly matched prior Doom/GameplayProbe artifacts. The
+last inherited renderer helper then rebuilt three explicit roots and emitted
+another Doom variant: runtime 502,443 bytes versus full-project 503,731, with
+identical consumed source hashes/compiler settings. GameplayProbe stays identical.
+Do not conflate these compiled artifacts or gas receipts. Latest production
+variant complete129-tic run 38271 is active; repeat, Chrome and paired-clone
+measurements will run sequentially afterward. M2/M3 remain unaccepted until
+this final runnable artifact is verified. No source or compiler changes required.
