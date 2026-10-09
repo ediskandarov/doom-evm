@@ -129,12 +129,12 @@
   },
   "generatedSourceSha256": "cd7e80768d58876790d6279279bffe218ef15573ba0ae4a8d32649f53cae5dbe",
   "harnessSha256": {
-    "reference.py": "cce67189f89e5e3ec8813b3f46ee457e62efe8e04bdee1ecfee282dd96c1dbef",
+    "reference.py": "b8c8f601db09614905d9209d6582c75f430070591212d5b01010d012d1fe4a35",
     "compat.h": "e6b59e6af81e49d5747382ae30ab973583e53d2dedf2d56a0ea16900a8f8a594",
-    "driver.c": "2559f98c4ac97fb87820496fcfde60bb2cd2c4ad4026333d41793808a412c765"
+    "driver.c": "92d83efd92508fecc57a25c541af9745949b523c12a46c09dabf4e56a4ba816c"
   },
-  "vectorCount": 95,
-  "vectorsSha256": "f213f31e73f2ae6fd895bf6c33e29ed8ef33bf80bda43106b43963abc2f4f594",
+  "vectorCount": 117,
+  "vectorsSha256": "8a06ed950e9d5076be38924721c0c5f9540329c1c59ffbc7bad5f1d1951e56ba",
   "rendererManifestSha256": "2072276e625d1fe7b47d0511ac70ea621a8b772f813ae8409b1653da2d13fcbd",
   "resourceIdentity": {
     "schemaVersion": 0,

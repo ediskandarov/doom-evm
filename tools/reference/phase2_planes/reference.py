@@ -15,7 +15,12 @@ def rows():
   for sky in [0,1]:
    for light,extra in [(-32,-10),(0,0),(128,1),(320,99)]:
     for fixed in [-1,32]:row(2,4*65536,sky,light,extra,fixed,0xffffffff,detail,0,0)
- row(3,0,0,0,0,-1,0,0,0,0)
+ for mode in [3,4,5]:row(mode,0,0,0,0,-1,0,0,0,0)
+ for detail in [0,1]:
+  row(2,65536,0,128,0,-1,0,detail,0,0)
+  for blocks in range(3,12):
+   width=320 if blocks==11 else blocks*32;height=200 if blocks==11 else (blocks*168//10)&~7
+   row(6,width>>detail,height,0,0,-1,0xffffffff,detail,0,0)
  return out
 
 def main():

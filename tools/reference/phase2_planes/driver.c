@@ -10,9 +10,11 @@ static void setup(int32_t *a){
  for(int i=0;i<4096;i++){flats[0][i]=(i*13)&255;flats[1][i]=(i*17+23)&255;}
  for(int x=0;x<128;x++)for(int y=0;y<128;y++)sky[x][y]=(x*3+y*5)&255;
  spanfunc=detailshift?R_DrawSpanLow:R_DrawSpan;colfunc=detailshift?R_DrawColumnLow:R_DrawColumn;
+ if(a[0]==6){viewwidth=a[1];viewheight=a[2];centerxfrac=(viewwidth/2)*65536;}
  R_ClearPlanes();ds_source=flats[0];planezlight=zlight[3];
 }
 static void dump(void){
+ word(viewwidth);word(viewheight);for(int x=0;x<viewwidth;x++){word(floorclip[x]);word(ceilingclip[x]);}
  int32_t values[]={ds_y,ds_x1,ds_x2,ds_xfrac,ds_yfrac,ds_xstep,ds_ystep,ds_colormap?(int32_t)((ds_colormap-colormaps)/256):-1,dc_x,dc_yl,dc_yh,dc_iscale,dc_texturemid,dc_colormap?(int32_t)((dc_colormap-colormaps)/256):-1,basexscale,baseyscale,planeheight};
  for(unsigned i=0;i<sizeof(values)/sizeof(*values);i++)word(values[i]);
  for(int y=0;y<200;y++){word(cachedheight[y]);word(cacheddistance[y]);word(cachedxstep[y]);word(cachedystep[y]);word(spanstart[y]);}
@@ -29,11 +31,13 @@ int main(int argc,char **argv){
   for(int x=0;x<8;x++){p->top[x]=1+x%3;p->bottom[x]=5+x%2;}
   extralight=a[4];R_DrawPlanes();
  }
- else if(a[0]==3){
+ else if(a[0]==3||a[0]==4){
   visplane_t *p=R_FindPlane(123,0,77);p=R_CheckPlane(p,1,5);p->top[3]=2;
   R_CheckPlane(p,2,4);R_FindPlane(99,skyflatnum,100);R_FindPlane(-999,skyflatnum,-10);
+  if(a[0]==4){dump();return 0;}
   p->pad1=17;p->pad2=18;p->bottom[7]=91;cachedheight[2]=9;cacheddistance[2]=34;cachedxstep[2]=56;cachedystep[2]=78;spanstart[2]=4;
   R_ClearPlanes();R_FindPlane(456,1,88);
  }
- else return 3;dump();return 0;
+ else if(a[0]==5){for(int i=0;i<128;i++)R_FindPlane(i,0,0);}
+ else if(a[0]!=6)return 3;dump();return 0;
 }

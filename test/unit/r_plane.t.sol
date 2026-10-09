@@ -149,6 +149,22 @@ contract RPlanesTest {
         bytes memory expected = vm.readFileBinary(string.concat(dir, "plane-pixels.bin"));
         string memory refdoc = vm.readFile(string.concat(dir, "reference.json"));
         require(
+            sha256(bytes(refdoc))
+                == vm.parseBytes32(
+                    string.concat(
+                        "0x",
+                        vm.parseJsonString(manifest, string.concat('.files["', name, '/reference.json"]'))
+                    )
+                ),
+            "native metadata identity"
+        );
+        require(
+            vm.parseJsonUint(refdoc, ".resourceIdentity.schemaVersion") == 0
+                && vm.parseJsonUint(refdoc, ".resourceIdentity.paletteVariant") == 0
+                && vm.parseJsonUint(refdoc, ".colormap") == 0,
+            "native resource schema and palette"
+        );
+        require(
             sha256(expected)
                 == vm.parseBytes32(
                     string.concat(
@@ -311,6 +327,11 @@ contract RPlanesTest {
         c.resources.flattranslation[0] = 1;
         c.skyflatnum = 99;
         c.skytexturemid = 100 * 65536;
+        if (a[0] == 6) {
+            c.rs.width = uint16(uint32(a[1]));
+            c.rs.height = uint16(uint32(a[2]));
+            c.rs.centerxfrac = int32(uint32(c.rs.width) / 2) * 65536;
+        }
         R_Plane.R_ClearPlanes(c);
         c.ds.source = c.resources.lumpcache[2];
         c.plane.light = 3;
@@ -345,7 +366,7 @@ contract RPlanesTest {
             }
             c.rs.extralight = a[4];
             R_Plane.R_DrawPlanes(c);
-        } else {
+        } else if (a[0] == 3 || a[0] == 4) {
             uint32 n = R_Plane.R_FindPlane(c, 123, 0, 77);
             n = R_Plane.R_CheckPlane(c, n, 1, 5);
             Visplane memory pl = c.visplanes[n];
@@ -353,6 +374,7 @@ contract RPlanesTest {
             R_Plane.R_CheckPlane(c, n, 2, 4);
             R_Plane.R_FindPlane(c, 99, c.skyflatnum, 100);
             R_Plane.R_FindPlane(c, -999, c.skyflatnum, -10);
+            if (a[0] == 4) return snapshot(c);
             pl.top[0] = 0x11;
             pl.top[321] = 0x12;
             pl.bottom[8] = 0x5b;
@@ -364,6 +386,11 @@ contract RPlanesTest {
             R_Plane.R_ClearPlanes(c);
             R_Plane.R_FindPlane(c, 456, 1, 88);
         }
+        if (a[0] == 5) {
+            for (uint32 i; i < 128; ++i) {
+                R_Plane.R_FindPlane(c, int32(i), 0, 0);
+            }
+        }
         return snapshot(c);
     }
 
@@ -373,7 +400,8 @@ contract RPlanesTest {
     }
 
     function snapshot(RenderContext memory c) private pure returns (bytes32) {
-        bytes memory b = new bytes(68 + 4000 + 4 + uint256(c.visplaneCount) * 664 + 2560);
+        bytes memory b =
+            new bytes(8 + uint256(c.rs.width) * 8 + 68 + 4000 + 4 + uint256(c.visplaneCount) * 664 + 2560);
         int32[17] memory values = [
             c.ds.y,
             c.ds.x1,
@@ -394,6 +422,12 @@ contract RPlanesTest {
             c.plane.planeheight
         ];
         uint256 p;
+        p = put(b, p, int32(uint32(c.rs.width)));
+        p = put(b, p, int32(uint32(c.rs.height)));
+        for (uint256 x; x < c.rs.width; ++x) {
+            p = put(b, p, c.floorclip[x]);
+            p = put(b, p, c.ceilingclip[x]);
+        }
         for (uint256 i; i < 17; ++i) {
             p = put(b, p, values[i]);
         }
@@ -507,5 +541,17 @@ contract RPlanesTest {
                             : R_Plane.PlaneBounds.selector)
             );
         }
+    }
+
+    function testNativeConstructionOverlapSkyCoalescing() public view {
+        checkSynthetic(4);
+    }
+
+    function testNativeConstructionCapacity() public view {
+        checkSynthetic(5);
+    }
+
+    function testNativeClearAll18ViewSizes() public view {
+        checkSynthetic(6);
     }
 }

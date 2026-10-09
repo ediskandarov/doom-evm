@@ -32,7 +32,7 @@ function hashes, generated-source hash, harness hashes, pinned compiler and targ
 Only the original top/bottom sentinel accesses are adapted through the enclosing
 object representation, preserving addresses while avoiding array-subobject UB.
 Resource callbacks supply declared synthetic bytes and do not calculate visibility.
-All synthetic snapshots include draw globals, all 200 entries of five cache/span
+All 117 synthetic snapshots include logical dimensions/clips, draw globals, all 200 entries of five cache/span
 arrays, active planes including sentinel bytes, and the first eight physical
 framebuffer rows. Identical output is required at O0/O2 and ASan/UBSan, using the
 pinned `-fwrapv` profile. This is profile equivalence, not an ISO-definedness claim.
@@ -40,8 +40,10 @@ pinned `-fwrapv` profile. This is profile equivalence, not an ISO-definedness cl
 Fixtures cover high/low detail, unsigned angle wrap, cache miss/hit, zero height,
 repeated clear, fixed colormap including index32, negative-distance saturation,
 empty/disjoint/expanding/contracting spans, translated flats, sky full brightness,
-light saturation, sky coalescing, occupied overlap and stale bytes. Existing geometry
-fixtures separately prove all eighteen original view and lighting setups.
+light saturation, sky coalescing, occupied overlap and stale bytes. All eighteen logical view sizes are checked for plane clear bounds and scales;
+existing geometry fixtures separately prove their original view and lighting setup.
+The construction snapshots directly cover occupied splitting, sky tuple coalescing,
+and all 128 valid slots before testing the explicit overflow rejection.
 
 Bounds tests reject invalid rows (including y==height), columns, spans, invalid
 plane indexes, 129th planes, unsafe CheckPlane overflow, and abs(INT_MIN). The
@@ -65,9 +67,9 @@ are allocator positions, not EVM MSIZE. Unit resource chunk placement uses `etch
 in setup; the real renderer reads normal immutable code bytes. Full native scene
 orchestration and deployed-resource/Anvil measurements remain integrator-owned.
 
-With the current allocation-based table API, plane-only regions cost 18.37M–136.39M
-gas; initialization 543.75M–543.89M, BSP/walls 75.48M–275.98M. The allocator advances
+With the current allocation-based table API, plane-only regions cost 18.37M–136.40M
+gas; initialization 543.78M–543.92M, BSP/walls 75.48M–275.99M. The allocator advances
 from 12.75–16.09MB before planes to 12.92–17.69MB afterward. These figures include
 actual memory expansion in the measured call and are not estimates or whole-frame
-sprite costs. All thirteen plane test functions pass under the unchanged 1B limit;
-the largest real-frame comparison is 972.69M including comparison overhead.
+sprite costs. All sixteen plane test functions pass under the unchanged 1B limit;
+the largest real-frame comparison is 972.74M including comparison overhead.
