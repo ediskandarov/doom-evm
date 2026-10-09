@@ -1,0 +1,39 @@
+{
+  "productionSource": "src/doom/r_bsp.sol",
+  "productionSha256": "170770c715e527fdd3fdc3aff7070bb3bbdedbce78b62fba18f2013c4e09107d",
+  "generatorSha256": "96582362472caab084ddf7bcbfda5befe9ec988a707bc6ffbd10fd0c6469606d",
+  "generatedSha256": "6463d32d2ee1f2eb225185c3b1acafd616de17aaaad68eab05b77c849b9ca4f7",
+  "hooks": [
+    {
+      "function": "_enter",
+      "operation": 0,
+      "statement": "_trace(ctx,0,bspnum,0);"
+    },
+    {
+      "function": "R_Subsector",
+      "operation": 1,
+      "statement": "_trace(ctx,1,int32(num),0);"
+    },
+    {
+      "function": "R_ClipSolidWallSegment",
+      "operation": 2,
+      "statement": "_trace(ctx,2,first,last);"
+    },
+    {
+      "function": "R_ClipPassWallSegment",
+      "operation": 3,
+      "statement": "_trace(ctx,3,first,last);"
+    },
+    {
+      "function": "_storeWall",
+      "operation": 4,
+      "statement": "_trace(ctx,4,first,last);"
+    }
+  ],
+  "onlyOtherChanges": [
+    "library name",
+    "relative import paths",
+    "private observation writer"
+  ],
+  "testStorage": "framebuffer bytes0..29999 and fuzzpos; unused by production BSP; callbacks use disjoint bytes30000+ and framecount/validcount"
+}
