@@ -12,4 +12,52 @@ struct RenderState {
     uint16 width;
     uint16 height;
     bytes framebuffer;
+    int32 viewcos;
+    int32 viewsin;
+    int32 centerx;
+    int32 centery;
+    int32 centerxfrac;
+    int32 centeryfrac;
+    int32 projection;
+    uint8 detailshift;
+    uint16 scaledviewwidth;
+    int32 viewwindowx;
+    int32 viewwindowy;
+    uint32[] ylookup;
+    uint32[] columnofs;
+    int32[] viewangletox;
+    uint32[] xtoviewangle;
+    uint32 clipangle;
+    int32[] yslope;
+    int32[] distscale;
+    bytes scalelight; // 16 * 48 colormap indexes, not pointers
+    bytes zlight; // 16 * 128 colormap indexes
+    int32 extralight;
+    int32 fixedcolormap; // -1 is NULL; otherwise a colormap index
+    uint32 fuzzpos;
+}
+
+/// @notice Original dc_* globals passed by memory reference, including original side effects.
+struct DrawColumn {
+    int32 x;
+    int32 yl;
+    int32 yh;
+    int32 iscale;
+    int32 texturemid;
+    bytes source;
+    uint32 sourceOffset;
+    bytes colormap; // precisely 256 palette indexes
+    bytes translation; // translated column only
+}
+
+struct DrawSpan {
+    int32 y;
+    int32 x1;
+    int32 x2;
+    int32 xfrac;
+    int32 yfrac;
+    int32 xstep;
+    int32 ystep;
+    bytes source; // 4096-byte flat
+    bytes colormap;
 }
