@@ -20,7 +20,11 @@ whole-storage rollback guards. Checkpoint `f0bce73` [fresh production evidence](
 records current init 1,621,885,757 gas and runtime 503,731 bytes; old receipts
 remain historical. [Native reconciliation](../tools/reference/gameplay/production-native-reconciliation.json)
 proves every original data file/Frame unchanged. Full kernel 60930 remains running; Chrome/repeat/
-clone memory and final inherited gates remain. No current bytecode-identity claim. The 388-function
+clone memory and final inherited gates remain. Current replay checkpoint
+`0015986` verifies two complete independent ordinary deployments: all 130 × 14
+rows, seven Frames, commands/cadence/sequences, startup/constructor/receipt gas
+and thirteen rejection selectors/gas/whole-storage rollback assertions equal.
+[Fresh replay evidence](../tools/reference/gameplay/production-final-reproducibility-evidence.json). No current bytecode-identity claim. The 388-function
 audit snapshot also needs refresh after the new evidence checkpoint.
 
 Inherited compile headroom checkpoint `bcbe46a`: the 497.56-second dependency build
