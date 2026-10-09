@@ -6,3 +6,4 @@ node_modules/
 artifacts/local/
 web/config.local.json
 __pycache__/
+web/palette.local.json

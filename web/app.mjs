@@ -1,5 +1,6 @@
 // SPDX-License-Identifier: GPL-2.0-only
 import { stepData, makeRpc, receipt, FrameInbox, FrameSubscription, backfill, expandPalette } from './protocol.mjs';
+import { validatePalette } from './palette.mjs';
 const status=document.querySelector('#status'), button=document.querySelector('#step'), canvas=document.querySelector('#frame');
 const proof=window.__transportProof={ready:false,frames:[],errors:[],fallbackVerified:false};
 const fail=error=>{status.textContent=error.message;proof.errors.push(error.message);};
@@ -9,10 +10,8 @@ try {
   const config=await (await fetch('/config.local.json')).json();
   const rpc=makeRpc(config.rpcUrl);
   const palette=await (await fetch(config.paletteUrl)).json();
-  if(palette.kind!=='synthetic'||palette.schemaVersion!==0||palette.encoding!=='rgb8'||palette.colorCount!==256||! /^[0-9a-f]{1536}$/.test(palette.rgbHex)) throw Error('Unexpected synthetic palette');
-  if(JSON.stringify(config.resourceIdentity)!==JSON.stringify(palette.resourceIdentity)) throw Error('Resource/palette identity mismatch');
-  const rgb=Uint8Array.from(palette.rgbHex.match(/../g),x=>parseInt(x,16));
-  if(hex(new Uint8Array(await crypto.subtle.digest('SHA-256',rgb)))!==palette.resourceIdentity.paletteSha256) throw Error('Palette SHA-256 mismatch');
+  const rgb=await validatePalette(palette,config.resourceIdentity,config.paletteKind??'synthetic');
+  proof.paletteKind=palette.kind;proof.paletteSha256=palette.resourceIdentity.paletteSha256;
   let latestBlock=config.deploymentBlock;
   const inbox=new FrameInbox((frame,source)=>{
     canvas.width=frame.width;canvas.height=frame.height;

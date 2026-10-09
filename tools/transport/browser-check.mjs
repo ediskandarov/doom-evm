@@ -10,6 +10,9 @@ import assert from 'node:assert/strict';
 import { serve } from './serve.mjs';
 import { makeRpc,decodeFrame,expandPalette } from '../../web/protocol.mjs';
 process.chdir(fileURLToPath(new URL('../../',import.meta.url)));
+const argv=process.argv.slice(2),option=(name,fallback)=>{const i=argv.indexOf(name);return i<0?fallback:argv[i+1];};
+const palettePath=option('--palette','web/palette.synthetic.json');
+const outputPrefix=option('--output-prefix','artifacts/local/transport-browser');
 const chromePath=process.env.CHROME_BIN??'/Applications/Google Chrome.app/Contents/MacOS/Google Chrome';
 const port=Number(process.env.BROWSER_ANVIL_PORT??18549),rpcUrl=`http://127.0.0.1:${port}`,rpc=makeRpc(rpcUrl);
 let anvil,chrome,server,cdp,profile;
@@ -33,7 +36,7 @@ try {
   anvil.stderr.on('data',x=>anvilError+=x);
   await waitFor(async()=>{if(anvilStartError)throw anvilStartError;if(anvil.exitCode!==null)throw Error(anvilError);try{return await rpc('web3_clientVersion');}catch{return false;}},'Anvil');
   await rpc('anvil_setBlockGasLimit',['0x3b9aca00']);
-  execFileSync(process.execPath,['tools/transport/benchmark.mjs','--rpc',rpcUrl,'--output','artifacts/local/transport-browser-node.json'],{timeout:60000,stdio:['ignore','pipe','inherit']});
+  execFileSync(process.execPath,['tools/transport/benchmark.mjs','--palette',palettePath,'--rpc',rpcUrl,'--output','artifacts/local/transport-browser-node.json'],{timeout:60000,stdio:['ignore','pipe','inherit']});
   server=await serve(0);
   profile=await mkdtemp(join(tmpdir(),'doom-evm-chrome-'));
   chrome=spawn(chromePath,['--headless=new','--no-first-run','--no-default-browser-check','--disable-background-networking','--remote-debugging-port=0',`--user-data-dir=${profile}`,'about:blank'],{stdio:['ignore','ignore','pipe']});
@@ -59,15 +62,16 @@ try {
   const mined=await rpc('eth_getTransactionReceipt',[proof.frames.at(-1).transactionHash]);
   const frame=decodeFrame(mined.logs[0]);
   assert.equal(proof.latestPixelsHex,Buffer.from(frame.pixels).toString('hex'),'complete browser bytes equal mined receipt');
-  const palette=JSON.parse(await readFile('web/palette.synthetic.json','utf8'));
+  const palette=JSON.parse(await readFile(palettePath,'utf8'));
   const expectedRgba=expandPalette(frame,Buffer.from(palette.rgbHex,'hex'));
   assert.equal(proof.rgbaSha256,createHash('sha256').update(expectedRgba).digest('hex'),'all Canvas pixels equal palette-expanded receipt');
   assert.equal(frame.pixels.length,64000);
+  assert.equal(proof.paletteKind,palette.kind);assert.equal(proof.paletteSha256,palette.resourceIdentity.paletteSha256);
   const screenshot=await command('Page.captureScreenshot',{format:'png'});
-  await mkdir('artifacts/local',{recursive:true});await writeFile('artifacts/local/transport-browser.png',Buffer.from(screenshot.data,'base64'));
+  await mkdir('artifacts/local',{recursive:true});await writeFile(outputPrefix+'.png',Buffer.from(screenshot.data,'base64'));
   delete proof.latestPixelsHex;
-  const result={timestamp:new Date().toISOString(),kind:'synthetic-browser-transport',browser:await command('Browser.getVersion'),config,proof,receiptPixelsSha256:createHash('sha256').update(frame.pixels).digest('hex'),allCanvasPixelsMatchReceipt:true,screenshot:'artifacts/local/transport-browser.png'};
-  await writeFile('artifacts/local/transport-browser.json',JSON.stringify(result,null,2)+'\n');console.log(JSON.stringify(result,null,2));
+  const result={timestamp:new Date().toISOString(),kind:'synthetic-browser-transport',browser:await command('Browser.getVersion'),config,proof,receiptPixelsSha256:createHash('sha256').update(frame.pixels).digest('hex'),allCanvasPixelsMatchReceipt:true,screenshot:outputPrefix+'.png'};
+  await writeFile(outputPrefix+'.json',JSON.stringify(result,null,2)+'\n');console.log(JSON.stringify(result,null,2));
 }catch(error){
   console.error(`Browser check failed: ${error.message}`);process.exitCode=1;
 }finally{
