@@ -35,6 +35,13 @@ struct RenderState {
     int32 extralight;
     int32 fixedcolormap; // -1 is NULL; otherwise a colormap index
     uint32 fuzzpos;
+    int32 pspritescale;
+    int32 pspriteiscale;
+    int32[] screenheightarray;
+    bytes scalelightfixed;
+    uint32 framecount;
+    uint32 validcount;
+    uint32 sscount;
 }
 
 /// @notice Original dc_* globals passed by memory reference, including original side effects.

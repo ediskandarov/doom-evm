@@ -28,6 +28,8 @@ Internal pure functions:
 
 Original uint32 angle wraps are explicit. Signed-overflow/shift extensions must be distinguished from defined-C equivalence and audited against the native profile. No regenerated floating trig.
 
+Reviewed amendment: retain setup side effects `pspritescale`, `pspriteiscale`, `screenheightarray`, `scalelightfixed`, `framecount`, `validcount`, `sscount` in RenderState. Integration initializes original `validcount=1` before first setup; counters use explicit uint32 wrapping as a deterministic extension beyond the signed C overflow domain.
+
 ## Render state / drawing API
 
 `r_state.sol` adds only Batch 2A fields to the existing context. `width,height` are logical view dimensions; `scaledviewwidth` includes detail doubling. The physical screen/framebuffer is always 320x200 for M1. `R_InitBuffer` sets offsets into that physical framebuffer; `center*` and projection match r_main. Existing Phase 0 tests can continue to use small standalone context byte buffers.
