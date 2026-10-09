@@ -26,9 +26,9 @@ including invalidation during a pending preparation receipt. No runtime claim.
 All completed module/kernel proofs below are committed. Production adapter and real gameplay browser tooling remain pending their separate checkpoint commits. **Phase 3 is
 active; M2 and M3 are unaccepted.** Committed production `Doom.sol` remains the
 accepted Phase 2 static renderer; its working-tree gameplay adapter is a draft.
-The complete public test-probe verifies eight scenarios, 2,205 tics and 24 frames.
+The new atomic public test-probe verifies nine scenarios, 2,355 tics and 31 frames.
 The draft production adapter verifies 129 keyboard tics and six frames. Real
-Chrome gameplay currently fails at tic five; final acceptance remains pending.
+Chrome gameplay now passes all six frames; final inherited acceptance is pending.
 Do not infer engine acceptance from completed module ports or finite passing streams.
 
 `Implemented` means source exists; `integrated` means the stated consumer really
@@ -107,16 +107,19 @@ no engine change. Production draft evidence separately covers 129 keyboard tics,
 The static real Chrome transport/Canvas gate also passes. These scopes are evidence,
 not M2/M3 closure, and will require rechecking after allocator integration.
 
-Current engine blocker: real gameplay Chrome passes four exact frames and 14
+Historical resolved engine blocker: real gameplay Chrome passed four frames and 14
 fields, then tic five (mask 128, sequence 7) reverts with DrawBounds at
 538,537,735 gas. Failed transaction:
 `0xd28123618d70997eb485b1f4bce9126b6567a8ec064ab6542506f550e4caa677`.
-Storage remains inputSeq 6 / gametic 4. Report:
+That old instance remains inputSeq 6 / gametic 4. Report:
 `artifacts/local/phase3-gameplay-browser.json`. Four native profiles reproduce
 frac −1 sampling PLAYW0 offset 1148 of a 1128-byte lump: next LP64 zone-header ID
 offset 20, written ZONEID low byte 17, mapped to palette index 139. This is a
 logical asset overread inside the larger zone allocation, not proven ISO C UB.
 Cause evidence: `artifacts/local/draw-diagnostic/conclusion.json`.
+The new source-derived backing adapter resolves this without changing sampling:
+Chrome 72876 now matches all six native frames and Canvas bytes. Final gates and
+repeated streams, rather than this resolved revert, are the remaining blockers.
 
 Verified recovery checkpoints:
 
@@ -179,13 +182,17 @@ Core policy checkpoint `bb0c375` is committed: five default/override/invalid-inp
 Node/Python/Bash/Zsh parity tests pass, and a TOML comparison proves only the gas
 default changed. Consumers are separate pending checkpoints; full 10B acceptance
 has not run.
+Legacy JS checkpoint `f2402cd` converts eight benchmark/browser consumers;
+syntax/configuration checks pass and deliberate low-gas rejections remain.
+[Wiring evidence](../artifacts/phase3/execution-js-checkpoint.json). Their complete
+inherited runtime gates are pending.
 
 Production and probe initialization drafts now call `DoomGame.initializeNative`
 for original R_Init/R_InitSprites then G_InitNew/P_Setup in **one transaction**.
 Resources decode once. Public preparation APIs have been removed from the draft;
-old staged browser support is explicitly historical capability only. A new full
-atomic native-header test exists, but has not run. Do not promote earlier proofs
-to this new source snapshot.
+old staged browser support is explicitly historical capability only. The new full
+atomic native-header test passes with separately retained evidence; do not promote
+the historical one-billion records to this new source snapshot.
 
 The completed historical staged production run 44500 remains separate: 129 tics,
 14 fields, six exact native frames, 17 rollback rejections and all 1,755 ordinary
@@ -199,8 +206,20 @@ Ownership: root owns shared budget loaders/default/Foundry/shell setup, atomic
 Doom/DoomGame/probe and final gates; reference agent owns Python Anvil/probe/gate
 consumer updates and the new atomic header test; interface agent owns legacy JS
 benchmark/browser consumers; input agent owns browser/config budgets and atomic
-production/MSIZE tooling. No active compiler yet; next serialized gate verifies
-atomic headers and frozen public artifacts after consumer changes settle.
+production/MSIZE tooling. Atomic 35080 passes all four setup tests at 10B; the new
+test uses 1,624,686,931 fixture-inclusive gas. Public code generation passes.
+Production 93227 verifies one initialization at **1,621,868,997 actual gas** and
+129 tics / 14 fields / six frames / 13 whole-storage rollback rejections. Chrome
+72876 verifies all six native/receipt/Canvas frames, including old failing tic five.
+Kernel 19797 verifies **nine scenarios / 2,355 tics / 31 frames / nine final stored
+states**, including rocket blast damage/removal. These source-bound workstreams
+await separate final code/evidence commits; M2/M3 remain unaccepted.
+
+MSIZE clone 41920 and cadence 74863 pass paired-clone gas and three-way storage/
+field/native-pixel checks. Measured clone boundaries: atomic init 19,665,056 bytes;
+steps 8,749,760–8,753,856; frames 11,918,816–11,956,800. These are literal clone
+high-water values, not exact untouched-production peaks. Second full production
+stream, refreshed audit and frozen inherited gates remain. No active compiler.
 
 Next dependency order:
 
