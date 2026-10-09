@@ -1,0 +1,123 @@
+{
+  "schemaVersion": 1,
+  "upstreamCommit": "a77dfb96cb91780ca334d0d4cfd86957558007e0",
+  "compiler": "Apple clang version 17.0.0 (clang-1700.0.13.5)",
+  "target": "arm64-apple-darwin24.6.0",
+  "flags": [
+    "-std=c11",
+    "-fsigned-char",
+    "-fwrapv",
+    "-fno-strict-aliasing",
+    "-ffp-contract=off",
+    "-fno-fast-math"
+  ],
+  "profiles": {
+    "O0": [
+      "-O0"
+    ],
+    "O2": [
+      "-O2"
+    ],
+    "sanitize": [
+      "-O2",
+      "-fsanitize=address,undefined",
+      "-fno-sanitize-recover=all"
+    ]
+  },
+  "caseCount": 6025,
+  "inputWords": 16,
+  "outputWords": 42,
+  "scope": "all give functions, all pickup sprites, damage/armor/invulnerability/sector11/death with null inflictor/source, CheckAmmo selection; cyclic state/audio/removal/spawn hooks declared test doubles; full gameplay oracle separate",
+  "extractions": [
+    {
+      "file": "p_inter.c",
+      "function": "P_GiveAmmo",
+      "startLine": 73,
+      "endLine": 160,
+      "sha256": "dcbcd1cf2695d756aeb3592ba144d673afc62ef49f80f65b8cff44b4ee910dc9"
+    },
+    {
+      "file": "p_inter.c",
+      "function": "P_GiveWeapon",
+      "startLine": 167,
+      "endLine": 220,
+      "sha256": "b95cca389a8fcaf19303cee853fb6b75c9bd2b82952a42e0028e8c280f0f0f58"
+    },
+    {
+      "file": "p_inter.c",
+      "function": "P_GiveBody",
+      "startLine": 228,
+      "endLine": 242,
+      "sha256": "4cd6d0f24d23b8569906df4635e9b4bd1c3ecf5893829490d37de42dc7647b72"
+    },
+    {
+      "file": "p_inter.c",
+      "function": "P_GiveArmor",
+      "startLine": 251,
+      "endLine": 266,
+      "sha256": "beae6f3d7564ebba878a5145106f5681092c709bbdbcf36bc14b7ab0fc07616c"
+    },
+    {
+      "file": "p_inter.c",
+      "function": "P_GiveCard",
+      "startLine": 273,
+      "endLine": 283,
+      "sha256": "340b764f1dfd8ee67d719593d48a22957eb67343386a6ddaf68cd110f3b79185"
+    },
+    {
+      "file": "p_inter.c",
+      "function": "P_GivePower",
+      "startLine": 289,
+      "endLine": 331,
+      "sha256": "4c288905f4b3183fe14aaf669cdd8da9542ce0518d25e33cf1d2e75802cef108"
+    },
+    {
+      "file": "p_inter.c",
+      "function": "P_TouchSpecialThing",
+      "startLine": 338,
+      "endLine": 661,
+      "sha256": "0139eb43ac50bcc649c2d11fc63ef8e54fae5dd53540cf554efd1e38b881d965"
+    },
+    {
+      "file": "p_inter.c",
+      "function": "P_KillMobj",
+      "startLine": 667,
+      "endLine": 758,
+      "sha256": "0d235081ba69200e9b01d41bfed298935dddf519e74bd132071acae7d4bb66db"
+    },
+    {
+      "file": "p_inter.c",
+      "function": "P_DamageMobj",
+      "startLine": 774,
+      "endLine": 917,
+      "sha256": "d0d6d30c312bdec3810a1e5f43fcdb838d3c9ef8ccd6fd8ecdd41c10d90aa45c"
+    },
+    {
+      "file": "p_pspr.c",
+      "function": "P_CheckAmmo",
+      "startLine": 161,
+      "endLine": 240,
+      "sha256": "6958c147539917b3b1b897477ff654992ebe7564b53004d08f8df2408f093751"
+    }
+  ],
+  "generatedSourceSha256": "f5c6dbf6c501e73420910587d49811f7c4bbb9e484268a0b0a53235d9b9b9521",
+  "sources": {
+    "p_inter.c": "72e9bbabe560ef548c2f2522494786347d5c831b0e1f0ecb5cb29d8d8e682356",
+    "p_pspr.c": "b47100f9c2c2c4f7913831c170bff55161af2d5d01f5467dbbc6be081c4f1af1",
+    "info.c": "e09631527669ee528bdae20a47be79e1cb33972b39964c33ac4814e1701a0949",
+    "d_items.c": "76531d5366de1157cf3d8510ef749617cfc46b6e721845bda4324cd697028fe6",
+    "m_random.c": "8d89f5cfcbbd0170e46b55538c4c272b3cf5b5d7dce91023b8aa8d9b922b21ee",
+    "m_fixed.c": "a4472841bc8890c5d5a41b325ecf56d10d7026a7489967aa29100b5dee759fea",
+    "tables.c": "db8759f4311654c63785dcffb8f73a00a61cfe2713e4284c238dea420b6e5f89",
+    "doomdef.h": "643daca966fb762fa86f39ce9a1779355117578527bf2e295163647f9ad0d74e",
+    "d_player.h": "9c9a342ab7c3661ab02d32890bd0d74ede94a0745ae0d622de83a9ae11046ffb",
+    "p_local.h": "8d71f591ed5f26580042d991558c89d674b683f9cd1c2801ac7714de04b0185f",
+    "d_englsh.h": "b018968e3aef65e0009d6ec676d40c8731b33e2882758640d3028c530c87a789"
+  },
+  "harnessSha256": {
+    "reference.py": "5bca64fc22335a9358740a6998b6eecce7b9937d761468807d6cdaf33f7eaa15",
+    "host.c": "558f3eea882bf6a2253ec7e443b8b899b9f3d9735e315514710f9072e1d85f3a",
+    "driver.c": "4b602f65eeeae3316a695abec18b9104f7e4a2014225556cb5ed578b65a53005"
+  },
+  "vectorsSha256": "8c65ac39a803c3c4729a759d44d8784037165fc05b22083dc1c04ffb40c4b93f"
+}

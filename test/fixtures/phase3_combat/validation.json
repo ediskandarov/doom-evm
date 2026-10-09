@@ -1,0 +1,44 @@
+{
+  "schemaVersion": 1,
+  "verifiedAt": "2026-10-09T14:53:19.069867+00:00",
+  "upstreamCommit": "a77dfb96cb91780ca334d0d4cfd86957558007e0",
+  "scope": "isolated combat modules; not M2/M3 integrated acceptance",
+  "forge": {
+    "commandExact": ".toolchain/bin/forge test --match-contract 'PPsprTest|PInterTest' --skip p_map.t.sol --skip p_maputl.t.sol --skip p_enemy.sol -vv",
+    "exitCode": 0,
+    "passed": 24,
+    "failed": 0,
+    "skipped": 0,
+    "interactionTests": 15,
+    "weaponTests": 9
+  },
+  "native": {
+    "interactionCases": 6025,
+    "weaponScenarios": 72,
+    "weaponTics": 11520,
+    "interactionOutputsPerCase": 42,
+    "weaponOutputsPerTic": 33,
+    "commands": [
+      "python3 tools/reference/phase3_combat/reference.py --check",
+      "python3 tools/reference/phase3_combat/weapons.py --check"
+    ],
+    "profiles": "pinned Clang O0/O2/ASan/UBSan; negative signed weapon shifts separately audited"
+  },
+  "sha256": {
+    "src/doom/p_pspr.sol": "cfa2db3438d689c38d9c957fc4aee598c58740f025d6efead2b5f9671eb0c863",
+    "src/doom/p_inter.sol": "8be27f9bba47beb46b3edf2a8a2674b3cd7218d2abb8ef5f8855803393d067de",
+    "test/unit/p_pspr.t.sol": "4b919349f7c85bd957df3407a854fc3da4fa7734fd01a232443eb974151ee3c4",
+    "test/unit/p_inter.t.sol": "04cb0de064744c2e97f21ba6a5e6de008907e47e2470ff28497485074266cd71",
+    "tools/reference/phase3_combat/reference.py": "5bca64fc22335a9358740a6998b6eecce7b9937d761468807d6cdaf33f7eaa15",
+    "tools/reference/phase3_combat/weapons.py": "f25857c2b899e74b79b4bfc17b20c77c4ceceaa679bf12752bf8485a3b27b805",
+    "tools/reference/phase3_combat/host.c": "558f3eea882bf6a2253ec7e443b8b899b9f3d9735e315514710f9072e1d85f3a",
+    "tools/reference/phase3_combat/driver.c": "4b602f65eeeae3316a695abec18b9104f7e4a2014225556cb5ed578b65a53005",
+    "tools/reference/phase3_combat/weapon_host.c": "d35347dbab31c16e97d21402f9103c7e01151d41770a15e83264661a8362a0bc",
+    "tools/reference/phase3_combat/weapon_driver.c": "fbcc9537ab6a96bb94ebffcf82383f353cf57de05b48a49a920901948975e83b",
+    "test/fixtures/phase3_combat/vectors.bin": "8c65ac39a803c3c4729a759d44d8784037165fc05b22083dc1c04ffb40c4b93f",
+    "test/fixtures/phase3_combat/manifest.json": "e72b635d6322e3a707eaa739fcbf518018a6c4c601a12484d6b2be5a99dbc578",
+    "test/fixtures/phase3_combat/weapons.bin": "c3f902a022b705419473f6fd3f3a718ed5e44fc0be8febee8360dbec0069cec2",
+    "test/fixtures/phase3_combat/weapons.json": "61071dcce89fd56bb1a9207573c43f7acdc8faa09998970f9c7bca41109f5d23",
+    "docs/PHASE3-COMBAT.md": "9fc1cab67f098fa78e6f8036e6399af92d68850274df14b200c32d2880c33053"
+  }
+}

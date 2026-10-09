@@ -1,0 +1,51 @@
+{
+  "schemaVersion": 1,
+  "upstreamCommit": "a77dfb96cb91780ca334d0d4cfd86957558007e0",
+  "compiler": "Apple clang version 17.0.0 (clang-1700.0.13.5)",
+  "target": "arm64-apple-darwin24.6.0",
+  "flags": [
+    "-std=c11",
+    "-fsigned-char",
+    "-fwrapv",
+    "-fno-strict-aliasing",
+    "-ffp-contract=off",
+    "-fno-fast-math"
+  ],
+  "profiles": {
+    "O0": [
+      "-O0"
+    ],
+    "O2": [
+      "-O2"
+    ],
+    "sanitize": [
+      "-O2",
+      "-fsanitize=address,undefined",
+      "-fno-sanitize=shift-base",
+      "-fno-sanitize-recover=all"
+    ]
+  },
+  "scenarioCount": 72,
+  "ticsPerScenario": 160,
+  "inputWords": 5,
+  "outputWords": 33,
+  "scope": "all9weapons x ammo0/100 x held/pulsedattack x hit/nohit, strengthat70, deathat120; BFGsprayat100; canonicalstateactioncascades; cyclicmap/missile/damage/noisehooks recorded sinks",
+  "originalUndefinedShiftAudit": "original/linuxdoom-1.10/p_pspr.c:482:37: runtime error: left shift of negative value -15\nSUMMARY: UndefinedBehaviorSanitizer: undefined-behavior original/linuxdoom-1.10/p_pspr.c:482:37",
+  "undefinedSemantics": "Original negative (P_Random()-P_Random()) left shift is ISO C undefined; pinned O0/O2 equality audited. Solidity uses explicit wrapping multiplication; sanitizer/audit omit -fwrapv; all other UBSan categories and ASan active.",
+  "sources": {
+    "p_pspr.c": "b47100f9c2c2c4f7913831c170bff55161af2d5d01f5467dbbc6be081c4f1af1",
+    "info.c": "e09631527669ee528bdae20a47be79e1cb33972b39964c33ac4814e1701a0949",
+    "d_items.c": "76531d5366de1157cf3d8510ef749617cfc46b6e721845bda4324cd697028fe6",
+    "m_random.c": "8d89f5cfcbbd0170e46b55538c4c272b3cf5b5d7dce91023b8aa8d9b922b21ee",
+    "m_fixed.c": "a4472841bc8890c5d5a41b325ecf56d10d7026a7489967aa29100b5dee759fea",
+    "tables.c": "db8759f4311654c63785dcffb8f73a00a61cfe2713e4284c238dea420b6e5f89",
+    "r_main.c": "2aae43cf807929a8758f71ed0205fc08017556541ba8df2ea9167c003d0dec5a"
+  },
+  "harnessSha256": {
+    "weapons.py": "f25857c2b899e74b79b4bfc17b20c77c4ceceaa679bf12752bf8485a3b27b805",
+    "weapon_host.c": "d35347dbab31c16e97d21402f9103c7e01151d41770a15e83264661a8362a0bc",
+    "weapon_driver.c": "fbcc9537ab6a96bb94ebffcf82383f353cf57de05b48a49a920901948975e83b"
+  },
+  "generatedSourceSha256": "155b371b6be6cd39920aa62fc7f9c8187b4e2a5a4a9c6d322ab6f086cd3c7798",
+  "vectorsSha256": "c3f902a022b705419473f6fd3f3a718ed5e44fc0be8febee8360dbec0069cec2"
+}
