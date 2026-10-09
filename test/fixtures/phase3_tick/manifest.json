@@ -1,0 +1,20 @@
+{
+  "upstreamCommit": "a77dfb96cb91780ca334d0d4cfd86957558007e0",
+  "compiler": "Apple clang version 17.0.0 (clang-1700.0.13.5)",
+  "target": "arm64-apple-darwin24.6.0",
+  "profiles": "O0/O2/ASan+UBSan exact",
+  "scenarios": 8,
+  "sourceSha256": {
+    "p_tick.c": "21a638b7b1ae4fcb6b6892a731cd27d20f44e2df12dd3325c8215ca4c9aee22f",
+    "d_think.h": "a8d3d4943495c729cd33b67eff1b56d801f1cf8cd0db74fb5d63b613c4eabddc",
+    "p_local.h": "8d71f591ed5f26580042d991558c89d674b683f9cd1c2801ac7714de04b0185f",
+    "doomstat.h": "c8b9eb311ec529a371c1c49dbd9a571ee07976dfd1bdc83d26b77ff6ba163355",
+    "d_player.h": "9c9a342ab7c3661ab02d32890bd0d74ede94a0745ae0d622de83a9ae11046ffb"
+  },
+  "hostSha256": "2c9a17b1856fec0244470db6b9e311d54c4c5691dfcb599d30942f326b6e07e2",
+  "generatorSha256": "38b9347b9b65111768ec841d839870d4fdafd17db8a01174afbdcdfb1202eed4",
+  "vectorsSha256": "d2ab24e1826b5867d48462beaf8c9238e9d4e1550745ebb7e6c5e799a2e14504",
+  "scope": "Original full p_tick.c: player order, pause/menu exceptions, append in same tic, stasis, lazy removal and current-next read after callbacks.",
+  "adaptation": "Unit Z_Free marks callback deallocation but retains static node bytes for original next-pointer read. No allocation/reuse equivalence claimed; real original z_zone is independently covered by the integrated gameplay oracle.",
+  "encoding": "u32 8; each step: leveltime,eventcount,events,count,(id,prev,next,status)*count,created,freedFlags*created; status active0/stasis1/removed2"
+}

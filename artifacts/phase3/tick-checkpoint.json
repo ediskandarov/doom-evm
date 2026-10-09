@@ -1,0 +1,20 @@
+{
+  "version": 1,
+  "scope": "Original p_tick scheduling with declared callbacks; not integrated M2/M3 acceptance",
+  "native": "Entire original translation unit, eight sequential snapshots, O0/O2/ASan+UBSan exact",
+  "forge": {
+    "command": ".toolchain/bin/forge test --match-path 'test/unit/{p_map,p_maputl,p_tick,GameHeap,g_game,p_info,m_random}.t.sol' --skip p_enemy.t.sol -vv",
+    "batchPassed": 22,
+    "tickTestPassed": 1,
+    "tickTestGas": 432876,
+    "exitCode": 0
+  },
+  "sourceSha256": {
+    "src/doom/p_tick.sol": "cde1c94f77a3ba1d0052cc4a72fb3e20c41a13b6e0c4bd5d359021aaa6a5af0b",
+    "test/unit/p_tick.t.sol": "10e1e60b69a40d591c928e7c42d0b090dfb53f7200f09a151fa1b7ebffce0cb4",
+    "tools/reference/phase3_tick/reference.py": "38b9347b9b65111768ec841d839870d4fdafd17db8a01174afbdcdfb1202eed4",
+    "test/fixtures/phase3_tick/manifest.json": "9d6b6f6d121e93131b92797bbf27ca410d495811ca2f04e59eed8ec08aa24224",
+    "test/fixtures/phase3_tick/vectors.bin": "d2ab24e1826b5867d48462beaf8c9238e9d4e1550745ebb7e6c5e799a2e14504",
+    "docs/PHASE3-TICK.md": "abf498882e2b927f97977397c33ae4d040c7e978c20515389872da21da290afb"
+  }
+}
