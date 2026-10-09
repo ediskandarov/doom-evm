@@ -61,3 +61,5 @@ Integrator owns shared structs, interfaces, schemas, foundry config, Doom glue, 
 3. Drawing: `src/doom/r_draw.sol`, `test/unit/r_draw.t.sol`, `tools/reference/phase2_draw/**`, `test/fixtures/phase2_draw/**`, `docs/PHASE2-DRAW.md`.
 
 Native extensions import/reuse the existing reference harness and mechanically extract original functions; they may not rewrite the oracle algorithms. Existing Phase 1 fixtures/harness remain unchanged. Each delivery supplies exact upstream/source hashes, native and Forge commands, domain/deviation audit, memory-safe assembly proofs, gas and memory probes. No edits to shared types without an integrator-reviewed amendment. Later BSP/segs and plane/sprite contexts are frozen at their prerequisite integration gates, before those agents begin.
+
+Reviewed test harness amendment: Foundry may read `test/fixtures` and `artifacts/local/wad`. Large pinned resource fixtures may use `vm.etch` in isolated unit tests only, with separate CREATE tests. Deployment and end-to-end gates must upload real code contracts using ordinary transactions, without `setCode`/`etch`.
