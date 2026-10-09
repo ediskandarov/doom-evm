@@ -1,0 +1,4 @@
+{
+  "kind": "projectile-arena",
+  "notes": "Original P_SetupLevel then actual possessed spawn 64 east, CheckPosition, angle ANG180, target player and original seestate; player angle0, blue armor200, missile owned/ready, pending nochange, six missiles, actual P_SetupPsprites. Host ordinary argv selects no alternate setup branch."
+}

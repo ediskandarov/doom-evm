@@ -1,0 +1,33 @@
+{
+  "executedCommand": "python3 tools/reference/gameplay_projectile/reference.py > artifacts/local/projectile-native.log 2>&1",
+  "session": 11456,
+  "kind": "generation",
+  "exitCode": 0,
+  "profiles": [
+    "O0",
+    "O2",
+    "ASan+UBSan",
+    "ASan+UBSan fill0xa5"
+  ],
+  "tics": 150,
+  "selectedFrames": [
+    1,
+    35,
+    44,
+    49,
+    65,
+    115,
+    150
+  ],
+  "events": {
+    "A_FireMissile": 4,
+    "P_SpawnPlayerMissile": 4,
+    "P_ExplodeMissile": 2,
+    "P_RadiusAttack": 2,
+    "P_KillMobj": 1
+  },
+  "scope": "Native-only bounded original projectile-world scenario; EVM comparison pending.",
+  "manifestSha256": "95af1d8ea3400b5f94f0ca2581e9bf7132dc71935ec6d9f022d21124a46b4bb7",
+  "actualRadiusDamageCalls": 1,
+  "priorOutputHashesRetained": 17
+}
