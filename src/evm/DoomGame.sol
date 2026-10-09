@@ -102,9 +102,8 @@ library DoomGame {
         RenderContext memory renderer;
         renderer.resources = R_Data.R_InitDataLazy(source);
         R_Things.R_InitSprites(renderer, Info.load().spriteNames);
-        zone = Z_Zone.Z_Init(
-            64 * 1024 * 1024, uint32(source.lumps.length + renderer.resources.textures.length)
-        );
+        zone =
+            Z_Zone.Z_Init(64 * 1024 * 1024, uint32(source.lumps.length + renderer.resources.textures.length));
         DoomZoneStartup.replay(zone, renderer.resources, renderer.sprite.definitions);
     }
 
@@ -125,6 +124,28 @@ library DoomGame {
     {
         c.resources = R_Data.R_InitDataLazy(source);
         c.state.nativeZone = zone;
+        initializeContext(c, nomonsters);
+    }
+
+    /// @notice Original resource preparation and level initialization in one call.
+    /// @dev Decode resources once, then replay R_Init/R_InitSprites before G_InitNew.
+    /// No native allocation tape, prepared world or pixels enter the engine.
+    function initializeNative(ResourceView memory source, bool nomonsters)
+        internal
+        view
+        returns (GameContext memory c)
+    {
+        c.resources = R_Data.R_InitDataLazy(source);
+        RenderContext memory renderer;
+        renderer.resources = c.resources;
+        R_Things.R_InitSprites(renderer, Info.load().spriteNames);
+        c.state.nativeZone =
+            Z_Zone.Z_Init(64 * 1024 * 1024, uint32(source.lumps.length + c.resources.textures.length));
+        DoomZoneStartup.replay(c.state.nativeZone, c.resources, renderer.sprite.definitions);
+        initializeContext(c, nomonsters);
+    }
+
+    function initializeContext(GameContext memory c, bool nomonsters) private view {
         c.definitions = P_Info.load();
         c.state.gameskill = 2;
         c.state.gamemode = 3;

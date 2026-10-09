@@ -194,4 +194,18 @@ contract PZoneSetupTest {
             "original setup actual actor/special allocation counts"
         );
     }
+
+    function testFullAtomicInitializationMatchesNativeHeaders() public view {
+        // One real initialization call performs original R_Init/R_InitSprites
+        // allocation replay and original G_InitNew/P_Setup without staged state.
+        GameContext memory c = DoomGame.initializeNative(source(), false);
+        assertHeaders(c.state.nativeZone, "setup-headers.bin");
+        require(
+            c.state.mobjCount == 210 && c.state.lightFlashCount == 3 && c.state.strobeCount == 6,
+            "atomic original setup actual actor/special allocation counts"
+        );
+        for (uint256 i; i < 9; ++i) {
+            require(c.state.nativeMapBlocks[i] != 0, "atomic native typed map allocation retained");
+        }
+    }
 }

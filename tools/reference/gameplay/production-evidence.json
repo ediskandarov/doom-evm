@@ -1,0 +1,476 @@
+{
+  "schemaVersion": 1,
+  "kind": "production-keyboard-gameplay-checkpoint",
+  "pass": true,
+  "commands": {
+    "productionNative": "python3 tools/reference/gameplay/production.py",
+    "productionAcceptance": "node tools/reference/gameplay/production.mjs --keep-node",
+    "browserNative": "python3 tools/reference/gameplay/production.py --profile browser",
+    "generatorUpdateVerification": "python3 tools/reference/gameplay/production.py --output artifacts/local/gameplay-production-generator-check",
+    "repeatNativeCheck": "python3 tools/reference/gameplay/production.py --profile browser --check",
+    "syntax": "node --check tools/reference/gameplay/production.mjs",
+    "forge": "Root separately compiled the unmodified production artifact; this tooling never invokes Forge."
+  },
+  "coverage": {
+    "setup": "Original medium-skill retail E1M1; no arena or controlled gameplay setup; all1755 authenticated resource chunks deployed by ordinary CREATE and runtime-byte verified.",
+    "startup": {
+      "gametic": 0,
+      "nativeFieldsExact": 14,
+      "emitsFrame": false,
+      "existingStaticFramePreserved": true
+    },
+    "heldKeyboardTics": 129,
+    "noRenderTics": 123,
+    "selectedLiveFrames": 6,
+    "livePixelComparisons": 384000,
+    "allStatusCameraFieldsExactAfterEveryTic": true,
+    "fieldNames": [
+      "gametic",
+      "leveltime",
+      "health",
+      "armor",
+      "weapon",
+      "x",
+      "y",
+      "z",
+      "angle",
+      "momx",
+      "momy",
+      "momz",
+      "viewz",
+      "prndindex"
+    ],
+    "stateObservationRows": 130,
+    "fieldComparisons": 1820,
+    "keyboardBuilder": "Entire original G_BuildTiccmd mechanically extracted unchanged. Python emits physical held masks only; native C builds each command.",
+    "nativeFrames": [
+      {
+        "sha256": "b736bf38b2992db3851d33e7d8ea3bc7d6036d13d45d5030823829a6cdd62133",
+        "tic": 1
+      },
+      {
+        "sha256": "eb796481fcebe298ded1f0697549b34cf5fb542330cc26396f6a9bdefd3d4fce",
+        "tic": 20
+      },
+      {
+        "sha256": "e220b8e47580b89cbaab457aceb396390f1b222a506abf60abb84b80255d97b8",
+        "tic": 40
+      },
+      {
+        "sha256": "ff733adbf5302742153e2a6c6062c899e947eab14a2fe9b0194fca91bfa88aed",
+        "tic": 69
+      },
+      {
+        "sha256": "747d990d75e2baef32b13cd0f49d7bb4efaaf7f84a66ca9bfdc75ca427c3dd6d",
+        "tic": 100
+      },
+      {
+        "sha256": "c7734b764b20c091d7686c28fb2d76dc0924872ad6cb35cc26be5bee4e6c6ae7",
+        "tic": 129
+      }
+    ],
+    "rejections": [
+      {
+        "label": "non-driver initialize",
+        "error": "NotDriver",
+        "selector": "0x0c0e646e",
+        "transactionHash": "0x37d511d30d84734670abf2371096dbb7d6e3ba23cacec87412ea035ec786751b",
+        "gas": 21463,
+        "allStorageRollback": true
+      },
+      {
+        "label": "step before startup",
+        "error": "GameNotStarted",
+        "selector": "0x3a5f7b57",
+        "transactionHash": "0xcb7e493ee3afe45168b301069b352f19f409f43c9f6a89bae2891e0cd3f3c370",
+        "gas": 23855,
+        "allStorageRollback": true
+      },
+      {
+        "label": "held movement before startup",
+        "error": "UnsupportedButtons",
+        "selector": "0x750706e2",
+        "transactionHash": "0x2ccb079bb3d4029808741eb8b7e385814eda82601de96946e6500f518f10e196",
+        "gas": 23803,
+        "allStorageRollback": true
+      },
+      {
+        "label": "sequence zero before startup",
+        "error": "BadSequence",
+        "selector": "0xb986d7fb",
+        "transactionHash": "0x03181f929b7edd6c09f0f27bbc8198835658897a2f83c82fcd0ad662a55d836d",
+        "gas": 26105,
+        "allStorageRollback": true
+      },
+      {
+        "label": "initialize twice",
+        "error": "GameAlreadyStarted",
+        "selector": "0xba26162b",
+        "transactionHash": "0x195e61626ffd7400f773d38b891c03a45374e55a219990e2d4aa2bef5fa7c113",
+        "gas": 23585,
+        "allStorageRollback": true
+      },
+      {
+        "label": "non-driver step",
+        "error": "NotDriver",
+        "selector": "0x0c0e646e",
+        "transactionHash": "0x1098915a3eb1cff2d4cff573d6dd928a7fc9146a244bd078845dd84840c1d63c",
+        "gas": 23921,
+        "allStorageRollback": true
+      },
+      {
+        "label": "non-driver frame",
+        "error": "NotDriver",
+        "selector": "0x0c0e646e",
+        "transactionHash": "0x89bdb9b2e4c9a5e2685ef0a7c033b30375d36ed5d85385ece1d9357b7377d299",
+        "gas": 23819,
+        "allStorageRollback": true
+      },
+      {
+        "label": "non-driver renderFrame",
+        "error": "NotDriver",
+        "selector": "0x0c0e646e",
+        "transactionHash": "0x9e851ba6b1110b13c39314cc18f4b9bb5ccf4692160bde8001c8f699fdc76891",
+        "gas": 23473,
+        "allStorageRollback": true
+      },
+      {
+        "label": "repeated accepted sequence",
+        "error": "BadSequence",
+        "selector": "0xb986d7fb",
+        "transactionHash": "0x040052bcd6dcead05fcd8716781e9c1781c55d0bbc7e3ec8f9b79afb0fa8da5a",
+        "gas": 26190,
+        "allStorageRollback": true
+      },
+      {
+        "label": "skipped sequence",
+        "error": "BadSequence",
+        "selector": "0xb986d7fb",
+        "transactionHash": "0xc9c22ecc79fca9bc2d8fa016836bdb1a0cb2e4bb5c8bcbbd9857a107ac49a253",
+        "gas": 26088,
+        "allStorageRollback": true
+      },
+      {
+        "label": "zero sequence after startup",
+        "error": "BadSequence",
+        "selector": "0xb986d7fb",
+        "transactionHash": "0x31276808cd4743d2f0e1c22edc955d97a400589a8e9d7294ccc1ef203199fa67",
+        "gas": 26178,
+        "allStorageRollback": true
+      },
+      {
+        "label": "reserved input bits",
+        "error": "UnsupportedInputBits(uint32)",
+        "selector": "0x56faaba9",
+        "transactionHash": "0xbad75455b411350ebd105f743eea70462e51c4a3e8bed1f969b0c6efc9b0dfce",
+        "gas": 171581414,
+        "allStorageRollback": true
+      },
+      {
+        "label": "invalid weapon request",
+        "error": "InvalidWeaponRequest(uint8)",
+        "selector": "0x8b5662aa",
+        "transactionHash": "0xbe1629f2977eaf47cf59153412bd482c66a6b23bdc240d21739428dab16b6c20",
+        "gas": 171581363,
+        "allStorageRollback": true
+      }
+    ],
+    "rollback": "Every rejected call has its exact custom-error selector verified by eth_call, followed by mined status0/logs0. eth_getProof account storageHash and codeHash plus public lifecycle/counters are equal before and after each rejected transaction; all persistent storage is covered.",
+    "transport": {
+      "totalFrames": 7,
+      "wsEqualsReceiptFrames": 6,
+      "completeFrameBytes": 64000,
+      "receiptFallbackVerified": true,
+      "duplicates": 7,
+      "stale": 0,
+      "backfill": "Intentional WS disconnect on selected tic20; receipt presents exact native bytes; reconnection/backfill does not redisplay that frame."
+    }
+  },
+  "productionCost": {
+    "gasLimit": 1000000000,
+    "creationGas": 243787972,
+    "startupGas": 740635413,
+    "noRenderStepGas": {
+      "count": 123,
+      "min": 198703529,
+      "max": 201518242
+    },
+    "stepAndRenderGas": {
+      "count": 6,
+      "min": 565898024,
+      "max": 615371177
+    },
+    "staticFrameGas": 578204718,
+    "browserFreshCreationGas": 243787972,
+    "runtimeBytes": 475840,
+    "runtimeSha256": "825d23eb077471246134f87438fcacc61d41dcf94decda5fbad3fda57b766de0",
+    "configuredNodeMemoryLimitBytes": 1073741824,
+    "measuredEvmMemoryHighWaterBytes": null,
+    "measuredNodeRssPeakBytes": null,
+    "scope": "Actual uninstrumented production Doom transactions, including storage load/save, gameplay and optional full renderer/event. No probe/state-observation serialization gas. Configured memory limit is not measured consumption; no production memory peak was measured.",
+    "resourceUploadGas": 6271928016,
+    "resourceUploadAndDeploymentElapsedMs": 47878.927292,
+    "timingScope": "Recorded elapsed times include client/RPC/mining/runtime checks and are not isolated interpreter execution times."
+  },
+  "compiler": {
+    "version": "0.8.37+commit.f401782d",
+    "settings": {
+      "remappings": [],
+      "optimizer": {
+        "enabled": true,
+        "runs": 200
+      },
+      "metadata": {
+        "bytecodeHash": "ipfs"
+      },
+      "compilationTarget": {
+        "src/evm/Doom.sol": "Doom"
+      },
+      "evmVersion": "cancun",
+      "libraries": {},
+      "viaIR": true
+    }
+  },
+  "node": {
+    "client": "anvil/v1.8.5",
+    "args": [
+      "--host",
+      "127.0.0.1",
+      "--port",
+      "18579",
+      "--hardfork",
+      "cancun",
+      "--disable-code-size-limit",
+      "--disable-block-gas-limit",
+      "--memory-limit",
+      "1073741824",
+      "--silent"
+    ],
+    "profile": "Local ordinary Cancun EVM with code-size/block-gas limits disabled;1B transaction gas cap and1GiB node memory limit."
+  },
+  "sourceIdentity": {
+    "upstreamCommit": "a77dfb96cb91780ca334d0d4cfd86957558007e0",
+    "resourceIdentity": {
+      "schemaVersion": 0,
+      "wadSha256": "7323bcc168c5a45ff10749b339960e98314740a734c30d4b9f3337001f9e703d",
+      "bundleSha256": "d379076f21645cf7cc5acb056663d0faacc4065489a0ca99738479323c9f7a47",
+      "paletteSha256": "fd895921b5d0a394612bb29852ed003d44d69f76dec31c0dc6b5d5fc7d63f7bb",
+      "paletteVariant": 0
+    },
+    "acceptanceSourceHashes": {
+      "src/doom/d_ticcmd.sol": "508d0332d3e8b83e1b68d37581a3befc100a9974fcaa0900cc44116cd75ff2ef",
+      "src/doom/doomstat.sol": "4c40da3914c629017959a0a4c0516d83346900674c92f5e55a766aba1b506fea",
+      "src/doom/g_game.sol": "2714f783a532bc2a525d7f50813c472f299c541ee9062a7a5d078e1818791e70",
+      "src/doom/info.sol": "4611205149173e42d3b0f1d91820c8042f6bc5fc48fb53aec84ad4bc501dca8e",
+      "src/doom/m_bbox.sol": "f4c60efe3627a97d0288fc5cd0283535527b1f51029568534c80bb8fbbf8f272",
+      "src/doom/m_fixed.sol": "3f64bef1f62f61faead3a5b8f382bf1c66e1b3739ce4ac8d59a6fcef0451ef9f",
+      "src/doom/m_random.sol": "5267b881138cfb7e0d683449005619513006c70e3ed557f64697b36c4ed40c7b",
+      "src/doom/p_ceilng.sol": "696f3f620f5bddb3cea64fda824e3203c780f53db890630f0685794454dc37f9",
+      "src/doom/p_doors.sol": "945bf600ce86d8286718fb75ecaf905a0c4631d79d2dac7260c91c9dc2013f8d",
+      "src/doom/p_enemy.sol": "eff76cce23b0877833a5c446a1a09d8ae01918a6925b6d3265240b144c09dfe7",
+      "src/doom/p_floor.sol": "b7c90baafa0b74fd7ff80cf60dcbc430148f6d6d068ba54ca0fbc7ba1bca7069",
+      "src/doom/p_game_state.sol": "3e8bd930c7a0aa173365d55d1aaed876207c7cf4c6d1ec57eb4b5c0abb21d252",
+      "src/doom/p_heap.sol": "29f216eedc153e34edcd7be9b79be695c7e534b0a1b307222702e9bd7fafe730",
+      "src/doom/p_info.sol": "a48840479115ea8bf849ca5ec448d1b2bec7a6cfe58c5314e140635a898de792",
+      "src/doom/p_inter.sol": "8be27f9bba47beb46b3edf2a8a2674b3cd7218d2abb8ef5f8855803393d067de",
+      "src/doom/p_lights.sol": "6f63cbc6b41fc492a46ce43aef464deb9d08b7fa1dd8b213b546eec3e4f08276",
+      "src/doom/p_map.sol": "6b6d48523a45acab9090dfb0ec3d6dbab4e6de18afa89453df8b5a87088da0f3",
+      "src/doom/p_maputl.sol": "93f5c0e37761e15675a2640e2be950d8056dcea335db36243f7df9e216069e93",
+      "src/doom/p_mobj.sol": "966cc7bf88a17adc30222f9ac7d735415afcb783dcb9367f5df9cced1df73ff8",
+      "src/doom/p_plats.sol": "6904df762b270f840daa99b34d2a5c689dbb2fef3aed3d33c2ac1a3f3e4d5722",
+      "src/doom/p_pspr.sol": "cfa2db3438d689c38d9c957fc4aee598c58740f025d6efead2b5f9671eb0c863",
+      "src/doom/p_setup.sol": "2da988ba10eac9ba2d905ad408426bfe7fc47c7ba152cebdc13f048f7d62b3d7",
+      "src/doom/p_setup_static.sol": "c8100a42bb0bac190c583bbb2c82168599009f88a766e4c05b9a9231a5f69792",
+      "src/doom/p_sight.sol": "335089a6b126c4be3aff3fbe8081c5968a3062c235fa6f023e6748eb3d9f41fb",
+      "src/doom/p_spec.sol": "2363640e75c22c9d017db677dda7148ad221380f0a23639167e145e933fc72b7",
+      "src/doom/p_switch.sol": "5404d359793e05c6c24a7804c07632150009b46f38d03068412d7ac53260dfe2",
+      "src/doom/p_telept.sol": "745f0fa4ed6f0515c398bfd2469c59aac82316965b7bac25263aeb82555d61b8",
+      "src/doom/p_tick.sol": "cde1c94f77a3ba1d0052cc4a72fb3e20c41a13b6e0c4bd5d359021aaa6a5af0b",
+      "src/doom/p_user.sol": "963a46850e1b17171f79dd65bff9b5006ce6f97a935ad2023d1d526a6ec35c37",
+      "src/doom/r_bsp.sol": "0ae5df313515692d0b2b970d5d39d107e014629cff2305fb37c14371a9524040",
+      "src/doom/r_data.sol": "ab45e09771ea0f3c8ef3c23896c146a6d1a6a0a31f97e0a66ae9dd1e2d612745",
+      "src/doom/r_data_types.sol": "f5ae6de0f06a25dfccd9421580d8f3fca8d2457507cca2d13fce586b3334d02f",
+      "src/doom/r_defs.sol": "558d5a9bfd131e816bbe28986e2dad6144a08e5a16ccfed1b199d7558a1ea0e2",
+      "src/doom/r_draw.sol": "7cdef01556fccc767df44f842f7ce03efea0ec34bd9cfeb6848d30074fb17e06",
+      "src/doom/r_main.sol": "df403bf04fdbbcfc68c4fd9c5e19b5201ca711498efc34db406a4010ad3b2af5",
+      "src/doom/r_plane.sol": "125633121ebe255912bb7f7d6543175cbe40b83eaa7b6d917a1d942c7b7177f1",
+      "src/doom/r_render_hooks.sol": "f026ccb8fffb68d8fbcb0966103212f52884b86350fe3fb52a401d146f3fb312",
+      "src/doom/r_render_state.sol": "072bd2f73b98e1eb775fc8093e95a69c184f3fa50a89a5d64a7beccd59493398",
+      "src/doom/r_segs.sol": "83d59a85fe06be61dcc53d48ef0becab449d97a38985481d7a0c6de6132d80c2",
+      "src/doom/r_sprite_state.sol": "735b3de85cbf455e05d3cb8e992cf4e477960bd4192bbd367f5c66c803b96363",
+      "src/doom/r_state.sol": "e87ff9d88345a53d1f8825fb07b485c782c7bcb55e2de1dc56c876f9b26ab966",
+      "src/doom/r_things.sol": "5d6099c8b388e9a26f63b9de1374fbbbc6bff338ca71c19970a9bb1b04c331f4",
+      "src/doom/tables.sol": "bf14202b419075f6d187653205a37e211d8267c7fc4c0bebf5a8c5713afddf38",
+      "src/evm/Doom.sol": "91200c5d999112f874c65d1b178882a86e9fc010258b8088372373dd22d5e2e8",
+      "src/evm/DoomGame.sol": "b2f3a5a90db775ffb5e1ad566661b1e3a140c9c7373e69f8ee88ff0b785ac169",
+      "src/evm/DoomRenderer.sol": "5639d82431350ea76c26d43457d26d0c3c0f410eaddf02db6adbcfb03a569ba0",
+      "src/evm/DoomScene.sol": "9ad7c8ccee4c9e05deb5608326baabacfa40f686b8d8445fb8aaa7352ab64569",
+      "src/evm/FrameProtocol.sol": "4665be3f613b8e817d616d2db1dc4a644325c44a6ade476a35d7d9d003625ace",
+      "src/evm/InputProtocol.sol": "df068ec9030d7241de7d6160059f8e46fe647f6655123f03849789b359bee51b",
+      "src/evm/ResourceTypes.sol": "159865364cfa57aae508cd94c49509cbccabd6aeeba55e92b9fcf816bdec4d6b",
+      "src/evm/WadResources.sol": "25a1acc0a44ac35cc29e5f9bd953ba66b85db4f665b732430571b416ef927895",
+      "tools/reference/gameplay/production.py": "791f541f99a42d8fb83d7c5cabaea75887abd15c9d848efd3b6698df378c2f9e",
+      "tools/reference/gameplay/production.mjs": "a2d07d44cbb38a435efef4e461e548d62e33d47f672abd38fe964d6e5f7e97e9",
+      "foundry.toml": "084d5192108931325837611f9d1339796a6ffd64ed570e31907afe718f191226"
+    },
+    "checkpointToolSourceHashes": {
+      "tools/reference/gameplay/production.py": "5971309efd86a42252fbda084d0348fe95a8f2ab45f2cd6d0b240d1a0d30170d",
+      "tools/reference/gameplay/production.mjs": "6c6ef6781e1d238f2f69c8ee5fdbb02736631d3bedb77b5cfec078b4eab530f5"
+    },
+    "creationBytecodeSha256": "df0d34e8118f7f3076b5005006973441ceb47787383ac419d2ae620ecccb487e",
+    "nativeCompiler": "Apple clang version 17.0.0 (clang-1700.0.13.5)",
+    "nativeTarget": "arm64-apple-darwin24.6.0",
+    "nativeProfiles": [
+      "Keyboard O0/O2/ASan/UBSan exact",
+      "Gameplay O0/O2/ASan/UBSan exact",
+      "Gameplay ASan/UBSan allocation-fill 0xa5 exact"
+    ],
+    "keyboardExtraction": {
+      "endLine": 437,
+      "file": "g_game.c",
+      "function": "G_BuildTiccmd",
+      "sha256": "59fcd9cdeef89c6abc5b8021b3caa2ed7c4d69ffc1fc8ee2a11b55c6073c94d1",
+      "startLine": 237
+    },
+    "generatedKeyboardSha256": "6e3739966425c80e4775b038e45a754e9615f96df6c2384d712688c793901dab",
+    "nativeProductionManifestSha256": "e62470a9759b5df497d7ccf997e3a18a7a78e4a32bead1e540fd79c258fb130c",
+    "nativeBuildManifestSha256": "a47bde0f108feffed4e7a4a2b3143ee50290b9aeef8318f22c722dca022c5e37"
+  },
+  "generatorUpdate": {
+    "reason": "Add separately bound six-tic all-frame browser profile after the129-tic acceptance run. The unchanged default production profile was freshly executed again under all native profiles.",
+    "acceptanceGeneratorSha256": "791f541f99a42d8fb83d7c5cabaea75887abd15c9d848efd3b6698df378c2f9e",
+    "currentGeneratorSha256": "5971309efd86a42252fbda084d0348fe95a8f2ab45f2cd6d0b240d1a0d30170d",
+    "allProductionBehaviorAndBuildFilesByteIdentical": true,
+    "equalFileCount": 15,
+    "equalFiles": {
+      "build-manifest.json": "a47bde0f108feffed4e7a4a2b3143ee50290b9aeef8318f22c722dca022c5e37",
+      "commands.txt": "85894397b69ce6221544c19caf4f967792ea8fc816033f325a586ef8ee4c7e0f",
+      "diagnostics.bin": "41936d5b68b67abd42551e840eba805febf4edef5d921186b57d0e42ded09014",
+      "events.json": "615d181cac1de7bf5034a2cd470e38c3ce935586cbc29c5a06cc085a182719f6",
+      "frame-000001.bin": "b736bf38b2992db3851d33e7d8ea3bc7d6036d13d45d5030823829a6cdd62133",
+      "frame-000020.bin": "eb796481fcebe298ded1f0697549b34cf5fb542330cc26396f6a9bdefd3d4fce",
+      "frame-000040.bin": "e220b8e47580b89cbaab457aceb396390f1b222a506abf60abb84b80255d97b8",
+      "frame-000069.bin": "ff733adbf5302742153e2a6c6062c899e947eab14a2fe9b0194fca91bfa88aed",
+      "frame-000100.bin": "747d990d75e2baef32b13cd0f49d7bb4efaaf7f84a66ca9bfdc75ca427c3dd6d",
+      "frame-000129.bin": "c7734b764b20c091d7686c28fb2d76dc0924872ad6cb35cc26be5bee4e6c6ae7",
+      "packets.json": "862a4025fec43f36440e56bb963a5e5f08ee8f2e6fb1996165f972cb24aab17b",
+      "players.json": "1d1ac3688cc30de5d217b7718f52fef12df2c33d191b1f76421f22321b3c662c",
+      "states.delta.bin.gz": "91ed3bdf93eca9c69666b36d253c05beaa01f329e943e0deeab52d78114863d8",
+      "summary.json": "f0fbc8606f46598908fbedd4d5664d2031ce58af15f9fdc6191e1cda15c5ac33",
+      "ticks.bin": "99ebd122668572e8842f66699e6a7e66e54e5067ac320276f49bc86c887eb3d7"
+    },
+    "updatedMetadataManifestSha256": "da40ec18771d1d4e4332080a7c3e2830f6524ca9b8c51987efaf1beb4d6007c8",
+    "scope": "This preserves the exact acceptance-run identity rather than silently attributing that historical run to a later generator source hash. Differences in the regenerated manifest document the new profile selector and current generator identity."
+  },
+  "browserNative": {
+    "pass": true,
+    "tics": 6,
+    "masks": [
+      0,
+      257,
+      8,
+      16,
+      128,
+      64
+    ],
+    "renderEveryTic": true,
+    "frames": [
+      {
+        "sha256": "b736bf38b2992db3851d33e7d8ea3bc7d6036d13d45d5030823829a6cdd62133",
+        "tic": 1
+      },
+      {
+        "sha256": "00f7a388a74802ae3821558b975835c0f0692786f0c136c3c274f5cb8b5a9c08",
+        "tic": 2
+      },
+      {
+        "sha256": "3210aaf4ec47038a598483d472ef0c2fd1b4b31f930db944853138f360723fca",
+        "tic": 3
+      },
+      {
+        "sha256": "483a260e39fe6629e7e3b99a257ddc22cdfaad56cefb80761974b6e3665c94b4",
+        "tic": 4
+      },
+      {
+        "sha256": "4a8302cfb7f0d352ff6dab4ae05a60a7b40fd30551f2cd9824b0a026ef3d964f",
+        "tic": 5
+      },
+      {
+        "sha256": "c1fef2ef0b6b722434a1f70df173c4f60ca58a39c85b17f4bbcc10e5f0a27885",
+        "tic": 6
+      }
+    ],
+    "profiles": [
+      "Keyboard O0/O2/ASan/UBSan exact",
+      "Gameplay O0/O2/ASan/UBSan exact",
+      "Gameplay ASan/UBSan allocation-fill 0xa5 exact"
+    ],
+    "manifestSha256": "d05bb58546cadc3e0e175b30b2691ec11024860c9176a105196401da788b02e9",
+    "files": {
+      "build-manifest.json": "a47bde0f108feffed4e7a4a2b3143ee50290b9aeef8318f22c722dca022c5e37",
+      "commands.txt": "b5818c2068b89e05df7e3182b395026a19602a1b7184be35fd060fb0f516a127",
+      "diagnostics.bin": "44d2b93c4a50a55284584173b01650d7950cf48b34b30bfe0892cdf43a91d45b",
+      "events.json": "c4a26834dcf5e7e7495395e3d53fb1bc813187702d2a1aa08c4a6f05b1d5384f",
+      "frame-000001.bin": "b736bf38b2992db3851d33e7d8ea3bc7d6036d13d45d5030823829a6cdd62133",
+      "frame-000002.bin": "00f7a388a74802ae3821558b975835c0f0692786f0c136c3c274f5cb8b5a9c08",
+      "frame-000003.bin": "3210aaf4ec47038a598483d472ef0c2fd1b4b31f930db944853138f360723fca",
+      "frame-000004.bin": "483a260e39fe6629e7e3b99a257ddc22cdfaad56cefb80761974b6e3665c94b4",
+      "frame-000005.bin": "4a8302cfb7f0d352ff6dab4ae05a60a7b40fd30551f2cd9824b0a026ef3d964f",
+      "frame-000006.bin": "c1fef2ef0b6b722434a1f70df173c4f60ca58a39c85b17f4bbcc10e5f0a27885",
+      "packets.json": "8824d6fda134dd07f8bf64c35c44e1fd98a58be6ba060b64877c3d3dfb89a252",
+      "players.json": "d2a0fbf8f733fb30bfb09e3e639102d4b26b861da28f063e59f47699abb6a40e",
+      "states.delta.bin.gz": "8386155824584230a3049935fa434ce9a68a7bd04afceff16096ad36c3f8e03d",
+      "summary.json": "8962045f4cb84ca86ea09ac97d96d93a590fb638f0d7422380f42b5408a9a177",
+      "ticks.bin": "44918c0fed352450a8a2eb02dabfa821b2f308deea459107840e3e3b463070ea"
+    },
+    "sourceHashes": {
+      "tools/reference/gameplay/build.py": "234b79169ec39f1faf3858a564e8ad25f680cd7e84a110c3d3c32f37eec4387d",
+      "tools/reference/gameplay/diagnostics.h": "0232b585727cf3a659815aeb647bd2a2a07518224f4cd58f4d9261586e484505",
+      "tools/reference/gameplay/host.c": "8eb17208506ae56f18cad6bd4f6a10a8bfdd4070391e8e3a19685958c5625ec3",
+      "tools/reference/gameplay/observe.h": "7ae14775b4ebc05bb8da32cff6d1a23be66937640509fd515d35b49c60ee0abe",
+      "tools/reference/gameplay/production.py": "5971309efd86a42252fbda084d0348fe95a8f2ab45f2cd6d0b240d1a0d30170d",
+      "tools/reference/gameplay/verify.py": "55efdd83082246343e6b649602af0d94e41c04a835495a0f77038f681d7ad76b",
+      "tools/reference/phase3_input/host.c": "a7ceae96acb9d71147ccf3c3aad35181fb25ede38556dc90ecfbc721b9316492",
+      "tools/reference/phase3_input/reference.py": "e8c482ce14abcc844904c410671b1f1a328c293aa5eab837ab286bf1e430da77"
+    },
+    "notes": [
+      "Every browser tic is rendered natively; this is a distinct bound rendering history from the six selected production frames.",
+      "The fire mask occurs while the initial weapon is rising, so this short stream does not claim an actual shot. The129-tic production stream proves original pistol firing."
+    ]
+  },
+  "localEvidence": {
+    "acceptanceReport": "artifacts/local/gameplay-production.json",
+    "acceptanceReportSha256": "533bb130835d4e4e23d4c33a5a2b09f74c69beedcf056f2bea7780239716f1b5",
+    "productionNativeDirectory": "artifacts/local/gameplay-production-native",
+    "browserNativeDirectory": "artifacts/local/gameplay-browser-native",
+    "freshBrowserConfig": "artifacts/local/gameplay-production.config.json",
+    "freshBrowserPalette": "artifacts/local/gameplay-production.palette.json",
+    "ordinaryAcceptanceAddress": "0x5ae1f4bb68f8eac39cfdbdfda2b7344ccbd80faf",
+    "ordinaryFreshBrowserAddress": "0xa6407325ff7daab36d20992dadc031c82d1c4390"
+  },
+  "limitations": [
+    "This checkpoint is the production ordinary-EVM acceptance gate; real Chrome gameplay verification is separate and still pending at this checkpoint.",
+    "Every exported gameStatus/playerView field is compared; this production ABI does not expose every internal world field. Separate full-world gameplay probe proofs cover their declared scenarios.",
+    "Native proofs retain the documented pinned compiler signed-overflow and LP64/platform profiles; no universal portable-C claim or unsupported undefined-domain claim.",
+    "All indexed8 bytes in selected frames are compared. Palette/Canvas readback and actual keyboard DOM events belong to the separate browser gate.",
+    "The local enlarged code/gas configuration is explicit; these results do not claim deployment under public-chain protocol limits."
+  ],
+  "checkpointSha256": "5b5b6853f17af7ad08332882943b5b500afde55f3830b4345377f3ec6d58e12b",
+  "configRepair": {
+    "cause": "The first inherited real-browser attempt found the generated config lacked paletteUrl/paletteKind/deploymentBlock; undefined palette fetch returned HTTP404 Not found and JSON parsing failed. No gameplay started. The earlier129-tic production gate remains a distinct PASS.",
+    "scope": "Only browser config/palette writer and metadata fields changed. Reversing these exact writer changes reconstructs the acceptance-run comparator source SHA256. No production source or node state was changed; no repeated129-tic run is claimed.",
+    "acceptanceComparatorSha256": "a2d07d44cbb38a435efef4e461e548d62e33d47f672abd38fe964d6e5f7e97e9",
+    "currentComparatorSha256": "6c6ef6781e1d238f2f69c8ee5fdbb02736631d3bedb77b5cfec078b4eab530f5",
+    "previousComparatorReconstructedHashExact": true,
+    "newFields": {
+      "paletteUrl": "/palette.local.json",
+      "paletteKind": "wad",
+      "deploymentBlock": "0x76d"
+    },
+    "deploymentReceiptSha256": "30aea15709b5544fbb6822b42437f07f5ded53e385ec41ee11ee10aaf2cac3a0",
+    "deploymentTransactionHash": "0x4905be810d6e472488de56627626a033edc01f14236606aff40a6e9608c67aae",
+    "configSha256": "06d5271041af17eca82f40c414a09369b40efecf3832437d81a62a0b13ebb298",
+    "paletteFileSha256": "a9cf61c57f81d5299a6c1229e8eabf1dd74254f10e2d185108c790636ade98ad",
+    "verified": "Current local config repaired from the original status1/address-matching deployment receipt; all required app config fields exist; exact palette bytes copied to ignored web/palette.local.json and resource RGB hash checked. Root web/config.local.json was not overwritten. Source syntax/diff checks pass; real browser retry is separately recorded by the integrator."
+  }
+}

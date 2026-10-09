@@ -1,0 +1,565 @@
+{
+  "kind": "atomic-original-setup-native-header-comparison",
+  "executedCommand": ".toolchain/bin/forge test --match-contract PZoneSetupTest -vv",
+  "session": 35080,
+  "environmentOverrides": {},
+  "logPath": null,
+  "exitCode": 0,
+  "compilerSeconds": 119.26,
+  "testsPassed": 4,
+  "testsFailed": 0,
+  "testsSkipped": 0,
+  "gasLimit": 10000000000,
+  "budgetSource": "foundry.toml default; no DOOM_GAS_LIMIT/FOUNDRY_GAS_LIMIT override",
+  "executionBudgetConfigSha256": "acde01f1b9cf248f9265f1ffcff7181d01d77620a2dfcd9a4d4d0b1c79df2be7",
+  "compiler": {
+    "version": "0.8.37+commit.f401782d"
+  },
+  "compilerSettings": {
+    "remappings": [],
+    "optimizer": {
+      "enabled": true,
+      "runs": 200
+    },
+    "metadata": {
+      "bytecodeHash": "ipfs"
+    },
+    "compilationTarget": {
+      "test/unit/p_zone_setup.t.sol": "PZoneSetupTest"
+    },
+    "evmVersion": "cancun",
+    "libraries": {},
+    "viaIR": true
+  },
+  "artifactPath": "out/p_zone_setup.t.sol/PZoneSetupTest.json",
+  "artifactSha256": "aec14a969d423916695171d54afa4a977383bd59b83b3eb9bfb118a0ec90ff06",
+  "sourceHashes": {
+    "src/doom/d_ticcmd.sol": "508d0332d3e8b83e1b68d37581a3befc100a9974fcaa0900cc44116cd75ff2ef",
+    "src/doom/g_game.sol": "2714f783a532bc2a525d7f50813c472f299c541ee9062a7a5d078e1818791e70",
+    "src/doom/info.sol": "4611205149173e42d3b0f1d91820c8042f6bc5fc48fb53aec84ad4bc501dca8e",
+    "src/doom/m_bbox.sol": "f4c60efe3627a97d0288fc5cd0283535527b1f51029568534c80bb8fbbf8f272",
+    "src/doom/m_fixed.sol": "3f64bef1f62f61faead3a5b8f382bf1c66e1b3739ce4ac8d59a6fcef0451ef9f",
+    "src/doom/m_random.sol": "5267b881138cfb7e0d683449005619513006c70e3ed557f64697b36c4ed40c7b",
+    "src/doom/native_zone_layout.sol": "118b2d17165826fb0857d9cb296e2214db2a28917769299a82e70d0c0790f6e8",
+    "src/doom/p_ceilng.sol": "696f3f620f5bddb3cea64fda824e3203c780f53db890630f0685794454dc37f9",
+    "src/doom/p_doors.sol": "945bf600ce86d8286718fb75ecaf905a0c4631d79d2dac7260c91c9dc2013f8d",
+    "src/doom/p_enemy.sol": "eff76cce23b0877833a5c446a1a09d8ae01918a6925b6d3265240b144c09dfe7",
+    "src/doom/p_floor.sol": "b7c90baafa0b74fd7ff80cf60dcbc430148f6d6d068ba54ca0fbc7ba1bca7069",
+    "src/doom/p_game_state.sol": "0f9d60aae9424cad17c614d4fcc93c9eb6fe8a43c7bce070d2460fcf2c34f649",
+    "src/doom/p_heap.sol": "5aee980933971a0eba6e221191e736619f4cb73148c9973c3f578408163c7b4a",
+    "src/doom/p_info.sol": "a48840479115ea8bf849ca5ec448d1b2bec7a6cfe58c5314e140635a898de792",
+    "src/doom/p_inter.sol": "8be27f9bba47beb46b3edf2a8a2674b3cd7218d2abb8ef5f8855803393d067de",
+    "src/doom/p_lights.sol": "6f63cbc6b41fc492a46ce43aef464deb9d08b7fa1dd8b213b546eec3e4f08276",
+    "src/doom/p_map.sol": "6b6d48523a45acab9090dfb0ec3d6dbab4e6de18afa89453df8b5a87088da0f3",
+    "src/doom/p_maputl.sol": "93f5c0e37761e15675a2640e2be950d8056dcea335db36243f7df9e216069e93",
+    "src/doom/p_mobj.sol": "966cc7bf88a17adc30222f9ac7d735415afcb783dcb9367f5df9cced1df73ff8",
+    "src/doom/p_plats.sol": "6904df762b270f840daa99b34d2a5c689dbb2fef3aed3d33c2ac1a3f3e4d5722",
+    "src/doom/p_pspr.sol": "cfa2db3438d689c38d9c957fc4aee598c58740f025d6efead2b5f9671eb0c863",
+    "src/doom/p_setup.sol": "9498e1298bf4e53ccedc484a50d4c7f9f85315f6cb700719d474b721e382243b",
+    "src/doom/p_setup_static.sol": "c8100a42bb0bac190c583bbb2c82168599009f88a766e4c05b9a9231a5f69792",
+    "src/doom/p_sight.sol": "335089a6b126c4be3aff3fbe8081c5968a3062c235fa6f023e6748eb3d9f41fb",
+    "src/doom/p_spec.sol": "2363640e75c22c9d017db677dda7148ad221380f0a23639167e145e933fc72b7",
+    "src/doom/p_switch.sol": "5404d359793e05c6c24a7804c07632150009b46f38d03068412d7ac53260dfe2",
+    "src/doom/p_telept.sol": "745f0fa4ed6f0515c398bfd2469c59aac82316965b7bac25263aeb82555d61b8",
+    "src/doom/p_tick.sol": "1993dd0c94853dabc4db554dfa0ca04375cef0a22075400ba0e7b56b525022ab",
+    "src/doom/p_user.sol": "963a46850e1b17171f79dd65bff9b5006ce6f97a935ad2023d1d526a6ec35c37",
+    "src/doom/p_zone_setup.sol": "e0308bd1197fd84a01eb1ee208be73c711851d6b0bc30be1d07a7c61b18b223d",
+    "src/doom/r_bsp.sol": "0ae5df313515692d0b2b970d5d39d107e014629cff2305fb37c14371a9524040",
+    "src/doom/r_data.sol": "5b404d561f8bce538e8a8221b4f36d62c9b9826fc833307640d96fcbfdca2d0a",
+    "src/doom/r_data_types.sol": "0448302d68447c8a5a4c46df4016e8845863e42bf6eaca8bcab8ab0c9707fdf8",
+    "src/doom/r_defs.sol": "558d5a9bfd131e816bbe28986e2dad6144a08e5a16ccfed1b199d7558a1ea0e2",
+    "src/doom/r_draw.sol": "afe958ea0c2962b739bff58b98d8bccc25c48d3d0838cacd46142c242b5d6477",
+    "src/doom/r_main.sol": "df403bf04fdbbcfc68c4fd9c5e19b5201ca711498efc34db406a4010ad3b2af5",
+    "src/doom/r_plane.sol": "c7a5abcbca84dddcd2a3c8bb160a609605c5c1842e73704dff4860df3280e463",
+    "src/doom/r_render_hooks.sol": "f026ccb8fffb68d8fbcb0966103212f52884b86350fe3fb52a401d146f3fb312",
+    "src/doom/r_render_state.sol": "072bd2f73b98e1eb775fc8093e95a69c184f3fa50a89a5d64a7beccd59493398",
+    "src/doom/r_segs.sol": "9d4e4dea06739278aab3698fb422818de6dd7726359c8822d60a162e886621cb",
+    "src/doom/r_sprite_state.sol": "735b3de85cbf455e05d3cb8e992cf4e477960bd4192bbd367f5c66c803b96363",
+    "src/doom/r_state.sol": "80951a13733e3a08f4182937a37def33ffda21eaae4b43a2a1bdba2043adab6b",
+    "src/doom/r_things.sol": "86705ab6b1f79b7ef07798b881cc547502d9911c97b57dc516a744e17c1977f5",
+    "src/doom/tables.sol": "bf14202b419075f6d187653205a37e211d8267c7fc4c0bebf5a8c5713afddf38",
+    "src/doom/w_zone_cache.sol": "03c07404765de9620b3d1ff15727809cdad911c8a78d822019b63500fa5018c2",
+    "src/doom/z_zone.sol": "47fe4cd4ce09d37d21d9d3cedd349004c8e3a1941f939a1ddbc5ec2e1d67b1ca",
+    "src/doom/z_zone_backing.sol": "902ea03bc32af6b7443461ff64d21e780d9a0ef6c6bbe2dd1262216bfc37a3f8",
+    "src/doom/z_zone_types.sol": "d6c5d8680e08bd8989042cb42a934a3323818e4c2b94c11dc38196911dadc08b",
+    "src/evm/DoomGame.sol": "353898c9547b1bcd619d51318aef505b0beb23374043660af9eeb18f4a15208d",
+    "src/evm/DoomRenderer.sol": "5639d82431350ea76c26d43457d26d0c3c0f410eaddf02db6adbcfb03a569ba0",
+    "src/evm/DoomScene.sol": "9ad7c8ccee4c9e05deb5608326baabacfa40f686b8d8445fb8aaa7352ab64569",
+    "src/evm/DoomZoneStartup.sol": "2d178494456a7ae3c730310f257ce2aa635d37d18c90cac039cf002cdb3f50dc",
+    "src/evm/ResourceTypes.sol": "159865364cfa57aae508cd94c49509cbccabd6aeeba55e92b9fcf816bdec4d6b",
+    "test/unit/p_zone_setup.t.sol": "cd725580c591dce6061003005290372a254d47fb74ed7555c386600269f47980",
+    "foundry.toml": "afe04c66f0e684b5a936821f6543605a3739f62164ceb4398426db7403452393",
+    "execution-budget.json": "acde01f1b9cf248f9265f1ffcff7181d01d77620a2dfcd9a4d4d0b1c79df2be7",
+    "scripts/execution_budget.py": "b7e111be390383b0a2e487bcc0f123c0dbbe5f6f552a79f05acb6d07bdc53879",
+    "tools/execution-budget.mjs": "dbf68241139422195203f57a08d8e382afa6d1d493848ae68fbebca9265eec78"
+  },
+  "artifactSourceKeccakBindings": {
+    "src/doom/d_ticcmd.sol": {
+      "keccak256": "0x4af58d0dce2331e6b326e586b00f36c0fdc2bcbaa652605cb78bd7a962aa0abf",
+      "urls": [
+        "bzz-raw://e3d30e9b16072b9bffc4cc272216f4e80bc10fe609a123117d41d95197a43eed",
+        "dweb:/ipfs/QmWifyyjnqKNv1KAai9KPoGdKpBwgtiuS8uszZWYkaqDPm"
+      ],
+      "license": "GPL-2.0-only"
+    },
+    "src/doom/g_game.sol": {
+      "keccak256": "0x4122640438fa9cc20e6e0f879773defcb1a0f9150c1575a8569c68625c30b9da",
+      "urls": [
+        "bzz-raw://1bf69b8e5fefc307bc16a6895d715c0aadbd5ed57f12cf27daa50dfef46519ab",
+        "dweb:/ipfs/QmWNPutoNzC58ocrm8i9NZ2MDhnBoYhf67ardVWVWrNdkq"
+      ],
+      "license": "GPL-2.0-only"
+    },
+    "src/doom/info.sol": {
+      "keccak256": "0x02137042b45dc605c3ac9589222d292e729df6dab43b0d8a081e000b93347dac",
+      "urls": [
+        "bzz-raw://a071dc6941055f0b1112359bf725f7acd4875b2add0d175eb17a2cdb0ded3c28",
+        "dweb:/ipfs/Qmaz5ZX2HQr6DCiPnCf5HwCB9CkpMsGvL4d7ixNpnVxvpq"
+      ],
+      "license": "GPL-2.0-only"
+    },
+    "src/doom/m_bbox.sol": {
+      "keccak256": "0xf1498489f5dfe95638bb90d27f17a19b6e93ee1db5d8e10fdd9a9cfe29a1be41",
+      "urls": [
+        "bzz-raw://98e281b22c3d80ef1838424e91abb0e03bf835b583afe02301e890322c8a3162",
+        "dweb:/ipfs/QmdDwiGyR9ysuKeeKmAgR78y8BfjEr2H1uJdLmU3ux78Gj"
+      ],
+      "license": "GPL-2.0-only"
+    },
+    "src/doom/m_fixed.sol": {
+      "keccak256": "0x3b186264292670a4047d4c2dcd2ef92d8e9d80144950c9d51e9c89af741f51e6",
+      "urls": [
+        "bzz-raw://79812436c90e72e3320eab9f0ef0ff2b4e6c1c176074c6f69d4be76dc469dd46",
+        "dweb:/ipfs/QmVfXzvrzfg5X4ASQh8F386Jsxj3fHrEfhBzaf1n1VcQKP"
+      ],
+      "license": "GPL-2.0-only"
+    },
+    "src/doom/m_random.sol": {
+      "keccak256": "0xe3e0d2654e9a373bfdb49fdc95b11c37a6e42011eb03e8ce7284f88fcfa245c5",
+      "urls": [
+        "bzz-raw://0048396aaad0560b5604df8a56acf7f2f6b3d9d43577f39f355a02e9163bc203",
+        "dweb:/ipfs/QmXzf6RdRhRrrc3f6kyVP7PuLpHSdrRP5aUiSjzBviFJu5"
+      ],
+      "license": "GPL-2.0-only"
+    },
+    "src/doom/native_zone_layout.sol": {
+      "keccak256": "0x5c8f4c80bab88a604c20a242a26b7e0cc06d9b5a9b5f08cd0d28199cd1a0792e",
+      "urls": [
+        "bzz-raw://8fe1792b5d1389ddab5c365000fd310210e5fbbf89666a10f1b0876e1977a45c",
+        "dweb:/ipfs/Qmcg5osNUCa7fyfbY1JU6yzFne2CGeZ2yV1yvsdMT4FG99"
+      ],
+      "license": "GPL-2.0-only"
+    },
+    "src/doom/p_ceilng.sol": {
+      "keccak256": "0x3984ea02f92f3dd45774e4abf2aaa6a8a3d8fb9c7799c273532ad1c3caea7407",
+      "urls": [
+        "bzz-raw://47a11a2fbabbea2405a1e7ebf5fc86f248dc954ffe1124de1d418902a58af12b",
+        "dweb:/ipfs/QmW81eEfR4SuhBiAe2pBV7dDzbiUdrUBG1SHfgcgHH2XT8"
+      ],
+      "license": "GPL-2.0-only"
+    },
+    "src/doom/p_doors.sol": {
+      "keccak256": "0xfc16ae2902a392227127cceddb84b4007a44394a43c0ab38545fccd5d90886fb",
+      "urls": [
+        "bzz-raw://812682e16c66b85457fd69aedd903a66ac388585004067b81267181f2da18aad",
+        "dweb:/ipfs/QmdCuzAFQQzXGpKorcytkoWv9Vz7vRAcgKUmTQ1YdDbJsQ"
+      ],
+      "license": "GPL-2.0-only"
+    },
+    "src/doom/p_enemy.sol": {
+      "keccak256": "0x83a1ceaaf50ba276ecfbf811eb1f64037030c47923b37838c165b19719b2c2c0",
+      "urls": [
+        "bzz-raw://70df79bb9a3999cc49091afe574ca1b3b1c76198f159cabb9f18d3d061d8f35d",
+        "dweb:/ipfs/QmcYsf7iUfUdzbueqBkzjkmHCtRQuvK5BSHFtgptfvq6Sc"
+      ],
+      "license": "GPL-2.0-only"
+    },
+    "src/doom/p_floor.sol": {
+      "keccak256": "0x27b80cb66d0f72926548e114b18ee166fca4418ea9d2ab3b44ba9bf80e4b97f0",
+      "urls": [
+        "bzz-raw://c78740cdcfc09d336319c5cf0e8735c84b32fb77e99679388b54df54968584bd",
+        "dweb:/ipfs/QmW2wWMhZFDh5nKejuE7CoW9BN3TAny96J4L9xkkNZHRz2"
+      ],
+      "license": "GPL-2.0-only"
+    },
+    "src/doom/p_game_state.sol": {
+      "keccak256": "0x1bbc1ea3f45bd9a80e2b44bb9f20445bbf80ae32e03958514fa44b7b29329299",
+      "urls": [
+        "bzz-raw://84bfb6f81aebc46dfe784db3267ef968723cbf66cc5e6d5a770814fab20df5e2",
+        "dweb:/ipfs/QmVXkrLtw8mD27NbXpGjotiShu3J89YLHt9xBJBV1Ba2Pr"
+      ],
+      "license": "GPL-2.0-only"
+    },
+    "src/doom/p_heap.sol": {
+      "keccak256": "0x98ee126d9ed796925f0f263d373e9342ba4b24a2f8fc6653de0fc5456b04c7aa",
+      "urls": [
+        "bzz-raw://b6ed4875f078576bcb577957229f9ab34b5fab79670d5ebee87bf16b5e07cd76",
+        "dweb:/ipfs/QmVqN85FnJDbRDD54MMxFybS7cw3dZvd9rBtZQ22gp3Yu5"
+      ],
+      "license": "GPL-2.0-only"
+    },
+    "src/doom/p_info.sol": {
+      "keccak256": "0xa84f88d92995dda4f031374a414fcbce66a31b0413c352dba1f7723c5f5c4352",
+      "urls": [
+        "bzz-raw://44b6bedcda75a8d148c1ebfa1098e5fff236751f5b09147d67abd035681c16d9",
+        "dweb:/ipfs/QmTkGKcTf2hh9D3eMyvniiFw1dbrTNzvhQ36MA4zkJiuRW"
+      ],
+      "license": "GPL-2.0-only"
+    },
+    "src/doom/p_inter.sol": {
+      "keccak256": "0x178f358cecd48ffaed239a2f06b034e9995540630b754199f0d3d8f9b801df96",
+      "urls": [
+        "bzz-raw://ac8b3f0def31b88eccb37663c04f2a688dc3738c8c1717cf8b7515d5e55f4fe6",
+        "dweb:/ipfs/QmZCy7uRGGutoN7GQ9aSBjyNY1iD6PJQQDCYUYSy4hBWu8"
+      ],
+      "license": "GPL-2.0-only"
+    },
+    "src/doom/p_lights.sol": {
+      "keccak256": "0x0943b67fc2c27281c16b7180e515618b4d9e193186b716f3ede5b0c13dac4b17",
+      "urls": [
+        "bzz-raw://8da741d0dd822a72e3dff254873e58b5d20b1cb49fa1bd2b1739fef96bfa15a4",
+        "dweb:/ipfs/QmXmZqQAGcGkjZ9YE88pifenzCuNNYapuzFZfvTy4KheNU"
+      ],
+      "license": "GPL-2.0-only"
+    },
+    "src/doom/p_map.sol": {
+      "keccak256": "0xe9bc3606999bcf24543c6344aec1190a20ce5285c02cbb38625b22ee1601f5e9",
+      "urls": [
+        "bzz-raw://26843bcbecadbd8e13882f1fb3411c55f7f862cd00842d82cd259119250b5599",
+        "dweb:/ipfs/QmUb6m7bsLYeVMsWpaJcDCgEoxVeCoQe38cmkwJQSdi7yG"
+      ],
+      "license": "GPL-2.0-only"
+    },
+    "src/doom/p_maputl.sol": {
+      "keccak256": "0x7f22b54c4c9366ef536b5dde42742d9015285f5b0acbccb4e5fef89a83889c18",
+      "urls": [
+        "bzz-raw://3c34bf66e29218dd3e14f248b29f66409b2c4981b4a44aa1738a4efcba3c5ae3",
+        "dweb:/ipfs/QmSkx6rRhQ5j3k1BHqvGg111oj4aqsXkeCvCJeu7rQ2t55"
+      ],
+      "license": "GPL-2.0-only"
+    },
+    "src/doom/p_mobj.sol": {
+      "keccak256": "0x1f7a694a28a92a65e5da58bad87bc3158f54bbae2128af7b76ec79cffb9dfb9b",
+      "urls": [
+        "bzz-raw://7c6d16df15d70560b4337da07d4a3717f074548bd06267393ddf1111db18e2ee",
+        "dweb:/ipfs/QmeFFtuaqKMXijwVjfByr7G1CE6tVEZE3SA9wq4GaPfL9b"
+      ],
+      "license": "GPL-2.0-only"
+    },
+    "src/doom/p_plats.sol": {
+      "keccak256": "0x7b99488bec9f6cddce3186ac8f522153edb9df44cf5931225596d901b9279805",
+      "urls": [
+        "bzz-raw://fb594754cb3c1aff4f291b14cfad6d2cc75e643538cb381d13aad9ca37cde236",
+        "dweb:/ipfs/Qma5Xq3jsRqEpbp1EywaXafP6wubJkjApZz5z7ZQCgwMoM"
+      ],
+      "license": "GPL-2.0-only"
+    },
+    "src/doom/p_pspr.sol": {
+      "keccak256": "0x43a7b6c9ce891855c6b60390542308e001865347019e211a4bcb714c7766152b",
+      "urls": [
+        "bzz-raw://03d1736525a66642ce45766b69cb115fe7959b6597bdb29046fea015fc314dfe",
+        "dweb:/ipfs/Qma2czc68bwYtJ487dSRMk9YCQSxe7tpd17ATmw6vRy4Fh"
+      ],
+      "license": "GPL-2.0-only"
+    },
+    "src/doom/p_setup.sol": {
+      "keccak256": "0x0bc88570833e6b14a68b90c5eb5f0abc8133a1b40717327bd933900334f109b8",
+      "urls": [
+        "bzz-raw://b249994300979c4701a6285c6e13c518d4d787bb5b6555e9a49e18a2dfac27ac",
+        "dweb:/ipfs/QmUzg7RkhQQUP31mvQkmT4zSjeG7BRiKG3d1UTFmmX1wwQ"
+      ],
+      "license": "GPL-2.0-only"
+    },
+    "src/doom/p_setup_static.sol": {
+      "keccak256": "0x5ebae6cf3749081a24c7e40872df3530070bea3bf1a710f3dbd0f43cd20b68e5",
+      "urls": [
+        "bzz-raw://a1137456308b38ae46e4918e997a9cbc862df9dbb38c94621c303a14e962c44d",
+        "dweb:/ipfs/QmTYggMAb5ZmMydZY18nVgVh5XNuTKQZVutN9a4CJve58Q"
+      ],
+      "license": "GPL-2.0-only"
+    },
+    "src/doom/p_sight.sol": {
+      "keccak256": "0x2946cd0242f16ebfe0b2ab87416305f4ae77efc585037d27de3411ea02da70c5",
+      "urls": [
+        "bzz-raw://7eb2413a11327dc405b5d136a00083ff557b9b0bc1edce29c99b88e01416fe1f",
+        "dweb:/ipfs/Qmaq5eNk9hMfVSQZ5JiTQadmgMNK4PtLGm7MjaY2swLAuw"
+      ],
+      "license": "GPL-2.0-only"
+    },
+    "src/doom/p_spec.sol": {
+      "keccak256": "0x1a1d8292fcc983c511bfd6cd3c323ae1f8896a38e656079eeecfb81b78d4a78b",
+      "urls": [
+        "bzz-raw://d9a6544e26b988754e4a9d4012fed381f2238b4014cac5acfb478ba7ac97d2e4",
+        "dweb:/ipfs/Qmaa1fCHV7p33zGfT4eaao6Lbob4npZ4V2ow4JF5vKJ4Kq"
+      ],
+      "license": "GPL-2.0-only"
+    },
+    "src/doom/p_switch.sol": {
+      "keccak256": "0x391f2ceb0ce889cf6817262e279721067dc33bbc825c8bb50b59c954de36bfb7",
+      "urls": [
+        "bzz-raw://02c2d1d36915a2167dcfe7458bc7279e7bd7b16cb834a7b93eb78680fe24c150",
+        "dweb:/ipfs/QmXLqwjNU52jVbh17jL2BUV3xCEdTihL6YCK8SwncttMen"
+      ],
+      "license": "GPL-2.0-only"
+    },
+    "src/doom/p_telept.sol": {
+      "keccak256": "0x9376dabab1c29d7764092d32cb60bd2861bebe77bcd8a327f3787d776e366a52",
+      "urls": [
+        "bzz-raw://9fbdf726abb2f5799245e1cd8073824e5741555292fc06a745174b37aec7ecf6",
+        "dweb:/ipfs/QmZG89k7wqUAzA3EWAe5xWD6qfxtXca9yLN3HzcQNFDxnz"
+      ],
+      "license": "GPL-2.0-only"
+    },
+    "src/doom/p_tick.sol": {
+      "keccak256": "0xfbc31828076d0ac57a2acbea6325522beebfcff60c52d76553e7870f3ed851d4",
+      "urls": [
+        "bzz-raw://dfcee522648d8f315ecf0e71922b36a8549343d3c2df8bbaac17377cd03e9a8d",
+        "dweb:/ipfs/QmRjvFnryucwpdmpSxtAjASXmesD2hEvxvWad81QEcoZtt"
+      ],
+      "license": "GPL-2.0-only"
+    },
+    "src/doom/p_user.sol": {
+      "keccak256": "0x127cad0c4cb1072b58d2aaa573b4ffec25ef69056bdf7247e12d823616c2ee25",
+      "urls": [
+        "bzz-raw://14382ffb71edf99e3c914a2eab993ca633466b9a0af72a62905353a358993ddc",
+        "dweb:/ipfs/QmPYcafsPxJk3F7Rru1a23vs2aX4uig7XAPoxTsytJbSVj"
+      ],
+      "license": "GPL-2.0-only"
+    },
+    "src/doom/p_zone_setup.sol": {
+      "keccak256": "0x9e86c528cf9c29d292254e523e95ef91ad6230d9e77c10956250fcc3834db417",
+      "urls": [
+        "bzz-raw://8a24243d7e54c52c981224a12cbe95904ffaa2c743723d08ed72bb8b49734fcc",
+        "dweb:/ipfs/QmeRFgKgsuWVAmtjY5JheVmG38xyfLfCmrsg9NHyJZ7qzK"
+      ],
+      "license": "GPL-2.0-only"
+    },
+    "src/doom/r_bsp.sol": {
+      "keccak256": "0x64d687cc90740cba937278d99a6e38b1deb9c874d73d2eb3c5bc000e0504fe73",
+      "urls": [
+        "bzz-raw://f543b5cfb36e4ae41b716d3604bd93d8f3a7914fcc2dcaa4f1f5d4e470ce2bf2",
+        "dweb:/ipfs/QmYtSderKHyXPcxEiLLLjpc14GRzpcRcisSNEpJ8uGCBhz"
+      ],
+      "license": "GPL-2.0-only"
+    },
+    "src/doom/r_data.sol": {
+      "keccak256": "0xfc04bbe2c148b852ca2eda32352f5a778b6dd1d18fa5138b73c07b152204c1aa",
+      "urls": [
+        "bzz-raw://495acdcf2db18e338c17306af8a92fbafbc195952b0eb61a19f234010eed34cc",
+        "dweb:/ipfs/QmQQHjQniTcd3rgZuo7xTZMw5qKYyS5XiWpS9hh6WKYgcY"
+      ],
+      "license": "GPL-2.0-only"
+    },
+    "src/doom/r_data_types.sol": {
+      "keccak256": "0xb65f5812d6d722e5dd02546f449ef4312d8f51e6a6c55dd62a2acfe2fd3dcf0d",
+      "urls": [
+        "bzz-raw://05159648647d014f71861a0bf4ff09a317ce2fa318698fb1c8668ebc9614ec5c",
+        "dweb:/ipfs/QmNXUuAg3oN3b1AYc7Kht8j81YSrSbuqcXfUr2AqXBkAND"
+      ],
+      "license": "GPL-2.0-only"
+    },
+    "src/doom/r_defs.sol": {
+      "keccak256": "0xa72c95722d9dbf6c793100d796c7ea3994b5bf89e9408397c853d81d2db4dab2",
+      "urls": [
+        "bzz-raw://d2e610c4ebbf259979d49df73b2cdce0dd15bdbe5cd5b4b12928045222d64f1d",
+        "dweb:/ipfs/QmdUpNyRkdJAbeS9NKSprzGTCjpT1mWTSYK9NZ9rYuxmX1"
+      ],
+      "license": "GPL-2.0-only"
+    },
+    "src/doom/r_draw.sol": {
+      "keccak256": "0x2511bbd270a5cad39d78fd028f1c3e1a9fa03a00535610d96be06cb32b7d2c07",
+      "urls": [
+        "bzz-raw://ccac6715f83f6ffc7021977c50383c880712d9e88d3ac843f3ce4e6ee1e970e7",
+        "dweb:/ipfs/QmcFeCCSpqzgkCQMz8XZhYmo1qWJNsaqwYBgpvnheN7K66"
+      ],
+      "license": "GPL-2.0-only"
+    },
+    "src/doom/r_main.sol": {
+      "keccak256": "0x4f8be93885127da85cda788a06e9a1d17ae0349ea4badf72187755c0549fbaed",
+      "urls": [
+        "bzz-raw://6c49b2f0080f53b6b116cce8ebad072122278cd80cc5c7ef045999f8d006a62f",
+        "dweb:/ipfs/QmYTMqhL8jPrKrNC5NRy4KhNkFVcjEnrukrXKfmo7arJMk"
+      ],
+      "license": "GPL-2.0-only"
+    },
+    "src/doom/r_plane.sol": {
+      "keccak256": "0x61d722e7bc1e98686e659b0bbbe44104f807216a771623fe1fc611db2b2a1721",
+      "urls": [
+        "bzz-raw://d5ab6015a3ce8126cfa0a66ed3ffc7d66277807e0a27475ac34598b973c4317e",
+        "dweb:/ipfs/QmVBww8UkRJ27MqD1QZfhhaYvcSLXC6ZNcMrisEkH4f4mZ"
+      ],
+      "license": "GPL-2.0-only"
+    },
+    "src/doom/r_render_hooks.sol": {
+      "keccak256": "0x63a7e53f7cad401a6a69466c5d4b589d2ad67f45212378d9daaeb5911b626b50",
+      "urls": [
+        "bzz-raw://9eb175993db3f757f8aea4f020f6c124626e9cf537a8219690068b90a01681f1",
+        "dweb:/ipfs/QmcCcKTnHufcWtAxf4ubfSBddUrkwLNhLtdzLcxNb6NoHk"
+      ],
+      "license": "GPL-2.0-only"
+    },
+    "src/doom/r_render_state.sol": {
+      "keccak256": "0x3dd5f963d7f2c35bbab21f9a031861be09c542712246007df440ad6b48155653",
+      "urls": [
+        "bzz-raw://3923482dbe08de8c6ee72bcbd47b5834cb3d2b93ce31ca6d00090167f3c0745d",
+        "dweb:/ipfs/QmPKTMZXqxrrvuK3Yia16fojJDFEghChnarMK13hawdCZ1"
+      ],
+      "license": "GPL-2.0-only"
+    },
+    "src/doom/r_segs.sol": {
+      "keccak256": "0xc185de128d00521c54e13dc187f395655bf07102751fbeb3aad695ece8387381",
+      "urls": [
+        "bzz-raw://edd1d86eb17f88667db28f0a8da4b260f4fa861c4d9f4d15d5fe9de2d367d76b",
+        "dweb:/ipfs/QmehyzC9scwidwnWoBcp8Qah2ho7ddV2EDrTKTy7NuCSoJ"
+      ],
+      "license": "GPL-2.0-only"
+    },
+    "src/doom/r_sprite_state.sol": {
+      "keccak256": "0xfdc6a52dfdc01226cd0ad6a2b00483f1c9a5f5cf30fec77f1c7bf72accc5f4e2",
+      "urls": [
+        "bzz-raw://eab893c9e7ecbf3077935553f01a5ac04500be300863ea42bb48b6fe1a93d34c",
+        "dweb:/ipfs/Qmd3LRX9cmqnzhfDS3A75mrN9EoGCDSwbkc1jV3iFuEmRS"
+      ],
+      "license": "GPL-2.0-only"
+    },
+    "src/doom/r_state.sol": {
+      "keccak256": "0xfd86419ae79283c2bc6b4dfcaf050f0484ab8beba40eb18736a664ba96b3ad2c",
+      "urls": [
+        "bzz-raw://925a36c14631087f7f2b749cbf1d062b62e3cef9973c2a7aa0e24eee61e5d396",
+        "dweb:/ipfs/QmQX4MkJeD7zEziH1gPaLSictJgu7fW7xFYFckRcc15aW3"
+      ],
+      "license": "GPL-2.0-only"
+    },
+    "src/doom/r_things.sol": {
+      "keccak256": "0x577e1535b6e4678fd6ffd283b8f066e3f9a63938ce56117b03f13998a7478a08",
+      "urls": [
+        "bzz-raw://398ec379d6fb87916fad43697bd8611cd3930a5116362a67a859c523d93d2754",
+        "dweb:/ipfs/QmYhB3xgqCZqYPqVyZECx3xAERVKK7XBAYHAvdX7i9jvn2"
+      ],
+      "license": "GPL-2.0-only"
+    },
+    "src/doom/tables.sol": {
+      "keccak256": "0x4de148ce59c7b3cc5d95a5d9643a2403abf3a7a3282a8cbb104a20be54f2ed1a",
+      "urls": [
+        "bzz-raw://28494a670d0d0046d748e077e2d88c09f9d2658816ae43dcc52141964d1ba478",
+        "dweb:/ipfs/Qmed2KUm3YRfFSd1gmQJnmJdKaP2jAT7foFT8xjBnFGULJ"
+      ],
+      "license": "GPL-2.0-only"
+    },
+    "src/doom/w_zone_cache.sol": {
+      "keccak256": "0xbd818cc8a131738224470416411eafea80082c3377c6d9393526d4cc9906e640",
+      "urls": [
+        "bzz-raw://f30578bb5c47dd948a3723cd53ed5c2fe49962b625bae66f41e4443819c33c6c",
+        "dweb:/ipfs/QmXSQh8YAeY999UUrydxYSaU9maCwVZKQZPDbziKntLfE7"
+      ],
+      "license": "GPL-2.0-only"
+    },
+    "src/doom/z_zone.sol": {
+      "keccak256": "0x3a19be947ea7cfeb34e73096b29c564d9a9bb64d34b9de6259584e9f4292e839",
+      "urls": [
+        "bzz-raw://fc45b6276fc9f4d844d000d0a325aad89b7dd0aa4c34acc436d7384af4ed5000",
+        "dweb:/ipfs/QmeLPKN6NH9KDFKKjU9KJz1XcVj4je51xSQk2CbAeZXq9d"
+      ],
+      "license": "GPL-2.0-only"
+    },
+    "src/doom/z_zone_backing.sol": {
+      "keccak256": "0x5ef8fab397e8ed1e81d3a9abc70fad873e69a225bdbb290cacebe816941b7422",
+      "urls": [
+        "bzz-raw://9f2ffb91c6335608193be0540a6d641be88476857be9e2bc0de061341f255d1e",
+        "dweb:/ipfs/QmSwhNV6Z1SZxE8weby35dxncPJXpxkDWnT2VgaaSphTHa"
+      ],
+      "license": "GPL-2.0-only"
+    },
+    "src/doom/z_zone_types.sol": {
+      "keccak256": "0x5e674cce285aafb5ddceaeb7826629dee79f1be2ac75e903bac12258ac19b9bd",
+      "urls": [
+        "bzz-raw://61ff67c3a0e03997772b93e9da694182b86b8e8592bac436c20f6c3f2bedf75f",
+        "dweb:/ipfs/QmYXPnmuk585sCzGKLFSCGo7TibsJRexb1NWCddhJW4wrf"
+      ],
+      "license": "GPL-2.0-only"
+    },
+    "src/evm/DoomGame.sol": {
+      "keccak256": "0x3f42a5c972c931fd19d0915974db0b0ca33f49720bf15577ec03c8e49272b160",
+      "urls": [
+        "bzz-raw://c090556d1a74aa6a2030c41741b0286406a09747a84e79db005d6640913acf99",
+        "dweb:/ipfs/QmcefkjerrvjF44TctBzH8a7Uq8YgFXzA1YWYJSw8Axmmm"
+      ],
+      "license": "GPL-2.0-only"
+    },
+    "src/evm/DoomRenderer.sol": {
+      "keccak256": "0x22a79508bed78c5e9dfb180fcfaf138d1d42dd9b0f529e5e53532866062b06d7",
+      "urls": [
+        "bzz-raw://0595d1c1b6f9315476a8df4c21b04fccd2453a37b3d8e8de67250fad245bc68b",
+        "dweb:/ipfs/QmVwohPfTsvgRyaihPxEt9otsTCa9QzbDiReuYBm1NFQ29"
+      ],
+      "license": "GPL-2.0-only"
+    },
+    "src/evm/DoomScene.sol": {
+      "keccak256": "0xb361302f62fec666210ebb54c3baa2e986883274a95186ffa7d0445f7ff21501",
+      "urls": [
+        "bzz-raw://6f0fa8960f10d2ae3b18bfe759c49a2aaa03529e31363bc645b272db36b6e3eb",
+        "dweb:/ipfs/QmUrF18F1C4A35prWcZcbJrPvAwJxtvBw43QSPpk3Gva4e"
+      ],
+      "license": "GPL-2.0-only"
+    },
+    "src/evm/DoomZoneStartup.sol": {
+      "keccak256": "0x64a2ba3054c5c21c8e3702d2abae06adc990ba698aa516ed0a76d9a847f76acd",
+      "urls": [
+        "bzz-raw://e66faa9a3ce4154d918d85fbd2a49b1eb2d4d2231788adc5d8654b6f5d5af93a",
+        "dweb:/ipfs/Qme3UoL6jNS91izCqurPiHUMDmVvC7zoYoNEJkfmwdUu3v"
+      ],
+      "license": "GPL-2.0-only"
+    },
+    "src/evm/ResourceTypes.sol": {
+      "keccak256": "0xcd7e2bcfad5a521a64c604cbcd74180e931a8a263b8e96d41573470a33c14f4d",
+      "urls": [
+        "bzz-raw://ccd32a313a5a64844c5e5e53dac8392e381ae0c5328e2e3b369b1d5889e39afe",
+        "dweb:/ipfs/QmZxPx9Ta2soGGmWG5wF6bY4jfAurhtLFt2uPqjMfjrVKn"
+      ],
+      "license": "GPL-2.0-only"
+    },
+    "test/unit/p_zone_setup.t.sol": {
+      "keccak256": "0xbda40e3a564865c7eb41693dabcd82b44db437325f8e75e53900a904136ebfdf",
+      "urls": [
+        "bzz-raw://192d4a31a0e5e54a1246e9bac8f29e094c17f55617d7b2420427b15aa5651867",
+        "dweb:/ipfs/QmXR3reieupEv1Yrr3N2YePRNRAYNvRvXQLuhxWqBFKWhC"
+      ],
+      "license": "GPL-2.0-only"
+    }
+  },
+  "nativeManifestSha256": "6c9f225e58606f629585f6840a9079122852e657ea516e29068cbba6f6d33f5e",
+  "tests": [
+    {
+      "name": "testActualSetupGeometryFunctionsMatchNativeHeaders",
+      "gas": 841290611
+    },
+    {
+      "name": "testOriginalGeometryOperationOrderAndHeaders",
+      "gas": 756519609
+    },
+    {
+      "name": "testWholeOriginalSetupWithRealSpawnHooksMatchesNativeHeaders",
+      "gas": 921702315
+    },
+    {
+      "name": "testFullAtomicInitializationMatchesNativeHeaders",
+      "gas": 1624686931
+    }
+  ],
+  "scope": "One actual DoomGame.initializeNative call decodes original resources once, replays original R_Init/R_InitSprites allocations and original G_InitNew/P_Setup. Every normalized native setup header and owner, heap integrity,210 actor/3 flash/6 strobe counts and all9 typed map allocation slots pass. Existing3 component gates retained.",
+  "limitations": [
+    "Test resource chunks are installed through etch; this is not an ordinary authenticated production deployment measurement.",
+    "Gas includes component resource fixtures and native header comparisons; not production initialization gas.",
+    "No native allocation tape, prepared zone/world or pixel input is passed to initializeNative.",
+    "No rendering/gameplay/browser or M2/M3 acceptance claimed by this component gate."
+  ],
+  "historicalValidation": {
+    "path": "tools/reference/phase3_zone_setup/evm-validation.json",
+    "sha256": "c05eb54dc8eac4ae014fb2cd4fe727f6418d60f0361bbbffc5767813e5322da0",
+    "session": 73296,
+    "gasLimit": 1000000000,
+    "note": "Historical1B measurements/source bindings retained unchanged."
+  },
+  "artifactSourceBindingsVerified": true,
+  "finalFormattingCheck": "PASS test/unit/p_zone_setup.t.sol"
+}

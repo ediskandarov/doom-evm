@@ -1,0 +1,343 @@
+{
+  "schemaVersion": 1,
+  "kind": "historical-staged-zone-production-one-billion-gas",
+  "pass": true,
+  "historicalArchitecture": "Driver preparation and game initialization in separate transactions, originally chosen under the 1B gas cap. Later user steering requires unified source-derived initialization with a configurable 10B default budget. This result preserves the completed historical run and does not establish acceptance of that later architecture.",
+  "command": "node tools/reference/gameplay/production.mjs --native-zone --rpc http://127.0.0.1:18579 --resources-report artifacts/local/gameplay-production.json --output-prefix artifacts/local/gameplay-production-zone --keep-node",
+  "rawReport": "artifacts/local/gameplay-production-zone.json",
+  "rawReportSha256": "0487917d30c265ea9c24f717467b1c19ad1a182207f66364cd1842c328862768",
+  "resourceIdentity": {
+    "schemaVersion": 0,
+    "wadSha256": "7323bcc168c5a45ff10749b339960e98314740a734c30d4b9f3337001f9e703d",
+    "bundleSha256": "d379076f21645cf7cc5acb056663d0faacc4065489a0ca99738479323c9f7a47",
+    "paletteSha256": "fd895921b5d0a394612bb29852ed003d44d69f76dec31c0dc6b5d5fc7d63f7bb",
+    "paletteVariant": 0
+  },
+  "coverage": {
+    "tics": 129,
+    "noRenderTics": 123,
+    "liveFrames": 6,
+    "staticFrame": true,
+    "pixelDiffCount": 0,
+    "fieldsPerObservation": 14,
+    "observations": 130,
+    "fieldComparisons": 1820,
+    "preparationAndInitializationEmitNoFrameOrConsumeSequence": true,
+    "rejections": [
+      {
+        "label": "non-driver resource preparation",
+        "error": "NotDriver",
+        "selector": "0x0c0e646e",
+        "transactionHash": "0x21b751d020ce6ef46b2afe345575057ed64767e596edfeeb3776776ad8e1bef4",
+        "gas": 21356,
+        "allStorageRollback": true
+      },
+      {
+        "label": "initialize before resource preparation",
+        "error": "GameResourcesNotPrepared",
+        "selector": "0xf540e7e2",
+        "transactionHash": "0xf3bfe7ddf57d35fc92cf6e68342d5d3ff330ffae93d35e9c3331f26636daf350",
+        "gas": 23663,
+        "allStorageRollback": true
+      },
+      {
+        "label": "non-driver initialize",
+        "error": "NotDriver",
+        "selector": "0x0c0e646e",
+        "transactionHash": "0x872af765560b9a3e854ccb4b4ca8a37666baa04ee362c5784b6feeff72efbb35",
+        "gas": 21510,
+        "allStorageRollback": true
+      },
+      {
+        "label": "step before startup",
+        "error": "GameNotStarted",
+        "selector": "0x3a5f7b57",
+        "transactionHash": "0xc9aec8f5240ee50d810e053550bbcd71cb8b4fb408beb7dce9fca0a55c6acce9",
+        "gas": 23884,
+        "allStorageRollback": true
+      },
+      {
+        "label": "held movement before startup",
+        "error": "UnsupportedButtons",
+        "selector": "0x750706e2",
+        "transactionHash": "0xdcef136ae2cad475a66f6faad0dd6993139b4aed74468126b3594542aaf8e5b9",
+        "gas": 23803,
+        "allStorageRollback": true
+      },
+      {
+        "label": "sequence zero before startup",
+        "error": "BadSequence",
+        "selector": "0xb986d7fb",
+        "transactionHash": "0x8e51a50390c072d8c26b18cc01a495f8ed55d2fe37f1f32b8631652dc7618d2a",
+        "gas": 26105,
+        "allStorageRollback": true
+      },
+      {
+        "label": "resource preparation twice",
+        "error": "GameResourcesAlreadyPrepared",
+        "selector": "0xb4d315a7",
+        "transactionHash": "0xa5a82da110392147ed34746a0e741cafc0a0c2ddeef0009650adef541c05bd7a",
+        "gas": 23506,
+        "allStorageRollback": true
+      },
+      {
+        "label": "resource preparation after initialization",
+        "error": "GameAlreadyStarted",
+        "selector": "0xba26162b",
+        "transactionHash": "0x652a60b8c98a7179843d5b60ab6d3cd27235f5ffe48730a664d81dabc1734977",
+        "gas": 23481,
+        "allStorageRollback": true
+      },
+      {
+        "label": "initialize twice",
+        "error": "GameAlreadyStarted",
+        "selector": "0xba26162b",
+        "transactionHash": "0x133bea428c9fc342c759f072e3861f2316712fa9f35a8c32c7f63702bc07891c",
+        "gas": 23635,
+        "allStorageRollback": true
+      },
+      {
+        "label": "non-driver step",
+        "error": "NotDriver",
+        "selector": "0x0c0e646e",
+        "transactionHash": "0x465070ddc34ab537000781009d6a776caab0e56cfd1dbcf62db35972ca1dc14f",
+        "gas": 23951,
+        "allStorageRollback": true
+      },
+      {
+        "label": "non-driver frame",
+        "error": "NotDriver",
+        "selector": "0x0c0e646e",
+        "transactionHash": "0x515f945ca645db0631589821eb152ac6cd26ce9d21a196427f19d220b4d8529c",
+        "gas": 23819,
+        "allStorageRollback": true
+      },
+      {
+        "label": "non-driver renderFrame",
+        "error": "NotDriver",
+        "selector": "0x0c0e646e",
+        "transactionHash": "0x23c011bfd0f787caa8b766e77207da61cb8e901c35d66fb803bd65096c6ff66b",
+        "gas": 23473,
+        "allStorageRollback": true
+      },
+      {
+        "label": "repeated accepted sequence",
+        "error": "BadSequence",
+        "selector": "0xb986d7fb",
+        "transactionHash": "0x8ee0c6d23897e8dc0e0806fb56a12b839008bc638aaa8bba13197cb3fb4a2819",
+        "gas": 26220,
+        "allStorageRollback": true
+      },
+      {
+        "label": "skipped sequence",
+        "error": "BadSequence",
+        "selector": "0xb986d7fb",
+        "transactionHash": "0x89a3d466bd1ecd1e63bd7f974f519ef4725be9bc564384376313cbe634aafed6",
+        "gas": 26088,
+        "allStorageRollback": true
+      },
+      {
+        "label": "zero sequence after startup",
+        "error": "BadSequence",
+        "selector": "0xb986d7fb",
+        "transactionHash": "0x82276b28acdcb2470a60c9171f4faf55004167c3a75b3e8554c9ea759f63ee38",
+        "gas": 26208,
+        "allStorageRollback": true
+      },
+      {
+        "label": "reserved input bits",
+        "error": "UnsupportedInputBits(uint32)",
+        "selector": "0x56faaba9",
+        "transactionHash": "0x5e970fe51b23524fe1650de731f52bc15d01056eb4da72549fd57fd32e4d15ce",
+        "gas": 270438575,
+        "allStorageRollback": true
+      },
+      {
+        "label": "invalid weapon request",
+        "error": "InvalidWeaponRequest(uint8)",
+        "selector": "0x8b5662aa",
+        "transactionHash": "0x51444e75f04e32aa4c5b455a47caf0abc298fa650c0202b81d1f19150141d162",
+        "gas": 270438500,
+        "allStorageRollback": true
+      }
+    ],
+    "allPersistentStorageRollback": true,
+    "wsReceiptExactAndReceiptFallback": {
+      "delivered": [
+        {
+          "frameId": "1",
+          "source": "ws"
+        },
+        {
+          "frameId": "2",
+          "source": "ws"
+        },
+        {
+          "frameId": "3",
+          "source": "receipt"
+        },
+        {
+          "frameId": "4",
+          "source": "ws"
+        },
+        {
+          "frameId": "5",
+          "source": "ws"
+        },
+        {
+          "frameId": "6",
+          "source": "ws"
+        },
+        {
+          "frameId": "7",
+          "source": "ws"
+        }
+      ],
+      "duplicates": 7,
+      "stale": 0,
+      "receiptFallbackVerified": true
+    }
+  },
+  "resources": {
+    "reused": true,
+    "sourceReport": "artifacts/local/gameplay-production.json",
+    "sourceReportSha256": "533bb130835d4e4e23d4c33a5a2b09f74c69beedcf056f2bea7780239716f1b5",
+    "allBytesRechecked": true,
+    "identityExact": true,
+    "newlyUploadedChunkGas": 0
+  },
+  "actualProductionGas": {
+    "transactionLimit": 1000000000,
+    "deployment": 249759506,
+    "preparation": 577921129,
+    "initialization": 960335676,
+    "noRender": {
+      "min": 309135111,
+      "max": 312202597
+    },
+    "stepAndRender": {
+      "min": 719412460,
+      "max": 781641380
+    },
+    "runtimeBytes": 502972,
+    "runtimeSha256": "ca8a1cf01989907a25b82a3d618ec853a64ebaa63c2f3119da1a3c910e18e2db",
+    "scope": "Actual uninstrumented production transactions including storage and source-derived allocator/gameplay/rendering work. RPC elapsed times are not isolated interpreter execution times. No actual memory high-water measurement in this run."
+  },
+  "compiler": {
+    "version": "0.8.37+commit.f401782d",
+    "settings": {
+      "remappings": [],
+      "optimizer": {
+        "enabled": true,
+        "runs": 200
+      },
+      "metadata": {
+        "bytecodeHash": "ipfs"
+      },
+      "compilationTarget": {
+        "src/evm/Doom.sol": "Doom"
+      },
+      "evmVersion": "cancun",
+      "libraries": {},
+      "viaIR": true
+    }
+  },
+  "sourceHashesAtRun": {
+    "src/doom/d_ticcmd.sol": "508d0332d3e8b83e1b68d37581a3befc100a9974fcaa0900cc44116cd75ff2ef",
+    "src/doom/doomstat.sol": "4c40da3914c629017959a0a4c0516d83346900674c92f5e55a766aba1b506fea",
+    "src/doom/g_game.sol": "2714f783a532bc2a525d7f50813c472f299c541ee9062a7a5d078e1818791e70",
+    "src/doom/info.sol": "4611205149173e42d3b0f1d91820c8042f6bc5fc48fb53aec84ad4bc501dca8e",
+    "src/doom/m_bbox.sol": "f4c60efe3627a97d0288fc5cd0283535527b1f51029568534c80bb8fbbf8f272",
+    "src/doom/m_fixed.sol": "3f64bef1f62f61faead3a5b8f382bf1c66e1b3739ce4ac8d59a6fcef0451ef9f",
+    "src/doom/m_random.sol": "5267b881138cfb7e0d683449005619513006c70e3ed557f64697b36c4ed40c7b",
+    "src/doom/native_zone_layout.sol": "118b2d17165826fb0857d9cb296e2214db2a28917769299a82e70d0c0790f6e8",
+    "src/doom/p_ceilng.sol": "696f3f620f5bddb3cea64fda824e3203c780f53db890630f0685794454dc37f9",
+    "src/doom/p_doors.sol": "945bf600ce86d8286718fb75ecaf905a0c4631d79d2dac7260c91c9dc2013f8d",
+    "src/doom/p_enemy.sol": "eff76cce23b0877833a5c446a1a09d8ae01918a6925b6d3265240b144c09dfe7",
+    "src/doom/p_floor.sol": "b7c90baafa0b74fd7ff80cf60dcbc430148f6d6d068ba54ca0fbc7ba1bca7069",
+    "src/doom/p_game_state.sol": "0f9d60aae9424cad17c614d4fcc93c9eb6fe8a43c7bce070d2460fcf2c34f649",
+    "src/doom/p_heap.sol": "5aee980933971a0eba6e221191e736619f4cb73148c9973c3f578408163c7b4a",
+    "src/doom/p_info.sol": "a48840479115ea8bf849ca5ec448d1b2bec7a6cfe58c5314e140635a898de792",
+    "src/doom/p_inter.sol": "8be27f9bba47beb46b3edf2a8a2674b3cd7218d2abb8ef5f8855803393d067de",
+    "src/doom/p_lights.sol": "6f63cbc6b41fc492a46ce43aef464deb9d08b7fa1dd8b213b546eec3e4f08276",
+    "src/doom/p_map.sol": "6b6d48523a45acab9090dfb0ec3d6dbab4e6de18afa89453df8b5a87088da0f3",
+    "src/doom/p_maputl.sol": "93f5c0e37761e15675a2640e2be950d8056dcea335db36243f7df9e216069e93",
+    "src/doom/p_mobj.sol": "966cc7bf88a17adc30222f9ac7d735415afcb783dcb9367f5df9cced1df73ff8",
+    "src/doom/p_plats.sol": "6904df762b270f840daa99b34d2a5c689dbb2fef3aed3d33c2ac1a3f3e4d5722",
+    "src/doom/p_pspr.sol": "cfa2db3438d689c38d9c957fc4aee598c58740f025d6efead2b5f9671eb0c863",
+    "src/doom/p_setup.sol": "9498e1298bf4e53ccedc484a50d4c7f9f85315f6cb700719d474b721e382243b",
+    "src/doom/p_setup_static.sol": "c8100a42bb0bac190c583bbb2c82168599009f88a766e4c05b9a9231a5f69792",
+    "src/doom/p_sight.sol": "335089a6b126c4be3aff3fbe8081c5968a3062c235fa6f023e6748eb3d9f41fb",
+    "src/doom/p_spec.sol": "2363640e75c22c9d017db677dda7148ad221380f0a23639167e145e933fc72b7",
+    "src/doom/p_switch.sol": "5404d359793e05c6c24a7804c07632150009b46f38d03068412d7ac53260dfe2",
+    "src/doom/p_telept.sol": "745f0fa4ed6f0515c398bfd2469c59aac82316965b7bac25263aeb82555d61b8",
+    "src/doom/p_tick.sol": "1993dd0c94853dabc4db554dfa0ca04375cef0a22075400ba0e7b56b525022ab",
+    "src/doom/p_user.sol": "963a46850e1b17171f79dd65bff9b5006ce6f97a935ad2023d1d526a6ec35c37",
+    "src/doom/p_zone_setup.sol": "e0308bd1197fd84a01eb1ee208be73c711851d6b0bc30be1d07a7c61b18b223d",
+    "src/doom/r_bsp.sol": "0ae5df313515692d0b2b970d5d39d107e014629cff2305fb37c14371a9524040",
+    "src/doom/r_data.sol": "5b404d561f8bce538e8a8221b4f36d62c9b9826fc833307640d96fcbfdca2d0a",
+    "src/doom/r_data_types.sol": "0448302d68447c8a5a4c46df4016e8845863e42bf6eaca8bcab8ab0c9707fdf8",
+    "src/doom/r_defs.sol": "558d5a9bfd131e816bbe28986e2dad6144a08e5a16ccfed1b199d7558a1ea0e2",
+    "src/doom/r_draw.sol": "afe958ea0c2962b739bff58b98d8bccc25c48d3d0838cacd46142c242b5d6477",
+    "src/doom/r_main.sol": "df403bf04fdbbcfc68c4fd9c5e19b5201ca711498efc34db406a4010ad3b2af5",
+    "src/doom/r_plane.sol": "c7a5abcbca84dddcd2a3c8bb160a609605c5c1842e73704dff4860df3280e463",
+    "src/doom/r_render_hooks.sol": "f026ccb8fffb68d8fbcb0966103212f52884b86350fe3fb52a401d146f3fb312",
+    "src/doom/r_render_state.sol": "072bd2f73b98e1eb775fc8093e95a69c184f3fa50a89a5d64a7beccd59493398",
+    "src/doom/r_segs.sol": "9d4e4dea06739278aab3698fb422818de6dd7726359c8822d60a162e886621cb",
+    "src/doom/r_sprite_state.sol": "735b3de85cbf455e05d3cb8e992cf4e477960bd4192bbd367f5c66c803b96363",
+    "src/doom/r_state.sol": "80951a13733e3a08f4182937a37def33ffda21eaae4b43a2a1bdba2043adab6b",
+    "src/doom/r_things.sol": "86705ab6b1f79b7ef07798b881cc547502d9911c97b57dc516a744e17c1977f5",
+    "src/doom/tables.sol": "bf14202b419075f6d187653205a37e211d8267c7fc4c0bebf5a8c5713afddf38",
+    "src/doom/w_zone_cache.sol": "03c07404765de9620b3d1ff15727809cdad911c8a78d822019b63500fa5018c2",
+    "src/doom/z_zone.sol": "47fe4cd4ce09d37d21d9d3cedd349004c8e3a1941f939a1ddbc5ec2e1d67b1ca",
+    "src/doom/z_zone_backing.sol": "902ea03bc32af6b7443461ff64d21e780d9a0ef6c6bbe2dd1262216bfc37a3f8",
+    "src/doom/z_zone_types.sol": "d6c5d8680e08bd8989042cb42a934a3323818e4c2b94c11dc38196911dadc08b",
+    "src/evm/Doom.sol": "3c0a7871db7f3263b9c5944888629e672c9215b70318840368ea5a93c717ca62",
+    "src/evm/DoomGame.sol": "a194b00ce5133b9a9983dcfb72003d32a02dfddedf70ef9ee861b3f0fba4f1ba",
+    "src/evm/DoomRenderer.sol": "5639d82431350ea76c26d43457d26d0c3c0f410eaddf02db6adbcfb03a569ba0",
+    "src/evm/DoomScene.sol": "9ad7c8ccee4c9e05deb5608326baabacfa40f686b8d8445fb8aaa7352ab64569",
+    "src/evm/DoomZoneStartup.sol": "2d178494456a7ae3c730310f257ce2aa635d37d18c90cac039cf002cdb3f50dc",
+    "src/evm/FrameProtocol.sol": "4665be3f613b8e817d616d2db1dc4a644325c44a6ade476a35d7d9d003625ace",
+    "src/evm/InputProtocol.sol": "df068ec9030d7241de7d6160059f8e46fe647f6655123f03849789b359bee51b",
+    "src/evm/ResourceTypes.sol": "159865364cfa57aae508cd94c49509cbccabd6aeeba55e92b9fcf816bdec4d6b",
+    "src/evm/WadResources.sol": "25a1acc0a44ac35cc29e5f9bd953ba66b85db4f665b732430571b416ef927895",
+    "tools/reference/gameplay/production.py": "5971309efd86a42252fbda084d0348fe95a8f2ab45f2cd6d0b240d1a0d30170d",
+    "tools/reference/gameplay/production.mjs": "c9ddcf8f0cca09ce991ae75177889e9c8a64b15ae482a6d9322be107b0456d31",
+    "foundry.toml": "084d5192108931325837611f9d1339796a6ffd64ed570e31907afe718f191226"
+  },
+  "deployment": {
+    "address": "0x0ca1caf038546b20380b2bd88fbcf604d5066628",
+    "transactionHash": "0xdd4ae7b26bc6b9a35060956d43b976fc7391e5f9aab8c15437efdb9d084d4958",
+    "gas": 249759506,
+    "ms": 57.87154199999998,
+    "runtimeBytes": 502972,
+    "runtimeSha256": "ca8a1cf01989907a25b82a3d618ec853a64ebaa63c2f3119da1a3c910e18e2db",
+    "all1755AuthenticatedResourceRuntimesVerified": true,
+    "chunkGas": 0,
+    "uploadMs": 403.84525
+  },
+  "historicalBrowserDeployment": {
+    "address": "0x12d73e63281fd1387290d75a66861b5368b4a616",
+    "transactionHash": "0x167311931799f6f43603dcd5699128473256d7bf3f15b4255cb545d82deedba2",
+    "gas": 249759506,
+    "deploymentBlock": "0x815",
+    "configPath": "artifacts/local/gameplay-production-zone.config.json",
+    "palettePath": "artifacts/local/gameplay-production-zone.palette.json",
+    "gameStarted": false,
+    "inputSeq": 0,
+    "gameResourcesPrepared": false
+  },
+  "sharedNode": {
+    "rpcUrl": "http://127.0.0.1:18579",
+    "externallyAttached": true,
+    "serverNeverOwnedOrTerminatedByRunner": true,
+    "nodeSettingsReverified": false
+  },
+  "limitations": [
+    "This historical staged architecture is superseded by user-directed unified startup/default 10B budget. No new atomic-runtime or new budget acceptance claim.",
+    "17 mined rejections compare eth_getProof whole-storage root before/after; all 14 exported state fields and selected complete Frames match original native gold.",
+    "Every reused 1,755 resource runtime byte was rechecked and constructor authentication retained. Ordinary CREATE only; no engine/resource code injection.",
+    "Source hashes record the frozen artifact used at run time; current workspace may advance afterward."
+  ],
+  "checkpointSha256": "c550733caee2617adc2270f12eacd4e7e4ce12155c49d474814686932c527523"
+}
