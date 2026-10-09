@@ -1,0 +1,102 @@
+{
+  "upstream": "a77dfb96cb91780ca334d0d4cfd86957558007e0",
+  "compiler": "Apple clang version 17.0.0 (clang-1700.0.13.5)",
+  "target": "arm64-apple-darwin24.6.0",
+  "cases": 71,
+  "sourceHashes": {
+    "p_map.c": "752c7873c81fe6b10b77a08b7ef5716fe49c3103f6caa02097ed299e6e04736c",
+    "p_maputl.c": "4d93e06d11160fb935e94750babbdcc9a4469d96f593764872db87cefd37c0a1",
+    "p_sight.c": "81014a71e4155db6da0af21e6ecf14687daf18075fb75322b63bdc254ce11120",
+    "m_fixed.c": "a4472841bc8890c5d5a41b325ecf56d10d7026a7489967aa29100b5dee759fea",
+    "m_random.c": "8d89f5cfcbbd0170e46b55538c4c272b3cf5b5d7dce91023b8aa8d9b922b21ee",
+    "tables.c": "db8759f4311654c63785dcffb8f73a00a61cfe2713e4284c238dea420b6e5f89",
+    "r_main.c": "2aae43cf807929a8758f71ed0205fc08017556541ba8df2ea9167c003d0dec5a"
+  },
+  "extractions": [
+    {
+      "file": "r_main.c",
+      "function": "R_PointOnSide",
+      "startLine": 161,
+      "endLine": 211,
+      "sha256": "6f1bb67d924478c35dadf38a077806f2f6aae317755ff2cdfc7e03cd912f2bc8"
+    },
+    {
+      "file": "r_main.c",
+      "function": "R_PointToAngle",
+      "startLine": 291,
+      "endLine": 374,
+      "sha256": "bfbf8cbf952634ec34d4fe192837979453a70eb22f3de9d5bd58fed24c7f6685"
+    },
+    {
+      "file": "r_main.c",
+      "function": "R_PointToAngle2",
+      "startLine": 377,
+      "endLine": 388,
+      "sha256": "e9a71fd43347e1f3c7ef7f30f42ca42d059548f0d832d4cb412e80078eae5e82"
+    },
+    {
+      "file": "r_main.c",
+      "function": "R_PointInSubsector",
+      "startLine": 800,
+      "endLine": 823,
+      "sha256": "bc7857186119d033939202c79653c05dd9b06694b97b5bae9a63de683515b246"
+    }
+  ],
+  "generatedGeometrySha256": "e9278dd1eb7bee1f4fe20c40db8142f1fbc17ebc9726928465c81278c7e98813",
+  "harnessHashes": {
+    "geometry.py": "e53a55f90a214c0c72177c2706d0e7a55b2eb4ece459a42639865be05916a974",
+    "scenarios.py": "fa4428df51648440c58781521e0cee248f9cfbb736f3e067d30f92fae7fc1671",
+    "scenario_host.c": "25c9cb53f5d540b612a4246f6be38dd9670bf68858386fb15e1976b3505e2b0a"
+  },
+  "profiles": [
+    {
+      "name": "O0",
+      "flags": [
+        "-std=c99",
+        "-O0",
+        "-fwrapv",
+        "-fno-strict-aliasing",
+        "-ffp-contract=off",
+        "-fno-fast-math",
+        "-fsigned-char",
+        "-include",
+        "stdlib.h"
+      ],
+      "outputSha256": "b3a260110994e87a8105083f4a030eef4a56b509a5a1d3cd205953af7a597317"
+    },
+    {
+      "name": "O2",
+      "flags": [
+        "-std=c99",
+        "-O2",
+        "-fwrapv",
+        "-fno-strict-aliasing",
+        "-ffp-contract=off",
+        "-fno-fast-math",
+        "-fsigned-char",
+        "-include",
+        "stdlib.h"
+      ],
+      "outputSha256": "b3a260110994e87a8105083f4a030eef4a56b509a5a1d3cd205953af7a597317"
+    },
+    {
+      "name": "sanitized",
+      "flags": [
+        "-std=c99",
+        "-O2",
+        "-fwrapv",
+        "-fno-strict-aliasing",
+        "-ffp-contract=off",
+        "-fno-fast-math",
+        "-fsigned-char",
+        "-include",
+        "stdlib.h",
+        "-fsanitize=address,undefined",
+        "-fno-sanitize-recover=all"
+      ],
+      "outputSha256": "b3a260110994e87a8105083f4a030eef4a56b509a5a1d3cd205953af7a597317"
+    }
+  ],
+  "vectorSha256": "3f64b8324694c245838efbc7e1b17c20867c9b59c8b7cb6075bce3586eeb6ff1",
+  "scope": "Full unchanged original map/maputl/sight units on declared synthetic map; higher-level gameplay side effects are recorded explicit mocks, not native engine substitution; whole-world gameplay oracle separately validates actual higher modules"
+}

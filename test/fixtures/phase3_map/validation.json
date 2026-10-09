@@ -1,0 +1,84 @@
+{
+  "version": 1,
+  "recordedAt": "2026-10-09T14:57:55.110209+00:00",
+  "scope": "Isolated collision, traversal, sight modules; whole-engine Phase3 acceptance pending",
+  "upstream": "a77dfb96cb91780ca334d0d4cfd86957558007e0",
+  "forge": {
+    "command": ".toolchain/bin/forge test --match-path 'test/unit/{p_map,p_maputl,p_tick,GameHeap,g_game,p_info,m_random}.t.sol' --skip p_enemy.t.sol -vv",
+    "exitCode": 0,
+    "passed": 22,
+    "failed": 0,
+    "suites": 7,
+    "solcSeconds": 35.9,
+    "evidence": "Integrator reported terminal session72303; raw console log was not archived",
+    "collisionTests": [
+      {
+        "name": "P_Map_Test.testEveryOriginalMapScenarioAndCallbackOrder",
+        "cases": 71,
+        "gas": 495270142,
+        "result": "pass"
+      },
+      {
+        "name": "P_MapUtl_Test.testEveryOriginalCollisionGeometryVector",
+        "cases": 4310,
+        "gas": 55671243,
+        "result": "pass"
+      },
+      {
+        "name": "P_MapUtl_Test.testUndefinedAbsIntMinRejected",
+        "gas": 941,
+        "result": "pass"
+      }
+    ]
+  },
+  "native": [
+    {
+      "command": "python3 tools/reference/phase3_map/geometry.py --check",
+      "result": "pass",
+      "cases": 4310,
+      "profiles": [
+        "O0",
+        "O2",
+        "ASan/UBSan"
+      ]
+    },
+    {
+      "command": "python3 tools/reference/phase3_map/scenarios.py --check",
+      "result": "pass",
+      "cases": 71,
+      "profiles": [
+        "O0",
+        "O2",
+        "ASan/UBSan"
+      ]
+    }
+  ],
+  "files": {
+    "src/doom/p_map.sol": "6b6d48523a45acab9090dfb0ec3d6dbab4e6de18afa89453df8b5a87088da0f3",
+    "src/doom/p_maputl.sol": "bda284e94377b42507aac622399801016df1bf1a2b7082df6a7f7002647f976d",
+    "src/doom/p_sight.sol": "335089a6b126c4be3aff3fbe8081c5968a3062c235fa6f023e6748eb3d9f41fb",
+    "test/unit/p_map.t.sol": "b3184a77e770320b2ee3fe106a42e1ab84a81fb1a56f6b2efb560cead22ba2db",
+    "test/unit/p_maputl.t.sol": "1694a18d05aee0ec2d7cacb92dd498102135aba63b14c4c3277d20649a9da06c",
+    "docs/PHASE3-COLLISION.md": "865e40a5f66cbc22252e1cc4b13a4a5d119a8ad6bf5be3ed72885710c07d364a",
+    "tools/reference/phase3_map/geometry.py": "e53a55f90a214c0c72177c2706d0e7a55b2eb4ece459a42639865be05916a974",
+    "tools/reference/phase3_map/geometry_driver.c": "b84dca94f3128aeb0cb1de07903a75ae71b5a5e68de59fd936ed41ea96f3ad81",
+    "tools/reference/phase3_map/scenario_host.c": "25c9cb53f5d540b612a4246f6be38dd9670bf68858386fb15e1976b3505e2b0a",
+    "tools/reference/phase3_map/scenarios.py": "fa4428df51648440c58781521e0cee248f9cfbb736f3e067d30f92fae7fc1671",
+    "test/fixtures/phase3_map/geometry-manifest.json": "2b2502de9d7c712cf16a717e177464f01da57ad3a15cf68d68d3d9d01a6ff38a",
+    "test/fixtures/phase3_map/geometry.bin": "745b519175fe483a4ddfebc79ba891eefc135cb1f8ee4553ca87ccee9f32c117",
+    "test/fixtures/phase3_map/scenarios-manifest.json": "3262180b3b79ad2df29ba62642a32653ea835c1fb4c0eb0e95d70dd66e44e1b8",
+    "test/fixtures/phase3_map/scenarios.bin": "3f64b8324694c245838efbc7e1b17c20867c9b59c8b7cb6075bce3586eeb6ff1"
+  },
+  "dependencyHashes": {
+    "p_game_state.sol": "c3fc10c4fe77b74432a9c57398170c0ba9c5adfec88dab1cd1b26a5e79a92e56",
+    "d_ticcmd.sol": "508d0332d3e8b83e1b68d37581a3befc100a9974fcaa0900cc44116cd75ff2ef",
+    "r_defs.sol": "558d5a9bfd131e816bbe28986e2dad6144a08e5a16ccfed1b199d7558a1ea0e2",
+    "r_data_types.sol": "f5ae6de0f06a25dfccd9421580d8f3fca8d2457507cca2d13fce586b3334d02f",
+    "r_state.sol": "e87ff9d88345a53d1f8825fb07b485c782c7bcb55e2de1dc56c876f9b26ab966",
+    "m_fixed.sol": "3f64bef1f62f61faead3a5b8f382bf1c66e1b3739ce4ac8d59a6fcef0451ef9f",
+    "m_random.sol": "5267b881138cfb7e0d683449005619513006c70e3ed557f64697b36c4ed40c7b",
+    "p_info.sol": "a48840479115ea8bf849ca5ec448d1b2bec7a6cfe58c5314e140635a898de792",
+    "r_main.sol": "df403bf04fdbbcfc68c4fd9c5e19b5201ca711498efc34db406a4010ad3b2af5",
+    "tables.sol": "bf14202b419075f6d187653205a37e211d8267c7fc4c0bebf5a8c5713afddf38"
+  }
+}

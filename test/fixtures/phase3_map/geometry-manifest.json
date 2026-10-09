@@ -1,0 +1,144 @@
+{
+  "upstream": "a77dfb96cb91780ca334d0d4cfd86957558007e0",
+  "compiler": "Apple clang version 17.0.0 (clang-1700.0.13.5)",
+  "target": "arm64-apple-darwin24.6.0",
+  "cases": 4310,
+  "extractions": [
+    {
+      "file": "p_maputl.c",
+      "function": "P_AproxDistance",
+      "startLine": 48,
+      "endLine": 58,
+      "sha256": "125a46dc740f4a399493d04a35a886c0278fceae5ce9b575c8b10af0717289a3"
+    },
+    {
+      "file": "p_maputl.c",
+      "function": "P_PointOnLineSide",
+      "startLine": 65,
+      "endLine": 100,
+      "sha256": "d5d4860dbaa6c222d643e559a882163d15cc8624ee6677eb0d5a2abd53ad4f0e"
+    },
+    {
+      "file": "p_maputl.c",
+      "function": "P_BoxOnLineSide",
+      "startLine": 109,
+      "endLine": 153,
+      "sha256": "557a345cd1856dd29e14f8fc0d7c63006e0e651a914c34fd67d028579540fcc3"
+    },
+    {
+      "file": "p_maputl.c",
+      "function": "P_PointOnDivlineSide",
+      "startLine": 160,
+      "endLine": 203,
+      "sha256": "d71146c80c7672220d8c7689e618a2ee14cdfe2e5b987ae1d6ffef170fab7eb0"
+    },
+    {
+      "file": "p_maputl.c",
+      "function": "P_MakeDivline",
+      "startLine": 210,
+      "endLine": 219,
+      "sha256": "c8d4f5b7d3377bf538b24d64e79bd8ac928396ba52ca35c3769bdb7f33688d39"
+    },
+    {
+      "file": "p_maputl.c",
+      "function": "P_InterceptVector",
+      "startLine": 230,
+      "endLine": 285,
+      "sha256": "3457f0afbbb56b44f9ca7afebbcf55a4aac5385f2d9c2f589d460d3b6e4b117a"
+    },
+    {
+      "file": "p_maputl.c",
+      "function": "P_LineOpening",
+      "startLine": 300,
+      "endLine": 332,
+      "sha256": "1fb07bd7ffc12dbeb8546ece56d5ccc7d8a95a95f8c06ff7061e3e5618049091"
+    },
+    {
+      "file": "p_sight.c",
+      "function": "P_DivlineSide",
+      "startLine": 54,
+      "endLine": 99,
+      "sha256": "66fd0bb69665ce4c1842292d6c5bc86b45d74db11f89a9a51f3d483099281829"
+    },
+    {
+      "file": "p_sight.c",
+      "function": "P_InterceptVector2",
+      "startLine": 108,
+      "endLine": 128,
+      "sha256": "bb705f5ec6f2f1bcdc9fd258d886589d2d3854ed0ca9f0ed16e893af363092f0"
+    },
+    {
+      "file": "m_fixed.c",
+      "function": "FixedMul",
+      "startLine": 43,
+      "endLine": 49,
+      "sha256": "71f681bd99115702cf59d6886386a7daa325f6870c235dd8f806d3dc79f8396e"
+    },
+    {
+      "file": "m_fixed.c",
+      "function": "FixedDiv",
+      "startLine": 57,
+      "endLine": 65,
+      "sha256": "97f73f12dd005f2b2d84f31baf9153f076f3aba300a48bdb0fe7d4b78cf933f4"
+    },
+    {
+      "file": "m_fixed.c",
+      "function": "FixedDiv2",
+      "startLine": 69,
+      "endLine": 87,
+      "sha256": "30c5f8fd2dd75b476d09aec6faca76b383464f1489b53de6b00bc8b214e746ff"
+    }
+  ],
+  "sourceHashes": {
+    "p_maputl.c": "4d93e06d11160fb935e94750babbdcc9a4469d96f593764872db87cefd37c0a1",
+    "p_sight.c": "81014a71e4155db6da0af21e6ecf14687daf18075fb75322b63bdc254ce11120",
+    "m_fixed.c": "a4472841bc8890c5d5a41b325ecf56d10d7026a7489967aa29100b5dee759fea"
+  },
+  "harnessHashes": {
+    "geometry.py": "e53a55f90a214c0c72177c2706d0e7a55b2eb4ece459a42639865be05916a974",
+    "geometry_driver.c": "b84dca94f3128aeb0cb1de07903a75ae71b5a5e68de59fd936ed41ea96f3ad81"
+  },
+  "generatedSha256": "a2757b827070edd72bd9bed5c3c75a3d9b9da54f1d475572aa5026a31e9b2e1b",
+  "profiles": [
+    {
+      "name": "O0",
+      "flags": [
+        "-std=c99",
+        "-O0",
+        "-fwrapv",
+        "-fno-strict-aliasing",
+        "-ffp-contract=off",
+        "-fno-fast-math"
+      ],
+      "outputSha256": "348fb18b2a382a4f6297f0dd47ce43a6f076d082d281ca596a124c29d59b9547"
+    },
+    {
+      "name": "O2",
+      "flags": [
+        "-std=c99",
+        "-O2",
+        "-fwrapv",
+        "-fno-strict-aliasing",
+        "-ffp-contract=off",
+        "-fno-fast-math"
+      ],
+      "outputSha256": "348fb18b2a382a4f6297f0dd47ce43a6f076d082d281ca596a124c29d59b9547"
+    },
+    {
+      "name": "sanitized",
+      "flags": [
+        "-std=c99",
+        "-O2",
+        "-fwrapv",
+        "-fno-strict-aliasing",
+        "-ffp-contract=off",
+        "-fno-fast-math",
+        "-fsanitize=address,undefined",
+        "-fno-sanitize-recover=all"
+      ],
+      "outputSha256": "348fb18b2a382a4f6297f0dd47ce43a6f076d082d281ca596a124c29d59b9547"
+    }
+  ],
+  "vectorSha256": "745b519175fe483a4ddfebc79ba891eefc135cb1f8ee4553ca87ccee9f32c117",
+  "scope": "Original geometry and line opening; no rewritten C oracle; int32 wrapping profile; abs(INT_MIN) excluded"
+}
