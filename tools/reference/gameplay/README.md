@@ -31,3 +31,20 @@ Original special objects intentionally leave some unused fields uninitialized. L
 ## Acceptance evidence and remaining scope
 
 The native cases provide reproducible movement/collision/lift/pickup traces, firing/psprites/RNG, controlled monster chasing/attacks/pain/death, armor damage, player death, and a real held-use door cycle. Native output is a reference to compare against Solidity, never an EVM simulation input. The integrator must verify the same initial conditions and input sequences through EVM transactions, persistent state and emitted Frame bytes, with all existing Phase 0/1/2 gates retained. Source-level feature coverage must explicitly distinguish implemented versus exercised weapons, monster species/actions, keys/pickups, doors/lifts/floors, teleporters/crushers, death/exit behavior and omitted UI/gameflow. These initial scenarios do not by themselves exercise every original action or establish M2/M3 completion.
+
+## Exact post-render state boundary
+
+The original snapshots above precede selected rendering. R_RenderPlayerView
+sets original ML_MAPPED line flags, so a final persisted EVM snapshot must be
+compared to original state after the selected render. A separate observation-only
+`post_render_host.c` wrapper calls the actual renderer and then the same DSG1
+observer. It changes no engine state or original source.
+
+`python3 tools/reference/gameplay/post_render.py --check` reproduces all 24
+selected post-render states across O0/O2/ASan and alternate allocation fill, and
+checks that every original pre-state, diagnostic, event, summary and frame byte
+remains unchanged. [Post-render fixtures](../../../test/fixtures/gameplay_post/manifest.json)
+retain exact compressed records; the [checkpoint](../../../artifacts/phase3/post-render-reference-checkpoint.json)
+binds the scope. The runner compares final persisted state against these exact
+post-states, with no masked fields. Native observation evidence does not imply
+EVM acceptance until the corresponding comparison run passes.
