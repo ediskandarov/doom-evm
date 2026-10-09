@@ -35,8 +35,11 @@ RGBA bytes exact, actual keyboard lifecycle, blur, deduplication and receipt fal
 Seven original browser source bindings checked; budget dependencies separately
 bound at integration. The 44-test component proof remains distinct.
 Production adapter and its atomic/header/keyboard evidence are committed in
-`60cd6f7`; atomic probe is committed in `53b5cd3`; real-browser is committed in `a88f285`; memory/reproducibility workstreams await
-separate verified checkpoint commits. **Phase 3 is
+`60cd6f7`; atomic probe is committed in `53b5cd3`; real-browser is committed in `a88f285`; memory/reproducibility are committed in `c5a3069`.
+[Memory](../tools/reference/gameplay/production-memory-evidence.json) and
+[independent replay](../tools/reference/gameplay/production-reproducibility-evidence.json)
+retain literal clone limits and complete replay scope separately. All current
+source/report bindings and seven isolated measurement tests pass. **Phase 3 is
 active; M2 and M3 are unaccepted.** Committed production `Doom.sol` now exposes verified atomic gameplay and keeps
 accepted Phase 2 static rendering before startup.
 The committed atomic public test-probe verifies nine scenarios, 2,355 tics and 31 frames.
@@ -231,7 +234,7 @@ Production 93227 verifies one initialization at **1,621,868,997 actual gas** and
 72876 verifies all six native/receipt/Canvas frames, including old failing tic five.
 Kernel 19797 verifies **nine scenarios / 2,355 tics / 31 frames / nine final stored
 states**, including rocket blast damage/removal. These source-bound workstreams
-await separate final code/evidence commits; M2/M3 remain unaccepted.
+are committed as production `60cd6f7`, kernel `53b5cd3` and Chrome `a88f285`; M2/M3 remain unaccepted.
 
 MSIZE clone 41920 and cadence 74863 pass paired-clone gas and three-way storage/
 field/native-pixel checks. Measured clone boundaries: atomic init 19,665,056 bytes;
@@ -248,9 +251,9 @@ Next dependency order:
 1. Atomic production interface/startup and header evidence are committed in
    `60cd6f7`; 58 atomic/header and 63 repeat-production source bindings were
    freshly checked, and targeted formatting plus runner syntax checks pass.
-2. Nine-scenario kernel comparison is committed in `53b5cd3`; real Chrome in
-   `a88f285`. Commit memory/reproducibility tooling as separate workstreams; update this ledger
-   after each checkpoint. Preserve historical measurements and tool/source hashes.
+2. Nine-scenario kernel `53b5cd3`, real Chrome `a88f285` and memory/replay
+   `c5a3069` checkpoints are committed. Historical measurements/tool hashes are
+   preserved. Continue separate checkpoints for audit and final gates.
 3. Review refreshed source/function/domain audit; preserve unknown-byte guards,
    original algorithms and unsupported-domain declarations. Archive obsolete local
    diagnostic tooling outside normal source inventory rather than claiming it works.
@@ -259,8 +262,8 @@ Next dependency order:
 5. Refresh bounded usage JSON/CSV and assess every unchanged acceptance criterion.
 
 No external blocker. Previous agents completed their work; no live agents are
-reported. Root owns integration and final acceptance. Production/probe/browser
-proof tooling remains uncommitted until its source-bound checkpoint review.
+reported. Root owns integration and final acceptance. Production/probe/browser/memory proof tooling is committed; refreshed audit and
+final frozen inherited gates remain.
 Anvil port 18579 is retained; the atomic browser deployment completed six tics.
 The historical failed instance and one-billion measurements remain historical.
 
@@ -310,7 +313,7 @@ source spans and reproducibility evidence.
 | M2 real-level movement | Per-tic original C vs Solidity positions, momentum, BAM angle, view height and RNG on E1M1 | 275 movement probe tics/full states exact and production keyboard129 tics verified; new allocator integration and repeated/final gates pending |
 | M2 collision | Blocking actors/walls, sliding, steps/dropoffs and height constraints; original traversal/intercept order | Module and eight full E1M1 probe traces verified; final frozen gate/domain audit pending |
 | M2 use | Real-level use traces, edge handling, door/switch changes persisted across transactions | 375-tic door-use and 375-tic obstruction probe states/frames/persistence exact; staged production/browser scope pending |
-| M2 reproducible frames | Same command stream twice, exact indexed8 native frame comparison at selected tics, real Frame events | 24 native/probe and six native/production frames exact; repeated identical EVM streams and final source gate pending |
+| M2 reproducible frames | Same command stream twice, exact indexed8 native frame comparison at selected tics, real Frame events | 24 native/probe and six native/production frames exact; two complete independent 129-tic EVM streams exact (`c5a3069`); final source gate pending |
 | Live thinkers | Append/remove/stasis and same-tic spawn order, native actor/state and RNG traces | Scheduling module and all eight real-world stored probe traces exact; new physical lazy-free component verified |
 | Weapons/shooting | All nine original weapon definitions/actions covered; ammo, refire, hitscan, projectiles and psprite traces | All-nine definitions/actions module proof; integrated pistol/combat/damage/death and production firing verified; broader projectile-world effects and final feature/gates pending |
 | Monster AI | Real state actions, sight/noise, chase/attack and RNG; feature matrix for all original actor families | 64 actions module proof; integrated sight/chase/attack/RNG in full probe exact; family coverage/domain audit remains required |
@@ -319,7 +322,7 @@ source spans and reproducibility evidence.
 | Gameplay rendering | Runtime sector/side/actor/psprite state reaches renderer; exact native frames | 24 probe and six production frames exact; atomic Chrome six-frame indexed/Canvas comparisons now exact (`a88f285`); final inherited gates pending |
 | Production transport | Authenticated resources, authorized driver, consecutive input sequence, WS/receipt/Canvas pixel readback | Authenticated 1,755 runtimes/driver/sequence/rollback/static Chrome pass; atomic Chrome all six frames pass; driver/sequence/receipt fallback/Canvas evidence committed `a88f285` |
 | Inherited gates | Phase 0, Phase 1 and complete Phase 2 verification commands against the frozen final source | Pending final run |
-| Fidelity and limits | Original function mapping, adaptation/undefined-domain audit, full feature coverage and measured gas/memory | Function audit 287 definitions committed; component and production gas recorded; final source audit and actual memory measurement pending |
+| Fidelity and limits | Original function mapping, adaptation/undefined-domain audit, full feature coverage and measured gas/memory | Function audit 287 definitions committed; component and production gas recorded; bounded clone memory measured (`c5a3069`); final source audit/gates pending, exact untouched-production peak unmeasured |
 | Usage | Local JSON/CSV collection with phases/models/agents and missing-data diagnostics | Active |
 
 M2 and M3 remain unaccepted until these proofs cover the actual integrated
