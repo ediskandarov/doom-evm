@@ -1,0 +1,55 @@
+{
+  "production": {
+    "oldManifest": "artifacts/local/gameplay-production-native/manifest.json",
+    "oldManifestSha256": "e62470a9759b5df497d7ccf997e3a18a7a78e4a32bead1e540fd79c258fb130c",
+    "newManifest": "artifacts/local/gameplay-production-native-final/manifest.json",
+    "newManifestSha256": "da40ec18771d1d4e4332080a7c3e2830f6524ca9b8c51987efaf1beb4d6007c8",
+    "allDataFilesAndFramesIdentical": true,
+    "changedFields": {
+      "profile": {
+        "before": null,
+        "after": "production"
+      },
+      "sourceHashes": {
+        "before": {
+          "tools/reference/gameplay/build.py": "234b79169ec39f1faf3858a564e8ad25f680cd7e84a110c3d3c32f37eec4387d",
+          "tools/reference/gameplay/diagnostics.h": "0232b585727cf3a659815aeb647bd2a2a07518224f4cd58f4d9261586e484505",
+          "tools/reference/gameplay/host.c": "8eb17208506ae56f18cad6bd4f6a10a8bfdd4070391e8e3a19685958c5625ec3",
+          "tools/reference/gameplay/observe.h": "7ae14775b4ebc05bb8da32cff6d1a23be66937640509fd515d35b49c60ee0abe",
+          "tools/reference/gameplay/production.py": "791f541f99a42d8fb83d7c5cabaea75887abd15c9d848efd3b6698df378c2f9e",
+          "tools/reference/gameplay/verify.py": "55efdd83082246343e6b649602af0d94e41c04a835495a0f77038f681d7ad76b",
+          "tools/reference/phase3_input/host.c": "a7ceae96acb9d71147ccf3c3aad35181fb25ede38556dc90ecfbc721b9316492",
+          "tools/reference/phase3_input/reference.py": "e8c482ce14abcc844904c410671b1f1a328c293aa5eab837ab286bf1e430da77"
+        },
+        "after": {
+          "tools/reference/gameplay/build.py": "234b79169ec39f1faf3858a564e8ad25f680cd7e84a110c3d3c32f37eec4387d",
+          "tools/reference/gameplay/diagnostics.h": "0232b585727cf3a659815aeb647bd2a2a07518224f4cd58f4d9261586e484505",
+          "tools/reference/gameplay/host.c": "8eb17208506ae56f18cad6bd4f6a10a8bfdd4070391e8e3a19685958c5625ec3",
+          "tools/reference/gameplay/observe.h": "7ae14775b4ebc05bb8da32cff6d1a23be66937640509fd515d35b49c60ee0abe",
+          "tools/reference/gameplay/production.py": "5971309efd86a42252fbda084d0348fe95a8f2ab45f2cd6d0b240d1a0d30170d",
+          "tools/reference/gameplay/verify.py": "55efdd83082246343e6b649602af0d94e41c04a835495a0f77038f681d7ad76b",
+          "tools/reference/phase3_input/host.c": "a7ceae96acb9d71147ccf3c3aad35181fb25ede38556dc90ecfbc721b9316492",
+          "tools/reference/phase3_input/reference.py": "e8c482ce14abcc844904c410671b1f1a328c293aa5eab837ab286bf1e430da77"
+        }
+      }
+    }
+  },
+  "browser": {
+    "oldManifest": "artifacts/local/gameplay-browser-native/manifest.json",
+    "oldManifestSha256": "d05bb58546cadc3e0e175b30b2691ec11024860c9176a105196401da788b02e9",
+    "newManifest": "artifacts/local/gameplay-browser-native-final/manifest.json",
+    "newManifestSha256": "d05bb58546cadc3e0e175b30b2691ec11024860c9176a105196401da788b02e9",
+    "allDataFilesAndFramesIdentical": true,
+    "changedFields": {}
+  },
+  "generationCommands": [
+    "python3 tools/reference/gameplay/production.py --output artifacts/local/gameplay-production-native-final",
+    "python3 tools/reference/gameplay/production.py --profile browser --output artifacts/local/gameplay-browser-native-final"
+  ],
+  "checkCommands": [
+    "python3 tools/reference/gameplay/production.py --check --output artifacts/local/gameplay-production-native-final",
+    "python3 tools/reference/gameplay/production.py --profile browser --check --output artifacts/local/gameplay-browser-native-final"
+  ],
+  "sourceSha256": "5971309efd86a42252fbda084d0348fe95a8f2ab45f2cd6d0b240d1a0d30170d",
+  "pass": true
+}
