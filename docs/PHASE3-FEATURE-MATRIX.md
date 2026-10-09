@@ -1,199 +1,270 @@
 # Phase 3 source coverage and acceptance boundaries
 
-This audit inventories the pinned original `linuxdoom-1.10` source at
-`a77dfb96cb91780ca334d0d4cfd86957558007e0` and the current Solidity ports.
-**M2 and M3 remain unaccepted.** Existing module proofs establish their declared
-profiles; the full production gameplay, persistence, framebuffer and browser gates
-are still pending. This document does not claim a complete original DOOM port.
+The frozen implementation now has bounded, completed kernel, public-contract and
+Chrome integration proofs. **M2 and M3 remain pending final inherited gates,
+integrator signoff.** This is not a complete original
+DOOM port. All descriptions below distinguish source presence, actual integration
+and the measured verification scope.
 
-The machine-readable [feature matrix](../artifacts/phase3/feature-matrix.json)
-contains every inventoried definition's original and port source spans, body
-hashes, evidence references, unsupported profiles and remaining gates. It records
-an audit-time snapshot. Refresh it after source changes and final integration;
-checkpoint hashes bind their own tested revisions, not automatically every later
-shared-state layout. No compiler was run for this audit and no Codex session
-transcripts were read.
+The [machine-readable matrix](../artifacts/phase3/feature-matrix.json) records every
+original definition's source span/hash, its named port or explicit delegation,
+helper roles, proof hashes, current source bindings and unsupported domains.
+Refresh with `python3 tools/audit/phase3_features.py`; verify the snapshot with
+`--check`. The generator reads code and summarized proof records, never Codex
+session transcripts. This audit ran no compiler or engine tests.
 
-## Source presence and module evidence
+## Source inventory
 
-There are **238 active definitions across the 18 core gameplay `p_*.c` units**:
-226 have named ports with isolated module evidence; 12 belong to draft level setup.
-The latter has five named ports and seven disk loaders delegated to
-`R_Data.R_LoadMap`, with sector runtime fields completed by `P_LoadSectorRuntime`.
-Delegation is an adaptation, rather than seven independent new ports or seven
-unimplemented loaders. Setup still requires real-level runtime comparison.
+The pinned original checkout is `a77dfb96cb91780ca334d0d4cfd86957558007e0`. Across 18 core
+`p_*.c` gameplay units there are **238 active definitions**: 231 named ports
+and seven disk loaders delegated to `R_Data.R_LoadMap`. Setup is integrated and
+verified, rather than a draft. Sector runtime initialization and native map
+allocation chronology remain separate source-derived adapter responsibilities.
 
-The broader inventory has **287 definitions**: those 238, four upstream-disabled
-sliding-door definitions, eight original save/archive definitions, 32 `g_game.c`
-definitions and five RNG/bounding-box definitions. Four game functions are
-ported: the declared keyboard `G_BuildTiccmd` profile and original
-`G_PlayerReborn`, `G_ExitLevel`, `G_SecretExitLevel`. The other 28 gameflow functions
-and eight save/archive functions are not ported.
+The expanded inventory covers **388 definitions**, including original
+`p_saveg`, all `g_game`, RNG/bbox, all renderer units, `z_zone` and `w_wad`.
+Original abandoned sliding doors are excluded from active gameplay counts.
+Four of 32 `g_game` definitions are ported; eight original save/archive
+definitions and the other gameflow definitions remain absent.
 
-| Original module | Active definitions | Present port/evidence scope |
+| Original unit | Definitions | Named / delegated / adapted / absent |
 |---|---:|---|
-| `p_maputl`, `p_map`, `p_sight` | 15 + 20 + 5 | Spatial links, BLOCKMAP, path/intercepts, movement/slide/teleport, hitscan/use/radius/sector clipping and sight; [collision proof](PHASE3-COLLISION.md) |
-| `p_user`, `p_mobj` | 5 + 16 | Player/lifecycle/state/momentum/spawning/respawn and effects; [lifecycle proof](PHASE3-LIFECYCLE.md) |
-| `p_pspr`, `p_inter` | 30 + 9 | All weapon/PSprite and pickup/damage/death definitions; [combat proof](PHASE3-COMBAT.md) |
-| `p_enemy` | 64 | Acquisition, chase, every active action, sound flood, bosses and brain; [AI proof](PHASE3-AI.md) |
-| `p_tick` | 6 | Linked scheduling and ticker, including the originally empty `P_AllocateThinker`; [tick proof](PHASE3-TICK.md) |
-| `p_doors`, `p_floor`, `p_ceilng`, `p_plats`, `p_lights` | 6 + 4 + 6 + 6 + 11 | All active events and thinkers; [world-action proof](PHASE3-WORLD-ACTIONS.md) |
-| `p_spec`, `p_switch`, `p_telept` | 18 + 4 + 1 | Helpers, numeric dispatch, animation, switches, sector effects, donut and teleport; [specials proof](PHASE3-WORLD-SPECIALS.md) |
-| `p_setup` | 12 | Draft loaders/grouping/startup/init; [original setup](../original/DOOM/linuxdoom-1.10/p_setup.c#L584), [draft adapter](../src/doom/p_setup.sol) |
-| `m_random`, `m_bbox` | 3 + 2 | Independent original RNG streams and bbox operations; `M_Random` maps to `M_RandomValue` |
-| `g_game` | 32 | Four named ports; keyboard profile restrictions and missing gameflow listed below |
-| `p_saveg` | 8 | Original archive/unarchive format absent; EVM persistence is a separate adapter |
+| `p_ceilng` | 6 | named_port: 6 |
+| `p_doors` | 10 | named_port: 6, disabled_upstream: 4 |
+| `p_enemy` | 64 | named_port: 64 |
+| `p_floor` | 4 | named_port: 4 |
+| `p_inter` | 9 | named_port: 9 |
+| `p_lights` | 11 | named_port: 11 |
+| `p_map` | 20 | named_port: 20 |
+| `p_maputl` | 15 | named_port: 15 |
+| `p_mobj` | 16 | named_port: 16 |
+| `p_plats` | 6 | named_port: 6 |
+| `p_pspr` | 30 | named_port: 30 |
+| `p_saveg` | 8 | not_ported: 8 |
+| `p_setup` | 12 | delegated: 7, named_port: 5 |
+| `p_sight` | 5 | named_port: 5 |
+| `p_spec` | 18 | named_port: 18 |
+| `p_switch` | 4 | named_port: 4 |
+| `p_telept` | 1 | named_port: 1 |
+| `p_tick` | 6 | named_port: 6 |
+| `p_user` | 5 | named_port: 5 |
+| `g_game` | 32 | not_ported: 28, named_port: 4 |
+| `m_random` | 3 | named_port: 3 |
+| `m_bbox` | 2 | named_port: 2 |
+| `z_zone` | 10 | named_port: 8, not_ported: 2 |
+| `w_wad` | 15 | adapted: 8, not_ported: 7 |
+| `r_bsp` | 8 | named_port: 8 |
+| `r_data` | 13 | named_port: 8, delegated: 4, not_ported: 1 |
+| `r_draw` | 13 | named_port: 9, disabled_upstream: 2, not_ported: 2 |
+| `r_main` | 17 | delegated: 3, named_port: 12, original_empty_noop: 2 |
+| `r_plane` | 7 | named_port: 7 |
+| `r_segs` | 3 | named_port: 3 |
+| `r_sky` | 1 | delegated: 1 |
+| `r_things` | 14 | named_port: 14 |
 
-Source presence and called-function coverage are not branch-completeness claims.
-All active enemy functions, for example, have controlled native cases; that does
-not mean every species/action has been exercised in a real persisted EVM world.
-The matrix's `moduleEvidence` links to the exact scope instead of treating every
-function as accepted end to end. Its `wholeEngineEvmEvidence` fields remain null.
+Counts establish source mapping, not per-function branch acceptance. Original
+host file/reload/profile and heap dump functions remain host responsibilities;
+immutable authenticated EVM resource readers adapt name/length/byte lookup.
+Semantic `W_CacheLumpNum` hit/miss/tag/owner behavior is implemented separately.
+`Z_ClearZone`, `Z_Init`, `Z_Free`, `Z_Malloc`, `Z_FreeTags`, `Z_CheckHeap`,
+`Z_ChangeTag2` and `Z_FreeMemory` are the eight ported original allocator cores.
 
-## What the existing proofs establish
+## Completed integration evidence
 
-| Proof | Native coverage | EVM evidence and boundary |
+| Evidence | Actual scope | Result |
 |---|---|---|
-| Input | 41,007 keyboard command cases | 14 Solidity tests and five browser unit tests; device/network and production transport are separate |
-| Collision/sight | 4,310 geometry cases and 71 scenarios | Three tests; higher-module callbacks are explicit recorded doubles |
-| Lifecycle | 784 cases / 24 definitions including three game reset/exit functions | 24 tests; recursive state and neighbor callbacks controlled; corrected positive item respawn separately rerun |
-| Weapons/interactions | 72 weapon scenarios / 11,520 tics; 6,025 interaction cases | 24 tests; real PSprite actions, recorded aim/hit/missile/noise/state boundaries |
-| Enemy AI | 1,137 cases / 64 definitions | 64 tests; ordered visibility/movement/spawn/damage/state doubles |
-| Ticker | Eight scheduling snapshots | One test; callbacks recorded, static test nodes retained after deallocation |
-| World actions | 359 scenarios / 79,021 snapshots; 2,160 plane cases; four plat and four ceiling cast cases | 28 tests; synthetic sector chain and obstruction callback; zero allocator execution profile |
-| Specials | 416 helper/selected-state cases; 1,007 dispatch scenarios / 4,048 paired snapshots | 25 tests; real world action dispatch, declared synthetic geometry; successful teleport movement/fog are boundary mocks |
-| Bounding boxes | 521 streams / 8,299 points | One test; every point prefix compared |
-| Storage | Synthetic nonempty map/actor/thinker/door/scratch/resource/render state | One roundtrip test; complete real-level/production evidence pending |
-| Complete native world | Eight E1M1 scenarios / 2,205 tics / 24 live 64,000-byte frames | Native oracle only; corresponding EVM state and frame acceptance pending |
+| [Atomic startup](../tools/reference/phase3_zone_setup/atomic-validation.json) | Single real `initializeNative`, original resource/level/player allocation order, all normalized headers/owners and actor/special/map counts; four tests | PASS |
+| Full kernel, retained report `artifacts/local/gameplay-atomic-complete.json` | Nine declared scenarios, 2,355 tics, 31 selected complete frames, nine exact final stored logical states; direct ticcmds and test-only arena setup | PASS, run19797 |
+| [Public production](../tools/reference/gameplay/production-atomic-evidence.json) | One ordinary `initializeGame` transaction; 129 keyboard tics, 130 rows ×14 fields, six native live frames, static pre-start Frame, thirteen whole-storage rollback checks | PASS, run93227 |
+| [Repeated production](../tools/reference/gameplay/production-reproducibility-evidence.json) | Two fresh ordinary contracts: all130×14 rows, commands/sequences/cadence, seven totalFrames, gas and thirteen errors/rollback equal | PASS, run10416 |
+| Chrome, retained report `artifacts/local/phase3-gameplay-browser-atomic.json` | Six actual Frames/Canvas, keyboard Start/Resume, blur stop, deduplication and controlled receipt fallback; prior failing tic5 now exact | PASS, run72876 |
+| Memory clone reports `artifacts/local/gameplay-production-atomic-memory{,-cadence}.json` | Separate clone agrees with ordinary production storage/exported fields/Frames; patched/unpatched clone gas equal; all-render and no-render cadence | PASS, runs41920/74863 |
 
-Counts refer to the retained checkpoint records, not a new audit run. The final
-world/specials/bbox/storage batch passed 55 tests in four suites; it does not
-replace a full frozen regression run. Aggregate fixture costs such as
-771,444,952 gas for a player-sector fixture batch include setup/serialization and
-are not production per-tic/frame costs.
+The repeated production stream has independent fresh state and rechecks all1,755 authenticated resource chunks. Only the repeat runner's optional palette-copy guard differs; production code/transactions/native stream are unchanged.
 
-The [special-number matrix](../test/fixtures/phase3_specials/dispatch-matrix.json)
-binds all 72 crossing, 63 use and three shoot branches to original bodies and a
-mechanical checked translation. All numeric branches are exercised in declared
-dispatch fixtures; actual geometric consequences still require integration.
+The full-kernel scenarios are idle70, movement275, pistol235, combat175,
+damage350, death350, door-use375, door-obstructed375 and projectile-arena150 tics.
+The last compares seven selected frames and actual rocket interactions. All
+other cases compare three frames. Native instrumentation reports authoritative
+logical world before rendering; final stored comparisons use the appropriate
+post-render native boundary. This avoids treating renderer-mutated flags and
+validcounts as a simulation mismatch. It does not imply comparison of every
+renderer cache byte or arbitrary physical payload byte.
 
-The [whole-world oracle](../tools/reference/gameplay/README.md) runs original
-`P_SetupLevel`, gameplay units, renderer and zone allocator. Ordinary idle,
-movement and pistol cases use original E1M1 spawning. Combat/damage/death arena
-cases add an original possessed actor at a declared valid point in real E1M1;
-armor/health are controlled initial conditions. Door cases teleport to the real
-line 55 and send held use; one disables monsters and the other retains them to
-exercise obstruction reversal. These are bounded scenarios, not all-map or
-natural-complete-playthrough coverage. O0/O2/ASan/UBSan and alternate `0xa5`
-allocation-fill outputs agree for these scenarios.
+Public production verifies its real driver/strict consecutive sequence/input
+validation and rollback, persisted whole game state and Frame transport, rather
+than probe serialization. Five `gameStatus` and nine `playerView` fields are
+checked at every selected tic. Chrome's short fire input arrives while the weapon
+is raising; actual shooting has independent 129-tic production and kernel proofs.
+Kernel direct-command coverage does not independently prove every keyboard path.
 
-Per-function `nativeEntryObservations` preserve counts from retained
-`events.json` instrumentation. A null entry means no retained measurement for
-that function; it does not prove nonexecution. Entry counts alone do not prove
-branches, state equivalence, persistence or pixel equivalence.
+The retained module scopes remain useful: collision/sight 4,310 geometry cases
+and71 scenarios; lifecycle784 cases; combat6,025 interaction cases and72 weapon
+scenarios/11,520 tics; AI1,137 controlled cases/all64 active definitions; world
+359 scenarios/79,021 snapshots/2,160 plane cases; specials416 unit cases plus
+1,007 dispatch scenarios/4,048 paired snapshots; bbox521 streams/8,299 points;
+input41,007 commands. The source/table export has967 states,137 actor/effect/item
+definitions,nine weapons and74 actions. These are not137 monster species or
+full-world execution of every entry. Exact original numeric special dispatch
+coverage is72 crossing,63 use and3 shoot branches in declared synthetic fixtures.
+Broad weapon/enemy/world module proofs use controlled neighbors or synthetic
+geometry; they do not become complete integrated action/species coverage.
 
-## Adapter and feature boundaries
+Allocator core proof covers1,624 original allocation snapshots and five fatal
+conditions across O0/O2/full ASan/UBSan, plus two Solidity tests. Renderer backing
+proof covers80 native cases/10,240 knownness positions/18 original draws and111
+owned inherited/focused Solidity tests. Each checkpoint binds its own tested
+source revision. Final inherited regression gates remain separate.
 
-At this snapshot, [Doom.sol](../src/evm/Doom.sol) is the accepted Phase 2 static
-caller and explicitly has no gameplay ticks. [DoomGame](../src/evm/DoomGame.sol)
-is a draft library with shared hook routing, startup/tick and actor/PSprite render
-projection. [P_Setup](../src/doom/p_setup.sol) adds runtime map/spawn state.
-Reported module compilation typechecked these drafts. Full public-caller graph
-compilation remains pending after a via-IR Yul stack-depth failure. Optimized IR
-points to a scenario parameter retained across initialization in the test probe;
-the reference agent is resolving test-only calldata lifetime. `R_Data` is restored
-to committed HEAD and the startup helper trial has been removed. No production
-loader refactor remains. This is a compilation issue, not an observed gameplay
-mismatch. Startup and transaction equivalence remain pending. The test-only
-`GameplayProbe` observer is not a production game frontend.
+## Allocator/cache and representation adaptations
 
-| Feature/profile | Current boundary |
+Stable logical actor/thinker/world IDs and capacity buffers preserve linked
+thinker/sector/block order and same-tic tail execution. A separate native zone
+ledger preserves source physical allocation offsets, list links, rover,
+purge/merge/donated slack and logical owner clearing. Source-derived startup,
+map setup, actors/movers/lazy frees and semantic renderer cache operations mutate
+that ledger. Native allocation outputs are comparison gold only, never runtime
+tapes. Owner namespace is lump ID; composites use `numlumps + textureID`.
+
+Raw columns/sprites use `PU_CACHE`; drawn flats use `PU_STATIC` then return to
+`PU_CACHE`; composites allocate before patch-cache calls and become cache-tagged
+after construction. Ephemeral immutable-data decoding is not an additional
+native allocation. Existing composite bodies may be quietly rebuilt after an
+EVM storage load, while a purged owner requires genuine original regeneration.
+
+The pinned LP64 profile has40-byte block headers,56-byte zone header, sentinel
+offset8 and8-byte alignment. Upstream4-byte alignment is explicitly adapted for
+native LP64 gameplay. Allocation sets known `ZONEID`; free sets known0; initial
+and split free IDs remain unknown, including physical reuse. Stable IDs are not
+fabricated process pointer bytes.
+
+The renderer can read beyond a logical lump only when the original physical
+backing value is known: size/tag/known-ID header integers or authenticated live
+adjacent cached-lump body bytes. It preserves the original column arithmetic,
+including negative fraction wrap. No specific asset/frame/pixel exception exists.
+Pointers, padding, uninitialized IDs, slack, free/unmodeled actor/mover/composite
+bodies, stale owners and out-of-zone bytes remain unknown and rejected. The lazy
+128-sample ordinary-column window is conservative for translated out-of-profile
+indices; negative absolute indices still reject. Existing malformed draw/resource
+checks remain. Selected recovered frames do not prove arbitrary native reads.
+
+Call-local traversal, line-loader and tail-reader working structs resolve full
+hook-graph compiler liveness without changing source math/order/loops/guards,
+persisted semantics, limits or compiler settings.
+
+## Supported and omitted profiles
+
+| Feature | Implementation/integration boundary |
 |---|---|
-| Single-player startup | Draft medium-skill retail E1M1, one player, optional adapter `nomonsters`; not arbitrary CLI initialization |
-| Weapons, pickups, AI, world actions | Complete active module definitions and bounded proofs; full-world EVM combinations pending |
-| Other maps, skills and modes | Algorithms and dependent branches tested in isolated contexts; arbitrary episode/WAD/map runtime acceptance absent |
-| Keyboard | Original declared keyboard conversion; production authorization, sequencing and browser delivery pending |
-| Mouse, joystick, chat | Zero-valued omitted device branches; no device/chat frontend |
-| CLI | No original `D_DoomMain` parser, `-avg` or `-timer`; original timer-update logic is implemented and tested separately |
-| Multiplayer/deathmatch | Four-player fields and original module branches retained/tested; no network consistency/checksum/game loop; startup rejects deathmatch |
-| Demo record/playback | No original demo gameflow; retained ticker demo flags only preserve its conditional scheduling behavior |
-| Audio/music | Presentation/device calls omitted; original gameplay noise flood and sound-choice `P_Random` draws retained |
-| Menus, status bar, HUD, automap | Presentation absent; original ticker menu guard retained; world view and PSprites rendered |
-| Save/load | Original `p_saveg`/game save format absent; storage roundtrip is a distinct EVM mechanism |
-| Exit/intermission/finale/next map | Exit and secret flags set original completed gameaction; intermission, finale and automatic level progression absent |
-| Death/reborn | DeathThink, PlayerReborn and SpawnPlayer exist; `G_DoReborn`, check-spot and level restart dispatch absent |
-| Sliding doors | Original abandoned `#if 0` definitions remain disabled, excluded from active coverage |
+| `single_player` | **integrated_selected_world_verified**: Actual atomic medium retail E1M1, one player, source-driven native zone startup; whole-kernel nine declared scenarios, public 129 keyboard tics and Chrome six-frame stream. No arbitrary maps/modes acceptance. |
+| `keyboard` | **integrated_production_and_browser_verified**: Original declared keyboard conversion, persistent input, actual public authentication/sequencing/rollback and Chrome Start/Resume, WebSocket/receipt fallback/Canvas in bounded retained streams. |
+| `mouse_joystick_chat` | **unsupported**: G_BuildTiccmd profile holds these device inputs zero; no device, chat or double-click frontend. |
+| `cli` | **unsupported_host_layer**: No original D_DoomMain CLI, -avg/-timer flags or arbitrary startup parsing. Timer update logic is separately implemented/tested; nomonsters is an adapter argument. |
+| `multiplayer_deathmatch` | **unsupported_adapter**: Original branches and four player slots retained/tested in modules; no network G_Ticker/checksum/consistency path and P_SetupLevel rejects deathmatch startup. |
+| `demo_record_playback` | **unsupported**: No G_Read/WriteDemoTiccmd or original demo gameflow implementation. Ticker demo exception fields do not imply demo support. |
+| `audio_music` | **presentation_omitted**: Sound/music device calls omitted; P_NoiseAlert and sound-choice gameplay P_Random draws retained. Cosmetic M_Random profile is distinct. |
+| `menu_hud_automap` | **presentation_omitted**: No original menu/status bar/HUD/automap; ticker menu guard retained, world view and PSprites rendered. |
+| `save_load` | **unsupported**: EVM state persistence is a different mechanism; original p_saveg serialization and G_Load/SaveGame not ported. |
+| `intermission_finale_level_progression` | **unsupported**: Exit/secret action flags implemented; G_DoCompleted/G_WorldDone/G_DoWorldDone/G_InitNew flow absent. No automatic next map, intermission or finale. |
+| `death_respawn_flow` | **partial**: DeathThink and G_PlayerReborn/P_SpawnPlayer implemented; complete G_DoReborn/check-spot/level restart dispatch absent. |
+| `other_maps_modes_skills` | **module_only**: Algorithms and dependent branches tested in isolated contexts. Production initializes fixed medium retail E1M1. No arbitrary WAD/map/episode runtime acceptance. |
+| `sliding_doors` | **disabled_upstream**: Original #if0 code intentionally excluded, not an active missing gameplay feature. |
 
-Original source spans for missing functions are in JSON. In particular,
-[`G_Ticker` (605–748)](../original/DOOM/linuxdoom-1.10/g_game.c#L605),
-[`G_DoReborn` (924–967)](../original/DOOM/linuxdoom-1.10/g_game.c#L924) and
-[`G_DoCompleted` (1020–1141)](../original/DOOM/linuxdoom-1.10/g_game.c#L1020)
-contain absent gameflow. Calling `P_Ticker` directly does not supply those layers.
+Original `G_Ticker`, `G_DoReborn`, `G_DoCompleted`, world transition/intermission,
+finale, full new-game flow and save/archive format are absent. Exit/secret flags,
+DeathThink/PlayerReborn/SpawnPlayer and a direct `P_Ticker` do not implement those
+layers. World view/PSprites are rendered, but original HUD/menu/automap/audio
+presentation is omitted. No complete playthrough, all-map, multiplayer, device,
+demo or arbitrary WAD acceptance is claimed.
 
-## Native C domains and explicit adaptations
+## Monster and boss family evidence
 
-The numerical contract is the pinned compiler/target and recorded flags,
-including `-fwrapv`, signed narrowing and arithmetic-shift behavior. Original
-negative signed shifts have independent strict-UB diagnostics; this is not a
-universal ISO C definedness claim. Ordered RNG expressions are deliberately
-preserved rather than silently using Solidity evaluation order.
+The source-derived family matrix includes every `MF_COUNTKILL` actor plus lost
+soul, Keen and brain/spitter/target actors. All original definitions are in the
+foundation proof. Named enemy actions have isolated original-C module evidence;
+this is not an integrated-world species claim. State-table traversal lists the
+declared actions from spawn/see/pain/melee/missile/death/xdeath/raise roots;
+dynamic calls from actions are covered by their own function inventory. Retained
+native action counters are global and cannot attribute a shared action to an
+actor species. **Individual integrated family entry coverage is uninstrumented.**
 
-Original zone allocation becomes stable IDs, capacity buffers and tombstones;
-linked thinker/sector/block traversal and same-tic tail execution retain original
-order. Native whole-world verification uses original zone free/reuse with
-recorded LP64 alignment and sector-pointer-array sizing adaptations. Tick unit
-fixtures retain node bytes after recorded free and do not establish reuse.
+| Original actor family | Declared enemy state actions | Integrated species evidence |
+|---|---|---|
+| `MT_POSSESSED` | `A_Chase`, `A_FaceTarget`, `A_Fall`, `A_Look`, `A_Pain`, `A_PosAttack`, `A_Scream`, `A_XScream` | Shared entry counters only; species attribution not established |
+| `MT_SHOTGUY` | `A_Chase`, `A_FaceTarget`, `A_Fall`, `A_Look`, `A_Pain`, `A_SPosAttack`, `A_Scream`, `A_XScream` | Shared entry counters only; species attribution not established |
+| `MT_VILE` | `A_FaceTarget`, `A_Fall`, `A_Look`, `A_Pain`, `A_Scream`, `A_VileAttack`, `A_VileChase`, `A_VileStart`, `A_VileTarget` | Shared entry counters only; species attribution not established |
+| `MT_UNDEAD` | `A_Chase`, `A_FaceTarget`, `A_Fall`, `A_Look`, `A_Pain`, `A_Scream`, `A_SkelFist`, `A_SkelMissile`, `A_SkelWhoosh` | Shared entry counters only; species attribution not established |
+| `MT_FATSO` | `A_BossDeath`, `A_Chase`, `A_FaceTarget`, `A_Fall`, `A_FatAttack1`, `A_FatAttack2`, `A_FatAttack3`, `A_FatRaise`, `A_Look`, `A_Pain`, `A_Scream` | Shared entry counters only; species attribution not established |
+| `MT_CHAINGUY` | `A_CPosAttack`, `A_CPosRefire`, `A_Chase`, `A_FaceTarget`, `A_Fall`, `A_Look`, `A_Pain`, `A_Scream`, `A_XScream` | Shared entry counters only; species attribution not established |
+| `MT_TROOP` | `A_Chase`, `A_FaceTarget`, `A_Fall`, `A_Look`, `A_Pain`, `A_Scream`, `A_TroopAttack`, `A_XScream` | Shared entry counters only; species attribution not established |
+| `MT_SERGEANT` | `A_Chase`, `A_FaceTarget`, `A_Fall`, `A_Look`, `A_Pain`, `A_SargAttack`, `A_Scream` | Shared entry counters only; species attribution not established |
+| `MT_SHADOWS` | `A_Chase`, `A_FaceTarget`, `A_Fall`, `A_Look`, `A_Pain`, `A_SargAttack`, `A_Scream` | Shared entry counters only; species attribution not established |
+| `MT_HEAD` | `A_Chase`, `A_FaceTarget`, `A_Fall`, `A_HeadAttack`, `A_Look`, `A_Pain`, `A_Scream` | Shared entry counters only; species attribution not established |
+| `MT_BRUISER` | `A_BossDeath`, `A_BruisAttack`, `A_Chase`, `A_FaceTarget`, `A_Fall`, `A_Look`, `A_Pain`, `A_Scream` | Shared entry counters only; species attribution not established |
+| `MT_KNIGHT` | `A_BruisAttack`, `A_Chase`, `A_FaceTarget`, `A_Fall`, `A_Look`, `A_Pain`, `A_Scream` | Shared entry counters only; species attribution not established |
+| `MT_SKULL` | `A_Chase`, `A_FaceTarget`, `A_Fall`, `A_Look`, `A_Pain`, `A_Scream`, `A_SkullAttack` | Shared entry counters only; species attribution not established |
+| `MT_SPIDER` | `A_BossDeath`, `A_Chase`, `A_FaceTarget`, `A_Fall`, `A_Look`, `A_Metal`, `A_Pain`, `A_SPosAttack`, `A_Scream`, `A_SpidRefire` | Shared entry counters only; species attribution not established |
+| `MT_BABY` | `A_BabyMetal`, `A_BossDeath`, `A_BspiAttack`, `A_Chase`, `A_FaceTarget`, `A_Fall`, `A_Look`, `A_Pain`, `A_Scream`, `A_SpidRefire` | Shared entry counters only; species attribution not established |
+| `MT_CYBORG` | `A_BossDeath`, `A_Chase`, `A_CyberAttack`, `A_FaceTarget`, `A_Fall`, `A_Hoof`, `A_Look`, `A_Metal`, `A_Pain`, `A_Scream` | Shared entry counters only; species attribution not established |
+| `MT_PAIN` | `A_Chase`, `A_FaceTarget`, `A_Look`, `A_Pain`, `A_PainAttack`, `A_PainDie`, `A_Scream` | Shared entry counters only; species attribution not established |
+| `MT_WOLFSS` | `A_CPosAttack`, `A_CPosRefire`, `A_Chase`, `A_FaceTarget`, `A_Fall`, `A_Look`, `A_Pain`, `A_Scream`, `A_XScream` | Shared entry counters only; species attribution not established |
+| `MT_KEEN` | `A_KeenDie`, `A_Pain`, `A_Scream` | Shared entry counters only; species attribution not established |
+| `MT_BOSSBRAIN` | `A_BrainDie`, `A_BrainPain`, `A_BrainScream` | Shared entry counters only; species attribution not established |
+| `MT_BOSSSPIT` | `A_BrainAwake`, `A_BrainSpit`, `A_Look` | Shared entry counters only; species attribution not established |
+| `MT_BOSSTARGET` |  | Shared entry counters only; species attribution not established |
 
-The [allocation-domain audit](../test/fixtures/phase3_world/original-domains.json)
-records uninitialized close-timer door `topheight/topwait` and stair `type/crush`.
-World module execution explicitly uses zero-filled allocation. Canonical masks
-exclude unknown raw fields but cannot prove equivalent execution under arbitrary
-heap contents when those fields are consumed. Fresh Solidity zero values are a
-deterministic extension in those domains. Selected whole-world alternate-fill
-agreement is stronger evidence for those scenarios, not all stair/timer cases.
+See the [AI family/function proof](PHASE3-AI.md) for controlled module conditions
+and remaining integrated species/attack/resurrection/boss-map domains. The JSON
+retains each family's state roots, table actions and global native observations;
+zero or absent observations do not prove absence of execution.
 
-The [mover-cast probe](../test/fixtures/phase3_world/mover-casts.json) binds original
-manual-door reuse to pinned LP64 byte offset 48: `door.direction`, `plat.count`
-and `ceiling.speed`. Both measured integer overlaps are preserved. Floor texture
-and padding lack a complete proven representation; fire-flicker reinterpretation
-is an original out-of-bounds read. Unsupported cases reject explicitly. Generic
-`EV_DoFloor(donutRaise)` originally uses an uninitialized sector pointer;
-that domain is rejected, while actual `EV_DoDonut` construction is supported.
+## Native domains and execution policy
 
-Geometry guards reject original undefined or malformed domains: `abs(INT_MIN)`,
-more than eight crossed specials or 128 intercepts, malformed BLOCKMAP,
-invalid/cyclic BSP, short REJECT, null donut topology and more than 64 scrollers.
-The original 64-step path traversal bound is retained. Next-highest-floor's first
-20 eligible entries are an original warning/break limit, not a rejected overflow.
+- **numeric-profile — Pinned implementation equivalence, not universal ISO C.** 32-bit wrapping, signed narrowing, arithmetic shifts and ordered RNG use explicit implementations. Negative signed shifts remain original undefined ISO C behavior, measured under pinned native profiles.
+- **allocation-profile — Explicit deterministic extension in isolated zero-filled world tests.** Original timed-close door topheight/topwait and stair type/crush are uninitialized. Snapshot masking does not prove gameplay equivalence when consumed under arbitrary heap fills; whole-world 0xa5 evidence covers only selected scenarios.
+- **zone-identity — Stable logical IDs plus original physical zone mirror.** Typed payload IDs/tombstones preserve live linked order; native zone separately preserves original physical offsets/rover/free/purge/cache owner chronology. Actor/mover body and pointer bytes are not generally reconstructed. Actual startup/header proof plus selected full-world/public/browser comparisons establish bounded integration, not all future allocation histories.
+- **mover-casts — Measured pinned LP64 integer overlaps only.** Manual doors preserve byte48 overlap with plat.count/ceiling.speed. Floor texture/padding representation not proven; fire-flicker reinterpretation is out-of-bounds. Other unsupported casts reject InvalidDoorThinker.
+- **undefined-generic-donut — Reject undefined initialized-payload domain.** EV_DoFloor(donutRaise) rejects where original sector pointer was never initialized. Actual EV_DoDonut creates valid donutRaise thinkers and is compared.
+- **geometry-and-capacity — Retain valid original control flow; explicit failures outside supported domain.** Reject abs(INT_MIN), >8 crossed specials, >128 intercepts, >64 scrollers, malformed BLOCKMAP/BSP/REJECT and null donut topology. P_PathTraverse original64-step bound retained. Next-highest floor original first20 eligible values is a defined break, not a rejected overflow.
+- **original-fatal-limits — Original I_Error becomes revert; original nonfatal behavior retained.** Exhausted16 buttons, full/missing30 platform registry and unknown pickups become explicit errors. Full30 ceiling registry originally silently fails registration and remains so. Valid animation/resource lookup prerequisites enforced.
+- **invalid-ai-indices — Reject original undefined/caller-invalid states.** Reject invalid movement direction, no enabled player during player search, >32/missing brain targets, zero cube speed/tics or target mass, invalid actor/state/weapon/ammo indices; native proof excludes undefined cases except explicit diagnostic probes.
+- **production-resources — Configurable local execution budget; independent code/memory/compiler constraints.** Default local 10B gas, env/config override. No fixed 1B economic fidelity gate and no production startup split to satisfy such a gate. Actual ordinary initialization1621868997 gas, selected steps309171400..312238893 and liveFrames719455170..781684253. Clone engine-boundary memory initialization19665056B/liveFrames<=11956800B/steps<=8753856B; not exact untouched-production peak. Enlarged local code limits do not imply public-chain deployability.
+- **physical-backing-knownness — Known bytes only; unknown remains a rejection.** Allocated/free size/tag/known-ID integer bytes and authenticated adjacent cached lump bodies may be read through source-derived links. Pointers, padding, initial/split unknown IDs, slack, free/unmodeled payload bodies, stale cache ownership, negative absolute indices and out-of-zone positions remain unreadable. Ordinary128-sample lazy tail window rejects arbitrary translated out-of-profile indices. Logical-lump overread can be within original whole-zone backing; no asset/frame/pixel exception.
+- **native-layout — Pinned LP64 implementation profile.** memblock40,memzone56,cap8,headerID20,align8 are measured native adaptation; upstream align4 replaced for LP64 gameplay validity. Stable IDs substitute process pointers. Fresh split IDs intentionally unknown. This is not universal compiler/architecture/pointer-byte fidelity.
+- **source-liveness-adaptations — Call-local working-set representation only.** P_PathTraverse working struct, R_LoadMap line aliases/offset scratch and physical tail reader scratch allow unchanged production compiler settings to generate the full hook graph. No source loop/math/order/guard changes or persisted scratch injection.
 
-Original fatal limits become reverts: exhausted 16 buttons, exhausted/missing
-30 platform registry, missing required resources and unknown collectibles.
-The 30-ceiling registry's original silent registration failure remains silent.
-Invalid table/player/ammo/weapon indices, undefined AI direction/player/brain
-states, zero division inputs and unsupported reinterpretations are explicit
-boundaries. These guards do not count as successful original gameplay cases.
+The default **local gas budget is10B and configurable** through the shared config
+and environment helper. There is no fixed1B economic fidelity gate. Production
+startup remains one atomic transaction. Existing historical1B reports retain
+their original values and scopes; no measurement has been rewritten.
 
-Complete generated data covers 967 states, 137 actor/effect/item definitions,
-nine weapons and 74 actions. These counts do not imply 137 monster species or
-integrated execution of every table entry.
+Actual ordinary production initialization costs1,621,868,997 gas; selected
+no-render steps309,171,400–312,238,893 and live frames719,455,170–781,684,253.
+These include storage/gameplay/render/Frame work and exclude probe serialization.
+They describe enlarged local Cancun execution, not protocol-limit public-chain
+deployment. Compiler remains solc0.8.37,viaIR,optimizer200,Cancun.
 
-## Remaining acceptance work
+Measured clone engine-boundary memory high-water is19,665,056 bytes for atomic
+initialization, at most11,956,800 bytes for selected live frames and8,753,856 bytes
+for selected no-render steps. The marker follows actual engine work; later
+observer event encoding and separate calls/precompiles are outside that reading.
+The clone can change compiler memory reuse. **Exact untouched-production memory
+peak remains unmeasured.** This limitation survives equal storage, pixels and
+patched/unpatched clone gas. See [memory method](../tools/reference/gameplay/PRODUCTION-MEMORY.md).
 
-The JSON lists pending gates individually so the integrator can attach final
-artifacts without converting unit proofs into whole-engine claims:
+## Remaining final acceptance
 
-1. Compare complete real E1M1 native/EVM startup, actors/world links, RNG,
-   BLOCKMAP/REJECT, sector lists and spawned specials.
-2. Run actual keyboard conversion and sequenced movement/turn/strafe/use through
-   persisted EVM state, compare logical tic records and repeat deterministic
-   streams; compare every selected 64,000-byte framebuffer.
-3. Compare integrated weapon/monster/damage/pickup/door/switch/lift behavior,
-   original thinker/RNG ordering and stored world/render scratch and aliases.
-4. Wire and verify the production game caller, authenticated resources,
-   authorization/input sequence, exact Frame events, WebSocket/receipt paths
-   and browser Canvas.
-5. Rerun all inherited Phase 0/1/2 gates and all Phase 3 regressions on the final
-   frozen source. Measure actual production tic/frame gas and memory.
-6. Keep article claims bounded by this feature/domain matrix and local usage
-   telemetry, preserving missing historical measurements and phase/model/agent
-   boundaries. No external telemetry service is required.
+- **inherited-final-gates: pending.** Run required final inherited Phase0/1/2 and complete Phase3 regression gates against frozen source; bind final tested source hashes.
+- **repeat-production-stream: verified.** Completed retained reproducibility proof: two independent ordinary production deployments, complete129-tic stream, all fields/cadence/Frames/gas/thirteen error and rollback checks equal.
+- **feature-domain-signoff: pending.** Integrator final source/function/domain review; preserve explicitly unsupported profiles and all rejected unknown backing/undefined domains.
+- **M2-final-acceptance: pending.** Integrator accepts bounded startup/input/movement/world/render/persistence/browser scope only after final inherited/repeat gates.
+- **M3-final-acceptance: pending.** Integrator accepts declared integrated combat/AI/damage/pickup/door/projectile scenarios after final gates; isolated all-nine-weapon/all-enemy-action proofs do not become complete full-world branch coverage.
+- **usage-article: continuing.** Keep existing local collector boundaries/model/agent/phase evidence and missing historical measurements; do not read raw transcripts or infer absent token counts.
+
+Commands are copied exactly when present in retained records. Where a local
+report does not retain a command, the matrix does not invent it from current
+script defaults. Source-at-run bindings remain distinct from the current audit
+snapshot; runner-only changes are listed even when production Solidity is
+unchanged. The machine-readable evidence registry binds every retained report
+by SHA256, including ignored local reports. No new test result is inferred by
+this audit.

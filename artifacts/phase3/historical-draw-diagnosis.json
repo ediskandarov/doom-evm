@@ -1,0 +1,196 @@
+{
+  "result": "cause identified; no production fix applied",
+  "scope": "Six-tic all-render browser native stream; normal clone first four Frames byte-exact, fifth fails unchanged source-bound guard. Observation-only original C trace agrees four profiles and every retained native Frame/trace stays unchanged.",
+  "productionFailure": {
+    "transactionHash": "0xd28123618d70997eb485b1f4bce9126b6567a8ec064ab6542506f550e4caa677",
+    "tic": 5,
+    "mask": 128,
+    "sequence": 7,
+    "error": "DrawBounds()",
+    "gas": 538537735
+  },
+  "diagnosticFailure": {
+    "tic": 5,
+    "mask": 128,
+    "selector": "0xfdc4d9dd",
+    "guard": 6,
+    "guardSource": "diagColumn(6,rs,dc,index,frac);",
+    "values": {
+      "sourceLength": "1128",
+      "sourceOffset": "1021",
+      "x": "236",
+      "yl": "111",
+      "yh": "114",
+      "iscale": "191876",
+      "texturemid": "-2110637",
+      "colormapLength": "256",
+      "translationLength": "0",
+      "ylookupLength": "200",
+      "columnofsLength": "320",
+      "framebufferLength": "64000",
+      "centery": "100",
+      "extra": "1148",
+      "extra2": "-1",
+      "detailshift": "0"
+    },
+    "sourceSha256": "c5692372819747b3df4151dcc042ba239857b7f0294aef53257a940887a9f72e",
+    "revertData": "0xfdc4d9dd0000000000000000000000000000000000000000000000000000000000000006000000000000000000000000000000000000000000000000000000000000046800000000000000000000000000000000000000000000000000000000000003fd00000000000000000000000000000000000000000000000000000000000000ec000000000000000000000000000000000000000000000000000000000000006f0000000000000000000000000000000000000000000000000000000000000072000000000000000000000000000000000000000000000000000000000002ed84ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffdfcb530000000000000000000000000000000000000000000000000000000000000100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000c80000000000000000000000000000000000000000000000000000000000000140000000000000000000000000000000000000000000000000000000000000fa000000000000000000000000000000000000000000000000000000000000000064000000000000000000000000000000000000000000000000000000000000047cffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff0000000000000000000000000000000000000000000000000000000000000000c5692372819747b3df4151dcc042ba239857b7f0294aef53257a940887a9f72e"
+  },
+  "lump": {
+    "id": 1652,
+    "name": "PLAYW0",
+    "bundleOffset": 17268325,
+    "bytes": 1128,
+    "sha256": "c5692372819747b3df4151dcc042ba239857b7f0294aef53257a940887a9f72e"
+  },
+  "nativeSamples": [
+    {
+      "profile": "O0",
+      "allocationFill": "0",
+      "gametic": 5,
+      "x": 236,
+      "yl": 111,
+      "yh": 114,
+      "iscale": 191876,
+      "texturemid": -2110637,
+      "centery": 100,
+      "frac": -1,
+      "maskedIndex": 127,
+      "lump": 1652,
+      "offset": 1021,
+      "length": 1128,
+      "sampleByte": 17,
+      "mappedByte": 139,
+      "blockSize": 1168,
+      "nextBlockOffset": 20,
+      "idFieldOffset": 20,
+      "nextBlockId": 1919505
+    },
+    {
+      "profile": "O2",
+      "allocationFill": "0",
+      "gametic": 5,
+      "x": 236,
+      "yl": 111,
+      "yh": 114,
+      "iscale": 191876,
+      "texturemid": -2110637,
+      "centery": 100,
+      "frac": -1,
+      "maskedIndex": 127,
+      "lump": 1652,
+      "offset": 1021,
+      "length": 1128,
+      "sampleByte": 17,
+      "mappedByte": 139,
+      "blockSize": 1168,
+      "nextBlockOffset": 20,
+      "idFieldOffset": 20,
+      "nextBlockId": 1919505
+    },
+    {
+      "profile": "asan",
+      "allocationFill": "0",
+      "gametic": 5,
+      "x": 236,
+      "yl": 111,
+      "yh": 114,
+      "iscale": 191876,
+      "texturemid": -2110637,
+      "centery": 100,
+      "frac": -1,
+      "maskedIndex": 127,
+      "lump": 1652,
+      "offset": 1021,
+      "length": 1128,
+      "sampleByte": 17,
+      "mappedByte": 139,
+      "blockSize": 1168,
+      "nextBlockOffset": 20,
+      "idFieldOffset": 20,
+      "nextBlockId": 1919505
+    },
+    {
+      "profile": "asan",
+      "allocationFill": "0xa5",
+      "gametic": 5,
+      "x": 236,
+      "yl": 111,
+      "yh": 114,
+      "iscale": 191876,
+      "texturemid": -2110637,
+      "centery": 100,
+      "frac": -1,
+      "maskedIndex": 127,
+      "lump": 1652,
+      "offset": 1021,
+      "length": 1128,
+      "sampleByte": 17,
+      "mappedByte": 139,
+      "blockSize": 1168,
+      "nextBlockOffset": 20,
+      "idFieldOffset": 20,
+      "nextBlockId": 1919505
+    }
+  ],
+  "equations": [
+    "frac = -2110637 + (111-100)*191876 = -1",
+    "masked index = (-1 >> 16) & 127 = 127",
+    "absolute lump offset = 1021+127 = 1148 = 1128+20",
+    "LP64 next-block ID offset = offsetof(memblock_t,id) = 20",
+    "native sample = low byte(0x1d4a11) = 17; dc_colormap[17] = 139"
+  ],
+  "cause": "Original R_DrawColumn reads adjacent allocated-zone metadata outside the logical sprite lump. Solidity source arithmetic matches exactly, but its logical asset-source guard rejects that access. Native ASan checks the whole64MiB zone allocation, and four-profile agreement does not prove logical lump bounds. This evidence classifies a logical resource overread, not necessarily ISO C undefined behavior within the larger allocation.",
+  "excludedCauses": [
+    "out of gas",
+    "reciprocal or FixedDiv arithmetic drift",
+    "zero-length span",
+    "PSprite PISGA0 bounds",
+    "colormap/framebuffer dimensions"
+  ],
+  "limits": [
+    "No claim that value17 is a generally valid replacement for arbitrary out-of-lump reads.",
+    "No silent frac clamp, zero-padding, special-coordinate/lump lookup, guard removal, or synthetic input/output substitution is justified.",
+    "Exact full kernel2205/24 proof remains scoped to its accepted scenes; this new browser view exposes a logical source domain rejected by current asset bounds."
+  ],
+  "executed": {
+    "cloneCompile": {
+      "run": "29893",
+      "command": "python3 tools/reference/gameplay/diagnose_draw.py",
+      "result": "PASS"
+    },
+    "cloneRuntime": {
+      "run": "71727",
+      "command": "node tools/reference/gameplay/diagnose_draw.mjs",
+      "result": "identified guard6 after four native-exact Frames"
+    },
+    "nativeTrace": {
+      "run": "78029",
+      "command": "python3 tools/reference/gameplay/diagnose_draw_native.py",
+      "result": "PASS exact inputs/header sample four profiles; existing native outputs unchanged"
+    }
+  },
+  "productionSourcesUnchanged": true,
+  "sourceHashes": {
+    "src/doom/r_draw.sol": "7cdef01556fccc767df44f842f7ce03efea0ec34bd9cfeb6848d30074fb17e06",
+    "src/doom/r_things.sol": "5d6099c8b388e9a26f63b9de1374fbbbc6bff338ca71c19970a9bb1b04c331f4",
+    "original/DOOM/linuxdoom-1.10/r_draw.c": "b19edd950d3d56d2d1d6168677d6345c190f081baa8269bfac3d2f3920a36a96",
+    "original/DOOM/linuxdoom-1.10/r_things.c": "b3ff03ba213782ed6488a9e0fb0afa0a0ee1f5cfbff8ce498c7133e93e01e0e3",
+    "original/DOOM/linuxdoom-1.10/z_zone.c": "80174204a0a2c96e89ceb059e0922238046106be4fd5116f1c0a6a530df9010b",
+    "original/DOOM/linuxdoom-1.10/z_zone.h": "46498575b14b5f5538d0d93f3d7c8325941b76f0e36b435bb895ecaac6f54cca",
+    "tools/reference/gameplay/diagnose_draw.py": "3bec8e0484b89f8d7f47f6925d9ddf40ad967730464095e60f0a96b865f8c4f9",
+    "tools/reference/gameplay/diagnose_draw.mjs": "379d872c0f9db3038a149b0f51bd3a2bd4e7e0f63300cbf93c29541c07bd92e0",
+    "tools/reference/gameplay/diagnose_draw_native.py": "2a994a84e12b3624ac4e29b61789a64e8dabb86adcfe91c806e5c78d60859bda",
+    "tools/reference/gameplay/diagnose_draw_native_host.c": "79df6835c13644a9af02d64640f586cc4be5722ee9665bd66baf9815315630dd"
+  },
+  "frozenCompilerOriginalDrawSha256": "7cdef01556fccc767df44f842f7ce03efea0ec34bd9cfeb6848d30074fb17e06",
+  "artifacts": {
+    "cloneRuntime": "artifacts/local/draw-diagnostic/runtime.json",
+    "nativeTraces": "artifacts/local/draw-diagnostic/native/results.json",
+    "cloneManifest": "artifacts/local/draw-diagnostic/manifest.json"
+  },
+  "historicalReport": "artifacts/local/draw-diagnostic/conclusion.json",
+  "historicalReportSha256": "575ae10da191ce6b6e7b19cabba7412f1a56bb1d2e8b37c69d0f77d617efaad6",
+  "historicalToolArchive": "artifacts/local/draw-diagnostic/history-tools/archive.json",
+  "archiveNotice": "Historical tools retained ignored locally. They target obsolete staged ABI/one-billion budget; not current verified implementation."
+}
