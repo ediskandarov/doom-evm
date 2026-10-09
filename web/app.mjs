@@ -8,6 +8,17 @@ const hex=bytes=>[...bytes].map(x=>x.toString(16).padStart(2,'0')).join('');
 let subscription, reconnectTimer, stopped=false, busy=false;
 try {
   const config=await (await fetch('/config.local.json')).json();
+  const genuine=config.rendererKind==='doom-world-view';
+  if(genuine){
+    document.title='DOOM EVM · Freedoom';
+    document.querySelector('.eyebrow').textContent='DOOM / running inside the EVM';
+    document.querySelector('h1').textContent='It runs. In a transaction.';
+    document.querySelector('.pill').textContent='FREEDOOM E1M1 · STATIC WORLD VIEW';
+    document.querySelector('p').textContent='Walls, floors, ceilings and sprites rendered by the DOOM port in the EVM. Send a transaction to draw the next frame.';
+    canvas.setAttribute('aria-label','Freedoom world view rendered in the EVM');
+    button.textContent='Run DOOM →';
+  }
+  proof.rendererKind=genuine?'doom-world-view':'synthetic';
   const rpc=makeRpc(config.rpcUrl);
   const palette=await (await fetch(config.paletteUrl)).json();
   const rgb=await validatePalette(palette,config.resourceIdentity,config.paletteKind??'synthetic');
@@ -56,7 +67,7 @@ try {
   };
   window.fixtureClient={nextFrame,config,inbox};
   button.addEventListener('click',()=>nextFrame().catch(fail));button.disabled=false;proof.ready=true;
-  status.textContent='Subscribed. Send a frame to run the synthetic fixture in the EVM.';
+  status.textContent=genuine?'Subscribed. Send a transaction to render Freedoom.':'Subscribed. Send a frame to run the synthetic fixture in the EVM.';
   if(new URLSearchParams(location.search).has('autotest')) {
     await nextFrame(); await nextFrame({disconnect:true});
     proof.rgbaSha256=hex(new Uint8Array(await crypto.subtle.digest('SHA-256',canvas.getContext('2d').getImageData(0,0,320,200).data)));

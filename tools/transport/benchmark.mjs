@@ -35,7 +35,7 @@ async function waitFor(test, description) {
   throw Error(`Timeout: ${description}`);
 }
 try {
-  execFileSync(resolve('.toolchain/bin/forge'),['build'],{stdio:'inherit',timeout:60000});
+  execFileSync(resolve('.toolchain/bin/forge'),['build','src/support/FrameFixture.sol'],{stdio:'inherit',timeout:60000});
   if (!external) {
     // Refuse to accidentally attach to an existing process when claiming self-managed node settings.
     try { await rpc('web3_clientVersion'); throw Error('Port already has an RPC server; choose --port or explicit --rpc'); }

@@ -355,7 +355,7 @@ After every integration gate, update this table:
 | Event smoke | passed | [Phase 0 report](PHASE0-REPORT.md), real receipt/WS/Canvas verification | Synthetic fixture only; no DOOM renderer | None |
 | C fixed math | passed | [Phase 1 report](PHASE1-REPORT.md), original C vectors and full table comparisons | Explicit undefined-C extensions | None |
 | WAD data in EVM (foundation samples) | passed | [Phase 1 report](PHASE1-REPORT.md), actual WAD upload/read hashes | Samples only; runtime renderer adapter remains Phase 2 | None for Phase 1 |
-| BSP walls render | not started | — | — | — |
+| BSP walls render | in progress | [Phase 2 ledger](PHASE2-REPORT.md), integrated geometry/resources/drawing and native renderer goldens | No real EVM wall frame yet | BSP/segs integration pending |
 | M1 full static frame | not started | — | — | — |
 | M2 movement | not started | — | — | — |
 | M3 basic gameplay | not started | — | — | — |

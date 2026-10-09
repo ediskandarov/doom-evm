@@ -13,8 +13,11 @@ process.chdir(fileURLToPath(new URL('../../',import.meta.url)));
 const argv=process.argv.slice(2),option=(name,fallback)=>{const i=argv.indexOf(name);return i<0?fallback:argv[i+1];};
 const palettePath=option('--palette','web/palette.synthetic.json');
 const outputPrefix=option('--output-prefix','artifacts/local/transport-browser');
+// A renderer deployment supplies its live node/config; default remains the original mock gate.
+const existingConfigPath=option('--existing-config',null);
+const existingConfig=existingConfigPath?JSON.parse(await readFile(existingConfigPath,'utf8')):null;
 const chromePath=process.env.CHROME_BIN??'/Applications/Google Chrome.app/Contents/MacOS/Google Chrome';
-const port=Number(process.env.BROWSER_ANVIL_PORT??18549),rpcUrl=`http://127.0.0.1:${port}`,rpc=makeRpc(rpcUrl);
+const port=Number(process.env.BROWSER_ANVIL_PORT??18549),rpcUrl=existingConfig?.rpcUrl??`http://127.0.0.1:${port}`,rpc=makeRpc(rpcUrl);
 let anvil,chrome,server,cdp,profile;
 const sleep=ms=>new Promise(r=>setTimeout(r,ms));
 async function waitFor(fn,label) { const end=Date.now()+30000;while(Date.now()<end){const value=await fn();if(value)return value;await sleep(50);}throw Error(`Timeout: ${label}`); }
@@ -30,6 +33,16 @@ async function stop(child) {
   });
 }
 try {
+  let expectedCase;
+  if(existingConfig){
+    assert.equal(existingConfig.rendererKind,'doom-world-view');
+    const manifest=JSON.parse(await readFile('test/fixtures/renderer/manifest.json','utf8'));
+    expectedCase=manifest.cases.find(row=>row.name===existingConfig.referenceCase);
+    assert(expectedCase);assert.equal(expectedCase.mode,'full','browser M1 requires the complete world-view pass');
+    assert.deepEqual(existingConfig.resourceIdentity,manifest.resourceIdentity);
+    await rpc('web3_clientVersion');
+    await writeFile('web/config.local.json',JSON.stringify(existingConfig,null,2)+'\n');
+  }else{
   try {await rpc('web3_clientVersion');throw Error('Anvil port in use');}catch(e){if(e.message.includes('port in use'))throw e;}
   anvil=spawn(resolve('.toolchain/bin/anvil'),['--host','127.0.0.1','--port',String(port),'--hardfork','cancun','--disable-code-size-limit','--disable-block-gas-limit','--memory-limit','1073741824','--silent'],{stdio:['ignore','ignore','pipe']});
   let anvilError='',anvilStartError;anvil.on('error',error=>anvilStartError=error);
@@ -37,6 +50,7 @@ try {
   await waitFor(async()=>{if(anvilStartError)throw anvilStartError;if(anvil.exitCode!==null)throw Error(anvilError);try{return await rpc('web3_clientVersion');}catch{return false;}},'Anvil');
   await rpc('anvil_setBlockGasLimit',['0x3b9aca00']);
   execFileSync(process.execPath,['tools/transport/benchmark.mjs','--palette',palettePath,'--rpc',rpcUrl,'--output','artifacts/local/transport-browser-node.json'],{timeout:60000,stdio:['ignore','pipe','inherit']});
+  }
   server=await serve(0);
   profile=await mkdtemp(join(tmpdir(),'doom-evm-chrome-'));
   chrome=spawn(chromePath,['--headless=new','--no-first-run','--no-default-browser-check','--disable-background-networking','--remote-debugging-port=0',`--user-data-dir=${profile}`,'about:blank'],{stdio:['ignore','ignore','pipe']});
@@ -66,11 +80,15 @@ try {
   const expectedRgba=expandPalette(frame,Buffer.from(palette.rgbHex,'hex'));
   assert.equal(proof.rgbaSha256,createHash('sha256').update(expectedRgba).digest('hex'),'all Canvas pixels equal palette-expanded receipt');
   assert.equal(frame.pixels.length,64000);
+  if(expectedCase){
+    assert.equal(proof.rendererKind,'doom-world-view');
+    assert.equal(createHash('sha256').update(frame.pixels).digest('hex'),expectedCase.frameSha256,'browser receipt must match the full original C golden');
+  }
   assert.equal(proof.paletteKind,palette.kind);assert.equal(proof.paletteSha256,palette.resourceIdentity.paletteSha256);
   const screenshot=await command('Page.captureScreenshot',{format:'png'});
   await mkdir(dirname(outputPrefix),{recursive:true});await writeFile(outputPrefix+'.png',Buffer.from(screenshot.data,'base64'));
   delete proof.latestPixelsHex;
-  const result={timestamp:new Date().toISOString(),kind:'synthetic-browser-transport',browser:await command('Browser.getVersion'),config,proof,receiptPixelsSha256:createHash('sha256').update(frame.pixels).digest('hex'),allCanvasPixelsMatchReceipt:true,screenshot:outputPrefix+'.png'};
+  const result={timestamp:new Date().toISOString(),kind:expectedCase?'doom-world-view-browser':'synthetic-browser-transport',referenceCase:expectedCase?.name,browser:await command('Browser.getVersion'),config,proof,receiptPixelsSha256:createHash('sha256').update(frame.pixels).digest('hex'),allCanvasPixelsMatchReceipt:true,screenshot:outputPrefix+'.png'};
   await writeFile(outputPrefix+'.json',JSON.stringify(result,null,2)+'\n');console.log(JSON.stringify(result,null,2));
 }catch(error){
   console.error(`Browser check failed: ${error.message}`);process.exitCode=1;
