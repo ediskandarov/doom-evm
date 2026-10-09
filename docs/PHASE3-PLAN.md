@@ -15,8 +15,15 @@ in `5a11e39`; all non-brace tokens remain identical, full build passes (70 files
 fuzz seed 0x44. [Format evidence](../artifacts/phase3/format-checkpoint.json).
 Compiled engine bytecode changed beyond metadata, despite unchanged compiler
 settings. Do not relabel prior kernel/production/browser/memory receipts current;
-fresh runtime proofs are running against the formatted build. The 388-function
+Fresh production 84848 passes all 129 tics, six native Frames and thirteen
+whole-storage rollback guards. Full kernel 60930 remains running; Chrome/repeat/
+clone memory and final inherited gates remain. No current bytecode-identity claim. The 388-function
 audit snapshot also needs refresh after the new evidence checkpoint.
+
+Inherited compile headroom checkpoint `bcbe46a`: the 497.56-second dependency build
+justifies forced-build timeout 1,200 seconds and enclosing Phase 0/1 wrappers
+1,800/3,600 seconds. Runner self-test passes; exact diff validation proves every
+command/assertion/compiler/gas setting and other individual timeout unchanged.
 
 The first Phase 3 native batch passed 27 commands through projectile-world proof,
 then stopped at a stale production-oracle manifest. Fresh separate production
