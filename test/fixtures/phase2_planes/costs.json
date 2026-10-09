@@ -1,0 +1,117 @@
+{
+  "command": [
+    "test",
+    "--match-contract",
+    "RPlanesTest",
+    "--match-test",
+    "testOriginalPlaneAngle",
+    "-vvvv"
+  ],
+  "sourceSha256": {
+    "src/doom/r_plane.sol": "125633121ebe255912bb7f7d6543175cbe40b83eaa7b6d917a1d942c7b7177f1",
+    "test/unit/r_plane.t.sol": "2ca8c4aa2f4762abb1554d13350483444806a9976fae0d20ea4b83af6bcc2fe6",
+    "src/doom/tables.sol": "b3532be9e2674543657bbfb9a668cf67a71baec7255cbaf324fa67eeaee7242c",
+    "src/doom/r_draw.sol": "7cdef01556fccc767df44f842f7ce03efea0ec34bd9cfeb6848d30074fb17e06",
+    "src/doom/r_segs.sol": "4ec76e347641ff6da419e02dba3557083f89e5b01a620648c3ec2f685d83d97d",
+    "src/evm/DoomScene.sol": "9ad7c8ccee4c9e05deb5608326baabacfa40f686b8d8445fb8aaa7352ab64569"
+  },
+  "memoryMeaning": "mload(0x40) allocator positions, not MSIZE; excludes cheatcode read buffers after renderer and external chunk deployment/setup. Gas regions include current memory expansion.",
+  "rows": [
+    {
+      "angle": 0,
+      "initGas": 543752416,
+      "wallGas": 275981102,
+      "planeGas": 136394186,
+      "allocatorAtPlanes": 16086656,
+      "allocatorBefore": 11900256,
+      "allocatorAfter": 17690048,
+      "drawsegs": 129,
+      "visplanes": 67,
+      "openings": 891
+    },
+    {
+      "angle": 536870912,
+      "initGas": 543772708,
+      "wallGas": 216029557,
+      "planeGas": 132578546,
+      "allocatorAtPlanes": 15106496,
+      "allocatorBefore": 11900704,
+      "allocatorAfter": 16825184,
+      "drawsegs": 85,
+      "visplanes": 50,
+      "openings": 632
+    },
+    {
+      "angle": 1073741824,
+      "initGas": 543791451,
+      "wallGas": 83457151,
+      "planeGas": 52058522,
+      "allocatorAtPlanes": 13002656,
+      "allocatorBefore": 11901152,
+      "allocatorAfter": 13677824,
+      "drawsegs": 21,
+      "visplanes": 7,
+      "openings": 80
+    },
+    {
+      "angle": 1610612736,
+      "initGas": 543811739,
+      "wallGas": 77235648,
+      "planeGas": 30382404,
+      "allocatorAtPlanes": 12828576,
+      "allocatorBefore": 11901600,
+      "allocatorAfter": 13174720,
+      "drawsegs": 12,
+      "visplanes": 6,
+      "openings": 492
+    },
+    {
+      "angle": 2147483648,
+      "initGas": 543832070,
+      "wallGas": 75477631,
+      "planeGas": 18373640,
+      "allocatorAtPlanes": 12752832,
+      "allocatorBefore": 11902048,
+      "allocatorAfter": 12918528,
+      "drawsegs": 12,
+      "visplanes": 6,
+      "openings": 617
+    },
+    {
+      "angle": 2684354560,
+      "initGas": 543852348,
+      "wallGas": 79545011,
+      "planeGas": 33920102,
+      "allocatorAtPlanes": 12873280,
+      "allocatorBefore": 11902496,
+      "allocatorAfter": 13280608,
+      "drawsegs": 14,
+      "visplanes": 6,
+      "openings": 485
+    },
+    {
+      "angle": 3221225472,
+      "initGas": 543872680,
+      "wallGas": 84669652,
+      "planeGas": 52411405,
+      "allocatorAtPlanes": 13027424,
+      "allocatorBefore": 11902944,
+      "allocatorAfter": 13702592,
+      "drawsegs": 21,
+      "visplanes": 7,
+      "openings": 81
+    },
+    {
+      "angle": 3758096384,
+      "initGas": 543892957,
+      "wallGas": 212952056,
+      "planeGas": 126921689,
+      "allocatorAtPlanes": 15104320,
+      "allocatorBefore": 11903392,
+      "allocatorAfter": 16721632,
+      "drawsegs": 92,
+      "visplanes": 53,
+      "openings": 648
+    }
+  ]
+}

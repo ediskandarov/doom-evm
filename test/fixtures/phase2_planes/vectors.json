@@ -1,0 +1,1522 @@
+[
+  {
+    "inputs": [
+      0,
+      0,
+      3,
+      1,
+      6,
+      -1,
+      0,
+      0,
+      0,
+      0
+    ],
+    "stateSha256": "00c1da3c4d0b2cbb7e88c86cec8f7e46f8d64b5ecef5fbf112d0efc7cd64c7fc",
+    "stateBytes": 6632
+  },
+  {
+    "inputs": [
+      0,
+      65536,
+      3,
+      1,
+      6,
+      -1,
+      0,
+      0,
+      0,
+      0
+    ],
+    "stateSha256": "bec010618f88dd6e9a37265fbd8e7f252aff68c9e4b1c8f96b6d1144ac075f90",
+    "stateBytes": 6632
+  },
+  {
+    "inputs": [
+      0,
+      6553600,
+      3,
+      1,
+      6,
+      -1,
+      0,
+      0,
+      0,
+      0
+    ],
+    "stateSha256": "e894f48ae36a17ce77f734f42ba38f4c9ca260ce5c6359528bce8ffaec39daa9",
+    "stateBytes": 6632
+  },
+  {
+    "inputs": [
+      0,
+      2147483647,
+      3,
+      1,
+      6,
+      -1,
+      0,
+      0,
+      0,
+      0
+    ],
+    "stateSha256": "2c812fb136b842302b3f29cad31e3a9a37b589efb7febf73b5e5c064ebfa841e",
+    "stateBytes": 6632
+  },
+  {
+    "inputs": [
+      0,
+      65536,
+      3,
+      1,
+      6,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "stateSha256": "b05704528c8e58a35dba841f5f359f61234c29ea09f76548a9b1ec3711f12970",
+    "stateBytes": 6632
+  },
+  {
+    "inputs": [
+      0,
+      65536,
+      3,
+      1,
+      6,
+      32,
+      0,
+      0,
+      0,
+      0
+    ],
+    "stateSha256": "abb7723cad2bb3dec1bb31cf22a614c873134d12e8e07c48f530545b5688f142",
+    "stateBytes": 6632
+  },
+  {
+    "inputs": [
+      0,
+      0,
+      3,
+      1,
+      6,
+      -1,
+      1073741824,
+      0,
+      0,
+      0
+    ],
+    "stateSha256": "58d8faabd288abf4bcf308f45a6a3df6b6c7a6b0fdc2ba741f4b026da5d59821",
+    "stateBytes": 6632
+  },
+  {
+    "inputs": [
+      0,
+      65536,
+      3,
+      1,
+      6,
+      -1,
+      1073741824,
+      0,
+      0,
+      0
+    ],
+    "stateSha256": "82ccf561ce6044a58f7c4487e72949a350b2dd4430cae29f59139abf482f1ae6",
+    "stateBytes": 6632
+  },
+  {
+    "inputs": [
+      0,
+      6553600,
+      3,
+      1,
+      6,
+      -1,
+      1073741824,
+      0,
+      0,
+      0
+    ],
+    "stateSha256": "eefa52fa05671a5b13c8948154352ddb3fc3eb369e112a19312500af806ea3f6",
+    "stateBytes": 6632
+  },
+  {
+    "inputs": [
+      0,
+      2147483647,
+      3,
+      1,
+      6,
+      -1,
+      1073741824,
+      0,
+      0,
+      0
+    ],
+    "stateSha256": "f1dd9a77b9bf3420d6c01a76662167571f21b47efffaee18dfec01fb91f280d4",
+    "stateBytes": 6632
+  },
+  {
+    "inputs": [
+      0,
+      65536,
+      3,
+      1,
+      6,
+      0,
+      1073741824,
+      0,
+      0,
+      0
+    ],
+    "stateSha256": "7b6cae7763196654853549b67174b3109ca824035d286c9642960b83a7e17945",
+    "stateBytes": 6632
+  },
+  {
+    "inputs": [
+      0,
+      65536,
+      3,
+      1,
+      6,
+      32,
+      1073741824,
+      0,
+      0,
+      0
+    ],
+    "stateSha256": "103b24777758b87ef5f1a26af90a5a855c58c282cbabc4e22cc205c57128907f",
+    "stateBytes": 6632
+  },
+  {
+    "inputs": [
+      0,
+      0,
+      3,
+      1,
+      6,
+      -1,
+      4294967295,
+      0,
+      0,
+      0
+    ],
+    "stateSha256": "3bbb76afa9d550d82a3d200c84439a007bee3c41fd3c096e28e8f344304437cc",
+    "stateBytes": 6632
+  },
+  {
+    "inputs": [
+      0,
+      65536,
+      3,
+      1,
+      6,
+      -1,
+      4294967295,
+      0,
+      0,
+      0
+    ],
+    "stateSha256": "1d49bae04675b72d140ef9b15a3eeeb85928efd830421b9fab1601f403d7dcf2",
+    "stateBytes": 6632
+  },
+  {
+    "inputs": [
+      0,
+      6553600,
+      3,
+      1,
+      6,
+      -1,
+      4294967295,
+      0,
+      0,
+      0
+    ],
+    "stateSha256": "8234d404d77119484aa28c3558f377d65b74971db73932adcac0ba966a45b124",
+    "stateBytes": 6632
+  },
+  {
+    "inputs": [
+      0,
+      2147483647,
+      3,
+      1,
+      6,
+      -1,
+      4294967295,
+      0,
+      0,
+      0
+    ],
+    "stateSha256": "a9e2771cea815a9b5600ec960c44fa1b6a2c8f16d6cad91b07ed463457a84480",
+    "stateBytes": 6632
+  },
+  {
+    "inputs": [
+      0,
+      65536,
+      3,
+      1,
+      6,
+      0,
+      4294967295,
+      0,
+      0,
+      0
+    ],
+    "stateSha256": "154cf6650a172d621a6f6ad95924160fd2ffa946eae5326d1ea0e1b159a377ed",
+    "stateBytes": 6632
+  },
+  {
+    "inputs": [
+      0,
+      65536,
+      3,
+      1,
+      6,
+      32,
+      4294967295,
+      0,
+      0,
+      0
+    ],
+    "stateSha256": "f192fd1baaedbf68240ec1231dc5bd9e6542b36da2097f42e927230311569eee",
+    "stateBytes": 6632
+  },
+  {
+    "inputs": [
+      0,
+      65536,
+      2,
+      0,
+      7,
+      -1,
+      0,
+      0,
+      123456,
+      0
+    ],
+    "stateSha256": "1bb2fa4e253612a54e66fcb58bc783bb56275d2c82a27354166fec129613cdfd",
+    "stateBytes": 6632
+  },
+  {
+    "inputs": [
+      0,
+      0,
+      2,
+      0,
+      7,
+      -1,
+      0,
+      0,
+      123456,
+      1
+    ],
+    "stateSha256": "a5e785919ab14b5d16d9f5e3ab150348428bfabcc08bdd08de5f6b7502a0e47b",
+    "stateBytes": 6632
+  },
+  {
+    "inputs": [
+      0,
+      0,
+      2,
+      0,
+      7,
+      -1,
+      0,
+      0,
+      -65536,
+      1
+    ],
+    "stateSha256": "d538c3404de6fcdbc55bc04551bb29c71cd46398317214a1bdbc3755db9d77de",
+    "stateBytes": 6632
+  },
+  {
+    "inputs": [
+      0,
+      65536,
+      2,
+      0,
+      7,
+      -1,
+      0,
+      0,
+      -65536,
+      0
+    ],
+    "stateSha256": "1060d874ef1c187171e8dc7750c1960c5ac705240acf870e75a8fd8374a8e9be",
+    "stateBytes": 6632
+  },
+  {
+    "inputs": [
+      1,
+      7,
+      255,
+      0,
+      1,
+      -1,
+      0,
+      0,
+      5,
+      0
+    ],
+    "stateSha256": "cbd94a96f57e03632246a53be063115babbf394a9b48962f847386223b41a781",
+    "stateBytes": 6632
+  },
+  {
+    "inputs": [
+      1,
+      7,
+      1,
+      5,
+      255,
+      -1,
+      0,
+      0,
+      0,
+      0
+    ],
+    "stateSha256": "7daa13a22f3e81d3d6ad07d713e9eacfb6d5beffe996bac479514ae96487b480",
+    "stateBytes": 6632
+  },
+  {
+    "inputs": [
+      1,
+      7,
+      1,
+      5,
+      2,
+      -1,
+      0,
+      0,
+      4,
+      0
+    ],
+    "stateSha256": "cebcae9367311949de7cee458b1678df2c2a791fbec072e3f7ea0e5aabfbc13f",
+    "stateBytes": 6632
+  },
+  {
+    "inputs": [
+      1,
+      7,
+      2,
+      4,
+      1,
+      -1,
+      0,
+      0,
+      5,
+      0
+    ],
+    "stateSha256": "f3de7c9f8d95bc9aac66a656c3c53cc04f7bb762220c7f6c4b307dbf1dada912",
+    "stateBytes": 6632
+  },
+  {
+    "inputs": [
+      1,
+      7,
+      1,
+      3,
+      4,
+      -1,
+      0,
+      0,
+      6,
+      0
+    ],
+    "stateSha256": "b8c5a9070549bc32f7d8c4df30b2d9e7b1c5af408bdf6bda2bf8cb7fdb6855e4",
+    "stateBytes": 6632
+  },
+  {
+    "inputs": [
+      1,
+      7,
+      4,
+      6,
+      1,
+      -1,
+      0,
+      0,
+      3,
+      0
+    ],
+    "stateSha256": "0e179d5666cd63f8e72ad6a0183a77796a1942cd37faa40e1f6b8e1e15879c19",
+    "stateBytes": 6632
+  },
+  {
+    "inputs": [
+      1,
+      7,
+      255,
+      77,
+      255,
+      -1,
+      0,
+      0,
+      88,
+      0
+    ],
+    "stateSha256": "700b6b5018a4120ed22fe153cfa1b637a0a726bed97e0c6ebbe51f91cc756362",
+    "stateBytes": 6632
+  },
+  {
+    "inputs": [
+      1,
+      7,
+      0,
+      7,
+      0,
+      -1,
+      0,
+      0,
+      7,
+      0
+    ],
+    "stateSha256": "700b6b5018a4120ed22fe153cfa1b637a0a726bed97e0c6ebbe51f91cc756362",
+    "stateBytes": 6632
+  },
+  {
+    "inputs": [
+      1,
+      7,
+      0,
+      7,
+      255,
+      -1,
+      0,
+      0,
+      7,
+      0
+    ],
+    "stateSha256": "5daeaa383198012ba772d75b029fa75cdfae3efbe3881e112e79de6b422b188b",
+    "stateBytes": 6632
+  },
+  {
+    "inputs": [
+      2,
+      262144,
+      0,
+      -32,
+      -10,
+      -1,
+      4294967295,
+      0,
+      0,
+      0
+    ],
+    "stateSha256": "d0b55efafad2ae27dd56ea51fc71c3fccf44c802d10780f74f8bff385e7b7379",
+    "stateBytes": 7296
+  },
+  {
+    "inputs": [
+      2,
+      262144,
+      0,
+      -32,
+      -10,
+      32,
+      4294967295,
+      0,
+      0,
+      0
+    ],
+    "stateSha256": "4dff5fc1191b1b5c07efacfd4f6b6fec130dfc32c40a9e3d721ccf7ef460b858",
+    "stateBytes": 7296
+  },
+  {
+    "inputs": [
+      2,
+      262144,
+      0,
+      0,
+      0,
+      -1,
+      4294967295,
+      0,
+      0,
+      0
+    ],
+    "stateSha256": "21d565319e182b983ce7685250acbb59f7c33c63a7502c14210c4dae2bef7e6c",
+    "stateBytes": 7296
+  },
+  {
+    "inputs": [
+      2,
+      262144,
+      0,
+      0,
+      0,
+      32,
+      4294967295,
+      0,
+      0,
+      0
+    ],
+    "stateSha256": "dcff643023bb614e6b222585a6b617ac80b9224479cd0f28d81c4d03fa1af465",
+    "stateBytes": 7296
+  },
+  {
+    "inputs": [
+      2,
+      262144,
+      0,
+      128,
+      1,
+      -1,
+      4294967295,
+      0,
+      0,
+      0
+    ],
+    "stateSha256": "b320d261c28f595c3ee5fa1d18c1c8a43b92afdd9779a9d54628ad4a718e7e12",
+    "stateBytes": 7296
+  },
+  {
+    "inputs": [
+      2,
+      262144,
+      0,
+      128,
+      1,
+      32,
+      4294967295,
+      0,
+      0,
+      0
+    ],
+    "stateSha256": "651a87a0288b3c7137ca5aadbd88711a476f594194fcf94d76fc40ffb2932b25",
+    "stateBytes": 7296
+  },
+  {
+    "inputs": [
+      2,
+      262144,
+      0,
+      320,
+      99,
+      -1,
+      4294967295,
+      0,
+      0,
+      0
+    ],
+    "stateSha256": "5891cb80dde18d8f34d1b85a718ba1623896ffbecdab87f6598c6d87e22ab3f8",
+    "stateBytes": 7296
+  },
+  {
+    "inputs": [
+      2,
+      262144,
+      0,
+      320,
+      99,
+      32,
+      4294967295,
+      0,
+      0,
+      0
+    ],
+    "stateSha256": "534cf0fc497a889fa06a1f51ad3ec296327ce5672a9f51671afccb342a133160",
+    "stateBytes": 7296
+  },
+  {
+    "inputs": [
+      2,
+      262144,
+      1,
+      -32,
+      -10,
+      -1,
+      4294967295,
+      0,
+      0,
+      0
+    ],
+    "stateSha256": "270d487915b99ca9919ad628b015a67d1d10f53bedb258751a7336e5e6b3b400",
+    "stateBytes": 7296
+  },
+  {
+    "inputs": [
+      2,
+      262144,
+      1,
+      -32,
+      -10,
+      32,
+      4294967295,
+      0,
+      0,
+      0
+    ],
+    "stateSha256": "270d487915b99ca9919ad628b015a67d1d10f53bedb258751a7336e5e6b3b400",
+    "stateBytes": 7296
+  },
+  {
+    "inputs": [
+      2,
+      262144,
+      1,
+      0,
+      0,
+      -1,
+      4294967295,
+      0,
+      0,
+      0
+    ],
+    "stateSha256": "270d487915b99ca9919ad628b015a67d1d10f53bedb258751a7336e5e6b3b400",
+    "stateBytes": 7296
+  },
+  {
+    "inputs": [
+      2,
+      262144,
+      1,
+      0,
+      0,
+      32,
+      4294967295,
+      0,
+      0,
+      0
+    ],
+    "stateSha256": "270d487915b99ca9919ad628b015a67d1d10f53bedb258751a7336e5e6b3b400",
+    "stateBytes": 7296
+  },
+  {
+    "inputs": [
+      2,
+      262144,
+      1,
+      128,
+      1,
+      -1,
+      4294967295,
+      0,
+      0,
+      0
+    ],
+    "stateSha256": "270d487915b99ca9919ad628b015a67d1d10f53bedb258751a7336e5e6b3b400",
+    "stateBytes": 7296
+  },
+  {
+    "inputs": [
+      2,
+      262144,
+      1,
+      128,
+      1,
+      32,
+      4294967295,
+      0,
+      0,
+      0
+    ],
+    "stateSha256": "270d487915b99ca9919ad628b015a67d1d10f53bedb258751a7336e5e6b3b400",
+    "stateBytes": 7296
+  },
+  {
+    "inputs": [
+      2,
+      262144,
+      1,
+      320,
+      99,
+      -1,
+      4294967295,
+      0,
+      0,
+      0
+    ],
+    "stateSha256": "270d487915b99ca9919ad628b015a67d1d10f53bedb258751a7336e5e6b3b400",
+    "stateBytes": 7296
+  },
+  {
+    "inputs": [
+      2,
+      262144,
+      1,
+      320,
+      99,
+      32,
+      4294967295,
+      0,
+      0,
+      0
+    ],
+    "stateSha256": "270d487915b99ca9919ad628b015a67d1d10f53bedb258751a7336e5e6b3b400",
+    "stateBytes": 7296
+  },
+  {
+    "inputs": [
+      0,
+      0,
+      3,
+      1,
+      6,
+      -1,
+      0,
+      1,
+      0,
+      0
+    ],
+    "stateSha256": "6730a3970e76d7c245beca4927231f3b391fdbc0007f7f474f3bce418ca0353b",
+    "stateBytes": 6632
+  },
+  {
+    "inputs": [
+      0,
+      65536,
+      3,
+      1,
+      6,
+      -1,
+      0,
+      1,
+      0,
+      0
+    ],
+    "stateSha256": "a7343bc3ca223473b4a70a1ae78635e133a18159097cf961a8404827350ec226",
+    "stateBytes": 6632
+  },
+  {
+    "inputs": [
+      0,
+      6553600,
+      3,
+      1,
+      6,
+      -1,
+      0,
+      1,
+      0,
+      0
+    ],
+    "stateSha256": "afa272a3a4b384083f334c26ca3d733367559f86852d7dad2c72c9a5ff5076f8",
+    "stateBytes": 6632
+  },
+  {
+    "inputs": [
+      0,
+      2147483647,
+      3,
+      1,
+      6,
+      -1,
+      0,
+      1,
+      0,
+      0
+    ],
+    "stateSha256": "8797929f59b180e4a122fa7f3cb72c5416d491c72820ffa80fc3434a0a3e9aaf",
+    "stateBytes": 6632
+  },
+  {
+    "inputs": [
+      0,
+      65536,
+      3,
+      1,
+      6,
+      0,
+      0,
+      1,
+      0,
+      0
+    ],
+    "stateSha256": "b5ab3b6f4e9d4baf9b40f142fec6de3b1f43c24408f19b2a56d89bc2b5d6fd67",
+    "stateBytes": 6632
+  },
+  {
+    "inputs": [
+      0,
+      65536,
+      3,
+      1,
+      6,
+      32,
+      0,
+      1,
+      0,
+      0
+    ],
+    "stateSha256": "2bf532fbb3eb1c687cad671b65e7ab9f9383f6e2d4aaee464364a84d9fb7a82e",
+    "stateBytes": 6632
+  },
+  {
+    "inputs": [
+      0,
+      0,
+      3,
+      1,
+      6,
+      -1,
+      1073741824,
+      1,
+      0,
+      0
+    ],
+    "stateSha256": "e248184d1bad99f13e04170b6ad0b353981fc5620f3f2f8c4b64f410d79ee1f0",
+    "stateBytes": 6632
+  },
+  {
+    "inputs": [
+      0,
+      65536,
+      3,
+      1,
+      6,
+      -1,
+      1073741824,
+      1,
+      0,
+      0
+    ],
+    "stateSha256": "39f2812f84ef92901a434a4ff895c719c10a9c1ec8b97acdd32f6ce1928d6110",
+    "stateBytes": 6632
+  },
+  {
+    "inputs": [
+      0,
+      6553600,
+      3,
+      1,
+      6,
+      -1,
+      1073741824,
+      1,
+      0,
+      0
+    ],
+    "stateSha256": "310d4c5e0706ba222815800b3544db8a15047856ee102522a2690f654c8996d2",
+    "stateBytes": 6632
+  },
+  {
+    "inputs": [
+      0,
+      2147483647,
+      3,
+      1,
+      6,
+      -1,
+      1073741824,
+      1,
+      0,
+      0
+    ],
+    "stateSha256": "6fc92dacda3f60367d86e1f3cecb93d0aff919c3450544b849b7eda549268222",
+    "stateBytes": 6632
+  },
+  {
+    "inputs": [
+      0,
+      65536,
+      3,
+      1,
+      6,
+      0,
+      1073741824,
+      1,
+      0,
+      0
+    ],
+    "stateSha256": "2c3a15c29cf0fc1423f2b36fa37d8707ea76d769a3d0933c0558c57c7928c9b4",
+    "stateBytes": 6632
+  },
+  {
+    "inputs": [
+      0,
+      65536,
+      3,
+      1,
+      6,
+      32,
+      1073741824,
+      1,
+      0,
+      0
+    ],
+    "stateSha256": "602a8b8ef384413705f46f979bae6be3049e6e752883b57936178c857471050b",
+    "stateBytes": 6632
+  },
+  {
+    "inputs": [
+      0,
+      0,
+      3,
+      1,
+      6,
+      -1,
+      4294967295,
+      1,
+      0,
+      0
+    ],
+    "stateSha256": "e40c6dfe9ed12755224e8d2cb2cd1bd981c93bb63ae7b0632932d4bfa3ea3edf",
+    "stateBytes": 6632
+  },
+  {
+    "inputs": [
+      0,
+      65536,
+      3,
+      1,
+      6,
+      -1,
+      4294967295,
+      1,
+      0,
+      0
+    ],
+    "stateSha256": "3197b77a79601ee94688b797979d7f28b3d79d0e89cd1f823f253836ee398612",
+    "stateBytes": 6632
+  },
+  {
+    "inputs": [
+      0,
+      6553600,
+      3,
+      1,
+      6,
+      -1,
+      4294967295,
+      1,
+      0,
+      0
+    ],
+    "stateSha256": "d421d4b1638a2e5c028075894fbcffe1f889bb2455427747edba6f80d3c6dcee",
+    "stateBytes": 6632
+  },
+  {
+    "inputs": [
+      0,
+      2147483647,
+      3,
+      1,
+      6,
+      -1,
+      4294967295,
+      1,
+      0,
+      0
+    ],
+    "stateSha256": "df7baaab9cc193e31ff77acd79c5be223f60bdfc8a007ef2d56b56df693fe56a",
+    "stateBytes": 6632
+  },
+  {
+    "inputs": [
+      0,
+      65536,
+      3,
+      1,
+      6,
+      0,
+      4294967295,
+      1,
+      0,
+      0
+    ],
+    "stateSha256": "7cd4fbae727a477e916c2f854208a1bc56040625e17712f40bc940fa88f448ec",
+    "stateBytes": 6632
+  },
+  {
+    "inputs": [
+      0,
+      65536,
+      3,
+      1,
+      6,
+      32,
+      4294967295,
+      1,
+      0,
+      0
+    ],
+    "stateSha256": "e0e5ad2515b34efe217ad7d798d82390ecb6357b790b6bbd0fd0da96db0bc02a",
+    "stateBytes": 6632
+  },
+  {
+    "inputs": [
+      0,
+      65536,
+      2,
+      0,
+      7,
+      -1,
+      0,
+      1,
+      123456,
+      0
+    ],
+    "stateSha256": "beaadd3e517564710e1cb8f835651fd84e7f5e964bd320867645c181f5541ee5",
+    "stateBytes": 6632
+  },
+  {
+    "inputs": [
+      0,
+      0,
+      2,
+      0,
+      7,
+      -1,
+      0,
+      1,
+      123456,
+      1
+    ],
+    "stateSha256": "e5f217dfbf0a48fd8a1ce496cecfeeea3b2d9085840836448f2df31ea821e053",
+    "stateBytes": 6632
+  },
+  {
+    "inputs": [
+      0,
+      0,
+      2,
+      0,
+      7,
+      -1,
+      0,
+      1,
+      -65536,
+      1
+    ],
+    "stateSha256": "b6b8806356b4be27d7ed81e9e8a3e7012b585e850d45dac82537f56070d8a799",
+    "stateBytes": 6632
+  },
+  {
+    "inputs": [
+      0,
+      65536,
+      2,
+      0,
+      7,
+      -1,
+      0,
+      1,
+      -65536,
+      0
+    ],
+    "stateSha256": "aea69671258a22ffe0cbe2080bd4f842d12a2cc75024ca2399e6a40555725ccf",
+    "stateBytes": 6632
+  },
+  {
+    "inputs": [
+      1,
+      7,
+      255,
+      0,
+      1,
+      -1,
+      0,
+      1,
+      5,
+      0
+    ],
+    "stateSha256": "cbd94a96f57e03632246a53be063115babbf394a9b48962f847386223b41a781",
+    "stateBytes": 6632
+  },
+  {
+    "inputs": [
+      1,
+      7,
+      1,
+      5,
+      255,
+      -1,
+      0,
+      1,
+      0,
+      0
+    ],
+    "stateSha256": "3b80400e0dcfd5452a9a4db4fad0d63c70e3606650f26aeb8bde92ba922ea264",
+    "stateBytes": 6632
+  },
+  {
+    "inputs": [
+      1,
+      7,
+      1,
+      5,
+      2,
+      -1,
+      0,
+      1,
+      4,
+      0
+    ],
+    "stateSha256": "8bc7e0c4586e738a459dca6ffa79e0ca77c346040a986e110cf64f6592104506",
+    "stateBytes": 6632
+  },
+  {
+    "inputs": [
+      1,
+      7,
+      2,
+      4,
+      1,
+      -1,
+      0,
+      1,
+      5,
+      0
+    ],
+    "stateSha256": "f3de7c9f8d95bc9aac66a656c3c53cc04f7bb762220c7f6c4b307dbf1dada912",
+    "stateBytes": 6632
+  },
+  {
+    "inputs": [
+      1,
+      7,
+      1,
+      3,
+      4,
+      -1,
+      0,
+      1,
+      6,
+      0
+    ],
+    "stateSha256": "67be675f0b50c2ef48453f84b4d8939f290b33da7d6113924de5841673c07888",
+    "stateBytes": 6632
+  },
+  {
+    "inputs": [
+      1,
+      7,
+      4,
+      6,
+      1,
+      -1,
+      0,
+      1,
+      3,
+      0
+    ],
+    "stateSha256": "002dd744147c172545b7297ff09ac144191f51bedae24a0154767aada40a40f7",
+    "stateBytes": 6632
+  },
+  {
+    "inputs": [
+      1,
+      7,
+      255,
+      77,
+      255,
+      -1,
+      0,
+      1,
+      88,
+      0
+    ],
+    "stateSha256": "700b6b5018a4120ed22fe153cfa1b637a0a726bed97e0c6ebbe51f91cc756362",
+    "stateBytes": 6632
+  },
+  {
+    "inputs": [
+      1,
+      7,
+      0,
+      7,
+      0,
+      -1,
+      0,
+      1,
+      7,
+      0
+    ],
+    "stateSha256": "700b6b5018a4120ed22fe153cfa1b637a0a726bed97e0c6ebbe51f91cc756362",
+    "stateBytes": 6632
+  },
+  {
+    "inputs": [
+      1,
+      7,
+      0,
+      7,
+      255,
+      -1,
+      0,
+      1,
+      7,
+      0
+    ],
+    "stateSha256": "3a6faf354224ca90d63706b8433f6ac7c3cdce2c3453fe6752f48976637717f4",
+    "stateBytes": 6632
+  },
+  {
+    "inputs": [
+      2,
+      262144,
+      0,
+      -32,
+      -10,
+      -1,
+      4294967295,
+      1,
+      0,
+      0
+    ],
+    "stateSha256": "acd525c641740fa242f7530825282b58ca50ff055c4a1a755641690cbfcf28dc",
+    "stateBytes": 7296
+  },
+  {
+    "inputs": [
+      2,
+      262144,
+      0,
+      -32,
+      -10,
+      32,
+      4294967295,
+      1,
+      0,
+      0
+    ],
+    "stateSha256": "ef49ffa29dc45d02119d4bcd18aeeaf6c730cf866526a8244cba5399b3eadcfe",
+    "stateBytes": 7296
+  },
+  {
+    "inputs": [
+      2,
+      262144,
+      0,
+      0,
+      0,
+      -1,
+      4294967295,
+      1,
+      0,
+      0
+    ],
+    "stateSha256": "c4e14962d9dc975a2de4b141f71800232422f3eed14672e59fd3703afe146f6a",
+    "stateBytes": 7296
+  },
+  {
+    "inputs": [
+      2,
+      262144,
+      0,
+      0,
+      0,
+      32,
+      4294967295,
+      1,
+      0,
+      0
+    ],
+    "stateSha256": "292d0d04f200a42ee927b203bdf622f97e5d58242d4e193f0e215cc4d81a6cdd",
+    "stateBytes": 7296
+  },
+  {
+    "inputs": [
+      2,
+      262144,
+      0,
+      128,
+      1,
+      -1,
+      4294967295,
+      1,
+      0,
+      0
+    ],
+    "stateSha256": "c8d499f39c029e633386eed8a5fb6ee8eab0c20ae115597d3ff8faccf220eb01",
+    "stateBytes": 7296
+  },
+  {
+    "inputs": [
+      2,
+      262144,
+      0,
+      128,
+      1,
+      32,
+      4294967295,
+      1,
+      0,
+      0
+    ],
+    "stateSha256": "304cc8ecf5c1f35bac862a7e3626f880f2fdfae652e10da83e9e772bda0f4c67",
+    "stateBytes": 7296
+  },
+  {
+    "inputs": [
+      2,
+      262144,
+      0,
+      320,
+      99,
+      -1,
+      4294967295,
+      1,
+      0,
+      0
+    ],
+    "stateSha256": "cf7f79a566d98aef16809173bb51875d4125777e7556df069d6edfedf896775f",
+    "stateBytes": 7296
+  },
+  {
+    "inputs": [
+      2,
+      262144,
+      0,
+      320,
+      99,
+      32,
+      4294967295,
+      1,
+      0,
+      0
+    ],
+    "stateSha256": "990ad9b9ab49c77776f15be42c369562e364a6877e87c065fb3ac86c60d93a91",
+    "stateBytes": 7296
+  },
+  {
+    "inputs": [
+      2,
+      262144,
+      1,
+      -32,
+      -10,
+      -1,
+      4294967295,
+      1,
+      0,
+      0
+    ],
+    "stateSha256": "eeefa0e6932171d6c4d540cf819cadf6eff010113015759406d08f30db400bc5",
+    "stateBytes": 7296
+  },
+  {
+    "inputs": [
+      2,
+      262144,
+      1,
+      -32,
+      -10,
+      32,
+      4294967295,
+      1,
+      0,
+      0
+    ],
+    "stateSha256": "eeefa0e6932171d6c4d540cf819cadf6eff010113015759406d08f30db400bc5",
+    "stateBytes": 7296
+  },
+  {
+    "inputs": [
+      2,
+      262144,
+      1,
+      0,
+      0,
+      -1,
+      4294967295,
+      1,
+      0,
+      0
+    ],
+    "stateSha256": "eeefa0e6932171d6c4d540cf819cadf6eff010113015759406d08f30db400bc5",
+    "stateBytes": 7296
+  },
+  {
+    "inputs": [
+      2,
+      262144,
+      1,
+      0,
+      0,
+      32,
+      4294967295,
+      1,
+      0,
+      0
+    ],
+    "stateSha256": "eeefa0e6932171d6c4d540cf819cadf6eff010113015759406d08f30db400bc5",
+    "stateBytes": 7296
+  },
+  {
+    "inputs": [
+      2,
+      262144,
+      1,
+      128,
+      1,
+      -1,
+      4294967295,
+      1,
+      0,
+      0
+    ],
+    "stateSha256": "eeefa0e6932171d6c4d540cf819cadf6eff010113015759406d08f30db400bc5",
+    "stateBytes": 7296
+  },
+  {
+    "inputs": [
+      2,
+      262144,
+      1,
+      128,
+      1,
+      32,
+      4294967295,
+      1,
+      0,
+      0
+    ],
+    "stateSha256": "eeefa0e6932171d6c4d540cf819cadf6eff010113015759406d08f30db400bc5",
+    "stateBytes": 7296
+  },
+  {
+    "inputs": [
+      2,
+      262144,
+      1,
+      320,
+      99,
+      -1,
+      4294967295,
+      1,
+      0,
+      0
+    ],
+    "stateSha256": "eeefa0e6932171d6c4d540cf819cadf6eff010113015759406d08f30db400bc5",
+    "stateBytes": 7296
+  },
+  {
+    "inputs": [
+      2,
+      262144,
+      1,
+      320,
+      99,
+      32,
+      4294967295,
+      1,
+      0,
+      0
+    ],
+    "stateSha256": "eeefa0e6932171d6c4d540cf819cadf6eff010113015759406d08f30db400bc5",
+    "stateBytes": 7296
+  },
+  {
+    "inputs": [
+      3,
+      0,
+      0,
+      0,
+      0,
+      -1,
+      0,
+      0,
+      0,
+      0
+    ],
+    "stateSha256": "18351f298b8ba1917d4a2023c23fa2d52d114b0715d99835c0092a9f168ba552",
+    "stateBytes": 7296
+  }
+]

@@ -1,0 +1,300 @@
+{
+  "upstreamCommit": "a77dfb96cb91780ca334d0d4cfd86957558007e0",
+  "compiler": "Apple clang version 17.0.0 (clang-1700.0.13.5)",
+  "target": "arm64-apple-darwin24.6.0",
+  "profiles": [
+    "O0 -fwrapv",
+    "O2 -fwrapv",
+    "O2 ASan/UBSan -fwrapv"
+  ],
+  "extractions": [
+    {
+      "file": "m_fixed.c",
+      "function": "FixedMul",
+      "startLine": 43,
+      "endLine": 49,
+      "sha256": "71f681bd99115702cf59d6886386a7daa325f6870c235dd8f806d3dc79f8396e"
+    },
+    {
+      "file": "m_fixed.c",
+      "function": "FixedDiv",
+      "startLine": 57,
+      "endLine": 65,
+      "sha256": "97f73f12dd005f2b2d84f31baf9153f076f3aba300a48bdb0fe7d4b78cf933f4"
+    },
+    {
+      "file": "m_fixed.c",
+      "function": "FixedDiv2",
+      "startLine": 69,
+      "endLine": 87,
+      "sha256": "30c5f8fd2dd75b476d09aec6faca76b383464f1489b53de6b00bc8b214e746ff"
+    },
+    {
+      "file": "r_draw.c",
+      "function": "R_DrawColumn",
+      "startLine": 105,
+      "endLine": 148,
+      "sha256": "42fc5e81985c381cb80695b3a3e31294a58ad06dadc022417b3beb9f37fb8ee4"
+    },
+    {
+      "file": "r_draw.c",
+      "function": "R_DrawColumnLow",
+      "startLine": 211,
+      "endLine": 253,
+      "sha256": "b087e1ae430cc511a8695f68e1b29d565a34320544b0c089dd2df8c3de39c866"
+    },
+    {
+      "file": "r_draw.c",
+      "function": "R_DrawSpan",
+      "startLine": 520,
+      "endLine": 563,
+      "sha256": "9512512c78109a15120b3d266f61943cd3d16be926ae5a33c8251c392d474bb6"
+    },
+    {
+      "file": "r_draw.c",
+      "function": "R_DrawSpanLow",
+      "startLine": 643,
+      "endLine": 686,
+      "sha256": "ceefe64fab896b61dee9996c1d3964c08eda14e097b60940d110b1a990a854e8"
+    },
+    {
+      "file": "r_plane.c",
+      "function": "R_InitPlanes",
+      "startLine": 101,
+      "endLine": 104,
+      "sha256": "05199a7df3662df3c59674601e2e0158a0269891e4c6ead91ce53dfa73a99354"
+    },
+    {
+      "file": "r_plane.c",
+      "function": "R_MapPlane",
+      "startLine": 120,
+      "endLine": 178,
+      "sha256": "dc6e1635229c4befdf383eb48cdba4dfebae6543158f3f7fa9cf5440b87c446f"
+    },
+    {
+      "file": "r_plane.c",
+      "function": "R_ClearPlanes",
+      "startLine": 185,
+      "endLine": 209,
+      "sha256": "540d8276b7e029bdecbec111f562eef90e4a2c42765b3ba0016f773e46207633"
+    },
+    {
+      "file": "r_plane.c",
+      "function": "R_FindPlane",
+      "startLine": 217,
+      "endLine": 259,
+      "sha256": "42a557d955b2622b5a26a259bf4be1080251a1c751e557ec9f92938c8172faf8"
+    },
+    {
+      "file": "r_plane.c",
+      "function": "R_CheckPlane",
+      "startLine": 265,
+      "endLine": 324,
+      "sha256": "d9a77f06b199beb266393e5d5353639b2d3c8a5fcbab7474a783ba4b8ed42d30"
+    },
+    {
+      "file": "r_plane.c",
+      "function": "R_MakeSpans",
+      "startLine": 330,
+      "endLine": 359,
+      "sha256": "6276277c2b87db6c63de50921e3d01739d042bf14fe18f1677dd25567f024ce0"
+    },
+    {
+      "file": "r_plane.c",
+      "function": "R_DrawPlanes",
+      "startLine": 367,
+      "endLine": 453,
+      "sha256": "d8409e9917722375d1d1e9bddd4b369ef14b356c1ead478d11b6bccf6d61bf46"
+    }
+  ],
+  "shims": [
+    {
+      "before": "pl->top[",
+      "after": "((byte*)pl+offsetof(visplane_t,top))[",
+      "count": 5,
+      "reason": "Original enclosing-object sentinel pad addresses; avoid array-subobject bounds UB."
+    },
+    {
+      "before": "pl->bottom[",
+      "after": "((byte*)pl+offsetof(visplane_t,bottom))[",
+      "count": 3,
+      "reason": "Original enclosing-object sentinel pad addresses; avoid array-subobject bounds UB."
+    }
+  ],
+  "sourceSha256": {
+    "r_plane.c": "e20397d9218bec009b026911640635d91ecaed17cd256a4d9cfab51780d1336f",
+    "r_draw.c": "b19edd950d3d56d2d1d6168677d6345c190f081baa8269bfac3d2f3920a36a96",
+    "m_fixed.c": "a4472841bc8890c5d5a41b325ecf56d10d7026a7489967aa29100b5dee759fea",
+    "tables.c": "db8759f4311654c63785dcffb8f73a00a61cfe2713e4284c238dea420b6e5f89"
+  },
+  "generatedSourceSha256": "cd7e80768d58876790d6279279bffe218ef15573ba0ae4a8d32649f53cae5dbe",
+  "harnessSha256": {
+    "reference.py": "cce67189f89e5e3ec8813b3f46ee457e62efe8e04bdee1ecfee282dd96c1dbef",
+    "compat.h": "e6b59e6af81e49d5747382ae30ab973583e53d2dedf2d56a0ea16900a8f8a594",
+    "driver.c": "2559f98c4ac97fb87820496fcfde60bb2cd2c4ad4026333d41793808a412c765"
+  },
+  "vectorCount": 95,
+  "vectorsSha256": "f213f31e73f2ae6fd895bf6c33e29ed8ef33bf80bda43106b43963abc2f4f594",
+  "rendererManifestSha256": "2072276e625d1fe7b47d0511ac70ea621a8b772f813ae8409b1653da2d13fcbd",
+  "resourceIdentity": {
+    "schemaVersion": 0,
+    "wadSha256": "7323bcc168c5a45ff10749b339960e98314740a734c30d4b9f3337001f9e703d",
+    "bundleSha256": "d379076f21645cf7cc5acb056663d0faacc4065489a0ca99738479323c9f7a47",
+    "paletteSha256": "fd895921b5d0a394612bb29852ed003d44d69f76dec31c0dc6b5d5fc7d63f7bb",
+    "paletteVariant": 0
+  },
+  "cases": [
+    {
+      "name": "full-angle0",
+      "mode": "full",
+      "angle": 0,
+      "frameSha256": "a8faf7b9137ccf3e5c9614b53daad8f0aeeef533d1ca6caadccac42224095010",
+      "traceSha256": "efa3f551bcf728c257758db4f536931ce02ef8110be57653502850209332d3a9",
+      "scene": {
+        "x": -27262976,
+        "y": 16777216,
+        "z": 2686976,
+        "angle": 0,
+        "spawnedThings": 209,
+        "drawsegs": 129,
+        "visplanes": 67,
+        "vissprites": 26,
+        "subsectors": 87
+      },
+      "planePixelsSha256": "927805b8aabfb0316b56ec438c43e4c155bd2e11e68dda75bcb50eb5d8391295"
+    },
+    {
+      "name": "full-angle1",
+      "mode": "full",
+      "angle": 536870912,
+      "frameSha256": "e109db5eade63d60adb8a76d457c07f447c5740aa2af44c91f5d4e56801853c7",
+      "traceSha256": "59ff1ef4d39908e614a4ed3e851c06a583fda3b9e7b994f237572f9c697b9507",
+      "scene": {
+        "x": -27262976,
+        "y": 16777216,
+        "z": 2686976,
+        "angle": 536870912,
+        "spawnedThings": 209,
+        "drawsegs": 85,
+        "visplanes": 50,
+        "vissprites": 17,
+        "subsectors": 59
+      },
+      "planePixelsSha256": "e58e7b4faf20d39c82a717ff86f2e2ce28da09a59480080bb628c4341c8e1d2d"
+    },
+    {
+      "name": "full-angle2",
+      "mode": "full",
+      "angle": 1073741824,
+      "frameSha256": "b87a84d6d6e4baa80e572260c32b0bdfb69ccfb2e12e5af0bf6db5a8a288d3eb",
+      "traceSha256": "92e2e0bd0578d596ff39b07fcdc27bae39f9bde84f110856a8118d9434fd7c95",
+      "scene": {
+        "x": -27262976,
+        "y": 16777216,
+        "z": 2686976,
+        "angle": 1073741824,
+        "spawnedThings": 209,
+        "drawsegs": 21,
+        "visplanes": 7,
+        "vissprites": 1,
+        "subsectors": 14
+      },
+      "planePixelsSha256": "fb178229807988bd3c1c5d264ad921a3bd739e677315127db99c2ab8c503aefd"
+    },
+    {
+      "name": "full-angle3",
+      "mode": "full",
+      "angle": 1610612736,
+      "frameSha256": "cbb177b389a20849b3a50c5f350ebc1a5129088de597a5494bbc4daee6d31e8f",
+      "traceSha256": "151ea3f8bd81d8c55e452a87fc232da3dc580a4f78e58556cb0c7c1c20a25e54",
+      "scene": {
+        "x": -27262976,
+        "y": 16777216,
+        "z": 2686976,
+        "angle": 1610612736,
+        "spawnedThings": 209,
+        "drawsegs": 12,
+        "visplanes": 6,
+        "vissprites": 4,
+        "subsectors": 7
+      },
+      "planePixelsSha256": "f6c0ef218ac12c2bdd20bf771d3e8d11ff42a218558ca12f5c170803b418aa1d"
+    },
+    {
+      "name": "full-angle4",
+      "mode": "full",
+      "angle": 2147483648,
+      "frameSha256": "dae36bb44849dc344f5157e29fe70d1d7ffbd9d8a58c8e962af3964a765651e2",
+      "traceSha256": "067069fc88c21b9ca55232c1d9ee5b4fcf23a84a30c81eef35766bd532a27981",
+      "scene": {
+        "x": -27262976,
+        "y": 16777216,
+        "z": 2686976,
+        "angle": 2147483648,
+        "spawnedThings": 209,
+        "drawsegs": 12,
+        "visplanes": 6,
+        "vissprites": 5,
+        "subsectors": 8
+      },
+      "planePixelsSha256": "604c85900bb1eaeee29d7a88217395a9364ab6f0e47a828b2c386f661ea0ccbd"
+    },
+    {
+      "name": "full-angle5",
+      "mode": "full",
+      "angle": 2684354560,
+      "frameSha256": "ad2c5806cc38d30a354be2fa2cad5274675432df3c90aa7f449103370a9a0420",
+      "traceSha256": "e13b8b1a08aee87e2a724cd263049386909c96f44c09023b33d1de3368bb10f0",
+      "scene": {
+        "x": -27262976,
+        "y": 16777216,
+        "z": 2686976,
+        "angle": 2684354560,
+        "spawnedThings": 209,
+        "drawsegs": 14,
+        "visplanes": 6,
+        "vissprites": 6,
+        "subsectors": 10
+      },
+      "planePixelsSha256": "5252e8dd46400661737a65bd66e5d82e6c3330dd8c28a714119becd44cd63e61"
+    },
+    {
+      "name": "full-angle6",
+      "mode": "full",
+      "angle": 3221225472,
+      "frameSha256": "9a8cffe2b347900cdc2f0236d7ec18eb70762e1bb1b13ab222e12dc71b539aa4",
+      "traceSha256": "543512781e47ff53d614670e2088fd4edb357529e6adf52f8b9fdf9363f721e9",
+      "scene": {
+        "x": -27262976,
+        "y": 16777216,
+        "z": 2686976,
+        "angle": 3221225472,
+        "spawnedThings": 209,
+        "drawsegs": 21,
+        "visplanes": 7,
+        "vissprites": 1,
+        "subsectors": 16
+      },
+      "planePixelsSha256": "c94667a140602ea4b8a6a6771092280b1fed0e4cabc2424fcc40d53ac27167ee"
+    },
+    {
+      "name": "full-angle7",
+      "mode": "full",
+      "angle": 3758096384,
+      "frameSha256": "ad2464445503deb72a4cdfbafec64b5eca12b5b743f45339a84cb93302ef69d1",
+      "traceSha256": "ae5ac127dfc179e7e36a26e7dbfcf67a3cb3c47cfcbce2d978352dc6427b9bf3",
+      "scene": {
+        "x": -27262976,
+        "y": 16777216,
+        "z": 2686976,
+        "angle": 3758096384,
+        "spawnedThings": 209,
+        "drawsegs": 92,
+        "visplanes": 53,
+        "vissprites": 14,
+        "subsectors": 64
+      },
+      "planePixelsSha256": "78668b2dc43ace53ba1cd30d540cada98d50bad55e66f77cf6e21432efebae00"
+    }
+  ]
+}
