@@ -7,7 +7,8 @@ does not count as accepted Phase 3 implementation.
 
 ## Recovery checkpoint
 
-Last committed implementation checkpoint: `fdadcb5`, world movers and special dispatch.
+Last implementation checkpoint: `fdadcb5`, world movers and special dispatch.
+Last audit checkpoint: `6302955`, original definition/feature inventory.
 All completed module proofs below are committed; startup and the gameplay adapter remain drafts. **Phase 3 is
 active; M2 and M3 are unaccepted.** The production `Doom.sol` still exposes the
 accepted Phase 2 static renderer. Gameplay modules have substantial isolated
@@ -36,8 +37,9 @@ mock-neighbor module proof does not imply whole-engine verification.
 | Original bounding-box helpers | Both functions complete and committed | Startup draft uses exact original else-if ordering | `bc74405`: 521 streams/8,299 points match O0/O2/full sanitizers; MBBoxTest passes. [Validation](../test/fixtures/phase3_bbox/validation.json). Full startup pending. |
 | Gameplay persistence layout | Approved extensions implemented and committed | Real memory/storage/memory copy tested on synthetic nonempty actor/thinker/door state | `9bcc6af`: [storage checkpoint](../artifacts/phase3/storage-checkpoint.json). GameStorageTest passes (9,959,477 test gas), including map/resource/scratch aliases, renderer caches and framebuffer. Authenticated full-level round trip and production cost remain pending. |
 | P_Setup gameplay startup | Draft implemented; uncommitted | Real BLOCKMAP/REJECT, sector grouping and THINGS order connected to gameplay; not exercised yet | Pending startup/native state proof. Integrator owns `src/doom/p_setup.sol`. Existing disk loader reused with explicit attribution. |
-| DoomGame state/action/render adapter | Draft implemented; uncommitted | All gameplay hooks and renderer projection written; no production caller yet | Type-checks in module batch; full public-caller code generation exposed a via-IR stack-depth failure; startup call-boundary refactor is under verification. Whole-tic and pixel proof pending. Integrator owns `src/evm/DoomGame.sol`. |
+| DoomGame state/action/render adapter | Draft implemented; uncommitted | All gameplay hooks and renderer projection written; no production caller yet | Type-checks in module batch; full public-caller code generation exposed via-IR stack-depth failures; test-only scenario lifetime correction cleared the map-loader site, with another resource-init site under investigation. Production loader remains unchanged. Whole-tic and pixel proof pending. Integrator owns `src/evm/DoomGame.sol`. |
 | Production Doom adapter and browser gameplay | Pending | Existing static engine remains baseline | Pending driver/sequence/tic/storage/frame/Canvas gates. |
+| Original feature/function audit | 287 original definitions inventoried with spans/body hashes and port mappings | Audit-time source snapshot; refresh on final freeze | `6302955`: [feature matrix](PHASE3-FEATURE-MATRIX.md), [JSON inventory](../artifacts/phase3/feature-matrix.json). Evidence scope and unsupported/undefined domains explicit; no new runtime acceptance claim. |
 | Usage telemetry | Complete collector; active collection | Local Codex logs only, no engine dependency or services | 20 collector tests pass; historical Phase 0–2 totals remain stable. Phase 3 boundary `d47dd86`. Latest snapshots are ignored `artifacts/local/codex-usage/`. |
 
 The executed mixed module batch was:
@@ -92,7 +94,7 @@ reproducible conformance evidence; build products and local console logs are ign
 5. Measure production gas/memory and limits, verify transport/Canvas, audit the
    feature matrix, then run every inherited gate against frozen final sources.
 
-There is no external blocker. The current dependencies are a full-graph via-IR stack-depth failure under active correction,
+There is no external blocker. The current dependencies are full-graph via-IR stack-depth failures under active correction,
 startup/storage integration and whole-engine comparisons. The reference agent now owns a
 test-only public gameplay probe/canonical serializer and native/EVM runner; the input
 agent owns browser wiring; the interface agent owns the feature/fidelity matrix.
