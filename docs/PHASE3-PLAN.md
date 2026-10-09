@@ -7,7 +7,8 @@ does not count as accepted Phase 3 implementation.
 
 ## Recovery checkpoint
 
-Last implementation checkpoint: `ab316f8`, physical actor/mover allocation and lazy free;
+Last implementation checkpoint: `1578f06`, original map allocation and native-zone interface integration;
+renderer/cache/backing checkpoint is `9c4ba50`; actor/mover lazy free is `ab316f8`;
 verified source-derived renderer allocator startup is `d9ca352`;
 zone core is `2392f4a`.
 Last native observation checkpoint: `01417ad`, rocket-world/blast observations;
@@ -55,7 +56,7 @@ mock-neighbor module proof does not imply whole-engine verification.
 | DoomGame state/action/render adapter | Implemented and committed | All gameplay hooks and renderer projection written; compiled draft production caller and test probe | Type-checks in module batch; full public probe graph compiles; all eight startup states, 2,205 full logical tics, 24 exact 64,000-byte frames and eight final post-render stored snapshots pass. `b1c2735`: [comparison](../tools/reference/gameplay/COMPARISON.md), [validation](../test/fixtures/gameplay_evm/validation.json). Integrator owns `src/evm/DoomGame.sol`. |
 | Production Doom adapter and browser gameplay | Draft adapter implements startup and sequenced command/tic/frame paths; browser loop committed with isolated proof | Production keyboard/EVM path verified before allocator changes; new staged runtime/browser integration pending | `a67f435`: [browser checkpoint](../artifacts/phase3/browser-input-checkpoint.json). Browser 29 isolated tests pass; no real gameplay browser claim. Production draft compile and 129 keyboard tics/14 state fields/six exact frames/13 rejection-storage rollback checks pass. Static real Chrome/WS/receipt/Canvas gate passes after config-only repair. Gameplay Chrome passes four exact frames/14 fields then hits DrawBounds on tic five; diagnosis and final inherited gates pending. |
 | Full native/EVM gameplay comparison | Test-only public probe and runner implemented and committed | Ordinary deployment, all 1,755 authenticated resource runtimes checked; real original hooks and stored state | Native post-render extension `7fc2cab` resolves the observer boundary without engine changes. Full corrected run passes all 2,205 tics/24 frames/eight exact final post-render stored snapshots; `b1c2735`: [retained evidence](../test/fixtures/gameplay_evm/evidence.json) and all 55 consumed source hashes verified. |
-| Native allocation/backing-memory adapter | Zone types/core committed; source-driven startup replay component verified and committed | Core used by startup and committed heap/ticker; map/cache/backing draft exists, verification pending | `2392f4a`: 1,624 exact snapshots, 15 fatal probes, two Forge tests. `5ffd10a`: nine native contexts/four profiles, 83,054 events, 84 snapshots and 63,975 sprite-adjacency checks; all prior native outputs unchanged. [Lifecycle validation](../test/fixtures/phase3_zone_lifecycle/validation.json). `d9ca352`: 6,498 startup calls/4,913 headers/4,126 owners and three Forge tests; [startup validation](../test/fixtures/phase3_zone_startup/validation.json). No runtime allocation tape, clamp, invented padding or guard removal. |
+| Native allocation/backing-memory adapter | Zone types/core committed; source-driven startup replay component verified and committed | Core, heap/ticker, map, semantic caches and known backing are component-integrated and committed; full atomic production/browser proof pending | `2392f4a`: 1,624 exact snapshots, 15 fatal probes, two Forge tests. `5ffd10a`: nine native contexts/four profiles, 83,054 events, 84 snapshots and 63,975 sprite-adjacency checks; all prior native outputs unchanged. [Lifecycle validation](../test/fixtures/phase3_zone_lifecycle/validation.json). `d9ca352`: 6,498 startup calls/4,913 headers/4,126 owners and three Forge tests; [startup validation](../test/fixtures/phase3_zone_startup/validation.json). No runtime allocation tape, clamp, invented padding or guard removal. |
 | Resource initializer integration amendment | Complete and committed | Complete public test-probe graph compiles | `abfb38c`: all 20 inherited RData tests pass, including all native lookup/sprite/map/composite fields. [Checkpoint](../artifacts/phase3/resource-init-checkpoint.json). Final inherited gate remains pending. |
 | Original feature/function audit | 287 original definitions inventoried with spans/body hashes and port mappings | Audit-time source snapshot; refresh on final freeze | `6302955`: [feature matrix](PHASE3-FEATURE-MATRIX.md), [JSON inventory](../artifacts/phase3/feature-matrix.json). Evidence scope and unsupported/undefined domains explicit; no new runtime acceptance claim. |
 | Usage telemetry | Complete collector; active collection | Local Codex logs only, no engine dependency or services | 20 collector tests pass; historical Phase 0–2 totals remain stable. Phase 3 boundary `d47dd86`. Latest snapshots are ignored `artifacts/local/codex-usage/`. |
@@ -155,6 +156,48 @@ Verified recovery checkpoints:
   flight, explosion, kill and lazy removal. [Native validation](../tools/reference/gameplay_projectile/validation.json).
   New probe scenario six and comparison runner are drafted; EVM proof pending.
 
+- `9c4ba50`: renderer/cache/backing and call-local loader/reader integration,
+  111 owned tests pass. All source/dependency bindings reviewed; public Doom and
+  GameplayProbe build passes. [Checkpoint](../artifacts/phase3/renderer-backing-checkpoint.json).
+- `1578f06`: original map/blockmap/reject/THINGS/grouped-line allocations and
+  persisted native zone aliases. Three exact header/owner/digest/setup tests pass,
+  including all 210 actors and nine lights; measured full-test gas 921,597,231 at
+  the historical one-billion limit. [Validation](../tools/reference/phase3_zone_setup/evm-validation.json).
+
+## Current gas-budget decision and recovery
+
+The user explicitly replaced the arbitrary one-billion cap with a configurable
+local budget, default **10,000,000,000 gas**, on 2026-10-09. Source fidelity takes
+precedence over that historical cap. `execution-budget.json` is the shared default;
+`DOOM_GAS_LIMIT` overrides it and normalized child environments also set
+`FOUNDRY_GAS_LIMIT`. Five Node/Python/shell parity/configuration tests pass. Real
+launcher/probes confirm the new default; all verification consumers are being
+updated consistently. Compiler settings, original semantics, code/memory limits
+and every correctness gate are preserved. Stack/code-generation errors and
+unknown-byte drawing guards are separate from gas exhaustion.
+
+Production and probe initialization drafts now call `DoomGame.initializeNative`
+for original R_Init/R_InitSprites then G_InitNew/P_Setup in **one transaction**.
+Resources decode once. Public preparation APIs have been removed from the draft;
+old staged browser support is explicitly historical capability only. A new full
+atomic native-header test exists, but has not run. Do not promote earlier proofs
+to this new source snapshot.
+
+The completed historical staged production run 44500 remains separate: 129 tics,
+14 fields, six exact native frames, 17 rollback rejections and all 1,755 ordinary
+resource runtimes verified. Actual resource preparation 577,921,129 gas; level
+initialization 960,335,676; steps 309,135,111–312,202,597; rendered steps
+719,412,460–781,641,380. Reports and original measurements are preserved under
+`artifacts/local/gameplay-production-zone.*`. This two-transaction architecture
+is superseded and is not final atomic acceptance.
+
+Ownership: root owns shared budget loaders/default/Foundry/shell setup, atomic
+Doom/DoomGame/probe and final gates; reference agent owns Python Anvil/probe/gate
+consumer updates and the new atomic header test; interface agent owns legacy JS
+benchmark/browser consumers; input agent owns browser/config budgets and atomic
+production/MSIZE tooling. No active compiler yet; next serialized gate verifies
+atomic headers and frozen public artifacts after consumer changes settle.
+
 Next dependency order:
 
 1. Native zone persistence, actor/mover and lazy-free component integration is
@@ -163,10 +206,10 @@ Next dependency order:
 2. Materialize only source-written known physical backing bytes for renderer reads.
    Pointer, padding and unwritten bytes remain unknown; no clamp, invented tail,
    special-lump pixel table, native runtime allocation tape or guard removal.
-3. Measure integrated startup gas. Existing production initialization costs
-   740,635,413 gas before the new replay. If necessary, stage original resource
-   preparation before level initialization, without gameplay tics or host state.
-   Keep the one-billion-gas/code/memory gates unchanged.
+3. Run restored single-transaction initialization with the configurable 10-billion
+   local budget. Resource preparation and level startup keep original order; no
+   split is required for the superseded one-billion cap. Measure actual gas and
+   memory. Compiler, code and memory settings stay unchanged.
 4. Recheck native/EVM scenarios and production/browser streams, repeated-command
    determinism, storage rollback and actual memory/gas measurements.
 5. Refresh the source/feature audit, run all Phase 0/1/2 inherited gates against
