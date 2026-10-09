@@ -58,6 +58,8 @@ Every `GameHooks` callback is an internal `view` function receiving the same `Ga
 
 Action IDs are generated from first action declaration order in `info.c`, plus one; zero means no callback. The generated definitions include all original state fields and weapon/mobj records. Unsupported action IDs must fail explicitly; silently skipping an action cannot establish source fidelity.
 
+Approved AI extension: `bossDoFloor(context,tag,FloorType)`, `bossDoDoor(context,tag,DoorType)` and `exitLevel(context)` retain the original boss/Keen actions. Original boss calls create a synthetic linedef with only its tag initialized, so these hooks carry the tag directly rather than inventing a real map-line index. The world adapter must execute the matching original sector action and return its success flag.
+
 Door/floor/ceiling/plat/light data uses typed payload arrays with thinker IDs. `specialdata` identifies the thinker, from which kind/payload determine its concrete type. Active ceiling/plat registries contain payload indices, not thinker IDs; they retain the original 30-slot first-free search order. Buttons retain 16 slots and paired switches retain original order. Sliding doors inside original `#if 0` are outside the active source profile.
 
 ## Deterministic scheduling and side effects

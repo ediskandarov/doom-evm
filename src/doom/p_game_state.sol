@@ -610,6 +610,10 @@ struct GameHooks {
     function(GameContext memory) internal view spawnSpecials;
     function(GameContext memory, uint32, uint32) internal view noiseAlert;
     function(GameContext memory, uint32) internal view thinkerDispatch;
+    // A_BossDeath/A_KeenDie pass synthetic original linedefs with only tag initialized.
+    function(GameContext memory, int32, FloorType) internal view returns (bool) bossDoFloor;
+    function(GameContext memory, int32, DoorType) internal view returns (bool) bossDoDoor;
+    function(GameContext memory) internal view exitLevel;
 }
 
 struct GameContext {
