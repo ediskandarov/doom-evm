@@ -52,6 +52,8 @@ Reviewed amendment: retain setup side effects `pspritescale`, `pspriteiscale`, `
 
 Original `R_GenerateLookup`, `R_GenerateComposite`, `R_DrawColumnInCache` remain traceable in r_data. Undefined/uninitialized composite holes must be identified rather than mislabeled faithful output. Immutable blob deployment support belongs in `src/evm/ResourceStore.sol`.
 
+Measured amendment: eager original-style initialization consumed 894,291,835 gas and advanced the allocator to 10,044,000 bytes on the pinned full WAD. Retain eager `R_InitData` for verification; add `R_InitDataLazy(ResourceView) returns(RenderResources)` which defers each original `R_GenerateLookup` until first column use. This changes initialization timing, not column values; malformed textures must still be caught by eager deployment validation. Add `bytes[] lumpcache` to RenderResources to preserve original W_CacheLumpNum reuse within a frame. Exact-name indexes may accelerate lookups only while preserving name normalization, first/last match and collision resolution. Eager/lazy/native equality and fresh cost measurements are required before accepting the optimization.
+
 ## Ownership and integration
 
 Integrator owns shared structs, interfaces, schemas, foundry config, Doom glue, deployment/full-renderer oracle and all cross-module integration. Three isolated worktrees own:

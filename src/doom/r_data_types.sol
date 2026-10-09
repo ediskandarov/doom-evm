@@ -34,6 +34,7 @@ struct Texture {
 
 struct RenderResources {
     ResourceView source;
+    bytes[] lumpcache; // per-frame W_CacheLumpNum reuse; empty means not loaded
     Texture[] textures;
     uint32 firstflat;
     uint32 numflats;

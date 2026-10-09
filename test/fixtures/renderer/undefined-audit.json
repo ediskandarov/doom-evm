@@ -1,0 +1,5 @@
+{
+  "profile": "strict ISO C UBSan without -fwrapv",
+  "expectedFailure": "r_data.c:623:44: runtime error: left shift of negative value -107",
+  "interpretation": "Native full-render goldens are equivalence to the explicitly pinned implementation profile, not a claim that original renderer is free of ISO C undefined behavior. Earlier independent foundation vectors retain their stricter defined-C claims."
+}

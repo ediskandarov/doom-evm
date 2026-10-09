@@ -1,0 +1,73 @@
+{
+  "schemaVersion": 0,
+  "resourceIdentity": {
+    "schemaVersion": 0,
+    "wadSha256": "7323bcc168c5a45ff10749b339960e98314740a734c30d4b9f3337001f9e703d",
+    "bundleSha256": "d379076f21645cf7cc5acb056663d0faacc4065489a0ca99738479323c9f7a47",
+    "paletteSha256": "fd895921b5d0a394612bb29852ed003d44d69f76dec31c0dc6b5d5fc7d63f7bb",
+    "paletteVariant": 0
+  },
+  "provenance": {
+    "kind": "wad",
+    "wadName": "Freedoom Phase 1 v0.13.0",
+    "wadSha256": "7323bcc168c5a45ff10749b339960e98314740a734c30d4b9f3337001f9e703d",
+    "upstreamCommit": "a77dfb96cb91780ca334d0d4cfd86957558007e0",
+    "license": "BSD-3-Clause",
+    "map": "E1M1",
+    "build": {
+      "compiler": "clang",
+      "version": "Apple clang version 17.0.0 (clang-1700.0.13.5)",
+      "target": "arm64-apple-darwin24.6.0",
+      "flags": [
+        "-std=c99",
+        "-O2",
+        "-fwrapv",
+        "-fno-strict-aliasing",
+        "-ffp-contract=off",
+        "-fno-fast-math",
+        "-DNORMALUNIX",
+        "-include",
+        "stdint.h",
+        "-include",
+        "stddef.h",
+        "-include",
+        "stdlib.h",
+        "-include",
+        "string.h",
+        "-include",
+        "strings.h",
+        "-include",
+        "alloca.h",
+        "-include",
+        "<HARNESS>/trace.h",
+        "-Wno-incompatible-pointer-types",
+        "-Wno-implicit-function-declaration",
+        "-Wno-pointer-to-int-cast",
+        "-Wno-int-to-pointer-cast"
+      ],
+      "patchSha256": "17bb035d644b6f64f829ba0e27571e32814ac370234f90f9f3b9179aaf931e7d",
+      "harnessSha256": "28241e9b8c1bd4c3685cf86ceae941679d8e3b9b90bc4d21a3a5ca32fc6cc538",
+      "integerSemantics": "Pinned 32-bit signed -fwrapv/arithmetic-shift profile. Original negative-left-shift UB is audited separately. LP64 disk/pointer and visplane object-representation adapters are explicit.",
+      "doubleSemantics": "Original FixedDiv2 binary64 expression; no fast math or contraction."
+    }
+  },
+  "scope": "world-view",
+  "camera": {
+    "x": -27262976,
+    "y": 16777216,
+    "z": 2686976,
+    "angle": 1073741824,
+    "coordinateFormat": "signed-16.16",
+    "angleFormat": "binary-angle-uint32"
+  },
+  "detail": "high",
+  "colormap": 0,
+  "lighting": {
+    "extraLight": 0,
+    "fixedColormap": -1
+  },
+  "gametic": 0,
+  "width": 320,
+  "height": 200,
+  "frameSha256": "a961fb640c8e56b8b9f8923b53437a4335038d5ce2d29b184e0be29e19593343"
+}
