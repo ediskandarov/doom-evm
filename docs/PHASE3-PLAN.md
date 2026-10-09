@@ -17,6 +17,8 @@ Last ABI checkpoint: `1e6227d`, generated native sizeof/offsetof constants;
 `python3 tools/zone/generate-layout.py --check` and standalone Forge build pass.
 Last browser component checkpoint: `9d1b567`, staged startup/Stop/reload lifecycle,
 37 isolated Node tests pass; actual staged EVM/browser integration remains pending.
+Follow-up `f9b62e2` adds direct-start invalidation guards; 38 isolated tests pass,
+including invalidation during a pending preparation receipt. No runtime claim.
 All completed module/kernel proofs below are committed. Production adapter and real gameplay browser tooling remain pending their separate checkpoint commits. **Phase 3 is
 active; M2 and M3 are unaccepted.** Committed production `Doom.sol` remains the
 accepted Phase 2 static renderer; its working-tree gameplay adapter is a draft.
@@ -151,13 +153,20 @@ Next dependency order:
 5. Refresh the source/feature audit, run all Phase 0/1/2 inherited gates against
    frozen final sources, then assess each original acceptance criterion below.
 
-No external blocker or active compiler run. Native lifecycle and startup agents
+No external blocker. Native lifecycle and startup agents
 finished their isolated work; do not restart completed ports. Root owns shared
 headers/glue and the production rendering fix. The production adapter, real-browser
 runner, production proof tooling and diagnostic tools remain uncommitted pending
 their separate verified integration checkpoints. Native ABI constant generation is
 committed in `1e6227d`. Live Anvil port 18579 is retained for
 production/browser verification; current failed browser instance cannot reinitialize.
+
+Current compile status: the first new PZoneSetup gate failed during code generation,
+before any EVM assertions. Optimized IR identifies duplicate map-lump scalar
+lifetimes across the line loader. A source-order-preserving SetupWork memory
+scratch amendment is under the serialized compiler gate. Four-profile native
+geometry/setup evidence passed independently; its native-only checkpoint is next.
+Do not count this native proof or a successful IR export as EVM verification.
 
 At each verified integration checkpoint, update and commit this ledger with exact
 implementation/integration/verification scope, evidence and code hashes, remaining
