@@ -10,117 +10,117 @@
     "-vvvv"
   ],
   "sources": {
-    "src/doom/r_data.sol": "273b02ed9a93ddc1b5d111e7a1bee85fcccd474bb0e9c638f456e9ddfe8c10e3",
-    "src/doom/r_data_types.sol": "689bb3229f3aee9d104b754a06d88c4201d8a60ed08d4af4c9f1a2d90f0a58ca",
+    "src/doom/r_data.sol": "6c967cf81b84e07485d8bb8c76eb4895dda443dfb69a9f5e72dea70e4b473df6",
+    "src/doom/r_data_types.sol": "6a9a012f86413736f907f2500e5adfffeb534f051b30cd120cdf973bf584cefd",
     "src/evm/ResourceStore.sol": "5ab3acc5d09f155a4cf25973c847f23e47f386a364704b76996c86be5862e3a8",
-    "test/unit/r_data.t.sol": "fa7a6252a565404bc40d18c652d637c5fc86fb85f40721ed1e40f4eae2d59555",
+    "test/unit/r_data.t.sol": "3699d0217dbf1a1227af53658c844684b2511e936433731fafa7bfa2fb789c3b",
     "foundry.toml": "084d5192108931325837611f9d1339796a6ffd64ed570e31907afe718f191226"
   },
   "measurements": [
     {
       "function": "R_InitDataLazy",
-      "gas": 52633579,
-      "allocatorEnd": 2698112
+      "gas": 53094427,
+      "allocatorEnd": 2736960
     },
     {
       "function": "direct column uncached",
-      "gas": 521425,
-      "allocatorEnd": 2724960
+      "gas": 525356,
+      "allocatorEnd": 2763808
     },
     {
       "function": "direct column cached",
-      "gas": 1569,
-      "allocatorEnd": 2724960
+      "gas": 1579,
+      "allocatorEnd": 2763808
     },
     {
       "function": "flat uncached",
-      "gas": 47127,
-      "allocatorEnd": 2729088
+      "gas": 47715,
+      "allocatorEnd": 2767936
     },
     {
       "function": "flat cached",
       "gas": 405,
-      "allocatorEnd": 2729088
+      "allocatorEnd": 2767936
     },
     {
       "function": "R_InitDataLazy",
-      "gas": 52633579,
-      "allocatorEnd": 2698112
+      "gas": 53094427,
+      "allocatorEnd": 2736960
     },
     {
       "function": "R_LoadMap",
-      "gas": 131474363,
-      "allocatorEnd": 6529088
+      "gas": 132292920,
+      "allocatorEnd": 6567936
     },
     {
       "function": "R_InitData",
-      "gas": 539971446,
-      "allocatorEnd": 10678208
+      "gas": 541593837,
+      "allocatorEnd": 10717120
     },
     {
       "function": "R_InitDataLazy",
-      "gas": 52633579,
-      "allocatorEnd": 2698112
+      "gas": 53094427,
+      "allocatorEnd": 2736960
     },
     {
       "function": "R_GenerateComposite",
-      "gas": 145307,
-      "allocatorEnd": 2887360
+      "gas": 145824,
+      "allocatorEnd": 2926208
     },
     {
       "function": "R_GenerateComposite",
-      "gas": 1863013,
-      "allocatorEnd": 2944768
+      "gas": 1868945,
+      "allocatorEnd": 2983616
     },
     {
       "function": "R_GenerateComposite",
-      "gas": 791479,
-      "allocatorEnd": 2976704
+      "gas": 794363,
+      "allocatorEnd": 3015552
     },
     {
       "function": "R_GenerateComposite",
-      "gas": 1865947,
-      "allocatorEnd": 3059104
+      "gas": 1872662,
+      "allocatorEnd": 3097952
     },
     {
       "function": "R_GenerateComposite",
-      "gas": 5785113,
-      "allocatorEnd": 3183200
+      "gas": 5799933,
+      "allocatorEnd": 3222048
     },
     {
       "function": "R_GenerateComposite",
       "gas": 275189,
-      "allocatorEnd": 3187680
+      "allocatorEnd": 3226528
     },
     {
       "function": "R_GenerateComposite",
-      "gas": 3729975,
-      "allocatorEnd": 3319456
+      "gas": 3743765,
+      "allocatorEnd": 3358304
     },
     {
       "function": "R_GenerateComposite",
-      "gas": 3537734,
-      "allocatorEnd": 3460064
+      "gas": 3548910,
+      "allocatorEnd": 3498912
     },
     {
       "function": "R_GenerateComposite",
-      "gas": 6168472,
-      "allocatorEnd": 3620032
+      "gas": 6185345,
+      "allocatorEnd": 3658880
     },
     {
       "function": "R_GenerateComposite",
-      "gas": 5834586,
-      "allocatorEnd": 3740192
+      "gas": 5847508,
+      "allocatorEnd": 3779040
     },
     {
       "function": "R_GenerateComposite",
-      "gas": 574754,
-      "allocatorEnd": 3779008
+      "gas": 575622,
+      "allocatorEnd": 3817856
     },
     {
       "function": "R_GenerateComposite",
-      "gas": 360578,
-      "allocatorEnd": 3843584
+      "gas": 361541,
+      "allocatorEnd": 3882432
     }
   ]
 }

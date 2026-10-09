@@ -11,11 +11,17 @@ interface DataVm {
     function etch(address, bytes calldata) external;
     function toString(uint256) external pure returns (string memory);
     function expectRevert() external;
+    function expectRevert(bytes calldata) external;
 }
 
 contract DataHarness {
     function range(ResourceView memory v, uint32 p, uint32 n) external view returns (bytes memory) {
         return R_Data.read(v, p, n);
+    }
+
+    function loadMap(ResourceView memory v) external view returns (uint256) {
+        RenderResources memory r = R_Data.R_InitDataLazy(v);
+        return R_Data.R_LoadMap(r, "E1M1").subsectors.length;
     }
 
     function composite(RenderResources memory r, uint32 n) external view returns (bytes memory) {
@@ -29,9 +35,8 @@ contract RDataTest {
     event Measurement(string name, uint256 gasUsed, uint256 freeMemory);
 
     function rd(bytes memory b, uint256 p) internal pure returns (uint32) {
-        return
-            uint32(uint8(b[p])) | uint32(uint8(b[p + 1])) << 8 | uint32(uint8(b[p + 2])) << 16
-                | uint32(uint8(b[p + 3])) << 24;
+        return uint32(uint8(b[p])) | uint32(uint8(b[p + 1])) << 8 | uint32(uint8(b[p + 2])) << 16
+            | uint32(uint8(b[p + 3])) << 24;
     }
 
     function wr(bytes memory b, uint256 p, uint32 n) internal pure {
@@ -317,6 +322,38 @@ contract RDataTest {
         emit Measurement("flat cached", flatGas, mem);
         assembly ("memory-safe") { same := eq(flat, again) }
         require(same);
+    }
+
+    function testNativeSubsectorSignedShortBoundaries() public view {
+        bytes memory rows = fixture("subsector-signed.bin");
+        uint16[5] memory raw = [uint16(0), 1, 32767, 32768, 65535];
+        for (uint256 i; i < 5; i++) {
+            for (uint256 j; j < 5; j++) {
+                require(int32(rd(rows, (i * 5 + j) * 8)) == int32(int16(raw[i])));
+                require(int32(rd(rows, (i * 5 + j) * 8 + 4)) == int32(int16(raw[j])));
+            }
+        }
+    }
+
+    function testNegativeSubsectorCountRejected() public {
+        rejectSubsector(0, 0x8000);
+    }
+
+    function testNegativeSubsectorFirstLineRejected() public {
+        rejectSubsector(2, 0xffff);
+    }
+
+    function rejectSubsector(uint32 field, uint16 raw) internal {
+        ResourceView memory v = source();
+        uint256 position = uint256(v.lumps[6].offset) + field;
+        address chunk = v.chunks[position / 16384];
+        bytes memory code = chunk.code;
+        code[1 + position % 16384] = bytes1(uint8(raw));
+        code[2 + position % 16384] = bytes1(uint8(raw >> 8));
+        vm.etch(chunk, code);
+        DataHarness h = new DataHarness();
+        vm.expectRevert(abi.encodeWithSelector(R_Data.Bounds.selector));
+        h.loadMap(v);
     }
 
     function testCompositeHolesRejected() public {

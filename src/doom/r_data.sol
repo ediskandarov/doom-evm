@@ -457,7 +457,11 @@ library R_Data {
         uint256 slot = hashName(key, table.length - 1);
         while (table[slot] != 0) {
             uint32 i = table[slot] - 1;
-            if (name8(r.textures[i].name, true) == key) return i;
+            if (name8(r.textures[i].name, true) == key) {
+                // p_setup stores this result in side_t signed-short texture fields.
+                if (i > 32767) revert Bounds();
+                return i;
+            }
             slot = (slot + 1) & (table.length - 1);
         }
         revert MissingName(name);
@@ -470,9 +474,9 @@ library R_Data {
     {
         int32 n = findLump(r.source, table, name);
         if (n < 0) revert MissingName(name);
-        unchecked {
-            return uint32(n) - r.firstflat;
-        }
+        // p_setup stores this result in sector_t signed-short picture fields.
+        if (uint32(n) < r.firstflat || uint32(n) - r.firstflat > 32767) revert Bounds();
+        return uint32(n) - r.firstflat;
     }
 
     function records(bytes memory data, uint256 stride) private pure returns (uint256) {
@@ -578,10 +582,13 @@ library R_Data {
         m.subsectors = new Subsector[](records(b, 4));
         for (uint256 i; i < m.subsectors.length; ++i) {
             uint256 p = i * 4;
-            uint32 count = u16(b, p);
-            uint32 first = u16(b, p + 2);
-            // subsector_t fields are unsigned short, unlike signed vertex/line indexes.
-            if (first >= m.segs.length || uint256(first) + count > m.segs.length) revert Bounds();
+            int32 signedCount = s16(b, p);
+            uint32 first = index16(b, p + 2, m.segs.length, false);
+            // Both disk mapsubsector_t and runtime subsector_t fields are signed short.
+            // Reject negative counts before exposing them as bounded runtime indexes.
+            if (signedCount < 0) revert Bounds();
+            uint32 count = uint32(signedCount);
+            if (uint256(first) + count > m.segs.length) revert Bounds();
             m.subsectors[i] = Subsector(m.sides[m.segs[first].sidedef].sector, count, first);
         }
         b = W_CacheLumpNum(r.source, base + 7);

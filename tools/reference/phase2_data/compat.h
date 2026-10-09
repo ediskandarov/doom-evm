@@ -30,23 +30,23 @@ typedef uint32_t angle_t;
 #define ST_NEGATIVE 3
 #pragma pack(push,1)
 typedef struct { short width,height,leftoffset,topoffset; int columnofs[1]; } patch_t;
-typedef struct { byte topdelta,length,unused; } column_t;
+typedef struct { byte topdelta,length; } column_t;
 typedef struct {short x,y;} mapvertex_t;
 typedef struct {short v1,v2,flags,special,tag,sidenum[2];} maplinedef_t;
 typedef struct {short textureoffset,rowoffset; char toptexture[8],bottomtexture[8],midtexture[8]; short sector;} mapsidedef_t;
 typedef struct {short v1,v2,angle,linedef,side,offset;} mapseg_t;
 typedef struct {short numsegs,firstseg;} mapsubsector_t;
 typedef struct {short floorheight,ceilingheight;char floorpic[8],ceilingpic[8];short lightlevel,special,tag;} mapsector_t;
-typedef struct {short x,y,dx,dy,bbox[2][4],children[2];} mapnode_t;
+typedef struct {short x,y,dx,dy,bbox[2][4];unsigned short children[2];} mapnode_t;
 #pragma pack(pop)
 typedef struct {int originx,originy,patch;} texpatch_t;
 typedef struct {char name[8];short width,height,patchcount;texpatch_t patches[1];} texture_t;
 typedef struct {fixed_t x,y;} vertex_t;
-typedef struct {fixed_t floorheight,ceilingheight;int floorpic,ceilingpic;short lightlevel,special,tag;void*thinglist;} sector_t;
-typedef struct {fixed_t textureoffset,rowoffset;int toptexture,bottomtexture,midtexture;sector_t*sector;} side_t;
+typedef struct {fixed_t floorheight,ceilingheight;short floorpic,ceilingpic;short lightlevel,special,tag;void*thinglist;} sector_t;
+typedef struct {fixed_t textureoffset,rowoffset;short toptexture,bottomtexture,midtexture;sector_t*sector;} side_t;
 typedef struct {vertex_t*v1,*v2;fixed_t dx,dy;short flags,special,tag;short sidenum[2];fixed_t bbox[4];int slopetype;sector_t*frontsector,*backsector;} line_t;
 typedef struct {vertex_t*v1,*v2;fixed_t offset;angle_t angle;side_t*sidedef;line_t*linedef;sector_t*frontsector,*backsector;} seg_t;
-typedef struct {sector_t*sector;unsigned short numlines,firstline;} subsector_t;
+typedef struct {sector_t*sector;short numlines,firstline;} subsector_t;
 typedef struct {fixed_t x,y,dx,dy,bbox[2][4];unsigned short children[2];} node_t;
 int firstflat,lastflat,numflats,firstspritelump,lastspritelump,numspritelumps,numtextures;
 texture_t** textures;
