@@ -10,6 +10,7 @@ Use the project's pinned toolchain and Node **24.11.0** (built-in `fetch` and `W
 ```sh
 .toolchain/bin/forge test --match-contract FrameEventTest
 node --test tools/transport/protocol.test.mjs
+node --test tools/transport/lifecycle.test.mjs
 node tools/transport/benchmark.mjs
 node tools/transport/browser-check.mjs
 ```
@@ -76,4 +77,4 @@ Anvil 1.8.5 rejects using `--disable-block-gas-limit` and `--gas-limit` together
   --disable-code-size-limit --disable-block-gas-limit --memory-limit 1073741824
 ```
 
-After readiness, call `anvil_setBlockGasLimit` with `0x3b9aca00` and verify the block header. The benchmark records this post-launch RPC alongside its exact arguments. Transactions still pass an explicit gas budget; this is a relaxed local EVM, not unlimited execution. No custom opcode, precompile, `anvil_setCode`, off-chain synthetic framebuffer injection, or substitute engine is used.
+After readiness, call `anvil_setBlockGasLimit` with `0x3b9aca00`. This setting applies to the **next mined block**, not the existing latest header. The benchmark's deployment mines that block and its header proves the configured limit; the project launcher explicitly calls `evm_mine` before checking the header. The benchmark records this post-launch RPC alongside its exact arguments. Transactions still pass an explicit gas budget; this is a relaxed local EVM, not unlimited execution. No custom opcode, precompile, `anvil_setCode`, off-chain synthetic framebuffer injection, or substitute engine is used.

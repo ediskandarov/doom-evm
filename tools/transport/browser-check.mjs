@@ -15,19 +15,31 @@ const port=Number(process.env.BROWSER_ANVIL_PORT??18549),rpcUrl=`http://127.0.0.
 let anvil,chrome,server,cdp,profile;
 const sleep=ms=>new Promise(r=>setTimeout(r,ms));
 async function waitFor(fn,label) { const end=Date.now()+30000;while(Date.now()<end){const value=await fn();if(value)return value;await sleep(50);}throw Error(`Timeout: ${label}`); }
-async function stop(child){if(child&&child.exitCode===null){child.kill('SIGTERM');await Promise.race([new Promise(r=>child.once('exit',r)),sleep(1500)]);if(child.exitCode===null)child.kill('SIGKILL');}}
+async function stop(child) {
+  // Failed spawn has no PID and never emits exit; do not wait on or signal it.
+  if(!child?.pid||child.exitCode!==null||child.signalCode!==null)return;
+  await new Promise(resolve=>{
+    let timer;
+    const done=()=>{clearTimeout(timer);child.removeListener('exit',done);resolve();};
+    child.once('exit',done);
+    child.kill('SIGTERM');
+    timer=setTimeout(()=>{child.kill('SIGKILL');timer=setTimeout(done,1500);},1500);
+  });
+}
 try {
   try {await rpc('web3_clientVersion');throw Error('Anvil port in use');}catch(e){if(e.message.includes('port in use'))throw e;}
   anvil=spawn(resolve('.toolchain/bin/anvil'),['--host','127.0.0.1','--port',String(port),'--hardfork','cancun','--disable-code-size-limit','--disable-block-gas-limit','--memory-limit','1073741824','--silent'],{stdio:['ignore','ignore','pipe']});
-  let anvilError='';anvil.stderr.on('data',x=>anvilError+=x);
-  await waitFor(async()=>{if(anvil.exitCode!==null)throw Error(anvilError);try{return await rpc('web3_clientVersion');}catch{return false;}},'Anvil');
+  let anvilError='',anvilStartError;anvil.on('error',error=>anvilStartError=error);
+  anvil.stderr.on('data',x=>anvilError+=x);
+  await waitFor(async()=>{if(anvilStartError)throw anvilStartError;if(anvil.exitCode!==null)throw Error(anvilError);try{return await rpc('web3_clientVersion');}catch{return false;}},'Anvil');
   await rpc('anvil_setBlockGasLimit',['0x3b9aca00']);
   execFileSync(process.execPath,['tools/transport/benchmark.mjs','--rpc',rpcUrl,'--output','artifacts/local/transport-browser-node.json'],{timeout:60000,stdio:['ignore','pipe','inherit']});
   server=await serve(0);
   profile=await mkdtemp(join(tmpdir(),'doom-evm-chrome-'));
   chrome=spawn(chromePath,['--headless=new','--no-first-run','--no-default-browser-check','--disable-background-networking','--remote-debugging-port=0',`--user-data-dir=${profile}`,'about:blank'],{stdio:['ignore','ignore','pipe']});
-  let chromeError='';chrome.stderr.on('data',x=>chromeError+=x);
-  const debugPort=await waitFor(async()=>{if(chrome.exitCode!==null)throw Error(chromeError);try{return (await readFile(join(profile,'DevToolsActivePort'),'utf8')).split('\n')[0];}catch{return null;}},'Chrome DevTools');
+  let chromeError='',chromeStartError;chrome.on('error',error=>chromeStartError=error);
+  chrome.stderr.on('data',x=>chromeError+=x);
+  const debugPort=await waitFor(async()=>{if(chromeStartError)throw chromeStartError;if(chrome.exitCode!==null)throw Error(chromeError);try{return (await readFile(join(profile,'DevToolsActivePort'),'utf8')).split('\n')[0];}catch{return null;}},'Chrome DevTools');
   const targets=await(await fetch(`http://127.0.0.1:${debugPort}/json/list`)).json();
   cdp=new WebSocket(targets.find(x=>x.type==='page').webSocketDebuggerUrl);
   await new Promise((done,fail)=>{cdp.addEventListener('open',done,{once:true});cdp.addEventListener('error',fail,{once:true});});
@@ -56,6 +68,8 @@ try {
   delete proof.latestPixelsHex;
   const result={timestamp:new Date().toISOString(),kind:'synthetic-browser-transport',browser:await command('Browser.getVersion'),config,proof,receiptPixelsSha256:createHash('sha256').update(frame.pixels).digest('hex'),allCanvasPixelsMatchReceipt:true,screenshot:'artifacts/local/transport-browser.png'};
   await writeFile('artifacts/local/transport-browser.json',JSON.stringify(result,null,2)+'\n');console.log(JSON.stringify(result,null,2));
+}catch(error){
+  console.error(`Browser check failed: ${error.message}`);process.exitCode=1;
 }finally{
   cdp?.close();await stop(chrome);await stop(anvil);
   if(server)await new Promise(r=>server.close(r));
