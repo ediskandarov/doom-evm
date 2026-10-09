@@ -1,6 +1,6 @@
 # Porting map
 
-Baseline: `original/DOOM/linuxdoom-1.10`, upstream `a77dfb96cb91780ca334d0d4cfd86957558007e0`. The complete static E1M1 renderer is implemented and matches all eight original-C world-view frames byte for byte. Phase 2 is accepted: ordinary deployment, Frame delivery, browser verification and every inherited regression gate pass. Phase 3 gameplay is integrated with completed native/kernel/production/browser proofs; M2/M3 await final inherited gates. See the [Phase 3 ledger](docs/PHASE3-PLAN.md) and [source/feature audit](docs/PHASE3-FEATURE-MATRIX.md); historical Phase 2 acceptance remains [separate](docs/PHASE2-REPORT.md).
+Baseline: `original/DOOM/linuxdoom-1.10`, upstream `a77dfb96cb91780ca334d0d4cfd86957558007e0`. The complete static E1M1 renderer is implemented and matches all eight original-C world-view frames byte for byte. Phase 2 is accepted: ordinary deployment, Frame delivery, browser verification and every inherited regression gate pass. Phase 3 gameplay is integrated with completed native/kernel/production/browser proofs; M2/M3 passed all required gates; see the [Phase 3 report](docs/PHASE3-REPORT.md). See the [Phase 3 ledger](docs/PHASE3-PLAN.md) and [source/feature audit](docs/PHASE3-FEATURE-MATRIX.md); historical Phase 2 acceptance remains [separate](docs/PHASE2-REPORT.md).
 
 | Upstream source | Solidity destination | Status and deliberate adaptation |
 |---|---|---|
@@ -45,8 +45,8 @@ Module reports identify the pinned source, mapped functions, numeric/algorithmic
 | Authenticated full WAD source | passed | [Source report](docs/PHASE2-SOURCE.md), every runtime/corruption check and actual production deployment | Immutable code/resource adapter | None |
 | BSP walls render | passed | [Wall report](docs/PHASE2-SEGS.md), eight native-matching ordinary calls and wall-only Frame receipt | Intermediate wall-only scope | None |
 | M1 full static frame | passed | Eight bytewise full-frame comparisons, production Frame/WS/Canvas, 196 tests and all prior gates; [report](docs/PHASE2-REPORT.md) | Static full-screen world view | None for declared static scope |
-| M2 movement | in progress | Atomic nine-scenario kernel, repeated 129-tic production and real Chrome six-frame proof; [ledger](docs/PHASE3-PLAN.md) | Fixed E1M1 single-player profile; complete source/domain matrix | Final inherited gates |
-| M3 basic gameplay | in progress | Integrated combat/AI/damage/door/projectile state/frame proofs; all-action controlled module proofs | Full DOOM/gameflow is not claimed | Final inherited gates and integrator acceptance |
+| M2 movement | passed | Atomic nine-scenario kernel, repeated 129-tic production and real Chrome six-frame proof; [ledger](docs/PHASE3-PLAN.md) | Fixed E1M1 single-player profile; complete source/domain matrix | None |
+| M3 basic gameplay | passed | Integrated combat/AI/damage/door/projectile state/frame proofs; all-action controlled module proofs | Full DOOM/gameflow is not claimed | None |
 
 The full-frame target is the pinned Freedoom 0.13.0 E1M1 player start, stationary floor+41 camera clamped to ceiling−4, medium-skill single-player spawn states, tic zero, high detail and 320×200. Eight ANG45 headings match native pixels. Floors, ceilings, sky, walls, masked textures and world sprites are included. Weapon/HUD overlays are inactive in this scene; active psprite algorithms have separate original-C pixel proofs. Static equivalence is not a gameplay or FPS claim.
 

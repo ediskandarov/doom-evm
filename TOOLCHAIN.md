@@ -92,3 +92,10 @@ The inherited forced full-build timeout now allows 1,200 seconds, with enclosing
 Phase 0 and Phase 1 wrappers at 1,800 and 3,600 seconds respectively. Every
 command, assertion and other individual timeout remains intact. Compile duration
 is separate from the configurable EVM execution gas budget.
+
+Phase 3 acceptance binds actual build artifacts as well as compiler settings.
+The renderer helper's explicit three-root command emits a 502,443-byte Doom
+runtime, while the full-project context emits 503,731 bytes from the same
+consumed sources/settings. Both complete production profiles pass. Their
+receipts are retained separately; current actual atomic init is 1,621,885,757 gas.
+See [build provenance](tools/reference/gameplay/production-release-evidence.json).

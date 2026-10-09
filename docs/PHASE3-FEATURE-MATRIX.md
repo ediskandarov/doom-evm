@@ -2,8 +2,9 @@
 
 The frozen implementation now has bounded, completed kernel, public-contract and
 Chrome integration proofs on the formatted build. Historical pre-format proofs remain
-separate and are not relabeled current. **M2 and M3 remain pending final inherited gates,
-integrator signoff.** This is not a complete original
+separate and are not relabeled current. **M2 and M3 passed the original Phase 3 gates.**
+The [acceptance record](../artifacts/phase3/acceptance.json) binds all required
+frozen regressions and final-artifact runtime proofs. This is not a complete original
 DOOM port. All descriptions below distinguish source presence, actual integration
 and the measured verification scope.
 
@@ -76,10 +77,10 @@ Semantic `W_CacheLumpNum` hit/miss/tag/owner behavior is implemented separately.
 |---|---|---|
 | [Atomic startup](../tools/reference/phase3_zone_setup/final-validation.json) | Single real `initializeNative`, original resource/level/player allocation order, all normalized headers/owners and actor/special/map counts; four tests | PASS |
 | Full kernel, retained report `artifacts/local/gameplay-kernel-final.json` | Nine declared scenarios, 2,355 tics, 31 selected complete frames, nine exact final stored logical states; direct ticcmds and test-only arena setup | PASS, run60930 |
-| [Public production](../tools/reference/gameplay/production-final-evidence.json) | One ordinary `initializeGame` transaction; 129 keyboard tics, 130 rows ×14 fields, six native live frames, static pre-start Frame, thirteen whole-storage rollback checks | PASS, run84848 |
-| [Repeated production](../tools/reference/gameplay/production-final-reproducibility-evidence.json) | Two fresh ordinary contracts: all130×14 rows, commands/sequences/cadence, seven totalFrames, gas and thirteen errors/rollback equal | PASS, run1273 |
-| Chrome, retained report `artifacts/local/phase3-gameplay-browser-final.json` | Six actual Frames/Canvas, keyboard Start/Resume, blur stop, deduplication and controlled receipt fallback; prior failing tic5 now exact | PASS, run5132 |
-| Memory clone reports `artifacts/local/gameplay-production-final-memory{,-cadence}.json` | Separate clone agrees with ordinary production storage/exported fields/Frames; patched/unpatched clone gas equal; all-render and no-render cadence | PASS, runs98439/37535 |
+| [Public production](../tools/reference/gameplay/production-release-evidence.json) | One ordinary `initializeGame` transaction; 129 keyboard tics, 130 rows ×14 fields, six native live frames, static pre-start Frame, thirteen whole-storage rollback checks | PASS, run38271 |
+| [Repeated production](../tools/reference/gameplay/production-release-reproducibility-evidence.json) | Two fresh ordinary contracts: all130×14 rows, commands/sequences/cadence, seven totalFrames, gas and thirteen errors/rollback equal | PASS, run47208 |
+| Chrome, retained report `artifacts/local/phase3-gameplay-browser-release.json` | Six actual Frames/Canvas, keyboard Start/Resume, blur stop, deduplication and controlled receipt fallback; prior failing tic5 now exact | PASS, run24522 |
+| Memory clone reports `artifacts/local/gameplay-production-release-memory{,-cadence}.json` | Separate clone agrees with ordinary production storage/exported fields/Frames; patched/unpatched clone gas equal; all-render and no-render cadence | PASS, run81374 |
 
 The repeated production stream has independent fresh state and rechecks all1,755 authenticated resource chunks. Only the repeat runner's optional palette-copy guard differs; production code/transactions/native stream are unchanged.
 
@@ -115,7 +116,7 @@ Allocator core proof covers1,624 original allocation snapshots and five fatal
 conditions across O0/O2/full ASan/UBSan, plus two Solidity tests. Renderer backing
 proof covers80 native cases/10,240 knownness positions/18 original draws and111
 owned inherited/focused Solidity tests. Each checkpoint binds its own tested
-source revision. Final inherited regression gates remain separate.
+source revision. Final inherited regressions pass; their frozen scope is recorded separately.
 
 ## Allocator/cache and representation adaptations
 
@@ -255,11 +256,11 @@ patched/unpatched clone gas. See [memory method](../tools/reference/gameplay/PRO
 
 ## Remaining final acceptance
 
-- **inherited-final-gates: pending.** Run required final inherited Phase0/1/2 and complete Phase3 regression gates against frozen source; bind final tested source hashes.
+- **inherited-final-gates: verified.** Run required final inherited Phase0/1/2 and complete Phase3 regression gates against frozen source; bind final tested source hashes.
 - **repeat-production-stream: verified.** Completed retained reproducibility proof: two independent ordinary production deployments, complete129-tic stream, all fields/cadence/Frames/gas/thirteen error and rollback checks equal.
-- **feature-domain-signoff: pending.** Integrator final source/function/domain review; preserve explicitly unsupported profiles and all rejected unknown backing/undefined domains.
-- **M2-final-acceptance: pending.** Integrator accepts bounded startup/input/movement/world/render/persistence/browser scope only after final inherited/repeat gates.
-- **M3-final-acceptance: pending.** Integrator accepts declared integrated combat/AI/damage/pickup/door/projectile scenarios after final gates; isolated all-nine-weapon/all-enemy-action proofs do not become complete full-world branch coverage.
+- **feature-domain-signoff: verified.** Integrator final source/function/domain review; preserve explicitly unsupported profiles and all rejected unknown backing/undefined domains.
+- **M2-final-acceptance: verified.** Integrator accepts bounded startup/input/movement/world/render/persistence/browser scope only after final inherited/repeat gates.
+- **M3-final-acceptance: verified.** Integrator accepts declared integrated combat/AI/damage/pickup/door/projectile scenarios after final gates; isolated all-nine-weapon/all-enemy-action proofs do not become complete full-world branch coverage.
 - **usage-article: continuing.** Keep existing local collector boundaries/model/agent/phase evidence and missing historical measurements; do not read raw transcripts or infer absent token counts.
 
 Commands are copied exactly when present in retained records. Where a local
@@ -269,3 +270,9 @@ snapshot; runner-only changes are listed even when production Solidity is
 unchanged. The machine-readable evidence registry binds every retained report
 by SHA256, including ignored local reports. No new test result is inferred by
 this audit.
+
+The final renderer build and full-project build emit different runtime artifacts
+with identical consumed sources/compiler settings. Both complete production
+streams are retained separately; current acceptance uses the final renderer
+build, ordinary129-tic repeat, six-frame Chrome and sequential memory proofs.
+Exact build command and hashes are in the current production evidence.

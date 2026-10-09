@@ -1,8 +1,15 @@
 # DOOM on EVM 👹
 
-But can it run DOOM? The static renderer produces eight Freedoom E1M1 views inside the EVM, matching all 64,000 pixels from the original C renderer. BSP, textured walls, floors, ceilings, sky and sprites are implemented. **Phase 2 is verified: ordinary deployment, transaction events, browser pixels, 196 tests and every Phase 0/1 gate pass. Gameplay comes next.**
+Original DOOM gameplay and rendering now run inside the local EVM. **Phase 3 M2/M3 is verified**: movement/collisions, weapons, monster AI,
+damage, doors and world interactions, with 2,355 native-equivalent gameplay tics,
+31 exact frames, complete independent production replay and real Chrome pixels.
+The browser submits input and displays EVM Frame pixels.
 
-The destination is a readable port of original `linuxdoom-1.10` to Solidity/Yul, with C-to-Solidity file/function traceability. The browser displays transaction pixels; the EVM computes the scene. Movement, weapons and game simulation belong to Phase 3.
+The accepted profile is Freedoom E1M1, one player, medium skill and full-screen
+world view. This is a readable port of original `linuxdoom-1.10` to Solidity/Yul;
+full original DOOM, automatic level progression, menus/HUD/audio and multiplayer
+remain outside the accepted profile. See the [Phase 3 report](docs/PHASE3-REPORT.md)
+and [feature matrix](docs/PHASE3-FEATURE-MATRIX.md).
 
 ## Press start
 
@@ -17,6 +24,31 @@ python3 scripts/verify-phase2.py
 ```
 
 Tools install under ignored `.toolchain/`; global Foundry is left alone. No npm dependencies are required. Set `CHROME_BIN` if Chrome is not at its standard macOS path. The full verifier downloads and checks the pinned Freedoom archive, builds the original C oracle, preserves every Phase 0 gate, starts and stops temporary localhost nodes and a headless browser, and writes fresh results to `artifacts/local/`. The original `python3 scripts/verify-phase0.py` command remains available.
+
+## Play the EVM game
+
+After the verifier prepares the resources:
+
+```sh
+source scripts/env.sh
+python3 tools/reference/gameplay/production.py --output artifacts/local/gameplay-production-native-final
+node tools/reference/gameplay/production.mjs --native-zone \
+  --native artifacts/local/gameplay-production-native-final \
+  --output-prefix artifacts/local/gameplay-production-new --keep-node
+cp artifacts/local/gameplay-production-new.config.json web/config.local.json
+cp artifacts/local/gameplay-production-new.palette.json web/palette.local.json
+node tools/transport/serve.mjs
+```
+
+Open <http://127.0.0.1:8080>, click Start, and use arrows/WASD, Ctrl to fire,
+Space to use, and Shift to run. Stop or blur releases input. Transactions advance
+original simulation tics; 35 tics/s is simulated game time, not an FPS promise.
+Serialize writers sharing the same unlocked Anvil sender.
+
+The local execution budget defaults to **10 billion gas** and is configurable
+through `execution-budget.json` or `DOOM_GAS_LIMIT`. Actual atomic initialization
+uses **1,621,885,757 gas** in the verified profile. Startup stays one transaction;
+compiler, code and memory settings are preserved.
 
 ## Run the real static view
 
@@ -59,6 +91,7 @@ Reload the browser. The image is still a transport test, now colored by PLAYPAL.
 ## Mission briefing
 
 - [Local Codex usage collector and historical article metrics](docs/CODEX-USAGE.md)
+- [Phase 3 acceptance report](docs/PHASE3-REPORT.md), [progress ledger](docs/PHASE3-PLAN.md), and [feature coverage](docs/PHASE3-FEATURE-MATRIX.md)
 - [Phase 2 acceptance ledger](docs/PHASE2-REPORT.md) and [frozen renderer interfaces](docs/PHASE2-INTERFACES.md)
 - [Phase 1 report and acceptance evidence](docs/PHASE1-REPORT.md)
 - [Phase 0 report and acceptance evidence](docs/PHASE0-REPORT.md)

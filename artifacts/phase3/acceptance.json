@@ -1,0 +1,335 @@
+{
+  "schemaVersion": 1,
+  "kind": "phase3-M2-M3-acceptance",
+  "acceptedAtUtc": "2026-10-09T21:13:08Z",
+  "M2": "passed",
+  "M3": "passed",
+  "scope": "Original-source single-player retail medium E1M1 gameplay inside ordinary local Cancun EVM. Basic playable gameplay acceptance, not complete original DOOM or arbitrary-map/all-branch certification.",
+  "proofs": {
+    "gates": {
+      "path": "artifacts/phase3/final-verification.json",
+      "sha256": "4a0b3d799d093da98a89afa4b9606727725f151e7b0f5361d796ffb497124b50"
+    },
+    "kernel": {
+      "path": "tools/reference/gameplay/final-kernel-evidence.json",
+      "sha256": "116e4393da5921d2a59c6fb8d261b5a710f34b1f55a4155de7abdd524b614fce"
+    },
+    "production": {
+      "path": "tools/reference/gameplay/production-release-evidence.json",
+      "sha256": "0d630804c1f3641be9e1d229ece211daf0e51eae35b2cb1f9f82907dd6276167"
+    },
+    "replay": {
+      "path": "tools/reference/gameplay/production-release-reproducibility-evidence.json",
+      "sha256": "6143b1c42c37a06bd73f46c13454278ba75e6fcdc2ce7335f70910d0a873123b"
+    },
+    "browser": {
+      "path": "tools/transport/evidence/gameplay-browser-release.json",
+      "sha256": "3bac0fc653ce27ba6fd489f84581adab7deffc8a21040e5a4727ff35c74a5528"
+    },
+    "memory": {
+      "path": "tools/reference/gameplay/production-release-memory-evidence.json",
+      "sha256": "4f9196f238a70c607b473b3f061c0cba49f61fdc874c26936c47704499e41892"
+    },
+    "headers": {
+      "path": "tools/reference/phase3_zone_setup/final-validation.json",
+      "sha256": "38fe025d74c906501a627d778578c0e8763f636b03f4f63e457e070aa4d54311"
+    }
+  },
+  "requirements": {
+    "Input commands": {
+      "status": "passed",
+      "evidence": [
+        "gates",
+        "production",
+        "browser"
+      ],
+      "verifiedScope": "Whole original keyboard profile, held/repeat/sequence and actual browser command delivery."
+    },
+    "M2 real-level movement": {
+      "status": "passed",
+      "evidence": [
+        "kernel",
+        "production",
+        "replay"
+      ],
+      "verifiedScope": "275 movement whole-world tics plus complete129 keyboard tics; original positions/momentum/BAM/view/RNG and fresh independent replay."
+    },
+    "M2 collision": {
+      "status": "passed",
+      "evidence": [
+        "gates",
+        "kernel"
+      ],
+      "verifiedScope": "All original collision/traversal module fixtures and nine integrated E1M1 traces; blocking/sliding/steps/height/order domains remain explicit."
+    },
+    "M2 use": {
+      "status": "passed",
+      "evidence": [
+        "kernel",
+        "production",
+        "browser"
+      ],
+      "verifiedScope": "375-tic door-use and375-tic obstruction persistence plus keyboard held/release edge and transport."
+    },
+    "M2 reproducible frames": {
+      "status": "passed",
+      "evidence": [
+        "kernel",
+        "production",
+        "replay"
+      ],
+      "verifiedScope": "31 exact native kernel frames; two independent complete129-tic production streams with identical seven Frame records/commands/gas."
+    },
+    "Live thinkers": {
+      "status": "passed",
+      "evidence": [
+        "gates",
+        "kernel",
+        "headers"
+      ],
+      "verifiedScope": "Original scheduling/lazy-free module scope and nine whole-world persistent traces with source-derived physical allocator."
+    },
+    "Weapons/shooting": {
+      "status": "passed",
+      "evidence": [
+        "gates",
+        "kernel",
+        "production"
+      ],
+      "verifiedScope": "All nine weapon definitions/actions controlled module proof; integrated pistol/combat/rocket flight/blast/kill/removal and real production firing."
+    },
+    "Monster AI": {
+      "status": "passed",
+      "evidence": [
+        "gates",
+        "kernel"
+      ],
+      "verifiedScope": "All64 actions controlled original-C proof, integrated sight/chase/attack/RNG; explicit22-family state/action matrix. Integrated per-species attribution is uninstrumented."
+    },
+    "Damage/lifecycle": {
+      "status": "passed",
+      "evidence": [
+        "gates",
+        "kernel"
+      ],
+      "verifiedScope": "Combat175/damage350/death350/projectile150 world traces and controlled armor/powers/pickup/missile/drop/removal branches."
+    },
+    "Doors/interactions": {
+      "status": "passed",
+      "evidence": [
+        "gates",
+        "kernel"
+      ],
+      "verifiedScope": "All-world/special controlled module scopes and explicit numeric-special matrix; full real door/obstruction stored world traces."
+    },
+    "Gameplay rendering": {
+      "status": "passed",
+      "evidence": [
+        "kernel",
+        "production",
+        "browser"
+      ],
+      "verifiedScope": "Runtime world/actor/psprite state rendered inside ordinary EVM, exact native indexed8 and Canvas comparisons. Generic known physical backing resolves historical overread."
+    },
+    "Production transport": {
+      "status": "passed",
+      "evidence": [
+        "production",
+        "replay",
+        "browser"
+      ],
+      "verifiedScope": "All1755 ordinary authenticated runtimes, driver/consecutive sequence/input guards, whole-storage rollback, actual WS/receipt fallback/Canvas."
+    },
+    "Inherited gates": {
+      "status": "passed",
+      "evidence": [
+        "gates"
+      ],
+      "verifiedScope": "All24 Phase2 commands plus documentation, all12 Phase0/13 Phase1 gates,403 Foundry tests,33 Phase3 native/local commands."
+    },
+    "Fidelity and limits": {
+      "status": "passed",
+      "evidence": [
+        "gates",
+        "headers",
+        "production",
+        "memory"
+      ],
+      "verifiedScope": "388-definition source mapping,22-family/per-special/unsupported-domain audit, actual configurable10B gas and literal clone boundary memory. Compiler settings preserved."
+    },
+    "Usage": {
+      "status": "passed",
+      "evidence": [
+        "gates"
+      ],
+      "verifiedScope": "Local collector20 tests, historic Phase0/1 recovery and phase/model/session/agent aggregates; no transcripts/services. Snapshot excludes unflushed response and late publication bookkeeping."
+    }
+  },
+  "sourceHashes": {
+    "src/doom/d_ticcmd.sol": "508d0332d3e8b83e1b68d37581a3befc100a9974fcaa0900cc44116cd75ff2ef",
+    "src/doom/doomstat.sol": "4c40da3914c629017959a0a4c0516d83346900674c92f5e55a766aba1b506fea",
+    "src/doom/doomtype.sol": "5fbe4b1d0fe96d04453b00d1c3f1c6781c6c8ab5147ee0ac512d17597a5a3c56",
+    "src/doom/g_game.sol": "2714f783a532bc2a525d7f50813c472f299c541ee9062a7a5d078e1818791e70",
+    "src/doom/info.sol": "4611205149173e42d3b0f1d91820c8042f6bc5fc48fb53aec84ad4bc501dca8e",
+    "src/doom/m_bbox.sol": "f4c60efe3627a97d0288fc5cd0283535527b1f51029568534c80bb8fbbf8f272",
+    "src/doom/m_fixed.sol": "3f64bef1f62f61faead3a5b8f382bf1c66e1b3739ce4ac8d59a6fcef0451ef9f",
+    "src/doom/m_random.sol": "5267b881138cfb7e0d683449005619513006c70e3ed557f64697b36c4ed40c7b",
+    "src/doom/native_zone_layout.sol": "118b2d17165826fb0857d9cb296e2214db2a28917769299a82e70d0c0790f6e8",
+    "src/doom/p_ceilng.sol": "696f3f620f5bddb3cea64fda824e3203c780f53db890630f0685794454dc37f9",
+    "src/doom/p_doors.sol": "945bf600ce86d8286718fb75ecaf905a0c4631d79d2dac7260c91c9dc2013f8d",
+    "src/doom/p_enemy.sol": "eff76cce23b0877833a5c446a1a09d8ae01918a6925b6d3265240b144c09dfe7",
+    "src/doom/p_floor.sol": "b7c90baafa0b74fd7ff80cf60dcbc430148f6d6d068ba54ca0fbc7ba1bca7069",
+    "src/doom/p_game_state.sol": "0f9d60aae9424cad17c614d4fcc93c9eb6fe8a43c7bce070d2460fcf2c34f649",
+    "src/doom/p_heap.sol": "3cc2e0a8c3239523db66c07fea33720f931754baedd312b5ca7cc2ebe763d2e0",
+    "src/doom/p_info.sol": "a48840479115ea8bf849ca5ec448d1b2bec7a6cfe58c5314e140635a898de792",
+    "src/doom/p_inter.sol": "8be27f9bba47beb46b3edf2a8a2674b3cd7218d2abb8ef5f8855803393d067de",
+    "src/doom/p_lights.sol": "6f63cbc6b41fc492a46ce43aef464deb9d08b7fa1dd8b213b546eec3e4f08276",
+    "src/doom/p_map.sol": "6b6d48523a45acab9090dfb0ec3d6dbab4e6de18afa89453df8b5a87088da0f3",
+    "src/doom/p_maputl.sol": "ac5ac60e7e058a5fc537e7042c7254bc0f51c77165149a22e141437b4e0ad0b6",
+    "src/doom/p_mobj.sol": "78e9c05b327100bd34cafe086454e3a5499beb92af878ad4756baeca18445ffa",
+    "src/doom/p_plats.sol": "6904df762b270f840daa99b34d2a5c689dbb2fef3aed3d33c2ac1a3f3e4d5722",
+    "src/doom/p_pspr.sol": "cfa2db3438d689c38d9c957fc4aee598c58740f025d6efead2b5f9671eb0c863",
+    "src/doom/p_setup.sol": "9498e1298bf4e53ccedc484a50d4c7f9f85315f6cb700719d474b721e382243b",
+    "src/doom/p_setup_static.sol": "c8100a42bb0bac190c583bbb2c82168599009f88a766e4c05b9a9231a5f69792",
+    "src/doom/p_sight.sol": "7ed366237fc3fec069ffb6336e95e038004d1f379622cf67f55fb8c6b1a6488c",
+    "src/doom/p_spec.sol": "2363640e75c22c9d017db677dda7148ad221380f0a23639167e145e933fc72b7",
+    "src/doom/p_switch.sol": "5404d359793e05c6c24a7804c07632150009b46f38d03068412d7ac53260dfe2",
+    "src/doom/p_telept.sol": "745f0fa4ed6f0515c398bfd2469c59aac82316965b7bac25263aeb82555d61b8",
+    "src/doom/p_tick.sol": "1993dd0c94853dabc4db554dfa0ca04375cef0a22075400ba0e7b56b525022ab",
+    "src/doom/p_user.sol": "963a46850e1b17171f79dd65bff9b5006ce6f97a935ad2023d1d526a6ec35c37",
+    "src/doom/p_zone_setup.sol": "e0308bd1197fd84a01eb1ee208be73c711851d6b0bc30be1d07a7c61b18b223d",
+    "src/doom/r_bsp.sol": "0ae5df313515692d0b2b970d5d39d107e014629cff2305fb37c14371a9524040",
+    "src/doom/r_data.sol": "5b404d561f8bce538e8a8221b4f36d62c9b9826fc833307640d96fcbfdca2d0a",
+    "src/doom/r_data_types.sol": "0448302d68447c8a5a4c46df4016e8845863e42bf6eaca8bcab8ab0c9707fdf8",
+    "src/doom/r_defs.sol": "558d5a9bfd131e816bbe28986e2dad6144a08e5a16ccfed1b199d7558a1ea0e2",
+    "src/doom/r_draw.sol": "afe958ea0c2962b739bff58b98d8bccc25c48d3d0838cacd46142c242b5d6477",
+    "src/doom/r_main.sol": "df403bf04fdbbcfc68c4fd9c5e19b5201ca711498efc34db406a4010ad3b2af5",
+    "src/doom/r_plane.sol": "c7a5abcbca84dddcd2a3c8bb160a609605c5c1842e73704dff4860df3280e463",
+    "src/doom/r_render_hooks.sol": "f026ccb8fffb68d8fbcb0966103212f52884b86350fe3fb52a401d146f3fb312",
+    "src/doom/r_render_state.sol": "072bd2f73b98e1eb775fc8093e95a69c184f3fa50a89a5d64a7beccd59493398",
+    "src/doom/r_segs.sol": "9d4e4dea06739278aab3698fb422818de6dd7726359c8822d60a162e886621cb",
+    "src/doom/r_sprite_state.sol": "735b3de85cbf455e05d3cb8e992cf4e477960bd4192bbd367f5c66c803b96363",
+    "src/doom/r_state.sol": "80951a13733e3a08f4182937a37def33ffda21eaae4b43a2a1bdba2043adab6b",
+    "src/doom/r_things.sol": "86705ab6b1f79b7ef07798b881cc547502d9911c97b57dc516a744e17c1977f5",
+    "src/doom/tables.sol": "bf14202b419075f6d187653205a37e211d8267c7fc4c0bebf5a8c5713afddf38",
+    "src/doom/w_zone_cache.sol": "03c07404765de9620b3d1ff15727809cdad911c8a78d822019b63500fa5018c2",
+    "src/doom/z_zone.sol": "47fe4cd4ce09d37d21d9d3cedd349004c8e3a1941f939a1ddbc5ec2e1d67b1ca",
+    "src/doom/z_zone_backing.sol": "902ea03bc32af6b7443461ff64d21e780d9a0ef6c6bbe2dd1262216bfc37a3f8",
+    "src/doom/z_zone_types.sol": "d6c5d8680e08bd8989042cb42a934a3323818e4c2b94c11dc38196911dadc08b",
+    "src/evm/Doom.sol": "e4f99d3d5a9d585f239828f8ebf9c376f098e367afb1eae37431b6c2bc4e0d5d",
+    "src/evm/DoomGame.sol": "353898c9547b1bcd619d51318aef505b0beb23374043660af9eeb18f4a15208d",
+    "src/evm/DoomRenderer.sol": "5639d82431350ea76c26d43457d26d0c3c0f410eaddf02db6adbcfb03a569ba0",
+    "src/evm/DoomScene.sol": "9ad7c8ccee4c9e05deb5608326baabacfa40f686b8d8445fb8aaa7352ab64569",
+    "src/evm/DoomZoneStartup.sol": "2d178494456a7ae3c730310f257ce2aa635d37d18c90cac039cf002cdb3f50dc",
+    "src/evm/FrameProtocol.sol": "4665be3f613b8e817d616d2db1dc4a644325c44a6ade476a35d7d9d003625ace",
+    "src/evm/InputProtocol.sol": "df068ec9030d7241de7d6160059f8e46fe647f6655123f03849789b359bee51b",
+    "src/evm/ResourceStore.sol": "5ab3acc5d09f155a4cf25973c847f23e47f386a364704b76996c86be5862e3a8",
+    "src/evm/ResourceTypes.sol": "159865364cfa57aae508cd94c49509cbccabd6aeeba55e92b9fcf816bdec4d6b",
+    "src/evm/WadResources.sol": "25a1acc0a44ac35cc29e5f9bd953ba66b85db4f665b732430571b416ef927895",
+    "src/support/FrameFixture.sol": "1de9a0f7c1ae276041f6d71111da36413f2604b9a43a95176dd4dfae82bbc799",
+    "src/support/GameplayProbe.sol": "fd29ba99ea2ca2c0db9ed44fb061c93c40e3a6aefbb14e07e8e7b8bd9ae859b5",
+    "src/support/RendererProbe.sol": "14dc07178db80fde8c9ae5d5500f8205049ed41e21da48dd7818304407785856",
+    "src/support/ResourceAccessProbe.sol": "4aa343501917ddfc0117cbb9fc543b543ce16124c7b25127dcf41d22cab10e3c",
+    "src/support/ResourcePlacement.sol": "3febd551f07205b96c4960d496acb27ab06c571bf8e4ce1983595491b0acd6ab",
+    "src/support/StackPressure.sol": "fa49240fd75c2810e813e3b7620492f24270a0e985ef900e88e8b81fd1fb41af",
+    "src/support/WadResourcesProbe.sol": "c05e160a1c62e5d2e71159466e7d0c5f030166501d986a7059c3f4c9870dc973"
+  },
+  "currentProductionArtifact": {
+    "artifactPath": "out/Doom.sol/Doom.json",
+    "artifactSha256": "fd2bd365f8ac655912cf1ad6b37bad8f6a3f0378aaa9cb0538a931e2895bb118",
+    "creationSha256": "e585fd62082cd1423abfeff9e82fec1bf2734f4b26a825af0b80c96aeaeb7146",
+    "runtimeTemplateSha256": "11fdc5041c4ae257c79e050dfadfe5c6dccb6b7964278df1d363ded222d9832b",
+    "runtimeBytes": 502443,
+    "compiler": {
+      "version": "0.8.37+commit.f401782d"
+    },
+    "settings": {
+      "remappings": [],
+      "optimizer": {
+        "enabled": true,
+        "runs": 200
+      },
+      "metadata": {
+        "bytecodeHash": "ipfs"
+      },
+      "compilationTarget": {
+        "src/evm/Doom.sol": "Doom"
+      },
+      "evmVersion": "cancun",
+      "libraries": {},
+      "viaIR": true
+    },
+    "sourceHashes": {
+      "src/doom/d_ticcmd.sol": "508d0332d3e8b83e1b68d37581a3befc100a9974fcaa0900cc44116cd75ff2ef",
+      "src/doom/doomstat.sol": "4c40da3914c629017959a0a4c0516d83346900674c92f5e55a766aba1b506fea",
+      "src/doom/g_game.sol": "2714f783a532bc2a525d7f50813c472f299c541ee9062a7a5d078e1818791e70",
+      "src/doom/info.sol": "4611205149173e42d3b0f1d91820c8042f6bc5fc48fb53aec84ad4bc501dca8e",
+      "src/doom/m_bbox.sol": "f4c60efe3627a97d0288fc5cd0283535527b1f51029568534c80bb8fbbf8f272",
+      "src/doom/m_fixed.sol": "3f64bef1f62f61faead3a5b8f382bf1c66e1b3739ce4ac8d59a6fcef0451ef9f",
+      "src/doom/m_random.sol": "5267b881138cfb7e0d683449005619513006c70e3ed557f64697b36c4ed40c7b",
+      "src/doom/native_zone_layout.sol": "118b2d17165826fb0857d9cb296e2214db2a28917769299a82e70d0c0790f6e8",
+      "src/doom/p_ceilng.sol": "696f3f620f5bddb3cea64fda824e3203c780f53db890630f0685794454dc37f9",
+      "src/doom/p_doors.sol": "945bf600ce86d8286718fb75ecaf905a0c4631d79d2dac7260c91c9dc2013f8d",
+      "src/doom/p_enemy.sol": "eff76cce23b0877833a5c446a1a09d8ae01918a6925b6d3265240b144c09dfe7",
+      "src/doom/p_floor.sol": "b7c90baafa0b74fd7ff80cf60dcbc430148f6d6d068ba54ca0fbc7ba1bca7069",
+      "src/doom/p_game_state.sol": "0f9d60aae9424cad17c614d4fcc93c9eb6fe8a43c7bce070d2460fcf2c34f649",
+      "src/doom/p_heap.sol": "3cc2e0a8c3239523db66c07fea33720f931754baedd312b5ca7cc2ebe763d2e0",
+      "src/doom/p_info.sol": "a48840479115ea8bf849ca5ec448d1b2bec7a6cfe58c5314e140635a898de792",
+      "src/doom/p_inter.sol": "8be27f9bba47beb46b3edf2a8a2674b3cd7218d2abb8ef5f8855803393d067de",
+      "src/doom/p_lights.sol": "6f63cbc6b41fc492a46ce43aef464deb9d08b7fa1dd8b213b546eec3e4f08276",
+      "src/doom/p_map.sol": "6b6d48523a45acab9090dfb0ec3d6dbab4e6de18afa89453df8b5a87088da0f3",
+      "src/doom/p_maputl.sol": "ac5ac60e7e058a5fc537e7042c7254bc0f51c77165149a22e141437b4e0ad0b6",
+      "src/doom/p_mobj.sol": "78e9c05b327100bd34cafe086454e3a5499beb92af878ad4756baeca18445ffa",
+      "src/doom/p_plats.sol": "6904df762b270f840daa99b34d2a5c689dbb2fef3aed3d33c2ac1a3f3e4d5722",
+      "src/doom/p_pspr.sol": "cfa2db3438d689c38d9c957fc4aee598c58740f025d6efead2b5f9671eb0c863",
+      "src/doom/p_setup.sol": "9498e1298bf4e53ccedc484a50d4c7f9f85315f6cb700719d474b721e382243b",
+      "src/doom/p_setup_static.sol": "c8100a42bb0bac190c583bbb2c82168599009f88a766e4c05b9a9231a5f69792",
+      "src/doom/p_sight.sol": "7ed366237fc3fec069ffb6336e95e038004d1f379622cf67f55fb8c6b1a6488c",
+      "src/doom/p_spec.sol": "2363640e75c22c9d017db677dda7148ad221380f0a23639167e145e933fc72b7",
+      "src/doom/p_switch.sol": "5404d359793e05c6c24a7804c07632150009b46f38d03068412d7ac53260dfe2",
+      "src/doom/p_telept.sol": "745f0fa4ed6f0515c398bfd2469c59aac82316965b7bac25263aeb82555d61b8",
+      "src/doom/p_tick.sol": "1993dd0c94853dabc4db554dfa0ca04375cef0a22075400ba0e7b56b525022ab",
+      "src/doom/p_user.sol": "963a46850e1b17171f79dd65bff9b5006ce6f97a935ad2023d1d526a6ec35c37",
+      "src/doom/p_zone_setup.sol": "e0308bd1197fd84a01eb1ee208be73c711851d6b0bc30be1d07a7c61b18b223d",
+      "src/doom/r_bsp.sol": "0ae5df313515692d0b2b970d5d39d107e014629cff2305fb37c14371a9524040",
+      "src/doom/r_data.sol": "5b404d561f8bce538e8a8221b4f36d62c9b9826fc833307640d96fcbfdca2d0a",
+      "src/doom/r_data_types.sol": "0448302d68447c8a5a4c46df4016e8845863e42bf6eaca8bcab8ab0c9707fdf8",
+      "src/doom/r_defs.sol": "558d5a9bfd131e816bbe28986e2dad6144a08e5a16ccfed1b199d7558a1ea0e2",
+      "src/doom/r_draw.sol": "afe958ea0c2962b739bff58b98d8bccc25c48d3d0838cacd46142c242b5d6477",
+      "src/doom/r_main.sol": "df403bf04fdbbcfc68c4fd9c5e19b5201ca711498efc34db406a4010ad3b2af5",
+      "src/doom/r_plane.sol": "c7a5abcbca84dddcd2a3c8bb160a609605c5c1842e73704dff4860df3280e463",
+      "src/doom/r_render_hooks.sol": "f026ccb8fffb68d8fbcb0966103212f52884b86350fe3fb52a401d146f3fb312",
+      "src/doom/r_render_state.sol": "072bd2f73b98e1eb775fc8093e95a69c184f3fa50a89a5d64a7beccd59493398",
+      "src/doom/r_segs.sol": "9d4e4dea06739278aab3698fb422818de6dd7726359c8822d60a162e886621cb",
+      "src/doom/r_sprite_state.sol": "735b3de85cbf455e05d3cb8e992cf4e477960bd4192bbd367f5c66c803b96363",
+      "src/doom/r_state.sol": "80951a13733e3a08f4182937a37def33ffda21eaae4b43a2a1bdba2043adab6b",
+      "src/doom/r_things.sol": "86705ab6b1f79b7ef07798b881cc547502d9911c97b57dc516a744e17c1977f5",
+      "src/doom/tables.sol": "bf14202b419075f6d187653205a37e211d8267c7fc4c0bebf5a8c5713afddf38",
+      "src/doom/w_zone_cache.sol": "03c07404765de9620b3d1ff15727809cdad911c8a78d822019b63500fa5018c2",
+      "src/doom/z_zone.sol": "47fe4cd4ce09d37d21d9d3cedd349004c8e3a1941f939a1ddbc5ec2e1d67b1ca",
+      "src/doom/z_zone_backing.sol": "902ea03bc32af6b7443461ff64d21e780d9a0ef6c6bbe2dd1262216bfc37a3f8",
+      "src/doom/z_zone_types.sol": "d6c5d8680e08bd8989042cb42a934a3323818e4c2b94c11dc38196911dadc08b",
+      "src/evm/Doom.sol": "e4f99d3d5a9d585f239828f8ebf9c376f098e367afb1eae37431b6c2bc4e0d5d",
+      "src/evm/DoomGame.sol": "353898c9547b1bcd619d51318aef505b0beb23374043660af9eeb18f4a15208d",
+      "src/evm/DoomRenderer.sol": "5639d82431350ea76c26d43457d26d0c3c0f410eaddf02db6adbcfb03a569ba0",
+      "src/evm/DoomScene.sol": "9ad7c8ccee4c9e05deb5608326baabacfa40f686b8d8445fb8aaa7352ab64569",
+      "src/evm/DoomZoneStartup.sol": "2d178494456a7ae3c730310f257ce2aa635d37d18c90cac039cf002cdb3f50dc",
+      "src/evm/FrameProtocol.sol": "4665be3f613b8e817d616d2db1dc4a644325c44a6ade476a35d7d9d003625ace",
+      "src/evm/InputProtocol.sol": "df068ec9030d7241de7d6160059f8e46fe647f6655123f03849789b359bee51b",
+      "src/evm/ResourceTypes.sol": "159865364cfa57aae508cd94c49509cbccabd6aeeba55e92b9fcf816bdec4d6b",
+      "src/evm/WadResources.sol": "25a1acc0a44ac35cc29e5f9bd953ba66b85db4f665b732430571b416ef927895"
+    },
+    "buildCommand": ".toolchain/bin/forge build src/support/RendererProbe.sol src/evm/Doom.sol src/evm/ResourceStore.sol",
+    "buildCommandProvenance": "Executed within passed frozen full-renderer-e2e gate; tools/renderer/verify.mjs line38."
+  },
+  "unsupported": "See PHASE3-FEATURE-MATRIX: full outer gameflow/level progression/death restart, menus/HUD/automap/audio device output, demo/save format, multiplayer, other devices/maps/modes remain explicit. All active core gameplay functions mapped; module branch coverage is separate from observed integrated streams.",
+  "measurementLimits": [
+    "No exact untouched-production memory peak; only clone engine-boundary high-water.",
+    "Historical compiler/source/metadata/gas receipts remain bound to their original runs. Different build target contexts produce different bytecode even with identical consumed source/settings.",
+    "Concurrent missing receipt cause unproven because pending hash/nonce were not retained; sequential rerun passed.",
+    "Local usage logs may be incomplete/rotated; current unflushed response and attribution across inference-boundary timestamps remain uncertain."
+  ],
+  "publicationRemaining": [
+    "Update human-readable report/ledger/audit and current usage exports, commit/push. Engineering acceptance is complete."
+  ]
+}

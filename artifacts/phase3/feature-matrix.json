@@ -1,10 +1,10 @@
 {
   "schemaVersion": 2,
-  "scope": "Current source/function/feature evidence audit; selected integration proof complete, final milestone gates pending",
+  "scope": "Current source/function/feature evidence audit; M2/M3 accepted within documented scope",
   "upstreamCommit": "a77dfb96cb91780ca334d0d4cfd86957558007e0",
   "acceptance": {
-    "M2": "pending_final_gates",
-    "M3": "pending_final_gates",
+    "M2": "passed",
+    "M3": "passed",
     "selectedProductionGameplay": "verified",
     "selectedWholeKernel": "verified",
     "selectedBrowser": "verified",
@@ -13733,10 +13733,10 @@
       "session": null
     },
     "repeat-production": {
-      "reference": "tools/reference/gameplay/production-final-reproducibility-evidence.json",
+      "reference": "tools/reference/gameplay/production-release-reproducibility-evidence.json",
       "documentation": "tools/reference/gameplay/PRODUCTION-MEMORY.md",
       "scope": "Two independent ordinary CREATE contracts; complete129 keyboard tics, all130x14 fields, identical commands/sequences/cadence/seven totalFrames/transactiongas/thirteen errors and storage rollback.",
-      "referenceSha256": "8828b51e1c0909e4cf4f61b7488458a6635465d6b6b5243ca53386ee089f74a4",
+      "referenceSha256": "6143b1c42c37a06bd73f46c13454278ba75e6fcdc2ce7335f70910d0a873123b",
       "universalBranchCoverage": false,
       "historicalCheckpoint": false,
       "localOnlyReport": false,
@@ -13810,21 +13810,21 @@
         "tools/execution-budget.mjs": "dbf68241139422195203f57a08d8e382afa6d1d493848ae68fbebca9265eec78",
         "execution-budget.json": "acde01f1b9cf248f9265f1ffcff7181d01d77620a2dfcd9a4d4d0b1c79df2be7"
       },
-      "executedCommand": "node tools/reference/gameplay/production.mjs --native-zone --rpc http://127.0.0.1:18579 --resources-report artifacts/local/gameplay-production-final.json --native artifacts/local/gameplay-production-native-final --output-prefix artifacts/local/gameplay-production-final-repeat --keep-node --no-web-palette-write",
+      "executedCommand": "node tools/reference/gameplay/production.mjs --native-zone --rpc http://127.0.0.1:18579 --resources-report artifacts/local/gameplay-production-release.json --native artifacts/local/gameplay-production-native-final --output-prefix artifacts/local/gameplay-production-release-repeat --keep-node --no-web-palette-write",
       "retainedReportBindings": [
         {
-          "path": "artifacts/local/gameplay-production-final-repeat.json",
-          "sha256": "f69fcd878aaadbafb437eb3ef791f2beb8a70170c16f92710ffe874c1f394cb7",
+          "path": "artifacts/local/gameplay-production-release-repeat.json",
+          "sha256": "9e3c65e5a8af235777e84276330baa282890b639e4666d9a893a34f8a7157894",
           "status": "match"
         },
         {
-          "path": "artifacts/local/gameplay-production-final.json",
-          "sha256": "a16821efdf86b9c7fdd87b6adb661a9b5bb928b32bc9049bff6cc1d91eee7168",
+          "path": "artifacts/local/gameplay-production-release.json",
+          "sha256": "c9e4579b8dc6006d7aedd3b5d9b53be4465f36603caf59a6ee556662c4178e1c",
           "status": "match"
         }
       ],
       "result": "pass",
-      "session": "1273",
+      "session": "47208",
       "coverage": {
         "independentOrdinaryCreateDeployments": 2,
         "ticsPerDeployment": 129,
@@ -13849,23 +13849,23 @@
       },
       "reports": [
         {
-          "path": "artifacts/local/gameplay-production-final.json",
-          "sha256": "a16821efdf86b9c7fdd87b6adb661a9b5bb928b32bc9049bff6cc1d91eee7168",
-          "address": "0xd36760784b287a381e58c9491624da172414914a"
+          "path": "artifacts/local/gameplay-production-release.json",
+          "sha256": "c9e4579b8dc6006d7aedd3b5d9b53be4465f36603caf59a6ee556662c4178e1c",
+          "address": "0x9f90561766cea617912925af6f13737467c70884"
         },
         {
-          "path": "artifacts/local/gameplay-production-final-repeat.json",
-          "sha256": "f69fcd878aaadbafb437eb3ef791f2beb8a70170c16f92710ffe874c1f394cb7",
-          "address": "0x5f9dc06607e947742ef1b837b952ea0728b1748f"
+          "path": "artifacts/local/gameplay-production-release-repeat.json",
+          "sha256": "9e3c65e5a8af235777e84276330baa282890b639e4666d9a893a34f8a7157894",
+          "address": "0x8169cc845e1df4f0381096b1668b1aa4a0c924b4"
         }
       ],
       "toolOnlyDifference": null
     },
     "production": {
-      "reference": "tools/reference/gameplay/production-final-evidence.json",
+      "reference": "tools/reference/gameplay/production-release-evidence.json",
       "documentation": "docs/PHASE3-GAMEPLAY-TRANSPORT.md",
       "scope": "Actual ordinary public Doom keyboard transactions; 129 tics, fourteen exported fields, six complete live Frames, static pre-start Frame and thirteen whole-storage rollback checks.",
-      "referenceSha256": "d7fca6c8d8b082804859216067a5725509d7c4ccc0944af0d42c0b5309912c05",
+      "referenceSha256": "0d630804c1f3641be9e1d229ece211daf0e51eae35b2cb1f9f82907dd6276167",
       "universalBranchCoverage": false,
       "historicalCheckpoint": false,
       "localOnlyReport": false,
@@ -13939,21 +13939,21 @@
         "tools/execution-budget.mjs": "dbf68241139422195203f57a08d8e382afa6d1d493848ae68fbebca9265eec78",
         "execution-budget.json": "acde01f1b9cf248f9265f1ffcff7181d01d77620a2dfcd9a4d4d0b1c79df2be7"
       },
-      "executedCommand": "node tools/reference/gameplay/production.mjs --native-zone --rpc http://127.0.0.1:18579 --resources-report artifacts/local/gameplay-production-atomic.json --native artifacts/local/gameplay-production-native-final --output-prefix artifacts/local/gameplay-production-final --keep-node",
+      "executedCommand": "node tools/reference/gameplay/production.mjs --native-zone --rpc http://127.0.0.1:18579 --resources-report artifacts/local/gameplay-production-final.json --native artifacts/local/gameplay-production-native-final --output-prefix artifacts/local/gameplay-production-release --keep-node",
       "retainedReportBindings": [
-        {
-          "path": "artifacts/local/gameplay-production-atomic.json",
-          "sha256": "11eea8c3650b0563dae80dafbd0facdc86876ed824f6028a4940558e4b508f2f",
-          "status": "match"
-        },
         {
           "path": "artifacts/local/gameplay-production-final.json",
           "sha256": "a16821efdf86b9c7fdd87b6adb661a9b5bb928b32bc9049bff6cc1d91eee7168",
           "status": "match"
+        },
+        {
+          "path": "artifacts/local/gameplay-production-release.json",
+          "sha256": "c9e4579b8dc6006d7aedd3b5d9b53be4465f36603caf59a6ee556662c4178e1c",
+          "status": "match"
         }
       ],
       "result": "pass",
-      "session": "84848",
+      "session": "38271",
       "coverage": {
         "tics": 129,
         "noRenderTics": 123,
@@ -13966,7 +13966,7 @@
       },
       "rejectionChecks": 13,
       "actualProductionGas": {
-        "constructor": 249930461,
+        "constructor": 249646689,
         "atomicInitialization": 1621885757,
         "noRenderStep": {
           "min": 309171400,
@@ -13980,8 +13980,8 @@
         "scope": "Actual ordinary uninstrumented production transactions; storage load/save, allocator/gameplay and optional render/Frame work included. No probe/native-state serialization gas."
       },
       "runtime": {
-        "bytes": 503731,
-        "sha256": "24f3a5f4b05a9d4fb28d30bfd294a356c64992ca5fdc51c82698032b4a19f1df"
+        "bytes": 502443,
+        "sha256": "41f40c32965875ab77ddcf666d6b371473032cf713f16fb8a9acb235d7bf9d11"
       },
       "compiler": {
         "version": "0.8.37+commit.f401782d",
@@ -14008,8 +14008,8 @@
         "source": "/Users/eduard/sandbox/doom-evm/execution-budget.json"
       },
       "rawReport": {
-        "path": "artifacts/local/gameplay-production-final.json",
-        "sha256": "a16821efdf86b9c7fdd87b6adb661a9b5bb928b32bc9049bff6cc1d91eee7168"
+        "path": "artifacts/local/gameplay-production-release.json",
+        "sha256": "c9e4579b8dc6006d7aedd3b5d9b53be4465f36603caf59a6ee556662c4178e1c"
       }
     },
     "browser-input": {
@@ -14316,10 +14316,10 @@
       ]
     },
     "browser": {
-      "reference": "artifacts/local/phase3-gameplay-browser-final.json",
+      "reference": "artifacts/local/phase3-gameplay-browser-release.json",
       "documentation": "docs/PHASE3-GAMEPLAY-TRANSPORT.md",
       "scope": "Actual Chrome Start/Resume for five commands and controlled sixth receipt fallback; six original native Frames and every Canvas pixel. Short fire command while raising is not independent shooting coverage.",
-      "referenceSha256": "feaf2aca8230c399bce1dd43fb9a2bc4206bf14750baef3d6305d00016bb68f6",
+      "referenceSha256": "64e9baff40df96c0165c2cd759fad79180c3caa6cb26626535ff7b5ea70b4d89",
       "universalBranchCoverage": false,
       "historicalCheckpoint": false,
       "localOnlyReport": true,
@@ -14338,10 +14338,10 @@
         "src/evm/Doom.sol": "e4f99d3d5a9d585f239828f8ebf9c376f098e367afb1eae37431b6c2bc4e0d5d"
       },
       "retainedReportBindings": [],
-      "executedCommand": "node tools/transport/gameplay-browser-check.mjs --config artifacts/local/gameplay-production-final.config.json --palette artifacts/local/gameplay-production-final.palette.json --native artifacts/local/gameplay-browser-native-final --output-prefix artifacts/local/phase3-gameplay-browser-final",
+      "executedCommand": "node tools/transport/gameplay-browser-check.mjs --config artifacts/local/gameplay-production-release.config.json --palette artifacts/local/gameplay-production-release.palette.json --native artifacts/local/gameplay-browser-native-final --output-prefix artifacts/local/phase3-gameplay-browser-release",
       "commandProvenance": "Parent exact completed-execution record; command not retained in local report",
       "result": "pass",
-      "session": "5132",
+      "session": "24522",
       "coverage": {
         "frames": 6,
         "nativePixelsExact": true,
@@ -14351,7 +14351,7 @@
         "duplicates": 11,
         "blurStopsBeforeNextCommand": true
       },
-      "runtimeSha256": "24f3a5f4b05a9d4fb28d30bfd294a356c64992ca5fdc51c82698032b4a19f1df",
+      "runtimeSha256": "41f40c32965875ab77ddcf666d6b371473032cf713f16fb8a9acb235d7bf9d11",
       "browser": {
         "protocolVersion": "1.3",
         "product": "Chrome/155.0.8059.40",
@@ -14361,10 +14361,10 @@
       }
     },
     "memory-all-render": {
-      "reference": "artifacts/local/gameplay-production-final-memory.json",
+      "reference": "artifacts/local/gameplay-production-release-memory.json",
       "documentation": "tools/reference/gameplay/PRODUCTION-MEMORY.md",
       "scope": "Separately deployed source-mapped MSIZE clone, six-tic all-render stream; storage/exported fields/Frames agree with ordinary production and unpatched clone; This is its complete six-tic all-render native stream, separate from the 129-tic public cadence proof.",
-      "referenceSha256": "02b3895966e7ceacf0a9a8bb6c622291dfcce73b40d348195b164943826fc26f",
+      "referenceSha256": "140d2c1074bf98ffed6631e0f8d70254fa9c1efcf5e3f43d881bd3ea03f72d61",
       "universalBranchCoverage": false,
       "historicalCheckpoint": false,
       "localOnlyReport": true,
@@ -14440,14 +14440,14 @@
       },
       "retainedReportBindings": [
         {
-          "path": "artifacts/local/gameplay-production-final.json",
-          "sha256": "a16821efdf86b9c7fdd87b6adb661a9b5bb928b32bc9049bff6cc1d91eee7168",
+          "path": "artifacts/local/gameplay-production-release.json",
+          "sha256": "c9e4579b8dc6006d7aedd3b5d9b53be4465f36603caf59a6ee556662c4178e1c",
           "status": "match"
         }
       ],
       "methodEvidence": {
-        "path": "tools/reference/gameplay/production-final-memory-evidence.json",
-        "sha256": "36d534fc14521e90147f6f18bd7f83f4d64f89bc21c92d2e1c7095bff288dd29",
+        "path": "tools/reference/gameplay/production-release-memory-evidence.json",
+        "sha256": "4f9196f238a70c607b473b3f061c0cba49f61fdc874c26936c47704499e41892",
         "retainedReportBindings": [
           {
             "path": "artifacts/local/gameplay-browser-native-final/manifest.json",
@@ -14455,32 +14455,32 @@
             "status": "match"
           },
           {
-            "path": "artifacts/local/gameplay-production-final-memory-cadence.json",
-            "sha256": "a76bdf2d14343b3671632e690a1abbcd120829f7e94dd4a0f8450a001859a45f",
-            "status": "match"
-          },
-          {
-            "path": "artifacts/local/gameplay-production-final-memory.json",
-            "sha256": "02b3895966e7ceacf0a9a8bb6c622291dfcce73b40d348195b164943826fc26f",
-            "status": "match"
-          },
-          {
             "path": "artifacts/local/gameplay-production-native-final/manifest.json",
             "sha256": "da40ec18771d1d4e4332080a7c3e2830f6524ca9b8c51987efaf1beb4d6007c8",
+            "status": "match"
+          },
+          {
+            "path": "artifacts/local/gameplay-production-release-memory-cadence.json",
+            "sha256": "82e0a55f5dc77b9e892ecb5ce4cbf27996254c3fb0ef0841f5a2ae6537ad7e3e",
+            "status": "match"
+          },
+          {
+            "path": "artifacts/local/gameplay-production-release-memory.json",
+            "sha256": "140d2c1074bf98ffed6631e0f8d70254fa9c1efcf5e3f43d881bd3ea03f72d61",
             "status": "match"
           }
         ]
       },
-      "executedCommand": "node tools/reference/gameplay/production-memory.mjs --resources-report artifacts/local/gameplay-production-final.json --rpc http://127.0.0.1:18579 --native artifacts/local/gameplay-browser-native-final --output-prefix artifacts/local/gameplay-production-final-memory",
+      "executedCommand": "node tools/reference/gameplay/production-memory.mjs --resources-report artifacts/local/gameplay-production-release.json --rpc http://127.0.0.1:18579 --native artifacts/local/gameplay-browser-native-final --output-prefix artifacts/local/gameplay-production-release-memory",
       "commandProvenance": "Parent exact completed-execution record; command not retained in local report",
       "cloneBuild": {
-        "session": "42876",
+        "session": "44843",
         "executedCommand": ".toolchain/bin/forge build artifacts/local/production-memory/DoomMemoryProbe.sol",
         "commandProvenance": "Parent execution record",
-        "limitation": "Current clone compiles in49.61s. Historical import failure remains separately documented. Current receipt-timeout failure and sequential resolution are in the method proof."
+        "limitation": "Current clone compiles in46.64s. Historical import failure remains separately documented. Current receipt-timeout failure and sequential resolution are in the method proof."
       },
       "result": "pass",
-      "session": "98439",
+      "session": "81374",
       "coverage": {
         "tics": 6,
         "completeNativeStream": true,
@@ -14594,10 +14594,10 @@
       }
     },
     "memory-cadence": {
-      "reference": "artifacts/local/gameplay-production-final-memory-cadence.json",
+      "reference": "artifacts/local/gameplay-production-release-memory-cadence.json",
       "documentation": "tools/reference/gameplay/PRODUCTION-MEMORY.md",
       "scope": "Separately deployed clone, six tics with five no-render steps; actual engine-boundary high-water, excludes later observer encoding and separate call frames; not an exact untouched-production peak.",
-      "referenceSha256": "a76bdf2d14343b3671632e690a1abbcd120829f7e94dd4a0f8450a001859a45f",
+      "referenceSha256": "82e0a55f5dc77b9e892ecb5ce4cbf27996254c3fb0ef0841f5a2ae6537ad7e3e",
       "universalBranchCoverage": false,
       "historicalCheckpoint": false,
       "localOnlyReport": true,
@@ -14673,14 +14673,14 @@
       },
       "retainedReportBindings": [
         {
-          "path": "artifacts/local/gameplay-production-final.json",
-          "sha256": "a16821efdf86b9c7fdd87b6adb661a9b5bb928b32bc9049bff6cc1d91eee7168",
+          "path": "artifacts/local/gameplay-production-release.json",
+          "sha256": "c9e4579b8dc6006d7aedd3b5d9b53be4465f36603caf59a6ee556662c4178e1c",
           "status": "match"
         }
       ],
       "methodEvidence": {
-        "path": "tools/reference/gameplay/production-final-memory-evidence.json",
-        "sha256": "36d534fc14521e90147f6f18bd7f83f4d64f89bc21c92d2e1c7095bff288dd29",
+        "path": "tools/reference/gameplay/production-release-memory-evidence.json",
+        "sha256": "4f9196f238a70c607b473b3f061c0cba49f61fdc874c26936c47704499e41892",
         "retainedReportBindings": [
           {
             "path": "artifacts/local/gameplay-browser-native-final/manifest.json",
@@ -14688,26 +14688,26 @@
             "status": "match"
           },
           {
-            "path": "artifacts/local/gameplay-production-final-memory-cadence.json",
-            "sha256": "a76bdf2d14343b3671632e690a1abbcd120829f7e94dd4a0f8450a001859a45f",
-            "status": "match"
-          },
-          {
-            "path": "artifacts/local/gameplay-production-final-memory.json",
-            "sha256": "02b3895966e7ceacf0a9a8bb6c622291dfcce73b40d348195b164943826fc26f",
-            "status": "match"
-          },
-          {
             "path": "artifacts/local/gameplay-production-native-final/manifest.json",
             "sha256": "da40ec18771d1d4e4332080a7c3e2830f6524ca9b8c51987efaf1beb4d6007c8",
+            "status": "match"
+          },
+          {
+            "path": "artifacts/local/gameplay-production-release-memory-cadence.json",
+            "sha256": "82e0a55f5dc77b9e892ecb5ce4cbf27996254c3fb0ef0841f5a2ae6537ad7e3e",
+            "status": "match"
+          },
+          {
+            "path": "artifacts/local/gameplay-production-release-memory.json",
+            "sha256": "140d2c1074bf98ffed6631e0f8d70254fa9c1efcf5e3f43d881bd3ea03f72d61",
             "status": "match"
           }
         ]
       },
-      "executedCommand": "node tools/reference/gameplay/production-memory.mjs --resources-report artifacts/local/gameplay-production-final.json --rpc http://127.0.0.1:18579 --native artifacts/local/gameplay-production-native-final --limit 6 --output-prefix artifacts/local/gameplay-production-final-memory-cadence",
+      "executedCommand": "node tools/reference/gameplay/production-memory.mjs --resources-report artifacts/local/gameplay-production-release.json --rpc http://127.0.0.1:18579 --native artifacts/local/gameplay-production-native-final --limit 6 --output-prefix artifacts/local/gameplay-production-release-memory-cadence",
       "commandProvenance": "Parent exact completed-execution record; command not retained in local report",
       "result": "pass",
-      "session": "37535",
+      "session": "81374",
       "coverage": {
         "tics": 6,
         "completeNativeStream": false,
@@ -15034,7 +15034,7 @@
       "references": [
         "execution-budget.json",
         "tools/execution-budget.mjs",
-        "tools/reference/gameplay/production-final-evidence.json",
+        "tools/reference/gameplay/production-release-evidence.json",
         "tools/reference/gameplay/PRODUCTION-MEMORY.md"
       ]
     },
@@ -15072,7 +15072,7 @@
   "remainingAcceptance": [
     {
       "id": "inherited-final-gates",
-      "status": "pending",
+      "status": "verified",
       "requirement": "Run required final inherited Phase0/1/2 and complete Phase3 regression gates against frozen source; bind final tested source hashes."
     },
     {
@@ -15082,17 +15082,17 @@
     },
     {
       "id": "feature-domain-signoff",
-      "status": "pending",
+      "status": "verified",
       "requirement": "Integrator final source/function/domain review; preserve explicitly unsupported profiles and all rejected unknown backing/undefined domains."
     },
     {
       "id": "M2-final-acceptance",
-      "status": "pending",
+      "status": "verified",
       "requirement": "Integrator accepts bounded startup/input/movement/world/render/persistence/browser scope only after final inherited/repeat gates."
     },
     {
       "id": "M3-final-acceptance",
-      "status": "pending",
+      "status": "verified",
       "requirement": "Integrator accepts declared integrated combat/AI/damage/pickup/door/projectile scenarios after final gates; isolated all-nine-weapon/all-enemy-action proofs do not become complete full-world branch coverage."
     },
     {
@@ -17125,5 +17125,9 @@
   "specialNumberMatrix": {
     "path": "test/fixtures/phase3_specials/dispatch-matrix.json",
     "sha256": "fab259f7e486636f02b0daa550fd571aca7f220e3eb012b50d6d78d4735087d7"
+  },
+  "acceptanceRecord": {
+    "path": "artifacts/phase3/acceptance.json",
+    "sha256": "1bebb1edfa40585901067b0dc10501e969654e457eadee2eab0be35e996e3e33"
   }
 }

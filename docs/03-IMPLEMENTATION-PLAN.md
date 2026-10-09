@@ -359,8 +359,8 @@ After every integration gate, update this table:
 | WAD data in EVM (foundation samples) | passed | [Phase 1 report](PHASE1-REPORT.md), actual WAD upload/read hashes | Samples only; runtime renderer adapter remains Phase 2 | None for Phase 1 |
 | BSP walls render | passed | [Wall report](PHASE2-SEGS.md), eight native-matching ordinary calls and wall-only Frame | Wall-only output is an intermediate scope | None |
 | M1 full static frame | passed | [Phase 2 report](PHASE2-REPORT.md), eight exact full frames, real Frame/WS/Canvas, all regressions | Static world view, no gameplay/HUD | None for static scope |
-| M2 movement | not started | — | — | — |
-| M3 basic gameplay | not started | — | — | — |
+| M2 movement | passed | [Phase 3 report](PHASE3-REPORT.md), complete native/kernel/public/browser/repeat and inherited gates | Declared single-player E1M1 profile; explicit feature matrix | None |
+| M3 basic gameplay | passed | [Phase 3 report](PHASE3-REPORT.md), weapons/AI/damage/world/projectile proofs and all regressions | Full original DOOM/gameflow/all-branch coverage not claimed | None |
 
 `Status` ∈ {not started, in progress, blocked, passed}. `Evidence` means a specific commit, reproducible command, screenshot diff, or log hash—not a subjective assertion.
 
