@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "upstreamCommit": "a77dfb96cb91780ca334d0d4cfd86957558007e0",
+  "sourceSha256": "db8759f4311654c63785dcffb8f73a00a61cfe2713e4284c238dea420b6e5f89",
+  "byteOrder": "little-endian",
+  "tables": [
+    {
+      "name": "finetangent",
+      "count": 4096,
+      "wordType": "int32",
+      "sha256": "8988638b066ed2b19a42c6ea1f7d451744e8337845bba4cbb08ac400e521a031"
+    },
+    {
+      "name": "finesine",
+      "count": 10240,
+      "wordType": "int32",
+      "sha256": "a2a1181edd988c7f3f8220c8ffa82801d7c3bbf7ca9564551e90d877728a2ebb"
+    },
+    {
+      "name": "tantoangle",
+      "count": 2049,
+      "wordType": "uint32",
+      "sha256": "ba4346ce3ac3dcb24c460bcf0ed98d3f8351203ca3bcc1dec1cb822f9dee7e11"
+    },
+    {
+      "name": "finecosine",
+      "count": 8192,
+      "wordType": "int32",
+      "sha256": "ec1f6386e7fb9165608705ff3561f538b7f41c5103d1b6c723dfef07a8f85cbf"
+    }
+  ]
+}
