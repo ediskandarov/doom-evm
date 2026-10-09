@@ -441,3 +441,12 @@ actual native indexed/Canvas frames, all84 player fields, keyboard/blur/dedup
 and controlled receipt fallback PASS.
 [Current artifact browser proof](../tools/transport/evidence/gameplay-browser-release.json).
 Repeat47208 and sequential memory remain; M2/M3 still unaccepted.
+
+Final artifact reproducibility checkpoint `949e594` passes two independent
+complete129-tic deployments: all130×14 fields, commands/cadence/sequences,
+seven Frames, constructor/init/receipt gas and thirteen guard/rollback records
+match. [Current replay](../tools/reference/gameplay/production-release-reproducibility-evidence.json).
+The inherited forced build cleaned the ignored memory-clone artifact. Current
+MSIZE attempt stopped at missing-artifact preflight (no runtime measurements);
+rebuild only the separate clone, assert production artifact stays identical,
+then run both memory streams sequentially. Engine sources/settings unchanged.
