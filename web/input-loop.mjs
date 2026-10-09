@@ -72,6 +72,9 @@ export class InputTransactions {
       this.invalidated = true; throw Error('Startup transaction unexpectedly emitted a Frame');
     }
   }
+  _startupValid() {
+    if (this.invalidated) throw Error('Session invalidated; reload after checking the local chain');
+  }
   async startGame({ shouldContinue = () => true } = {}) {
     this._available();
     if (this.config.gameplay !== true) throw Error('Gameplay unavailable for this deployment');
@@ -81,6 +84,7 @@ export class InputTransactions {
       // submission and the contract remains authoritative about sequence acceptance.
       this.sequence = await this._counter();
       this.started = await this._started();
+      this._startupValid();
       if (!this.started) {
         if (this.config.nativeZone === true) {
           this.prepared = await this._prepared();
@@ -94,12 +98,14 @@ export class InputTransactions {
             if (!this.prepared || sequence !== this.sequence) {
               this.invalidated = true; throw Error('Game resource preparation was not confirmed');
             }
+            this._startupValid();
             this.uncertain = false; this._state();
           }
         }
         // Stop may occur while preparation is pending. Its accepted receipt is
         // settled, but initialization is a future transaction and must wait for Start.
         if (!shouldContinue()) return;
+        this._startupValid();
         const mined = await this._send(INITIALIZE_GAME_SELECTOR);
         // Mined initialization is confirmed separately; it need not emit a Frame.
         this.uncertain = true;
@@ -107,6 +113,7 @@ export class InputTransactions {
         this.started = await this._started();
         const sequence = await this._counter();
         if (!this.started || sequence !== this.sequence) { this.invalidated = true; throw Error('Game initialization was not confirmed'); }
+        this._startupValid();
         this.uncertain = false;
       }
     } finally { this.busy = this.uncertain; this.pending = false; this._state(); }

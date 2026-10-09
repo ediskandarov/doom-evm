@@ -74,7 +74,7 @@ node --test web/input.test.mjs web/input-loop.test.mjs web/input-app.test.mjs \
 node --check web/app.mjs
 ```
 
-**37 isolated tests pass**, with zero failures/skips. They cover packet mapping,
+**38 isolated tests pass**, with zero failures/skips. They cover packet mapping,
 all valid masks/ABI encoding, initialization once, legacy counter/static behavior,
 pending transactions, uncertainty/reverts, stop during initialization/receipt,
 held sampling without backlog, blur/visibility, invalid outputs, sequence limits,
@@ -82,7 +82,9 @@ and actual application Start/Stop wiring. The eight additional staged tests
 cover prepare-then-initialize ordering, a shared lock, prepared reload, Stop
 between stages, definite/uncertain preparation failure, initialization failure
 after preparation, confirmation/counter/Frame guards, and staged app wiring.
-The previous 29 tests are retained. The DOM/RPC/WS test uses explicit local
+The previous 29 tests are retained. A follow-up direct-Start regression proves
+that chain invalidation during pending preparation prevents initialization
+submission, including controlled `run: false` startup. The DOM/RPC/WS test uses explicit local
 test doubles and checks complete 64,000-byte Frame palette presentation. It does
 not claim a real browser or a real EVM execution gate.
 

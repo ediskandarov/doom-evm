@@ -282,3 +282,14 @@ test('preparation must confirm a canonical flag, unchanged counter, and no Frame
   f.env.receiptHook = async () => { f.env.preparedReadError = Error('Post-prepare read failed'); };
   await assert.rejects(f.client.startGame(), /read failed/); assert(f.client.uncertain); assert.equal(submitted(f).length, 1);
 });
+
+test('direct staged Start invalidated during pending preparation never submits initialization', async () => {
+  const f = fixture({ nativeZone: true, started: false }); await f.client.load(); f.env.wait = deferred();
+  const pending = f.client.startGame(); await flush();
+  assert.deepEqual(submitted(f).map(tx => tx.data), [PREPARE_GAME_RESOURCES_SELECTOR]);
+  f.client.invalidate(); f.env.wait.resolve();
+  await assert.rejects(pending, /Session invalidated/);
+  assert(f.chain.prepared && !f.chain.started); assert(f.client.invalidated);
+  assert.deepEqual(submitted(f).map(tx => tx.data), [PREPARE_GAME_RESOURCES_SELECTOR]);
+  await assert.rejects(f.client.startGame(), /Session invalidated/);
+});

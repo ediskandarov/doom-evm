@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "kind": "staged-startup-chain-invalidation-follow-up",
+  "pass": true,
+  "command": "node --test web/input-app.test.mjs web/input-loop.test.mjs web/input.test.mjs tools/transport/protocol.test.mjs tools/transport/palette.test.mjs",
+  "tests": {
+    "passed": 38,
+    "failed": 0,
+    "skipped": 0,
+    "previousRetained": 37,
+    "newRegression": 1
+  },
+  "problem": "Controlled direct startup used a default continuation predicate; session invalidation during pending preparation could allow a following initialize transaction.",
+  "change": "Explicit invalidation guards after metadata/confirmation reads and before startup submissions stop that future transaction. Already submitted preparation may settle.",
+  "proof": "Regression invalidates during an actual deferred preparation receipt, then confirms preparation settled but initialization was never submitted; later direct Start remains rejected.",
+  "scope": "Isolated Node component test, no engine changes/actual EVM/browser or Forge gate. Does not restart or supersede the historical37-test component proof.",
+  "previousEvidenceSha256": "214d3aefa2cbbf3ab4dd2ff114bc17e0a9f7d467265ef9efc01dd53c455378a6",
+  "sourceHashes": {
+    "web/input-loop.mjs": "869bc236dc38b73d57efa0d7d2732e0675769f106af257b23a5bdb916eeaa4b3",
+    "web/input-loop.test.mjs": "d9fef76bd6e06694c5a3f8ebe03f632419571eaf3be06db7ebe97e96590001bc",
+    "docs/PHASE3-GAMEPLAY-TRANSPORT.md": "3fbf322bdad438aa7885bc8401078d9337ae687ac4a39dad7fcfa797b3dc5128"
+  },
+  "localLog": "artifacts/local/gameplay-staged-input-invalidation.log",
+  "localLogSha256": "1dd92c6ff03c4d91ea8467fb6921c56a271346883bc8c9ccd5a8721148d2ea71",
+  "checkpointSha256": "2df06122cd75c442c97f6d233136469059292ff9505adf45f2dcaca08999d207"
+}
