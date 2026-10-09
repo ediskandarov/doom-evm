@@ -1,0 +1,109 @@
+{
+  "note": "Original outputs are compiler-profile observations only. abs audit is a separate instrumentation surrogate, not patched oracle. Sanitizer paths normalized.",
+  "original": [
+    {
+      "function": "FixedDiv",
+      "inputs": [
+        -2147483648,
+        1
+      ],
+      "classification": "undefined",
+      "runs": {
+        "O0": {
+          "exitCode": 0,
+          "stdout": "error",
+          "diagnostic": ""
+        },
+        "O2": {
+          "exitCode": 0,
+          "stdout": "error",
+          "diagnostic": ""
+        },
+        "sanitize": {
+          "exitCode": -6,
+          "stdout": "",
+          "diagnostic": "<build>/oracle.c:14:15: runtime error: negation of -2147483648 cannot be represented in type 'int'; cast to an unsigned type to negate this value to itself\nSUMMARY: UndefinedBehaviorSanitizer: undefined-behavior <build>/oracle.c:14:15"
+        }
+      }
+    },
+    {
+      "function": "FixedDiv",
+      "inputs": [
+        1,
+        -2147483648
+      ],
+      "classification": "undefined",
+      "runs": {
+        "O0": {
+          "exitCode": 0,
+          "stdout": "ok -2147483648",
+          "diagnostic": ""
+        },
+        "O2": {
+          "exitCode": 0,
+          "stdout": "ok -2147483648",
+          "diagnostic": ""
+        },
+        "sanitize": {
+          "exitCode": -6,
+          "stdout": "",
+          "diagnostic": "<build>/oracle.c:14:30: runtime error: negation of -2147483648 cannot be represented in type 'int'; cast to an unsigned type to negate this value to itself\nSUMMARY: UndefinedBehaviorSanitizer: undefined-behavior <build>/oracle.c:14:30"
+        }
+      }
+    },
+    {
+      "function": "FixedDiv",
+      "inputs": [
+        -2147483648,
+        -2147483648
+      ],
+      "classification": "undefined",
+      "runs": {
+        "O0": {
+          "exitCode": 0,
+          "stdout": "ok 2147483647",
+          "diagnostic": ""
+        },
+        "O2": {
+          "exitCode": 0,
+          "stdout": "ok 2147483647",
+          "diagnostic": ""
+        },
+        "sanitize": {
+          "exitCode": -6,
+          "stdout": "",
+          "diagnostic": "<build>/oracle.c:14:15: runtime error: negation of -2147483648 cannot be represented in type 'int'; cast to an unsigned type to negate this value to itself\nSUMMARY: UndefinedBehaviorSanitizer: undefined-behavior <build>/oracle.c:14:15"
+        }
+      }
+    },
+    {
+      "function": "FixedDiv2",
+      "inputs": [
+        0,
+        0
+      ],
+      "classification": "undefined",
+      "runs": {
+        "O0": {
+          "exitCode": 0,
+          "stdout": "ok 0",
+          "diagnostic": ""
+        },
+        "O2": {
+          "exitCode": 0,
+          "stdout": "ok 0",
+          "diagnostic": ""
+        },
+        "sanitize": {
+          "exitCode": -6,
+          "stdout": "",
+          "diagnostic": "<build>/oracle.c:35:12: runtime error: nan is outside the range of representable values of type 'int'\nSUMMARY: UndefinedBehaviorSanitizer: undefined-behavior <build>/oracle.c:35:12"
+        }
+      }
+    }
+  ],
+  "absDomainAudit": {
+    "exitCode": -6,
+    "diagnostic": "<build>/abs-audit.c:2:53: runtime error: negation of -2147483648 cannot be represented in type 'int'; cast to an unsigned type to negate this value to itself\nSUMMARY: UndefinedBehaviorSanitizer: undefined-behavior <build>/abs-audit.c:2:53"
+  }
+}

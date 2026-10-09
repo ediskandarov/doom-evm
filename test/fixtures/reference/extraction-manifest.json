@@ -1,0 +1,66 @@
+{
+  "sources": {
+    "m_fixed.h": "67aa3925a905d448fb947fb7358093a39367f534c3e26e3f8b06228f553227ef",
+    "tables.h": "54e366ed33a0bd65e5cad6c5b6f7df77573909e5974b8af296fdb1503c77fcf2",
+    "m_fixed.c": "a4472841bc8890c5d5a41b325ecf56d10d7026a7489967aa29100b5dee759fea",
+    "r_main.c": "2aae43cf807929a8758f71ed0205fc08017556541ba8df2ea9167c003d0dec5a",
+    "tables.c": "db8759f4311654c63785dcffb8f73a00a61cfe2713e4284c238dea420b6e5f89"
+  },
+  "extractions": [
+    {
+      "file": "m_fixed.c",
+      "function": "FixedMul",
+      "startLine": 43,
+      "endLine": 49,
+      "sha256": "71f681bd99115702cf59d6886386a7daa325f6870c235dd8f806d3dc79f8396e"
+    },
+    {
+      "file": "m_fixed.c",
+      "function": "FixedDiv",
+      "startLine": 57,
+      "endLine": 65,
+      "sha256": "97f73f12dd005f2b2d84f31baf9153f076f3aba300a48bdb0fe7d4b78cf933f4"
+    },
+    {
+      "file": "m_fixed.c",
+      "function": "FixedDiv2",
+      "startLine": 69,
+      "endLine": 87,
+      "sha256": "30c5f8fd2dd75b476d09aec6faca76b383464f1489b53de6b00bc8b214e746ff"
+    },
+    {
+      "file": "r_main.c",
+      "function": "R_PointOnSide",
+      "startLine": 161,
+      "endLine": 211,
+      "sha256": "6f1bb67d924478c35dadf38a077806f2f6aae317755ff2cdfc7e03cd912f2bc8"
+    },
+    {
+      "file": "r_main.c",
+      "function": "R_PointToAngle",
+      "startLine": 291,
+      "endLine": 374,
+      "sha256": "bfbf8cbf952634ec34d4fe192837979453a70eb22f3de9d5bd58fed24c7f6685"
+    },
+    {
+      "file": "r_main.c",
+      "function": "R_PointToAngle2",
+      "startLine": 377,
+      "endLine": 388,
+      "sha256": "e9a71fd43347e1f3c7ef7f30f42ca42d059548f0d832d4cb412e80078eae5e82"
+    },
+    {
+      "file": "r_main.c",
+      "function": "R_PointInSubsector",
+      "startLine": 800,
+      "endLine": 823,
+      "sha256": "bc7857186119d033939202c79653c05dd9b06694b97b5bae9a63de683515b246"
+    }
+  ],
+  "generatedSourceSha256": "50ea0ea668bb1fc4a2b58980c6966ea7fd23bab29c577d7787e07b064fc2ff39",
+  "portabilityShims": {
+    "compat.h": "7f462cbe29984e8a27b0829fceb6c9544f8b2044770c58a2a06285e472e2a123",
+    "driver.c": "5a0dca50ffa7a3f1950476b25a39662ef8ede1b592619a5a84c37e430182a21c",
+    "traceAdapter": "84b196f66dd925e2547599e1d6ea3cea621cf9e35e3703b1421e4917d5049416"
+  }
+}

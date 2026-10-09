@@ -1,0 +1,21 @@
+{
+  "encoding": "little-endian-32-bit-native-arm64",
+  "tables": {
+    "finesine": {
+      "count": 10240,
+      "sha256": "a2a1181edd988c7f3f8220c8ffa82801d7c3bbf7ca9564551e90d877728a2ebb"
+    },
+    "finecosine": {
+      "count": 8192,
+      "sha256": "ec1f6386e7fb9165608705ff3561f538b7f41c5103d1b6c723dfef07a8f85cbf"
+    },
+    "finetangent": {
+      "count": 4096,
+      "sha256": "8988638b066ed2b19a42c6ea1f7d451744e8337845bba4cbb08ac400e521a031"
+    },
+    "tantoangle": {
+      "count": 2049,
+      "sha256": "ba4346ce3ac3dcb24c460bcf0ed98d3f8351203ca3bcc1dec1cb822f9dee7e11"
+    }
+  }
+}

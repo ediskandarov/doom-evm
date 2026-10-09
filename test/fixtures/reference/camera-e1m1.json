@@ -1,0 +1,48 @@
+{
+  "kind": "camera-test-configuration",
+  "rendererGoldenAvailable": false,
+  "reason": "Phase 1 does not port or render original full engine frames",
+  "wadSha256": "7323bcc168c5a45ff10749b339960e98314740a734c30d4b9f3337001f9e703d",
+  "map": "E1M1",
+  "camera": {
+    "x": -27262976,
+    "y": 16777216,
+    "z": 2686976,
+    "angle": 0,
+    "coordinateFormat": "signed-16.16",
+    "angleFormat": "binary-angle-uint32"
+  },
+  "viewZPolicy": "stationary initial camera: min(sector floor+VIEWHEIGHT(41), ceiling-4), bob=0; configuration only, no frame rendered",
+  "spawnSubsector": 115,
+  "spawnSector": 140,
+  "detail": "high",
+  "colormap": 0,
+  "lighting": {
+    "extraLight": 0,
+    "fixedColormap": -1
+  },
+  "gametic": 0,
+  "width": 320,
+  "height": 200,
+  "nodesSha256": "d839fd0c3bd879df73b09fae80d1f3bb5c7b2f6647d53ec5eb485898ff372fb0",
+  "subsectorCount": 682,
+  "upstreamCommit": "a77dfb96cb91780ca334d0d4cfd86957558007e0",
+  "build": {
+    "compiler": "clang",
+    "version": "Apple clang version 17.0.0 (clang-1700.0.13.5)",
+    "target": "arm64-apple-darwin24.6.0",
+    "flags": [
+      "-std=c99",
+      "-O2",
+      "-fwrapv",
+      "-fno-strict-aliasing",
+      "-ffp-contract=off",
+      "-fno-fast-math"
+    ],
+    "sourceSha256": "a5cfa0e35d4bc6a8f37393810c15c4b0aa15123609555700369a1890d253838c",
+    "harnessSha256": "800bcdff3c05634aab27f4cc38bf12bc564ed4644bb88845aff9aa9ce12dc8ee",
+    "patchSha256": "ea6b2eced5eddacb0be4a683da65f97d8fece542aa435d059347daa3a559fd2a",
+    "integerSemantics": "32-bit int; 64-bit long long; arithmetic signed right shift; signed narrowing wraps on pinned Clang; -fwrapv; abs(INT_MIN) remains undefined and excluded",
+    "doubleSemantics": "IEEE binary64; round-to-nearest ties-to-even; no fast-math or contraction; original double division then exact power-of-two scale; 0/0 float-to-int is undefined"
+  }
+}
