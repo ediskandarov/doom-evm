@@ -122,3 +122,13 @@ and real Anvil → WS/receipt → browser gameplay acceptance against the native
 module checkpoint establishes no M2/M3 engine acceptance; historical staged
 production evidence remains separately labeled. No external telemetry
 service or Forge command is introduced by this workstream.
+
+## Actual atomic Chrome checkpoint
+
+The separate [actual browser evidence](../tools/transport/evidence/gameplay-browser-atomic.json)
+passes all six native indexed8/receipt/Canvas RGBA frames and all fourteen exported
+fields per tic. Actual Start/Resume and DOM keyboard events drive the first five
+commands; controlled receipt fallback verifies the sixth. Blur stops sampling and
+duplicate Frames are ignored. The previously failing tic five is exact with the
+source-derived backing adapter. This finite stream does not prove all weapons:
+the complete 129-tic production and nine-scenario kernel proofs are separate.

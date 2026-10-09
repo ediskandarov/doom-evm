@@ -1,0 +1,150 @@
+{
+  "kind": "original-gameplay-chrome-keyboard-canvas",
+  "pass": true,
+  "config": {
+    "rpcUrl": "http://127.0.0.1:18579",
+    "wsUrl": "ws://127.0.0.1:18579",
+    "address": "0x026bae7f033e7b7ac0953b104151603270379a8b",
+    "driver": "0xf39fd6e51aad88f6f4ce6ab8827279cfffb92266",
+    "rendererKind": "doom-world-view",
+    "gameplay": true,
+    "referenceCase": "full-angle0",
+    "deploymentBlock": "0x8a8",
+    "paletteUrl": "/palette.local.json",
+    "paletteKind": "wad",
+    "resourceIdentity": {
+      "schemaVersion": 0,
+      "wadSha256": "7323bcc168c5a45ff10749b339960e98314740a734c30d4b9f3337001f9e703d",
+      "bundleSha256": "d379076f21645cf7cc5acb056663d0faacc4065489a0ca99738479323c9f7a47",
+      "paletteSha256": "fd895921b5d0a394612bb29852ed003d44d69f76dec31c0dc6b5d5fc7d63f7bb",
+      "paletteVariant": 0
+    },
+    "gasLimit": 10000000000,
+    "stagedInitialization": false,
+    "nativeZone": true
+  },
+  "nativeManifestSha256": "d05bb58546cadc3e0e175b30b2691ec11024860c9176a105196401da788b02e9",
+  "runtimeSha256": "6fd003bed8fd61f0b5dd90ee4e7eeb0bfa69b8a01c6dfaa12a0d46a0463c307f",
+  "scope": "Six all-render native tics: actual Start/Resume keyboard for five, controlled receipt fallback for sixth. Short fire input arrives during weapon raising; actual shooting has separate 129-tic production proof.",
+  "initialSequence": 0,
+  "frames": [
+    {
+      "tic": 1,
+      "mask": 0,
+      "inputSeq": 1,
+      "frameId": "1",
+      "source": "ws",
+      "transactionHash": "0x0a1d106cd06d59cf2473e0bea4cad1138dba401e89e6e104ed72d9a7aab75755",
+      "gas": 781701353,
+      "pixelSha256": "b736bf38b2992db3851d33e7d8ea3bc7d6036d13d45d5030823829a6cdd62133",
+      "rgbaSha256": "abd2e600eaebde9b5fcb476d97e29a210f2c4fa073c7984217e4422d96544e80",
+      "all64000NativePixelsExact": true,
+      "allCanvasPixelsExact": true,
+      "nativeFieldsExact": 14
+    },
+    {
+      "tic": 2,
+      "mask": 257,
+      "inputSeq": 2,
+      "frameId": "2",
+      "source": "ws",
+      "transactionHash": "0x3976baaf45d427b842df8cf2ce3d6c49f180b28f099f001215f033fc45b426ce",
+      "gas": 744075606,
+      "pixelSha256": "00f7a388a74802ae3821558b975835c0f0692786f0c136c3c274f5cb8b5a9c08",
+      "rgbaSha256": "747e90fd49d6826c53ec4c6c33e91fa082e340cfeea9619bb08fcc57ba90dc66",
+      "all64000NativePixelsExact": true,
+      "allCanvasPixelsExact": true,
+      "nativeFieldsExact": 14
+    },
+    {
+      "tic": 3,
+      "mask": 8,
+      "inputSeq": 3,
+      "frameId": "3",
+      "source": "ws",
+      "transactionHash": "0x45a12749b393cf0125405203ed2e171ec38e591d098ea65077397375d6f44b8a",
+      "gas": 743445099,
+      "pixelSha256": "3210aaf4ec47038a598483d472ef0c2fd1b4b31f930db944853138f360723fca",
+      "rgbaSha256": "5a2d95af5c3d144f0a018560364cd95d815038b9c99ae79fec2843f0919a5a17",
+      "all64000NativePixelsExact": true,
+      "allCanvasPixelsExact": true,
+      "nativeFieldsExact": 14
+    },
+    {
+      "tic": 4,
+      "mask": 16,
+      "inputSeq": 4,
+      "frameId": "4",
+      "source": "ws",
+      "transactionHash": "0x3a1f88cc741d147484f0ef270b625e8ccc285697f1448bc7198f2492706ddea2",
+      "gas": 743210790,
+      "pixelSha256": "483a260e39fe6629e7e3b99a257ddc22cdfaad56cefb80761974b6e3665c94b4",
+      "rgbaSha256": "73f249c8a1bcdf2330994fc09452d88740b30ef84e595f72e0ec5fa80eb6e9a5",
+      "all64000NativePixelsExact": true,
+      "allCanvasPixelsExact": true,
+      "nativeFieldsExact": 14
+    },
+    {
+      "tic": 5,
+      "mask": 128,
+      "inputSeq": 5,
+      "frameId": "5",
+      "source": "ws",
+      "transactionHash": "0xddd932d6c43c3628169807c1f70d23fa79f1163a6fb000777b5f0a64d89ad0f8",
+      "gas": 742033281,
+      "pixelSha256": "4a8302cfb7f0d352ff6dab4ae05a60a7b40fd30551f2cd9824b0a026ef3d964f",
+      "rgbaSha256": "6c45e945271606c53de0ece56a79ad1366dfa994625249a97ef47724e1898c3e",
+      "all64000NativePixelsExact": true,
+      "allCanvasPixelsExact": true,
+      "nativeFieldsExact": 14
+    },
+    {
+      "tic": 6,
+      "mask": 64,
+      "inputSeq": 6,
+      "frameId": "6",
+      "source": "receipt",
+      "transactionHash": "0x74db186896be864568d86a4b4d2a7d0067f308bdfd2d1b5c298ea941368a8abb",
+      "gas": 743496230,
+      "pixelSha256": "c1fef2ef0b6b722434a1f70df173c4f60ca58a39c85b17f4bbcc10e5f0a27885",
+      "rgbaSha256": "8708513bc63828a07a7be206f2172f7e4d70ec6df42e92346d42532fc23bb695",
+      "all64000NativePixelsExact": true,
+      "allCanvasPixelsExact": true,
+      "nativeFieldsExact": 14
+    }
+  ],
+  "sources": {
+    "tools/transport/gameplay-browser-check.mjs": "6532c10d2c7152db084223eda578d3f1f7c4fec71bcfb5c3304411763debce4c",
+    "web/app.mjs": "ae30ac37dbb1a65d5aa025ffab45d96bd8d3a3d8e9b035d05577e17e37433f9b",
+    "web/input.mjs": "f9ed0064ccdccc4588632798aa0a1ce99e4bfc83a4e7c910450c48328ea729f6",
+    "web/input-loop.mjs": "80dee14e694c77d30a80f607aaca4c7508266dfa5651549ded4cecb671eb47f3",
+    "web/protocol.mjs": "fec5104a0e13b7ca8666200431a1804d53cdb6537c1f0f8f02fb5b69dd70f47e",
+    "web/palette.mjs": "110c2c0af974ecfa935d37da60d32eedc47114484fc7b994043bfd24e95bc8ae",
+    "src/evm/Doom.sol": "e4f99d3d5a9d585f239828f8ebf9c376f098e367afb1eae37431b6c2bc4e0d5d"
+  },
+  "fallbackVerified": true,
+  "duplicates": 11,
+  "blurStopsBeforeNextCommand": true,
+  "browser": {
+    "protocolVersion": "1.3",
+    "product": "Chrome/155.0.8059.40",
+    "revision": "@cfaadc5a132d78e1828635aa8405a499f3e14864",
+    "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36",
+    "jsVersion": "15.5.35.20"
+  },
+  "screenshot": "artifacts/local/phase3-gameplay-browser-atomic.png",
+  "schemaVersion": 1,
+  "rawReport": "artifacts/local/phase3-gameplay-browser-atomic.json",
+  "rawReportSha256": "41b72a4f6b8056fbb6697692d646f8cf762e096e4615ce29c5448c8f9e130d24",
+  "executedCommand": "node tools/transport/gameplay-browser-check.mjs --config artifacts/local/gameplay-production-atomic.config.json --palette artifacts/local/gameplay-production-atomic.palette.json --output-prefix artifacts/local/phase3-gameplay-browser-atomic",
+  "supplementalDependencyHashes": {
+    "web/budget.mjs": "b24e411daa2933c20e9d61d4ba3d54cbce4d76b3287d2b0faad06ce8c1606778",
+    "tools/execution-budget.mjs": "dbf68241139422195203f57a08d8e382afa6d1d493848ae68fbebca9265eec78",
+    "execution-budget.json": "acde01f1b9cf248f9265f1ffcff7181d01d77620a2dfcd9a4d4d0b1c79df2be7"
+  },
+  "limitations": [
+    "Six real all-render tics; shooting during early weapon raising is not full weapon firing evidence. The separate 129-tic production and kernel proofs establish firing.",
+    "Supplemental dependency hashes checked at integration; they were not originally listed in the retained browser report.",
+    "Native references and palette are browser comparison inputs only, not runtime contract input."
+  ]
+}
