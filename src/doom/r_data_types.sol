@@ -43,6 +43,7 @@ struct RenderResources {
     uint32 firstspritelump;
     uint32 numspritelumps;
     bytes colormaps;
+    bytes[] colormapcache; // bounded memory slices replacing reusable lighttable_t pointers
     int32[] spritewidth;
     int32[] spriteoffset;
     int32[] spritetopoffset;

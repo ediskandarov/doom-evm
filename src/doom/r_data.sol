@@ -386,6 +386,23 @@ library R_Data {
         return cacheLump(r, r.firstflat + flat);
     }
 
+    /// @notice EVM pointer adapter for colormaps + index*256, reused across draw calls.
+    function R_GetColormap(RenderResources memory r, uint32 index) internal pure returns (bytes memory data) {
+        uint256 count = r.colormaps.length / 256;
+        if (index >= count) revert Bounds();
+        if (r.colormapcache.length == 0) r.colormapcache = new bytes[](count);
+        if (r.colormapcache.length != count) revert Malformed();
+        data = r.colormapcache[index];
+        if (data.length == 0) {
+            data = new bytes(256);
+            bytes memory maps = r.colormaps;
+            uint256 offset = uint256(index) * 256;
+            // Checked index proves the full source slice exists; destination is a fresh 256-byte array.
+            assembly ("memory-safe") { mcopy(add(data, 32), add(add(maps, 32), offset), 256) }
+            r.colormapcache[index] = data;
+        }
+    }
+
     function cacheLump(RenderResources memory r, uint32 lump) private view returns (bytes memory data) {
         // Synthetic tests may construct RenderResources directly; initialize their cache on demand.
         if (r.lumpcache.length == 0) r.lumpcache = new bytes[](r.source.lumps.length);

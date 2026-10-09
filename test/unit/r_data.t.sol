@@ -15,6 +15,10 @@ interface DataVm {
 }
 
 contract DataHarness {
+    function colormap(RenderResources memory r, uint32 index) external pure returns (bytes memory) {
+        return R_Data.R_GetColormap(r, index);
+    }
+
     function range(ResourceView memory v, uint32 p, uint32 n) external view returns (bytes memory) {
         return R_Data.read(v, p, n);
     }
@@ -93,6 +97,24 @@ contract RDataTest {
         uint256 mem;
         assembly ("memory-safe") { mem := mload(0x40) }
         emit Measurement(lazy ? "R_InitDataLazy" : "R_InitData", start - gasleft(), mem);
+    }
+
+    function testColormapPointerSlicesAndCacheReuse() public {
+        RenderResources memory r = initMode(true);
+        for (uint32 index; index < 34; ++index) {
+            bytes memory table = R_Data.R_GetColormap(r, index);
+            require(table.length == 256, "colormap pointer extent");
+            for (uint256 j; j < 256; ++j) {
+                require(table[j] == r.colormaps[uint256(index) * 256 + j], "colormap source byte");
+            }
+            bytes memory again = R_Data.R_GetColormap(r, index);
+            bool same;
+            assembly ("memory-safe") { same := eq(table, again) }
+            require(same, "colormap cache alias");
+        }
+        DataHarness harness = new DataHarness();
+        vm.expectRevert();
+        harness.colormap(r, 34);
     }
 
     function testResourceReadAcrossChunksAndOrdinaryDeploy() public {
