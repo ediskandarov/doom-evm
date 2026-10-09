@@ -122,9 +122,9 @@ def unchanged(before, after):
                        (', '.join(changed[:30]) or 'HEAD or recursive submodule identity'))
 
 
-def fresh(path, started_ns):
+def fresh(path, started_ns, allow_empty=False):
     path = Path(path)
-    require(path.is_file() and path.stat().st_size > 0, f'Missing/empty evidence: {path}')
+    require(path.is_file() and (allow_empty or path.stat().st_size > 0), f'Missing/empty evidence: {path}')
     require(path.stat().st_mtime_ns >= started_ns, f'Stale evidence from a prior run: {path}')
     return path
 
@@ -178,7 +178,9 @@ def phase1_evidence(started_ns, baseline, destination):
         summary.write_text(json.dumps(value, indent=2) + '\n')
         archived[label] = {'summary': str(summary), 'sha256': sha(summary), 'logs': {}}
         for row in rows:
-            original = fresh(ROOT / row['log'], started_ns)
+            # Successful quiet commands (notably forge fmt --check) emit no text.
+            # Their exit status is checked above; the log must still be fresh.
+            original = fresh(ROOT / row['log'], started_ns, allow_empty=True)
             copied = archive / (row['gate'] + '.log')
             shutil.copyfile(original, copied)
             archived[label]['logs'][str(copied)] = sha(copied)
@@ -470,6 +472,9 @@ def write_report(output, report, started):
 def self_test():
     with tempfile.TemporaryDirectory(prefix='doom-phase2-gate-selftest-') as tmp:
         folder = Path(tmp)
+        empty = folder / 'quiet-success.log'
+        empty.write_text('')
+        fresh(empty, 0, allow_empty=True)
         for name, args, timeout, expected in [
             ('success', [sys.executable, '-c', 'print("ok")'], 5, 0),
             ('failure', [sys.executable, '-c', 'raise SystemExit(17)'], 5, 17),
@@ -479,7 +484,9 @@ def self_test():
             result = run_command(dict(name=name, args=args, timeout=timeout), folder / (name + '.log'))
             require(result['exit_code'] == expected and result['log_sha256'], 'Command failure handling regressed')
         (folder / 'renderer.json').write_text(json.dumps({'kind': 'doom-world-view-ordinary-e2e', 'pass': False}))
-        for operation in [lambda: renderer_evidence(folder / 'renderer', 0, {}),
+        for operation in [lambda: fresh(empty, 0),
+                          lambda: fresh(empty, time.time_ns() + 1000000, allow_empty=True),
+                          lambda: renderer_evidence(folder / 'renderer', 0, {}),
                           lambda: unchanged({'source_sha256': {'a': '1'}}, {'source_sha256': {'a': '2'}}),
                           lambda: fresh(folder / 'missing.json', 0),
                           lambda: fresh(folder / 'success.log', time.time_ns() + 1000000),
