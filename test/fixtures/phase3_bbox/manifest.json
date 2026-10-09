@@ -1,0 +1,35 @@
+{
+  "portabilityHeader": {
+    "name": "values.h",
+    "text": "#include <limits.h>\n#include \"doomtype.h\"\n",
+    "sha256": "ec2400ddb8bebde33e6fc0873f24ef5cb1cca978916b1b58c52aaaeda0bbcc4f",
+    "reason": "macOS lacks old values.h; original doomtype.h provides exact MININT/MAXINT constants"
+  },
+  "upstreamCommit": "a77dfb96cb91780ca334d0d4cfd86957558007e0",
+  "compiler": "Apple clang version 17.0.0 (clang-1700.0.13.5)",
+  "target": "arm64-apple-darwin24.6.0",
+  "profiles": [
+    "O0 without -fwrapv",
+    "O2 without -fwrapv",
+    "O2 full ASan/UBSan without -fwrapv"
+  ],
+  "sourceFunctions": [
+    "M_ClearBox",
+    "M_AddToBox"
+  ],
+  "streams": 521,
+  "points": 8299,
+  "sourceFiles": {
+    "m_bbox.c": "98f3aea4f43d4d75fe452a25a65678fbd8368cfef3928b869767996e2165f42c",
+    "m_bbox.h": "fc041f774ff1f7b2b05d5bd8dd35a9496cf4dd4ca2a0a2df2420ac6f827b0b5d",
+    "m_fixed.h": "67aa3925a905d448fb947fb7358093a39367f534c3e26e3f8b06228f553227ef",
+    "doomtype.h": "e2b8da9ed44c6686a282af8e14a53b605ecc781d05ccd78579fcf57c720297e6"
+  },
+  "harnessFiles": {
+    "driver.c": "4a909156680e1949582076b5cdcab11035a9d7896160f18ded0ea3dd3227ba1d",
+    "reference.py": "567d54f1ffc32471090feb0fa5ab237f93761420f9b8491826e64bac3a3f0a10"
+  },
+  "vectorSha256": "a38332d4687f207ac0fba6e96ef8ef42b6cb191bd9251a5f602b8b1e0ecce375",
+  "encoding": "big-endian32: stream count then4clear bounds; each point x,y then4bounds; streams concatenate until EOF; native BOXTOP/BOTTOM/LEFT/RIGHT order",
+  "scope": "All prefix bounds of point streams; original else-if firstpoint/decreasing-order behavior retained, no alternative geometric bounding algorithm"
+}

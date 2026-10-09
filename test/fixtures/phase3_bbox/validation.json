@@ -1,0 +1,30 @@
+{
+  "scope": "Original M_ClearBox/M_AddToBox only, every point-prefix compared; not startup/whole-world acceptance",
+  "result": "PASS",
+  "sourceFunctions": 2,
+  "streams": 521,
+  "points": 8299,
+  "nativeProfiles": [
+    "O0 without -fwrapv",
+    "O2 without -fwrapv",
+    "O2 full ASan/UBSan without -fwrapv"
+  ],
+  "solidityTests": 1,
+  "integratorRun": {
+    "handle": 93349,
+    "reportedBy": "integrator",
+    "ownedScope": "MBBoxTest.testAllOriginalBoundingStreams",
+    "result": "PASS",
+    "gas": 12872503,
+    "combinedResult": "55 tests PASS; only bbox proof claimed here"
+  },
+  "nativeCommand": "python3 tools/reference/phase3_bbox/reference.py --check",
+  "files": {
+    "src/doom/m_bbox.sol": "f4c60efe3627a97d0288fc5cd0283535527b1f51029568534c80bb8fbbf8f272",
+    "test/unit/m_bbox.t.sol": "79597a966e6c1f64f78cada3eb7cb53246c34a6ed163b10f10d69d7825e4050d",
+    "tools/reference/phase3_bbox/driver.c": "4a909156680e1949582076b5cdcab11035a9d7896160f18ded0ea3dd3227ba1d",
+    "tools/reference/phase3_bbox/reference.py": "567d54f1ffc32471090feb0fa5ab237f93761420f9b8491826e64bac3a3f0a10",
+    "test/fixtures/phase3_bbox/vectors.bin": "a38332d4687f207ac0fba6e96ef8ef42b6cb191bd9251a5f602b8b1e0ecce375",
+    "test/fixtures/phase3_bbox/manifest.json": "81958fffb3cb3ecd57e76b8f89f0abc497d835ea852d168d5a6c18dff63192bc"
+  }
+}
