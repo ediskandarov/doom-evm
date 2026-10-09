@@ -7,7 +7,8 @@ does not count as accepted Phase 3 implementation.
 
 ## Recovery checkpoint
 
-Last implementation checkpoint: `d9ca352`, verified source-derived renderer allocator startup;
+Last implementation checkpoint: `ab316f8`, physical actor/mover allocation and lazy free;
+verified source-derived renderer allocator startup is `d9ca352`;
 zone core is `2392f4a`.
 Last native observation checkpoint: `5ffd10a`, original zone lifecycle/layout evidence;
 `7fc2cab` remains the exact post-render state extension.
@@ -30,7 +31,7 @@ mock-neighbor module proof does not imply whole-engine verification.
 
 | Workstream | Implementation | Integration | Verification and commit |
 |---|---|---|---|
-| Shared player/actor/thinker/world interfaces and heap | Base and approved persistence extensions complete | Used by all gameplay module proofs; synthetic storage copy verified; full-level production copy pending | Compiles; actor/thinker aliases survive pool growth. `d793fd1`; tag-only boss callbacks `0960141`. [Interface checkpoint](../artifacts/phase3/interface-freeze.json). |
+| Shared player/actor/thinker/world interfaces and heap | Base, persistence and native allocation extensions complete | All gameplay modules use stable IDs; native payload blocks now allocated/freed by heap/ticker, storage/resource aliases verified | `d793fd1`, `0960141`, `ab316f8`: all nine original payload sizes/tags, no embedded-thinker double allocation, lazy physical reuse with stable actor IDs; 21 focused tests pass. [Allocation checkpoint](../artifacts/phase3/zone-heap-checkpoint.json). Full native map/backing and production integration pending. |
 | Original state/action, actor, weapon tables and RNG | Complete | Imported by gameplay modules | Every field of 967 states/137 actor types/9 weapons and both RNG streams matches native; O0/O2/sanitizers. `f1081fd`. [Foundation checkpoint](../artifacts/phase3/foundation-checkpoint.json). |
 | Keyboard commands and browser sampler | Complete declared keyboard profile | Standalone helper/decoder and serialized browser lifecycle tested; real production browser connection pending | 41,007 original-C cases, 14 Forge tests, five browser tests. `0a7d839`; browser lifecycle `a67f435` adds a 29-test isolated gate. [Input checkpoint](../artifacts/phase3/input-checkpoint.json). |
 | Original-C full gameplay/frame oracle | Complete eight reference scenarios | Ready as EVM comparison oracle; no EVM conformance claim | 2,205 original tics and 24 live frames match O0/O2/ASan and alternate allocation fill. `6af2ec2`. [Native checkpoint](../artifacts/phase3/native-reference-checkpoint.json). |
@@ -121,11 +122,17 @@ Verified recovery checkpoints:
   match native. Three Forge tests pass under unchanged limits. Normal replay stage
   costs 344,974,734 test gas; fixture-inclusive normal test costs 808,761,041.
   These are component measurements, not integrated production estimates.
+- `ab316f8`: native zone/payload/map/backing schema and typed heap/ticker wiring;
+  all nine original sizes/tags, lazy physical free/reuse, stable IDs and storage
+  aliases verified. Eight shared/startup tests and 13 inherited primitive/heap
+  tests pass. [Bounded evidence](../artifacts/phase3/zone-heap-checkpoint.json).
+  Tail fields are interface-only here; drawing still has its original strict guard.
 
 Next dependency order:
 
-1. Integrate zone state into persistence and mirror original P_Setup, actor/mover,
-   lazy-free and semantic resource-cache operations. Preserve stable actor IDs.
+1. Native zone persistence, actor/mover and lazy-free component integration is
+   committed. Finish original P_Setup and semantic resource-cache operations,
+   then verify the complete native allocation lifecycle. Preserve stable actor IDs.
 2. Materialize only source-written known physical backing bytes for renderer reads.
    Pointer, padding and unwritten bytes remain unknown; no clamp, invented tail,
    special-lump pixel table, native runtime allocation tape or guard removal.
