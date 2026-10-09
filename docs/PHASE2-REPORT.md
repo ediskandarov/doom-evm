@@ -13,13 +13,13 @@ Phase 2 is **not complete**. The acceptance scope is implementation-plan section
 | Indexed8 columns/spans and bounds | 95 original-C cases, including 93 defined cases and two explicit profile extensions; [drawing report](PHASE2-DRAW.md) | Passed; final regression still required |
 | Native full renderer goldens | 16 wall/full cases across eight spawn headings, exact pixels and intermediate clipping state, O0/O2/sanitizer/allocation-fill agreement | Native reference passed; not EVM rendering evidence |
 | BSP traversal/clipping, front/back and NF_SUBSECTOR | Eight native ordered traces, 1,120 clipping operations, deep trees and DAG/cycle tests; all 16 BSP tests and both native/instrumentation checks pass on the integrated tree | Passed; textured walls pending |
-| Textured wall pipeline and exact C wall pixels | Native wall-only goldens exist; Solidity wall integration pending | Not achieved |
+| Textured wall pipeline and exact C wall pixels | Integrated `13df471`: all eight real EVM wall scenes match all 64,000 pixels and every drawseg/clipping/visplane record; merged tests also pass with the 2C sprite context | Wall gate passed; synthetic branches and ordinary cost evidence in progress |
 | Visplanes/floors/ceilings, lighting and sky | Plane construction prerequisite exists; actual plane drawing pending | Not achieved |
 | Masked walls, sprite projection/sorting/clipping | Native world-view goldens include original masked pass and world sprites; Solidity port pending | Not achieved |
 | R_RenderPlayerView orchestration and thin Doom adapter | Frozen contexts; adapter still abstract | Not achieved |
 | Actual EVM memory, gas and resource-access costs | Drawing opcode traces calibrated against literal MSIZE; ordinary-deployment resource benchmark verifies all 1,755 runtimes and six resource operations, with actual MSIZE and equal normal/instrumented transaction gas | Resource evidence integrated; final source refresh and full-frame measurement missing |
 | Production resource identity | `WadResources` authenticates the packed directory and every ordered STOP-prefixed chunk against commitments derived from the pinned bundle; six acceptance/corruption tests pass | Constructor unit gate passed; ordinary production-adapter deployment pending |
-| All Phase 0 and Phase 1 gates preserved | Existing runners/assertions retained; 84 combined Foundry tests passed during 2A integration | Full final regression run missing |
+| All Phase 0 and Phase 1 gates preserved | Existing runners/assertions retained; 111 combined Foundry tests passed after BSP/resource-authentication integration, plus eight wall tests | Full final regression run missing |
 | Ordinary Anvil deployment and one genuine Frame event per render | No real EVM frame yet | Not achieved |
 | Browser displays transaction pixels; exact reference diff and screenshot | Native reference images exist; real renderer browser gate pending | Not achieved |
 | Function-by-function C mapping, deviations and completion audit | Module reports and explicit native adaptations available | Final audit missing |

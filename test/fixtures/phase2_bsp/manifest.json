@@ -34,7 +34,7 @@
   },
   "clipRows": 1120,
   "clipProfiles": "O0/O2 and ASan/UBSan without fwrapv identical",
-  "rendererManifestSha256": "71fbc9bf072bc5896de35038ee442bdc4b807826c934183ffac6e11a1901a5a0",
+  "rendererManifestSha256": "2072276e625d1fe7b47d0511ac70ea621a8b772f813ae8409b1653da2d13fcbd",
   "cases": [
     {
       "name": "full-angle0",

@@ -5,6 +5,7 @@ pragma solidity 0.8.37;
 import {RenderState, DrawColumn, DrawSpan} from "./r_state.sol";
 import {MapData} from "./r_defs.sol";
 import {RenderResources} from "./r_data_types.sol";
+import {SpriteState} from "./r_sprite_state.sol";
 
 /// @custom:source linuxdoom-1.10/r_bsp.c cliprange_t
 struct ClipRange {
@@ -118,4 +119,5 @@ struct RenderContext {
     PlaneState plane;
     DrawColumn dc;
     DrawSpan ds;
+    SpriteState sprite;
 }

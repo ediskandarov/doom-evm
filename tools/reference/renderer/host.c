@@ -35,7 +35,14 @@ void *Z_Malloc(int size,int tag,void *user) {
 }
 void Z_Free(void *ptr) { memblock_t *b=(memblock_t*)ptr-1; if(b->id!=0x1d4a11) I_Error("bad free"); if(b->user) *b->user=NULL; free(b); }
 void Z_ChangeTag2(void *ptr,int tag) { ((memblock_t*)ptr-1)->tag=tag; }
-void NetUpdate(void) {}
+static unsigned char plane_pixels[320*200];
+static int render_netupdates;
+static int observe_render;
+void NetUpdate(void) {
+    // Original R_RenderPlayerView calls this after setup, BSP, planes, and masked drawing.
+    // Observe the completed plane pass without changing original renderer code or state.
+    if(observe_render && ++render_netupdates==3) memcpy(plane_pixels,screens[0],sizeof(plane_pixels));
+}
 void I_BeginRead(void) {}
 void I_EndRead(void) {}
 void V_MarkRect(int x,int y,int width,int height) {}
@@ -117,11 +124,16 @@ int main(int argc,char **argv) {
     players[0].mo=&camera; players[0].viewz=camera.subsector->sector->floorheight+41*FRACUNIT;
     if(players[0].viewz>camera.subsector->sector->ceilingheight-4*FRACUNIT) players[0].viewz=camera.subsector->sector->ceilingheight-4*FRACUNIT;
     char tracepath[4096]; snprintf(tracepath,sizeof(tracepath),"%s/trace.txt",argv[2]); tracefile=fopen(tracepath,"w"); if(!tracefile) I_Error("trace output");
+    observe_render=1; render_netupdates=0;
     // Camera-only static scene: no player psprite/HUD, no gameplay actions or time advancement.
     if(argc>4 && !strcmp(argv[4],"walls")) { R_SetupFrame(players); R_ClearClipSegs(); R_ClearDrawSegs(); R_ClearPlanes(); R_ClearSprites(); R_RenderBSPNode(numnodes-1); }
     else R_RenderPlayerView(players);
     fclose(tracefile); tracefile=NULL;
     writefile(argv[2],"pixels.bin",screens[0],64000);
+    if(render_netupdates) {
+        if(render_netupdates!=4) I_Error("Unexpected original render checkpoints");
+        writefile(argv[2],"plane-pixels.bin",plane_pixels,sizeof(plane_pixels));
+    }
     geometry_outputs(argv[2]);
     char summary[2048]; int len=snprintf(summary,sizeof(summary),"{\"x\":%d,\"y\":%d,\"z\":%d,\"angle\":%u,\"spawnedThings\":%d,\"drawsegs\":%ld,\"visplanes\":%ld,\"vissprites\":%ld,\"subsectors\":%d}\n",viewx,viewy,viewz,viewangle,spawned,(long)(ds_p-drawsegs),(long)(lastvisplane-visplanes),(long)(vissprite_p-vissprites),sscount);
     writefile(argv[2],"scene.json",summary,len);

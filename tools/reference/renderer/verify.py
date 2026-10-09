@@ -33,6 +33,9 @@ def main():
                     assert result.returncode==0,(slug,profile,result.stderr)
                     assert not result.stderr,(slug,profile,result.stderr)
                     current={name:(dest/name).read_bytes() for name in ['pixels.bin','scene.json','trace.txt','planes.bin','clips.bin','drawsegs.bin']}
+                    if mode=='full':
+                        current['plane-pixels.bin']=(dest/'plane-pixels.bin').read_bytes()
+                        assert len(current['plane-pixels.bin'])==64000
                     assert len(current['pixels.bin'])==64000
                     if baseline is None: baseline=current
                     else: assert current==baseline,(slug,profile,fill,'native mismatch')
