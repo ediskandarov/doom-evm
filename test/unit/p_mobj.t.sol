@@ -216,9 +216,8 @@ abstract contract LifecycleOracle {
         p.fixedcolormap = 1;
         p.colormap = 2;
         p.didsecret = true;
-        p.playerstate = mode(c, 1024)
-            ? PlayerState.dead
-            : (mode(c, 2048) ? PlayerState.reborn : PlayerState.live);
+        p.playerstate =
+            mode(c, 1024) ? PlayerState.dead : (mode(c, 2048) ? PlayerState.reborn : PlayerState.live);
         p.cheats = (mode(c, 256) ? int32(4) : int32(0)) | (mode(c, 512) ? int32(1) : int32(0));
         p.cmd = Ticcmd(
             int8(int32(a[4]) / 2048), int8(int32(a[5]) / 2048), int16(int32(a[6])), 42, 65, uint8(a[12])
@@ -267,9 +266,8 @@ abstract contract LifecycleOracle {
     }
 
     function invoke(GameContext memory c, uint32 op, uint32[14] calldata a) private view returns (int32) {
-        MapThing memory thing = MapThing(
-            -64, 16, int16(int32(a[13])), int16(int32(a[11])), int16(int32(a[12]))
-        );
+        MapThing memory thing =
+            MapThing(-64, 16, int16(int32(a[13])), int16(int32(a[11])), int16(int32(a[12])));
         if (op == 0) {
             U.P_Thrust(c, 0, a[13], c.state.mobjs[0].momx);
             return 0;

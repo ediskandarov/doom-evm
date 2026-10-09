@@ -194,13 +194,17 @@ library P_Heap {
         if (index == blocks.length) {
             uint256 capacity = blocks.length == 0 ? 8 : blocks.length * 2;
             uint32[] memory grown = new uint32[](capacity);
-            for (uint256 i; i < index; ++i) grown[i] = blocks[i];
+            for (uint256 i; i < index; ++i) {
+                grown[i] = blocks[i];
+            }
             s.nativePayloadBlocks[slot] = grown;
             blocks = grown;
         }
         if (index >= blocks.length || blocks[index] != 0) revert PoolExhausted();
         blocks[index] = Z_Zone.Z_Malloc(
-            s.nativeZone, size, kind == ThinkerKind.mobj ? ZoneConst.PU_LEVEL : ZoneConst.PU_LEVSPEC,
+            s.nativeZone,
+            size,
+            kind == ThinkerKind.mobj ? ZoneConst.PU_LEVEL : ZoneConst.PU_LEVSPEC,
             ZoneConst.NULL
         );
     }

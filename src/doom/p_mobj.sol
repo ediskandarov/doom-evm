@@ -247,7 +247,9 @@ library P_Mobj {
                 if ((mo.flags & GameConst.MF_COUNTKILL) == 0 || !c.state.respawnmonsters) return;
                 ++mo.movecount;
                 if (mo.movecount < 12 * 35 || (c.state.leveltime & 31) != 0 || M_Random.P_Random(c.state) > 4)
-                return;
+                {
+                    return;
+                }
                 P_NightmareRespawn(c, id);
             }
         }

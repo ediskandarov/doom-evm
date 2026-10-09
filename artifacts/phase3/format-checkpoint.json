@@ -1,0 +1,71 @@
+{
+  "schemaVersion": 1,
+  "kind": "verified-forge-format-checkpoint",
+  "pass": true,
+  "sourceChanges": [
+    {
+      "path": "src/doom/p_sight.sol",
+      "beforeSha256": "335089a6b126c4be3aff3fbe8081c5968a3062c235fa6f023e6748eb3d9f41fb",
+      "afterSha256": "7ed366237fc3fec069ffb6336e95e038004d1f379622cf67f55fb8c6b1a6488c",
+      "allNonBraceTokensIdentical": true
+    },
+    {
+      "path": "src/doom/p_heap.sol",
+      "beforeSha256": "5aee980933971a0eba6e221191e736619f4cb73148c9973c3f578408163c7b4a",
+      "afterSha256": "3cc2e0a8c3239523db66c07fea33720f931754baedd312b5ca7cc2ebe763d2e0",
+      "allNonBraceTokensIdentical": true
+    },
+    {
+      "path": "src/doom/p_mobj.sol",
+      "beforeSha256": "966cc7bf88a17adc30222f9ac7d735415afcb783dcb9367f5df9cced1df73ff8",
+      "afterSha256": "78e9c05b327100bd34cafe086454e3a5499beb92af878ad4756baeca18445ffa",
+      "allNonBraceTokensIdentical": true
+    },
+    {
+      "path": "src/doom/p_maputl.sol",
+      "beforeSha256": "93f5c0e37761e15675a2640e2be950d8056dcea335db36243f7df9e216069e93",
+      "afterSha256": "ac5ac60e7e058a5fc537e7042c7254bc0f51c77165149a22e141437b4e0ad0b6",
+      "allNonBraceTokensIdentical": true
+    },
+    {
+      "path": "test/unit/p_mobj.t.sol",
+      "beforeSha256": "920d869c2d3cc5266e4c748b2bc37179db069c2c893f80c0478004d5ed6b819c",
+      "afterSha256": "c2fb849aa00c70613843032e5cadec2cc8d8b34025a5f146b2ddf4540b86ee4b",
+      "allNonBraceTokensIdentical": true
+    }
+  ],
+  "commands": [
+    {
+      "command": ".toolchain/bin/forge fmt --check",
+      "exitCode": 0
+    },
+    {
+      "command": ".toolchain/bin/forge build",
+      "exitCode": 0,
+      "compilerSeconds": 497.56,
+      "filesCompiled": 70,
+      "logSha256": "949ae412edc5d77afa495761247c98d4694fc80c0c7d15874cabdbbefde0a2c8"
+    },
+    {
+      "command": ".toolchain/bin/forge test --fuzz-seed 0x44 -vv",
+      "exitCode": 0,
+      "suites": 40,
+      "pass": 403,
+      "fail": 0,
+      "skip": 0,
+      "logSha256": "3087c07f04720a1863d0bab921e159fdf5fe2994732599e70e109bdc98863a5d"
+    }
+  ],
+  "compilerUnchanged": "solc0.8.37 viaIR optimizer200 Cancun",
+  "runtimeReverification": "Executable bytecode differs after formatting despite identical settings. No instruction-equivalence claim; fresh kernel/production/browser/memory measurements required for final acceptance. Historical evidence retained.",
+  "artifacts": {
+    "out/Doom.sol/Doom.json": {
+      "beforeSha256": "b4adcf52457d164e53d34c7a82753454e5d725909439b9bb26352ac49c4ec9ef",
+      "afterSha256": "b2fc1ccb0f68ff0b56a83117dba9a813874dd7b47936a443339eeec32e7b302c"
+    },
+    "out/GameplayProbe.sol/GameplayProbe.json": {
+      "beforeSha256": "3389fd2ee35d0f0ac3693c16c48fe863dabd8b5ca959a762235af1517dcdd657",
+      "afterSha256": "f7cdd42c654107497acd7d930778b3f08f06bb860f693ba0eecc90d1200e3427"
+    }
+  }
+}

@@ -374,7 +374,9 @@ library P_MapUtl {
                     return false;
                 }
                 if (flags & 2 != 0 && !P_BlockThingsIterator(c, work.mapx, work.mapy, PIT_AddThingIntercepts))
-                return false;
+                {
+                    return false;
+                }
                 if (work.mapx == work.xt2 && work.mapy == work.yt2) break;
                 if (work.yintercept >> 16 == work.mapy) {
                     work.yintercept += work.ystep;

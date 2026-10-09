@@ -57,10 +57,11 @@ library P_Sight {
                 if (line.flags & 4 == 0) return false;
                 Sector memory front = c.map.sectors[seg.frontsector];
                 Sector memory back = c.map.sectors[seg.backsector];
-                if (front.floorheight == back.floorheight && front.ceilingheight == back.ceilingheight) continue;
-                int32 top = front.ceilingheight < back.ceilingheight
-                    ? front.ceilingheight
-                    : back.ceilingheight;
+                if (front.floorheight == back.floorheight && front.ceilingheight == back.ceilingheight) {
+                    continue;
+                }
+                int32 top =
+                    front.ceilingheight < back.ceilingheight ? front.ceilingheight : back.ceilingheight;
                 int32 bottom = front.floorheight > back.floorheight ? front.floorheight : back.floorheight;
                 if (bottom >= top) return false;
                 int32 frac = P_InterceptVector2(c.move.strace, divl);
@@ -83,10 +84,12 @@ library P_Sight {
     }
 
     function cross(GameContext memory c, int32 bspnum, uint32 depth) private pure returns (bool) {
-        if (bspnum & 0x8000 != 0) return P_CrossSubsector(
-            c, bspnum == -1 ? uint32(0) : uint32(bspnum) & 0xffff7fff
-        );
-        if (bspnum < 0 || uint32(bspnum) >= c.map.nodes.length || depth > c.map.nodes.length) revert InvalidSightBSP();
+        if (bspnum & 0x8000 != 0) {
+            return P_CrossSubsector(c, bspnum == -1 ? uint32(0) : uint32(bspnum) & 0xffff7fff);
+        }
+        if (bspnum < 0 || uint32(bspnum) >= c.map.nodes.length || depth > c.map.nodes.length) {
+            revert InvalidSightBSP();
+        }
         Node memory bsp = c.map.nodes[uint32(bspnum)];
         DivLine memory dl = DivLine(bsp.x, bsp.y, bsp.dx, bsp.dy);
         int32 side = P_DivlineSide(c.move.strace.x, c.move.strace.y, dl);
