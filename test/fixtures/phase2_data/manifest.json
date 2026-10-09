@@ -1,0 +1,181 @@
+{
+  "upstreamCommit": "a77dfb96cb91780ca334d0d4cfd86957558007e0",
+  "wadSha256": "7323bcc168c5a45ff10749b339960e98314740a734c30d4b9f3337001f9e703d",
+  "compiler": "Apple clang version 17.0.0 (clang-1700.0.13.5)",
+  "target": "arm64-apple-darwin24.6.0",
+  "flags": [
+    "-std=c99",
+    "-O2",
+    "-fwrapv",
+    "-fno-strict-aliasing",
+    "-ffp-contract=off",
+    "-fno-fast-math"
+  ],
+  "extractions": [
+    {
+      "file": "w_wad.c",
+      "function": "W_CheckNumForName",
+      "startLine": 351,
+      "endLine": 390,
+      "sha256": "10c5f34f7928eb60b67509372cfb9ac4337380d1638b272f2a0b5c4c0019bcc0"
+    },
+    {
+      "file": "w_wad.c",
+      "function": "W_GetNumForName",
+      "startLine": 399,
+      "endLine": 409,
+      "sha256": "6da257255b4eeab16fcb06b5c2dd1f9a6a8b9b22ec720a551135fc23af1fc363"
+    },
+    {
+      "file": "r_data.c",
+      "function": "R_DrawColumnInCache",
+      "startLine": 184,
+      "endLine": 218,
+      "sha256": "241db59557b398f0acfec381e1676e5407a5b5ec8df311fff9fb6453f6eb7220"
+    },
+    {
+      "file": "r_data.c",
+      "function": "R_GenerateComposite",
+      "startLine": 228,
+      "endLine": 289,
+      "sha256": "1d48b121215893710562d4335f7dc63ae214d73c68927d52fc888beb7f21798a"
+    },
+    {
+      "file": "r_data.c",
+      "function": "R_GenerateLookup",
+      "startLine": 296,
+      "endLine": 374,
+      "sha256": "cf3ca6ee276b8e781eb7e0d843b356df54c91a0ad20077c0d0fe8a5c4ba9ab68"
+    },
+    {
+      "file": "r_data.c",
+      "function": "R_GetColumn",
+      "startLine": 382,
+      "endLine": 401,
+      "sha256": "04821850cb1d72b62b51adff8258e00caee43158dbd20e9ef5c825abe66e9c86"
+    },
+    {
+      "file": "r_data.c",
+      "function": "R_InitFlats",
+      "startLine": 581,
+      "endLine": 594,
+      "sha256": "e9c1e0c09970872072e963789dd28ac25f361ef0ec5638b76d0430d7d8dc3e60"
+    },
+    {
+      "file": "r_data.c",
+      "function": "R_InitSpriteLumps",
+      "startLine": 603,
+      "endLine": 626,
+      "sha256": "2da6d50507189decc3609d3148a3a1889262cbdfce316588c3c5df4d42a5a754"
+    },
+    {
+      "file": "r_data.c",
+      "function": "R_FlatNumForName",
+      "startLine": 672,
+      "endLine": 686,
+      "sha256": "4f17803437167e7ee4bcf1f900451377ca1f8cd01cb4057fd0c10c6b4a8cdcbe"
+    },
+    {
+      "file": "r_data.c",
+      "function": "R_CheckTextureNumForName",
+      "startLine": 696,
+      "endLine": 709,
+      "sha256": "ab84f308e244a3d6e6977a27bae289c6d68ae5f8d14404d844108a737876f9d9"
+    },
+    {
+      "file": "r_data.c",
+      "function": "R_TextureNumForName",
+      "startLine": 718,
+      "endLine": 730,
+      "sha256": "eac4ffafd4d021bf4ce3337a4496947f636179af79d4dc7d381829c110d6de5c"
+    },
+    {
+      "file": "m_fixed.c",
+      "function": "FixedDiv",
+      "startLine": 57,
+      "endLine": 65,
+      "sha256": "97f73f12dd005f2b2d84f31baf9153f076f3aba300a48bdb0fe7d4b78cf933f4"
+    },
+    {
+      "file": "m_fixed.c",
+      "function": "FixedDiv2",
+      "startLine": 69,
+      "endLine": 87,
+      "sha256": "30c5f8fd2dd75b476d09aec6faca76b383464f1489b53de6b00bc8b214e746ff"
+    },
+    {
+      "file": "p_setup.c",
+      "function": "P_LoadVertexes",
+      "startLine": 122,
+      "endLine": 152,
+      "sha256": "29256886dacf075fbbd69f11214336d81e96908d5328cae969f30cd104d22587"
+    },
+    {
+      "file": "p_setup.c",
+      "function": "P_LoadSectors",
+      "startLine": 231,
+      "endLine": 258,
+      "sha256": "43c2c088784783f31ab12bfe0b93698b1c618e82f6ae2f259094e8d917634e2a"
+    },
+    {
+      "file": "p_setup.c",
+      "function": "P_LoadSideDefs",
+      "startLine": 438,
+      "endLine": 463,
+      "sha256": "37b853507a9786030006dba6564eda4b29ec4cb08b737e8f0b3f0db6654872b8"
+    },
+    {
+      "file": "p_setup.c",
+      "function": "P_LoadLineDefs",
+      "startLine": 357,
+      "endLine": 432,
+      "sha256": "6439cb31f24e90d53582c460d98cba203b4be6c86c41da580bf35be279fc0822"
+    },
+    {
+      "file": "p_setup.c",
+      "function": "P_LoadSegs",
+      "startLine": 159,
+      "endLine": 196,
+      "sha256": "7f570bd776da2ab01067d69676b666d702458ad54b9646ffeeb1cb25ecca3c49"
+    },
+    {
+      "file": "p_setup.c",
+      "function": "P_LoadSubsectors",
+      "startLine": 202,
+      "endLine": 224,
+      "sha256": "dcafcd6e9e4ce76a0f6e33a0fc5c2eddb8f3385943e34a8bc9338dfc9d21ad48"
+    },
+    {
+      "file": "p_setup.c",
+      "function": "P_LoadNodes",
+      "startLine": 264,
+      "endLine": 295,
+      "sha256": "55d0b96e048cd954270e6c924dc54eeeaed5f86efdee0427d6469186f3b388b0"
+    }
+  ],
+  "sources": {
+    "w_wad.c": "a193860a2a1f671a680999aaa93ca294f90c9b1d6b5ba33152c0aa92000074a9",
+    "r_data.c": "0d0e83faec506d6bbf8d0a7aa5256b8e660f6deebc48c87d2c77bdb6ace4bf8d",
+    "m_fixed.c": "a4472841bc8890c5d5a41b325ecf56d10d7026a7489967aa29100b5dee759fea",
+    "p_setup.c": "cc56c3ef5eb73aaec4db8be855fd3c192af19bf8f775478d002e9b2e9225872d"
+  },
+  "shimSha256": {
+    "compat.h": "d2a05f3811836e2aa4699c21d90a943b94df6d5178cc3b6bf41b7d158bfd5368",
+    "driver.c": "fd84a662cbd13345853bd0d479d5badcb634077d3032efbae9563c86d3a7548a",
+    "reference.py": "c198c60f2e86da8ff12553c723510f2da38c484a1e622a8bf2940bdda7d9e97d"
+  },
+  "generatedSourceSha256": "6ec19d7155261316c78a6eb1fcdcbbe62181613babf30a958fef57ef05dad7cb",
+  "files": {
+    "resources.bin": "e04d5e79980752550f726ac5d093911c60c58a6bcb94c3ba0bbb3c6f06949ad0",
+    "map.bin": "aba7dd72c1ea0a61bd207f719cb99a3b3221fa23fcb2b3afc609406124769117",
+    "clip.bin": "f9ab5e1e2c13b20b62b2e1e96384e5db25a38d4d0f05b15c3b326d5873932d0f",
+    "getcolumns.bin": "1a88d4c01cc9ef8ee5b40559dd5e6861e16f725983d6c5e83ce8a6cd98616bd0",
+    "directory.bin": "4acf70e1a550810a0682365afb4a717b8258082e18962f898554eac4dbd1d012"
+  },
+  "audit": {
+    "p_setupSignedShift": "Negative signed left shifts are original C UB. Pinned O0/O2 results retained as documented extensions; sanitizer shift checks disabled only for this mixed map/sprite run. Composite-only clip bytes also match a separate full UBSan run without -fwrapv or suppressed shift checks.",
+    "uninitializedComposite": "Two native runs initialize fresh zone allocation with 0xa5 and 0x5a. Equal bytes are written/defined; unequal bytes explicitly marked unwritten. Solidity rejects requested textures containing any unwritten composite byte.",
+    "hostABI": "64-bit host runtime pointers; original disk structures packed 16/32-bit. R_InitTextures disk/allocator adapter is not presented as an extracted oracle. Lookup, composite, GetColumn, flat/sprite init, name and P_Load* bodies are verbatim.",
+    "memory": "Z_Free no-op for shared immutable input bytes; Z_Malloc otherwise ordinary allocation with explicit fill; no original pointer arithmetic changed."
+  }
+}

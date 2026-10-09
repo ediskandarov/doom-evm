@@ -1,0 +1,126 @@
+{
+  "description": "Foundry actual EVM gasleft deltas; free-memory pointer is allocator high-water bound, not opcode MSIZE. Test fixture uses vm.etch for full WAD chunks; a separate test uses ordinary CREATE across a 16KiB boundary. Full ordinary-deployment Anvil/render costs belong to integration gate. Uncached means first lump allocation in this frame; code accounts may already be warm from init.",
+  "command": [
+    ".toolchain/bin/forge",
+    "test",
+    "--match-contract",
+    "RDataTest",
+    "--match-test",
+    "testLazyCacheReuseAndFlatAccessCosts|testNativeAllE1M1MapFields|testNativeRepresentativeCompositesAndDirectColumns|testNativeAllLookupAndSpriteMetadata",
+    "-vvvv"
+  ],
+  "sources": {
+    "src/doom/r_data.sol": "273b02ed9a93ddc1b5d111e7a1bee85fcccd474bb0e9c638f456e9ddfe8c10e3",
+    "src/doom/r_data_types.sol": "689bb3229f3aee9d104b754a06d88c4201d8a60ed08d4af4c9f1a2d90f0a58ca",
+    "src/evm/ResourceStore.sol": "5ab3acc5d09f155a4cf25973c847f23e47f386a364704b76996c86be5862e3a8",
+    "test/unit/r_data.t.sol": "7962c30e2f9cc2c873fa45bf4ec6dcbdfc103a09bbb49278c3902352fe7b665f",
+    "foundry.toml": "084d5192108931325837611f9d1339796a6ffd64ed570e31907afe718f191226"
+  },
+  "measurements": [
+    {
+      "function": "R_InitDataLazy",
+      "gas": 52633579,
+      "allocatorEnd": 2698112
+    },
+    {
+      "function": "direct column uncached",
+      "gas": 521425,
+      "allocatorEnd": 2724960
+    },
+    {
+      "function": "direct column cached",
+      "gas": 1604,
+      "allocatorEnd": 2724960
+    },
+    {
+      "function": "flat uncached",
+      "gas": 47101,
+      "allocatorEnd": 2724960
+    },
+    {
+      "function": "flat cached",
+      "gas": 405,
+      "allocatorEnd": 2724960
+    },
+    {
+      "function": "R_InitDataLazy",
+      "gas": 52633579,
+      "allocatorEnd": 2698112
+    },
+    {
+      "function": "R_LoadMap",
+      "gas": 131474363,
+      "allocatorEnd": 6529088
+    },
+    {
+      "function": "R_InitData",
+      "gas": 539971446,
+      "allocatorEnd": 10678208
+    },
+    {
+      "function": "R_InitDataLazy",
+      "gas": 52633579,
+      "allocatorEnd": 2698112
+    },
+    {
+      "function": "R_GenerateComposite",
+      "gas": 145307,
+      "allocatorEnd": 2887360
+    },
+    {
+      "function": "R_GenerateComposite",
+      "gas": 1863013,
+      "allocatorEnd": 2944768
+    },
+    {
+      "function": "R_GenerateComposite",
+      "gas": 791479,
+      "allocatorEnd": 2976704
+    },
+    {
+      "function": "R_GenerateComposite",
+      "gas": 1865947,
+      "allocatorEnd": 3059104
+    },
+    {
+      "function": "R_GenerateComposite",
+      "gas": 5785113,
+      "allocatorEnd": 3183200
+    },
+    {
+      "function": "R_GenerateComposite",
+      "gas": 275189,
+      "allocatorEnd": 3187680
+    },
+    {
+      "function": "R_GenerateComposite",
+      "gas": 3729975,
+      "allocatorEnd": 3319456
+    },
+    {
+      "function": "R_GenerateComposite",
+      "gas": 3537734,
+      "allocatorEnd": 3460064
+    },
+    {
+      "function": "R_GenerateComposite",
+      "gas": 6168472,
+      "allocatorEnd": 3620032
+    },
+    {
+      "function": "R_GenerateComposite",
+      "gas": 5834586,
+      "allocatorEnd": 3740192
+    },
+    {
+      "function": "R_GenerateComposite",
+      "gas": 574754,
+      "allocatorEnd": 3779008
+    },
+    {
+      "function": "R_GenerateComposite",
+      "gas": 360578,
+      "allocatorEnd": 3843584
+    }
+  ]
+}
