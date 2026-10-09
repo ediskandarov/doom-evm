@@ -19,7 +19,9 @@ Fresh production 84848 passes all 129 tics, six native Frames and thirteen
 whole-storage rollback guards. Checkpoint `f0bce73` [fresh production evidence](../tools/reference/gameplay/production-final-evidence.json)
 records current init 1,621,885,757 gas and runtime 503,731 bytes; old receipts
 remain historical. [Native reconciliation](../tools/reference/gameplay/production-native-reconciliation.json)
-proves every original data file/Frame unchanged. Full kernel 60930 remains running; Chrome/repeat/
+proves every original data file/Frame unchanged. Full kernel 60930 is terminal PASS: nine scenarios / 2,355 tics / 31 exact
+frames / nine exact final stored snapshots, all 1,755 runtimes verified.
+Checkpoint `3242865` [fresh kernel evidence](../tools/reference/gameplay/final-kernel-evidence.json); Chrome/repeat/
 clone memory and final inherited gates remain. Current replay checkpoint
 `0015986` verifies two complete independent ordinary deployments: all 130 × 14
 rows, seven Frames, commands/cadence/sequences, startup/constructor/receipt gas
