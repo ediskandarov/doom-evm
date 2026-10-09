@@ -186,6 +186,11 @@ Legacy JS checkpoint `f2402cd` converts eight benchmark/browser consumers;
 syntax/configuration checks pass and deliberate low-gas rejections remain.
 [Wiring evidence](../artifacts/phase3/execution-js-checkpoint.json). Their complete
 inherited runtime gates are pending.
+Python/Anvil checkpoint `82fea9d` converts all five launch/probe/Phase 0–2 runners.
+Fresh current-helper launcher and limit probes pass at 10B, including budget+1
+cases; child environments and source inventories bind both helpers/config.
+[Evidence](../artifacts/phase3/execution-python-checkpoint.json). Original gate
+counts, deliberate smaller gas probes and historical reports remain intact.
 
 Production and probe initialization drafts now call `DoomGame.initializeNative`
 for original R_Init/R_InitSprites then G_InitNew/P_Setup in **one transaction**.
