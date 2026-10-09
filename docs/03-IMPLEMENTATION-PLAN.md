@@ -309,7 +309,7 @@ A faster renderer that changes pixels without documented justification **is not 
 - [x] `F0-05` Compile a stack-heavy, renderer-shaped spike.
 - [x] `F0-06` Publish `PORTING.md` progress matrix and fixture metadata format.
 
-**Phase 0 verified 2026-10-09:** see [acceptance report](PHASE0-REPORT.md). Phase 1 subsequently verified: see [Phase 1 report](PHASE1-REPORT.md). Phase 2 remains unstarted.
+**Phase 0 verified 2026-10-09:** see [acceptance report](PHASE0-REPORT.md). Phase 1 subsequently verified: see [Phase 1 report](PHASE1-REPORT.md). Phase 2's complete static pixel pipeline now matches original C; final ordinary event/browser and regression gates remain in progress in the [acceptance ledger](PHASE2-REPORT.md).
 
 ### Foundation / Sprint F1 (parallel agents)
 
@@ -321,18 +321,18 @@ A faster renderer that changes pixels without documented justification **is not 
 
 ### Renderer / Sprint R1
 
-- [ ] `R1-A` Geometry subset of `r_main.sol`.
-- [ ] `R1-B` `r_data.sol` and resource access inside the EVM.
-- [ ] `R1-C` `r_draw.sol` framebuffer primitives.
-- [ ] `R1-D` `r_bsp.sol` traversal/clipping, C trace comparison.
-- [ ] `R1-E` `r_segs.sol` walls and texture coordinates.
+- [x] `R1-A` Geometry subset of `r_main.sol`.
+- [x] `R1-B` `r_data.sol` and resource access inside the EVM.
+- [x] `R1-C` `r_draw.sol` framebuffer primitives.
+- [x] `R1-D` `r_bsp.sol` traversal/clipping, C trace comparison.
+- [x] `R1-E` `r_segs.sol` walls and texture coordinates.
 - [ ] `R1-F` Integrate BSP→segs→draw→event; reproduce a wall-only frame.
 
 ### Renderer / Sprint R2
 
-- [ ] `R2-A` `r_plane.sol` visplanes, floors, and ceilings.
-- [ ] `R2-B` `r_things.sol` sprites and masked columns.
-- [ ] `R2-C` `r_main.sol` player-view integration; `r_sky` as required.
+- [x] `R2-A` `r_plane.sol` visplanes, floors, and ceilings.
+- [x] `R2-B` `r_things.sol` sprites and masked columns.
+- [x] `R2-C` `r_main.sol` player-view integration; `r_sky` as required.
 - [ ] `R2-D` Pixel-golden comparisons and deviation audit.
 - [ ] `R2-E` Full static Doom frame end-to-end; M1 report.
 
@@ -355,8 +355,8 @@ After every integration gate, update this table:
 | Event smoke | passed | [Phase 0 report](PHASE0-REPORT.md), real receipt/WS/Canvas verification | Synthetic fixture only; no DOOM renderer | None |
 | C fixed math | passed | [Phase 1 report](PHASE1-REPORT.md), original C vectors and full table comparisons | Explicit undefined-C extensions | None |
 | WAD data in EVM (foundation samples) | passed | [Phase 1 report](PHASE1-REPORT.md), actual WAD upload/read hashes | Samples only; runtime renderer adapter remains Phase 2 | None for Phase 1 |
-| BSP walls render | in progress | [Phase 2 ledger](PHASE2-REPORT.md), integrated geometry/resources/drawing and native renderer goldens | No real EVM wall frame yet | BSP/segs integration pending |
-| M1 full static frame | not started | — | — | — |
+| BSP walls render | passed | [Wall report](PHASE2-SEGS.md), eight native-matching ordinary EVM wall calls | Wall-only output is an intermediate scope | Final event-path proof pending |
+| M1 full static frame | in progress | [Phase 2 ledger](PHASE2-REPORT.md), eight bytewise full-frame comparisons | Static world view, no gameplay/HUD | Ordinary Frame/browser and final regression gates |
 | M2 movement | not started | — | — | — |
 | M3 basic gameplay | not started | — | — | — |
 

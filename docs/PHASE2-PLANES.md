@@ -67,7 +67,7 @@ are allocator positions, not EVM MSIZE. Unit resource chunk placement uses `etch
 in setup; the real renderer reads normal immutable code bytes. Full native scene
 orchestration and deployed-resource/Anvil measurements remain integrator-owned.
 
-With the current allocation-based table API, plane-only regions cost 18.37M–136.40M
+In the isolated pre-optimization snapshot using allocation-based table access, plane-only regions cost 18.37M–136.40M
 gas; initialization 543.78M–543.92M, BSP/walls 75.48M–275.99M. The allocator advances
 from 12.75–16.09MB before planes to 12.92–17.69MB afterward. These figures include
 actual memory expansion in the measured call and are not estimates or whole-frame
