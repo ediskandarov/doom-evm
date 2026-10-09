@@ -1,0 +1,26 @@
+{
+  "upstreamCommit": "a77dfb96cb91780ca334d0d4cfd86957558007e0",
+  "compiler": "Apple clang version 17.0.0 (clang-1700.0.13.5)",
+  "target": "arm64-apple-darwin24.6.0",
+  "counts": {
+    "sprites": 138,
+    "states": 967,
+    "mobjTypes": 137
+  },
+  "encoding": "big-endian u32 counts; sprite names4 bytes; state(sprite,frame)2*u32; mobj(doomednum,spawnstate,flags,radius,height)5*u32, signed values retain two-complement bits",
+  "scope": "All original static table rendering fields. No WAD, spawn selection, sector assignment, visibility or per-view computation.",
+  "sha256": "8b6c29902bfc700980c25ab8a4e767a6f1f775d91c105c2bbe70ff782e110178",
+  "sources": {
+    "info.c": "e09631527669ee528bdae20a47be79e1cb33972b39964c33ac4814e1701a0949",
+    "info.h": "3e68ee6cc13323e69cbcf208e9a0af7b13867bead49e66d765abefa5d914b0dd",
+    "doomdef.h": "643daca966fb762fa86f39ce9a1779355117578527bf2e295163647f9ad0d74e",
+    "doomtype.h": "e2b8da9ed44c6686a282af8e14a53b605ecc781d05ccd78579fcf57c720297e6",
+    "p_mobj.h": "85be6ea83fc4b5f95df666c68c8999f7fe5745a5f503d3a441afd66b5f7e5db0",
+    "p_pspr.h": "21b95a0eb8b901287be5077b780b809e5e4e296393cb63c8e02970646a8f8e67",
+    "d_think.h": "a8d3d4943495c729cd33b67eff1b56d801f1cf8cd0db74fb5d63b613c4eabddc",
+    "sounds.h": "fa5a6c19c689eeb6e4a2df08b1d4efe5c445b3d0cb4081dc3a7d28fdadfd39f8"
+  },
+  "exporterSha256": "b2a440284afb2044317572e583dd73d04cb25d4b0e88f28f32a4aad1c7ae1276",
+  "generatorSha256": "9baf42cb8ade7944928801ffdf70cf86333809b22798821b6311b146be8281e2",
+  "soliditySha256": "4611205149173e42d3b0f1d91820c8042f6bc5fc48fb53aec84ad4bc501dca8e"
+}
