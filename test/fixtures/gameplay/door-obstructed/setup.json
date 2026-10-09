@@ -1,0 +1,4 @@
+{
+  "kind": "door-obstructed",
+  "notes": "Door-use sets original nomonsters before setup for a full unobstructed cycle; door-obstructed retains monsters and proves reversal. Both use original P_TeleportMove to (832,576), facing south at real E1M1 door line55. Arena scenarios spawn one possessed enemy64 units east of actual E1M1 start, original P_CheckPosition validates and P_SetMobjState(seestate) starts AI. Damage gives green armor100; death starts both player health fields at3."
+}

@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "status": "verified-native-reference",
+  "command": "python3 tools/reference/gameplay/verify.py --check",
+  "scenarios": 8,
+  "tics": 2205,
+  "live_frames": 24,
+  "manifested_files": 90,
+  "profiles": [
+    "O0",
+    "O2",
+    "O2 ASan/UBSan",
+    "O2 ASan/UBSan allocation 0xa5"
+  ],
+  "sourceSha256": {
+    "tools/reference/gameplay/build.py": "234b79169ec39f1faf3858a564e8ad25f680cd7e84a110c3d3c32f37eec4387d",
+    "tools/reference/gameplay/host.c": "8eb17208506ae56f18cad6bd4f6a10a8bfdd4070391e8e3a19685958c5625ec3",
+    "tools/reference/gameplay/observe.h": "7ae14775b4ebc05bb8da32cff6d1a23be66937640509fd515d35b49c60ee0abe",
+    "tools/reference/gameplay/diagnostics.h": "0232b585727cf3a659815aeb647bd2a2a07518224f4cd58f4d9261586e484505",
+    "tools/reference/gameplay/verify.py": "55efdd83082246343e6b649602af0d94e41c04a835495a0f77038f681d7ad76b",
+    "tools/reference/gameplay/README.md": "2acb9c55004b6e13411f980387e52744d010ffea421f1a707550367cf5d81e36",
+    "test/fixtures/gameplay/manifest.json": "43297a125c59e98539ca159020c19fa0465233a927e2d8e0eb62159219f9c973"
+  },
+  "limitations": "Native comparison oracle only; integrated Solidity M2/M3 remains unverified. Scenario initialization and host adaptations are explicit in README and fixture metadata.",
+  "fixturePolicy": "Only canonical binary traces, compressed exact world states, selected frames, commands, provenance, state hashes and summaries; expanded player JSON omitted as reversible duplication."
+}

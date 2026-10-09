@@ -1,0 +1,1 @@
+{"P_SpawnMobj":225,"A_Raise":16,"P_SetMobjState":3648,"A_Look":669,"P_CheckSight":1360,"P_TryMove":182,"P_CheckPosition":270,"A_WeaponReady":7,"P_NoiseAlert":15,"A_FirePistol":15,"A_Light1":15,"A_Light0":15,"A_ReFire":15,"P_RemoveMobj":15,"A_Chase":35,"A_FaceTarget":1}

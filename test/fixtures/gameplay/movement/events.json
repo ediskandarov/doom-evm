@@ -1,0 +1,1 @@
+{"P_SpawnMobj":212,"A_Raise":16,"P_SetMobjState":4180,"A_Look":777,"P_CheckSight":1547,"P_TryMove":389,"P_CheckPosition":474,"A_WeaponReady":261,"A_Chase":45,"P_TouchSpecialThing":1,"P_RemoveMobj":3,"P_SlideMove":72,"A_FaceTarget":4,"A_PosAttack":2,"P_UseLines":1}
