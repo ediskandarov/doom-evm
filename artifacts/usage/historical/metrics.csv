@@ -1,0 +1,13 @@
+session_id,thread_id,agent,phase,model,method,records,input_tokens,input_tokens_missing_records,cached_input_tokens,cached_input_tokens_missing_records,cache_write_input_tokens,cache_write_input_tokens_missing_records,output_tokens,output_tokens_missing_records,reasoning_tokens,reasoning_tokens_missing_records,total_tokens,total_tokens_missing_records
+01a11fdf-1d25-7201-abb8-1afdaaab6b9c,01a11fdf-1d25-7201-abb8-1afdaaab6b9c,/root,phase0,gpt-6-astra,response_record,66,7161151,0,7046656,0,0,0,25915,0,3362,0,7187066,0
+01a11fdf-1d25-7201-abb8-1afdaaab6b9c,01a11fdf-1d25-7201-abb8-1afdaaab6b9c,/root,phase1,gpt-6-astra,response_record,68,6860563,0,6721024,0,0,0,30688,0,5506,0,6891251,0
+01a11fdf-1d25-7201-abb8-1afdaaab6b9c,01a11fdf-1d25-7201-abb8-1afdaaab6b9c,/root,phase2,gpt-6-astra,response_record,330,38867877,0,38384640,0,0,0,145489,0,39555,0,39013366,0
+01a11fdf-1d25-7201-abb8-1afdaaab6b9c,01a11ff3-0ce5-7802-a5b5-a9243cca6778,/root/stack,phase0,gpt-6-astra,response_record,24,1317527,0,1258368,0,0,0,10565,0,971,0,1328092,0
+01a11fdf-1d25-7201-abb8-1afdaaab6b9c,01a11ff3-4412-7eb0-87e9-7487533aa875,/root/transport,phase0,gpt-6-astra,response_record,33,1836891,0,1779712,0,0,0,19403,0,2587,0,1856294,0
+01a11fdf-1d25-7201-abb8-1afdaaab6b9c,01a11ff3-7ca3-7df1-a272-958d18ac6e2d,/root/schemas,phase0,gpt-6-astra,response_record,31,1593608,0,1535872,0,0,0,13409,0,1975,0,1607017,0
+01a11fdf-1d25-7201-abb8-1afdaaab6b9c,01a12040-c93c-7f01-ad15-92712cdafa23,/root/phase1_reference,phase1,gpt-6-astra,response_record,58,3794863,0,3704576,0,0,0,24128,0,4340,0,3818991,0
+01a11fdf-1d25-7201-abb8-1afdaaab6b9c,01a12040-f004-73d3-9b83-d0bd90cb5219,/root/phase1_numeric,phase1,gpt-6-astra,response_record,29,1281898,0,1246464,0,0,0,12190,0,1668,0,1294088,0
+01a11fdf-1d25-7201-abb8-1afdaaab6b9c,01a12041-1dc0-7720-a32b-2836d969b872,/root/phase1_assets,phase1,gpt-6-astra,response_record,36,2017253,0,1957632,0,0,0,21513,0,3187,0,2038766,0
+01a11fdf-1d25-7201-abb8-1afdaaab6b9c,01a1205f-6624-7051-8c98-9cad0087104d,/root/p2_geometry,phase2,gpt-6-astra,response_record,192,20995132,0,20609152,0,0,0,115128,0,36098,0,21110260,0
+01a11fdf-1d25-7201-abb8-1afdaaab6b9c,01a1205f-8ff5-77f3-82ef-2d5ce22efad0,/root/p2_data,phase2,gpt-6-astra,response_record,211,23908071,0,23397760,0,0,0,134520,0,35644,0,24042591,0
+01a11fdf-1d25-7201-abb8-1afdaaab6b9c,01a1205f-b192-7750-bb4f-3f1aa2c27c66,/root/p2_draw,phase2,gpt-6-astra,response_record,135,15560074,0,15237120,0,0,0,82049,0,24480,0,15642123,0

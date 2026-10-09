@@ -1,0 +1,89 @@
+{
+  "version": 1,
+  "policy": "Half-open windows from recorded goal start/completion events; gaps remain unattributed. Goal counters are retained separately and never summed with response usage.",
+  "windows": [
+    {
+      "phase": "phase0",
+      "session_id": "01a11fdf-1d25-7201-abb8-1afdaaab6b9c",
+      "start": "2026-10-09T09:10:22.952Z",
+      "start_evidence": {
+        "timestamp": "2026-10-09T09:10:22.952Z",
+        "source_id": "aa1624475b953229f152",
+        "line": 93,
+        "event_type": "event_msg",
+        "goal_created_at_unix": 1791537022
+      },
+      "end": "2026-10-09T09:52:14.339Z",
+      "end_evidence": {
+        "timestamp": "2026-10-09T09:52:14.339Z",
+        "source_id": "aa1624475b953229f152",
+        "line": 634,
+        "event_type": "response_item",
+        "goal_created_at_unix": 1791537022
+      },
+      "separate_goal_counter": {
+        "tokensUsed": 357861,
+        "timeUsedSeconds": 2511
+      }
+    },
+    {
+      "phase": "phase1",
+      "session_id": "01a11fdf-1d25-7201-abb8-1afdaaab6b9c",
+      "start": "2026-10-09T10:32:32.851Z",
+      "start_evidence": {
+        "timestamp": "2026-10-09T10:32:32.851Z",
+        "source_id": "aa1624475b953229f152",
+        "line": 710,
+        "event_type": "event_msg",
+        "goal_created_at_unix": 1791541952
+      },
+      "end": "2026-10-09T11:07:21.766Z",
+      "end_evidence": {
+        "timestamp": "2026-10-09T11:07:21.766Z",
+        "source_id": "aa1624475b953229f152",
+        "line": 1244,
+        "event_type": "response_item",
+        "goal_created_at_unix": 1791541952
+      },
+      "separate_goal_counter": {
+        "tokensUsed": 412801,
+        "timeUsedSeconds": 2088
+      }
+    },
+    {
+      "phase": "phase2",
+      "session_id": "01a11fdf-1d25-7201-abb8-1afdaaab6b9c",
+      "start": "2026-10-09T11:11:47.796Z",
+      "start_evidence": {
+        "timestamp": "2026-10-09T11:11:47.796Z",
+        "source_id": "aa1624475b953229f152",
+        "line": 1266,
+        "event_type": "event_msg",
+        "goal_created_at_unix": 1791544307
+      },
+      "end": "2026-10-09T13:15:29.721Z",
+      "end_evidence": {
+        "timestamp": "2026-10-09T13:15:29.721Z",
+        "source_id": "aa1624475b953229f152",
+        "line": 4079,
+        "event_type": "response_item",
+        "goal_created_at_unix": 1791544307
+      },
+      "separate_goal_counter": {
+        "tokensUsed": 2139054,
+        "timeUsedSeconds": 7421
+      }
+    },
+    {
+      "phase": "telemetry",
+      "session_id": "01a11fdf-1d25-7201-abb8-1afdaaab6b9c",
+      "start": "2026-10-09T13:30:39.695Z",
+      "end": null,
+      "start_evidence": {
+        "kind": "explicit_marker",
+        "note": "Timestamp of explicit user telemetry request; recovered programmatically without exporting message text"
+      }
+    }
+  ],
+  "incomplete_goals": []
+}

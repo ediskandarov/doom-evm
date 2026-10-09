@@ -1,0 +1,17 @@
+{
+  "passed": true,
+  "synthetic_tests": 20,
+  "historical_phase_totals_stable_on_recollection": true,
+  "json_csv_totals_agree": true,
+  "no_transcript_fields_in_historical_export": true,
+  "source_sha256": {
+    "artifacts/usage/historical/metrics.csv": "d6071129ab5f1f73654cc17c3e651d9ddf367ab375e981f7d8f3c2a5248d655d",
+    "artifacts/usage/historical/phase-totals.csv": "e5a3a29339c65635be4271aae125e1dfdbdc8208e7c6dd80a309aeef51623cbf",
+    "artifacts/usage/historical/usage.json": "d4904b62b2ba243231841ff01b6f16a04a9974f64b63868c12a31f1800cd95f0",
+    "tools/usage/README.md": "7677de2d2217f0b6adb548790011ee48ec157d451b899180be20a5bbca4fea46",
+    "tools/usage/collect.py": "989e8cc6937ef274180067575a4c33eea51bac00ec37e5ecfa203efe3e0ad3d4",
+    "tools/usage/phases.json": "55f5ccb3e64d0fc8b0885cddcaef911fabcfde0aa4a87ef3ca478c6d0cd16013",
+    "tools/usage/phases.py": "71141760e4c2eadc0f439bdb18570f88a81d9fa2442d36f727d6de7606616c9e",
+    "tools/usage/test_collect.py": "0f4eabfab7a75fa197c205c6a8b65e8f587a2b12b6a492fec468a4b8cf7f9bfc"
+  }
+}

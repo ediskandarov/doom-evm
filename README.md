@@ -58,6 +58,7 @@ Reload the browser. The image is still a transport test, now colored by PLAYPAL.
 
 ## Mission briefing
 
+- [Local Codex usage collector and historical article metrics](docs/CODEX-USAGE.md)
 - [Phase 2 acceptance ledger](docs/PHASE2-REPORT.md) and [frozen renderer interfaces](docs/PHASE2-INTERFACES.md)
 - [Phase 1 report and acceptance evidence](docs/PHASE1-REPORT.md)
 - [Phase 0 report and acceptance evidence](docs/PHASE0-REPORT.md)

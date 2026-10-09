@@ -1,0 +1,102 @@
+# Codex usage telemetry
+
+The local collector is separate from the engine in [`tools/usage`](../tools/usage/README.md).
+It uses Python's standard library, reads existing JSONL logs, and makes no network
+requests. No raw transcript was loaded into model context during recovery; scripts
+emitted only field names, timestamps, IDs, phase labels and numeric accounting.
+
+## Recovered historical usage
+
+These are recorded per-response tokens assigned to explicit goal windows,
+including root and child agents once each. Cached input is part of input;
+reasoning is part of output. Total is input + output.
+
+| Phase | Responses | Input | Cached input | Output | Reasoning | Total |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: |
+| 0 | 154 | 11,909,177 | 11,620,608 | 69,292 | 8,895 | 11,978,469 |
+| 1 | 191 | 13,954,577 | 13,629,696 | 88,519 | 14,701 | 14,043,096 |
+| 2 | 868 | 99,331,154 | 97,628,672 | 477,186 | 135,777 | 99,808,340 |
+
+Input totals include repeatedly processed conversation context, not just unique
+prompt text. All four requested categories were present for every included
+response; cache-write input was explicitly zero. The configured model recorded
+for these windows was `gpt-6-astra`; no configured model switch was observed in
+this project snapshot. The collector preserves switches when present, including
+returning to an earlier model.
+
+Retained exports:
+
+- [Aggregated JSON, segments, model events and source fingerprints](../artifacts/usage/historical/usage.json)
+- [Per-session, agent, phase and model CSV](../artifacts/usage/historical/metrics.csv)
+- [Phase totals CSV](../artifacts/usage/historical/phase-totals.csv)
+- [Reviewed phase boundaries](../tools/usage/phases.json)
+
+The scan found 20 local rollouts and selected the 10 owned by this project or
+its explicit child threads. Unrelated project bodies were excluded. Phase 0
+includes root, stack, transport and schema agents; Phase 1 includes root,
+reference, numeric and asset agents; Phase 2 includes root, geometry, data and
+draw agents. The first metadata record owns an agent log; later inherited root
+metadata does not change that ownership.
+
+## Boundaries and measurement limits
+
+| Phase | Start UTC | End UTC | Evidence |
+| --- | --- | --- | --- |
+| 0 | 2026-10-09 09:10:22.952 | 2026-10-09 09:52:14.339 | Goal-start event and structured completion result |
+| 1 | 2026-10-09 10:32:32.851 | 2026-10-09 11:07:21.766 | Goal-start event and structured completion result |
+| 2 | 2026-10-09 11:11:47.796 | 2026-10-09 13:15:29.721 | Goal-start event and structured completion result |
+
+Windows are half-open. Setup before Phase 0, gaps between goals, and work after
+completion remain separately unattributed; they are not silently charged to the
+nearest phase. Individual response placement uses its event timestamp. The logs
+do not provide enough request-start timing to split an inference across a phase
+boundary exactly. Cumulative-only intervals crossing boundaries remain ambiguous
+instead of being prorated.
+
+The completion records also contain goal `tokensUsed` counters (357,861;
+412,801; 2,139,054). Those differ from total per-response usage. Their semantics
+are not assumed equivalent, and they are never added to the exported totals.
+Likewise, thread/turn cumulative totals and UI `token_count` snapshots are not
+additional model calls. The source snapshot reconciles per-response sums with
+the recorded thread cumulative high-water values without discrepancies.
+
+The local metadata identifies configured models, not unreported backend reroutes.
+Two response records outside the closed phases preceded their matching turn
+contexts; their model was recovered from the unique later context for the same
+turn. No transcript text was needed. A missing or ambiguous model stays unknown.
+
+The collector cannot prove that unavailable/rotated logs never existed. It does
+not estimate missing tokens or prices, and these logs are not a final bill.
+Unflushed usage and the currently running response appear only in a later scan.
+Malformed records, partial tails, missing fields, duplicate/conflicting IDs,
+cumulative resets/corrections and incomplete accounting are explicit diagnostics.
+For a cumulative reset without an unambiguous new accounting identity, later
+counter snapshots are withheld rather than risk counting replayed usage twice.
+Mixed-version threads use response records when present and report cumulative
+mismatches instead of blending potentially overlapping ledgers.
+
+## Repeat locally
+
+```sh
+python3 tools/usage/collect.py --phases tools/usage/phases.json
+python3 tools/usage/collect.py --phases tools/usage/phases.json \
+  --closed-only --aggregate-only --output artifacts/local/codex-usage/historical
+python3 -m unittest discover -s tools/usage -p 'test_*.py' -v
+```
+
+The default detailed snapshot stays in ignored local artifacts. The committed
+historical snapshot contains aggregates and chronology, not transcripts or
+individual response bodies. Optional `--watch 60` refreshes in the foreground;
+there is no installed daemon or telemetry service. Explicit phase markers and
+recovery commands are documented in the [collector README](../tools/usage/README.md).
+
+Twenty synthetic tests cover duplicate/cumulative accounting, inherited agent
+history, model switches and delayed contexts, boundary crossings, resets,
+missing versus zero fields, closed-window selection, partial writes, repeated
+collection, and exclusion of transcript text. Engine contracts are unaffected.
+
+For the public terminology, see the official
+[usage field definitions](https://developers.openai.com/api/docs/guides/agents-api/observability#understand-token-usage)
+and [Codex thread usage notifications](https://learn.chatgpt.com/docs/app-server#turn-events).
+The private local JSONL adapters are based on observed CLI 0.162.0 records; the
+public documentation is not treated as a stable schema guarantee for those logs.
