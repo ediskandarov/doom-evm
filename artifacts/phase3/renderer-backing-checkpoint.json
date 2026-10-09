@@ -1,0 +1,124 @@
+{
+  "schemaVersion": 1,
+  "verifiedAt": "2026-10-09T19:11:59.065886+00:00",
+  "scope": "Verified renderer/cache/backing/line-loader component checkpoint plus final real whole-setup allocation/header proof. Production full-engine/browser pending.",
+  "ownedTestsPassed": 111,
+  "forgeRuns": [
+    {
+      "handle": 6162,
+      "command": ".toolchain/bin/forge test --match-contract 'RDataTest|PZoneSetupTest|ZoneBackingTest|RDrawTest|RThingsTest|RSegsTest|RPlaneTest' -vv",
+      "codegen": "PASS77files",
+      "solcSeconds": 183.82,
+      "overallPassed": 97,
+      "overallFailed": 1,
+      "ownedPassed": 95,
+      "ownedFailed": 0,
+      "ownedSuites": {
+        "RDataTest": 20,
+        "RDrawTest": 11,
+        "RThingsTest": 15,
+        "RSegsTest": 43,
+        "ZoneBackingTest": 6
+      },
+      "separateSetup": {
+        "geometryPassed": 2,
+        "wholeSetup": "MemoryOOG999978936gas before mismatch; duplicate parsing fixture under reference-agent correction"
+      }
+    },
+    {
+      "handle": 47902,
+      "command": ".toolchain/bin/forge test --match-path test/unit/r_plane.t.sol -vv",
+      "exitCode": 0,
+      "solcSeconds": 35.0,
+      "ownedPassed": 16,
+      "ownedFailed": 0,
+      "actualContract": "RPlanesTest",
+      "note": "Initial regex did not match actual plane contract; explicit path retained all16 assertions/tests"
+    },
+    {
+      "handle": 73296,
+      "reportedBy": "reference agent",
+      "command": ".toolchain/bin/forge test --match-contract PZoneSetupTest -vv",
+      "passed": 3,
+      "failed": 0,
+      "skipped": 0,
+      "scope": "Actual source initializer with real gameplay spawn hooks; complete normalized zone headers and owners plus geometry operation/header gates",
+      "wholeSetupGas": 921597231,
+      "geometryGas": [
+        841226923,
+        756455921
+      ],
+      "change": "Duplicate resource-parse fixture scaffolding removed; actual initializer called once; all assertions/caps retained"
+    }
+  ],
+  "nativeProof": {
+    "reference": "test/fixtures/phase3_zone_backing/validation.json",
+    "cases": 80,
+    "maskPositions": 10240,
+    "originalColumnDrawingCases": 18,
+    "profiles": [
+      "O0",
+      "O2",
+      "full ASan/UBSan"
+    ],
+    "result": "PASS independent native checkpoint"
+  },
+  "knownnessPolicy": [
+    "Generated integer size/tag/known-ID bytes and bounded authenticated live cached lump payload only",
+    "Unknown pointer/padding/free/unmodeled body/slack/out-of-zone bytes reject",
+    "Default empty tails keep all16 inherited drawing-negative cases",
+    "Conservative127 ordinary sample window; arbitrary translated/negative absolute source domains not broadened"
+  ],
+  "performance": {
+    "backingFixtureGas": 36289003,
+    "largestOwnedFixtureGas": 884648036,
+    "fastPath": "Measured no free-memory-pointer movement for no-tail source bind",
+    "scope": "Aggregate tests, not production per-frame cost"
+  },
+  "compilerFailures": [
+    {
+      "handles": [
+        80103,
+        80877,
+        31289
+      ],
+      "site": "R_LoadMap line-loader aliases; stopped before assertions"
+    },
+    {
+      "handle": 12089,
+      "site": "New backing-reader inlined locals; stopped before assertions"
+    }
+  ],
+  "sourceHashes": {
+    "src/doom/r_data.sol": "5b404d561f8bce538e8a8221b4f36d62c9b9826fc833307640d96fcbfdca2d0a",
+    "src/doom/r_things.sol": "86705ab6b1f79b7ef07798b881cc547502d9911c97b57dc516a744e17c1977f5",
+    "src/doom/r_segs.sol": "9d4e4dea06739278aab3698fb422818de6dd7726359c8822d60a162e886621cb",
+    "src/doom/r_plane.sol": "c7a5abcbca84dddcd2a3c8bb160a609605c5c1842e73704dff4860df3280e463",
+    "src/doom/r_draw.sol": "afe958ea0c2962b739bff58b98d8bccc25c48d3d0838cacd46142c242b5d6477",
+    "src/doom/w_zone_cache.sol": "03c07404765de9620b3d1ff15727809cdad911c8a78d822019b63500fa5018c2",
+    "src/doom/z_zone_backing.sol": "902ea03bc32af6b7443461ff64d21e780d9a0ef6c6bbe2dd1262216bfc37a3f8",
+    "test/unit/r_draw.t.sol": "d26ba37f9494ae97f8dc3bc92a58cb19ac762761f4532dfbc8865d24d5103b10",
+    "test/unit/r_things.t.sol": "bec2971c348f8a1ee9ab5fd9b6d8428bba80953bedfd551696f3b609438b2480",
+    "test/unit/z_zone_backing.t.sol": "340a88deb60375fbc40c2d44c925101ec4946e198b9943543350a927088e4545",
+    "docs/PHASE3-BACKING-INTEGRATION.md": "d112d39bba70c884a7f341e426ef3417aeafc0652e6e5250dfc0c023537eacfd"
+  },
+  "dependencyHashes": {
+    "src/doom/z_zone.sol": "47fe4cd4ce09d37d21d9d3cedd349004c8e3a1941f939a1ddbc5ec2e1d67b1ca",
+    "src/doom/z_zone_types.sol": "d6c5d8680e08bd8989042cb42a934a3323818e4c2b94c11dc38196911dadc08b",
+    "src/doom/native_zone_layout.sol": "118b2d17165826fb0857d9cb296e2214db2a28917769299a82e70d0c0790f6e8",
+    "src/doom/r_state.sol": "80951a13733e3a08f4182937a37def33ffda21eaae4b43a2a1bdba2043adab6b",
+    "src/doom/r_data_types.sol": "0448302d68447c8a5a4c46df4016e8845863e42bf6eaca8bcab8ab0c9707fdf8",
+    "src/doom/r_render_state.sol": "072bd2f73b98e1eb775fc8093e95a69c184f3fa50a89a5d64a7beccd59493398",
+    "foundry.toml": "084d5192108931325837611f9d1339796a6ffd64ed570e31907afe718f191226",
+    "test/fixtures/phase3_zone_backing/vectors.bin": "35a24a397074a1d766e116845e5162001387ee38d4fce5b74257a5a49ecd5d9d",
+    "test/fixtures/phase3_zone_backing/manifest.json": "acade412bf2340712dc9c6f68b41d863191046301e701462c1b492c5e6043a5f",
+    "test/fixtures/phase3_zone_backing/validation.json": "ee6f296fdcdeb3a9cadaaf574461939409e21f825896c22e09f2501bbb8428ca"
+  },
+  "remaining": [
+    "Full public Doom/GameplayProbe build",
+    "Final physical allocation chronology/cache stage proof through production",
+    "Recovered browser/canvas and whole-native scenarios",
+    "Frozen inherited final gates"
+  ],
+  "finalSetupResult": "PASS all3 tests after fixture-only duplicate parsing correction"
+}

@@ -10,6 +10,7 @@ import {R_Main} from "./r_main.sol";
 import {R_Data} from "./r_data.sol";
 import {R_Draw} from "./r_draw.sol";
 import {R_Plane} from "./r_plane.sol";
+import {Z_ZoneBacking} from "./z_zone_backing.sol";
 
 /// @custom:source linuxdoom-1.10/r_segs.c at a77dfb96cb91780ca334d0d4cfd86957558007e0
 library R_Segs {
@@ -36,6 +37,7 @@ library R_Segs {
         ColumnView memory source = R_Data.R_GetColumn(c.resources, texture, column);
         c.dc.source = source.data;
         c.dc.sourceOffset = source.offset;
+        Z_ZoneBacking.bindColumn(c.resources, c.dc, c.resources.currentColumnZoneBlock);
         if (c.rs.detailshift == 0) R_Draw.R_DrawColumn(c.rs, c.dc);
         else R_Draw.R_DrawColumnLow(c.rs, c.dc);
     }

@@ -48,8 +48,18 @@ library R_Draw {
         for (uint256 i; i < count; ++i) {
             int256 index = int256(uint256(dc.sourceOffset))
                 + (translated ? int256(frac >> 16) : int256((frac >> 16) & 127));
-            if (index < 0 || uint256(index) >= dc.source.length) revert DrawBounds();
-            uint8 color = uint8(dc.source[uint256(index)]);
+            if (index < 0) revert DrawBounds();
+            uint8 color;
+            if (uint256(index) < dc.source.length) {
+                color = uint8(dc.source[uint256(index)]);
+            } else {
+                uint256 tailIndex = uint256(index) - dc.source.length;
+                if (
+                    tailIndex >= dc.sourceTail.length || tailIndex >= dc.sourceTailKnown.length
+                        || dc.sourceTailKnown[tailIndex] != 0x01
+                ) revert DrawBounds();
+                color = uint8(dc.sourceTail[tailIndex]);
+            }
             if (translated) color = uint8(dc.translation[color]);
             rs.framebuffer[dest] = dc.colormap[color];
             if (low) rs.framebuffer[dest2] = dc.colormap[color];

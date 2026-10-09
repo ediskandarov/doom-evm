@@ -458,7 +458,7 @@ contract RThingsTest {
         require(c.sprite.definitions.length == 0);
     }
 
-    function maskedPost(bytes calldata post) external pure {
+    function maskedPost(bytes calldata post) external view {
         RenderContext memory c;
         c.sprite.mfloorclip = new int32[](1);
         c.sprite.mfloorclip[0] = 200;

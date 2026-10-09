@@ -7,6 +7,8 @@ import {ResourceView, TexPatch, Texture, RenderResources, ColumnView} from "./r_
 import {LumpDescriptor} from "../evm/ResourceTypes.sol";
 import {Vertex, Sector, Side, Line, Seg, Subsector, Node, MapThing, MapData} from "./r_defs.sol";
 import {M_Fixed} from "./m_fixed.sol";
+import {W_ZoneCache} from "./w_zone_cache.sol";
+import {ZoneConst as ZC} from "./z_zone_types.sol";
 
 /// @custom:source linuxdoom-1.10/r_data.c; named W_* adapters map to w_wad.c.
 library R_Data {
@@ -286,13 +288,23 @@ library R_Data {
 
     /// @custom:source R_GenerateComposite
     function R_GenerateComposite(RenderResources memory r, uint32 texture) internal view {
+        generateComposite(r, texture, true);
+    }
+
+    /// @dev Rebuilding ephemeral bytes for an existing native cache owner is parsing,
+    /// not another original Z_Malloc or W_CacheLumpNum call.
+    function generateComposite(RenderResources memory r, uint32 texture, bool nativeCall) private view {
         Texture memory t = r.textures[texture];
         if (t.columnlump.length == 0) R_GenerateLookup(r, texture);
+        uint32 nativeBlock;
+        if (nativeCall) {
+            nativeBlock = W_ZoneCache.allocateComposite(r.nativeZone, r.source, texture, t.compositesize);
+        }
         bytes memory composite = new bytes(t.compositesize);
         bytes memory written = new bytes(t.compositesize);
         for (uint256 i; i < t.patches.length; ++i) {
             TexPatch memory patch = t.patches[i];
-            bytes memory data = cacheLump(r, patch.patch);
+            bytes memory data = nativeCall ? cacheLump(r, patch.patch, ZC.PU_CACHE) : loadLump(r, patch.patch);
             int32 x1 = patch.originx;
             int32 x2 = x1 + s16(data, 0);
             if (x2 > int32(uint32(t.width))) x2 = int32(uint32(t.width));
@@ -329,6 +341,7 @@ library R_Data {
         }
         t.composite = composite;
         t.compositeReady = true;
+        if (nativeCall) W_ZoneCache.changeTag(r.nativeZone, nativeBlock, ZC.PU_CACHE);
     }
 
     /// @custom:source R_GetColumn
@@ -344,7 +357,8 @@ library R_Data {
         int32 lump = t.columnlump[col];
         uint32 offset = t.columnofs[col];
         if (lump > 0) {
-            v.data = cacheLump(r, uint32(lump));
+            v.data = cacheLump(r, uint32(lump), ZC.PU_CACHE);
+            r.currentColumnZoneBlock = W_ZoneCache.ownerBlock(r.nativeZone, uint32(lump));
             v.offset = offset;
             // An empty last column is just the 0xff terminator. The original returned
             // pixel pointer may be two bytes past the lump; masked callers subtract three.
@@ -352,8 +366,17 @@ library R_Data {
             if (offset > v.data.length && (offset < 3 || offset - 3 >= v.data.length)) revert Bounds();
             return v;
         }
-        if (!t.compositeReady) R_GenerateComposite(r, texture);
+        if (r.nativeZone.byteLength != 0) {
+            if (W_ZoneCache.compositeBlock(r.nativeZone, r.source, texture) == ZC.NULL) {
+                R_GenerateComposite(r, texture);
+            } else if (!t.compositeReady) {
+                generateComposite(r, texture, false);
+            }
+        } else if (!t.compositeReady) {
+            R_GenerateComposite(r, texture);
+        }
         v.data = t.composite;
+        r.currentColumnZoneBlock = W_ZoneCache.compositeBlock(r.nativeZone, r.source, texture);
         v.offset = offset;
         if (offset >= v.data.length) revert Bounds();
     }
@@ -388,7 +411,7 @@ library R_Data {
 
     function R_GetFlat(RenderResources memory r, uint32 flat) internal view returns (bytes memory) {
         if (flat >= r.numflats) revert Bounds();
-        return cacheLump(r, r.firstflat + flat);
+        return cacheLump(r, r.firstflat + flat, ZC.PU_STATIC);
     }
 
     /// @notice EVM pointer adapter for colormaps + index*256, reused across draw calls.
@@ -408,7 +431,24 @@ library R_Data {
         }
     }
 
-    function cacheLump(RenderResources memory r, uint32 lump) private view returns (bytes memory data) {
+    function releaseFlat(RenderResources memory r, uint32 flat) internal pure {
+        if (r.nativeZone.byteLength != 0) {
+            W_ZoneCache.changeTag(
+                r.nativeZone, W_ZoneCache.ownerBlock(r.nativeZone, r.firstflat + flat), ZC.PU_CACHE
+            );
+        }
+    }
+
+    function cacheLump(RenderResources memory r, uint32 lump, uint8 tag)
+        internal
+        view
+        returns (bytes memory data)
+    {
+        W_ZoneCache.cacheLump(r.nativeZone, r.source, lump, tag);
+        return loadLump(r, lump);
+    }
+
+    function loadLump(RenderResources memory r, uint32 lump) private view returns (bytes memory data) {
         // Synthetic tests may construct RenderResources directly; initialize their cache on demand.
         if (r.lumpcache.length == 0) r.lumpcache = new bytes[](r.source.lumps.length);
         if (lump >= r.lumpcache.length) revert Bounds();
@@ -517,6 +557,15 @@ library R_Data {
         return uint32(n);
     }
 
+    /// @dev Call-local line-loader working aliases, never persisted or supplied by a host.
+    /// Reads/writes keep original order; grouping aliases avoids full-hook-graph stack pressure.
+    struct MapLineWork {
+        uint256 offset;
+        Line line;
+        Vertex first;
+        Vertex second;
+    }
+
     /// @notice Static p_setup.c adapter: P_Load* order and P_GroupLines subsector binding.
     /// @dev No thinkers, gameplay spawning, BLOCKMAP collision state, or sector line lists yet.
     function R_LoadMap(RenderResources memory r, bytes8 mapname) internal view returns (MapData memory m) {
@@ -555,29 +604,32 @@ library R_Data {
         }
         b = W_CacheLumpNum(r.source, base + 2);
         m.lines = new Line[](records(b, 14));
+        MapLineWork memory work;
         for (uint256 i; i < m.lines.length; ++i) {
-            uint256 p = i * 14;
-            Line memory l = m.lines[i];
-            l.v1 = index16(b, p, m.vertexes.length, false);
-            l.v2 = index16(b, p + 2, m.vertexes.length, false);
-            Vertex memory v1 = m.vertexes[l.v1];
-            Vertex memory v2 = m.vertexes[l.v2];
+            work.offset = i * 14;
+            work.line = m.lines[i];
+            work.line.v1 = index16(b, work.offset, m.vertexes.length, false);
+            work.line.v2 = index16(b, work.offset + 2, m.vertexes.length, false);
+            work.first = m.vertexes[work.line.v1];
+            work.second = m.vertexes[work.line.v2];
             unchecked {
-                l.dx = v2.x - v1.x;
-                l.dy = v2.y - v1.y;
+                work.line.dx = work.second.x - work.first.x;
+                work.line.dy = work.second.y - work.first.y;
             }
-            l.flags = u16(b, p + 4);
-            l.special = int16(s16(b, p + 6));
-            l.tag = int16(s16(b, p + 8));
-            l.slopetype = l.dx == 0 ? 1 : l.dy == 0 ? 0 : M_Fixed.FixedDiv(l.dy, l.dx) > 0 ? 2 : 3;
-            l.bbox[0] = v1.y > v2.y ? v1.y : v2.y;
-            l.bbox[1] = v1.y < v2.y ? v1.y : v2.y;
-            l.bbox[2] = v1.x < v2.x ? v1.x : v2.x;
-            l.bbox[3] = v1.x > v2.x ? v1.x : v2.x;
-            l.sidenum[0] = index16(b, p + 10, m.sides.length, true);
-            l.sidenum[1] = index16(b, p + 12, m.sides.length, true);
-            l.frontsector = l.sidenum[0] == NULL ? NULL : m.sides[l.sidenum[0]].sector;
-            l.backsector = l.sidenum[1] == NULL ? NULL : m.sides[l.sidenum[1]].sector;
+            work.line.flags = u16(b, work.offset + 4);
+            work.line.special = int16(s16(b, work.offset + 6));
+            work.line.tag = int16(s16(b, work.offset + 8));
+            work.line.slopetype = work.line.dx == 0
+                ? 1
+                : work.line.dy == 0 ? 0 : M_Fixed.FixedDiv(work.line.dy, work.line.dx) > 0 ? 2 : 3;
+            work.line.bbox[0] = work.first.y > work.second.y ? work.first.y : work.second.y;
+            work.line.bbox[1] = work.first.y < work.second.y ? work.first.y : work.second.y;
+            work.line.bbox[2] = work.first.x < work.second.x ? work.first.x : work.second.x;
+            work.line.bbox[3] = work.first.x > work.second.x ? work.first.x : work.second.x;
+            work.line.sidenum[0] = index16(b, work.offset + 10, m.sides.length, true);
+            work.line.sidenum[1] = index16(b, work.offset + 12, m.sides.length, true);
+            work.line.frontsector = work.line.sidenum[0] == NULL ? NULL : m.sides[work.line.sidenum[0]].sector;
+            work.line.backsector = work.line.sidenum[1] == NULL ? NULL : m.sides[work.line.sidenum[1]].sector;
         }
         b = W_CacheLumpNum(r.source, base + 5);
         m.segs = new Seg[](records(b, 12));

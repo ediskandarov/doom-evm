@@ -5,6 +5,9 @@ import {RenderContext, DrawSeg} from "./r_render_state.sol";
 import {SpriteFrame, SpriteDef, SpriteBuild, RenderThing, VisSprite, PSprite} from "./r_sprite_state.sol";
 import {ColumnView} from "./r_data_types.sol";
 import {R_Data} from "./r_data.sol";
+import {W_ZoneCache} from "./w_zone_cache.sol";
+import {Z_ZoneBacking} from "./z_zone_backing.sol";
+import {ZoneConst as ZC} from "./z_zone_types.sol";
 import {R_Main} from "./r_main.sol";
 import {R_Draw} from "./r_draw.sol";
 import {M_Fixed} from "./m_fixed.sol";
@@ -217,11 +220,8 @@ library R_Things {
 
     function patchLump(RenderContext memory c, uint32 lump) private view returns (bytes memory data) {
         if (c.resources.lumpcache.length != c.resources.source.lumps.length) revert SpriteBounds();
-        data = c.resources.lumpcache[lump];
-        if (data.length == 0) {
-            data = R_Data.W_CacheLumpNum(c.resources.source, lump);
-            c.resources.lumpcache[lump] = data;
-        }
+        data = R_Data.cacheLump(c.resources, lump, ZC.PU_CACHE);
+        c.resources.currentColumnZoneBlock = W_ZoneCache.ownerBlock(c.resources.nativeZone, lump);
     }
 
     function le32(bytes memory data, uint256 p) private pure returns (uint32 v) {
@@ -238,7 +238,7 @@ library R_Things {
         else R_Draw.R_DrawColumn(c.rs, c.dc);
     }
 
-    function R_DrawMaskedColumn(RenderContext memory c, ColumnView memory post) internal pure {
+    function R_DrawMaskedColumn(RenderContext memory c, ColumnView memory post) internal view {
         int32 base = c.dc.texturemid;
         uint256 p = post.offset;
         for (;;) {
@@ -260,6 +260,7 @@ library R_Things {
                 if (c.dc.yl <= c.dc.yh) {
                     c.dc.source = post.data;
                     c.dc.sourceOffset = uint32(p + 3);
+                    Z_ZoneBacking.bindColumn(c.resources, c.dc, c.resources.currentColumnZoneBlock);
                     c.dc.texturemid = base - (int32(uint32(top)) << 16);
                     drawColumn(c);
                 }

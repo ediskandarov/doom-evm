@@ -8,6 +8,7 @@ import {R_Data} from "./r_data.sol";
 import {ColumnView} from "./r_data_types.sol";
 import {R_Draw} from "./r_draw.sol";
 import {Tables} from "./tables.sol";
+import {Z_ZoneBacking} from "./z_zone_backing.sol";
 
 /// @custom:source linuxdoom-1.10/r_plane.c at a77dfb96cb91780ca334d0d4cfd86957558007e0
 /// @notice Original visplane construction, span mapping and sky/floor/ceiling drawing.
@@ -221,13 +222,15 @@ library R_Plane {
                             R_Data.R_GetColumn(ctx.resources, ctx.skytexture, int32(angle));
                         ctx.dc.source = column.data;
                         ctx.dc.sourceOffset = column.offset;
+                        Z_ZoneBacking.bindColumn(ctx.resources, ctx.dc, ctx.resources.currentColumnZoneBlock);
                         if (ctx.rs.detailshift == 0) R_Draw.R_DrawColumn(ctx.rs, ctx.dc);
                         else R_Draw.R_DrawColumnLow(ctx.rs, ctx.dc);
                     }
                 }
                 continue;
             }
-            ctx.ds.source = R_Data.R_GetFlat(ctx.resources, ctx.resources.flattranslation[pl.picnum]);
+            uint32 flat = ctx.resources.flattranslation[pl.picnum];
+            ctx.ds.source = R_Data.R_GetFlat(ctx.resources, flat);
             int32 height;
             unchecked {
                 height = pl.height - ctx.rs.viewz;
@@ -252,7 +255,7 @@ library R_Plane {
                     int32(uint32(uint8(pl.bottom[uint32(x + 1)])))
                 );
             }
-            // Z_ChangeTag(PU_CACHE) has no operation in the immutable memory resource adapter.
+            R_Data.releaseFlat(ctx.resources, flat);
         }
     }
 }
