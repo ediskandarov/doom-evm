@@ -2,10 +2,53 @@
 pragma solidity 0.8.37;
 // Copyright (C) 1993-1996 by id Software, Inc.
 import {Ticcmd, GameInputState, KeyboardInput} from "./d_ticcmd.sol";
+import {GameContext, GameState, Player, PlayerState, GameConst} from "./p_game_state.sol";
+import {R_Data} from "./r_data.sol";
 
 library G_Game {
     error InvalidTurnState(int32 turnheld);
     error InvalidWeaponRequest(uint8 request);
+
+    /// @custom:source linuxdoom-1.10/g_game.c G_ExitLevel
+    function G_ExitLevel(GameState memory state) internal pure {
+        state.secretExit = false;
+        state.gameaction = 6; // d_event.h ga_completed
+    }
+
+    /// @custom:source linuxdoom-1.10/g_game.c G_SecretExitLevel
+    function G_SecretExitLevel(GameContext memory c) internal pure {
+        c.state.secretExit =
+        !(c.state.gamemode == 2 && R_Data.W_CheckNumForName(c.resources.source, "MAP31") < 0);
+        c.state.gameaction = 6;
+    }
+
+    /// @custom:source linuxdoom-1.10/g_game.c G_PlayerReborn
+    function G_PlayerReborn(GameState memory state, uint32 playerId) internal pure {
+        Player memory old = state.players[playerId];
+        Player memory fresh;
+        // Original memcpy preserves these statistics across the memset.
+        for (uint256 i; i < 4; ++i) {
+            fresh.frags[i] = old.frags[i];
+        }
+        fresh.killcount = old.killcount;
+        fresh.itemcount = old.itemcount;
+        fresh.secretcount = old.secretcount;
+        fresh.mo = GameConst.NULL;
+        fresh.attacker = GameConst.NULL;
+        fresh.psprites[0].state = GameConst.NULL;
+        fresh.psprites[1].state = GameConst.NULL;
+        fresh.usedown = 1;
+        fresh.attackdown = 1;
+        fresh.playerstate = PlayerState.live;
+        fresh.health = 100;
+        fresh.readyweapon = 1;
+        fresh.pendingweapon = 1;
+        fresh.weaponowned[0] = true;
+        fresh.weaponowned[1] = true;
+        fresh.ammo[0] = 50;
+        fresh.maxammo = [int32(200), int32(50), int32(300), int32(50)];
+        state.players[playerId] = fresh;
+    }
 
     // Original g_game.c G_BuildTiccmd, declared keyboard profile: zero base command,
     // ticdup=1, single player, no chat/mouse/joystick/save/pause. See INPUT_PROTOCOL.md.

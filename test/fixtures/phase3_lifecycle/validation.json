@@ -1,0 +1,99 @@
+{
+  "scope": "Owned lifecycle conformance only; no M2/M3 or whole-batch acceptance claim",
+  "result": "PASS for owned scope",
+  "sourceDefinitions": 24,
+  "nativeCases": 784,
+  "strictUndefinedDiagnostics": 8,
+  "solidityTests": 24,
+  "verifiedRuns": [
+    {
+      "handle": 52538,
+      "reportedBy": "integrator",
+      "scope": "PUserLifecycleTest5 + PMobjLifecycleTest16 + GGameLifecycleTest3 all passed in the 52-test five-suite batch",
+      "result": "PASS lifecycle scope before sole aged-queue fixture correction",
+      "command": ".toolchain/bin/forge test --match-contract 'PUserLifecycleTest|PMobjLifecycleTest|GGameLifecycleTest|WorldActionsTest|WorldSpecials_Test' -vv"
+    },
+    {
+      "handle": 9411,
+      "reportedBy": "integrator",
+      "command": ".toolchain/bin/forge test --match-contract 'WorldActionsTest|WorldSpecials_Test|PMobjLifecycleTest' --match-test 'testOriginal|testNative_P_RespawnSpecials' -vv",
+      "scope": "Only PMobjLifecycleTest.testNative_P_RespawnSpecials is claimed here; all its corrected rows passed",
+      "result": "PASS owned test; overall combined batch had one unrelated world-specials failure",
+      "observedGas": 624476097
+    },
+    {
+      "handle": 91650,
+      "command": "python3 tools/reference/phase3_lifecycle/reference.py --check",
+      "result": "PASS all24definitions/784cases/O0/O2/ASan/allocationfill + eight documented original strict-UB diagnostics"
+    }
+  ],
+  "correctedPositiveCase": {
+    "row": 783,
+    "function": "P_RespawnSpecials",
+    "actorCountBefore": 3,
+    "actorCountAfter": 5,
+    "queueTailBefore": 1,
+    "queueTailAfter": 2,
+    "otherNativeRowsUnchanged": true
+  },
+  "functionMapping": {
+    "player": {
+      "source": "p_user.c",
+      "port": "src/doom/p_user.sol",
+      "functions": [
+        "P_Thrust",
+        "P_CalcHeight",
+        "P_MovePlayer",
+        "P_DeathThink",
+        "P_PlayerThink"
+      ]
+    },
+    "mobj": {
+      "source": "p_mobj.c",
+      "port": "src/doom/p_mobj.sol",
+      "functions": [
+        "P_SetMobjState",
+        "P_ExplodeMissile",
+        "P_XYMovement",
+        "P_ZMovement",
+        "P_NightmareRespawn",
+        "P_MobjThinker",
+        "P_SpawnMobj",
+        "P_RemoveMobj",
+        "P_RespawnSpecials",
+        "P_SpawnPlayer",
+        "P_SpawnMapThing",
+        "P_SpawnPuff",
+        "P_SpawnBlood",
+        "P_CheckMissileSpawn",
+        "P_SpawnMissile",
+        "P_SpawnPlayerMissile"
+      ]
+    },
+    "game": {
+      "source": "g_game.c",
+      "port": "src/doom/g_game.sol",
+      "functions": [
+        "G_PlayerReborn",
+        "G_ExitLevel",
+        "G_SecretExitLevel"
+      ],
+      "acceptedInputBodyUnchangedFromCommit": "0a7d839",
+      "acceptedInputBodySha256": "f33377502a2cb1bd766bbf9f1a108b8812bab1ddae6c49a108b6edb9bb0ba2c3"
+    }
+  },
+  "files": {
+    "src/doom/p_user.sol": "963a46850e1b17171f79dd65bff9b5006ce6f97a935ad2023d1d526a6ec35c37",
+    "src/doom/p_mobj.sol": "966cc7bf88a17adc30222f9ac7d735415afcb783dcb9367f5df9cced1df73ff8",
+    "src/doom/g_game.sol": "2714f783a532bc2a525d7f50813c472f299c541ee9062a7a5d078e1818791e70",
+    "test/unit/p_user.t.sol": "fa106b579a0b27ccbf3f5ce68ef1470157b781265dfbde2a0724bcc80f1e9d38",
+    "test/unit/p_mobj.t.sol": "920d869c2d3cc5266e4c748b2bc37179db069c2c893f80c0478004d5ed6b819c",
+    "test/unit/g_game_lifecycle.t.sol": "a2d7bdbeca6966e572dd6cab8645c113edbe19dc94b46bc11157103644c08b36",
+    "tools/reference/phase3_lifecycle/host.c": "35e8584121e9576e8a647ae9c98658c227a7a8b13b35f2f25be427cb573f53f9",
+    "tools/reference/phase3_lifecycle/reference.py": "5a8953a59947c590c665322f02b577966ab820b4d630a05262fd173563dbb26b",
+    "test/fixtures/phase3_lifecycle/vectors.bin": "e57e4e66bcafbc1aed48979f540d74cbe67ce3f5cb17d09b99dc8af0a0473cb0",
+    "test/fixtures/phase3_lifecycle/manifest.json": "74db7179c2cd8fae5124d443299aae560bc457c1dc203bf171a688733ac30ff1",
+    "test/fixtures/phase3_lifecycle/undefined-audit.json": "e149ba824a6c1e83cb5b44af56a8754b5b9e7008444dfc520255198c8066883f",
+    "docs/PHASE3-LIFECYCLE.md": "ddf125c33176ef38aedb52cf37b155386c15b038a796ee6c58a778ba8283c301"
+  }
+}

@@ -1,0 +1,173 @@
+{
+  "profile": "O2 full ASan/UBSan without -fwrapv; every diagnostic deliberately observed rather than suppressed",
+  "cases": [
+    {
+      "function": "P_MovePlayer",
+      "inputs": [
+        2,
+        0,
+        0,
+        0,
+        51200,
+        0,
+        -1280,
+        0,
+        1,
+        2,
+        3,
+        3004,
+        7,
+        0
+      ],
+      "strictDiagnostic": "p_user.c:154:41: runtime error: left shift of negative value -1280",
+      "classification": "Original ISO C undefined operation; admitted only under documented pinned -fwrapv implementation profile"
+    },
+    {
+      "function": "P_NightmareRespawn",
+      "inputs": [
+        9,
+        33,
+        0,
+        0,
+        51200,
+        0,
+        0,
+        0,
+        1,
+        2,
+        3,
+        3004,
+        7,
+        0
+      ],
+      "strictDiagnostic": "p_mobj.c:366:28: runtime error: left shift of negative value -64",
+      "classification": "Original ISO C undefined operation; admitted only under documented pinned -fwrapv implementation profile"
+    },
+    {
+      "function": "P_RespawnSpecials",
+      "inputs": [
+        13,
+        33,
+        0,
+        557056,
+        51200,
+        0,
+        0,
+        0,
+        1,
+        2,
+        3,
+        3004,
+        7,
+        0
+      ],
+      "strictDiagnostic": "p_mobj.c:604:19: runtime error: left shift of negative value -64",
+      "classification": "Original ISO C undefined operation; admitted only under documented pinned -fwrapv implementation profile"
+    },
+    {
+      "function": "P_SpawnPlayer",
+      "inputs": [
+        14,
+        0,
+        0,
+        0,
+        51200,
+        0,
+        0,
+        0,
+        1,
+        2,
+        3,
+        1,
+        7,
+        0
+      ],
+      "strictDiagnostic": "p_mobj.c:662:21: runtime error: left shift of negative value -64",
+      "classification": "Original ISO C undefined operation; admitted only under documented pinned -fwrapv implementation profile"
+    },
+    {
+      "function": "P_SpawnMapThing",
+      "inputs": [
+        15,
+        33,
+        0,
+        0,
+        51200,
+        0,
+        0,
+        0,
+        1,
+        2,
+        3,
+        3004,
+        7,
+        0
+      ],
+      "strictDiagnostic": "p_mobj.c:776:19: runtime error: left shift of negative value -64",
+      "classification": "Original ISO C undefined operation; admitted only under documented pinned -fwrapv implementation profile"
+    },
+    {
+      "function": "P_SpawnPuff",
+      "inputs": [
+        16,
+        33,
+        0,
+        0,
+        51200,
+        0,
+        0,
+        0,
+        1,
+        2,
+        3,
+        3004,
+        7,
+        0
+      ],
+      "strictDiagnostic": "p_mobj.c:819:34: runtime error: left shift of negative value -19",
+      "classification": "Original ISO C undefined operation; admitted only under documented pinned -fwrapv implementation profile"
+    },
+    {
+      "function": "P_SpawnBlood",
+      "inputs": [
+        17,
+        33,
+        0,
+        0,
+        51200,
+        0,
+        0,
+        0,
+        1,
+        2,
+        3,
+        3004,
+        7,
+        0
+      ],
+      "strictDiagnostic": "p_mobj.c:847:34: runtime error: left shift of negative value -19",
+      "classification": "Original ISO C undefined operation; admitted only under documented pinned -fwrapv implementation profile"
+    },
+    {
+      "function": "P_SpawnMissile",
+      "inputs": [
+        19,
+        33,
+        7,
+        67108864,
+        51200,
+        0,
+        0,
+        0,
+        1,
+        2,
+        3,
+        3004,
+        7,
+        0
+      ],
+      "strictDiagnostic": "p_mobj.c:910:31: runtime error: left shift of negative value -50",
+      "classification": "Original ISO C undefined operation; admitted only under documented pinned -fwrapv implementation profile"
+    }
+  ]
+}
