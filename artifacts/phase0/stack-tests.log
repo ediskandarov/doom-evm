@@ -1,0 +1,17 @@
+Compiling 1 files with Solc 0.8.37
+Solc 0.8.37 finished in 284.09ms
+Compiler run successful!
+
+Ran 9 tests for test/unit/StackPressure.t.sol:StackPressureTest
+[PASS] testClosedDoorAndViewPlaneSuppression() (gas: 49242)
+[PASS] testDrawsegLimitAndInvalidRange() (gas: 20400)
+[PASS] testFullWidthMaskedRuntime() (gas: 651766)
+[PASS] testFuzzColumnRangeAndEdgeRecurrence(uint16,uint16) (runs: 256, μ: 104386, ~: 64708)
+[PASS] testLightingClampAndAngleClamp() (gas: 73235)
+[PASS] testSingleColumnAndBottomPeg() (gas: 15608)
+[PASS] testSingleSidedEdgeRecurrence() (gas: 19641)
+[PASS] testTwoSidedTiersMaskedClipAllocation() (gas: 47932)
+[PASS] testUntexturedIdenticalPlanesAndSky() (gas: 31497)
+Suite result: ok. 9 passed; 0 failed; 0 skipped; finished in 14.76ms (20.07ms CPU time)
+
+Ran 1 test suite in 15.07ms (14.76ms CPU time): 9 tests passed, 0 failed, 0 skipped (9 total tests)

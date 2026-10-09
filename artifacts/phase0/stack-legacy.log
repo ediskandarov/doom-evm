@@ -1,0 +1,6 @@
+CompilerError: Stack too deep. Try compiling with `--via-ir` (cli) or the equivalent `viaIR: true` (standard JSON) while enabling the optimizer. Otherwise, try removing local variables.
+  --> src/support/StackPressure.sol:95:14:
+   |
+95 |         if (!s.backsector) {
+   |              ^
+
