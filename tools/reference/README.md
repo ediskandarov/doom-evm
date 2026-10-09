@@ -5,7 +5,7 @@ The oracle compiles the pinned DOOM algorithms, without a replacement math or BS
 From the repository root, after installing the pinned local toolchain and downloading the pinned Freedoom archive with `tools/wad`:
 
 ```sh
-python3 tools/reference/reference.py --check --wad artifacts/local/freedoom/freedoom-0.13.0/freedoom1.wad
+python3 tools/reference/reference.py --check --wad artifacts/local/freedoom/freedoom1.wad
 python3 tools/reference/test_reference.py
 ```
 

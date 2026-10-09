@@ -3,7 +3,7 @@
 import { spawn, execFileSync } from 'node:child_process';
 import { mkdtemp,readFile,writeFile,mkdir,rm } from 'node:fs/promises';
 import { tmpdir } from 'node:os';
-import { join,resolve } from 'node:path';
+import { join,resolve,dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { createHash } from 'node:crypto';
 import assert from 'node:assert/strict';
@@ -68,7 +68,7 @@ try {
   assert.equal(frame.pixels.length,64000);
   assert.equal(proof.paletteKind,palette.kind);assert.equal(proof.paletteSha256,palette.resourceIdentity.paletteSha256);
   const screenshot=await command('Page.captureScreenshot',{format:'png'});
-  await mkdir('artifacts/local',{recursive:true});await writeFile(outputPrefix+'.png',Buffer.from(screenshot.data,'base64'));
+  await mkdir(dirname(outputPrefix),{recursive:true});await writeFile(outputPrefix+'.png',Buffer.from(screenshot.data,'base64'));
   delete proof.latestPixelsHex;
   const result={timestamp:new Date().toISOString(),kind:'synthetic-browser-transport',browser:await command('Browser.getVersion'),config,proof,receiptPixelsSha256:createHash('sha256').update(frame.pixels).digest('hex'),allCanvasPixelsMatchReceipt:true,screenshot:outputPrefix+'.png'};
   await writeFile(outputPrefix+'.json',JSON.stringify(result,null,2)+'\n');console.log(JSON.stringify(result,null,2));

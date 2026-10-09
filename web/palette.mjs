@@ -3,6 +3,8 @@
 export async function validatePalette(palette, expectedIdentity, expectedKind) {
   const keys=['schemaVersion','wadSha256','bundleSha256','paletteSha256','paletteVariant'];
   if(!palette||!['synthetic','wad'].includes(palette.kind)||palette.kind!==expectedKind||palette.schemaVersion!==0||palette.encoding!=='rgb8'||palette.colorCount!==256||! /^[0-9a-f]{1536}$/.test(palette.rgbHex)) throw Error('Unexpected palette format or kind');
+  const allowed=['schemaVersion','resourceIdentity','kind','encoding','colorCount','rgbHex'];
+  if(Object.keys(palette).length!==allowed.length||Object.keys(palette).some(key=>!allowed.includes(key)))throw Error('Unexpected palette fields');
   const identity=palette.resourceIdentity;
   if(!identity||!expectedIdentity||Object.keys(identity).length!==keys.length||Object.keys(expectedIdentity).length!==keys.length||keys.some(key=>identity[key]!==expectedIdentity[key])) throw Error('Resource/palette identity mismatch');
   if(identity.schemaVersion!==0||!Number.isInteger(identity.paletteVariant)||identity.paletteVariant<0||identity.paletteVariant>255||['wadSha256','bundleSha256','paletteSha256'].some(key=>! /^[0-9a-f]{64}$/.test(identity[key]))) throw Error('Invalid resource identity');

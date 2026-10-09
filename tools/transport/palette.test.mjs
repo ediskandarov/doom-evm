@@ -5,6 +5,7 @@ import {readFile} from 'node:fs/promises';
 import {validatePalette} from '../../web/palette.mjs';
 const sample=JSON.parse(await readFile(new URL('../../web/palette.synthetic.json',import.meta.url),'utf8'));
 test('palette validates RGB bytes, kind and identity independent of key order',async()=>{
+  await assert.rejects(validatePalette({...sample,extra:true},sample.resourceIdentity,'synthetic'),/fields/);
   const shuffled=Object.fromEntries(Object.entries(sample.resourceIdentity).reverse());
   assert.equal((await validatePalette(sample,shuffled,'synthetic')).length,768);
   const wad=structuredClone(sample);wad.kind='wad';wad.resourceIdentity.wadSha256='1'.repeat(64);

@@ -25,10 +25,11 @@ for (const [index, entry] of packed.bundle.lumps.entries()) {
 }
 assert.equal(offset, packed.blob.length);
 assert.deepEqual(snapshot.resourceIdentity, packed.bundle.resourceIdentity); assert.equal(snapshot.wadByteLength, wad.bytes.length);
+assert.equal(snapshot.upstreamCommit, packed.bundle.provenance.upstreamCommit);
 assert.equal(snapshot.directoryEntryCount, wad.lumps.length); assert.equal(snapshot.packedByteLength, packed.blob.length); assert.equal(snapshot.packedBlobSha256, sha256(packed.blob));
 assert.deepEqual(snapshot.validation, packed.validation); assert.equal(snapshot.schemaVersion, 1); assert.equal(snapshot.source, 'Freedoom v0.13.0 freedoom1.wad'); assert.equal(snapshot.map, 'E1M1');
 assert.equal(snapshot.snapshotFile, 'selected-lumps.bin');
-assert.deepEqual(Object.keys(snapshot).sort(), ['schemaVersion', 'source', 'map', 'resourceIdentity', 'wadByteLength', 'directoryEntryCount', 'packedByteLength', 'packedBlobSha256', 'snapshotFile', 'snapshotSha256', 'licenseSha256', 'lumps', 'validation'].sort());
+assert.deepEqual(Object.keys(snapshot).sort(), ['schemaVersion', 'upstreamCommit', 'source', 'map', 'resourceIdentity', 'wadByteLength', 'directoryEntryCount', 'packedByteLength', 'packedBlobSha256', 'snapshotFile', 'snapshotSha256', 'licenseSha256', 'lumps', 'validation'].sort());
 const expectedSnapshot = [...Object.values(mapLumps(wad)), lookup(wad, 'PLAYPAL'), lookup(wad, 'COLORMAP'), lookup(wad, 'PNAMES'), lookup(wad, nameOf(lookup(wad, 'PNAMES').data.subarray(4, 12))), wad.lumps.slice(lookup(wad, 'F_START').id + 1, lookup(wad, 'F_END').id).find(lump => lump.data.length === 4096)!];
 assert.deepEqual(snapshot.lumps.map((lump: any) => lump.id), expectedSnapshot.map(lump => lump.id));
 const raw = readFileSync(new URL('../../test/fixtures/wad/selected-lumps.bin', import.meta.url));

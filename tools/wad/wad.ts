@@ -13,7 +13,7 @@ function range(data: Buffer, offset: number, length: number, label: string) {
 }
 export function parseWad(bytes: Buffer): Wad {
   range(bytes, 0, 12, 'WAD header');
-  const kind = bytes.toString('ascii', 0, 4);
+  const kind = bytes.toString('latin1', 0, 4);
   requireValid(kind === 'IWAD' || kind === 'PWAD', 'unsupported WAD magic');
   const count = bytes.readInt32LE(4), directory = bytes.readInt32LE(8);
   requireValid(count >= 0 && directory >= 12, 'negative count or invalid directory');
@@ -29,7 +29,13 @@ export function parseWad(bytes: Buffer): Wad {
 }
 export function lookup(wad: Wad, name: string): Lump {
   const query = Buffer.alloc(8); Buffer.from(name.split('\0', 1)[0].toUpperCase(), 'latin1').copy(query, 0, 0, 8);
-  const found = wad.lumps.findLast(lump => lump.nameHex === query.toString('hex'));
+  // W_AddFile uses strncpy(...,8): bytes after the first NUL become zero for lookup.
+  // Preserve original raw bytes in nameHex for deterministic resource packing.
+  const found = wad.lumps.findLast(lump => {
+    const key = Buffer.from(lump.nameHex, 'hex'), nul = key.indexOf(0);
+    if (nul >= 0) key.fill(0, nul);
+    return key.equals(query);
+  });
   requireValid(found, `missing lump ${name}`); return found;
 }
 export function records(lump: Lump): Record<string, number | string>[] {
@@ -76,6 +82,7 @@ export function validateMap(wad: Wad, map = 'E1M1') {
     index(rows.LINEDEFS[seg.linedef][`sidenum${seg.side}`], 'SIDEDEFS', 'SEGS');
   }
   for (const sub of rows.SSECTORS) requireValid(sub.numsegs > 0 && sub.firstseg >= 0 && sub.firstseg + sub.numsegs <= count.SEGS, 'SSECTORS: invalid seg span');
+  requireValid(count.NODES <= 32768, 'NODES: root exceeds original 15-bit node domain');
   const children = rows.NODES.map(node => [node.child0, node.child1]);
   for (const pair of children) for (const child of pair) index(child & 0x8000 ? child & 0x7fff : child, child & 0x8000 ? 'SSECTORS' : 'NODES', 'NODES');
   // Iterative depth-first coloring avoids host call-stack limits on hostile graphs.

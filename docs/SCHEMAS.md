@@ -51,3 +51,14 @@ Only `synthetic-transport` scope is accepted for synthetic provenance. Real fram
 ## Verified primitive assumptions
 
 `test/unit/Contexts.t.sol` verifies internal memory-reference mutation and memory assignment aliasing; storage-to-memory and memory-to-storage independence; internal persistent-state mutation; arithmetic signed right shifts versus division truncation; sign extension, explicit narrowing and widened int64 multiplication; angle wrapping; null-index separation from index zero; and the raw BSP flag. Narrowing also runs 256 fuzz cases. No `m_fixed` function is implemented here, no assembly is used, and no C comparison is claimed. C compiler overflow and original `FixedDiv2` floating behavior remain Phase 1 oracle requirements.
+
+## Phase 1 extensions
+
+[PHASE1-INTERFACES.md](PHASE1-INTERFACES.md) freezes the numerical lookup API and original on-disk per-lump records. V0 Frame/resource/palette/reference contracts stay unchanged.
+
+- `vectors-v1.schema.json`: native numeric and geometry vector shapes, source/compiler/hash metadata and explicit ok/error/undefined status. The oracle semantic validator enforces signatures and domain ranges; no undefined native result is counted as equivalence.
+- `tables-v1.schema.json`: complete table counts, signedness and little-endian word hashes; crosschecked with an independently compiled native export.
+- `wad-layouts-v1.json`: ordered field types and strides matching original doomdata.h. It is a binary-layout definition consumed by the TypeScript parser, not a JSON Schema document.
+- The real bundle preserves raw directory names and payloads, packs them contiguously, and selects PLAYPAL variant0. Full source regeneration verifies the committed snapshot and palette identities.
+
+Run `python3 scripts/check-phase1-schemas.py` for strict schema and cross-workstream identity checks, including WAD/camera/BSP binding and negative mutations. `node tools/wad/check.ts artifacts/local/freedoom/freedoom1.wad artifacts/local/wad` additionally verifies every packaged lump against the actual pinned source WAD. Camera configuration is explicitly unrendered; no synthetic frame becomes a native golden.

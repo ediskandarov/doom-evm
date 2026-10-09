@@ -1,5 +1,6 @@
 {
   "schemaVersion": 1,
+  "upstreamCommit": "a77dfb96cb91780ca334d0d4cfd86957558007e0",
   "source": "Freedoom v0.13.0 freedoom1.wad",
   "map": "E1M1",
   "resourceIdentity": {

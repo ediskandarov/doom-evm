@@ -34,11 +34,11 @@ function mutate(lumpName: string, operation: (b: Buffer) => void | Buffer) {
 test('complete minimal classic IWAD validates each resource family', () => {
   assert.equal(validateResources(parseWad(serialize(fixture()))).textureCount, 1);
 });
-test('directory last-match uses exact uppercase padded bytes; duplicates and markers preserved', () => {
+test('directory last-match uses original strncpy padding; raw names, duplicates and markers preserved', () => {
   const raw = serialize([['DUP', Buffer.from([1])], ['MARKER', Buffer.alloc(0)], ['DUP', Buffer.from([2])], ['ABCDEFGH', Buffer.from([3])], ['lower', Buffer.from([4])]]);
   const wad = parseWad(raw); assert.equal(lookup(wad, 'dup').data[0], 2); assert.equal(lookup(wad, 'ABCDEFGH').data[0], 3);
   assert.equal(wad.lumps[1].data.length, 0); assert.equal(wad.lumps.length, 5); assert.throws(() => lookup(wad, 'lower'), /missing/);
-  const dirty = parseWad(serialize([['DUP', Buffer.from([9])]])); dirty.lumps[0].nameHex = '4455500078000000'; assert.throws(() => lookup(dirty, 'DUP'), /missing/);
+  const dirty = parseWad(serialize([['DUP', Buffer.from([9])]])); dirty.lumps[0].nameHex = '4455500078000000'; assert.equal(lookup(dirty, 'DUP').data[0], 9); assert.equal(dirty.lumps[0].nameHex, '4455500078000000');
 });
 test('rejects invalid WAD envelope without allocating from hostile counts', () => {
   for (const [offset, value] of [[4, -1], [4, 2147483647], [8, -1], [8, 2147483647]]) { const b = serialize(fixture()); b.writeInt32LE(value, offset); assert.throws(() => parseWad(b)); }
@@ -132,4 +132,14 @@ test('near-end offsets and counts reject one-byte truncations, not only integer 
 test('original absolute patch post offsets permit clipping without tall-patch normalization', () => {
   const wad = mutate('PATCH', b => { b[12] = 200; }); const patch = lookup(wad, 'PATCH');
   assert.deepEqual(validatePatch(patch), { width: 1, height: 1 }); assert.equal(patch.data[12], 200);
+});
+
+test('BSP root cannot overlap NF_SUBSECTOR flag', () => {
+  const node = Buffer.alloc(28); node.writeUInt16LE(32768,24); node.writeUInt16LE(32768,26);
+  assert.throws(() => validateMap(mutate('NODES', () => Buffer.concat(Array(32769).fill(node)))), /root exceeds/);
+  assert.equal(validateMap(mutate('NODES', () => Buffer.concat(Array(32768).fill(node)))).count.NODES, 32768);
+});
+
+test('WAD magic compares all eight bits of each byte', () => {
+  for(let i=0;i<4;i++){const wad=serialize(fixture());wad[i]|=128;assert.throws(()=>parseWad(wad),/magic/);}
 });

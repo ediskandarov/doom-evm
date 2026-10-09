@@ -1,4 +1,4 @@
-# Phase 0 toolchain
+# Toolchain and runtime profiles
 
 `toolchain.lock.json` pins binary URLs and SHA-256 digests taken from the official release metadata. `scripts/install-toolchain.py` verifies all downloads before replacing project-local executables. It does not update global tools. A failed download can be rerun. Node and Python are external prerequisites.
 
@@ -11,7 +11,7 @@
 | Host | macOS 15.7.9 arm64 |
 | Browser | Chrome 155.0.8059.40 in recorded browser experiment |
 | Compiler settings | optimizer on, 200 runs, `via_ir = true`, Cancun |
-| Future native C oracle | Not built in Phase 0. Apple clang 17.0.0 is present; Phase 1 must pin flags/target and validate C arithmetic semantics before using vectors. |
+| Native C oracle | Apple clang 17.0.0 (clang-1700.0.13.5), target arm64-apple-darwin24.6.0; O0/O2 and UBSan comparisons. Exact flags and semantics in `tools/reference/reference.py` and fixture metadata. |
 
 Official release sources: [Foundry v1.8.5](https://github.com/foundry-rs/foundry/releases/tag/v1.8.5), [Solidity v0.8.37](https://github.com/argotorg/solidity/releases/tag/v0.8.37). `python3 scripts/check-toolchain.py` verifies local tool versions/commits, upstream SHA, Node, and effective Forge compiler settings. The lock also provides Linux binary digests; Linux execution has not been verified in this run.
 
@@ -57,3 +57,9 @@ No `anvil_setCode`, special precompile, EVM fork, or native renderer is used. In
 `python3 scripts/verify-phase0.py` runs version checks, schema validation, formatting, a forced build, all Foundry tests with a fixed fuzz seed, protocol unit tests, the compiler-pipeline comparison, startup/limit probes, the transaction benchmark, and the real-browser check. It records exit codes, elapsed times, command logs and source hashes. Browser execution requires installed Chrome/Chromium (`CHROME_BIN` override).
 
 Foundry may print informational AST notices for header-only struct modules and cast lint warnings in the synthetic stack fixture. Compilation succeeds; the spike documents bounded toy arithmetic, not C numeric equivalence. No unsafe assembly is present.
+
+## Phase 1 verification
+
+`python3 scripts/verify-phase1.py` runs the complete foundation gate, including every Phase 0 check. The C baseline flags are `-std=c99 -O2 -fwrapv -fno-strict-aliasing -ffp-contract=off -fno-fast-math`; the O0 comparison changes only optimization, while the sanitizer build removes `-fwrapv` and adds `-fsanitize=undefined,float-cast-overflow -fno-sanitize-recover=all`. Compiler/target drift fails explicitly. See `tools/reference/README.md` for original source extraction and undefined-domain audits. Node 24 native type stripping executes the TypeScript WAD tools without npm dependencies.
+
+Additional cast warnings in numerical tests concern explicit narrowing to the frozen ABI; production narrowing is documented and compared with the C oracle. The placement fixture may trigger an event-after-external-call lint at SHA-256: its only call is the standard SHA-256 precompile, with no arbitrary callback. Memory-safe table loads and EXTCODECOPY writes are bounded and documented beside their assembly.
