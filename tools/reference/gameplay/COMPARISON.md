@@ -94,3 +94,24 @@ LP64 and undefined-arithmetic adaptations remain those of the existing pinned or
 The finite eight scenarios do not certify every monster species, weapon, multiplayer,
 nightmare, level transition or special-world branch; their separate isolated proofs
 retain their own scopes. Renderer cadence is exactly the native selected cadence.
+
+## Atomic native-zone integration checkpoint
+
+The separate `atomic-kernel-evidence.json` records a full ordinary-EVM run using
+the configurable 10-billion budget: nine scenarios, 2,355 original logical tics,
+31 exact 64,000-byte frames and nine exact final post-render stored snapshots.
+All 1,755 resource chunk runtimes were ordinarily deployed and byte-checked.
+The original eight scenarios retain their native observations; the ninth adds
+150 projectile-arena tics and seven frames, including original rocket flight,
+blast damage, kill and lazy removal. Test-only scenario setup is explicit and
+symmetric with the independent C host. No native state or pixels enter runtime.
+
+Each startup/reset performs original resource preparation and level startup in
+one call. Probe gas includes observation serialization and is not production
+transaction gas. The prior one-billion evidence remains historical and unchanged.
+GameplayProbe formatting follows the existing Forge format gate; observation
+field order and encoding remain unchanged.
+
+```sh
+node tools/reference/gameplay/compare.mjs --skip-build --output-prefix artifacts/local/gameplay-atomic-complete
+```

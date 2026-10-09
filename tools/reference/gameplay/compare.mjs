@@ -9,13 +9,15 @@ import {connect} from 'node:net';
 import {resolve,dirname} from 'node:path';
 import {fileURLToPath} from 'node:url';
 import assert from 'node:assert/strict';
+import {loadGasBudget,executionEnv} from '../../execution-budget.mjs';
+const budget=loadGasBudget();
 const root=resolve(dirname(fileURLToPath(import.meta.url)),'../../..');process.chdir(root);
 const args=process.argv.slice(2),option=(key,fallback)=>args.includes(key)?args[args.indexOf(key)+1]:fallback;
-const cases=option('--cases','idle,movement,pistol,combat-arena,damage-arena,death-arena,door-use,door-obstructed').split(',');
+const cases=option('--cases','idle,movement,pistol,combat-arena,damage-arena,death-arena,door-use,door-obstructed,projectile-arena').split(',');
 const limit=Number(option('--limit','Infinity')),batch=Number(option('--batch','5')),port=Number(option('--port','18577'));
 const prefix=option('--output-prefix','artifacts/local/gameplay-evm');
 assert(limit===Infinity||(Number.isInteger(limit)&&limit>=0),'invalid --limit');
-assert(Number.isInteger(batch)&&batch>=1&&batch<=5);assert(Number.isInteger(port)&&port>1024&&port<65536);
+assert(Number.isInteger(batch)&&batch>=1&&batch<=100);assert(Number.isInteger(port)&&port>1024&&port<65536);
 await mkdir(dirname(prefix),{recursive:true});
 const sha=data=>createHash('sha256').update(data).digest('hex');
 const word=value=>BigInt.asUintN(256,BigInt(value)).toString(16).padStart(64,'0');
@@ -74,22 +76,26 @@ assert.equal(sha(blob),bundle.blobSha256);
 const native=JSON.parse(await readFile('test/fixtures/gameplay/manifest.json','utf8'));
 const post=JSON.parse(await readFile('test/fixtures/gameplay_post/manifest.json','utf8'));assert.deepEqual(post.resourceIdentity,native.resourceIdentity);
 assert.deepEqual(native.resourceIdentity,bundle.resourceIdentity);
-for(const name of cases){assert(native.cases.some(row=>row.name===name),'unknown scenario '+name);
-  const relative=name+'/states.delta.bin.gz';assert.equal(sha(await readFile('test/fixtures/gameplay/'+relative)),native.files[relative]);}
+const projectile=JSON.parse(await readFile('test/fixtures/gameplay_projectile/manifest.json','utf8'));
+assert.deepEqual(projectile.resourceIdentity,bundle.resourceIdentity);
+const fixtureDir=name=>name==='projectile-arena'?'test/fixtures/gameplay_projectile':`test/fixtures/gameplay/${name}`;
+const fixtureHash=(name,leaf)=>name==='projectile-arena'?projectile.files[leaf]:native.files[name+'/'+leaf];
+for(const name of cases){assert(name==='projectile-arena'||native.cases.some(row=>row.name===name),'unknown scenario '+name);
+  assert.equal(sha(await readFile(fixtureDir(name)+'/states.delta.bin.gz')),fixtureHash(name,'states.delta.bin.gz'));}
 if(args.includes('--decode-native-only')) {
-  for(const name of cases){const rows=nativeStates(await readFile(`test/fixtures/gameplay/${name}/states.delta.bin.gz`));for(const state of rows)fields(state);console.log(`PASS DSG1 schema ${name}: ${rows.length} records`);}
+  for(const name of cases){const rows=nativeStates(await readFile(fixtureDir(name)+'/states.delta.bin.gz'));for(const state of rows)fields(state);console.log(`PASS DSG1 schema ${name}: ${rows.length} records`);}
   process.exit(0);
 }
-if(!args.includes('--skip-build'))execFileSync(resolve('.toolchain/bin/forge'),['build','src/support/GameplayProbe.sol','src/evm/ResourceStore.sol'],{stdio:'inherit',timeout:600000});
+if(!args.includes('--skip-build'))execFileSync(resolve('.toolchain/bin/forge'),['build','src/support/GameplayProbe.sol','src/evm/ResourceStore.sol'],{stdio:'inherit',timeout:600000,env:executionEnv()});
 const artifact=JSON.parse(await readFile('out/GameplayProbe.sol/GameplayProbe.json','utf8')),chunk=JSON.parse(await readFile('out/ResourceStore.sol/ResourceStore.json','utf8'));
 const method=name=>{const selector=artifact.methodIdentifiers[name];assert(selector,'missing probe method '+name);return '0x'+selector;};
-const gas='0x3b9aca00',url=`http://127.0.0.1:${port}`;let rpcId=0,server;
-const report={kind:'original-gameplay-ordinary-evm-comparison',pass:false,scope:'Startup, authoritative logical world after every original tic, and only native-selected live frames. Direct ticcmds; test-only scenario setup.',resourceIdentity:bundle.resourceIdentity,gasLimit:1000000000,notes:['Probe gas includes test-only DSG1 serialization and Observation events; this is not production Doom transaction cost.','The last source snapshot precedes selected rendering; renderer globals persist into subsequent real ticks.','No setCode, etch, alternate interpreter, or native-provided gameplay/pixels. Native bytes are comparison inputs only.'],cases:[],sourceHashes:{}};
+const gas=budget.gasHex,url=`http://127.0.0.1:${port}`;let rpcId=0,server;
+const report={kind:'original-gameplay-ordinary-evm-comparison',pass:false,scope:'Startup, authoritative logical world after every original tic, and only native-selected live frames. Direct ticcmds; test-only scenario setup.',resourceIdentity:bundle.resourceIdentity,gasLimit:budget.gasLimit,executionBudget:budget,notes:['Probe gas includes test-only DSG1 serialization and Observation events; this is not production Doom transaction cost.','The last source snapshot precedes selected rendering; renderer globals persist into subsequent real ticks.','No setCode, etch, alternate interpreter, or native-provided gameplay/pixels. Native bytes are comparison inputs only.'],cases:[],sourceHashes:{}};
 async function rpc(method,params=[]){const response=await fetch(url,{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({jsonrpc:'2.0',id:++rpcId,method,params}),signal:AbortSignal.timeout(300000)});const result=await response.json();if(result.error)throw Object.assign(Error(`${method}: ${JSON.stringify(result.error)}`),{rpcError:result.error});return result.result;}
 const sleep=ms=>new Promise(done=>setTimeout(done,ms));
 async function waitFor(fn,label){for(let i=0;i<2400;i++){const value=await fn();if(value)return value;await sleep(50);}throw Error('Timeout '+label);}
 async function transaction(from,data,to){const start=performance.now(),hash=await rpc('eth_sendTransaction',[{from,data,gas,...(to?{to}:{})}]);const r=await waitFor(()=>rpc('eth_getTransactionReceipt',[hash]),'receipt');assert.equal(r.status,'0x1',`EVM transaction reverted ${hash} gas ${BigInt(r.gasUsed)}`);return {receipt:r,ms:performance.now()-start};}
-const scenarios={idle:0,movement:0,pistol:0,'combat-arena':1,'damage-arena':2,'death-arena':3,'door-use':4,'door-obstructed':5};
+const scenarios={idle:0,movement:0,pistol:0,'combat-arena':1,'damage-arena':2,'death-arena':3,'door-use':4,'door-obstructed':5,'projectile-arena':6};
 try{
   await new Promise((done,fail)=>{const socket=connect({host:'127.0.0.1',port});socket.once('connect',()=>{socket.destroy();fail(Error('Refusing occupied port'));});socket.once('error',error=>error.code==='ECONNREFUSED'?done():fail(error));});
   const nodeArgs=['--host','127.0.0.1','--port',String(port),'--hardfork','cancun','--disable-code-size-limit','--disable-block-gas-limit','--memory-limit','1073741824','--silent'];
@@ -105,11 +111,12 @@ try{
   assert.equal(await rpc('eth_getCode',[address,'latest']),artifact.deployedBytecode.object);
   report.deployment={address,transactionHash:deploy.transactionHash,gas:Number(BigInt(deploy.gasUsed)),runtimeBytes:(artifact.deployedBytecode.object.length-2)/2,all1755ResourceRuntimesVerified:true,uploadMs,totalChunkGas:chunkGas};
   report.compiler={version:artifact.metadata.compiler.version,settings:artifact.metadata.settings};
-  for(const path of [...Object.keys(artifact.metadata.sources),'tools/reference/gameplay/compare.mjs','tools/reference/gameplay/observe.h','test/fixtures/gameplay/manifest.json','test/fixtures/gameplay_post/manifest.json','tools/reference/gameplay/post_render.py','tools/reference/gameplay/post_render_host.c','foundry.toml'])report.sourceHashes[path]=sha(await readFile(path));
+  for(const path of [...Object.keys(artifact.metadata.sources),'tools/reference/gameplay/compare.mjs','tools/reference/gameplay/observe.h','test/fixtures/gameplay/manifest.json','test/fixtures/gameplay_post/manifest.json','test/fixtures/gameplay_projectile/manifest.json','tools/reference/gameplay/post_render.py','tools/reference/gameplay/post_render_host.c','foundry.toml'])report.sourceHashes[path]=sha(await readFile(path));
+  report.initialization={nativeZone:true,atomic:true,scope:'Each startup/reset runs original resource and level initialization in one call.'};
   for(const name of cases){
-    const postBytes=await readFile(`test/fixtures/gameplay_post/${name}.bin.gz`);assert.equal(sha(postBytes),post.files[name+'.bin.gz']);const postStates=nativePostStates(postBytes);
-    const states=nativeStates(await readFile(`test/fixtures/gameplay/${name}/states.delta.bin.gz`));fields(states[0]);
-    const commandBytes=await readFile(`test/fixtures/gameplay/${name}/commands.txt`);assert.equal(sha(commandBytes),native.files[name+'/commands.txt']);
+    const postBytes=await readFile(name==='projectile-arena'?fixtureDir(name)+'/post-render.bin.gz':`test/fixtures/gameplay_post/${name}.bin.gz`);assert.equal(sha(postBytes),name==='projectile-arena'?projectile.files['post-render.bin.gz']:post.files[name+'.bin.gz']);const postStates=nativePostStates(postBytes);
+    const states=nativeStates(await readFile(fixtureDir(name)+'/states.delta.bin.gz'));fields(states[0]);
+    const commandBytes=await readFile(fixtureDir(name)+'/commands.txt');assert.equal(sha(commandBytes),fixtureHash(name,'commands.txt'));
     const commands=commandBytes.toString('utf8').trim().split('\n').map(line=>line.split(' ').map(Number));
     const count=Math.min(limit,commands.length),caseReport={name,tics:0,frames:[],startup:false,batches:[]};report.cases.push(caseReport);
     const startupStart=performance.now();
@@ -131,7 +138,7 @@ try{
       for(const [i,row]of obs.entries()){
         const tic=start+i+1;assert.equal(row.tic,tic);const diff=difference(states[tic],row.state);actual.push(row.state);
         if(diff){report.firstDifference={case:name,tic,...diff};await writeFile(prefix+'.mismatch-native.bin',states[tic]);await writeFile(prefix+'.mismatch-evm.bin',row.state);throw Error(JSON.stringify(report.firstDifference));}
-        if(commands[tic-1][4]){const expected=await readFile(`test/fixtures/gameplay/${name}/frame-${String(tic).padStart(6,'0')}.bin`);assert.equal(sha(expected),native.files[`${name}/frame-${String(tic).padStart(6,'0')}.bin`]);assert.equal(row.pixels.length,64000);let differences=0,first=-1;for(let k=0;k<64000;k++)if(expected[k]!==row.pixels[k]){differences++;if(first<0)first=k;}
+        if(commands[tic-1][4]){const expected=await readFile(fixtureDir(name)+`/frame-${String(tic).padStart(6,'0')}.bin`);assert.equal(sha(expected),fixtureHash(name,`frame-${String(tic).padStart(6,'0')}.bin`));assert.equal(row.pixels.length,64000);let differences=0,first=-1;for(let k=0;k<64000;k++)if(expected[k]!==row.pixels[k]){differences++;if(first<0)first=k;}
           if(differences){report.firstDifference={case:name,tic,field:'framebuffer',pixelDiffCount:differences,firstPixel:first,native:expected[first],evm:row.pixels[first]};await writeFile(prefix+'.mismatch-frame.bin',row.pixels);throw Error(JSON.stringify(report.firstDifference));}
           caseReport.frames.push({tic,pixelDiffCount:0,sha256:sha(row.pixels)});
         }else assert.equal(row.pixels.length,0);
@@ -148,7 +155,7 @@ try{
     const packed=Buffer.concat(actual.flatMap(state=>{const length=Buffer.alloc(4);length.writeUInt32BE(state.length);return [length,state];}));
     await writeFile(prefix+'.'+name+'.states.bin.gz',gzipSync(packed,{mtime:0}));caseReport.stateStreamSha256=sha(packed);
   }
-  report.pass=true;report.completeNativeScenarioSet=cases.length===8&&new Set(cases).size===8&&report.cases.every(c=>c.tics===native.cases.find(row=>row.name===c.name).tics)&&report.cases.reduce((n,c)=>n+c.tics,0)===2205&&report.cases.reduce((n,c)=>n+c.frames.length,0)===24;
+  report.pass=true;report.completeNativeScenarioSet=cases.length===9&&new Set(cases).size===9&&report.cases.every(c=>c.tics===(c.name==='projectile-arena'?projectile.tics:native.cases.find(row=>row.name===c.name).tics))&&report.cases.reduce((n,c)=>n+c.tics,0)===2355&&report.cases.reduce((n,c)=>n+c.frames.length,0)===31;
   console.log(JSON.stringify({pass:true,completeNativeScenarioSet:report.completeNativeScenarioSet,cases:report.cases.map(({name,tics,frames})=>({name,tics,frames:frames.length}))}));
 }catch(error){report.error=String(error);throw error;}finally{
   await writeFile(prefix+'.json',JSON.stringify(report,null,2)+'\n');
