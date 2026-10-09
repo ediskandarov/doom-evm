@@ -1,7 +1,8 @@
 # Phase 3 source coverage and acceptance boundaries
 
 The frozen implementation now has bounded, completed kernel, public-contract and
-Chrome integration proofs. **M2 and M3 remain pending final inherited gates,
+Chrome integration proofs on the formatted build. Historical pre-format proofs remain
+separate and are not relabeled current. **M2 and M3 remain pending final inherited gates,
 integrator signoff.** This is not a complete original
 DOOM port. All descriptions below distinguish source presence, actual integration
 and the measured verification scope.
@@ -73,12 +74,12 @@ Semantic `W_CacheLumpNum` hit/miss/tag/owner behavior is implemented separately.
 
 | Evidence | Actual scope | Result |
 |---|---|---|
-| [Atomic startup](../tools/reference/phase3_zone_setup/atomic-validation.json) | Single real `initializeNative`, original resource/level/player allocation order, all normalized headers/owners and actor/special/map counts; four tests | PASS |
-| Full kernel, retained report `artifacts/local/gameplay-atomic-complete.json` | Nine declared scenarios, 2,355 tics, 31 selected complete frames, nine exact final stored logical states; direct ticcmds and test-only arena setup | PASS, run19797 |
-| [Public production](../tools/reference/gameplay/production-atomic-evidence.json) | One ordinary `initializeGame` transaction; 129 keyboard tics, 130 rows ×14 fields, six native live frames, static pre-start Frame, thirteen whole-storage rollback checks | PASS, run93227 |
-| [Repeated production](../tools/reference/gameplay/production-reproducibility-evidence.json) | Two fresh ordinary contracts: all130×14 rows, commands/sequences/cadence, seven totalFrames, gas and thirteen errors/rollback equal | PASS, run10416 |
-| Chrome, retained report `artifacts/local/phase3-gameplay-browser-atomic.json` | Six actual Frames/Canvas, keyboard Start/Resume, blur stop, deduplication and controlled receipt fallback; prior failing tic5 now exact | PASS, run72876 |
-| Memory clone reports `artifacts/local/gameplay-production-atomic-memory{,-cadence}.json` | Separate clone agrees with ordinary production storage/exported fields/Frames; patched/unpatched clone gas equal; all-render and no-render cadence | PASS, runs41920/74863 |
+| [Atomic startup](../tools/reference/phase3_zone_setup/final-validation.json) | Single real `initializeNative`, original resource/level/player allocation order, all normalized headers/owners and actor/special/map counts; four tests | PASS |
+| Full kernel, retained report `artifacts/local/gameplay-kernel-final.json` | Nine declared scenarios, 2,355 tics, 31 selected complete frames, nine exact final stored logical states; direct ticcmds and test-only arena setup | PASS, run60930 |
+| [Public production](../tools/reference/gameplay/production-final-evidence.json) | One ordinary `initializeGame` transaction; 129 keyboard tics, 130 rows ×14 fields, six native live frames, static pre-start Frame, thirteen whole-storage rollback checks | PASS, run84848 |
+| [Repeated production](../tools/reference/gameplay/production-final-reproducibility-evidence.json) | Two fresh ordinary contracts: all130×14 rows, commands/sequences/cadence, seven totalFrames, gas and thirteen errors/rollback equal | PASS, run1273 |
+| Chrome, retained report `artifacts/local/phase3-gameplay-browser-final.json` | Six actual Frames/Canvas, keyboard Start/Resume, blur stop, deduplication and controlled receipt fallback; prior failing tic5 now exact | PASS, run5132 |
+| Memory clone reports `artifacts/local/gameplay-production-final-memory{,-cadence}.json` | Separate clone agrees with ordinary production storage/exported fields/Frames; patched/unpatched clone gas equal; all-render and no-render cadence | PASS, runs98439/37535 |
 
 The repeated production stream has independent fresh state and rechecks all1,755 authenticated resource chunks. Only the repeat runner's optional palette-copy guard differs; production code/transactions/native stream are unchanged.
 
@@ -228,7 +229,7 @@ zero or absent observations do not prove absence of execution.
 - **geometry-and-capacity — Retain valid original control flow; explicit failures outside supported domain.** Reject abs(INT_MIN), >8 crossed specials, >128 intercepts, >64 scrollers, malformed BLOCKMAP/BSP/REJECT and null donut topology. P_PathTraverse original64-step bound retained. Next-highest floor original first20 eligible values is a defined break, not a rejected overflow.
 - **original-fatal-limits — Original I_Error becomes revert; original nonfatal behavior retained.** Exhausted16 buttons, full/missing30 platform registry and unknown pickups become explicit errors. Full30 ceiling registry originally silently fails registration and remains so. Valid animation/resource lookup prerequisites enforced.
 - **invalid-ai-indices — Reject original undefined/caller-invalid states.** Reject invalid movement direction, no enabled player during player search, >32/missing brain targets, zero cube speed/tics or target mass, invalid actor/state/weapon/ammo indices; native proof excludes undefined cases except explicit diagnostic probes.
-- **production-resources — Configurable local execution budget; independent code/memory/compiler constraints.** Default local 10B gas, env/config override. No fixed 1B economic fidelity gate and no production startup split to satisfy such a gate. Actual ordinary initialization1621868997 gas, selected steps309171400..312238893 and liveFrames719455170..781684253. Clone engine-boundary memory initialization19665056B/liveFrames<=11956800B/steps<=8753856B; not exact untouched-production peak. Enlarged local code limits do not imply public-chain deployability.
+- **production-resources — Configurable local execution budget; independent code/memory/compiler constraints.** Default local 10B gas, env/config override. No fixed 1B economic fidelity gate and no production startup split to satisfy such a gate. Actual ordinary initialization1621885757 gas, selected steps309171400..312238893 and liveFrames719455170..781684253. Clone engine-boundary memory initialization19665056B/liveFrames<=11956800B/steps<=8753856B; not exact untouched-production peak. Enlarged local code limits do not imply public-chain deployability.
 - **physical-backing-knownness — Known bytes only; unknown remains a rejection.** Allocated/free size/tag/known-ID integer bytes and authenticated adjacent cached lump bodies may be read through source-derived links. Pointers, padding, initial/split unknown IDs, slack, free/unmodeled payload bodies, stale cache ownership, negative absolute indices and out-of-zone positions remain unreadable. Ordinary128-sample lazy tail window rejects arbitrary translated out-of-profile indices. Logical-lump overread can be within original whole-zone backing; no asset/frame/pixel exception.
 - **native-layout — Pinned LP64 implementation profile.** memblock40,memzone56,cap8,headerID20,align8 are measured native adaptation; upstream align4 replaced for LP64 gameplay validity. Stable IDs substitute process pointers. Fresh split IDs intentionally unknown. This is not universal compiler/architecture/pointer-byte fidelity.
 - **source-liveness-adaptations — Call-local working-set representation only.** P_PathTraverse working struct, R_LoadMap line aliases/offset scratch and physical tail reader scratch allow unchanged production compiler settings to generate the full hook graph. No source loop/math/order/guard changes or persisted scratch injection.
@@ -238,7 +239,7 @@ and environment helper. There is no fixed1B economic fidelity gate. Production
 startup remains one atomic transaction. Existing historical1B reports retain
 their original values and scopes; no measurement has been rewritten.
 
-Actual ordinary production initialization costs1,621,868,997 gas; selected
+Actual ordinary production initialization costs1,621,885,757 gas; selected
 no-render steps309,171,400–312,238,893 and live frames719,455,170–781,684,253.
 These include storage/gameplay/render/Frame work and exclude probe serialization.
 They describe enlarged local Cancun execution, not protocol-limit public-chain
