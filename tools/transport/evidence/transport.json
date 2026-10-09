@@ -1,0 +1,152 @@
+{
+  "kind": "synthetic-transport-experiment",
+  "timestamp": "2026-10-09T09:40:01.834Z",
+  "nodeVersion": "v24.11.0",
+  "anvilVersion": "anvil/v1.8.5",
+  "compilerVersion": "solc, the solidity compiler commandline interface\nVersion: 0.8.37+commit.f401782d.Darwin.appleclang",
+  "nodeArgs": [
+    "--host",
+    "127.0.0.1",
+    "--port",
+    "18546",
+    "--hardfork",
+    "cancun",
+    "--disable-code-size-limit",
+    "--disable-block-gas-limit",
+    "--memory-limit",
+    "1073741824",
+    "--silent"
+  ],
+  "externalNodeSettingsUnverified": false,
+  "postLaunchRpc": {
+    "method": "anvil_setBlockGasLimit",
+    "params": [
+      "0x3b9aca00"
+    ]
+  },
+  "blockGasLimit": 1000000000,
+  "deployment": {
+    "transactionHash": "0x726f90f2fc81e8714d7fed87b9c4e8cb5e0f85087631cba6077a3ec66e22e4f2",
+    "address": "0x5fbdb2315678afecb367f032d93f642f64180aa3",
+    "gasUsed": 257429,
+    "runtimeBytes": 947
+  },
+  "frames": [
+    {
+      "sequence": 1,
+      "transactionHash": "0x84226817867d14fd72f60655e66373ad7c92ec472d6eb325fc6fc7f0e00d54eb",
+      "frameId": "1",
+      "pixelBytes": 64000,
+      "abiDataBytes": 64128,
+      "pixelsSha256": "f268e8234ce8f3af96819db5e09a5f129bf0240a0aac37c76bbe42cf4fa4061c",
+      "gasUsed": 11622237,
+      "gasLimit": 1000000000,
+      "submitResponseMs": 0.981583999999998,
+      "receiptMs": 28.197958999999997,
+      "wsDeliveryMs": 21.01762500000001,
+      "wsEqualsReceipt": true
+    },
+    {
+      "sequence": 2,
+      "transactionHash": "0x5917b7c0d16f85e9a6b8cf32a356831b5c5cdba31dec17e9332a8dd7f366f235",
+      "frameId": "2",
+      "pixelBytes": 64000,
+      "abiDataBytes": 64128,
+      "pixelsSha256": "51691bf766eb5ae5531ca3cc9b1a66e73ffae8f9c0381cdb70ffb6df84d4ab53",
+      "gasUsed": 11605137,
+      "gasLimit": 1000000000,
+      "submitResponseMs": 1.18991699999998,
+      "receiptMs": 25.026708000000013,
+      "wsDeliveryMs": 20.318374999999975,
+      "wsEqualsReceipt": true
+    },
+    {
+      "sequence": 3,
+      "transactionHash": "0x220245d0fc5dba93d313b324511678c4a7f5e2e9185f9b88b7c58635ba743251",
+      "frameId": "3",
+      "pixelBytes": 64000,
+      "abiDataBytes": 64128,
+      "pixelsSha256": "d3fef298d600fd46ac440b0727e51340e640ad268bbe192500e3290be25ce7d0",
+      "gasUsed": 11605137,
+      "gasLimit": 1000000000,
+      "submitResponseMs": 3.0774999999999864,
+      "receiptMs": 25.063625000000002,
+      "wsDeliveryMs": 19.391834000000017,
+      "wsEqualsReceipt": true
+    }
+  ],
+  "fallback": {
+    "sequence": 4,
+    "source": "receipt",
+    "recoveredLogs": 4,
+    "duplicates": 7,
+    "displayed": [
+      {
+        "frameId": "1",
+        "source": "ws"
+      },
+      {
+        "frameId": "2",
+        "source": "ws"
+      },
+      {
+        "frameId": "3",
+        "source": "ws"
+      },
+      {
+        "frameId": "4",
+        "source": "receipt"
+      }
+    ]
+  },
+  "failedTransactions": [
+    {
+      "name": "wrong-driver",
+      "transactionHash": "0x7a8cbb38c643503cf00ccd23625701c3d5d5c38158bc76e484c4d864b4b460b7",
+      "status": "0x0",
+      "logCount": 0,
+      "gasUsed": 21830
+    },
+    {
+      "name": "replayed-sequence",
+      "transactionHash": "0x84a8e745d75e49bf52035bc1c9cd463f67167e4a347eb91ed48384fc7614dcbc",
+      "status": "0x0",
+      "logCount": 0,
+      "gasUsed": 23883
+    },
+    {
+      "name": "skipped-sequence",
+      "transactionHash": "0x2b3c6da20b8b78d05a70d51bdd6ff290e196e3370f2da752afb077cb44f3693d",
+      "status": "0x0",
+      "logCount": 0,
+      "gasUsed": 23883
+    },
+    {
+      "name": "out-of-gas",
+      "transactionHash": "0x46d19961333c0feba53f82413647b4d5db8cbfe83f061af52d96a972dc62b52a",
+      "status": "0x0",
+      "logCount": 0,
+      "gasUsed": 100000
+    },
+    {
+      "name": "revert-after-log",
+      "transactionHash": "0x46007b4c6db6516f75fdcedbceaba27ece8bf9c8ad60500e26ffd754fae79e05",
+      "status": "0x0",
+      "logCount": 0,
+      "gasUsed": 11605054
+    }
+  ],
+  "memory": {
+    "samplingIntervalMs": 100,
+    "nodePeakSampledRssBytes": 146604032,
+    "nodePeakSampledHeapUsedBytes": 28412104,
+    "nodePeakSampledExternalBytes": 4215327,
+    "anvilPeakSampledRssBytes": 31735808,
+    "samples": 6
+  },
+  "notes": [
+    "Timings are wall-clock client observations including JSON-RPC, execution and mining; no isolated EVM execution-time claim.",
+    "Memory peaks are sampled, not guaranteed exact maxima. External-node Anvil RSS is unavailable.",
+    "Synthetic fixture only: no WAD, original C equivalence or engine implementation."
+  ]
+}
