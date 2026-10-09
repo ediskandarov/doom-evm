@@ -29,8 +29,11 @@ Clone memory and final inherited gates remain. Current replay checkpoint
 `0015986` verifies two complete independent ordinary deployments: all 130 × 14
 rows, seven Frames, commands/cadence/sequences, startup/constructor/receipt gas
 and thirteen rejection selectors/gas/whole-storage rollback assertions equal.
-[Fresh replay evidence](../tools/reference/gameplay/production-final-reproducibility-evidence.json). No current bytecode-identity claim. The 388-function
-audit snapshot also needs refresh after the new evidence checkpoint.
+[Fresh replay evidence](../tools/reference/gameplay/production-final-reproducibility-evidence.json). No current bytecode-identity claim. Current native header checkpoint `c672568` passes all four retained tests inside
+the 403-test full run; all 54 compiled source keccak bindings checked.
+[Fresh header evidence](../tools/reference/phase3_zone_setup/final-validation.json).
+Atomic fixture gas remains 1,624,686,931, distinct from production gas.
+The 388-function audit snapshot needs refresh after the new evidence checkpoint.
 
 Inherited compile headroom checkpoint `bcbe46a`: the 497.56-second dependency build
 justifies forced-build timeout 1,200 seconds and enclosing Phase 0/1 wrappers
