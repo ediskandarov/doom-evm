@@ -7,6 +7,8 @@ import {M_Fixed} from "./m_fixed.sol";
 import {Tables} from "./tables.sol";
 import {RenderState} from "./r_state.sol";
 import {Node, Seg, MapData} from "./r_defs.sol";
+import {RenderContext} from "./r_render_state.sol";
+import {RenderHooks} from "./r_render_hooks.sol";
 
 /// @custom:source linuxdoom-1.10/r_main.c at a77dfb96cb91780ca334d0d4cfd86957558007e0
 /// @dev Original global variables are fields in rs. See PHASE2-GEOMETRY.md for C domain boundaries.
@@ -14,6 +16,21 @@ library R_Main {
     error InvalidBSP();
     error InvalidViewSize();
     error UndefinedGeometry();
+
+    /// @dev Camera/light inputs are already in rs, replacing original player/global indirection.
+    /// Original NetUpdate calls are platform boundaries with no work in this static EVM frame.
+    function R_RenderPlayerView(RenderContext memory ctx, RenderHooks memory hooks) internal view {
+        RenderState memory rs = ctx.rs;
+        R_SetupFrame(rs, rs.viewx, rs.viewy, rs.viewz, rs.viewangle, rs.extralight, rs.fixedcolormap);
+        hooks.clearClipSegs(ctx);
+        hooks.clearDrawSegs(ctx);
+        hooks.clearPlanes(ctx);
+        hooks.clearSprites(ctx);
+        if (ctx.map.nodes.length > 32768) revert InvalidBSP();
+        hooks.renderBSPNode(ctx, int32(uint32(ctx.map.nodes.length)) - 1);
+        hooks.drawPlanes(ctx);
+        hooks.drawMasked(ctx);
+    }
 
     function R_PointOnSide(int32 x, int32 y, Node memory node) internal pure returns (uint32) {
         if (node.dx == 0) return x <= node.x ? (node.dy > 0 ? 1 : 0) : (node.dy < 0 ? 1 : 0);

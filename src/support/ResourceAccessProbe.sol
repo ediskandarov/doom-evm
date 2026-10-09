@@ -125,9 +125,8 @@ contract ResourceAccessProbe {
         ColumnView memory b = R_Data.R_GetColumn(r, 2, 1);
         report.cost[3] = start - gasleft();
         report.footprint[4] = memorySize();
-        report.digest = sha256(
-            abi.encode(sha256(a.data), uint256(a.offset), sha256(b.data), uint256(b.offset))
-        );
+        report.digest =
+            sha256(abi.encode(sha256(a.data), uint256(a.offset), sha256(b.data), uint256(b.offset)));
         report.footprint[5] = memorySize();
     }
 
