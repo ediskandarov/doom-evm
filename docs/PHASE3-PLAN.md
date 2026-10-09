@@ -10,7 +10,8 @@ does not count as accepted Phase 3 implementation.
 Last implementation checkpoint: `ab316f8`, physical actor/mover allocation and lazy free;
 verified source-derived renderer allocator startup is `d9ca352`;
 zone core is `2392f4a`.
-Last native observation checkpoint: `4d06c03`, generic physical-byte/column proof;
+Last native observation checkpoint: `01417ad`, rocket-world/blast observations;
+`4d06c03` supplies the generic physical-byte/column proof;
 `ba53a4b` supplies exact map/setup heap boundaries;
 `5ffd10a` supplies the original zone lifecycle/layout evidence;
 `7fc2cab` remains the exact post-render state extension.
@@ -148,6 +149,11 @@ Verified recovery checkpoints:
   Source-written header/resource bytes are distinguished from unknown pointers,
   padding and slack. Generation and fresh `--check` pass. [Validation](../test/fixtures/phase3_zone_backing/validation.json).
   Renderer/cache source exists but its EVM component gate is still running.
+- `01417ad`: 150 original rocket-world tics / seven selected frames and exact
+  pre/post-render worlds across four profiles. Observation-only nested timeline
+  confirms actual radius damage to the player (requested 25 at tic 49), alongside
+  flight, explosion, kill and lazy removal. [Native validation](../tools/reference/gameplay_projectile/validation.json).
+  New probe scenario six and comparison runner are drafted; EVM proof pending.
 
 Next dependency order:
 
@@ -174,15 +180,17 @@ their separate verified integration checkpoints. Native ABI constant generation 
 committed in `1e6227d`. Live Anvil port 18579 is retained for
 production/browser verification; current failed browser instance cannot reinitialize.
 
-Current compile status: setup attempts 80103/80877/31289 failed during code
-generation before assertions, at the same R_LoadMap line-loop lifetime pressure.
-Ineffective P_Setup scratch/call-boundary experiments were removed. An approved
-call-local MapLineWork in R_Data now retains line/vertex aliases and offset,
-preserving every read/write/order. The serialized 12089 gate compiles backing,
-whole setup and inherited resource/draw/sprite/wall/plane tests. A test-only hex
-literal inference error was fixed before this run; no assertions were skipped.
-Four-profile native geometry/setup evidence passed and is committed in `ba53a4b`.
-Do not count this native proof or a successful IR export as EVM verification.
+Current component gate status: setup attempts 80103/80877/31289 stopped before
+assertions at R_LoadMap line-loop lifetime pressure; ineffective P_Setup experiments
+were removed. MapLineWork resolves that site. The subsequent backing-reader stack
+pressure in 12089 was resolved by call-local TailWork, preserving loop/read order.
+6162 plus plane-path 47902 verify all 111 renderer/resource/backing tests. Its full
+setup test hit MemoryOOG near the unchanged cap because test scaffolding parsed
+resources twice. Test-only duplicate parsing was removed; 73296 now passes all
+three setup tests, retaining every header/owner/digest/actor/light assertion.
+Full original initializeWithZone + header comparison costs 921,597,231 test gas.
+These verified components are ready for separate commits after source-hash review;
+production transaction and browser recovery are still pending.
 
 At each verified integration checkpoint, update and commit this ledger with exact
 implementation/integration/verification scope, evidence and code hashes, remaining
