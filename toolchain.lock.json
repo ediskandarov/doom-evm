@@ -1,0 +1,40 @@
+{
+  "foundry": "1.8.5",
+  "foundry_commit": "51a52c59cffd940f76eddd0b4bb1791aa4b5ac7f",
+  "solc": "0.8.37",
+  "solc_commit": "f401782d",
+  "node": "24.11.0",
+  "evm": "cancun",
+  "platforms": {
+    "darwin_arm64": {
+      "foundry": {
+        "url": "https://github.com/foundry-rs/foundry/releases/download/v1.8.5/foundry_v1.8.5_darwin_arm64.tar.gz",
+        "sha256": "56049728e25e44a61c7f2e49438023b0890cb45850ffcb7c882f90cd998baf83"
+      },
+      "solc": {
+        "url": "https://github.com/argotorg/solidity/releases/download/v0.8.37/solc-macos",
+        "sha256": "a27396e7732aa52e80ff89ad7bd8a2e46fec2a6dcc4ef20cd16e5e0c502d6821"
+      }
+    },
+    "linux_amd64": {
+      "foundry": {
+        "url": "https://github.com/foundry-rs/foundry/releases/download/v1.8.5/foundry_v1.8.5_linux_amd64.tar.gz",
+        "sha256": "6c66ffcc55fa4249197721baa3098bc208014ea1d8aa04b2ed50ac6bccffb226"
+      },
+      "solc": {
+        "url": "https://github.com/argotorg/solidity/releases/download/v0.8.37/solc-static-linux",
+        "sha256": "5de843c2c93563cc66425c99a4fb13fdbf32b4c4ae07469480faaf126e14404a"
+      }
+    },
+    "linux_arm64": {
+      "foundry": {
+        "url": "https://github.com/foundry-rs/foundry/releases/download/v1.8.5/foundry_v1.8.5_linux_arm64.tar.gz",
+        "sha256": "5bdce3dade8b6f0a65d4fccf6908426aee4905a988b08dce79d0a72fe7498310"
+      },
+      "solc": {
+        "url": "https://github.com/argotorg/solidity/releases/download/v0.8.37/solc-static-linux-arm",
+        "sha256": "717142f4275804e75c3d0bafd264db669da9cf411550c7c29cc68f634d17a9da"
+      }
+    }
+  }
+}

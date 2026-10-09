@@ -10,7 +10,7 @@ import time
 ROOT = pathlib.Path(__file__).resolve().parents[1]
 SOURCE = 'src/support/StackPressure.sol'
 SOLC = ROOT / '.toolchain/bin/solc'
-OUT = ROOT / 'artifacts/phase0'
+OUT = ROOT / 'artifacts/local/stack'
 OUT.mkdir(parents=True, exist_ok=True)
 source_text = (ROOT / SOURCE).read_text()
 version = subprocess.check_output([str(SOLC), '--version'], text=True).strip()

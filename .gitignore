@@ -5,3 +5,4 @@ cache/
 node_modules/
 artifacts/local/
 web/config.local.json
+__pycache__/

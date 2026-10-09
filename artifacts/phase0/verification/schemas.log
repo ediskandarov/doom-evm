@@ -1,0 +1,3 @@
+jsonschema unavailable; strict supported-keyword validator used (Python stdlib)
+PASS: 4 fixture contracts, little-endian vector, 37 malformed cases
+Synthetic serialization fixtures only; no WAD parse or C equivalence claim.

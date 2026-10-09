@@ -302,12 +302,14 @@ A faster renderer that changes pixels without documented justification **is not 
 
 ### Foundation / Sprint F0 (finish before substantial parallel work)
 
-- [ ] `F0-01` Audit/create repository and pin original DOOM commit SHA.
-- [ ] `F0-02` Reproducible Foundry + Anvil setup, `via_ir`, exact compiler.
-- [ ] `F0-03` Freeze importable common numeric/render/resource/frame schemas.
-- [ ] `F0-04` Prove a 64 KB Frame log from a real transaction and decode it in the browser.
-- [ ] `F0-05` Compile a stack-heavy, renderer-shaped spike.
-- [ ] `F0-06` Publish `PORTING.md` progress matrix and fixture metadata format.
+- [x] `F0-01` Audit/create repository and pin original DOOM commit SHA.
+- [x] `F0-02` Reproducible Foundry + Anvil setup, `via_ir`, exact compiler.
+- [x] `F0-03` Freeze importable common numeric/render/resource/frame schemas.
+- [x] `F0-04` Prove a 64 KB Frame log from a real transaction and decode it in the browser.
+- [x] `F0-05` Compile a stack-heavy, renderer-shaped spike.
+- [x] `F0-06` Publish `PORTING.md` progress matrix and fixture metadata format.
+
+**Phase 0 verified 2026-10-09:** see [acceptance report](PHASE0-REPORT.md). Phase 1 remains unstarted.
 
 ### Foundation / Sprint F1 (parallel agents)
 
@@ -350,7 +352,7 @@ After every integration gate, update this table:
 
 | Milestone | Status | Evidence | Divergences | Blockers |
 |---|---|---|---|---|
-| Event smoke | not started | — | — | — |
+| Event smoke | passed | [Phase 0 report](PHASE0-REPORT.md), real receipt/WS/Canvas verification | Synthetic fixture only; no DOOM renderer | None |
 | C fixed math | not started | — | — | — |
 | WAD data in EVM | not started | — | — | — |
 | BSP walls render | not started | — | — | — |

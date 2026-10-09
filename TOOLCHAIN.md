@@ -1,0 +1,59 @@
+# Phase 0 toolchain
+
+`toolchain.lock.json` pins binary URLs and SHA-256 digests taken from the official release metadata. `scripts/install-toolchain.py` verifies all downloads before replacing project-local executables. It does not update global tools. A failed download can be rerun. Node and Python are external prerequisites.
+
+| Component | Tested baseline |
+|---|---|
+| Forge / Anvil / Cast | 1.8.5, commit `51a52c59cffd940f76eddd0b4bb1791aa4b5ac7f` |
+| Solidity | 0.8.37, commit `f401782d`, native Darwin appleclang binary |
+| Node | 24.11.0; built-in fetch/WebSocket, no npm dependencies |
+| Python | 3.14.2 observed; scripts use standard library, Python 3.10+ |
+| Host | macOS 15.7.9 arm64 |
+| Browser | Chrome 155.0.8059.40 in recorded browser experiment |
+| Compiler settings | optimizer on, 200 runs, `via_ir = true`, Cancun |
+| Future native C oracle | Not built in Phase 0. Apple clang 17.0.0 is present; Phase 1 must pin flags/target and validate C arithmetic semantics before using vectors. |
+
+Official release sources: [Foundry v1.8.5](https://github.com/foundry-rs/foundry/releases/tag/v1.8.5), [Solidity v0.8.37](https://github.com/argotorg/solidity/releases/tag/v0.8.37). `python3 scripts/check-toolchain.py` verifies local tool versions/commits, upstream SHA, Node, and effective Forge compiler settings. The lock also provides Linux binary digests; Linux execution has not been verified in this run.
+
+Use `.toolchain/bin/forge` directly or `export PATH="$PWD/.toolchain/bin:$PATH"` from the repository root. Bare global `forge` may still refer to the previous installation. `foundry.toml` pins the project-local compiler path; its exact version is guarded by Solidity pragmas and the check script.
+
+## Working Anvil startup
+
+```sh
+./scripts/start-anvil.sh
+# Optional bounded startup check:
+ANVIL_PORT=18545 ./scripts/start-anvil.sh --check --quiet
+```
+
+The launcher binds localhost and starts the pinned binary with:
+
+```text
+--host 127.0.0.1 --port 8545 --chain-id 31337 --hardfork cancun
+--disable-code-size-limit --disable-block-gas-limit --memory-limit 1073741824
+```
+
+Then it calls `anvil_setBlockGasLimit("0x3b9aca00")`, mines one empty initialization block with `evm_mine`, and verifies the resulting header reports 1,000,000,000 gas. It waits for the owned child, forwards signals, and cleans up on error. It refuses to attach to an already occupied port.
+
+**Measured correction to the design's illustrative command:** Anvil 1.8.5 rejects `--gas-limit` together with `--disable-block-gas-limit`. Furthermore, setting the gas limit by RPC affects the next mined block, not the already-existing genesis header. This is why the launcher uses an RPC and initialization block. The transport benchmark verifies the limit in its deployment block.
+
+## Executable limit checks
+
+`python3 scripts/probe-limits.py` starts separate temporary control and relaxed nodes, uses ordinary EVM initcode/runtime bytecode, records results in `artifacts/local/runtime-limits.json`, and stops each node. The retained run is `artifacts/phase0/runtime-limits.json`.
+
+| Probe | Control | Relaxed configuration |
+|---|---|---|
+| 25,000-byte runtime, 25,014-byte initcode | Deployment receipt fails | Normal deployment succeeds; on-chain code length checked |
+| 50,000-byte runtime, 50,014-byte initcode | RPC rejects max initcode size | Normal deployment succeeds; on-chain code length checked |
+| Touch memory at 65,536 and return word 42 | 1 KiB control fails `MemoryLimitOOG` | 1 GiB configured limit permits it |
+| Self-transfer gas allowance 1,000,000,001 vs block budget 1e9 | RPC rejects allowance | RPC returns hash, but no receipt within about 2.5 seconds; subsequent transaction lookup is null |
+| Small `eth_call` with allowance 1,000,000,001 | Returns word 42 with ordinary memory setting | Returns word 42 |
+
+The gas allowance probe does not consume 1e9 gas. It shows that disabling admission checks does not guarantee successful mining. The fixture transactions request at most the configured block budget. No claim of unlimited execution is made. A 1 GiB memory setting is not a measurement of host memory capacity, and the probe deliberately allocates only about 64 KiB. Large engine deployments and real BSP recursion must still be measured later.
+
+No `anvil_setCode`, special precompile, EVM fork, or native renderer is used. In this exact pinned Anvil version, disabling the code-size limit also allowed the tested initcode above 49,152 bytes; do not assume other versions behave the same way.
+
+## Commands and evidence
+
+`python3 scripts/verify-phase0.py` runs version checks, schema validation, formatting, a forced build, all Foundry tests with a fixed fuzz seed, protocol unit tests, the compiler-pipeline comparison, startup/limit probes, the transaction benchmark, and the real-browser check. It records exit codes, elapsed times, command logs and source hashes. Browser execution requires installed Chrome/Chromium (`CHROME_BIN` override).
+
+Foundry may print informational AST notices for header-only struct modules and cast lint warnings in the synthetic stack fixture. Compilation succeeds; the spike documents bounded toy arithmetic, not C numeric equivalence. No unsafe assembly is present.

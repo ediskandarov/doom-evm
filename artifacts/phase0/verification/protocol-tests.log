@@ -1,0 +1,10 @@
+✔ strict ABI decode and palette expansion only (0.755875ms)
+✔ duplicates, out-of-order delivery, gaps and removed logs (0.20025ms)
+ℹ tests 2
+ℹ suites 0
+ℹ pass 2
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 37.34225

@@ -13,3 +13,5 @@ Owner: integrator. These are minimal compilable boundaries, not completed engine
 - `ResourceIdentity` and `LumpDescriptor`: versioned static bundle identity and explicit lump bounds. JSON schemas define little-endian blob serialization, SHA-256 and provenance. No view-dependent resource transforms permitted. Storage/code placement is deliberately unresolved pending Phase 1 benchmarks.
 - Reference fixtures distinguish `synthetic` from `wad`; synthetic fixtures cannot claim a WAD hash or C equivalence. Real goldens must identify upstream SHA, WAD SHA, compiler/build semantics, camera, palette, detail, tic and resolution.
 - `Doom` remains abstract until a real renderer exists. Experiments live in `src/support`; no mock is represented as a port.
+
+Schema review clarification: `LumpDescriptor[]` position is its lump ID. `bundleSha256` binds the canonical manifest (including descriptors and provenance); `blobSha256` independently hashes raw blob bytes. See `SCHEMAS.md` for exact canonical encoding. Both were reviewed by the schema agent and accepted by the integrator before integration.

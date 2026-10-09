@@ -1,0 +1,31 @@
+No files changed, compilation skipped
+
+Ran 7 tests for test/unit/Contexts.t.sol:ContextsTest
+[PASS] testExplicitNarrowingAndWidenedProduct() (gas: 156)
+[PASS] testFuzzInt32NarrowingPreservesLowBits(int64) (runs: 256, μ: 293, ~: 293)
+[PASS] testInternalMemoryReferenceAndAssignmentAlias() (gas: 867)
+[PASS] testInternalStorageReferencePersists() (gas: 22820)
+[PASS] testNullSentinelAndRawBspFlagAreDistinct() (gas: 178)
+[PASS] testSignedShiftDiffersFromDivision() (gas: 284)
+[PASS] testStorageMemoryCopiesAreIndependent() (gas: 48499)
+Suite result: ok. 7 passed; 0 failed; 0 skipped; finished in 18.52ms (6.19ms CPU time)
+
+Ran 9 tests for test/unit/StackPressure.t.sol:StackPressureTest
+[PASS] testClosedDoorAndViewPlaneSuppression() (gas: 49242)
+[PASS] testDrawsegLimitAndInvalidRange() (gas: 20400)
+[PASS] testFullWidthMaskedRuntime() (gas: 651766)
+[PASS] testFuzzColumnRangeAndEdgeRecurrence(uint16,uint16) (runs: 256, μ: 106377, ~: 70013)
+[PASS] testLightingClampAndAngleClamp() (gas: 73235)
+[PASS] testSingleColumnAndBottomPeg() (gas: 15608)
+[PASS] testSingleSidedEdgeRecurrence() (gas: 19641)
+[PASS] testTwoSidedTiersMaskedClipAllocation() (gas: 47932)
+[PASS] testUntexturedIdenticalPlanesAndSky() (gas: 31497)
+Suite result: ok. 9 passed; 0 failed; 0 skipped; finished in 18.58ms (21.72ms CPU time)
+
+Ran 3 tests for test/integration/FrameEvent.t.sol:FrameEventTest
+[PASS] testCompletePayloadExactlyOneFrameAndSequentialIds() (gas: 41153806)
+[PASS] testInvalidSequenceDriverAndButtonsHaveNoLogsOrStateChange() (gas: 11729390)
+[PASS] testRevertAfterFrameRollsBackCounters() (gas: 23262031)
+Suite result: ok. 3 passed; 0 failed; 0 skipped; finished in 74.12ms (145.79ms CPU time)
+
+Ran 3 test suites in 75.21ms (111.21ms CPU time): 19 tests passed, 0 failed, 0 skipped (19 total tests)

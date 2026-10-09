@@ -12,7 +12,7 @@ python3 scripts/stack-pressure.py
 .toolchain/bin/forge fmt --check src/support/StackPressure.sol test/unit/StackPressure.t.sol
 ```
 
-Compiler: `0.8.37+commit.f401782d.Darwin.appleclang`; Foundry: `1.8.5`. Both compiler pipelines use optimizer enabled, 200 runs, Cancun. The Python driver compiles only this contract from identical source using standard JSON and changes only `viaIR`; it checks diagnostic severity because solc can exit 0 with a compiler error. The script writes measurements and source SHA-256 to `artifacts/phase0/stack-compile.json` and full diagnostics to `stack-via-ir.log` / `stack-legacy.log`.
+Compiler: `0.8.37+commit.f401782d.Darwin.appleclang`; Foundry: `1.8.5`. Both compiler pipelines use optimizer enabled, 200 runs, Cancun. The Python driver compiles only this contract from identical source using standard JSON and changes only `viaIR`; it checks diagnostic severity because solc can exit 0 with a compiler error. The script writes fresh measurements and source SHA-256 to `artifacts/local/stack/stack-compile.json` and full diagnostics to `stack-via-ir.log` / `stack-legacy.log` there. The recorded baseline is retained under `artifacts/phase0/`.
 
 | Pipeline | Observed compile wall time | Initcode / runtime | Result |
 |---|---:|---:|---|
