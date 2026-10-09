@@ -8,7 +8,6 @@ import hashlib
 import importlib.util
 import json
 import pathlib
-import shutil
 ROOT=pathlib.Path(__file__).resolve().parents[2]
 
 def validate_reference(metadata, pixels):
@@ -20,7 +19,18 @@ def validate_reference(metadata, pixels):
     if metadata['provenance']['kind']=='wad':
         if metadata['provenance']['wadSha256']!=metadata['resourceIdentity']['wadSha256']: raise ValueError('WAD identity mismatch')
         if metadata['resourceIdentity']['wadSha256']=='0'*64: raise ValueError('Real WAD reference needs nonzero identity')
-    elif metadata['scope']!='synthetic-transport': raise ValueError('Synthetic pixels cannot claim a renderer golden')
+        if metadata['scope']=='synthetic-transport': raise ValueError('WAD reference cannot claim synthetic scope')
+    else:
+        if metadata['resourceIdentity']['wadSha256']!='0'*64: raise ValueError('Synthetic reference cannot claim a WAD identity')
+        if metadata['scope']!='synthetic-transport': raise ValueError('Synthetic pixels cannot claim a renderer golden')
+
+def comparison_settings(metadata):
+    # Compilers/builds may differ between native and ported implementations;
+    # the source, map and rendering context must still identify the same scene.
+    settings={key:item for key,item in metadata.items() if key not in ['frameSha256','provenance']}
+    provenance=metadata['provenance']
+    settings['provenance']={key:provenance[key] for key in ['kind','upstreamCommit','wadSha256','map'] if key in provenance}
+    return settings
 
 def compare(expected,actual,width,height):
     if type(width)!=int or type(height)!=int or width<1 or height<1: raise ValueError('Invalid dimensions')
@@ -40,7 +50,6 @@ def main():
         print(json.dumps({'recorded':str(args.output),'scope':reference['scope']})); return
     expected=args.expected.read_bytes(); actual=args.actual.read_bytes(); actual_reference=json.loads(args.actual_reference.read_text())
     validate_reference(reference,expected); validate_reference(actual_reference,actual)
-    settings=lambda value:{key:item for key,item in value.items() if key not in ['frameSha256','provenance']}
-    if settings(reference)!=settings(actual_reference): raise ValueError('Comparison camera/resource/render settings differ')
+    if comparison_settings(reference)!=comparison_settings(actual_reference): raise ValueError('Comparison camera/resource/render settings differ')
     report=compare(expected,actual,reference['width'],reference['height']); print(json.dumps(report,indent=2)); raise SystemExit(bool(report['mismatchCount']))
 if __name__=='__main__': main()

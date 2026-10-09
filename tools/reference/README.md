@@ -33,11 +33,11 @@ The approved Solidity widened-magnitude handling of `INT_MIN` is a deterministic
 
 ## Golden infrastructure, ready for a later renderer
 
-`pixel_diff.py record` accepts an existing `reference-v0` metadata document and actual pixel bytes, verifies schema, identities, dimensions and frame hash, then records both without replacing an existing directory. It never manufactures a rendered image. `compare` requires expected and actual metadata, enforces equal resource/camera/render settings, verifies each hash and length, and reports exact mismatch count and every `(x,y,expected,actual)` index. Exit status 1 means mismatching pixels; invalid dimensions/settings/hash are errors.
+`pixel_diff.py record` accepts an existing `reference-v0` metadata document and actual pixel bytes, verifies schema, identities, dimensions and frame hash, then records both without replacing an existing directory. It never manufactures a rendered image. `compare` requires expected and actual metadata, enforces equal resource/camera/render settings and map/upstream provenance (builds may differ), verifies each hash and length, and reports exact mismatch count and every `(x,y,expected,actual)` index. Exit status 1 means mismatching pixels; invalid dimensions/settings/hash are errors.
 
 ```sh
 python3 tools/reference/pixel_diff.py record --pixels path/to/pixels.bin --reference path/to/reference.json --output path/to/new-golden
 python3 tools/reference/pixel_diff.py compare --expected path/to/expected.bin --reference path/to/expected-reference.json --actual path/to/actual.bin --actual-reference path/to/actual-reference.json
 ```
 
-These commands are templates for later renderer fixtures. The nine infrastructure tests exercise exact mismatch coordinates, dimensions, hash and settings rejection, synthetic-scope protection, recording and CLI exit status, vector semantic mutations, native edge results, and empty BSP traversal. Phase 1 never labels a synthetic transport pattern as an original-renderer golden.
+These commands are templates for later renderer fixtures. The twelve infrastructure tests exercise exact mismatch coordinates, dimensions, hash and settings rejection, synthetic-scope protection, recording and CLI exit status, vector semantic mutations, native edge results, empty BSP traversal, and the 32,768-node root-index boundary. Phase 1 never labels a synthetic transport pattern as an original-renderer golden.

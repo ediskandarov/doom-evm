@@ -60,7 +60,7 @@
   "generatedSourceSha256": "50ea0ea668bb1fc4a2b58980c6966ea7fd23bab29c577d7787e07b064fc2ff39",
   "portabilityShims": {
     "compat.h": "7f462cbe29984e8a27b0829fceb6c9544f8b2044770c58a2a06285e472e2a123",
-    "driver.c": "5a0dca50ffa7a3f1950476b25a39662ef8ede1b592619a5a84c37e430182a21c",
+    "driver.c": "26157fea29f42019c963a0e49c61c9c312c4ead68dce2f7566fd068efbc45edd",
     "traceAdapter": "84b196f66dd925e2547599e1d6ea3cea621cf9e35e3703b1421e4917d5049416"
   }
 }

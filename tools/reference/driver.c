@@ -4,7 +4,7 @@ static int signed16(const unsigned char *p) { unsigned v=read16(p); return v<327
 static void load_nodes(const char *path, int count) {
     FILE *file=fopen(path,"rb"); if(!file || count<1 || count>32768) exit(2);
     fseek(file,0,SEEK_END); long size=ftell(file); rewind(file);
-    if(size<0 || size%28 || size/28>32767) exit(2);
+    if(size<0 || size%28 || size/28>32768) exit(2);
     numnodes=(int)(size/28); nodes=calloc((size_t)numnodes+1,sizeof(*nodes));
     subsectors=calloc((size_t)count,sizeof(*subsectors));
     if(!nodes || !subsectors) exit(2);
