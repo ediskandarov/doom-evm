@@ -1,0 +1,41 @@
+{
+  "schemaVersion": 1,
+  "verifiedAt": "2026-10-09T18:54:47.225787+00:00",
+  "scope": "Native-only physical backing knowledge/bytes and original column sampling. Solidity integration, actual browser recovery and full engine acceptance remain pending.",
+  "upstreamCommit": "a77dfb96cb91780ca334d0d4cfd86957558007e0",
+  "result": "PASS native only",
+  "native": {
+    "commands": [
+      "python3 tools/reference/phase3_zone_backing/reference.py",
+      "python3 tools/reference/phase3_zone_backing/reference.py --check"
+    ],
+    "executedHandle": 78588,
+    "cases": 80,
+    "byteMaskPositions": 10240,
+    "originalDrawColumnCases": 18,
+    "profiles": [
+      "O0",
+      "O2",
+      "full ASan/UBSan"
+    ],
+    "fixtureRows": "16 lengths\u00d75successor kinds:cached resource/unowned/freed/fresh fragment/donated slack"
+  },
+  "solidity": {
+    "result": "not run for backing scope",
+    "note": "Whole setup compile attempts80103/80877/31289 stopped before assertions at shared R_LoadMap liveness. No allocator/backing mismatch measured."
+  },
+  "fileHashes": {
+    "tools/reference/phase3_zone_backing/host.c": "310ecd4f1fa6f4c47823699cadb80f08d999e8eb016bfe5a0b902f112467e91f",
+    "tools/reference/phase3_zone_backing/reference.py": "4fe6c0f9a554c578cfaba157b8407751292e4ab72a8fcb47483f0ca1543f266a",
+    "test/fixtures/phase3_zone_backing/vectors.bin": "35a24a397074a1d766e116845e5162001387ee38d4fce5b74257a5a49ecd5d9d",
+    "test/fixtures/phase3_zone_backing/manifest.json": "acade412bf2340712dc9c6f68b41d863191046301e701462c1b492c5e6043a5f",
+    "docs/PHASE3-BACKING.md": "94f57c537fea2944c4fadc9324f1d36d13a2fb8ccb01cac46c0eb7fcb5567138"
+  },
+  "knownDomains": [
+    "Only proven integer headers and bounded cached body bytes exported",
+    "Unknown bytes have mask0; output placeholder0 is not claimed native0",
+    "Native sample frac=-1 original&127; no rewritten sampling/clamping",
+    "No source asset name/pixel/byte specialcase; no heap/pixel fixture consumed as runtime inputs",
+    "Zero-initialized isolated allocation provider; all native integer writes still original C"
+  ]
+}
