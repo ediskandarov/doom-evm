@@ -19,10 +19,13 @@ Last native observation checkpoint: `01417ad`, rocket-world/blast observations;
 Last audit checkpoint: `6302955`, original definition/feature inventory.
 Last ABI checkpoint: `1e6227d`, generated native sizeof/offsetof constants;
 `python3 tools/zone/generate-layout.py --check` and standalone Forge build pass.
-Last browser component checkpoint: `9d1b567`, staged startup/Stop/reload lifecycle,
-37 isolated Node tests pass; actual staged EVM/browser integration remains pending.
-Follow-up `f9b62e2` adds direct-start invalidation guards; 38 isolated tests pass,
-including invalidation during a pending preparation receipt. No runtime claim.
+Last browser component checkpoint: `982782f`, atomic startup and configurable
+transaction budgets. All 44 isolated tests pass, retaining the earlier 38 cases
+and adding six atomic/configuration regressions. Historical staged support is
+explicitly capability-gated; nativeZone alone uses one initializeGame call.
+[Component evidence](../tools/transport/evidence/gameplay-atomic-input.json).
+The separately executed actual Chrome six-frame gate passed; its runner/evidence
+await their own checkpoint, so this commit alone is component verification.
 All completed module/kernel proofs below are committed. Production adapter and real gameplay browser tooling remain pending their separate checkpoint commits. **Phase 3 is
 active; M2 and M3 are unaccepted.** Committed production `Doom.sol` remains the
 accepted Phase 2 static renderer; its working-tree gameplay adapter is a draft.
@@ -41,7 +44,7 @@ mock-neighbor module proof does not imply whole-engine verification.
 |---|---|---|---|
 | Shared player/actor/thinker/world interfaces and heap | Base, persistence and native allocation extensions complete | All gameplay modules use stable IDs; native payload blocks now allocated/freed by heap/ticker, storage/resource aliases verified | `d793fd1`, `0960141`, `ab316f8`: all nine original payload sizes/tags, no embedded-thinker double allocation, lazy physical reuse with stable actor IDs; 21 focused tests pass. [Allocation checkpoint](../artifacts/phase3/zone-heap-checkpoint.json). Full native map/backing and production integration pending. |
 | Original state/action, actor, weapon tables and RNG | Complete | Imported by gameplay modules | Every field of 967 states/137 actor types/9 weapons and both RNG streams matches native; O0/O2/sanitizers. `f1081fd`. [Foundation checkpoint](../artifacts/phase3/foundation-checkpoint.json). |
-| Keyboard commands and browser sampler | Complete declared keyboard profile and optional staged startup | Helper/decoder and serialized browser lifecycle tested; real production keyboard path verifies 129 tics; Chrome rendering blocked at tic five | `0a7d839`: 41,007 original-C cases, 14 Forge tests, five browser tests. `a67f435`: 29 isolated lifecycle tests. `9d1b567`: 37 tests retain all prior cases and verify optional prepare/init, Stop and reload. [Staged evidence](../tools/transport/evidence/gameplay-staged-input.json). Actual staged browser/EVM gate pending. |
+| Keyboard commands and browser sampler | Complete declared keyboard profile; atomic startup and configurable budgets committed | Helper/decoder and serialized lifecycle verified; actual atomic production 129 tics and Chrome six frames separately executed, pending evidence commits | `0a7d839`: 41,007 original-C cases, 14 Forge tests, five browser tests. `a67f435`: 29 isolated lifecycle tests. `9d1b567`: 37 tests retain all prior cases and verify optional prepare/init, Stop and reload. [Staged evidence](../tools/transport/evidence/gameplay-staged-input.json). `982782f`: 44 isolated tests pass; [atomic component evidence](../tools/transport/evidence/gameplay-atomic-input.json). Actual six-frame Chrome gate passes at the atomic source snapshot; its separate checkpoint remains. |
 | Original-C full gameplay/frame oracle | Complete eight reference scenarios | Ready as EVM comparison oracle; no EVM conformance claim | 2,205 original tics and 24 live frames match O0/O2/ASan and alternate allocation fill. `6af2ec2`. [Native checkpoint](../artifacts/phase3/native-reference-checkpoint.json). |
 | Collision, traversal and sight | All 40 active original functions implemented | Real hooks/spatial links integrated in eight native/EVM probe scenarios; isolated tests additionally cover declared branches | 4,310 geometry cases and 71 scenarios match C; three Forge tests pass. `be86b4b`; fresh call-local traversal amendment `659ee64` passes unchanged goldens and full public-probe code generation. [Collision report](PHASE3-COLLISION.md). |
 | Weapons, pickups and damage | Complete original p_pspr/p_inter functions | Real PSprite/actions/attacks integrated in probe; isolated proof uses explicit neighboring doubles for broader branch coverage | 72 weapon scenarios/11,520 tics and 6,025 interaction cases; 24 Forge tests pass. `e7d58a8`. [Combat report](PHASE3-COMBAT.md). |
@@ -223,45 +226,38 @@ await separate final code/evidence commits; M2/M3 remain unaccepted.
 MSIZE clone 41920 and cadence 74863 pass paired-clone gas and three-way storage/
 field/native-pixel checks. Measured clone boundaries: atomic init 19,665,056 bytes;
 steps 8,749,760–8,753,856; frames 11,918,816–11,956,800. These are literal clone
-high-water values, not exact untouched-production peaks. Second full production
-stream, refreshed audit and frozen inherited gates remain. No active compiler.
+high-water values, not exact untouched-production peaks. Independent repeat 10416 also passes the complete 129-tic stream: 130 × 14
+fields, command/sequence/cadence, seven Frame hashes and gas (static plus six live),
+constructor/initialization gas, thirteen rejection errors/gas/storage rollback and
+source/runtime identities equal. The optional palette writer changed only the
+runner hash; both historical tool hashes remain explicit. Refreshed audit review,
+separate integration commits and frozen inherited gates remain. No active compiler.
 
 Next dependency order:
 
-1. Native zone persistence, actor/mover and lazy-free component integration is
-   committed. Finish original P_Setup and semantic resource-cache operations,
-   then verify the complete native allocation lifecycle. Preserve stable actor IDs.
-2. Materialize only source-written known physical backing bytes for renderer reads.
-   Pointer, padding and unwritten bytes remain unknown; no clamp, invented tail,
-   special-lump pixel table, native runtime allocation tape or guard removal.
-3. Run restored single-transaction initialization with the configurable 10-billion
-   local budget. Resource preparation and level startup keep original order; no
-   split is required for the superseded one-billion cap. Measure actual gas and
-   memory. Compiler, code and memory settings stay unchanged.
-4. Recheck native/EVM scenarios and production/browser streams, repeated-command
-   determinism, storage rollback and actual memory/gas measurements.
-5. Refresh the source/feature audit, run all Phase 0/1/2 inherited gates against
-   frozen final sources, then assess each original acceptance criterion below.
+1. Commit the verified atomic production interface/startup and header evidence.
+2. Commit the completed nine-scenario kernel comparison, real Chrome runner and
+   memory/reproducibility tooling as separate workstreams; update this ledger
+   after each checkpoint. Preserve historical measurements and tool/source hashes.
+3. Review refreshed source/function/domain audit; preserve unknown-byte guards,
+   original algorithms and unsupported-domain declarations. Archive obsolete local
+   diagnostic tooling outside normal source inventory rather than claiming it works.
+4. Freeze all sources and run complete Phase 0/1/2 inherited gates, all Phase 3
+   regression tests and format/source checks. No edits or commits during that run.
+5. Refresh bounded usage JSON/CSV and assess every unchanged acceptance criterion.
 
-No external blocker. Native lifecycle and startup agents
-finished their isolated work; do not restart completed ports. Root owns shared
-headers/glue and the production rendering fix. The production adapter, real-browser
-runner, production proof tooling and diagnostic tools remain uncommitted pending
-their separate verified integration checkpoints. Native ABI constant generation is
-committed in `1e6227d`. Live Anvil port 18579 is retained for
-production/browser verification; current failed browser instance cannot reinitialize.
+No external blocker. Previous agents completed their work; no live agents are
+reported. Root owns integration and final acceptance. Production/probe/browser
+proof tooling remains uncommitted until its source-bound checkpoint review.
+Anvil port 18579 is retained; the atomic browser deployment completed six tics.
+The historical failed instance and one-billion measurements remain historical.
 
-Current component gate status: setup attempts 80103/80877/31289 stopped before
-assertions at R_LoadMap line-loop lifetime pressure; ineffective P_Setup experiments
-were removed. MapLineWork resolves that site. The subsequent backing-reader stack
-pressure in 12089 was resolved by call-local TailWork, preserving loop/read order.
-6162 plus plane-path 47902 verify all 111 renderer/resource/backing tests. Its full
-setup test hit MemoryOOG near the unchanged cap because test scaffolding parsed
-resources twice. Test-only duplicate parsing was removed; 73296 now passes all
-three setup tests, retaining every header/owner/digest/actor/light assertion.
-Full original initializeWithZone + header comparison costs 921,597,231 test gas.
-These verified components are ready for separate commits after source-hash review;
-production transaction and browser recovery are still pending.
+Compiler failures 80103/80877/31289 (map-loop liveness) and 12089 (tail-reader
+liveness) were resolved by call-local MapLineWork/TailWork, without changing
+compiler settings or original ordering. The earlier fixture MemoryOOG was resolved
+by removing duplicate test-only resource decoding. These are separate from gas
+exhaustion. Atomic setup 35080 now passes all four tests, preserving all prior
+header/owner/actor/light assertions; full atomic fixture costs 1,624,686,931 gas.
 
 At each verified integration checkpoint, update and commit this ledger with exact
 implementation/integration/verification scope, evidence and code hashes, remaining
