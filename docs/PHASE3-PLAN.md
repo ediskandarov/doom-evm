@@ -7,7 +7,7 @@ does not count as accepted Phase 3 implementation.
 
 ## Recovery checkpoint
 
-Last implementation checkpoint: `659ee64`, verified traversal integration amendment.
+Last implementation checkpoint: `abfb38c`, verified resource initializer amendment.
 Last audit checkpoint: `6302955`, original definition/feature inventory.
 All completed module proofs below are committed; startup and the gameplay adapter remain drafts. **Phase 3 is
 active; M2 and M3 are unaccepted.** Committed production `Doom.sol` remains the
@@ -37,9 +37,10 @@ mock-neighbor module proof does not imply whole-engine verification.
 | Sector specials, switches, teleport and animations | All 23 active functions complete and committed | Real world-module dispatch tested on controlled maps; production pending | `fdadcb5`: 416 helper cases plus 1,007 dispatch scenarios/4,048 paired snapshots; all 25 Forge tests pass. [Specials report](PHASE3-WORLD-SPECIALS.md), [validation](../test/fixtures/phase3_specials/validation.json). |
 | Original bounding-box helpers | Both functions complete and committed | Startup draft uses exact original else-if ordering | `bc74405`: 521 streams/8,299 points match O0/O2/full sanitizers; MBBoxTest passes. [Validation](../test/fixtures/phase3_bbox/validation.json). Full startup pending. |
 | Gameplay persistence layout | Approved extensions implemented and committed | Real memory/storage/memory copy tested on synthetic nonempty actor/thinker/door state | `9bcc6af`: [storage checkpoint](../artifacts/phase3/storage-checkpoint.json). GameStorageTest passes (9,959,477 test gas), including map/resource/scratch aliases, renderer caches and framebuffer. Authenticated full-level round trip and production cost remain pending. |
-| P_Setup gameplay startup | Draft implemented; uncommitted | Real BLOCKMAP/REJECT, sector grouping and THINGS order connected to gameplay; ordinary EVM startup comparison running | Pending startup/native state proof. Integrator owns `src/doom/p_setup.sol`. Existing disk loader reused with explicit attribution. |
-| DoomGame state/action/render adapter | Draft implemented; uncommitted | All gameplay hooks and renderer projection written; no production caller yet | Type-checks in module batch; full public test-probe code generation passes (49 files, solc 0.8.37); ordinary startup comparison running. Whole-tic and pixel proof pending. Integrator owns `src/evm/DoomGame.sol`. |
+| P_Setup gameplay startup | Draft implemented; uncommitted | Real BLOCKMAP/REJECT, sector grouping and THINGS order connected to gameplay; ordinary authenticated EVM startup matches the original 102,468-byte DSG1 state; persisted tic/frame run underway | Startup logical-state proof passes through the test probe; full collision geometry/roundtrip/tic evidence underway. Integrator owns `src/doom/p_setup.sol`. Existing disk loader reused with explicit attribution. |
+| DoomGame state/action/render adapter | Draft implemented; uncommitted | All gameplay hooks and renderer projection written; no production caller yet | Type-checks in module batch; full public test-probe code generation passes (49 files, solc 0.8.37); ordinary startup state matches C exactly. Whole-tic and pixel proof pending. Integrator owns `src/evm/DoomGame.sol`. |
 | Production Doom adapter and browser gameplay | Draft adapter implements startup and sequenced command/tic/frame paths; browser loop implemented with isolated proof | Actual production EVM/browser integration pending | Browser 29 isolated tests pass; no real gameplay browser claim. Production compile, driver/sequence/tic/storage/frame/Canvas gates pending. |
+| Resource initializer integration amendment | Complete and committed | Complete public test-probe graph compiles | `abfb38c`: all 20 inherited RData tests pass, including all native lookup/sprite/map/composite fields. [Checkpoint](../artifacts/phase3/resource-init-checkpoint.json). Final inherited gate remains pending. |
 | Original feature/function audit | 287 original definitions inventoried with spans/body hashes and port mappings | Audit-time source snapshot; refresh on final freeze | `6302955`: [feature matrix](PHASE3-FEATURE-MATRIX.md), [JSON inventory](../artifacts/phase3/feature-matrix.json). Evidence scope and unsupported/undefined domains explicit; no new runtime acceptance claim. |
 | Usage telemetry | Complete collector; active collection | Local Codex logs only, no engine dependency or services | 20 collector tests pass; historical Phase 0–2 totals remain stable. Phase 3 boundary `d47dd86`. Latest snapshots are ignored `artifacts/local/codex-usage/`. |
 
@@ -95,12 +96,15 @@ reproducible conformance evidence; build products and local console logs are ign
 5. Measure production gas/memory and limits, verify transport/Canvas, audit the
    feature matrix, then run every inherited gate against frozen final sources.
 
-There is no external blocker. The current dependencies are ordinary startup/storage/native comparisons and
+There is no external blocker. The current dependencies are persisted tic/frame/native comparisons and
 production integration. The full probe compiles after a test-only immutable
-scenario reread, a resource patch field-assignment amendment (fresh RData regression
-running), and committed call-local traversal work. No compiler settings or limits
-changed. Local runtime needs sandbox network approval for its loopback Anvil node;
-the required retry has been requested, with no runtime acceptance yet. The reference agent now owns a
+scenario reread, a verified resource patch field-assignment amendment (20 RData tests pass,
+`abfb38c`), and committed call-local traversal work. No compiler settings or limits
+changed. The loopback Anvil sandbox retry was approved. Startup matches original C
+byte-for-byte after ordinary deployment and exact verification of all 1,755
+resource runtimes. This startup scope does not establish persisted tics or frames;
+those are now executing. The ignored report is `artifacts/local/gameplay-evm.json`
+(startup-only), with `completeNativeScenarioSet=false`. The reference agent now owns a
 test-only public gameplay probe/canonical serializer and native/EVM runner; the input
 agent owns browser wiring; the interface agent owns the feature/fidelity matrix.
 No completed module ports are being restarted. Previous test-only
