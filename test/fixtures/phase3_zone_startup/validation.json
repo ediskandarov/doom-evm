@@ -1,0 +1,160 @@
+{
+  "schemaVersion": 1,
+  "scope": "Source-backed renderer startup allocator replay only; no actual-engine allocator or out-of-lump renderer integration acceptance claim.",
+  "native": {
+    "status": "four-profile exact",
+    "profiles": [
+      "O0:0",
+      "O2:0",
+      "asan:0",
+      "asan:0xa5"
+    ],
+    "upstreamCommit": "a77dfb96cb91780ca334d0d4cfd86957558007e0",
+    "operations": 6498,
+    "operationHistogram": {
+      "changeTag": 1581,
+      "free": 3,
+      "malloc": 4914
+    },
+    "operationDigest": "db58554758b690627ee4275c90bf7270f89cab616ffb10a7597b871e6d447681",
+    "liveHeaders": 4913,
+    "ownerSlots": 4126,
+    "actualNativeSizeof": [
+      8,
+      4,
+      2,
+      28,
+      12,
+      16,
+      28
+    ],
+    "nativeLifecycleManifestSha256": "3dd82addb86a9684666212c3c4c4f0a1024d6d43b4284f5630e88148d57be95c",
+    "allComparedBinaryGoldUnchangedBetweenInterimO2AndFinalFourProfiles": true,
+    "nativeComparisonSummaryIndependentlyMatches": true
+  },
+  "forge": {
+    "command": ".toolchain/bin/forge test --match-contract DoomZoneStartupTest -vv",
+    "passed": 3,
+    "failed": 0,
+    "skipped": 0,
+    "tests": [
+      {
+        "name": "testOriginalStartupOperationOrderAndFinalHeaders",
+        "gas": 953625319
+      },
+      {
+        "name": "testOriginalStartupWithoutObservationMatchesSameNativeHeaders",
+        "gas": 808761041
+      },
+      {
+        "name": "testPinnedNativeSizeofConstants",
+        "gas": 8322
+      }
+    ],
+    "compiledFiles": 68,
+    "solcSeconds": 102.56,
+    "runtimeSuiteSeconds": 0.55964,
+    "gasLimit": 1000000000,
+    "scope": "Fixture-inclusive test gas includes full resource parsing, sprite definitions, startup replay, digest and/or assertions. Not measured production startup gas. Test fixtures etch only resource chunks, never engine runtime/state/pixels.",
+    "testStageGas": {
+      "resource-and-sprite-definition-loading": 107531293,
+      "zone-init": 2053774,
+      "normal-startup-replay": 344974734,
+      "native-header-comparison": 354182132
+    },
+    "testStageGasScope": "gasleft differences within normal component test, excluding subsequent measurement-event emissions. Earlier resource/definition loading establishes memory context. These are test-stage measurements, not integrated production transaction estimates.",
+    "measurementCommand": ".toolchain/bin/forge test --match-contract DoomZoneStartupTest --match-test testOriginalStartupWithoutObservationMatchesSameNativeHeaders -vvvv",
+    "measurementSolcSeconds": 2.73,
+    "finalThreeTestCheckCompilation": "No files changed; compilation skipped"
+  },
+  "verification": {
+    "conversionCheck": "python3 tools/reference/phase3_zone_startup/reference.py --check",
+    "codegenCommand": ".toolchain/bin/forge build test/unit/DoomZoneStartup.t.sol",
+    "observedReplayAndNormalReplayBothMatchFinalNativeHeaders": true,
+    "originalCallsAreDerivedOnEVMFromParsedResourcesAndSpriteDefinitions": true,
+    "nativeOperationTapeNeverAcceptedAsRuntimeInput": true
+  },
+  "memory": {
+    "nativeZoneBytes": 67108864,
+    "actualEvmHighWaterBytes": null,
+    "actualNodeRssPeakBytes": null,
+    "scope": "Zone backing size is a source/native profile, not measured EVM consumption. This component has no production memory instrumentation."
+  },
+  "artifact": {
+    "compiler": {
+      "version": "0.8.37+commit.f401782d"
+    },
+    "settings": {
+      "remappings": [],
+      "optimizer": {
+        "enabled": true,
+        "runs": 200
+      },
+      "metadata": {
+        "bytecodeHash": "ipfs"
+      },
+      "compilationTarget": {
+        "test/unit/DoomZoneStartup.t.sol": "DoomZoneStartupTest"
+      },
+      "evmVersion": "cancun",
+      "libraries": {},
+      "viaIR": true
+    },
+    "testRuntimeBytes": 33290,
+    "testRuntimeSha256": "9cca0c8055dfe42ba044982e8575086da9085c25a5fadacbf1a7fd55b33fdc76"
+  },
+  "gold": {
+    "operationsBytes": 181948,
+    "headersBytes": 193400,
+    "summaryBytes": 36,
+    "layoutBytes": 28,
+    "fileHashes": {
+      "headers.bin": "28c5dde8f2bb44d8819503e2fdd09ee941a32b31d0947821a1c6ac61ce4d08ca",
+      "layout.bin": "008417db36e98872c4afea44c8debce09cb3907c06fff28359edde0c9a41f312",
+      "operations.bin": "eff4e112820907dde483e78c844b4519f7b6dcac2f0fa9d61c36cd97b13ff418",
+      "summary.bin": "ca43ba800aa6e21ccfb2dd7d0131f175482fe17ba0c64901445c9a24743b759d"
+    }
+  },
+  "sourceHashes": {
+    "foundry.toml": "084d5192108931325837611f9d1339796a6ffd64ed570e31907afe718f191226",
+    "src/doom/info.sol": "4611205149173e42d3b0f1d91820c8042f6bc5fc48fb53aec84ad4bc501dca8e",
+    "src/doom/m_fixed.sol": "3f64bef1f62f61faead3a5b8f382bf1c66e1b3739ce4ac8d59a6fcef0451ef9f",
+    "src/doom/r_data.sol": "ab45e09771ea0f3c8ef3c23896c146a6d1a6a0a31f97e0a66ae9dd1e2d612745",
+    "src/doom/r_data_types.sol": "f5ae6de0f06a25dfccd9421580d8f3fca8d2457507cca2d13fce586b3334d02f",
+    "src/doom/r_defs.sol": "558d5a9bfd131e816bbe28986e2dad6144a08e5a16ccfed1b199d7558a1ea0e2",
+    "src/doom/r_draw.sol": "7cdef01556fccc767df44f842f7ce03efea0ec34bd9cfeb6848d30074fb17e06",
+    "src/doom/r_main.sol": "df403bf04fdbbcfc68c4fd9c5e19b5201ca711498efc34db406a4010ad3b2af5",
+    "src/doom/r_render_hooks.sol": "f026ccb8fffb68d8fbcb0966103212f52884b86350fe3fb52a401d146f3fb312",
+    "src/doom/r_render_state.sol": "072bd2f73b98e1eb775fc8093e95a69c184f3fa50a89a5d64a7beccd59493398",
+    "src/doom/r_sprite_state.sol": "735b3de85cbf455e05d3cb8e992cf4e477960bd4192bbd367f5c66c803b96363",
+    "src/doom/r_state.sol": "e87ff9d88345a53d1f8825fb07b485c782c7bcb55e2de1dc56c876f9b26ab966",
+    "src/doom/r_things.sol": "5d6099c8b388e9a26f63b9de1374fbbbc6bff338ca71c19970a9bb1b04c331f4",
+    "src/doom/tables.sol": "bf14202b419075f6d187653205a37e211d8267c7fc4c0bebf5a8c5713afddf38",
+    "src/doom/z_zone.sol": "47fe4cd4ce09d37d21d9d3cedd349004c8e3a1941f939a1ddbc5ec2e1d67b1ca",
+    "src/doom/z_zone_types.sol": "d6c5d8680e08bd8989042cb42a934a3323818e4c2b94c11dc38196911dadc08b",
+    "src/evm/DoomZoneStartup.sol": "2d178494456a7ae3c730310f257ce2aa635d37d18c90cac039cf002cdb3f50dc",
+    "src/evm/ResourceTypes.sol": "159865364cfa57aae508cd94c49509cbccabd6aeeba55e92b9fcf816bdec4d6b",
+    "test/fixtures/phase3_zone_lifecycle/layout.json": "81e871d8639a55ee9058e8a12e8f5bbeeab8bdd55675ed7c3fc938a4147275f4",
+    "test/fixtures/phase3_zone_lifecycle/manifest.json": "3dd82addb86a9684666212c3c4c4f0a1024d6d43b4284f5630e88148d57be95c",
+    "test/fixtures/phase3_zone_startup/headers.bin": "28c5dde8f2bb44d8819503e2fdd09ee941a32b31d0947821a1c6ac61ce4d08ca",
+    "test/fixtures/phase3_zone_startup/layout.bin": "008417db36e98872c4afea44c8debce09cb3907c06fff28359edde0c9a41f312",
+    "test/fixtures/phase3_zone_startup/manifest.json": "4b89dbedd65b0c178337776286c0d648f83c9119e4a010be18991eca456606a1",
+    "test/fixtures/phase3_zone_startup/operations.bin": "eff4e112820907dde483e78c844b4519f7b6dcac2f0fa9d61c36cd97b13ff418",
+    "test/fixtures/phase3_zone_startup/summary.bin": "ca43ba800aa6e21ccfb2dd7d0131f175482fe17ba0c64901445c9a24743b759d",
+    "test/unit/DoomZoneStartup.t.sol": "df807c878a9313e6583e40e875795404946f644f2ae2274e675553eea248e6a9",
+    "tools/reference/phase3_zone_startup/README.md": "4ff122594d0901378bfee92dea81c961dc656bab4ac92d0a4d5fa7c3e4c859a9",
+    "tools/reference/phase3_zone_startup/reference.py": "9177eda00b2b43ec4e39da99fc29de85e0a21e3ed46ac12e63469e11423d6bb0"
+  },
+  "checkpointSha256": "19e84052dec4ab8cba5e2d922133c8b571a43ce2edc6ff50e3c1d23bf6d01f29",
+  "limitations": [
+    "No native pointer or padding bytes are invented. Unwritten free-fragment ID and initial/free tag bytes are normalized explicitly.",
+    "This proves startup source-driven calls/placement and normalized live headers/owner marks; map, thinker, gameplay allocations and payload/header materialization are separate integration work.",
+    "Existing production/browser acceptance evidence predates allocator integration and is not promoted by this component result."
+  ],
+  "localLogs": {
+    "measurement": "artifacts/local/zone-startup-measurement.log",
+    "measurementSha256": "10e99cce8b9d08158ea3b508e92ebbf19053006040afc430f61ed6bc322af101",
+    "final": "artifacts/local/zone-startup-final.log",
+    "finalSha256": "2ac54ec95bd756e5225d27fd1ff82a789b2a48754afa5d3bb2aa30310f62ff9a"
+  }
+}

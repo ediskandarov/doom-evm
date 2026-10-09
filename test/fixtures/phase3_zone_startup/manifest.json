@@ -1,0 +1,61 @@
+{
+  "converterSha256": "9177eda00b2b43ec4e39da99fc29de85e0a21e3ed46ac12e63469e11423d6bb0",
+  "digestSchema": "SHA256 chaining: previous32zero initial +7BE32 [op1malloc/2free/3tag,requestSize,requestedTag,ownerNULLff,headerOffset,blockSize,roverAfter]; free header/size/owner captured before coalescing; nested purge events excluded.",
+  "files": {
+    "headers.bin": "28c5dde8f2bb44d8819503e2fdd09ee941a32b31d0947821a1c6ac61ce4d08ca",
+    "layout.bin": "008417db36e98872c4afea44c8debce09cb3907c06fff28359edde0c9a41f312",
+    "operations.bin": "eff4e112820907dde483e78c844b4519f7b6dcac2f0fa9d61c36cd97b13ff418",
+    "summary.bin": "ca43ba800aa6e21ccfb2dd7d0131f175482fe17ba0c64901445c9a24743b759d"
+  },
+  "headerSchema": "6BE32 [byteLength,rover,capPrev,capNext,freeMemory,count];count*9 [offset,size,allocated,ownerNULLff,tagAllocatedElse0,idKnown,idKnownElse0,prev,next];ownerCount;ownerCount payloadOffsetsNULLff.",
+  "layoutWordOrder": [
+    "pointer",
+    "int",
+    "short",
+    "texture_t",
+    "texpatch_t",
+    "spritedef_t",
+    "spriteframe_t"
+  ],
+  "limitations": [
+    "Pointer/padding bytes are not modeled; original unset free-fragment IDs and tags remain masked.",
+    "This startup component does not certify map/gameplay allocations or rendering overread/payload bytes.",
+    "Native core purge/coalescing proof is separate; only source startup outer calls belong to this operation digest."
+  ],
+  "liveBlocks": 4913,
+  "nativeLayout": [
+    8,
+    4,
+    2,
+    28,
+    12,
+    16,
+    28
+  ],
+  "nativeLayoutManifestSha256": "81e871d8639a55ee9058e8a12e8f5bbeeab8bdd55675ed7c3fc938a4147275f4",
+  "nativeLifecycleManifestSha256": "3dd82addb86a9684666212c3c4c4f0a1024d6d43b4284f5630e88148d57be95c",
+  "nativeLifecycleProfiles": [
+    "O0:0",
+    "O2:0",
+    "asan:0",
+    "asan:0xa5"
+  ],
+  "nativeLifecycleStatus": "four-profile exact",
+  "operationCount": 6498,
+  "operationDigest": "db58554758b690627ee4275c90bf7270f89cab616ffb10a7597b871e6d447681",
+  "operations": {
+    "changeTag": 1581,
+    "free": 3,
+    "malloc": 4914
+  },
+  "ownerCount": 4126,
+  "schemaVersion": 1,
+  "scope": "Original R_Init followed by R_InitSprites, including R_InitData and R_InitTranslationTables; normalized outer zone calls and final live-header/owner state only. No native trace/header is a runtime input.",
+  "sourceObservationHashes": {
+    "layout.json": "81e871d8639a55ee9058e8a12e8f5bbeeab8bdd55675ed7c3fc938a4147275f4",
+    "manifest.json": "3dd82addb86a9684666212c3c4c4f0a1024d6d43b4284f5630e88148d57be95c",
+    "startup-headers.bin": "28c5dde8f2bb44d8819503e2fdd09ee941a32b31d0947821a1c6ac61ce4d08ca",
+    "startup-operations.bin": "eff4e112820907dde483e78c844b4519f7b6dcac2f0fa9d61c36cd97b13ff418"
+  },
+  "upstreamCommit": "a77dfb96cb91780ca334d0d4cfd86957558007e0"
+}
