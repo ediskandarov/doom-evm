@@ -36,7 +36,7 @@ mock-neighbor module proof does not imply whole-engine verification.
 | Original bounding-box helpers | Both functions complete and committed | Startup draft uses exact original else-if ordering | `bc74405`: 521 streams/8,299 points match O0/O2/full sanitizers; MBBoxTest passes. [Validation](../test/fixtures/phase3_bbox/validation.json). Full startup pending. |
 | Gameplay persistence layout | Approved extensions implemented and committed | Real memory/storage/memory copy tested on synthetic nonempty actor/thinker/door state | `9bcc6af`: [storage checkpoint](../artifacts/phase3/storage-checkpoint.json). GameStorageTest passes (9,959,477 test gas), including map/resource/scratch aliases, renderer caches and framebuffer. Authenticated full-level round trip and production cost remain pending. |
 | P_Setup gameplay startup | Draft implemented; uncommitted | Real BLOCKMAP/REJECT, sector grouping and THINGS order connected to gameplay; not exercised yet | Pending startup/native state proof. Integrator owns `src/doom/p_setup.sol`. Existing disk loader reused with explicit attribution. |
-| DoomGame state/action/render adapter | Draft implemented; uncommitted | All gameplay hooks and renderer projection written; no production caller yet | Type-checks in module batch; full public-caller code generation, whole-tic comparison and pixel proof pending. Integrator owns `src/evm/DoomGame.sol`. |
+| DoomGame state/action/render adapter | Draft implemented; uncommitted | All gameplay hooks and renderer projection written; no production caller yet | Type-checks in module batch; full public-caller code generation exposed a via-IR stack-depth failure; startup call-boundary refactor is under verification. Whole-tic and pixel proof pending. Integrator owns `src/evm/DoomGame.sol`. |
 | Production Doom adapter and browser gameplay | Pending | Existing static engine remains baseline | Pending driver/sequence/tic/storage/frame/Canvas gates. |
 | Usage telemetry | Complete collector; active collection | Local Codex logs only, no engine dependency or services | 20 collector tests pass; historical Phase 0–2 totals remain stable. Phase 3 boundary `d47dd86`. Latest snapshots are ignored `artifacts/local/codex-usage/`. |
 
@@ -53,6 +53,27 @@ Subsequent verified runs: 52 tests in the lifecycle/world batch (lifecycle 24),
 then all 55 tests in `WorldActionsTest|WorldSpecials_Test|MBBoxTest|GameStorageTest`
 (28/25/1/1). The strengthened nonempty `GameStorageTest` passed separately.
 These are module and synthetic-storage evidence, not production acceptance.
+
+Reproducible checkpoint commands (terminal results recorded in linked validation files):
+
+```sh
+.toolchain/bin/forge test --match-contract 'PUserLifecycleTest|PMobjLifecycleTest|GGameLifecycleTest|WorldActionsTest|WorldSpecials_Test' -vv
+.toolchain/bin/forge test --match-contract 'WorldActionsTest|WorldSpecials_Test|MBBoxTest|GameStorageTest' -vv
+.toolchain/bin/forge test --match-contract GameStorageTest -vv
+python3 tools/reference/phase3_bbox/reference.py --check
+python3 tools/reference/phase3_world/reference.py --check
+python3 tools/reference/phase3_world/planes.py --check
+python3 tools/reference/phase3_world/domains.py --check
+python3 tools/reference/phase3_world/undefined_floor.py --check
+python3 tools/reference/phase3_world/mover_casts.py --check
+python3 tools/reference/phase3_specials/reference.py --check
+python3 tools/reference/phase3_specials/dispatch.py --check
+python3 tools/reference/phase3_specials/generate_dispatch.py --check
+```
+
+The native bbox/world/special commands were freshly rerun after hash validation,
+all passing before their commits. Their committed binary fixtures are deliberate
+reproducible conformance evidence; build products and local console logs are ignored.
 
 ## Remaining work and current constraints
 
@@ -71,7 +92,7 @@ These are module and synthetic-storage evidence, not production acceptance.
 5. Measure production gas/memory and limits, verify transport/Canvas, audit the
    feature matrix, then run every inherited gate against frozen final sources.
 
-There is no external blocker. The current dependencies are full public-caller code generation,
+There is no external blocker. The current dependencies are a full-graph via-IR stack-depth failure under active correction,
 startup/storage integration and whole-engine comparisons. The reference agent now owns a
 test-only public gameplay probe/canonical serializer and native/EVM runner; the input
 agent owns browser wiring; the interface agent owns the feature/fidelity matrix.
