@@ -297,6 +297,24 @@ library P_MapUtl {
         return true;
     }
 
+    /// @dev Original P_PathTraverse local variables. Each call owns a fresh allocation;
+    /// nested traversal callbacks cannot alias this work with persisted path globals.
+    struct PathTraverseWork {
+        int32 xt1;
+        int32 yt1;
+        int32 xt2;
+        int32 yt2;
+        int32 mapxstep;
+        int32 mapystep;
+        int32 stepFraction;
+        int32 ystep;
+        int32 xstep;
+        int32 yintercept;
+        int32 xintercept;
+        int32 mapx;
+        int32 mapy;
+    }
+
     function P_PathTraverse(
         GameContext memory c,
         int32 x1,
@@ -306,6 +324,7 @@ library P_MapUtl {
         int32 flags,
         function(GameContext memory, Intercept memory) internal view returns (bool) trav
     ) internal view returns (bool) {
+        PathTraverseWork memory work;
         unchecked {
             c.path.earlyout = flags & 4 != 0;
             ++c.state.validcount;
@@ -315,55 +334,54 @@ library P_MapUtl {
             c.path.trace = DivLine(x1, y1, x2 - x1, y2 - y1);
             x1 -= c.state.blockmap.orgx;
             y1 -= c.state.blockmap.orgy;
-            int32 xt1 = x1 >> 23;
-            int32 yt1 = y1 >> 23;
+            work.xt1 = x1 >> 23;
+            work.yt1 = y1 >> 23;
             x2 -= c.state.blockmap.orgx;
             y2 -= c.state.blockmap.orgy;
-            int32 xt2 = x2 >> 23;
-            int32 yt2 = y2 >> 23;
-            int32 mapxstep;
-            int32 mapystep;
-            int32 stepFraction;
-            int32 ystep;
-            int32 xstep;
-            if (xt2 > xt1) {
-                mapxstep = 1;
-                stepFraction = 65536 - ((x1 >> 7) & 65535);
-                ystep = F.FixedDiv(y2 - y1, abs(x2 - x1));
-            } else if (xt2 < xt1) {
-                mapxstep = -1;
-                stepFraction = (x1 >> 7) & 65535;
-                ystep = F.FixedDiv(y2 - y1, abs(x2 - x1));
+            work.xt2 = x2 >> 23;
+            work.yt2 = y2 >> 23;
+
+            if (work.xt2 > work.xt1) {
+                work.mapxstep = 1;
+                work.stepFraction = 65536 - ((x1 >> 7) & 65535);
+                work.ystep = F.FixedDiv(y2 - y1, abs(x2 - x1));
+            } else if (work.xt2 < work.xt1) {
+                work.mapxstep = -1;
+                work.stepFraction = (x1 >> 7) & 65535;
+                work.ystep = F.FixedDiv(y2 - y1, abs(x2 - x1));
             } else {
-                stepFraction = 65536;
-                ystep = 256 * 65536;
+                work.stepFraction = 65536;
+                work.ystep = 256 * 65536;
             }
-            int32 yintercept = (y1 >> 7) + F.FixedMul(stepFraction, ystep);
-            if (yt2 > yt1) {
-                mapystep = 1;
-                stepFraction = 65536 - ((y1 >> 7) & 65535);
-                xstep = F.FixedDiv(x2 - x1, abs(y2 - y1));
-            } else if (yt2 < yt1) {
-                mapystep = -1;
-                stepFraction = (y1 >> 7) & 65535;
-                xstep = F.FixedDiv(x2 - x1, abs(y2 - y1));
+            work.yintercept = (y1 >> 7) + F.FixedMul(work.stepFraction, work.ystep);
+            if (work.yt2 > work.yt1) {
+                work.mapystep = 1;
+                work.stepFraction = 65536 - ((y1 >> 7) & 65535);
+                work.xstep = F.FixedDiv(x2 - x1, abs(y2 - y1));
+            } else if (work.yt2 < work.yt1) {
+                work.mapystep = -1;
+                work.stepFraction = (y1 >> 7) & 65535;
+                work.xstep = F.FixedDiv(x2 - x1, abs(y2 - y1));
             } else {
-                stepFraction = 65536;
-                xstep = 256 * 65536;
+                work.stepFraction = 65536;
+                work.xstep = 256 * 65536;
             }
-            int32 xintercept = (x1 >> 7) + F.FixedMul(stepFraction, xstep);
-            int32 mapx = xt1;
-            int32 mapy = yt1;
+            work.xintercept = (x1 >> 7) + F.FixedMul(work.stepFraction, work.xstep);
+            work.mapx = work.xt1;
+            work.mapy = work.yt1;
             for (uint32 count; count < 64; count++) {
-                if (flags & 1 != 0 && !P_BlockLinesIterator(c, mapx, mapy, PIT_AddLineIntercepts)) return false;
-                if (flags & 2 != 0 && !P_BlockThingsIterator(c, mapx, mapy, PIT_AddThingIntercepts)) return false;
-                if (mapx == xt2 && mapy == yt2) break;
-                if (yintercept >> 16 == mapy) {
-                    yintercept += ystep;
-                    mapx += mapxstep;
-                } else if (xintercept >> 16 == mapx) {
-                    xintercept += xstep;
-                    mapy += mapystep;
+                if (flags & 1 != 0 && !P_BlockLinesIterator(c, work.mapx, work.mapy, PIT_AddLineIntercepts)) {
+                    return false;
+                }
+                if (flags & 2 != 0 && !P_BlockThingsIterator(c, work.mapx, work.mapy, PIT_AddThingIntercepts))
+                return false;
+                if (work.mapx == work.xt2 && work.mapy == work.yt2) break;
+                if (work.yintercept >> 16 == work.mapy) {
+                    work.yintercept += work.ystep;
+                    work.mapx += work.mapxstep;
+                } else if (work.xintercept >> 16 == work.mapx) {
+                    work.xintercept += work.xstep;
+                    work.mapy += work.mapystep;
                 }
             }
             return P_TraverseIntercepts(c, trav, 65536);

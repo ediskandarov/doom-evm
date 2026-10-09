@@ -1,0 +1,49 @@
+{
+  "version": 1,
+  "scope": "Call-local traversal working-set integration; isolated collision proof and full probe code generation only",
+  "result": "PASS",
+  "change": "Original P_PathTraverse local scalar variables moved into fresh library-local memory struct; not persisted or shared across nested calls. Expressions, traversal order, bounds, callbacks and wrapping unchanged.",
+  "forge": {
+    "command": ".toolchain/bin/forge test --match-path 'test/unit/{p_map,p_maputl}.t.sol' -vv",
+    "runHandle": 7678,
+    "passed": 3,
+    "failed": 0,
+    "skipped": 0,
+    "suites": 2
+  },
+  "fullGraphBuild": {
+    "command": ".toolchain/bin/forge build src/support/GameplayProbe.sol src/evm/ResourceStore.sol",
+    "runHandle": 90948,
+    "result": "PASS",
+    "files": 49,
+    "seconds": 42.47,
+    "scope": "Draft actual gameplay hook graph plus test observer; no runtime/native state acceptance"
+  },
+  "native": {
+    "geometry": 4310,
+    "scenarios": 71,
+    "profiles": [
+      "O0",
+      "O2",
+      "ASan/UBSan"
+    ],
+    "commands": [
+      "python3 tools/reference/phase3_map/geometry.py --check",
+      "python3 tools/reference/phase3_map/scenarios.py --check"
+    ],
+    "goldensUnchanged": true
+  },
+  "sourceSha256": {
+    "src/doom/p_maputl.sol": "93f5c0e37761e15675a2640e2be950d8056dcea335db36243f7df9e216069e93",
+    "test/unit/p_map.t.sol": "b3184a77e770320b2ee3fe106a42e1ab84a81fb1a56f6b2efb560cead22ba2db",
+    "test/unit/p_maputl.t.sol": "1694a18d05aee0ec2d7cacb92dd498102135aba63b14c4c3277d20649a9da06c",
+    "test/fixtures/phase3_map/geometry.bin": "745b519175fe483a4ddfebc79ba891eefc135cb1f8ee4553ca87ccee9f32c117",
+    "test/fixtures/phase3_map/scenarios.bin": "3f64b8324694c245838efbc7e1b17c20867c9b59c8b7cb6075bce3586eeb6ff1",
+    "tools/reference/phase3_map/geometry.py": "e53a55f90a214c0c72177c2706d0e7a55b2eb4ece459a42639865be05916a974",
+    "tools/reference/phase3_map/scenarios.py": "fa4428df51648440c58781521e0cee248f9cfbb736f3e067d30f92fae7fc1671"
+  },
+  "remaining": [
+    "Ordinary startup/tic/frame comparisons",
+    "Production adapter and inherited final gates"
+  ]
+}

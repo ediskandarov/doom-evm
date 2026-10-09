@@ -62,3 +62,17 @@ Original C `int`/fixed-point behavior follows the repository's pinned 32-bit wra
 Original buffer writes past eight crossed specials or 128 intercepts are undefined. The Solidity port rejects those overflows rather than truncating or emulating adjacent-memory corruption. Negative/out-of-range BLOCKMAP offsets/line IDs, unterminated lists, invalid BSP cycles/subsector IDs and truncated REJECT matrices likewise fail explicitly. These are domain checks, not additional gameplay rules on valid original inputs.
 
 Stable IDs never compact and all null pointers use `0xffffffff`. The GameContext map aliases the authoritative state map. Heap growth must preserve actor aliases across nested original callbacks. Whole-world gates must establish that persisted world mutation and rendering use the state after each tic; passing these isolated fixtures alone cannot establish M2/M3.
+
+## Full gameplay graph integration amendment
+
+The actual gameplay hook graph exposed via-IR stack pressure in P_PathTraverse.
+Its original local scalar working variables now occupy a fresh call-local
+`PathTraverseWork` memory struct; persisted `PathScratch` and shared headers are
+unchanged. Nested calls receive distinct local work allocations. Original math,
+wrapping, block traversal, callback and intercept order remain unchanged.
+
+The full test probe graph compiles under the existing compiler/limits. Fresh
+collision suites pass all three tests against the unchanged 4,310 geometry and
+71 scenario goldens; both native regeneration checks pass. The
+[amendment checkpoint](../artifacts/phase3/path-traversal-checkpoint.json) binds
+the new source and executed commands. This is not whole-engine runtime acceptance.
