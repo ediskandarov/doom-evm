@@ -1,0 +1,4489 @@
+Compiling 54 files with Solc 0.8.37
+Solc 0.8.37 finished in 216.60s
+Compiler run successful with warnings:
+Warning (2319): This declaration shadows a builtin symbol.
+   --> src/doom/r_things.sol:142:13:
+    |
+142 |             int32 tx = -(M_Fixed.FixedMul(tr_y, c.rs.viewcos) - M_Fixed.FixedMul(tr_x, c.rs.viewsin));
+    |             ^^^^^^^^
+
+Warning (2319): This declaration shadows a builtin symbol.
+   --> src/doom/r_things.sol:322:13:
+    |
+322 |             int32 tx = p.sx - 160 * 65536 - c.resources.spriteoffset[l];
+    |             ^^^^^^^^
+
+Warning (2018): Function state mutability can be restricted to pure
+   --> src/doom/r_plane.sol:122:5:
+    |
+122 |     function R_MapPlane(RenderContext memory ctx, int32 y, int32 x1, int32 x2) internal view {
+    |     ^ (Relevant source part starts here and spans across multiple lines).
+
+Warning (2018): Function state mutability can be restricted to view
+   --> test/unit/r_things.t.sol:446:5:
+    |
+446 |     function testDefinitionErrorsAndZeroRotation() public {
+    |     ^ (Relevant source part starts here and spans across multiple lines).
+
+Warning (2018): Function state mutability can be restricted to view
+   --> test/unit/r_things.t.sol:473:5:
+    |
+473 |     function testTerminalAndMalformedPosts() public {
+    |     ^ (Relevant source part starts here and spans across multiple lines).
+
+warning[uninitialized-local]: local variable is read before being initialized
+   ╭▸ src/doom/p_setup_static.sol:35:20
+   │
+35 │             for (; kind < Info.NUMMOBJTYPES; ++kind) {
+   │                    ━━━━
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/uninitialized-local
+
+warning[unsafe-typecast]: typecast can truncate values
+   ╭▸ src/doom/m_fixed.sol:12:16
+   │
+12 │         return int32((int64(a) * int64(b)) >> 16);
+   │                ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   │
+   ├ note: consider disabling this lint if you're certain the cast is safe
+   │       
+   │       // casting to 'int32' is safe because [explain why]
+   │       // forge-lint: disable-next-line(unsafe-typecast)
+   │       
+   │       
+   ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[uninitialized-local]: local variable is read before being initialized
+   ╭▸ src/doom/r_data.sol:28:16
+   │
+28 │         while (copied < length) {
+   │                ━━━━━━
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/uninitialized-local
+
+warning[unsafe-typecast]: typecast can truncate values
+   ╭▸ src/doom/m_fixed.sol:36:16
+   │
+36 │         return int32(numerator / denominator);
+   │                ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   │
+   ├ note: consider disabling this lint if you're certain the cast is safe
+   │       
+   │       // casting to 'int32' is safe because [explain why]
+   │       // forge-lint: disable-next-line(unsafe-typecast)
+   │       
+   │       
+   ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[require-revert-in-loop]: `require` or `revert` inside a loop
+   ╭▸ src/doom/r_data.sol:34:43
+   │
+34 │             if (chunk >= v.chunks.length) revert Bounds();
+   │                                           ━━━━━━━━━━━━━━━━
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/require-revert-in-loop
+
+warning[require-revert-in-loop]: `require` or `revert` inside a loop
+   ╭▸ src/doom/r_data.sol:36:57
+   │
+36 │             if (source.code.length < local + count + 1) revert Bounds();
+   │                                                         ━━━━━━━━━━━━━━━━
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/require-revert-in-loop
+
+warning[uninitialized-local]: local variable is read before being initialized
+   ╭▸ src/doom/p_setup_static.sol:40:56
+   │
+40 │             RenderThing memory thing = c.sprite.things[cursor];
+   │                                                        ━━━━━━
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/uninitialized-local
+
+warning[uninitialized-local]: local variable is read before being initialized
+   ╭▸ src/doom/p_setup_static.sol:22:46
+   │
+22 │             if (selected(c.map.things[i])) ++count;
+   │                                              ━━━━━
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/uninitialized-local
+
+warning[uninitialized-local]: local variable is read before being initialized
+   ╭▸ src/doom/r_bsp.sol:64:30
+   │
+64 │         while (ctx.solidsegs[start].last < first - 1) if (++start >= ctx.solidsegCount) revert BSPBounds();
+   │                              ━━━━━
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/uninitialized-local
+
+warning[uninitialized-local]: local variable is read before being initialized
+   ╭▸ src/doom/r_data.sol:56:17
+   │
+56 │             if (ended) c = 0;
+   │                 ━━━━━
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/uninitialized-local
+
+warning[uninitialized-local]: local variable is read before being initialized
+   ╭▸ src/doom/r_data.sol:58:20
+   │
+58 │             acc = (acc << 8) | c;
+   │                    ━━━
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/uninitialized-local
+
+warning[require-revert-in-loop]: `require` or `revert` inside a loop
+   ╭▸ src/doom/r_bsp.sol:64:89
+   │
+64 │         while (ctx.solidsegs[start].last < first - 1) if (++start >= ctx.solidsegCount) revert BSPBounds();
+   │                                                                                         ━━━━━━━━━━━━━━━━━━━
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/require-revert-in-loop
+
+warning[require-revert-in-loop]: `require` or `revert` inside a loop
+   ╭▸ src/doom/r_bsp.sol:84:48
+   │
+84 │             if (next + 1 >= ctx.solidsegCount) revert BSPBounds();
+   │                                                ━━━━━━━━━━━━━━━━━━━
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/require-revert-in-loop
+
+warning[require-revert-in-loop]: `require` or `revert` inside a loop
+    ╭▸ src/doom/r_main.sol:125:58
+    │
+125 │         if (map.subsectors.length == 0 || count > 32768) revert InvalidBSP();
+    │                                                          ━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/require-revert-in-loop
+
+warning[require-revert-in-loop]: `require` or `revert` inside a loop
+    ╭▸ src/doom/r_main.sol:130:49
+    │
+130 │             if (n >= count || steps++ >= count) revert InvalidBSP();
+    │                                                 ━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/require-revert-in-loop
+
+warning[require-revert-in-loop]: `require` or `revert` inside a loop
+    ╭▸ src/doom/r_main.sol:135:41
+    │
+135 │         if (n >= map.subsectors.length) revert InvalidBSP();
+    │                                         ━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/require-revert-in-loop
+
+warning[require-revert-in-loop]: `require` or `revert` inside a loop
+   ╭▸ src/doom/info.sol:29:9
+   │
+29 │         require(offset + 4 <= data.length, "info bounds");
+   │         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/require-revert-in-loop
+
+warning[require-revert-in-loop]: `require` or `revert` inside a loop
+   ╭▸ src/doom/p_setup_static.sol:38:44
+   │
+38 │             if (kind == Info.NUMMOBJTYPES) revert UnknownThing(t.thingType);
+   │                                            ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/require-revert-in-loop
+
+warning[require-revert-in-loop]: `require` or `revert` inside a loop
+    ╭▸ src/doom/r_bsp.sol:104:29
+    │
+104 │             if (next >= 32) revert ClipOverflow();
+    │                             ━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/require-revert-in-loop
+
+warning[unsafe-typecast]: typecast can truncate values
+    ╭▸ src/doom/tables.sol:607:16
+    │
+607 │         return int32(_word(group, index));
+    │                ━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ├ note: consider disabling this lint if you're certain the cast is safe
+    │       
+    │       // casting to 'int32' is safe because [explain why]
+    │       // forge-lint: disable-next-line(unsafe-typecast)
+    │       
+    │       
+    ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[unsafe-typecast]: typecast can truncate values
+   ╭▸ src/doom/p_setup_static.sol:36:21
+   │
+36 │                 if (int32(Info.word(info.mobjInfo, kind * 20)) == t.thingType) break;
+   │                     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   │
+   ├ note: consider disabling this lint if you're certain the cast is safe
+   │       
+   │       // casting to 'int32' is safe because [explain why]
+   │       // forge-lint: disable-next-line(unsafe-typecast)
+   │       
+   │       
+   ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[unsafe-typecast]: typecast can truncate values
+   ╭▸ src/doom/p_setup_static.sol:44:31
+   │
+44 │                 thing.angle = uint32(int32(t.angle) / 45) * Tables.ANG45;
+   │                               ━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   │
+   ├ note: consider disabling this lint if you're certain the cast is safe
+   │       
+   │       // casting to 'uint32' is safe because [explain why]
+   │       // forge-lint: disable-next-line(unsafe-typecast)
+   │       
+   │       
+   ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[unsafe-typecast]: typecast can truncate values
+   ╭▸ src/doom/r_data.sol:69:22
+   │
+69 │             ) return int32(uint32(i - 1));
+   │                      ━━━━━━━━━━━━━━━━━━━━
+   │
+   ├ note: consider disabling this lint if you're certain the cast is safe
+   │       
+   │       // casting to 'int32' is safe because [explain why]
+   │       // forge-lint: disable-next-line(unsafe-typecast)
+   │       
+   │       
+   ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[unsafe-typecast]: typecast can truncate values
+   ╭▸ src/doom/r_data.sol:69:28
+   │
+69 │             ) return int32(uint32(i - 1));
+   │                            ━━━━━━━━━━━━━
+   │
+   ├ note: consider disabling this lint if you're certain the cast is safe
+   │       
+   │       // casting to 'uint32' is safe because [explain why]
+   │       // forge-lint: disable-next-line(unsafe-typecast)
+   │       
+   │       
+   ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[unsafe-typecast]: typecast can truncate values
+   ╭▸ src/doom/p_setup_static.sol:54:67
+   │
+54 │                     ? c.map.sectors[thing.sector].ceilingheight - int32(Info.word(info.mobjInfo, p + 16))
+   │                                                                   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   │
+   ├ note: consider disabling this lint if you're certain the cast is safe
+   │       
+   │       // casting to 'int32' is safe because [explain why]
+   │       // forge-lint: disable-next-line(unsafe-typecast)
+   │       
+   │       
+   ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[uninitialized-local]: local variable is read before being initialized
+    ╭▸ src/doom/r_bsp.sol:118:30
+    │
+118 │         while (ctx.solidsegs[start].last < first - 1) if (++start >= ctx.solidsegCount) revert BSPBounds();
+    │                              ━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/uninitialized-local
+
+warning[reentrancy-events]: event emitted after an external call; reentrancy can reorder or fabricate logs that off-chain consumers rely on
+   ╭▸ src/evm/Doom.sol:46:9
+   │
+46 │         emit Frame(frameId, sequence, 320, 200, ctx.rs.framebuffer);
+   │         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/reentrancy-events
+
+warning[require-revert-in-loop]: `require` or `revert` inside a loop
+    ╭▸ src/doom/r_bsp.sol:118:89
+    │
+118 │         while (ctx.solidsegs[start].last < first - 1) if (++start >= ctx.solidsegCount) revert BSPBounds();
+    │                                                                                         ━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/require-revert-in-loop
+
+warning[require-revert-in-loop]: `require` or `revert` inside a loop
+    ╭▸ src/doom/r_bsp.sol:128:49
+    │
+128 │             if (start + 1 >= ctx.solidsegCount) revert BSPBounds();
+    │                                                 ━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/require-revert-in-loop
+
+warning[unsafe-typecast]: typecast can truncate values
+   ╭▸ src/doom/r_segs.sol:22:22
+   │
+22 │         return int32(int16(v));
+   │                      ━━━━━━━━
+   │
+   ├ note: consider disabling this lint if you're certain the cast is safe
+   │       
+   │       // casting to 'int16' is safe because [explain why]
+   │       // forge-lint: disable-next-line(unsafe-typecast)
+   │       
+   │       
+   ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[unsafe-typecast]: typecast can truncate values
+   ╭▸ src/doom/r_data.sol:77:16
+   │
+77 │         return uint32(n);
+   │                ━━━━━━━━━
+   │
+   ├ note: consider disabling this lint if you're certain the cast is safe
+   │       
+   │       // casting to 'uint32' is safe because [explain why]
+   │       // forge-lint: disable-next-line(unsafe-typecast)
+   │       
+   │       
+   ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[uninitialized-local]: local variable is read before being initialized
+   ╭▸ src/evm/DoomScene.sol:58:14
+   │
+58 │         if (!found) revert MissingPlayerStart();
+   │              ━━━━━
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/uninitialized-local
+
+warning[unsafe-typecast]: typecast can truncate values
+   ╭▸ src/doom/r_data.sol:86:22
+   │
+86 │         return int32(int16(u16(b, p)));
+   │                      ━━━━━━━━━━━━━━━━
+   │
+   ├ note: consider disabling this lint if you're certain the cast is safe
+   │       
+   │       // casting to 'int16' is safe because [explain why]
+   │       // forge-lint: disable-next-line(unsafe-typecast)
+   │       
+   │       
+   ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[unsafe-typecast]: typecast can truncate values
+   ╭▸ src/evm/DoomScene.sol:55:32
+   │
+55 │                 camera.angle = uint32(int32(thing.angle) / 45) * Tables.ANG45;
+   │                                ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   │
+   ├ note: consider disabling this lint if you're certain the cast is safe
+   │       
+   │       // casting to 'uint32' is safe because [explain why]
+   │       // forge-lint: disable-next-line(unsafe-typecast)
+   │       
+   │       
+   ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[unsafe-typecast]: typecast can truncate values
+     ╭▸ src/doom/tables.sol:2016:16
+     │
+2016 │         return int32(_word(group, index));
+     │                ━━━━━━━━━━━━━━━━━━━━━━━━━━
+     │
+     ├ note: consider disabling this lint if you're certain the cast is safe
+     │       
+     │       // casting to 'int32' is safe because [explain why]
+     │       // forge-lint: disable-next-line(unsafe-typecast)
+     │       
+     │       
+     ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[require-revert-in-loop]: `require` or `revert` inside a loop
+    ╭▸ src/doom/r_data.sol:392:29
+    │
+392 │         if (index >= count) revert Bounds();
+    │                             ━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/require-revert-in-loop
+
+warning[require-revert-in-loop]: `require` or `revert` inside a loop
+    ╭▸ src/doom/r_data.sol:394:46
+    │
+394 │         if (r.colormapcache.length != count) revert Malformed();
+    │                                              ━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/require-revert-in-loop
+
+warning[require-revert-in-loop]: `require` or `revert` inside a loop
+    ╭▸ src/doom/r_segs.sol:107:50
+    │
+107 │                     if (c.sprite.spryscale == 0) revert WallBounds();
+    │                                                  ━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/require-revert-in-loop
+
+warning[require-revert-in-loop]: `require` or `revert` inside a loop
+    ╭▸ src/doom/r_data.sol:335:43
+    │
+335 │         if (texture >= r.textures.length) revert Bounds();
+    │                                           ━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/require-revert-in-loop
+
+warning[require-revert-in-loop]: `require` or `revert` inside a loop
+    ╭▸ src/doom/r_data.sol:107:70
+    │
+107 │         if (lump >= v.lumps.length || v.lumps[lump].length < length) revert Bounds();
+    │                                                                      ━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/require-revert-in-loop
+
+warning[require-revert-in-loop]: `require` or `revert` inside a loop
+   ╭▸ src/doom/r_data.sol:25:54
+   │
+25 │         if (uint256(offset) + length > v.byteLength) revert Bounds();
+   │                                                      ━━━━━━━━━━━━━━━━
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/require-revert-in-loop
+
+warning[require-revert-in-loop]: `require` or `revert` inside a loop
+   ╭▸ src/doom/r_data.sol:81:31
+   │
+81 │         if (p + 2 > b.length) revert Bounds();
+   │                               ━━━━━━━━━━━━━━━━
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/require-revert-in-loop
+
+warning[require-revert-in-loop]: `require` or `revert` inside a loop
+    ╭▸ src/doom/r_data.sol:203:29
+    │
+203 │             if (width <= 0) revert Malformed();
+    │                             ━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/require-revert-in-loop
+
+warning[require-revert-in-loop]: `require` or `revert` inside a loop
+    ╭▸ src/doom/r_data.sol:220:32
+    │
+220 │             if (count[x] == 0) revert Malformed();
+    │                                ━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/require-revert-in-loop
+
+warning[require-revert-in-loop]: `require` or `revert` inside a loop
+    ╭▸ src/doom/r_data.sol:224:67
+    │
+224 │                 if (t.compositesize > 0x10000 - uint32(t.height)) revert Malformed();
+    │                                                                   ━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/require-revert-in-loop
+
+warning[require-revert-in-loop]: `require` or `revert` inside a loop
+    ╭▸ src/doom/r_data.sol:409:41
+    │
+409 │         if (lump >= r.lumpcache.length) revert Bounds();
+    │                                         ━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/require-revert-in-loop
+
+warning[require-revert-in-loop]: `require` or `revert` inside a loop
+   ╭▸ src/doom/r_data.sol:44:37
+   │
+44 │         if (lump >= v.lumps.length) revert Bounds();
+   │                                     ━━━━━━━━━━━━━━━━
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/require-revert-in-loop
+
+warning[require-revert-in-loop]: `require` or `revert` inside a loop
+    ╭▸ src/doom/r_data.sol:347:88
+    │
+347 │             if (offset > v.data.length && (offset < 3 || offset - 3 >= v.data.length)) revert Bounds();
+    │                                                                                        ━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/require-revert-in-loop
+
+warning[uninitialized-local]: local variable is read before being initialized
+    ╭▸ src/doom/r_bsp.sol:231:30
+    │
+231 │         while (ctx.solidsegs[start].last < sx2) if (++start >= ctx.solidsegCount) revert BSPBounds();
+    │                              ━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/uninitialized-local
+
+warning[unsafe-typecast]: typecast can truncate values
+   ╭▸ src/doom/r_main.sol:30:34
+   │
+30 │         hooks.renderBSPNode(ctx, int32(uint32(ctx.map.nodes.length)) - 1);
+   │                                  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   │
+   ├ note: consider disabling this lint if you're certain the cast is safe
+   │       
+   │       // casting to 'int32' is safe because [explain why]
+   │       // forge-lint: disable-next-line(unsafe-typecast)
+   │       
+   │       
+   ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[unsafe-typecast]: typecast can truncate values
+   ╭▸ src/doom/r_main.sol:30:40
+   │
+30 │         hooks.renderBSPNode(ctx, int32(uint32(ctx.map.nodes.length)) - 1);
+   │                                        ━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   │
+   ├ note: consider disabling this lint if you're certain the cast is safe
+   │       
+   │       // casting to 'uint32' is safe because [explain why]
+   │       // forge-lint: disable-next-line(unsafe-typecast)
+   │       
+   │       
+   ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[require-revert-in-loop]: `require` or `revert` inside a loop
+   ╭▸ src/doom/m_fixed.sol:24:21
+   │
+24 │         if (b == 0) revert FixedDivisionError(a, b);
+   │                     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/require-revert-in-loop
+
+warning[require-revert-in-loop]: `require` or `revert` inside a loop
+   ╭▸ src/doom/m_fixed.sol:33:13
+   │
+33 │             revert FixedDivisionError(a, b);
+   │             ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/require-revert-in-loop
+
+warning[require-revert-in-loop]: `require` or `revert` inside a loop
+    ╭▸ src/doom/r_things.sol:117:35
+    │
+117 │         if (n == type(int32).min) revert UndefinedSpriteDomain();
+    │                                   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/require-revert-in-loop
+
+warning[uninitialized-local]: local variable is read before being initialized
+    ╭▸ src/doom/r_data.sol:101:17
+    │
+101 │             n = n << 8 | uint8(b[p + i]);
+    │                 ━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/uninitialized-local
+
+warning[require-revert-in-loop]: `require` or `revert` inside a loop
+    ╭▸ src/doom/r_bsp.sol:231:83
+    │
+231 │         while (ctx.solidsegs[start].last < sx2) if (++start >= ctx.solidsegCount) revert BSPBounds();
+    │                                                                                   ━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/require-revert-in-loop
+
+warning[require-revert-in-loop]: `require` or `revert` inside a loop
+   ╭▸ src/doom/r_main.sol:71:63
+   │
+71 │             if (x == type(int32).min || y == type(int32).min) revert UndefinedGeometry();
+   │                                                               ━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/require-revert-in-loop
+
+warning[require-revert-in-loop]: `require` or `revert` inside a loop
+     ╭▸ src/doom/tables.sol:2020:28
+     │
+2020 │         if (index >= 2049) revert TableIndexOutOfBounds(index, 2049);
+     │                            ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+     │
+     ╰ help: https://getfoundry.sh/forge/linting/require-revert-in-loop
+
+warning[require-revert-in-loop]: `require` or `revert` inside a loop
+    ╭▸ src/doom/r_data.sol:243:36
+    │
+243 │             if (p >= patch.length) revert Bounds();
+    │                                    ━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/require-revert-in-loop
+
+warning[require-revert-in-loop]: `require` or `revert` inside a loop
+    ╭▸ src/doom/r_data.sol:245:39
+    │
+245 │             if (p + 4 > patch.length) revert Bounds();
+    │                                       ━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/require-revert-in-loop
+
+warning[require-revert-in-loop]: `require` or `revert` inside a loop
+    ╭▸ src/doom/r_data.sol:248:55
+    │
+248 │             if (p + uint32(count) + 4 > patch.length) revert Bounds();
+    │                                                       ━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/require-revert-in-loop
+
+warning[require-revert-in-loop]: `require` or `revert` inside a loop
+    ╭▸ src/doom/r_data.sol:259:21
+    │
+259 │                     revert Bounds();
+    │                     ━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/require-revert-in-loop
+
+warning[unsafe-typecast]: typecast can truncate values
+   ╭▸ src/doom/r_main.sol:41:18
+   │
+41 │             if ((uint32(node.dy ^ node.dx ^ dx ^ dy) & 0x80000000) != 0) {
+   │                  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   │
+   ├ note: consider disabling this lint if you're certain the cast is safe
+   │       
+   │       // casting to 'uint32' is safe because [explain why]
+   │       // forge-lint: disable-next-line(unsafe-typecast)
+   │       
+   │       
+   ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[require-revert-in-loop]: `require` or `revert` inside a loop
+    ╭▸ src/doom/r_data.sol:313:55
+    │
+313 │                     if (offset + 32 > written.length) revert Bounds();
+    │                                                       ━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/require-revert-in-loop
+
+warning[require-revert-in-loop]: `require` or `revert` inside a loop
+    ╭▸ src/doom/r_data.sol:321:59
+    │
+321 │                     if (written[t.columnofs[x] + y] == 0) revert UndefinedComposite(texture, x, y);
+    │                                                           ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/require-revert-in-loop
+
+warning[require-revert-in-loop]: `require` or `revert` inside a loop
+    ╭▸ src/doom/r_data.sol:353:38
+    │
+353 │         if (offset >= v.data.length) revert Bounds();
+    │                                      ━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/require-revert-in-loop
+
+warning[require-revert-in-loop]: `require` or `revert` inside a loop
+    ╭▸ src/doom/r_segs.sol:110:42
+    │
+110 │                     if (post.offset < 3) revert WallBounds();
+    │                                          ━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/require-revert-in-loop
+
+warning[unsafe-typecast]: typecast can truncate values
+   ╭▸ src/doom/r_main.sol:42:25
+   │
+42 │                 return (uint32(node.dy ^ dx) & 0x80000000) != 0 ? 1 : 0;
+   │                         ━━━━━━━━━━━━━━━━━━━━
+   │
+   ├ note: consider disabling this lint if you're certain the cast is safe
+   │       
+   │       // casting to 'uint32' is safe because [explain why]
+   │       // forge-lint: disable-next-line(unsafe-typecast)
+   │       
+   │       
+   ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[require-revert-in-loop]: `require` or `revert` inside a loop
+    ╭▸ src/doom/r_things.sol:148:27
+    │
+148 │             if (lump < 0) revert SpriteBounds();
+    │                           ━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/require-revert-in-loop
+
+warning[require-revert-in-loop]: `require` or `revert` inside a loop
+    ╭▸ src/doom/r_things.sol:122:63
+    │
+122 │         if (index < 0 || index >= 48 || row < 0 || row >= 16) revert SpriteBounds();
+    │                                                               ━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/require-revert-in-loop
+
+warning[require-revert-in-loop]: `require` or `revert` inside a loop
+    ╭▸ src/doom/r_segs.sol:112:58
+    │
+112 │                     if (post.offset >= post.data.length) revert WallBounds();
+    │                                                          ━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/require-revert-in-loop
+
+warning[require-revert-in-loop]: `require` or `revert` inside a loop
+   ╭▸ src/doom/r_data.sol:98:31
+   │
+98 │         if (p + 8 > b.length) revert Bounds();
+   │                               ━━━━━━━━━━━━━━━━
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/require-revert-in-loop
+
+warning[require-revert-in-loop]: `require` or `revert` inside a loop
+    ╭▸ src/doom/r_bsp.sol:142:41
+    │
+142 │         if (seg >= ctx.map.segs.length) revert BSPBounds();
+    │                                         ━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/require-revert-in-loop
+
+warning[unsafe-typecast]: typecast can truncate values
+   ╭▸ src/doom/r_main.sol:75:73
+   │
+75 │                     if (x > y) return Tables.tantoangle(Tables.SlopeDiv(uint32(y), uint32(x)));
+   │                                                                         ━━━━━━━━━
+   │
+   ├ note: consider disabling this lint if you're certain the cast is safe
+   │       
+   │       // casting to 'uint32' is safe because [explain why]
+   │       // forge-lint: disable-next-line(unsafe-typecast)
+   │       
+   │       
+   ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[unsafe-typecast]: typecast can truncate values
+   ╭▸ src/doom/r_main.sol:75:84
+   │
+75 │                     if (x > y) return Tables.tantoangle(Tables.SlopeDiv(uint32(y), uint32(x)));
+   │                                                                                    ━━━━━━━━━
+   │
+   ├ note: consider disabling this lint if you're certain the cast is safe
+   │       
+   │       // casting to 'uint32' is safe because [explain why]
+   │       // forge-lint: disable-next-line(unsafe-typecast)
+   │       
+   │       
+   ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[unsafe-typecast]: typecast can truncate values
+   ╭▸ src/doom/r_main.sol:76:81
+   │
+76 │                     return Tables.ANG90 - 1 - Tables.tantoangle(Tables.SlopeDiv(uint32(x), uint32(y)));
+   │                                                                                 ━━━━━━━━━
+   │
+   ├ note: consider disabling this lint if you're certain the cast is safe
+   │       
+   │       // casting to 'uint32' is safe because [explain why]
+   │       // forge-lint: disable-next-line(unsafe-typecast)
+   │       
+   │       
+   ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[unsafe-typecast]: typecast can truncate values
+   ╭▸ src/doom/r_main.sol:76:92
+   │
+76 │                     return Tables.ANG90 - 1 - Tables.tantoangle(Tables.SlopeDiv(uint32(x), uint32(y)));
+   │                                                                                            ━━━━━━━━━
+   │
+   ├ note: consider disabling this lint if you're certain the cast is safe
+   │       
+   │       // casting to 'uint32' is safe because [explain why]
+   │       // forge-lint: disable-next-line(unsafe-typecast)
+   │       
+   │       
+   ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[unsafe-typecast]: typecast can truncate values
+   ╭▸ src/doom/r_segs.sol:93:67
+   │
+93 │                 c.dc.colormap = R_Data.R_GetColormap(c.resources, uint32(c.rs.fixedcolormap));
+   │                                                                   ━━━━━━━━━━━━━━━━━━━━━━━━━━
+   │
+   ├ note: consider disabling this lint if you're certain the cast is safe
+   │       
+   │       // casting to 'uint32' is safe because [explain why]
+   │       // forge-lint: disable-next-line(unsafe-typecast)
+   │       
+   │       
+   ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[unsafe-typecast]: typecast can truncate values
+   ╭▸ src/doom/r_segs.sol:96:28
+   │
+96 │                 uint32 x = uint32(c.dc.x);
+   │                            ━━━━━━━━━━━━━━
+   │
+   ├ note: consider disabling this lint if you're certain the cast is safe
+   │       
+   │       // casting to 'uint32' is safe because [explain why]
+   │       // forge-lint: disable-next-line(unsafe-typecast)
+   │       
+   │       
+   ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[unsafe-typecast]: typecast can truncate values
+   ╭▸ src/doom/r_main.sol:79:73
+   │
+79 │                 if (x > y) return 0 - Tables.tantoangle(Tables.SlopeDiv(uint32(y), uint32(x)));
+   │                                                                         ━━━━━━━━━
+   │
+   ├ note: consider disabling this lint if you're certain the cast is safe
+   │       
+   │       // casting to 'uint32' is safe because [explain why]
+   │       // forge-lint: disable-next-line(unsafe-typecast)
+   │       
+   │       
+   ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[unsafe-typecast]: typecast can truncate values
+   ╭▸ src/doom/r_main.sol:79:84
+   │
+79 │                 if (x > y) return 0 - Tables.tantoangle(Tables.SlopeDiv(uint32(y), uint32(x)));
+   │                                                                                    ━━━━━━━━━
+   │
+   ├ note: consider disabling this lint if you're certain the cast is safe
+   │       
+   │       // casting to 'uint32' is safe because [explain why]
+   │       // forge-lint: disable-next-line(unsafe-typecast)
+   │       
+   │       
+   ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[unsafe-typecast]: typecast can truncate values
+   ╭▸ src/doom/r_segs.sol:99:40
+   │
+99 │                         uint32 index = uint32(c.sprite.spryscale >> 12);
+   │                                        ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   │
+   ├ note: consider disabling this lint if you're certain the cast is safe
+   │       
+   │       // casting to 'uint32' is safe because [explain why]
+   │       // forge-lint: disable-next-line(unsafe-typecast)
+   │       
+   │       
+   ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[require-revert-in-loop]: `require` or `revert` inside a loop
+   ╭▸ src/doom/r_bsp.sol:38:11
+   │
+38 │         ) revert BSPBounds();
+   │           ━━━━━━━━━━━━━━━━━━━
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/require-revert-in-loop
+
+warning[require-revert-in-loop]: `require` or `revert` inside a loop
+   ╭▸ src/doom/r_bsp.sol:67:46
+   │
+67 │                 if (ctx.solidsegCount == 32) revert ClipOverflow();
+   │                                              ━━━━━━━━━━━━━━━━━━━━━━
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/require-revert-in-loop
+
+warning[unsafe-typecast]: typecast can truncate values
+    ╭▸ src/doom/r_segs.sol:102:64
+    │
+102 │ …                     c.resources, uint8(c.rs.scalelight[uint32(c.wall.lightnum) * 48 + index])
+    │                                                          ━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ├ note: consider disabling this lint if you're certain the cast is safe
+    │       
+    │       // casting to 'uint32' is safe because [explain why]
+    │       // forge-lint: disable-next-line(unsafe-typecast)
+    │       
+    │       
+    ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[unsafe-typecast]: typecast can truncate values
+    ╭▸ src/doom/r_segs.sol:108:35
+    │
+108 │                     c.dc.iscale = int32(type(uint32).max / uint32(c.sprite.spryscale));
+    │                                   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ├ note: consider disabling this lint if you're certain the cast is safe
+    │       
+    │       // casting to 'int32' is safe because [explain why]
+    │       // forge-lint: disable-next-line(unsafe-typecast)
+    │       
+    │       
+    ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[unsafe-typecast]: typecast can truncate values
+    ╭▸ src/doom/r_segs.sol:108:60
+    │
+108 │                     c.dc.iscale = int32(type(uint32).max / uint32(c.sprite.spryscale));
+    │                                                            ━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ├ note: consider disabling this lint if you're certain the cast is safe
+    │       
+    │       // casting to 'uint32' is safe because [explain why]
+    │       // forge-lint: disable-next-line(unsafe-typecast)
+    │       
+    │       
+    ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[unsafe-typecast]: typecast can truncate values
+    ╭▸ src/doom/r_segs.sol:115:41
+    │
+115 │                     ds.maskedtexturecol[uint32(c.dc.x)] = 32767;
+    │                                         ━━━━━━━━━━━━━━
+    │
+    ├ note: consider disabling this lint if you're certain the cast is safe
+    │       
+    │       // casting to 'uint32' is safe because [explain why]
+    │       // forge-lint: disable-next-line(unsafe-typecast)
+    │       
+    │       
+    ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[uninitialized-local]: local variable is read before being initialized
+    ╭▸ src/doom/r_bsp.sol:284:34
+    │
+284 │             int32 current = work[depth];
+    │                                  ━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/uninitialized-local
+
+warning[unsafe-typecast]: typecast can truncate values
+   ╭▸ src/doom/r_main.sol:80:74
+   │
+80 │                 return Tables.ANG270 + Tables.tantoangle(Tables.SlopeDiv(uint32(x), uint32(y)));
+   │                                                                          ━━━━━━━━━
+   │
+   ├ note: consider disabling this lint if you're certain the cast is safe
+   │       
+   │       // casting to 'uint32' is safe because [explain why]
+   │       // forge-lint: disable-next-line(unsafe-typecast)
+   │       
+   │       
+   ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[unsafe-typecast]: typecast can truncate values
+   ╭▸ src/doom/r_main.sol:80:85
+   │
+80 │                 return Tables.ANG270 + Tables.tantoangle(Tables.SlopeDiv(uint32(x), uint32(y)));
+   │                                                                                     ━━━━━━━━━
+   │
+   ├ note: consider disabling this lint if you're certain the cast is safe
+   │       
+   │       // casting to 'uint32' is safe because [explain why]
+   │       // forge-lint: disable-next-line(unsafe-typecast)
+   │       
+   │       
+   ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[require-revert-in-loop]: `require` or `revert` inside a loop
+    ╭▸ src/doom/r_data.sol:152:58
+    │
+152 │             if (width <= 0 || height <= 0 || count <= 0) revert Malformed();
+    │                                                          ━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/require-revert-in-loop
+
+warning[require-revert-in-loop]: `require` or `revert` inside a loop
+    ╭▸ src/doom/r_data.sol:159:75
+    │
+159 │                 if (pi < 0 || uint32(pi) >= np || lookup[uint32(pi)] < 0) revert Malformed();
+    │                                                                           ━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/require-revert-in-loop
+
+warning[uninitialized-local]: local variable is read before being initialized
+    ╭▸ src/doom/r_segs.sol:169:46
+    │
+169 │                     _column(c, w.midtexture, texturecolumn);
+    │                                              ━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/uninitialized-local
+
+warning[require-revert-in-loop]: `require` or `revert` inside a loop
+    ╭▸ src/doom/r_bsp.sol:241:47
+    │
+241 │         if (num >= ctx.map.subsectors.length) revert BSPBounds();
+    │                                               ━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/require-revert-in-loop
+
+warning[require-revert-in-loop]: `require` or `revert` inside a loop
+    ╭▸ src/doom/r_plane.sol:106:70
+    │
+106 │         if (ctx.visplaneCount >= 128 || ctx.visplanes.length != 128) revert PlaneOverflow();
+    │                                                                      ━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/require-revert-in-loop
+
+warning[require-revert-in-loop]: `require` or `revert` inside a loop
+    ╭▸ src/doom/r_bsp.sol:261:13
+    │
+261 │             revert BSPBounds();
+    │             ━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/require-revert-in-loop
+
+warning[unsafe-typecast]: typecast can truncate values
+   ╭▸ src/doom/r_main.sol:85:82
+   │
+85 │                     return Tables.ANG180 - 1 - Tables.tantoangle(Tables.SlopeDiv(uint32(y), uint32(x)));
+   │                                                                                  ━━━━━━━━━
+   │
+   ├ note: consider disabling this lint if you're certain the cast is safe
+   │       
+   │       // casting to 'uint32' is safe because [explain why]
+   │       // forge-lint: disable-next-line(unsafe-typecast)
+   │       
+   │       
+   ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[unsafe-typecast]: typecast can truncate values
+   ╭▸ src/doom/r_main.sol:85:93
+   │
+85 │                     return Tables.ANG180 - 1 - Tables.tantoangle(Tables.SlopeDiv(uint32(y), uint32(x)));
+   │                                                                                             ━━━━━━━━━
+   │
+   ├ note: consider disabling this lint if you're certain the cast is safe
+   │       
+   │       // casting to 'uint32' is safe because [explain why]
+   │       // forge-lint: disable-next-line(unsafe-typecast)
+   │       
+   │       
+   ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[require-revert-in-loop]: `require` or `revert` inside a loop
+    ╭▸ src/doom/r_bsp.sol:328:59
+    │
+328 │                 if (bspnum < 0 || uint32(bspnum) > 65535) revert BSPBounds();
+    │                                                           ━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/require-revert-in-loop
+
+warning[require-revert-in-loop]: `require` or `revert` inside a loop
+    ╭▸ src/doom/r_things.sol:273:26
+    │
+273 │         if (v.patch < 0) revert SpriteBounds();
+    │                          ━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/require-revert-in-loop
+
+warning[require-revert-in-loop]: `require` or `revert` inside a loop
+    ╭▸ src/doom/r_things.sol:219:78
+    │
+219 │         if (c.resources.lumpcache.length != c.resources.source.lumps.length) revert SpriteBounds();
+    │                                                                              ━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/require-revert-in-loop
+
+warning[unsafe-typecast]: typecast can truncate values
+   ╭▸ src/doom/r_main.sol:87:73
+   │
+87 │                 return Tables.ANG90 + Tables.tantoangle(Tables.SlopeDiv(uint32(x), uint32(y)));
+   │                                                                         ━━━━━━━━━
+   │
+   ├ note: consider disabling this lint if you're certain the cast is safe
+   │       
+   │       // casting to 'uint32' is safe because [explain why]
+   │       // forge-lint: disable-next-line(unsafe-typecast)
+   │       
+   │       
+   ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[unsafe-typecast]: typecast can truncate values
+   ╭▸ src/doom/r_main.sol:87:84
+   │
+87 │                 return Tables.ANG90 + Tables.tantoangle(Tables.SlopeDiv(uint32(x), uint32(y)));
+   │                                                                                    ━━━━━━━━━
+   │
+   ├ note: consider disabling this lint if you're certain the cast is safe
+   │       
+   │       // casting to 'uint32' is safe because [explain why]
+   │       // forge-lint: disable-next-line(unsafe-typecast)
+   │       
+   │       
+   ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[unsafe-typecast]: typecast can truncate values
+   ╭▸ src/doom/r_main.sol:90:81
+   │
+90 │             if (x > y) return Tables.ANG180 + Tables.tantoangle(Tables.SlopeDiv(uint32(y), uint32(x)));
+   │                                                                                 ━━━━━━━━━
+   │
+   ├ note: consider disabling this lint if you're certain the cast is safe
+   │       
+   │       // casting to 'uint32' is safe because [explain why]
+   │       // forge-lint: disable-next-line(unsafe-typecast)
+   │       
+   │       
+   ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[unsafe-typecast]: typecast can truncate values
+   ╭▸ src/doom/r_main.sol:90:92
+   │
+90 │             if (x > y) return Tables.ANG180 + Tables.tantoangle(Tables.SlopeDiv(uint32(y), uint32(x)));
+   │                                                                                            ━━━━━━━━━
+   │
+   ├ note: consider disabling this lint if you're certain the cast is safe
+   │       
+   │       // casting to 'uint32' is safe because [explain why]
+   │       // forge-lint: disable-next-line(unsafe-typecast)
+   │       
+   │       
+   ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[unsafe-typecast]: typecast can truncate values
+   ╭▸ src/doom/r_main.sol:91:74
+   │
+91 │             return Tables.ANG270 - 1 - Tables.tantoangle(Tables.SlopeDiv(uint32(x), uint32(y)));
+   │                                                                          ━━━━━━━━━
+   │
+   ├ note: consider disabling this lint if you're certain the cast is safe
+   │       
+   │       // casting to 'uint32' is safe because [explain why]
+   │       // forge-lint: disable-next-line(unsafe-typecast)
+   │       
+   │       
+   ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[unsafe-typecast]: typecast can truncate values
+   ╭▸ src/doom/r_main.sol:91:85
+   │
+91 │             return Tables.ANG270 - 1 - Tables.tantoangle(Tables.SlopeDiv(uint32(x), uint32(y)));
+   │                                                                                     ━━━━━━━━━
+   │
+   ├ note: consider disabling this lint if you're certain the cast is safe
+   │       
+   │       // casting to 'uint32' is safe because [explain why]
+   │       // forge-lint: disable-next-line(unsafe-typecast)
+   │       
+   │       
+   ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[require-revert-in-loop]: `require` or `revert` inside a loop
+    ╭▸ src/doom/r_things.sol:275:31
+    │
+275 │         if (patch.length < 8) revert SpriteBounds();
+    │                               ━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/require-revert-in-loop
+
+warning[require-revert-in-loop]: `require` or `revert` inside a loop
+    ╭▸ src/doom/r_things.sol:280:33
+    │
+280 │             if (v.colormap < 0) revert SpriteBounds();
+    │                                 ━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/require-revert-in-loop
+
+warning[require-revert-in-loop]: `require` or `revert` inside a loop
+    ╭▸ src/doom/r_bsp.sol:333:67
+    │
+333 │         if (bspnum < 0 || uint32(bspnum) >= ctx.map.nodes.length) revert BSPBounds();
+    │                                                                   ━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/require-revert-in-loop
+
+warning[require-revert-in-loop]: `require` or `revert` inside a loop
+    ╭▸ src/doom/r_bsp.sol:335:33
+    │
+335 │         if (active[index] != 0) revert BSPCycle();
+    │                                 ━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/require-revert-in-loop
+
+warning[unsafe-typecast]: typecast can truncate values
+    ╭▸ src/doom/r_main.sol:118:43
+    │
+118 │         uint32 angle = (Tables.tantoangle(uint32(M_Fixed.FixedDiv(dy, dx)) >> Tables.DBITS) + Tables.ANG90)
+    │                                           ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ├ note: consider disabling this lint if you're certain the cast is safe
+    │       
+    │       // casting to 'uint32' is safe because [explain why]
+    │       // forge-lint: disable-next-line(unsafe-typecast)
+    │       
+    │       
+    ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[require-revert-in-loop]: `require` or `revert` inside a loop
+   ╭▸ src/doom/tables.sol:42:28
+   │
+42 │         if (index >= 4096) revert TableIndexOutOfBounds(index, 4096);
+   │                            ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/require-revert-in-loop
+
+warning[require-revert-in-loop]: `require` or `revert` inside a loop
+    ╭▸ src/doom/r_things.sol:305:48
+    │
+305 │             if (column < 0 || column >= width) revert SpriteBounds();
+    │                                                ━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/require-revert-in-loop
+
+warning[require-revert-in-loop]: `require` or `revert` inside a loop
+    ╭▸ src/doom/r_things.sol:228:34
+    │
+228 │         if (p + 4 > data.length) revert SpriteBounds();
+    │                                  ━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/require-revert-in-loop
+
+warning[require-revert-in-loop]: `require` or `revert` inside a loop
+    ╭▸ src/doom/r_things.sol:245:40
+    │
+245 │             if (p >= post.data.length) revert SpriteBounds();
+    │                                        ━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/require-revert-in-loop
+
+warning[require-revert-in-loop]: `require` or `revert` inside a loop
+    ╭▸ src/doom/r_things.sol:248:43
+    │
+248 │             if (p + 3 > post.data.length) revert SpriteBounds();
+    │                                           ━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/require-revert-in-loop
+
+warning[require-revert-in-loop]: `require` or `revert` inside a loop
+    ╭▸ src/doom/r_things.sol:250:58
+    │
+250 │             if (p + uint256(len) + 4 > post.data.length) revert SpriteBounds();
+    │                                                          ━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/require-revert-in-loop
+
+warning[require-revert-in-loop]: `require` or `revert` inside a loop
+    ╭▸ src/doom/r_things.sol:256:33
+    │
+256 │                 if (c.dc.x < 0) revert SpriteBounds();
+    │                                 ━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/require-revert-in-loop
+
+warning[require-revert-in-loop]: `require` or `revert` inside a loop
+   ╭▸ src/doom/r_draw.sol:74:11
+   │
+74 │         ) revert DrawBounds();
+   │           ━━━━━━━━━━━━━━━━━━━━
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/require-revert-in-loop
+
+warning[require-revert-in-loop]: `require` or `revert` inside a loop
+   ╭▸ src/doom/r_draw.sol:83:17
+   │
+83 │                 revert DrawBounds();
+   │                 ━━━━━━━━━━━━━━━━━━━━
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/require-revert-in-loop
+
+warning[require-revert-in-loop]: `require` or `revert` inside a loop
+   ╭▸ src/doom/r_draw.sol:28:13
+   │
+28 │             revert DrawBounds();
+   │             ━━━━━━━━━━━━━━━━━━━━
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/require-revert-in-loop
+
+warning[require-revert-in-loop]: `require` or `revert` inside a loop
+   ╭▸ src/doom/r_draw.sol:30:57
+   │
+30 │         if (translated && dc.translation.length != 256) revert DrawBounds();
+   │                                                         ━━━━━━━━━━━━━━━━━━━━
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/require-revert-in-loop
+
+warning[require-revert-in-loop]: `require` or `revert` inside a loop
+   ╭▸ src/doom/r_draw.sol:32:45
+   │
+32 │             if (dc.x > type(int32).max / 2) revert DrawBounds();
+   │                                             ━━━━━━━━━━━━━━━━━━━━
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/require-revert-in-loop
+
+warning[require-revert-in-loop]: `require` or `revert` inside a loop
+   ╭▸ src/doom/r_draw.sol:36:55
+   │
+36 │         if (x + (low ? 1 : 0) >= rs.columnofs.length) revert DrawBounds();
+   │                                                       ━━━━━━━━━━━━━━━━━━━━
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/require-revert-in-loop
+
+warning[require-revert-in-loop]: `require` or `revert` inside a loop
+   ╭▸ src/doom/r_draw.sol:43:11
+   │
+43 │         ) revert DrawBounds();
+   │           ━━━━━━━━━━━━━━━━━━━━
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/require-revert-in-loop
+
+warning[require-revert-in-loop]: `require` or `revert` inside a loop
+   ╭▸ src/doom/r_draw.sol:51:66
+   │
+51 │             if (index < 0 || uint256(index) >= dc.source.length) revert DrawBounds();
+   │                                                                  ━━━━━━━━━━━━━━━━━━━━
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/require-revert-in-loop
+
+warning[uninitialized-local]: local variable is read before being initialized
+    ╭▸ src/doom/r_main.sol:130:31
+    │
+130 │             if (n >= count || steps++ >= count) revert InvalidBSP();
+    │                               ━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/uninitialized-local
+
+warning[require-revert-in-loop]: `require` or `revert` inside a loop
+    ╭▸ src/doom/r_things.sol:318:28
+    │
+318 │         if (f.lump[0] < 0) revert SpriteBounds();
+    │                            ━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/require-revert-in-loop
+
+warning[require-revert-in-loop]: `require` or `revert` inside a loop
+    ╭▸ src/doom/r_bsp.sol:228:13
+    │
+228 │             revert BSPBounds();
+    │             ━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/require-revert-in-loop
+
+warning[unsafe-typecast]: typecast can truncate values
+    ╭▸ src/doom/r_bsp.sol:292:49
+    │
+292 │                 Node memory bsp = ctx.map.nodes[uint32(current)];
+    │                                                 ━━━━━━━━━━━━━━━
+    │
+    ├ note: consider disabling this lint if you're certain the cast is safe
+    │       
+    │       // casting to 'uint32' is safe because [explain why]
+    │       // forge-lint: disable-next-line(unsafe-typecast)
+    │       
+    │       
+    ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[unsafe-typecast]: typecast can truncate values
+    ╭▸ src/doom/r_bsp.sol:294:32
+    │
+294 │                 stage[depth] = uint8(side + 1);
+    │                                ━━━━━━━━━━━━━━━
+    │
+    ├ note: consider disabling this lint if you're certain the cast is safe
+    │       
+    │       // casting to 'uint8' is safe because [explain why]
+    │       // forge-lint: disable-next-line(unsafe-typecast)
+    │       
+    │       
+    ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[unsafe-typecast]: typecast can truncate values
+    ╭▸ src/doom/r_bsp.sol:301:49
+    │
+301 │                 Node memory bsp = ctx.map.nodes[uint32(current)];
+    │                                                 ━━━━━━━━━━━━━━━
+    │
+    ├ note: consider disabling this lint if you're certain the cast is safe
+    │       
+    │       // casting to 'uint32' is safe because [explain why]
+    │       // forge-lint: disable-next-line(unsafe-typecast)
+    │       
+    │       
+    ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[unsafe-typecast]: typecast can truncate values
+    ╭▸ src/doom/r_main.sol:136:16
+    │
+136 │         return uint32(n);
+    │                ━━━━━━━━━
+    │
+    ├ note: consider disabling this lint if you're certain the cast is safe
+    │       
+    │       // casting to 'uint32' is safe because [explain why]
+    │       // forge-lint: disable-next-line(unsafe-typecast)
+    │       
+    │       
+    ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[unsafe-typecast]: typecast can truncate values
+    ╭▸ src/doom/r_data.sol:135:72
+    │
+135 │         bytes memory t2 = t2num < 0 ? new bytes(0) : W_CacheLumpNum(v, uint32(t2num));
+    │                                                                        ━━━━━━━━━━━━━
+    │
+    ├ note: consider disabling this lint if you're certain the cast is safe
+    │       
+    │       // casting to 'uint32' is safe because [explain why]
+    │       // forge-lint: disable-next-line(unsafe-typecast)
+    │       
+    │       
+    ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[unsafe-typecast]: typecast can truncate values
+    ╭▸ src/doom/r_data.sol:144:39
+    │
+144 │             r.texturetranslation[i] = uint32(i);
+    │                                       ━━━━━━━━━
+    │
+    ├ note: consider disabling this lint if you're certain the cast is safe
+    │       
+    │       // casting to 'uint32' is safe because [explain why]
+    │       // forge-lint: disable-next-line(unsafe-typecast)
+    │       
+    │       
+    ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[unsafe-typecast]: typecast can truncate values
+    ╭▸ src/doom/r_bsp.sol:311:20
+    │
+311 │             active[uint32(current)] = 0;
+    │                    ━━━━━━━━━━━━━━━
+    │
+    ├ note: consider disabling this lint if you're certain the cast is safe
+    │       
+    │       // casting to 'uint32' is safe because [explain why]
+    │       // forge-lint: disable-next-line(unsafe-typecast)
+    │       
+    │       
+    ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[unsafe-typecast]: typecast can truncate values
+    ╭▸ src/doom/r_data.sol:153:23
+    │
+153 │             t.width = uint16(uint32(width));
+    │                       ━━━━━━━━━━━━━━━━━━━━━
+    │
+    ├ note: consider disabling this lint if you're certain the cast is safe
+    │       
+    │       // casting to 'uint16' is safe because [explain why]
+    │       // forge-lint: disable-next-line(unsafe-typecast)
+    │       
+    │       
+    ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[unsafe-typecast]: typecast can truncate values
+    ╭▸ src/doom/r_data.sol:153:30
+    │
+153 │             t.width = uint16(uint32(width));
+    │                              ━━━━━━━━━━━━━
+    │
+    ├ note: consider disabling this lint if you're certain the cast is safe
+    │       
+    │       // casting to 'uint32' is safe because [explain why]
+    │       // forge-lint: disable-next-line(unsafe-typecast)
+    │       
+    │       
+    ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[unsafe-typecast]: typecast can truncate values
+    ╭▸ src/doom/r_data.sol:154:24
+    │
+154 │             t.height = uint16(uint32(height));
+    │                        ━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ├ note: consider disabling this lint if you're certain the cast is safe
+    │       
+    │       // casting to 'uint16' is safe because [explain why]
+    │       // forge-lint: disable-next-line(unsafe-typecast)
+    │       
+    │       
+    ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[unsafe-typecast]: typecast can truncate values
+    ╭▸ src/doom/r_data.sol:154:31
+    │
+154 │             t.height = uint16(uint32(height));
+    │                               ━━━━━━━━━━━━━━
+    │
+    ├ note: consider disabling this lint if you're certain the cast is safe
+    │       
+    │       // casting to 'uint32' is safe because [explain why]
+    │       // forge-lint: disable-next-line(unsafe-typecast)
+    │       
+    │       
+    ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[unsafe-typecast]: typecast can truncate values
+    ╭▸ src/doom/r_data.sol:155:40
+    │
+155 │             t.patches = new TexPatch[](uint32(count));
+    │                                        ━━━━━━━━━━━━━
+    │
+    ├ note: consider disabling this lint if you're certain the cast is safe
+    │       
+    │       // casting to 'uint32' is safe because [explain why]
+    │       // forge-lint: disable-next-line(unsafe-typecast)
+    │       
+    │       
+    ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[unsafe-typecast]: typecast can truncate values
+    ╭▸ src/doom/r_main.sol:148:28
+    │
+148 │             int32 anglea = int32(Tables.ANG90 + (visangle - rs.viewangle));
+    │                            ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ├ note: consider disabling this lint if you're certain the cast is safe
+    │       
+    │       // casting to 'int32' is safe because [explain why]
+    │       // forge-lint: disable-next-line(unsafe-typecast)
+    │       
+    │       
+    ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[unsafe-typecast]: typecast can truncate values
+    ╭▸ src/doom/r_data.sol:156:33
+    │
+156 │             for (uint256 j; j < uint32(count); ++j) {
+    │                                 ━━━━━━━━━━━━━
+    │
+    ├ note: consider disabling this lint if you're certain the cast is safe
+    │       
+    │       // casting to 'uint32' is safe because [explain why]
+    │       // forge-lint: disable-next-line(unsafe-typecast)
+    │       
+    │       
+    ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[unsafe-typecast]: typecast can truncate values
+    ╭▸ src/doom/r_main.sol:149:28
+    │
+149 │             int32 angleb = int32(Tables.ANG90 + (visangle - rw_normalangle));
+    │                            ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ├ note: consider disabling this lint if you're certain the cast is safe
+    │       
+    │       // casting to 'int32' is safe because [explain why]
+    │       // forge-lint: disable-next-line(unsafe-typecast)
+    │       
+    │       
+    ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[unsafe-typecast]: typecast can truncate values
+    ╭▸ src/doom/r_bsp.sol:324:14
+    │
+324 │         if ((uint32(bspnum) & 0x8000) != 0) {
+    │              ━━━━━━━━━━━━━━
+    │
+    ├ note: consider disabling this lint if you're certain the cast is safe
+    │       
+    │       // casting to 'uint32' is safe because [explain why]
+    │       // forge-lint: disable-next-line(unsafe-typecast)
+    │       
+    │       
+    ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[unsafe-typecast]: typecast can truncate values
+    ╭▸ src/doom/r_main.sol:151:43
+    │
+151 │             int32 sinea = Tables.finesine(uint32(anglea) >> 19);
+    │                                           ━━━━━━━━━━━━━━
+    │
+    ├ note: consider disabling this lint if you're certain the cast is safe
+    │       
+    │       // casting to 'uint32' is safe because [explain why]
+    │       // forge-lint: disable-next-line(unsafe-typecast)
+    │       
+    │       
+    ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[unsafe-typecast]: typecast can truncate values
+    ╭▸ src/doom/r_main.sol:152:43
+    │
+152 │             int32 sineb = Tables.finesine(uint32(angleb) >> 19);
+    │                                           ━━━━━━━━━━━━━━
+    │
+    ├ note: consider disabling this lint if you're certain the cast is safe
+    │       
+    │       // casting to 'uint32' is safe because [explain why]
+    │       // forge-lint: disable-next-line(unsafe-typecast)
+    │       
+    │       
+    ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[unsafe-typecast]: typecast can truncate values
+    ╭▸ src/doom/r_bsp.sol:328:35
+    │
+328 │                 if (bspnum < 0 || uint32(bspnum) > 65535) revert BSPBounds();
+    │                                   ━━━━━━━━━━━━━━
+    │
+    ├ note: consider disabling this lint if you're certain the cast is safe
+    │       
+    │       // casting to 'uint32' is safe because [explain why]
+    │       // forge-lint: disable-next-line(unsafe-typecast)
+    │       
+    │       
+    ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[unsafe-typecast]: typecast can truncate values
+    ╭▸ src/doom/r_bsp.sol:329:34
+    │
+329 │                 R_Subsector(ctx, uint32(bspnum) & 0x7fff, storeWall, addSprites);
+    │                                  ━━━━━━━━━━━━━━
+    │
+    ├ note: consider disabling this lint if you're certain the cast is safe
+    │       
+    │       // casting to 'uint32' is safe because [explain why]
+    │       // forge-lint: disable-next-line(unsafe-typecast)
+    │       
+    │       
+    ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[unsafe-typecast]: typecast can truncate values
+    ╭▸ src/doom/r_bsp.sol:333:27
+    │
+333 │         if (bspnum < 0 || uint32(bspnum) >= ctx.map.nodes.length) revert BSPBounds();
+    │                           ━━━━━━━━━━━━━━
+    │
+    ├ note: consider disabling this lint if you're certain the cast is safe
+    │       
+    │       // casting to 'uint32' is safe because [explain why]
+    │       // forge-lint: disable-next-line(unsafe-typecast)
+    │       
+    │       
+    ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[unsafe-typecast]: typecast can truncate values
+    ╭▸ src/doom/r_bsp.sol:334:24
+    │
+334 │         uint32 index = uint32(bspnum);
+    │                        ━━━━━━━━━━━━━━
+    │
+    ├ note: consider disabling this lint if you're certain the cast is safe
+    │       
+    │       // casting to 'uint32' is safe because [explain why]
+    │       // forge-lint: disable-next-line(unsafe-typecast)
+    │       
+    │       
+    ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[uninitialized-local]: local variable is read before being initialized
+    ╭▸ src/doom/r_main.sol:189:36
+    │
+189 │             while (rs.viewangletox[i] > int32(uint32(x))) ++i;
+    │                                    ━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/uninitialized-local
+
+warning[unsafe-typecast]: typecast can truncate values
+    ╭▸ src/doom/r_data.sol:159:31
+    │
+159 │                 if (pi < 0 || uint32(pi) >= np || lookup[uint32(pi)] < 0) revert Malformed();
+    │                               ━━━━━━━━━━
+    │
+    ├ note: consider disabling this lint if you're certain the cast is safe
+    │       
+    │       // casting to 'uint32' is safe because [explain why]
+    │       // forge-lint: disable-next-line(unsafe-typecast)
+    │       
+    │       
+    ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[unsafe-typecast]: typecast can truncate values
+    ╭▸ src/doom/r_data.sol:159:58
+    │
+159 │                 if (pi < 0 || uint32(pi) >= np || lookup[uint32(pi)] < 0) revert Malformed();
+    │                                                          ━━━━━━━━━━
+    │
+    ├ note: consider disabling this lint if you're certain the cast is safe
+    │       
+    │       // casting to 'uint32' is safe because [explain why]
+    │       // forge-lint: disable-next-line(unsafe-typecast)
+    │       
+    │       
+    ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[unsafe-typecast]: typecast can truncate values
+    ╭▸ src/doom/r_data.sol:160:73
+    │
+160 │                 t.patches[j] = TexPatch(s16(data, q), s16(data, q + 2), uint32(lookup[uint32(pi)]));
+    │                                                                         ━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ├ note: consider disabling this lint if you're certain the cast is safe
+    │       
+    │       // casting to 'uint32' is safe because [explain why]
+    │       // forge-lint: disable-next-line(unsafe-typecast)
+    │       
+    │       
+    ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[unsafe-typecast]: typecast can truncate values
+    ╭▸ src/doom/r_data.sol:160:87
+    │
+160 │                 t.patches[j] = TexPatch(s16(data, q), s16(data, q + 2), uint32(lookup[uint32(pi)]));
+    │                                                                                       ━━━━━━━━━━
+    │
+    ├ note: consider disabling this lint if you're certain the cast is safe
+    │       
+    │       // casting to 'uint32' is safe because [explain why]
+    │       // forge-lint: disable-next-line(unsafe-typecast)
+    │       
+    │       
+    ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[unsafe-typecast]: typecast can truncate values
+    ╭▸ src/doom/r_data.sol:165:44
+    │
+165 │             if (!lazy) R_GenerateLookup(r, uint32(i));
+    │                                            ━━━━━━━━━
+    │
+    ├ note: consider disabling this lint if you're certain the cast is safe
+    │       
+    │       // casting to 'uint32' is safe because [explain why]
+    │       // forge-lint: disable-next-line(unsafe-typecast)
+    │       
+    │       
+    ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[unsafe-typecast]: typecast can truncate values
+    ╭▸ src/doom/r_main.sol:189:41
+    │
+189 │             while (rs.viewangletox[i] > int32(uint32(x))) ++i;
+    │                                         ━━━━━━━━━━━━━━━━
+    │
+    ├ note: consider disabling this lint if you're certain the cast is safe
+    │       
+    │       // casting to 'int32' is safe because [explain why]
+    │       // forge-lint: disable-next-line(unsafe-typecast)
+    │       
+    │       
+    ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[unsafe-typecast]: typecast can truncate values
+    ╭▸ src/doom/r_data.sol:204:51
+    │
+204 │             h = header(r.source, patch.patch, 8 + uint32(width) * 4);
+    │                                                   ━━━━━━━━━━━━━
+    │
+    ├ note: consider disabling this lint if you're certain the cast is safe
+    │       
+    │       // casting to 'uint32' is safe because [explain why]
+    │       // forge-lint: disable-next-line(unsafe-typecast)
+    │       
+    │       
+    ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[unsafe-typecast]: typecast can truncate values
+    ╭▸ src/doom/r_main.sol:189:47
+    │
+189 │             while (rs.viewangletox[i] > int32(uint32(x))) ++i;
+    │                                               ━━━━━━━━━
+    │
+    ├ note: consider disabling this lint if you're certain the cast is safe
+    │       
+    │       // casting to 'uint32' is safe because [explain why]
+    │       // forge-lint: disable-next-line(unsafe-typecast)
+    │       
+    │       
+    ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[unsafe-typecast]: typecast can truncate values
+    ╭▸ src/doom/r_data.sol:209:29
+    │
+209 │                 uint32 ux = uint32(x);
+    │                             ━━━━━━━━━
+    │
+    ├ note: consider disabling this lint if you're certain the cast is safe
+    │       
+    │       // casting to 'uint32' is safe because [explain why]
+    │       // forge-lint: disable-next-line(unsafe-typecast)
+    │       
+    │       
+    ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[unsafe-typecast]: typecast can truncate values
+    ╭▸ src/doom/r_data.sol:214:36
+    │
+214 │                 t.columnlump[ux] = int32(int16(uint16(patch.patch)));
+    │                                    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ├ note: consider disabling this lint if you're certain the cast is safe
+    │       
+    │       // casting to 'int32' is safe because [explain why]
+    │       // forge-lint: disable-next-line(unsafe-typecast)
+    │       
+    │       
+    ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[unsafe-typecast]: typecast can truncate values
+    ╭▸ src/doom/r_data.sol:214:42
+    │
+214 │                 t.columnlump[ux] = int32(int16(uint16(patch.patch)));
+    │                                          ━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ├ note: consider disabling this lint if you're certain the cast is safe
+    │       
+    │       // casting to 'int16' is safe because [explain why]
+    │       // forge-lint: disable-next-line(unsafe-typecast)
+    │       
+    │       
+    ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[unsafe-typecast]: typecast can truncate values
+    ╭▸ src/doom/r_data.sol:214:48
+    │
+214 │                 t.columnlump[ux] = int32(int16(uint16(patch.patch)));
+    │                                                ━━━━━━━━━━━━━━━━━━━
+    │
+    ├ note: consider disabling this lint if you're certain the cast is safe
+    │       
+    │       // casting to 'uint16' is safe because [explain why]
+    │       // forge-lint: disable-next-line(unsafe-typecast)
+    │       
+    │       
+    ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[unsafe-typecast]: typecast can truncate values
+    ╭▸ src/doom/r_data.sol:215:35
+    │
+215 │                 t.columnofs[ux] = uint16(u32(h, 8 + uint32(x - x1) * 4) + 3);
+    │                                   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ├ note: consider disabling this lint if you're certain the cast is safe
+    │       
+    │       // casting to 'uint16' is safe because [explain why]
+    │       // forge-lint: disable-next-line(unsafe-typecast)
+    │       
+    │       
+    ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[unsafe-typecast]: typecast can truncate values
+    ╭▸ src/doom/r_data.sol:215:53
+    │
+215 │                 t.columnofs[ux] = uint16(u32(h, 8 + uint32(x - x1) * 4) + 3);
+    │                                                     ━━━━━━━━━━━━━━
+    │
+    ├ note: consider disabling this lint if you're certain the cast is safe
+    │       
+    │       // casting to 'uint32' is safe because [explain why]
+    │       // forge-lint: disable-next-line(unsafe-typecast)
+    │       
+    │       
+    ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[unsafe-typecast]: typecast can truncate values
+    ╭▸ src/doom/r_data.sol:223:34
+    │
+223 │                 t.columnofs[x] = uint16(t.compositesize);
+    │                                  ━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ├ note: consider disabling this lint if you're certain the cast is safe
+    │       
+    │       // casting to 'uint16' is safe because [explain why]
+    │       // forge-lint: disable-next-line(unsafe-typecast)
+    │       
+    │       
+    ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[uninitialized-local]: local variable is read before being initialized
+    ╭▸ src/doom/r_main.sol:207:23
+    │
+207 │         for (int32 i; i < 16; ++i) {
+    │                       ━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/uninitialized-local
+
+warning[uninitialized-local]: local variable is read before being initialized
+    ╭▸ src/doom/r_main.sol:209:27
+    │
+209 │             for (int32 j; j < 128; ++j) {
+    │                           ━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/uninitialized-local
+
+warning[unsafe-typecast]: typecast can truncate values
+    ╭▸ src/doom/r_segs.sol:126:28
+    │
+126 │                 uint32 x = uint32(w.rw_x);
+    │                            ━━━━━━━━━━━━━━
+    │
+    ├ note: consider disabling this lint if you're certain the cast is safe
+    │       
+    │       // casting to 'uint32' is safe because [explain why]
+    │       // forge-lint: disable-next-line(unsafe-typecast)
+    │       
+    │       
+    ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[unsafe-typecast]: typecast can truncate values
+    ╭▸ src/doom/r_segs.sol:135:47
+    │
+135 │                         p.top[x + 1] = bytes1(uint8(uint32(top)));
+    │                                               ━━━━━━━━━━━━━━━━━━
+    │
+    ├ note: consider disabling this lint if you're certain the cast is safe
+    │       
+    │       // casting to 'uint8' is safe because [explain why]
+    │       // forge-lint: disable-next-line(unsafe-typecast)
+    │       
+    │       
+    ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[unsafe-typecast]: typecast can truncate values
+    ╭▸ src/doom/r_segs.sol:135:53
+    │
+135 │                         p.top[x + 1] = bytes1(uint8(uint32(top)));
+    │                                                     ━━━━━━━━━━━
+    │
+    ├ note: consider disabling this lint if you're certain the cast is safe
+    │       
+    │       // casting to 'uint32' is safe because [explain why]
+    │       // forge-lint: disable-next-line(unsafe-typecast)
+    │       
+    │       
+    ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[unsafe-typecast]: typecast can truncate values
+    ╭▸ src/doom/r_segs.sol:136:50
+    │
+136 │                         p.bottom[x + 1] = bytes1(uint8(uint32(bottom)));
+    │                                                  ━━━━━━━━━━━━━━━━━━━━━
+    │
+    ├ note: consider disabling this lint if you're certain the cast is safe
+    │       
+    │       // casting to 'uint8' is safe because [explain why]
+    │       // forge-lint: disable-next-line(unsafe-typecast)
+    │       
+    │       
+    ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[unsafe-typecast]: typecast can truncate values
+    ╭▸ src/doom/r_segs.sol:136:56
+    │
+136 │                         p.bottom[x + 1] = bytes1(uint8(uint32(bottom)));
+    │                                                        ━━━━━━━━━━━━━━
+    │
+    ├ note: consider disabling this lint if you're certain the cast is safe
+    │       
+    │       // casting to 'uint32' is safe because [explain why]
+    │       // forge-lint: disable-next-line(unsafe-typecast)
+    │       
+    │       
+    ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[unsafe-typecast]: typecast can truncate values
+    ╭▸ src/doom/r_segs.sol:147:47
+    │
+147 │                         p.top[x + 1] = bytes1(uint8(uint32(top)));
+    │                                               ━━━━━━━━━━━━━━━━━━
+    │
+    ├ note: consider disabling this lint if you're certain the cast is safe
+    │       
+    │       // casting to 'uint8' is safe because [explain why]
+    │       // forge-lint: disable-next-line(unsafe-typecast)
+    │       
+    │       
+    ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[unsafe-typecast]: typecast can truncate values
+    ╭▸ src/doom/r_segs.sol:147:53
+    │
+147 │                         p.top[x + 1] = bytes1(uint8(uint32(top)));
+    │                                                     ━━━━━━━━━━━
+    │
+    ├ note: consider disabling this lint if you're certain the cast is safe
+    │       
+    │       // casting to 'uint32' is safe because [explain why]
+    │       // forge-lint: disable-next-line(unsafe-typecast)
+    │       
+    │       
+    ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[unsafe-typecast]: typecast can truncate values
+    ╭▸ src/doom/r_segs.sol:148:50
+    │
+148 │                         p.bottom[x + 1] = bytes1(uint8(uint32(bottom)));
+    │                                                  ━━━━━━━━━━━━━━━━━━━━━
+    │
+    ├ note: consider disabling this lint if you're certain the cast is safe
+    │       
+    │       // casting to 'uint8' is safe because [explain why]
+    │       // forge-lint: disable-next-line(unsafe-typecast)
+    │       
+    │       
+    ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[unsafe-typecast]: typecast can truncate values
+    ╭▸ src/doom/r_segs.sol:148:56
+    │
+148 │                         p.bottom[x + 1] = bytes1(uint8(uint32(bottom)));
+    │                                                        ━━━━━━━━━━━━━━
+    │
+    ├ note: consider disabling this lint if you're certain the cast is safe
+    │       
+    │       // casting to 'uint32' is safe because [explain why]
+    │       // forge-lint: disable-next-line(unsafe-typecast)
+    │       
+    │       
+    ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[unsafe-typecast]: typecast can truncate values
+    ╭▸ src/doom/r_segs.sol:156:36
+    │
+156 │                     uint32 index = uint32(w.rw_scale >> 12);
+    │                                    ━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ├ note: consider disabling this lint if you're certain the cast is safe
+    │       
+    │       // casting to 'uint32' is safe because [explain why]
+    │       // forge-lint: disable-next-line(unsafe-typecast)
+    │       
+    │       
+    ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[unsafe-typecast]: typecast can truncate values
+    ╭▸ src/doom/r_segs.sol:160:49
+    │
+160 │                         : uint8(c.rs.scalelight[uint32(w.lightnum) * 48 + index]);
+    │                                                 ━━━━━━━━━━━━━━━━━━
+    │
+    ├ note: consider disabling this lint if you're certain the cast is safe
+    │       
+    │       // casting to 'uint32' is safe because [explain why]
+    │       // forge-lint: disable-next-line(unsafe-typecast)
+    │       
+    │       
+    ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[unsafe-typecast]: typecast can truncate values
+    ╭▸ src/doom/r_segs.sol:163:35
+    │
+163 │                     c.dc.iscale = int32(type(uint32).max / uint32(w.rw_scale));
+    │                                   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ├ note: consider disabling this lint if you're certain the cast is safe
+    │       
+    │       // casting to 'int32' is safe because [explain why]
+    │       // forge-lint: disable-next-line(unsafe-typecast)
+    │       
+    │       
+    ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[unsafe-typecast]: typecast can truncate values
+    ╭▸ src/doom/r_segs.sol:163:60
+    │
+163 │                     c.dc.iscale = int32(type(uint32).max / uint32(w.rw_scale));
+    │                                                            ━━━━━━━━━━━━━━━━━━
+    │
+    ├ note: consider disabling this lint if you're certain the cast is safe
+    │       
+    │       // casting to 'uint32' is safe because [explain why]
+    │       // forge-lint: disable-next-line(unsafe-typecast)
+    │       
+    │       
+    ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[unsafe-typecast]: typecast can truncate values
+    ╭▸ src/doom/r_main.sol:214:27
+    │
+214 │                 rs.zlight[uint32(i * 128 + j)] = bytes1(uint8(uint32(level)));
+    │                           ━━━━━━━━━━━━━━━━━━━
+    │
+    ├ note: consider disabling this lint if you're certain the cast is safe
+    │       
+    │       // casting to 'uint32' is safe because [explain why]
+    │       // forge-lint: disable-next-line(unsafe-typecast)
+    │       
+    │       
+    ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[unsafe-typecast]: typecast can truncate values
+    ╭▸ src/doom/r_main.sol:214:57
+    │
+214 │                 rs.zlight[uint32(i * 128 + j)] = bytes1(uint8(uint32(level)));
+    │                                                         ━━━━━━━━━━━━━━━━━━━━
+    │
+    ├ note: consider disabling this lint if you're certain the cast is safe
+    │       
+    │       // casting to 'uint8' is safe because [explain why]
+    │       // forge-lint: disable-next-line(unsafe-typecast)
+    │       
+    │       
+    ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[unsafe-typecast]: typecast can truncate values
+    ╭▸ src/doom/r_main.sol:214:63
+    │
+214 │                 rs.zlight[uint32(i * 128 + j)] = bytes1(uint8(uint32(level)));
+    │                                                               ━━━━━━━━━━━━━
+    │
+    ├ note: consider disabling this lint if you're certain the cast is safe
+    │       
+    │       // casting to 'uint32' is safe because [explain why]
+    │       // forge-lint: disable-next-line(unsafe-typecast)
+    │       
+    │       
+    ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[unsafe-typecast]: typecast can truncate values
+    ╭▸ src/doom/r_data.sol:248:21
+    │
+248 │             if (p + uint32(count) + 4 > patch.length) revert Bounds();
+    │                     ━━━━━━━━━━━━━
+    │
+    ├ note: consider disabling this lint if you're certain the cast is safe
+    │       
+    │       // casting to 'uint32' is safe because [explain why]
+    │       // forge-lint: disable-next-line(unsafe-typecast)
+    │       
+    │       
+    ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[unsafe-typecast]: typecast can truncate values
+    ╭▸ src/doom/r_data.sol:249:32
+    │
+249 │             uint256 next = p + uint32(count) + 4;
+    │                                ━━━━━━━━━━━━━
+    │
+    ├ note: consider disabling this lint if you're certain the cast is safe
+    │       
+    │       // casting to 'uint32' is safe because [explain why]
+    │       // forge-lint: disable-next-line(unsafe-typecast)
+    │       
+    │       
+    ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[unsafe-typecast]: typecast can truncate values
+    ╭▸ src/doom/r_data.sol:254:36
+    │
+254 │             if (position + count > int32(height)) count = int32(height) - position;
+    │                                    ━━━━━━━━━━━━━
+    │
+    ├ note: consider disabling this lint if you're certain the cast is safe
+    │       
+    │       // casting to 'int32' is safe because [explain why]
+    │       // forge-lint: disable-next-line(unsafe-typecast)
+    │       
+    │       
+    ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[unsafe-typecast]: typecast can truncate values
+    ╭▸ src/doom/r_data.sol:254:59
+    │
+254 │             if (position + count > int32(height)) count = int32(height) - position;
+    │                                                           ━━━━━━━━━━━━━
+    │
+    ├ note: consider disabling this lint if you're certain the cast is safe
+    │       
+    │       // casting to 'int32' is safe because [explain why]
+    │       // forge-lint: disable-next-line(unsafe-typecast)
+    │       
+    │       
+    ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[unsafe-typecast]: typecast can truncate values
+    ╭▸ src/doom/r_data.sol:256:55
+    │
+256 │                 uint256 destination = uint256(base) + uint32(position);
+    │                                                       ━━━━━━━━━━━━━━━━
+    │
+    ├ note: consider disabling this lint if you're certain the cast is safe
+    │       
+    │       // casting to 'uint32' is safe because [explain why]
+    │       // forge-lint: disable-next-line(unsafe-typecast)
+    │       
+    │       
+    ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[unsafe-typecast]: typecast can truncate values
+    ╭▸ src/doom/r_data.sol:257:34
+    │
+257 │                 uint256 length = uint32(count);
+    │                                  ━━━━━━━━━━━━━
+    │
+    ├ note: consider disabling this lint if you're certain the cast is safe
+    │       
+    │       // casting to 'uint32' is safe because [explain why]
+    │       // forge-lint: disable-next-line(unsafe-typecast)
+    │       
+    │       
+    ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[unsafe-typecast]: typecast can truncate values
+    ╭▸ src/doom/r_main.sol:241:48
+    │
+241 │                 rs.scalelightfixed[i] = bytes1(uint8(uint32(fixedcolormap)));
+    │                                                ━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ├ note: consider disabling this lint if you're certain the cast is safe
+    │       
+    │       // casting to 'uint8' is safe because [explain why]
+    │       // forge-lint: disable-next-line(unsafe-typecast)
+    │       
+    │       
+    ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[unsafe-typecast]: typecast can truncate values
+    ╭▸ src/doom/r_main.sol:241:54
+    │
+241 │                 rs.scalelightfixed[i] = bytes1(uint8(uint32(fixedcolormap)));
+    │                                                      ━━━━━━━━━━━━━━━━━━━━━
+    │
+    ├ note: consider disabling this lint if you're certain the cast is safe
+    │       
+    │       // casting to 'uint32' is safe because [explain why]
+    │       // forge-lint: disable-next-line(unsafe-typecast)
+    │       
+    │       
+    ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[uninitialized-local]: local variable is read before being initialized
+    ╭▸ src/doom/r_data.sol:311:32
+    │
+311 │                 while (uint256(y) + 32 <= t.height) {
+    │                                ━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/uninitialized-local
+
+warning[unsafe-typecast]: typecast can truncate values
+    ╭▸ src/doom/r_data.sol:295:34
+    │
+295 │                 if (t.columnlump[uint32(x)] >= 0) continue;
+    │                                  ━━━━━━━━━
+    │
+    ├ note: consider disabling this lint if you're certain the cast is safe
+    │       
+    │       // casting to 'uint32' is safe because [explain why]
+    │       // forge-lint: disable-next-line(unsafe-typecast)
+    │       
+    │       
+    ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[unsafe-typecast]: typecast can truncate values
+    ╭▸ src/doom/r_data.sol:298:35
+    │
+298 │                     u32(data, 8 + uint32(x - x1) * 4),
+    │                                   ━━━━━━━━━━━━━━
+    │
+    ├ note: consider disabling this lint if you're certain the cast is safe
+    │       
+    │       // casting to 'uint32' is safe because [explain why]
+    │       // forge-lint: disable-next-line(unsafe-typecast)
+    │       
+    │       
+    ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[unsafe-typecast]: typecast can truncate values
+    ╭▸ src/doom/r_data.sol:301:33
+    │
+301 │                     t.columnofs[uint32(x)],
+    │                                 ━━━━━━━━━
+    │
+    ├ note: consider disabling this lint if you're certain the cast is safe
+    │       
+    │       // casting to 'uint32' is safe because [explain why]
+    │       // forge-lint: disable-next-line(unsafe-typecast)
+    │       
+    │       
+    ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[unsafe-typecast]: typecast can truncate values
+    ╭▸ src/doom/r_segs.sol:233:32
+    │
+233 │             int32 difference = int32(w.rw_normalangle - w.rw_angle1);
+    │                                ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ├ note: consider disabling this lint if you're certain the cast is safe
+    │       
+    │       // casting to 'int32' is safe because [explain why]
+    │       // forge-lint: disable-next-line(unsafe-typecast)
+    │       
+    │       
+    ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[unsafe-typecast]: typecast can truncate values
+    ╭▸ src/doom/r_segs.sol:235:34
+    │
+235 │             uint32 offsetangle = uint32(difference < 0 ? -difference : difference);
+    │                                  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ├ note: consider disabling this lint if you're certain the cast is safe
+    │       
+    │       // casting to 'uint32' is safe because [explain why]
+    │       // forge-lint: disable-next-line(unsafe-typecast)
+    │       
+    │       
+    ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[unsafe-typecast]: typecast can truncate values
+    ╭▸ src/doom/r_data.sol:338:22
+    │
+338 │         uint32 col = uint32(column) & t.widthmask;
+    │                      ━━━━━━━━━━━━━━
+    │
+    ├ note: consider disabling this lint if you're certain the cast is safe
+    │       
+    │       // casting to 'uint32' is safe because [explain why]
+    │       // forge-lint: disable-next-line(unsafe-typecast)
+    │       
+    │       
+    ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[unsafe-typecast]: typecast can truncate values
+    ╭▸ src/doom/r_data.sol:342:35
+    │
+342 │             v.data = cacheLump(r, uint32(lump));
+    │                                   ━━━━━━━━━━━━
+    │
+    ├ note: consider disabling this lint if you're certain the cast is safe
+    │       
+    │       // casting to 'uint32' is safe because [explain why]
+    │       // forge-lint: disable-next-line(unsafe-typecast)
+    │       
+    │       
+    ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[uninitialized-local]: local variable is read before being initialized
+    ╭▸ src/doom/r_main.sol:282:23
+    │
+282 │         for (int32 i; i < 16; ++i) {
+    │                       ━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/uninitialized-local
+
+warning[uninitialized-local]: local variable is read before being initialized
+    ╭▸ src/doom/r_main.sol:284:27
+    │
+284 │             for (int32 j; j < 48; ++j) {
+    │                           ━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/uninitialized-local
+
+warning[uninitialized-local]: local variable is read before being initialized
+    ╭▸ src/doom/r_main.sol:270:23
+    │
+270 │         for (int32 i; i < int32(uint32(rs.height)); ++i) {
+    │                       ━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/uninitialized-local
+
+warning[unsafe-typecast]: typecast can truncate values
+    ╭▸ src/doom/r_segs.sol:246:58
+    │
+246 │                 c.rs, c.rs.viewangle + c.rs.xtoviewangle[uint32(start)], w.rw_normalangle, w.rw_distance
+    │                                                          ━━━━━━━━━━━━━
+    │
+    ├ note: consider disabling this lint if you're certain the cast is safe
+    │       
+    │       // casting to 'uint32' is safe because [explain why]
+    │       // forge-lint: disable-next-line(unsafe-typecast)
+    │       
+    │       
+    ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[unsafe-typecast]: typecast can truncate values
+    ╭▸ src/doom/r_segs.sol:250:62
+    │
+250 │                     c.rs, c.rs.viewangle + c.rs.xtoviewangle[uint32(stop)], w.rw_normalangle, w.rw_distance
+    │                                                              ━━━━━━━━━━━━
+    │
+    ├ note: consider disabling this lint if you're certain the cast is safe
+    │       
+    │       // casting to 'uint32' is safe because [explain why]
+    │       // forge-lint: disable-next-line(unsafe-typecast)
+    │       
+    │       
+    ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[unsafe-typecast]: typecast can truncate values
+    ╭▸ src/doom/r_data.sol:365:22
+    │
+365 │             ) return int32(uint32(i));
+    │                      ━━━━━━━━━━━━━━━━
+    │
+    ├ note: consider disabling this lint if you're certain the cast is safe
+    │       
+    │       // casting to 'int32' is safe because [explain why]
+    │       // forge-lint: disable-next-line(unsafe-typecast)
+    │       
+    │       
+    ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[unsafe-typecast]: typecast can truncate values
+    ╭▸ src/doom/r_data.sol:365:28
+    │
+365 │             ) return int32(uint32(i));
+    │                            ━━━━━━━━━
+    │
+    ├ note: consider disabling this lint if you're certain the cast is safe
+    │       
+    │       // casting to 'uint32' is safe because [explain why]
+    │       // forge-lint: disable-next-line(unsafe-typecast)
+    │       
+    │       
+    ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[require-revert-in-loop]: `require` or `revert` inside a loop
+   ╭▸ src/doom/tables.sol:30:34
+   │
+30 │         if (index >= FINEANGLES) revert TableIndexOutOfBounds(index, FINEANGLES);
+   │                                  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/require-revert-in-loop
+
+warning[require-revert-in-loop]: `require` or `revert` inside a loop
+    ╭▸ src/doom/tables.sol:611:29
+    │
+611 │         if (index >= 10240) revert TableIndexOutOfBounds(index, 10240);
+    │                             ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/require-revert-in-loop
+
+warning[unsafe-typecast]: typecast can truncate values
+    ╭▸ src/doom/r_segs.sol:330:52
+    │
+330 │                     ds.maskedtexturecol = _open(c, uint32(w.rw_stopx - w.rw_x));
+    │                                                    ━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ├ note: consider disabling this lint if you're certain the cast is safe
+    │       
+    │       // casting to 'uint32' is safe because [explain why]
+    │       // forge-lint: disable-next-line(unsafe-typecast)
+    │       
+    │       
+    ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[unsafe-typecast]: typecast can truncate values
+    ╭▸ src/doom/r_data.sol:373:16
+    │
+373 │         return uint32(n);
+    │                ━━━━━━━━━
+    │
+    ├ note: consider disabling this lint if you're certain the cast is safe
+    │       
+    │       // casting to 'uint32' is safe because [explain why]
+    │       // forge-lint: disable-next-line(unsafe-typecast)
+    │       
+    │       
+    ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[unsafe-typecast]: typecast can truncate values
+    ╭▸ src/doom/r_main.sol:252:30
+    │
+252 │         rs.scaledviewwidth = uint16(blocks == 11 ? 320 : blocks * 32);
+    │                              ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ├ note: consider disabling this lint if you're certain the cast is safe
+    │       
+    │       // casting to 'uint16' is safe because [explain why]
+    │       // forge-lint: disable-next-line(unsafe-typecast)
+    │       
+    │       
+    ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[unsafe-typecast]: typecast can truncate values
+    ╭▸ src/doom/r_main.sol:253:21
+    │
+253 │         rs.height = uint16(blocks == 11 ? 200 : (blocks * 168 / 10) & ~uint32(7));
+    │                     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ├ note: consider disabling this lint if you're certain the cast is safe
+    │       
+    │       // casting to 'uint16' is safe because [explain why]
+    │       // forge-lint: disable-next-line(unsafe-typecast)
+    │       
+    │       
+    ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[unsafe-typecast]: typecast can truncate values
+    ╭▸ src/doom/r_main.sol:254:26
+    │
+254 │         rs.detailshift = uint8(detail);
+    │                          ━━━━━━━━━━━━━
+    │
+    ├ note: consider disabling this lint if you're certain the cast is safe
+    │       
+    │       // casting to 'uint8' is safe because [explain why]
+    │       // forge-lint: disable-next-line(unsafe-typecast)
+    │       
+    │       
+    ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[unsafe-typecast]: typecast can truncate values
+    ╭▸ src/doom/r_segs.sol:376:42
+    │
+376 │                 ds.sprtopclip = _open(c, uint32(w.rw_stopx - start));
+    │                                          ━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ├ note: consider disabling this lint if you're certain the cast is safe
+    │       
+    │       // casting to 'uint32' is safe because [explain why]
+    │       // forge-lint: disable-next-line(unsafe-typecast)
+    │       
+    │       
+    ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[unsafe-typecast]: typecast can truncate values
+    ╭▸ src/doom/r_segs.sol:378:35
+    │
+378 │                     ds.sprtopclip[uint32(x)] = _short(c.ceilingclip[uint32(x)]);
+    │                                   ━━━━━━━━━
+    │
+    ├ note: consider disabling this lint if you're certain the cast is safe
+    │       
+    │       // casting to 'uint32' is safe because [explain why]
+    │       // forge-lint: disable-next-line(unsafe-typecast)
+    │       
+    │       
+    ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[unsafe-typecast]: typecast can truncate values
+    ╭▸ src/doom/r_segs.sol:378:69
+    │
+378 │                     ds.sprtopclip[uint32(x)] = _short(c.ceilingclip[uint32(x)]);
+    │                                                                     ━━━━━━━━━
+    │
+    ├ note: consider disabling this lint if you're certain the cast is safe
+    │       
+    │       // casting to 'uint32' is safe because [explain why]
+    │       // forge-lint: disable-next-line(unsafe-typecast)
+    │       
+    │       
+    ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[unsafe-typecast]: typecast can truncate values
+    ╭▸ src/doom/r_segs.sol:382:45
+    │
+382 │                 ds.sprbottomclip = _open(c, uint32(w.rw_stopx - start));
+    │                                             ━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ├ note: consider disabling this lint if you're certain the cast is safe
+    │       
+    │       // casting to 'uint32' is safe because [explain why]
+    │       // forge-lint: disable-next-line(unsafe-typecast)
+    │       
+    │       
+    ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[unsafe-typecast]: typecast can truncate values
+    ╭▸ src/doom/r_data.sol:433:27
+    │
+433 │             table[slot] = uint32(i + 1); // Original W_CheckNumForName chooses the last lump.
+    │                           ━━━━━━━━━━━━━
+    │
+    ├ note: consider disabling this lint if you're certain the cast is safe
+    │       
+    │       // casting to 'uint32' is safe because [explain why]
+    │       // forge-lint: disable-next-line(unsafe-typecast)
+    │       
+    │       
+    ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[unsafe-typecast]: typecast can truncate values
+    ╭▸ src/doom/r_main.sol:273:23
+    │
+273 │             rs.yslope[uint32(i)] = M_Fixed.FixedDiv(int32(uint32(rs.scaledviewwidth / 2) * 65536), dy);
+    │                       ━━━━━━━━━
+    │
+    ├ note: consider disabling this lint if you're certain the cast is safe
+    │       
+    │       // casting to 'uint32' is safe because [explain why]
+    │       // forge-lint: disable-next-line(unsafe-typecast)
+    │       
+    │       
+    ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[unsafe-typecast]: typecast can truncate values
+    ╭▸ src/doom/r_segs.sol:384:38
+    │
+384 │                     ds.sprbottomclip[uint32(x)] = _short(c.floorclip[uint32(x)]);
+    │                                      ━━━━━━━━━
+    │
+    ├ note: consider disabling this lint if you're certain the cast is safe
+    │       
+    │       // casting to 'uint32' is safe because [explain why]
+    │       // forge-lint: disable-next-line(unsafe-typecast)
+    │       
+    │       
+    ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[unsafe-typecast]: typecast can truncate values
+    ╭▸ src/doom/r_segs.sol:384:70
+    │
+384 │                     ds.sprbottomclip[uint32(x)] = _short(c.floorclip[uint32(x)]);
+    │                                                                      ━━━━━━━━━
+    │
+    ├ note: consider disabling this lint if you're certain the cast is safe
+    │       
+    │       // casting to 'uint32' is safe because [explain why]
+    │       // forge-lint: disable-next-line(unsafe-typecast)
+    │       
+    │       
+    ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[unsafe-typecast]: typecast can truncate values
+    ╭▸ src/doom/r_main.sol:288:31
+    │
+288 │                 rs.scalelight[uint32(i * 48 + j)] = bytes1(uint8(uint32(level)));
+    │                               ━━━━━━━━━━━━━━━━━━
+    │
+    ├ note: consider disabling this lint if you're certain the cast is safe
+    │       
+    │       // casting to 'uint32' is safe because [explain why]
+    │       // forge-lint: disable-next-line(unsafe-typecast)
+    │       
+    │       
+    ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[unsafe-typecast]: typecast can truncate values
+    ╭▸ src/doom/r_main.sol:288:60
+    │
+288 │                 rs.scalelight[uint32(i * 48 + j)] = bytes1(uint8(uint32(level)));
+    │                                                            ━━━━━━━━━━━━━━━━━━━━
+    │
+    ├ note: consider disabling this lint if you're certain the cast is safe
+    │       
+    │       // casting to 'uint8' is safe because [explain why]
+    │       // forge-lint: disable-next-line(unsafe-typecast)
+    │       
+    │       
+    ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[unsafe-typecast]: typecast can truncate values
+    ╭▸ src/doom/r_main.sol:288:66
+    │
+288 │                 rs.scalelight[uint32(i * 48 + j)] = bytes1(uint8(uint32(level)));
+    │                                                                  ━━━━━━━━━━━━━
+    │
+    ├ note: consider disabling this lint if you're certain the cast is safe
+    │       
+    │       // casting to 'uint32' is safe because [explain why]
+    │       // forge-lint: disable-next-line(unsafe-typecast)
+    │       
+    │       
+    ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[unsafe-typecast]: typecast can truncate values
+    ╭▸ src/doom/r_data.sol:446:62
+    │
+446 │             if (name8(v.lumps[i].name, false) == key) return int32(i);
+    │                                                              ━━━━━━━━
+    │
+    ├ note: consider disabling this lint if you're certain the cast is safe
+    │       
+    │       // casting to 'int32' is safe because [explain why]
+    │       // forge-lint: disable-next-line(unsafe-typecast)
+    │       
+    │       
+    ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[empty-block]: empty function body
+   ╭▸ src/doom/r_plane.sol:19:43
+   │
+19 │     function R_InitPlanes() internal pure {}
+   │                                           ━━
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/empty-block
+
+warning[unsafe-typecast]: typecast can truncate values
+   ╭▸ src/doom/r_draw.sol:27:35
+   │
+27 │         if (dc.yl < 0 || dc.yh >= int256(rs.ylookup.length) || dc.x < 0 || dc.colormap.length != 256) {
+   │                                   ━━━━━━━━━━━━━━━━━━━━━━━━━
+   │
+   ├ note: consider disabling this lint if you're certain the cast is safe
+   │       
+   │       // casting to 'int256' is safe because [explain why]
+   │       // forge-lint: disable-next-line(unsafe-typecast)
+   │       
+   │       
+   ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[unsafe-typecast]: typecast can truncate values
+   ╭▸ src/doom/r_draw.sol:35:21
+   │
+35 │         uint256 x = uint32(dc.x);
+   │                     ━━━━━━━━━━━━
+   │
+   ├ note: consider disabling this lint if you're certain the cast is safe
+   │       
+   │       // casting to 'uint32' is safe because [explain why]
+   │       // forge-lint: disable-next-line(unsafe-typecast)
+   │       
+   │       
+   ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[unsafe-typecast]: typecast can truncate values
+   ╭▸ src/doom/r_draw.sol:37:43
+   │
+37 │         uint256 dest = uint256(rs.ylookup[uint32(dc.yl)]) + rs.columnofs[x];
+   │                                           ━━━━━━━━━━━━━
+   │
+   ├ note: consider disabling this lint if you're certain the cast is safe
+   │       
+   │       // casting to 'uint32' is safe because [explain why]
+   │       // forge-lint: disable-next-line(unsafe-typecast)
+   │       
+   │       
+   ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[unsafe-typecast]: typecast can truncate values
+    ╭▸ src/doom/r_data.sol:463:27
+    │
+463 │             table[slot] = uint32(i + 1); // First texture takes precedence, opposite to WAD lookup.
+    │                           ━━━━━━━━━━━━━
+    │
+    ├ note: consider disabling this lint if you're certain the cast is safe
+    │       
+    │       // casting to 'uint32' is safe because [explain why]
+    │       // forge-lint: disable-next-line(unsafe-typecast)
+    │       
+    │       
+    ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[unsafe-typecast]: typecast can truncate values
+   ╭▸ src/doom/r_draw.sol:38:50
+   │
+38 │         uint256 dest2 = low ? uint256(rs.ylookup[uint32(dc.yl)]) + rs.columnofs[x + 1] : dest;
+   │                                                  ━━━━━━━━━━━━━
+   │
+   ├ note: consider disabling this lint if you're certain the cast is safe
+   │       
+   │       // casting to 'uint32' is safe because [explain why]
+   │       // forge-lint: disable-next-line(unsafe-typecast)
+   │       
+   │       
+   ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[unsafe-typecast]: typecast can truncate values
+   ╭▸ src/doom/r_draw.sol:39:25
+   │
+39 │         uint256 count = uint256(int256(dc.yh) - dc.yl) + 1;
+   │                         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   │
+   ├ note: consider disabling this lint if you're certain the cast is safe
+   │       
+   │       // casting to 'uint256' is safe because [explain why]
+   │       // forge-lint: disable-next-line(unsafe-typecast)
+   │       
+   │       
+   ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[require-revert-in-loop]: `require` or `revert` inside a loop
+    ╭▸ src/doom/r_data.sol:479:32
+    │
+479 │                 if (i > 32767) revert Bounds();
+    │                                ━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/require-revert-in-loop
+
+warning[unsafe-typecast]: typecast can truncate values
+   ╭▸ src/doom/r_draw.sol:51:30
+   │
+51 │             if (index < 0 || uint256(index) >= dc.source.length) revert DrawBounds();
+   │                              ━━━━━━━━━━━━━━
+   │
+   ├ note: consider disabling this lint if you're certain the cast is safe
+   │       
+   │       // casting to 'uint256' is safe because [explain why]
+   │       // forge-lint: disable-next-line(unsafe-typecast)
+   │       
+   │       
+   ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[unsafe-typecast]: typecast can truncate values
+   ╭▸ src/doom/r_draw.sol:52:43
+   │
+52 │             uint8 color = uint8(dc.source[uint256(index)]);
+   │                                           ━━━━━━━━━━━━━━
+   │
+   ├ note: consider disabling this lint if you're certain the cast is safe
+   │       
+   │       // casting to 'uint256' is safe because [explain why]
+   │       // forge-lint: disable-next-line(unsafe-typecast)
+   │       
+   │       
+   ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[unsafe-typecast]: typecast can truncate values
+    ╭▸ src/doom/r_data.sol:495:13
+    │
+495 │         if (uint32(n) < r.firstflat || uint32(n) - r.firstflat > 32767) revert Bounds();
+    │             ━━━━━━━━━
+    │
+    ├ note: consider disabling this lint if you're certain the cast is safe
+    │       
+    │       // casting to 'uint32' is safe because [explain why]
+    │       // forge-lint: disable-next-line(unsafe-typecast)
+    │       
+    │       
+    ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[unsafe-typecast]: typecast can truncate values
+    ╭▸ src/doom/r_data.sol:495:40
+    │
+495 │         if (uint32(n) < r.firstflat || uint32(n) - r.firstflat > 32767) revert Bounds();
+    │                                        ━━━━━━━━━
+    │
+    ├ note: consider disabling this lint if you're certain the cast is safe
+    │       
+    │       // casting to 'uint32' is safe because [explain why]
+    │       // forge-lint: disable-next-line(unsafe-typecast)
+    │       
+    │       
+    ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[unsafe-typecast]: typecast can truncate values
+   ╭▸ src/doom/r_plane.sol:86:24
+   │
+86 │             if (pl.top[uint32(x + 1)] != 0xff) break;
+   │                        ━━━━━━━━━━━━━
+   │
+   ├ note: consider disabling this lint if you're certain the cast is safe
+   │       
+   │       // casting to 'uint32' is safe because [explain why]
+   │       // forge-lint: disable-next-line(unsafe-typecast)
+   │       
+   │       
+   ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[unsafe-typecast]: typecast can truncate values
+    ╭▸ src/doom/r_data.sol:496:16
+    │
+496 │         return uint32(n) - r.firstflat;
+    │                ━━━━━━━━━
+    │
+    ├ note: consider disabling this lint if you're certain the cast is safe
+    │       
+    │       // casting to 'uint32' is safe because [explain why]
+    │       // forge-lint: disable-next-line(unsafe-typecast)
+    │       
+    │       
+    ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[unsafe-typecast]: typecast can truncate values
+   ╭▸ src/doom/r_draw.sol:72:35
+   │
+72 │             dc.yl < 0 || dc.yh >= int256(rs.ylookup.length) || dc.x < 0 || uint32(dc.x) >= rs.columnofs.length
+   │                                   ━━━━━━━━━━━━━━━━━━━━━━━━━
+   │
+   ├ note: consider disabling this lint if you're certain the cast is safe
+   │       
+   │       // casting to 'int256' is safe because [explain why]
+   │       // forge-lint: disable-next-line(unsafe-typecast)
+   │       
+   │       
+   ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[unsafe-typecast]: typecast can truncate values
+   ╭▸ src/doom/r_draw.sol:72:76
+   │
+72 │             dc.yl < 0 || dc.yh >= int256(rs.ylookup.length) || dc.x < 0 || uint32(dc.x) >= rs.columnofs.length
+   │                                                                            ━━━━━━━━━━━━
+   │
+   ├ note: consider disabling this lint if you're certain the cast is safe
+   │       
+   │       // casting to 'uint32' is safe because [explain why]
+   │       // forge-lint: disable-next-line(unsafe-typecast)
+   │       
+   │       
+   ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[unsafe-typecast]: typecast can truncate values
+    ╭▸ src/doom/r_data.sol:511:22
+    │
+511 │         if (n < 0 || uint32(n) >= limit) revert Bounds();
+    │                      ━━━━━━━━━
+    │
+    ├ note: consider disabling this lint if you're certain the cast is safe
+    │       
+    │       // casting to 'uint32' is safe because [explain why]
+    │       // forge-lint: disable-next-line(unsafe-typecast)
+    │       
+    │       
+    ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[unsafe-typecast]: typecast can truncate values
+    ╭▸ src/doom/r_data.sol:512:16
+    │
+512 │         return uint32(n);
+    │                ━━━━━━━━━
+    │
+    ├ note: consider disabling this lint if you're certain the cast is safe
+    │       
+    │       // casting to 'uint32' is safe because [explain why]
+    │       // forge-lint: disable-next-line(unsafe-typecast)
+    │       
+    │       
+    ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[unsafe-typecast]: typecast can truncate values
+   ╭▸ src/doom/r_draw.sol:75:43
+   │
+75 │         uint256 dest = uint256(rs.ylookup[uint32(dc.yl)]) + rs.columnofs[uint32(dc.x)];
+   │                                           ━━━━━━━━━━━━━
+   │
+   ├ note: consider disabling this lint if you're certain the cast is safe
+   │       
+   │       // casting to 'uint32' is safe because [explain why]
+   │       // forge-lint: disable-next-line(unsafe-typecast)
+   │       
+   │       
+   ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[unsafe-typecast]: typecast can truncate values
+   ╭▸ src/doom/r_draw.sol:75:74
+   │
+75 │         uint256 dest = uint256(rs.ylookup[uint32(dc.yl)]) + rs.columnofs[uint32(dc.x)];
+   │                                                                          ━━━━━━━━━━━━
+   │
+   ├ note: consider disabling this lint if you're certain the cast is safe
+   │       
+   │       // casting to 'uint32' is safe because [explain why]
+   │       // forge-lint: disable-next-line(unsafe-typecast)
+   │       
+   │       
+   ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[unsafe-typecast]: typecast can truncate values
+    ╭▸ src/doom/r_plane.sol:127:22
+    │
+127 │         uint32 row = uint32(y);
+    │                      ━━━━━━━━━
+    │
+    ├ note: consider disabling this lint if you're certain the cast is safe
+    │       
+    │       // casting to 'uint32' is safe because [explain why]
+    │       // forge-lint: disable-next-line(unsafe-typecast)
+    │       
+    │       
+    ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[unsafe-typecast]: typecast can truncate values
+   ╭▸ src/doom/r_draw.sol:79:25
+   │
+79 │         uint256 count = uint256(int256(dc.yh) - dc.yl) + 1;
+   │                         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   │
+   ├ note: consider disabling this lint if you're certain the cast is safe
+   │       
+   │       // casting to 'uint256' is safe because [explain why]
+   │       // forge-lint: disable-next-line(unsafe-typecast)
+   │       
+   │       
+   ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[unsafe-typecast]: typecast can truncate values
+   ╭▸ src/doom/r_draw.sol:81:31
+   │
+81 │             int256 neighbor = int256(dest) + (signs[rs.fuzzpos] == 0x01 ? int256(320) : -int256(320));
+   │                               ━━━━━━━━━━━━
+   │
+   ├ note: consider disabling this lint if you're certain the cast is safe
+   │       
+   │       // casting to 'int256' is safe because [explain why]
+   │       // forge-lint: disable-next-line(unsafe-typecast)
+   │       
+   │       
+   ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[unsafe-typecast]: typecast can truncate values
+   ╭▸ src/doom/r_draw.sol:82:66
+   │
+82 │             if (dest >= rs.framebuffer.length || neighbor < 0 || uint256(neighbor) >= rs.framebuffer.length) {
+   │                                                                  ━━━━━━━━━━━━━━━━━
+   │
+   ├ note: consider disabling this lint if you're certain the cast is safe
+   │       
+   │       // casting to 'uint256' is safe because [explain why]
+   │       // forge-lint: disable-next-line(unsafe-typecast)
+   │       
+   │       
+   ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[unsafe-typecast]: typecast can truncate values
+   ╭▸ src/doom/r_draw.sol:85:77
+   │
+85 │             rs.framebuffer[dest] = colormaps[6 * 256 + uint8(rs.framebuffer[uint256(neighbor)])];
+   │                                                                             ━━━━━━━━━━━━━━━━━
+   │
+   ├ note: consider disabling this lint if you're certain the cast is safe
+   │       
+   │       // casting to 'uint256' is safe because [explain why]
+   │       // forge-lint: disable-next-line(unsafe-typecast)
+   │       
+   │       
+   ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[unsafe-typecast]: typecast can truncate values
+    ╭▸ src/doom/r_plane.sol:142:68
+    │
+142 │         int32 length = M_Fixed.FixedMul(distance, ctx.rs.distscale[uint32(x1)]);
+    │                                                                    ━━━━━━━━━━
+    │
+    ├ note: consider disabling this lint if you're certain the cast is safe
+    │       
+    │       // casting to 'uint32' is safe because [explain why]
+    │       // forge-lint: disable-next-line(unsafe-typecast)
+    │       
+    │       
+    ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[unsafe-typecast]: typecast can truncate values
+    ╭▸ src/doom/r_plane.sol:145:61
+    │
+145 │             angle = (ctx.rs.viewangle + ctx.rs.xtoviewangle[uint32(x1)]) >> Tables.ANGLETOFINESHIFT;
+    │                                                             ━━━━━━━━━━
+    │
+    ├ note: consider disabling this lint if you're certain the cast is safe
+    │       
+    │       // casting to 'uint32' is safe because [explain why]
+    │       // forge-lint: disable-next-line(unsafe-typecast)
+    │       
+    │       
+    ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[unsafe-typecast]: typecast can truncate values
+    ╭▸ src/doom/r_draw.sol:101:55
+    │
+101 │             ds.x1 < 0 || ds.x2 < ds.x1 || ds.y < 0 || uint32(ds.y) >= rs.ylookup.length
+    │                                                       ━━━━━━━━━━━━
+    │
+    ├ note: consider disabling this lint if you're certain the cast is safe
+    │       
+    │       // casting to 'uint32' is safe because [explain why]
+    │       // forge-lint: disable-next-line(unsafe-typecast)
+    │       
+    │       
+    ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[require-revert-in-loop]: `require` or `revert` inside a loop
+   ╭▸ src/doom/r_bsp.sol:25:54
+   │
+25 │         if (ctx.rs.width == 0 || ctx.rs.width > 320) revert BSPBounds();
+   │                                                      ━━━━━━━━━━━━━━━━━━━
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/require-revert-in-loop
+
+warning[unsafe-typecast]: typecast can truncate values
+    ╭▸ src/doom/r_draw.sol:109:13
+    │
+109 │         if (uint32(ds.x1) >= rs.columnofs.length) revert DrawBounds();
+    │             ━━━━━━━━━━━━━
+    │
+    ├ note: consider disabling this lint if you're certain the cast is safe
+    │       
+    │       // casting to 'uint32' is safe because [explain why]
+    │       // forge-lint: disable-next-line(unsafe-typecast)
+    │       
+    │       
+    ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[unsafe-typecast]: typecast can truncate values
+    ╭▸ src/doom/r_draw.sol:110:43
+    │
+110 │         uint256 dest = uint256(rs.ylookup[uint32(ds.y)]) + rs.columnofs[uint32(ds.x1)];
+    │                                           ━━━━━━━━━━━━
+    │
+    ├ note: consider disabling this lint if you're certain the cast is safe
+    │       
+    │       // casting to 'uint32' is safe because [explain why]
+    │       // forge-lint: disable-next-line(unsafe-typecast)
+    │       
+    │       
+    ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[unsafe-typecast]: typecast can truncate values
+    ╭▸ src/doom/r_draw.sol:110:73
+    │
+110 │         uint256 dest = uint256(rs.ylookup[uint32(ds.y)]) + rs.columnofs[uint32(ds.x1)];
+    │                                                                         ━━━━━━━━━━━━━
+    │
+    ├ note: consider disabling this lint if you're certain the cast is safe
+    │       
+    │       // casting to 'uint32' is safe because [explain why]
+    │       // forge-lint: disable-next-line(unsafe-typecast)
+    │       
+    │       
+    ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[unsafe-typecast]: typecast can truncate values
+    ╭▸ src/doom/r_draw.sol:112:25
+    │
+112 │         uint256 count = uint256(int256(ds.x2) - ds.x1) + 1;
+    │                         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ├ note: consider disabling this lint if you're certain the cast is safe
+    │       
+    │       // casting to 'uint256' is safe because [explain why]
+    │       // forge-lint: disable-next-line(unsafe-typecast)
+    │       
+    │       
+    ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[unsafe-typecast]: typecast can truncate values
+    ╭▸ src/doom/r_plane.sol:151:20
+    │
+151 │             cmap = uint32(ctx.rs.fixedcolormap);
+    │                    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ├ note: consider disabling this lint if you're certain the cast is safe
+    │       
+    │       // casting to 'uint32' is safe because [explain why]
+    │       // forge-lint: disable-next-line(unsafe-typecast)
+    │       
+    │       
+    ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[unsafe-typecast]: typecast can truncate values
+    ╭▸ src/doom/r_plane.sol:154:28
+    │
+154 │             uint32 index = uint32(distance >> 20);
+    │                            ━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ├ note: consider disabling this lint if you're certain the cast is safe
+    │       
+    │       // casting to 'uint32' is safe because [explain why]
+    │       // forge-lint: disable-next-line(unsafe-typecast)
+    │       
+    │       
+    ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[unsafe-typecast]: typecast can truncate values
+    ╭▸ src/doom/r_plane.sol:157:40
+    │
+157 │             cmap = uint8(ctx.rs.zlight[uint32(ctx.plane.light) * 128 + index]);
+    │                                        ━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ├ note: consider disabling this lint if you're certain the cast is safe
+    │       
+    │       // casting to 'uint32' is safe because [explain why]
+    │       // forge-lint: disable-next-line(unsafe-typecast)
+    │       
+    │       
+    ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[unsafe-typecast]: typecast can truncate values
+    ╭▸ src/doom/r_draw.sol:118:28
+    │
+118 │             uint256 spot = uint32(((yfrac >> 10) & 4032) + ((xfrac >> 16) & 63));
+    │                            ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ├ note: consider disabling this lint if you're certain the cast is safe
+    │       
+    │       // casting to 'uint32' is safe because [explain why]
+    │       // forge-lint: disable-next-line(unsafe-typecast)
+    │       
+    │       
+    ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[require-revert-in-loop]: `require` or `revert` inside a loop
+    ╭▸ src/doom/r_main.sol:112:61
+    │
+112 │         if (dx == type(int32).min || dy == type(int32).min) revert UndefinedGeometry();
+    │                                                             ━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/require-revert-in-loop
+
+warning[require-revert-in-loop]: `require` or `revert` inside a loop
+    ╭▸ src/doom/r_main.sol:117:22
+    │
+117 │         if (dx == 0) revert UndefinedGeometry();
+    │                      ━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/require-revert-in-loop
+
+warning[require-revert-in-loop]: `require` or `revert` inside a loop
+    ╭▸ src/doom/r_draw.sol:131:13
+    │
+131 │             revert DrawBounds();
+    │             ━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/require-revert-in-loop
+
+warning[require-revert-in-loop]: `require` or `revert` inside a loop
+    ╭▸ src/doom/r_plane.sol:195:57
+    │
+195 │         if (y < 0 || y >= int32(uint32(ctx.rs.height))) revert PlaneBounds();
+    │                                                         ━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/require-revert-in-loop
+
+warning[require-revert-in-loop]: `require` or `revert` inside a loop
+    ╭▸ src/doom/r_plane.sol:126:11
+    │
+126 │         ) revert PlaneBounds();
+    │           ━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/require-revert-in-loop
+
+warning[unsafe-typecast]: typecast can truncate values
+    ╭▸ src/doom/r_draw.sol:133:26
+    │
+133 │         rs.viewwindowx = int32((320 - width) >> 1);
+    │                          ━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ├ note: consider disabling this lint if you're certain the cast is safe
+    │       
+    │       // casting to 'int32' is safe because [explain why]
+    │       // forge-lint: disable-next-line(unsafe-typecast)
+    │       
+    │       
+    ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[unsafe-typecast]: typecast can truncate values
+    ╭▸ src/doom/r_draw.sol:136:31
+    │
+136 │             rs.columnofs[i] = uint32(rs.viewwindowx) + i;
+    │                               ━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ├ note: consider disabling this lint if you're certain the cast is safe
+    │       
+    │       // casting to 'uint32' is safe because [explain why]
+    │       // forge-lint: disable-next-line(unsafe-typecast)
+    │       
+    │       
+    ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[unsafe-typecast]: typecast can truncate values
+    ╭▸ src/doom/r_draw.sol:138:52
+    │
+138 │         rs.viewwindowy = width == 320 ? int32(0) : int32((168 - height) >> 1);
+    │                                                    ━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ├ note: consider disabling this lint if you're certain the cast is safe
+    │       
+    │       // casting to 'int32' is safe because [explain why]
+    │       // forge-lint: disable-next-line(unsafe-typecast)
+    │       
+    │       
+    ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[unsafe-typecast]: typecast can truncate values
+    ╭▸ src/doom/r_draw.sol:141:34
+    │
+141 │             rs.ylookup[i] = (i + uint32(rs.viewwindowy)) * 320;
+    │                                  ━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ├ note: consider disabling this lint if you're certain the cast is safe
+    │       
+    │       // casting to 'uint32' is safe because [explain why]
+    │       // forge-lint: disable-next-line(unsafe-typecast)
+    │       
+    │       
+    ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[require-revert-in-loop]: `require` or `revert` inside a loop
+    ╭▸ src/doom/r_draw.sol:103:11
+    │
+103 │         ) revert DrawBounds();
+    │           ━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/require-revert-in-loop
+
+warning[require-revert-in-loop]: `require` or `revert` inside a loop
+    ╭▸ src/doom/r_plane.sol:156:63
+    │
+156 │             if (ctx.plane.light < 0 || ctx.plane.light >= 16) revert PlaneBounds();
+    │                                                               ━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/require-revert-in-loop
+
+warning[require-revert-in-loop]: `require` or `revert` inside a loop
+    ╭▸ src/doom/r_draw.sol:105:46
+    │
+105 │             if (ds.x2 > type(int32).max / 2) revert DrawBounds();
+    │                                              ━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/require-revert-in-loop
+
+warning[require-revert-in-loop]: `require` or `revert` inside a loop
+    ╭▸ src/doom/r_draw.sol:109:51
+    │
+109 │         if (uint32(ds.x1) >= rs.columnofs.length) revert DrawBounds();
+    │                                                   ━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/require-revert-in-loop
+
+warning[require-revert-in-loop]: `require` or `revert` inside a loop
+    ╭▸ src/doom/r_draw.sol:114:82
+    │
+114 │         if (dest > rs.framebuffer.length || size > rs.framebuffer.length - dest) revert DrawBounds();
+    │                                                                                  ━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/require-revert-in-loop
+
+warning[require-revert-in-loop]: `require` or `revert` inside a loop
+    ╭▸ src/doom/r_draw.sol:163:69
+    │
+163 │         if (end > rs.framebuffer.length || end > backscreen.length) revert DrawBounds();
+    │                                                                     ━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/require-revert-in-loop
+
+warning[require-revert-in-loop]: `require` or `revert` inside a loop
+    ╭▸ src/doom/r_data.sol:493:20
+    │
+493 │         if (n < 0) revert MissingName(name);
+    │                    ━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/require-revert-in-loop
+
+warning[require-revert-in-loop]: `require` or `revert` inside a loop
+    ╭▸ src/doom/r_data.sol:495:73
+    │
+495 │         if (uint32(n) < r.firstflat || uint32(n) - r.firstflat > 32767) revert Bounds();
+    │                                                                         ━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/require-revert-in-loop
+
+warning[unsafe-typecast]: typecast can truncate values
+    ╭▸ src/doom/r_draw.sol:149:42
+    │
+149 │                 translations[i] = bytes1(uint8(0x60 + (i & 15)));
+    │                                          ━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ├ note: consider disabling this lint if you're certain the cast is safe
+    │       
+    │       // casting to 'uint8' is safe because [explain why]
+    │       // forge-lint: disable-next-line(unsafe-typecast)
+    │       
+    │       
+    ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[unsafe-typecast]: typecast can truncate values
+    ╭▸ src/doom/r_draw.sol:150:48
+    │
+150 │                 translations[i + 256] = bytes1(uint8(0x40 + (i & 15)));
+    │                                                ━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ├ note: consider disabling this lint if you're certain the cast is safe
+    │       
+    │       // casting to 'uint8' is safe because [explain why]
+    │       // forge-lint: disable-next-line(unsafe-typecast)
+    │       
+    │       
+    ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[require-revert-in-loop]: `require` or `revert` inside a loop
+    ╭▸ src/doom/r_data.sol:484:9
+    │
+484 │         revert MissingName(name);
+    │         ━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/require-revert-in-loop
+
+warning[require-revert-in-loop]: `require` or `revert` inside a loop
+    ╭▸ src/doom/r_data.sol:511:42
+    │
+511 │         if (n < 0 || uint32(n) >= limit) revert Bounds();
+    │                                          ━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/require-revert-in-loop
+
+warning[require-revert-in-loop]: `require` or `revert` inside a loop
+    ╭▸ src/doom/r_main.sol:150:65
+    │
+150 │             if (anglea < 0 || angleb < 0 || rs.detailshift > 1) revert UndefinedGeometry();
+    │                                                                 ━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/require-revert-in-loop
+
+warning[unsafe-typecast]: typecast can truncate values
+    ╭▸ src/doom/r_draw.sol:151:48
+    │
+151 │                 translations[i + 512] = bytes1(uint8(0x20 + (i & 15)));
+    │                                                ━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ├ note: consider disabling this lint if you're certain the cast is safe
+    │       
+    │       // casting to 'uint8' is safe because [explain why]
+    │       // forge-lint: disable-next-line(unsafe-typecast)
+    │       
+    │       
+    ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[unsafe-typecast]: typecast can truncate values
+    ╭▸ src/doom/r_draw.sol:153:90
+    │
+153 │                 translations[i] = translations[i + 256] = translations[i + 512] = bytes1(uint8(i));
+    │                                                                                          ━━━━━━━━
+    │
+    ├ note: consider disabling this lint if you're certain the cast is safe
+    │       
+    │       // casting to 'uint8' is safe because [explain why]
+    │       // forge-lint: disable-next-line(unsafe-typecast)
+    │       
+    │       
+    ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[require-revert-in-loop]: `require` or `revert` inside a loop
+    ╭▸ src/doom/r_data.sol:590:36
+    │
+590 │             if (s.sidedef == NULL) revert Bounds();
+    │                                    ━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/require-revert-in-loop
+
+warning[require-revert-in-loop]: `require` or `revert` inside a loop
+    ╭▸ src/doom/r_data.sol:594:50
+    │
+594 │                 if (l.sidenum[side ^ 1] == NULL) revert Bounds();
+    │                                                  ━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/require-revert-in-loop
+
+warning[require-revert-in-loop]: `require` or `revert` inside a loop
+    ╭▸ src/doom/r_data.sol:606:34
+    │
+606 │             if (signedCount < 0) revert Bounds();
+    │                                  ━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/require-revert-in-loop
+
+warning[require-revert-in-loop]: `require` or `revert` inside a loop
+    ╭▸ src/doom/r_data.sol:608:57
+    │
+608 │             if (uint256(first) + count > m.segs.length) revert Bounds();
+    │                                                         ━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/require-revert-in-loop
+
+warning[unsafe-typecast]: typecast can truncate values
+    ╭▸ src/doom/r_plane.sol:174:53
+    │
+174 │             R_MapPlane(ctx, t1, ctx.plane.spanstart[uint32(t1)], x - 1);
+    │                                                     ━━━━━━━━━━
+    │
+    ├ note: consider disabling this lint if you're certain the cast is safe
+    │       
+    │       // casting to 'uint32' is safe because [explain why]
+    │       // forge-lint: disable-next-line(unsafe-typecast)
+    │       
+    │       
+    ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[unsafe-typecast]: typecast can truncate values
+    ╭▸ src/doom/r_plane.sol:179:53
+    │
+179 │             R_MapPlane(ctx, b1, ctx.plane.spanstart[uint32(b1)], x - 1);
+    │                                                     ━━━━━━━━━━
+    │
+    ├ note: consider disabling this lint if you're certain the cast is safe
+    │       
+    │       // casting to 'uint32' is safe because [explain why]
+    │       // forge-lint: disable-next-line(unsafe-typecast)
+    │       
+    │       
+    ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[unsafe-typecast]: typecast can truncate values
+    ╭▸ src/doom/r_plane.sol:184:33
+    │
+184 │             ctx.plane.spanstart[uint32(t2)] = x;
+    │                                 ━━━━━━━━━━
+    │
+    ├ note: consider disabling this lint if you're certain the cast is safe
+    │       
+    │       // casting to 'uint32' is safe because [explain why]
+    │       // forge-lint: disable-next-line(unsafe-typecast)
+    │       
+    │       
+    ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[require-revert-in-loop]: `require` or `revert` inside a loop
+    ╭▸ src/doom/r_main.sol:228:56
+    │
+228 │         if (fixedcolormap < -1 || fixedcolormap >= 34) revert UndefinedGeometry();
+    │                                                        ━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/require-revert-in-loop
+
+warning[unsafe-typecast]: typecast can truncate values
+    ╭▸ src/doom/r_plane.sol:189:33
+    │
+189 │             ctx.plane.spanstart[uint32(b2)] = x;
+    │                                 ━━━━━━━━━━
+    │
+    ├ note: consider disabling this lint if you're certain the cast is safe
+    │       
+    │       // casting to 'uint32' is safe because [explain why]
+    │       // forge-lint: disable-next-line(unsafe-typecast)
+    │       
+    │       
+    ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[require-revert-in-loop]: `require` or `revert` inside a loop
+    ╭▸ src/doom/r_data.sol:629:57
+    │
+629 │                         : uint256(c) >= m.nodes.length) revert Bounds();
+    │                                                         ━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/require-revert-in-loop
+
+warning[require-revert-in-loop]: `require` or `revert` inside a loop
+   ╭▸ src/support/ResourceAccessProbe.sol:33:13
+   │
+33 │             require(chunks[i].code.length == (i == 1754 ? 4354 : 16385), "invalid deployed chunk length");
+   │             ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/require-revert-in-loop
+
+warning[unsafe-typecast]: typecast can truncate values
+   ╭▸ src/support/WadResourcesProbe.sol:35:47
+   │
+35 │                 directory[p + 8 + j] = bytes1(uint8(l.offset >> (j * 8)));
+   │                                               ━━━━━━━━━━━━━━━━━━━━━━━━━━
+   │
+   ├ note: consider disabling this lint if you're certain the cast is safe
+   │       
+   │       // casting to 'uint8' is safe because [explain why]
+   │       // forge-lint: disable-next-line(unsafe-typecast)
+   │       
+   │       
+   ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[unsafe-typecast]: typecast can truncate values
+   ╭▸ src/support/WadResourcesProbe.sol:36:48
+   │
+36 │                 directory[p + 12 + j] = bytes1(uint8(l.length >> (j * 8)));
+   │                                                ━━━━━━━━━━━━━━━━━━━━━━━━━━
+   │
+   ├ note: consider disabling this lint if you're certain the cast is safe
+   │       
+   │       // casting to 'uint8' is safe because [explain why]
+   │       // forge-lint: disable-next-line(unsafe-typecast)
+   │       
+   │       
+   ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[unsafe-typecast]: typecast can truncate values
+    ╭▸ src/doom/r_data.sol:535:17
+    │
+535 │                 int16(s16(b, p + 20))
+    │                 ━━━━━━━━━━━━━━━━━━━━━
+    │
+    ├ note: consider disabling this lint if you're certain the cast is safe
+    │       
+    │       // casting to 'int16' is safe because [explain why]
+    │       // forge-lint: disable-next-line(unsafe-typecast)
+    │       
+    │       
+    ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[unsafe-typecast]: typecast can truncate values
+   ╭▸ src/doom/r_things.sol:28:13
+   │
+28 │         if (int32(frame) > b.maxframe) b.maxframe = int32(frame);
+   │             ━━━━━━━━━━━━
+   │
+   ├ note: consider disabling this lint if you're certain the cast is safe
+   │       
+   │       // casting to 'int32' is safe because [explain why]
+   │       // forge-lint: disable-next-line(unsafe-typecast)
+   │       
+   │       
+   ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[unsafe-typecast]: typecast can truncate values
+   ╭▸ src/doom/r_things.sol:28:53
+   │
+28 │         if (int32(frame) > b.maxframe) b.maxframe = int32(frame);
+   │                                                     ━━━━━━━━━━━━
+   │
+   ├ note: consider disabling this lint if you're certain the cast is safe
+   │       
+   │       // casting to 'int32' is safe because [explain why]
+   │       // forge-lint: disable-next-line(unsafe-typecast)
+   │       
+   │       
+   ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[unsafe-typecast]: typecast can truncate values
+   ╭▸ src/doom/r_things.sol:30:26
+   │
+30 │         int16 relative = int16(int32(lump) - int32(c.resources.firstspritelump));
+   │                          ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   │
+   ├ note: consider disabling this lint if you're certain the cast is safe
+   │       
+   │       // casting to 'int16' is safe because [explain why]
+   │       // forge-lint: disable-next-line(unsafe-typecast)
+   │       
+   │       
+   ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[unsafe-typecast]: typecast can truncate values
+   ╭▸ src/doom/r_things.sol:30:32
+   │
+30 │         int16 relative = int16(int32(lump) - int32(c.resources.firstspritelump));
+   │                                ━━━━━━━━━━━
+   │
+   ├ note: consider disabling this lint if you're certain the cast is safe
+   │       
+   │       // casting to 'int32' is safe because [explain why]
+   │       // forge-lint: disable-next-line(unsafe-typecast)
+   │       
+   │       
+   ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[unsafe-typecast]: typecast can truncate values
+   ╭▸ src/doom/r_things.sol:30:46
+   │
+30 │         int16 relative = int16(int32(lump) - int32(c.resources.firstspritelump));
+   │                                              ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   │
+   ├ note: consider disabling this lint if you're certain the cast is safe
+   │       
+   │       // casting to 'int32' is safe because [explain why]
+   │       // forge-lint: disable-next-line(unsafe-typecast)
+   │       
+   │       
+   ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[require-revert-in-loop]: `require` or `revert` inside a loop
+    ╭▸ src/doom/r_plane.sol:206:15
+    │
+206 │             ) revert PlaneBounds();
+    │               ━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/require-revert-in-loop
+
+warning[unsafe-typecast]: typecast can truncate values
+    ╭▸ src/doom/r_data.sol:565:25
+    │
+565 │             l.special = int16(s16(b, p + 6));
+    │                         ━━━━━━━━━━━━━━━━━━━━
+    │
+    ├ note: consider disabling this lint if you're certain the cast is safe
+    │       
+    │       // casting to 'int16' is safe because [explain why]
+    │       // forge-lint: disable-next-line(unsafe-typecast)
+    │       
+    │       
+    ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[unsafe-typecast]: typecast can truncate values
+    ╭▸ src/doom/r_data.sol:566:21
+    │
+566 │             l.tag = int16(s16(b, p + 8));
+    │                     ━━━━━━━━━━━━━━━━━━━━
+    │
+    ├ note: consider disabling this lint if you're certain the cast is safe
+    │       
+    │       // casting to 'int16' is safe because [explain why]
+    │       // forge-lint: disable-next-line(unsafe-typecast)
+    │       
+    │       
+    ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[unsafe-typecast]: typecast can truncate values
+    ╭▸ src/doom/r_data.sol:584:23
+    │
+584 │             s.angle = uint32(fixed16(b, p + 4));
+    │                       ━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ├ note: consider disabling this lint if you're certain the cast is safe
+    │       
+    │       // casting to 'uint32' is safe because [explain why]
+    │       // forge-lint: disable-next-line(unsafe-typecast)
+    │       
+    │       
+    ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[unsafe-typecast]: typecast can truncate values
+    ╭▸ src/doom/r_data.sol:607:28
+    │
+607 │             uint32 count = uint32(signedCount);
+    │                            ━━━━━━━━━━━━━━━━━━━
+    │
+    ├ note: consider disabling this lint if you're certain the cast is safe
+    │       
+    │       // casting to 'uint32' is safe because [explain why]
+    │       // forge-lint: disable-next-line(unsafe-typecast)
+    │       
+    │       
+    ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[reentrancy-events]: event emitted after an external call; reentrancy can reorder or fabricate logs that off-chain consumers rely on
+   ╭▸ src/support/RendererProbe.sol:69:9
+   │
+69 │         emit Frame(1, 1, 320, 200, c.rs.framebuffer);
+   │         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/reentrancy-events
+
+warning[unsafe-typecast]: typecast can truncate values
+   ╭▸ src/support/RendererProbe.sol:67:16
+   │
+67 │             c, int32(uint32(c.map.nodes.length)) - 1, R_Segs.R_StoreWallRange, R_Things.R_AddSprites
+   │                ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   │
+   ├ note: consider disabling this lint if you're certain the cast is safe
+   │       
+   │       // casting to 'int32' is safe because [explain why]
+   │       // forge-lint: disable-next-line(unsafe-typecast)
+   │       
+   │       
+   ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[require-revert-in-loop]: `require` or `revert` inside a loop
+    ╭▸ src/doom/r_data.sol:385:33
+    │
+385 │         if (flat >= r.numflats) revert Bounds();
+    │                                 ━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/require-revert-in-loop
+
+warning[require-revert-in-loop]: `require` or `revert` inside a loop
+    ╭▸ src/doom/r_plane.sol:236:44
+    │
+236 │             if (height == type(int32).min) revert PlaneBounds();
+    │                                            ━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/require-revert-in-loop
+
+warning[require-revert-in-loop]: `require` or `revert` inside a loop
+    ╭▸ src/doom/r_plane.sol:171:55
+    │
+171 │         if (x < 0 || x > int32(uint32(ctx.rs.width))) revert PlaneBounds();
+    │                                                       ━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/require-revert-in-loop
+
+warning[require-revert-in-loop]: `require` or `revert` inside a loop
+   ╭▸ src/doom/r_data.sol:76:20
+   │
+76 │         if (n < 0) revert MissingName(name);
+   │                    ━━━━━━━━━━━━━━━━━━━━━━━━━
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/require-revert-in-loop
+
+warning[require-revert-in-loop]: `require` or `revert` inside a loop
+   ╭▸ src/doom/r_things.sol:75:65
+   │
+75 │                 if (uint8(name[4]) < 65 || uint8(name[5]) < 48) revert SpriteDefinition();
+   │                                                                 ━━━━━━━━━━━━━━━━━━━━━━━━━━
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/require-revert-in-loop
+
+warning[unsafe-typecast]: typecast can truncate values
+   ╭▸ src/support/RendererProbe.sol:67:22
+   │
+67 │             c, int32(uint32(c.map.nodes.length)) - 1, R_Segs.R_StoreWallRange, R_Things.R_AddSprites
+   │                      ━━━━━━━━━━━━━━━━━━━━━━━━━━
+   │
+   ├ note: consider disabling this lint if you're certain the cast is safe
+   │       
+   │       // casting to 'uint32' is safe because [explain why]
+   │       // forge-lint: disable-next-line(unsafe-typecast)
+   │       
+   │       
+   ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[require-revert-in-loop]: `require` or `revert` inside a loop
+   ╭▸ src/doom/r_things.sol:27:42
+   │
+27 │         if (frame >= 29 || rotation > 8) revert SpriteDefinition();
+   │                                          ━━━━━━━━━━━━━━━━━━━━━━━━━━
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/require-revert-in-loop
+
+warning[require-revert-in-loop]: `require` or `revert` inside a loop
+   ╭▸ src/doom/r_things.sol:32:49
+   │
+32 │             if (f.rotate == 0 || f.rotate == 1) revert SpriteDefinition();
+   │                                                 ━━━━━━━━━━━━━━━━━━━━━━━━━━
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/require-revert-in-loop
+
+warning[require-revert-in-loop]: `require` or `revert` inside a loop
+   ╭▸ src/doom/r_things.sol:40:28
+   │
+40 │         if (f.rotate == 0) revert SpriteDefinition();
+   │                            ━━━━━━━━━━━━━━━━━━━━━━━━━━
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/require-revert-in-loop
+
+warning[require-revert-in-loop]: `require` or `revert` inside a loop
+   ╭▸ src/doom/r_things.sol:43:37
+   │
+43 │         if (f.lump[rotation] != -1) revert SpriteDefinition();
+   │                                     ━━━━━━━━━━━━━━━━━━━━━━━━━━
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/require-revert-in-loop
+
+warning[require-revert-in-loop]: `require` or `revert` inside a loop
+   ╭▸ src/doom/r_things.sol:78:69
+   │
+78 │                     if (uint8(name[6]) < 65 || uint8(name[7]) < 48) revert SpriteDefinition();
+   │                                                                     ━━━━━━━━━━━━━━━━━━━━━━━━━━
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/require-revert-in-loop
+
+warning[require-revert-in-loop]: `require` or `revert` inside a loop
+   ╭▸ src/doom/r_things.sol:86:45
+   │
+86 │                 if (b.temp[f].rotate == -1) revert SpriteDefinition();
+   │                                             ━━━━━━━━━━━━━━━━━━━━━━━━━━
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/require-revert-in-loop
+
+warning[require-revert-in-loop]: `require` or `revert` inside a loop
+   ╭▸ src/doom/r_things.sol:90:70
+   │
+90 │                     if (dest.rotate == 1 && b.temp[f].lump[r] == -1) revert SpriteDefinition();
+   │                                                                      ━━━━━━━━━━━━━━━━━━━━━━━━━━
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/require-revert-in-loop
+
+warning[unsafe-typecast]: typecast can truncate values
+    ╭▸ src/doom/r_data.sol:637:17
+    │
+637 │                 int16(s16(b, p)),
+    │                 ━━━━━━━━━━━━━━━━
+    │
+    ├ note: consider disabling this lint if you're certain the cast is safe
+    │       
+    │       // casting to 'int16' is safe because [explain why]
+    │       // forge-lint: disable-next-line(unsafe-typecast)
+    │       
+    │       
+    ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[unsafe-typecast]: typecast can truncate values
+    ╭▸ src/doom/r_data.sol:638:17
+    │
+638 │                 int16(s16(b, p + 2)),
+    │                 ━━━━━━━━━━━━━━━━━━━━
+    │
+    ├ note: consider disabling this lint if you're certain the cast is safe
+    │       
+    │       // casting to 'int16' is safe because [explain why]
+    │       // forge-lint: disable-next-line(unsafe-typecast)
+    │       
+    │       
+    ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[unsafe-typecast]: typecast can truncate values
+    ╭▸ src/doom/r_data.sol:639:17
+    │
+639 │                 int16(s16(b, p + 4)),
+    │                 ━━━━━━━━━━━━━━━━━━━━
+    │
+    ├ note: consider disabling this lint if you're certain the cast is safe
+    │       
+    │       // casting to 'int16' is safe because [explain why]
+    │       // forge-lint: disable-next-line(unsafe-typecast)
+    │       
+    │       
+    ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[unsafe-typecast]: typecast can truncate values
+    ╭▸ src/doom/r_data.sol:640:17
+    │
+640 │                 int16(s16(b, p + 6)),
+    │                 ━━━━━━━━━━━━━━━━━━━━
+    │
+    ├ note: consider disabling this lint if you're certain the cast is safe
+    │       
+    │       // casting to 'int16' is safe because [explain why]
+    │       // forge-lint: disable-next-line(unsafe-typecast)
+    │       
+    │       
+    ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[unsafe-typecast]: typecast can truncate values
+    ╭▸ src/doom/r_data.sol:641:17
+    │
+641 │                 int16(s16(b, p + 8))
+    │                 ━━━━━━━━━━━━━━━━━━━━
+    │
+    ├ note: consider disabling this lint if you're certain the cast is safe
+    │       
+    │       // casting to 'int16' is safe because [explain why]
+    │       // forge-lint: disable-next-line(unsafe-typecast)
+    │       
+    │       
+    ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[unsafe-typecast]: typecast can truncate values
+   ╭▸ src/support/StackPressure.sol:82:50
+   │
+82 │             rw_scalestep = (scale2 - rw_scale) / int256(stop - start);
+   │                                                  ━━━━━━━━━━━━━━━━━━━━
+   │
+   ├ note: consider disabling this lint if you're certain the cast is safe
+   │       
+   │       // casting to 'int256' is safe because [explain why]
+   │       // forge-lint: disable-next-line(unsafe-typecast)
+   │       
+   │       
+   ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[reentrancy-events]: event emitted after an external call; reentrancy can reorder or fabricate logs that off-chain consumers rely on
+   ╭▸ src/support/ResourcePlacement.sol:60:9
+   │
+60 │         emit Sample(sha256(read(offset, length)));
+   │         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/reentrancy-events
+
+warning[unsafe-typecast]: typecast can truncate values
+    ╭▸ src/doom/r_plane.sol:212:59
+    │
+212 │                     ctx.dc.yl = int32(uint32(uint8(pl.top[uint32(x + 1)])));
+    │                                                           ━━━━━━━━━━━━━
+    │
+    ├ note: consider disabling this lint if you're certain the cast is safe
+    │       
+    │       // casting to 'uint32' is safe because [explain why]
+    │       // forge-lint: disable-next-line(unsafe-typecast)
+    │       
+    │       
+    ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[unsafe-typecast]: typecast can truncate values
+    ╭▸ src/doom/r_plane.sol:213:62
+    │
+213 │                     ctx.dc.yh = int32(uint32(uint8(pl.bottom[uint32(x + 1)])));
+    │                                                              ━━━━━━━━━━━━━
+    │
+    ├ note: consider disabling this lint if you're certain the cast is safe
+    │       
+    │       // casting to 'uint32' is safe because [explain why]
+    │       // forge-lint: disable-next-line(unsafe-typecast)
+    │       
+    │       
+    ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[unsafe-typecast]: typecast can truncate values
+    ╭▸ src/doom/r_plane.sol:217:77
+    │
+217 │ …                     angle = (ctx.rs.viewangle + ctx.rs.xtoviewangle[uint32(x)]) >> 22;
+    │                                                                       ━━━━━━━━━
+    │
+    ├ note: consider disabling this lint if you're certain the cast is safe
+    │       
+    │       // casting to 'uint32' is safe because [explain why]
+    │       // forge-lint: disable-next-line(unsafe-typecast)
+    │       
+    │       
+    ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[unsafe-typecast]: typecast can truncate values
+    ╭▸ src/doom/r_plane.sol:221:79
+    │
+221 │ …                     R_Data.R_GetColumn(ctx.resources, ctx.skytexture, int32(angle));
+    │                                                                         ━━━━━━━━━━━━
+    │
+    ├ note: consider disabling this lint if you're certain the cast is safe
+    │       
+    │       // casting to 'int32' is safe because [explain why]
+    │       // forge-lint: disable-next-line(unsafe-typecast)
+    │       
+    │       
+    ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[require-revert-in-loop]: `require` or `revert` inside a loop
+   ╭▸ src/evm/WadResources.sol:64:44
+   │
+64 │             if (chunk.code.length != size) revert ResourceDimensions();
+   │                                            ━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/require-revert-in-loop
+
+warning[unsafe-typecast]: typecast can truncate values
+   ╭▸ src/doom/r_things.sol:73:21
+   │
+73 │                 if (bytes4(name) != b.name) continue;
+   │                     ━━━━━━━━━━━━
+   │
+   ├ note: consider disabling this lint if you're certain the cast is safe
+   │       
+   │       // casting to 'bytes4' is safe because [explain why]
+   │       // forge-lint: disable-next-line(unsafe-typecast)
+   │       
+   │       
+   ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[unsafe-typecast]: typecast can truncate values
+   ╭▸ src/doom/r_things.sol:83:30
+   │
+83 │             uint256 frames = uint32(b.maxframe) + 1;
+   │                              ━━━━━━━━━━━━━━━━━━
+   │
+   ├ note: consider disabling this lint if you're certain the cast is safe
+   │       
+   │       // casting to 'uint32' is safe because [explain why]
+   │       // forge-lint: disable-next-line(unsafe-typecast)
+   │       
+   │       
+   ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[unsafe-typecast]: typecast can truncate values
+    ╭▸ src/support/StackPressure.sol:182:66
+    │
+182 │             if (segtextured) t.checksum += rw_scale + t.offset + int256(rw_x) + t.light;
+    │                                                                  ━━━━━━━━━━━━
+    │
+    ├ note: consider disabling this lint if you're certain the cast is safe
+    │       
+    │       // casting to 'int256' is safe because [explain why]
+    │       // forge-lint: disable-next-line(unsafe-typecast)
+    │       
+    │       
+    ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[unsafe-typecast]: typecast can truncate values
+    ╭▸ src/support/StackPressure.sol:194:50
+    │
+194 │                 if (maskedtexture) t.checksum += int256(rw_x);
+    │                                                  ━━━━━━━━━━━━
+    │
+    ├ note: consider disabling this lint if you're certain the cast is safe
+    │       
+    │       // casting to 'int256' is safe because [explain why]
+    │       // forge-lint: disable-next-line(unsafe-typecast)
+    │       
+    │       
+    ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[unsafe-typecast]: typecast can truncate values
+    ╭▸ src/doom/r_plane.sol:243:20
+    │
+243 │             pl.top[uint32(pl.maxx + 2)] = 0xff;
+    │                    ━━━━━━━━━━━━━━━━━━━
+    │
+    ├ note: consider disabling this lint if you're certain the cast is safe
+    │       
+    │       // casting to 'uint32' is safe because [explain why]
+    │       // forge-lint: disable-next-line(unsafe-typecast)
+    │       
+    │       
+    ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[unsafe-typecast]: typecast can truncate values
+    ╭▸ src/support/StackPressure.sol:230:21
+    │
+230 │         return 16 + int256(x) + (angle < 0 ? -angle : angle) / 30;
+    │                     ━━━━━━━━━
+    │
+    ├ note: consider disabling this lint if you're certain the cast is safe
+    │       
+    │       // casting to 'int256' is safe because [explain why]
+    │       // forge-lint: disable-next-line(unsafe-typecast)
+    │       
+    │       
+    ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[unsafe-typecast]: typecast can truncate values
+    ╭▸ src/doom/r_things.sol:123:51
+    │
+123 │         return int32(uint32(uint8(c.rs.scalelight[uint32(row) * 48 + uint32(index)])));
+    │                                                   ━━━━━━━━━━━
+    │
+    ├ note: consider disabling this lint if you're certain the cast is safe
+    │       
+    │       // casting to 'uint32' is safe because [explain why]
+    │       // forge-lint: disable-next-line(unsafe-typecast)
+    │       
+    │       
+    ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[unsafe-typecast]: typecast can truncate values
+    ╭▸ src/doom/r_things.sol:123:70
+    │
+123 │         return int32(uint32(uint8(c.rs.scalelight[uint32(row) * 48 + uint32(index)])));
+    │                                                                      ━━━━━━━━━━━━━
+    │
+    ├ note: consider disabling this lint if you're certain the cast is safe
+    │       
+    │       // casting to 'uint32' is safe because [explain why]
+    │       // forge-lint: disable-next-line(unsafe-typecast)
+    │       
+    │       
+    ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[unsafe-typecast]: typecast can truncate values
+    ╭▸ src/doom/r_plane.sol:244:20
+    │
+244 │             pl.top[uint32(pl.minx)] = 0xff;
+    │                    ━━━━━━━━━━━━━━━
+    │
+    ├ note: consider disabling this lint if you're certain the cast is safe
+    │       
+    │       // casting to 'uint32' is safe because [explain why]
+    │       // forge-lint: disable-next-line(unsafe-typecast)
+    │       
+    │       
+    ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[unsafe-typecast]: typecast can truncate values
+    ╭▸ src/doom/r_plane.sol:249:47
+    │
+249 │                     int32(uint32(uint8(pl.top[uint32(x)]))),
+    │                                               ━━━━━━━━━
+    │
+    ├ note: consider disabling this lint if you're certain the cast is safe
+    │       
+    │       // casting to 'uint32' is safe because [explain why]
+    │       // forge-lint: disable-next-line(unsafe-typecast)
+    │       
+    │       
+    ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[unsafe-typecast]: typecast can truncate values
+    ╭▸ src/doom/r_plane.sol:250:50
+    │
+250 │                     int32(uint32(uint8(pl.bottom[uint32(x)]))),
+    │                                                  ━━━━━━━━━
+    │
+    ├ note: consider disabling this lint if you're certain the cast is safe
+    │       
+    │       // casting to 'uint32' is safe because [explain why]
+    │       // forge-lint: disable-next-line(unsafe-typecast)
+    │       
+    │       
+    ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[unsafe-typecast]: typecast can truncate values
+    ╭▸ src/doom/r_plane.sol:251:47
+    │
+251 │                     int32(uint32(uint8(pl.top[uint32(x + 1)]))),
+    │                                               ━━━━━━━━━━━━━
+    │
+    ├ note: consider disabling this lint if you're certain the cast is safe
+    │       
+    │       // casting to 'uint32' is safe because [explain why]
+    │       // forge-lint: disable-next-line(unsafe-typecast)
+    │       
+    │       
+    ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[unsafe-typecast]: typecast can truncate values
+    ╭▸ src/support/StackPressure.sol:234:21
+    │
+234 │         return 64 + int256(id);
+    │                     ━━━━━━━━━━
+    │
+    ├ note: consider disabling this lint if you're certain the cast is safe
+    │       
+    │       // casting to 'int256' is safe because [explain why]
+    │       // forge-lint: disable-next-line(unsafe-typecast)
+    │       
+    │       
+    ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[unsafe-typecast]: typecast can truncate values
+    ╭▸ src/doom/r_plane.sol:252:50
+    │
+252 │                     int32(uint32(uint8(pl.bottom[uint32(x + 1)])))
+    │                                                  ━━━━━━━━━━━━━
+    │
+    ├ note: consider disabling this lint if you're certain the cast is safe
+    │       
+    │       // casting to 'uint32' is safe because [explain why]
+    │       // forge-lint: disable-next-line(unsafe-typecast)
+    │       
+    │       
+    ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[unsafe-typecast]: typecast can truncate values
+    ╭▸ src/doom/r_things.sol:150:24
+    │
+150 │             uint32 l = uint32(lump);
+    │                        ━━━━━━━━━━━━
+    │
+    ├ note: consider disabling this lint if you're certain the cast is safe
+    │       
+    │       // casting to 'uint32' is safe because [explain why]
+    │       // forge-lint: disable-next-line(unsafe-typecast)
+    │       
+    │       
+    ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[uninitialized-local]: local variable is read before being initialized
+    ╭▸ src/doom/r_things.sol:193:19
+    │
+193 │             if (++seen > c.sprite.things.length) revert SpriteBounds();
+    │                   ━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/uninitialized-local
+
+warning[require-revert-in-loop]: `require` or `revert` inside a loop
+    ╭▸ src/doom/r_things.sol:193:50
+    │
+193 │             if (++seen > c.sprite.things.length) revert SpriteBounds();
+    │                                                  ━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/require-revert-in-loop
+
+warning[require-revert-in-loop]: `require` or `revert` inside a loop
+    ╭▸ src/doom/r_things.sol:212:43
+    │
+212 │             if (best == type(uint32).max) revert UndefinedSpriteDomain();
+    │                                           ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/require-revert-in-loop
+
+warning[unsafe-typecast]: typecast can truncate values
+    ╭▸ src/doom/r_things.sol:230:48
+    │
+230 │             v |= uint32(uint8(data[p + j])) << uint32(j * 8);
+    │                                                ━━━━━━━━━━━━━
+    │
+    ├ note: consider disabling this lint if you're certain the cast is safe
+    │       
+    │       // casting to 'uint32' is safe because [explain why]
+    │       // forge-lint: disable-next-line(unsafe-typecast)
+    │       
+    │       
+    ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[unsafe-typecast]: typecast can truncate values
+    ╭▸ src/doom/r_things.sol:257:28
+    │
+257 │                 uint32 x = uint32(c.dc.x);
+    │                            ━━━━━━━━━━━━━━
+    │
+    ├ note: consider disabling this lint if you're certain the cast is safe
+    │       
+    │       // casting to 'uint32' is safe because [explain why]
+    │       // forge-lint: disable-next-line(unsafe-typecast)
+    │       
+    │       
+    ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[unsafe-typecast]: typecast can truncate values
+    ╭▸ src/doom/r_things.sol:262:41
+    │
+262 │                     c.dc.sourceOffset = uint32(p + 3);
+    │                                         ━━━━━━━━━━━━━
+    │
+    ├ note: consider disabling this lint if you're certain the cast is safe
+    │       
+    │       // casting to 'uint32' is safe because [explain why]
+    │       // forge-lint: disable-next-line(unsafe-typecast)
+    │       
+    │       
+    ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[unsafe-typecast]: typecast can truncate values
+    ╭▸ src/doom/r_things.sol:274:43
+    │
+274 │         bytes memory patch = patchLump(c, uint32(v.patch) + c.resources.firstspritelump);
+    │                                           ━━━━━━━━━━━━━━━
+    │
+    ├ note: consider disabling this lint if you're certain the cast is safe
+    │       
+    │       // casting to 'uint32' is safe because [explain why]
+    │       // forge-lint: disable-next-line(unsafe-typecast)
+    │       
+    │       
+    ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[unsafe-typecast]: typecast can truncate values
+    ╭▸ src/doom/r_things.sol:281:63
+    │
+281 │             c.dc.colormap = R_Data.R_GetColormap(c.resources, uint32(v.colormap));
+    │                                                               ━━━━━━━━━━━━━━━━━━
+    │
+    ├ note: consider disabling this lint if you're certain the cast is safe
+    │       
+    │       // casting to 'uint32' is safe because [explain why]
+    │       // forge-lint: disable-next-line(unsafe-typecast)
+    │       
+    │       
+    ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[unsafe-typecast]: typecast can truncate values
+    ╭▸ src/doom/r_things.sol:306:69
+    │
+306 │             R_DrawMaskedColumn(c, ColumnView(patch, le32(patch, 8 + uint32(column) * 4)));
+    │                                                                     ━━━━━━━━━━━━━━
+    │
+    ├ note: consider disabling this lint if you're certain the cast is safe
+    │       
+    │       // casting to 'uint32' is safe because [explain why]
+    │       // forge-lint: disable-next-line(unsafe-typecast)
+    │       
+    │       
+    ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[unsafe-typecast]: typecast can truncate values
+    ╭▸ src/doom/r_things.sol:319:20
+    │
+319 │         uint32 l = uint32(int32(f.lump[0]));
+    │                    ━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ├ note: consider disabling this lint if you're certain the cast is safe
+    │       
+    │       // casting to 'uint32' is safe because [explain why]
+    │       // forge-lint: disable-next-line(unsafe-typecast)
+    │       
+    │       
+    ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[unsafe-typecast]: typecast can truncate values
+    ╭▸ src/doom/r_things.sol:336:23
+    │
+336 │             v.patch = int32(l);
+    │                       ━━━━━━━━
+    │
+    ├ note: consider disabling this lint if you're certain the cast is safe
+    │       
+    │       // casting to 'int32' is safe because [explain why]
+    │       // forge-lint: disable-next-line(unsafe-typecast)
+    │       
+    │       
+    ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[unsafe-typecast]: typecast can truncate values
+    ╭▸ src/doom/r_things.sol:363:20
+    │
+363 │             bottom[uint32(x)] = -2;
+    │                    ━━━━━━━━━
+    │
+    ├ note: consider disabling this lint if you're certain the cast is safe
+    │       
+    │       // casting to 'uint32' is safe because [explain why]
+    │       // forge-lint: disable-next-line(unsafe-typecast)
+    │       
+    │       
+    ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[unsafe-typecast]: typecast can truncate values
+    ╭▸ src/doom/r_things.sol:364:17
+    │
+364 │             top[uint32(x)] = -2;
+    │                 ━━━━━━━━━
+    │
+    ├ note: consider disabling this lint if you're certain the cast is safe
+    │       
+    │       // casting to 'uint32' is safe because [explain why]
+    │       // forge-lint: disable-next-line(unsafe-typecast)
+    │       
+    │       
+    ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[unsafe-typecast]: typecast can truncate values
+    ╭▸ src/doom/r_things.sol:388:28
+    │
+388 │                 uint32 u = uint32(x);
+    │                            ━━━━━━━━━
+    │
+    ├ note: consider disabling this lint if you're certain the cast is safe
+    │       
+    │       // casting to 'uint32' is safe because [explain why]
+    │       // forge-lint: disable-next-line(unsafe-typecast)
+    │       
+    │       
+    ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[unsafe-typecast]: typecast can truncate values
+    ╭▸ src/doom/r_things.sol:389:73
+    │
+389 │                 if (silhouette & 1 != 0 && bottom[u] == -2) bottom[u] = int16(d.sprbottomclip[u]);
+    │                                                                         ━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ├ note: consider disabling this lint if you're certain the cast is safe
+    │       
+    │       // casting to 'int16' is safe because [explain why]
+    │       // forge-lint: disable-next-line(unsafe-typecast)
+    │       
+    │       
+    ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[unsafe-typecast]: typecast can truncate values
+    ╭▸ src/doom/r_things.sol:390:67
+    │
+390 │                 if (silhouette & 2 != 0 && top[u] == -2) top[u] = int16(d.sprtopclip[u]);
+    │                                                                   ━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ├ note: consider disabling this lint if you're certain the cast is safe
+    │       
+    │       // casting to 'int16' is safe because [explain why]
+    │       // forge-lint: disable-next-line(unsafe-typecast)
+    │       
+    │       
+    ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[unsafe-typecast]: typecast can truncate values
+    ╭▸ src/doom/r_things.sol:394:24
+    │
+394 │             if (bottom[uint32(x)] == -2) bottom[uint32(x)] = int32(uint32(c.rs.height));
+    │                        ━━━━━━━━━
+    │
+    ├ note: consider disabling this lint if you're certain the cast is safe
+    │       
+    │       // casting to 'uint32' is safe because [explain why]
+    │       // forge-lint: disable-next-line(unsafe-typecast)
+    │       
+    │       
+    ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[unsafe-typecast]: typecast can truncate values
+    ╭▸ src/doom/r_things.sol:394:49
+    │
+394 │             if (bottom[uint32(x)] == -2) bottom[uint32(x)] = int32(uint32(c.rs.height));
+    │                                                 ━━━━━━━━━
+    │
+    ├ note: consider disabling this lint if you're certain the cast is safe
+    │       
+    │       // casting to 'uint32' is safe because [explain why]
+    │       // forge-lint: disable-next-line(unsafe-typecast)
+    │       
+    │       
+    ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[unsafe-typecast]: typecast can truncate values
+    ╭▸ src/doom/r_things.sol:395:21
+    │
+395 │             if (top[uint32(x)] == -2) top[uint32(x)] = -1;
+    │                     ━━━━━━━━━
+    │
+    ├ note: consider disabling this lint if you're certain the cast is safe
+    │       
+    │       // casting to 'uint32' is safe because [explain why]
+    │       // forge-lint: disable-next-line(unsafe-typecast)
+    │       
+    │       
+    ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[unsafe-typecast]: typecast can truncate values
+    ╭▸ src/doom/r_things.sol:395:43
+    │
+395 │             if (top[uint32(x)] == -2) top[uint32(x)] = -1;
+    │                                           ━━━━━━━━━
+    │
+    ├ note: consider disabling this lint if you're certain the cast is safe
+    │       
+    │       // casting to 'uint32' is safe because [explain why]
+    │       // forge-lint: disable-next-line(unsafe-typecast)
+    │       
+    │       
+    ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[require-revert-in-loop]: `require` or `revert` inside a loop
+    ╭▸ src/doom/r_main.sol:251:54
+    │
+251 │         if (blocks < 3 || blocks > 11 || detail > 1) revert InvalidViewSize();
+    │                                                      ━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/require-revert-in-loop
+
+warning[require-revert-in-loop]: `require` or `revert` inside a loop
+    ╭▸ src/doom/r_main.sol:167:13
+    │
+167 │             revert InvalidViewSize();
+    │             ━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/require-revert-in-loop
+
+warning[require-revert-in-loop]: `require` or `revert` inside a loop
+   ╭▸ src/doom/r_plane.sol:23:85
+   │
+23 │         if (width == 0 || width > 320 || ctx.rs.height == 0 || ctx.rs.height > 200) revert PlaneBounds();
+   │                                                                                     ━━━━━━━━━━━━━━━━━━━━━
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/require-revert-in-loop
+
+warning[require-revert-in-loop]: `require` or `revert` inside a loop
+    ╭▸ src/doom/r_segs.sol:221:11
+    │
+221 │         ) revert WallBounds();
+    │           ━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/require-revert-in-loop
+
+warning[require-revert-in-loop]: `require` or `revert` inside a loop
+    ╭▸ src/doom/r_segs.sol:234:48
+    │
+234 │             if (difference == type(int32).min) revert UndefinedWallAngle();
+    │                                                ━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/require-revert-in-loop
+
+warning[require-revert-in-loop]: `require` or `revert` inside a loop
+   ╭▸ src/doom/r_segs.sol:26:57
+   │
+26 │         if (uint256(c.openingCount) + count > 320 * 64) revert OpeningOverflow();
+   │                                                         ━━━━━━━━━━━━━━━━━━━━━━━━━
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/require-revert-in-loop
+
+warning[require-revert-in-loop]: `require` or `revert` inside a loop
+   ╭▸ src/doom/r_plane.sol:78:109
+   │
+78 │         if (plane >= ctx.visplaneCount || start < 0 || start > stop || stop >= int32(uint32(ctx.rs.width))) revert PlaneBounds();
+   │                                                                                                             ━━━━━━━━━━━━━━━━━━━━━
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/require-revert-in-loop
+

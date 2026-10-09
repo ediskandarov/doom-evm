@@ -1,0 +1,46 @@
+{
+  "result": "pass",
+  "checks": [
+    "pinned WAD identity",
+    "deterministic repeated packing",
+    "strict v0 schemas",
+    "all disk outputs match regeneration",
+    "every lump byte/name/order preserved",
+    "contiguous uint32 offsets",
+    "committed snapshots compared with original source bytes",
+    "license and palette identities"
+  ],
+  "directoryEntryCount": 3163,
+  "snapshotBytes": 176053,
+  "resourceIdentity": {
+    "schemaVersion": 0,
+    "wadSha256": "7323bcc168c5a45ff10749b339960e98314740a734c30d4b9f3337001f9e703d",
+    "bundleSha256": "d379076f21645cf7cc5acb056663d0faacc4065489a0ca99738479323c9f7a47",
+    "paletteSha256": "fd895921b5d0a394612bb29852ed003d44d69f76dec31c0dc6b5d5fc7d63f7bb",
+    "paletteVariant": 0
+  },
+  "validation": {
+    "map": "E1M1",
+    "counts": {
+      "THINGS": 292,
+      "LINEDEFS": 1175,
+      "SIDEDEFS": 1829,
+      "VERTEXES": 1196,
+      "SEGS": 2057,
+      "SSECTORS": 682,
+      "NODES": 681,
+      "SECTORS": 182
+    },
+    "blockmap": {
+      "width": 32,
+      "height": 27,
+      "uniqueLists": 450
+    },
+    "paletteCount": 14,
+    "colormapCount": 34,
+    "pnamesCount": 1049,
+    "textureCount": 963,
+    "referencedPatchCount": 1045,
+    "flatCount": 240
+  }
+}

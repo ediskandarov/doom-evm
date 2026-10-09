@@ -1,0 +1,17 @@
+{
+  "textures": 963,
+  "fixtures": {
+    "subsector-signed.bin": 200,
+    "resources.bin": 91148,
+    "map.bin": 244476,
+    "clip.bin": 13200,
+    "getcolumns.bin": 23112,
+    "directory.bin": 50608,
+    "manifest.json": 6952
+  },
+  "nativeProfiles": [
+    "O0",
+    "O2",
+    "UBSan-except-signed-shift"
+  ]
+}

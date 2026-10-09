@@ -1,0 +1,15 @@
+Ordinary CREATE and exact runtime verification: 250/1755 chunks
+Ordinary CREATE and exact runtime verification: 500/1755 chunks
+Ordinary CREATE and exact runtime verification: 750/1755 chunks
+Ordinary CREATE and exact runtime verification: 1000/1755 chunks
+Ordinary CREATE and exact runtime verification: 1250/1755 chunks
+Ordinary CREATE and exact runtime verification: 1500/1755 chunks
+Ordinary CREATE and exact runtime verification: 1750/1755 chunks
+All chunks deployed and verified in 53081ms
+cross-chunk-read: transaction 11834639 gas; actual MSIZE 1216 -> 462592 -> 462656 -> 0 -> 0 -> 462720 bytes
+lazy-initialization: transaction 62126953 gas; actual MSIZE 1952 -> 463328 -> 2332864 -> 0 -> 0 -> 2341600 bytes
+eager-initialization: transaction 538511665 gas; actual MSIZE 1952 -> 463328 -> 10312320 -> 0 -> 0 -> 10321056 bytes
+lazy-init-and-map: transaction 187897822 gas; actual MSIZE 1952 -> 463328 -> 2332864 -> 6163776 -> 0 -> 6164352 bytes
+uncached-and-cached-columns: transaction 62709186 gas; actual MSIZE 1952 -> 463328 -> 2332864 -> 2359584 -> 2359648 -> 2377248 bytes
+uncached-and-cached-flats: transaction 62128275 gas; actual MSIZE 1952 -> 463328 -> 2332864 -> 2336992 -> 2336992 -> 2341120 bytes
+Saved /Users/eduard/sandbox/doom-evm/artifacts/local/phase2-verification/resource-measurements.json

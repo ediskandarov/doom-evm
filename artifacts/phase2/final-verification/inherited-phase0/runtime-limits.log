@@ -1,0 +1,140 @@
+{
+  "scope": "Phase 0 resource-limit probes; synthetic EVM programs, no DOOM renderer",
+  "utc": "2026-10-09T13:03:21Z",
+  "control": {
+    "post_start_rpc": null,
+    "initialization_mined_block": false,
+    "args": [
+      "--host",
+      "127.0.0.1",
+      "--port",
+      "59190",
+      "--hardfork",
+      "cancun",
+      "--memory-limit",
+      "1073741824",
+      "--quiet",
+      "--gas-limit",
+      "1000000000"
+    ],
+    "client": "anvil/v1.8.5",
+    "block_gas_limit": 1000000000,
+    "gas_above_block": {
+      "accepted": false,
+      "success": false,
+      "error": "{\"code\": -32000, \"message\": \"intrinsic gas too high -- tx.gas_limit > env.block.gas_limit\"}",
+      "elapsed_ms": 1.4995411038398743
+    },
+    "deploy_25000": {
+      "accepted": true,
+      "success": false,
+      "gas_used": 100000000,
+      "address": "0x5fbdb2315678afecb367f032d93f642f64180aa3",
+      "tx_hash": "0xb9c6a42773ec90edbe3b5a45c447a8e846eac4db386f2c24dfde900ae7c67742",
+      "elapsed_ms": 26.41870779916644
+    },
+    "deploy_50000": {
+      "accepted": false,
+      "success": false,
+      "error": "{\"code\": -32003, \"message\": \"max initcode size exceeded\"}",
+      "elapsed_ms": 0.8751251734793186
+    },
+    "memory_64k": {
+      "success": true,
+      "value": 42
+    },
+    "call_gas_above_block": {
+      "success": true,
+      "value": 42
+    }
+  },
+  "control_1k_memory": {
+    "post_start_rpc": null,
+    "initialization_mined_block": false,
+    "args": [
+      "--host",
+      "127.0.0.1",
+      "--port",
+      "59205",
+      "--hardfork",
+      "cancun",
+      "--memory-limit",
+      "1024",
+      "--quiet",
+      "--gas-limit",
+      "1000000000"
+    ],
+    "client": "anvil/v1.8.5",
+    "block_gas_limit": 1000000000,
+    "gas_above_block": {
+      "accepted": false,
+      "success": false,
+      "error": "{\"code\": -32000, \"message\": \"intrinsic gas too high -- tx.gas_limit > env.block.gas_limit\"}",
+      "elapsed_ms": 0.6975000724196434
+    },
+    "memory_64k": {
+      "success": false,
+      "error": "{\"code\": -32003, \"message\": \"EVM error MemoryLimitOOG\"}"
+    },
+    "call_gas_above_block": {
+      "success": false,
+      "error": "{\"code\": -32003, \"message\": \"EVM error MemoryLimitOOG\"}"
+    }
+  },
+  "relaxed": {
+    "post_start_rpc": [
+      "anvil_setBlockGasLimit",
+      "0x3b9aca00"
+    ],
+    "initialization_mined_block": true,
+    "args": [
+      "--host",
+      "127.0.0.1",
+      "--port",
+      "59217",
+      "--hardfork",
+      "cancun",
+      "--memory-limit",
+      "1073741824",
+      "--quiet",
+      "--disable-code-size-limit",
+      "--disable-block-gas-limit"
+    ],
+    "client": "anvil/v1.8.5",
+    "block_gas_limit": 1000000000,
+    "gas_above_block": {
+      "accepted": true,
+      "success": false,
+      "no_receipt_after_ms": 2514.306750148535,
+      "transaction_lookup": null,
+      "tx_hash": "0x89e2e27ba0b72056d6a2182f081d1f7276b85ac8a2e70887121d3bb2ec06851e",
+      "dropped": null
+    },
+    "deploy_25000": {
+      "accepted": true,
+      "success": true,
+      "gas_used": 5160666,
+      "address": "0x5fbdb2315678afecb367f032d93f642f64180aa3",
+      "tx_hash": "0xea2b9a19053afc9f1c3888d1f69f5ae8a64f27ff18da9ae5f278e3e06837a935",
+      "elapsed_ms": 27.199083007872105,
+      "runtime_bytes": 25000
+    },
+    "deploy_50000": {
+      "accepted": true,
+      "success": true,
+      "gas_used": 10270491,
+      "address": "0xe7f1725e7734ce288f8367e1bb143e90bb3f0512",
+      "tx_hash": "0xba52be9ac4584e8de98f2c428e98c3211e913e7923f0a4ed8ba23109e52cd603",
+      "elapsed_ms": 29.239792376756668,
+      "runtime_bytes": 50000
+    },
+    "memory_64k": {
+      "success": true,
+      "value": 42
+    },
+    "call_gas_above_block": {
+      "success": true,
+      "value": 42
+    }
+  }
+}

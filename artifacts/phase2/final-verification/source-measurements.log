@@ -1,0 +1,116 @@
+PASS authenticated resource commitments: pinned bundle, packed directory, all 1,755 STOP-prefixed chunk hashes
+Authenticated source inputs: 250/1755 ordinary chunks uploaded and verified
+Authenticated source inputs: 500/1755 ordinary chunks uploaded and verified
+Authenticated source inputs: 750/1755 ordinary chunks uploaded and verified
+Authenticated source inputs: 1000/1755 ordinary chunks uploaded and verified
+Authenticated source inputs: 1250/1755 ordinary chunks uploaded and verified
+Authenticated source inputs: 1500/1755 ordinary chunks uploaded and verified
+Authenticated source inputs: 1750/1755 ordinary chunks uploaded and verified
+{
+  "constructorGas": 140469519,
+  "metadata": {
+    "expectedSha256": "543ebeab135b5b104a19c0de713ca543ee85b8f09ccb068774c67fdf6957f827",
+    "transactionHash": "0x99b877684bad4adc729c30839eb6970532843837a589baf81a7d596f52e77114",
+    "transactionGas": 25475024,
+    "binds": "all identity fields, blob length, chunk/lump counts, every stored directory descriptor, every ordered stored chunk address"
+  },
+  "reads": [
+    {
+      "offset": 0,
+      "length": 32,
+      "outputSha256": "846d01fbccc8559cbe1665c4c24dd7f0fda40c0748be968e6447a8c8d304a022",
+      "viewGas": 11726594,
+      "readGas": 3946,
+      "actualMemoryBytes": [
+        416,
+        462080,
+        462144,
+        462208
+      ],
+      "transactionGas": 11754071,
+      "transactionHash": "0x7ba8e4579e2032a930159c1dfed427b7e1e267148acf61ea10997dbcf7124c21",
+      "instrumentedTransactionHash": "0x0b5418bd5fa6372850d704e8bde2316e5d33984cc96990d2f74de65cb7621177"
+    },
+    {
+      "offset": 16380,
+      "length": 16,
+      "outputSha256": "aad7a88430e2639c141fc7cffff4a209bdbd138882b5f1f9bc7eedf62731d7b9",
+      "viewGas": 11726594,
+      "readGas": 7262,
+      "actualMemoryBytes": [
+        416,
+        462080,
+        462144,
+        462208
+      ],
+      "transactionGas": 11757411,
+      "transactionHash": "0xe3ed55456542597ce4bae3c814dd0e12413a14c11007c993874b2022b0328f19",
+      "instrumentedTransactionHash": "0x3fe3dcebd628a54641db40859f246efed846164d4b883dda95e2c35df55b3984"
+    },
+    {
+      "offset": 28741857,
+      "length": 32,
+      "outputSha256": "9e503b52d0017906e34f5c3d39e4d4064360ad8ae7d65fcc52b0062199712137",
+      "viewGas": 11726594,
+      "readGas": 3946,
+      "actualMemoryBytes": [
+        416,
+        462080,
+        462144,
+        462208
+      ],
+      "transactionGas": 11754119,
+      "transactionHash": "0xd218b4b7762233d33ebb6b9ae96f20b15294dac9d9ba72d5a8db9800f5c8ce96",
+      "instrumentedTransactionHash": "0xd03bef86378ac28dbd453998fe2b0071f971952e60e2281f038de278187768c9"
+    },
+    {
+      "offset": 28741889,
+      "length": 0,
+      "outputSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "viewGas": 11726594,
+      "readGas": 587,
+      "actualMemoryBytes": [
+        416,
+        462080,
+        462112,
+        462144
+      ],
+      "transactionGas": 11750733,
+      "transactionHash": "0xd5087ad43c392f3b8396dd0facd0a80a4c925005fef6e321fdc1d3120865b3d0",
+      "instrumentedTransactionHash": "0x2201d5a187bd648583e5682a56774e1a4eb8a6ab6d0c9a0e8a7d9834c3fe72fe"
+    }
+  ],
+  "rejections": [
+    {
+      "name": "modified-directory",
+      "error": "DirectoryIdentity()",
+      "errorSelector": "0xefb76b3a",
+      "transactionHash": "0x58cf2bb5019357bceec90455866298d4fae9c7ee7b1f8aea9482c69f14bdef99",
+      "contractAddress": "0xa13318684281a820304c164427396385c306d870",
+      "status": "0x0",
+      "logs": 0,
+      "gas": 3448120
+    },
+    {
+      "name": "modified-final-payload",
+      "error": "ChunkIdentity()",
+      "errorSelector": "0x50a7d418",
+      "transactionHash": "0xd1580e265a8a389daa74b7d06d80b49fb0194f18af221aeac07b37d65f08eaaf",
+      "contractAddress": "0xa4ae41b9bb88eb03048ea3bb71ab32a62ebc7188",
+      "status": "0x0",
+      "logs": 0,
+      "gas": 23756367
+    },
+    {
+      "name": "missing-chunks",
+      "error": "ResourceDimensions()",
+      "errorSelector": "0xc3f6fe20",
+      "transactionHash": "0x0b07d086d77573abdfbbe5410a88d2fc39abf5a2311a6328b6819af1287abc23",
+      "contractAddress": "0xe5e41d59f85d4b2e70ab5bd048d96d556930b61a",
+      "status": "0x0",
+      "logs": 0,
+      "gas": 1837420
+    }
+  ],
+  "output": "/Users/eduard/sandbox/doom-evm/artifacts/local/phase2-verification/source-measurements.json"
+}

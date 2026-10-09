@@ -187,12 +187,14 @@ The integrator connects BSP + Segs + Draw + resources + mock/real Frame emitter.
 
 ### M1 gate — real DOOM rendering in Anvil
 
-- [ ] The Frame event contains pixels computed by genuine Doom algorithms in Solidity/Yul (BSP/segs/planes/sprites—or an explicitly documented partial scope).
-- [ ] Real WAD resource pipeline, reproducible SHA, no precomputed player-specific visibility outside the EVM.
-- [ ] `forge test` and an end-to-end script pass against pinned Anvil.
-- [ ] A reference screenshot/golden diff and a technical divergence report are available.
-- [ ] Browser displays pixels from a transaction event rather than rendering the 3D scene itself.
-- [ ] Renderer functions in the Solidity source can be traced back to their original C definitions.
+- [x] The Frame event contains pixels computed by genuine Doom algorithms in Solidity/Yul (BSP/segs/planes/sprites—or an explicitly documented partial scope).
+- [x] Real WAD resource pipeline, reproducible SHA, no precomputed player-specific visibility outside the EVM.
+- [x] `forge test` and an end-to-end script pass against pinned Anvil.
+- [x] A reference screenshot/golden diff and a technical divergence report are available.
+- [x] Browser displays pixels from a transaction event rather than rendering the 3D scene itself.
+- [x] Renderer functions in the Solidity source can be traced back to their original C definitions.
+
+Verified 2026-10-09 for the complete static E1M1 world view; [acceptance report and archived gates](PHASE2-REPORT.md).
 
 For a **complete static M1 frame**, implement planes and sprites whenever they appear in the test viewpoint. A partial frame can be published as an intermediate milestone, but it must not be labeled full M1.
 
@@ -309,7 +311,7 @@ A faster renderer that changes pixels without documented justification **is not 
 - [x] `F0-05` Compile a stack-heavy, renderer-shaped spike.
 - [x] `F0-06` Publish `PORTING.md` progress matrix and fixture metadata format.
 
-**Phase 0 verified 2026-10-09:** see [acceptance report](PHASE0-REPORT.md). Phase 1 subsequently verified: see [Phase 1 report](PHASE1-REPORT.md). Phase 2's complete static pixel pipeline now matches original C; final ordinary event/browser and regression gates remain in progress in the [acceptance ledger](PHASE2-REPORT.md).
+**Phases 0, 1 and 2 verified 2026-10-09:** see the [Phase 0 report](PHASE0-REPORT.md), [Phase 1 report](PHASE1-REPORT.md), and [Phase 2 acceptance report](PHASE2-REPORT.md). The complete static pipeline matches original C, ordinary Frame events reach Canvas, and every inherited gate passes.
 
 ### Foundation / Sprint F1 (parallel agents)
 
@@ -326,15 +328,15 @@ A faster renderer that changes pixels without documented justification **is not 
 - [x] `R1-C` `r_draw.sol` framebuffer primitives.
 - [x] `R1-D` `r_bsp.sol` traversal/clipping, C trace comparison.
 - [x] `R1-E` `r_segs.sol` walls and texture coordinates.
-- [ ] `R1-F` Integrate BSP→segs→draw→event; reproduce a wall-only frame.
+- [x] `R1-F` Integrate BSP→segs→draw→event; reproduce a wall-only frame.
 
 ### Renderer / Sprint R2
 
 - [x] `R2-A` `r_plane.sol` visplanes, floors, and ceilings.
 - [x] `R2-B` `r_things.sol` sprites and masked columns.
 - [x] `R2-C` `r_main.sol` player-view integration; `r_sky` as required.
-- [ ] `R2-D` Pixel-golden comparisons and deviation audit.
-- [ ] `R2-E` Full static Doom frame end-to-end; M1 report.
+- [x] `R2-D` Pixel-golden comparisons and deviation audit.
+- [x] `R2-E` Full static Doom frame end-to-end; M1 report.
 
 ### Gameplay / Sprint G1+
 
@@ -355,8 +357,8 @@ After every integration gate, update this table:
 | Event smoke | passed | [Phase 0 report](PHASE0-REPORT.md), real receipt/WS/Canvas verification | Synthetic fixture only; no DOOM renderer | None |
 | C fixed math | passed | [Phase 1 report](PHASE1-REPORT.md), original C vectors and full table comparisons | Explicit undefined-C extensions | None |
 | WAD data in EVM (foundation samples) | passed | [Phase 1 report](PHASE1-REPORT.md), actual WAD upload/read hashes | Samples only; runtime renderer adapter remains Phase 2 | None for Phase 1 |
-| BSP walls render | passed | [Wall report](PHASE2-SEGS.md), eight native-matching ordinary EVM wall calls | Wall-only output is an intermediate scope | Final event-path proof pending |
-| M1 full static frame | in progress | [Phase 2 ledger](PHASE2-REPORT.md), eight bytewise full-frame comparisons | Static world view, no gameplay/HUD | Ordinary Frame/browser and final regression gates |
+| BSP walls render | passed | [Wall report](PHASE2-SEGS.md), eight native-matching ordinary calls and wall-only Frame | Wall-only output is an intermediate scope | None |
+| M1 full static frame | passed | [Phase 2 report](PHASE2-REPORT.md), eight exact full frames, real Frame/WS/Canvas, all regressions | Static world view, no gameplay/HUD | None for static scope |
 | M2 movement | not started | — | — | — |
 | M3 basic gameplay | not started | — | — | — |
 

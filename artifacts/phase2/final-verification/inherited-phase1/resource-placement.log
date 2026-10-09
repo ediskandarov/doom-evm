@@ -1,0 +1,320 @@
+{
+  "scope": "Phase 1 static WAD resource placement; no renderer/frame-access measurement",
+  "wadSha256": "7323bcc168c5a45ff10749b339960e98314740a734c30d4b9f3337001f9e703d",
+  "bundleSha256": "d379076f21645cf7cc5acb056663d0faacc4065489a0ca99738479323c9f7a47",
+  "anvilVersion": "anvil/v1.8.5",
+  "nodeArgs": [
+    "--host",
+    "127.0.0.1",
+    "--port",
+    "18553",
+    "--hardfork",
+    "cancun",
+    "--disable-code-size-limit",
+    "--disable-block-gas-limit",
+    "--memory-limit",
+    "1073741824",
+    "--silent"
+  ],
+  "timestamp": "2026-10-09T13:03:29.841Z",
+  "results": [
+    {
+      "lumpId": 396,
+      "lumpName": "PLAYPAL",
+      "sourceLength": 10752,
+      "measuredBytes": 768,
+      "payloadSha256": "fd895921b5d0a394612bb29852ed003d44d69f76dec31c0dc6b5d5fc7d63f7bb",
+      "strategies": [
+        {
+          "contract": "StorageResourceFixture",
+          "uploadGas": 795575,
+          "uploadReceiptMs": 23.029124999999965,
+          "initcodeBytes": 2156,
+          "runtimeBytes": 771,
+          "auxiliaryRuntimeBytes": 0,
+          "address": "0x5fbdb2315678afecb367f032d93f642f64180aa3",
+          "deploymentTransactionHash": "0x867abb2461b0e46526ed750f2ab4fecc4554cd84909bf22ba5a74d5e4819d87a",
+          "reads": [
+            {
+              "offset": 0,
+              "length": 32,
+              "sha256": "8fe37d3a94554af85a01b6bc8baa9948c93dac6b2bf054e1220943c0e29229ef",
+              "gasUsed": 41749,
+              "receiptMs": 22.648416999999995,
+              "transactionHash": "0xf7ee1ef6eca6b4b179a9dfc1d91d12dad8cccec686edacd08681b7e000824465"
+            },
+            {
+              "offset": 17,
+              "length": 751,
+              "sha256": "4b1b7994a72f6f7b6f7f96069a80dff1d0a111f70e1d0db484a7a2a797e1c111",
+              "gasUsed": 407566,
+              "receiptMs": 22.27254099999999,
+              "transactionHash": "0x8365dccb2c7b7e28af5bcb7bac9ad04b01c1846f4b6fcd47851cc085c9a35a43"
+            },
+            {
+              "offset": 0,
+              "length": 768,
+              "sha256": "fd895921b5d0a394612bb29852ed003d44d69f76dec31c0dc6b5d5fc7d63f7bb",
+              "gasUsed": 415090,
+              "receiptMs": 21.422833999999966,
+              "transactionHash": "0x7096993d2324b7b5fb6ceca2e8abd0a560acf16dc3f21ba944861bec9abfeff1"
+            },
+            {
+              "offset": 768,
+              "length": 0,
+              "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+              "gasUsed": 25517,
+              "receiptMs": 22.96683299999995,
+              "transactionHash": "0x1bc47a58e16e67fbd4dfc07b8f0e60c2f5a0c84640be23fc9677fb538bdfbe61"
+            }
+          ]
+        },
+        {
+          "contract": "CodeResourceFixture",
+          "uploadGas": 423279,
+          "uploadReceiptMs": 23.015917,
+          "initcodeBytes": 2184,
+          "runtimeBytes": 751,
+          "auxiliaryRuntimeBytes": 769,
+          "address": "0x5fc8d32690cc91d4c39d9d3abcbd16989f875707",
+          "deploymentTransactionHash": "0x09a65292227d0d9329832afbc8b228296cdc9a63895a37c80aab4dcb4dc0d286",
+          "reads": [
+            {
+              "offset": 0,
+              "length": 32,
+              "sha256": "8fe37d3a94554af85a01b6bc8baa9948c93dac6b2bf054e1220943c0e29229ef",
+              "gasUsed": 25901,
+              "receiptMs": 22.464291000000003,
+              "transactionHash": "0x15404ff4f03e62f2cded0765156b73cc16bd51984380ad58c1acdef093b1ba24"
+            },
+            {
+              "offset": 17,
+              "length": 751,
+              "sha256": "4b1b7994a72f6f7b6f7f96069a80dff1d0a111f70e1d0db484a7a2a797e1c111",
+              "gasUsed": 26551,
+              "receiptMs": 23.66395799999998,
+              "transactionHash": "0x714de07372a254fb88df159349d25d805e457b9c157a2fc8519f48de0d8a5ef2"
+            },
+            {
+              "offset": 0,
+              "length": 768,
+              "sha256": "fd895921b5d0a394612bb29852ed003d44d69f76dec31c0dc6b5d5fc7d63f7bb",
+              "gasUsed": 26527,
+              "receiptMs": 23.379374999999982,
+              "transactionHash": "0xcde5eaeee10a1878309634171bd910bb54273a8132548a2f9e990bfc5cc59733"
+            },
+            {
+              "offset": 768,
+              "length": 0,
+              "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+              "gasUsed": 25874,
+              "receiptMs": 23.379332999999974,
+              "transactionHash": "0x2f492b8529971328e661de2886610cfe86e002724ca49621fc39985b9672d52a"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "lumpId": 397,
+      "lumpName": "COLORMAP",
+      "sourceLength": 8704,
+      "measuredBytes": 4096,
+      "payloadSha256": "38c3c6c1c34531a7c1ebe468dd2bd69f86c439f965549450fe19533ac58644d8",
+      "strategies": [
+        {
+          "contract": "StorageResourceFixture",
+          "uploadGas": 3158133,
+          "uploadReceiptMs": 23.169042000000104,
+          "initcodeBytes": 5484,
+          "runtimeBytes": 771,
+          "auxiliaryRuntimeBytes": 0,
+          "address": "0x610178da211fef7d417bc0e6fed39f05609ad788",
+          "deploymentTransactionHash": "0xfd38229abbd3d372cee9edd5c26abee207d81fc72b9b2fb26893c4d12db6a74c",
+          "reads": [
+            {
+              "offset": 0,
+              "length": 32,
+              "sha256": "630dcd2966c4336691125448bbb25b4ff412a49c732db2c8abc1b8581bd710dd",
+              "gasUsed": 41749,
+              "receiptMs": 25.300749999999994,
+              "transactionHash": "0x3fd4c56e4b01b6ec8ba146ae2b5a85713dfa0089bac946075a1e6571abee5ee4"
+            },
+            {
+              "offset": 17,
+              "length": 768,
+              "sha256": "9ad2f8d2dd5426f855e0f1b84ae279495579899c7b62ebf1532a9ea0894267a0",
+              "gasUsed": 417102,
+              "receiptMs": 23.778875000000085,
+              "transactionHash": "0xb47f8801d665be0e5bc8d5ca88f2b80df2df1cb593f5d1d925ae548bee410a47"
+            },
+            {
+              "offset": 0,
+              "length": 4096,
+              "sha256": "38c3c6c1c34531a7c1ebe468dd2bd69f86c439f965549450fe19533ac58644d8",
+              "gasUsed": 2103347,
+              "receiptMs": 22.986291999999935,
+              "transactionHash": "0x98a48753d5782d0a1e2db106da658eb2ad4b5466ceefee1993badb25c1fa6fde"
+            },
+            {
+              "offset": 4096,
+              "length": 0,
+              "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+              "gasUsed": 25517,
+              "receiptMs": 22.886207999999897,
+              "transactionHash": "0x92d3cfb584c8243a740d257cd77de8664dcbd31aa4c919fa8eb6b5b606581662"
+            }
+          ]
+        },
+        {
+          "contract": "CodeResourceFixture",
+          "uploadGas": 1147551,
+          "uploadReceiptMs": 24.829375000000027,
+          "initcodeBytes": 5512,
+          "runtimeBytes": 751,
+          "auxiliaryRuntimeBytes": 4097,
+          "address": "0x0b306bf915c4d645ff596e518faf3f9669b97016",
+          "deploymentTransactionHash": "0x525b60db2bbba9b9344ed18b7e2f8f311ca9681f670f418af80cc922a9dbb5bf",
+          "reads": [
+            {
+              "offset": 0,
+              "length": 32,
+              "sha256": "630dcd2966c4336691125448bbb25b4ff412a49c732db2c8abc1b8581bd710dd",
+              "gasUsed": 25901,
+              "receiptMs": 24.940707999999972,
+              "transactionHash": "0x916c949d67134a6ac3f0f16b2596dada4bac28fb6810ab062941accd8b5e32d1"
+            },
+            {
+              "offset": 17,
+              "length": 768,
+              "sha256": "9ad2f8d2dd5426f855e0f1b84ae279495579899c7b62ebf1532a9ea0894267a0",
+              "gasUsed": 26539,
+              "receiptMs": 25.483333000000016,
+              "transactionHash": "0x850b6341462b34281c6ad36bcb6b9259fa2ad96c18e4b68b5aa634de2949b641"
+            },
+            {
+              "offset": 0,
+              "length": 4096,
+              "sha256": "38c3c6c1c34531a7c1ebe468dd2bd69f86c439f965549450fe19533ac58644d8",
+              "gasUsed": 29464,
+              "receiptMs": 24.135790999999926,
+              "transactionHash": "0xfe7284168789f05c40b9037202a95192da48d606f88c41bd1664271c19a7f863"
+            },
+            {
+              "offset": 4096,
+              "length": 0,
+              "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+              "gasUsed": 25874,
+              "receiptMs": 25.339667000000077,
+              "transactionHash": "0x403f0d19ddee9ebd00fbd3e4f40607b9b8426ef26b9e1cb8cb4723d422f6c628"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "lumpId": 7,
+      "lumpName": "NODES",
+      "sourceLength": 19068,
+      "measuredBytes": 16384,
+      "payloadSha256": "6a2b2460eefa19b0fc5724f251bfef8910c53ef4b459c697d88af002a43a8b7c",
+      "strategies": [
+        {
+          "contract": "StorageResourceFixture",
+          "uploadGas": 11852481,
+          "uploadReceiptMs": 24.141917000000035,
+          "initcodeBytes": 17772,
+          "runtimeBytes": 771,
+          "auxiliaryRuntimeBytes": 0,
+          "address": "0xc6e7df5e7b4f2a278906862b61205850344d4e7d",
+          "deploymentTransactionHash": "0x9c1f6903884a3068f8565ebba3b4405679039e5cd48ccdac1b1c348c83a822a6",
+          "reads": [
+            {
+              "offset": 0,
+              "length": 32,
+              "sha256": "a2be1c190c73e75d8a2f408bce8597172a4ee87862a3fb0a6047b867fce2d716",
+              "gasUsed": 41749,
+              "receiptMs": 24.78054199999997,
+              "transactionHash": "0x6cbe9b055788ce4cf0b62616bc4543251cffc493acc04ef26df7d09e8f9f794a"
+            },
+            {
+              "offset": 17,
+              "length": 768,
+              "sha256": "2ee9dcf9de65af40312607e7f93b2e93640db5d16aad76472f9a7dd3d79301a6",
+              "gasUsed": 417102,
+              "receiptMs": 24.846666000000027,
+              "transactionHash": "0xc0136cf3328d0e19242bf0816dd093f29c6172a0a6df6f2eed7f63196b6e5361"
+            },
+            {
+              "offset": 0,
+              "length": 16384,
+              "sha256": "6a2b2460eefa19b0fc5724f251bfef8910c53ef4b459c697d88af002a43a8b7c",
+              "gasUsed": 8338373,
+              "receiptMs": 21.565166999999974,
+              "transactionHash": "0x6985b71aea03e496555147e16047f2fdf1be6afc5e8b3aadfcde3f6c62ad7648"
+            },
+            {
+              "offset": 16384,
+              "length": 0,
+              "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+              "gasUsed": 25517,
+              "receiptMs": 22.529416999999967,
+              "transactionHash": "0x4a7e3378c580896abb549d5f5ee2bf93a7aa1c0e3a5e531ea074b58eaf16e7dc"
+            }
+          ]
+        },
+        {
+          "contract": "CodeResourceFixture",
+          "uploadGas": 3797970,
+          "uploadReceiptMs": 22.683958000000075,
+          "initcodeBytes": 17800,
+          "runtimeBytes": 751,
+          "auxiliaryRuntimeBytes": 16385,
+          "address": "0x4a679253410272dd5232b3ff7cf5dbb88f295319",
+          "deploymentTransactionHash": "0xe1c6369551ba3dcbd9efd2db6547f82378e1dc248a9f0c19254f2857af9af880",
+          "reads": [
+            {
+              "offset": 0,
+              "length": 32,
+              "sha256": "a2be1c190c73e75d8a2f408bce8597172a4ee87862a3fb0a6047b867fce2d716",
+              "gasUsed": 25901,
+              "receiptMs": 22.506291000000033,
+              "transactionHash": "0xd4e1a1f09cbb4a6704a79aff537c465e87fabfb3d7da7fdecdf5b5e00fa7ebee"
+            },
+            {
+              "offset": 17,
+              "length": 768,
+              "sha256": "2ee9dcf9de65af40312607e7f93b2e93640db5d16aad76472f9a7dd3d79301a6",
+              "gasUsed": 26539,
+              "receiptMs": 24.877875000000017,
+              "transactionHash": "0x7173acc06e6e89b257db775cca9fe46fee8137dbb604107365ea976933c30d4a"
+            },
+            {
+              "offset": 0,
+              "length": 16384,
+              "sha256": "6a2b2460eefa19b0fc5724f251bfef8910c53ef4b459c697d88af002a43a8b7c",
+              "gasUsed": 41770,
+              "receiptMs": 24.48837500000002,
+              "transactionHash": "0xae936f15c54930bb979fd69c593a3c7f7d4a3355c5bee6c24bd894589664cbe2"
+            },
+            {
+              "offset": 16384,
+              "length": 0,
+              "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+              "gasUsed": 25874,
+              "receiptMs": 24.08270799999991,
+              "transactionHash": "0xc02783415d337ad34db1f390acdb896df7e4fed05c8bfc6f5a6e566a315dcf66"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "notes": [
+    "Each read transaction has cold storage/account access; read() output is checked against actual WAD bytes before measuring sample().",
+    "sample() includes SHA-256 and one event; upload includes ordinary constructor deployment and initialization.",
+    "Code strategy includes deployment of both reader and STOP-prefixed payload contract.",
+    "Timings include client/RPC/mining overhead; these are not isolated EVM execution times.",
+    "No anvil_setCode, custom opcode or frame/view precomputation. Full renderer access patterns remain a Phase 2+ measurement."
+  ]
+}

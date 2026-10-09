@@ -1,0 +1,153 @@
+{
+  "calibration": {
+    "actualMsize": 416,
+    "derivedHighWater": 416,
+    "runtime": "5a50606060405260aa6020536020608060a05e602060c02050601060006101003961012c51506000600061ffff376020610180602060006002620186a0fa505a505960005260206000f3"
+  },
+  "deployedBytecodeSha256": "0c8fd27ee8d0ec6af5816e12ce0c7dbbfc261884bd85f84ee590957ceac6fb7f",
+  "kind": "phase2-draw-evm-measurements",
+  "client": "anvil/v1.8.5",
+  "compiler": "solc 0.8.37 viaIR optimizer 200 Cancun",
+  "sourceHashes": {
+    "src/doom/r_draw.sol": "7cdef01556fccc767df44f842f7ce03efea0ec34bd9cfeb6848d30074fb17e06",
+    "src/doom/r_state.sol": "e87ff9d88345a53d1f8825fb07b485c782c7bcb55e2de1dc56c876f9b26ab966",
+    "test/unit/r_draw.t.sol": "3fae9e895ee9adb7207921e33a23f7cf82a67033be158857e095af5efa88cc58",
+    "tools/reference/phase2_draw/measure.mjs": "6826c30ccd04b6d761a3ebf367e6180330c9314491fdaf08d55dbf23dd71ab97",
+    "foundry.toml": "084d5192108931325837611f9d1339796a6ffd64ed570e31907afe718f191226"
+  },
+  "scope": "Primitive gas and actual EVM memory expansion from stack-only opcode trace. Setup and final framebuffer SHA excluded from primitive segment; whole-call high-water includes them. Local synthetic input patterns match original-C fixtures. No whole-renderer performance claim.",
+  "measurements": [
+    {
+      "operation": "R_DrawColumn",
+      "pixelsWritten": 200,
+      "drawGas": 129792,
+      "allocatorBefore": 92576,
+      "allocatorAfter": 92576,
+      "frameSha256": "c5837a85f20bd4c47be7b002696bf08a1e570285a540b70df74732564bfce1d1",
+      "wholeCallHighWaterBytes": 156608,
+      "primitiveBeforeBytes": 92576,
+      "primitiveAfterBytes": 92576,
+      "primitiveGasFromTrace": 129792,
+      "opcodeCount": 155792,
+      "externalCalls": 1,
+      "memoryOpcodes": {
+        "MSTORE": 611,
+        "MLOAD": 5030,
+        "MSTORE8": 1224,
+        "MCOPY": 285,
+        "STATICCALL": 1,
+        "RETURN": 1
+      }
+    },
+    {
+      "operation": "R_DrawColumnLow",
+      "pixelsWritten": 400,
+      "drawGas": 170086,
+      "allocatorBefore": 92576,
+      "allocatorAfter": 92576,
+      "frameSha256": "bcd3d9c99ac5162b3d2a9e26778599afcc60f923a02837308d33870292281fa1",
+      "wholeCallHighWaterBytes": 156608,
+      "primitiveBeforeBytes": 92576,
+      "primitiveAfterBytes": 92576,
+      "primitiveGasFromTrace": 170086,
+      "opcodeCount": 167528,
+      "externalCalls": 1,
+      "memoryOpcodes": {
+        "MSTORE": 612,
+        "MLOAD": 6039,
+        "MSTORE8": 1424,
+        "MCOPY": 285,
+        "STATICCALL": 1,
+        "RETURN": 1
+      }
+    },
+    {
+      "operation": "R_DrawTranslatedColumn",
+      "pixelsWritten": 200,
+      "drawGas": 145077,
+      "allocatorBefore": 92576,
+      "allocatorAfter": 92576,
+      "frameSha256": "4d05e8a0b9d5163c680468458c3bbe6fc3eb77a6880b52116198b83b2bf595f9",
+      "wholeCallHighWaterBytes": 156608,
+      "primitiveBeforeBytes": 92576,
+      "primitiveAfterBytes": 92576,
+      "primitiveGasFromTrace": 145077,
+      "opcodeCount": 160015,
+      "externalCalls": 1,
+      "memoryOpcodes": {
+        "MSTORE": 611,
+        "MLOAD": 5632,
+        "MSTORE8": 1224,
+        "MCOPY": 285,
+        "STATICCALL": 1,
+        "RETURN": 1
+      }
+    },
+    {
+      "operation": "R_DrawFuzzColumn",
+      "pixelsWritten": 198,
+      "drawGas": 169646,
+      "allocatorBefore": 94400,
+      "allocatorAfter": 94496,
+      "frameSha256": "9178ce72c13fcec149f2e2b6e112a0e65954c1a592a85e946545421e71f8978a",
+      "wholeCallHighWaterBytes": 158528,
+      "primitiveBeforeBytes": 94400,
+      "primitiveAfterBytes": 94528,
+      "primitiveGasFromTrace": 169646,
+      "opcodeCount": 412958,
+      "externalCalls": 1,
+      "memoryOpcodes": {
+        "MSTORE": 820,
+        "MLOAD": 6995,
+        "MSTORE8": 3014,
+        "MCOPY": 285,
+        "STATICCALL": 1,
+        "RETURN": 1
+      }
+    },
+    {
+      "operation": "R_DrawSpan",
+      "pixelsWritten": 320,
+      "drawGas": 176161,
+      "allocatorBefore": 92576,
+      "allocatorAfter": 92576,
+      "frameSha256": "c930faf046410a116d59038d87dae5465718910be0f6e9278d5038ab9f470822",
+      "wholeCallHighWaterBytes": 156608,
+      "primitiveBeforeBytes": 92576,
+      "primitiveAfterBytes": 92576,
+      "primitiveGasFromTrace": 176161,
+      "opcodeCount": 168810,
+      "externalCalls": 1,
+      "memoryOpcodes": {
+        "MSTORE": 611,
+        "MLOAD": 5830,
+        "MSTORE8": 1344,
+        "MCOPY": 285,
+        "STATICCALL": 1,
+        "RETURN": 1
+      }
+    },
+    {
+      "operation": "R_DrawSpanLow",
+      "pixelsWritten": 318,
+      "drawGas": 112524,
+      "allocatorBefore": 92576,
+      "allocatorAfter": 92576,
+      "frameSha256": "423b9e229be98a6f18932b6fea03bd7d80ef2c9a8e0a29be6ae192660ab0bfab",
+      "wholeCallHighWaterBytes": 156608,
+      "primitiveBeforeBytes": 92576,
+      "primitiveAfterBytes": 92576,
+      "primitiveGasFromTrace": 112524,
+      "opcodeCount": 150607,
+      "externalCalls": 1,
+      "memoryOpcodes": {
+        "MSTORE": 614,
+        "MLOAD": 4541,
+        "MSTORE8": 1342,
+        "MCOPY": 285,
+        "STATICCALL": 1,
+        "RETURN": 1
+      }
+    }
+  ]
+}

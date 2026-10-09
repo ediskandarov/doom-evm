@@ -1,0 +1,94 @@
+PASS authenticated resource commitments: pinned bundle, packed directory, all 1,755 STOP-prefixed chunk hashes
+Compiling production Doom and separate RendererProbe (up to 300 seconds).
+Uploaded and exact-verified 250/1755 chunks
+Uploaded and exact-verified 500/1755 chunks
+Uploaded and exact-verified 750/1755 chunks
+Uploaded and exact-verified 1000/1755 chunks
+Uploaded and exact-verified 1250/1755 chunks
+Uploaded and exact-verified 1500/1755 chunks
+Uploaded and exact-verified 1750/1755 chunks
+full-angle0: exact, gas 590075082, MSIZE 9027840, eth_call 363.7ms
+full-angle1: exact, gas 563649966, MSIZE 8494272, eth_call 351.3ms
+full-angle2: exact, gas 493302483, MSIZE 7294144, eth_call 323.2ms
+full-angle3: exact, gas 501923157, MSIZE 7507360, eth_call 320.7ms
+full-angle4: exact, gas 506263910, MSIZE 7540832, eth_call 327.7ms
+full-angle5: exact, gas 506818822, MSIZE 7569056, eth_call 328.6ms
+full-angle6: exact, gas 493690980, MSIZE 7295264, eth_call 316.2ms
+full-angle7: exact, gas 554633504, MSIZE 8332704, eth_call 352.7ms
+Running existing browser gate against genuine production Doom.
+{
+  "pass": true,
+  "acceptance": {
+    "fullCaseCount": 8,
+    "pixelDiffCount": 0,
+    "ordinaryResourceDeployment": true,
+    "ordinaryDoomDeployment": true,
+    "oneFramePerTransaction": true,
+    "websocketReceiptPixelsEqual": true,
+    "canvasPixelsEqual": true,
+    "wallFramePixelDiffCount": 0,
+    "measuredGasPositive": true,
+    "measuredMemoryPositive": true
+  },
+  "productionFrames": [
+    {
+      "sequence": 1,
+      "status": "0x1",
+      "frameId": "1",
+      "inputSeq": 1,
+      "receiptFile": "/Users/eduard/sandbox/doom-evm/artifacts/local/phase2-verification/renderer.receipts/frame1.json",
+      "method": "stepAndRender",
+      "transactionHash": "0x1f590cdf2d1e3f4c045ba398e8bceb71e7c47258b48e829bba201c567e58a0ce",
+      "gasUsed": 590974330,
+      "ethCallMs": 366.5404169999965,
+      "sendToReceiptMs": 519.5369170000049,
+      "eventDeliveryMs": 497.5826669999951,
+      "oneFrame": true,
+      "frameSha256": "a8faf7b9137ccf3e5c9614b53daad8f0aeeef533d1ca6caadccac42224095010",
+      "pixelBytes": 64000,
+      "abiDataBytes": 64128,
+      "websocketReceiptPixelsEqual": true
+    },
+    {
+      "sequence": 2,
+      "status": "0x1",
+      "frameId": "2",
+      "inputSeq": 2,
+      "receiptFile": "/Users/eduard/sandbox/doom-evm/artifacts/local/phase2-verification/renderer.receipts/frame2.json",
+      "method": "renderFrame",
+      "transactionHash": "0x70985d943493fed4d9911ba9cd206b8c4ae609dff561b062e74c82c6d94ea84e",
+      "gasUsed": 590957053,
+      "ethCallMs": 360.0732080000016,
+      "sendToReceiptMs": 518.4615410000115,
+      "eventDeliveryMs": 501.84850000000733,
+      "oneFrame": true,
+      "frameSha256": "a8faf7b9137ccf3e5c9614b53daad8f0aeeef533d1ca6caadccac42224095010",
+      "pixelBytes": 64000,
+      "abiDataBytes": 64128,
+      "websocketReceiptPixelsEqual": true
+    }
+  ],
+  "browserTimings": [
+    {
+      "transactionHash": "0xf7ee4f96628cb63d6f82e523b7c1fd04beb68483edb8ea3bace844203a248afe",
+      "source": "ws",
+      "sendToReceiptMs": 539,
+      "eventDeliveryMs": 519.4000000953674,
+      "deliveryKind": "ws",
+      "inputToCanvasMs": 524.4000000953674,
+      "canvasPutImageDataMs": 0,
+      "receiptFile": "/Users/eduard/sandbox/doom-evm/artifacts/local/phase2-verification/renderer.receipts/frame3.json"
+    },
+    {
+      "transactionHash": "0x3c31334eee2bd7adca576e0e1800f80b7a70c11223acb1c892e68149a11de05c",
+      "source": "receipt",
+      "sendToReceiptMs": 513.5,
+      "eventDeliveryMs": 513.5,
+      "deliveryKind": "receipt-fallback",
+      "inputToCanvasMs": 518.6999998092651,
+      "canvasPutImageDataMs": 0,
+      "receiptFile": "/Users/eduard/sandbox/doom-evm/artifacts/local/phase2-verification/renderer.receipts/frame4.json"
+    }
+  ],
+  "report": "/Users/eduard/sandbox/doom-evm/artifacts/local/phase2-verification/renderer.json"
+}

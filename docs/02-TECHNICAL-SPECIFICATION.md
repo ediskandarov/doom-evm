@@ -410,24 +410,26 @@ interface IDoom {
 
 ## 11. Acceptance criteria / Definition of Done
 
+Verified for the implemented Phase 2 modules and complete static E1M1 world view on 2026-10-09; see the [acceptance report](PHASE2-REPORT.md). These checks do not claim Phase 3 gameplay implementation.
+
 ### For every `*.sol` module
 
-- [ ] Identify the exact upstream `.c/.h` and its commit SHA; list the mapped functions.
-- [ ] Preserve function names and recognizable control flow, or explain the differences.
-- [ ] Compile under the pinned solc version with `via_ir = true`.
-- [ ] Test critical arithmetic functions against C vectors, including edge cases.
-- [ ] Validate every Yul memory assumption; never add `memory-safe` casually.
-- [ ] Do not introduce browser-based 3D rendering or precomputed visibility data.
-- [ ] Update `PORTING.md` (status and known deviations).
+- [x] Identify the exact upstream `.c/.h` and its commit SHA; list the mapped functions.
+- [x] Preserve function names and recognizable control flow, or explain the differences.
+- [x] Compile under the pinned solc version with `via_ir = true`.
+- [x] Test critical arithmetic functions against C vectors, including edge cases.
+- [x] Validate every Yul memory assumption; never add `memory-safe` casually.
+- [x] Do not introduce browser-based 3D rendering or precomputed visibility data.
+- [x] Update `PORTING.md` (status and known deviations).
 
 ### For M1 end-to-end
 
-- [ ] Local `forge build`, `forge test`, loading a permitted WAD, deployment, and frame-producing transaction all work.
-- [ ] Receipt or WS yields the **complete pixel array** computed in the EVM.
-- [ ] Browser displays the array with only palette decoding, without geometry computation.
-- [ ] Actual Doom BSP and segments are used; scope of planes/sprites is disclosed accurately.
-- [ ] Attach comparison against the equivalent C reference scene and localize discrepancies.
-- [ ] Record exact Anvil parameters and one-frame metrics in reproducible commands.
+- [x] Local `forge build`, `forge test`, loading a permitted WAD, deployment, and frame-producing transaction all work.
+- [x] Receipt or WS yields the **complete pixel array** computed in the EVM.
+- [x] Browser displays the array with only palette decoding, without geometry computation.
+- [x] Actual Doom BSP and segments are used; scope of planes/sprites is disclosed accurately.
+- [x] Attach comparison against the equivalent C reference scene and localize discrepancies.
+- [x] Record exact Anvil parameters and one-frame metrics in reproducible commands.
 
 ## 12. Authoritative references
 

@@ -1,6 +1,6 @@
 # DOOM on EVM 👹
 
-But can it run DOOM? The static renderer now produces eight Freedoom E1M1 views inside the EVM, matching all 64,000 pixels from the original C renderer. BSP, textured walls, floors, ceilings, sky and sprites are implemented. **Phase 2's ordinary deployment, event/browser and final regression gates are still underway; gameplay comes next.**
+But can it run DOOM? The static renderer produces eight Freedoom E1M1 views inside the EVM, matching all 64,000 pixels from the original C renderer. BSP, textured walls, floors, ceilings, sky and sprites are implemented. **Phase 2 is verified: ordinary deployment, transaction events, browser pixels, 196 tests and every Phase 0/1 gate pass. Gameplay comes next.**
 
 The destination is a readable port of original `linuxdoom-1.10` to Solidity/Yul, with C-to-Solidity file/function traceability. The browser displays transaction pixels; the EVM computes the scene. Movement, weapons and game simulation belong to Phase 3.
 

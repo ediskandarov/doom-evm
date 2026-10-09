@@ -1,0 +1,279 @@
+No files changed, compilation skipped
+
+Ran 2 tests for test/unit/DoomScene.t.sol:DoomSceneTest
+[PASS] testMissingPlayerStartRejected() (gas: 3798)
+[PASS] testPlayerStartSelectionAngleAndStationaryHeight() (gas: 7111)
+Suite result: ok. 2 passed; 0 failed; 0 skipped; finished in 185.67µs (85.04µs CPU time)
+
+Ran 1 test for test/unit/RenderSequence.t.sol:RenderSequenceTest
+[PASS] testOriginalPassSequenceAndZeroNodeRoot() (gas: 38442)
+Suite result: ok. 1 passed; 0 failed; 0 skipped; finished in 640.83µs (220.96µs CPU time)
+
+Ran 2 tests for test/unit/ResourcePlacement.t.sol:ResourcePlacementTest
+[PASS] testEmptyResource() (gas: 21400)
+[PASS] testSameBytesAndBounds() (gas: 319998)
+Suite result: ok. 2 passed; 0 failed; 0 skipped; finished in 1.26ms (1.16ms CPU time)
+
+Ran 7 tests for test/unit/Contexts.t.sol:ContextsTest
+[PASS] testExplicitNarrowingAndWidenedProduct() (gas: 156)
+[PASS] testFuzzInt32NarrowingPreservesLowBits(int64) (runs: 256, μ: 293, ~: 293)
+[PASS] testInternalMemoryReferenceAndAssignmentAlias() (gas: 1414)
+[PASS] testInternalStorageReferencePersists() (gas: 22892)
+[PASS] testNullSentinelAndRawBspFlagAreDistinct() (gas: 178)
+[PASS] testSignedShiftDiffersFromDivision() (gas: 284)
+[PASS] testStorageMemoryCopiesAreIndependent() (gas: 106487)
+Suite result: ok. 7 passed; 0 failed; 0 skipped; finished in 7.02ms (6.66ms CPU time)
+
+Ran 5 tests for test/unit/m_fixed.t.sol:MFixedTest
+[PASS] testDirectZeroDivisionIncludesUndefinedNaNExtension() (gas: 9448)
+[PASS] testEveryDefinedOriginalCNumericVector() (gas: 32700935)
+[PASS] testFixedMulArithmeticShiftAndWrapping() (gas: 541)
+[PASS] testFuzzFixedDiv2ExactRationalRange(int32,int32) (runs: 256, μ: 2051, ~: 2102)
+[PASS] testUndefinedCIntMinMagnitudeExtension() (gas: 2382)
+Suite result: ok. 5 passed; 0 failed; 0 skipped; finished in 101.04ms (99.56ms CPU time)
+
+Ran 9 tests for test/unit/StackPressure.t.sol:StackPressureTest
+[PASS] testClosedDoorAndViewPlaneSuppression() (gas: 49242)
+[PASS] testDrawsegLimitAndInvalidRange() (gas: 20400)
+[PASS] testFullWidthMaskedRuntime() (gas: 651766)
+[PASS] testFuzzColumnRangeAndEdgeRecurrence(uint16,uint16) (runs: 256, μ: 111585, ~: 75319)
+[PASS] testLightingClampAndAngleClamp() (gas: 73235)
+[PASS] testSingleColumnAndBottomPeg() (gas: 15608)
+[PASS] testSingleSidedEdgeRecurrence() (gas: 19641)
+[PASS] testTwoSidedTiersMaskedClipAllocation() (gas: 47932)
+[PASS] testUntexturedIdenticalPlanesAndSky() (gas: 31497)
+Suite result: ok. 9 passed; 0 failed; 0 skipped; finished in 141.04ms (140.74ms CPU time)
+
+Ran 7 tests for test/unit/tables.t.sol:TablesTest
+[PASS] testAllBoundsRejectInsteadOfWrapping() (gas: 29053)
+[PASS] testConstantsAndCardinalAngles() (gas: 736)
+[PASS] testEveryCosineAliasMatchesOriginalC() (gas: 42036979)
+[PASS] testEverySineLookupMatchesOriginalC() (gas: 50900933)
+[PASS] testEveryTangentLookupMatchesOriginalC() (gas: 19184155)
+[PASS] testEveryTantoangleLookupMatchesOriginalC() (gas: 9386853)
+[PASS] testSlopeDivUnsignedWrapAndCutoffs() (gas: 189)
+Suite result: ok. 7 passed; 0 failed; 0 skipped; finished in 216.40ms (216.08ms CPU time)
+
+Ran 3 tests for test/integration/FrameEvent.t.sol:FrameEventTest
+[PASS] testCompletePayloadExactlyOneFrameAndSequentialIds() (gas: 41153806)
+[PASS] testInvalidSequenceDriverAndButtonsHaveNoLogsOrStateChange() (gas: 11729390)
+[PASS] testRevertAfterFrameRollsBackCounters() (gas: 23262031)
+Suite result: ok. 3 passed; 0 failed; 0 skipped; finished in 335.25ms (335.20ms CPU time)
+
+Ran 1 test for test/unit/info.t.sol:InfoTest
+[PASS] testAllOriginalNativeRenderingFields() (gas: 1070493)
+Suite result: ok. 1 passed; 0 failed; 0 skipped; finished in 2.05ms (1.97ms CPU time)
+
+Ran 6 tests for test/unit/WadResources.t.sol:WadResourcesTest
+[PASS] testPinnedBytesAcceptedAndReadableAcrossChunkBoundary() (gas: 152326489)
+[PASS] testRejectsAlteredLastPayloadByte() (gas: 24089423)
+[PASS] testRejectsModifiedDirectory() (gas: 2131409)
+[PASS] testRejectsNonStopPrefix() (gas: 24121325)
+[PASS] testRejectsReorderedChunksWithValidLengths() (gas: 24074926)
+[PASS] testRejectsWrongChunkDimensions() (gas: 24837723)
+Suite result: ok. 6 passed; 0 failed; 0 skipped; finished in 648.52ms (218.65ms CPU time)
+
+Ran 20 tests for test/unit/r_data.t.sol:RDataTest
+[PASS] testAllComposites0() (gas: 199706167)
+[PASS] testAllComposites1() (gas: 191735398)
+[PASS] testAllComposites2() (gas: 224317517)
+[PASS] testAllComposites3() (gas: 214578489)
+[PASS] testAllComposites4() (gas: 208306160)
+[PASS] testAllComposites5() (gas: 189243152)
+[PASS] testAllComposites6() (gas: 195319521)
+[PASS] testAllComposites7() (gas: 209398872)
+[PASS] testColormapPointerSlicesAndCacheReuse() (gas: 101523826)
+[PASS] testCompositeHolesRejected() (gas: 3746971)
+[PASS] testLazyCacheReuseAndFlatAccessCosts() (gas: 61111139)
+[PASS] testNamesAndWidthMaskRules() (gas: 18322)
+[PASS] testNativeAllE1M1MapFields() (gas: 247152101)
+[PASS] testNativeAllLookupAndSpriteMetadata() (gas: 896352792)
+[PASS] testNativeClippingIncludingNegativeOriginQuirk() (gas: 7801995)
+[PASS] testNativeRepresentativeCompositesAndDirectColumns() (gas: 108685611)
+[PASS] testNativeSubsectorSignedShortBoundaries() (gas: 45502)
+[PASS] testNegativeSubsectorCountRejected() (gas: 168926482)
+[PASS] testNegativeSubsectorFirstLineRejected() (gas: 168926263)
+[PASS] testResourceReadAcrossChunksAndOrdinaryDeploy() (gas: 6385473)
+Suite result: ok. 20 passed; 0 failed; 0 skipped; finished in 5.51s (5.91s CPU time)
+
+Ran 16 tests for test/unit/r_bsp.t.sol:RBspTest
+[PASS] testBoundsClipCapacityAndTraversedCycles() (gas: 3664501)
+[PASS] testClipMergingPreservesIndependentMemorySlots() (gas: 436959)
+[PASS] testDAGRevisitsNodesAfterLeavingActivePath() (gas: 567780)
+[PASS] testDeepValidTreeUsesExplicitStack() (gas: 10774944)
+[PASS] testEveryNativeClipOperation() (gas: 32952040)
+[PASS] testOriginalE1M1Angle0Trace() (gas: 386663443)
+[PASS] testOriginalE1M1Angle1Trace() (gas: 381972794)
+[PASS] testOriginalE1M1Angle2Trace() (gas: 371548373)
+[PASS] testOriginalE1M1Angle3Trace() (gas: 370553253)
+[PASS] testOriginalE1M1Angle4Trace() (gas: 370639201)
+[PASS] testOriginalE1M1Angle5Trace() (gas: 370895978)
+[PASS] testOriginalE1M1Angle6Trace() (gas: 371721162)
+[PASS] testOriginalE1M1Angle7Trace() (gas: 382732080)
+[PASS] testSingleSidedWindowClosedAndEmptyLines() (gas: 149928085)
+[PASS] testSubsectorPlanesHeightAndSky() (gas: 605585)
+[PASS] testZeroNodeAndLeafFlags() (gas: 548748)
+Suite result: ok. 16 passed; 0 failed; 0 skipped; finished in 5.55s (6.14s CPU time)
+
+Ran 15 tests for test/unit/r_things.t.sol:RThingsTest
+[PASS] testDefinitionErrorsAndZeroRotation() (gas: 559313)
+[PASS] testEmptyShadowPreservesNullColormap() (gas: 35247)
+[PASS] testOriginalDefinitionsAndStaticThings() (gas: 445974134)
+[PASS] testOriginalDrawModesAndActivePSprites() (gas: 644284217)
+[PASS] testOriginalProjectionEdgesAndOverflow() (gas: 6181350)
+[PASS] testProjectionAngle0() (gas: 448381308)
+[PASS] testProjectionAngle1() (gas: 446971602)
+[PASS] testProjectionAngle2() (gas: 443252000)
+[PASS] testProjectionAngle3() (gas: 443169804)
+[PASS] testProjectionAngle4() (gas: 443235032)
+[PASS] testProjectionAngle5() (gas: 443330532)
+[PASS] testProjectionAngle6() (gas: 443310283)
+[PASS] testProjectionAngle7() (gas: 446987648)
+[PASS] testSpriteStageCosts() (gas: 433080116)
+[PASS] testTerminalAndMalformedPosts() (gas: 38148)
+Suite result: ok. 15 passed; 0 failed; 0 skipped; finished in 6.47s (9.22s CPU time)
+
+Ran 16 tests for test/unit/r_plane.t.sol:RPlanesTest
+[PASS] testBoundsAndUndefinedDomains() (gas: 183731053)
+[PASS] testNativeClearAll18ViewSizes() (gas: 290011402)
+[PASS] testNativeConstructionCapacity() (gas: 49345010)
+[PASS] testNativeConstructionOverlapSkyCoalescing() (gas: 16841524)
+[PASS] testNativeConstructionRepeatedClear() (gas: 16568704)
+[PASS] testNativeDrawFlatSky() (gas: 554609120)
+[PASS] testNativeMakeSpans() (gas: 288421533)
+[PASS] testNativeMapCacheLighting() (gas: 703068539)
+[PASS] testOriginalPlaneAngle0() (gas: 512964833)
+[PASS] testOriginalPlaneAngle1() (gas: 495426091)
+[PASS] testOriginalPlaneAngle2() (gas: 441499446)
+[PASS] testOriginalPlaneAngle3() (gas: 443010717)
+[PASS] testOriginalPlaneAngle4() (gas: 441881582)
+[PASS] testOriginalPlaneAngle5() (gas: 443556806)
+[PASS] testOriginalPlaneAngle6() (gas: 441892851)
+[PASS] testOriginalPlaneAngle7() (gas: 490767483)
+Suite result: ok. 16 passed; 0 failed; 0 skipped; finished in 6.62s (12.76s CPU time)
+
+Ran 8 tests for test/integration/DoomRenderer.t.sol:DoomRendererTest
+[PASS] testFullNativeAngle0() (gas: 638214186)
+[PASS] testFullNativeAngle1() (gas: 610666146)
+[PASS] testFullNativeAngle2() (gas: 537770710)
+[PASS] testFullNativeAngle3() (gas: 546872319)
+[PASS] testFullNativeAngle4() (gas: 551305333)
+[PASS] testFullNativeAngle5() (gas: 551937348)
+[PASS] testFullNativeAngle6() (gas: 538234844)
+[PASS] testFullNativeAngle7() (gas: 601427461)
+Suite result: ok. 8 passed; 0 failed; 0 skipped; finished in 6.62s (9.11s CPU time)
+
+Ran 11 tests for test/unit/r_draw.t.sol:RDrawTest
+[PASS] testBoundsRejections() (gas: 4830003)
+[PASS] testMeasuredPrimitives() (gas: 5021977)
+Logs:
+  operation: 0
+  draw gas (excluding fixture setup and SHA): 129792
+  allocator before: 92576
+  allocator after: 92576
+  operation: 1
+  draw gas (excluding fixture setup and SHA): 170086
+  allocator before: 92576
+  allocator after: 92576
+  operation: 2
+  draw gas (excluding fixture setup and SHA): 145077
+  allocator before: 92576
+  allocator after: 92576
+  operation: 3
+  draw gas (excluding fixture setup and SHA): 169646
+  allocator before: 94400
+  allocator after: 94496
+  operation: 4
+  draw gas (excluding fixture setup and SHA): 176161
+  allocator before: 92576
+  allocator after: 92576
+  operation: 5
+  draw gas (excluding fixture setup and SHA): 112524
+  allocator before: 92576
+  allocator after: 92576
+
+[PASS] testOriginalBufferLookups() (gas: 5692731)
+[PASS] testOriginalColumnPixels() (gas: 29875533)
+[PASS] testOriginalFuzzPixelsAndState() (gas: 47014877)
+[PASS] testOriginalLowColumnPixelsAndMutation() (gas: 27921704)
+[PASS] testOriginalLowSpanCountQuirkAndMutation() (gas: 36677491)
+[PASS] testOriginalSpanPixels() (gas: 36493337)
+[PASS] testOriginalTranslatedInteriorPointers() (gas: 6501239)
+[PASS] testOriginalTranslationTables() (gas: 1798670)
+[PASS] testOriginalVideoErase() (gas: 21906934)
+Suite result: ok. 11 passed; 0 failed; 0 skipped; finished in 6.64s (749.75ms CPU time)
+
+Ran 24 tests for test/unit/r_main.t.sol:RMainTest
+[PASS] testEveryOriginalGeometryVector() (gas: 89439554)
+[PASS] testLastRepresentableBSPNode() (gas: 786843603)
+[PASS] testNativeViewSize10Detail0() (gas: 147050797)
+[PASS] testNativeViewSize10Detail1() (gas: 84875727)
+[PASS] testNativeViewSize11Detail0() (gas: 147209725)
+[PASS] testNativeViewSize11Detail1() (gas: 85041371)
+[PASS] testNativeViewSize3Detail0() (gas: 58985624)
+[PASS] testNativeViewSize3Detail1() (gas: 40346778)
+[PASS] testNativeViewSize4Detail0() (gas: 71565245)
+[PASS] testNativeViewSize4Detail1() (gas: 46701145)
+[PASS] testNativeViewSize5Detail0() (gas: 84131211)
+[PASS] testNativeViewSize5Detail1() (gas: 53049565)
+[PASS] testNativeViewSize6Detail0() (gas: 96712045)
+[PASS] testNativeViewSize6Detail1() (gas: 59413373)
+[PASS] testNativeViewSize7Detail0() (gas: 109286336)
+[PASS] testNativeViewSize7Detail1() (gas: 65770297)
+[PASS] testNativeViewSize8Detail0() (gas: 121853257)
+[PASS] testNativeViewSize8Detail1() (gas: 72120458)
+[PASS] testNativeViewSize9Detail0() (gas: 134435639)
+[PASS] testNativeViewSize9Detail1() (gas: 78484914)
+[PASS] testRejectUndefinedAndMalformedDomains() (gas: 60514)
+[PASS] testRejectUnrepresentableBSPRoot() (gas: 786885931)
+[PASS] testSetupPreservesInactiveFixedLightArray() (gas: 9471)
+[PASS] testZeroNodeSingleSubsector() (gas: 1351)
+Suite result: ok. 24 passed; 0 failed; 0 skipped; finished in 6.64s (4.65s CPU time)
+
+Ran 43 tests for test/unit/r_segs.t.sol:RSegsTest
+[PASS] testExplicitWallBoundsAndUndefinedAbs() (gas: 590432)
+[PASS] testMaskedRangeBoundsAndZeroScale() (gas: 185700)
+[PASS] testMaskedVirtualTerminalAndConsumedSentinel() (gas: 22571)
+[PASS] testNativeMaskedCallbackXMutation() (gas: 223407571)
+[PASS] testNativeMaskedDiagonalLight() (gas: 249978938)
+[PASS] testNativeMaskedPartialFinalAndEmptyRanges() (gas: 249953745)
+[PASS] testNativeMaskedRepeatedRange() (gas: 258314950)
+[PASS] testNativeMaskedSentinelsFixedLightBottomPeg() (gas: 245665849)
+[PASS] testNativeMaskedTranslatedPeggingHeight() (gas: 249956486)
+[PASS] testNativeSyntheticBothSilhouettes() (gas: 242855333)
+[PASS] testNativeSyntheticBottomPegged() (gas: 258693502)
+[PASS] testNativeSyntheticBrightClamp() (gas: 257220215)
+[PASS] testNativeSyntheticCeilingBelowEye() (gas: 254523892)
+[PASS] testNativeSyntheticClosedBottom() (gas: 258945647)
+[PASS] testNativeSyntheticClosedTop() (gas: 258968915)
+[PASS] testNativeSyntheticDarkClamp() (gas: 257220339)
+[PASS] testNativeSyntheticDiagonalLight() (gas: 258366740)
+[PASS] testNativeSyntheticFixedColormap() (gas: 257221485)
+[PASS] testNativeSyntheticFloorAboveEye() (gas: 255222918)
+[PASS] testNativeSyntheticFrontCeilingBelowEye() (gas: 247382541)
+[PASS] testNativeSyntheticFrontFloorAboveEye() (gas: 248984591)
+[PASS] testNativeSyntheticFrontOnlySky() (gas: 246159871)
+[PASS] testNativeSyntheticHorizontalLight() (gas: 257221144)
+[PASS] testNativeSyntheticJoinedSky() (gas: 241492481)
+[PASS] testNativeSyntheticMaskedIdentical() (gas: 243512804)
+[PASS] testNativeSyntheticMaskedWindow() (gas: 252463970)
+[PASS] testNativeSyntheticNegativeRowoffset() (gas: 258693225)
+[PASS] testNativeSyntheticOneSided() (gas: 257220518)
+[PASS] testNativeSyntheticSingleColumnStaleStep() (gas: 242049772)
+[PASS] testNativeSyntheticTranslatedHeightOriginal() (gas: 257220740)
+[PASS] testNativeSyntheticWindowPegging0() (gas: 250755982)
+[PASS] testNativeSyntheticWindowPegging16() (gas: 250756058)
+[PASS] testNativeSyntheticWindowPegging24() (gas: 250756041)
+[PASS] testNativeSyntheticWindowPegging8() (gas: 250755569)
+[PASS] testOpeningCapacityExactBoundaryAndOverflow() (gas: 449645214)
+[PASS] testOriginalWallAngle0() (gas: 505087261)
+[PASS] testOriginalWallAngle1() (gas: 485161907)
+[PASS] testOriginalWallAngle2() (gas: 423742741)
+[PASS] testOriginalWallAngle3() (gas: 428485186)
+[PASS] testOriginalWallAngle4() (gas: 431184919)
+[PASS] testOriginalWallAngle5() (gas: 428722446)
+[PASS] testOriginalWallAngle6() (gas: 423887411)
+[PASS] testOriginalWallAngle7() (gas: 480883985)
+Suite result: ok. 43 passed; 0 failed; 0 skipped; finished in 6.64s (23.96s CPU time)
+
+Ran 18 test suites in 6.64s (52.12s CPU time): 196 tests passed, 0 failed, 0 skipped (196 total tests)

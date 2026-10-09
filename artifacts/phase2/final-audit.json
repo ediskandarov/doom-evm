@@ -1,0 +1,64 @@
+{
+  "passed": true,
+  "verified_commit": "82e24e1c3f742a528dbbd63bdfb16e2d0d585774",
+  "run_id": "e55faeaa-6958-4f78-bd91-d59d327c23bc",
+  "scope": "Complete Phase 2 static E1M1 world view; implementation-plan section 5; gameplay remains Phase 3.",
+  "implementation_tests_tools_fixtures_schemas_settings_unchanged": true,
+  "guarded_input_count": 642,
+  "unchanged_guarded_input_count": 637,
+  "only_post_run_source_changes": {
+    "PORTING.md": {
+      "verified_sha256": "856609e21a2dba0604df544545a13ee2948c10b0ee944e40f36a235fbad5770d",
+      "final_sha256": "c99f16f67659bc69332cb95783e8c4325e64fdbad043dc66968ee99bbdf70ca4"
+    },
+    "README.md": {
+      "verified_sha256": "9005a4143a1f427b6b0348ddf9a379d738c9a876153f168df076d7b4319ceb1d",
+      "final_sha256": "32d5955c84c3c8c69394e5c58afe0b78031d12f00a708f46c93afa50ff7916ab"
+    },
+    "docs/02-TECHNICAL-SPECIFICATION.md": {
+      "verified_sha256": "1f8a00a8c2b8660ad38ba6615647c732fa95a8d0c088216a706d799800a983be",
+      "final_sha256": "09b17f9e3e87edc37984f65fa613e386edbb7b37faeabcd85d634c3221d50817"
+    },
+    "docs/03-IMPLEMENTATION-PLAN.md": {
+      "verified_sha256": "8fce765fe36565206d1279800265b7d11cc6cdd02a7cfe80a5406112ca07ce78",
+      "final_sha256": "c437444a9c1811dd34f7b63c9d4af299bb25ce333a1b2b93d0a1f88e432681b0"
+    },
+    "docs/PHASE2-REPORT.md": {
+      "verified_sha256": "021daf959e9d98209173682aafd187820c00e7d78643d6d3f27954951808e1bb",
+      "final_sha256": "1c3c56ad87d3959fa90da5d8b62ea5027bf55953e83f59563dbd3e87ce52c756"
+    }
+  },
+  "original_submodules": {
+    "original/DOOM": {
+      "gitlink": "a77dfb96cb91780ca334d0d4cfd86957558007e0",
+      "head": "a77dfb96cb91780ca334d0d4cfd86957558007e0",
+      "tree": "0d4c802e4d6e73efb9f66113bb5e5dd8ff2dca0b"
+    }
+  },
+  "archive_is_byte_identical_to_successful_run": true,
+  "results": {
+    "phase2_commands": 24,
+    "documentation_presence": true,
+    "phase1_gates": 13,
+    "phase0_gates": 12,
+    "solidity_suites": 18,
+    "solidity_tests": 196,
+    "failures": 0,
+    "skipped": 0,
+    "full_native_pixel_comparisons": 8,
+    "pixel_differences": 0
+  },
+  "completion_review": {
+    "interface_freeze_and_parallel_work": "docs/PHASE2-INTERFACES.md and acceptance ledger with freeze/integration commits",
+    "original_c_fidelity": "All module native gates, eight complete pixel comparisons and PORTING.md function mappings/deviations",
+    "actual_costs": "Fresh drawing/resource/source/wall/full reports; calibrated MSIZE with normal/instrumented gas and output equality",
+    "ordinary_deployment": "Every resource runtime and actual production runtime/driver checked",
+    "frame_transport": "Two production methods, sequential identifiers, one Frame each, WS equals receipt; four early validation mined reverts",
+    "browser": "Both transaction receipts checked; final Canvas palette-expanded pixel readback exact; actual screenshot inspected",
+    "scope": "All eight headings exercised by probe; production angle0; complete static world view without gameplay/HUD",
+    "assembly": "Independent review of every production memory-safe block and bounded allocation/copy assumptions",
+    "licenses": "Pinned original source license and Freedoom BSD attribution retained",
+    "all_gates": "25 successful rows including documentation presence; inherited 13 and 12 gate summaries retained"
+  },
+  "note": "Final documentation reconciliation is recorded here instead of claiming the historical passing snapshot already contained its own completion report. No executable input changed."
+}

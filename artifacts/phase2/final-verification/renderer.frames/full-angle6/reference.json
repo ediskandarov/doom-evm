@@ -1,0 +1,51 @@
+{
+  "schemaVersion": 0,
+  "resourceIdentity": {
+    "schemaVersion": 0,
+    "wadSha256": "7323bcc168c5a45ff10749b339960e98314740a734c30d4b9f3337001f9e703d",
+    "bundleSha256": "d379076f21645cf7cc5acb056663d0faacc4065489a0ca99738479323c9f7a47",
+    "paletteSha256": "fd895921b5d0a394612bb29852ed003d44d69f76dec31c0dc6b5d5fc7d63f7bb",
+    "paletteVariant": 0
+  },
+  "provenance": {
+    "kind": "wad",
+    "wadName": "Freedoom Phase 1 v0.13.0",
+    "wadSha256": "7323bcc168c5a45ff10749b339960e98314740a734c30d4b9f3337001f9e703d",
+    "upstreamCommit": "a77dfb96cb91780ca334d0d4cfd86957558007e0",
+    "license": "BSD-3-Clause",
+    "map": "E1M1",
+    "build": {
+      "compiler": "solc",
+      "version": "solc, the solidity compiler commandline interface\nVersion: 0.8.37+commit.f401782d.Darwin.appleclang",
+      "target": "Cancun ordinary EVM",
+      "flags": [
+        "optimizer-runs=200",
+        "via-ir=true",
+        "evm-version=cancun"
+      ],
+      "patchSha256": "a0de2de3480957a84299f94e1731e9843a571df6413e995027d5afd81ec5e5a6",
+      "harnessSha256": "c5e68c22007d4c8d3e2f188d18da034c10d6c35d2e15315ae29e7303505c27b0",
+      "integerSemantics": "Explicit original int32/uint32 narrowing and pinned wrapping extensions; original undefined domains documented per module.",
+      "doubleSemantics": "No EVM floating point: FixedDiv2 integer arithmetic reproduces the pinned original binary64 accepted domain."
+    }
+  },
+  "scope": "world-view",
+  "camera": {
+    "x": -27262976,
+    "y": 16777216,
+    "z": 2686976,
+    "angle": 3221225472,
+    "coordinateFormat": "signed-16.16",
+    "angleFormat": "binary-angle-uint32"
+  },
+  "detail": "high",
+  "colormap": 0,
+  "lighting": {
+    "extraLight": 0,
+    "fixedColormap": -1
+  },
+  "gametic": 0,
+  "width": 320,
+  "height": 200,
+  "frameSha256": "9a8cffe2b347900cdc2f0236d7ec18eb70762e1bb1b13ab222e12dc71b539aa4"
+}

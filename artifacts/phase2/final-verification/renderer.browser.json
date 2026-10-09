@@ -1,0 +1,512 @@
+{
+  "timestamp": "2026-10-09T13:08:58.267Z",
+  "kind": "doom-world-view-browser",
+  "referenceCase": "full-angle0",
+  "browser": {
+    "protocolVersion": "1.3",
+    "product": "Chrome/155.0.8059.40",
+    "revision": "@cfaadc5a132d78e1828635aa8405a499f3e14864",
+    "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36",
+    "jsVersion": "15.5.35.20"
+  },
+  "config": {
+    "rpcUrl": "http://127.0.0.1:18567",
+    "wsUrl": "ws://127.0.0.1:18567",
+    "address": "0x5ae1f4bb68f8eac39cfdbdfda2b7344ccbd80faf",
+    "driver": "0xf39fd6e51aad88f6f4ce6ab8827279cfffb92266",
+    "deploymentBlock": "0x6dd",
+    "paletteUrl": "/palette.local.json",
+    "paletteKind": "wad",
+    "resourceIdentity": {
+      "schemaVersion": 0,
+      "wadSha256": "7323bcc168c5a45ff10749b339960e98314740a734c30d4b9f3337001f9e703d",
+      "bundleSha256": "d379076f21645cf7cc5acb056663d0faacc4065489a0ca99738479323c9f7a47",
+      "paletteSha256": "fd895921b5d0a394612bb29852ed003d44d69f76dec31c0dc6b5d5fc7d63f7bb",
+      "paletteVariant": 0
+    },
+    "rendererKind": "doom-world-view",
+    "referenceCase": "full-angle0"
+  },
+  "proof": {
+    "ready": true,
+    "frames": [
+      {
+        "frameId": "1",
+        "inputSeq": 1,
+        "source": "backfill",
+        "transactionHash": "0x1f590cdf2d1e3f4c045ba398e8bceb71e7c47258b48e829bba201c567e58a0ce",
+        "pixelBytes": 64000
+      },
+      {
+        "frameId": "2",
+        "inputSeq": 2,
+        "source": "backfill",
+        "transactionHash": "0x70985d943493fed4d9911ba9cd206b8c4ae609dff561b062e74c82c6d94ea84e",
+        "pixelBytes": 64000
+      },
+      {
+        "frameId": "3",
+        "inputSeq": 3,
+        "source": "ws",
+        "transactionHash": "0xf7ee4f96628cb63d6f82e523b7c1fd04beb68483edb8ea3bace844203a248afe",
+        "pixelBytes": 64000
+      },
+      {
+        "frameId": "4",
+        "inputSeq": 4,
+        "source": "receipt",
+        "transactionHash": "0x3c31334eee2bd7adca576e0e1800f80b7a70c11223acb1c892e68149a11de05c",
+        "pixelBytes": 64000
+      }
+    ],
+    "errors": [],
+    "fallbackVerified": true,
+    "rendererKind": "doom-world-view",
+    "paletteKind": "wad",
+    "paletteSha256": "fd895921b5d0a394612bb29852ed003d44d69f76dec31c0dc6b5d5fc7d63f7bb",
+    "duplicates": 5,
+    "backfilled": 4,
+    "rgbaSha256": "9c01312903fb18c6afc3184a79aff6bf8e70201c916733f53488153ccf39eefc",
+    "done": true
+  },
+  "receiptPixelsSha256": "a8faf7b9137ccf3e5c9614b53daad8f0aeeef533d1ca6caadccac42224095010",
+  "allCanvasPixelsMatchReceipt": true,
+  "screenshot": "/Users/eduard/sandbox/doom-evm/artifacts/local/phase2-verification/renderer.browser.png",
+  "timing": {
+    "clock": "performance.now milliseconds since navigation",
+    "requests": [
+      {
+        "method": "eth_getLogs",
+        "id": 1,
+        "start": 51.799999713897705,
+        "headersAt": 55.799999713897705,
+        "responseAt": 57.5
+      },
+      {
+        "method": "eth_call",
+        "id": 2,
+        "start": 88.90000009536743,
+        "headersAt": 90.90000009536743,
+        "responseAt": 90.90000009536743
+      },
+      {
+        "method": "eth_sendTransaction",
+        "id": 3,
+        "start": 91.19999980926514,
+        "params": [
+          {
+            "from": "0xf39fd6e51aad88f6f4ce6ab8827279cfffb92266",
+            "to": "0x5ae1f4bb68f8eac39cfdbdfda2b7344ccbd80faf",
+            "data": "0x18e65d5600000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000003",
+            "gas": "0x3b9aca00"
+          }
+        ],
+        "headersAt": 92.69999980926514,
+        "responseAt": 92.69999980926514,
+        "transactionHash": "0xf7ee4f96628cb63d6f82e523b7c1fd04beb68483edb8ea3bace844203a248afe"
+      },
+      {
+        "method": "eth_getTransactionReceipt",
+        "id": 4,
+        "start": 93.09999990463257,
+        "headersAt": 93.59999990463257,
+        "responseAt": 93.59999990463257
+      },
+      {
+        "method": "eth_getTransactionReceipt",
+        "id": 5,
+        "start": 114.5,
+        "headersAt": 115.09999990463257,
+        "responseAt": 115.19999980926514
+      },
+      {
+        "method": "eth_getTransactionReceipt",
+        "id": 6,
+        "start": 135.90000009536743,
+        "headersAt": 136.5,
+        "responseAt": 136.59999990463257
+      },
+      {
+        "method": "eth_getTransactionReceipt",
+        "id": 7,
+        "start": 159.40000009536743,
+        "headersAt": 160,
+        "responseAt": 160.09999990463257
+      },
+      {
+        "method": "eth_getTransactionReceipt",
+        "id": 8,
+        "start": 182.19999980926514,
+        "headersAt": 182.7999997138977,
+        "responseAt": 182.90000009536743
+      },
+      {
+        "method": "eth_getTransactionReceipt",
+        "id": 9,
+        "start": 204.90000009536743,
+        "headersAt": 205.5,
+        "responseAt": 205.5
+      },
+      {
+        "method": "eth_getTransactionReceipt",
+        "id": 10,
+        "start": 227.5,
+        "headersAt": 228.19999980926514,
+        "responseAt": 228.19999980926514
+      },
+      {
+        "method": "eth_getTransactionReceipt",
+        "id": 11,
+        "start": 250.19999980926514,
+        "headersAt": 250.90000009536743,
+        "responseAt": 250.90000009536743
+      },
+      {
+        "method": "eth_getTransactionReceipt",
+        "id": 12,
+        "start": 273,
+        "headersAt": 273.69999980926514,
+        "responseAt": 273.69999980926514
+      },
+      {
+        "method": "eth_getTransactionReceipt",
+        "id": 13,
+        "start": 295.7999997138977,
+        "headersAt": 296.19999980926514,
+        "responseAt": 296.19999980926514
+      },
+      {
+        "method": "eth_getTransactionReceipt",
+        "id": 14,
+        "start": 317.40000009536743,
+        "headersAt": 317.7999997138977,
+        "responseAt": 317.90000009536743
+      },
+      {
+        "method": "eth_getTransactionReceipt",
+        "id": 15,
+        "start": 340,
+        "headersAt": 340.5,
+        "responseAt": 340.59999990463257
+      },
+      {
+        "method": "eth_getTransactionReceipt",
+        "id": 16,
+        "start": 362.59999990463257,
+        "headersAt": 363.2999997138977,
+        "responseAt": 363.2999997138977
+      },
+      {
+        "method": "eth_getTransactionReceipt",
+        "id": 17,
+        "start": 384.40000009536743,
+        "headersAt": 385.09999990463257,
+        "responseAt": 385.19999980926514
+      },
+      {
+        "method": "eth_getTransactionReceipt",
+        "id": 18,
+        "start": 405.19999980926514,
+        "headersAt": 405.90000009536743,
+        "responseAt": 406
+      },
+      {
+        "method": "eth_getTransactionReceipt",
+        "id": 19,
+        "start": 428,
+        "headersAt": 428.59999990463257,
+        "responseAt": 428.59999990463257
+      },
+      {
+        "method": "eth_getTransactionReceipt",
+        "id": 20,
+        "start": 449.7999997138977,
+        "headersAt": 450.40000009536743,
+        "responseAt": 450.5
+      },
+      {
+        "method": "eth_getTransactionReceipt",
+        "id": 21,
+        "start": 470.90000009536743,
+        "headersAt": 471.2999997138977,
+        "responseAt": 471.2999997138977
+      },
+      {
+        "method": "eth_getTransactionReceipt",
+        "id": 22,
+        "start": 493.2999997138977,
+        "headersAt": 493.69999980926514,
+        "responseAt": 493.69999980926514
+      },
+      {
+        "method": "eth_getTransactionReceipt",
+        "id": 23,
+        "start": 515.9000000953674,
+        "headersAt": 516.2999997138977,
+        "responseAt": 516.2999997138977
+      },
+      {
+        "method": "eth_getTransactionReceipt",
+        "id": 24,
+        "start": 538.4000000953674,
+        "headersAt": 538.7999997138977,
+        "responseAt": 538.7999997138977
+      },
+      {
+        "method": "eth_getTransactionReceipt",
+        "id": 25,
+        "start": 561.5,
+        "headersAt": 562.0999999046326,
+        "responseAt": 562.0999999046326
+      },
+      {
+        "method": "eth_getTransactionReceipt",
+        "id": 26,
+        "start": 584.1999998092651,
+        "headersAt": 584.6999998092651,
+        "responseAt": 584.6999998092651
+      },
+      {
+        "method": "eth_getTransactionReceipt",
+        "id": 27,
+        "start": 606.7999997138977,
+        "headersAt": 607.1999998092651,
+        "responseAt": 607.1999998092651
+      },
+      {
+        "method": "eth_getTransactionReceipt",
+        "id": 28,
+        "start": 629.2999997138977,
+        "headersAt": 630.0999999046326,
+        "responseAt": 630.1999998092651,
+        "receipt": {
+          "transactionHash": "0xf7ee4f96628cb63d6f82e523b7c1fd04beb68483edb8ea3bace844203a248afe",
+          "status": "0x1"
+        }
+      },
+      {
+        "method": "eth_sendTransaction",
+        "id": 29,
+        "start": 633.5999999046326,
+        "params": [
+          {
+            "from": "0xf39fd6e51aad88f6f4ce6ab8827279cfffb92266",
+            "to": "0x5ae1f4bb68f8eac39cfdbdfda2b7344ccbd80faf",
+            "data": "0x18e65d5600000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000004",
+            "gas": "0x3b9aca00"
+          }
+        ],
+        "headersAt": 634.2999997138977,
+        "responseAt": 634.4000000953674,
+        "transactionHash": "0x3c31334eee2bd7adca576e0e1800f80b7a70c11223acb1c892e68149a11de05c"
+      },
+      {
+        "method": "eth_getTransactionReceipt",
+        "id": 30,
+        "start": 634.4000000953674,
+        "headersAt": 634.5999999046326,
+        "responseAt": 634.6999998092651
+      },
+      {
+        "method": "eth_getTransactionReceipt",
+        "id": 31,
+        "start": 656.6999998092651,
+        "headersAt": 657.2999997138977,
+        "responseAt": 657.2999997138977
+      },
+      {
+        "method": "eth_getTransactionReceipt",
+        "id": 32,
+        "start": 679.4000000953674,
+        "headersAt": 679.7999997138977,
+        "responseAt": 679.9000000953674
+      },
+      {
+        "method": "eth_getTransactionReceipt",
+        "id": 33,
+        "start": 701.9000000953674,
+        "headersAt": 702.1999998092651,
+        "responseAt": 702.1999998092651
+      },
+      {
+        "method": "eth_getTransactionReceipt",
+        "id": 34,
+        "start": 722.6999998092651,
+        "headersAt": 723.0999999046326,
+        "responseAt": 723.0999999046326
+      },
+      {
+        "method": "eth_getTransactionReceipt",
+        "id": 35,
+        "start": 745.1999998092651,
+        "headersAt": 745.5999999046326,
+        "responseAt": 745.5999999046326
+      },
+      {
+        "method": "eth_getTransactionReceipt",
+        "id": 36,
+        "start": 767.5999999046326,
+        "headersAt": 768.0999999046326,
+        "responseAt": 768.0999999046326
+      },
+      {
+        "method": "eth_getTransactionReceipt",
+        "id": 37,
+        "start": 790.2999997138977,
+        "headersAt": 790.6999998092651,
+        "responseAt": 790.6999998092651
+      },
+      {
+        "method": "eth_getTransactionReceipt",
+        "id": 38,
+        "start": 812.5,
+        "headersAt": 812.7999997138977,
+        "responseAt": 812.7999997138977
+      },
+      {
+        "method": "eth_getTransactionReceipt",
+        "id": 39,
+        "start": 834.6999998092651,
+        "headersAt": 835,
+        "responseAt": 835
+      },
+      {
+        "method": "eth_getTransactionReceipt",
+        "id": 40,
+        "start": 858,
+        "headersAt": 858.2999997138977,
+        "responseAt": 858.2999997138977
+      },
+      {
+        "method": "eth_getTransactionReceipt",
+        "id": 41,
+        "start": 880.0999999046326,
+        "headersAt": 880.4000000953674,
+        "responseAt": 880.4000000953674
+      },
+      {
+        "method": "eth_getTransactionReceipt",
+        "id": 42,
+        "start": 902.5999999046326,
+        "headersAt": 903,
+        "responseAt": 903
+      },
+      {
+        "method": "eth_getTransactionReceipt",
+        "id": 43,
+        "start": 925,
+        "headersAt": 925.2999997138977,
+        "responseAt": 925.2999997138977
+      },
+      {
+        "method": "eth_getTransactionReceipt",
+        "id": 44,
+        "start": 948.1999998092651,
+        "headersAt": 948.5999999046326,
+        "responseAt": 948.6999998092651
+      },
+      {
+        "method": "eth_getTransactionReceipt",
+        "id": 45,
+        "start": 969.9000000953674,
+        "headersAt": 970.2999997138977,
+        "responseAt": 970.4000000953674
+      },
+      {
+        "method": "eth_getTransactionReceipt",
+        "id": 46,
+        "start": 991.0999999046326,
+        "headersAt": 991.4000000953674,
+        "responseAt": 991.5
+      },
+      {
+        "method": "eth_getTransactionReceipt",
+        "id": 47,
+        "start": 1013.2999997138977,
+        "headersAt": 1013.7999997138977,
+        "responseAt": 1013.7999997138977
+      },
+      {
+        "method": "eth_getTransactionReceipt",
+        "id": 48,
+        "start": 1035.9000000953674,
+        "headersAt": 1036.2999997138977,
+        "responseAt": 1036.4000000953674
+      },
+      {
+        "method": "eth_getTransactionReceipt",
+        "id": 49,
+        "start": 1058.0999999046326,
+        "headersAt": 1058.5999999046326,
+        "responseAt": 1058.5999999046326
+      },
+      {
+        "method": "eth_getTransactionReceipt",
+        "id": 50,
+        "start": 1081.1999998092651,
+        "headersAt": 1081.5999999046326,
+        "responseAt": 1081.5999999046326
+      },
+      {
+        "method": "eth_getTransactionReceipt",
+        "id": 51,
+        "start": 1103.6999998092651,
+        "headersAt": 1104.0999999046326,
+        "responseAt": 1104.0999999046326
+      },
+      {
+        "method": "eth_getTransactionReceipt",
+        "id": 52,
+        "start": 1125.1999998092651,
+        "headersAt": 1125.5,
+        "responseAt": 1125.5999999046326
+      },
+      {
+        "method": "eth_getTransactionReceipt",
+        "id": 53,
+        "start": 1146.2999997138977,
+        "headersAt": 1147,
+        "responseAt": 1147.0999999046326,
+        "receipt": {
+          "transactionHash": "0x3c31334eee2bd7adca576e0e1800f80b7a70c11223acb1c892e68149a11de05c",
+          "status": "0x1"
+        }
+      },
+      {
+        "method": "eth_getLogs",
+        "id": 54,
+        "start": 1155.5,
+        "headersAt": 1156.2999997138977,
+        "responseAt": 1156.5999999046326
+      }
+    ],
+    "notifications": [
+      {
+        "at": 610.5999999046326,
+        "transactionHash": "0xf7ee4f96628cb63d6f82e523b7c1fd04beb68483edb8ea3bace844203a248afe"
+      }
+    ],
+    "canvas": [
+      {
+        "start": 68.2999997138977,
+        "end": 76.2999997138977,
+        "frameIndex": 0
+      },
+      {
+        "start": 86.19999980926514,
+        "end": 86.2999997138977,
+        "frameIndex": 1
+      },
+      {
+        "start": 615.5999999046326,
+        "end": 615.5999999046326,
+        "frameIndex": 2
+      },
+      {
+        "start": 1152.2999997138977,
+        "end": 1152.2999997138977,
+        "frameIndex": 3
+      }
+    ]
+  }
+}

@@ -1,0 +1,17 @@
+Ordinary CREATE and exact runtime verification: 250/1755 chunks
+Ordinary CREATE and exact runtime verification: 500/1755 chunks
+Ordinary CREATE and exact runtime verification: 750/1755 chunks
+Ordinary CREATE and exact runtime verification: 1000/1755 chunks
+Ordinary CREATE and exact runtime verification: 1250/1755 chunks
+Ordinary CREATE and exact runtime verification: 1500/1755 chunks
+Ordinary CREATE and exact runtime verification: 1750/1755 chunks
+All chunks deployed and verified in 54697ms
+walls-angle0: walls 87913781 gas; MSIZE 6624576 -> 7940128; total 444619248
+walls-angle1: walls 76465069 gas; MSIZE 6624576 -> 7600704; total 433087991
+walls-angle2: walls 34960228 gas; MSIZE 6624576 -> 6789632; total 391383927
+walls-angle3: walls 38939204 gas; MSIZE 6624576 -> 6847616; total 395377418
+walls-angle4: walls 40701817 gas; MSIZE 6624576 -> 6838880; total 397138303
+walls-angle5: walls 39076163 gas; MSIZE 6624576 -> 6848192; total 395515275
+walls-angle6: walls 35027548 gas; MSIZE 6624576 -> 6790432; total 391452956
+walls-angle7: walls 71147206 gas; MSIZE 6624576 -> 7514464; total 427749821
+Saved /Users/eduard/sandbox/doom-evm/artifacts/local/phase2-verification/wall-measurements.json

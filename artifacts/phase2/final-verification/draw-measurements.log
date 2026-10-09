@@ -1,0 +1,7 @@
+R_DrawColumn: 129792 gas; EVM memory 92576 -> 92576 bytes
+R_DrawColumnLow: 170086 gas; EVM memory 92576 -> 92576 bytes
+R_DrawTranslatedColumn: 145077 gas; EVM memory 92576 -> 92576 bytes
+R_DrawFuzzColumn: 169646 gas; EVM memory 94400 -> 94528 bytes
+R_DrawSpan: 176161 gas; EVM memory 92576 -> 92576 bytes
+R_DrawSpanLow: 112524 gas; EVM memory 92576 -> 92576 bytes
+Saved /Users/eduard/sandbox/doom-evm/artifacts/local/phase2-verification/draw-measurements.json

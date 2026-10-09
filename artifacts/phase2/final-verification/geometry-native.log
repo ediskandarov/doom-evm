@@ -1,0 +1,1 @@
+{"extendedVectors": 1027, "existingSyntheticVectors": 581, "existingWadVectors": 772, "allViewConfigurations": 18, "native": "O0/O2 identical; full UBSan scalar; view shift-base separately audited", "mode": "check"}

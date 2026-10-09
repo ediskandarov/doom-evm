@@ -1,6 +1,6 @@
 # Porting map
 
-Baseline: `original/DOOM/linuxdoom-1.10`, upstream `a77dfb96cb91780ca334d0d4cfd86957558007e0`. The complete static E1M1 renderer is implemented and matches all eight original-C world-view frames byte for byte. Phase 2 remains in progress until ordinary deployment, Frame delivery, browser verification and final regression pass. Gameplay remains Phase 3.
+Baseline: `original/DOOM/linuxdoom-1.10`, upstream `a77dfb96cb91780ca334d0d4cfd86957558007e0`. The complete static E1M1 renderer is implemented and matches all eight original-C world-view frames byte for byte. Phase 2 is accepted: ordinary deployment, Frame delivery, browser verification and every inherited regression gate pass. Gameplay remains Phase 3; see the [acceptance report](docs/PHASE2-REPORT.md).
 
 | Upstream source | Solidity destination | Status and deliberate adaptation |
 |---|---|---|
@@ -40,9 +40,9 @@ Module reports identify the pinned source, mapped functions, numeric/algorithmic
 | Event smoke | passed | `tools/transport/evidence/`, FrameEvent tests, browser readback | Synthetic palette/frame; no WAD | None |
 | Stack-pressure spike | passed | `artifacts/phase0/stack-*` | Stubbed geometry/textures, toy arithmetic | None for spike; real renderer untested |
 | C fixed math | passed | Original C fixtures, Foundry comparisons, rational proof in `tools/tables/NUMERICS.md` | Undefined C domains handled explicitly; no equivalence claim for extensions | None |
-| Authenticated full WAD source | passed | [Source report](docs/PHASE2-SOURCE.md), every runtime and corruption checks | Immutable code/resource adapter | Final production deployment |
-| BSP walls render | passed | [Wall report](docs/PHASE2-SEGS.md), eight native-matching ordinary wall calls | Intermediate wall-only scope | Final event-path evidence |
-| M1 full static frame | in progress | Eight bytewise full-frame integration tests; [ledger](docs/PHASE2-REPORT.md) | Static full-screen world view | Ordinary Frame/browser and final regression gates |
+| Authenticated full WAD source | passed | [Source report](docs/PHASE2-SOURCE.md), every runtime/corruption check and actual production deployment | Immutable code/resource adapter | None |
+| BSP walls render | passed | [Wall report](docs/PHASE2-SEGS.md), eight native-matching ordinary calls and wall-only Frame receipt | Intermediate wall-only scope | None |
+| M1 full static frame | passed | Eight bytewise full-frame comparisons, production Frame/WS/Canvas, 196 tests and all prior gates; [report](docs/PHASE2-REPORT.md) | Static full-screen world view | None for declared static scope |
 | M2 movement | not started | — | — | M1 |
 | M3 basic gameplay | not started | — | — | M2 |
 

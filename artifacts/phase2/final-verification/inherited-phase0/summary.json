@@ -1,0 +1,224 @@
+{
+  "scope": "Phase 0 only; no engine port or C equivalence",
+  "utc": "2026-10-09T12:59:36Z",
+  "git_head": "82e24e1c3f742a528dbbd63bdfb16e2d0d585774",
+  "results": [
+    {
+      "gate": "toolchain",
+      "command": [
+        "python3",
+        "scripts/check-toolchain.py"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.127,
+      "log": "artifacts/local/verification/toolchain.log"
+    },
+    {
+      "gate": "schemas",
+      "command": [
+        "python3",
+        "scripts/check-schemas.py"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.039,
+      "log": "artifacts/local/verification/schemas.log"
+    },
+    {
+      "gate": "format",
+      "command": [
+        ".toolchain/bin/forge",
+        "fmt",
+        "--check"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.02,
+      "log": "artifacts/local/verification/format.log"
+    },
+    {
+      "gate": "build",
+      "command": [
+        ".toolchain/bin/forge",
+        "build",
+        "--force"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 216.8,
+      "log": "artifacts/local/verification/build.log"
+    },
+    {
+      "gate": "foundry-tests",
+      "command": [
+        ".toolchain/bin/forge",
+        "test",
+        "--fuzz-seed",
+        "0x44",
+        "-vv"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 6.722,
+      "log": "artifacts/local/verification/foundry-tests.log"
+    },
+    {
+      "gate": "protocol-tests",
+      "command": [
+        "node",
+        "--test",
+        "tools/transport/protocol.test.mjs"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.125,
+      "log": "artifacts/local/verification/protocol-tests.log"
+    },
+    {
+      "gate": "browser-failure-cleanup",
+      "command": [
+        "node",
+        "--test",
+        "tools/transport/lifecycle.test.mjs"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.823,
+      "log": "artifacts/local/verification/browser-failure-cleanup.log"
+    },
+    {
+      "gate": "stack-compile",
+      "command": [
+        "python3",
+        "scripts/stack-pressure.py"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.296,
+      "log": "artifacts/local/verification/stack-compile.log"
+    },
+    {
+      "gate": "launcher",
+      "command": [
+        "scripts/start-anvil.sh",
+        "--check",
+        "--quiet"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.188,
+      "log": "artifacts/local/verification/launcher.log"
+    },
+    {
+      "gate": "runtime-limits",
+      "command": [
+        "python3",
+        "scripts/probe-limits.py"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 2.978,
+      "log": "artifacts/local/verification/runtime-limits.log"
+    },
+    {
+      "gate": "transport",
+      "command": [
+        "node",
+        "tools/transport/benchmark.mjs"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 2.605,
+      "log": "artifacts/local/verification/transport.log"
+    },
+    {
+      "gate": "browser",
+      "command": [
+        "node",
+        "tools/transport/browser-check.mjs"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 1.526,
+      "log": "artifacts/local/verification/browser.log"
+    }
+  ],
+  "source_sha256": {
+    "src/doom/doomstat.sol": "4c40da3914c629017959a0a4c0516d83346900674c92f5e55a766aba1b506fea",
+    "src/doom/doomtype.sol": "5fbe4b1d0fe96d04453b00d1c3f1c6781c6c8ab5147ee0ac512d17597a5a3c56",
+    "src/doom/info.sol": "4611205149173e42d3b0f1d91820c8042f6bc5fc48fb53aec84ad4bc501dca8e",
+    "src/doom/m_fixed.sol": "3f64bef1f62f61faead3a5b8f382bf1c66e1b3739ce4ac8d59a6fcef0451ef9f",
+    "src/doom/p_setup_static.sol": "c8100a42bb0bac190c583bbb2c82168599009f88a766e4c05b9a9231a5f69792",
+    "src/doom/r_bsp.sol": "0ae5df313515692d0b2b970d5d39d107e014629cff2305fb37c14371a9524040",
+    "src/doom/r_data.sol": "2e3af7d36e37d00734826e0b04ed08fd7bb70587b10a0c1b66841b2bd8c10a3a",
+    "src/doom/r_data_types.sol": "f5ae6de0f06a25dfccd9421580d8f3fca8d2457507cca2d13fce586b3334d02f",
+    "src/doom/r_defs.sol": "558d5a9bfd131e816bbe28986e2dad6144a08e5a16ccfed1b199d7558a1ea0e2",
+    "src/doom/r_draw.sol": "7cdef01556fccc767df44f842f7ce03efea0ec34bd9cfeb6848d30074fb17e06",
+    "src/doom/r_main.sol": "df403bf04fdbbcfc68c4fd9c5e19b5201ca711498efc34db406a4010ad3b2af5",
+    "src/doom/r_plane.sol": "125633121ebe255912bb7f7d6543175cbe40b83eaa7b6d917a1d942c7b7177f1",
+    "src/doom/r_render_hooks.sol": "f026ccb8fffb68d8fbcb0966103212f52884b86350fe3fb52a401d146f3fb312",
+    "src/doom/r_render_state.sol": "072bd2f73b98e1eb775fc8093e95a69c184f3fa50a89a5d64a7beccd59493398",
+    "src/doom/r_segs.sol": "83d59a85fe06be61dcc53d48ef0becab449d97a38985481d7a0c6de6132d80c2",
+    "src/doom/r_sprite_state.sol": "735b3de85cbf455e05d3cb8e992cf4e477960bd4192bbd367f5c66c803b96363",
+    "src/doom/r_state.sol": "e87ff9d88345a53d1f8825fb07b485c782c7bcb55e2de1dc56c876f9b26ab966",
+    "src/doom/r_things.sol": "5d6099c8b388e9a26f63b9de1374fbbbc6bff338ca71c19970a9bb1b04c331f4",
+    "src/doom/tables.sol": "bf14202b419075f6d187653205a37e211d8267c7fc4c0bebf5a8c5713afddf38",
+    "src/evm/Doom.sol": "971f50d84e7e9201c5bee784df72b6e9d77ffcbf64e7ab83fab6b6291690c13b",
+    "src/evm/DoomRenderer.sol": "5639d82431350ea76c26d43457d26d0c3c0f410eaddf02db6adbcfb03a569ba0",
+    "src/evm/DoomScene.sol": "9ad7c8ccee4c9e05deb5608326baabacfa40f686b8d8445fb8aaa7352ab64569",
+    "src/evm/FrameProtocol.sol": "4665be3f613b8e817d616d2db1dc4a644325c44a6ade476a35d7d9d003625ace",
+    "src/evm/ResourceStore.sol": "5ab3acc5d09f155a4cf25973c847f23e47f386a364704b76996c86be5862e3a8",
+    "src/evm/ResourceTypes.sol": "159865364cfa57aae508cd94c49509cbccabd6aeeba55e92b9fcf816bdec4d6b",
+    "src/evm/WadResources.sol": "25a1acc0a44ac35cc29e5f9bd953ba66b85db4f665b732430571b416ef927895",
+    "src/support/FrameFixture.sol": "1de9a0f7c1ae276041f6d71111da36413f2604b9a43a95176dd4dfae82bbc799",
+    "src/support/RendererProbe.sol": "14dc07178db80fde8c9ae5d5500f8205049ed41e21da48dd7818304407785856",
+    "src/support/ResourceAccessProbe.sol": "4aa343501917ddfc0117cbb9fc543b543ce16124c7b25127dcf41d22cab10e3c",
+    "src/support/ResourcePlacement.sol": "3febd551f07205b96c4960d496acb27ab06c571bf8e4ce1983595491b0acd6ab",
+    "src/support/StackPressure.sol": "fa49240fd75c2810e813e3b7620492f24270a0e985ef900e88e8b81fd1fb41af",
+    "src/support/WadResourcesProbe.sol": "c05e160a1c62e5d2e71159466e7d0c5f030166501d986a7059c3f4c9870dc973",
+    "test/fixtures/phase2_bsp/InstrumentedR_BSP.sol": "7df4a68f14fcd1bdac94fae039dbeed8ac385737e9f59cc6ad6823d26ef18275",
+    "test/fixtures/phase2_draw/DrawVectors.sol": "2854a98e2212dba4730c5dd36149c73eb886d2d23a6c6c28180bb232aa5d5fba",
+    "test/fixtures/phase2_geometry/GeometryVectors.sol": "38424b8faace21a1e920d4e5eaf74837db80b04494d985b181429fadf11e5af6",
+    "test/fixtures/reference/ReferenceNumericVectors.sol": "263bba9a3cf2995ebfd2ce21ce82960cf95ae0e9b721f9c9f9ccb745b5121ae2",
+    "test/integration/DoomRenderer.t.sol": "eb5aa2c01407327b7edd9c664630abb917432907b08f5ee1e80918c234013495",
+    "test/integration/FrameEvent.t.sol": "407ba83ec6b72b8811d42c750c124adc9267692fa42b6be8630aaa7152b80af1",
+    "test/unit/Contexts.t.sol": "d96390e537540af6f9317804c85776c67e997231ce97c281298670be19035732",
+    "test/unit/DoomScene.t.sol": "e104ffe619ff7329cc80f9d04479a4cb9037c7a3327b9bb686dc1710eeee682d",
+    "test/unit/RenderSequence.t.sol": "92d9372b046a93b2c037ec34459f1baa65c30223fde6ef104d02d773b7cf483d",
+    "test/unit/ResourcePlacement.t.sol": "2fdd6d2804d9239ab506ef6815a818b414c09d3ea033f75fa8840514ff9e917a",
+    "test/unit/StackPressure.t.sol": "03953d342417feb131bc81adec8f49841a6e54017294621d04bf89cee17b8fae",
+    "test/unit/WadResources.t.sol": "28ef957d324cab212c7b96b504e3776f82cb2d47a763107407986acd491d066d",
+    "test/unit/info.t.sol": "bb03ae1d2d7431b55bf4b430cfac634b6c4076f9dcb9c4a95f7f5bf97b293594",
+    "test/unit/m_fixed.t.sol": "1f723de625712d9d5ee2057db7037c3e09feaea9012fc7b53e8cb5b11f2d48e5",
+    "test/unit/r_bsp.t.sol": "e3debfd58e1de8e0290e7f2b12542c1829748c5fe886950053bc765fd25d3fb6",
+    "test/unit/r_data.t.sol": "98bb1ba8d7c50b298f923cd4c099503a2649a4cfad78d1df2c2b87f930455853",
+    "test/unit/r_draw.t.sol": "3fae9e895ee9adb7207921e33a23f7cf82a67033be158857e095af5efa88cc58",
+    "test/unit/r_main.t.sol": "85f170f269f0a60512c1e3d033e04b8de1bb04ad0e3afbd57b70969b52b06be1",
+    "test/unit/r_plane.t.sol": "bfc470631d6175bc73f42aa3be4ddbb6d9c716b2ed0b6ca327129b7b3c2f2865",
+    "test/unit/r_segs.t.sol": "b7389293b17160cd860b175550f610cbed7db035a7048d9d9b7ed0c34989bfa7",
+    "test/unit/r_things.t.sol": "8ad152cd2e73cc0fc13eea5f16045e06d19ba5bcfc09ec2d58c5085b00ca6dff",
+    "test/unit/tables.t.sol": "b338db5a20484f4285708f61ba0bcd7bba9ffadd0285e3e95be925cada05de0b",
+    "scripts/check-phase1-schemas.py": "e0a8a624974afb1a93d0dce92f87cc6465b06005ceeee411a71445671179e37c",
+    "scripts/check-schemas.py": "df7667f32a23f8fb60469d877a7e4f638fc27fcf4743c0b6e05f6d4e62c40ab4",
+    "scripts/check-toolchain.py": "ad2d4fd6627fb94a0a6d6eba57305ed0bd64733cc221a4ff1a35d23e86428019",
+    "scripts/install-toolchain.py": "3a07e7cd106c84265a497dda8965657c15c445722519b232a7b017bb0d23afac",
+    "scripts/probe-limits.py": "49c8076ab7b78b689ab20e7a2016534670d8669458dab6ce71be7f9174783631",
+    "scripts/stack-pressure.py": "2caef3b7f12b380903f79df0a2cf4d0d8d42092ec2206c565ef8943d654ea298",
+    "scripts/start-anvil.py": "ffdc0c33d1562b145bebd4c672c4584cb48c04e865779b5372c188df89636493",
+    "scripts/verify-phase0.py": "92ebe6ed717bd772754622e8f5866cd81369eafb4d47f3cd4e3f726b5749cf43",
+    "scripts/verify-phase1.py": "b336c51781c491e83863d03395c2921c1ab27b89ee963e5525c371326349ef0b",
+    "scripts/verify-phase2.py": "e31dd68f042fe26636a8de1c9db1bbeb26eb2e002fe4e7d796e435b548dafddf",
+    "scripts/env.sh": "af7ac5eb6b0e6180649c50744ad9dd2c492b04806316a066c31aaf6bf1455091",
+    "scripts/start-anvil.sh": "ead411040b8d2d536ff5334ef5b3306303f8a4cf16fb1e0bb2e6221e8b7d4f35",
+    "tools/transport/benchmark.mjs": "689ccd69dce073ef151be68fe233361c81ab6c46b942f1859efdd6455ffc55be",
+    "tools/transport/browser-check.mjs": "fe733ed488dbf093d4130ca2a0c96c02638df23cd265d1f519d16a319f8f7cac",
+    "tools/transport/lifecycle.test.mjs": "84ba3339593da8f1ab818714e05b675707658a3d95a6cf25910937737b90e4a0",
+    "tools/transport/palette.test.mjs": "1e9ca82b5397e18ea65183fe8834f7c91f5feffbe3d90215054b85f62af4ab39",
+    "tools/transport/protocol.test.mjs": "1fe7ef1b3275bf4c41d30cb6171e0ce08146a536ee69ef0f4467aac7faeb7b38",
+    "tools/transport/serve.mjs": "e55aa5197feb25b45655f8a68f8a37cca5827c6c403f89ad10ac70c159386e76",
+    "web/app.mjs": "0745a3a5a30ba6bf1b855d0f536a0cca980b585f494dd1b3305c0e54cc837995",
+    "web/palette.mjs": "110c2c0af974ecfa935d37da60d32eedc47114484fc7b994043bfd24e95bc8ae",
+    "web/protocol.mjs": "fec5104a0e13b7ca8666200431a1804d53cdb6537c1f0f8f02fb5b69dd70f47e",
+    "web/index.html": "c5906bc07071480f0a286cdc07090a037988f4416237b23440f4e48b851f58a5",
+    "web/palette.synthetic.json": "cd72ce880f86ec534889c8391989a4af60d3781b164acd1317b34732c8e4d79f",
+    "schemas/frame-v0.schema.json": "937bb9cae8b5b9dda32ccf2d7d7d6ef706ef12b0271a0c8abef50d8c3ac09cda",
+    "schemas/palette-v0.schema.json": "2014af44e7cd31330e7636f69eb51ea44c2ceeb03e97b4c20b815d132982a97b",
+    "schemas/reference-v0.schema.json": "4e3aeb6044e5d9ee74c83d74167dd198d97a3185030d5550ae996f9d033b86b9",
+    "schemas/resource-bundle-v0.schema.json": "88887532c3cebc662f147addd412faabfb44eb8b54412fede908c816cb6529c8",
+    "schemas/tables-v1.schema.json": "4cffcd999cf0472ccda413a70d9d739c672e07468bb8841e97571e32fb34c845",
+    "schemas/vectors-v1.schema.json": "c6e109f5f5573cfa9af72c8afcea507eb29afef4171be222fc8c1bbded168036",
+    "schemas/wad-layouts-v1.json": "9a11b0c3ecd3b5d362009a7d1e61e3572cd184b1042e057dedd9ba0cc8bcb71e",
+    "foundry.toml": "084d5192108931325837611f9d1339796a6ffd64ed570e31907afe718f191226",
+    "toolchain.lock.json": "7675376b9fb9fe3256f2581760c8ad8fe896cdfae6ee9cc8b70b53497fb1b7c0"
+  },
+  "passed": true
+}
