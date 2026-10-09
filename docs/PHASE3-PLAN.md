@@ -21,8 +21,11 @@ records current init 1,621,885,757 gas and runtime 503,731 bytes; old receipts
 remain historical. [Native reconciliation](../tools/reference/gameplay/production-native-reconciliation.json)
 proves every original data file/Frame unchanged. Full kernel 60930 is terminal PASS: nine scenarios / 2,355 tics / 31 exact
 frames / nine exact final stored snapshots, all 1,755 runtimes verified.
-Checkpoint `3242865` [fresh kernel evidence](../tools/reference/gameplay/final-kernel-evidence.json); Chrome/repeat/
-clone memory and final inherited gates remain. Current replay checkpoint
+Checkpoint `3242865` [fresh kernel evidence](../tools/reference/gameplay/final-kernel-evidence.json); Chrome 5132 is terminal PASS and committed `45d0f62`: all six native indexed
+Frames, 84 exported field comparisons and Canvas RGBA bytes exact; actual
+keyboard lifecycle/blur/deduplication/receipt fallback verified.
+[Current Chrome evidence](../tools/transport/evidence/gameplay-browser-final.json).
+Clone memory and final inherited gates remain. Current replay checkpoint
 `0015986` verifies two complete independent ordinary deployments: all 130 × 14
 rows, seven Frames, commands/cadence/sequences, startup/constructor/receipt gas
 and thirteen rejection selectors/gas/whole-storage rollback assertions equal.
