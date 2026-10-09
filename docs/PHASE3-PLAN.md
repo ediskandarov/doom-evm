@@ -12,6 +12,8 @@ zone core is `2392f4a`.
 Last native observation checkpoint: `5ffd10a`, original zone lifecycle/layout evidence;
 `7fc2cab` remains the exact post-render state extension.
 Last audit checkpoint: `6302955`, original definition/feature inventory.
+Last ABI checkpoint: `1e6227d`, generated native sizeof/offsetof constants;
+`python3 tools/zone/generate-layout.py --check` and standalone Forge build pass.
 All completed module/kernel proofs below are committed. Production adapter and real gameplay browser tooling remain pending their separate checkpoint commits. **Phase 3 is
 active; M2 and M3 are unaccepted.** Committed production `Doom.sol` remains the
 accepted Phase 2 static renderer; its working-tree gameplay adapter is a draft.
@@ -141,7 +143,7 @@ finished their isolated work; do not restart completed ports. Root owns shared
 headers/glue and the production rendering fix. The production adapter, real-browser
 runner, production proof tooling and diagnostic tools remain uncommitted pending
 their separate verified integration checkpoints. Native ABI constant generation is
-ready for a separate architecture checkpoint. Live Anvil port 18579 is retained for
+committed in `1e6227d`. Live Anvil port 18579 is retained for
 production/browser verification; current failed browser instance cannot reinitialize.
 
 At each verified integration checkpoint, update and commit this ledger with exact
