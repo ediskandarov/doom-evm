@@ -1,0 +1,165 @@
+{
+  "schemaVersion": 1,
+  "source": "Freedoom v0.13.0 freedoom1.wad",
+  "map": "E1M1",
+  "resourceIdentity": {
+    "schemaVersion": 0,
+    "wadSha256": "7323bcc168c5a45ff10749b339960e98314740a734c30d4b9f3337001f9e703d",
+    "bundleSha256": "d379076f21645cf7cc5acb056663d0faacc4065489a0ca99738479323c9f7a47",
+    "paletteSha256": "fd895921b5d0a394612bb29852ed003d44d69f76dec31c0dc6b5d5fc7d63f7bb",
+    "paletteVariant": 0
+  },
+  "wadByteLength": 28795076,
+  "directoryEntryCount": 3163,
+  "packedByteLength": 28741889,
+  "packedBlobSha256": "0a07ab5de33592142c3427d29e8f2eaf25d0e4fa21e03ac9c9b0fb5d77531d16",
+  "snapshotFile": "selected-lumps.bin",
+  "snapshotSha256": "1f296c6c5354395a5abe3e3f47fb6f3bfa39d79e8274a2ef731aae9a4f87762c",
+  "licenseSha256": "7c62f2c520769c798774f416637eec4921e5f0aafdac1245ae7c8a8cf65fe102",
+  "lumps": [
+    {
+      "id": 1,
+      "nameHex": "5448494e47530000",
+      "originalOffset": 12,
+      "offset": 0,
+      "length": 2920,
+      "sha256": "9200fe55b6b49e15cafbd01dbca6bc0a1ffd2715ff5e3f49bddb01c142b5a720"
+    },
+    {
+      "id": 2,
+      "nameHex": "4c494e4544454653",
+      "originalOffset": 2932,
+      "offset": 2920,
+      "length": 16450,
+      "sha256": "bc1f13efe8d57a11e02d54af5dc3ec6383b1e79b9c3ee658e97d7c3bfb751134"
+    },
+    {
+      "id": 3,
+      "nameHex": "5349444544454653",
+      "originalOffset": 19384,
+      "offset": 19370,
+      "length": 54870,
+      "sha256": "26fb7e537da079889d75461a389e9ce98f76050ae2d0690066c36b24aee2c565"
+    },
+    {
+      "id": 4,
+      "nameHex": "5645525445584553",
+      "originalOffset": 74256,
+      "offset": 74240,
+      "length": 4784,
+      "sha256": "cd7fdfd3a5035e68006095b6267b37f16ee101773e01134f546c7e30bd368039"
+    },
+    {
+      "id": 5,
+      "nameHex": "5345475300000000",
+      "originalOffset": 79040,
+      "offset": 79024,
+      "length": 24684,
+      "sha256": "567503934b52026544d51cffc9fa3c206052f2a5dd53b4fa893d597c0aa47e3f"
+    },
+    {
+      "id": 6,
+      "nameHex": "53534543544f5253",
+      "originalOffset": 103724,
+      "offset": 103708,
+      "length": 2728,
+      "sha256": "5b4b27e29fccb3bfba64526bbf4d4aaf948083fb3b1e8de3a7092626a8c71c6c"
+    },
+    {
+      "id": 7,
+      "nameHex": "4e4f444553000000",
+      "originalOffset": 106452,
+      "offset": 106436,
+      "length": 19068,
+      "sha256": "d839fd0c3bd879df73b09fae80d1f3bb5c7b2f6647d53ec5eb485898ff372fb0"
+    },
+    {
+      "id": 8,
+      "nameHex": "534543544f525300",
+      "originalOffset": 125520,
+      "offset": 125504,
+      "length": 4732,
+      "sha256": "9cafe21ede65cbd8445288b5c61044a867caec03ca28c4498beacf2e42600576"
+    },
+    {
+      "id": 9,
+      "nameHex": "52454a4543540000",
+      "originalOffset": 130252,
+      "offset": 130236,
+      "length": 4141,
+      "sha256": "4c919d0a687d503d9fc5e88e810c6332d08c8d5d0e9309624d7579ab16359a56"
+    },
+    {
+      "id": 10,
+      "nameHex": "424c4f434b4d4150",
+      "originalOffset": 134396,
+      "offset": 134377,
+      "length": 7528,
+      "sha256": "e9cefededde10c41fdc751e38d43389ad867c11ad2d10f7ad9cc9688e4e938f1"
+    },
+    {
+      "id": 396,
+      "nameHex": "504c415950414c00",
+      "originalOffset": 10557296,
+      "offset": 141905,
+      "length": 10752,
+      "sha256": "3d6069acf11e7c8cf6ae77869a3b67eade15c5df686ca3a49fa31e4517359312"
+    },
+    {
+      "id": 397,
+      "nameHex": "434f4c4f524d4150",
+      "originalOffset": 10568048,
+      "offset": 152657,
+      "length": 8704,
+      "sha256": "82a12cab7416a89e7a7791da2dc4e69c118c9a41a3a930dfd0dc01cb35626cda"
+    },
+    {
+      "id": 410,
+      "nameHex": "504e414d45530000",
+      "originalOffset": 10904056,
+      "offset": 161361,
+      "length": 8396,
+      "sha256": "f224d983dd7d7bb87fa06d64bb814e45997bef6f2ec5b6db23e1b469a7a44869"
+    },
+    {
+      "id": 2765,
+      "nameHex": "57414c4c30305f33",
+      "originalOffset": 26487532,
+      "offset": 169757,
+      "length": 2200,
+      "sha256": "6c3662ebde087aa75ab3406daffcbc80313025dc041fed1fe7b946b3f0a785f5"
+    },
+    {
+      "id": 2917,
+      "nameHex": "424c4f4f44310000",
+      "originalOffset": 27761428,
+      "offset": 171957,
+      "length": 4096,
+      "sha256": "52f0b5988a456d30720dd19ae76f94dfd7a3d2329d144774ce71a8e694a0aa14"
+    }
+  ],
+  "validation": {
+    "map": "E1M1",
+    "counts": {
+      "THINGS": 292,
+      "LINEDEFS": 1175,
+      "SIDEDEFS": 1829,
+      "VERTEXES": 1196,
+      "SEGS": 2057,
+      "SSECTORS": 682,
+      "NODES": 681,
+      "SECTORS": 182
+    },
+    "blockmap": {
+      "width": 32,
+      "height": 27,
+      "uniqueLists": 450
+    },
+    "paletteCount": 14,
+    "colormapCount": 34,
+    "pnamesCount": 1049,
+    "textureCount": 963,
+    "referencedPatchCount": 1045,
+    "flatCount": 240
+  }
+}

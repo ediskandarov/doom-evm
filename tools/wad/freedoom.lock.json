@@ -1,0 +1,14 @@
+{
+  "schemaVersion": 1,
+  "release": "Freedoom 0.13.0",
+  "releaseUrl": "https://github.com/freedoom/freedoom/releases/tag/v0.13.0",
+  "archiveUrl": "https://github.com/freedoom/freedoom/releases/download/v0.13.0/freedoom-0.13.0.zip",
+  "checksumUrl": "https://github.com/freedoom/freedoom/releases/download/v0.13.0/freedoom-0.13.0-CHECKSUM",
+  "archiveSha256": "3f9b264f3e3ce503b4fb7f6bdcb1f419d93c7b546f4df3e874dd878db9688f59",
+  "wadMember": "freedoom-0.13.0/freedoom1.wad",
+  "wadSha256": "7323bcc168c5a45ff10749b339960e98314740a734c30d4b9f3337001f9e703d",
+  "licenseMember": "freedoom-0.13.0/COPYING.txt",
+  "license": "BSD-3-Clause",
+  "selectedMap": "E1M1",
+  "checksumVerification": "Archive SHA256 compared with official release CHECKSUM over HTTPS; PGP signature not independently verified."
+}

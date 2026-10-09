@@ -1,0 +1,4 @@
+# Preserve the official archive's exact BOM/CRLF license and credit bytes.
+COPYING.txt -text -whitespace
+CREDITS.txt -text -whitespace
+selected-lumps.bin -text -diff
