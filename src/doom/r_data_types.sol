@@ -2,6 +2,7 @@
 pragma solidity 0.8.37;
 
 import {ResourceIdentity, LumpDescriptor} from "../evm/ResourceTypes.sol";
+import {ZoneState} from "./z_zone_types.sol";
 
 /// @notice EVM placement adapter; concatenated STOP-prefixed immutable 16 KiB code chunks.
 struct ResourceView {
@@ -33,6 +34,8 @@ struct Texture {
 }
 
 struct RenderResources {
+    ZoneState nativeZone; // aliases authoritative gameplay allocation ledger when enabled
+    uint32 currentColumnZoneBlock; // last R_GetColumn source; zero means no native backing
     ResourceView source;
     bytes[] lumpcache; // per-frame W_CacheLumpNum reuse; empty means not loaded
     Texture[] textures;

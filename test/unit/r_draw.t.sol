@@ -95,7 +95,9 @@ contract RDrawTest {
             _pattern(8192, 37, 19),
             uint32(a[8]),
             _pattern(256, 7, 3),
-            new bytes(256)
+            new bytes(256),
+            new bytes(0),
+            new bytes(0)
         );
         bytes memory translations = R_Draw.R_InitTranslationTables();
         for (uint256 i; i < 256; ++i) {
@@ -162,8 +164,9 @@ contract RDrawTest {
 
     function invalid(uint256 which) external pure {
         RenderState memory rs = _state(320, 200);
-        DrawColumn memory dc =
-            DrawColumn(0, 0, 199, 65536, 0, new bytes(128), 0, new bytes(256), new bytes(256));
+        DrawColumn memory dc = DrawColumn(
+            0, 0, 199, 65536, 0, new bytes(128), 0, new bytes(256), new bytes(256), new bytes(0), new bytes(0)
+        );
         DrawSpan memory ds = DrawSpan(0, 0, 319, 0, 0, 65536, 0, new bytes(4096), dc.colormap);
         if (which == 0) {
             dc.x = -1;
@@ -232,7 +235,17 @@ contract RDrawTest {
     {
         RenderState memory rs = _state(320, 200);
         DrawColumn memory dc = DrawColumn(
-            13, 0, 199, 65536, 0, _pattern(8192, 37, 19), 0, _pattern(256, 7, 3), _pattern(256, 1, 0)
+            13,
+            0,
+            199,
+            65536,
+            0,
+            _pattern(8192, 37, 19),
+            0,
+            _pattern(256, 7, 3),
+            _pattern(256, 1, 0),
+            new bytes(0),
+            new bytes(0)
         );
         DrawSpan memory ds = DrawSpan(100, 0, 319, 0, 0, 65536, 0, dc.source, dc.colormap);
         if (op == 5) ds.x2 = 79;

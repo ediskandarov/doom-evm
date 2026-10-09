@@ -2,6 +2,7 @@
 pragma solidity 0.8.37;
 import {
     GameState,
+    ThinkerKind,
     Mobj,
     Thinker,
     Door,
@@ -13,6 +14,10 @@ import {
     Strobe,
     Glow
 } from "./p_game_state.sol";
+
+import {Z_Zone} from "./z_zone.sol";
+import {ZoneConst} from "./z_zone_types.sol";
+import {NativeZoneLayout} from "./native_zone_layout.sol";
 
 /// @notice Z_Malloc adapter: stable slots, geometric memory pools, original linked-list order.
 /// @dev Pool capacity is not thinker/actor iteration order; only live lists drive simulation.
@@ -32,6 +37,7 @@ library P_Heap {
             s.mobjs = grown;
         }
         s.mobjCount = index + 1;
+        allocateNativePayload(s, ThinkerKind.mobj, index, NativeZoneLayout.MOBJ_SIZE);
     }
 
     function allocateThinker(GameState memory s) internal pure returns (uint32 index) {
@@ -62,6 +68,7 @@ library P_Heap {
             s.doors = grown;
         }
         s.doorCount = index + 1;
+        allocateNativePayload(s, ThinkerKind.door, index, NativeZoneLayout.VLDOOR_SIZE);
     }
 
     function allocateFloorMove(GameState memory s) internal pure returns (uint32 index) {
@@ -77,6 +84,7 @@ library P_Heap {
             s.floors = grown;
         }
         s.floorCount = index + 1;
+        allocateNativePayload(s, ThinkerKind.floor, index, NativeZoneLayout.FLOORMOVE_SIZE);
     }
 
     function allocateCeilingMove(GameState memory s) internal pure returns (uint32 index) {
@@ -92,6 +100,7 @@ library P_Heap {
             s.ceilings = grown;
         }
         s.ceilingCount = index + 1;
+        allocateNativePayload(s, ThinkerKind.ceiling, index, NativeZoneLayout.CEILING_SIZE);
     }
 
     function allocatePlat(GameState memory s) internal pure returns (uint32 index) {
@@ -107,6 +116,7 @@ library P_Heap {
             s.plats = grown;
         }
         s.platCount = index + 1;
+        allocateNativePayload(s, ThinkerKind.plat, index, NativeZoneLayout.PLAT_SIZE);
     }
 
     function allocateFireFlicker(GameState memory s) internal pure returns (uint32 index) {
@@ -122,6 +132,7 @@ library P_Heap {
             s.fireFlickers = grown;
         }
         s.fireFlickerCount = index + 1;
+        allocateNativePayload(s, ThinkerKind.fireFlicker, index, NativeZoneLayout.FIREFLICKER_SIZE);
     }
 
     function allocateLightFlash(GameState memory s) internal pure returns (uint32 index) {
@@ -137,6 +148,7 @@ library P_Heap {
             s.lightFlashes = grown;
         }
         s.lightFlashCount = index + 1;
+        allocateNativePayload(s, ThinkerKind.lightFlash, index, NativeZoneLayout.LIGHTFLASH_SIZE);
     }
 
     function allocateStrobe(GameState memory s) internal pure returns (uint32 index) {
@@ -152,6 +164,7 @@ library P_Heap {
             s.strobes = grown;
         }
         s.strobeCount = index + 1;
+        allocateNativePayload(s, ThinkerKind.strobe, index, NativeZoneLayout.STROBE_SIZE);
     }
 
     function allocateGlow(GameState memory s) internal pure returns (uint32 index) {
@@ -167,5 +180,40 @@ library P_Heap {
             s.glows = grown;
         }
         s.glowCount = index + 1;
+        allocateNativePayload(s, ThinkerKind.glow, index, NativeZoneLayout.GLOW_SIZE);
+    }
+
+    /// @dev Original payload embeds thinker_t; pool/index growth has no native allocation.
+    function allocateNativePayload(GameState memory s, ThinkerKind kind, uint32 index, uint32 size)
+        private
+        pure
+    {
+        if (s.nativeZone.byteLength == 0) return;
+        uint32 slot = uint32(kind) - 1;
+        uint32[] memory blocks = s.nativePayloadBlocks[slot];
+        if (index == blocks.length) {
+            uint256 capacity = blocks.length == 0 ? 8 : blocks.length * 2;
+            uint32[] memory grown = new uint32[](capacity);
+            for (uint256 i; i < index; ++i) grown[i] = blocks[i];
+            s.nativePayloadBlocks[slot] = grown;
+            blocks = grown;
+        }
+        if (index >= blocks.length || blocks[index] != 0) revert PoolExhausted();
+        blocks[index] = Z_Zone.Z_Malloc(
+            s.nativeZone, size, kind == ThinkerKind.mobj ? ZoneConst.PU_LEVEL : ZoneConst.PU_LEVSPEC,
+            ZoneConst.NULL
+        );
+    }
+
+    /// @dev Original P_RunThinkers frees only when lazy removal reaches this node.
+    /// Stable Solidity payloads remain tombstones, while the physical block is reusable.
+    function freeNativePayload(GameState memory s, ThinkerKind kind, uint32 index) internal pure {
+        if (s.nativeZone.byteLength == 0) return;
+        uint32 slot = uint32(kind) - 1;
+        if (index >= s.nativePayloadBlocks[slot].length) revert PoolExhausted();
+        uint32 blockId = s.nativePayloadBlocks[slot][index];
+        if (blockId == 0) revert PoolExhausted();
+        Z_Zone.Z_Free(s.nativeZone, blockId);
+        s.nativePayloadBlocks[slot][index] = 0;
     }
 }

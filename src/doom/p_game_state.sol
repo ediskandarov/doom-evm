@@ -6,6 +6,7 @@ import {MapData, MapThing} from "./r_defs.sol";
 import {RenderResources} from "./r_data_types.sol";
 import {Ticcmd, GameInputState} from "./d_ticcmd.sol";
 import {WallState, PlaneState} from "./r_render_state.sol";
+import {ZoneState} from "./z_zone_types.sol";
 
 /// @custom:source linuxdoom-1.10/{doomdef,p_local,p_mobj,p_pspr}.h at a77dfb96cb91780ca334d0d4cfd86957558007e0
 library GameConst {
@@ -424,6 +425,13 @@ struct BlockMap {
 }
 
 struct GameState {
+    // Original physical allocation ledger; byteLength zero keeps isolated legacy contexts disabled.
+    ZoneState nativeZone;
+    // Stable payload index -> native block ID, indexed by uint32(ThinkerKind) - 1.
+    // The thinker itself is embedded in the original allocation, never allocated twice.
+    uint32[][9] nativePayloadBlocks;
+    // blocklinks, vertexes, sectors, sides, lines, subsectors, nodes, segs, grouped line buffer.
+    uint32[9] nativeMapBlocks;
     MapData map; // authoritative mutable heights/light, side textures, line flags/specials.
     uint64 gametic;
     int32 leveltime;

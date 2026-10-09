@@ -1,0 +1,76 @@
+{
+  "schemaVersion": 1,
+  "scope": "Shared physical allocation interfaces and typed actor/mover allocation/lazy-free integration; component/synthetic storage proof only. Renderer backing and production remain unverified.",
+  "upstreamCommit": "a77dfb96cb91780ca334d0d4cfd86957558007e0",
+  "nativeDependencies": {
+    "allocator": "2392f4a",
+    "actualLayout": "5ffd10a",
+    "abiConstants": "1e6227d",
+    "startupReplay": "d9ca352"
+  },
+  "executed": [
+    {
+      "command": ".toolchain/bin/forge test --match-contract 'GameZoneHeapTest|GameStorageTest|TickTest|DoomZoneStartupTest' -vv",
+      "run": "97031",
+      "passed": 8,
+      "failed": 0,
+      "skipped": 0,
+      "solcSeconds": 131.58
+    },
+    {
+      "command": ".toolchain/bin/forge test --match-contract 'RDrawTest|GameHeapTest' -vv",
+      "run": "56248",
+      "passed": 13,
+      "failed": 0,
+      "skipped": 0,
+      "solcSeconds": 9.97
+    }
+  ],
+  "newTests": [
+    {
+      "name": "testAllEmbeddedPayloadSizesTagsAndNoThinkerDoubleAllocation",
+      "gas": 265091
+    },
+    {
+      "name": "testLazyFreeAndPhysicalReuseKeepStablePayloadIdentity",
+      "gas": 178390
+    },
+    {
+      "name": "testPoolGrowthZoneStorageAndResourceAlias",
+      "gas": 4445142
+    }
+  ],
+  "startupRecheckGas": {
+    "observed": 954390893,
+    "normal": 809521361
+  },
+  "checks": [
+    "All nine native payload sizes and original LEVEL/LEVSPEC tags",
+    "Embedded thinkers allocate no second native block",
+    "Marking removal retains physical allocation until original lazy unlink",
+    "Physical offset reuse preserves monotonically stable actor IDs",
+    "17 actors cross pool capacity boundaries without losing native block or resource aliases",
+    "Native owner/block and payload mappings survive memory/storage/memory copy",
+    "Existing ticker, heap alias, renderer primitive/pixel/rejection, storage and startup proofs pass"
+  ],
+  "limitations": [
+    "No final inherited gate run",
+    "No native-map population or lifecycle scenario acceptance at this checkpoint",
+    "SourceTail schema only; original strict drawing guard unchanged",
+    "Gas is fixture/unit cost, not measured production gas or memory"
+  ],
+  "sourceHashes": {
+    "src/doom/p_game_state.sol": "0f9d60aae9424cad17c614d4fcc93c9eb6fe8a43c7bce070d2460fcf2c34f649",
+    "src/doom/p_heap.sol": "5aee980933971a0eba6e221191e736619f4cb73148c9973c3f578408163c7b4a",
+    "src/doom/p_tick.sol": "1993dd0c94853dabc4db554dfa0ca04375cef0a22075400ba0e7b56b525022ab",
+    "src/doom/r_data_types.sol": "0448302d68447c8a5a4c46df4016e8845863e42bf6eaca8bcab8ab0c9707fdf8",
+    "src/doom/r_state.sol": "80951a13733e3a08f4182937a37def33ffda21eaae4b43a2a1bdba2043adab6b",
+    "src/doom/z_zone.sol": "47fe4cd4ce09d37d21d9d3cedd349004c8e3a1941f939a1ddbc5ec2e1d67b1ca",
+    "src/doom/z_zone_types.sol": "d6c5d8680e08bd8989042cb42a934a3323818e4c2b94c11dc38196911dadc08b",
+    "src/doom/native_zone_layout.sol": "118b2d17165826fb0857d9cb296e2214db2a28917769299a82e70d0c0790f6e8",
+    "test/unit/GameZoneHeap.t.sol": "d50e88dc685163fa32d2bb65f6bccf9f3ff7f2d8d5161c95a25b971794cdb7b8",
+    "test/unit/r_draw.t.sol": "d26ba37f9494ae97f8dc3bc92a58cb19ac762761f4532dfbc8865d24d5103b10",
+    "docs/PHASE3-INTERFACES.md": "5144ce5b5e8628d1f5a84ff1e1967dcf9f56041012950eb443d821b996b25560",
+    "foundry.toml": "084d5192108931325837611f9d1339796a6ffd64ed570e31907afe718f191226"
+  }
+}

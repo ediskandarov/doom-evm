@@ -53,7 +53,9 @@ library P_Tick {
             if (thinker.status == GameConst.THINKER_REMOVE) {
                 c.state.thinkers[thinker.next].prev = thinker.prev;
                 c.state.thinkers[thinker.prev].next = thinker.next;
-                // The stable payload remains a tombstone, replacing zone deallocation.
+                // Physical native allocation is freed here, in original lazy-removal order.
+                P_Heap.freeNativePayload(c.state, thinker.kind, thinker.payload);
+                // The stable Solidity payload remains a tombstone.
                 if (thinker.kind == ThinkerKind.mobj) c.state.mobjs[thinker.payload].allocated = false;
             } else if (thinker.status == GameConst.THINKER_ACTIVE) {
                 c.hooks.thinkerDispatch(c, current);

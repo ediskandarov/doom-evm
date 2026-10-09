@@ -55,6 +55,8 @@ struct DrawColumn {
     uint32 sourceOffset;
     bytes colormap; // precisely 256 palette indexes
     bytes translation; // translated column only
+    bytes sourceTail; // source-derived physical bytes following the logical resource
+    bytes sourceTailKnown; // byte 1 means written/known; unknown padding/pointers cannot be pixels
 }
 
 struct DrawSpan {

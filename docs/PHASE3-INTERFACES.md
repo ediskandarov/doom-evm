@@ -24,6 +24,29 @@ Approved persistence extension: `GameContext.move/path` alias `GameState.move/pa
 
 `renderFramebuffer` retains original screens[0] bytes between renders. The renderer does not introduce a framebuffer clear; full world passes and overlays overwrite the original buffer under their existing algorithms. The first buffer starts zeroed, matching the declared native host. This also preserves the exact previous bytes if an original pass leaves any location untouched.
 
+Approved physical allocation extension: `GameState.nativeZone` retains the
+source-derived original allocator ledger. `RenderResources.nativeZone` aliases
+that same memory object after gameplay load; an unset byteLength disables this
+extension in isolated legacy contexts and the accepted static renderer. The zone
+has a separate namespace from stable gameplay IDs. `nativePayloadBlocks[kind-1]`
+maps each typed payload ID to its physical block; block zero means no allocation.
+`P_Heap` allocates the actual pinned C payload size/tag, including its embedded
+thinker. `P_AddThinker` adds no second physical allocation. `P_RemoveThinker`
+remains lazy; `P_RunThinkers` frees the block at actual unlink time while retaining
+the stable logical payload tombstone. Physical reuse must never recycle actor IDs.
+`nativeMapBlocks[9]` reserves blocklinks/vertexes/sectors/sides/lines/subsectors/
+nodes/segs/grouped-line-buffer blocks in that order; map population is a separate
+integration checkpoint.
+
+Renderer source backing is explicit: `DrawColumn.sourceTail/sourceTailKnown`
+reserve physical bytes beyond a logical resource and their source-write masks.
+Empty fields preserve the existing strict logical bounds. Unknown native pointer,
+padding or unwritten bytes cannot silently become pixels. The current-column
+block is transient `RenderResources.currentColumnZoneBlock`; it is not host input.
+The schema/heap checkpoint proves allocation sizes/tags, lazy reuse, growth and
+memory/storage aliases. Actual renderer backing and production integration require
+their own evidence and are not established by this interface extension.
+
 `MapScratch` and `PathScratch` replace original globals, and remain shared through nested original calls. This includes collision results consumed by `P_TryMove`/monster floating movement, sight and attack slopes, path intercepts, slide lines, damage-radius globals, player onground, weapon bulletslope and sound flood target. A module must not clear another module's original globals merely to simplify its interface.
 
 `P_LineOpening` publishes `opentop`, `openbottom`, `openrange` and `lowfloor` into `MapScratch`. Collision/trace/sound routines consume those exact shared results.
