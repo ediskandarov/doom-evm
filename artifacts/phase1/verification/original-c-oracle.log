@@ -1,0 +1,1 @@
+{"numericVectors": 3276, "geometryVectors": 581, "files": ["native-table-hashes.json", "numeric-v1.json", "geometry-synthetic-v1.json", "extraction-manifest.json", "undefined-audit.json", "geometry-wad-v1.json", "camera-e1m1.json", "ReferenceNumericVectors.sol"], "O0O2": "identical", "definedSanitizer": "clean", "mode": "check"}

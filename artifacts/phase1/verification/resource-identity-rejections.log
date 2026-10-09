@@ -1,0 +1,11 @@
+✔ placement benchmark rejects unknown manifest field before starting Anvil (75.471708ms)
+✔ placement benchmark rejects forged manifest with stale identity before starting Anvil (90.04175ms)
+✔ placement benchmark rejects self-consistent unpinned resource identity before starting Anvil (92.352625ms)
+ℹ tests 3
+ℹ suites 0
+ℹ pass 3
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 319.931375

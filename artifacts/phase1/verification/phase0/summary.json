@@ -1,0 +1,201 @@
+{
+  "scope": "Phase 0 only; no engine port or C equivalence",
+  "utc": "2026-10-09T11:05:11Z",
+  "git_head": "c05f43b630363393d15d57c64fe3e3ae3b6fe492",
+  "results": [
+    {
+      "gate": "toolchain",
+      "command": [
+        "python3",
+        "scripts/check-toolchain.py"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.187,
+      "log": "artifacts/phase1/verification/phase0/toolchain.log",
+      "log_sha256": "b7bc741ee4244c8b92a94136b4067e4c41098c9261c9c8b9d292b43e4abc359d"
+    },
+    {
+      "gate": "schemas",
+      "command": [
+        "python3",
+        "scripts/check-schemas.py"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.041,
+      "log": "artifacts/phase1/verification/phase0/schemas.log",
+      "log_sha256": "caa139dbf79c8cc62e7fcf7f3ca672ade967b31221cad7c60aa69fdcdb747686"
+    },
+    {
+      "gate": "format",
+      "command": [
+        ".toolchain/bin/forge",
+        "fmt",
+        "--check"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.02,
+      "log": "artifacts/phase1/verification/phase0/format.log",
+      "log_sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+    },
+    {
+      "gate": "build",
+      "command": [
+        ".toolchain/bin/forge",
+        "build",
+        "--force"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 24.56,
+      "log": "artifacts/phase1/verification/phase0/build.log",
+      "log_sha256": "6e7383c357f0ee159a08606e65afc387635225b22da9e775b0382603cde87f41"
+    },
+    {
+      "gate": "foundry-tests",
+      "command": [
+        ".toolchain/bin/forge",
+        "test",
+        "--fuzz-seed",
+        "0x44",
+        "-vv"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.184,
+      "log": "artifacts/phase1/verification/phase0/foundry-tests.log",
+      "log_sha256": "4aa2ab4e0bdb0d88cd3d57d331dfbebc5c1d0bd611f41b800a5acf58f1c7f686"
+    },
+    {
+      "gate": "protocol-tests",
+      "command": [
+        "node",
+        "--test",
+        "tools/transport/protocol.test.mjs"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.128,
+      "log": "artifacts/phase1/verification/phase0/protocol-tests.log",
+      "log_sha256": "33ca86a19f93d9a6f993c591ce0ec68b548a18507fb42fe013bac3faff91fb91"
+    },
+    {
+      "gate": "browser-failure-cleanup",
+      "command": [
+        "node",
+        "--test",
+        "tools/transport/lifecycle.test.mjs"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.865,
+      "log": "artifacts/phase1/verification/phase0/browser-failure-cleanup.log",
+      "log_sha256": "e843975ecd1268f84564fc2e8578a4e8f52a4ef69d5ae49a8c58e41eccb50c63"
+    },
+    {
+      "gate": "stack-compile",
+      "command": [
+        "python3",
+        "scripts/stack-pressure.py"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.293,
+      "log": "artifacts/phase1/verification/phase0/stack-compile.log",
+      "log_sha256": "4f947e6232b3a5b4675a62e6de1658687b6147114cb70e56fab8f4eee74cc786"
+    },
+    {
+      "gate": "launcher",
+      "command": [
+        "scripts/start-anvil.sh",
+        "--check",
+        "--quiet"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.185,
+      "log": "artifacts/phase1/verification/phase0/launcher.log",
+      "log_sha256": "fe1a0d9f599d4dd2e117c4f27b0378844c9d5cea47f5f1ef15578417cd193756"
+    },
+    {
+      "gate": "runtime-limits",
+      "command": [
+        "python3",
+        "scripts/probe-limits.py"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 2.97,
+      "log": "artifacts/phase1/verification/phase0/runtime-limits.log",
+      "log_sha256": "860876983b64f7184b330714285ad715078722083b88dc3f303470b7796aedf8"
+    },
+    {
+      "gate": "transport",
+      "command": [
+        "node",
+        "tools/transport/benchmark.mjs"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 2.63,
+      "log": "artifacts/phase1/verification/phase0/transport.log",
+      "log_sha256": "3dd5566165c9fa6cf8990b6ae0792f3bdb9f040c660784a3433a6b8df283e5ac"
+    },
+    {
+      "gate": "browser",
+      "command": [
+        "node",
+        "tools/transport/browser-check.mjs"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 1.582,
+      "log": "artifacts/phase1/verification/phase0/browser.log",
+      "log_sha256": "114c7ef557a7f275aa1a29e5703be08506635cc0616ae8bfbf0d046861bcf63c"
+    }
+  ],
+  "source_sha256": {
+    "src/doom/doomstat.sol": "4c40da3914c629017959a0a4c0516d83346900674c92f5e55a766aba1b506fea",
+    "src/doom/doomtype.sol": "5fbe4b1d0fe96d04453b00d1c3f1c6781c6c8ab5147ee0ac512d17597a5a3c56",
+    "src/doom/m_fixed.sol": "3f64bef1f62f61faead3a5b8f382bf1c66e1b3739ce4ac8d59a6fcef0451ef9f",
+    "src/doom/r_defs.sol": "67fe2af175243874398abecd389938f7737c2f69fdb0bfcb11291256d7637ab2",
+    "src/doom/r_state.sol": "be3ca57e2ad1bebf0a9fa693505c3789a4292b60d20d9cf186b8053ca38b6c1a",
+    "src/doom/tables.sol": "b3532be9e2674543657bbfb9a668cf67a71baec7255cbaf324fa67eeaee7242c",
+    "src/evm/Doom.sol": "19fffec0ad30656826893bc603164299e87ea55abc771dff03b863acd96e2cf1",
+    "src/evm/FrameProtocol.sol": "4665be3f613b8e817d616d2db1dc4a644325c44a6ade476a35d7d9d003625ace",
+    "src/evm/ResourceTypes.sol": "159865364cfa57aae508cd94c49509cbccabd6aeeba55e92b9fcf816bdec4d6b",
+    "src/support/FrameFixture.sol": "1de9a0f7c1ae276041f6d71111da36413f2604b9a43a95176dd4dfae82bbc799",
+    "src/support/ResourcePlacement.sol": "3febd551f07205b96c4960d496acb27ab06c571bf8e4ce1983595491b0acd6ab",
+    "src/support/StackPressure.sol": "fa49240fd75c2810e813e3b7620492f24270a0e985ef900e88e8b81fd1fb41af",
+    "test/fixtures/reference/ReferenceNumericVectors.sol": "263bba9a3cf2995ebfd2ce21ce82960cf95ae0e9b721f9c9f9ccb745b5121ae2",
+    "test/integration/FrameEvent.t.sol": "407ba83ec6b72b8811d42c750c124adc9267692fa42b6be8630aaa7152b80af1",
+    "test/unit/Contexts.t.sol": "d96390e537540af6f9317804c85776c67e997231ce97c281298670be19035732",
+    "test/unit/ResourcePlacement.t.sol": "2fdd6d2804d9239ab506ef6815a818b414c09d3ea033f75fa8840514ff9e917a",
+    "test/unit/StackPressure.t.sol": "03953d342417feb131bc81adec8f49841a6e54017294621d04bf89cee17b8fae",
+    "test/unit/m_fixed.t.sol": "1f723de625712d9d5ee2057db7037c3e09feaea9012fc7b53e8cb5b11f2d48e5",
+    "test/unit/tables.t.sol": "b338db5a20484f4285708f61ba0bcd7bba9ffadd0285e3e95be925cada05de0b",
+    "scripts/check-phase1-schemas.py": "e0a8a624974afb1a93d0dce92f87cc6465b06005ceeee411a71445671179e37c",
+    "scripts/check-schemas.py": "df7667f32a23f8fb60469d877a7e4f638fc27fcf4743c0b6e05f6d4e62c40ab4",
+    "scripts/check-toolchain.py": "ad2d4fd6627fb94a0a6d6eba57305ed0bd64733cc221a4ff1a35d23e86428019",
+    "scripts/install-toolchain.py": "3a07e7cd106c84265a497dda8965657c15c445722519b232a7b017bb0d23afac",
+    "scripts/probe-limits.py": "49c8076ab7b78b689ab20e7a2016534670d8669458dab6ce71be7f9174783631",
+    "scripts/stack-pressure.py": "2caef3b7f12b380903f79df0a2cf4d0d8d42092ec2206c565ef8943d654ea298",
+    "scripts/start-anvil.py": "ffdc0c33d1562b145bebd4c672c4584cb48c04e865779b5372c188df89636493",
+    "scripts/verify-phase0.py": "cff2d6b649935208b5a5e9a61d98c2b6065839012225c4a7dc432e457b00df0c",
+    "scripts/verify-phase1.py": "b336c51781c491e83863d03395c2921c1ab27b89ee963e5525c371326349ef0b",
+    "scripts/env.sh": "af7ac5eb6b0e6180649c50744ad9dd2c492b04806316a066c31aaf6bf1455091",
+    "scripts/start-anvil.sh": "ead411040b8d2d536ff5334ef5b3306303f8a4cf16fb1e0bb2e6221e8b7d4f35",
+    "tools/transport/benchmark.mjs": "f3d8f32823c120fbe953bae28d4f4b222fa224bdee6f6216a1a6d74c28ef485d",
+    "tools/transport/browser-check.mjs": "3efd9e7e2e1f1bb229986f5b50b4b8728e609d836bf038ab9d38b2548888917a",
+    "tools/transport/lifecycle.test.mjs": "84ba3339593da8f1ab818714e05b675707658a3d95a6cf25910937737b90e4a0",
+    "tools/transport/palette.test.mjs": "1e9ca82b5397e18ea65183fe8834f7c91f5feffbe3d90215054b85f62af4ab39",
+    "tools/transport/protocol.test.mjs": "1fe7ef1b3275bf4c41d30cb6171e0ce08146a536ee69ef0f4467aac7faeb7b38",
+    "tools/transport/serve.mjs": "e55aa5197feb25b45655f8a68f8a37cca5827c6c403f89ad10ac70c159386e76",
+    "web/app.mjs": "20e34071029b1f741920fd870c45de7d887b052f4d575d3121f09d58c6980ed4",
+    "web/palette.mjs": "110c2c0af974ecfa935d37da60d32eedc47114484fc7b994043bfd24e95bc8ae",
+    "web/protocol.mjs": "fec5104a0e13b7ca8666200431a1804d53cdb6537c1f0f8f02fb5b69dd70f47e",
+    "web/index.html": "c5906bc07071480f0a286cdc07090a037988f4416237b23440f4e48b851f58a5",
+    "web/palette.synthetic.json": "cd72ce880f86ec534889c8391989a4af60d3781b164acd1317b34732c8e4d79f",
+    "schemas/frame-v0.schema.json": "937bb9cae8b5b9dda32ccf2d7d7d6ef706ef12b0271a0c8abef50d8c3ac09cda",
+    "schemas/palette-v0.schema.json": "2014af44e7cd31330e7636f69eb51ea44c2ceeb03e97b4c20b815d132982a97b",
+    "schemas/reference-v0.schema.json": "4e3aeb6044e5d9ee74c83d74167dd198d97a3185030d5550ae996f9d033b86b9",
+    "schemas/resource-bundle-v0.schema.json": "88887532c3cebc662f147addd412faabfb44eb8b54412fede908c816cb6529c8",
+    "schemas/tables-v1.schema.json": "4cffcd999cf0472ccda413a70d9d739c672e07468bb8841e97571e32fb34c845",
+    "schemas/vectors-v1.schema.json": "c6e109f5f5573cfa9af72c8afcea507eb29afef4171be222fc8c1bbded168036",
+    "schemas/wad-layouts-v1.json": "9a11b0c3ecd3b5d362009a7d1e61e3572cd184b1042e057dedd9ba0cc8bcb71e",
+    "foundry.toml": "46a5dd6478691c46931dce2bdaa7ec442e380081609d07005ac1ad422262d17c",
+    "toolchain.lock.json": "7675376b9fb9fe3256f2581760c8ad8fe896cdfae6ee9cc8b70b53497fb1b7c0"
+  },
+  "passed": true,
+  "snapshot_note": "Retained final verification against source_sha256. Log paths relocated to this committed snapshot; trailing whitespace removed from log lines only. Original commands/results and source hashes preserved."
+}

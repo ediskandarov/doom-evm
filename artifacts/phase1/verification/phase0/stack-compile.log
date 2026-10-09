@@ -1,0 +1,37 @@
+{
+  "experiment": "synthetic R_StoreWallRange shape; not a port or C-equivalence result",
+  "upstream_commit": "a77dfb96cb91780ca334d0d4cfd86957558007e0",
+  "source_sha256": "fa49240fd75c2810e813e3b7620492f24270a0e985ef900e88e8b81fd1fb41af",
+  "compiler": "solc, the solidity compiler commandline interface\nVersion: 0.8.37+commit.f401782d.Darwin.appleclang",
+  "host": "macOS-15.7.9-arm64-arm-64bit-Mach-O",
+  "settings": {
+    "optimizer": {
+      "enabled": true,
+      "runs": 200
+    },
+    "evmVersion": "cancun"
+  },
+  "command": ".toolchain/bin/solc --standard-json (input assembled by scripts/stack-pressure.py)",
+  "results": [
+    {
+      "pipeline": "via-ir",
+      "viaIR": true,
+      "process_exit_code": 0,
+      "success": true,
+      "compile_wall_ms": 173.531,
+      "error_messages": [],
+      "initcode_bytes": 4196,
+      "runtime_bytes": 4170
+    },
+    {
+      "pipeline": "legacy",
+      "viaIR": false,
+      "process_exit_code": 0,
+      "success": false,
+      "compile_wall_ms": 13.467,
+      "error_messages": [
+        "Compiler error (/solidity/libsolidity/codegen/LValue.cpp:54): Stack too deep. Try compiling with `--via-ir` (cli) or the equivalent `viaIR: true` (standard JSON) while enabling the optimizer. Otherwise, try removing local variables."
+      ]
+    }
+  ]
+}

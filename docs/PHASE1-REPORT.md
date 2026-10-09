@@ -1,6 +1,8 @@
 # Phase 1 — foundation checkpoint 👹
 
-Status: integration verification in progress. Phase 2 has not started. This report will be finalized against the retained full verification run.
+**Status: complete and verified, 2026-10-09. Phase 2 has not started.**
+
+All **13 Phase 1 gates** passed, including all **12 Phase 0 gates**, **33 Foundry tests**, **51 WAD tests**, **12 reference infrastructure tests**, palette/transport tests and three malformed resource-identity regressions. Every recorded executable/fixture source hash was rechecked against the final worktree. [Final gate summary](../artifacts/phase1/verification/summary.json) · [nested Phase 0 evidence](../artifacts/phase1/verification/phase0/summary.json).
 
 ## Scope and evidence
 
@@ -21,7 +23,7 @@ Reproduce everything from the README prerequisites:
 python3 scripts/verify-phase1.py
 ```
 
-The command downloads/checks the pinned permitted WAD, regenerates the package, rebuilds/checks the native oracle and tables, runs schemas and tests, executes the entire Phase 0 suite, and checks actual Anvil resource transactions and Chrome Canvas pixels. Fresh evidence is under `artifacts/local/phase1-verification/`. Full WAD/archive/package files stay in ignored `artifacts/local/`; compact selected-lump snapshots and original license/credits are committed.
+The command downloads/checks the pinned permitted WAD, regenerates the package, rebuilds/checks the native oracle and tables, runs schemas and tests, executes the entire Phase 0 suite, and checks actual Anvil resource transactions and Chrome Canvas pixels. Fresh evidence is under `artifacts/local/phase1-verification/`. The retained final snapshot is [artifacts/phase1](../artifacts/phase1/); log paths are relocated and trailing whitespace trimmed, explicitly noted in each summary. Full WAD/archive/package files stay in ignored `artifacts/local/`; compact selected-lump snapshots and original license/credits are committed.
 
 ## Fidelity decisions
 
@@ -41,7 +43,7 @@ Bundle identity: `d379076f21645cf7cc5acb056663d0faacc4065489a0ca99738479323c9f7a
 
 The selected map contains 1,175 lines, 1,196 vertices, 2,057 segs, 682 subsectors, 681 nodes and 182 sectors. Resource validation covers 963 texture definitions, 1,045 referenced patches, 240 flats, 14 palettes and 34 colormaps. The packer only reorders raw lump payloads into contiguous directory order; it computes no visibility, lighting or frame-specific information. Runtime record decoding remains a Phase 2 resource-adapter task.
 
-Measured gas with actual WAD slices:
+Measured gas with actual WAD slices ([raw transactions and read hashes](../artifacts/phase1/resource-placement.json)):
 
 | Slice | Bytes | Storage upload | Code upload incl. reader | Storage full sample | Code full sample |
 |---|---:|---:|---:|---:|---:|
@@ -57,6 +59,10 @@ Decision: use immutable code blobs as the starting strategy for the future stati
 
 The native oracle intentionally requires Apple clang 17.0.0 `clang-1700.0.13.5`, target `arm64-apple-darwin24.6.0`, and recorded flags. Other compiler/platform profiles require explicit review. Linux binaries are pinned for Foundry but a cross-platform C oracle is not yet verified. The WAD packer deliberately rejects extended map formats and only packages the checksum-pinned permitted IWAD; raw parser tests include malformed classic input.
 
-The browser still displays a **mock-generated EVM frame**, now optionally using real WAD colors. No real DOOM frame, pixel-perfect renderer, gameplay or M1 completion is claimed. Pixel-diff infrastructure exists, but no original-renderer framebuffer golden exists yet.
+The browser still displays a **mock-generated EVM frame**, now optionally using real WAD colors. [Canvas/receipt verification](../artifacts/phase1/wad-browser.json) and [screenshot](../artifacts/phase1/wad-browser.png) retain the actual result. No real DOOM frame, pixel-perfect renderer, gameplay or M1 completion is claimed. Pixel-diff infrastructure exists, but no original-renderer framebuffer golden exists yet.
 
 Before Phase 2 implementation, extend the shared geometry/render-state and resource-access contracts around these tested foundations. Then sequence r_main geometry, r_data access and r_draw primitives as prescribed by the existing plan. Measure pure table-lookup memory growth and immutable resource access in those actual workloads. The real E1M1 camera/BSP fixtures are ready to serve as their native reference; full frame goldens arrive with the real renderer.
+
+## Completion audit
+
+Every F1 workstream in the implementation plan has an implementation, reproducible command, source-fidelity notes and passing gate above. The original toolchain/compiler settings, abstract Doom adapter, shared render context and Phase 0 verifier are unchanged. Code inspection confirms no Phase 2 Solidity module was introduced. Review regressions cover W_AddFile name padding, the 15-bit BSP root boundary, all eight magic-byte bits, untrusted manifest identities, and camera/map/upstream agreement in reference comparisons. All defined native numeric/error rows are compared; the 36 undefined cases remain disclosed.

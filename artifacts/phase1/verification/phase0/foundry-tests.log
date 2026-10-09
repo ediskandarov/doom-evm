@@ -1,0 +1,54 @@
+No files changed, compilation skipped
+
+Ran 2 tests for test/unit/ResourcePlacement.t.sol:ResourcePlacementTest
+[PASS] testEmptyResource() (gas: 21400)
+[PASS] testSameBytesAndBounds() (gas: 319998)
+Suite result: ok. 2 passed; 0 failed; 0 skipped; finished in 34.06ms (2.38ms CPU time)
+
+Ran 9 tests for test/unit/StackPressure.t.sol:StackPressureTest
+[PASS] testClosedDoorAndViewPlaneSuppression() (gas: 49242)
+[PASS] testDrawsegLimitAndInvalidRange() (gas: 20400)
+[PASS] testFullWidthMaskedRuntime() (gas: 651766)
+[PASS] testFuzzColumnRangeAndEdgeRecurrence(uint16,uint16) (runs: 256, μ: 105612, ~: 63529)
+[PASS] testLightingClampAndAngleClamp() (gas: 73235)
+[PASS] testSingleColumnAndBottomPeg() (gas: 15608)
+[PASS] testSingleSidedEdgeRecurrence() (gas: 19641)
+[PASS] testTwoSidedTiersMaskedClipAllocation() (gas: 47932)
+[PASS] testUntexturedIdenticalPlanesAndSky() (gas: 31497)
+Suite result: ok. 9 passed; 0 failed; 0 skipped; finished in 34.08ms (31.41ms CPU time)
+
+Ran 7 tests for test/unit/Contexts.t.sol:ContextsTest
+[PASS] testExplicitNarrowingAndWidenedProduct() (gas: 156)
+[PASS] testFuzzInt32NarrowingPreservesLowBits(int64) (runs: 256, μ: 293, ~: 293)
+[PASS] testInternalMemoryReferenceAndAssignmentAlias() (gas: 867)
+[PASS] testInternalStorageReferencePersists() (gas: 22820)
+[PASS] testNullSentinelAndRawBspFlagAreDistinct() (gas: 178)
+[PASS] testSignedShiftDiffersFromDivision() (gas: 284)
+[PASS] testStorageMemoryCopiesAreIndependent() (gas: 48499)
+Suite result: ok. 7 passed; 0 failed; 0 skipped; finished in 58.68ms (5.77ms CPU time)
+
+Ran 5 tests for test/unit/m_fixed.t.sol:MFixedTest
+[PASS] testDirectZeroDivisionIncludesUndefinedNaNExtension() (gas: 9448)
+[PASS] testEveryDefinedOriginalCNumericVector() (gas: 32700935)
+[PASS] testFixedMulArithmeticShiftAndWrapping() (gas: 541)
+[PASS] testFuzzFixedDiv2ExactRationalRange(int32,int32) (runs: 256, μ: 2018, ~: 2078)
+[PASS] testUndefinedCIntMinMagnitudeExtension() (gas: 2382)
+Suite result: ok. 5 passed; 0 failed; 0 skipped; finished in 60.72ms (61.25ms CPU time)
+
+Ran 7 tests for test/unit/tables.t.sol:TablesTest
+[PASS] testAllBoundsRejectInsteadOfWrapping() (gas: 29053)
+[PASS] testConstantsAndCardinalAngles() (gas: 3350)
+[PASS] testEveryCosineAliasMatchesOriginalC() (gas: 45271027)
+[PASS] testEverySineLookupMatchesOriginalC() (gas: 54918213)
+[PASS] testEveryTangentLookupMatchesOriginalC() (gas: 20737051)
+[PASS] testEveryTantoangleLookupMatchesOriginalC() (gas: 10127001)
+[PASS] testSlopeDivUnsignedWrapAndCutoffs() (gas: 189)
+Suite result: ok. 7 passed; 0 failed; 0 skipped; finished in 71.94ms (175.00ms CPU time)
+
+Ran 3 tests for test/integration/FrameEvent.t.sol:FrameEventTest
+[PASS] testCompletePayloadExactlyOneFrameAndSequentialIds() (gas: 41153806)
+[PASS] testInvalidSequenceDriverAndButtonsHaveNoLogsOrStateChange() (gas: 11729390)
+[PASS] testRevertAfterFrameRollsBackCounters() (gas: 23262031)
+Suite result: ok. 3 passed; 0 failed; 0 skipped; finished in 93.01ms (188.56ms CPU time)
+
+Ran 6 test suites in 97.04ms (352.49ms CPU time): 33 tests passed, 0 failed, 0 skipped (33 total tests)

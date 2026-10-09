@@ -309,15 +309,15 @@ A faster renderer that changes pixels without documented justification **is not 
 - [x] `F0-05` Compile a stack-heavy, renderer-shaped spike.
 - [x] `F0-06` Publish `PORTING.md` progress matrix and fixture metadata format.
 
-**Phase 0 verified 2026-10-09:** see [acceptance report](PHASE0-REPORT.md). Phase 1 remains unstarted.
+**Phase 0 verified 2026-10-09:** see [acceptance report](PHASE0-REPORT.md). Phase 1 subsequently verified: see [Phase 1 report](PHASE1-REPORT.md). Phase 2 remains unstarted.
 
 ### Foundation / Sprint F1 (parallel agents)
 
-- [ ] `F1-A` `m_fixed.sol` and C-oracle tests.
-- [ ] `F1-B` `tables.sol` and checksum tests.
-- [ ] `F1-C` WAD loader and deterministic resource package.
-- [ ] `F1-D` WebSocket + receipt minimal browser and palette decoder.
-- [ ] `F1-E` Original C harness and reproducible golden infrastructure.
+- [x] `F1-A` `m_fixed.sol` and C-oracle tests.
+- [x] `F1-B` `tables.sol` and checksum tests.
+- [x] `F1-C` WAD loader and deterministic resource package.
+- [x] `F1-D` WebSocket + receipt minimal browser and palette decoder.
+- [x] `F1-E` Original C harness and reproducible golden infrastructure.
 
 ### Renderer / Sprint R1
 
@@ -353,8 +353,8 @@ After every integration gate, update this table:
 | Milestone | Status | Evidence | Divergences | Blockers |
 |---|---|---|---|---|
 | Event smoke | passed | [Phase 0 report](PHASE0-REPORT.md), real receipt/WS/Canvas verification | Synthetic fixture only; no DOOM renderer | None |
-| C fixed math | not started | — | — | — |
-| WAD data in EVM | not started | — | — | — |
+| C fixed math | passed | [Phase 1 report](PHASE1-REPORT.md), original C vectors and full table comparisons | Explicit undefined-C extensions | None |
+| WAD data in EVM (foundation samples) | passed | [Phase 1 report](PHASE1-REPORT.md), actual WAD upload/read hashes | Samples only; runtime renderer adapter remains Phase 2 | None for Phase 1 |
 | BSP walls render | not started | — | — | — |
 | M1 full static frame | not started | — | — | — |
 | M2 movement | not started | — | — | — |

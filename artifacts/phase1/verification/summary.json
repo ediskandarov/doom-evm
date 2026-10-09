@@ -1,0 +1,256 @@
+{
+  "scope": "Phase 1 foundations and all Phase 0 regressions; no Phase 2 renderer",
+  "utc": "2026-10-09T11:05:05Z",
+  "git_head": "c05f43b630363393d15d57c64fe3e3ae3b6fe492",
+  "source_sha256": {
+    "src/doom/doomstat.sol": "4c40da3914c629017959a0a4c0516d83346900674c92f5e55a766aba1b506fea",
+    "src/doom/doomtype.sol": "5fbe4b1d0fe96d04453b00d1c3f1c6781c6c8ab5147ee0ac512d17597a5a3c56",
+    "src/doom/m_fixed.sol": "3f64bef1f62f61faead3a5b8f382bf1c66e1b3739ce4ac8d59a6fcef0451ef9f",
+    "src/doom/r_defs.sol": "67fe2af175243874398abecd389938f7737c2f69fdb0bfcb11291256d7637ab2",
+    "src/doom/r_state.sol": "be3ca57e2ad1bebf0a9fa693505c3789a4292b60d20d9cf186b8053ca38b6c1a",
+    "src/doom/tables.sol": "b3532be9e2674543657bbfb9a668cf67a71baec7255cbaf324fa67eeaee7242c",
+    "src/evm/Doom.sol": "19fffec0ad30656826893bc603164299e87ea55abc771dff03b863acd96e2cf1",
+    "src/evm/FrameProtocol.sol": "4665be3f613b8e817d616d2db1dc4a644325c44a6ade476a35d7d9d003625ace",
+    "src/evm/ResourceTypes.sol": "159865364cfa57aae508cd94c49509cbccabd6aeeba55e92b9fcf816bdec4d6b",
+    "src/support/FrameFixture.sol": "1de9a0f7c1ae276041f6d71111da36413f2604b9a43a95176dd4dfae82bbc799",
+    "src/support/ResourcePlacement.sol": "3febd551f07205b96c4960d496acb27ab06c571bf8e4ce1983595491b0acd6ab",
+    "src/support/StackPressure.sol": "fa49240fd75c2810e813e3b7620492f24270a0e985ef900e88e8b81fd1fb41af",
+    "test/fixtures/phase0/bundle.bin": "5c6ee0df7c6c7f49691529c0bff0bebe3d14d2d11b567d4ccbf1864354441201",
+    "test/fixtures/phase0/bundle.json": "3aab41bf271b9d22316ec40ec96c58dd04e364a0472b52fac38e40fcf66824a4",
+    "test/fixtures/phase0/frame.json": "d46ffb85bce20dd0e50390f5529851b9a0670a14da037268600a0f4830a6f372",
+    "test/fixtures/phase0/palette.json": "cd72ce880f86ec534889c8391989a4af60d3781b164acd1317b34732c8e4d79f",
+    "test/fixtures/phase0/pixels.bin": "499ee3bbb8bb50ccdb67d2987394008886186d1d04213dcec273e728abc6e56c",
+    "test/fixtures/phase0/reference.json": "eedee76fe831d7274fdcde0e0eced8f48fe40d277bf89b32adc3023abb0a4f4c",
+    "test/fixtures/reference/ReferenceNumericVectors.sol": "263bba9a3cf2995ebfd2ce21ce82960cf95ae0e9b721f9c9f9ccb745b5121ae2",
+    "test/fixtures/reference/camera-e1m1.json": "0571782695a62ddf7fcfb6af6a840ad49ad45040d13f53ae30fc5fdcc61f0fc1",
+    "test/fixtures/reference/extraction-manifest.json": "3e08d123f1e5b4703190ec357bce861c225c86496c964c24edbd92a0b7b1a77c",
+    "test/fixtures/reference/geometry-synthetic-v1.json": "2aee6928611b82a0520b8178f6183e24088e2ae6b56fea763213a21581f3c19b",
+    "test/fixtures/reference/geometry-wad-v1.json": "7dca63a427e4b5bcd7f398ee0758a77654cf8967ec760c35e3c983b5e4849c3c",
+    "test/fixtures/reference/native-table-hashes.json": "f48624ef368f4a4c40cfa33479c32350c9a96e5e9b4eeefe91234b3de29364c4",
+    "test/fixtures/reference/numeric-v1.json": "25f9a8420517f26c50f6b47eba4e2d482f88739fd5df5c4c7335ddea4480862f",
+    "test/fixtures/reference/undefined-audit.json": "c0b80512d1c2c9a29b4dc09271dddaa65d6065c5842f70970f9c1907dc4b0976",
+    "test/fixtures/wad/palette.json": "a9cf61c57f81d5299a6c1229e8eabf1dd74254f10e2d185108c790636ade98ad",
+    "test/fixtures/wad/selected-lumps.bin": "1f296c6c5354395a5abe3e3f47fb6f3bfa39d79e8274a2ef731aae9a4f87762c",
+    "test/fixtures/wad/snapshot.json": "597d64650f8be9745095c1703d6d58f0d6baf6094b51a3435b797c2b9cb72c42",
+    "test/integration/FrameEvent.t.sol": "407ba83ec6b72b8811d42c750c124adc9267692fa42b6be8630aaa7152b80af1",
+    "test/unit/Contexts.t.sol": "d96390e537540af6f9317804c85776c67e997231ce97c281298670be19035732",
+    "test/unit/ResourcePlacement.t.sol": "2fdd6d2804d9239ab506ef6815a818b414c09d3ea033f75fa8840514ff9e917a",
+    "test/unit/StackPressure.t.sol": "03953d342417feb131bc81adec8f49841a6e54017294621d04bf89cee17b8fae",
+    "test/unit/m_fixed.t.sol": "1f723de625712d9d5ee2057db7037c3e09feaea9012fc7b53e8cb5b11f2d48e5",
+    "test/unit/tables.t.sol": "b338db5a20484f4285708f61ba0bcd7bba9ffadd0285e3e95be925cada05de0b",
+    "tools/reference/compat.h": "7f462cbe29984e8a27b0829fceb6c9544f8b2044770c58a2a06285e472e2a123",
+    "tools/reference/driver.c": "26157fea29f42019c963a0e49c61c9c312c4ead68dce2f7566fd068efbc45edd",
+    "tools/reference/pixel_diff.py": "c0d68e1fbee0f25b970e76902b32ea035c5c79da1f66c302e6a1701cd1df756e",
+    "tools/reference/reference.py": "800bcdff3c05634aab27f4cc38bf12bc564ed4644bb88845aff9aa9ce12dc8ee",
+    "tools/reference/test_reference.py": "750ccad87504ee885deda199e90492f7400e43ee43c184b5ee8e9dda37501879",
+    "tools/resources/benchmark.mjs": "1a432b33f0a1c107dac4a95ba93c0cf103f1781891d907f28312397c45889e36",
+    "tools/resources/identity.test.mjs": "7e00e1687243d44fbff14aaf82cbb6bb7f2bce2f181ebb4947eb4faa8421ddde",
+    "tools/tables/generate.py": "72cb51801b5106da2b32fc4207948ed5d659f7c5635b0da137f2e7c462134dd0",
+    "tools/tables/manifest.json": "e70a66f6dccc236d647bad25235cafc52593b09fdb6b1ffab180b7c01c544232",
+    "tools/transport/benchmark.mjs": "f3d8f32823c120fbe953bae28d4f4b222fa224bdee6f6216a1a6d74c28ef485d",
+    "tools/transport/browser-check.mjs": "3efd9e7e2e1f1bb229986f5b50b4b8728e609d836bf038ab9d38b2548888917a",
+    "tools/transport/evidence/browser.json": "0b9ef6c4c09e6dcd40bf4fdbe503edf16b1242770117118050ea0bfee5aed083",
+    "tools/transport/evidence/transport.json": "5597409b3b4c821fa5f97d3872b4363e2f151b624d098d4dcf7d5eb0318100bc",
+    "tools/transport/lifecycle.test.mjs": "84ba3339593da8f1ab818714e05b675707658a3d95a6cf25910937737b90e4a0",
+    "tools/transport/palette.test.mjs": "1e9ca82b5397e18ea65183fe8834f7c91f5feffbe3d90215054b85f62af4ab39",
+    "tools/transport/protocol.test.mjs": "1fe7ef1b3275bf4c41d30cb6171e0ce08146a536ee69ef0f4467aac7faeb7b38",
+    "tools/transport/serve.mjs": "e55aa5197feb25b45655f8a68f8a37cca5827c6c403f89ad10ac70c159386e76",
+    "tools/wad/check.ts": "a42985cc41b2f9f40221de2d459c6e4fc2a82f802b1f62c8b888a79d448ebe0d",
+    "tools/wad/download.ts": "01fa49258021aea9d95a24e3853397ed2c94a969fd17ddd1d558872977bb3f2b",
+    "tools/wad/freedoom.lock.json": "e1a9ff60d5d2bb242523ebaa8dfa01449c80ce91192305c30073f470fda533a2",
+    "tools/wad/pack.ts": "c58729a911282c880916bcedd917baa82bf037aabaf188fa0476a1582c2ba3dc",
+    "tools/wad/schema.ts": "94d181c2ef3221a0a5b666e8564c43944a62955d325cb1cdaa8b441fa5fb94d0",
+    "tools/wad/snapshot.ts": "9f75d478ebe902924b9ee863ca391b13f06922bfaae5614658c0f865b8aec751",
+    "tools/wad/wad.test.ts": "ea4ff6edd42163d7e30dc77d5df18f783a5aa4adb79d522a9dc56621ca879a1d",
+    "tools/wad/wad.ts": "5180c179fe2b5deddfb1f11557f82e94449f6c184dc11189611bc517976307f7",
+    "scripts/check-phase1-schemas.py": "e0a8a624974afb1a93d0dce92f87cc6465b06005ceeee411a71445671179e37c",
+    "scripts/check-schemas.py": "df7667f32a23f8fb60469d877a7e4f638fc27fcf4743c0b6e05f6d4e62c40ab4",
+    "scripts/check-toolchain.py": "ad2d4fd6627fb94a0a6d6eba57305ed0bd64733cc221a4ff1a35d23e86428019",
+    "scripts/env.sh": "af7ac5eb6b0e6180649c50744ad9dd2c492b04806316a066c31aaf6bf1455091",
+    "scripts/install-toolchain.py": "3a07e7cd106c84265a497dda8965657c15c445722519b232a7b017bb0d23afac",
+    "scripts/probe-limits.py": "49c8076ab7b78b689ab20e7a2016534670d8669458dab6ce71be7f9174783631",
+    "scripts/stack-pressure.py": "2caef3b7f12b380903f79df0a2cf4d0d8d42092ec2206c565ef8943d654ea298",
+    "scripts/start-anvil.py": "ffdc0c33d1562b145bebd4c672c4584cb48c04e865779b5372c188df89636493",
+    "scripts/start-anvil.sh": "ead411040b8d2d536ff5334ef5b3306303f8a4cf16fb1e0bb2e6221e8b7d4f35",
+    "scripts/verify-phase0.py": "cff2d6b649935208b5a5e9a61d98c2b6065839012225c4a7dc432e457b00df0c",
+    "scripts/verify-phase1.py": "b336c51781c491e83863d03395c2921c1ab27b89ee963e5525c371326349ef0b",
+    "schemas/frame-v0.schema.json": "937bb9cae8b5b9dda32ccf2d7d7d6ef706ef12b0271a0c8abef50d8c3ac09cda",
+    "schemas/palette-v0.schema.json": "2014af44e7cd31330e7636f69eb51ea44c2ceeb03e97b4c20b815d132982a97b",
+    "schemas/reference-v0.schema.json": "4e3aeb6044e5d9ee74c83d74167dd198d97a3185030d5550ae996f9d033b86b9",
+    "schemas/resource-bundle-v0.schema.json": "88887532c3cebc662f147addd412faabfb44eb8b54412fede908c816cb6529c8",
+    "schemas/tables-v1.schema.json": "4cffcd999cf0472ccda413a70d9d739c672e07468bb8841e97571e32fb34c845",
+    "schemas/vectors-v1.schema.json": "c6e109f5f5573cfa9af72c8afcea507eb29afef4171be222fc8c1bbded168036",
+    "schemas/wad-layouts-v1.json": "9a11b0c3ecd3b5d362009a7d1e61e3572cd184b1042e057dedd9ba0cc8bcb71e",
+    "web/app.mjs": "20e34071029b1f741920fd870c45de7d887b052f4d575d3121f09d58c6980ed4",
+    "web/index.html": "c5906bc07071480f0a286cdc07090a037988f4416237b23440f4e48b851f58a5",
+    "web/palette.mjs": "110c2c0af974ecfa935d37da60d32eedc47114484fc7b994043bfd24e95bc8ae",
+    "web/palette.synthetic.json": "cd72ce880f86ec534889c8391989a4af60d3781b164acd1317b34732c8e4d79f",
+    "web/protocol.mjs": "fec5104a0e13b7ca8666200431a1804d53cdb6537c1f0f8f02fb5b69dd70f47e",
+    "foundry.toml": "46a5dd6478691c46931dce2bdaa7ec442e380081609d07005ac1ad422262d17c",
+    "toolchain.lock.json": "7675376b9fb9fe3256f2581760c8ad8fe896cdfae6ee9cc8b70b53497fb1b7c0"
+  },
+  "results": [
+    {
+      "gate": "wad-download",
+      "command": [
+        "node",
+        "tools/wad/download.ts",
+        "artifacts/local/freedoom"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.187,
+      "log": "artifacts/phase1/verification/wad-download.log",
+      "log_sha256": "ec86879e1458934cb13aef5342c5694ae112f3f5b1f8266b028d7c147434383c"
+    },
+    {
+      "gate": "wad-pack",
+      "command": [
+        "node",
+        "tools/wad/pack.ts",
+        "artifacts/local/freedoom/freedoom1.wad",
+        "artifacts/local/wad"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.296,
+      "log": "artifacts/phase1/verification/wad-pack.log",
+      "log_sha256": "c7b57c5ffd50b58c278a2e70286cc9d9f917f71ac48e4cbfca9f3c58242a796f"
+    },
+    {
+      "gate": "wad-tests",
+      "command": [
+        "node",
+        "--test",
+        "tools/wad/wad.test.ts"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.186,
+      "log": "artifacts/phase1/verification/wad-tests.log",
+      "log_sha256": "2cbffa6293dcafbb16b6b0b3777ee9cf8d16b35a8543f871f28812ff4717a2d3"
+    },
+    {
+      "gate": "wad-reproducibility",
+      "command": [
+        "node",
+        "tools/wad/check.ts",
+        "artifacts/local/freedoom/freedoom1.wad",
+        "artifacts/local/wad"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.511,
+      "log": "artifacts/phase1/verification/wad-reproducibility.log",
+      "log_sha256": "3e495119e6ea5bbfe896d63593f0e998db67f9290d9c6b57260baea09a99b426"
+    },
+    {
+      "gate": "original-c-oracle",
+      "command": [
+        "python3",
+        "tools/reference/reference.py",
+        "--check",
+        "--wad",
+        "artifacts/local/freedoom/freedoom1.wad"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 1.909,
+      "log": "artifacts/phase1/verification/original-c-oracle.log",
+      "log_sha256": "516ab5ec814605d8002f89436182898f164bbdf21f749cca8d2c93873f868563"
+    },
+    {
+      "gate": "reference-infrastructure",
+      "command": [
+        "python3",
+        "tools/reference/test_reference.py"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 2.129,
+      "log": "artifacts/phase1/verification/reference-infrastructure.log",
+      "log_sha256": "714840eafa8c010c94cb080074eee6f240eb320cec344697bad7d542c01d6b45"
+    },
+    {
+      "gate": "native-tables",
+      "command": [
+        "python3",
+        "tools/tables/generate.py"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.386,
+      "log": "artifacts/phase1/verification/native-tables.log",
+      "log_sha256": "3af5220ce81bd64e850bf2580b2d343632b6c208a3c7c170fa55ef6e71161be7"
+    },
+    {
+      "gate": "phase1-schemas",
+      "command": [
+        "python3",
+        "scripts/check-phase1-schemas.py"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.132,
+      "log": "artifacts/phase1/verification/phase1-schemas.log",
+      "log_sha256": "4c6aadc5f318cd535802830f938dd4abdc3b7bf223c8b9b5986e56d06f0e621f"
+    },
+    {
+      "gate": "palette-validation",
+      "command": [
+        "node",
+        "--test",
+        "tools/transport/palette.test.mjs"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.124,
+      "log": "artifacts/phase1/verification/palette-validation.log",
+      "log_sha256": "5af8af3bfae84da54f0a44eea775e5fcc01a2c27dabf15d0c458d011f9227752"
+    },
+    {
+      "gate": "all-phase0-gates",
+      "command": [
+        "python3",
+        "scripts/verify-phase0.py"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 33.748,
+      "log": "artifacts/phase1/verification/all-phase0-gates.log",
+      "log_sha256": "74bd0f40aa295ec323966df9b1672055f3f90f0c4d50cc7d2d8a971e51fd0beb"
+    },
+    {
+      "gate": "resource-identity-rejections",
+      "command": [
+        "node",
+        "--test",
+        "tools/resources/identity.test.mjs"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.401,
+      "log": "artifacts/phase1/verification/resource-identity-rejections.log",
+      "log_sha256": "c56d33e2a5f0174da629600a7dba6f2da6aacc024f92a050780db49a47fcc3cd"
+    },
+    {
+      "gate": "resource-placement",
+      "command": [
+        "node",
+        "tools/resources/benchmark.mjs",
+        "--bundle",
+        "artifacts/local/wad/bundle.json"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.958,
+      "log": "artifacts/phase1/verification/resource-placement.log",
+      "log_sha256": "7df73dfc9003ac791b198299839b2e8b7db9bea9dce28db61bba6e82d802ce2a"
+    },
+    {
+      "gate": "wad-palette-browser",
+      "command": [
+        "node",
+        "tools/transport/browser-check.mjs",
+        "--palette",
+        "artifacts/local/wad/palette.json",
+        "--output-prefix",
+        "artifacts/local/wad-browser"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 1.205,
+      "log": "artifacts/phase1/verification/wad-palette-browser.log",
+      "log_sha256": "8cdff198944238a85c84f87908627824338ca0075b89cf3c1b5760e5c53866dd"
+    }
+  ],
+  "passed": true,
+  "snapshot_note": "Retained final verification against source_sha256. Log paths relocated to this committed snapshot; trailing whitespace removed from log lines only. Original commands/results and source hashes preserved."
+}

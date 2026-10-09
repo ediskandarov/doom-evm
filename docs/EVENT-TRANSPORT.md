@@ -78,3 +78,7 @@ Anvil 1.8.5 rejects using `--disable-block-gas-limit` and `--gas-limit` together
 ```
 
 After readiness, call `anvil_setBlockGasLimit` with `0x3b9aca00`. This setting applies to the **next mined block**, not the existing latest header. The benchmark's deployment mines that block and its header proves the configured limit; the project launcher explicitly calls `evm_mine` before checking the header. The benchmark records this post-launch RPC alongside its exact arguments. Transactions still pass an explicit gas budget; this is a relaxed local EVM, not unlimited execution. No custom opcode, precompile, `anvil_setCode`, off-chain synthetic framebuffer injection, or substitute engine is used.
+
+## Phase 1 palette integration
+
+The synthetic Frame fixture and ABI are unchanged. `benchmark.mjs --palette <palette.json>` and `browser-check.mjs --palette <palette.json>` accept the real packed WAD palette after checking v0 identity, kind and RGB SHA-256. The browser only expands color indices. The [Phase 1 Canvas evidence](../artifacts/phase1/wad-browser.json) compares all receipt pixels and all RGBA bytes against Freedoom PLAYPAL variant0, including receipt fallback and duplicate backfill. It remains explicitly a mock frame, not a DOOM render.

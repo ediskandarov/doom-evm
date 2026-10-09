@@ -1,0 +1,139 @@
+Compiling 19 files with Solc 0.8.37
+Solc 0.8.37 finished in 24.46s
+Compiler run successful!
+Warning: AST source not found for /Users/eduard/sandbox/doom-evm/src/doom/r_defs.sol
+Warning: AST source not found for /Users/eduard/sandbox/doom-evm/src/evm/ResourceTypes.sol
+warning[unsafe-typecast]: typecast can truncate values
+   ╭▸ src/doom/m_fixed.sol:12:16
+   │
+12 │         return int32((int64(a) * int64(b)) >> 16);
+   │                ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   │
+   ├ note: consider disabling this lint if you're certain the cast is safe
+   │
+   │       // casting to 'int32' is safe because [explain why]
+   │       // forge-lint: disable-next-line(unsafe-typecast)
+   │
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[unsafe-typecast]: typecast can truncate values
+   ╭▸ src/doom/tables.sol:95:16
+   │
+95 │         return int32(_word(data, index & 255));
+   │                ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   │
+   ├ note: consider disabling this lint if you're certain the cast is safe
+   │
+   │       // casting to 'int32' is safe because [explain why]
+   │       // forge-lint: disable-next-line(unsafe-typecast)
+   │
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[unsafe-typecast]: typecast can truncate values
+   ╭▸ src/support/StackPressure.sol:82:50
+   │
+82 │             rw_scalestep = (scale2 - rw_scale) / int256(stop - start);
+   │                                                  ━━━━━━━━━━━━━━━━━━━━
+   │
+   ├ note: consider disabling this lint if you're certain the cast is safe
+   │
+   │       // casting to 'int256' is safe because [explain why]
+   │       // forge-lint: disable-next-line(unsafe-typecast)
+   │
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[unsafe-typecast]: typecast can truncate values
+   ╭▸ src/doom/m_fixed.sol:36:16
+   │
+36 │         return int32(numerator / denominator);
+   │                ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   │
+   ├ note: consider disabling this lint if you're certain the cast is safe
+   │
+   │       // casting to 'int32' is safe because [explain why]
+   │       // forge-lint: disable-next-line(unsafe-typecast)
+   │
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[reentrancy-events]: event emitted after an external call; reentrancy can reorder or fabricate logs that off-chain consumers rely on
+   ╭▸ src/support/ResourcePlacement.sol:60:9
+   │
+60 │         emit Sample(sha256(read(offset, length)));
+   │         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/reentrancy-events
+
+warning[unsafe-typecast]: typecast can truncate values
+    ╭▸ src/support/StackPressure.sol:182:66
+    │
+182 │             if (segtextured) t.checksum += rw_scale + t.offset + int256(rw_x) + t.light;
+    │                                                                  ━━━━━━━━━━━━
+    │
+    ├ note: consider disabling this lint if you're certain the cast is safe
+    │
+    │       // casting to 'int256' is safe because [explain why]
+    │       // forge-lint: disable-next-line(unsafe-typecast)
+    │
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[unsafe-typecast]: typecast can truncate values
+    ╭▸ src/support/StackPressure.sol:194:50
+    │
+194 │                 if (maskedtexture) t.checksum += int256(rw_x);
+    │                                                  ━━━━━━━━━━━━
+    │
+    ├ note: consider disabling this lint if you're certain the cast is safe
+    │
+    │       // casting to 'int256' is safe because [explain why]
+    │       // forge-lint: disable-next-line(unsafe-typecast)
+    │
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[unsafe-typecast]: typecast can truncate values
+    ╭▸ src/doom/tables.sol:223:16
+    │
+223 │         return int32(_word(data, index & 255));
+    │                ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ├ note: consider disabling this lint if you're certain the cast is safe
+    │
+    │       // casting to 'int32' is safe because [explain why]
+    │       // forge-lint: disable-next-line(unsafe-typecast)
+    │
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[unsafe-typecast]: typecast can truncate values
+    ╭▸ src/support/StackPressure.sol:230:21
+    │
+230 │         return 16 + int256(x) + (angle < 0 ? -angle : angle) / 30;
+    │                     ━━━━━━━━━
+    │
+    ├ note: consider disabling this lint if you're certain the cast is safe
+    │
+    │       // casting to 'int256' is safe because [explain why]
+    │       // forge-lint: disable-next-line(unsafe-typecast)
+    │
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[unsafe-typecast]: typecast can truncate values
+    ╭▸ src/support/StackPressure.sol:234:21
+    │
+234 │         return 64 + int256(id);
+    │                     ━━━━━━━━━━
+    │
+    ├ note: consider disabling this lint if you're certain the cast is safe
+    │
+    │       // casting to 'int256' is safe because [explain why]
+    │       // forge-lint: disable-next-line(unsafe-typecast)
+    │
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+

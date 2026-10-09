@@ -1,0 +1,221 @@
+Warning: AST source not found for /Users/eduard/sandbox/doom-evm/src/doom/r_defs.sol
+Warning: AST source not found for /Users/eduard/sandbox/doom-evm/src/evm/ResourceTypes.sol
+warning[unsafe-typecast]: typecast can truncate values
+   ╭▸ src/doom/m_fixed.sol:12:16
+   │
+12 │         return int32((int64(a) * int64(b)) >> 16);
+   │                ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   │
+   ├ note: consider disabling this lint if you're certain the cast is safe
+   │
+   │       // casting to 'int32' is safe because [explain why]
+   │       // forge-lint: disable-next-line(unsafe-typecast)
+   │
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[reentrancy-events]: event emitted after an external call; reentrancy can reorder or fabricate logs that off-chain consumers rely on
+   ╭▸ src/support/ResourcePlacement.sol:60:9
+   │
+60 │         emit Sample(sha256(read(offset, length)));
+   │         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/reentrancy-events
+
+warning[unsafe-typecast]: typecast can truncate values
+   ╭▸ src/doom/tables.sol:95:16
+   │
+95 │         return int32(_word(data, index & 255));
+   │                ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   │
+   ├ note: consider disabling this lint if you're certain the cast is safe
+   │
+   │       // casting to 'int32' is safe because [explain why]
+   │       // forge-lint: disable-next-line(unsafe-typecast)
+   │
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[unsafe-typecast]: typecast can truncate values
+   ╭▸ src/doom/m_fixed.sol:36:16
+   │
+36 │         return int32(numerator / denominator);
+   │                ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   │
+   ├ note: consider disabling this lint if you're certain the cast is safe
+   │
+   │       // casting to 'int32' is safe because [explain why]
+   │       // forge-lint: disable-next-line(unsafe-typecast)
+   │
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[unsafe-typecast]: typecast can truncate values
+    ╭▸ src/doom/tables.sol:223:16
+    │
+223 │         return int32(_word(data, index & 255));
+    │                ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ├ note: consider disabling this lint if you're certain the cast is safe
+    │
+    │       // casting to 'int32' is safe because [explain why]
+    │       // forge-lint: disable-next-line(unsafe-typecast)
+    │
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[unsafe-typecast]: typecast can truncate values
+   ╭▸ src/support/StackPressure.sol:82:50
+   │
+82 │             rw_scalestep = (scale2 - rw_scale) / int256(stop - start);
+   │                                                  ━━━━━━━━━━━━━━━━━━━━
+   │
+   ├ note: consider disabling this lint if you're certain the cast is safe
+   │
+   │       // casting to 'int256' is safe because [explain why]
+   │       // forge-lint: disable-next-line(unsafe-typecast)
+   │
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[unsafe-typecast]: typecast can truncate values
+    ╭▸ src/support/StackPressure.sol:182:66
+    │
+182 │             if (segtextured) t.checksum += rw_scale + t.offset + int256(rw_x) + t.light;
+    │                                                                  ━━━━━━━━━━━━
+    │
+    ├ note: consider disabling this lint if you're certain the cast is safe
+    │
+    │       // casting to 'int256' is safe because [explain why]
+    │       // forge-lint: disable-next-line(unsafe-typecast)
+    │
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[unsafe-typecast]: typecast can truncate values
+    ╭▸ src/support/StackPressure.sol:194:50
+    │
+194 │                 if (maskedtexture) t.checksum += int256(rw_x);
+    │                                                  ━━━━━━━━━━━━
+    │
+    ├ note: consider disabling this lint if you're certain the cast is safe
+    │
+    │       // casting to 'int256' is safe because [explain why]
+    │       // forge-lint: disable-next-line(unsafe-typecast)
+    │
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[unsafe-typecast]: typecast can truncate values
+    ╭▸ src/support/StackPressure.sol:230:21
+    │
+230 │         return 16 + int256(x) + (angle < 0 ? -angle : angle) / 30;
+    │                     ━━━━━━━━━
+    │
+    ├ note: consider disabling this lint if you're certain the cast is safe
+    │
+    │       // casting to 'int256' is safe because [explain why]
+    │       // forge-lint: disable-next-line(unsafe-typecast)
+    │
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[unsafe-typecast]: typecast can truncate values
+    ╭▸ src/support/StackPressure.sol:234:21
+    │
+234 │         return 64 + int256(id);
+    │                     ━━━━━━━━━━
+    │
+    ├ note: consider disabling this lint if you're certain the cast is safe
+    │
+    │       // casting to 'int256' is safe because [explain why]
+    │       // forge-lint: disable-next-line(unsafe-typecast)
+    │
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+{
+  "timestamp": "2026-10-09T11:05:47.553Z",
+  "kind": "synthetic-browser-transport",
+  "browser": {
+    "protocolVersion": "1.3",
+    "product": "Chrome/155.0.8059.40",
+    "revision": "@cfaadc5a132d78e1828635aa8405a499f3e14864",
+    "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36",
+    "jsVersion": "15.5.35.20"
+  },
+  "config": {
+    "rpcUrl": "http://127.0.0.1:18549",
+    "wsUrl": "ws://127.0.0.1:18549",
+    "address": "0x5fbdb2315678afecb367f032d93f642f64180aa3",
+    "driver": "0xf39fd6e51aad88f6f4ce6ab8827279cfffb92266",
+    "deploymentBlock": "0x1",
+    "paletteUrl": "/palette.local.json",
+    "paletteKind": "wad",
+    "resourceIdentity": {
+      "schemaVersion": 0,
+      "wadSha256": "7323bcc168c5a45ff10749b339960e98314740a734c30d4b9f3337001f9e703d",
+      "bundleSha256": "d379076f21645cf7cc5acb056663d0faacc4065489a0ca99738479323c9f7a47",
+      "paletteSha256": "fd895921b5d0a394612bb29852ed003d44d69f76dec31c0dc6b5d5fc7d63f7bb",
+      "paletteVariant": 0
+    }
+  },
+  "proof": {
+    "ready": true,
+    "frames": [
+      {
+        "frameId": "1",
+        "inputSeq": 1,
+        "source": "backfill",
+        "transactionHash": "0x84226817867d14fd72f60655e66373ad7c92ec472d6eb325fc6fc7f0e00d54eb",
+        "pixelBytes": 64000
+      },
+      {
+        "frameId": "2",
+        "inputSeq": 2,
+        "source": "backfill",
+        "transactionHash": "0x5917b7c0d16f85e9a6b8cf32a356831b5c5cdba31dec17e9332a8dd7f366f235",
+        "pixelBytes": 64000
+      },
+      {
+        "frameId": "3",
+        "inputSeq": 3,
+        "source": "backfill",
+        "transactionHash": "0x220245d0fc5dba93d313b324511678c4a7f5e2e9185f9b88b7c58635ba743251",
+        "pixelBytes": 64000
+      },
+      {
+        "frameId": "4",
+        "inputSeq": 4,
+        "source": "backfill",
+        "transactionHash": "0x78160ea1003a8476877b6ddc0841d0ecf70726be633c5fee6eff5bd4b547f772",
+        "pixelBytes": 64000
+      },
+      {
+        "frameId": "5",
+        "inputSeq": 5,
+        "source": "ws",
+        "transactionHash": "0xe0e03bfb05c3887de0fbfc8fea0f76a60063570ae18151997891ac1fa696f400",
+        "pixelBytes": 64000
+      },
+      {
+        "frameId": "6",
+        "inputSeq": 6,
+        "source": "receipt",
+        "transactionHash": "0x1ebc847a4206c4fdc42406fa8c00847656b17de56d31175601c9185319ccdbf5",
+        "pixelBytes": 64000
+      }
+    ],
+    "errors": [],
+    "fallbackVerified": true,
+    "paletteKind": "wad",
+    "paletteSha256": "fd895921b5d0a394612bb29852ed003d44d69f76dec31c0dc6b5d5fc7d63f7bb",
+    "duplicates": 7,
+    "backfilled": 6,
+    "rgbaSha256": "b602d6b026948ae660163b33a3fd9503c4461013525172334b259da588db5aa7",
+    "done": true
+  },
+  "receiptPixelsSha256": "df16d2b173a5affe9099a36d594442f4412bc947b5d05c13c19d06d806d071f9",
+  "allCanvasPixelsMatchReceipt": true,
+  "screenshot": "artifacts/local/wad-browser.png"
+}
