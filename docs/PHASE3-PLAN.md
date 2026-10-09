@@ -34,7 +34,7 @@ A concurrent unlocked-sender attempt timed out waiting for a receipt after tic2;
 no pending hash/nonce was retained, so shared-sender conflict is suspected only.
 Empty pool/equal latest-pending nonce were observed; sequential replay passed.
 No gas-exhaustion/revert evidence. All old reports remain historical.
-Final audit refresh and frozen inherited/native gates remain. Current replay checkpoint
+Final audit refresh is committed `1aadd50`; frozen inherited/native gates remain. Current replay checkpoint
 `0015986` verifies two complete independent ordinary deployments: all 130 × 14
 rows, seven Frames, commands/cadence/sequences, startup/constructor/receipt gas
 and thirteen rejection selectors/gas/whole-storage rollback assertions equal.
@@ -42,7 +42,10 @@ and thirteen rejection selectors/gas/whole-storage rollback assertions equal.
 the 403-test full run; all 54 compiled source keccak bindings checked.
 [Fresh header evidence](../tools/reference/phase3_zone_setup/final-validation.json).
 Atomic fixture gas remains 1,624,686,931, distinct from production gas.
-The 388-function audit snapshot needs refresh after the new evidence checkpoint.
+Current audit checkpoint `1aadd50` binds freshly verified formatted kernel,
+production, replay, Chrome and memory evidence. Generator and --check pass;
+historical source drift remains explicit. All current integration measurements
+are complete. Frozen complete inherited/native regression gates remain pending.
 
 Inherited compile headroom checkpoint `bcbe46a`: the 497.56-second dependency build
 justifies forced-build timeout 1,200 seconds and enclosing Phase 0/1 wrappers
@@ -70,7 +73,7 @@ Last native observation checkpoint: `01417ad`, rocket-world/blast observations;
 `ba53a4b` supplies exact map/setup heap boundaries;
 `5ffd10a` supplies the original zone lifecycle/layout evidence;
 `7fc2cab` remains the exact post-render state extension.
-Last audit checkpoint: `6749dcd`, 388 original definitions, 238 active core
+Last audit checkpoint: `1aadd50` (current formatted proofs), following `6749dcd`, 388 original definitions, 238 active core
 gameplay definitions, 22 monster/boss families and explicit per-special/domain
 limits. Generator/check pass; nested reports and current/hash-at-run drift are
 disclosed. No new runtime acceptance claim. `6172458` updates root port/runtime
@@ -392,3 +395,18 @@ adapter, acceptance runner and final audit. Agents receive non-overlapping
 source/test/native-harness paths after the freeze. Shared interface changes
 require a concrete integrator review before consumers are changed. No source
 edits occur during the final frozen verification run.
+
+## Final frozen gate recovery
+
+All formatted gameplay/runtime workstreams are verified and committed: production
+`f0bce73`, complete replay `0015986`, kernel `3242865`, Chrome `45d0f62`, headers
+`c672568`, memory `3ad701b`, current fidelity audit `1aadd50`. Runtime compiler
+settings and gas policy are unchanged. No runtime/compiler/agent work is active.
+
+Next run complete `python3 scripts/verify-phase2.py --output
+artifacts/local/phase3-frozen-inherited/summary.json --port 18567` and the full
+33-command native/local regression batch using fresh production/browser oracle
+paths. Do not edit any sources or commit during those source-guarded runs. Bind
+fresh logs/source snapshots and ensure the forced build has not changed the
+engine artifact relative to the runtime proofs. M2/M3 remain unaccepted until
+all required gates and the final requirement-by-requirement review pass.
