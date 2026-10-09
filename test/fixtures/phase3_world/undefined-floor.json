@@ -1,0 +1,10 @@
+{
+  "upstreamCommit": "a77dfb96cb91780ca334d0d4cfd86957558007e0",
+  "compiler": "Apple clang version 17.0.0 (clang-1700.0.13.5)",
+  "target": "arm64-apple-darwin24.6.0",
+  "classification": "Original EV_DoFloor(donutRaise) does not initialize floor->sector; zero-heap profile reaches null sector dereference on first thinker tic. Actual EV_DoDonut constructs its own initialized donut floor payload.",
+  "sanitizerDiagnostic": "original/linuxdoom-1.10/p_floor.c:219:41: runtime error: member access within null pointer of type 'sector_t'\nSUMMARY: UndefinedBehaviorSanitizer: undefined-behavior original/linuxdoom-1.10/p_floor.c:219:41",
+  "sourceSha256": "c22ad7b7112d28c8b8c54a26ff611b98664a6d7a40d8d300680e6ca465468d47",
+  "probeSha256": "c40919bd44d314d4416705cf67c9644344f275835b7b9fc47d7c97f4d430fa51",
+  "harnessSha256": "1cc3d9ec2ec902dacea87f082c70501adbb93bc54a8d8b89e485b789d5d83251"
+}

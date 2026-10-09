@@ -1,0 +1,160 @@
+{
+  "schemaVersion": 1,
+  "upstreamCommit": "a77dfb96cb91780ca334d0d4cfd86957558007e0",
+  "compiler": "Apple clang version 17.0.0 (clang-1700.0.13.5)",
+  "target": "arm64-apple-darwin24.6.0",
+  "flags": [
+    "-std=c11",
+    "-fsigned-char",
+    "-fwrapv",
+    "-fno-strict-aliasing",
+    "-ffp-contract=off",
+    "-fno-fast-math"
+  ],
+  "profiles": {
+    "O0": [
+      "-O0"
+    ],
+    "O2": [
+      "-O2"
+    ],
+    "sanitize": [
+      "-O2",
+      "-fsanitize=address,undefined",
+      "-fno-sanitize-recover=all"
+    ]
+  },
+  "sources": {
+    "p_doors.c": "2e44a6051f27206971c7bf9629431db201e1dc3441d974119ec9d88655e5ec12",
+    "p_floor.c": "c22ad7b7112d28c8b8c54a26ff611b98664a6d7a40d8d300680e6ca465468d47",
+    "p_ceilng.c": "0b4de846cef16d92f95275e70e568ffabef6d6ee1a2b60609604dce42f011907",
+    "p_plats.c": "15f27dd1282ef9730ffce010b1fcaec1283a9cd37e143b863576a690aba514f6",
+    "p_lights.c": "0ade56b8514b3e11fd13af2be7a787531e4ffb6b84c49e489d678d42b5abfdca",
+    "p_spec.c": "1eed828498af033bd2322402a727e5b66913f5814e4d3fb002712fbcc8825cb1",
+    "p_tick.c": "21a638b7b1ae4fcb6b6892a731cd27d20f44e2df12dd3325c8215ca4c9aee22f",
+    "p_spec.h": "95d93e2e3b803126b0ecf6ea42de41d2bce7b2d09ea701e03992f0cc6dae22a3",
+    "p_local.h": "8d71f591ed5f26580042d991558c89d674b683f9cd1c2801ac7714de04b0185f",
+    "r_defs.h": "d8856503bea02282f5f338f3533885e87c6c430ce4f11511d6a04b5fc040db31",
+    "doomdef.h": "643daca966fb762fa86f39ce9a1779355117578527bf2e295163647f9ad0d74e",
+    "m_random.c": "8d89f5cfcbbd0170e46b55538c4c272b3cf5b5d7dce91023b8aa8d9b922b21ee"
+  },
+  "extractions": [
+    {
+      "file": "p_spec.c",
+      "function": "getSide",
+      "startLine": 203,
+      "endLine": 210,
+      "sha256": "5234a40593275677b5b1e467887e49e16e87e69a6cc6feb56c065c633902e4eb"
+    },
+    {
+      "file": "p_spec.c",
+      "function": "getSector",
+      "startLine": 219,
+      "endLine": 226,
+      "sha256": "19f36f552000154a03e6f34c8599474b6416ccc981fccf123ef3508857eae72f"
+    },
+    {
+      "file": "p_spec.c",
+      "function": "twoSided",
+      "startLine": 234,
+      "endLine": 240,
+      "sha256": "503b5f3561d4b2b93480592725a9f0edaa0c3a78a221baa84bd3a8d3d99ede61"
+    },
+    {
+      "file": "p_spec.c",
+      "function": "getNextSector",
+      "startLine": 250,
+      "endLine": 262,
+      "sha256": "d468c9252da2821a7f0ab2b59be16da0f4642d8a0fd120876faeb6d20b895dc4"
+    },
+    {
+      "file": "p_spec.c",
+      "function": "P_FindLowestFloorSurrounding",
+      "startLine": 270,
+      "endLine": 289,
+      "sha256": "bc8faa3068d4e1d5615f82219e6396d10b53a82769e85d3ec0f3bc3937861e70"
+    },
+    {
+      "file": "p_spec.c",
+      "function": "P_FindHighestFloorSurrounding",
+      "startLine": 297,
+      "endLine": 316,
+      "sha256": "8b2243b73a17ab8df2598fad7ca65dcc9dbee969e9682739503ba4631d21b2da"
+    },
+    {
+      "file": "p_spec.c",
+      "function": "P_FindNextHighestFloor",
+      "startLine": 328,
+      "endLine": 375,
+      "sha256": "8704d2c64f2d009ee133c62ee5dd5868ab0aa982e916675016ce55e6f1bafc8e"
+    },
+    {
+      "file": "p_spec.c",
+      "function": "P_FindLowestCeilingSurrounding",
+      "startLine": 381,
+      "endLine": 401,
+      "sha256": "3353895c3a9efd91adaec7343692b9697f38a97d23a531f8f5c3526a483aeab9"
+    },
+    {
+      "file": "p_spec.c",
+      "function": "P_FindHighestCeilingSurrounding",
+      "startLine": 407,
+      "endLine": 426,
+      "sha256": "ba0013471e2737312f079acf314ad7329659967a94f700e62d9237dc538f8736"
+    },
+    {
+      "file": "p_spec.c",
+      "function": "P_FindSectorFromLineTag",
+      "startLine": 433,
+      "endLine": 445,
+      "sha256": "3e9e67d6870f810655382128511c32c5287c7b0738de8d68b53aa4a4cbc97f9b"
+    },
+    {
+      "file": "p_spec.c",
+      "function": "P_FindMinSurroundingLight",
+      "startLine": 453,
+      "endLine": 476,
+      "sha256": "19e987580577562643b7524e600a417bf7ac9a654676e9a7cd57420b939fb7af"
+    },
+    {
+      "file": "p_tick.c",
+      "function": "P_InitThinkers",
+      "startLine": 53,
+      "endLine": 56,
+      "sha256": "5bfe57268875708bf2ab28cfa1981b9b795efad5139206c9463d357b58ef33a7"
+    },
+    {
+      "file": "p_tick.c",
+      "function": "P_AddThinker",
+      "startLine": 65,
+      "endLine": 71,
+      "sha256": "a4429738b6d53938bb34a93e4ea2aa774f6d714f174a0e4b75859c7361fe5b7a"
+    },
+    {
+      "file": "p_tick.c",
+      "function": "P_RemoveThinker",
+      "startLine": 80,
+      "endLine": 84,
+      "sha256": "a6f60765506d945c221e13e4e50091fad26216ee5319e7cd26f51de758d9db57"
+    },
+    {
+      "file": "p_tick.c",
+      "function": "P_RunThinkers",
+      "startLine": 101,
+      "endLine": 122,
+      "sha256": "bbb4105be4237d9675be1092d165ccaaa135c8a2cf9195e98e8eb303fa73887e"
+    }
+  ],
+  "harnessSha256": {
+    "reference.py": "eb36a57abe7b028aa2636b712dc3d5b069d01ad45f12467c15f361ef82868d77",
+    "host.c": "4cb3c617f08a975ec872c00aa051cc52c382db44c41a5e4d34be5f44388642fb",
+    "driver.c": "d85ca67c06c2a9e3653ef50c1eaff06aa8c051b254f04c1a053186372ece260b"
+  },
+  "generatedSourceSha256": "1cc1e1eb1ae2cebf0c0b137efa7f56cbfe32a1b7238c3d65a0243b3b3aaec6ea",
+  "scenarioCount": 359,
+  "snapshotCount": 79021,
+  "vectorsSha256": "b07edea72b41a5188f57b8d19098b2a9d5eb9f3bfc3a495176aade3c9d900b1a",
+  "nativeSnapshotsSha256": "41d837742d31c81bfcdfd52ac5221f1980f28a540771ecfcf88479c210ae1777",
+  "scope": "all active movers/lights/locks/stairs, linked thinker order, stop/resume/retrigger, ceiling registry overflow, changeSector obstruction profiles; synthetic four-sector geometry; zero allocation profile; callback algorithms and exact immutable source units retained",
+  "originalUninitializedFields": "P_SpawnDoorCloseIn30 leaves topheight/topwait unset; stair floors leave type/crush unset. Raw bytes of these fields are logically masked to zero in state snapshots; execution is explicitly the zero allocator profile. Stair crush is consumed by changeSector from the first tic, and timer-door topheight/topwait may become meaningful after obstruction reversal. Alternate-fill execution must be separately audited; these cases do not establish portable ISO-C behavior."
+}

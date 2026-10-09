@@ -1,0 +1,65 @@
+{
+  "closeDoorUninitialized": [
+    {
+      "fill": 0,
+      "topheight": 0,
+      "topwait": 0
+    },
+    {
+      "fill": 165,
+      "topheight": 2779096485,
+      "topwait": 2779096485
+    }
+  ],
+  "stairUninitialized": [
+    {
+      "fill": 0,
+      "type": 0,
+      "crush": 0
+    },
+    {
+      "fill": 165,
+      "type": 2779096485,
+      "crush": 2779096485
+    }
+  ],
+  "incompatibleDoorPlat": {
+    "doorDirectionOffset": 48,
+    "platCountOffset": 48,
+    "cases": [
+      {
+        "player": true,
+        "countBefore": 7,
+        "countAfter": -1
+      },
+      {
+        "player": false,
+        "countBefore": 7,
+        "countAfter": 7
+      },
+      {
+        "player": true,
+        "countBefore": -1,
+        "countAfter": 1
+      },
+      {
+        "player": false,
+        "countBefore": -1,
+        "countAfter": 1
+      }
+    ]
+  },
+  "platErrors": [
+    "P_AddActivePlat: no more plats!",
+    "P_RemoveActivePlat: can't find plat!"
+  ],
+  "genericDonutDefinedNoAllocation": [
+    0,
+    0
+  ],
+  "upstreamCommit": "a77dfb96cb91780ca334d0d4cfd86957558007e0",
+  "profiles": "O0/O2/full ASan+UBSan exact",
+  "probeSha256": "ea21c0d7e1fc53f1ce3a4c79ed2daf579571cdedf4e43f722fd8e7e897296832",
+  "harnessSha256": "02d38eee8266bdefa147ceba8b2e664485062e26a3f80a8caa98a2b71ed60203",
+  "hostSha256": "4cb3c617f08a975ec872c00aa051cc52c382db44c41a5e4d34be5f44388642fb"
+}

@@ -1,0 +1,195 @@
+{
+  "upstream": "a77dfb96cb91780ca334d0d4cfd86957558007e0",
+  "compiler": "Apple clang version 17.0.0 (clang-1700.0.13.5)",
+  "target": "arm64-apple-darwin24.6.0",
+  "cases": 416,
+  "extractions": [
+    {
+      "file": "p_spec.c",
+      "function": "P_InitPicAnims",
+      "startLine": 148,
+      "endLine": 187,
+      "sha256": "accff47ee5bc61e4bcd92dab63f0cf33e0b3d2c3fc519263fb8538d7d589077e"
+    },
+    {
+      "file": "p_spec.c",
+      "function": "getSide",
+      "startLine": 203,
+      "endLine": 210,
+      "sha256": "5234a40593275677b5b1e467887e49e16e87e69a6cc6feb56c065c633902e4eb"
+    },
+    {
+      "file": "p_spec.c",
+      "function": "getSector",
+      "startLine": 219,
+      "endLine": 226,
+      "sha256": "19f36f552000154a03e6f34c8599474b6416ccc981fccf123ef3508857eae72f"
+    },
+    {
+      "file": "p_spec.c",
+      "function": "twoSided",
+      "startLine": 234,
+      "endLine": 240,
+      "sha256": "503b5f3561d4b2b93480592725a9f0edaa0c3a78a221baa84bd3a8d3d99ede61"
+    },
+    {
+      "file": "p_spec.c",
+      "function": "getNextSector",
+      "startLine": 250,
+      "endLine": 262,
+      "sha256": "d468c9252da2821a7f0ab2b59be16da0f4642d8a0fd120876faeb6d20b895dc4"
+    },
+    {
+      "file": "p_spec.c",
+      "function": "P_FindLowestFloorSurrounding",
+      "startLine": 270,
+      "endLine": 289,
+      "sha256": "bc8faa3068d4e1d5615f82219e6396d10b53a82769e85d3ec0f3bc3937861e70"
+    },
+    {
+      "file": "p_spec.c",
+      "function": "P_FindHighestFloorSurrounding",
+      "startLine": 297,
+      "endLine": 316,
+      "sha256": "8b2243b73a17ab8df2598fad7ca65dcc9dbee969e9682739503ba4631d21b2da"
+    },
+    {
+      "file": "p_spec.c",
+      "function": "P_FindNextHighestFloor",
+      "startLine": 328,
+      "endLine": 375,
+      "sha256": "8704d2c64f2d009ee133c62ee5dd5868ab0aa982e916675016ce55e6f1bafc8e"
+    },
+    {
+      "file": "p_spec.c",
+      "function": "P_FindLowestCeilingSurrounding",
+      "startLine": 381,
+      "endLine": 401,
+      "sha256": "3353895c3a9efd91adaec7343692b9697f38a97d23a531f8f5c3526a483aeab9"
+    },
+    {
+      "file": "p_spec.c",
+      "function": "P_FindHighestCeilingSurrounding",
+      "startLine": 407,
+      "endLine": 426,
+      "sha256": "ba0013471e2737312f079acf314ad7329659967a94f700e62d9237dc538f8736"
+    },
+    {
+      "file": "p_spec.c",
+      "function": "P_FindSectorFromLineTag",
+      "startLine": 433,
+      "endLine": 445,
+      "sha256": "3e9e67d6870f810655382128511c32c5287c7b0738de8d68b53aa4a4cbc97f9b"
+    },
+    {
+      "file": "p_spec.c",
+      "function": "P_FindMinSurroundingLight",
+      "startLine": 453,
+      "endLine": 476,
+      "sha256": "19e987580577562643b7524e600a417bf7ac9a654676e9a7cd57420b939fb7af"
+    },
+    {
+      "file": "p_spec.c",
+      "function": "P_PlayerInSpecialSector",
+      "startLine": 1009,
+      "endLine": 1071,
+      "sha256": "8256adfd5db772e08635b37e020b92b6287f82353db2e9cd97ce5c1021356bd6"
+    },
+    {
+      "file": "p_spec.c",
+      "function": "P_UpdateSpecials",
+      "startLine": 1083,
+      "endLine": 1156,
+      "sha256": "c71b0b9f9d8ff353f40809832bd5ce3c82308312e1f67c8997742fa927f7ff47"
+    },
+    {
+      "file": "p_switch.c",
+      "function": "P_InitSwitchList",
+      "startLine": 107,
+      "endLine": 148,
+      "sha256": "efdb865f61e00c7f147f961b5001cce37148ffbe0aeaed7f7d9189557206ea79"
+    },
+    {
+      "file": "p_switch.c",
+      "function": "P_StartButton",
+      "startLine": 154,
+      "endLine": 190,
+      "sha256": "cbd973f0b2ac9e8d0c44af09550f24ef0f9a25e433a6cadf19fae41310053533"
+    },
+    {
+      "file": "p_switch.c",
+      "function": "P_ChangeSwitchTexture",
+      "startLine": 200,
+      "endLine": 263,
+      "sha256": "a3d5b24086daedceb47cc659cfb1a014b81c686b438face74e9ee9874ed92408"
+    },
+    {
+      "file": "p_telept.c",
+      "function": "EV_Teleport",
+      "startLine": 47,
+      "endLine": 131,
+      "sha256": "3f9d02617e41429342815ea7a85b934a4ccbf26fb58f8b82b0ccfee880d07798"
+    }
+  ],
+  "sourceHashes": {
+    "p_spec.c": "1eed828498af033bd2322402a727e5b66913f5814e4d3fb002712fbcc8825cb1",
+    "p_switch.c": "ac7effb3c4cfce1ecd8f7d25c93690c9b74cda99c639a47f76c4151a73010358",
+    "p_telept.c": "b717afb76c138954ca4aef44de3c3c081f91039cb485385afe2fd334fe4802c6",
+    "m_random.c": "8d89f5cfcbbd0170e46b55538c4c272b3cf5b5d7dce91023b8aa8d9b922b21ee"
+  },
+  "harnessHashes": {
+    "reference.py": "b4f7c637b8336cc42081dab11fcaac4630df363d5c9bcb45d180965d48e8bce2",
+    "host.c": "336c9b558be89b8b5316d54088ba4d5dd3ca008ba12efec5dda4deff9df8281d",
+    "driver.c": "1ca29223d6dd1e00fc4bf5df13077d897b7052322af8b50fbeca215784a2e6d2"
+  },
+  "generatedSha256": "9027b857e2436ff592caa3753fe54d70bc9e67048b4f55cc0ac0eb2f3fa44279",
+  "namesHeaderSha256": "49723141420d34599ea49af52825c8669f2ffebfd50b7579925a742ba97c60d4",
+  "profiles": [
+    {
+      "name": "O0",
+      "flags": [
+        "-std=c99",
+        "-O0",
+        "-fwrapv",
+        "-fno-strict-aliasing",
+        "-ffp-contract=off",
+        "-fno-fast-math",
+        "-fsigned-char"
+      ],
+      "outputSha256": "0e6411c2cdab8eb9447337a87942595b7d5f929e33ddcaeeede4253c3a12e4f8",
+      "stderrSha256": "a5199a316676d8f552169b8e59034a9246ce4d8ea75ebf58d631db139cbd34e3"
+    },
+    {
+      "name": "O2",
+      "flags": [
+        "-std=c99",
+        "-O2",
+        "-fwrapv",
+        "-fno-strict-aliasing",
+        "-ffp-contract=off",
+        "-fno-fast-math",
+        "-fsigned-char"
+      ],
+      "outputSha256": "0e6411c2cdab8eb9447337a87942595b7d5f929e33ddcaeeede4253c3a12e4f8",
+      "stderrSha256": "a5199a316676d8f552169b8e59034a9246ce4d8ea75ebf58d631db139cbd34e3"
+    },
+    {
+      "name": "sanitized",
+      "flags": [
+        "-std=c99",
+        "-O2",
+        "-fwrapv",
+        "-fno-strict-aliasing",
+        "-ffp-contract=off",
+        "-fno-fast-math",
+        "-fsigned-char",
+        "-fsanitize=address,undefined",
+        "-fno-sanitize-recover=all"
+      ],
+      "outputSha256": "0e6411c2cdab8eb9447337a87942595b7d5f929e33ddcaeeede4253c3a12e4f8",
+      "stderrSha256": "a5199a316676d8f552169b8e59034a9246ce4d8ea75ebf58d631db139cbd34e3"
+    }
+  ],
+  "vectorSha256": "d45757c5044427979cedc47bccb18daae57addd436c2636c55de1ef07ed18bb0",
+  "scope": "18 mechanically extracted unchanged original functions + original switch/animation definitions; declared synthetic geometry/resources; damage/teleport/fog callbacks recorded mocks, full mechanics proof separately"
+}

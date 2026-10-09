@@ -1,0 +1,41 @@
+{
+  "schemaVersion": 1,
+  "upstreamCommit": "a77dfb96cb91780ca334d0d4cfd86957558007e0",
+  "compiler": "Apple clang version 17.0.0 (clang-1700.0.13.5)",
+  "target": "arm64-apple-darwin24.6.0",
+  "flags": [
+    "-std=c11",
+    "-fsigned-char",
+    "-fwrapv",
+    "-fno-strict-aliasing"
+  ],
+  "profiles": {
+    "O0": [
+      "-O0"
+    ],
+    "O2": [
+      "-O2"
+    ],
+    "sanitize": [
+      "-O2",
+      "-fsanitize=address,undefined",
+      "-fno-sanitize-recover=all"
+    ]
+  },
+  "caseCount": 2160,
+  "extraction": {
+    "file": "p_floor.c",
+    "function": "T_MovePlane",
+    "startLine": 48,
+    "endLine": 203,
+    "sha256": "195f05602140310f5f989316f327edb9bc360f3cf8cdb6938c02f445a54804f3"
+  },
+  "vectorsSha256": "45b20744a28c3e056b79fa372b1bb234b777035acf3121d06946c9b5adb8807f",
+  "generatedSourceSha256": "5d9216125bfaff579fe98e25ac36d3da2e05f4c52b3f00ea2bcea16671911922",
+  "harnessSha256": {
+    "planes.py": "34e53fd8d60626640b819f3bdc86b74100b66db4113908a07410987e232b0296",
+    "plane_host.c": "88697d41e697bcd0578328499cf20796da3a6c274a5fef39c6989b9b5cbcee34",
+    "plane_driver.c": "35506b7481c059a6b93a01f20a34865b4234214d5c888138d480b411c89158f7"
+  },
+  "scope": "all floor/ceiling directions x crush x three obstruction patterns x exact/undershoot/overshoot destination x zero/normal/large speeds; final plane heights/result and ordered callback hash"
+}

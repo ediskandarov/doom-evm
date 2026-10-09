@@ -1,0 +1,70 @@
+{
+  "offsets": {
+    "doorDirection": 48,
+    "floorNewspecial": 44,
+    "floorTexture": 48,
+    "ceilingSpeed": 48,
+    "platCount": 48,
+    "fireFlickerSize": 48
+  },
+  "cases": [
+    {
+      "kind": 4,
+      "player": false,
+      "before": -1,
+      "after": 1
+    },
+    {
+      "kind": 4,
+      "player": false,
+      "before": 7,
+      "after": 7
+    },
+    {
+      "kind": 4,
+      "player": true,
+      "before": -1,
+      "after": 1
+    },
+    {
+      "kind": 4,
+      "player": true,
+      "before": 7,
+      "after": -1
+    },
+    {
+      "kind": 5,
+      "player": false,
+      "before": -1,
+      "after": 1
+    },
+    {
+      "kind": 5,
+      "player": false,
+      "before": 7,
+      "after": 7
+    },
+    {
+      "kind": 5,
+      "player": true,
+      "before": -1,
+      "after": 1
+    },
+    {
+      "kind": 5,
+      "player": true,
+      "before": 7,
+      "after": -1
+    }
+  ],
+  "upstreamCommit": "a77dfb96cb91780ca334d0d4cfd86957558007e0",
+  "profiles": "O0/O2/full ASan+UBSan exact",
+  "unsupportedLightPayload": {
+    "classification": "AddressSanitizer heap-buffer-overflow: vldoor.direction offset48 reaches past sizeof(fireflicker_t)=48",
+    "originalSourceFrames": []
+  },
+  "probeSha256": "a3b9fdde06b83330297b6d80319ece579e8a162fa9b4a667651467fef075b518",
+  "harnessSha256": "53c52ed53eea6641cab8e9e7fdc919e779d4aefacdc0ff7b8ab01bcd3a34415e",
+  "sourceSha256": "2e44a6051f27206971c7bf9629431db201e1dc3441d974119ec9d88655e5ec12",
+  "hostSha256": "4cb3c617f08a975ec872c00aa051cc52c382db44c41a5e4d34be5f44388642fb"
+}

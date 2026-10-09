@@ -1,0 +1,120 @@
+{
+  "schemaVersion": 1,
+  "verifiedAt": "2026-10-09T16:05:40.925662+00:00",
+  "upstreamCommit": "a77dfb96cb91780ca334d0d4cfd86957558007e0",
+  "scope": "isolated world action modules and shared special/storage gate; not integrated M2/M3 acceptance",
+  "forge": {
+    "command": ".toolchain/bin/forge test --match-contract 'WorldActionsTest|WorldSpecials_Test|MBBoxTest|GameStorageTest' -vv",
+    "exitCode": 0,
+    "passed": 55,
+    "failed": 0,
+    "skipped": 0,
+    "suites": 4,
+    "worldActionTests": 28,
+    "specialTests": 25,
+    "boundingBoxTests": 1,
+    "storageTests": 1,
+    "maximumWorldTestGas": 641210811,
+    "gasScope": "fixture setup/compare plus module execution; not engine frame performance"
+  },
+  "native": {
+    "worldScenarios": 359,
+    "worldSnapshots": 79021,
+    "planeCases": 2160,
+    "doorPlatCases": 4,
+    "doorCeilingCases": 4,
+    "profiles": "pinned Clang O0/O2/full ASan+UBSan; zero allocation execution profile explicitly declared for original uninitialized domains",
+    "commands": [
+      "python3 tools/reference/phase3_world/reference.py --check",
+      "python3 tools/reference/phase3_world/planes.py --check",
+      "python3 tools/reference/phase3_world/domains.py --check",
+      "python3 tools/reference/phase3_world/undefined_floor.py --check",
+      "python3 tools/reference/phase3_world/mover_casts.py --check"
+    ]
+  },
+  "artifacts": {
+    "test/fixtures/phase3_world/door-ceiling.bin": {
+      "bytes": 52,
+      "sha256": "d25c5397a6b9795a1ed9d0871e510fb52166db8b0981501813ad3e07f2160e2e"
+    },
+    "test/fixtures/phase3_world/door-plat.bin": {
+      "bytes": 52,
+      "sha256": "1f9355aa367336ecde8862db1b6af7c0feed34117357456edd7d71c5e78bbdc2"
+    },
+    "test/fixtures/phase3_world/manifest.json": {
+      "bytes": 6101,
+      "sha256": "4304d78687c3cda45362b035555e1bebf180063c43fb182161e7f2d8e329957b"
+    },
+    "test/fixtures/phase3_world/mover-casts.json": {
+      "bytes": 1547,
+      "sha256": "31afdd58bb912cf7801715a9241954a3312ff093694e89abae8f394075c4c936"
+    },
+    "test/fixtures/phase3_world/native-snapshots.bin.gz": {
+      "bytes": 640698,
+      "sha256": "bf371ba6504b989f84c1752c9e5602a4dcd73e817667ee84be455be0b5e09388"
+    },
+    "test/fixtures/phase3_world/original-domains.json": {
+      "bytes": 1384,
+      "sha256": "ce175e6904da84d16e41eb018353a88541545222e05b0eb37e5a3a89981d320c"
+    },
+    "test/fixtures/phase3_world/planes.bin": {
+      "bytes": 112324,
+      "sha256": "45b20744a28c3e056b79fa372b1bb234b777035acf3121d06946c9b5adb8807f"
+    },
+    "test/fixtures/phase3_world/planes.json": {
+      "bytes": 1376,
+      "sha256": "19376f2dd4a2d482829a589fd025f842e82c113e4f0727ce529b7afb1f684fff"
+    },
+    "test/fixtures/phase3_world/scenarios.json": {
+      "bytes": 51890,
+      "sha256": "9ae8f813f21433507957fb1a116cef2b976a885902eccf48f592dce10e76f748"
+    },
+    "test/fixtures/phase3_world/undefined-floor.json": {
+      "bytes": 897,
+      "sha256": "e2f921c304f69313dbecc0d7968a352aff303929d0cd661aefc4659a7522db0e"
+    },
+    "test/fixtures/phase3_world/vectors.bin": {
+      "bytes": 2541600,
+      "sha256": "b07edea72b41a5188f57b8d19098b2a9d5eb9f3bfc3a495176aade3c9d900b1a"
+    }
+  },
+  "sha256": {
+    "src/doom/p_doors.sol": "945bf600ce86d8286718fb75ecaf905a0c4631d79d2dac7260c91c9dc2013f8d",
+    "src/doom/p_floor.sol": "b7c90baafa0b74fd7ff80cf60dcbc430148f6d6d068ba54ca0fbc7ba1bca7069",
+    "src/doom/p_ceilng.sol": "696f3f620f5bddb3cea64fda824e3203c780f53db890630f0685794454dc37f9",
+    "src/doom/p_plats.sol": "6904df762b270f840daa99b34d2a5c689dbb2fef3aed3d33c2ac1a3f3e4d5722",
+    "src/doom/p_lights.sol": "6f63cbc6b41fc492a46ce43aef464deb9d08b7fa1dd8b213b546eec3e4f08276",
+    "test/unit/WorldActions.t.sol": "b2cd2b5be69bd5b7149aab311a95dbbcbc881d85d95c16873ef0acdf7402799d",
+    "docs/PHASE3-WORLD-ACTIONS.md": "f42a34d14f44dc998d04095fdbf91e7b9c50b498b7a6b03a61f4281c115b2d20",
+    "src/doom/p_game_state.sol": "3e8bd930c7a0aa173365d55d1aaed876207c7cf4c6d1ec57eb4b5c0abb21d252",
+    "src/doom/p_heap.sol": "29f216eedc153e34edcd7be9b79be695c7e534b0a1b307222702e9bd7fafe730",
+    "src/doom/p_tick.sol": "cde1c94f77a3ba1d0052cc4a72fb3e20c41a13b6e0c4bd5d359021aaa6a5af0b",
+    "src/doom/p_spec.sol": "2363640e75c22c9d017db677dda7148ad221380f0a23639167e145e933fc72b7",
+    "src/doom/m_random.sol": "5267b881138cfb7e0d683449005619513006c70e3ed557f64697b36c4ed40c7b",
+    "src/doom/r_defs.sol": "558d5a9bfd131e816bbe28986e2dad6144a08e5a16ccfed1b199d7558a1ea0e2",
+    "src/doom/r_data_types.sol": "f5ae6de0f06a25dfccd9421580d8f3fca8d2457507cca2d13fce586b3334d02f",
+    "tools/reference/phase3_world/domains.c": "ea21c0d7e1fc53f1ce3a4c79ed2daf579571cdedf4e43f722fd8e7e897296832",
+    "tools/reference/phase3_world/domains.py": "02d38eee8266bdefa147ceba8b2e664485062e26a3f80a8caa98a2b71ed60203",
+    "tools/reference/phase3_world/driver.c": "d85ca67c06c2a9e3653ef50c1eaff06aa8c051b254f04c1a053186372ece260b",
+    "tools/reference/phase3_world/host.c": "4cb3c617f08a975ec872c00aa051cc52c382db44c41a5e4d34be5f44388642fb",
+    "tools/reference/phase3_world/mover_casts.c": "a3b9fdde06b83330297b6d80319ece579e8a162fa9b4a667651467fef075b518",
+    "tools/reference/phase3_world/mover_casts.py": "53c52ed53eea6641cab8e9e7fdc919e779d4aefacdc0ff7b8ab01bcd3a34415e",
+    "tools/reference/phase3_world/plane_driver.c": "35506b7481c059a6b93a01f20a34865b4234214d5c888138d480b411c89158f7",
+    "tools/reference/phase3_world/plane_host.c": "88697d41e697bcd0578328499cf20796da3a6c274a5fef39c6989b9b5cbcee34",
+    "tools/reference/phase3_world/planes.py": "34e53fd8d60626640b819f3bdc86b74100b66db4113908a07410987e232b0296",
+    "tools/reference/phase3_world/reference.py": "eb36a57abe7b028aa2636b712dc3d5b069d01ad45f12467c15f361ef82868d77",
+    "tools/reference/phase3_world/undefined_floor.c": "c40919bd44d314d4416705cf67c9644344f275835b7b9fc47d7c97f4d430fa51",
+    "tools/reference/phase3_world/undefined_floor.py": "1cc3d9ec2ec902dacea87f082c70501adbb93bc54a8d8b89e485b789d5d83251",
+    "test/fixtures/phase3_world/door-ceiling.bin": "d25c5397a6b9795a1ed9d0871e510fb52166db8b0981501813ad3e07f2160e2e",
+    "test/fixtures/phase3_world/door-plat.bin": "1f9355aa367336ecde8862db1b6af7c0feed34117357456edd7d71c5e78bbdc2",
+    "test/fixtures/phase3_world/manifest.json": "4304d78687c3cda45362b035555e1bebf180063c43fb182161e7f2d8e329957b",
+    "test/fixtures/phase3_world/mover-casts.json": "31afdd58bb912cf7801715a9241954a3312ff093694e89abae8f394075c4c936",
+    "test/fixtures/phase3_world/native-snapshots.bin.gz": "bf371ba6504b989f84c1752c9e5602a4dcd73e817667ee84be455be0b5e09388",
+    "test/fixtures/phase3_world/original-domains.json": "ce175e6904da84d16e41eb018353a88541545222e05b0eb37e5a3a89981d320c",
+    "test/fixtures/phase3_world/planes.bin": "45b20744a28c3e056b79fa372b1bb234b777035acf3121d06946c9b5adb8807f",
+    "test/fixtures/phase3_world/planes.json": "19376f2dd4a2d482829a589fd025f842e82c113e4f0727ce529b7afb1f684fff",
+    "test/fixtures/phase3_world/scenarios.json": "9ae8f813f21433507957fb1a116cef2b976a885902eccf48f592dce10e76f748",
+    "test/fixtures/phase3_world/undefined-floor.json": "e2f921c304f69313dbecc0d7968a352aff303929d0cd661aefc4659a7522db0e",
+    "test/fixtures/phase3_world/vectors.bin": "b07edea72b41a5188f57b8d19098b2a9d5eb9f3bfc3a495176aade3c9d900b1a"
+  }
+}
