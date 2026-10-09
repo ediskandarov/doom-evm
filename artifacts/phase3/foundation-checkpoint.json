@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "status": "verified-isolated-checkpoint",
+  "checks": [
+    "python3 tools/reference/gameplay_info/generate.py --check",
+    "python3 tools/reference/gameplay_info/generate_random.py --check",
+    "GameInfoTest:testEveryOriginalStateActorAndWeaponField",
+    "RandomTest:testOriginalIndependentStreamsWrapAndClear"
+  ],
+  "sourceSha256": {
+    "src/doom/p_info.sol": "a48840479115ea8bf849ca5ec448d1b2bec7a6cfe58c5314e140635a898de792",
+    "src/doom/m_random.sol": "5267b881138cfb7e0d683449005619513006c70e3ed557f64697b36c4ed40c7b",
+    "tools/reference/gameplay_info/generate.py": "aa120f07ceae435d5409d7db96c24adee3e0149ce25d5c10fd0a07a79f7f4d04",
+    "tools/reference/gameplay_info/generate_random.py": "31ee69d4b08c9e9cfe60e01f18768c87f464053ddad73e07c13e9971e59f1057",
+    "test/unit/p_info.t.sol": "64bbf0528ccb5d0fa790fc7bfbbc997676ed60c7003e0486eb908d6d30fe839d",
+    "test/unit/m_random.t.sol": "deff238d1c4c2157baaf86fabdd6011d6fcdcf71ab7ac7d6d51db64f19ebbcad",
+    "test/fixtures/gameplay_info/tables.bin": "cf3de152619ac3387d6fa0b0a97515a616f5c717ab83dc2fa92720cb3077e70e",
+    "test/fixtures/gameplay_info/random.bin": "e7de8a95770404422c2e126c911bb4383cd333bc26b9c5beccc89e14c4ea6014",
+    "test/fixtures/gameplay_info/manifest.json": "674aeec3de58a3bd0a3ca089cb54a72c4e4ee8a3bab13a2ebb52895786937828",
+    "test/fixtures/gameplay_info/random-manifest.json": "436cbed63e23159bb0a4b37f5563566399beeec925294a396a2516d5ed8a536b"
+  },
+  "limitations": "Isolated checkpoint; M2/M3 engine integration and inherited final gates remain outstanding."
+}

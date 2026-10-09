@@ -1,0 +1,14 @@
+{
+  "upstreamCommit": "a77dfb96cb91780ca334d0d4cfd86957558007e0",
+  "compiler": "Apple clang version 17.0.0 (clang-1700.0.13.5)",
+  "target": "arm64-apple-darwin24.6.0",
+  "originalSha256": "8d89f5cfcbbd0170e46b55538c4c272b3cf5b5d7dce91023b8aa8d9b922b21ee",
+  "tableSha256": "908b529108dcbcd3fe82907cd646e08b12404a893eda2165fe58dadd709a413f",
+  "vectorsSha256": "e7de8a95770404422c2e126c911bb4383cd333bc26b9c5beccc89e14c4ea6014",
+  "generatorSha256": "31ee69d4b08c9e9cfe60e01f18768c87f464053ddad73e07c13e9971e59f1057",
+  "exporterSha256": "48aa51317c48a4b73bf28e4b5654aba8ddb5d72ab2cf4545db81631427c16014",
+  "soliditySha256": "5267b881138cfb7e0d683449005619513006c70e3ed557f64697b36c4ed40c7b",
+  "nativeAgreement": "O0/O2/ASan+UBSan exact",
+  "encoding": "u32 count then 1024 big-endian (prndindex,P_Random,rndindex,M_Random) rows; M_Random extra call on i%3!=0; clear after row511",
+  "deviation": "Library is M_Random; original M_Random function spelled M_RandomValue because Solidity member names cannot duplicate the library name."
+}
