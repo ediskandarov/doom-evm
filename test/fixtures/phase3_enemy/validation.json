@@ -1,0 +1,27 @@
+{
+  "scope": "Isolated original p_enemy conformance; observing neighboring-module doubles, not M2/M3 acceptance",
+  "sourceDefinitions": 64,
+  "nativeCases": 1137,
+  "solidityTests": 64,
+  "profiles": [
+    "O0",
+    "O2",
+    "O2 ASan/UBSan -fwrapv"
+  ],
+  "commands": [
+    "python3 tools/reference/phase3_enemy/reference.py --check",
+    ".toolchain/bin/forge test --match-contract PEnemyTest --fuzz-seed 0x44 -vv"
+  ],
+  "result": "PASS",
+  "maxObservedTestGas": 526755836,
+  "gasLimitUnchanged": 1000000000,
+  "files": {
+    "src/doom/p_enemy.sol": "eff76cce23b0877833a5c446a1a09d8ae01918a6925b6d3265240b144c09dfe7",
+    "test/unit/p_enemy.t.sol": "18913c440ff8d614d189f91a92054a8f58329cf68bcd8e07fb45f01e9a8fa06d",
+    "tools/reference/phase3_enemy/reference.py": "974ff9bad5c19e08629b98f6656601a24301ef59c76947b38f589a015c23844b",
+    "tools/reference/phase3_enemy/host.c": "977207ca1ea261a83b61864dbb7a74616ae9e8f9c3d22e03d2d088f7c873eca3",
+    "test/fixtures/phase3_enemy/vectors.bin": "1af4a061708a983c73317b8c510fd0b301ef6b6f712e719b0ac6f87fd4c85cbb",
+    "test/fixtures/phase3_enemy/manifest.json": "66f4eba63324a9cdd8194ecc69babbbf5d5ecdb14c7f9d433883b682b4095e2a",
+    "docs/PHASE3-AI.md": "84bb02c6fabd53e9c864da94db9ebbf6205686209504e01ce306f7c126afdf23"
+  }
+}
