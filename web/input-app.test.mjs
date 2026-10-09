@@ -4,14 +4,14 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
 import { FRAME_TOPIC } from './protocol.mjs';
-import { INITIALIZE_GAME_SELECTOR, GAME_STARTED_SELECTOR, LAST_INPUT_SELECTOR } from './input-loop.mjs';
+import { INITIALIZE_GAME_SELECTOR, GAME_STARTED_SELECTOR, LAST_INPUT_SELECTOR, GAME_RESOURCES_PREPARED_SELECTOR, PREPARE_GAME_RESOURCES_SELECTOR } from './input-loop.mjs';
 
 const palette = JSON.parse(await readFile(new URL('./palette.synthetic.json', import.meta.url), 'utf8'));
 const word = value => BigInt(value).toString(16).padStart(64, '0');
 const until = async predicate => { for (let i = 0; i < 1000 && !predicate(); ++i) await Promise.resolve(); assert(predicate(), 'expected asynchronous control state'); };
 let version = 0;
 
-async function appFixture({ gameplay = false, autotest = false, started = false } = {}) {
+async function appFixture({ gameplay = false, autotest = false, started = false, nativeZone = false, prepared = started } = {}) {
   const saved = Object.fromEntries(['window', 'document', 'location', 'fetch', 'WebSocket', 'ImageData'].map(key => [key, globalThis[key]]));
   const nodes = [], selectors = new Map(), sockets = new Set(), logs = [], transactions = [];
   const window = new EventTarget(), document = new EventTarget(); document.hidden = false;
@@ -31,7 +31,8 @@ async function appFixture({ gameplay = false, autotest = false, started = false 
   const config = { rpcUrl: 'http://local.invalid/rpc', wsUrl: 'ws://local.invalid/ws', address: '0x1234', driver: '0xabcd',
     deploymentBlock: '0x0', rendererKind: 'doom-world-view', paletteUrl: '/palette.json', paletteKind: 'synthetic', resourceIdentity: palette.resourceIdentity };
   if (gameplay) config.gameplay = true;
-  const chain = { started, sequence: 0, frame: 0 }, pending = new Map();
+  if (nativeZone) config.nativeZone = true;
+  const chain = { started, prepared, sequence: 0, frame: 0 }, pending = new Map();
   function notify(socket, object) { const event = new Event('message'); event.data = JSON.stringify(object); socket.dispatchEvent(event); }
   class Socket extends EventTarget {
     constructor() { super(); sockets.add(this); queueMicrotask(() => this.dispatchEvent(new Event('open'))); }
@@ -41,7 +42,8 @@ async function appFixture({ gameplay = false, autotest = false, started = false 
   function mine(hash) {
     const tx = pending.get(hash); if (tx.receipt) return tx.receipt;
     let emitted = [];
-    if (tx.data === INITIALIZE_GAME_SELECTOR) chain.started = true;
+    if (tx.data === PREPARE_GAME_RESOURCES_SELECTOR) chain.prepared = true;
+    else if (tx.data === INITIALIZE_GAME_SELECTOR) chain.started = true;
     else {
       chain.sequence = Number(BigInt('0x' + tx.data.slice(74))); ++chain.frame;
       const pixels = Buffer.alloc(64000, 7).toString('hex');
@@ -65,6 +67,7 @@ async function appFixture({ gameplay = false, autotest = false, started = false 
       const data = request.params[0].data;
       if (data === LAST_INPUT_SELECTOR) result = '0x' + word(chain.sequence);
       else if (data === GAME_STARTED_SELECTOR && gameplay) result = '0x' + word(chain.started ? 1 : 0);
+      else if (data === GAME_RESOURCES_PREPARED_SELECTOR && gameplay && nativeZone) result = '0x' + word(chain.prepared ? 1 : 0);
       else throw Error('Unexpected metadata selector');
     } else if (request.method === 'eth_getLogs') result = [...logs];
     else if (request.method === 'eth_sendTransaction') {
@@ -133,5 +136,27 @@ test('actual Start/Stop wiring samples DOM keyboard, pauses on blur, and resumes
     f.window.dispatchEvent(new Event('blur')); assert(!f.client.loop.running); assert.equal(tasks.size, 0);
     assert.equal(f.transactions.filter(tx => tx.data === INITIALIZE_GAME_SELECTOR).length, 1);
     assert.deepEqual(f.proof.errors, []);
+  } finally { f.cleanup(); }
+});
+
+test('native-zone capable autotest remains static; explicit Start serializes preparation and initialization', async () => {
+  const f = await appFixture({ gameplay: true, nativeZone: true, autotest: true });
+  try {
+    assert(f.proof.done && f.proof.nativeZoneAvailable); assert(!f.chain.prepared && !f.chain.started);
+    assert.equal(f.transactions.length, 2); assert.equal(f.chain.sequence, 2); assert.equal(f.chain.frame, 2);
+    await f.client.startGame({ run: false });
+    assert.deepEqual(f.transactions.slice(2).map(tx => tx.data), [PREPARE_GAME_RESOURCES_SELECTOR, INITIALIZE_GAME_SELECTOR]);
+    assert(f.proof.resourcesPrepared && f.proof.gameStarted); assert.equal(f.chain.sequence, 2); assert.equal(f.chain.frame, 2);
+    await f.client.nextFrame({ buttons: 257 }); assert.equal(f.chain.sequence, 3); assert.equal(f.proof.frames.length, 3);
+    await f.client.startGame({ run: false }); assert.equal(f.transactions.length, 5);
+  } finally { f.cleanup(); }
+});
+
+test('native-zone prepared reload starts without preparing again', async () => {
+  const f = await appFixture({ gameplay: true, nativeZone: true, prepared: true });
+  try {
+    assert(f.proof.resourcesPrepared && !f.proof.gameStarted);
+    await f.client.startGame({ run: false });
+    assert.deepEqual(f.transactions.map(tx => tx.data), [INITIALIZE_GAME_SELECTOR]);
   } finally { f.cleanup(); }
 });

@@ -3,7 +3,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { KeyboardInput, bindKeyboard } from './input.mjs';
 import { FrameInbox, FRAME_TOPIC } from './protocol.mjs';
-import { InputTransactions, GameplayLoop, LAST_INPUT_SELECTOR, GAME_STARTED_SELECTOR, INITIALIZE_GAME_SELECTOR } from './input-loop.mjs';
+import { InputTransactions, GameplayLoop, LAST_INPUT_SELECTOR, GAME_STARTED_SELECTOR, INITIALIZE_GAME_SELECTOR, GAME_RESOURCES_PREPARED_SELECTOR, PREPARE_GAME_RESOURCES_SELECTOR } from './input-loop.mjs';
 
 const word = n => BigInt(n).toString(16).padStart(64, '0');
 const deferred = () => { let resolve, reject; const promise = new Promise((a, b) => { resolve = a; reject = b; }); return { promise, resolve, reject }; };
@@ -13,16 +13,17 @@ function frameLog(sequence, hash) {
     data: '0x' + word(2) + word(1) + word(96) + word(2) + '0102' + '0'.repeat(60),
     transactionHash: hash, logIndex: '0x0', blockNumber: '0x1' };
 }
-function fixture({ gameplay = true, started = true, sequence = 0 } = {}) {
-  const chain = { started, sequence }, calls = [], pending = new Map(), delivered = [];
+function fixture({ gameplay = true, started = true, sequence = 0, nativeZone = false, prepared = started } = {}) {
+  const chain = { started, sequence, prepared }, calls = [], pending = new Map(), delivered = [];
   const inbox = new FrameInbox((frame, source) => delivered.push({ frame, source }));
   const env = { chain, calls, pending, delivered, inbox, sendError: null, receiptError: null, status: '0x1',
-    wait: null, badSequence: false, duplicateWS: false, extraFrame: false, initializeEffect: true };
+    wait: null, badSequence: false, duplicateWS: false, extraFrame: false, initializeEffect: true, prepareEffect: true, startupFrame: false, startupSequenceChange: false, receiptHook: null, preparedReadError: null };
   const rpc = async (method, params) => {
     calls.push({ method, params });
     if (method === 'eth_call') {
       if (params[0].data === LAST_INPUT_SELECTOR) return '0x' + word(chain.sequence);
       if (params[0].data === GAME_STARTED_SELECTOR) return '0x' + word(chain.started ? 1 : 0);
+      if (params[0].data === GAME_RESOURCES_PREPARED_SELECTOR) { if (env.preparedReadError) throw env.preparedReadError; return '0x' + word(chain.prepared ? 1 : 0); }
       throw Error('Unexpected selector');
     }
     assert.equal(method, 'eth_sendTransaction');
@@ -34,7 +35,8 @@ function fixture({ gameplay = true, started = true, sequence = 0 } = {}) {
     const tx = pending.get(hash);
     let logs = [];
     if (env.status === '0x1') {
-      if (tx.data === INITIALIZE_GAME_SELECTOR) { if (env.initializeEffect) chain.started = true; }
+      if (tx.data === PREPARE_GAME_RESOURCES_SELECTOR) { if (env.prepareEffect) chain.prepared = true; }
+      else if (tx.data === INITIALIZE_GAME_SELECTOR) { if (env.initializeEffect) chain.started = true; }
       else {
         chain.sequence = Number(BigInt('0x' + tx.data.slice(74)));
         const log = frameLog(chain.sequence + (env.badSequence ? 1 : 0), hash);
@@ -43,14 +45,17 @@ function fixture({ gameplay = true, started = true, sequence = 0 } = {}) {
         if (env.duplicateWS) inbox.accept(log, 'ws');
       }
     }
+    if (env.startupFrame && [INITIALIZE_GAME_SELECTOR, PREPARE_GAME_RESOURCES_SELECTOR].includes(tx.data)) logs = [frameLog(1, hash)];
+    if (env.startupSequenceChange && [INITIALIZE_GAME_SELECTOR, PREPARE_GAME_RESOURCES_SELECTOR].includes(tx.data)) chain.sequence++;
     return { status: env.status, logs, transactionHash: hash };
   };
   const waitReceipt = async (_rpc, hash) => {
+    if (env.receiptHook) await env.receiptHook(pending.get(hash));
     if (env.receiptError) throw env.receiptError;
     if (env.wait) await env.wait.promise;
     return env.mine(hash);
   };
-  const client = new InputTransactions(rpc, { address: '0x1234', driver: '0xabcd', gameplay }, inbox, { waitReceipt });
+  const client = new InputTransactions(rpc, { address: '0x1234', driver: '0xabcd', gameplay, nativeZone }, inbox, { waitReceipt });
   return { ...env, client, env };
 }
 function scheduler() {
@@ -217,4 +222,63 @@ test('metadata must be canonical uint32/bool ABI words', async () => {
       { address: '0x1234', gameplay: true }, { accept() {} });
     await assert.rejects(client.load(), /Malformed|Invalid/); assert(!client.loaded); assert(!client.busy);
   }
+});
+
+test('native-zone Start prepares then initializes under one lock without counters or Frames', async () => {
+  const f = fixture({ nativeZone: true, started: false, sequence: 2 }); await f.client.load();
+  f.env.wait = deferred(); const pending = f.client.startGame(); await flush();
+  assert.equal(submitted(f).length, 1); assert.equal(submitted(f)[0].data, PREPARE_GAME_RESOURCES_SELECTOR);
+  await assert.rejects(f.client.startGame(), /pending/); await assert.rejects(f.client.nextFrame(), /pending/);
+  f.env.wait.resolve(); await pending;
+  assert.deepEqual(submitted(f).map(tx => tx.data), [PREPARE_GAME_RESOURCES_SELECTOR, INITIALIZE_GAME_SELECTOR]);
+  assert(f.client.prepared && f.client.started && f.client.canSend);
+  assert.equal(f.client.sequence, 2); assert.equal(f.delivered.length, 0);
+  await f.client.startGame(); assert.equal(submitted(f).length, 2);
+});
+
+test('prepared but uninitialized reload skips preparation and preserves legacy ABI calls', async () => {
+  const f = fixture({ nativeZone: true, prepared: true, started: false }); await f.client.load();
+  await f.client.startGame(); assert.deepEqual(submitted(f).map(tx => tx.data), [INITIALIZE_GAME_SELECTOR]);
+  const legacy = fixture({ started: false }); await legacy.client.load(); await legacy.client.startGame();
+  assert(!legacy.calls.some(call => call.params[0].data === GAME_RESOURCES_PREPARED_SELECTOR));
+});
+
+test('Stop during preparation settles it, defers initialization, and resume does not prepare twice', async () => {
+  const f = fixture({ nativeZone: true, started: false }); await f.client.load();
+  const { loop, clock, keyboard } = loopFixture(f); f.env.wait = deferred();
+  const pending = loop.start(); await flush(); assert.equal(submitted(f)[0].data, PREPARE_GAME_RESOURCES_SELECTOR);
+  keyboard.update('KeyW', true); loop.stop(); f.env.wait.resolve(); await pending;
+  assert(f.client.prepared && !f.client.started); assert.equal(keyboard.sample(), 0); assert.equal(clock.tasks.size, 0);
+  assert.deepEqual(submitted(f).map(tx => tx.data), [PREPARE_GAME_RESOURCES_SELECTOR]);
+  f.env.wait = null; await loop.start(); assert(f.client.started); assert.equal(clock.tasks.size, 1);
+  assert.deepEqual(submitted(f).map(tx => tx.data), [PREPARE_GAME_RESOURCES_SELECTOR, INITIALIZE_GAME_SELECTOR]); loop.stop();
+});
+
+test('prepare revert releases channel while prepare uncertainty prevents initialization', async () => {
+  const reverted = fixture({ nativeZone: true, started: false }); await reverted.client.load(); reverted.env.status = '0x0';
+  await assert.rejects(reverted.client.startGame(), /reverted/); assert(reverted.client.canSend); assert(!reverted.client.prepared);
+  assert.deepEqual(submitted(reverted).map(tx => tx.data), [PREPARE_GAME_RESOURCES_SELECTOR]);
+  const uncertain = fixture({ nativeZone: true, started: false }); await uncertain.client.load(); uncertain.env.receiptError = Error('Receipt timeout');
+  await assert.rejects(uncertain.client.startGame(), /timeout/); assert(uncertain.client.uncertain && uncertain.client.busy);
+  assert.deepEqual(submitted(uncertain).map(tx => tx.data), [PREPARE_GAME_RESOURCES_SELECTOR]);
+});
+
+test('initialization revert after preparation permits resume without duplicate preparation', async () => {
+  const f = fixture({ nativeZone: true, started: false }); await f.client.load();
+  f.env.receiptHook = async tx => { if (tx.data === INITIALIZE_GAME_SELECTOR) f.env.status = '0x0'; };
+  await assert.rejects(f.client.startGame(), /reverted/); assert(f.client.prepared && !f.client.started && f.client.canSend);
+  f.env.receiptHook = null; f.env.status = '0x1'; await f.client.startGame();
+  assert.deepEqual(submitted(f).map(tx => tx.data), [PREPARE_GAME_RESOURCES_SELECTOR, INITIALIZE_GAME_SELECTOR, INITIALIZE_GAME_SELECTOR]);
+});
+
+test('preparation must confirm a canonical flag, unchanged counter, and no Frame', async () => {
+  for (const fault of ['prepareEffect', 'startupFrame', 'startupSequenceChange']) {
+    const f = fixture({ nativeZone: true, started: false }); await f.client.load();
+    f.env[fault] = fault === 'prepareEffect' ? false : true;
+    await assert.rejects(f.client.startGame(), /not confirmed|unexpectedly/);
+    assert(f.client.invalidated && f.client.uncertain); assert.equal(submitted(f).length, 1);
+  }
+  const f = fixture({ nativeZone: true, started: false }); await f.client.load();
+  f.env.receiptHook = async () => { f.env.preparedReadError = Error('Post-prepare read failed'); };
+  await assert.rejects(f.client.startGame(), /read failed/); assert(f.client.uncertain); assert.equal(submitted(f).length, 1);
 });

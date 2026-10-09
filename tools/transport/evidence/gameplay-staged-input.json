@@ -1,0 +1,55 @@
+{
+  "schemaVersion": 1,
+  "kind": "staged-gameplay-browser-input-component",
+  "pass": true,
+  "command": "node --test web/input-app.test.mjs web/input-loop.test.mjs web/input.test.mjs tools/transport/protocol.test.mjs tools/transport/palette.test.mjs",
+  "nodeVersion": "v24.11.0",
+  "tests": {
+    "passed": 37,
+    "failed": 0,
+    "skipped": 0,
+    "priorRetained": 29,
+    "newStaged": 8
+  },
+  "capability": {
+    "gameplay": true,
+    "nativeZone": true,
+    "legacyBehavior": "Missing/false nativeZone keeps one-stage initialization and never queries preparation ABI; missing/false gameplay keeps static zero-input behavior."
+  },
+  "abi": {
+    "gameResourcesPrepared()": "0x8874965d",
+    "prepareGameResources()": "0x4cc5dc3f",
+    "gameStarted()": "0x5e123ce4",
+    "initializeGame()": "0xa0a1f49b",
+    "inputSeq()": "0x3464285a",
+    "stepAndRender(uint32,uint32)": "0x18e65d56"
+  },
+  "checks": [
+    "Explicit Start serializes optional preparation then initialization under a single transaction lock.",
+    "Both startup stages require confirmation without a Frame or sequence consumption.",
+    "Reload of a prepared deployment avoids duplicate preparation.",
+    "Stop/blur epoch guard settles pending preparation and prevents the next initialize transaction.",
+    "Direct controlled startGame({run:false}) intentionally completes both stages.",
+    "Definite stage reverts release the channel; uncertainty locks it until reload.",
+    "Initialization failure does not forget successfully prepared resources.",
+    "All original keyboard mappings, one-flight loop, static autotest, full64kFrame palette/Canvas wiring tests remain."
+  ],
+  "scope": "Isolated Node tests with explicit local DOM/RPC/WS doubles. No actual browser, actual EVM execution, engine/allocator acceptance, Forge build or production source modification in this component checkpoint.",
+  "pending": "Staged production runtime and real browser/EVM native comparison are separate integration gates.",
+  "localLog": "artifacts/local/gameplay-staged-input.log",
+  "localLogSha256": "3d770d341e03e0da7d7f12153198b4516d632a7c1479083caf6412c006cc712b",
+  "sourceHashes": {
+    "web/app.mjs": "a21933f92b7cf9e0a0e3f4a056bb1ffe1a41311705771ed4ef7a2340018ba9fe",
+    "web/input-loop.mjs": "a11c8fb979c23ffc991380f89cdb10174ad72546130f882d71b78de01ae61876",
+    "web/input-loop.test.mjs": "2d53d3e9592ccc3693f8d6e6c8a3eac2622efdb42528ae95453318a7522fda10",
+    "web/input-app.test.mjs": "1ee6c178676dfb93eb4d1a1ccb15af7726db15dd870954a95114fb2a22e7b64a",
+    "web/input.mjs": "f9ed0064ccdccc4588632798aa0a1ce99e4bfc83a4e7c910450c48328ea729f6",
+    "web/input.test.mjs": "b4b03e3960abf5da7815d741571b9d658a5139d29a93b3be68823a2d35412ab8",
+    "web/protocol.mjs": "fec5104a0e13b7ca8666200431a1804d53cdb6537c1f0f8f02fb5b69dd70f47e",
+    "web/palette.mjs": "110c2c0af974ecfa935d37da60d32eedc47114484fc7b994043bfd24e95bc8ae",
+    "tools/transport/protocol.test.mjs": "1fe7ef1b3275bf4c41d30cb6171e0ce08146a536ee69ef0f4467aac7faeb7b38",
+    "tools/transport/palette.test.mjs": "1e9ca82b5397e18ea65183fe8834f7c91f5feffbe3d90215054b85f62af4ab39",
+    "docs/PHASE3-GAMEPLAY-TRANSPORT.md": "66ab3cf12089e46de2116e43efafc4c391a21bf39524ce9a7f1abbb9d6387bf9"
+  },
+  "checkpointSha256": "13cc85b66ad2576dcb2d2087b6005d051c225d39295887490f7e0682de6ff961"
+}

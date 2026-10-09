@@ -25,6 +25,7 @@ try {
   }
   proof.rendererKind = genuine ? 'doom-world-view' : 'synthetic';
   proof.gameplayAvailable = gameplay;
+  proof.nativeZoneAvailable = gameplay && config.nativeZone === true;
   const rpc = makeRpc(config.rpcUrl);
   const palette = await (await fetch(config.paletteUrl)).json();
   const rgb = await validatePalette(palette, config.resourceIdentity, config.paletteKind ?? 'synthetic');
@@ -83,11 +84,12 @@ try {
     controls.append(startButton, stopButton); status.before(controls);
     loop = new GameplayLoop(transactions, keyboard, { onState: () => updateControls(), onError: fail });
     updateControls = () => {
-      proof.gameStarted = transactions.started; proof.gameplayRunning = loop.running;
+      proof.gameStarted = transactions.started; proof.resourcesPrepared = transactions.prepared;
+      proof.gameplayRunning = loop.running;
       button.disabled = stopped || !transactions.canSend || loop.running;
       button.textContent = transactions.started ? 'Step one tic →' : 'Run DOOM →';
       startButton.disabled = stopped || !transactions.canSend || loop.running || loop.starting;
-      startButton.textContent = loop.running ? 'Running…' : transactions.started ? 'Resume game →' : 'Start game →';
+      startButton.textContent = loop.running ? (loop.starting ? 'Starting…' : 'Running…') : transactions.started ? 'Resume game →' : 'Start game →';
       stopButton.disabled = !loop.running && !loop.starting;
     };
     binding = bindKeyboard(window, keyboard, document, {

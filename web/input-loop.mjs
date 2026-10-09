@@ -7,6 +7,8 @@ import { inputStepData } from './input.mjs';
 export const GAME_STARTED_SELECTOR = '0x5e123ce4';
 export const INITIALIZE_GAME_SELECTOR = '0xa0a1f49b';
 export const LAST_INPUT_SELECTOR = '0x3464285a';
+export const GAME_RESOURCES_PREPARED_SELECTOR = '0x8874965d';
+export const PREPARE_GAME_RESOURCES_SELECTOR = '0x4cc5dc3f';
 
 function uintWord(data, maximum, label) {
   if (!/^0x[\da-f]{64}$/i.test(data)) throw Error(`Malformed ${label}`);
@@ -19,7 +21,7 @@ export class InputTransactions {
   constructor(rpc, config, inbox, { waitReceipt = receipt, onState = () => {}, onFrame = () => {} } = {}) {
     this.rpc = rpc; this.config = config; this.inbox = inbox;
     this.waitReceipt = waitReceipt; this.onState = onState; this.onFrame = onFrame;
-    this.sequence = 0; this.started = false; this.busy = false;
+    this.sequence = 0; this.started = false; this.prepared = false; this.busy = false;
     this.uncertain = false; this.invalidated = false; this.loaded = false; this.pending = false;
   }
   get canSend() { return this.loaded && !this.busy && !this.uncertain && !this.invalidated; }
@@ -37,12 +39,16 @@ export class InputTransactions {
   async _started() {
     return uintWord(await this.rpc('eth_call', [{ to: this.config.address, data: GAME_STARTED_SELECTOR }, 'latest']), 1n, 'gameStarted') === 1;
   }
+  async _prepared() {
+    return uintWord(await this.rpc('eth_call', [{ to: this.config.address, data: GAME_RESOURCES_PREPARED_SELECTOR }, 'latest']), 1n, 'gameResourcesPrepared') === 1;
+  }
   async load() {
     if (this.busy || this.uncertain || this.invalidated) throw Error('Input channel unavailable');
     this.busy = true; this.pending = true; this._state();
     try {
       this.sequence = await this._counter();
       if (this.config.gameplay === true) this.started = await this._started();
+      if (this.config.gameplay === true && this.config.nativeZone === true) this.prepared = await this._prepared();
       this.loaded = true;
     } finally { this.busy = false; this.pending = false; this._state(); }
   }
@@ -60,7 +66,13 @@ export class InputTransactions {
     return mined;
   }
 
-  async startGame() {
+  _startupFrameCheck(mined) {
+    if (mined.logs.some(log => log.address?.toLowerCase() === this.config.address.toLowerCase()
+      && log.topics?.[0]?.toLowerCase() === FRAME_TOPIC)) {
+      this.invalidated = true; throw Error('Startup transaction unexpectedly emitted a Frame');
+    }
+  }
+  async startGame({ shouldContinue = () => true } = {}) {
     this._available();
     if (this.config.gameplay !== true) throw Error('Gameplay unavailable for this deployment');
     this.busy = true; this.pending = true; this._state();
@@ -70,12 +82,31 @@ export class InputTransactions {
       this.sequence = await this._counter();
       this.started = await this._started();
       if (!this.started) {
-        await this._send(INITIALIZE_GAME_SELECTOR);
+        if (this.config.nativeZone === true) {
+          this.prepared = await this._prepared();
+          if (!this.prepared) {
+            if (!shouldContinue()) return;
+            const mined = await this._send(PREPARE_GAME_RESOURCES_SELECTOR);
+            this.uncertain = true;
+            this._startupFrameCheck(mined);
+            this.prepared = await this._prepared();
+            const sequence = await this._counter();
+            if (!this.prepared || sequence !== this.sequence) {
+              this.invalidated = true; throw Error('Game resource preparation was not confirmed');
+            }
+            this.uncertain = false; this._state();
+          }
+        }
+        // Stop may occur while preparation is pending. Its accepted receipt is
+        // settled, but initialization is a future transaction and must wait for Start.
+        if (!shouldContinue()) return;
+        const mined = await this._send(INITIALIZE_GAME_SELECTOR);
         // Mined initialization is confirmed separately; it need not emit a Frame.
         this.uncertain = true;
+        this._startupFrameCheck(mined);
         this.started = await this._started();
-        this.sequence = await this._counter();
-        if (!this.started) { this.invalidated = true; throw Error('Game initialization was not confirmed'); }
+        const sequence = await this._counter();
+        if (!this.started || sequence !== this.sequence) { this.invalidated = true; throw Error('Game initialization was not confirmed'); }
         this.uncertain = false;
       }
     } finally { this.busy = this.uncertain; this.pending = false; this._state(); }
@@ -127,7 +158,7 @@ export class GameplayLoop {
     this.keyboard.clear(); this.running = true; this.starting = true;
     const epoch = ++this.epoch; this._state();
     try {
-      await this.transactions.startGame();
+      await this.transactions.startGame({ shouldContinue: () => this.running && epoch === this.epoch });
       if (this.running && epoch === this.epoch) this._schedule(epoch, 0);
       return true;
     } catch (error) { this.stop(); throw error; }
