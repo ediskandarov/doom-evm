@@ -1,0 +1,521 @@
+{
+  "kind": "original-gameplay-ordinary-evm-comparison",
+  "pass": true,
+  "scope": "Startup, authoritative logical world after every original tic, and only native-selected live frames. Direct ticcmds; test-only scenario setup.",
+  "resourceIdentity": {
+    "schemaVersion": 0,
+    "wadSha256": "7323bcc168c5a45ff10749b339960e98314740a734c30d4b9f3337001f9e703d",
+    "bundleSha256": "d379076f21645cf7cc5acb056663d0faacc4065489a0ca99738479323c9f7a47",
+    "paletteSha256": "fd895921b5d0a394612bb29852ed003d44d69f76dec31c0dc6b5d5fc7d63f7bb",
+    "paletteVariant": 0
+  },
+  "gasLimit": 10000000000,
+  "executionBudget": {
+    "gasLimit": 10000000000,
+    "gasHex": "0x2540be400",
+    "source": "/Users/eduard/sandbox/doom-evm/execution-budget.json"
+  },
+  "notes": [
+    "Probe gas includes test-only DSG1 serialization and Observation events; this is not production Doom transaction cost.",
+    "The last source snapshot precedes selected rendering; renderer globals persist into subsequent real ticks.",
+    "No setCode, etch, alternate interpreter, or native-provided gameplay/pixels. Native bytes are comparison inputs only."
+  ],
+  "sourceHashes": {
+    "src/doom/d_ticcmd.sol": "508d0332d3e8b83e1b68d37581a3befc100a9974fcaa0900cc44116cd75ff2ef",
+    "src/doom/g_game.sol": "2714f783a532bc2a525d7f50813c472f299c541ee9062a7a5d078e1818791e70",
+    "src/doom/info.sol": "4611205149173e42d3b0f1d91820c8042f6bc5fc48fb53aec84ad4bc501dca8e",
+    "src/doom/m_bbox.sol": "f4c60efe3627a97d0288fc5cd0283535527b1f51029568534c80bb8fbbf8f272",
+    "src/doom/m_fixed.sol": "3f64bef1f62f61faead3a5b8f382bf1c66e1b3739ce4ac8d59a6fcef0451ef9f",
+    "src/doom/m_random.sol": "5267b881138cfb7e0d683449005619513006c70e3ed557f64697b36c4ed40c7b",
+    "src/doom/native_zone_layout.sol": "118b2d17165826fb0857d9cb296e2214db2a28917769299a82e70d0c0790f6e8",
+    "src/doom/p_ceilng.sol": "696f3f620f5bddb3cea64fda824e3203c780f53db890630f0685794454dc37f9",
+    "src/doom/p_doors.sol": "945bf600ce86d8286718fb75ecaf905a0c4631d79d2dac7260c91c9dc2013f8d",
+    "src/doom/p_enemy.sol": "eff76cce23b0877833a5c446a1a09d8ae01918a6925b6d3265240b144c09dfe7",
+    "src/doom/p_floor.sol": "b7c90baafa0b74fd7ff80cf60dcbc430148f6d6d068ba54ca0fbc7ba1bca7069",
+    "src/doom/p_game_state.sol": "0f9d60aae9424cad17c614d4fcc93c9eb6fe8a43c7bce070d2460fcf2c34f649",
+    "src/doom/p_heap.sol": "3cc2e0a8c3239523db66c07fea33720f931754baedd312b5ca7cc2ebe763d2e0",
+    "src/doom/p_info.sol": "a48840479115ea8bf849ca5ec448d1b2bec7a6cfe58c5314e140635a898de792",
+    "src/doom/p_inter.sol": "8be27f9bba47beb46b3edf2a8a2674b3cd7218d2abb8ef5f8855803393d067de",
+    "src/doom/p_lights.sol": "6f63cbc6b41fc492a46ce43aef464deb9d08b7fa1dd8b213b546eec3e4f08276",
+    "src/doom/p_map.sol": "6b6d48523a45acab9090dfb0ec3d6dbab4e6de18afa89453df8b5a87088da0f3",
+    "src/doom/p_maputl.sol": "ac5ac60e7e058a5fc537e7042c7254bc0f51c77165149a22e141437b4e0ad0b6",
+    "src/doom/p_mobj.sol": "78e9c05b327100bd34cafe086454e3a5499beb92af878ad4756baeca18445ffa",
+    "src/doom/p_plats.sol": "6904df762b270f840daa99b34d2a5c689dbb2fef3aed3d33c2ac1a3f3e4d5722",
+    "src/doom/p_pspr.sol": "cfa2db3438d689c38d9c957fc4aee598c58740f025d6efead2b5f9671eb0c863",
+    "src/doom/p_setup.sol": "9498e1298bf4e53ccedc484a50d4c7f9f85315f6cb700719d474b721e382243b",
+    "src/doom/p_setup_static.sol": "c8100a42bb0bac190c583bbb2c82168599009f88a766e4c05b9a9231a5f69792",
+    "src/doom/p_sight.sol": "7ed366237fc3fec069ffb6336e95e038004d1f379622cf67f55fb8c6b1a6488c",
+    "src/doom/p_spec.sol": "2363640e75c22c9d017db677dda7148ad221380f0a23639167e145e933fc72b7",
+    "src/doom/p_switch.sol": "5404d359793e05c6c24a7804c07632150009b46f38d03068412d7ac53260dfe2",
+    "src/doom/p_telept.sol": "745f0fa4ed6f0515c398bfd2469c59aac82316965b7bac25263aeb82555d61b8",
+    "src/doom/p_tick.sol": "1993dd0c94853dabc4db554dfa0ca04375cef0a22075400ba0e7b56b525022ab",
+    "src/doom/p_user.sol": "963a46850e1b17171f79dd65bff9b5006ce6f97a935ad2023d1d526a6ec35c37",
+    "src/doom/p_zone_setup.sol": "e0308bd1197fd84a01eb1ee208be73c711851d6b0bc30be1d07a7c61b18b223d",
+    "src/doom/r_bsp.sol": "0ae5df313515692d0b2b970d5d39d107e014629cff2305fb37c14371a9524040",
+    "src/doom/r_data.sol": "5b404d561f8bce538e8a8221b4f36d62c9b9826fc833307640d96fcbfdca2d0a",
+    "src/doom/r_data_types.sol": "0448302d68447c8a5a4c46df4016e8845863e42bf6eaca8bcab8ab0c9707fdf8",
+    "src/doom/r_defs.sol": "558d5a9bfd131e816bbe28986e2dad6144a08e5a16ccfed1b199d7558a1ea0e2",
+    "src/doom/r_draw.sol": "afe958ea0c2962b739bff58b98d8bccc25c48d3d0838cacd46142c242b5d6477",
+    "src/doom/r_main.sol": "df403bf04fdbbcfc68c4fd9c5e19b5201ca711498efc34db406a4010ad3b2af5",
+    "src/doom/r_plane.sol": "c7a5abcbca84dddcd2a3c8bb160a609605c5c1842e73704dff4860df3280e463",
+    "src/doom/r_render_hooks.sol": "f026ccb8fffb68d8fbcb0966103212f52884b86350fe3fb52a401d146f3fb312",
+    "src/doom/r_render_state.sol": "072bd2f73b98e1eb775fc8093e95a69c184f3fa50a89a5d64a7beccd59493398",
+    "src/doom/r_segs.sol": "9d4e4dea06739278aab3698fb422818de6dd7726359c8822d60a162e886621cb",
+    "src/doom/r_sprite_state.sol": "735b3de85cbf455e05d3cb8e992cf4e477960bd4192bbd367f5c66c803b96363",
+    "src/doom/r_state.sol": "80951a13733e3a08f4182937a37def33ffda21eaae4b43a2a1bdba2043adab6b",
+    "src/doom/r_things.sol": "86705ab6b1f79b7ef07798b881cc547502d9911c97b57dc516a744e17c1977f5",
+    "src/doom/tables.sol": "bf14202b419075f6d187653205a37e211d8267c7fc4c0bebf5a8c5713afddf38",
+    "src/doom/w_zone_cache.sol": "03c07404765de9620b3d1ff15727809cdad911c8a78d822019b63500fa5018c2",
+    "src/doom/z_zone.sol": "47fe4cd4ce09d37d21d9d3cedd349004c8e3a1941f939a1ddbc5ec2e1d67b1ca",
+    "src/doom/z_zone_backing.sol": "902ea03bc32af6b7443461ff64d21e780d9a0ef6c6bbe2dd1262216bfc37a3f8",
+    "src/doom/z_zone_types.sol": "d6c5d8680e08bd8989042cb42a934a3323818e4c2b94c11dc38196911dadc08b",
+    "src/evm/DoomGame.sol": "353898c9547b1bcd619d51318aef505b0beb23374043660af9eeb18f4a15208d",
+    "src/evm/DoomRenderer.sol": "5639d82431350ea76c26d43457d26d0c3c0f410eaddf02db6adbcfb03a569ba0",
+    "src/evm/DoomScene.sol": "9ad7c8ccee4c9e05deb5608326baabacfa40f686b8d8445fb8aaa7352ab64569",
+    "src/evm/DoomZoneStartup.sol": "2d178494456a7ae3c730310f257ce2aa635d37d18c90cac039cf002cdb3f50dc",
+    "src/evm/ResourceTypes.sol": "159865364cfa57aae508cd94c49509cbccabd6aeeba55e92b9fcf816bdec4d6b",
+    "src/evm/WadResources.sol": "25a1acc0a44ac35cc29e5f9bd953ba66b85db4f665b732430571b416ef927895",
+    "src/support/GameplayProbe.sol": "fd29ba99ea2ca2c0db9ed44fb061c93c40e3a6aefbb14e07e8e7b8bd9ae859b5",
+    "tools/reference/gameplay/compare.mjs": "a2b1e0962fa732c683d8a1a126c4f270a85c9db093c9204922d69c11947d9630",
+    "tools/reference/gameplay/observe.h": "7ae14775b4ebc05bb8da32cff6d1a23be66937640509fd515d35b49c60ee0abe",
+    "test/fixtures/gameplay/manifest.json": "43297a125c59e98539ca159020c19fa0465233a927e2d8e0eb62159219f9c973",
+    "test/fixtures/gameplay_post/manifest.json": "94a2b3376b218cd0883d404a03a50328fc45fa1b6c4f5ff352087cdc53911f4c",
+    "test/fixtures/gameplay_projectile/manifest.json": "95af1d8ea3400b5f94f0ca2581e9bf7132dc71935ec6d9f022d21124a46b4bb7",
+    "tools/reference/gameplay/post_render.py": "08eb1e34607b77c0fab1b05d28dfac2a3012a613cd6cf0513c4b93e87f427119",
+    "tools/reference/gameplay/post_render_host.c": "d8dac846947d3c64b9878ecbcb6821d63ccfc7ea8b1c405e7d5d70ed4baead41",
+    "foundry.toml": "afe04c66f0e684b5a936821f6543605a3739f62164ceb4398426db7403452393"
+  },
+  "client": "anvil/v1.8.5",
+  "nodeArgs": [
+    "--host",
+    "127.0.0.1",
+    "--port",
+    "18577",
+    "--hardfork",
+    "cancun",
+    "--disable-code-size-limit",
+    "--disable-block-gas-limit",
+    "--memory-limit",
+    "1073741824",
+    "--silent"
+  ],
+  "deployment": {
+    "address": "0x5ae1f4bb68f8eac39cfdbdfda2b7344ccbd80faf",
+    "transactionHash": "0x5b5c21750b70bc2cc987a3057068fe10f694fd7aced4ca57880f2825675a726f",
+    "gas": 236458413,
+    "runtimeBytes": 442437,
+    "all1755ResourceRuntimesVerified": true,
+    "uploadMs": 96264.53625,
+    "totalChunkGas": 6271928016
+  },
+  "compiler": {
+    "version": "0.8.37+commit.f401782d",
+    "settings": {
+      "remappings": [],
+      "optimizer": {
+        "enabled": true,
+        "runs": 200
+      },
+      "metadata": {
+        "bytecodeHash": "ipfs"
+      },
+      "compilationTarget": {
+        "src/support/GameplayProbe.sol": "GameplayProbe"
+      },
+      "evmVersion": "cancun",
+      "libraries": {},
+      "viaIR": true
+    }
+  },
+  "initialization": {
+    "nativeZone": true,
+    "atomic": true,
+    "scope": "Each startup/reset runs original resource and level initialization in one call."
+  },
+  "completeNativeScenarioSet": true,
+  "schemaVersion": 1,
+  "executedCommand": "node tools/reference/gameplay/compare.mjs --skip-build --output-prefix artifacts/local/gameplay-kernel-final",
+  "rawReport": "artifacts/local/gameplay-kernel-final.json",
+  "rawReportSha256": "b1431f9838fa9dbb15892e83e3940440399fb1d0d9771ac1b6e745f4b34443a1",
+  "cases": [
+    {
+      "name": "idle",
+      "tics": 70,
+      "frames": [
+        {
+          "tic": 1,
+          "pixelDiffCount": 0,
+          "sha256": "b736bf38b2992db3851d33e7d8ea3bc7d6036d13d45d5030823829a6cdd62133"
+        },
+        {
+          "tic": 35,
+          "pixelDiffCount": 0,
+          "sha256": "2b8bd89dc727997eb00cb51676d08908bdd64f095bc7f211ec14f80c52d64323"
+        },
+        {
+          "tic": 70,
+          "pixelDiffCount": 0,
+          "sha256": "2b8bd89dc727997eb00cb51676d08908bdd64f095bc7f211ec14f80c52d64323"
+        }
+      ],
+      "startup": true,
+      "startupCallMs": 303.19233400000667,
+      "startupGas": 1107489395,
+      "resetGas": 1649805744,
+      "finalStoredState": {
+        "boundary": "post-render",
+        "nativeSha256": "843209493c546d0e4658d673fe2f183d2d340a25e0c7b43402fae555f26f9929",
+        "evmSha256": "843209493c546d0e4658d673fe2f183d2d340a25e0c7b43402fae555f26f9929",
+        "exact": true
+      },
+      "stateStreamSha256": "f32ccbb0ab97f4c57ec92ff01eddb6b8e0f32eb9862b9c6b6ae0e50f5ebf9ede",
+      "batchMetrics": {
+        "count": 14,
+        "gasMin": 373933688,
+        "gasMax": 851003029,
+        "gasSum": 6592348750
+      }
+    },
+    {
+      "name": "movement",
+      "tics": 275,
+      "frames": [
+        {
+          "tic": 1,
+          "pixelDiffCount": 0,
+          "sha256": "ea7fec925ba282885f486fc2aad243c8eda4abd2dc0383d093d7de04eed9af6f"
+        },
+        {
+          "tic": 137,
+          "pixelDiffCount": 0,
+          "sha256": "2e44608420970e81749d18bb964b61a906cdf293b6da92bb4a3cc8698eb5c31c"
+        },
+        {
+          "tic": 275,
+          "pixelDiffCount": 0,
+          "sha256": "202faf416d806507bf1189b5b57cd1c50125d9e5e979d60c21c88f073aa1fec4"
+        }
+      ],
+      "startup": true,
+      "startupCallMs": 304.31212499999674,
+      "startupGas": 1107489395,
+      "resetGas": 1197982501,
+      "finalStoredState": {
+        "boundary": "post-render",
+        "nativeSha256": "fd294e0684837695957dc914216ad88ed72558829c317a67f1d1166c943241ba",
+        "evmSha256": "fd294e0684837695957dc914216ad88ed72558829c317a67f1d1166c943241ba",
+        "exact": true
+      },
+      "stateStreamSha256": "e261dc2d9105be6d04592188ade68cabc85bec2a137b1b4a24d1e33c5e4658fa",
+      "batchMetrics": {
+        "count": 55,
+        "gasMin": 374190352,
+        "gasMax": 851049551,
+        "gasSum": 22003722632
+      }
+    },
+    {
+      "name": "pistol",
+      "tics": 235,
+      "frames": [
+        {
+          "tic": 1,
+          "pixelDiffCount": 0,
+          "sha256": "b736bf38b2992db3851d33e7d8ea3bc7d6036d13d45d5030823829a6cdd62133"
+        },
+        {
+          "tic": 117,
+          "pixelDiffCount": 0,
+          "sha256": "f9c2c5d2152e499a3aa577aed9063bbd704231ff02036f221084b6ea39e31a18"
+        },
+        {
+          "tic": 235,
+          "pixelDiffCount": 0,
+          "sha256": "731bebd5089ef0ba121719d58c3c32f342f63f6d8556d64359dd2c2bb32f264f"
+        }
+      ],
+      "startup": true,
+      "startupCallMs": 303.80012500000885,
+      "startupGas": 1107489395,
+      "resetGas": 1197952978,
+      "finalStoredState": {
+        "boundary": "post-render",
+        "nativeSha256": "04e10dab7100cb01e6416c24f03f2a179d13c251d7099aa19a9044cdfd7e529d",
+        "evmSha256": "04e10dab7100cb01e6416c24f03f2a179d13c251d7099aa19a9044cdfd7e529d",
+        "exact": true
+      },
+      "stateStreamSha256": "63c73336967190a2b8fead291696dcc79a147682ad5e50ca2bdf053ea0fc02ac",
+      "batchMetrics": {
+        "count": 47,
+        "gasMin": 374259175,
+        "gasMax": 851003029,
+        "gasSum": 18965249898
+      }
+    },
+    {
+      "name": "combat-arena",
+      "tics": 175,
+      "frames": [
+        {
+          "tic": 1,
+          "pixelDiffCount": 0,
+          "sha256": "2aad15f7344ac8d4e91370533ec37e49987157ebb5fde8c4ad4a0b61d61c8a43"
+        },
+        {
+          "tic": 87,
+          "pixelDiffCount": 0,
+          "sha256": "f9ee42492cd47cccdd917ab8852677dc680ca9879a3079a03563e665e62f2095"
+        },
+        {
+          "tic": 175,
+          "pixelDiffCount": 0,
+          "sha256": "b6c44fa75c2d0bf52b049c4e1f36619c29ad4a785bb985b342d61bc3f12aa22b"
+        }
+      ],
+      "startup": true,
+      "startupCallMs": 315.96308300000965,
+      "startupGas": 1108059117,
+      "resetGas": 1198485384,
+      "finalStoredState": {
+        "boundary": "post-render",
+        "nativeSha256": "fa9721e08823bfbc943876e17e83a8c8a2ea35175ba00087ca61b9aaaace4c44",
+        "evmSha256": "fa9721e08823bfbc943876e17e83a8c8a2ea35175ba00087ca61b9aaaace4c44",
+        "exact": true
+      },
+      "stateStreamSha256": "281ed3431a42d8dcdd558605e5babff08089baf32937f1d41e1b917a4326a22e",
+      "batchMetrics": {
+        "count": 35,
+        "gasMin": 374314208,
+        "gasMax": 859031654,
+        "gasSum": 14522600441
+      }
+    },
+    {
+      "name": "damage-arena",
+      "tics": 350,
+      "frames": [
+        {
+          "tic": 1,
+          "pixelDiffCount": 0,
+          "sha256": "2aad15f7344ac8d4e91370533ec37e49987157ebb5fde8c4ad4a0b61d61c8a43"
+        },
+        {
+          "tic": 175,
+          "pixelDiffCount": 0,
+          "sha256": "9438a734b8f86283004160dcb1532b88bb377404d6a3e22df9fd3b5ac7399158"
+        },
+        {
+          "tic": 350,
+          "pixelDiffCount": 0,
+          "sha256": "1009c433449585267275df07c71d8d8d4b89895022fecbfdea3cc7fd5b08f8c8"
+        }
+      ],
+      "startup": true,
+      "startupCallMs": 314.67674999998417,
+      "startupGas": 1108059201,
+      "resetGas": 1198535691,
+      "finalStoredState": {
+        "boundary": "post-render",
+        "nativeSha256": "e3c99a2802b74fee56017147b66dfd4e619b16af01181e80d8cd80a0adbda3c9",
+        "evmSha256": "e3c99a2802b74fee56017147b66dfd4e619b16af01181e80d8cd80a0adbda3c9",
+        "exact": true
+      },
+      "stateStreamSha256": "fc4b86720c461125cb3beb3adc611dc3d7d57ca31d1691f56c9d4a39ea88b2da",
+      "batchMetrics": {
+        "count": 70,
+        "gasMin": 374091432,
+        "gasMax": 859031654,
+        "gasSum": 27599617350
+      }
+    },
+    {
+      "name": "death-arena",
+      "tics": 350,
+      "frames": [
+        {
+          "tic": 1,
+          "pixelDiffCount": 0,
+          "sha256": "2aad15f7344ac8d4e91370533ec37e49987157ebb5fde8c4ad4a0b61d61c8a43"
+        },
+        {
+          "tic": 175,
+          "pixelDiffCount": 0,
+          "sha256": "9438a734b8f86283004160dcb1532b88bb377404d6a3e22df9fd3b5ac7399158"
+        },
+        {
+          "tic": 350,
+          "pixelDiffCount": 0,
+          "sha256": "bf5b7f24fd825fddc3d7ac9e3578a56846c84d1a6811837ee16f297b2deaac42"
+        }
+      ],
+      "startup": true,
+      "startupCallMs": 330.31399999998393,
+      "startupGas": 1108059277,
+      "resetGas": 1198634044,
+      "finalStoredState": {
+        "boundary": "post-render",
+        "nativeSha256": "0c760e46630ba678b486273bda00f2be5f5714dfef87edc2cce1d6b6f9086246",
+        "evmSha256": "0c760e46630ba678b486273bda00f2be5f5714dfef87edc2cce1d6b6f9086246",
+        "exact": true
+      },
+      "stateStreamSha256": "0568ebd0e797930df1d1c309ade3d2bd385ab925f120bbf9ee4acb58f7ee975d",
+      "batchMetrics": {
+        "count": 70,
+        "gasMin": 374091432,
+        "gasMax": 859031654,
+        "gasSum": 27598505850
+      }
+    },
+    {
+      "name": "door-use",
+      "tics": 375,
+      "frames": [
+        {
+          "tic": 1,
+          "pixelDiffCount": 0,
+          "sha256": "a6eb4ed43a5077b0a655de0056ed9dd72fc97a2b26cd799a34ad89e019affc69"
+        },
+        {
+          "tic": 187,
+          "pixelDiffCount": 0,
+          "sha256": "f648c31f6683ebc00e1699de1fae3cafac8e739e8ed5329ca1e03d2d8e88e41d"
+        },
+        {
+          "tic": 375,
+          "pixelDiffCount": 0,
+          "sha256": "201590e7cb8bd83fdd1aa430e16564454c9e201962eb32c0837e309460b67050"
+        }
+      ],
+      "startup": true,
+      "startupCallMs": 306.2283339999849,
+      "startupGas": 1104043502,
+      "resetGas": 1196231548,
+      "finalStoredState": {
+        "boundary": "post-render",
+        "nativeSha256": "8b933debbffbad5b20e0990b134fcbd693000bc9f621e684b64c56aba21d3c7f",
+        "evmSha256": "8b933debbffbad5b20e0990b134fcbd693000bc9f621e684b64c56aba21d3c7f",
+        "exact": true
+      },
+      "stateStreamSha256": "0c1498ee52b0438a7a38f7d1fd1b8d8eadbeb65cff927adaae8ac3fcf50af2ef",
+      "batchMetrics": {
+        "count": 75,
+        "gasMin": 371025206,
+        "gasMax": 740241832,
+        "gasSum": 28843994728
+      }
+    },
+    {
+      "name": "door-obstructed",
+      "tics": 375,
+      "frames": [
+        {
+          "tic": 1,
+          "pixelDiffCount": 0,
+          "sha256": "a6eb4ed43a5077b0a655de0056ed9dd72fc97a2b26cd799a34ad89e019affc69"
+        },
+        {
+          "tic": 187,
+          "pixelDiffCount": 0,
+          "sha256": "5bc32c636b9447522d297204575b3a5205a85f241d5a656881adc48647aca15b"
+        },
+        {
+          "tic": 375,
+          "pixelDiffCount": 0,
+          "sha256": "b270792f7fb47d105eae938a2d3bc8b3fcd093084771995ac1120f7be122cc58"
+        }
+      ],
+      "startup": true,
+      "startupCallMs": 303.4615829999966,
+      "startupGas": 1107510785,
+      "resetGas": 1204722964,
+      "finalStoredState": {
+        "boundary": "post-render",
+        "nativeSha256": "4ea3b410794dea341e1bbe7cea75fc4910771a54e01dff8350cbfc0dc877abe9",
+        "evmSha256": "4ea3b410794dea341e1bbe7cea75fc4910771a54e01dff8350cbfc0dc877abe9",
+        "exact": true
+      },
+      "stateStreamSha256": "2dd22946d096d1df8417cbeea632daf47df982a5fa017f76c6e8c966167921b2",
+      "batchMetrics": {
+        "count": 75,
+        "gasMin": 376282506,
+        "gasMax": 763822410,
+        "gasSum": 29483971293
+      }
+    },
+    {
+      "name": "projectile-arena",
+      "tics": 150,
+      "frames": [
+        {
+          "tic": 1,
+          "pixelDiffCount": 0,
+          "sha256": "2aad15f7344ac8d4e91370533ec37e49987157ebb5fde8c4ad4a0b61d61c8a43"
+        },
+        {
+          "tic": 35,
+          "pixelDiffCount": 0,
+          "sha256": "286e9f4ddf04b10f0deb8abc31d5a526214f7e8282a602d0e9711a43a620d3c6"
+        },
+        {
+          "tic": 44,
+          "pixelDiffCount": 0,
+          "sha256": "cbaf899cc04bd3f2c0e3ef15de7e4d1f1432cec76c55a597d867e7b240f65692"
+        },
+        {
+          "tic": 49,
+          "pixelDiffCount": 0,
+          "sha256": "56549c74a520bff8bcb1bb497e70dbdf88d8de57a7890dd5c01fdd20c1901939"
+        },
+        {
+          "tic": 65,
+          "pixelDiffCount": 0,
+          "sha256": "18ff700bf887027065fe3791c95fef546eaadde7cf82fa900252f06f247147f7"
+        },
+        {
+          "tic": 115,
+          "pixelDiffCount": 0,
+          "sha256": "0dffa9c675248b894c525bf12fde4bd11b60393e1da3a525a58378f9f9b4de85"
+        },
+        {
+          "tic": 150,
+          "pixelDiffCount": 0,
+          "sha256": "42914700b7d36b94a22422eb7b66b0481f03ab054a06b9f17d9334637e31b2b7"
+        }
+      ],
+      "startup": true,
+      "startupCallMs": 303.6067500000063,
+      "startupGas": 1108062418,
+      "resetGas": 1198214581,
+      "finalStoredState": {
+        "boundary": "post-render",
+        "nativeSha256": "2e35059772633e2a161d5160711101fde2c0e9041997c2457975405fa45d8d9d",
+        "evmSha256": "2e35059772633e2a161d5160711101fde2c0e9041997c2457975405fa45d8d9d",
+        "exact": true
+      },
+      "stateStreamSha256": "6c598bc8dd306f7c4581643250c44b04e8aec3cd69566d0c1d83d6f5732f6284",
+      "batchMetrics": {
+        "count": 30,
+        "gasMin": 374207419,
+        "gasMax": 859147973,
+        "gasSum": 14466892816
+      }
+    }
+  ],
+  "coverage": {
+    "scenarios": 9,
+    "tics": 2355,
+    "nativeFrames": 31,
+    "exactPixelComparisons": 1984000,
+    "finalStoredStates": 9,
+    "authenticatedChunkRuntimes": 1755
+  },
+  "supplementalBudgetBindings": {
+    "execution-budget.json": "acde01f1b9cf248f9265f1ffcff7181d01d77620a2dfcd9a4d4d0b1c79df2be7",
+    "tools/execution-budget.mjs": "dbf68241139422195203f57a08d8e382afa6d1d493848ae68fbebca9265eec78"
+  },
+  "limitations": [
+    "Probe gas includes test-only observations; actual production gas is separate.",
+    "Fresh formatted build. Historical atomic kernel evidence remains unchanged.",
+    "Budget helper/config bindings checked at integration; omitted from original runner report inventory."
+  ]
+}
