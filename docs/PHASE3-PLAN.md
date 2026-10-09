@@ -7,7 +7,26 @@ does not count as accepted Phase 3 implementation.
 
 ## Recovery checkpoint
 
-Last implementation checkpoint: `60cd6f7`, atomic production gameplay/startup;
+
+Current verification recovery: first inherited run at `367783e` correctly stopped
+at the unchanged format gate, before compilation/tests. Five files were formatted
+in `5a11e39`; all non-brace tokens remain identical, full build passes (70 files,
+497.56 seconds), and all **403 tests / 40 suites pass with zero failures/skips**,
+fuzz seed 0x44. [Format evidence](../artifacts/phase3/format-checkpoint.json).
+Compiled engine bytecode changed beyond metadata, despite unchanged compiler
+settings. Do not relabel prior kernel/production/browser/memory receipts current;
+fresh runtime proofs are running against the formatted build. The 388-function
+audit snapshot also needs refresh after the new evidence checkpoint.
+
+The first Phase 3 native batch passed 27 commands through projectile-world proof,
+then stopped at a stale production-oracle manifest. Fresh separate production
+and browser oracles pass four native profiles. All data files/commands/states/
+Frames match their retained versions exactly; only production profile label and
+generator source hash differ. Original oracles/reports remain unchanged. Final
+full native regression will use the fresh oracle paths; no required gate removed.
+
+Last implementation checkpoint: `5a11e39`, verified Forge formatting;
+atomic production gameplay/startup implementation is `60cd6f7`;
 original map allocation and native-zone interface integration is `1578f06`;
 renderer/cache/backing checkpoint is `9c4ba50`; actor/mover lazy free is `ab316f8`;
 verified source-derived renderer allocator startup is `d9ca352`;
@@ -249,7 +268,7 @@ fields, command/sequence/cadence, seven Frame hashes and gas (static plus six li
 constructor/initialization gas, thirteen rejection errors/gas/storage rollback and
 source/runtime identities equal. The optional palette writer changed only the
 runner hash; both historical tool hashes remain explicit. Refreshed audit review,
-separate integration commits and frozen inherited gates remain. No active compiler.
+separate integration commits and frozen inherited gates remain. No active compiler. Formatted-build runtime rechecks are in progress.
 
 Next dependency order:
 
