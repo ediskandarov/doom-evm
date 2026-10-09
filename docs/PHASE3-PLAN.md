@@ -12,6 +12,9 @@ original map allocation and native-zone interface integration is `1578f06`;
 renderer/cache/backing checkpoint is `9c4ba50`; actor/mover lazy free is `ab316f8`;
 verified source-derived renderer allocator startup is `d9ca352`;
 zone core is `2392f4a`.
+Last full kernel checkpoint: `53b5cd3`, atomic nine scenarios / 2,355 tics /
+31 exact frames / nine final stored snapshots; all 63 consumed hashes checked.
+[Bounded evidence](../tools/reference/gameplay/atomic-kernel-evidence.json).
 Last native observation checkpoint: `01417ad`, rocket-world/blast observations;
 `4d06c03` supplies the generic physical-byte/column proof;
 `ba53a4b` supplies exact map/setup heap boundaries;
@@ -28,11 +31,11 @@ explicitly capability-gated; nativeZone alone uses one initializeGame call.
 The separately executed actual Chrome six-frame gate passed; its runner/evidence
 await their own checkpoint, so this commit alone is component verification.
 Production adapter and its atomic/header/keyboard evidence are committed in
-`60cd6f7`; probe, real-browser and memory/reproducibility workstreams await
+`60cd6f7`; atomic probe is committed in `53b5cd3`; real-browser and memory/reproducibility workstreams await
 separate verified checkpoint commits. **Phase 3 is
 active; M2 and M3 are unaccepted.** Committed production `Doom.sol` now exposes verified atomic gameplay and keeps
 accepted Phase 2 static rendering before startup.
-The new atomic public test-probe verifies nine scenarios, 2,355 tics and 31 frames.
+The committed atomic public test-probe verifies nine scenarios, 2,355 tics and 31 frames.
 The committed production adapter verifies 129 keyboard tics and six frames. Real
 Chrome gameplay now passes all six frames; final inherited acceptance is pending.
 Do not infer engine acceptance from completed module ports or finite passing streams.
@@ -61,7 +64,7 @@ mock-neighbor module proof does not imply whole-engine verification.
 | P_Setup gameplay startup | Implemented and committed | Real BLOCKMAP/REJECT, sector grouping and THINGS order connected to gameplay; ordinary authenticated EVM startup and persisted tic/frame scenarios match native | `b1c2735`: all eight startups, 2,205 persisted logical tics, 24 frames and eight final snapshots exact. New physical map allocations remain a separate pending proof. Integrator owns `src/doom/p_setup.sol`. Existing disk loader reused with explicit attribution. |
 | DoomGame state/action/render adapter | Implemented and committed | All gameplay hooks and renderer projection written; compiled draft production caller and test probe | Type-checks in module batch; full public probe graph compiles; all eight startup states, 2,205 full logical tics, 24 exact 64,000-byte frames and eight final post-render stored snapshots pass. `b1c2735`: [comparison](../tools/reference/gameplay/COMPARISON.md), [validation](../test/fixtures/gameplay_evm/validation.json). Integrator owns `src/evm/DoomGame.sol`. |
 | Production Doom adapter and browser gameplay | Atomic adapter committed `60cd6f7`; client component `982782f` | Original startup, keyboard/tic/render/storage and authenticated resources integrated; 129-tic atomic production and six-frame Chrome execute successfully | `a67f435`: [browser checkpoint](../artifacts/phase3/browser-input-checkpoint.json). Browser 29 isolated tests pass; no real gameplay browser claim. Production draft compile and 129 keyboard tics/14 state fields/six exact frames/13 rejection-storage rollback checks pass. Static real Chrome/WS/receipt/Canvas gate passes after config-only repair. Historical DrawBounds is resolved. Atomic production evidence [129 tics / six frames / 13 full-storage rollbacks](../tools/reference/gameplay/production-atomic-evidence.json), one init at 1,621,868,997 gas; [four header/setup tests](../tools/reference/phase3_zone_setup/atomic-validation.json). Real Chrome evidence checkpoint and final inherited gates remain. |
-| Full native/EVM gameplay comparison | Test-only public probe and runner implemented and committed | Ordinary deployment, all 1,755 authenticated resource runtimes checked; real original hooks and stored state | Native post-render extension `7fc2cab` resolves the observer boundary without engine changes. Full corrected run passes all 2,205 tics/24 frames/eight exact final post-render stored snapshots; `b1c2735`: [retained evidence](../test/fixtures/gameplay_evm/evidence.json) and all 55 consumed source hashes verified. |
+| Full native/EVM gameplay comparison | Atomic probe and runner committed `53b5cd3` | Ordinary deployment, all 1,755 authenticated resource runtimes checked; real original hooks and stored state | Native post-render extension `7fc2cab` resolves the observer boundary without engine changes. Full corrected run passes all 2,205 tics/24 frames/eight exact final post-render stored snapshots; `b1c2735`: [retained evidence](../test/fixtures/gameplay_evm/evidence.json) and all 55 historical consumed hashes verified. New atomic [evidence](../tools/reference/gameplay/atomic-kernel-evidence.json): nine scenarios / 2,355 tics / 31 frames / nine stored states exact; all 63 consumed hashes freshly checked. |
 | Native allocation/backing-memory adapter | Zone types/core committed; source-driven startup replay component verified and committed | Core, heap/ticker, map, semantic caches and known backing are component-integrated and committed; full atomic production/browser proof pending | `2392f4a`: 1,624 exact snapshots, 15 fatal probes, two Forge tests. `5ffd10a`: nine native contexts/four profiles, 83,054 events, 84 snapshots and 63,975 sprite-adjacency checks; all prior native outputs unchanged. [Lifecycle validation](../test/fixtures/phase3_zone_lifecycle/validation.json). `d9ca352`: 6,498 startup calls/4,913 headers/4,126 owners and three Forge tests; [startup validation](../test/fixtures/phase3_zone_startup/validation.json). No runtime allocation tape, clamp, invented padding or guard removal. |
 | Resource initializer integration amendment | Complete and committed | Complete public test-probe graph compiles | `abfb38c`: all 20 inherited RData tests pass, including all native lookup/sprite/map/composite fields. [Checkpoint](../artifacts/phase3/resource-init-checkpoint.json). Final inherited gate remains pending. |
 | Original feature/function audit | 287 original definitions inventoried with spans/body hashes and port mappings | Audit-time source snapshot; refresh on final freeze | `6302955`: [feature matrix](PHASE3-FEATURE-MATRIX.md), [JSON inventory](../artifacts/phase3/feature-matrix.json). Evidence scope and unsupported/undefined domains explicit; no new runtime acceptance claim. |
@@ -163,7 +166,7 @@ Verified recovery checkpoints:
   pre/post-render worlds across four profiles. Observation-only nested timeline
   confirms actual radius damage to the player (requested 25 at tic 49), alongside
   flight, explosion, kill and lazy removal. [Native validation](../tools/reference/gameplay_projectile/validation.json).
-  New probe scenario six and comparison runner are drafted; EVM proof pending.
+  Probe scenario six and runner `53b5cd3` pass all 150 original projectile tics, seven frames and the final stored snapshot.
 
 - `9c4ba50`: renderer/cache/backing and call-local loader/reader integration,
   111 owned tests pass. All source/dependency bindings reviewed; public Doom and
@@ -241,7 +244,7 @@ Next dependency order:
 1. Atomic production interface/startup and header evidence are committed in
    `60cd6f7`; 58 atomic/header and 63 repeat-production source bindings were
    freshly checked, and targeted formatting plus runner syntax checks pass.
-2. Commit the completed nine-scenario kernel comparison, real Chrome runner and
+2. Nine-scenario kernel comparison is committed in `53b5cd3`. Commit real Chrome runner and
    memory/reproducibility tooling as separate workstreams; update this ledger
    after each checkpoint. Preserve historical measurements and tool/source hashes.
 3. Review refreshed source/function/domain audit; preserve unknown-byte guards,
