@@ -5,6 +5,7 @@ pragma solidity 0.8.37;
 import {MapData, MapThing} from "./r_defs.sol";
 import {RenderResources} from "./r_data_types.sol";
 import {Ticcmd, GameInputState} from "./d_ticcmd.sol";
+import {WallState, PlaneState} from "./r_render_state.sol";
 
 /// @custom:source linuxdoom-1.10/{doomdef,p_local,p_mobj,p_pspr}.h at a77dfb96cb91780ca334d0d4cfd86957558007e0
 library GameConst {
@@ -479,6 +480,8 @@ struct GameState {
     uint32[30] activeplats;
     Button[16] buttons;
     Animation[] animations; // original maximum 32, no silent truncation.
+    uint32[] texturetranslation;
+    uint32[] flattranslation;
     uint32[] scrollingLines; // original linespeciallist; original maximum 64.
     int32[] switchlist; // original paired texture IDs terminated by -1.
     int32 numswitches;
@@ -498,6 +501,15 @@ struct GameState {
     uint32[] brainTargets; // p_enemy.c braintargets, original maximum 32.
     uint32 brainTargetOn;
     int32 brainEasy;
+    // Original globals survive transactions, including P_User onground during reaction time.
+    MapScratch move;
+    PathScratch path;
+    // R_ClearPlanes clears cachedheight only; the other caches must survive frames.
+    WallState renderWall;
+    PlaneState renderPlane;
+    uint32 renderFuzzpos;
+    uint32 renderFramecount;
+    bytes renderFramebuffer;
 }
 
 /// @custom:source p_local.h divline_t/intercept_t; index discriminated by isaline.

@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "scope": "Synthetic persistent state integration only; no full-level/production/M2/M3 acceptance",
+  "result": "PASS",
+  "command": ".toolchain/bin/forge test --match-contract GameStorageTest -vv",
+  "runHandle": 88231,
+  "testsPassed": 1,
+  "observedTestGas": 9959477,
+  "compiler": "solc 0.8.37 via-IR optimizer 200 Cancun",
+  "evidence": [
+    "Nonempty actor/thinker/door payload and linked list",
+    "Mutable map/resource translations and scratch aliases",
+    "Nested path intercepts and player message",
+    "R_ClearPlanes clears cachedheight and retains distance/steps/span starts",
+    "Wall globals, fuzz/frame counts and 64000-byte screens[0] persist"
+  ],
+  "remaining": [
+    "Authenticated complete E1M1 storage roundtrip",
+    "Production transaction gas/memory",
+    "Native whole-tic/frame comparison"
+  ],
+  "sourceSha256": {
+    "src/doom/p_game_state.sol": "3e8bd930c7a0aa173365d55d1aaed876207c7cf4c6d1ec57eb4b5c0abb21d252",
+    "docs/PHASE3-INTERFACES.md": "7d13385bf18b82cfd99873cc8fa82ef4663933cce8c908198bd7e3cbfb14145b",
+    "test/unit/GameStorage.t.sol": "2e4973c08e10f13bfeb87141fd26a6f1816aba23218b70bee7a9fb7cc352e69a",
+    "artifacts/phase3/interface-freeze.json": "981da6d3dcb9b8c988c4294502d6e8c35d5e98e50a1ecbd51fb647372cd9dbf9"
+  }
+}

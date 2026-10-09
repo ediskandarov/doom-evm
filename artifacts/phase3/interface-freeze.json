@@ -4,20 +4,24 @@
   "status": "integrator-approved",
   "tests": [
     "GameHeapTest:testActorAliasSurvivesNestedSpawnGrowth",
-    "GameHeapTest:testThinkerAliasSurvivesGrowth"
+    "GameHeapTest:testThinkerAliasSurvivesGrowth",
+    "GameStorageTest:testPersistentGlobalsAndAliasesThroughStorageRoundTrip"
   ],
   "sourceSha256": {
-    "src/doom/p_game_state.sol": "c3fc10c4fe77b74432a9c57398170c0ba9c5adfec88dab1cd1b26a5e79a92e56",
+    "src/doom/p_game_state.sol": "3e8bd930c7a0aa173365d55d1aaed876207c7cf4c6d1ec57eb4b5c0abb21d252",
     "src/doom/d_ticcmd.sol": "508d0332d3e8b83e1b68d37581a3befc100a9974fcaa0900cc44116cd75ff2ef",
     "src/doom/p_heap.sol": "29f216eedc153e34edcd7be9b79be695c7e534b0a1b307222702e9bd7fafe730",
-    "docs/PHASE3-INTERFACES.md": "677da9ca0eaabcf26934347f9fc2511c87b0226a64229d354ae47ac1ab5b3669",
+    "docs/PHASE3-INTERFACES.md": "7d13385bf18b82cfd99873cc8fa82ef4663933cce8c908198bd7e3cbfb14145b",
     "INPUT_PROTOCOL.md": "586a1496b2887c6af28f50f55baf43b78fa6bc88df85856c7c14b770d4bfc349"
   },
-  "limitations": "Interface freeze only; storage round-trip and M2/M3 acceptance remain unverified.",
+  "limitations": "Interface and synthetic storage proof only; authenticated full-level round trips, production costs and M2/M3 acceptance remain unverified.",
   "nativePrerequisites": "All gameplay table fields and both RNG streams match O0/O2/ASan/UBSan; recorded in separate foundation checkpoint.",
   "approvedExtensions": [
     "MapScratch.usething/sightcounts; level sky identifiers",
-    "Tag-only original boss floor/door and exit callbacks"
+    "Tag-only original boss floor/door and exit callbacks",
+    "Persistent texture/flat translations with resource aliases",
+    "Persistent collision/path scratch globals",
+    "Persistent renderer wall/plane caches, fuzz/frame counters and screens[0]"
   ],
-  "verification": "Current full source compiles; 22 tick/collision/input/foundation Forge tests pass. Combat24 separately passes against same schema. Gameplay acceptance remains pending."
+  "verification": "Pinned via-IR source type-checks. Strengthened GameStorageTest passed separately (run 88231), real memory/storage/memory copies of nonempty actor/thinker/door payloads, map/scratch/resource aliases and renderer globals/framebuffer."
 }
