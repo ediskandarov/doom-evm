@@ -52,6 +52,33 @@ static void writefile(const char *directory,const char *name,const void *data,si
     FILE *f=fopen(path,"wb"); if(!f || fwrite(data,1,size,f)!=size) I_Error("write %s",path); fclose(f);
 }
 
+static void word(FILE *file,int32_t value) {
+    uint32_t u=(uint32_t)value; unsigned char bytes[4]={u>>24,u>>16,u>>8,u};
+    if(fwrite(bytes,1,4,file)!=4) I_Error("trace write");
+}
+static FILE *output(const char *directory,const char *name) {
+    char path[4096]; snprintf(path,sizeof(path),"%s/%s",directory,name);
+    FILE *file=fopen(path,"wb"); if(!file) I_Error("open output"); return file;
+}
+static void geometry_outputs(const char *directory) {
+    FILE *file=output(directory,"planes.bin"); word(file,(int)(lastvisplane-visplanes));
+    for(visplane_t *p=visplanes;p<lastvisplane;p++) {
+        word(file,p->height); word(file,p->picnum); word(file,p->lightlevel); word(file,p->minx); word(file,p->maxx);
+        fwrite(p->top,1,SCREENWIDTH,file); fwrite(p->bottom,1,SCREENWIDTH,file);
+    }
+    fclose(file); file=output(directory,"clips.bin");
+    for(int x=0;x<viewwidth;x++) { word(file,floorclip[x]); word(file,ceilingclip[x]); }
+    fclose(file); file=output(directory,"drawsegs.bin"); word(file,(int)(ds_p-drawsegs));
+    for(drawseg_t *d=drawsegs;d<ds_p;d++) {
+        word(file,(int)(d->curline-segs)); word(file,d->x1); word(file,d->x2);
+        word(file,d->scale1); word(file,d->scale2); word(file,d->scalestep); word(file,d->silhouette);
+        word(file,d->bsilheight); word(file,d->tsilheight);
+        short *arrays[]={d->sprtopclip,d->sprbottomclip,d->maskedtexturecol};
+        for(int i=0;i<3;i++) { word(file,arrays[i]!=NULL); if(arrays[i]) for(int x=d->x1;x<=d->x2;x++) word(file,arrays[i][x]); }
+    }
+    fclose(file);
+}
+
 int main(int argc,char **argv) {
     if(argc<3) I_Error("renderer WAD output-directory [angle-uint32] [walls|full]");
     char *files[]={argv[1],NULL}; W_InitMultipleFiles(files);
@@ -77,7 +104,7 @@ int main(int argc,char **argv) {
         // Static spawnstate projection, equivalent initial rendering fields of P_SpawnMobj.
         mobj_t *obj=calloc(1,sizeof(*obj)); obj->type=type; obj->info=mobjinfo+type;
         obj->x=(int32_t)t->x*65536; obj->y=(int32_t)t->y*65536; obj->angle=(t->angle/45)*ANG45;
-        obj->flags=obj->info->flags; obj->height=obj->info->height; obj->radius=obj->info->radius;
+        obj->flags=obj->info->flags; if(t->options&MTF_AMBUSH) obj->flags|=MF_AMBUSH; obj->height=obj->info->height; obj->radius=obj->info->radius;
         obj->state=states+obj->info->spawnstate; obj->sprite=obj->state->sprite; obj->frame=obj->state->frame;
         obj->subsector=R_PointInSubsector(obj->x,obj->y); sector_t *sector=obj->subsector->sector;
         obj->z=(obj->flags&MF_SPAWNCEILING)?sector->ceilingheight-obj->height:sector->floorheight;
@@ -95,6 +122,7 @@ int main(int argc,char **argv) {
     else R_RenderPlayerView(players);
     fclose(tracefile); tracefile=NULL;
     writefile(argv[2],"pixels.bin",screens[0],64000);
+    geometry_outputs(argv[2]);
     char summary[2048]; int len=snprintf(summary,sizeof(summary),"{\"x\":%d,\"y\":%d,\"z\":%d,\"angle\":%u,\"spawnedThings\":%d,\"drawsegs\":%ld,\"visplanes\":%ld,\"vissprites\":%ld,\"subsectors\":%d}\n",viewx,viewy,viewz,viewangle,spawned,(long)(ds_p-drawsegs),(long)(lastvisplane-visplanes),(long)(vissprite_p-vissprites),sscount);
     writefile(argv[2],"scene.json",summary,len);
     return 0;

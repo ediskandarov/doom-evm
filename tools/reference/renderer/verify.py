@@ -32,7 +32,7 @@ def main():
                     result=subprocess.run([str(binaries[profile]),str(WAD),str(dest),str(angle),mode],text=True,capture_output=True,env={**os.environ,'ASAN_OPTIONS':'detect_leaks=0','DOOM_ORACLE_ALLOCATION_FILL':fill})
                     assert result.returncode==0,(slug,profile,result.stderr)
                     assert not result.stderr,(slug,profile,result.stderr)
-                    current={name:(dest/name).read_bytes() for name in ['pixels.bin','scene.json','trace.txt']}
+                    current={name:(dest/name).read_bytes() for name in ['pixels.bin','scene.json','trace.txt','planes.bin','clips.bin','drawsegs.bin']}
                     assert len(current['pixels.bin'])==64000
                     if baseline is None: baseline=current
                     else: assert current==baseline,(slug,profile,fill,'native mismatch')

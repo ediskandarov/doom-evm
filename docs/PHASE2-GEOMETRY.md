@@ -19,7 +19,7 @@ All mappings refer to unmodified `id-Software/DOOM` commit `a77dfb96cb91780ca334
 | `R_ExecuteSetViewSize` | Original menu-supported blocks 3–11, detail 0/1; centers/projection, psprite scales, screen heights, slopes, distance scales and 16×48 lights |
 | `R_SetupFrame` | Camera/player values passed directly; native view angle offset is already included in supplied angle; trig/light state, frame/valid counts and subsector count retained |
 
-`R_InitBuffer` is temporarily the frozen private adapter mapping `r_draw.c` offsets exactly; the integrator must replace it with `R_Draw.R_InitBuffer` after combining workstreams. Original draw function-pointer selection is represented by `detailshift` and later explicit dispatcher calls. Original fixed light pointer selection is represented by `fixedcolormap != -1`; its 48-entry array is preserved. Initialize `validcount=1` in the eventual renderer lifecycle, matching the original global initializer. Counter increment wraps uint32; signed C overflow is a compiler-profile extension after its positive domain.
+`R_ExecuteSetViewSize` calls the integrated `R_Draw.R_InitBuffer`; the temporary freeze adapter has been removed. Original draw function-pointer selection is represented by `detailshift` and later explicit dispatcher calls. Original fixed light pointer selection is represented by `fixedcolormap != -1`; its 48-entry array is preserved. Initialize `validcount=1` in the eventual renderer lifecycle, matching the original global initializer. Counter increment wraps uint32; signed C overflow is a compiler-profile extension after its positive domain.
 
 ## Oracle and domains
 

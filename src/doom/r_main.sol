@@ -2,6 +2,7 @@
 // Copyright (C) 1993-1996 by id Software, Inc.
 pragma solidity 0.8.37;
 
+import {R_Draw} from "./r_draw.sol";
 import {M_Fixed} from "./m_fixed.sol";
 import {Tables} from "./tables.sol";
 import {RenderState} from "./r_state.sol";
@@ -240,7 +241,7 @@ library R_Main {
         rs.centerxfrac = rs.centerx << 16;
         rs.centeryfrac = rs.centery << 16;
         rs.projection = rs.centerxfrac;
-        _initBuffer(rs);
+        R_Draw.R_InitBuffer(rs, rs.scaledviewwidth, rs.height);
         R_InitTextureMapping(rs);
         rs.pspritescale = int32(uint32(rs.width) * 65536 / 320);
         rs.pspriteiscale = int32(uint32(65536 * 320) / rs.width);
@@ -269,22 +270,6 @@ library R_Main {
                 if (level >= 32) level = 31;
                 rs.scalelight[uint32(i * 48 + j)] = bytes1(uint8(uint32(level)));
             }
-        }
-    }
-
-    // Temporary interface-freeze adapter; integrator replaces this with R_Draw.R_InitBuffer.
-    function _initBuffer(RenderState memory rs) private pure {
-        uint32 width = rs.scaledviewwidth;
-        uint32 height = rs.height;
-        rs.viewwindowx = int32((320 - width) >> 1);
-        rs.viewwindowy = width == 320 ? int32(0) : int32((200 - 32 - height) >> 1);
-        rs.columnofs = new uint32[](width);
-        for (uint32 i; i < width; ++i) {
-            rs.columnofs[i] = uint32(rs.viewwindowx) + i;
-        }
-        rs.ylookup = new uint32[](height);
-        for (uint32 i; i < height; ++i) {
-            rs.ylookup[i] = (i + uint32(rs.viewwindowy)) * 320;
         }
     }
 }

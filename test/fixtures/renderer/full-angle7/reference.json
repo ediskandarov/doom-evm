@@ -46,7 +46,7 @@
         "-Wno-int-to-pointer-cast"
       ],
       "patchSha256": "17bb035d644b6f64f829ba0e27571e32814ac370234f90f9f3b9179aaf931e7d",
-      "harnessSha256": "28241e9b8c1bd4c3685cf86ceae941679d8e3b9b90bc4d21a3a5ca32fc6cc538",
+      "harnessSha256": "40c866085e24804a41dd018df187dd561a21b5596ca00a6d5c3ca6fda7ed3014",
       "integerSemantics": "Pinned 32-bit signed -fwrapv/arithmetic-shift profile. Original negative-left-shift UB is audited separately. LP64 disk/pointer and visplane object-representation adapters are explicit.",
       "doubleSemantics": "Original FixedDiv2 binary64 expression; no fast math or contraction."
     }
