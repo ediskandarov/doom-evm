@@ -113,7 +113,7 @@ No raw transcript or per-response message body is included.
 |---|---:|---:|---:|---:|---:|---:|
 | 3 | 1,885 | 327,953,798 | 322,382,080 | 1,363,816 | 605,056 | 329,317,614 |
 
-The window ends at **2026-10-09T21:13:08Z**, an explicit integrator M2/M3
+That engineering snapshot window ends at **2026-10-09T21:13:08Z**, an explicit integrator M2/M3
 engineering acceptance marker backed by `artifacts/phase3/acceptance.json`. It
 is not an inferred goal-counter completion timestamp. Documentation publication,
 push bookkeeping and the current unflushed response can fall outside this window
@@ -133,3 +133,26 @@ The historical goal counters and current goal accounting use separate semantics;
 never add them to these response totals. The reusable local collector and all
 twenty accounting/attribution/privacy regression tests remain separate from the
 DOOM engine and use no external telemetry service.
+
+## Structured goal completion snapshot
+
+After clean publication at2696ff7, the goal tool reported completion at
+**2026-10-09T21:31:33Z** (second precision). The current phase policy uses this
+recorded goal endpoint and preserves the earlier engineering acceptance marker
+separately. The engineering exports above remain unchanged.
+
+[Completion aggregate JSON](../artifacts/usage/phase3-complete/usage.json),
+[session/agent/phase/model CSV](../artifacts/usage/phase3-complete/metrics.csv) and
+[phase totals CSV](../artifacts/usage/phase3-complete/phase-totals.csv) contain the
+observed response totals through that configured boundary.
+
+| Phase | Responses | Input | Cached input | Output | Reasoning | Total |
+|---|---:|---:|---:|---:|---:|---:|
+| 3 | 1,902 | 332,256,311 | 326,402,688 | 1,397,046 | 625,089 | 333,653,357 |
+
+The tool's separate goal accounting is **6,818,723 tokens and26,155 seconds
+(about7h16m)**. This is not added to, or interpreted as equivalent to, session
+response usage. Current unflushed response usage may arrive later; inference
+crossing either boundary cannot be split exactly. No missing values or backend
+routes are estimated. Later accounting publication is outside the completed goal
+window. The collector's twenty tests pass after closing the actual goal boundary.

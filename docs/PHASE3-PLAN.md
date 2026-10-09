@@ -202,3 +202,12 @@ JSON/CSV and explicit engineering closure. Repository push is verified against
 origin/main; final documentation handoff records the ready local browser config.
 All requested implementation, integration, verification and telemetry work is
 complete. Engine sources remain identical to the frozen accepted hashes.
+
+## Final goal accounting
+
+Goal completion is recorded at2026-10-09T21:31:33Z after clean2696ff7 publication.
+Separate tool accounting:6,818,723 tokens /26,155 seconds, never summed with
+response usage. The actual goal closure and earlier engineering-acceptance
+marker are both preserved in tools/usage/phases.json. Completion JSON/CSV are
+separate from the preserved engineering snapshot; all20 collector tests pass.
+No engine, compiler setting, correctness gate or acceptance scope changed.

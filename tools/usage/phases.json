@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "policy": "Half-open windows from recorded goal start/completion events or explicit engineering acceptance markers; gaps and later publication bookkeeping remain unattributed. Goal counters are separate and never summed with response usage.",
+  "policy": "Half-open windows from recorded goal start/completion events or explicit markers; gaps remain unattributed. Engineering acceptance markers are preserved separately. Goal counters are separate and never added to response usage.",
   "windows": [
     {
       "phase": "phase0",
@@ -88,16 +88,31 @@
       "phase": "phase3",
       "session_id": "01a11fdf-1d25-7201-abb8-1afdaaab6b9c",
       "start": "2026-10-09T14:10:28.000Z",
-      "end": "2026-10-09T21:13:08Z",
+      "end": "2026-10-09T21:31:33.000Z",
       "start_evidence": {
         "kind": "explicit_marker",
         "note": "Explicit active Phase 3 goal created at Unix 1791555028; prior abandoned scaffolding remains outside this phase"
       },
       "end_evidence": {
-        "kind": "explicit_marker",
+        "kind": "structured_goal_completion",
+        "timestamp": "2026-10-09T21:31:33.000Z",
+        "goal_created_at_unix": 1791555028,
+        "goal_updated_at_unix": 1791581493,
+        "source": "functions.update_goal(status=complete) structured result after verified clean published2696ff7",
+        "timestamp_precision": "seconds; tool does not provide finer completion time"
+      },
+      "engineering_acceptance_marker": {
         "timestamp": "2026-10-09T21:13:08Z",
-        "source": "artifacts/phase3/acceptance.json",
-        "note": "Integrator M2/M3 engineering acceptance after all required gates and final artifact proofs. Later publication/bookkeeping and current unflushed response may remain unattributed; not an inferred goal completion counter."
+        "evidence": {
+          "kind": "explicit_marker",
+          "timestamp": "2026-10-09T21:13:08Z",
+          "source": "artifacts/phase3/acceptance.json",
+          "note": "Integrator M2/M3 engineering acceptance after all required gates and final artifact proofs. Later publication/bookkeeping and current unflushed response may remain unattributed; not an inferred goal completion counter."
+        }
+      },
+      "separate_goal_counter": {
+        "tokensUsed": 6818723,
+        "timeUsedSeconds": 26155
       }
     }
   ],
