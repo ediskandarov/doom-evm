@@ -25,7 +25,16 @@ Checkpoint `3242865` [fresh kernel evidence](../tools/reference/gameplay/final-k
 Frames, 84 exported field comparisons and Canvas RGBA bytes exact; actual
 keyboard lifecycle/blur/deduplication/receipt fallback verified.
 [Current Chrome evidence](../tools/transport/evidence/gameplay-browser-final.json).
-Clone memory and final inherited gates remain. Current replay checkpoint
+Current clone memory checkpoint `3ad701b` is verified: all-render six tics
+and six production-cadence tics (five no-render) pass all three-deployment
+storage/field/native-frame and paired-clone gas comparisons. Measured boundaries
+remain init 19,665,056B / no-render 8,749,760–8,753,856B / live render
+11,918,816–11,956,800B. [Fresh memory evidence](../tools/reference/gameplay/production-final-memory-evidence.json).
+A concurrent unlocked-sender attempt timed out waiting for a receipt after tic2;
+no pending hash/nonce was retained, so shared-sender conflict is suspected only.
+Empty pool/equal latest-pending nonce were observed; sequential replay passed.
+No gas-exhaustion/revert evidence. All old reports remain historical.
+Final audit refresh and frozen inherited/native gates remain. Current replay checkpoint
 `0015986` verifies two complete independent ordinary deployments: all 130 × 14
 rows, seven Frames, commands/cadence/sequences, startup/constructor/receipt gas
 and thirteen rejection selectors/gas/whole-storage rollback assertions equal.
