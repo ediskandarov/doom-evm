@@ -1,0 +1,112 @@
+{
+  "upstreamCommit": "a77dfb96cb91780ca334d0d4cfd86957558007e0",
+  "build": {
+    "compiler": "clang",
+    "version": "Apple clang version 17.0.0 (clang-1700.0.13.5)",
+    "target": "arm64-apple-darwin24.6.0",
+    "flags": [
+      "-std=c99",
+      "-O2",
+      "-fwrapv",
+      "-fno-strict-aliasing",
+      "-ffp-contract=off",
+      "-fno-fast-math"
+    ],
+    "sourceSha256": "a5cfa0e35d4bc6a8f37393810c15c4b0aa15123609555700369a1890d253838c",
+    "harnessSha256": "800bcdff3c05634aab27f4cc38bf12bc564ed4644bb88845aff9aa9ce12dc8ee",
+    "patchSha256": "e268787993a73551889b4e935121e3544ebe8e92d54e0fa68ccfdd3776929e5a",
+    "integerSemantics": "32-bit int; 64-bit long long; arithmetic signed right shift; signed narrowing wraps on pinned Clang; -fwrapv; abs(INT_MIN) remains undefined and excluded",
+    "doubleSemantics": "IEEE binary64; round-to-nearest ties-to-even; no fast-math or contraction; original double division then exact power-of-two scale; 0/0 float-to-int is undefined"
+  },
+  "sources": {
+    "r_main.c": "2aae43cf807929a8758f71ed0205fc08017556541ba8df2ea9167c003d0dec5a",
+    "r_draw.c": "b19edd950d3d56d2d1d6168677d6345c190f081baa8269bfac3d2f3920a36a96",
+    "m_fixed.c": "a4472841bc8890c5d5a41b325ecf56d10d7026a7489967aa29100b5dee759fea",
+    "tables.c": "db8759f4311654c63785dcffb8f73a00a61cfe2713e4284c238dea420b6e5f89"
+  },
+  "extractions": [
+    {
+      "file": "m_fixed.c",
+      "function": "FixedMul",
+      "startLine": 43,
+      "endLine": 49,
+      "sha256": "71f681bd99115702cf59d6886386a7daa325f6870c235dd8f806d3dc79f8396e"
+    },
+    {
+      "file": "m_fixed.c",
+      "function": "FixedDiv",
+      "startLine": 57,
+      "endLine": 65,
+      "sha256": "97f73f12dd005f2b2d84f31baf9153f076f3aba300a48bdb0fe7d4b78cf933f4"
+    },
+    {
+      "file": "m_fixed.c",
+      "function": "FixedDiv2",
+      "startLine": 69,
+      "endLine": 87,
+      "sha256": "30c5f8fd2dd75b476d09aec6faca76b383464f1489b53de6b00bc8b214e746ff"
+    },
+    {
+      "file": "r_main.c",
+      "function": "R_PointOnSegSide",
+      "startLine": 214,
+      "endLine": 274,
+      "sha256": "a374e9745c85a1e52e001172d377d186b2e7efe05d2b123780b6f3dd6abd6337"
+    },
+    {
+      "file": "r_main.c",
+      "function": "R_PointToDist",
+      "startLine": 391,
+      "endLine": 418,
+      "sha256": "edad0b73bc8ac22a02d31c8e3784b3c4ae69f3c410204adac36d08c97630bca7"
+    },
+    {
+      "file": "r_main.c",
+      "function": "R_ScaleFromGlobalAngle",
+      "startLine": 453,
+      "endLine": 502,
+      "sha256": "7a355cde6f2e1db60045f841b882db9668427bef7cc07621211caa34df7d32b5"
+    },
+    {
+      "file": "r_main.c",
+      "function": "R_InitTextureMapping",
+      "startLine": 544,
+      "endLine": 603,
+      "sha256": "1f6bf87cd4ef973bcdb8d32c586935ccce1db6d8cf5b0a4f2ba49b95433fa452"
+    },
+    {
+      "file": "r_main.c",
+      "function": "R_InitLightTables",
+      "startLine": 614,
+      "endLine": 642,
+      "sha256": "2e1628d99c4a9b91592a9633d7c0b519af95afcd03218fd802d7365cb53d2976"
+    },
+    {
+      "file": "r_draw.c",
+      "function": "R_InitBuffer",
+      "startLine": 695,
+      "endLine": 720,
+      "sha256": "2b5b24d04db7bddbd2710fac777ed90766125af94c38e6157f0c955f33b61b4d"
+    },
+    {
+      "file": "r_main.c",
+      "function": "R_ExecuteSetViewSize",
+      "startLine": 671,
+      "endLine": 761,
+      "sha256": "1643ca85f2c62d9af9cd8836dec6670124974db47ee691124aacf071b003e1bb"
+    },
+    {
+      "file": "r_main.c",
+      "function": "R_SetupFrame",
+      "startLine": 830,
+      "endLine": 863,
+      "sha256": "adbe47a2bb833c757e0eaaa573bd02f2c26dbbe4ebf52feaf37079f61e927b79"
+    }
+  ],
+  "generatedSourceSha256": "f9ce4bc77909aae72409f815a537e4f46d2bec9a60c79b251ca68e9577725663",
+  "harnessSha256": {
+    "reference.py": "ea1f18938f204ff1462662d373ea680c01c4b783cea5d71b7241b50ff4fef2fe",
+    "driver.c": "cff76bc13f3d3534a054f83c92f085884b74f4fdd9cafb0014c81e2568f188fe",
+    "compat.h": "b95e26ea16d39139d567965c86fb19fb7dade857e1e0d2d53c3c178d4eb47b1c"
+  }
+}

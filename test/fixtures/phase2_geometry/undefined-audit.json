@@ -1,0 +1,5 @@
+{
+  "classification": "Original R_ExecuteSetViewSize shifts negative (i-viewheight/2); ISO C undefined. Equality is pinned compiler-profile evidence; port uses multiplication with identical representable results.",
+  "sanitizerDiagnostic": "<build>/geometry.c:352:24: runtime error: left shift of negative value -100\nSUMMARY: UndefinedBehaviorSanitizer: undefined-behavior <build>/geometry.c:352:24",
+  "otherChecks": "All other sanitizer categories enabled for view setup; ordinary vectors full UBSan clean."
+}
