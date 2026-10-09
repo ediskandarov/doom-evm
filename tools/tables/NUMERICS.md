@@ -64,7 +64,9 @@ its little-endian result against those native-checked digests. Invalid indices
 revert explicitly. The first sine sample being 25 rather than zero is intentional.
 
 Generated Solidity keeps the words in 256-entry big-endian byte chunks and
-extracts the requested word using a single memory-safe read. This preserves the
+extracts the requested word using a single aligned memory-safe read followed by
+a shift and mask. Every 32-byte load stays inside its allocated chunk, including
+the final short chunk's padding. This preserves the
 pure frozen API with bounded memory allocation per call (up to 1 KiB), avoiding
 a whole-table allocation. Internal pure calls still advance caller memory; a
 renderer must measure that behavior before choosing its adapter. No placement

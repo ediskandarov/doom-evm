@@ -13,7 +13,7 @@ ROOT = Path(__file__).resolve().parents[2]
 SOURCE = ROOT / "original/DOOM/linuxdoom-1.10/tables.c"
 SOURCE_SHA = "db8759f4311654c63785dcffb8f73a00a61cfe2713e4284c238dea420b6e5f89"
 COUNTS = {"finetangent": 4096, "finesine": 10240, "tantoangle": 2049}
-HEADER = "// SPDX-License-Identifier: GPL-2.0-only\npragma solidity 0.8.37;\n"
+HEADER = "// SPDX-License-Identifier: GPL-2.0-only\n// Copyright (C) 1993-1996 by id Software, Inc.\npragma solidity 0.8.37;\n"
 
 
 def extract():
@@ -90,9 +90,11 @@ library Tables {
     }
 
     function _word(bytes memory data, uint256 index) private pure returns (uint32 value) {
-        // index is always within a generated chunk. Read only; never touch free-memory metadata.
+        // index is within a generated chunk. Load an aligned 32-byte group wholly inside
+        // its allocation (the final partial chunk has Solidity's 32-byte padding).
         assembly ("memory-safe") {
-            value := shr(224, mload(add(add(data, 32), mul(index, 4))))
+            let group := mload(add(add(data, 32), mul(shr(3, index), 32)))
+            value := and(shr(sub(224, mul(and(index, 7), 32)), group), 0xffffffff)
         }
     }
 '''

@@ -1,4 +1,5 @@
 // SPDX-License-Identifier: GPL-2.0-only
+// Copyright (C) 1993-1996 by id Software, Inc.
 pragma solidity 0.8.37;
 
 /// @custom:source linuxdoom-1.10/tables.c, tables.h at a77dfb96cb91780ca334d0d4cfd86957558007e0
@@ -30,9 +31,11 @@ library Tables {
     }
 
     function _word(bytes memory data, uint256 index) private pure returns (uint32 value) {
-        // index is always within a generated chunk. Read only; never touch free-memory metadata.
+        // index is within a generated chunk. Load an aligned 32-byte group wholly inside
+        // its allocation (the final partial chunk has Solidity's 32-byte padding).
         assembly ("memory-safe") {
-            value := shr(224, mload(add(add(data, 32), mul(index, 4))))
+            let group := mload(add(add(data, 32), mul(shr(3, index), 32)))
+            value := and(shr(sub(224, mul(and(index, 7), 32)), group), 0xffffffff)
         }
     }
 

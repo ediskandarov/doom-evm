@@ -1,4 +1,5 @@
 // SPDX-License-Identifier: GPL-2.0-only
+// Copyright (C) 1993-1996 by id Software, Inc.
 pragma solidity 0.8.37;
 
 /// @custom:source linuxdoom-1.10/m_fixed.c at a77dfb96cb91780ca334d0d4cfd86957558007e0
