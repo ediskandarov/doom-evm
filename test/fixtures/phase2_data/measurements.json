@@ -13,7 +13,7 @@
     "src/doom/r_data.sol": "273b02ed9a93ddc1b5d111e7a1bee85fcccd474bb0e9c638f456e9ddfe8c10e3",
     "src/doom/r_data_types.sol": "689bb3229f3aee9d104b754a06d88c4201d8a60ed08d4af4c9f1a2d90f0a58ca",
     "src/evm/ResourceStore.sol": "5ab3acc5d09f155a4cf25973c847f23e47f386a364704b76996c86be5862e3a8",
-    "test/unit/r_data.t.sol": "7962c30e2f9cc2c873fa45bf4ec6dcbdfc103a09bbb49278c3902352fe7b665f",
+    "test/unit/r_data.t.sol": "fa7a6252a565404bc40d18c652d637c5fc86fb85f40721ed1e40f4eae2d59555",
     "foundry.toml": "084d5192108931325837611f9d1339796a6ffd64ed570e31907afe718f191226"
   },
   "measurements": [
@@ -29,18 +29,18 @@
     },
     {
       "function": "direct column cached",
-      "gas": 1604,
+      "gas": 1569,
       "allocatorEnd": 2724960
     },
     {
       "function": "flat uncached",
-      "gas": 47101,
-      "allocatorEnd": 2724960
+      "gas": 47127,
+      "allocatorEnd": 2729088
     },
     {
       "function": "flat cached",
       "gas": 405,
-      "allocatorEnd": 2724960
+      "allocatorEnd": 2729088
     },
     {
       "function": "R_InitDataLazy",

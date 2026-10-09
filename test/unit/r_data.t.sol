@@ -307,10 +307,14 @@ contract RDataTest {
         require(same, "cache did not reuse allocation");
         start = gasleft();
         bytes memory flat = R_Data.R_GetFlat(r, 1);
-        emit Measurement("flat uncached", start - gasleft(), mem);
+        uint256 flatGas = start - gasleft();
+        assembly ("memory-safe") { mem := mload(0x40) }
+        emit Measurement("flat uncached", flatGas, mem);
         start = gasleft();
         bytes memory again = R_Data.R_GetFlat(r, 1);
-        emit Measurement("flat cached", start - gasleft(), mem);
+        flatGas = start - gasleft();
+        assembly ("memory-safe") { mem := mload(0x40) }
+        emit Measurement("flat cached", flatGas, mem);
         assembly ("memory-safe") { same := eq(flat, again) }
         require(same);
     }
