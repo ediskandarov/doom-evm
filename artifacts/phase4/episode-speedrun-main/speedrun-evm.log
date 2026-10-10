@@ -1,0 +1,19 @@
+Resource CREATE/readback 300/1755
+Resource CREATE/readback 600/1755
+Resource CREATE/readback 900/1755
+Resource CREATE/readback 1200/1755
+Resource CREATE/readback 1500/1755
+PASS E1M1 skill0 startup: exact full original-C DSG1
+PASS exact original world 25/279 tics; gas 376712718
+PASS exact original world 50/279 tics; gas 378510462
+PASS exact original world 75/279 tics; gas 377573979
+PASS exact original world 100/279 tics; gas 377927206
+PASS exact original world 125/279 tics; gas 379394364
+PASS exact original world 150/279 tics; gas 378802312
+PASS exact original world 175/279 tics; gas 378734125
+PASS exact original world 200/279 tics; gas 380075858
+PASS exact original world 225/279 tics; gas 379581070
+PASS exact original world 250/279 tics; gas 378548139
+PASS exact original world 275/279 tics; gas 378179781
+PASS exact original world 279/279 tics; gas 367194245
+{"pass":true,"executedTics":279,"verifiedTics":279,"totalReplayGas":21204228799,"replayElapsedMs":11880.636791000004,"output":"/Users/eduard/sandbox/doom-evm/artifacts/phase4/episode-speedrun-main/speedrun-evm.json"}

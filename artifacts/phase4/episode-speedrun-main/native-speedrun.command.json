@@ -1,0 +1,19 @@
+{
+  "name": "native-speedrun",
+  "command": [
+    "python3",
+    "tools/reference/speedrun/replay.py",
+    "--demo",
+    "artifacts/speedrun-e1m1/e1m1-easy.lmp",
+    "--wad",
+    "artifacts/local/freedoom/freedoom1.wad",
+    "--output",
+    "artifacts/local/episode-speedrun-main/native-speedrun"
+  ],
+  "cwd": "/Users/eduard/sandbox/doom-evm",
+  "startedUtc": "2026-10-10T16:45:31.651112+00:00",
+  "endedUtc": "2026-10-10T16:45:58.664115+00:00",
+  "seconds": 27.01264916593209,
+  "exitCode": 0,
+  "logSha256": "000a45fe9790388ec1917e1eae9d29f94e88612c60ad1fba6202f3d30f2a48be"
+}

@@ -1,0 +1,18 @@
+{
+  "name": "episode-evm",
+  "command": [
+    "node",
+    "tools/reference/episode_completion/evm.mjs",
+    "--port",
+    "18931",
+    "--browser",
+    "--output-prefix",
+    "/Users/eduard/sandbox/doom-evm/artifacts/phase4/episode-speedrun-main/episode-evm"
+  ],
+  "cwd": "artifacts/local/episode-speedrun-main/runtime",
+  "startedUtc": "2026-10-10T16:54:20.215880+00:00",
+  "endedUtc": "2026-10-10T17:00:24.779957+00:00",
+  "seconds": 364.5601446661167,
+  "exitCode": 0,
+  "logSha256": "54490b9cd529b8692719c91560b2ce358791476a783c34f1579529ac406ec67b"
+}

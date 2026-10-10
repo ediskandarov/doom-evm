@@ -1,0 +1,14 @@
+{
+  "name": "native-gameflow",
+  "command": [
+    "python3",
+    "tools/reference/gameflow/reference.py",
+    "--check"
+  ],
+  "cwd": "/Users/eduard/sandbox/doom-evm",
+  "startedUtc": "2026-10-10T16:45:30.491322+00:00",
+  "endedUtc": "2026-10-10T16:45:32.406800+00:00",
+  "seconds": 1.915429917164147,
+  "exitCode": 0,
+  "logSha256": "7382c445e3b12fdd9ade19544917cb8b37f58f5987303446cf0493f9cc5df603"
+}

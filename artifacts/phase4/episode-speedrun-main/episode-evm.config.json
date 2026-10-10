@@ -1,0 +1,25 @@
+{
+  "rpcUrl": "http://127.0.0.1:18931",
+  "wsUrl": "ws://127.0.0.1:18931",
+  "address": "0x5ae1f4bb68f8eac39cfdbdfda2b7344ccbd80faf",
+  "driver": "0xf39fd6e51aad88f6f4ce6ab8827279cfffb92266",
+  "rendererKind": "doom-world-view",
+  "gameplay": true,
+  "productionUI": true,
+  "rawKeyboard": true,
+  "episodeMode": true,
+  "uiFullscreen": false,
+  "startMap": 1,
+  "skill": 2,
+  "deploymentBlock": "0x0",
+  "paletteUrl": "/palette.local.json",
+  "paletteKind": "wad",
+  "resourceIdentity": {
+    "schemaVersion": 0,
+    "wadSha256": "7323bcc168c5a45ff10749b339960e98314740a734c30d4b9f3337001f9e703d",
+    "bundleSha256": "d379076f21645cf7cc5acb056663d0faacc4065489a0ca99738479323c9f7a47",
+    "paletteSha256": "fd895921b5d0a394612bb29852ed003d44d69f76dec31c0dc6b5d5fc7d63f7bb",
+    "paletteVariant": 0
+  },
+  "gasLimit": 10000000000
+}

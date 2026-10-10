@@ -1,0 +1,392 @@
+ffmpeg version 9.0.1 Copyright (c) 2000-2026 the FFmpeg developers
+built with Apple clang version 17.0.0 (clang-1700.6.4.2)
+configuration: --prefix=/opt/homebrew/Cellar/ffmpeg/9.0.1_1 --enable-shared --enable-pthreads --enable-version3 --cc=clang --host-cflags= --host-ldflags= --enable-ffplay --enable-gpl --enable-libsvtav1 --enable-libopus --enable-libx264 --enable-libmp3lame --enable-libdav1d --enable-libvmaf --enable-libvpx --enable-libx265 --enable-openssl --enable-videotoolbox --enable-audiotoolbox --enable-neon
+libavutil      61.  1.101 / 61.  1.101
+libavcodec     63.  1.101 / 63.  1.101
+libavformat    63.  1.101 / 63.  1.101
+libavdevice    63.  1.101 / 63.  1.101
+libavfilter    12.  1.101 / 12.  1.101
+libswscale     10.  1.101 / 10.  1.101
+libswresample   7.  1.101 /  7.  1.101
+
+Exiting with exit code 0
+ffprobe version 9.0.1 Copyright (c) 2007-2026 the FFmpeg developers
+built with Apple clang version 17.0.0 (clang-1700.6.4.2)
+configuration: --prefix=/opt/homebrew/Cellar/ffmpeg/9.0.1_1 --enable-shared --enable-pthreads --enable-version3 --cc=clang --host-cflags= --host-ldflags= --enable-ffplay --enable-gpl --enable-libsvtav1 --enable-libopus --enable-libx264 --enable-libmp3lame --enable-libdav1d --enable-libvmaf --enable-libvpx --enable-libx265 --enable-openssl --enable-videotoolbox --enable-audiotoolbox --enable-neon
+libavutil      61.  1.101 / 61.  1.101
+libavcodec     63.  1.101 / 63.  1.101
+libavformat    63.  1.101 / 63.  1.101
+libavdevice    63.  1.101 / 63.  1.101
+libavfilter    12.  1.101 / 12.  1.101
+libswscale     10.  1.101 / 10.  1.101
+libswresample   7.  1.101 /  7.  1.101
+Pillow 12.1.1
+{
+  "output": "/Users/eduard/sandbox/doom-evm/artifacts/local/episode-speedrun-main/runtime/artifacts/local/speedrun-e1m1/wad",
+  "identity": {
+    "schemaVersion": 0,
+    "wadSha256": "7323bcc168c5a45ff10749b339960e98314740a734c30d4b9f3337001f9e703d",
+    "bundleSha256": "d379076f21645cf7cc5acb056663d0faacc4065489a0ca99738479323c9f7a47",
+    "paletteSha256": "fd895921b5d0a394612bb29852ed003d44d69f76dec31c0dc6b5d5fc7d63f7bb",
+    "paletteVariant": 0
+  },
+  "validation": {
+    "map": "E1M1",
+    "counts": {
+      "THINGS": 292,
+      "LINEDEFS": 1175,
+      "SIDEDEFS": 1829,
+      "VERTEXES": 1196,
+      "SEGS": 2057,
+      "SSECTORS": 682,
+      "NODES": 681,
+      "SECTORS": 182
+    },
+    "blockmap": {
+      "width": 32,
+      "height": 27,
+      "uniqueLists": 450
+    },
+    "paletteCount": 14,
+    "colormapCount": 34,
+    "pnamesCount": 1049,
+    "textureCount": 963,
+    "referencedPatchCount": 1045,
+    "flatCount": 240
+  }
+}
+{
+  "pass_": true,
+  "originalDemoBytes": 1700,
+  "decodedTics": 370,
+  "historicalSourceCheckpoint": "bb16afd879d5fe818ada5a21834027c07a4b3803",
+  "currentEngineAcceptance": false,
+  "nativeProfiles": 4,
+  "nativeRecheckProfiles": 4,
+  "exactReceiptWorlds": 280,
+  "resourceAndProbeReceipts": 1756,
+  "startupReceipts": 1,
+  "replayReceipts": 56,
+  "totalReplayGas": 21203677822,
+  "fullStateStreamSha256": "82ea9cd129ba41274de70fe4b2e829d9e5c47ac3f18c5b6f9456183a7d339010"
+}
+Compiling 60 files with Solc 0.8.37
+Solc 0.8.37 finished in 47.82s
+Compiler run successful with warnings:
+Warning (6335): "at" will be promoted to keyword in the future and will not be allowed as an identifier anymore.
+  --> src/doom/p_switch.sol:76:9:
+   |
+76 |         uint256 at;
+   |         ^^^^^^^^^^
+
+Warning (6335): "at" will be promoted to keyword in the future and will not be allowed as an identifier anymore.
+   --> src/doom/p_spec.sol:216:9:
+    |
+216 |         uint256 at;
+    |         ^^^^^^^^^^
+
+Warning (6335): "at" will be promoted to keyword in the future and will not be allowed as an identifier anymore.
+   --> src/doom/p_spec.sol:383:9:
+    |
+383 |         uint256 at;
+    |         ^^^^^^^^^^
+
+Warning (6335): "at" will be promoted to keyword in the future and will not be allowed as an identifier anymore.
+   --> src/doom/p_maputl.sol:285:13:
+    |
+285 |             uint32 at = C.NULL;
+    |             ^^^^^^^^^
+
+Warning (2319): This declaration shadows a builtin symbol.
+  --> src/doom/z_zone.sol:63:5:
+   |
+63 |     function block(ZoneState memory z, uint32 id) private pure returns (ZoneBlock memory b) {
+   |     ^ (Relevant source part starts here and spans across multiple lines).
+
+Warning (2319): This declaration shadows a builtin symbol.
+   --> src/doom/p_maputl.sol:165:21:
+    |
+165 |                     uint32 block = uint32(by * c.state.blockmap.width + bx);
+    |                     ^^^^^^^^^^^^
+
+Warning (2319): This declaration shadows a builtin symbol.
+   --> src/doom/p_enemy.sol:163:13:
+    |
+163 |             int32 tx = actor.x + info(c, id).speed * xspeed(actor.movedir);
+    |             ^^^^^^^^
+
+Warning (2519): This declaration shadows an existing declaration.
+   --> src/doom/p_map.sol:407:17:
+    |
+407 |                 int32 frac = hit.frac - F.FixedDiv(4 * 65536, c.move.attackrange);
+    |                 ^^^^^^^^^^
+Note: The shadowed declaration is here:
+   --> src/doom/p_map.sol:427:13:
+    |
+427 |             int32 frac = hit.frac - F.FixedDiv(10 * 65536, c.move.attackrange);
+    |             ^^^^^^^^^^
+
+Warning (2519): This declaration shadows an existing declaration.
+   --> src/doom/p_map.sol:408:17:
+    |
+408 |                 int32 x = c.path.trace.x + F.FixedMul(c.path.trace.dx, frac);
+    |                 ^^^^^^^
+Note: The shadowed declaration is here:
+   --> src/doom/p_map.sol:428:13:
+    |
+428 |             int32 x = c.path.trace.x + F.FixedMul(c.path.trace.dx, frac);
+    |             ^^^^^^^
+
+Warning (2519): This declaration shadows an existing declaration.
+   --> src/doom/p_map.sol:409:17:
+    |
+409 |                 int32 y = c.path.trace.y + F.FixedMul(c.path.trace.dy, frac);
+    |                 ^^^^^^^
+Note: The shadowed declaration is here:
+   --> src/doom/p_map.sol:429:13:
+    |
+429 |             int32 y = c.path.trace.y + F.FixedMul(c.path.trace.dy, frac);
+    |             ^^^^^^^
+
+Warning (2519): This declaration shadows an existing declaration.
+   --> src/doom/p_map.sol:410:17:
+    |
+410 |                 int32 z = c.move.shootz + F.FixedMul(c.move.aimslope, F.FixedMul(frac, c.move.attackrange));
+    |                 ^^^^^^^
+Note: The shadowed declaration is here:
+   --> src/doom/p_map.sol:430:13:
+    |
+430 |             int32 z = c.move.shootz + F.FixedMul(c.move.aimslope, F.FixedMul(frac, c.move.attackrange));
+    |             ^^^^^^^
+
+Warning (2319): This declaration shadows a builtin symbol.
+   --> src/doom/r_things.sol:145:13:
+    |
+145 |             int32 tx = -(M_Fixed.FixedMul(tr_y, c.rs.viewcos) - M_Fixed.FixedMul(tr_x, c.rs.viewsin));
+    |             ^^^^^^^^
+
+Warning (2319): This declaration shadows a builtin symbol.
+   --> src/doom/r_things.sol:323:13:
+    |
+323 |             int32 tx = p.sx - 160 * 65536 - c.resources.spriteoffset[l];
+    |             ^^^^^^^^
+
+Warning (2018): Function state mutability can be restricted to pure
+   --> src/doom/p_switch.sol:129:5:
+    |
+129 |     function P_UseSpecialLine(GameContext memory c, uint32 thing, uint32 line, int32 side)
+    |     ^ (Relevant source part starts here and spans across multiple lines).
+
+Warning (2018): Function state mutability can be restricted to pure
+   --> src/doom/p_spec.sol:346:5:
+    |
+346 |     function P_SpawnSpecials(GameContext memory c) internal view {
+    |     ^ (Relevant source part starts here and spans across multiple lines).
+
+Warning (2018): Function state mutability can be restricted to pure
+   --> src/doom/p_spec.sol:598:5:
+    |
+598 |     function P_ShootSpecialLine(GameContext memory c, uint32 thing, uint32 line) internal view {
+    |     ^ (Relevant source part starts here and spans across multiple lines).
+
+Warning (2018): Function state mutability can be restricted to pure
+   --> src/doom/r_plane.sol:123:5:
+    |
+123 |     function R_MapPlane(RenderContext memory ctx, int32 y, int32 x1, int32 x2) internal view {
+    |     ^ (Relevant source part starts here and spans across multiple lines).
+
+Warning (2018): Function state mutability can be restricted to pure
+   --> src/evm/DoomGame.sol:388:5:
+    |
+388 |     function bossFloor(GameContext memory c, int32 tag, FloorType kind) private view returns (bool) {
+    |     ^ (Relevant source part starts here and spans across multiple lines).
+
+warning[missing-events-access-control]: `saved` is changed without an event but is used for access control
+   ╭▸ src/support/SpeedrunVideoProbe.sol:60:9
+   │
+60 │         saved = c.state;
+   │         ━━━━━
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/missing-events-access-control
+
+warning[reentrancy-events]: event emitted after an external call; reentrancy can reorder or fabricate logs that off-chain consumers rely on
+   ╭▸ src/support/SpeedrunVideoProbe.sol:39:9
+   │
+39 │         emit Observation(0, Snapshot.observe(c.state));
+   │         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/reentrancy-events
+
+warning[uninitialized-local]: local variable is read before being initialized
+   ╭▸ src/support/SpeedrunVideoProbe.sol:50:27
+   │
+50 │         for (uint256 pos; pos < commands.length; pos += 4) {
+   │                           ━━━
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/uninitialized-local
+
+warning[reentrancy-events]: event emitted after an external call; reentrancy can reorder or fabricate logs that off-chain consumers rely on
+   ╭▸ src/support/SpeedrunVideoProbe.sol:58:13
+   │
+58 │             emit Observation(uint32(c.state.gametic), Snapshot.observe(c.state));
+   │             ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/reentrancy-events
+
+warning[require-revert-in-loop]: `require` or `revert` inside a loop
+   ╭▸ src/support/SpeedrunVideoProbe.sol:51:42
+   │
+51 │             if (c.state.gameaction != 0) revert InvalidReplay();
+   │                                          ━━━━━━━━━━━━━━━━━━━━━━━
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/require-revert-in-loop
+
+warning[unsafe-typecast]: typecast can truncate values
+   ╭▸ src/support/SpeedrunVideoProbe.sol:58:30
+   │
+58 │             emit Observation(uint32(c.state.gametic), Snapshot.observe(c.state));
+   │                              ━━━━━━━━━━━━━━━━━━━━━━━
+   │
+   ├ note: consider disabling this lint if you're certain the cast is safe
+   │       
+   │       // casting to 'uint32' is safe because [explain why]
+   │       // forge-lint: disable-next-line(unsafe-typecast)
+   │       
+   │       
+   ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[reentrancy-events]: event emitted after an external call; reentrancy can reorder or fabricate logs that off-chain consumers rely on
+   ╭▸ src/support/SpeedrunVideoProbe.sol:76:9
+   │
+76 │ ┏         emit CaptureProof(
+77 │ ┃             tic,
+78 │ ┃             beforeState,
+79 │ ┃             sha256(Snapshot.observe(c.state)),
+   ‡ ┃
+84 │ ┃             renderGas
+85 │ ┃         );
+   │ ┗━━━━━━━━━━┛
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/reentrancy-events
+
+warning[reentrancy-events]: event emitted after an external call; reentrancy can reorder or fabricate logs that off-chain consumers rely on
+   ╭▸ src/support/SpeedrunVideoProbe.sol:86:9
+   │
+86 │         emit Frame(++frameId, tic, 320, 200, pixels);
+   │         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/reentrancy-events
+
+warning[unsafe-typecast]: typecast can truncate values
+   ╭▸ src/support/SpeedrunVideoProbe.sol:74:28
+   │
+74 │         uint64 renderGas = uint64(began - gasleft());
+   │                            ━━━━━━━━━━━━━━━━━━━━━━━━━
+   │
+   ├ note: consider disabling this lint if you're certain the cast is safe
+   │       
+   │       // casting to 'uint64' is safe because [explain why]
+   │       // forge-lint: disable-next-line(unsafe-typecast)
+   │       
+   │       
+   ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+Resource CREATE/readback 300/1755
+Resource CREATE/readback 600/1755
+Resource CREATE/readback 900/1755
+Resource CREATE/readback 1200/1755
+Resource CREATE/readback 1500/1755
+PASS E1M1 skill0 startup: exact full original-C DSG1
+EVM Frame tic 5: 922632480 gas, 737ms; saved world exact
+EVM Frame tic 10: 803827507 gas, 604ms; saved world exact
+EVM Frame tic 15: 847752958 gas, 631ms; saved world exact
+EVM Frame tic 20: 909927171 gas, 711ms; saved world exact
+EVM Frame tic 25: 800910389 gas, 609ms; saved world exact
+PASS exact original world 25/279 tics; gas 376767203
+EVM Frame tic 30: 738726114 gas, 553ms; saved world exact
+EVM Frame tic 35: 759635927 gas, 578ms; saved world exact
+EVM Frame tic 40: 844793106 gas, 632ms; saved world exact
+EVM Frame tic 45: 786449335 gas, 579ms; saved world exact
+EVM Frame tic 50: 712132525 gas, 528ms; saved world exact
+PASS exact original world 50/279 tics; gas 378565053
+EVM Frame tic 55: 632555378 gas, 449ms; saved world exact
+EVM Frame tic 60: 631714743 gas, 446ms; saved world exact
+EVM Frame tic 65: 631415310 gas, 451ms; saved world exact
+EVM Frame tic 70: 627198448 gas, 446ms; saved world exact
+EVM Frame tic 75: 661351155 gas, 446ms; saved world exact
+PASS exact original world 75/279 tics; gas 377628493
+EVM Frame tic 80: 652276912 gas, 535ms; saved world exact
+EVM Frame tic 85: 654382134 gas, 473ms; saved world exact
+EVM Frame tic 90: 653568929 gas, 476ms; saved world exact
+EVM Frame tic 95: 705869768 gas, 556ms; saved world exact
+EVM Frame tic 100: 730528924 gas, 553ms; saved world exact
+PASS exact original world 100/279 tics; gas 377985328
+EVM Frame tic 105: 757688174 gas, 580ms; saved world exact
+EVM Frame tic 110: 667021597 gas, 503ms; saved world exact
+EVM Frame tic 115: 761946776 gas, 608ms; saved world exact
+EVM Frame tic 120: 734994043 gas, 581ms; saved world exact
+EVM Frame tic 125: 720805754 gas, 555ms; saved world exact
+PASS exact original world 125/279 tics; gas 379452434
+EVM Frame tic 130: 701830090 gas, 552ms; saved world exact
+EVM Frame tic 135: 607027183 gas, 447ms; saved world exact
+EVM Frame tic 140: 605361837 gas, 449ms; saved world exact
+EVM Frame tic 145: 673596785 gas, 500ms; saved world exact
+EVM Frame tic 150: 672840172 gas, 505ms; saved world exact
+PASS exact original world 150/279 tics; gas 378860448
+EVM Frame tic 155: 681028565 gas, 555ms; saved world exact
+EVM Frame tic 160: 720587120 gas, 553ms; saved world exact
+EVM Frame tic 165: 746973818 gas, 579ms; saved world exact
+EVM Frame tic 170: 827617162 gas, 657ms; saved world exact
+EVM Frame tic 175: 902944767 gas, 762ms; saved world exact
+PASS exact original world 175/279 tics; gas 378792321
+EVM Frame tic 180: 875193837 gas, 740ms; saved world exact
+EVM Frame tic 185: 772871914 gas, 606ms; saved world exact
+EVM Frame tic 190: 821304381 gas, 688ms; saved world exact
+EVM Frame tic 195: 741377761 gas, 636ms; saved world exact
+EVM Frame tic 200: 658379268 gas, 501ms; saved world exact
+PASS exact original world 200/279 tics; gas 380134170
+EVM Frame tic 205: 727691619 gas, 580ms; saved world exact
+EVM Frame tic 210: 614212805 gas, 448ms; saved world exact
+EVM Frame tic 215: 767515498 gas, 632ms; saved world exact
+EVM Frame tic 220: 851490436 gas, 710ms; saved world exact
+EVM Frame tic 225: 641337960 gas, 474ms; saved world exact
+PASS exact original world 225/279 tics; gas 379639583
+EVM Frame tic 230: 634832540 gas, 473ms; saved world exact
+EVM Frame tic 235: 655304962 gas, 498ms; saved world exact
+EVM Frame tic 240: 659741809 gas, 500ms; saved world exact
+EVM Frame tic 245: 659727716 gas, 501ms; saved world exact
+EVM Frame tic 250: 659649755 gas, 501ms; saved world exact
+PASS exact original world 250/279 tics; gas 378606343
+EVM Frame tic 255: 660013821 gas, 500ms; saved world exact
+EVM Frame tic 260: 661534540 gas, 501ms; saved world exact
+EVM Frame tic 265: 639280105 gas, 476ms; saved world exact
+EVM Frame tic 270: 614076239 gas, 445ms; saved world exact
+EVM Frame tic 275: 619728360 gas, 445ms; saved world exact
+PASS exact original world 275/279 tics; gas 378237955
+EVM Frame tic 279: 622289062 gas, 473ms; saved world exact
+PASS exact original world 279/279 tics; gas 367251208
+{"pass":true,"executedTics":279,"verifiedTics":279,"totalReplayGas":21207433393,"replayElapsedMs":43575.12254099999,"frames":56,"captureGas":40047467444,"captureElapsedMs":30710.353913999978,"output":"/Users/eduard/sandbox/doom-evm/artifacts/local/episode-speedrun-main/runtime/artifacts/local/episode-speedrun-main-video/evm.json"}
+{
+  "pass_": true,
+  "frames": 56,
+  "durationSeconds": 7.971429,
+  "encodingSeconds": 0.44180587492883205,
+  "mp4": "/Users/eduard/sandbox/doom-evm/artifacts/local/episode-speedrun-main/runtime/artifacts/local/episode-speedrun-main-video/speedrun-e1m1.mp4",
+  "contactSheet": "/Users/eduard/sandbox/doom-evm/artifacts/local/episode-speedrun-main/runtime/artifacts/local/episode-speedrun-main-video/speedrun-e1m1-contact-sheet.png"
+}
+{
+  "pass_": true,
+  "gameplayWorlds": 280,
+  "originalTics": 279,
+  "genuineExit": true,
+  "standardEVMFrames": 56,
+  "pngPaletteExpansionExact": true,
+  "encodedFrames": 279,
+  "durationSeconds": 7.971429,
+  "sampleAspectRatio": "5:6",
+  "displayAspectRatio": "4:3",
+  "frameManifestSha256": "bef97ecc04d62182b89c7b94eaba5bb0a1a5b9304320909f6745e8b5a8757f05",
+  "totalCaptureGas": 40047467444,
+  "totalReplayGas": 21207433393
+}
+Recorded EVM speedrun: /Users/eduard/sandbox/doom-evm/artifacts/local/episode-speedrun-main/runtime/artifacts/local/episode-speedrun-main-video/speedrun-e1m1.mp4

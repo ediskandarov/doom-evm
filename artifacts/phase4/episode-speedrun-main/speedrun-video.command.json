@@ -1,0 +1,19 @@
+{
+  "name": "speedrun-video",
+  "command": [
+    "node",
+    "tools/reference/speedrun/record.mjs",
+    "--sample-every",
+    "5",
+    "--port",
+    "18934",
+    "--output-dir",
+    "artifacts/local/episode-speedrun-main-video"
+  ],
+  "cwd": "artifacts/local/episode-speedrun-main/runtime",
+  "startedUtc": "2026-10-10T17:02:09.192620+00:00",
+  "endedUtc": "2026-10-10T17:04:48.728954+00:00",
+  "seconds": 159.53453116724268,
+  "exitCode": 0,
+  "logSha256": "2436f0e192b4843c345051916866e696a0def654be962779044d6e4ae3951c73"
+}

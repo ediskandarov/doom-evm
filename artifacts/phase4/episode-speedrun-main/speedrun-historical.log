@@ -1,0 +1,15 @@
+{
+  "pass_": true,
+  "originalDemoBytes": 1700,
+  "decodedTics": 370,
+  "historicalSourceCheckpoint": "bb16afd879d5fe818ada5a21834027c07a4b3803",
+  "currentEngineAcceptance": false,
+  "nativeProfiles": 4,
+  "nativeRecheckProfiles": 4,
+  "exactReceiptWorlds": 280,
+  "resourceAndProbeReceipts": 1756,
+  "startupReceipts": 1,
+  "replayReceipts": 56,
+  "totalReplayGas": 21203677822,
+  "fullStateStreamSha256": "82ea9cd129ba41274de70fe4b2e829d9e5c47ac3f18c5b6f9456183a7d339010"
+}

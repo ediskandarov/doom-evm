@@ -1,5 +1,12 @@
 # Phase 4 progress ledger
 
+Latest main checkpoint (2026-10-10): **Episode One Completion and E1M1 speedrun
+replay/video are integrated and focused-verified.** Nine-map runtime, transitions,
+WI, E1 finale and browser controls pass production EVM/Canvas checks. The original
+speedrun matches all280 worlds and56 sampled frames. Tic52 full-rate rendering
+and full inherited acceptance remain deferred. Earlier checkpoints below retain
+their original scope/status; see the final integration entry.
+
 Current feature checkpoint: **Episode One functional integration is verified on
 `feat/phase4-episode-completion`; main integration remains pending.** Nine-map
 runtime, original transitions/WI/E1 finale and browser controls are connected.
@@ -1194,3 +1201,134 @@ Use the README launcher on18761/18762 for interactive play. All owned runtimes
 were stopped; playground18880/8088 and other owners' environments were preserved.
 Stop for the designated integrator; refresh main and inspect the declared interfaces
 before integration. Do not merge/push main or automatically begin final acceptance.
+
+## Episode One Completion and E1M1 Speedrun — Verified main integration (2026-10-10)
+
+The designated Single Writer integrated both completed feature branches on clean,
+synchronized main `0141708e9772c40a4b43f6fc631e0364fa0eb1a4`. Both merge bases
+were that same commit. Their changed files were disjoint: 308 Episode files and
+39 speedrun files. No Git or gameplay/memory API conflict occurred. All original
+feature commits, native fixtures, reports, failed attempts and certificates remain
+in history; the memory audit and earlier Phase 4 checkpoints are preserved.
+
+| Workstream | Implementation | Main integration | Verification | Source tip | Integration commit |
+|---|---|---|---|---|---|
+| Episode One Completion | Complete in declared E1 single-player domain | Merged; production runtime/WI/finale/browser connected | Focused native, Forge, Node, mined EVM and Canvas gates passed | `b12eb212fa1f33ba787490327e327611b156f9a0` | `df4681fe12a8e48971fbd9ba4ced6fbc8cbaa500` |
+| E1M1 speedrun replay and video | Original tape, exact-command support hosts and recorder preserved | Merged; uses integrated engine libraries | Both fresh EVM runners match all280 native worlds;56 sampled frames/MP4 verified | `dac56caac8d4eb66f64fd05200829fb17bd892ba` | `e2681038f04bede6a045dd7fe28e68fcc9b5353d` |
+
+Episode source commits: `827c95d`, `54b696d`, `e216de0`, `4be57da`, `b12eb21`.
+Speedrun source commits: `99ba341`, `38efd8c`, `bb16afd`, `6e876b6`, `dac56ca`.
+The integration compatibility commit is
+`a784506fe6c31ac9f85fc909b566f38b5fb1ae7c`; no engine or native fixture was
+modified by the integrator.
+
+### Memory applicability review
+
+The exact feature rules were retained. Episode startup alone enables
+`ZoneState.canonicalPointerHighBytes` for the declared LP64 native address domain
+below2^48. Only bytes6/7 of CURRENT linked header user/next/prev fields become
+known, with diagnostic provenance3. Source/logical bounds, linked-block traversal,
+zone-end checks and all existing R_Draw bounds remain intact. Lower pointer bytes,
+retired headers and unmodeled bodies remain unknown. Legacy and strict
+initializers leave the new flag false; initial-zero provenance remains2.
+
+Neighboring composite reconstruction requires a CURRENT allocated block, a
+texture owner within the lump/texture and owner-table bounds, and a matching
+`ownerBlocks[owner]` binding. Only in-range original-generated payload bytes
+become source-written provenance1. The existing generator runs with native cache
+effects disabled; no allocation, tag, owner or rover changes occur. Freed
+composites remain unknown. The three-profile native pointer proof and inherited
+strict/backing tests pass. These finite proofs do not establish arbitrary native
+process memory or pointer equivalence.
+
+### Executed verification
+
+- One combined **239-test Forge gate /23 suites**, zero failures/skips, pinned
+  solc0.8.37/viaIR/optimizer200/Cancun, existing256 fuzz runs and seed0x414.
+  Covers lifecycle, player/enemy hooks, all9 native startups, WI/finale,
+  Production UI/raw input, Status Bar/video, resource composites, zone/backing,
+  strict initialization and draw dependencies. All963 retained native composite
+  records remain exact. Compilation260.11s; tests11.31s.
+- **128 Node tests**, zero failures/skips: all browser input/control tests,
+  Frame/palette/budget consumers and69 WAD/Episode resource tests. The first
+  command had unmatched filename patterns; the remaining17 actual tests ran
+  separately. Both matched file lists are recorded. The unchanged lifecycle
+  test that writes browser configuration was deferred; owned runtime cleanup
+  and real browser lifecycle were checked directly.
+- Explicit affected-root build of production Doom, both speedrun probes and
+  ResourceStore passed (78 files,223.03s). The one-command recorder also built
+  its affected root. Formatting and Python/Node syntax passed. Production ABI
+  and928,442-byte driver-patched runtime match the Episode feature certificate
+  exactly: runtime SHA256
+  `219e2732fabf70b9a22a7dcc3aaa538ec8fbb2d7786a68b0a9d148a375b1ed1d`.
+- Native Gameflow **219 cases**, finale **27 full state/pixel checkpoints** and
+  guarded pointer reconstruction agree under O0/O2/ASan+UBSan. Fresh speedrun
+  O0/O2/sanitizer/alternate-fill profiles reproduce the authentic exit at
+  tic279/line407 and all280 canonical worlds. Original tape bytes are unchanged.
+- Fresh production Anvil18931: all9 maps initialize/render; **210 native-exact
+  E1M1 player observations /13 native UI Frames**, movement/shooting/pickup,
+  Cheats/AM/IDDT, IDCLEV12 without WI, pause/restart, genuine
+  E1M1->WI->E1M2 and E1M3->E1M9->E1M4 with inventory carryover, and genuine E1M8
+  special52->finale. **61 Frames /1,207 input transactions**, seven complete
+  storage-root rollbacks, native-exact initial finale, and separate legacy
+  static/world/UI/raw compatibility deployments passed.
+- Real Chrome: **14 complete Canvas checks** across WI, finale/world/AM,
+  New Game, level selection, Restart, Pause/Resume and fresh launcher startup.
+  All256,000 RGBA bytes per checked Frame match mined EVM pixels and palette.
+- Fresh no-render speedrun Anvil18933: **279 tics /280 exact worlds /56 gameplay
+  transactions**, real normal exit and final saved state exact. Fresh sampled
+  recorder Anvil18934 repeats all280 worlds, **56 standard EVM Frame receipts**,
+  unchanged saved gameplay after capture, and exact palette/PNG expansion.
+  All56 indexed8 hashes match the prior recording. ffprobe confirms279 coded
+  frames at35fps,7.971429s,1280x800 raster and4:3 presentation. Contact sheet
+  visually inspected. MP4/frame media stay ignored under the owned local archive.
+- Fresh interactive launcher Anvil18935/HTTP18936 and unchanged Chrome DOM
+  checks passed. All owned Anvil/Chrome/HTTP children stopped; all five dedicated
+  ports confirmed closed. Main browser configuration/palette hashes remain
+  unchanged. Reserved18880/8088 and other worktrees/processes were untouched.
+
+### Integration correction and retained failures
+
+The old speedrun offline checker initially rejected the integrated GameContext
+source because it compared historical receipt source hashes to today's files.
+It now verifies every historical hash against preserved ancestor commit
+`bb16afd879d5fe818ada5a21834027c07a4b3803`, retaining every tape/state/receipt,
+gas and native-source assertion. A negative source-hash check still rejects
+tampering. Fresh EVM/video checks bind current sources and independently compare
+every world; historical receipts alone do not accept current engine changes.
+
+The original Episode certificate check failed against stale production build
+output before compilation; it passed unchanged after the affected-root build.
+The first owned fresh-launch helper used a nonexistent report config path; the
+launcher writes web/config.local.json. Correcting only the helper path made the
+unchanged browser gate pass. All failed attempts and their follow-up results
+remain separately recorded. No accepted test, assertion, C source, native golden
+or historical acceptance certificate was changed.
+
+### Deferred verification and remaining work
+
+**Full-rate speedrun rendering remains deferred.** The historical tic52 capture
+reverted with `DrawBounds()`; this integration did not test tic52 or assume the
+Episode memory extension resolved it. Only the verified five-tic/56-frame
+cadence was rerun. Systematic bounds/domain investigation is a separate Goal.
+
+Full inherited Phase0–4 acceptance, complete honest Episode playthrough/baron
+combat tapes, audio/wipes, other episodes, demos/saves/multiplayer and gas/peak
+memory acceptance remain separate. The replay/video hosts are observation
+support: no production demo-command endpoint, migration of live deployments or
+continuously persisted speedrun-render history is claimed. Fresh deployment
+with episodeMode/rawKeyboard/productionUI is required for the Episode runtime.
+No remaining merge or focused verification blocker exists in the demonstrated
+scope. No new gameplay or speculative memory/rendering implementation was added.
+
+Measured start: `2026-10-10T16:42:14Z`; verification/cleanup endpoint:
+`2026-10-10T17:08:21Z` (**1,567s**). Usage snapshot at that endpoint:
+**185,295 tokens /1,558 goal-service seconds**; publication and final counters
+are reported separately. [Integration certificate](../artifacts/phase4/episode-speedrun-main/integration.json)
+binds commands, source tips, evidence, preservation checks and the updated ledger.
+See [Episode production proof](../artifacts/phase4/episode-speedrun-main/episode-evm.json),
+[fresh launcher Canvas proof](../artifacts/phase4/episode-speedrun-main/fresh-launch-final-browser.json),
+[fresh speedrun proof](../artifacts/phase4/episode-speedrun-main/speedrun-evm.json),
+[sampled video verification](../artifacts/phase4/episode-speedrun-main/video-video-verification.json),
+and [memory/ABI review](../artifacts/phase4/episode-speedrun-main/interfaces.json).
+Stop after the normal main push and synchronized clean-tree check.

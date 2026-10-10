@@ -1,0 +1,27 @@
+{
+  "name": "format",
+  "command": [
+    ".toolchain/bin/forge",
+    "fmt",
+    "--check",
+    "src/doom/f_finale.sol",
+    "src/doom/p_game_state.sol",
+    "src/doom/p_mobj.sol",
+    "src/doom/r_data.sol",
+    "src/doom/st_stuff.sol",
+    "src/doom/z_zone_backing.sol",
+    "src/doom/z_zone_types.sol",
+    "src/evm/Doom.sol",
+    "src/evm/DoomUI.sol",
+    "src/evm/EpisodeRuntime.sol",
+    "src/evm/InputProtocol.sol",
+    "src/support/SpeedrunProbe.sol",
+    "src/support/SpeedrunVideoProbe.sol"
+  ],
+  "cwd": "/Users/eduard/sandbox/doom-evm",
+  "startedUtc": "2026-10-10T16:47:54.977780+00:00",
+  "endedUtc": "2026-10-10T16:47:54.988372+00:00",
+  "seconds": 0.010536415968090296,
+  "exitCode": 0,
+  "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+}

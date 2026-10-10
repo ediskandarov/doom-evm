@@ -1,0 +1,13 @@
+Verified CREATE 300
+Verified CREATE 600
+Verified CREATE 900
+Verified CREATE 1200
+Verified CREATE 1500
+Episode One ready: http://127.0.0.1:18936. Select a level and click New Game. Ctrl-C stops only this launcher’s runtimes.
+PASS Chrome Canvas New Game E1M1
+PASS Chrome Canvas Pause
+PASS Chrome Canvas Resume
+PASS Chrome Canvas Restart
+PASS Chrome Canvas New Game E1M9
+PASS Chrome Canvas Tab Automap
+{"pass":true,"frames":0,"routes":0,"evidence":"/Users/eduard/sandbox/doom-evm/artifacts/phase4/episode-speedrun-main/fresh-launch-final.json"}

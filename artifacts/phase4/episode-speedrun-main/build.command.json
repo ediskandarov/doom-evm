@@ -1,0 +1,23 @@
+{
+  "name": "build",
+  "command": [
+    ".toolchain/bin/forge",
+    "build",
+    "--offline",
+    "src/evm/Doom.sol",
+    "src/support/SpeedrunProbe.sol",
+    "src/support/SpeedrunVideoProbe.sol",
+    "src/evm/ResourceStore.sol",
+    "--skip",
+    "test",
+    "--skip",
+    "script",
+    "--no-lint"
+  ],
+  "cwd": "/Users/eduard/sandbox/doom-evm",
+  "startedUtc": "2026-10-10T16:50:10.425825+00:00",
+  "endedUtc": "2026-10-10T16:53:53.551379+00:00",
+  "seconds": 223.1247021672316,
+  "exitCode": 0,
+  "logSha256": "f68a6f49bd8552c0e2c07e179a9fc79e3628a8ce564659ea70e0721227958f19"
+}

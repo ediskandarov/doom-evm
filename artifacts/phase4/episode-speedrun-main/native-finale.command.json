@@ -1,0 +1,14 @@
+{
+  "name": "native-finale",
+  "command": [
+    "python3",
+    "tools/reference/episode_completion/finale.py",
+    "--check"
+  ],
+  "cwd": "artifacts/local/episode-speedrun-main/runtime",
+  "startedUtc": "2026-10-10T16:45:08.474460+00:00",
+  "endedUtc": "2026-10-10T16:45:10.195076+00:00",
+  "seconds": 1.7205274170264602,
+  "exitCode": 0,
+  "logSha256": "9fd524f1b8fcfd8392bbce382f61706bcf061b313c2b4a267a8b295bb53b927d"
+}

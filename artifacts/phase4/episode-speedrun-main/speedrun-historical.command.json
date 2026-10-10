@@ -1,0 +1,13 @@
+{
+  "name": "speedrun-historical",
+  "command": [
+    "python3",
+    "tools/reference/speedrun/verify_evidence.py"
+  ],
+  "cwd": "/Users/eduard/sandbox/doom-evm",
+  "startedUtc": "2026-10-10T16:46:12.298761+00:00",
+  "endedUtc": "2026-10-10T16:46:17.082512+00:00",
+  "seconds": 4.783660833723843,
+  "exitCode": 0,
+  "logSha256": "4586a1ef631adf0b674998e2fe47b4670100dc8535e4aa356ce2d516cd0f7d41"
+}

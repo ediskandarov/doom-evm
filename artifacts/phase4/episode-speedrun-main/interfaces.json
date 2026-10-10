@@ -1,0 +1,115 @@
+{
+  "pass_": true,
+  "abiSha256": "6edff6f0b4c5bbe7ae9f1d44ca35059cf40ae57646d210f1ac113b078d699814",
+  "patchedDriverRuntimeSha256": "219e2732fabf70b9a22a7dcc3aaa538ec8fbb2d7786a68b0a9d148a375b1ed1d",
+  "runtimeBytes": 928442,
+  "episodeFeatureRuntimeExact": true,
+  "frameEvent": {
+    "type": "event",
+    "name": "Frame",
+    "inputs": [
+      {
+        "name": "frameId",
+        "type": "uint64",
+        "indexed": true,
+        "internalType": "uint64"
+      },
+      {
+        "name": "inputSeq",
+        "type": "uint32",
+        "indexed": true,
+        "internalType": "uint32"
+      },
+      {
+        "name": "width",
+        "type": "uint16",
+        "indexed": false,
+        "internalType": "uint16"
+      },
+      {
+        "name": "height",
+        "type": "uint16",
+        "indexed": false,
+        "internalType": "uint16"
+      },
+      {
+        "name": "pixels",
+        "type": "bytes",
+        "indexed": false,
+        "internalType": "bytes"
+      }
+    ],
+    "anonymous": false
+  },
+  "framePaletteEvent": {
+    "type": "event",
+    "name": "FramePalette",
+    "inputs": [
+      {
+        "name": "frameId",
+        "type": "uint64",
+        "indexed": true,
+        "internalType": "uint64"
+      },
+      {
+        "name": "inputSeq",
+        "type": "uint32",
+        "indexed": true,
+        "internalType": "uint32"
+      },
+      {
+        "name": "revision",
+        "type": "uint32",
+        "indexed": false,
+        "internalType": "uint32"
+      },
+      {
+        "name": "palette",
+        "type": "int32",
+        "indexed": false,
+        "internalType": "int32"
+      },
+      {
+        "name": "gamma",
+        "type": "uint8",
+        "indexed": false,
+        "internalType": "uint8"
+      },
+      {
+        "name": "rgb",
+        "type": "bytes",
+        "indexed": false,
+        "internalType": "bytes"
+      }
+    ],
+    "anonymous": false
+  },
+  "engineSourceUnchangedByIntegrator": true,
+  "memoryReview": {
+    "pointerOptIn": "Doom.initializeEpisode only; ZoneState.canonicalPointerHighBytes defaults false",
+    "pointerBytes": "bytes 6/7 of current linked headers user/next/prev only; domain LP64 native addresses <2^48; diagnostic provenance 3; no low/retired/body inference",
+    "compositeGuard": "current allocated block; owner in [lumpCount,lumpCount+textureCount); owner within ownerBlocks; ownerBlocks[owner]==current block; bytes within rebuilt payload/current physical tail",
+    "reconstruction": "R_Data.generateComposite(nativeCall=false); no cache/allocator/tag/owner/rover changes",
+    "bounds": "original source block/logical bounds/traversal/zone end/r_draw bounds and initializedBytes exclusion unchanged",
+    "legacyStrict": "new flag false; strict initial-zone profile unchanged; 239 tests pass"
+  },
+  "compiler": {
+    "version": "0.8.37+commit.f401782d"
+  },
+  "settings": {
+    "remappings": [],
+    "optimizer": {
+      "enabled": true,
+      "runs": 200
+    },
+    "metadata": {
+      "bytecodeHash": "ipfs"
+    },
+    "compilationTarget": {
+      "src/evm/Doom.sol": "Doom"
+    },
+    "evmVersion": "cancun",
+    "libraries": {},
+    "viaIR": true
+  }
+}

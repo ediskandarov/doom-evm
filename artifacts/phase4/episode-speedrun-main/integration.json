@@ -1,0 +1,439 @@
+{
+  "kind": "episode-completion-and-speedrun-main-integration",
+  "pass_": true,
+  "scope": "focused integration acceptance only; full inherited acceptance deferred",
+  "baseline": "0141708e9772c40a4b43f6fc631e0364fa0eb1a4",
+  "sourceHead": "a784506fe6c31ac9f85fc909b566f38b5fb1ae7c",
+  "featureTips": {
+    "feat/phase4-episode-completion": "b12eb212fa1f33ba787490327e327611b156f9a0",
+    "feat/phase4-speedrun-e1m1": "dac56caac8d4eb66f64fd05200829fb17bd892ba"
+  },
+  "sourceCommits": {
+    "feat/phase4-episode-completion": [
+      {
+        "sha": "827c95dc1b43eb5c4ecc944f5f4637ac16410734",
+        "message": "\u2728 Connect original Episode One lifecycle components"
+      },
+      {
+        "sha": "54b696d3a1cb42f9e5bbd5f99f5d1ffe27cf8f0b",
+        "message": "\ud83d\udc1b Establish verified Episode renderer backing"
+      },
+      {
+        "sha": "e216de07720fc86093c03c43fc608b6cfdbe745e",
+        "message": "\ud83d\udc1b Borrow one automap world per input packet"
+      },
+      {
+        "sha": "4be57da6b67668b8d16260e009249279fb75a418",
+        "message": "\u2705 Verify Episode lifecycle and browser controls"
+      },
+      {
+        "sha": "b12eb212fa1f33ba787490327e327611b156f9a0",
+        "message": "\u2705 Publish functional Episode integration handoff"
+      }
+    ],
+    "feat/phase4-speedrun-e1m1": [
+      {
+        "sha": "99ba3417a7d53339f07d04a402e64ffd5f9f006b",
+        "message": "\ud83d\udcdd Record isolated E1M1 speedrun scope and source"
+      },
+      {
+        "sha": "38efd8c449e85be8d3da1f93dbbe07a4c0e7eac7",
+        "message": "\u2705 Verify original E1M1 demo commands and native exit"
+      },
+      {
+        "sha": "bb16afd879d5fe818ada5a21834027c07a4b3803",
+        "message": "\u2705 Replay real E1M1 speedrun through EVM and preserve receipts"
+      },
+      {
+        "sha": "6e876b6da99457a983aeb3ebb5365213df6b905a",
+        "message": "\ud83d\udcdd Record isolated EVM speedrun video scope"
+      },
+      {
+        "sha": "dac56caac8d4eb66f64fd05200829fb17bd892ba",
+        "message": "\ud83c\udfa5 Record verified E1M1 EVM frames as paced MP4 video"
+      }
+    ]
+  },
+  "merges": {
+    "combinedHead": "e2681038f04bede6a045dd7fe28e68fcc9b5353d",
+    "episodeMerge": "df4681fe12a8e48971fbd9ba4ced6fbc8cbaa500",
+    "conflicts": [],
+    "ownedRuntimeSnapshot": "/Users/eduard/sandbox/doom-evm/artifacts/local/episode-speedrun-main/runtime"
+  },
+  "compatibilityCommit": "a784506fe6c31ac9f85fc909b566f38b5fb1ae7c",
+  "conflicts": [],
+  "verificationEndpointUtc": "2026-10-10T17:08:21Z",
+  "measuredStartUtc": "2026-10-10T16:42:14Z",
+  "verificationClockSeconds": 1567,
+  "usageSnapshot": {
+    "tokensUsed": 185295,
+    "goalServiceSeconds": 1558,
+    "capturedUtc": "2026-10-10T17:08:21Z",
+    "finalUsageReportedAfterPush": true
+  },
+  "coverage": {
+    "forgeTests": 239,
+    "forgeSuites": 23,
+    "nodeTests": 128,
+    "nativeGameflowCases": 219,
+    "nativeFinaleCheckpoints": 27,
+    "nativeSpeedrunWorlds": 280,
+    "nativeSpeedrunProfiles": 4,
+    "productionMaps": 9,
+    "productionInputTransactions": 1207,
+    "productionFrames": 61,
+    "productionNativePlayerTics": 210,
+    "productionNativeUIFrames": 13,
+    "storageRootRollbacks": 7,
+    "productionEdges": [
+      [
+        1,
+        2
+      ],
+      [
+        3,
+        9
+      ],
+      [
+        9,
+        4
+      ],
+      [
+        8,
+        null
+      ]
+    ],
+    "chromeCanvasChecks": 14,
+    "freshNoRenderReplayWorlds": 280,
+    "sampledVideoWorlds": 280,
+    "sampledVideoFrames": 56,
+    "allPriorSamplePixelsExact": true
+  },
+  "interfaces": {
+    "pass_": true,
+    "abiSha256": "6edff6f0b4c5bbe7ae9f1d44ca35059cf40ae57646d210f1ac113b078d699814",
+    "patchedDriverRuntimeSha256": "219e2732fabf70b9a22a7dcc3aaa538ec8fbb2d7786a68b0a9d148a375b1ed1d",
+    "runtimeBytes": 928442,
+    "episodeFeatureRuntimeExact": true,
+    "frameEvent": {
+      "type": "event",
+      "name": "Frame",
+      "inputs": [
+        {
+          "name": "frameId",
+          "type": "uint64",
+          "indexed": true,
+          "internalType": "uint64"
+        },
+        {
+          "name": "inputSeq",
+          "type": "uint32",
+          "indexed": true,
+          "internalType": "uint32"
+        },
+        {
+          "name": "width",
+          "type": "uint16",
+          "indexed": false,
+          "internalType": "uint16"
+        },
+        {
+          "name": "height",
+          "type": "uint16",
+          "indexed": false,
+          "internalType": "uint16"
+        },
+        {
+          "name": "pixels",
+          "type": "bytes",
+          "indexed": false,
+          "internalType": "bytes"
+        }
+      ],
+      "anonymous": false
+    },
+    "framePaletteEvent": {
+      "type": "event",
+      "name": "FramePalette",
+      "inputs": [
+        {
+          "name": "frameId",
+          "type": "uint64",
+          "indexed": true,
+          "internalType": "uint64"
+        },
+        {
+          "name": "inputSeq",
+          "type": "uint32",
+          "indexed": true,
+          "internalType": "uint32"
+        },
+        {
+          "name": "revision",
+          "type": "uint32",
+          "indexed": false,
+          "internalType": "uint32"
+        },
+        {
+          "name": "palette",
+          "type": "int32",
+          "indexed": false,
+          "internalType": "int32"
+        },
+        {
+          "name": "gamma",
+          "type": "uint8",
+          "indexed": false,
+          "internalType": "uint8"
+        },
+        {
+          "name": "rgb",
+          "type": "bytes",
+          "indexed": false,
+          "internalType": "bytes"
+        }
+      ],
+      "anonymous": false
+    },
+    "engineSourceUnchangedByIntegrator": true,
+    "memoryReview": {
+      "pointerOptIn": "Doom.initializeEpisode only; ZoneState.canonicalPointerHighBytes defaults false",
+      "pointerBytes": "bytes 6/7 of current linked headers user/next/prev only; domain LP64 native addresses <2^48; diagnostic provenance 3; no low/retired/body inference",
+      "compositeGuard": "current allocated block; owner in [lumpCount,lumpCount+textureCount); owner within ownerBlocks; ownerBlocks[owner]==current block; bytes within rebuilt payload/current physical tail",
+      "reconstruction": "R_Data.generateComposite(nativeCall=false); no cache/allocator/tag/owner/rover changes",
+      "bounds": "original source block/logical bounds/traversal/zone end/r_draw bounds and initializedBytes exclusion unchanged",
+      "legacyStrict": "new flag false; strict initial-zone profile unchanged; 239 tests pass"
+    },
+    "compiler": {
+      "version": "0.8.37+commit.f401782d"
+    },
+    "settings": {
+      "remappings": [],
+      "optimizer": {
+        "enabled": true,
+        "runs": 200
+      },
+      "metadata": {
+        "bytecodeHash": "ipfs"
+      },
+      "compilationTarget": {
+        "src/evm/Doom.sol": "Doom"
+      },
+      "evmVersion": "cancun",
+      "libraries": {},
+      "viaIR": true
+    }
+  },
+  "preservation": {
+    "pass_": true,
+    "baselineTrackedFiles": 2147,
+    "exactUnaffectedFiles": 2131,
+    "featureBlobsExactAtMerge": true,
+    "featureTipsPreserved": true,
+    "episodeCertificateBindingsExact": true,
+    "originalCPinnedClean": true,
+    "protectedFiles": [
+      "foundry.toml",
+      "execution-budget.json",
+      "AGENTS.md",
+      "src/evm/FrameProtocol.sol",
+      "src/evm/ResourceTypes.sol",
+      "web/protocol.mjs"
+    ],
+    "integrationEdits": [
+      "historical speedrun verifier source-object binding",
+      "matching reproduction documentation"
+    ],
+    "prePublicationProtectedLocalHashes": {
+      "web/config.local.json": "c8b874acc45fe3f353fe2fe18d3fc8a6f62cdf81515503d2172d61673ed3ac98",
+      "web/palette.local.json": "a9cf61c57f81d5299a6c1229e8eabf1dd74254f10e2d185108c790636ade98ad"
+    }
+  },
+  "runtimeCleanup": {
+    "pass_": true,
+    "checkedUtc": "2026-10-10T17:08:21.281817+00:00",
+    "portsConfirmedClosed": [
+      18931,
+      18933,
+      18934,
+      18935,
+      18936
+    ],
+    "reservedPortsUntouched": [
+      18880,
+      8088
+    ],
+    "mainBrowserHashesUnchanged": {
+      "web/config.local.json": "c8b874acc45fe3f353fe2fe18d3fc8a6f62cdf81515503d2172d61673ed3ac98",
+      "web/palette.local.json": "a9cf61c57f81d5299a6c1229e8eabf1dd74254f10e2d185108c790636ade98ad"
+    },
+    "allOwnedRuntimeReportsStopped": true,
+    "featureTipsUnchanged": true,
+    "canvasChecks": 14
+  },
+  "retainedFailedAttempts": {
+    "historicalChecker": "Expected integration incompatibility: old certificate compared current source; fixed historical Git-object binding, equality/assertions retained; fresh replay separately passes.",
+    "episodeCertificate": "Setup ordering: stale ABI/build output before affected production build; original checker passed unchanged after build.",
+    "freshLaunch": "Owned helper used nonexistent report config path; launcher/cleanup worked; corrected helper path, unchanged Chrome gate passed."
+  },
+  "deferred": [
+    "Full-rate DrawBounds at tic52; not retested, no assumption of resolution by Episode memory changes, no speculative fix.",
+    "Full inherited Phase0\u20134 acceptance; honest complete Episode/baron-combat tapes; audio/wipes, other episodes, saves/demos/multiplayer; peak-memory/gas acceptance.",
+    "Unchanged transport lifecycle unit that writes browser configuration; actual fresh launcher/Chrome and owned cleanup verified instead."
+  ],
+  "noGeneratedMP4OrLocalTemporaryFilesCommitted": true,
+  "ledgerSha256": "40d867d158905aa1ea5b28030903ab97bb94453aaf52d7ed9b981861fc4b6522",
+  "historicalEpisodeCertificateSha256": "d88dcf651b3c08ef4ece3f00d528ee55d8e64038aa92cf1deaadefc9743ff96f",
+  "historicalSpeedrunManifestSha256": "14ec630d526f3d198f7ceaef85a2b2c81bba3504dbc587430b87b7e91e824801",
+  "evidenceHashes": {
+    "artifacts/phase4/episode-speedrun-main/build.command.json": "0bb7803c4500788d487fe09e7c628c80c1c9498dabf9397755f382a61f0f30a6",
+    "artifacts/phase4/episode-speedrun-main/build.log": "f68a6f49bd8552c0e2c07e179a9fc79e3628a8ce564659ea70e0721227958f19",
+    "artifacts/phase4/episode-speedrun-main/commands.json": "3b14740bcb0c925f4229d354b94b637569b9203670034252cfb625ddeaa49f3c",
+    "artifacts/phase4/episode-speedrun-main/episode-certificate-after-build.command.json": "b137e6840250e2a236efb35526686d2de66857d1f2c6504e8843385b4ed4a05a",
+    "artifacts/phase4/episode-speedrun-main/episode-certificate-after-build.log": "8a8dd7761847797a25327837d7bf064d35cdba20043dcae652e66d2d61a11f35",
+    "artifacts/phase4/episode-speedrun-main/episode-certificate.command.json": "f2370607b9847e20beabeffe13f21082262832bfd81c01c318a55449f970eddf",
+    "artifacts/phase4/episode-speedrun-main/episode-certificate.log": "abb36bdfa5ecff580de3ee1fb00492a6be6fe5bb030cd58d61ba595295134cfe",
+    "artifacts/phase4/episode-speedrun-main/episode-evm-0.pixels": "5cbda18c022ea2d48b88810a53d7a4c463f7f069bc5f48d53ede22e274dafdf8",
+    "artifacts/phase4/episode-speedrun-main/episode-evm-1.pixels": "17f4e09de10a24421bfc0c9577053c3090cc9522e0b86f44810a9e368bf37660",
+    "artifacts/phase4/episode-speedrun-main/episode-evm-10.pixels": "2dcb785a94ac738ccf6aded456e618e0995acb474d2ff80bc00df41facfce031",
+    "artifacts/phase4/episode-speedrun-main/episode-evm-11.pixels": "7b688d3097402564b1066ad80beb9c844f9d51c5c9573b1c05876ed8a2b8583c",
+    "artifacts/phase4/episode-speedrun-main/episode-evm-12.pixels": "c9df2a59f97561b70f9845a1631774d6e82123806992fa4d3cf1a4b62575d816",
+    "artifacts/phase4/episode-speedrun-main/episode-evm-13.pixels": "5d0acfd545362a12edc6603bf08831595692864880490a702e510bd5845c39cf",
+    "artifacts/phase4/episode-speedrun-main/episode-evm-14.pixels": "6a2d55273271ffc42d33c2767ba0479ccebf42db8ee936b86212d0644fa69788",
+    "artifacts/phase4/episode-speedrun-main/episode-evm-15.pixels": "3738772642cd11c81e76a7477c53aa2d1aab6b0297b0314127d6568ab5d86898",
+    "artifacts/phase4/episode-speedrun-main/episode-evm-16.pixels": "5d0acfd545362a12edc6603bf08831595692864880490a702e510bd5845c39cf",
+    "artifacts/phase4/episode-speedrun-main/episode-evm-17.pixels": "a297ba2dfa2d1eae509b975c96471640802a189389ea15ad741c399218782d54",
+    "artifacts/phase4/episode-speedrun-main/episode-evm-18.pixels": "be5058026ae975206bfab9b9e3637b3b903d4f4bfa1ef3efea49dd75eeac8055",
+    "artifacts/phase4/episode-speedrun-main/episode-evm-19.pixels": "76c71748531495fbd965a2aa2b2740027ee2ec6ba12da67e3198e924817346ca",
+    "artifacts/phase4/episode-speedrun-main/episode-evm-2.pixels": "afb334785147745752bec58b1f3e34a4483545484876fc94b6b65a7d15134a7c",
+    "artifacts/phase4/episode-speedrun-main/episode-evm-20.pixels": "18ab5c789885db75432efaa48b4b190891c3a154286f12c5315a61235337e414",
+    "artifacts/phase4/episode-speedrun-main/episode-evm-21.pixels": "022067ff7240701befd92e63279fc39887e1da071e99bc4544a43c43372c4c52",
+    "artifacts/phase4/episode-speedrun-main/episode-evm-22.pixels": "6f7acfc232f8582d4d8c7921c20543272805f088c84e6b350f39ec3984531941",
+    "artifacts/phase4/episode-speedrun-main/episode-evm-23.pixels": "06589afcb771057a22aa23ec0ecfc72bbda85e80c41c6d6c9982296a95f5b43f",
+    "artifacts/phase4/episode-speedrun-main/episode-evm-24.pixels": "36bbcccb5dc578edabe3d700847b65773a8d74920e94f318d23871715990692e",
+    "artifacts/phase4/episode-speedrun-main/episode-evm-25.pixels": "b07c82597f5e81c8a02c2fd7350b3de5cc034b7a46e6004480b392164d14f009",
+    "artifacts/phase4/episode-speedrun-main/episode-evm-26.pixels": "be5058026ae975206bfab9b9e3637b3b903d4f4bfa1ef3efea49dd75eeac8055",
+    "artifacts/phase4/episode-speedrun-main/episode-evm-27.pixels": "e82efca6b635acd08488c2c628e4e495a82b20cf354a80fe8ba6dc82a4ba7b9f",
+    "artifacts/phase4/episode-speedrun-main/episode-evm-28.pixels": "e82efca6b635acd08488c2c628e4e495a82b20cf354a80fe8ba6dc82a4ba7b9f",
+    "artifacts/phase4/episode-speedrun-main/episode-evm-29.pixels": "be5058026ae975206bfab9b9e3637b3b903d4f4bfa1ef3efea49dd75eeac8055",
+    "artifacts/phase4/episode-speedrun-main/episode-evm-3.pixels": "dbbbf47a5d8b6551c28f88c431ffb511fa9f8f90819ce078b57f6c6cc85e2985",
+    "artifacts/phase4/episode-speedrun-main/episode-evm-30.pixels": "be5058026ae975206bfab9b9e3637b3b903d4f4bfa1ef3efea49dd75eeac8055",
+    "artifacts/phase4/episode-speedrun-main/episode-evm-31.pixels": "66672b024cee7e41808c7b6a5e1f6f1e04dde53db910bd20bc0f77a4f84228eb",
+    "artifacts/phase4/episode-speedrun-main/episode-evm-32.pixels": "236e92cb53435f4410f23324b6e03e8f42b4d3c00c73c27ec114cd3062b45983",
+    "artifacts/phase4/episode-speedrun-main/episode-evm-33.pixels": "35d3437bc755378bcd084868f906668fe6e7f97dc58a61585d169848a59cc9b8",
+    "artifacts/phase4/episode-speedrun-main/episode-evm-34.pixels": "35d3437bc755378bcd084868f906668fe6e7f97dc58a61585d169848a59cc9b8",
+    "artifacts/phase4/episode-speedrun-main/episode-evm-35.pixels": "0fd1db18d2314ca00388e695ea3341b545902ebfdb436f0ac58f0f080beee5b6",
+    "artifacts/phase4/episode-speedrun-main/episode-evm-36.pixels": "0fd1db18d2314ca00388e695ea3341b545902ebfdb436f0ac58f0f080beee5b6",
+    "artifacts/phase4/episode-speedrun-main/episode-evm-37.pixels": "0fd1db18d2314ca00388e695ea3341b545902ebfdb436f0ac58f0f080beee5b6",
+    "artifacts/phase4/episode-speedrun-main/episode-evm-38.pixels": "0fd1db18d2314ca00388e695ea3341b545902ebfdb436f0ac58f0f080beee5b6",
+    "artifacts/phase4/episode-speedrun-main/episode-evm-39.pixels": "737fcbdd83bfe37635b268e786b54e845b5e6380912324a928239c1ab8486193",
+    "artifacts/phase4/episode-speedrun-main/episode-evm-4.pixels": "bfb517e22fe992d952ff4bc4829ac90559b4f1193d3d1d374e747c5f7d4b0c6e",
+    "artifacts/phase4/episode-speedrun-main/episode-evm-40.pixels": "8cc942a256f56861c494562bf0ec3004abeac21cf5c93c6158d4370600681283",
+    "artifacts/phase4/episode-speedrun-main/episode-evm-41.pixels": "9af75f54c19330b424f93057fbb7aee465cbcb3d2537ca757015c7a6f2c890b5",
+    "artifacts/phase4/episode-speedrun-main/episode-evm-42.pixels": "f76aa6de7a60232112cf57be1c3648383aac9c0b652d04a03701f8d042714899",
+    "artifacts/phase4/episode-speedrun-main/episode-evm-43.pixels": "f76aa6de7a60232112cf57be1c3648383aac9c0b652d04a03701f8d042714899",
+    "artifacts/phase4/episode-speedrun-main/episode-evm-44.pixels": "443992a4d323a4ee7db52e0caec090615a6e4043ae8448f5276486571fde505d",
+    "artifacts/phase4/episode-speedrun-main/episode-evm-45.pixels": "443992a4d323a4ee7db52e0caec090615a6e4043ae8448f5276486571fde505d",
+    "artifacts/phase4/episode-speedrun-main/episode-evm-46.pixels": "443992a4d323a4ee7db52e0caec090615a6e4043ae8448f5276486571fde505d",
+    "artifacts/phase4/episode-speedrun-main/episode-evm-47.pixels": "443992a4d323a4ee7db52e0caec090615a6e4043ae8448f5276486571fde505d",
+    "artifacts/phase4/episode-speedrun-main/episode-evm-48.pixels": "f0d283bb697ad218472154ba604efc8eacded4d806c94f465d539dd76067f93d",
+    "artifacts/phase4/episode-speedrun-main/episode-evm-49.pixels": "b3b93ce1078a00de2d4b07a34f4ccaa9b20d41fd47b10550333fe492bbb41c13",
+    "artifacts/phase4/episode-speedrun-main/episode-evm-5.pixels": "c2896f45a1cd402d95b84c3569d2a6c41ede3831414148e19f4eac7efcb4e8ee",
+    "artifacts/phase4/episode-speedrun-main/episode-evm-50.pixels": "659d313532a5257028da5519ce2383d61d13892a56a48d171ac72b11d3585e3b",
+    "artifacts/phase4/episode-speedrun-main/episode-evm-51.pixels": "659d313532a5257028da5519ce2383d61d13892a56a48d171ac72b11d3585e3b",
+    "artifacts/phase4/episode-speedrun-main/episode-evm-52.pixels": "eb7ea312da2daea7970e67d67375b130004de45224ef64277a22db81edb49b4f",
+    "artifacts/phase4/episode-speedrun-main/episode-evm-53.pixels": "eb7ea312da2daea7970e67d67375b130004de45224ef64277a22db81edb49b4f",
+    "artifacts/phase4/episode-speedrun-main/episode-evm-54.pixels": "eb7ea312da2daea7970e67d67375b130004de45224ef64277a22db81edb49b4f",
+    "artifacts/phase4/episode-speedrun-main/episode-evm-55.pixels": "eb7ea312da2daea7970e67d67375b130004de45224ef64277a22db81edb49b4f",
+    "artifacts/phase4/episode-speedrun-main/episode-evm-56.pixels": "94c538240afd58a7f965a3e6684a836f43b819d6aa2d3711d5a5a89371c04d9d",
+    "artifacts/phase4/episode-speedrun-main/episode-evm-57.pixels": "c925b75ae895117c92492dc0aebd0dc53e59c781f66237dba76b79aa5a2e7113",
+    "artifacts/phase4/episode-speedrun-main/episode-evm-58.pixels": "2b07442e83f5b17db74542c994077fee078a7a9bceb1cff4e99cfa3cce441ffb",
+    "artifacts/phase4/episode-speedrun-main/episode-evm-59.pixels": "a297ba2dfa2d1eae509b975c96471640802a189389ea15ad741c399218782d54",
+    "artifacts/phase4/episode-speedrun-main/episode-evm-6.pixels": "e3b04f7b091b3d62d4c981358eaf08f3aedacdc5e7f7ab873c3b45252a3a621e",
+    "artifacts/phase4/episode-speedrun-main/episode-evm-60.pixels": "5cbda18c022ea2d48b88810a53d7a4c463f7f069bc5f48d53ede22e274dafdf8",
+    "artifacts/phase4/episode-speedrun-main/episode-evm-7.pixels": "96aa7ecaab9f0488cfdb7af9b8fbe5e7229796aee408c001eb9de64be1783ec9",
+    "artifacts/phase4/episode-speedrun-main/episode-evm-8.pixels": "31226c4d25e8b657b287cd8bbac24e3494931dfc54b676df39b31cf8ee64fca5",
+    "artifacts/phase4/episode-speedrun-main/episode-evm-9.pixels": "72314bcbfcb2538940a5750f0a499ef762aa25d9d6b29ff07c88a5255106e9ad",
+    "artifacts/phase4/episode-speedrun-main/episode-evm-browser-finale-controls-0.png": "5871f38f1133d779052e9bc02d35e12c9aff9667ec4aaee777c1b34761e48f90",
+    "artifacts/phase4/episode-speedrun-main/episode-evm-browser-finale-controls-1.png": "aaa3d875597dab42bcc3e4cbae152a459a74d0486679269d96be0f4d8c070685",
+    "artifacts/phase4/episode-speedrun-main/episode-evm-browser-finale-controls-2.png": "373fed4fbe5f90080ba30e50ae4167da25faed017fb4ad432ccd8732c8d297f3",
+    "artifacts/phase4/episode-speedrun-main/episode-evm-browser-finale-controls-3.png": "711f01253ce81df99874a2456ad570aaa2ee1bbece2c4085788bc27bd1c8ac69",
+    "artifacts/phase4/episode-speedrun-main/episode-evm-browser-finale-controls-4.png": "cad3990727cc51d11a36cf5f7d5dfbec7aaef1d5298e25e4c58f5629c8eea7e5",
+    "artifacts/phase4/episode-speedrun-main/episode-evm-browser-finale-controls-5.png": "b76135bc03ac8f65ec3599aa23538e09ade72fab15d91237ee747601079e3e5f",
+    "artifacts/phase4/episode-speedrun-main/episode-evm-browser-finale-controls-6.png": "21e905b2fc51bb3f273c870a79d0d64b5414487e3c27f4f59ad9a9ea3c674e44",
+    "artifacts/phase4/episode-speedrun-main/episode-evm-browser-finale-controls.json": "896c63903459048fb4e1e4382ef92f5f5796a6e793c416fb90d0d67ca96d0892",
+    "artifacts/phase4/episode-speedrun-main/episode-evm-browser-intermission-0.png": "d72765abd0e916efd543fdd57edd14896eb0d4387fcc8c48e491026996f08357",
+    "artifacts/phase4/episode-speedrun-main/episode-evm-browser-intermission.json": "6898784ed3b66600df5341a1b4e2aa80a9d662cb766561d60389bac7331692fe",
+    "artifacts/phase4/episode-speedrun-main/episode-evm.anvil.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "artifacts/phase4/episode-speedrun-main/episode-evm.command.json": "0fface991894d5ffc1cb46a788594b669240dae05235be96b8ff6daea50bcb77",
+    "artifacts/phase4/episode-speedrun-main/episode-evm.config.json": "158deb791f8a3ca5371dc47caf9432a2143df55ea73b85b02ecb9a56ae5f98e9",
+    "artifacts/phase4/episode-speedrun-main/episode-evm.json": "40a85c2599c2e219ccacf38118c0b34d31f01a4e8918165ced60dbde489c1cdb",
+    "artifacts/phase4/episode-speedrun-main/episode-evm.log": "54490b9cd529b8692719c91560b2ce358791476a783c34f1579529ac406ec67b",
+    "artifacts/phase4/episode-speedrun-main/focused-runner.py": "b34a3e68e1f911c3153b768b6ccc282d8441faa5a60334066363052f473d4a4a",
+    "artifacts/phase4/episode-speedrun-main/focused.command.json": "9ffcb5d9ae111b3fb16b82aac3ad20b8d4d164975ce1018d6b5e9688fc402618",
+    "artifacts/phase4/episode-speedrun-main/focused.log": "1d961111f848dbaa6cd6123ca568ce2f08a931a204ab4757dd19fe3c5a1adb62",
+    "artifacts/phase4/episode-speedrun-main/format.command.json": "65db06054f8568d86d2fd1b09ca6bf3a927d1abfe1480cfc759ee8386caff94a",
+    "artifacts/phase4/episode-speedrun-main/format.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "artifacts/phase4/episode-speedrun-main/fresh-launch-attempt-runner.mjs": "c2da0e86c3dea3bcbed251d892a131347607e20f16207dc61f4e401bf81eedde",
+    "artifacts/phase4/episode-speedrun-main/fresh-launch-final-browser-0.png": "7e9ab135860c9f2900cbc62042df13cbd01ef8b106483922a33215f1bc9cee5c",
+    "artifacts/phase4/episode-speedrun-main/fresh-launch-final-browser-1.png": "7ef5d9c6f47a928a90810468b406fb7622cf1227089bd6a16391c23ffea7d0c3",
+    "artifacts/phase4/episode-speedrun-main/fresh-launch-final-browser-2.png": "6f3edef244002b89d369791e3c4841ec4796213c0577d87d8533333cea528aa7",
+    "artifacts/phase4/episode-speedrun-main/fresh-launch-final-browser-3.png": "ed906349917b2688533e11da04b48a0ca2482bd86f15da6331e60814736410a2",
+    "artifacts/phase4/episode-speedrun-main/fresh-launch-final-browser-4.png": "0f69ad2febcbfefd8285374c0b35335522d226319080d70fc8fefd98b9b709a6",
+    "artifacts/phase4/episode-speedrun-main/fresh-launch-final-browser-5.png": "6db523985171037f18c1631bfa155c70fd4cd367ebb5db540d408c670cfe2ba2",
+    "artifacts/phase4/episode-speedrun-main/fresh-launch-final-browser.json": "51ff851caaf922b8329c613d53522794b33b4df3ba3ca17410f30a70b4a4984a",
+    "artifacts/phase4/episode-speedrun-main/fresh-launch-final-ownership.json": "fc6bf67945e5d3b2dbabf6db45f3aba5e4a7b4e2330b701ef24b2ee6d74a3c2a",
+    "artifacts/phase4/episode-speedrun-main/fresh-launch-final.anvil.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "artifacts/phase4/episode-speedrun-main/fresh-launch-final.command.json": "b2b626a9d965c2409da9e6e0443160670a1ec4906f5576501f1dca6d200ef416",
+    "artifacts/phase4/episode-speedrun-main/fresh-launch-final.json": "5758116dce11a1f2b303d28c1a52da75b21b4e6df09df4ae0e609ed32968f5a9",
+    "artifacts/phase4/episode-speedrun-main/fresh-launch-final.log": "847a71b7493847c2101d8e22178c3ac0dae14e498cd38cb19cf406da91eff483",
+    "artifacts/phase4/episode-speedrun-main/fresh-launch-ownership.json": "032fb5a63ea01b5d928d515d57de8ea11a3e85740253a7cf7b80f969de318f0a",
+    "artifacts/phase4/episode-speedrun-main/fresh-launch-runner.mjs": "1d5e3cb9ab0397f4cddae6c83599c406cfa8daaaae1e71c29e09f9810bbcf6ae",
+    "artifacts/phase4/episode-speedrun-main/fresh-launch.anvil.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "artifacts/phase4/episode-speedrun-main/fresh-launch.command.json": "86670d3bcc740921e837e07b62b842fca9324bcff2dd4164c5f53d37b5858773",
+    "artifacts/phase4/episode-speedrun-main/fresh-launch.json": "0d0903f7ff370e00998fd6a71b2593e96e7c31186d0afca938ce8ac81c298141",
+    "artifacts/phase4/episode-speedrun-main/fresh-launch.log": "6a95fb310f60b10ef830886baede899777dc2d61ecec155d8215a891f6966d3a",
+    "artifacts/phase4/episode-speedrun-main/fresh-native-result.json": "8022a3d4b675e630f64d5511210a9df85d47543e4277f84950cd4516efdc4202",
+    "artifacts/phase4/episode-speedrun-main/fresh-native-state-hashes.json": "cb630c921c2073b6ee804bc52224556ccea63cc8c536becabd83086ec69e6e76",
+    "artifacts/phase4/episode-speedrun-main/fresh-native-states.delta.bin.gz": "5ed9e50c87bfb866e34037e8e0833c6ba4bef5850bfad0b69a3044b4f7c3c56a",
+    "artifacts/phase4/episode-speedrun-main/historical-source-negative.json": "6b9a616ecdb129ca890d6bcff357d5fcc305cb9c9e30c4554a4f4e79f477c7a8",
+    "artifacts/phase4/episode-speedrun-main/interfaces.json": "5f886e80f65d2574f25e878a974b61bd17967289d40c8f856527dd13a8ae8183",
+    "artifacts/phase4/episode-speedrun-main/merge.json": "3d5ce82b3ad3657faf825589060e4702ada2ea119a2a7d2be8ba421489a0156e",
+    "artifacts/phase4/episode-speedrun-main/native-finale.command.json": "106bec4060282b5cdbc579f67d13ab2e49aafd42df70db6251cb6e89b84b9502",
+    "artifacts/phase4/episode-speedrun-main/native-finale.log": "9fd524f1b8fcfd8392bbce382f61706bcf061b313c2b4a267a8b295bb53b927d",
+    "artifacts/phase4/episode-speedrun-main/native-gameflow.command.json": "16df085edcf3c315a530039d0aa2ce8fa983ea46f0827bef56cb73caeb813e97",
+    "artifacts/phase4/episode-speedrun-main/native-gameflow.log": "7382c445e3b12fdd9ade19544917cb8b37f58f5987303446cf0493f9cc5df603",
+    "artifacts/phase4/episode-speedrun-main/native-pointer.command.json": "320f3363f8a74a75a55fe52e693c6a4949b5b04dda9d625cdcb71447377e57ef",
+    "artifacts/phase4/episode-speedrun-main/native-pointer.log": "7744c1c8f864884504f8c0800e003c45137b44291835d47c8524fb86313bedee",
+    "artifacts/phase4/episode-speedrun-main/native-speedrun.command.json": "29012fd1f6d7bae364a78a88b1dc32d64c9d960aaacb42b8d7e24a86cc87e332",
+    "artifacts/phase4/episode-speedrun-main/native-speedrun.log": "000a45fe9790388ec1917e1eae9d29f94e88612c60ad1fba6202f3d30f2a48be",
+    "artifacts/phase4/episode-speedrun-main/node-remaining.command.json": "d550661fc4c7a006118f36899e8dcdac971fc7105399c62384aeac90516490ca",
+    "artifacts/phase4/episode-speedrun-main/node-remaining.log": "22ca91238c4e603436be8547e8a79054e3451b2ba608deef161717091c1942d6",
+    "artifacts/phase4/episode-speedrun-main/node.command.json": "bd797cebcca745d8ee2e2cdd73180554936afaa93e43d5e3ba8b0a6094e9612a",
+    "artifacts/phase4/episode-speedrun-main/node.log": "bebfcc30819a7dfe61d7c216d22f6c190a6676472ad97abb4bf8477dfca5f279",
+    "artifacts/phase4/episode-speedrun-main/pointer-native.json": "b2fdd86711cb3b8ba74fdfd0444da114d13c1b5a75fa37e0853b948c6e48eaf1",
+    "artifacts/phase4/episode-speedrun-main/preflight.json": "bdb267e5983c51fe9823d5775befec722d580b7e4f851d71f9a80e1dfd8efc66",
+    "artifacts/phase4/episode-speedrun-main/preservation.json": "4f599fe529fab7bdc9fe7be7b8bd200f745bc792be5d44b3450d1469859b4cdd",
+    "artifacts/phase4/episode-speedrun-main/runtime-cleanup.json": "48f5d00430d344c0b5a5b050332395f218009e217574ca9974344f0e3924631c",
+    "artifacts/phase4/episode-speedrun-main/speedrun-evm.anvil-stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "artifacts/phase4/episode-speedrun-main/speedrun-evm.command.json": "4093b1215d09793cf292cbda52f41a9840144f0a0b6ef2532e63b2981342088b",
+    "artifacts/phase4/episode-speedrun-main/speedrun-evm.deployment-receipts.json.gz": "b5f6b63359970749a2821b0d0c4dfafd4e36b6d8f217b8755abf3769a278ed03",
+    "artifacts/phase4/episode-speedrun-main/speedrun-evm.json": "0f770e189b7bc38cf13a6e04258b86672c79cafb20609035971edc2102e61740",
+    "artifacts/phase4/episode-speedrun-main/speedrun-evm.log": "266d6cf1079f6191c616a3d83bc0500aee2a58516f0ed12551d03b337f83e27d",
+    "artifacts/phase4/episode-speedrun-main/speedrun-evm.replay-receipts.json.gz": "68fbbf0f164b41712fe0c12c1a7baab2c2f976051e193f48b0f1bf723bbbd989",
+    "artifacts/phase4/episode-speedrun-main/speedrun-evm.states.bin.gz": "ca8bf09b9396e97686b2f61227d990e45a12eaaa3c4561eb8ed8179d5945902c",
+    "artifacts/phase4/episode-speedrun-main/speedrun-historical-before.command.json": "e463a2704024497dee030b491d4adf271d8fc099630a899496f4278639694137",
+    "artifacts/phase4/episode-speedrun-main/speedrun-historical-before.log": "7a8821b0a0aa714afc932bd8d6ff166639792d306958f1abd83e59718095e1c2",
+    "artifacts/phase4/episode-speedrun-main/speedrun-historical.command.json": "d946d3404d3fd4b3238ab933b7fd7ed833cb692367fb1db06500c957c19e619d",
+    "artifacts/phase4/episode-speedrun-main/speedrun-historical.log": "4586a1ef631adf0b674998e2fe47b4670100dc8535e4aa356ce2d516cd0f7d41",
+    "artifacts/phase4/episode-speedrun-main/speedrun-video.command.json": "3dae7e0b135ce4914f7a16165f67a6972a254e977a64ff973bd425acdf3c58e0",
+    "artifacts/phase4/episode-speedrun-main/speedrun-video.log": "2436f0e192b4843c345051916866e696a0def654be962779044d6e4ae3951c73",
+    "artifacts/phase4/episode-speedrun-main/syntax.command.json": "20883da14be849bbf1454e0c88a9f870e27310cee34855fc7d5bd9159e2f5038",
+    "artifacts/phase4/episode-speedrun-main/syntax.log": "1fcd4383b8c729d0cc445ad469d6205c3b5bb36934ab5c93dc5d87fb98bc50de",
+    "artifacts/phase4/episode-speedrun-main/verification-runner.py": "5ddcae121694d301e2b1de7318289fb1f51b4a051d457b7855fdfb946303b289",
+    "artifacts/phase4/episode-speedrun-main/video-comparison.json": "183a8e67d870daac8a701d815c6444ccc0085d098e4aee2b4e5c32956e9a70bb",
+    "artifacts/phase4/episode-speedrun-main/video-evm.json": "4af99e0e32925572c5dcd82e0e5b6c4130c4ce8d44b66b4a6389d5f63c05f284",
+    "artifacts/phase4/episode-speedrun-main/video-frame-manifest.json": "bef97ecc04d62182b89c7b94eaba5bb0a1a5b9304320909f6745e8b5a8757f05",
+    "artifacts/phase4/episode-speedrun-main/video-video-verification.json": "364ee2d9deccc70b0cfa5d86f5ac872adccb751001a4cea82764fd1862d7577c"
+  }
+}

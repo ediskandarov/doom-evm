@@ -1,0 +1,29 @@
+{
+  "name": "node-remaining",
+  "command": [
+    "node",
+    "--test",
+    "web/input-app.test.mjs",
+    "web/input-runtime.test.mjs",
+    "web/budget.test.mjs",
+    "tools/transport/palette.test.mjs"
+  ],
+  "cwd": "/Users/eduard/sandbox/doom-evm",
+  "startedUtc": "2026-10-10T16:46:12.298692+00:00",
+  "endedUtc": "2026-10-10T16:46:12.699885+00:00",
+  "seconds": 0.40111929178237915,
+  "exitCode": 0,
+  "logSha256": "22ca91238c4e603436be8547e8a79054e3451b2ba608deef161717091c1942d6",
+  "matchedTestFiles": [
+    "web/input-app.test.mjs",
+    "web/input-runtime.test.mjs",
+    "web/budget.test.mjs",
+    "tools/transport/palette.test.mjs"
+  ],
+  "unmatchedPatterns": [],
+  "coverage": {
+    "testsPassed": 17,
+    "failures": 0,
+    "skips": 0
+  }
+}

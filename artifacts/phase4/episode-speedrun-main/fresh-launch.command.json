@@ -1,0 +1,13 @@
+{
+  "name": "fresh-launch",
+  "command": [
+    "node",
+    "artifacts/local/episode-speedrun-main/fresh-launch.mjs"
+  ],
+  "cwd": "/Users/eduard/sandbox/doom-evm",
+  "startedUtc": "2026-10-10T17:05:34.850625+00:00",
+  "endedUtc": "2026-10-10T17:06:18.493729+00:00",
+  "seconds": 43.642538082785904,
+  "exitCode": 1,
+  "logSha256": "6a95fb310f60b10ef830886baede899777dc2d61ecec155d8215a891f6966d3a"
+}

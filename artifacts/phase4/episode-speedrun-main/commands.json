@@ -1,0 +1,358 @@
+[
+  {
+    "name": "build",
+    "command": [
+      ".toolchain/bin/forge",
+      "build",
+      "--offline",
+      "src/evm/Doom.sol",
+      "src/support/SpeedrunProbe.sol",
+      "src/support/SpeedrunVideoProbe.sol",
+      "src/evm/ResourceStore.sol",
+      "--skip",
+      "test",
+      "--skip",
+      "script",
+      "--no-lint"
+    ],
+    "cwd": "/Users/eduard/sandbox/doom-evm",
+    "startedUtc": "2026-10-10T16:50:10.425825+00:00",
+    "endedUtc": "2026-10-10T16:53:53.551379+00:00",
+    "seconds": 223.1247021672316,
+    "exitCode": 0,
+    "logSha256": "f68a6f49bd8552c0e2c07e179a9fc79e3628a8ce564659ea70e0721227958f19"
+  },
+  {
+    "name": "episode-certificate-after-build",
+    "command": [
+      "python3",
+      "tools/reference/episode_completion/checkpoint.py",
+      "--check"
+    ],
+    "cwd": "/Users/eduard/sandbox/doom-evm",
+    "startedUtc": "2026-10-10T16:54:16.532178+00:00",
+    "endedUtc": "2026-10-10T16:54:16.766557+00:00",
+    "seconds": 0.23432224988937378,
+    "exitCode": 0,
+    "logSha256": "8a8dd7761847797a25327837d7bf064d35cdba20043dcae652e66d2d61a11f35"
+  },
+  {
+    "name": "episode-certificate",
+    "command": [
+      "python3",
+      "tools/reference/episode_completion/checkpoint.py",
+      "--check"
+    ],
+    "cwd": "/Users/eduard/sandbox/doom-evm",
+    "startedUtc": "2026-10-10T16:46:47.761118+00:00",
+    "endedUtc": "2026-10-10T16:46:47.893758+00:00",
+    "seconds": 0.13257887540385127,
+    "exitCode": 1,
+    "logSha256": "abb36bdfa5ecff580de3ee1fb00492a6be6fe5bb030cd58d61ba595295134cfe"
+  },
+  {
+    "name": "episode-evm",
+    "command": [
+      "node",
+      "tools/reference/episode_completion/evm.mjs",
+      "--port",
+      "18931",
+      "--browser",
+      "--output-prefix",
+      "/Users/eduard/sandbox/doom-evm/artifacts/phase4/episode-speedrun-main/episode-evm"
+    ],
+    "cwd": "artifacts/local/episode-speedrun-main/runtime",
+    "startedUtc": "2026-10-10T16:54:20.215880+00:00",
+    "endedUtc": "2026-10-10T17:00:24.779957+00:00",
+    "seconds": 364.5601446661167,
+    "exitCode": 0,
+    "logSha256": "54490b9cd529b8692719c91560b2ce358791476a783c34f1579529ac406ec67b"
+  },
+  {
+    "name": "focused",
+    "command": [
+      "python3",
+      "artifacts/local/episode-speedrun-main/focused.py"
+    ],
+    "cwd": "/Users/eduard/sandbox/doom-evm",
+    "startedUtc": "2026-10-10T16:45:07.337995+00:00",
+    "endedUtc": "2026-10-10T16:49:39.561343+00:00",
+    "seconds": 272.2203814173117,
+    "exitCode": 0,
+    "logSha256": "1d961111f848dbaa6cd6123ca568ce2f08a931a204ab4757dd19fe3c5a1adb62",
+    "helperEvidencePath": "artifacts/phase4/episode-speedrun-main/focused-runner.py",
+    "helperSha256": "b34a3e68e1f911c3153b768b6ccc282d8441faa5a60334066363052f473d4a4a",
+    "coverage": {
+      "uniqueTests": 239,
+      "suites": 23,
+      "failures": 0,
+      "skips": 0,
+      "fuzzRuns": 256,
+      "fuzzSeed": "0x414",
+      "compileSeconds": 260.11
+    }
+  },
+  {
+    "name": "format",
+    "command": [
+      ".toolchain/bin/forge",
+      "fmt",
+      "--check",
+      "src/doom/f_finale.sol",
+      "src/doom/p_game_state.sol",
+      "src/doom/p_mobj.sol",
+      "src/doom/r_data.sol",
+      "src/doom/st_stuff.sol",
+      "src/doom/z_zone_backing.sol",
+      "src/doom/z_zone_types.sol",
+      "src/evm/Doom.sol",
+      "src/evm/DoomUI.sol",
+      "src/evm/EpisodeRuntime.sol",
+      "src/evm/InputProtocol.sol",
+      "src/support/SpeedrunProbe.sol",
+      "src/support/SpeedrunVideoProbe.sol"
+    ],
+    "cwd": "/Users/eduard/sandbox/doom-evm",
+    "startedUtc": "2026-10-10T16:47:54.977780+00:00",
+    "endedUtc": "2026-10-10T16:47:54.988372+00:00",
+    "seconds": 0.010536415968090296,
+    "exitCode": 0,
+    "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "name": "fresh-launch-final",
+    "command": [
+      "node",
+      "artifacts/local/episode-speedrun-main/fresh-launch.mjs"
+    ],
+    "cwd": "/Users/eduard/sandbox/doom-evm",
+    "startedUtc": "2026-10-10T17:06:52.222195+00:00",
+    "endedUtc": "2026-10-10T17:07:45.722531+00:00",
+    "seconds": 53.499647666700184,
+    "exitCode": 0,
+    "logSha256": "847a71b7493847c2101d8e22178c3ac0dae14e498cd38cb19cf406da91eff483"
+  },
+  {
+    "name": "fresh-launch",
+    "command": [
+      "node",
+      "artifacts/local/episode-speedrun-main/fresh-launch.mjs"
+    ],
+    "cwd": "/Users/eduard/sandbox/doom-evm",
+    "startedUtc": "2026-10-10T17:05:34.850625+00:00",
+    "endedUtc": "2026-10-10T17:06:18.493729+00:00",
+    "seconds": 43.642538082785904,
+    "exitCode": 1,
+    "logSha256": "6a95fb310f60b10ef830886baede899777dc2d61ecec155d8215a891f6966d3a"
+  },
+  {
+    "name": "native-finale",
+    "command": [
+      "python3",
+      "tools/reference/episode_completion/finale.py",
+      "--check"
+    ],
+    "cwd": "artifacts/local/episode-speedrun-main/runtime",
+    "startedUtc": "2026-10-10T16:45:08.474460+00:00",
+    "endedUtc": "2026-10-10T16:45:10.195076+00:00",
+    "seconds": 1.7205274170264602,
+    "exitCode": 0,
+    "logSha256": "9fd524f1b8fcfd8392bbce382f61706bcf061b313c2b4a267a8b295bb53b927d"
+  },
+  {
+    "name": "native-gameflow",
+    "command": [
+      "python3",
+      "tools/reference/gameflow/reference.py",
+      "--check"
+    ],
+    "cwd": "/Users/eduard/sandbox/doom-evm",
+    "startedUtc": "2026-10-10T16:45:30.491322+00:00",
+    "endedUtc": "2026-10-10T16:45:32.406800+00:00",
+    "seconds": 1.915429917164147,
+    "exitCode": 0,
+    "logSha256": "7382c445e3b12fdd9ade19544917cb8b37f58f5987303446cf0493f9cc5df603"
+  },
+  {
+    "name": "native-pointer",
+    "command": [
+      "python3",
+      "tools/reference/episode_completion/pointer.py"
+    ],
+    "cwd": "artifacts/local/episode-speedrun-main/runtime",
+    "startedUtc": "2026-10-10T16:45:29.554250+00:00",
+    "endedUtc": "2026-10-10T16:45:30.441980+00:00",
+    "seconds": 0.8876643748953938,
+    "exitCode": 0,
+    "logSha256": "7744c1c8f864884504f8c0800e003c45137b44291835d47c8524fb86313bedee"
+  },
+  {
+    "name": "native-speedrun",
+    "command": [
+      "python3",
+      "tools/reference/speedrun/replay.py",
+      "--demo",
+      "artifacts/speedrun-e1m1/e1m1-easy.lmp",
+      "--wad",
+      "artifacts/local/freedoom/freedoom1.wad",
+      "--output",
+      "artifacts/local/episode-speedrun-main/native-speedrun"
+    ],
+    "cwd": "/Users/eduard/sandbox/doom-evm",
+    "startedUtc": "2026-10-10T16:45:31.651112+00:00",
+    "endedUtc": "2026-10-10T16:45:58.664115+00:00",
+    "seconds": 27.01264916593209,
+    "exitCode": 0,
+    "logSha256": "000a45fe9790388ec1917e1eae9d29f94e88612c60ad1fba6202f3d30f2a48be"
+  },
+  {
+    "name": "node-remaining",
+    "command": [
+      "node",
+      "--test",
+      "web/input-app.test.mjs",
+      "web/input-runtime.test.mjs",
+      "web/budget.test.mjs",
+      "tools/transport/palette.test.mjs"
+    ],
+    "cwd": "/Users/eduard/sandbox/doom-evm",
+    "startedUtc": "2026-10-10T16:46:12.298692+00:00",
+    "endedUtc": "2026-10-10T16:46:12.699885+00:00",
+    "seconds": 0.40111929178237915,
+    "exitCode": 0,
+    "logSha256": "22ca91238c4e603436be8547e8a79054e3451b2ba608deef161717091c1942d6",
+    "matchedTestFiles": [
+      "web/input-app.test.mjs",
+      "web/input-runtime.test.mjs",
+      "web/budget.test.mjs",
+      "tools/transport/palette.test.mjs"
+    ],
+    "unmatchedPatterns": [],
+    "coverage": {
+      "testsPassed": 17,
+      "failures": 0,
+      "skips": 0
+    }
+  },
+  {
+    "name": "node",
+    "command": [
+      "node",
+      "--test",
+      "web/app.test.mjs",
+      "web/budgets.test.mjs",
+      "web/input.test.mjs",
+      "web/input-dom.test.mjs",
+      "web/input-loop.test.mjs",
+      "web/episode.test.mjs",
+      "web/palette.test.mjs",
+      "tools/transport/protocol.test.mjs",
+      "tools/transport/ui-palette.test.mjs",
+      "tools/wad/wad.test.ts",
+      "tools/wad/episode.test.ts"
+    ],
+    "cwd": "/Users/eduard/sandbox/doom-evm",
+    "startedUtc": "2026-10-10T16:45:08.474723+00:00",
+    "endedUtc": "2026-10-10T16:45:26.383627+00:00",
+    "seconds": 17.908673000056297,
+    "exitCode": 0,
+    "logSha256": "bebfcc30819a7dfe61d7c216d22f6c190a6676472ad97abb4bf8477dfca5f279",
+    "matchedTestFiles": [
+      "web/input.test.mjs",
+      "web/input-loop.test.mjs",
+      "web/episode.test.mjs",
+      "tools/transport/protocol.test.mjs",
+      "tools/transport/ui-palette.test.mjs",
+      "tools/wad/wad.test.ts",
+      "tools/wad/episode.test.ts"
+    ],
+    "unmatchedPatterns": [
+      "web/app.test.mjs",
+      "web/budgets.test.mjs",
+      "web/input-dom.test.mjs",
+      "web/palette.test.mjs"
+    ],
+    "coverage": {
+      "testsPassed": 111,
+      "failures": 0,
+      "skips": 0
+    }
+  },
+  {
+    "name": "speedrun-evm",
+    "command": [
+      "node",
+      "tools/reference/speedrun/evm.mjs",
+      "--port",
+      "18933",
+      "--batch",
+      "5",
+      "--output-prefix",
+      "/Users/eduard/sandbox/doom-evm/artifacts/phase4/episode-speedrun-main/speedrun-evm"
+    ],
+    "cwd": "artifacts/local/episode-speedrun-main/runtime",
+    "startedUtc": "2026-10-10T17:00:46.708445+00:00",
+    "endedUtc": "2026-10-10T17:01:59.285911+00:00",
+    "seconds": 72.57648545783013,
+    "exitCode": 0,
+    "logSha256": "266d6cf1079f6191c616a3d83bc0500aee2a58516f0ed12551d03b337f83e27d"
+  },
+  {
+    "name": "speedrun-historical-before",
+    "command": [
+      "python3",
+      "tools/reference/speedrun/verify_evidence.py"
+    ],
+    "cwd": "/Users/eduard/sandbox/doom-evm",
+    "startedUtc": "2026-10-10T16:45:08.474484+00:00",
+    "endedUtc": "2026-10-10T16:45:12.630671+00:00",
+    "seconds": 4.156101166270673,
+    "exitCode": 1,
+    "logSha256": "7a8821b0a0aa714afc932bd8d6ff166639792d306958f1abd83e59718095e1c2"
+  },
+  {
+    "name": "speedrun-historical",
+    "command": [
+      "python3",
+      "tools/reference/speedrun/verify_evidence.py"
+    ],
+    "cwd": "/Users/eduard/sandbox/doom-evm",
+    "startedUtc": "2026-10-10T16:46:12.298761+00:00",
+    "endedUtc": "2026-10-10T16:46:17.082512+00:00",
+    "seconds": 4.783660833723843,
+    "exitCode": 0,
+    "logSha256": "4586a1ef631adf0b674998e2fe47b4670100dc8535e4aa356ce2d516cd0f7d41"
+  },
+  {
+    "name": "speedrun-video",
+    "command": [
+      "node",
+      "tools/reference/speedrun/record.mjs",
+      "--sample-every",
+      "5",
+      "--port",
+      "18934",
+      "--output-dir",
+      "artifacts/local/episode-speedrun-main-video"
+    ],
+    "cwd": "artifacts/local/episode-speedrun-main/runtime",
+    "startedUtc": "2026-10-10T17:02:09.192620+00:00",
+    "endedUtc": "2026-10-10T17:04:48.728954+00:00",
+    "seconds": 159.53453116724268,
+    "exitCode": 0,
+    "logSha256": "2436f0e192b4843c345051916866e696a0def654be962779044d6e4ae3951c73"
+  },
+  {
+    "name": "syntax",
+    "command": [
+      "python3",
+      "-"
+    ],
+    "cwd": "/Users/eduard/sandbox/doom-evm",
+    "startedUtc": "2026-10-10T16:47:54.716747+00:00",
+    "endedUtc": "2026-10-10T16:47:54.949900+00:00",
+    "seconds": 0.23311512498185039,
+    "exitCode": 0,
+    "logSha256": "1fcd4383b8c729d0cc445ad469d6205c3b5bb36934ab5c93dc5d87fb98bc50de"
+  }
+]

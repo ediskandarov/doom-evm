@@ -1,0 +1,10 @@
+{
+  "startedUtc": "2026-10-10T17:05:34.881Z",
+  "endedUtc": "2026-10-10T17:06:18.492Z",
+  "ownedLauncherPid": 87969,
+  "exit": {
+    "code": 0,
+    "signal": null
+  },
+  "stoppedOwnedLauncher": true
+}

@@ -1,0 +1,43 @@
+Verified CREATE 300
+Verified CREATE 600
+Verified CREATE 900
+Verified CREATE 1200
+Verified CREATE 1500
+PASS native integrated gameplay tic 50
+PASS native integrated gameplay tic 100
+PASS native integrated gameplay tic 150
+PASS native integrated gameplay tic 200
+PASS production map 1
+PASS production map 2
+PASS production map 3
+PASS production map 4
+PASS production map 5
+PASS production map 6
+PASS production map 7
+PASS production map 8
+PASS production map 9
+Moving toward exit -365 1296 from -416 256
+Moving toward exit -365 1296 from -399.98052978515625 494.42259216308594
+PASS Chrome Canvas Existing lifecycle Frame
+Moving toward exit 248 1483 from -788 -216
+Moving toward exit 248 1483 from -546.2536315917969 203.3421630859375
+Moving toward exit 248 1483 from -112.94961547851562 912.2911682128906
+PASS genuine secret route E1M3 -> E1M9
+Moving toward exit 1312 596 from -216 -160
+Moving toward exit 1312 596 from -203.33363342285156 -153.52064514160156
+Moving toward exit 1312 596 from 455.25408935546875 183.37167358398438
+Moving toward exit 1312 596 from 1181.3729858398438 537.4939880371094
+PASS genuine secret return E1M9 -> E1M4
+Moving toward exit 992 352 from 2464 360
+Moving toward exit 992 352 from 2239.9754028320312 358.5373992919922
+Moving toward exit 992 352 from 1405.8678131103516 353.0924530029297
+Moving toward exit 992 352 from 697.5047760009766 350.5721893310547
+Moving toward exit 992 352 from 937.0833129882812 355.99147033691406
+PASS Chrome Canvas Existing lifecycle Frame
+PASS Chrome Canvas New Game E1M1
+PASS Chrome Canvas Pause
+PASS Chrome Canvas Resume
+PASS Chrome Canvas Restart
+PASS Chrome Canvas New Game E1M9
+PASS Chrome Canvas Tab Automap
+{"pass":true,"frames":61,"routes":4,"evidence":"/Users/eduard/sandbox/doom-evm/artifacts/phase4/episode-speedrun-main/episode-evm.json"}

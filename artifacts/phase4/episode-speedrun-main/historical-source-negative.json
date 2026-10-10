@@ -1,0 +1,9 @@
+{
+  "pass_": true,
+  "kind": "historical-source-binding-negative-check",
+  "changedOwnedCopyOnly": true,
+  "file": "src/doom/p_game_state.sol",
+  "expectedExitCode": 1,
+  "actualExitCode": 1,
+  "stderr": "Traceback (most recent call last):\n  File \"/Users/eduard/sandbox/doom-evm/artifacts/local/episode-speedrun-main/runtime/tools/reference/speedrun/verify_evidence.py\", line 95, in <module>\n    assert sha(executed_source) == digest, file + ' historical executed-source drift'\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: src/doom/p_game_state.sol historical executed-source drift\n"
+}

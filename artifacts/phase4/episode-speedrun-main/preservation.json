@@ -1,0 +1,25 @@
+{
+  "pass_": true,
+  "baselineTrackedFiles": 2147,
+  "exactUnaffectedFiles": 2131,
+  "featureBlobsExactAtMerge": true,
+  "featureTipsPreserved": true,
+  "episodeCertificateBindingsExact": true,
+  "originalCPinnedClean": true,
+  "protectedFiles": [
+    "foundry.toml",
+    "execution-budget.json",
+    "AGENTS.md",
+    "src/evm/FrameProtocol.sol",
+    "src/evm/ResourceTypes.sol",
+    "web/protocol.mjs"
+  ],
+  "integrationEdits": [
+    "historical speedrun verifier source-object binding",
+    "matching reproduction documentation"
+  ],
+  "prePublicationProtectedLocalHashes": {
+    "web/config.local.json": "c8b874acc45fe3f353fe2fe18d3fc8a6f62cdf81515503d2172d61673ed3ac98",
+    "web/palette.local.json": "a9cf61c57f81d5299a6c1229e8eabf1dd74254f10e2d185108c790636ade98ad"
+  }
+}

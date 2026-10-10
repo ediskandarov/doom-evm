@@ -1,0 +1,5 @@
+Traceback (most recent call last):
+  File "/Users/eduard/sandbox/doom-evm/tools/reference/speedrun/verify_evidence.py", line 87, in <module>
+    assert sha((ROOT / file).read_bytes()) == digest, file + ' executed-source drift'
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: src/doom/p_game_state.sol executed-source drift

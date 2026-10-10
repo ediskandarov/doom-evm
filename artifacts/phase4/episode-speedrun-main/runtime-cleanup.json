@@ -1,0 +1,22 @@
+{
+  "pass_": true,
+  "checkedUtc": "2026-10-10T17:08:21.281817+00:00",
+  "portsConfirmedClosed": [
+    18931,
+    18933,
+    18934,
+    18935,
+    18936
+  ],
+  "reservedPortsUntouched": [
+    18880,
+    8088
+  ],
+  "mainBrowserHashesUnchanged": {
+    "web/config.local.json": "c8b874acc45fe3f353fe2fe18d3fc8a6f62cdf81515503d2172d61673ed3ac98",
+    "web/palette.local.json": "a9cf61c57f81d5299a6c1229e8eabf1dd74254f10e2d185108c790636ade98ad"
+  },
+  "allOwnedRuntimeReportsStopped": true,
+  "featureTipsUnchanged": true,
+  "canvasChecks": 14
+}

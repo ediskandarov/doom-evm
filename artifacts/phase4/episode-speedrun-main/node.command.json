@@ -1,0 +1,44 @@
+{
+  "name": "node",
+  "command": [
+    "node",
+    "--test",
+    "web/app.test.mjs",
+    "web/budgets.test.mjs",
+    "web/input.test.mjs",
+    "web/input-dom.test.mjs",
+    "web/input-loop.test.mjs",
+    "web/episode.test.mjs",
+    "web/palette.test.mjs",
+    "tools/transport/protocol.test.mjs",
+    "tools/transport/ui-palette.test.mjs",
+    "tools/wad/wad.test.ts",
+    "tools/wad/episode.test.ts"
+  ],
+  "cwd": "/Users/eduard/sandbox/doom-evm",
+  "startedUtc": "2026-10-10T16:45:08.474723+00:00",
+  "endedUtc": "2026-10-10T16:45:26.383627+00:00",
+  "seconds": 17.908673000056297,
+  "exitCode": 0,
+  "logSha256": "bebfcc30819a7dfe61d7c216d22f6c190a6676472ad97abb4bf8477dfca5f279",
+  "matchedTestFiles": [
+    "web/input.test.mjs",
+    "web/input-loop.test.mjs",
+    "web/episode.test.mjs",
+    "tools/transport/protocol.test.mjs",
+    "tools/transport/ui-palette.test.mjs",
+    "tools/wad/wad.test.ts",
+    "tools/wad/episode.test.ts"
+  ],
+  "unmatchedPatterns": [
+    "web/app.test.mjs",
+    "web/budgets.test.mjs",
+    "web/input-dom.test.mjs",
+    "web/palette.test.mjs"
+  ],
+  "coverage": {
+    "testsPassed": 111,
+    "failures": 0,
+    "skips": 0
+  }
+}

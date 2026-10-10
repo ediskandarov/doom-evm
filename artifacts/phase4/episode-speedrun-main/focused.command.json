@@ -1,0 +1,24 @@
+{
+  "name": "focused",
+  "command": [
+    "python3",
+    "artifacts/local/episode-speedrun-main/focused.py"
+  ],
+  "cwd": "/Users/eduard/sandbox/doom-evm",
+  "startedUtc": "2026-10-10T16:45:07.337995+00:00",
+  "endedUtc": "2026-10-10T16:49:39.561343+00:00",
+  "seconds": 272.2203814173117,
+  "exitCode": 0,
+  "logSha256": "1d961111f848dbaa6cd6123ca568ce2f08a931a204ab4757dd19fe3c5a1adb62",
+  "helperEvidencePath": "artifacts/phase4/episode-speedrun-main/focused-runner.py",
+  "helperSha256": "b34a3e68e1f911c3153b768b6ccc282d8441faa5a60334066363052f473d4a4a",
+  "coverage": {
+    "uniqueTests": 239,
+    "suites": 23,
+    "failures": 0,
+    "skips": 0,
+    "fuzzRuns": 256,
+    "fuzzSeed": "0x414",
+    "compileSeconds": 260.11
+  }
+}

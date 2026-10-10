@@ -1,0 +1,14 @@
+{
+  "name": "episode-certificate",
+  "command": [
+    "python3",
+    "tools/reference/episode_completion/checkpoint.py",
+    "--check"
+  ],
+  "cwd": "/Users/eduard/sandbox/doom-evm",
+  "startedUtc": "2026-10-10T16:46:47.761118+00:00",
+  "endedUtc": "2026-10-10T16:46:47.893758+00:00",
+  "seconds": 0.13257887540385127,
+  "exitCode": 1,
+  "logSha256": "abb36bdfa5ecff580de3ee1fb00492a6be6fe5bb030cd58d61ba595295134cfe"
+}

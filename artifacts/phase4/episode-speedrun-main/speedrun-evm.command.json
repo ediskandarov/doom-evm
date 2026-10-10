@@ -1,0 +1,19 @@
+{
+  "name": "speedrun-evm",
+  "command": [
+    "node",
+    "tools/reference/speedrun/evm.mjs",
+    "--port",
+    "18933",
+    "--batch",
+    "5",
+    "--output-prefix",
+    "/Users/eduard/sandbox/doom-evm/artifacts/phase4/episode-speedrun-main/speedrun-evm"
+  ],
+  "cwd": "artifacts/local/episode-speedrun-main/runtime",
+  "startedUtc": "2026-10-10T17:00:46.708445+00:00",
+  "endedUtc": "2026-10-10T17:01:59.285911+00:00",
+  "seconds": 72.57648545783013,
+  "exitCode": 0,
+  "logSha256": "266d6cf1079f6191c616a3d83bc0500aee2a58516f0ed12551d03b337f83e27d"
+}

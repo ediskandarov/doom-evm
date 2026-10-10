@@ -1,0 +1,194 @@
+{
+  "kind": "episode-one-real-chrome-canvas",
+  "pass": true,
+  "startedUtc": "2026-10-10T17:07:35.845Z",
+  "config": {
+    "rpcUrl": "http://127.0.0.1:18935",
+    "wsUrl": "ws://127.0.0.1:18935",
+    "address": "0x5ae1f4bb68f8eac39cfdbdfda2b7344ccbd80faf",
+    "driver": "0xf39fd6e51aad88f6f4ce6ab8827279cfffb92266",
+    "rendererKind": "doom-world-view",
+    "gameplay": true,
+    "productionUI": true,
+    "rawKeyboard": true,
+    "episodeMode": true,
+    "uiFullscreen": false,
+    "startMap": 1,
+    "skill": 2,
+    "deploymentBlock": "0x0",
+    "paletteUrl": "/palette.local.json",
+    "paletteKind": "wad",
+    "resourceIdentity": {
+      "schemaVersion": 0,
+      "wadSha256": "7323bcc168c5a45ff10749b339960e98314740a734c30d4b9f3337001f9e703d",
+      "bundleSha256": "d379076f21645cf7cc5acb056663d0faacc4065489a0ca99738479323c9f7a47",
+      "paletteSha256": "fd895921b5d0a394612bb29852ed003d44d69f76dec31c0dc6b5d5fc7d63f7bb",
+      "paletteVariant": 0
+    },
+    "gasLimit": 10000000000
+  },
+  "frames": [
+    {
+      "label": "New Game E1M1",
+      "state": {
+        "map": 1,
+        "skill": 2,
+        "state": 0,
+        "action": 0,
+        "paused": 0,
+        "last": 0,
+        "next": 0,
+        "wiStage": 0,
+        "wiTic": 0,
+        "finaleStage": 0,
+        "finaleTic": 0
+      },
+      "transaction": "0xa337ee9e8db0d7607590a550e3eff2762622960b43ad6c8a8e565355c717ccf8",
+      "inputSeq": 1,
+      "pixelSha256": "a297ba2dfa2d1eae509b975c96471640802a189389ea15ad741c399218782d54",
+      "palette": 0,
+      "rgbaSha256": "e774efbe632c754d4fd0e1488d0a573d2b79b26c3817f08ceaf5c8243b4a0dc5",
+      "allCanvasPixelsExact": true,
+      "screenshot": "/Users/eduard/sandbox/doom-evm/artifacts/phase4/episode-speedrun-main/fresh-launch-final-browser-0.png"
+    },
+    {
+      "label": "Pause",
+      "state": {
+        "map": 1,
+        "skill": 2,
+        "state": 0,
+        "action": 0,
+        "paused": 1,
+        "last": 0,
+        "next": 0,
+        "wiStage": 0,
+        "wiTic": 0,
+        "finaleStage": 0,
+        "finaleTic": 0
+      },
+      "transaction": "0xa34182c7160addff6a9c21b5fe8a54f11671e6040f15f24099de09f259c2493e",
+      "inputSeq": 2,
+      "pixelSha256": "3a1b7e7b2d05831914d7cccbc0017f83f2f5488ea1afcbbf8d19f119b853289a",
+      "palette": 0,
+      "rgbaSha256": "5c5060b8ced13c57ec2f85390244c271b9b528fff48a7c350a59c293295079e9",
+      "allCanvasPixelsExact": true,
+      "screenshot": "/Users/eduard/sandbox/doom-evm/artifacts/phase4/episode-speedrun-main/fresh-launch-final-browser-1.png"
+    },
+    {
+      "label": "Resume",
+      "state": {
+        "map": 1,
+        "skill": 2,
+        "state": 0,
+        "action": 0,
+        "paused": 0,
+        "last": 0,
+        "next": 0,
+        "wiStage": 0,
+        "wiTic": 0,
+        "finaleStage": 0,
+        "finaleTic": 0
+      },
+      "transaction": "0x1dc24cc4d0c689db5fdf08ec4c904e8777597872e6af9c528f7ebb0587f94114",
+      "inputSeq": 3,
+      "pixelSha256": "a297ba2dfa2d1eae509b975c96471640802a189389ea15ad741c399218782d54",
+      "palette": 0,
+      "rgbaSha256": "e774efbe632c754d4fd0e1488d0a573d2b79b26c3817f08ceaf5c8243b4a0dc5",
+      "allCanvasPixelsExact": true,
+      "screenshot": "/Users/eduard/sandbox/doom-evm/artifacts/phase4/episode-speedrun-main/fresh-launch-final-browser-2.png"
+    },
+    {
+      "label": "Restart",
+      "state": {
+        "map": 1,
+        "skill": 2,
+        "state": 0,
+        "action": 0,
+        "paused": 0,
+        "last": 0,
+        "next": 0,
+        "wiStage": 0,
+        "wiTic": 0,
+        "finaleStage": 0,
+        "finaleTic": 0
+      },
+      "transaction": "0x3b45e23f18dc86237e8fcc95385098ff45a9cd1ea640e147686e5b9b0a4d6c80",
+      "inputSeq": 4,
+      "pixelSha256": "66672b024cee7e41808c7b6a5e1f6f1e04dde53db910bd20bc0f77a4f84228eb",
+      "palette": 0,
+      "rgbaSha256": "5db3e3b9565f553eaac57fbfe4234cfe54febe0b5b37aa91df3eb51a09fd1e3c",
+      "allCanvasPixelsExact": true,
+      "screenshot": "/Users/eduard/sandbox/doom-evm/artifacts/phase4/episode-speedrun-main/fresh-launch-final-browser-3.png"
+    },
+    {
+      "label": "New Game E1M9",
+      "state": {
+        "map": 9,
+        "skill": 2,
+        "state": 0,
+        "action": 0,
+        "paused": 0,
+        "last": 0,
+        "next": 0,
+        "wiStage": 0,
+        "wiTic": 0,
+        "finaleStage": 0,
+        "finaleTic": 0
+      },
+      "transaction": "0x1f03ebbf63e6dc798211b55dd479b7a28fdca4a2a1dc01b0cb217f6e4b3ac01b",
+      "inputSeq": 5,
+      "pixelSha256": "b07c82597f5e81c8a02c2fd7350b3de5cc034b7a46e6004480b392164d14f009",
+      "palette": 0,
+      "rgbaSha256": "b32d204d41f2e54b32cc96927a50e981094e25b8f7e726aa3041a3f10c98bb6e",
+      "allCanvasPixelsExact": true,
+      "screenshot": "/Users/eduard/sandbox/doom-evm/artifacts/phase4/episode-speedrun-main/fresh-launch-final-browser-4.png"
+    },
+    {
+      "label": "Tab Automap",
+      "state": {
+        "map": 9,
+        "skill": 2,
+        "state": 0,
+        "action": 0,
+        "paused": 0,
+        "last": 0,
+        "next": 0,
+        "wiStage": 0,
+        "wiTic": 0,
+        "finaleStage": 0,
+        "finaleTic": 0
+      },
+      "transaction": "0x457e4c2693e73cb95b10b48641268c23c104d3fd4f4ed315f3359881b2233e35",
+      "inputSeq": 6,
+      "pixelSha256": "be989559a2381ff5a3dc72741be83cd8f555c9d9884b307deb568a8095e2f74f",
+      "palette": 0,
+      "rgbaSha256": "d4745de34fe4d305c945d31a86abec1cde3b04f1d29089f559b7e797f6539bbb",
+      "allCanvasPixelsExact": true,
+      "screenshot": "/Users/eduard/sandbox/doom-evm/artifacts/phase4/episode-speedrun-main/fresh-launch-final-browser-5.png"
+    }
+  ],
+  "controls": [
+    "New Game E1M1",
+    "Pause",
+    "Resume",
+    "Restart",
+    "New Game E1M9"
+  ],
+  "sourceHashes": {
+    "web/app.mjs": "3f2e3ff5c2f96d34c974b1ac562390146fac696b202c4579212bea40f0ac5cd1",
+    "web/input-loop.mjs": "3dcd20308e6a448e03ae3650d831070f4baa05b41290160d5845cb1a733c6eee",
+    "web/input.mjs": "3087524e9257a664fa8872f88f747f0b37c56a276ea73b7a2b14f7a933c7cd83",
+    "web/protocol.mjs": "fec5104a0e13b7ca8666200431a1804d53cdb6537c1f0f8f02fb5b69dd70f47e",
+    "web/ui-palette.mjs": "31614c2e32d7105ee075758bb73f5c7cc5f5944a240edaee26e6c374cb415645",
+    "tools/transport/episode-browser-check.mjs": "bb3e3a601f18106f45c92924977fe04a891fc35f13ebccb698ca01a8f1f2689c"
+  },
+  "browser": {
+    "protocolVersion": "1.3",
+    "product": "Chrome/155.0.8059.40",
+    "revision": "@cfaadc5a132d78e1828635aa8405a499f3e14864",
+    "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36",
+    "jsVersion": "15.5.35.20"
+  },
+  "endedUtc": "2026-10-10T17:07:45.706Z",
+  "stoppedOwnedBrowser": true
+}

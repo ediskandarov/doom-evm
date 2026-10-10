@@ -1,0 +1,13 @@
+{
+  "name": "native-pointer",
+  "command": [
+    "python3",
+    "tools/reference/episode_completion/pointer.py"
+  ],
+  "cwd": "artifacts/local/episode-speedrun-main/runtime",
+  "startedUtc": "2026-10-10T16:45:29.554250+00:00",
+  "endedUtc": "2026-10-10T16:45:30.441980+00:00",
+  "seconds": 0.8876643748953938,
+  "exitCode": 0,
+  "logSha256": "7744c1c8f864884504f8c0800e003c45137b44291835d47c8524fb86313bedee"
+}

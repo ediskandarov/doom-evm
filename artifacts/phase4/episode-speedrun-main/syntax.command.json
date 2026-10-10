@@ -1,0 +1,13 @@
+{
+  "name": "syntax",
+  "command": [
+    "python3",
+    "-"
+  ],
+  "cwd": "/Users/eduard/sandbox/doom-evm",
+  "startedUtc": "2026-10-10T16:47:54.716747+00:00",
+  "endedUtc": "2026-10-10T16:47:54.949900+00:00",
+  "seconds": 0.23311512498185039,
+  "exitCode": 0,
+  "logSha256": "1fcd4383b8c729d0cc445ad469d6205c3b5bb36934ab5c93dc5d87fb98bc50de"
+}
