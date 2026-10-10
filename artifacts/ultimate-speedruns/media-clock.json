@@ -1,0 +1,66 @@
+{
+  "pass_": true,
+  "scope": "All five complete MP4s: actual presentation timestamp set, count, each packet duration; no duplicate or missing tic position",
+  "maps": [
+    {
+      "map": "E1M1",
+      "MP4": "artifacts/local/ultimate-speedruns/E1M1/full-rate/speedrun-e1m1.mp4",
+      "MP4SHA256": "406c10fd046c452afe2b31000275b4ab2283e2ba5bc497f95dd2e7665f326478",
+      "frames": 316,
+      "timeBase": "1/35000",
+      "firstPTS": 0,
+      "lastPTS": 315000,
+      "everyPresentationTimestampExact": true,
+      "everyPacketDuration": 1000,
+      "packetProbeSHA256": "b2abbc7b2d15b7e84ea3aa18d1587feb40ce19ef9489fba637b85a36543e36a3"
+    },
+    {
+      "map": "E1M2",
+      "MP4": "artifacts/local/ultimate-speedruns/E1M2/full-rate/speedrun-e1m2.mp4",
+      "MP4SHA256": "3f71cc6cbaced7be14cd15550db3d2e13e2e150b40c81858aa2ed429ad829ab9",
+      "frames": 798,
+      "timeBase": "1/35000",
+      "firstPTS": 0,
+      "lastPTS": 797000,
+      "everyPresentationTimestampExact": true,
+      "everyPacketDuration": 1000,
+      "packetProbeSHA256": "2c8cb41d47549191c06f41bfac082ee1fb63b8e34bb28628e15dad08606fdde3"
+    },
+    {
+      "map": "E1M4",
+      "MP4": "artifacts/local/ultimate-speedruns/E1M4/full-rate/speedrun-e1m4.mp4",
+      "MP4SHA256": "0597c38afe0481047a2c6733064e50a9eeffe7add9b657bb970c2c5beec42196",
+      "frames": 767,
+      "timeBase": "1/35000",
+      "firstPTS": 0,
+      "lastPTS": 766000,
+      "everyPresentationTimestampExact": true,
+      "everyPacketDuration": 1000,
+      "packetProbeSHA256": "d1ac7bc666e85a82ac23451cca4b1261bc42a43c13caa5a2af46a921ff61bd88"
+    },
+    {
+      "map": "E1M7",
+      "MP4": "artifacts/local/ultimate-speedruns/E1M7/full-rate/speedrun-e1m7.mp4",
+      "MP4SHA256": "6dd05aa1e33d80d2662f5d525d9d881ef95554b0095520e2d5e14cacbc2ce8ca",
+      "frames": 2572,
+      "timeBase": "1/35000",
+      "firstPTS": 0,
+      "lastPTS": 2571000,
+      "everyPresentationTimestampExact": true,
+      "everyPacketDuration": 1000,
+      "packetProbeSHA256": "1cfb2a6045b39ab368b79e24929b3796b1f05feb09fe67d09043d5690f39a6be"
+    },
+    {
+      "map": "E1M9",
+      "MP4": "artifacts/local/ultimate-speedruns/E1M9/full-rate/speedrun-e1m9.mp4",
+      "MP4SHA256": "25bd8894f158bf5dd61038049f50c70e498d69d6da3afaeeadfce367dc0213fa",
+      "frames": 1598,
+      "timeBase": "1/35000",
+      "firstPTS": 0,
+      "lastPTS": 1597000,
+      "everyPresentationTimestampExact": true,
+      "everyPacketDuration": 1000,
+      "packetProbeSHA256": "16c3ed441157c614a03f77d109489e7bfaaa9b1f74c6551e88c4ab33c64a2ac2"
+    }
+  ]
+}

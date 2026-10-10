@@ -1,0 +1,248 @@
+{
+  "baseline": "51e879247bb3d6d809af8a0516a097f71c3d0756",
+  "sourceCommitBeforeReportCheckpoint": "3a96868f18e66a9fbc331e054364159a25012156",
+  "durableWorktree": "/Users/eduard/sandbox/doom-evm-ultimate-speedruns",
+  "commercialPayloadsLocalOnly": true,
+  "files": [
+    {
+      "path": "artifacts/ultimate-speedruns/episode-summary.json",
+      "bytes": 12546,
+      "SHA256": "2e203f8d324ca62ea81babd74b32bc8ee2bc25aba330bdb836950a480df3edc2"
+    },
+    {
+      "path": "artifacts/ultimate-speedruns/host-summary.json",
+      "bytes": 1522,
+      "SHA256": "8bf3b218f54a3222edf1844e465841ec953753d81d2c56ac7ea1bf79bba9889b"
+    },
+    {
+      "path": "artifacts/ultimate-speedruns/runtime-notes.json",
+      "bytes": 2833,
+      "SHA256": "e03390561720ef570a30a8bf37a60c679c06de74ad8d2e2cebfa0de1ea2e8e26"
+    },
+    {
+      "path": "artifacts/ultimate-speedruns/preflight.json",
+      "bytes": 851,
+      "SHA256": "f352c9bb294c4651c4f8576cb74249b9b09caa51bade813a7dd03033fef7d24c"
+    },
+    {
+      "path": "artifacts/ultimate-speedruns/reset-handoff.json",
+      "bytes": 1447,
+      "SHA256": "b97e4b3ecc242041a955e945b73bf1923d138fd3e783bf99bca4073f8e971b98"
+    },
+    {
+      "path": "artifacts/ultimate-speedruns/source-index.json",
+      "bytes": 14146,
+      "SHA256": "92b9225c2527d4a43edf4ee71afbacef12b924a544bcf2a7ab3361123f24cfd1"
+    },
+    {
+      "path": "artifacts/ultimate-speedruns/media-clock.json",
+      "bytes": 2564,
+      "SHA256": "d0888fd92827e402da87e975232557a54867b0987f21b6926f32b255f197f764"
+    },
+    {
+      "path": "artifacts/ultimate-speedruns/relocation.json",
+      "bytes": 9129,
+      "SHA256": "8c5c72c327f9aa07bea867c33749e0b16276353543e44fccefeaeb21c0a5c910"
+    },
+    {
+      "path": "tools/reference/ultimate_speedruns/observer.py",
+      "bytes": 4799,
+      "SHA256": "b98d46bffaaaa98df87b9b84508c56038a4fe3f5c2402c0004a69e95e4c5f672"
+    },
+    {
+      "path": "tools/reference/ultimate_speedruns/evm.mjs",
+      "bytes": 31371,
+      "SHA256": "67ca6876e11156116edbbc451881f8b3eca5aaa645fe0bd64540e8d73f605fbb"
+    },
+    {
+      "path": "tools/reference/ultimate_speedruns/encode.py",
+      "bytes": 1096,
+      "SHA256": "57637ffd3ef04810636de0b7ff316e6eb8aa4f991b35cc8c7d19e2ac7368eb0d"
+    },
+    {
+      "path": "tools/reference/ultimate_speedruns/render-diagnostic.py",
+      "bytes": 3375,
+      "SHA256": "dc6d94d50bbb91cfac084a8bab12aa9ae88d9da60c094733d918503c717116e3"
+    },
+    {
+      "path": "tools/reference/ultimate_speedruns/monitor.py",
+      "bytes": 1644,
+      "SHA256": "61335b37d6c24109f4c4453649671f3195cc0da9fee1e25c6cba6f609692255f"
+    },
+    {
+      "path": "tools/reference/ultimate_speedruns/suite.py",
+      "bytes": 4102,
+      "SHA256": "75d52969617070742222c6c13a5d883d61647a932aa3e6ddf5e0d5341df5e2ad"
+    },
+    {
+      "path": "tools/reference/ultimate_speedruns/acquire.py",
+      "bytes": 3158,
+      "SHA256": "5e3fe61ceec183b75e38fe838cbedb36eb54a7376cf124e6cde9c6fe3d1c8703"
+    },
+    {
+      "path": "tools/reference/ultimate_speedruns/stage-inputs.py",
+      "bytes": 1932,
+      "SHA256": "04f8ff910d25bb51d6316da269a9cb8f1e9d6297d340cff61ac2f20738c68393"
+    },
+    {
+      "path": "tools/reference/ultimate_speedruns/verify-native-domain.py",
+      "bytes": 7499,
+      "SHA256": "dc6c103fae51ed248e9e5f880f487d2182fd2904d4c1c5ed50bc7e0f75c6cebf"
+    },
+    {
+      "path": "tools/reference/ultimate_speedruns/intercept-audit.py",
+      "bytes": 2436,
+      "SHA256": "73ec40d31e4fd800d12ada64a3375a90abcf52bfbda4ccec71d4d609154ad29f"
+    },
+    {
+      "path": "tools/reference/ultimate_speedruns/episode-summary.py",
+      "bytes": 4222,
+      "SHA256": "7f16343d6941ceb7bbfdbcced7f93ef083996d7cd2761680141672d3b01a8422"
+    },
+    {
+      "path": "tools/reference/ultimate_speedruns/checkpoint-blocker.py",
+      "bytes": 5771,
+      "SHA256": "0a30e9612779f2c51b0ac4eae494ee6d0a0a9b1366b5ab2dd8d8876ff165433f"
+    },
+    {
+      "path": "tools/reference/ultimate_speedruns/evm-diagnostic.mjs",
+      "bytes": 32216,
+      "SHA256": "1df531592b67895cc910bfefd75edb50a6fac900c44b4f38ef53ca22014009bd"
+    },
+    {
+      "path": "tools/reference/ultimate_speedruns/native.py",
+      "bytes": 7005,
+      "SHA256": "993ec3e57bf26346fdd40cdffe7313833ddeeed7fe40427180750276f3c91c0e"
+    },
+    {
+      "path": "tools/reference/ultimate_speedruns/native-frames-cached.py",
+      "bytes": 5881,
+      "SHA256": "b860cfb437142de639bf3b50338646c3ef6dbd89255dab36270577634c755089"
+    },
+    {
+      "path": "tools/reference/ultimate_speedruns/evm-native-domain.mjs",
+      "bytes": 32147,
+      "SHA256": "37e110603b534c1baa6b9b91e2296851c90342912a66dd6cc3ce2d4e3a675c7b"
+    },
+    {
+      "path": "tools/reference/ultimate_speedruns/README.md",
+      "bytes": 8406,
+      "SHA256": "bed2e1fdef1c749d09b12e6fc40fd4997b9671d456a033fc9a7d17fd10370755"
+    },
+    {
+      "path": "tools/reference/ultimate_speedruns/clean-checkpoints.py",
+      "bytes": 2240,
+      "SHA256": "0ebb0adfa3f9a29a8854f6caeefaeac93ace9ebbdfa9e156ea4243bd19cbab48"
+    },
+    {
+      "path": "tools/reference/ultimate_speedruns/host-summary.py",
+      "bytes": 2309,
+      "SHA256": "0d607371f1db223f381e9ae00fe819a81c062a84a34d66da20aa2345a6279f46"
+    },
+    {
+      "path": "tools/reference/ultimate_speedruns/native-frames.py",
+      "bytes": 7999,
+      "SHA256": "cc90fe231a79588991417a6aeb6e1534efd445fd293677fd0745bbe7cca7c682"
+    },
+    {
+      "path": "tools/reference/ultimate_speedruns/test_checkpoint_cleanup.py",
+      "bytes": 2220,
+      "SHA256": "e60046a0217a4123fa7caa4a4e031cb5bcfe3fe094f4e15e6c37c836ffb789f4"
+    },
+    {
+      "path": "tools/reference/ultimate_speedruns/checkpoint-result.py",
+      "bytes": 4550,
+      "SHA256": "ff13116ac49c9102165d84435c97882d23dc6ca12d029d1fa2b0beb547b09c89"
+    },
+    {
+      "path": "tools/reference/ultimate_speedruns/verify-gameplay.py",
+      "bytes": 2630,
+      "SHA256": "a7cec03daed848e13fa05b521f26012921a1b6207ad481aa5ddb4387c7bf73e6"
+    },
+    {
+      "path": "tools/reference/ultimate_speedruns/verify.py",
+      "bytes": 7064,
+      "SHA256": "900d5ef265fabad0eadcd8f9c0d02c4a67c65fc1a33ca748e0bb88cf034264c6"
+    },
+    {
+      "path": "tools/reference/ultimate_speedruns/pixel-domain.py",
+      "bytes": 2819,
+      "SHA256": "f57a2cefa89713d5e9bc6cb974eeb04f48003797ac07b23e6a5db1ed5b737e79"
+    },
+    {
+      "path": "tools/reference/ultimate_speedruns/gameplay.mjs",
+      "bytes": 32003,
+      "SHA256": "3665ef49aa58ceef392a6b72d132700a50c966cb5c971817136bb5dddff6fdbe"
+    },
+    {
+      "path": "tools/reference/ultimate_speedruns/native-domain.mjs",
+      "bytes": 4322,
+      "SHA256": "9f6394e3613e4d79ca0aa353d6f5e21aca06b568961e401e4fb71dff3c01ce6d"
+    },
+    {
+      "path": "tools/reference/ultimate_speedruns/pack.ts",
+      "bytes": 2903,
+      "SHA256": "f69c6483d324fef5d791768c9c942cfc41a1b7f27d7fde32cbb76a414dab8acb"
+    },
+    {
+      "path": "tools/reference/ultimate_speedruns/adapters.py",
+      "bytes": 2614,
+      "SHA256": "e2a0899997d6768bfa21678118fb00952c22c58d88d0e2a709e3b67b3514adfb"
+    },
+    {
+      "path": "docs/ULTIMATE-SPEEDRUNS.md",
+      "bytes": 10497,
+      "SHA256": "680fabd102c8aba716ab79e3724e4b453d2dffe89d7febada79dd66c08eb2bdd"
+    },
+    {
+      "path": "tools/reference/ultimate_speedruns/README.md",
+      "bytes": 8406,
+      "SHA256": "bed2e1fdef1c749d09b12e6fc40fd4997b9671d456a033fc9a7d17fd10370755"
+    },
+    {
+      "path": "docs/ULTIMATE-SPEEDRUN-E1M1.md",
+      "bytes": 3400,
+      "SHA256": "71f3fda4221c2ed485a40f2f6a51659cf3a85dd18aa2fa4459f57088e9497b49"
+    },
+    {
+      "path": "docs/ULTIMATE-SPEEDRUN-E1M2.md",
+      "bytes": 2484,
+      "SHA256": "0b86ff453c44d6349855c43657ee459dfe6910842fd855807d45328cad90e625"
+    },
+    {
+      "path": "docs/ULTIMATE-SPEEDRUN-E1M3.md",
+      "bytes": 4151,
+      "SHA256": "cc8c81493fc7921fd02377c79ab5c1a3cc9d5afdce889439ffdb5d3374a27276"
+    },
+    {
+      "path": "docs/ULTIMATE-SPEEDRUN-E1M4.md",
+      "bytes": 1954,
+      "SHA256": "a071c40014c3da42f9a819194bf07cbca29020304781bd06a6eecc190bcc5511"
+    },
+    {
+      "path": "docs/ULTIMATE-SPEEDRUN-E1M5.md",
+      "bytes": 3226,
+      "SHA256": "447e5967a36116930e6dd644f99beba4dcc2e542a3f052c750bdb0714ad5045e"
+    },
+    {
+      "path": "docs/ULTIMATE-SPEEDRUN-E1M6.md",
+      "bytes": 3014,
+      "SHA256": "c9bc5db1bf55f07cb64609d43acf34c741f0af82d4828bb74e7cfaf2d189e7cd"
+    },
+    {
+      "path": "docs/ULTIMATE-SPEEDRUN-E1M7.md",
+      "bytes": 2838,
+      "SHA256": "aa5dc1899225a0dc69b257606cdc50c10ea97d31ad5218c8778abf5b86e5a063"
+    },
+    {
+      "path": "docs/ULTIMATE-SPEEDRUN-E1M8.md",
+      "bytes": 3575,
+      "SHA256": "24606e1b4b5093885f64724f152c76d7588f069621ba5f42646fef1ed126adee"
+    },
+    {
+      "path": "docs/ULTIMATE-SPEEDRUN-E1M9.md",
+      "bytes": 3229,
+      "SHA256": "dda680ca4f5ee99cca4fdef073c92d45ec556dd83de1acea0ebf1d58bf8f8e1d"
+    }
+  ]
+}

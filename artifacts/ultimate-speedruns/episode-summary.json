@@ -1,0 +1,311 @@
+{
+  "profile": "classic-ultimate-doom-1.9",
+  "memoryProfile": "integrated-experimental-virtual-pointer",
+  "IWAD": {
+    "MD5": "c4fe9fd920207691a9f493668e0a2083",
+    "SHA256": "6fdf361847b46228cfebd9f3af09cd844282ac75f3edbb61ca4cb27103ce2e7f"
+  },
+  "maps": [
+    {
+      "map": "E1M1",
+      "status": "complete35fps",
+      "demo": {
+        "author": "aconfusedhuman",
+        "originalName": "e1m1-903.lmp",
+        "URL": "https://dsdarchive.com/files/demos/doom/54454/e1m1-903.zip",
+        "SHA256": "e5766abc098faf496c2b7787668e4c21c0a4ebf819c7667ce59c4ca14dc39288"
+      },
+      "nativeTics": 316,
+      "nativeAllAllocationProfilesExact": true,
+      "EVMGameplayTics": 316,
+      "exactGameplayObservations": 317,
+      "EVMFrames": 316,
+      "allThreeNativeWholeFramesEqual": 316,
+      "commonNativePixelsOutsideVirtualSources": 20224000,
+      "virtualSampleUses": 0,
+      "virtualTouchedDestinations": 0,
+      "mainRecordingGas": 252404150437,
+      "separateCompleteGameplayGas": 0,
+      "MP4": "artifacts/local/ultimate-speedruns/E1M1/full-rate/speedrun-e1m1.mp4",
+      "rejectedTic": null,
+      "result": "artifacts/ultimate-speedruns/E1M1/result.json",
+      "evidence": "artifacts/ultimate-speedruns/E1M1/evidence-manifest.json"
+    },
+    {
+      "map": "E1M2",
+      "status": "complete35fps",
+      "demo": {
+        "author": "trioct",
+        "originalName": "e1m2-2280.lmp",
+        "URL": "https://dsdarchive.com/files/demos/doom/50975/e1m2-2280.zip",
+        "SHA256": "1210cbccd5148091f438d9fb5f8f763b0b49cdb1e3870380521c0b2632fbc15f"
+      },
+      "nativeTics": 798,
+      "nativeAllAllocationProfilesExact": true,
+      "EVMGameplayTics": 798,
+      "exactGameplayObservations": 799,
+      "EVMFrames": 798,
+      "allThreeNativeWholeFramesEqual": 798,
+      "commonNativePixelsOutsideVirtualSources": 51072000,
+      "virtualSampleUses": 0,
+      "virtualTouchedDestinations": 0,
+      "mainRecordingGas": 780776944043,
+      "separateCompleteGameplayGas": 0,
+      "MP4": "artifacts/local/ultimate-speedruns/E1M2/full-rate/speedrun-e1m2.mp4",
+      "rejectedTic": null,
+      "result": "artifacts/ultimate-speedruns/E1M2/result.json",
+      "evidence": "artifacts/ultimate-speedruns/E1M2/evidence-manifest.json"
+    },
+    {
+      "map": "E1M3",
+      "status": "rendering-blocked",
+      "demo": {
+        "author": "Jonathan Rimmer",
+        "originalName": "e1m3-036/e1m3-036.lmp",
+        "URL": "https://dsdarchive.com/files/demos/doom/96083/e1m3-036.zip",
+        "SHA256": "d91a896d529672e5bbc011b7607de75308c183643ee204d722e8704e348a9f5e"
+      },
+      "nativeTics": 1291,
+      "nativeAllAllocationProfilesExact": false,
+      "EVMGameplayTics": 1291,
+      "exactGameplayObservations": 1292,
+      "EVMFrames": 922,
+      "allThreeNativeWholeFramesEqual": 922,
+      "commonNativePixelsOutsideVirtualSources": 59007997,
+      "virtualSampleUses": 3,
+      "virtualTouchedDestinations": 3,
+      "mainRecordingGas": 1055438777854,
+      "separateCompleteGameplayGas": 40480507576,
+      "MP4": null,
+      "rejectedTic": 923,
+      "result": "artifacts/ultimate-speedruns/E1M3/result.json",
+      "evidence": "artifacts/ultimate-speedruns/E1M3/evidence-manifest.json"
+    },
+    {
+      "map": "E1M4",
+      "status": "complete35fps",
+      "demo": {
+        "author": "izzybell",
+        "originalName": "e1m4-0021.lmp",
+        "URL": "https://dsdarchive.com/files/demos/doom/113314/e1m4-0021.zip",
+        "SHA256": "1f5427b2776aa7deb83716350eb6d252e4953895aa338c239bf62eeac5d67fdf"
+      },
+      "nativeTics": 767,
+      "nativeAllAllocationProfilesExact": true,
+      "EVMGameplayTics": 767,
+      "exactGameplayObservations": 768,
+      "EVMFrames": 767,
+      "allThreeNativeWholeFramesEqual": 767,
+      "commonNativePixelsOutsideVirtualSources": 49088000,
+      "virtualSampleUses": 0,
+      "virtualTouchedDestinations": 0,
+      "mainRecordingGas": 672360227071,
+      "separateCompleteGameplayGas": 0,
+      "MP4": "artifacts/local/ultimate-speedruns/E1M4/full-rate/speedrun-e1m4.mp4",
+      "rejectedTic": null,
+      "result": "artifacts/ultimate-speedruns/E1M4/result.json",
+      "evidence": "artifacts/ultimate-speedruns/E1M4/evidence-manifest.json"
+    },
+    {
+      "map": "E1M5",
+      "status": "rendering-blocked",
+      "demo": {
+        "author": "trioct",
+        "originalName": "e1m5-100.lmp",
+        "URL": "https://dsdarchive.com/files/demos/doom/51000/e1m5-100.zip",
+        "SHA256": "4a3ffd0a1f92ac2980e9c3b5aafde01a6ec2fb4eaca0fdde61ab85d51e1ea48e"
+      },
+      "nativeTics": 2110,
+      "nativeAllAllocationProfilesExact": false,
+      "EVMGameplayTics": 2110,
+      "exactGameplayObservations": 2111,
+      "EVMFrames": 1063,
+      "allThreeNativeWholeFramesEqual": 1062,
+      "commonNativePixelsOutsideVirtualSources": 68031999,
+      "virtualSampleUses": 1,
+      "virtualTouchedDestinations": 1,
+      "mainRecordingGas": 1021199600919,
+      "separateCompleteGameplayGas": 54947882777,
+      "MP4": null,
+      "rejectedTic": 1064,
+      "result": "artifacts/ultimate-speedruns/E1M5/result.json",
+      "evidence": "artifacts/ultimate-speedruns/E1M5/evidence-manifest.json"
+    },
+    {
+      "map": "E1M6",
+      "status": "rendering-blocked",
+      "demo": {
+        "author": "ShadowCaco33",
+        "originalName": "e1m6-0136.lmp",
+        "URL": "https://dsdarchive.com/files/demos/doom/108200/e1m6-0136.zip",
+        "SHA256": "fa51135c2bee9b4c82c1b0390c6e29755b347237c981b911cef044e4b01e1ea6"
+      },
+      "nativeTics": 3385,
+      "nativeAllAllocationProfilesExact": true,
+      "EVMGameplayTics": 3385,
+      "exactGameplayObservations": 3386,
+      "EVMFrames": 1735,
+      "allThreeNativeWholeFramesEqual": 1735,
+      "commonNativePixelsOutsideVirtualSources": 111039999,
+      "virtualSampleUses": 1,
+      "virtualTouchedDestinations": 1,
+      "mainRecordingGas": 2256471884011,
+      "separateCompleteGameplayGas": 134775446906,
+      "MP4": null,
+      "rejectedTic": 1736,
+      "result": "artifacts/ultimate-speedruns/E1M6/result.json",
+      "evidence": "artifacts/ultimate-speedruns/E1M6/evidence-manifest.json"
+    },
+    {
+      "map": "E1M7",
+      "status": "complete35fps",
+      "demo": {
+        "author": "mhrz",
+        "originalName": "e1m7-113.lmp",
+        "URL": "https://dsdarchive.com/files/demos/doom/56602/e1m7-113.zip",
+        "SHA256": "182931b0afdcace7dffe66c74bdcd546e6e110eed95a725ce79dc7dd4ce5041e"
+      },
+      "nativeTics": 2572,
+      "nativeAllAllocationProfilesExact": true,
+      "EVMGameplayTics": 2572,
+      "exactGameplayObservations": 2573,
+      "EVMFrames": 2572,
+      "allThreeNativeWholeFramesEqual": 2571,
+      "commonNativePixelsOutsideVirtualSources": 164607997,
+      "virtualSampleUses": 3,
+      "virtualTouchedDestinations": 3,
+      "mainRecordingGas": 2926248654012,
+      "separateCompleteGameplayGas": 0,
+      "MP4": "artifacts/local/ultimate-speedruns/E1M7/full-rate/speedrun-e1m7.mp4",
+      "rejectedTic": null,
+      "result": "artifacts/ultimate-speedruns/E1M7/result.json",
+      "evidence": "artifacts/ultimate-speedruns/E1M7/evidence-manifest.json"
+    },
+    {
+      "map": "E1M8",
+      "status": "rendering-blocked",
+      "demo": {
+        "author": "Sedlo",
+        "originalName": "e1m8-046.lmp",
+        "URL": "https://dsdarchive.com/files/demos/doom/30217/e1m8-046.zip",
+        "SHA256": "a47622d63d3b797280842c86b858cf80a7d85b7b1df03882db08f5f16fb261ef"
+      },
+      "nativeTics": 1638,
+      "nativeAllAllocationProfilesExact": true,
+      "EVMGameplayTics": 1638,
+      "exactGameplayObservations": 1639,
+      "EVMFrames": 262,
+      "allThreeNativeWholeFramesEqual": 262,
+      "commonNativePixelsOutsideVirtualSources": 16768000,
+      "virtualSampleUses": 0,
+      "virtualTouchedDestinations": 0,
+      "mainRecordingGas": 186743099068,
+      "separateCompleteGameplayGas": 26990631866,
+      "MP4": null,
+      "rejectedTic": 263,
+      "result": "artifacts/ultimate-speedruns/E1M8/alternatives/sedlo-046/result.json",
+      "evidence": "artifacts/ultimate-speedruns/E1M8/alternatives/sedlo-046/evidence-manifest.json"
+    },
+    {
+      "map": "E1M9",
+      "status": "complete35fps",
+      "demo": {
+        "author": "ShadowCaco33",
+        "originalName": "e1m9-0045.lmp",
+        "URL": "https://dsdarchive.com/files/demos/doom/108203/e1m9-0045.zip",
+        "SHA256": "ae640d1a17919e24983afd9d191d75502f0f745b89a52fff808ee41a2761bfb1"
+      },
+      "nativeTics": 1598,
+      "nativeAllAllocationProfilesExact": true,
+      "EVMGameplayTics": 1598,
+      "exactGameplayObservations": 1599,
+      "EVMFrames": 1598,
+      "allThreeNativeWholeFramesEqual": 1597,
+      "commonNativePixelsOutsideVirtualSources": 102271998,
+      "virtualSampleUses": 2,
+      "virtualTouchedDestinations": 2,
+      "mainRecordingGas": 1421620264871,
+      "separateCompleteGameplayGas": 0,
+      "MP4": "artifacts/local/ultimate-speedruns/E1M9/full-rate/speedrun-e1m9.mp4",
+      "rejectedTic": null,
+      "result": "artifacts/ultimate-speedruns/E1M9/result.json",
+      "evidence": "artifacts/ultimate-speedruns/E1M9/evidence-manifest.json"
+    }
+  ],
+  "totals": {
+    "fullRateRecordings": 5,
+    "renderingBlockedMaps": 4,
+    "nativeAndEVMGameplayTics": 14475,
+    "exactGameplayObservations": 14484,
+    "renderedFrames": 10033,
+    "completeRecordingFrames": 6051,
+    "commonNativePixelsOutsideVirtualSources": 642111990,
+    "virtualSampleUses": 10,
+    "virtualTouchedDestinations": 10,
+    "selectedRecordingAttemptGas": 10573263602286,
+    "separateBlockedMapGameplayGas": 257194469125
+  },
+  "proofs": [
+    {
+      "path": "artifacts/local/ultimate-speedruns/E1M1/full-rate/pixel-domain.json",
+      "bytes": 49706,
+      "SHA256": "fd430f203faf8af04df2b7922b3e527446550d46a61b8515817eed52dc8457de"
+    },
+    {
+      "path": "artifacts/ultimate-speedruns/E1M1/evidence-manifest.json",
+      "bytes": 2354,
+      "SHA256": "b2ca385146678652e6344324d771ecda648a734b0815b8c67c3997c94ecb3682"
+    },
+    {
+      "path": "artifacts/local/ultimate-speedruns/E1M2/full-rate/pixel-domain.json",
+      "bytes": 124299,
+      "SHA256": "aa6eba76f48ff01a9128f844d6ba1cef79dff60b849aac7495a4a8518de5a80c"
+    },
+    {
+      "path": "artifacts/ultimate-speedruns/E1M2/evidence-manifest.json",
+      "bytes": 2357,
+      "SHA256": "5545a310bd169a00a8e53472de9dc2a085770ddd63be026c7cf06007b252d115"
+    },
+    {
+      "path": "artifacts/ultimate-speedruns/E1M3/evidence-manifest.json",
+      "bytes": 5641,
+      "SHA256": "371fefa0efa1521e66f8cd628fe7107cdc82d219e1eb268b580dcd816c025c54"
+    },
+    {
+      "path": "artifacts/local/ultimate-speedruns/E1M4/full-rate/pixel-domain.json",
+      "bytes": 119494,
+      "SHA256": "f29d4848442af3edc287cf85ffa45e7c74ad0a4c3f43bde2a1bfa7a08628a457"
+    },
+    {
+      "path": "artifacts/ultimate-speedruns/E1M4/evidence-manifest.json",
+      "bytes": 2357,
+      "SHA256": "8066533d7d44d4c0829317678d516f3d4ecc0453e6f03eb5b705354a53c6d83c"
+    },
+    {
+      "path": "artifacts/ultimate-speedruns/E1M5/evidence-manifest.json",
+      "bytes": 5640,
+      "SHA256": "d05a1eef7b4597edc541641da2abb27683eddf6223e6167f25b96402116037d2"
+    },
+    {
+      "path": "artifacts/ultimate-speedruns/E1M6/evidence-manifest.json",
+      "bytes": 5641,
+      "SHA256": "cc512d1722a81b8f3e4849044e7437c19625fb442f8785d3e3e55d337c03e9ae"
+    },
+    {
+      "path": "artifacts/ultimate-speedruns/E1M7/evidence-manifest.json",
+      "bytes": 2570,
+      "SHA256": "2804f705156508c44367fa9c93558ab8ae44c9bb194abf8482933663f0f6ff29"
+    },
+    {
+      "path": "artifacts/ultimate-speedruns/E1M8/alternatives/sedlo-046/evidence-manifest.json",
+      "bytes": 6250,
+      "SHA256": "b113ea3b0f77e85d85e0bda1203e11ada419d1878f911f5c32362625c71c7558"
+    },
+    {
+      "path": "artifacts/ultimate-speedruns/E1M9/evidence-manifest.json",
+      "bytes": 2570,
+      "SHA256": "34eed2678a106b70675936ea0b7eb30cbb59d7ef9faca8749962a0379d96169c"
+    }
+  ],
+  "limits": "Finite native profiles only. Allocation-fill gates stay failed for E1M3/E1M5; strict whole DSG1 matches named normal C profile. Virtual-derived destinations are a deterministic extension. Accepted partial frames are not complete recordings. Gas totals cover selected recording proofs and listed separate gameplay runs, excluding diagnostic/extra failed attempts and unmeasured interrupted work. MP4s are lossy presentation; raw indexed8 is receipt-authenticated. No universal native pixel, production browser/UI or continuously persisted renderer-history claim."
+}
