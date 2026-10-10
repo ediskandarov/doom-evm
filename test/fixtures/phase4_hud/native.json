@@ -1,0 +1,194 @@
+{
+  "status": "passed",
+  "profiles": [
+    {
+      "name": "O0",
+      "flags": [
+        "-O0"
+      ],
+      "outputSha256": "a6741b6597a644c40fc651c5e47fb279793d5a2b901be01aaf8e99d20d4a8e06",
+      "returnCode": 0
+    },
+    {
+      "name": "O2",
+      "flags": [
+        "-O2"
+      ],
+      "outputSha256": "a6741b6597a644c40fc651c5e47fb279793d5a2b901be01aaf8e99d20d4a8e06",
+      "returnCode": 0
+    },
+    {
+      "name": "sanitized",
+      "flags": [
+        "-O1",
+        "-g",
+        "-fsanitize=address,undefined",
+        "-fno-sanitize=array-bounds",
+        "-fno-omit-frame-pointer"
+      ],
+      "outputSha256": "a6741b6597a644c40fc651c5e47fb279793d5a2b901be01aaf8e99d20d4a8e06",
+      "returnCode": 0
+    }
+  ],
+  "exactAgreement": true,
+  "caseCount": 209,
+  "snapshots": 575,
+  "sourceSha256": {
+    "original/DOOM/linuxdoom-1.10/hu_stuff.c": "0273745e404b2d151eb231fd4146e88d4fccef87412ac937c87ba7253141db5a",
+    "original/DOOM/linuxdoom-1.10/hu_stuff.h": "09a1c0ef0434b0b46e9ea3b43232898b7b939b07bf18f302458227948d98579c",
+    "original/DOOM/linuxdoom-1.10/hu_lib.c": "2e0f06d46e0c581bdc59fc66791c9001d23cca0c0e25983e1f74ac9095e8f3f3",
+    "original/DOOM/linuxdoom-1.10/hu_lib.h": "611143caa98ef13992845fde571be9a9c3d944fa850ee2f2d8b0406aae9ed02e",
+    "original/DOOM/linuxdoom-1.10/v_video.c": "52fb89efb1e6de3842c197b32009d620dcd1578f7111a7502abe6110a925e5eb",
+    "original/DOOM/linuxdoom-1.10/d_englsh.h": "b018968e3aef65e0009d6ec676d40c8731b33e2882758640d3028c530c87a789",
+    "tools/reference/hud/compat.h": "74322474196ca3d47b1ffc74baabe0da3782b18e307a5009d80102dec5f36ca5",
+    "tools/reference/hud/host.c": "04e5e1e4053e5a38625ef53bcae4082248af7117d2bf5118855fe711e5ed10d2",
+    "tools/reference/hud/reference.py": "e85143ce6448c0cba82c6ce4a68e092d599a80e270456dcdd932312a1e30e92e",
+    "tools/reference/hud/gameplay.py": "1cd2a35619e613806354fa71c662336ab846df0daccc38dfb0f14987e0222d7a"
+  },
+  "projectionSha256": "77e909281e3a583cc7590ff8388b71ea606f3e3943336c30fa4c1d780d2738a6",
+  "functionMapping": [
+    {
+      "file": "hu_stuff.c",
+      "function": "HU_Init",
+      "startLine": 392,
+      "endLine": 412,
+      "sha256": "b29ba1519c9400ce9ba5091e402f41499de6507e20615d6fd38b255b4f65fdf4"
+    },
+    {
+      "file": "hu_stuff.c",
+      "function": "HU_Stop",
+      "startLine": 414,
+      "endLine": 417,
+      "sha256": "28315d30238d8995d20e64352c6980a5b5c8ba3c3880501006b094cb741b7c7c"
+    },
+    {
+      "file": "hu_stuff.c",
+      "function": "HU_Start",
+      "startLine": 419,
+      "endLine": 484,
+      "sha256": "b507679d2f92bd74815dcfc3302e8160fe56271e55fa8f7a454f014fb2c42141"
+    },
+    {
+      "file": "hu_stuff.c",
+      "function": "HU_Drawer",
+      "startLine": 486,
+      "endLine": 494,
+      "sha256": "73d500e06afcf7b46e7086ed711553935b0ed45ade60abb18ff5fa933b31af40"
+    },
+    {
+      "file": "hu_stuff.c",
+      "function": "HU_Erase",
+      "startLine": 496,
+      "endLine": 503,
+      "sha256": "87d98d55efe9a52aa1e8b39f8e249fbffc17861fb5f5e158d54daa727420b164"
+    },
+    {
+      "file": "hu_stuff.c",
+      "function": "HU_Ticker",
+      "startLine": 505,
+      "endLine": 578,
+      "sha256": "0e22c3c05e5648af661222b25a193c5189e047571efdf639ca62850ff3d546b2"
+    },
+    {
+      "file": "hu_stuff.c",
+      "function": "HU_Responder",
+      "startLine": 617,
+      "endLine": 759,
+      "sha256": "5abd64eab9f315276939ed7b6c264e8cb18f16d4b50a6bf02a802fb4f595f218"
+    },
+    {
+      "file": "hu_lib.c",
+      "function": "HUlib_init",
+      "startLine": 42,
+      "endLine": 44,
+      "sha256": "477ba1cdfc42418f1aae5b03f5e9355e1fd132f1372c55afb55ad00344c4e6b7"
+    },
+    {
+      "file": "hu_lib.c",
+      "function": "HUlib_clearTextLine",
+      "startLine": 46,
+      "endLine": 51,
+      "sha256": "27c41fb098751548c5c844c917933348062f749c28ec649e6a0b1ed6daa9a239"
+    },
+    {
+      "file": "hu_lib.c",
+      "function": "HUlib_initTextLine",
+      "startLine": 53,
+      "endLine": 66,
+      "sha256": "2c67bb7c2a615b8aa7417114c8b1b46b75f5934d5cf181c23091e631c9765d42"
+    },
+    {
+      "file": "hu_lib.c",
+      "function": "HUlib_addCharToTextLine",
+      "startLine": 68,
+      "endLine": 84,
+      "sha256": "afcb06fea8cafef9ed9f9dac359eb63761dc2da92d10cf8d8c3527dc30d6fc76"
+    },
+    {
+      "file": "hu_lib.c",
+      "function": "HUlib_delCharFromTextLine",
+      "startLine": 86,
+      "endLine": 97,
+      "sha256": "de258c684be6901cfb810984df7c4c6c110aee82fe1034fda90193b31ffd5324"
+    },
+    {
+      "file": "hu_lib.c",
+      "function": "HUlib_drawTextLine",
+      "startLine": 99,
+      "endLine": 139,
+      "sha256": "06b2a2c02839cc99825e071439e7a1a23cfa1bfe831fec6cdb20274d338f98f9"
+    },
+    {
+      "file": "hu_lib.c",
+      "function": "HUlib_eraseTextLine",
+      "startLine": 143,
+      "endLine": 174,
+      "sha256": "80bcca43ffbf69eb10e92e35edc7e0e21fd8173b692ef42df9aed900caf8beed"
+    },
+    {
+      "file": "hu_lib.c",
+      "function": "HUlib_initSText",
+      "startLine": 176,
+      "endLine": 198,
+      "sha256": "7999bfd069db7e5f80f518b96115354735aa6f2c4954d2dd6d0fd724a81f5117"
+    },
+    {
+      "file": "hu_lib.c",
+      "function": "HUlib_addLineToSText",
+      "startLine": 200,
+      "endLine": 214,
+      "sha256": "fe6d146f231956f84ab9fb45bd4e22d435c20214830d37fac2d0b6e321c91e0f"
+    },
+    {
+      "file": "hu_lib.c",
+      "function": "HUlib_addMessageToSText",
+      "startLine": 216,
+      "endLine": 229,
+      "sha256": "9827d56f5ceb91b16c3aee066ebecc404f80c3592e885b08809bf3c8f81766d8"
+    },
+    {
+      "file": "hu_lib.c",
+      "function": "HUlib_drawSText",
+      "startLine": 231,
+      "endLine": 252,
+      "sha256": "c6beb122c1d241f68f71809bb945895c051951787f1cd9a816f861ca41df3a0b"
+    },
+    {
+      "file": "hu_lib.c",
+      "function": "HUlib_eraseSText",
+      "startLine": 254,
+      "endLine": 267,
+      "sha256": "1fa2fa9a839275b46a473878a80902d8e7283e47f8ebd99f7b9852cec1d9551b"
+    }
+  ],
+  "hostAdaptations": [
+    "hu_lib.c, v_video.c and m_bbox.c compiled unchanged; hu_stuff functions mechanically extracted",
+    "HU_Start chat widget/inputbuffer setup and HU_Drawer/HU_Erase chat calls removed; HU_Ticker incoming-chat branch removed",
+    "HU_Init keyboard translation selection uses inert host pointers; font loader is original sprintf/W_CacheLumpName loop",
+    "HU_Responder uses exact extracted single-player Enter branch and keydown gate; chat/modifier branches excluded",
+    "Existing Solidity Player empty string is the null-message sentinel; empty pending fixture input maps to C NULL",
+    "R_VideoErase equivalent memcpy screen1 to screen0; screen pattern explicitly seeded",
+    "ASCII C locale; invalid maps and signed-char toupper undefined inputs excluded",
+    "ASan/UBSan; only original variable-sized patch columnofs array-bounds check disabled; leak detection disabled for borrowed text/font fixture allocations"
+  ]
+}

@@ -1,0 +1,768 @@
+{
+  "provenance": {
+    "kind": "wad",
+    "wadName": "freedoom1.wad",
+    "wadSha256": "7323bcc168c5a45ff10749b339960e98314740a734c30d4b9f3337001f9e703d",
+    "upstreamCommit": "a77dfb96cb91780ca334d0d4cfd86957558007e0",
+    "license": "Freedoom BSD-3-Clause; see test/fixtures/wad/COPYING.txt"
+  },
+  "resourceBlobSha256": "0a07ab5de33592142c3427d29e8f2eaf25d0e4fa21e03ac9c9b0fb5d77531d16",
+  "fonts": [
+    {
+      "name": "STCFN033",
+      "lumpId": 650,
+      "sha256": "9b75dc3391a1742499282e7e1da8b9fadacf8595b82cca71d1cbd7337b6a6446",
+      "length": 72,
+      "dimensionsOffsets": [
+        4,
+        7,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "STCFN034",
+      "lumpId": 651,
+      "sha256": "8d620ac036f0d6b355fd62de8d81d9d3ec6835b7093888c30689bc15796ee3db",
+      "length": 102,
+      "dimensionsOffsets": [
+        7,
+        7,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "STCFN035",
+      "lumpId": 652,
+      "sha256": "5b93aa6a4ab4630c7c36d8f259e3951b5c984a894749ff08e4305b5c0109da7c",
+      "length": 152,
+      "dimensionsOffsets": [
+        9,
+        7,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "STCFN036",
+      "lumpId": 653,
+      "sha256": "586e6666bb4b5b4d1c4797afeecaf78f04e720bf3de38b4d531283bdd96ba2b9",
+      "length": 120,
+      "dimensionsOffsets": [
+        7,
+        7,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "STCFN037",
+      "lumpId": 654,
+      "sha256": "e389160c8b6047b3a9d5643e1c87b0908ab1face97022f951f405f677a3ca708",
+      "length": 136,
+      "dimensionsOffsets": [
+        9,
+        7,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "STCFN038",
+      "lumpId": 655,
+      "sha256": "ae384bcc4f2a04c275e5ff2b81fff49e4e8d5e528b3dbc20604ebeba14717bab",
+      "length": 129,
+      "dimensionsOffsets": [
+        8,
+        7,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "STCFN039",
+      "lumpId": 656,
+      "sha256": "7317b7a6187c43c08b7f72dde9bb910a1007e82cb44879825a067e1d732c1729",
+      "length": 61,
+      "dimensionsOffsets": [
+        4,
+        7,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "STCFN040",
+      "lumpId": 657,
+      "sha256": "e7ef10b0b1dc6274ac886e4e1ecd78f807614de99d2d2361c4b3bee38162b470",
+      "length": 99,
+      "dimensionsOffsets": [
+        6,
+        7,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "STCFN041",
+      "lumpId": 658,
+      "sha256": "8dde51e0d373f80a71c7e1861d507ade74df424e3a5bab084c5ba0ad423bff68",
+      "length": 99,
+      "dimensionsOffsets": [
+        6,
+        7,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "STCFN042",
+      "lumpId": 659,
+      "sha256": "bd6d9071215a1fba985bb738e15a90a27586296243d6f7bc61d371ef0461bf18",
+      "length": 138,
+      "dimensionsOffsets": [
+        8,
+        7,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "STCFN043",
+      "lumpId": 660,
+      "sha256": "f74112516a7ecb36be8a5dbe2e8b8450040454783904699b76908ee80bbcb739",
+      "length": 98,
+      "dimensionsOffsets": [
+        7,
+        7,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "STCFN044",
+      "lumpId": 661,
+      "sha256": "b03ac0685c7b2c68f1f84e1ebd73aad64de130e8b32eb771487166e0963c0ac8",
+      "length": 61,
+      "dimensionsOffsets": [
+        4,
+        7,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "STCFN045",
+      "lumpId": 662,
+      "sha256": "bff3aca7d4ac5feeb67a0a14fb4abcb61dd58f929cf139d558cbce4e543a9e49",
+      "length": 92,
+      "dimensionsOffsets": [
+        7,
+        7,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "STCFN046",
+      "lumpId": 663,
+      "sha256": "f97ce12ef69ed9a341d0124156c9b91a3823eccc7f46b1ac8841004b5681d2dd",
+      "length": 56,
+      "dimensionsOffsets": [
+        4,
+        7,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "STCFN047",
+      "lumpId": 664,
+      "sha256": "10e7effdc151488064399fab26f4a989d3f838da66af514950d2c5eae6aeeea6",
+      "length": 102,
+      "dimensionsOffsets": [
+        7,
+        7,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "STCFN048",
+      "lumpId": 665,
+      "sha256": "21a012e300fc6b792f3b589599d57099361a24a6b59e03607a6cb7d7153098c3",
+      "length": 108,
+      "dimensionsOffsets": [
+        7,
+        7,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "STCFN049",
+      "lumpId": 666,
+      "sha256": "c3bc449f1dd48136cb76ba498c2ce3f39412f6514ee2db8260510bb729505be2",
+      "length": 81,
+      "dimensionsOffsets": [
+        5,
+        7,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "STCFN050",
+      "lumpId": 667,
+      "sha256": "46ba0e4e534c67a0ee620468fd6b3fef565fc9235e6b871aecae7c382e96619d",
+      "length": 125,
+      "dimensionsOffsets": [
+        7,
+        7,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "STCFN051",
+      "lumpId": 668,
+      "sha256": "616d93304db6ce9d0d2d4c861f889ad6dacaa13d4a0a88950a9e072bf5631145",
+      "length": 120,
+      "dimensionsOffsets": [
+        7,
+        7,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "STCFN052",
+      "lumpId": 669,
+      "sha256": "89cc6316a6a11f48773705cb13c65dee050512e489fa0439137dccccdb51a2ba",
+      "length": 109,
+      "dimensionsOffsets": [
+        7,
+        7,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "STCFN053",
+      "lumpId": 670,
+      "sha256": "9f84074305551d438f0796f0f32ad0e4ab43d47797cc0861b4833b9b866d4ef2",
+      "length": 123,
+      "dimensionsOffsets": [
+        7,
+        7,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "STCFN054",
+      "lumpId": 671,
+      "sha256": "381655db298d256128f72aef8449b91821f19639b21c95caab7922c98272865a",
+      "length": 105,
+      "dimensionsOffsets": [
+        7,
+        7,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "STCFN055",
+      "lumpId": 672,
+      "sha256": "b585280eb213c5a7c9a30739fe5cf37df7ac27a524d230375878057e0a0f5598",
+      "length": 115,
+      "dimensionsOffsets": [
+        7,
+        7,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "STCFN056",
+      "lumpId": 673,
+      "sha256": "9b0c52e6384170b19fefbfb4a010d6c86edab41f208b3299d08b49baf44876ef",
+      "length": 130,
+      "dimensionsOffsets": [
+        8,
+        7,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "STCFN057",
+      "lumpId": 674,
+      "sha256": "d81b2e3c462d42c544e74ae6df9b9d79b5d60463c09652fdfcbe8aac6e92ee8c",
+      "length": 109,
+      "dimensionsOffsets": [
+        7,
+        7,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "STCFN058",
+      "lumpId": 675,
+      "sha256": "c2bf879c16eb40a777f9fcf2905197f9aeae9acec2c3daab7d814cd831c176c6",
+      "length": 72,
+      "dimensionsOffsets": [
+        4,
+        7,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "STCFN059",
+      "lumpId": 676,
+      "sha256": "675160d9547b5838e10d91748e0918a2556cb715b721e29737a8eef9d4487c75",
+      "length": 69,
+      "dimensionsOffsets": [
+        4,
+        7,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "STCFN060",
+      "lumpId": 677,
+      "sha256": "2ff71e7931df8f2502be799b006239be202096377e4609c4c0588a0398d64bf5",
+      "length": 95,
+      "dimensionsOffsets": [
+        6,
+        7,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "STCFN061",
+      "lumpId": 678,
+      "sha256": "8dbc215758734f9ddc5380bcd2ff930adb6d7dfbe48ee5db480f0abfcb3a2637",
+      "length": 106,
+      "dimensionsOffsets": [
+        7,
+        7,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "STCFN062",
+      "lumpId": 679,
+      "sha256": "6ae77ab035047418fbdde6d96075e081228bf86c599a8f2a2baa2eb123f0d5f4",
+      "length": 95,
+      "dimensionsOffsets": [
+        6,
+        7,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "STCFN063",
+      "lumpId": 680,
+      "sha256": "1e912e3faefa13a4a7e0ddff001e56d5689e80736333ff88d0594fe7fdbb311a",
+      "length": 106,
+      "dimensionsOffsets": [
+        7,
+        7,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "STCFN064",
+      "lumpId": 681,
+      "sha256": "7ee90e6b23780a3699c713f24fbb1993acb96d2e403a4518c56950d909457276",
+      "length": 143,
+      "dimensionsOffsets": [
+        9,
+        7,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "STCFN065",
+      "lumpId": 682,
+      "sha256": "4866ca847db9dcde7b6d9cbf064d98c4bc6e6c2782b1e3fd7c8926cc2ae04fb2",
+      "length": 138,
+      "dimensionsOffsets": [
+        9,
+        7,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "STCFN066",
+      "lumpId": 683,
+      "sha256": "9941e00fcd9632e483b2068436e0aaf63f58b0097e35dd9bc7c0b2b2289f229e",
+      "length": 133,
+      "dimensionsOffsets": [
+        8,
+        7,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "STCFN067",
+      "lumpId": 684,
+      "sha256": "60ad3e1aa66a28a2dbf6e810a68ff08e8b5307b9d0c99f8b6b15387f0f3966a7",
+      "length": 133,
+      "dimensionsOffsets": [
+        8,
+        7,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "STCFN068",
+      "lumpId": 685,
+      "sha256": "10731264cebfef672e349a62603a9a868ad07246f9da084a7caa4e5e28255be9",
+      "length": 127,
+      "dimensionsOffsets": [
+        8,
+        7,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "STCFN069",
+      "lumpId": 686,
+      "sha256": "3ffac1b7127ee308c052ba9edb7f50ca5e447d68ceab2c854816c96c0b97bd5c",
+      "length": 114,
+      "dimensionsOffsets": [
+        7,
+        7,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "STCFN070",
+      "lumpId": 687,
+      "sha256": "4cd64be3429ce166a99f3b040c03097fd6369f08a30115ff915b78a9b542b588",
+      "length": 111,
+      "dimensionsOffsets": [
+        7,
+        7,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "STCFN071",
+      "lumpId": 688,
+      "sha256": "dd84e5da80162b07cb735b3a463eb12024e77ec82005071a8450dbbbc2851fa1",
+      "length": 111,
+      "dimensionsOffsets": [
+        7,
+        7,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "STCFN072",
+      "lumpId": 689,
+      "sha256": "a0742512c427f1fce98f807f4a0e62d31306e8b0a797ea72b4c5d9d31625a7f6",
+      "length": 120,
+      "dimensionsOffsets": [
+        7,
+        7,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "STCFN073",
+      "lumpId": 690,
+      "sha256": "f39b4330aaba06e842ea0279f48e4435e1139547d1b4b5ac9f54376355705829",
+      "length": 110,
+      "dimensionsOffsets": [
+        6,
+        7,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "STCFN074",
+      "lumpId": 691,
+      "sha256": "a26f60b41834c36eb1b0761dc410dcd5e31a46e3eaaaea9b8d84d9fb2bb123c5",
+      "length": 117,
+      "dimensionsOffsets": [
+        7,
+        7,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "STCFN075",
+      "lumpId": 692,
+      "sha256": "23ace5f91980d3c8b089e5b7813f433cb41533c036509528a5fdfefc5f5069f5",
+      "length": 122,
+      "dimensionsOffsets": [
+        7,
+        7,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "STCFN076",
+      "lumpId": 693,
+      "sha256": "abc9954c2dfd46c684a2c15530c16f9f6808383f08c97d2e79fe8bcd77d7e8d1",
+      "length": 105,
+      "dimensionsOffsets": [
+        7,
+        7,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "STCFN077",
+      "lumpId": 694,
+      "sha256": "4540015ceec30c5c47fcd7868d0a7c5e29817a065f89a9317c604797e1e643c5",
+      "length": 145,
+      "dimensionsOffsets": [
+        9,
+        7,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "STCFN078",
+      "lumpId": 695,
+      "sha256": "c0e5a1def1f7fdd54635d3bf12c857f413eeb25b237e284dc72416a55dfdbf99",
+      "length": 132,
+      "dimensionsOffsets": [
+        8,
+        7,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "STCFN079",
+      "lumpId": 696,
+      "sha256": "5110d34abd101ae88b2672bc7dc6f4ef5c82c2bb9416349435584689833bbf8e",
+      "length": 128,
+      "dimensionsOffsets": [
+        9,
+        7,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "STCFN080",
+      "lumpId": 697,
+      "sha256": "e3f28dd5ffdf436f6ebae0d7abb7b3ff993b82522735d9776e9e865f7802b0dd",
+      "length": 123,
+      "dimensionsOffsets": [
+        8,
+        7,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "STCFN081",
+      "lumpId": 698,
+      "sha256": "70e51eecf4eab8100ed741e849ae3e28957faa312c939740feb9fbdd6e7a49db",
+      "length": 128,
+      "dimensionsOffsets": [
+        9,
+        7,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "STCFN082",
+      "lumpId": 699,
+      "sha256": "39b5980bd48eb8c2bdde5396427d318d922dc63e67b49b7396dc1230cb4279d8",
+      "length": 120,
+      "dimensionsOffsets": [
+        7,
+        7,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "STCFN083",
+      "lumpId": 700,
+      "sha256": "2d5f83e6c73ddb053a1a049b6f5345d11960e42f8d75671073f362d09e632e2b",
+      "length": 124,
+      "dimensionsOffsets": [
+        8,
+        7,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "STCFN084",
+      "lumpId": 701,
+      "sha256": "87a0459d1bf5f743b9d61eb079e4b5b3d0d0ce27d587d86929d573ceeb93c7a6",
+      "length": 120,
+      "dimensionsOffsets": [
+        8,
+        7,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "STCFN085",
+      "lumpId": 702,
+      "sha256": "cd397a5443a7274c7457e0a6a9afb8e1af8837f5d7d1a69babb6af2fe49ba135",
+      "length": 132,
+      "dimensionsOffsets": [
+        8,
+        7,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "STCFN086",
+      "lumpId": 703,
+      "sha256": "5f1ad561e238601104917adf6d8c144101b96dcf7510672025204f65eb170a80",
+      "length": 134,
+      "dimensionsOffsets": [
+        9,
+        7,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "STCFN087",
+      "lumpId": 704,
+      "sha256": "36a8a8c9a6a8f9c2d230c1ae4f985f1d06192ae2c9dd13eeb9be9ad1a15aa67d",
+      "length": 141,
+      "dimensionsOffsets": [
+        9,
+        7,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "STCFN088",
+      "lumpId": 705,
+      "sha256": "4d331b211a2441e1314ade9ca80a8503c7bb880af49d4c38e48c208346f54247",
+      "length": 144,
+      "dimensionsOffsets": [
+        8,
+        7,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "STCFN089",
+      "lumpId": 706,
+      "sha256": "92ee6fdf0ec3e906f0955a818f281f1e51732db7bd37181dc0965e7c68826885",
+      "length": 122,
+      "dimensionsOffsets": [
+        8,
+        7,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "STCFN090",
+      "lumpId": 707,
+      "sha256": "cbad92170276c9119a8fe2cf3610a8829d04f138193b9f60accaf9fb902cd073",
+      "length": 126,
+      "dimensionsOffsets": [
+        7,
+        7,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "STCFN091",
+      "lumpId": 708,
+      "sha256": "edea41268f957ea15e58b937df1f06048d870efca026e6467857acf7b68c91cc",
+      "length": 110,
+      "dimensionsOffsets": [
+        6,
+        7,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "STCFN092",
+      "lumpId": 709,
+      "sha256": "7370aa240fcb48a1287d7f02e1898b7e10298dd29af747b0b2e4a792b2c38a2b",
+      "length": 102,
+      "dimensionsOffsets": [
+        7,
+        7,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "STCFN093",
+      "lumpId": 710,
+      "sha256": "b62f5513627aee1f708507714946945772b756ab287f5fea817f4a0ff6ea66ca",
+      "length": 110,
+      "dimensionsOffsets": [
+        6,
+        7,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "STCFN094",
+      "lumpId": 711,
+      "sha256": "f9eaf2affdc45eae02b8d018c839cda00e3900509bff4cf2cd8b3ec24cb264c1",
+      "length": 93,
+      "dimensionsOffsets": [
+        7,
+        7,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "STCFN095",
+      "lumpId": 712,
+      "sha256": "463321aacbf0c2d037f81aa0a003fd346142ffaa15e8bcd8eef4b9d0cae6eb8f",
+      "length": 92,
+      "dimensionsOffsets": [
+        7,
+        7,
+        0,
+        0
+      ]
+    }
+  ]
+}
