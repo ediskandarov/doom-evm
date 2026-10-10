@@ -1,0 +1,19 @@
+{
+  "map": "E1M3",
+  "author": "Jonathan Rimmer",
+  "engine": "DSDA-Doom v0.28.3cl3",
+  "category": "UV Speed",
+  "note": "",
+  "downloadUrl": "https://dsdarchive.com/files/demos/doom/96083/e1m3-036.zip",
+  "runUrl": "https://dsdarchive.com/wads/doom?category=UV+Speed&level=E1M3",
+  "selection": "First listed non-TAS single-player DSDA-Doom complevel3 UV Speed row; not a claim of world-record status.",
+  "originalName": "e1m3-036/e1m3-036.lmp",
+  "demoBytes": 6407,
+  "demoSha256": "d91a896d529672e5bbc011b7607de75308c183643ee204d722e8704e348a9f5e",
+  "archiveSha256": "edc169c6d4e8f952cc9134de7b99716c338e8abcdff11e457b9d57cdd7440eb0",
+  "authorNotes": {
+    "e1m3-036/e1m3-036.txt": "For https://dsdarchive.com/\r\n\r\nPlayer: Jonathan Rimmer\r\nDate: 2025-January-22 22:50\r\nIWAD: DOOM.wad\r\nCategory: UV Speed\r\nMap: E1M3\r\nSource Port: dsda-doom v0.28.3\r\nTime: 0:36.89\r\n\r\nDescription:\r\n\r\nI was never particularly happy with my 38s demo in 2021, as it was such an ugly run in many\r\nways. Still, it was a record, so I submitted it, but I never really moved on from this map.\r\nOver the years I've had several periods of grinding it, usually when I had some extra free\r\ntime for one reason or another. I gradually improved my skill and consistency, made more use\r\nof SR50, and made various micro refinements to the route to speed things up and attempt to\r\ntame the RNG just a little bit. But despite getting a few low 38s runs, I never managed to\r\nclose out a whole-second improvement.\r\n\r\nRecently I've had some time off, waiting to start a new job, and I decided to give it\r\nanother go. This time I really felt like I was getting somewhere. I was able to get the \r\nstarting shotgun with far more consistency than ever before. I also realised that, if\r\neverything came together in a single run, 0:36 was a possibility. I did a lot of offline\r\nrunning, and then started streaming when it really felt like I was getting close. And\r\neventually this run happened :-)\r\n\r\nIt's still not perfect. The start can go a little smoother if you get the shotgun in two\r\nshots, I get briefly blocked by a sergeant on the way back from the blue key (who \r\nsurvives a point blank shotgun blast, due to blockmap shenanigans I guess) and the\r\nending is a little iffy (I was rather nervous by this point). But overall, I'm happy with\r\nit. Whether it stands for years or gets beaten tomorrow, I think it fairly represents\r\njust about the best I can do on this map, so is a nice note to finish my E1M3 career on."
+  },
+  "IWADMD5": "c4fe9fd920207691a9f493668e0a2083",
+  "IWADSHA256": "6fdf361847b46228cfebd9f3af09cd844282ac75f3edbb61ca4cb27103ce2e7f"
+}

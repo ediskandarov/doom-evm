@@ -1,0 +1,55 @@
+{
+  "map": "E1M1",
+  "author": "aconfusedhuman",
+  "engine": "DSDA-Doom v0.18.0cl3",
+  "category": "UV Speed",
+  "note": "",
+  "downloadUrl": "https://dsdarchive.com/files/demos/doom/54454/e1m1-903.zip",
+  "runUrl": "https://dsdarchive.com/wads/doom?category=UV+Speed&level=E1M1",
+  "selection": "First listed non-TAS single-player DSDA-Doom complevel3 UV Speed row; not a claim of world-record status.",
+  "originalName": "e1m1-903.lmp",
+  "demoBytes": 13247,
+  "demoSha256": "e5766abc098faf496c2b7787668e4c21c0a4ebf819c7667ce59c4ca14dc39288",
+  "archiveSha256": "8fcc186514e522dd61edc19aed6943c983afe1bff2f27480d3ba699ee7268f2e",
+  "authorNotes": {
+    "e1m1-903.txt": "player: aconfusedhuman\r\ndate: 08-06-2021\r\niwad: DOOM.wad\r\npwad:\r\nmap: e1m1\r\nskill: 4\r\ncategory: uv-speed\r\nsourceport: dsda doom 0.18.0\r\ntime: 9.03\r\ncomments: this map has broken me\r\n"
+  },
+  "IWADMD5": "c4fe9fd920207691a9f493668e0a2083",
+  "IWADSHA256": "6fdf361847b46228cfebd9f3af09cd844282ac75f3edbb61ca4cb27103ce2e7f",
+  "header": {
+    "version": 109,
+    "skill": 3,
+    "episode": 1,
+    "map": 1,
+    "deathmatch": 0,
+    "respawn": 0,
+    "fast": 0,
+    "nomonsters": 0,
+    "consoleplayer": 0,
+    "playeringame": [
+      1,
+      0,
+      0,
+      0
+    ]
+  },
+  "totalDemoTics": 3280,
+  "markerOffset": 13133,
+  "footer": {
+    "VERSION": "2",
+    "PORTNAME": "dsda-doom 0.18.0",
+    "CMDLINE": "-iwad \"DOOM.wad\" -complevel 3 "
+  },
+  "dsdaFooterChecksumVerified": null,
+  "originalDecoder": {
+    "file": "g_game.c",
+    "function": "G_ReadDemoTiccmd",
+    "startLine": 1491,
+    "endLine": 1503,
+    "sha256": "77f7b1aeca0bf6da361bf3c29af3cde4f2f291f8deeaa9426017b12dbbdcb345"
+  },
+  "decoderExact": true,
+  "wadSha256": "6fdf361847b46228cfebd9f3af09cd844282ac75f3edbb61ca4cb27103ce2e7f",
+  "stockLoaderCompatible": false,
+  "recordingWadIdentity": "Not independently known; compatible pinned IWAD replay must be demonstrated."
+}

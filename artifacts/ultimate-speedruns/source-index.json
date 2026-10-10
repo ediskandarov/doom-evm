@@ -1,0 +1,178 @@
+{
+  "pageUrl": "https://dsdarchive.com/wads/doom?category=UV+Speed&level=Episode+1+ILs",
+  "pageSha256": "7bbbe885468b617b649fc32b375826541916b4e30463794dec9dfea48d966886",
+  "retrievedUTC": "2026-10-10T19:45:17Z",
+  "selected": [
+    {
+      "map": "E1M1",
+      "author": "aconfusedhuman",
+      "engine": "DSDA-Doom v0.18.0cl3",
+      "category": "UV Speed",
+      "note": "",
+      "downloadUrl": "https://dsdarchive.com/files/demos/doom/54454/e1m1-903.zip",
+      "runUrl": "https://dsdarchive.com/wads/doom?category=UV+Speed&level=E1M1",
+      "selection": "First listed non-TAS single-player DSDA-Doom complevel3 UV Speed row; not a claim of world-record status.",
+      "originalName": "e1m1-903.lmp",
+      "demoBytes": 13247,
+      "demoSha256": "e5766abc098faf496c2b7787668e4c21c0a4ebf819c7667ce59c4ca14dc39288",
+      "archiveSha256": "8fcc186514e522dd61edc19aed6943c983afe1bff2f27480d3ba699ee7268f2e",
+      "authorNotes": {
+        "e1m1-903.txt": "player: aconfusedhuman\r\ndate: 08-06-2021\r\niwad: DOOM.wad\r\npwad:\r\nmap: e1m1\r\nskill: 4\r\ncategory: uv-speed\r\nsourceport: dsda doom 0.18.0\r\ntime: 9.03\r\ncomments: this map has broken me\r\n"
+      },
+      "IWADMD5": "c4fe9fd920207691a9f493668e0a2083",
+      "IWADSHA256": "6fdf361847b46228cfebd9f3af09cd844282ac75f3edbb61ca4cb27103ce2e7f"
+    },
+    {
+      "map": "E1M2",
+      "author": "trioct",
+      "engine": "DSDA-Doom v0.10.0cl3",
+      "category": "UV Speed",
+      "note": "",
+      "downloadUrl": "https://dsdarchive.com/files/demos/doom/50975/e1m2-2280.zip",
+      "runUrl": "https://dsdarchive.com/wads/doom?category=UV+Speed&level=E1M2",
+      "selection": "First listed non-TAS single-player DSDA-Doom complevel3 UV Speed row; not a claim of world-record status.",
+      "originalName": "e1m2-2280.lmp",
+      "demoBytes": 4195,
+      "demoSha256": "1210cbccd5148091f438d9fb5f8f763b0b49cdb1e3870380521c0b2632fbc15f",
+      "archiveSha256": "2ede1def22094b92e27396af92aa8703e0812dd4bac5c64c9775b2dbf205c166",
+      "authorNotes": {
+        "e1m2-2280.txt": "Player: Trioct\r\nIWAD: Doom.wad\r\nPWAD:\r\nMap: E1M2\r\nSkill: 4\r\nCategory: UV-Speed\r\nExe: dsda-doom v0.10.0 -complevel 3\r\nTime: 0:22.80\r\n\r\nComments: Stairs were sloppy, doors were kinda weak. Not too bad though\r\n"
+      },
+      "IWADMD5": "c4fe9fd920207691a9f493668e0a2083",
+      "IWADSHA256": "6fdf361847b46228cfebd9f3af09cd844282ac75f3edbb61ca4cb27103ce2e7f"
+    },
+    {
+      "map": "E1M3",
+      "author": "Jonathan Rimmer",
+      "engine": "DSDA-Doom v0.28.3cl3",
+      "category": "UV Speed",
+      "note": "",
+      "downloadUrl": "https://dsdarchive.com/files/demos/doom/96083/e1m3-036.zip",
+      "runUrl": "https://dsdarchive.com/wads/doom?category=UV+Speed&level=E1M3",
+      "selection": "First listed non-TAS single-player DSDA-Doom complevel3 UV Speed row; not a claim of world-record status.",
+      "originalName": "e1m3-036/e1m3-036.lmp",
+      "demoBytes": 6407,
+      "demoSha256": "d91a896d529672e5bbc011b7607de75308c183643ee204d722e8704e348a9f5e",
+      "archiveSha256": "edc169c6d4e8f952cc9134de7b99716c338e8abcdff11e457b9d57cdd7440eb0",
+      "authorNotes": {
+        "e1m3-036/e1m3-036.txt": "For https://dsdarchive.com/\r\n\r\nPlayer: Jonathan Rimmer\r\nDate: 2025-January-22 22:50\r\nIWAD: DOOM.wad\r\nCategory: UV Speed\r\nMap: E1M3\r\nSource Port: dsda-doom v0.28.3\r\nTime: 0:36.89\r\n\r\nDescription:\r\n\r\nI was never particularly happy with my 38s demo in 2021, as it was such an ugly run in many\r\nways. Still, it was a record, so I submitted it, but I never really moved on from this map.\r\nOver the years I've had several periods of grinding it, usually when I had some extra free\r\ntime for one reason or another. I gradually improved my skill and consistency, made more use\r\nof SR50, and made various micro refinements to the route to speed things up and attempt to\r\ntame the RNG just a little bit. But despite getting a few low 38s runs, I never managed to\r\nclose out a whole-second improvement.\r\n\r\nRecently I've had some time off, waiting to start a new job, and I decided to give it\r\nanother go. This time I really felt like I was getting somewhere. I was able to get the \r\nstarting shotgun with far more consistency than ever before. I also realised that, if\r\neverything came together in a single run, 0:36 was a possibility. I did a lot of offline\r\nrunning, and then started streaming when it really felt like I was getting close. And\r\neventually this run happened :-)\r\n\r\nIt's still not perfect. The start can go a little smoother if you get the shotgun in two\r\nshots, I get briefly blocked by a sergeant on the way back from the blue key (who \r\nsurvives a point blank shotgun blast, due to blockmap shenanigans I guess) and the\r\nending is a little iffy (I was rather nervous by this point). But overall, I'm happy with\r\nit. Whether it stands for years or gets beaten tomorrow, I think it fairly represents\r\njust about the best I can do on this map, so is a nice note to finish my E1M3 career on."
+      },
+      "IWADMD5": "c4fe9fd920207691a9f493668e0a2083",
+      "IWADSHA256": "6fdf361847b46228cfebd9f3af09cd844282ac75f3edbb61ca4cb27103ce2e7f"
+    },
+    {
+      "map": "E1M4",
+      "author": "izzybell",
+      "engine": "DSDA-Doom v0.29.4cl3",
+      "category": "UV Speed",
+      "note": "",
+      "downloadUrl": "https://dsdarchive.com/files/demos/doom/113314/e1m4-0021.zip",
+      "runUrl": "https://dsdarchive.com/wads/doom?category=UV+Speed&level=E1M4",
+      "selection": "First listed non-TAS single-player DSDA-Doom complevel3 UV Speed row; not a claim of world-record status.",
+      "originalName": "e1m4-0021.lmp",
+      "demoBytes": 3341,
+      "demoSha256": "1f5427b2776aa7deb83716350eb6d252e4953895aa338c239bf62eeac5d67fdf",
+      "archiveSha256": "1c2a2bb927aee45b6e6998f46bb2e94073469a506cfe3115776f96e75edb9048",
+      "authorNotes": {
+        "e1m4-0021.txt": "Player: izzybell\r\nPort: dsda-doom-0.29.4\r\nIWAD: DOOM.wad\r\nSkill: 4\r\nMap: e1m4\r\nCatagory: UV Speed\r\nTime: 00:21.91\r\n\r\nNotes:\r\nDe-rusting continues, got this on my first attempt and honestly im quite happy with it! I probably\r\ncould've gotten a low 20 if I grabbed the key and keep my speed through the yellow key door but still. Happy with this one."
+      },
+      "IWADMD5": "c4fe9fd920207691a9f493668e0a2083",
+      "IWADSHA256": "6fdf361847b46228cfebd9f3af09cd844282ac75f3edbb61ca4cb27103ce2e7f"
+    },
+    {
+      "map": "E1M5",
+      "author": "trioct",
+      "engine": "DSDA-Doom v0.10.0cl3",
+      "category": "UV Speed",
+      "note": "",
+      "downloadUrl": "https://dsdarchive.com/files/demos/doom/51000/e1m5-100.zip",
+      "runUrl": "https://dsdarchive.com/wads/doom?category=UV+Speed&level=E1M5",
+      "selection": "First listed non-TAS single-player DSDA-Doom complevel3 UV Speed row; not a claim of world-record status.",
+      "originalName": "e1m5-100.lmp",
+      "demoBytes": 9575,
+      "demoSha256": "4a3ffd0a1f92ac2980e9c3b5aafde01a6ec2fb4eaca0fdde61ab85d51e1ea48e",
+      "archiveSha256": "2d25bcb4e1977d8a8da21ce62c037ee1b806d8cb222cda11743ef20ecfc075b6",
+      "authorNotes": {
+        "e1m5-100.txt": "Player: Trioct\r\nIWAD: Doom.wad\r\nPWAD:\r\nMap: E1M5\r\nSkill: 4\r\nCategory: UV-Speed\r\nExe: dsda-doom v0.10.0 -complevel 3\r\nTime: 1:00.29\r\n\r\nComments: I just couldn't get a sub 1 minute. The level has defeated me.\r\n"
+      },
+      "IWADMD5": "c4fe9fd920207691a9f493668e0a2083",
+      "IWADSHA256": "6fdf361847b46228cfebd9f3af09cd844282ac75f3edbb61ca4cb27103ce2e7f"
+    },
+    {
+      "map": "E1M6",
+      "author": "ShadowCaco33",
+      "engine": "DSDA-Doom v0.29.0cl3",
+      "category": "UV Speed",
+      "note": "",
+      "downloadUrl": "https://dsdarchive.com/files/demos/doom/108200/e1m6-0136.zip",
+      "runUrl": "https://dsdarchive.com/wads/doom?category=UV+Speed&level=E1M6",
+      "selection": "First listed non-TAS single-player DSDA-Doom complevel3 UV Speed row; not a claim of world-record status.",
+      "originalName": "e1m6-0136.lmp",
+      "demoBytes": 15721,
+      "demoSha256": "fa51135c2bee9b4c82c1b0390c6e29755b347237c981b911cef044e4b01e1ea6",
+      "archiveSha256": "94ab9ab505baa1ac55cd970dcad83f35a53a4437a1d96f8191b4bfbe05a481e5",
+      "authorNotes": {
+        "e1m6-0136.txt": "Doom Speed Demo Archive\nhttps://dsdarchive.com/\n\nIwad:      DOOM.WAD\nMap:       E1M6\nSkill:     4\nCategory:  UV Speed\nExe:       dsda-doom 0.29.0 -complevel 3\nRecorded on: 10/31/25\nTime:      1:36.71\n\nAuthor:    ShadowCaco33\n\nComments:  Got a drastic improvement over my last time of 2:00\n"
+      },
+      "IWADMD5": "c4fe9fd920207691a9f493668e0a2083",
+      "IWADSHA256": "6fdf361847b46228cfebd9f3af09cd844282ac75f3edbb61ca4cb27103ce2e7f"
+    },
+    {
+      "map": "E1M7",
+      "author": "mhrz",
+      "engine": "DSDA-Doom v0.19.7cl3",
+      "category": "UV Speed",
+      "note": "",
+      "downloadUrl": "https://dsdarchive.com/files/demos/doom/56602/e1m7-113.zip",
+      "runUrl": "https://dsdarchive.com/wads/doom?category=UV+Speed&level=E1M7",
+      "selection": "First listed non-TAS single-player DSDA-Doom complevel3 UV Speed row; not a claim of world-record status.",
+      "originalName": "e1m7-113.lmp",
+      "demoBytes": 11051,
+      "demoSha256": "182931b0afdcace7dffe66c74bdcd546e6e110eed95a725ce79dc7dd4ce5041e",
+      "archiveSha256": "b0104482eef13890777eb38d369126a3167ea638ff7a4cf7c8e6a8523f2ee5ac",
+      "authorNotes": {
+        "e1m7-113.txt": "Filename   : Doom.wad\r\nTitle      : The Ultimate Doom\r\nMap        : E1M7\r\nCategory   : UV-Speed\r\nExe        : dsda-doom 0.19.7 -complevel 3\r\nTime       : 1:13\r\nAuthor     : mhrz\r\n\r\nComments: Just a few hundred attempts from reaching Dwaze's attempt count :), after checking out some episode 1\r\nmaps to run for UV-Speed and trying some of them I thought they were awful, until I found this run which I\r\ninnocently thought was pretty beatable but it turns out I was wrong. The run isn't that bad until the ending which is just awful, at one point I felt that the only outcome from the ending is to either lose all your time by getting blocked by everything or to just die from not getting there with good enough health, I think my best attempt to the blue door was an 0:54 (compared to the 0:56 in this run) which probably died or ended with an awful time c:, I was also able to finish off one attempt that died at the ending with 1:11 so 1:10 should be \r\npossible with some insane luck and a great ending. My fastest runs before this one were 2 1:14.83's (lol)\r\nand a 1:14.9x so naturally I assumed i'm probably gonna beat it by ticks due to my awful luck, really happy that\r\ndidn't happen :D\r\n"
+      },
+      "IWADMD5": "c4fe9fd920207691a9f493668e0a2083",
+      "IWADSHA256": "6fdf361847b46228cfebd9f3af09cd844282ac75f3edbb61ca4cb27103ce2e7f"
+    },
+    {
+      "map": "E1M8",
+      "author": "Zero-Master",
+      "engine": "DSDA-Doom v0.24.3cl3",
+      "category": "UV Speed",
+      "note": "",
+      "downloadUrl": "https://dsdarchive.com/files/demos/doom/63387/e1m8-017.zip",
+      "runUrl": "https://dsdarchive.com/wads/doom?category=UV+Speed&level=E1M8",
+      "selection": "First listed non-TAS single-player DSDA-Doom complevel3 UV Speed row; not a claim of world-record status.",
+      "originalName": "e1m8-017.lmp",
+      "demoBytes": 3364,
+      "demoSha256": "3b24a44c2603aea15a91897b11eb4f1f52e29b2353c61b36d6957ac89c825f22",
+      "archiveSha256": "58fee6cfb240fca6422ee387b650709de7da86ba41e07199a4e3d6f987e311a9",
+      "authorNotes": {
+        "e1m8-017.txt": "Runner: Zero-Master\r\nDate: 2022-06-03\r\nIWAD: Doom.wad\r\nCategory: UV-Speed\r\nMap: E1M8 (Phobos Anomaly)\r\nSource Port: DSDA-Doom v0.24.3\r\nTime: 0:17.00\r\n\r\nDescription: \r\nI didn't even think it was possible to get E1M8 like this without having the barrels blow up, so I was completely surprised by it and didn't react very quickly. But I was at the correct coordinate and fortunate positioning of the pinkies did the job instead. I also didn't SR50 for some of the outdoor section, though I got this extremely quickly with hardly any serious attempts at it, was still just trying to get a hang of the inputs. \r\n\r\nNot sure if it's possible to do it without lowering the wall and waking up the pinkies, if something like that would exist then it would be 100% consistent like pl11. Usually several pinkies survive the barrels so you could get this consistent as well perhaps if you just kill them in the right place, but that would be far too slow.\r\n\r\nNo doubt the TAS time can also be improved as you should be able to blow up the barrels, fire the pistol to get all ghost and just go directly to the exit. It would skip having to wait for the door to open so it would also improve upon my E1 TAS."
+      },
+      "IWADMD5": "c4fe9fd920207691a9f493668e0a2083",
+      "IWADSHA256": "6fdf361847b46228cfebd9f3af09cd844282ac75f3edbb61ca4cb27103ce2e7f"
+    },
+    {
+      "map": "E1M9",
+      "author": "ShadowCaco33",
+      "engine": "DSDA-Doom v0.29.4cl3",
+      "category": "UV Speed",
+      "note": "",
+      "downloadUrl": "https://dsdarchive.com/files/demos/doom/108203/e1m9-0045.zip",
+      "runUrl": "https://dsdarchive.com/wads/doom?category=UV+Speed&level=E1M9",
+      "selection": "First listed non-TAS single-player DSDA-Doom complevel3 UV Speed row; not a claim of world-record status.",
+      "originalName": "e1m9-0045.lmp",
+      "demoBytes": 7729,
+      "demoSha256": "ae640d1a17919e24983afd9d191d75502f0f745b89a52fff808ee41a2761bfb1",
+      "archiveSha256": "a618a1dddd141db230f500d6055dfa08febb68f670efa7cc0963aa0e7c89f352",
+      "authorNotes": {
+        "e1m9-0045.txt": "Doom Speed Demo Archive\nhttps://dsdarchive.com/\n\nIwad:      DOOM.WAD\nMap:       E1M9\nSkill:     4\nCategory:  UV Speed\nExe:       dsda-doom 0.29.4 -complevel 3\nRecorded on: 1/22/26\nTime:      0:45.66\n\nAuthor:    ShadowCaco33\n\nComments:  Took a more direct path and got 45\n"
+      },
+      "IWADMD5": "c4fe9fd920207691a9f493668e0a2083",
+      "IWADSHA256": "6fdf361847b46228cfebd9f3af09cd844282ac75f3edbb61ca4cb27103ce2e7f"
+    }
+  ]
+}

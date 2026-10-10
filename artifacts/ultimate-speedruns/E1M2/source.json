@@ -1,0 +1,19 @@
+{
+  "map": "E1M2",
+  "author": "trioct",
+  "engine": "DSDA-Doom v0.10.0cl3",
+  "category": "UV Speed",
+  "note": "",
+  "downloadUrl": "https://dsdarchive.com/files/demos/doom/50975/e1m2-2280.zip",
+  "runUrl": "https://dsdarchive.com/wads/doom?category=UV+Speed&level=E1M2",
+  "selection": "First listed non-TAS single-player DSDA-Doom complevel3 UV Speed row; not a claim of world-record status.",
+  "originalName": "e1m2-2280.lmp",
+  "demoBytes": 4195,
+  "demoSha256": "1210cbccd5148091f438d9fb5f8f763b0b49cdb1e3870380521c0b2632fbc15f",
+  "archiveSha256": "2ede1def22094b92e27396af92aa8703e0812dd4bac5c64c9775b2dbf205c166",
+  "authorNotes": {
+    "e1m2-2280.txt": "Player: Trioct\r\nIWAD: Doom.wad\r\nPWAD:\r\nMap: E1M2\r\nSkill: 4\r\nCategory: UV-Speed\r\nExe: dsda-doom v0.10.0 -complevel 3\r\nTime: 0:22.80\r\n\r\nComments: Stairs were sloppy, doors were kinda weak. Not too bad though\r\n"
+  },
+  "IWADMD5": "c4fe9fd920207691a9f493668e0a2083",
+  "IWADSHA256": "6fdf361847b46228cfebd9f3af09cd844282ac75f3edbb61ca4cb27103ce2e7f"
+}

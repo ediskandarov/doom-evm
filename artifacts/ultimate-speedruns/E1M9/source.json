@@ -1,0 +1,19 @@
+{
+  "map": "E1M9",
+  "author": "ShadowCaco33",
+  "engine": "DSDA-Doom v0.29.4cl3",
+  "category": "UV Speed",
+  "note": "",
+  "downloadUrl": "https://dsdarchive.com/files/demos/doom/108203/e1m9-0045.zip",
+  "runUrl": "https://dsdarchive.com/wads/doom?category=UV+Speed&level=E1M9",
+  "selection": "First listed non-TAS single-player DSDA-Doom complevel3 UV Speed row; not a claim of world-record status.",
+  "originalName": "e1m9-0045.lmp",
+  "demoBytes": 7729,
+  "demoSha256": "ae640d1a17919e24983afd9d191d75502f0f745b89a52fff808ee41a2761bfb1",
+  "archiveSha256": "a618a1dddd141db230f500d6055dfa08febb68f670efa7cc0963aa0e7c89f352",
+  "authorNotes": {
+    "e1m9-0045.txt": "Doom Speed Demo Archive\nhttps://dsdarchive.com/\n\nIwad:      DOOM.WAD\nMap:       E1M9\nSkill:     4\nCategory:  UV Speed\nExe:       dsda-doom 0.29.4 -complevel 3\nRecorded on: 1/22/26\nTime:      0:45.66\n\nAuthor:    ShadowCaco33\n\nComments:  Took a more direct path and got 45\n"
+  },
+  "IWADMD5": "c4fe9fd920207691a9f493668e0a2083",
+  "IWADSHA256": "6fdf361847b46228cfebd9f3af09cd844282ac75f3edbb61ca4cb27103ce2e7f"
+}

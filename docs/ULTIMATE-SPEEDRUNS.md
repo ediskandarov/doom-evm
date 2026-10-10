@@ -26,7 +26,35 @@ never attach to the ongoing Freedoom18640 runtime or reserved ports.
 Gates: exact classic IWAD and original command decoder; original-C exit and
 cross-profile DSG1 equality; affected-root build; EVM startup/replay world
 comparisons and actual Frame receipts; per-profile pixel/provenance distinctions;
-35fps media if full capture succeeds. Stop at demonstrated pilot feasibility or
+35fps media if full capture succeeds. Proceed to remaining maps after the pilot; stop after available verified work or
 concrete incompatibility, with reproducible evidence and no commercial bytes in
 Git. This is separate experimental profile evaluation, not production IWAD
 support or universal native equivalence.
+
+
+## Integrated-baseline reset
+
+The user's updated goal authorizes local gas, memory, RPC, timeout and checkpoint
+limit changes with measured host monitoring; compiler/viaIR/optimizer/hardfork,
+game rules, source fidelity, WAD identity and unknown-memory guards remain fixed.
+Infrastructure failures do not authorize fabricated bytes or modified inputs.
+
+New worktree `/private/tmp/doom-evm-ultimate-speedruns`, branch
+`feat/ultimate-episode-speedruns`, baseline
+`51e879247bb3d6d809af8a0516a097f71c3d0756` from fetched origin/main. Confirmed
+integrated `DoomMenu`, `Z_ZoneVirtual` and `EpisodeRuntime`, with preserved
+integration evidence. Five absent speedrun-only commits were cherry-picked;
+no integrated menu/virtual-memory commit was duplicated. Main and other owners'
+worktrees were not modified. The old worktree remains recovery evidence.
+
+The old Freedoom E1M2 run captured250/1942 frames and251 exact world snapshots
+before Node's512MiB string limit stopped a chain checkpoint. Its ten-tic
+checkpoint, failed attempts, receipts and all native outputs remain local.
+Owned old native workers were stopped for reset; its Anvil had already stopped
+in the runner's failure cleanup. Completed raw native state streams are being
+losslessly compressed with round-trip byte/hash checks to preserve them while
+relieving local disk pressure; no original fixtures or goldens are removed.
+
+Commercial-profile canonical world streams, frame pixels, resources and MP4s
+remain local because world snapshots contain map geometry. Commit metadata,
+source identities, counts and hashes only; never commercial payloads or artwork.

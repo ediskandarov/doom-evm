@@ -1,0 +1,19 @@
+{
+  "map": "E1M8",
+  "author": "Zero-Master",
+  "engine": "DSDA-Doom v0.24.3cl3",
+  "category": "UV Speed",
+  "note": "",
+  "downloadUrl": "https://dsdarchive.com/files/demos/doom/63387/e1m8-017.zip",
+  "runUrl": "https://dsdarchive.com/wads/doom?category=UV+Speed&level=E1M8",
+  "selection": "First listed non-TAS single-player DSDA-Doom complevel3 UV Speed row; not a claim of world-record status.",
+  "originalName": "e1m8-017.lmp",
+  "demoBytes": 3364,
+  "demoSha256": "3b24a44c2603aea15a91897b11eb4f1f52e29b2353c61b36d6957ac89c825f22",
+  "archiveSha256": "58fee6cfb240fca6422ee387b650709de7da86ba41e07199a4e3d6f987e311a9",
+  "authorNotes": {
+    "e1m8-017.txt": "Runner: Zero-Master\r\nDate: 2022-06-03\r\nIWAD: Doom.wad\r\nCategory: UV-Speed\r\nMap: E1M8 (Phobos Anomaly)\r\nSource Port: DSDA-Doom v0.24.3\r\nTime: 0:17.00\r\n\r\nDescription: \r\nI didn't even think it was possible to get E1M8 like this without having the barrels blow up, so I was completely surprised by it and didn't react very quickly. But I was at the correct coordinate and fortunate positioning of the pinkies did the job instead. I also didn't SR50 for some of the outdoor section, though I got this extremely quickly with hardly any serious attempts at it, was still just trying to get a hang of the inputs. \r\n\r\nNot sure if it's possible to do it without lowering the wall and waking up the pinkies, if something like that would exist then it would be 100% consistent like pl11. Usually several pinkies survive the barrels so you could get this consistent as well perhaps if you just kill them in the right place, but that would be far too slow.\r\n\r\nNo doubt the TAS time can also be improved as you should be able to blow up the barrels, fire the pistol to get all ghost and just go directly to the exit. It would skip having to wait for the door to open so it would also improve upon my E1 TAS."
+  },
+  "IWADMD5": "c4fe9fd920207691a9f493668e0a2083",
+  "IWADSHA256": "6fdf361847b46228cfebd9f3af09cd844282ac75f3edbb61ca4cb27103ce2e7f"
+}
