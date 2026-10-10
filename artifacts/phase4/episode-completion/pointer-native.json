@@ -1,0 +1,79 @@
+{
+  "pass_": true,
+  "kind": "bounded-lp64-header-pointer-original-c",
+  "rows": [
+    {
+      "profile": "O0",
+      "sample": 527,
+      "sourceLength": 512,
+      "sourceOffset": 400,
+      "frac": -33,
+      "userByte7": 0,
+      "pixel": 0,
+      "allPointersBelow2Pow48": true,
+      "userHighBytes": [
+        0,
+        0
+      ],
+      "nextHighBytes": [
+        0,
+        0
+      ],
+      "prevHighBytes": [
+        0,
+        0
+      ]
+    },
+    {
+      "profile": "O2",
+      "sample": 527,
+      "sourceLength": 512,
+      "sourceOffset": 400,
+      "frac": -33,
+      "userByte7": 0,
+      "pixel": 0,
+      "allPointersBelow2Pow48": true,
+      "userHighBytes": [
+        0,
+        0
+      ],
+      "nextHighBytes": [
+        0,
+        0
+      ],
+      "prevHighBytes": [
+        0,
+        0
+      ]
+    },
+    {
+      "profile": "san",
+      "sample": 527,
+      "sourceLength": 512,
+      "sourceOffset": 400,
+      "frac": -33,
+      "userByte7": 0,
+      "pixel": 0,
+      "allPointersBelow2Pow48": true,
+      "userHighBytes": [
+        0,
+        0
+      ],
+      "nextHighBytes": [
+        0,
+        0
+      ],
+      "prevHighBytes": [
+        0,
+        0
+      ]
+    }
+  ],
+  "sourceHashes": {
+    "z_zone.c": "80174204a0a2c96e89ceb059e0922238046106be4fd5116f1c0a6a530df9010b",
+    "R_DrawColumn": "42fc5e81985c381cb80695b3a3e31294a58ad06dadc022417b3beb9f37fb8ee4",
+    "host": "858801984b81f6f83b1e9b0be95c64c359ca9493c8e7ce97d1c0091a82853229",
+    "runner": "3139a2b92f5b89fe69bbcbf5bfd390d0955e2c6d1349f0ca5f68e13f6137ffd2"
+  },
+  "scope": "Captured E1M4 tail sample and current header pointer high-byte domain only. Low bytes, obsolete headers and bodies remain unknown. Original draw and zone bodies; accepted LP64 align8 adapter; no full frame or arbitrary process-address equivalence."
+}

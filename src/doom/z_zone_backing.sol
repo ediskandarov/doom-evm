@@ -82,11 +82,11 @@ library Z_ZoneBacking {
     {
         (data, known) = tailWithProvenance(resources, sourceBlock, logicalLength, length);
         for (uint256 i; i < known.length; ++i) {
-            if (known[i] == 0x02) known[i] = 0x01;
+            if (known[i] == 0x02 || known[i] == 0x03) known[i] = 0x01;
         }
     }
 
-    /// @notice 0=unknown/invalid, 1=original source-written, 2=initial-zone zero.
+    /// @notice 0=unknown/invalid, 1=original source-written, 2=initial-zone zero, 3=bounded LP64 address high byte.
     /// @dev Initialization never establishes provenance for a pointer, an
     /// unmodeled written body, a reused body or a byte outside the initial zone.
     function tailWithProvenance(
@@ -128,6 +128,11 @@ library Z_ZoneBacking {
                 if (isKnown) {
                     data[work.cursor] = value;
                     known[work.cursor] = 0x01;
+                } else if (work.zone.canonicalPointerHighBytes && pointerHighByte(work.relative)) {
+                    // Original writes user/next/prev as LP64 addresses (or NULL/2).
+                    // In the explicitly bounded <2^48 platform domain their high
+                    // two bytes are zero. No lower pointer byte or old body is inferred.
+                    known[work.cursor] = 0x03;
                 }
                 ++work.cursor;
                 ++work.physical;
@@ -154,6 +159,25 @@ library Z_ZoneBacking {
                             known[work.cursor + i] = 0x01;
                         }
                     }
+                } else if (
+                    work.current.allocated && work.owner >= resources.source.lumps.length
+                        && work.owner < resources.source.lumps.length + resources.textures.length
+                        && work.owner < work.zone.ownerBlocks.length
+                        && work.zone.ownerBlocks[work.owner] == work.id
+                ) {
+                    // Source-written R_GenerateComposite payload, including a
+                    // neighboring texture. No native allocation/cache call is replayed.
+                    work.payload = R_Data.compositeBacking(
+                        resources, work.owner - uint32(resources.source.lumps.length)
+                    );
+                    if (work.local < work.payload.length) {
+                        work.written = work.payload.length - work.local;
+                        if (work.written > work.count) work.written = work.count;
+                        for (uint256 i; i < work.written; ++i) {
+                            data[work.cursor + i] = work.payload[work.local + i];
+                            known[work.cursor + i] = 0x01;
+                        }
+                    }
                 }
                 work.cursor += work.count;
                 work.physical += work.count;
@@ -164,6 +188,12 @@ library Z_ZoneBacking {
                 work.zone, work.zone.blocks[sourceBlock].offset + N.MEMBLOCK_SIZE + logicalLength, data, known
             );
         }
+    }
+
+    function pointerHighByte(uint32 relative) private pure returns (bool) {
+        return relative == N.MEMBLOCK_USER_OFFSET + 6 || relative == N.MEMBLOCK_USER_OFFSET + 7
+            || relative == N.MEMBLOCK_NEXT_OFFSET + 6 || relative == N.MEMBLOCK_NEXT_OFFSET + 7
+            || relative == N.MEMBLOCK_PREV_OFFSET + 6 || relative == N.MEMBLOCK_PREV_OFFSET + 7;
     }
 
     function exclude(bytes memory candidates, uint256 start, uint256 end, uint256 first) private pure {

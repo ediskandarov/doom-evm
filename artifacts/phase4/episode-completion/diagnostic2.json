@@ -1,0 +1,460 @@
+{
+  "kind": "episode-one-functional-production-evm",
+  "pass": false,
+  "startedUtc": "2026-10-10T15:21:44.292Z",
+  "executionBudget": {
+    "gasLimit": 10000000000,
+    "gasHex": "0x2540be400",
+    "source": "/Users/eduard/sandbox/doom-evm-episode-completion/execution-budget.json"
+  },
+  "compiler": {
+    "version": "0.8.37+commit.f401782d",
+    "settings": {
+      "remappings": [],
+      "optimizer": {
+        "enabled": true,
+        "runs": 200
+      },
+      "metadata": {
+        "bytecodeHash": "ipfs"
+      },
+      "compilationTarget": {
+        "src/evm/Doom.sol": "Doom"
+      },
+      "evmVersion": "cancun",
+      "libraries": {},
+      "viaIR": true
+    }
+  },
+  "resourceIdentity": {
+    "schemaVersion": 0,
+    "wadSha256": "7323bcc168c5a45ff10749b339960e98314740a734c30d4b9f3337001f9e703d",
+    "bundleSha256": "d379076f21645cf7cc5acb056663d0faacc4065489a0ca99738479323c9f7a47",
+    "paletteSha256": "fd895921b5d0a394612bb29852ed003d44d69f76dec31c0dc6b5d5fc7d63f7bb",
+    "paletteVariant": 0
+  },
+  "sourceHashes": {
+    "src/doom/am_map.sol": "3c5da949fc635d095659d4333d153408499e89e4178b469cb335e31cf52f6020",
+    "src/doom/am_map_types.sol": "7347073682c367c15c918aa51ff924c664b6d05efdbf4f0392d4f404b31a9039",
+    "src/doom/d_ticcmd.sol": "508d0332d3e8b83e1b68d37581a3befc100a9974fcaa0900cc44116cd75ff2ef",
+    "src/doom/doomstat.sol": "4c40da3914c629017959a0a4c0516d83346900674c92f5e55a766aba1b506fea",
+    "src/doom/f_finale.sol": "a337e7c0b0d5c3fab8b98a40d67c29dd4f63e7ef0d47773d65879f8dc3111c8f",
+    "src/doom/g_game.sol": "ea632f47ca5904819dd0dc254fc547799b56696e08e37d96a503d71da145f89c",
+    "src/doom/hu_lib.sol": "bf11331f06c38565650e93ce5ece611d048d5656ae2c8442b6568de5ce079a06",
+    "src/doom/hu_stuff.sol": "fcf57390d8c8e6d5ec935164264870509bb64197179536a39cd2a14dddb9588e",
+    "src/doom/info.sol": "4611205149173e42d3b0f1d91820c8042f6bc5fc48fb53aec84ad4bc501dca8e",
+    "src/doom/m_bbox.sol": "f4c60efe3627a97d0288fc5cd0283535527b1f51029568534c80bb8fbbf8f272",
+    "src/doom/m_cheat.sol": "e79d73bd9e159b0f05639464bf7c9cb7f40dc069780c3459336dfffb50394f82",
+    "src/doom/m_fixed.sol": "3f64bef1f62f61faead3a5b8f382bf1c66e1b3739ce4ac8d59a6fcef0451ef9f",
+    "src/doom/m_random.sol": "5267b881138cfb7e0d683449005619513006c70e3ed557f64697b36c4ed40c7b",
+    "src/doom/native_zone_layout.sol": "118b2d17165826fb0857d9cb296e2214db2a28917769299a82e70d0c0790f6e8",
+    "src/doom/p_ceilng.sol": "696f3f620f5bddb3cea64fda824e3203c780f53db890630f0685794454dc37f9",
+    "src/doom/p_doors.sol": "945bf600ce86d8286718fb75ecaf905a0c4631d79d2dac7260c91c9dc2013f8d",
+    "src/doom/p_enemy.sol": "eff76cce23b0877833a5c446a1a09d8ae01918a6925b6d3265240b144c09dfe7",
+    "src/doom/p_floor.sol": "b7c90baafa0b74fd7ff80cf60dcbc430148f6d6d068ba54ca0fbc7ba1bca7069",
+    "src/doom/p_game_state.sol": "06cbccba214717193fbab7c290e2962c4fb05b3f34c6543247ee1ec8e45d085a",
+    "src/doom/p_heap.sol": "3cc2e0a8c3239523db66c07fea33720f931754baedd312b5ca7cc2ebe763d2e0",
+    "src/doom/p_info.sol": "a48840479115ea8bf849ca5ec448d1b2bec7a6cfe58c5314e140635a898de792",
+    "src/doom/p_inter.sol": "8be27f9bba47beb46b3edf2a8a2674b3cd7218d2abb8ef5f8855803393d067de",
+    "src/doom/p_lights.sol": "6f63cbc6b41fc492a46ce43aef464deb9d08b7fa1dd8b213b546eec3e4f08276",
+    "src/doom/p_map.sol": "6b6d48523a45acab9090dfb0ec3d6dbab4e6de18afa89453df8b5a87088da0f3",
+    "src/doom/p_maputl.sol": "ac5ac60e7e058a5fc537e7042c7254bc0f51c77165149a22e141437b4e0ad0b6",
+    "src/doom/p_mobj.sol": "e6138aceee2be933f2c36e3fc18e6d2baa22ffa6a1197d9db89c744d42d78e56",
+    "src/doom/p_plats.sol": "6904df762b270f840daa99b34d2a5c689dbb2fef3aed3d33c2ac1a3f3e4d5722",
+    "src/doom/p_pspr.sol": "cfa2db3438d689c38d9c957fc4aee598c58740f025d6efead2b5f9671eb0c863",
+    "src/doom/p_setup.sol": "9498e1298bf4e53ccedc484a50d4c7f9f85315f6cb700719d474b721e382243b",
+    "src/doom/p_setup_static.sol": "c8100a42bb0bac190c583bbb2c82168599009f88a766e4c05b9a9231a5f69792",
+    "src/doom/p_sight.sol": "7ed366237fc3fec069ffb6336e95e038004d1f379622cf67f55fb8c6b1a6488c",
+    "src/doom/p_spec.sol": "2363640e75c22c9d017db677dda7148ad221380f0a23639167e145e933fc72b7",
+    "src/doom/p_switch.sol": "5404d359793e05c6c24a7804c07632150009b46f38d03068412d7ac53260dfe2",
+    "src/doom/p_telept.sol": "745f0fa4ed6f0515c398bfd2469c59aac82316965b7bac25263aeb82555d61b8",
+    "src/doom/p_tick.sol": "1993dd0c94853dabc4db554dfa0ca04375cef0a22075400ba0e7b56b525022ab",
+    "src/doom/p_user.sol": "963a46850e1b17171f79dd65bff9b5006ce6f97a935ad2023d1d526a6ec35c37",
+    "src/doom/p_zone_setup.sol": "e0308bd1197fd84a01eb1ee208be73c711851d6b0bc30be1d07a7c61b18b223d",
+    "src/doom/r_bsp.sol": "0ae5df313515692d0b2b970d5d39d107e014629cff2305fb37c14371a9524040",
+    "src/doom/r_data.sol": "5b404d561f8bce538e8a8221b4f36d62c9b9826fc833307640d96fcbfdca2d0a",
+    "src/doom/r_data_types.sol": "0448302d68447c8a5a4c46df4016e8845863e42bf6eaca8bcab8ab0c9707fdf8",
+    "src/doom/r_defs.sol": "558d5a9bfd131e816bbe28986e2dad6144a08e5a16ccfed1b199d7558a1ea0e2",
+    "src/doom/r_draw.sol": "8907e1307aef98f57e512e81d4dfb0b43ed73e3858a8e78de290016260a42875",
+    "src/doom/r_main.sol": "df403bf04fdbbcfc68c4fd9c5e19b5201ca711498efc34db406a4010ad3b2af5",
+    "src/doom/r_plane.sol": "c7a5abcbca84dddcd2a3c8bb160a609605c5c1842e73704dff4860df3280e463",
+    "src/doom/r_render_hooks.sol": "f026ccb8fffb68d8fbcb0966103212f52884b86350fe3fb52a401d146f3fb312",
+    "src/doom/r_render_state.sol": "072bd2f73b98e1eb775fc8093e95a69c184f3fa50a89a5d64a7beccd59493398",
+    "src/doom/r_segs.sol": "9d4e4dea06739278aab3698fb422818de6dd7726359c8822d60a162e886621cb",
+    "src/doom/r_sprite_state.sol": "735b3de85cbf455e05d3cb8e992cf4e477960bd4192bbd367f5c66c803b96363",
+    "src/doom/r_state.sol": "80951a13733e3a08f4182937a37def33ffda21eaae4b43a2a1bdba2043adab6b",
+    "src/doom/r_things.sol": "86705ab6b1f79b7ef07798b881cc547502d9911c97b57dc516a744e17c1977f5",
+    "src/doom/st_cheats.sol": "e35b8253b068f1ad807073bc322e2b62205ef3ffa95bb06f36acef7a79721677",
+    "src/doom/st_lib.sol": "5307f52151fbd73e442a60d8b87cbfbed3d38a28704a81e952f56672de667299",
+    "src/doom/st_stuff.sol": "936cf09f8f0dcc9c0555a9d533d9d1a50f65941462b0d3325a5c7850b5be2e49",
+    "src/doom/tables.sol": "bf14202b419075f6d187653205a37e211d8267c7fc4c0bebf5a8c5713afddf38",
+    "src/doom/v_video.sol": "be75fe69e7cd2486ce93408ec204cdf470ea097569e37fbedd867e9a2f3adf1f",
+    "src/doom/v_video_types.sol": "266890b0c8003e89f78baf8415048d24e4ca14865a1c8518ad77bb6a9f6b4d35",
+    "src/doom/w_zone_cache.sol": "03c07404765de9620b3d1ff15727809cdad911c8a78d822019b63500fa5018c2",
+    "src/doom/wi_stuff.sol": "a4290c7bef956c868d62ffc269e076e90cebb25ae9eb2143bf167c8cabb4a39e",
+    "src/doom/wi_stuff_types.sol": "7d7d56059e363e6311c693b0dde47fb5f10e7c27aaa903d20de2f9a7eaff9e60",
+    "src/doom/z_zone.sol": "b4e75218021d65aaf3389cf78a68663feebc2084c82457821be17247dc8106c5",
+    "src/doom/z_zone_backing.sol": "589b135bb4c1c674c3509de61c7f3f338c142890c3dec63de88fd42512888d47",
+    "src/doom/z_zone_types.sol": "f543690360a07b6df0ac5633e061b4bd1b348b5e26ba7283a4bf3f1f017ab0a7",
+    "src/evm/Doom.sol": "fa07a57c356d2c0cffe2d09affaad4d620fa6dd929c8ba78ffa46c6595f3a1a2",
+    "src/evm/DoomGame.sol": "d9451a915ab977bae137340e3e6626a270a4b84b8b6ea9449a8c4f0f578296df",
+    "src/evm/DoomRenderer.sol": "5639d82431350ea76c26d43457d26d0c3c0f410eaddf02db6adbcfb03a569ba0",
+    "src/evm/DoomScene.sol": "9ad7c8ccee4c9e05deb5608326baabacfa40f686b8d8445fb8aaa7352ab64569",
+    "src/evm/DoomUI.sol": "c2fa44363eeb962acabb51779fc780b8b6c5d46d5291448d44a585690e9ea9f9",
+    "src/evm/DoomZoneStartup.sol": "2d178494456a7ae3c730310f257ce2aa635d37d18c90cac039cf002cdb3f50dc",
+    "src/evm/EpisodeRuntime.sol": "7be9205e74af487a1a2722d861465be5e5d155607221cfdf84178cc11680afa8",
+    "src/evm/EpisodeStartup.sol": "bb574f20cdc09e63385261f7e8e203a49a90a15b87903d70dfe43d396bc3255e",
+    "src/evm/FrameProtocol.sol": "4665be3f613b8e817d616d2db1dc4a644325c44a6ade476a35d7d9d003625ace",
+    "src/evm/InputProtocol.sol": "590bbe22b2549985f3ad12f5f0d1d81252cfeaa2f5f6ad79d61b15d9fa5aab3a",
+    "src/evm/ResourceTypes.sol": "159865364cfa57aae508cd94c49509cbccabd6aeeba55e92b9fcf816bdec4d6b",
+    "src/evm/WadResources.sol": "25a1acc0a44ac35cc29e5f9bd953ba66b85db4f665b732430571b416ef927895"
+  },
+  "frames": [
+    {
+      "label": "God cheat",
+      "inputSeq": 2,
+      "frameId": "1",
+      "transaction": "0x62511f99f67df0c7b9ac5dd6e651c097bc4ec934dc4b3c796faf1a54c49e1a74",
+      "pixelSha256": "ddbcc070f0cedf978bb7b6ae3d3c5a8bee1b794d9c492fe2191995f465022d22",
+      "palette": 0,
+      "paletteSha256": "12bafa34214682ae20c2cb6f4e38f21575564de88c4599f3410661e9b7a5c6d3",
+      "gas": 2289570788,
+      "ms": 1233.7813749999987,
+      "nativeExact": false,
+      "pixelsPath": "artifacts/phase4/episode-completion/diagnostic2-0.pixels"
+    },
+    {
+      "label": "Automap",
+      "inputSeq": 3,
+      "frameId": "2",
+      "transaction": "0x1058e2097ad8eb9cec99f20aade5fa89038d5796c166c5f7729a2dc74276c832",
+      "pixelSha256": "88a0296bf650e0499677a4613fbb836aefd70c52116221a31d55947f462e71d3",
+      "palette": 0,
+      "paletteSha256": "12bafa34214682ae20c2cb6f4e38f21575564de88c4599f3410661e9b7a5c6d3",
+      "gas": 826170460,
+      "ms": 552.5832919999957,
+      "nativeExact": false,
+      "pixelsPath": "artifacts/phase4/episode-completion/diagnostic2-1.pixels"
+    },
+    {
+      "label": "IDDT automap",
+      "inputSeq": 4,
+      "frameId": "3",
+      "transaction": "0xf4794a5c1ed9625945cf94f58a1fd625a7950e50308314575ddb8242e4a3d058",
+      "pixelSha256": "bedf96694e7f5b8415176e0905c19d7887b0d3eea679094157e1b3bbc3cfa652",
+      "palette": 0,
+      "paletteSha256": "12bafa34214682ae20c2cb6f4e38f21575564de88c4599f3410661e9b7a5c6d3",
+      "gas": 1430154504,
+      "ms": 573.1736249999958,
+      "nativeExact": false,
+      "pixelsPath": "artifacts/phase4/episode-completion/diagnostic2-2.pixels"
+    },
+    {
+      "label": "Automap close",
+      "inputSeq": 5,
+      "frameId": "4",
+      "transaction": "0x181ff6ffc10d9a811eb00ff128bdc72becfe6075e13eb7cbf7f3e503487bccaa",
+      "pixelSha256": "0edfe1668c9c57e151df360a4289afb6d0ec254485e547e26029a1cb40e07e66",
+      "palette": 0,
+      "paletteSha256": "12bafa34214682ae20c2cb6f4e38f21575564de88c4599f3410661e9b7a5c6d3",
+      "gas": 1575577124,
+      "ms": 1192.9865419999987,
+      "nativeExact": false,
+      "pixelsPath": "artifacts/phase4/episode-completion/diagnostic2-3.pixels"
+    },
+    {
+      "label": "newEpisodeGame(int32,int32,uint32)",
+      "inputSeq": 6,
+      "frameId": "5",
+      "transaction": "0xbfdfaf9cc188e6752c3139703cdbf4c6e4076367d8c22587545c228087e5b432",
+      "pixelSha256": "a297ba2dfa2d1eae509b975c96471640802a189389ea15ad741c399218782d54",
+      "palette": 0,
+      "paletteSha256": "12bafa34214682ae20c2cb6f4e38f21575564de88c4599f3410661e9b7a5c6d3",
+      "gas": 3221226156,
+      "ms": 1790.9934159999975,
+      "nativeExact": false,
+      "pixelsPath": "artifacts/phase4/episode-completion/diagnostic2-4.pixels"
+    },
+    {
+      "label": "newEpisodeGame(int32,int32,uint32)",
+      "inputSeq": 7,
+      "frameId": "6",
+      "transaction": "0x443d04045d20e2585c8c51cf91cd5a9d6caea7e0e71376698e74686598ba08fa",
+      "pixelSha256": "be5058026ae975206bfab9b9e3637b3b903d4f4bfa1ef3efea49dd75eeac8055",
+      "palette": 0,
+      "paletteSha256": "12bafa34214682ae20c2cb6f4e38f21575564de88c4599f3410661e9b7a5c6d3",
+      "gas": 4334478842,
+      "ms": 2172.997875000001,
+      "nativeExact": false,
+      "pixelsPath": "artifacts/phase4/episode-completion/diagnostic2-5.pixels"
+    },
+    {
+      "label": "newEpisodeGame(int32,int32,uint32)",
+      "inputSeq": 8,
+      "frameId": "7",
+      "transaction": "0x79948f1580ae491d4718f84665f1ecb1a6b07e8322027442439e12cea1358722",
+      "pixelSha256": "76c71748531495fbd965a2aa2b2740027ee2ec6ba12da67e3198e924817346ca",
+      "palette": 0,
+      "paletteSha256": "12bafa34214682ae20c2cb6f4e38f21575564de88c4599f3410661e9b7a5c6d3",
+      "gas": 4157162680,
+      "ms": 1802.0367079999996,
+      "nativeExact": false,
+      "pixelsPath": "artifacts/phase4/episode-completion/diagnostic2-6.pixels"
+    }
+  ],
+  "operations": [
+    {
+      "operation": "CREATE Doom",
+      "address": "0x5ae1f4bb68f8eac39cfdbdfda2b7344ccbd80faf",
+      "transaction": "0x02d6a2c1c9ea58b82dbb2c3edda808b567db4d5eb6002f95dece59616fb95e4c",
+      "gas": 344300228,
+      "runtimeBytes": 930379,
+      "runtimeSha256": "fc5086f89a815904a7f6a19939e13e76b4b077d4f2142f560c742f197e2995df"
+    },
+    {
+      "operation": "initializeEpisode",
+      "map": 1,
+      "skill": 2,
+      "transaction": "0xa303e23c5ed2be2d7ae2640475a83afe6b594f718d91b9c0439d57d571419d13",
+      "gas": 2370456034,
+      "ms": 855.3624999999956
+    },
+    {
+      "operation": "newEpisodeGame(int32,int32,uint32)",
+      "params": [
+        1,
+        2
+      ],
+      "sequence": 6,
+      "transaction": "0xbfdfaf9cc188e6752c3139703cdbf4c6e4076367d8c22587545c228087e5b432",
+      "gas": 3221226156,
+      "ms": 1790.9934159999975
+    },
+    {
+      "operation": "newEpisodeGame(int32,int32,uint32)",
+      "params": [
+        2,
+        2
+      ],
+      "sequence": 7,
+      "transaction": "0x443d04045d20e2585c8c51cf91cd5a9d6caea7e0e71376698e74686598ba08fa",
+      "gas": 4334478842,
+      "ms": 2172.997875000001
+    },
+    {
+      "operation": "newEpisodeGame(int32,int32,uint32)",
+      "params": [
+        3,
+        2
+      ],
+      "sequence": 8,
+      "transaction": "0x79948f1580ae491d4718f84665f1ecb1a6b07e8322027442439e12cea1358722",
+      "gas": 4157162680,
+      "ms": 1802.0367079999996
+    }
+  ],
+  "rollbacks": [
+    {
+      "error": "NotDriver()",
+      "transaction": "0xa8c055a5a02008111509fb7c6ec4bbfa22d8ae3a43ae0f6757d83c0281dc3851",
+      "gas": 22407,
+      "allStorageRollback": true
+    },
+    {
+      "error": "UnsupportedSelection(int32,int32,int32)",
+      "transaction": "0xe51659b6deb8dd48a96cfa71f1bfc41901442a543a0c37c5d25522000e133c41",
+      "gas": 12147130,
+      "allStorageRollback": true
+    },
+    {
+      "error": "BadSequence()",
+      "transaction": "0x98545ce742ed640b6466b9bb42540fb43b3d67bdd9414bda2adf6d997764fb7d",
+      "gas": 177991141,
+      "allStorageRollback": true
+    }
+  ],
+  "routes": [],
+  "inputs": [
+    {
+      "address": "0x5ae1f4bb68f8eac39cfdbdfda2b7344ccbd80faf",
+      "sequence": 1,
+      "events": [],
+      "draw": false,
+      "transaction": "0x9e4488f0789866cf3bc760e29997baab744c814536c89913d307bb4346037e6b",
+      "gas": 323003842,
+      "ms": 148.6908340000009
+    },
+    {
+      "address": "0x5ae1f4bb68f8eac39cfdbdfda2b7344ccbd80faf",
+      "sequence": 2,
+      "events": [
+        [
+          0,
+          105
+        ],
+        [
+          1,
+          105
+        ],
+        [
+          0,
+          100
+        ],
+        [
+          1,
+          100
+        ],
+        [
+          0,
+          100
+        ],
+        [
+          1,
+          100
+        ],
+        [
+          0,
+          113
+        ],
+        [
+          1,
+          113
+        ],
+        [
+          0,
+          100
+        ],
+        [
+          1,
+          100
+        ]
+      ],
+      "draw": true,
+      "transaction": "0x62511f99f67df0c7b9ac5dd6e651c097bc4ec934dc4b3c796faf1a54c49e1a74",
+      "gas": 2289570788,
+      "ms": 1233.7813749999987
+    },
+    {
+      "address": "0x5ae1f4bb68f8eac39cfdbdfda2b7344ccbd80faf",
+      "sequence": 3,
+      "events": [
+        [
+          0,
+          9
+        ]
+      ],
+      "draw": true,
+      "transaction": "0x1058e2097ad8eb9cec99f20aade5fa89038d5796c166c5f7729a2dc74276c832",
+      "gas": 826170460,
+      "ms": 552.5832919999957
+    },
+    {
+      "address": "0x5ae1f4bb68f8eac39cfdbdfda2b7344ccbd80faf",
+      "sequence": 4,
+      "events": [
+        [
+          0,
+          105
+        ],
+        [
+          1,
+          105
+        ],
+        [
+          0,
+          100
+        ],
+        [
+          1,
+          100
+        ],
+        [
+          0,
+          100
+        ],
+        [
+          1,
+          100
+        ],
+        [
+          0,
+          116
+        ],
+        [
+          1,
+          116
+        ]
+      ],
+      "draw": true,
+      "transaction": "0xf4794a5c1ed9625945cf94f58a1fd625a7950e50308314575ddb8242e4a3d058",
+      "gas": 1430154504,
+      "ms": 573.1736249999958
+    },
+    {
+      "address": "0x5ae1f4bb68f8eac39cfdbdfda2b7344ccbd80faf",
+      "sequence": 5,
+      "events": [
+        [
+          1,
+          9
+        ],
+        [
+          0,
+          9
+        ],
+        [
+          1,
+          9
+        ]
+      ],
+      "draw": true,
+      "transaction": "0x181ff6ffc10d9a811eb00ff128bdc72becfe6075e13eb7cbf7f3e503487bccaa",
+      "gas": 1575577124,
+      "ms": 1192.9865419999987
+    }
+  ],
+  "runtime": {
+    "port": 18761,
+    "args": [
+      "--host",
+      "127.0.0.1",
+      "--port",
+      "18761",
+      "--hardfork",
+      "cancun",
+      "--disable-code-size-limit",
+      "--disable-block-gas-limit",
+      "--memory-limit",
+      "1073741824",
+      "--silent"
+    ],
+    "client": "anvil/v1.8.5"
+  },
+  "resources": {
+    "chunks": 1755,
+    "allRuntimeBytesExact": true,
+    "cumulativeGas": 6271928016,
+    "receiptHash": "f304564c56d1d689746d0d1f8f9ac0d5ee7b4eef5ae6ff6a71d1577b4808645d"
+  },
+  "nativeGameplay": {
+    "tics": 0,
+    "fieldsPerTic": 14,
+    "frames": 0,
+    "movement": false,
+    "shooting": false,
+    "actualPickupTic": null,
+    "manifestSha256": "0a5fcf08f1a14d7cb3eb4eb99bf33895c69138bff5c680f55744fdb9405c1195"
+  },
+  "failedTransaction": {
+    "hash": "0x496b1d90d9d866c0cecb1b50ae9bfc493f7f35ed754c7b93ba1293c58f0df550",
+    "data": "0x25729a0f000000000000000000000000000000000000000000000000000000000000000400000000000000000000000000000000000000000000000000000000000000020000000000000000000000000000000000000000000000000000000000000009",
+    "error": {
+      "code": 3,
+      "message": "execution reverted: custom error 0x2ec74eb4: bdf6cf3a76487e51c677749a4794c4a980f2e5470a5014c6c60ab289baed58ba000000000000000000000000000000000000000000000000000000000000020000000000000000000000000000000000000000000000000000000000000001b0000000000000000000000000000000000000000000000000000000000000022fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffdf0000000000000000000000000000000000000000000000000000000000000122000000000000000000000000000000000000000000000000000000000000008b0000000000000000000000000000000000000000000000000000000000000098000000000000000000000000000000000000000000000000000000000000014000000000000000000000000000000000000000000000000000000000000001a000000000000000000000000000000000000000000000000000000000000000302810000000000000000000000000000065000000114a1d0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000003001010101010101010000000000000101010101010101010100000000000001010000000000000101000000000000000000000000000000000000000000000000",
+      "data": "0x2ec74eb4bdf6cf3a76487e51c677749a4794c4a980f2e5470a5014c6c60ab289baed58ba000000000000000000000000000000000000000000000000000000000000020000000000000000000000000000000000000000000000000000000000000001b0000000000000000000000000000000000000000000000000000000000000022fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffdf0000000000000000000000000000000000000000000000000000000000000122000000000000000000000000000000000000000000000000000000000000008b0000000000000000000000000000000000000000000000000000000000000098000000000000000000000000000000000000000000000000000000000000014000000000000000000000000000000000000000000000000000000000000001a000000000000000000000000000000000000000000000000000000000000000302810000000000000000000000000000065000000114a1d0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000003001010101010101010000000000000101010101010101010100000000000001010000000000000101000000000000000000000000000000000000000000000000"
+    }
+  },
+  "error": "AssertionError [ERR_ASSERTION]: 0x496b1d90d9d866c0cecb1b50ae9bfc493f7f35ed754c7b93ba1293c58f0df550 gas 3873072240\n\n'0x0' !== '0x1'\n\n    at tx (file:///Users/eduard/sandbox/doom-evm-episode-completion/tools/reference/episode_completion/evm.mjs:33:451)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async control (file:///Users/eduard/sandbox/doom-evm-episode-completion/tools/reference/episode_completion/evm.mjs:52:13)\n    at async file:///Users/eduard/sandbox/doom-evm-episode-completion/tools/reference/episode_completion/evm.mjs:118:33",
+  "endedUtc": "2026-10-10T15:22:40.621Z",
+  "stoppedOwnedRuntime": true
+}

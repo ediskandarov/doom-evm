@@ -60,6 +60,7 @@ contract Doom is IFrameProtocol, WadResources {
         if (gameStarted) revert GameAlreadyStarted();
         (GameContext memory c, GameflowState memory f) =
             EpisodeStartup.initialize(_resourceView(), 1, map, skill, false, true);
+        c.state.nativeZone.canonicalPointerHighBytes = true;
         UIState memory u;
         DoomUI.initialize(u, c, fullscreen);
         InputRuntimeState memory s;
