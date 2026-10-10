@@ -1,0 +1,140 @@
+{
+  "schemaVersion": 1,
+  "goal": "4.7a",
+  "nodeVersion": "v24.11.0",
+  "resourceIdentity": {
+    "schemaVersion": 0,
+    "wadSha256": "7323bcc168c5a45ff10749b339960e98314740a734c30d4b9f3337001f9e703d",
+    "bundleSha256": "d379076f21645cf7cc5acb056663d0faacc4065489a0ca99738479323c9f7a47",
+    "paletteSha256": "fd895921b5d0a394612bb29852ed003d44d69f76dec31c0dc6b5d5fc7d63f7bb",
+    "paletteVariant": 0
+  },
+  "catalogSha256": "1af6a076fdf0427be1df9beae42c8f87a931058fed89d1f104543eb8b1188c9e",
+  "runs": [
+    {
+      "parseMs": 2.5022090000000006,
+      "packMs": 1739.861833,
+      "rssBeforeBytes": 117194752,
+      "rssAfterBytes": 239239168
+    },
+    {
+      "parseMs": 1.0797499999998763,
+      "packMs": 1711.3124160000002,
+      "rssBeforeBytes": 239239168,
+      "rssAfterBytes": 327139328
+    },
+    {
+      "parseMs": 1.0792079999996531,
+      "packMs": 1669.4180420000002,
+      "rssBeforeBytes": 327139328,
+      "rssAfterBytes": 387022848
+    }
+  ],
+  "sharedBlobBytes": 28741889,
+  "sharedChunkCount": 1755,
+  "catalogCanonicalBytes": 146904,
+  "totalMapPayloadBytes": 2190770,
+  "maps": [
+    {
+      "map": "E1M1",
+      "packageSha256": "9b368475f9437e0e3b1add8243230925bdbd675e39beddd8c0ab01b35f986ede",
+      "descriptorCanonicalBytes": 4440,
+      "rawMapBytes": 141905,
+      "mapChunkSpans": 9,
+      "textureDependencies": 115,
+      "flatDependencies": 44,
+      "patchDependencies": 164
+    },
+    {
+      "map": "E1M2",
+      "packageSha256": "b6d1310906586805cdc21f6f2a1894f44fcf4e8e1597fd46f42ce215488792cd",
+      "descriptorCanonicalBytes": 4864,
+      "rawMapBytes": 261230,
+      "mapChunkSpans": 17,
+      "textureDependencies": 127,
+      "flatDependencies": 64,
+      "patchDependencies": 205
+    },
+    {
+      "map": "E1M3",
+      "packageSha256": "4d5138a3041618dccd007208e6590c39af8378f74bbc7fcf512ae00855fbc36d",
+      "descriptorCanonicalBytes": 4294,
+      "rawMapBytes": 220777,
+      "mapChunkSpans": 15,
+      "textureDependencies": 101,
+      "flatDependencies": 36,
+      "patchDependencies": 159
+    },
+    {
+      "map": "E1M4",
+      "packageSha256": "91360efe8e6c47a53b3714d480f2f13246bf479fcec79b01809e45632638ac0a",
+      "descriptorCanonicalBytes": 4294,
+      "rawMapBytes": 252331,
+      "mapChunkSpans": 16,
+      "textureDependencies": 94,
+      "flatDependencies": 40,
+      "patchDependencies": 156
+    },
+    {
+      "map": "E1M5",
+      "packageSha256": "3184a5e364fa023bd9d8be3b39f9e98721747cbe4476f3dd13f7f8c910252f69",
+      "descriptorCanonicalBytes": 3936,
+      "rawMapBytes": 139313,
+      "mapChunkSpans": 9,
+      "textureDependencies": 67,
+      "flatDependencies": 31,
+      "patchDependencies": 120
+    },
+    {
+      "map": "E1M6",
+      "packageSha256": "816bd08480de386c8784abb5099e7c8568720a01e273be23dd0b09d6e6995ea2",
+      "descriptorCanonicalBytes": 4334,
+      "rawMapBytes": 316450,
+      "mapChunkSpans": 21,
+      "textureDependencies": 86,
+      "flatDependencies": 51,
+      "patchDependencies": 147
+    },
+    {
+      "map": "E1M7",
+      "packageSha256": "e10a5f6e7c13674b3719163a86c5ac8c54abfc88d62d8c34b8d25c11fdb13342",
+      "descriptorCanonicalBytes": 4625,
+      "rawMapBytes": 522206,
+      "mapChunkSpans": 33,
+      "textureDependencies": 107,
+      "flatDependencies": 60,
+      "patchDependencies": 176
+    },
+    {
+      "map": "E1M8",
+      "packageSha256": "0e997e429ca7a52eb6ad95f987bb8d32354455bca7b203eacf9002551e9eeca7",
+      "descriptorCanonicalBytes": 3779,
+      "rawMapBytes": 114409,
+      "mapChunkSpans": 8,
+      "textureDependencies": 51,
+      "flatDependencies": 34,
+      "patchDependencies": 90
+    },
+    {
+      "map": "E1M9",
+      "packageSha256": "fa96b72b74984d95c401ea4392f55069ab4bff53d86bd8b9ad0810207e705d04",
+      "descriptorCanonicalBytes": 4624,
+      "rawMapBytes": 222149,
+      "mapChunkSpans": 14,
+      "textureDependencies": 125,
+      "flatDependencies": 51,
+      "patchDependencies": 175
+    }
+  ],
+  "sourceSha256": {
+    "tools/wad/episode.ts": "70c17afe32d0c0d3f24de2bc75133bc43e4e971401d30509594a1c4bed5a3263",
+    "tools/wad/episode-measure.ts": "d0f5641ed94d1ed9b3050c164613b8e557c2285d72ba310345e9113166feaa4f",
+    "tools/wad/wad.ts": "5180c179fe2b5deddfb1f11557f82e94449f6c184dc11189611bc517976307f7",
+    "schemas/episode-resources-v1.schema.json": "0290193f27d3f22318fe0cde21c69ef93ae977fe581fa202c5e4b7d22e54b8cd"
+  },
+  "notes": [
+    "Three in-process runs parse the complete WAD and pack/validate all nine maps; packing includes canonical identity computation and full blob construction, excludes filesystem writes.",
+    "RSS values are process snapshots before/after each run, not isolated allocator peaks. GC and earlier runs may affect them.",
+    "Map chunk spans count existing full-bundle chunks touched by ten map lumps, excluding shared asset reads. No resource reindexing or selective production deployment is proposed."
+  ]
+}

@@ -1,0 +1,1006 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:doom-evm:episode-resources:v1",
+  "title": "Episode One resource catalog (v1)",
+  "type": "object",
+  "properties": {
+    "schemaVersion": {
+      "const": 1
+    },
+    "episode": {
+      "const": 1
+    },
+    "resourceIdentity": {
+      "type": "object",
+      "properties": {
+        "schemaVersion": {
+          "const": 0
+        },
+        "wadSha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "bundleSha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "paletteSha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "paletteVariant": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 255
+        }
+      },
+      "required": [
+        "schemaVersion",
+        "wadSha256",
+        "bundleSha256",
+        "paletteSha256",
+        "paletteVariant"
+      ],
+      "additionalProperties": false
+    },
+    "provenance": {
+      "anyOf": [
+        {
+          "type": "object",
+          "properties": {
+            "kind": {
+              "const": "synthetic"
+            },
+            "label": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "required": [
+            "kind",
+            "label"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "kind": {
+              "const": "wad"
+            },
+            "wadName": {
+              "type": "string",
+              "minLength": 1
+            },
+            "wadSha256": {
+              "type": "string",
+              "minLength": 1,
+              "pattern": "^[0-9a-f]{64}$"
+            },
+            "upstreamCommit": {
+              "type": "string",
+              "minLength": 1,
+              "pattern": "^[0-9a-f]{40}$"
+            },
+            "license": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "required": [
+            "kind",
+            "wadName",
+            "wadSha256",
+            "upstreamCommit",
+            "license"
+          ],
+          "additionalProperties": false
+        }
+      ]
+    },
+    "bundleFile": {
+      "const": "bundle.json"
+    },
+    "chunkBytes": {
+      "const": 16384
+    },
+    "shared": {
+      "type": "object",
+      "properties": {
+        "paletteLumpId": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 4294967295
+        },
+        "colormapLumpId": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 4294967295
+        },
+        "pnamesLumpId": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 4294967295
+        },
+        "pnamesPatchLumpIds": {
+          "type": "array",
+          "items": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 4294967295
+          }
+        },
+        "textures": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "index": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 4294967295
+              },
+              "name": {
+                "type": "string",
+                "maxLength": 8
+              },
+              "sourceLumpId": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 4294967295
+              },
+              "definitionOffset": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 4294967295
+              },
+              "patchLumpIds": {
+                "type": "array",
+                "items": {
+                  "type": "integer",
+                  "minimum": 0,
+                  "maximum": 4294967295
+                }
+              }
+            },
+            "required": [
+              "index",
+              "name",
+              "sourceLumpId",
+              "definitionOffset",
+              "patchLumpIds"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "flats": {
+          "type": "object",
+          "properties": {
+            "firstLumpId": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 4294967295
+            },
+            "count": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 4294967295
+            }
+          },
+          "required": [
+            "firstLumpId",
+            "count"
+          ],
+          "additionalProperties": false
+        },
+        "sprites": {
+          "type": "object",
+          "properties": {
+            "firstLumpId": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 4294967295
+            },
+            "count": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 4294967295
+            }
+          },
+          "required": [
+            "firstLumpId",
+            "count"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "paletteLumpId",
+        "colormapLumpId",
+        "pnamesLumpId",
+        "pnamesPatchLumpIds",
+        "textures",
+        "flats",
+        "sprites"
+      ],
+      "additionalProperties": false
+    },
+    "maps": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "schemaVersion": {
+            "const": 1
+          },
+          "map": {
+            "type": "string",
+            "enum": [
+              "E1M1",
+              "E1M2",
+              "E1M3",
+              "E1M4",
+              "E1M5",
+              "E1M6",
+              "E1M7",
+              "E1M8",
+              "E1M9"
+            ]
+          },
+          "resourceIdentity": {
+            "type": "object",
+            "properties": {
+              "schemaVersion": {
+                "const": 0
+              },
+              "wadSha256": {
+                "type": "string",
+                "pattern": "^[0-9a-f]{64}$"
+              },
+              "bundleSha256": {
+                "type": "string",
+                "pattern": "^[0-9a-f]{64}$"
+              },
+              "paletteSha256": {
+                "type": "string",
+                "pattern": "^[0-9a-f]{64}$"
+              },
+              "paletteVariant": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 255
+              }
+            },
+            "required": [
+              "schemaVersion",
+              "wadSha256",
+              "bundleSha256",
+              "paletteSha256",
+              "paletteVariant"
+            ],
+            "additionalProperties": false
+          },
+          "marker": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 4294967295
+              },
+              "nameHex": {
+                "type": "string",
+                "pattern": "^[0-9A-Fa-f]{16}$"
+              },
+              "offset": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 4294967295
+              },
+              "length": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 4294967295
+              },
+              "originalOffset": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 4294967295
+              },
+              "sha256": {
+                "type": "string",
+                "pattern": "^[0-9a-f]{64}$"
+              }
+            },
+            "required": [
+              "id",
+              "nameHex",
+              "offset",
+              "length",
+              "originalOffset",
+              "sha256"
+            ],
+            "additionalProperties": false
+          },
+          "lumps": {
+            "type": "object",
+            "properties": {
+              "THINGS": {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 4294967295
+                  },
+                  "nameHex": {
+                    "type": "string",
+                    "pattern": "^[0-9A-Fa-f]{16}$"
+                  },
+                  "offset": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 4294967295
+                  },
+                  "length": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 4294967295
+                  },
+                  "originalOffset": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 4294967295
+                  },
+                  "sha256": {
+                    "type": "string",
+                    "pattern": "^[0-9a-f]{64}$"
+                  }
+                },
+                "required": [
+                  "id",
+                  "nameHex",
+                  "offset",
+                  "length",
+                  "originalOffset",
+                  "sha256"
+                ],
+                "additionalProperties": false
+              },
+              "LINEDEFS": {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 4294967295
+                  },
+                  "nameHex": {
+                    "type": "string",
+                    "pattern": "^[0-9A-Fa-f]{16}$"
+                  },
+                  "offset": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 4294967295
+                  },
+                  "length": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 4294967295
+                  },
+                  "originalOffset": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 4294967295
+                  },
+                  "sha256": {
+                    "type": "string",
+                    "pattern": "^[0-9a-f]{64}$"
+                  }
+                },
+                "required": [
+                  "id",
+                  "nameHex",
+                  "offset",
+                  "length",
+                  "originalOffset",
+                  "sha256"
+                ],
+                "additionalProperties": false
+              },
+              "SIDEDEFS": {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 4294967295
+                  },
+                  "nameHex": {
+                    "type": "string",
+                    "pattern": "^[0-9A-Fa-f]{16}$"
+                  },
+                  "offset": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 4294967295
+                  },
+                  "length": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 4294967295
+                  },
+                  "originalOffset": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 4294967295
+                  },
+                  "sha256": {
+                    "type": "string",
+                    "pattern": "^[0-9a-f]{64}$"
+                  }
+                },
+                "required": [
+                  "id",
+                  "nameHex",
+                  "offset",
+                  "length",
+                  "originalOffset",
+                  "sha256"
+                ],
+                "additionalProperties": false
+              },
+              "VERTEXES": {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 4294967295
+                  },
+                  "nameHex": {
+                    "type": "string",
+                    "pattern": "^[0-9A-Fa-f]{16}$"
+                  },
+                  "offset": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 4294967295
+                  },
+                  "length": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 4294967295
+                  },
+                  "originalOffset": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 4294967295
+                  },
+                  "sha256": {
+                    "type": "string",
+                    "pattern": "^[0-9a-f]{64}$"
+                  }
+                },
+                "required": [
+                  "id",
+                  "nameHex",
+                  "offset",
+                  "length",
+                  "originalOffset",
+                  "sha256"
+                ],
+                "additionalProperties": false
+              },
+              "SEGS": {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 4294967295
+                  },
+                  "nameHex": {
+                    "type": "string",
+                    "pattern": "^[0-9A-Fa-f]{16}$"
+                  },
+                  "offset": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 4294967295
+                  },
+                  "length": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 4294967295
+                  },
+                  "originalOffset": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 4294967295
+                  },
+                  "sha256": {
+                    "type": "string",
+                    "pattern": "^[0-9a-f]{64}$"
+                  }
+                },
+                "required": [
+                  "id",
+                  "nameHex",
+                  "offset",
+                  "length",
+                  "originalOffset",
+                  "sha256"
+                ],
+                "additionalProperties": false
+              },
+              "SSECTORS": {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 4294967295
+                  },
+                  "nameHex": {
+                    "type": "string",
+                    "pattern": "^[0-9A-Fa-f]{16}$"
+                  },
+                  "offset": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 4294967295
+                  },
+                  "length": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 4294967295
+                  },
+                  "originalOffset": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 4294967295
+                  },
+                  "sha256": {
+                    "type": "string",
+                    "pattern": "^[0-9a-f]{64}$"
+                  }
+                },
+                "required": [
+                  "id",
+                  "nameHex",
+                  "offset",
+                  "length",
+                  "originalOffset",
+                  "sha256"
+                ],
+                "additionalProperties": false
+              },
+              "NODES": {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 4294967295
+                  },
+                  "nameHex": {
+                    "type": "string",
+                    "pattern": "^[0-9A-Fa-f]{16}$"
+                  },
+                  "offset": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 4294967295
+                  },
+                  "length": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 4294967295
+                  },
+                  "originalOffset": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 4294967295
+                  },
+                  "sha256": {
+                    "type": "string",
+                    "pattern": "^[0-9a-f]{64}$"
+                  }
+                },
+                "required": [
+                  "id",
+                  "nameHex",
+                  "offset",
+                  "length",
+                  "originalOffset",
+                  "sha256"
+                ],
+                "additionalProperties": false
+              },
+              "SECTORS": {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 4294967295
+                  },
+                  "nameHex": {
+                    "type": "string",
+                    "pattern": "^[0-9A-Fa-f]{16}$"
+                  },
+                  "offset": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 4294967295
+                  },
+                  "length": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 4294967295
+                  },
+                  "originalOffset": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 4294967295
+                  },
+                  "sha256": {
+                    "type": "string",
+                    "pattern": "^[0-9a-f]{64}$"
+                  }
+                },
+                "required": [
+                  "id",
+                  "nameHex",
+                  "offset",
+                  "length",
+                  "originalOffset",
+                  "sha256"
+                ],
+                "additionalProperties": false
+              },
+              "REJECT": {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 4294967295
+                  },
+                  "nameHex": {
+                    "type": "string",
+                    "pattern": "^[0-9A-Fa-f]{16}$"
+                  },
+                  "offset": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 4294967295
+                  },
+                  "length": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 4294967295
+                  },
+                  "originalOffset": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 4294967295
+                  },
+                  "sha256": {
+                    "type": "string",
+                    "pattern": "^[0-9a-f]{64}$"
+                  }
+                },
+                "required": [
+                  "id",
+                  "nameHex",
+                  "offset",
+                  "length",
+                  "originalOffset",
+                  "sha256"
+                ],
+                "additionalProperties": false
+              },
+              "BLOCKMAP": {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 4294967295
+                  },
+                  "nameHex": {
+                    "type": "string",
+                    "pattern": "^[0-9A-Fa-f]{16}$"
+                  },
+                  "offset": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 4294967295
+                  },
+                  "length": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 4294967295
+                  },
+                  "originalOffset": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 4294967295
+                  },
+                  "sha256": {
+                    "type": "string",
+                    "pattern": "^[0-9a-f]{64}$"
+                  }
+                },
+                "required": [
+                  "id",
+                  "nameHex",
+                  "offset",
+                  "length",
+                  "originalOffset",
+                  "sha256"
+                ],
+                "additionalProperties": false
+              }
+            },
+            "required": [
+              "THINGS",
+              "LINEDEFS",
+              "SIDEDEFS",
+              "VERTEXES",
+              "SEGS",
+              "SSECTORS",
+              "NODES",
+              "SECTORS",
+              "REJECT",
+              "BLOCKMAP"
+            ],
+            "additionalProperties": false
+          },
+          "validation": {
+            "type": "object",
+            "properties": {
+              "map": {
+                "type": "string",
+                "enum": [
+                  "E1M1",
+                  "E1M2",
+                  "E1M3",
+                  "E1M4",
+                  "E1M5",
+                  "E1M6",
+                  "E1M7",
+                  "E1M8",
+                  "E1M9"
+                ]
+              },
+              "counts": {
+                "type": "object",
+                "properties": {
+                  "THINGS": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 4294967295
+                  },
+                  "LINEDEFS": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 4294967295
+                  },
+                  "SIDEDEFS": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 4294967295
+                  },
+                  "VERTEXES": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 4294967295
+                  },
+                  "SEGS": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 4294967295
+                  },
+                  "SSECTORS": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 4294967295
+                  },
+                  "NODES": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 4294967295
+                  },
+                  "SECTORS": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 4294967295
+                  }
+                },
+                "required": [
+                  "THINGS",
+                  "LINEDEFS",
+                  "SIDEDEFS",
+                  "VERTEXES",
+                  "SEGS",
+                  "SSECTORS",
+                  "NODES",
+                  "SECTORS"
+                ],
+                "additionalProperties": false
+              },
+              "blockmap": {
+                "type": "object",
+                "properties": {
+                  "width": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 4294967295
+                  },
+                  "height": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 4294967295
+                  },
+                  "uniqueLists": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 4294967295
+                  }
+                },
+                "required": [
+                  "width",
+                  "height",
+                  "uniqueLists"
+                ],
+                "additionalProperties": false
+              },
+              "paletteCount": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 4294967295
+              },
+              "colormapCount": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 4294967295
+              },
+              "pnamesCount": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 4294967295
+              },
+              "textureCount": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 4294967295
+              },
+              "referencedPatchCount": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 4294967295
+              },
+              "flatCount": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 4294967295
+              }
+            },
+            "required": [
+              "map",
+              "counts",
+              "blockmap",
+              "paletteCount",
+              "colormapCount",
+              "pnamesCount",
+              "textureCount",
+              "referencedPatchCount",
+              "flatCount"
+            ],
+            "additionalProperties": false
+          },
+          "blockmapOrigin": {
+            "type": "object",
+            "properties": {
+              "x": {
+                "type": "integer",
+                "minimum": -32768,
+                "maximum": 32767
+              },
+              "y": {
+                "type": "integer",
+                "minimum": -32768,
+                "maximum": 32767
+              }
+            },
+            "required": [
+              "x",
+              "y"
+            ],
+            "additionalProperties": false
+          },
+          "dependencies": {
+            "type": "object",
+            "properties": {
+              "textureIndices": {
+                "type": "array",
+                "items": {
+                  "type": "integer",
+                  "minimum": 0,
+                  "maximum": 32767
+                }
+              },
+              "patchLumpIds": {
+                "type": "array",
+                "items": {
+                  "type": "integer",
+                  "minimum": 0,
+                  "maximum": 4294967295
+                }
+              },
+              "flatIndices": {
+                "type": "array",
+                "items": {
+                  "type": "integer",
+                  "minimum": 0,
+                  "maximum": 32767
+                }
+              },
+              "flatLumpIds": {
+                "type": "array",
+                "items": {
+                  "type": "integer",
+                  "minimum": 0,
+                  "maximum": 4294967295
+                }
+              }
+            },
+            "required": [
+              "textureIndices",
+              "patchLumpIds",
+              "flatIndices",
+              "flatLumpIds"
+            ],
+            "additionalProperties": false
+          },
+          "packageSha256": {
+            "type": "string",
+            "pattern": "^[0-9a-f]{64}$"
+          }
+        },
+        "required": [
+          "schemaVersion",
+          "map",
+          "resourceIdentity",
+          "marker",
+          "lumps",
+          "validation",
+          "blockmapOrigin",
+          "dependencies",
+          "packageSha256"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "catalogSha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    }
+  },
+  "required": [
+    "schemaVersion",
+    "episode",
+    "resourceIdentity",
+    "provenance",
+    "bundleFile",
+    "chunkBytes",
+    "shared",
+    "maps",
+    "catalogSha256"
+  ],
+  "additionalProperties": false
+}
