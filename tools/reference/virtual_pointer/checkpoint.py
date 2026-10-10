@@ -34,7 +34,8 @@ def main():
               LOCAL/'observer/manifest.json',LOCAL/'observer/src/doom/r_draw.sol',
               LOCAL/'out/SpeedrunVideoProbe.sol/SpeedrunVideoProbe.json',
               LOCAL/'observer/out/SpeedrunVideoProbe.sol/SpeedrunVideoProbe.json']
-    files += list(LOCAL.glob('*.log'))
+    # Do not snapshot this command's redirected output while it is still being written.
+    files += [p for p in LOCAL.glob('*.log') if p.name != 'checkpoint.log']
     files += list((LOCAL/'native-pointer').glob('*.jsonl'))
     files += list((LOCAL/'native-frames').glob('build-*/*manifest.json'))
     files += list((LOCAL/'observer/src').rglob('*.sol'))
