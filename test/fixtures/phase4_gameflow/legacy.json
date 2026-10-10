@@ -1,0 +1,25 @@
+{
+  "scope": "Two unchanged accepted native DSG1 E1M1 medium-skill idle snapshots, setup and tic 1 before rendering; full serialized gameplay state, no pixel claim",
+  "upstreamFixture": "test/fixtures/gameplay/idle/states.delta.bin.gz",
+  "upstreamFixtureSha256": "ad0e6a063d5cb572ac9df2a0cce30f41acc3b3512f97573e0d4083eaa347b114",
+  "serializerSourceSha256": "fd29ba99ea2ca2c0db9ed44fb061c93c40e3a6aefbb14e07e8e7b8bd9ae859b5",
+  "resourceIdentity": {
+    "bundleSha256": "d379076f21645cf7cc5acb056663d0faacc4065489a0ca99738479323c9f7a47",
+    "paletteSha256": "fd895921b5d0a394612bb29852ed003d44d69f76dec31c0dc6b5d5fc7d63f7bb",
+    "paletteVariant": 0,
+    "schemaVersion": 0,
+    "wadSha256": "7323bcc168c5a45ff10749b339960e98314740a734c30d4b9f3337001f9e703d"
+  },
+  "states": [
+    {
+      "tic": 0,
+      "bytes": 102468,
+      "sha256": "b8cfcff84e0542ee70afc9a05fd39cc0cd78db2086b01d538f74a706dde87500"
+    },
+    {
+      "tic": 1,
+      "bytes": 102468,
+      "sha256": "2991d1af9382f62eef138797466657ef20577ddb1f9c989a1572ab57a991abb4"
+    }
+  ]
+}
