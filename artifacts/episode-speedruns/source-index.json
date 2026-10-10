@@ -1,0 +1,632 @@
+{
+  "url": "https://www.speedrun.com/api/v1/runs?game=m1zjr526&max=200&embed=players,level,category",
+  "retrievedUTC": "2026-10-10T19:27:00Z",
+  "pagination": {
+    "offset": 0,
+    "max": 200,
+    "size": 36,
+    "links": []
+  },
+  "runs": [
+    {
+      "runId": "m3n5d14y",
+      "runUrl": "https://www.speedrun.com/freedoom_phase_1/runs/m3n5d14y",
+      "map": "E1M1",
+      "category": "EC-Max (0.12.1)",
+      "author": [
+        "Shepardus"
+      ],
+      "submitted": "2021-01-26T11:28:34Z",
+      "status": {
+        "status": "verified",
+        "examiner": "y8d1wg58",
+        "verify-date": "2021-01-26T11:28:34Z"
+      },
+      "seconds": 74.69,
+      "demoUrls": [
+        "https://www.doomworld.com/applications/core/interface/file/attachment.php?id=107608"
+      ],
+      "comment": "Demo: https://www.doomworld.com/applications/core/interface/file/attachment.php?id=107608\r\n\r\nIt was surprisingly difficult to get a good run of this map, and I'm not sure how this demo ended up being my fastest despite some egregious mistakes like having to wait through an extra cycle of the lift. I wanted to do more with the barrels in the outdoor area but couldn't find a good setup for that. All in all, I appreciate the variety in this map; it makes for a solid opening to the episode."
+    },
+    {
+      "runId": "y66575py",
+      "runUrl": "https://www.speedrun.com/freedoom_phase_1/runs/y66575py",
+      "map": "E1M2",
+      "category": "EC-Max (0.12.1)",
+      "author": [
+        "Shepardus"
+      ],
+      "submitted": "2021-01-26T11:29:54Z",
+      "status": {
+        "status": "verified",
+        "examiner": "y8d1wg58",
+        "verify-date": "2021-01-26T11:29:54Z"
+      },
+      "seconds": 195.37,
+      "demoUrls": [
+        "https://www.doomworld.com/applications/core/interface/file/attachment.php?id=108436"
+      ],
+      "comment": "Demo: https://www.doomworld.com/applications/core/interface/file/attachment.php?id=108436\r\n\r\nI find this level to be a drag; the linear path and lack of available weapons means there's hardly any room for meaningful decisions when doing a UV Max run of this map. It also has a lot of pinkies, which makes for tedious shotgunning. I had a number of runs of this map foiled by missing a single enemy, much of the time from the second pass through the starting area."
+    },
+    {
+      "runId": "yj1lklgy",
+      "runUrl": "https://www.speedrun.com/freedoom_phase_1/runs/yj1lklgy",
+      "map": "E1M3",
+      "category": "EC-Max (0.12.1)",
+      "author": [
+        "Shepardus"
+      ],
+      "submitted": "2021-01-26T11:31:14Z",
+      "status": {
+        "status": "verified",
+        "examiner": "y8d1wg58",
+        "verify-date": "2021-01-26T11:31:14Z"
+      },
+      "seconds": 285.51,
+      "demoUrls": [
+        "https://www.doomworld.com/applications/core/interface/file/attachment.php?id=108435"
+      ],
+      "comment": "Demo: https://www.doomworld.com/applications/core/interface/file/attachment.php?id=108435 \r\n\r\nThis is one of the better levels in the episode, even if part of that is due to obvious inspiration from the original shareware episode. I had fun routing out the early sections of the map, and the introduction of the chaingun and the rocket launcher means more tools to play with compared to the previous two maps."
+    },
+    {
+      "runId": "me9oko3z",
+      "runUrl": "https://www.speedrun.com/freedoom_phase_1/runs/me9oko3z",
+      "map": "E1M9",
+      "category": "EC-Max (0.12.1)",
+      "author": [
+        "Shepardus"
+      ],
+      "submitted": "2021-01-26T11:32:44Z",
+      "status": {
+        "status": "verified",
+        "examiner": "y8d1wg58",
+        "verify-date": "2021-01-26T11:32:44Z"
+      },
+      "seconds": 220.94,
+      "demoUrls": [
+        "https://www.doomworld.com/applications/core/interface/file/attachment.php?id=109327"
+      ],
+      "comment": "Demo: https://www.doomworld.com/applications/core/interface/file/attachment.php?id=109327"
+    },
+    {
+      "runId": "yd95q5jz",
+      "runUrl": "https://www.speedrun.com/freedoom_phase_1/runs/yd95q5jz",
+      "map": "E1M4",
+      "category": "EC-Max (0.12.1)",
+      "author": [
+        "Shepardus"
+      ],
+      "submitted": "2021-01-26T11:33:47Z",
+      "status": {
+        "status": "verified",
+        "examiner": "y8d1wg58",
+        "verify-date": "2021-01-26T11:33:47Z"
+      },
+      "seconds": 250.6,
+      "demoUrls": [
+        "https://www.doomworld.com/applications/core/interface/file/attachment.php?id=109328"
+      ],
+      "comment": "Demo: https://www.doomworld.com/applications/core/interface/file/attachment.php?id=109328\r\n\r\nThis is a pretty linear map if you know where you need to go and which ways are dead ends, but the variety of terrain and thing placement makes it feel considerably more engaging than E1M2. Rocketing the groups of enemies that collect in certain places is quite satisfying."
+    },
+    {
+      "runId": "me9ok63z",
+      "runUrl": "https://www.speedrun.com/freedoom_phase_1/runs/me9ok63z",
+      "map": "E1M8",
+      "category": "EC-Max (0.12.1)",
+      "author": [
+        "MxCrab"
+      ],
+      "submitted": "2021-01-26T11:47:48Z",
+      "status": {
+        "status": "verified",
+        "examiner": "y8d1wg58",
+        "verify-date": "2021-01-26T11:47:48Z"
+      },
+      "seconds": 63.54,
+      "demoUrls": [
+        "https://www.doomworld.com/applications/core/interface/file/attachment.php?id=109652"
+      ],
+      "comment": "Demo: https://www.doomworld.com/applications/core/interface/file/attachment.php?id=109652\r\n\r\nThis went alright. Luck plays a huge part on this (which is why I stopped). You need 3/4 to be 5 rockets, and then 2 max damage rockets to give the final one as little HP as possible for the ratatatata. \r\n\r\nDefinitely possible to get sub 60s, but I'm not gonna be the one to do it. Better movement through the maze should sort you out though. "
+    },
+    {
+      "runId": "y9n071kz",
+      "runUrl": "https://www.speedrun.com/freedoom_phase_1/runs/y9n071kz",
+      "map": "E1M8",
+      "category": "EC-Max (0.12.1)",
+      "author": [
+        "Shepardus"
+      ],
+      "submitted": "2021-01-26T11:48:56Z",
+      "status": {
+        "status": "verified",
+        "examiner": "y8d1wg58",
+        "verify-date": "2021-01-26T11:48:56Z"
+      },
+      "seconds": 52.37,
+      "demoUrls": [
+        "https://www.doomworld.com/applications/core/interface/file/attachment.php?id=109806"
+      ],
+      "comment": "Demo: https://www.doomworld.com/applications/core/interface/file/attachment.php?id=109806\r\n\r\nA simple boss map with four barons and not much else. Getting a good time is dependent on smooth movement in the sections before the bosses and rocket RNG for the bosses. This run was the best I did with the movement. I unfortunately missed a rocket on one of the barons but made up for it by getting lucky enough to kill it in four hits."
+    },
+    {
+      "runId": "m78g95ez",
+      "runUrl": "https://www.speedrun.com/freedoom_phase_1/runs/m78g95ez",
+      "map": "E1M5",
+      "category": "EC-Max (0.12.1)",
+      "author": [
+        "Shepardus"
+      ],
+      "submitted": "2021-01-26T11:50:05Z",
+      "status": {
+        "status": "verified",
+        "examiner": "y8d1wg58",
+        "verify-date": "2021-01-26T11:50:05Z"
+      },
+      "seconds": 408.06,
+      "demoUrls": [
+        "https://www.doomworld.com/applications/core/interface/file/attachment.php?id=109802"
+      ],
+      "comment": "Demo: https://www.doomworld.com/applications/core/interface/file/attachment.php?id=109802\r\n\r\nI enjoyed this map a lot more than I thought I would when I was initially playing through it. The layout seems winding and confusing, but with a good route it flows surprisingly well, with little backtracking or dead air. The level's pretty easy since it's generous with resources and never unleashes too many enemies at once, but it was fun to try to push the time down. The par time for this level is 7:00, so I'm glad I was able to get under that."
+    },
+    {
+      "runId": "mr4kq9dz",
+      "runUrl": "https://www.speedrun.com/freedoom_phase_1/runs/mr4kq9dz",
+      "map": "E1M6",
+      "category": "EC-Max (0.12.1)",
+      "author": [
+        "Shepardus"
+      ],
+      "submitted": "2021-01-26T11:51:11Z",
+      "status": {
+        "status": "verified",
+        "examiner": "y8d1wg58",
+        "verify-date": "2021-01-26T11:51:11Z"
+      },
+      "seconds": 413.77,
+      "demoUrls": [
+        "https://www.doomworld.com/applications/core/interface/file/attachment.php?id=109899"
+      ],
+      "comment": "Demo: https://www.doomworld.com/applications/core/interface/file/attachment.php?id=109899\r\n\r\nThis map has some pretty fun moments, such as the big fight in the outdoor area (prime rocket fodder), but I think other parts are drawn out too much, such as the leadup to the red key. I had rockets left over, so I could have found more places to use them or at least skipped some of the ammo pickups. I think a great run could get under the par time (6:30), but getting under 7 minutes is good enough for me."
+    },
+    {
+      "runId": "zx62vd5z",
+      "runUrl": "https://www.speedrun.com/freedoom_phase_1/runs/zx62vd5z",
+      "map": "E1M7",
+      "category": "EC-Max (0.12.1)",
+      "author": [
+        "Shepardus"
+      ],
+      "submitted": "2021-01-26T11:52:07Z",
+      "status": {
+        "status": "verified",
+        "examiner": "y8d1wg58",
+        "verify-date": "2021-01-26T11:52:07Z"
+      },
+      "seconds": 585.8,
+      "demoUrls": [
+        "https://www.doomworld.com/applications/core/interface/file/attachment.php?id=109917"
+      ],
+      "comment": "Demo: https://www.doomworld.com/applications/core/interface/file/attachment.php?id=109917\r\n\r\nPlenty of minor mistakes in this run, but my goal was to get under 10 minutes, so I'm fine with the imperfections. I feel that this level leans too heavily on shotgunning; the provided ammo for the other weapons doesn't last long against all the pinkies, spectres, and imps the map throws at you, and the rocket launcher comes quite late in the level (assuming you even figure out its secret). There's also some cell ammo which I can only assume is for continuous play, since there's no plasma gun to be found; I can imagine the map being more fun with a plasma gun and spare rockets carried over from the previous map."
+    },
+    {
+      "runId": "y4r092kz",
+      "runUrl": "https://www.speedrun.com/freedoom_phase_1/runs/y4r092kz",
+      "map": "E1M1",
+      "category": "EC-Speed",
+      "author": [
+        "DoggoX_X"
+      ],
+      "submitted": "2021-06-30T08:19:22Z",
+      "status": {
+        "status": "rejected",
+        "examiner": "y8d1wg58",
+        "reason": "No demo file. Good run though."
+      },
+      "seconds": 28,
+      "demoUrls": [],
+      "comment": null
+    },
+    {
+      "runId": "yde6220m",
+      "runUrl": "https://www.speedrun.com/freedoom_phase_1/runs/yde6220m",
+      "map": "E1M1",
+      "category": "EC-Speed",
+      "author": [
+        "AlexParkerBR"
+      ],
+      "submitted": "2021-08-10T16:55:30Z",
+      "status": {
+        "status": "verified",
+        "examiner": "y8d1wg58",
+        "verify-date": "2021-08-13T17:09:00Z"
+      },
+      "seconds": 42,
+      "demoUrls": [],
+      "comment": "This was the first time I had ever actually played FreeDOOM, and I decided to speedrun a couple levels. I am happy with 42 seconds for now, but might try again."
+    },
+    {
+      "runId": "y8ero51y",
+      "runUrl": "https://www.speedrun.com/freedoom_phase_1/runs/y8ero51y",
+      "map": "E1M1",
+      "category": "EC-Speed",
+      "author": [
+        "20kdc"
+      ],
+      "submitted": "2021-08-20T20:37:24Z",
+      "status": {
+        "status": "verified",
+        "examiner": "y8d1wg58",
+        "verify-date": "2022-01-20T17:07:38Z"
+      },
+      "seconds": 26.43,
+      "demoUrls": [],
+      "comment": "Run with mouselook on the Debian build of Crispy Doom 5.10.3.\r\n\r\nDemo lump link:\r\n(LINK DEAD) (sha1sum: 5e1b0dcab2b440b12ad7f73923bbf7a6088307b9)\r\n\r\nFreedoom 0.12.1 (freedoom1.wad sha1sum: e9bf428b73a04423ea7a0e9f4408f71df85ab175)\r\n\r\n-- Lump file, gzip'd and hex-encoded (use `xxd -ps -r` followed by `gunzip`) --\r\n\r\n1f8b0800340920610003ed965b72db300c45414a729d76a6d365e8dbfbea\r\n1eda0dfa9beb483b89638b622e49408211ca69a7af8f4633c7149f22804b\r\n989f3be7283ff5f7befc1ec63d20c631f2ee1952ed64c6773c2697776abd\r\nb431479841e4d2aea9bf9b4cbfadcb377ca34dc6679e983398c023f8ce6d\r\n177f184fe00938d0fbba86dddb2db4dfc40647d73e15bcea479d3c437f10\r\nc7c87b0f76a0f36803b09bbcbfde875bdf83e277edc9aca99f23647aa4e4\r\n8e23ca311558ba8adce61aed8253e8ba37edb748a6d46bdfaaff0b648f33\r\n885c7fcd472f39184cbfc407382ef5a33443e917f5da559d6e6a2ff70f75\r\n6ce9f74c6b3d5fc79673273924e7acdee41d39a3b97da8f98cf6751f751c\r\nce08f203edfc21e0ec04aa145b13be74211a4f741cbf81073001f809738f\r\nc82784925027eca122751891355ef49ef15cca7b0f10c72b88e7af3951ad\r\n576caa21eb88c20072490b87e01a7eb5f975039e4b6191c4a205ad871f8f\r\nb768c56d8f69ea20cfc3ff084d6bdb6875f4cab7f5ff958c2f3a1ab89ccd\r\n9cc824ce9d858df5bd2aed5e6c7e753f915f6fd925363885f15f80f60ad0\r\n648066c399b51ac185df8989d0d3047279e172668dcd8ce846ee02433d43\r\nd05cf561b79ecdab18a6d5fea6fee48eb133e753bee3cd3bd5731e701709\r\n7b65bf5fec5edb92c2f867d139d5bde75c53be91d4be54de20b1f11df8c0\r\n659e1b9bbe5f4ae48ba2afa57d5ae714dfcc46fb32d7997a8b3ca667dbc5\r\n075d632d5beff87de63dea7326f647be3b890f5a773d1d4b1eb3f869cf7b\r\ndb3ad31a3dc6d7589435b4b6b5c69db1b305db97fd5f7caccf9353eb1b9d\r\n96b1d90f679e2b7b120df41cfb9efd77e6ff08fc6f04e48b107d8d715af7\r\n90e3bd99f3ac46954f48dbd28a25c74cf795b8596cdc54cc8a5d3dbdd00b\r\nd9f8dab827d56feb7ca6f3fd33ecd4d9d4f96a301ac9e547f09e7d36f13e\r\ndcf53ea8b1ff2079a895070dad1cd4ccd7bcde12ff9ecb791d5bef247c4f\r\n18e4aed0d0a7d633e7c9fa6d871c0a3a9040ac77b2708bc8cc2071b9d455\r\n1cb32e1e19b19df3d1683453c8769dd0f7c0e75ecec1bc9e49d279b0536b\r\n12ff57464ff489de9eb7e73f7dbefe8d8f7c7906a934f71eea110000"
+    },
+    {
+      "runId": "y9k19jvz",
+      "runUrl": "https://www.speedrun.com/freedoom_phase_1/runs/y9k19jvz",
+      "map": "E1M1",
+      "category": "EC-Speed",
+      "author": [
+        "sastofficial"
+      ],
+      "submitted": "2023-10-09T13:00:19Z",
+      "status": {
+        "status": "verified",
+        "examiner": "y8d1wg58",
+        "verify-date": "2023-10-21T12:27:33Z"
+      },
+      "seconds": 35.14,
+      "demoUrls": [
+        "https://archive.org/details/c1m1_20231009"
+      ],
+      "comment": "Played on chocolate doom 3.0\n\nDemo: https://archive.org/details/c1m1_20231009\n\n\n\n-Retimed using XDRE- [Message from Moderator]"
+    },
+    {
+      "runId": "mk1dn31y",
+      "runUrl": "https://www.speedrun.com/freedoom_phase_1/runs/mk1dn31y",
+      "map": "E1M1",
+      "category": "EC-Speed",
+      "author": [
+        "asdf435"
+      ],
+      "submitted": "2024-09-07T15:13:34Z",
+      "status": {
+        "status": "verified",
+        "examiner": "y8d1wg58",
+        "verify-date": "2024-09-09T07:52:26Z"
+      },
+      "seconds": 24,
+      "demoUrls": [
+        "https://drive.google.com/file/d/129PZWoa6A8YX-OmERy6XIfZ8lwrOjv7E/view?usp=drive_link"
+      ],
+      "comment": "Played with Chocolate Doom version 3.1.0\nFreedoom version 0.12.1\n\nDemo file - https://drive.google.com/file/d/129PZWoa6A8YX-OmERy6XIfZ8lwrOjv7E/view?usp=drive_link"
+    },
+    {
+      "runId": "y8p0r5wz",
+      "runUrl": "https://www.speedrun.com/freedoom_phase_1/runs/y8p0r5wz",
+      "map": "E1M1",
+      "category": "EC-Speed",
+      "author": [
+        "asdf435"
+      ],
+      "submitted": "2024-09-09T13:50:07Z",
+      "status": {
+        "status": "verified",
+        "examiner": "y8d1wg58",
+        "verify-date": "2024-09-09T13:58:56Z"
+      },
+      "seconds": 23.74,
+      "demoUrls": [
+        "https://drive.google.com/file/d/1yxLL_yqqD3L3LkEHNgWUmkMg-CAr5JNy/view?usp=sharing"
+      ],
+      "comment": "Played with chocolate doom version 3.1.0\nFreedoom version 0.12.1\n\nDemo file - https://drive.google.com/file/d/1yxLL_yqqD3L3LkEHNgWUmkMg-CAr5JNy/view?usp=sharing\n\n\n\n-Retimed with XDRE- [Message from AZRAEL]"
+    },
+    {
+      "runId": "zq2k8jrz",
+      "runUrl": "https://www.speedrun.com/freedoom_phase_1/runs/zq2k8jrz",
+      "map": "E1M1",
+      "category": "EC-Speed",
+      "author": [
+        "spencerrosasgunn_03474"
+      ],
+      "submitted": "2024-12-01T07:09:20Z",
+      "status": {
+        "status": "verified",
+        "examiner": "y8d1wg58",
+        "verify-date": "2024-12-23T14:02:55Z"
+      },
+      "seconds": 22,
+      "demoUrls": [],
+      "comment": "I've never done any speedrunning before, so I thought I'd get the lowest-hanging WR in a game I enjoyed to start out."
+    },
+    {
+      "runId": "ydv950qy",
+      "runUrl": "https://www.speedrun.com/freedoom_phase_1/runs/ydv950qy",
+      "map": "E1M1",
+      "category": "EC-Speed",
+      "author": [
+        "fdziarz"
+      ],
+      "submitted": "2025-01-05T14:00:26Z",
+      "status": {
+        "status": "verified",
+        "examiner": "y8d1wg58",
+        "verify-date": "2025-01-11T09:56:12Z"
+      },
+      "seconds": 11,
+      "demoUrls": [],
+      "comment": "am i doing something wrong or is it just so easy to get a world record here??"
+    },
+    {
+      "runId": "y4j2w2qy",
+      "runUrl": "https://www.speedrun.com/freedoom_phase_1/runs/y4j2w2qy",
+      "map": "E1M1",
+      "category": "EC-Speed",
+      "author": [
+        "fdziarz"
+      ],
+      "submitted": "2025-01-05T14:23:12Z",
+      "status": {
+        "status": "verified",
+        "examiner": "y8d1wg58",
+        "verify-date": "2025-01-11T09:56:35Z"
+      },
+      "seconds": 10,
+      "demoUrls": [],
+      "comment": "how does the WR have 22s\n\ni don't understand\n"
+    },
+    {
+      "runId": "ydv95gwy",
+      "runUrl": "https://www.speedrun.com/freedoom_phase_1/runs/ydv95gwy",
+      "map": "E1M1",
+      "category": "EC-Speed",
+      "author": [
+        "fdziarz"
+      ],
+      "submitted": "2025-01-05T15:32:30Z",
+      "status": {
+        "status": "verified",
+        "examiner": "y8d1wg58",
+        "verify-date": "2025-01-11T09:56:53Z"
+      },
+      "seconds": 9,
+      "demoUrls": [],
+      "comment": "really good run, it seems like it's not possible to go under 9s sadly"
+    },
+    {
+      "runId": "z1v23q9z",
+      "runUrl": "https://www.speedrun.com/freedoom_phase_1/runs/z1v23q9z",
+      "map": "E1M1",
+      "category": "EC-Speed",
+      "author": [
+        "fdziarz"
+      ],
+      "submitted": "2025-01-22T09:27:23Z",
+      "status": {
+        "status": "verified",
+        "examiner": "y8d1wg58",
+        "verify-date": "2025-03-03T22:39:19Z"
+      },
+      "seconds": 8.7,
+      "demoUrls": [],
+      "comment": null
+    },
+    {
+      "runId": "zq206o1z",
+      "runUrl": "https://www.speedrun.com/freedoom_phase_1/runs/zq206o1z",
+      "map": "E1M1",
+      "category": "EC-Speed",
+      "author": [
+        "LANCASTER_"
+      ],
+      "submitted": "2025-01-22T12:44:24Z",
+      "status": {
+        "status": "verified",
+        "examiner": "y8d1wg58",
+        "verify-date": "2025-03-03T22:39:22Z"
+      },
+      "seconds": 8.8,
+      "demoUrls": [
+        "https://drive.proton.me/urls/X4PD9GWYK4#z9pENKYpi1Bm",
+        "https://drive.proton.me/urls/B3DG1Z1C3R#VE2sZekEUQnc"
+      ],
+      "comment": "This is a 8s80ms time\n\nThis is the link to the tar.gz file of my demo present in the video : https://drive.proton.me/urls/X4PD9GWYK4#z9pENKYpi1Bm\n\nThis is the result from all of my 394 attempts to do that result : https://drive.proton.me/urls/B3DG1Z1C3R#VE2sZekEUQnc\n\nIn the No Monsters Category, i did a 8.710s time, i think we can scrape a bit of time here, but we **CANNOT** do a 8.000s time with that route for sure"
+    },
+    {
+      "runId": "yoqrjx0z",
+      "runUrl": "https://www.speedrun.com/freedoom_phase_1/runs/yoqrjx0z",
+      "map": "E1M1",
+      "category": "EC-Speed",
+      "author": [
+        "LANCASTER_"
+      ],
+      "submitted": "2025-01-22T22:04:49Z",
+      "status": {
+        "status": "verified",
+        "examiner": "y8d1wg58",
+        "verify-date": "2025-03-03T22:39:26Z"
+      },
+      "seconds": 8.6,
+      "demoUrls": [
+        "https://drive.proton.me/urls/6D377853BC#I2bUImWZbHgX",
+        "https://drive.proton.me/urls/4QYRD2X26G#rpuWrx7zyHmt"
+      ],
+      "comment": "This is a 8.600s run, so fricking fast man.\n\n\n\nThis is the link to the tar.gz file of my demo present in the video : https://drive.proton.me/urls/6D377853BC#I2bUImWZbHgX \n\nThis is the result from all of my 1324 attempts to do that result : https://drive.proton.me/urls/4QYRD2X26G#rpuWrx7zyHmt\n\nSo, this is the result of my personal battle against Fdziarz witch resulted on 1722 attempts in total that day (22.01.2025) : here's my run. \n\nI tryharded for almost 4 hours, both on my laptop and my everyday computer (my vision is foggy right now, like... really)."
+    },
+    {
+      "runId": "yjexdvgm",
+      "runUrl": "https://www.speedrun.com/freedoom_phase_1/runs/yjexdvgm",
+      "map": "E1M1",
+      "category": "EC-Speed",
+      "author": [
+        "LANCASTER_"
+      ],
+      "submitted": "2025-01-24T22:51:39Z",
+      "status": {
+        "status": "verified",
+        "examiner": "y8d1wg58",
+        "verify-date": "2025-03-03T22:39:29Z"
+      },
+      "seconds": 8.51,
+      "demoUrls": [
+        "https://drive.proton.me/urls/8NQACZWH24#HfZkkDzEW0OD"
+      ],
+      "comment": "Here's my brand new ***8.51s*** World Record\n\nHere's the link of my demo : https://drive.proton.me/urls/8NQACZWH24#HfZkkDzEW0OD"
+    },
+    {
+      "runId": "z1vqdq7z",
+      "runUrl": "https://www.speedrun.com/freedoom_phase_1/runs/z1vqdq7z",
+      "map": "E1M1",
+      "category": "EC-Speed",
+      "author": [
+        "Rimer"
+      ],
+      "submitted": "2025-02-08T14:23:15Z",
+      "status": {
+        "status": "rejected",
+        "examiner": "y8d1wg58",
+        "reason": "That's Freedoom 2"
+      },
+      "seconds": 16,
+      "demoUrls": [],
+      "comment": null
+    },
+    {
+      "runId": "yww2nx0y",
+      "runUrl": "https://www.speedrun.com/freedoom_phase_1/runs/yww2nx0y",
+      "map": "E1M1",
+      "category": "PdKM-Speed",
+      "author": [
+        "LANCASTER_"
+      ],
+      "submitted": "2025-03-17T19:03:16Z",
+      "status": {
+        "status": "verified",
+        "examiner": "8d31o0ox",
+        "verify-date": "2025-03-17T19:03:16Z"
+      },
+      "seconds": 8.31,
+      "demoUrls": [
+        "https://drive.proton.me/urls/C36K88YXK8#EUoCnndGfBJw"
+      ],
+      "comment": "Hello, new world record to innogurate the new leaderboard ! I think i can beat my time to a low 8s (8.000s or lower).\n\nHere's my demo: https://drive.proton.me/urls/C36K88YXK8#EUoCnndGfBJw\n\n-Validated with XDRE-"
+    },
+    {
+      "runId": "ylpjl2nm",
+      "runUrl": "https://www.speedrun.com/freedoom_phase_1/runs/ylpjl2nm",
+      "map": "E1M2",
+      "category": "PdKM-Speed",
+      "author": [
+        "LANCASTER_"
+      ],
+      "submitted": "2025-03-17T19:53:48Z",
+      "status": {
+        "status": "verified",
+        "examiner": "8d31o0ox",
+        "verify-date": "2025-03-17T19:53:48Z"
+      },
+      "seconds": 55.49,
+      "demoUrls": [
+        "https://drive.proton.me/urls/HQTD1QTR4C#S5CiNp36Dwh9"
+      ],
+      "comment": "Demo file : https://drive.proton.me/urls/HQTD1QTR4C#S5CiNp36Dwh9\n\n\n\n-Validated with XDRE-"
+    },
+    {
+      "runId": "zg677ovm",
+      "runUrl": "https://www.speedrun.com/freedoom_phase_1/runs/zg677ovm",
+      "map": "E1M1",
+      "category": "PdKM-Speed",
+      "author": [
+        "asdf435"
+      ],
+      "submitted": "2025-05-02T07:09:05Z",
+      "status": {
+        "status": "verified",
+        "examiner": "8d31o0ox",
+        "verify-date": "2025-05-09T19:22:05Z"
+      },
+      "seconds": 7.97,
+      "demoUrls": [
+        "https://drive.google.com/file/d/1ofW23JwBMdzYd_k3NCz0GdIV5FrlvolK/view?usp=drive_link"
+      ],
+      "comment": "Played with dsda-doom v0.29.0\nFreedoom version 0.13.0-2\nDemo file - https://drive.google.com/file/d/1ofW23JwBMdzYd_k3NCz0GdIV5FrlvolK/view?usp=drive_link\n\nvblank_mode=0 dsda-doom -iwad freedoom1.wad -record e1m1-easy -skill 1 -complevel 3 -warp 1 1"
+    },
+    {
+      "runId": "y4n152qm",
+      "runUrl": "https://www.speedrun.com/freedoom_phase_1/runs/y4n152qm",
+      "map": "E1M1",
+      "category": "PdKM-Speed",
+      "author": [
+        "Cactaceae"
+      ],
+      "submitted": "2025-05-08T17:23:12Z",
+      "status": {
+        "status": "verified",
+        "examiner": "8d31o0ox",
+        "verify-date": "2025-05-09T19:22:33Z"
+      },
+      "seconds": 7.83,
+      "demoUrls": [
+        "https://www.mediafire.com/file/4te2d29o3mpqxk7/fde1m1-783.zip/file"
+      ],
+      "comment": "Se puede bajar mucho m\u00e1s el tiempo, pero por ahora este es mi l\u00edmite...\n\nDemo: https://www.mediafire.com/file/4te2d29o3mpqxk7/fde1m1-783.zip/file\n\n\n\n"
+    },
+    {
+      "runId": "mkx9d31z",
+      "runUrl": "https://www.speedrun.com/freedoom_phase_1/runs/mkx9d31z",
+      "map": "E1M1",
+      "category": "PdKM-Speed",
+      "author": [
+        "ReneeIDK"
+      ],
+      "submitted": "2026-03-01T22:41:03Z",
+      "status": {
+        "status": "verified",
+        "examiner": "8d31o0ox",
+        "verify-date": "2026-03-21T16:35:03Z"
+      },
+      "seconds": 8.26,
+      "demoUrls": [
+        "https://www.mediafire.com/file/uc6j0rjvo6o16ue/e1m1_pdkm-speed.lmp/file"
+      ],
+      "comment": "Demo LMP File: https://www.mediafire.com/file/uc6j0rjvo6o16ue/e1m1_pdkm-speed.lmp/file"
+    },
+    {
+      "runId": "y44r70ny",
+      "runUrl": "https://www.speedrun.com/freedoom_phase_1/runs/y44r70ny",
+      "map": "E1M1",
+      "category": "PdKM-Speed",
+      "author": [
+        "solaranix_IDKFA"
+      ],
+      "submitted": "2026-08-03T10:38:36Z",
+      "status": {
+        "status": "rejected",
+        "examiner": "8d31o0ox",
+        "reason": "A demo file (.lmp format) is required for the demo to be actually verified (link it via a cloud so I can use actual moderation tools on the demo)"
+      },
+      "seconds": 1020,
+      "demoUrls": [],
+      "comment": null
+    },
+    {
+      "runId": "z04rowey",
+      "runUrl": "https://www.speedrun.com/freedoom_phase_1/runs/z04rowey",
+      "map": "E1M1",
+      "category": "PdKM-Speed",
+      "author": [
+        "solaranix_IDKFA"
+      ],
+      "submitted": "2026-08-03T11:45:13Z",
+      "status": {
+        "status": "rejected",
+        "examiner": "8d31o0ox",
+        "reason": "Duplicate of the first run"
+      },
+      "seconds": 1020,
+      "demoUrls": [],
+      "comment": null
+    }
+  ]
+}

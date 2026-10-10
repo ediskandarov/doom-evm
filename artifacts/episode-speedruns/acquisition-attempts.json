@@ -1,0 +1,92 @@
+[
+  {
+    "map": "E1M2",
+    "runId": "y66575py",
+    "url": "https://www.doomworld.com/applications/core/interface/file/attachment.php?id=108436",
+    "UTC": "2026-10-10T19:31:27Z",
+    "http": "403",
+    "returncode": 0,
+    "stderr": "",
+    "bytes": 5508
+  },
+  {
+    "map": "E1M3",
+    "runId": "yj1lklgy",
+    "url": "https://www.doomworld.com/applications/core/interface/file/attachment.php?id=108435",
+    "UTC": "2026-10-10T19:31:27Z",
+    "http": "403",
+    "returncode": 0,
+    "stderr": "",
+    "bytes": 5508
+  },
+  {
+    "map": "E1M9",
+    "runId": "me9oko3z",
+    "url": "https://www.doomworld.com/applications/core/interface/file/attachment.php?id=109327",
+    "UTC": "2026-10-10T19:31:27Z",
+    "http": "403",
+    "returncode": 0,
+    "stderr": "",
+    "bytes": 5508
+  },
+  {
+    "map": "E1M4",
+    "runId": "yd95q5jz",
+    "url": "https://www.doomworld.com/applications/core/interface/file/attachment.php?id=109328",
+    "UTC": "2026-10-10T19:31:27Z",
+    "http": "403",
+    "returncode": 0,
+    "stderr": "",
+    "bytes": 5508
+  },
+  {
+    "map": "E1M8",
+    "runId": "me9ok63z",
+    "url": "https://www.doomworld.com/applications/core/interface/file/attachment.php?id=109652",
+    "UTC": "2026-10-10T19:31:27Z",
+    "http": "403",
+    "returncode": 0,
+    "stderr": "",
+    "bytes": 5508
+  },
+  {
+    "map": "E1M8",
+    "runId": "y9n071kz",
+    "url": "https://www.doomworld.com/applications/core/interface/file/attachment.php?id=109806",
+    "UTC": "2026-10-10T19:31:27Z",
+    "http": "403",
+    "returncode": 0,
+    "stderr": "",
+    "bytes": 5508
+  },
+  {
+    "map": "E1M5",
+    "runId": "m78g95ez",
+    "url": "https://www.doomworld.com/applications/core/interface/file/attachment.php?id=109802",
+    "UTC": "2026-10-10T19:31:27Z",
+    "http": "403",
+    "returncode": 0,
+    "stderr": "",
+    "bytes": 5508
+  },
+  {
+    "map": "E1M6",
+    "runId": "mr4kq9dz",
+    "url": "https://www.doomworld.com/applications/core/interface/file/attachment.php?id=109899",
+    "UTC": "2026-10-10T19:31:27Z",
+    "http": "403",
+    "returncode": 0,
+    "stderr": "",
+    "bytes": 5508
+  },
+  {
+    "map": "E1M7",
+    "runId": "zx62vd5z",
+    "url": "https://www.doomworld.com/applications/core/interface/file/attachment.php?id=109917",
+    "UTC": "2026-10-10T19:31:27Z",
+    "http": "403",
+    "returncode": 0,
+    "stderr": "",
+    "bytes": 5508
+  }
+]
