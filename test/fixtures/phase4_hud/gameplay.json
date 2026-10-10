@@ -1,0 +1,338 @@
+{
+  "cases": [
+    {
+      "kind": 0,
+      "arg": 55,
+      "health": 50,
+      "message": "Picked up the armor."
+    },
+    {
+      "kind": 0,
+      "arg": 56,
+      "health": 50,
+      "message": "Picked up the MegaArmor!"
+    },
+    {
+      "kind": 0,
+      "arg": 60,
+      "health": 50,
+      "message": "Picked up a health bonus."
+    },
+    {
+      "kind": 0,
+      "arg": 61,
+      "health": 50,
+      "message": "Picked up an armor bonus."
+    },
+    {
+      "kind": 0,
+      "arg": 70,
+      "health": 50,
+      "message": "Supercharge!"
+    },
+    {
+      "kind": 0,
+      "arg": 74,
+      "health": 50,
+      "message": "MegaSphere!"
+    },
+    {
+      "kind": 0,
+      "arg": 62,
+      "health": 50,
+      "message": "Picked up a blue keycard."
+    },
+    {
+      "kind": 0,
+      "arg": 64,
+      "health": 50,
+      "message": "Picked up a yellow keycard."
+    },
+    {
+      "kind": 0,
+      "arg": 63,
+      "health": 50,
+      "message": "Picked up a red keycard."
+    },
+    {
+      "kind": 0,
+      "arg": 65,
+      "health": 50,
+      "message": "Picked up a blue skull key."
+    },
+    {
+      "kind": 0,
+      "arg": 67,
+      "health": 50,
+      "message": "Picked up a yellow skull key."
+    },
+    {
+      "kind": 0,
+      "arg": 66,
+      "health": 50,
+      "message": "Picked up a red skull key."
+    },
+    {
+      "kind": 0,
+      "arg": 68,
+      "health": 50,
+      "message": "Picked up a stimpack."
+    },
+    {
+      "kind": 0,
+      "arg": 69,
+      "health": 50,
+      "message": "Picked up a medikit."
+    },
+    {
+      "kind": 0,
+      "arg": 71,
+      "health": 50,
+      "message": "Invulnerability!"
+    },
+    {
+      "kind": 0,
+      "arg": 72,
+      "health": 50,
+      "message": "Berserk!"
+    },
+    {
+      "kind": 0,
+      "arg": 73,
+      "health": 50,
+      "message": "Partial Invisibility"
+    },
+    {
+      "kind": 0,
+      "arg": 75,
+      "health": 50,
+      "message": "Radiation Shielding Suit"
+    },
+    {
+      "kind": 0,
+      "arg": 76,
+      "health": 50,
+      "message": "Computer Area Map"
+    },
+    {
+      "kind": 0,
+      "arg": 77,
+      "health": 50,
+      "message": "Light Amplification Visor"
+    },
+    {
+      "kind": 0,
+      "arg": 78,
+      "health": 50,
+      "message": "Picked up a clip."
+    },
+    {
+      "kind": 0,
+      "arg": 79,
+      "health": 50,
+      "message": "Picked up a box of bullets."
+    },
+    {
+      "kind": 0,
+      "arg": 80,
+      "health": 50,
+      "message": "Picked up a rocket."
+    },
+    {
+      "kind": 0,
+      "arg": 81,
+      "health": 50,
+      "message": "Picked up a box of rockets."
+    },
+    {
+      "kind": 0,
+      "arg": 82,
+      "health": 50,
+      "message": "Picked up an energy cell."
+    },
+    {
+      "kind": 0,
+      "arg": 83,
+      "health": 50,
+      "message": "Picked up an energy cell pack."
+    },
+    {
+      "kind": 0,
+      "arg": 84,
+      "health": 50,
+      "message": "Picked up 4 shotgun shells."
+    },
+    {
+      "kind": 0,
+      "arg": 85,
+      "health": 50,
+      "message": "Picked up a box of shotgun shells."
+    },
+    {
+      "kind": 0,
+      "arg": 86,
+      "health": 50,
+      "message": "Picked up a backpack full of ammo!"
+    },
+    {
+      "kind": 0,
+      "arg": 87,
+      "health": 50,
+      "message": "You got the BFG9000!  Oh, yes."
+    },
+    {
+      "kind": 0,
+      "arg": 88,
+      "health": 50,
+      "message": "You got the chaingun!"
+    },
+    {
+      "kind": 0,
+      "arg": 89,
+      "health": 50,
+      "message": "A chainsaw!  Find some meat!"
+    },
+    {
+      "kind": 0,
+      "arg": 90,
+      "health": 50,
+      "message": "You got the rocket launcher!"
+    },
+    {
+      "kind": 0,
+      "arg": 91,
+      "health": 50,
+      "message": "You got the plasma gun!"
+    },
+    {
+      "kind": 0,
+      "arg": 92,
+      "health": 50,
+      "message": "You got the shotgun!"
+    },
+    {
+      "kind": 0,
+      "arg": 93,
+      "health": 50,
+      "message": "You got the super shotgun!"
+    },
+    {
+      "kind": 0,
+      "arg": 69,
+      "health": 24,
+      "message": "Picked up a medikit."
+    },
+    {
+      "kind": 0,
+      "arg": 68,
+      "health": 100,
+      "message": ""
+    },
+    {
+      "kind": 1,
+      "arg": 26,
+      "health": 0,
+      "message": "You need a blue key to open this door"
+    },
+    {
+      "kind": 1,
+      "arg": 27,
+      "health": 0,
+      "message": "You need a yellow key to open this door"
+    },
+    {
+      "kind": 1,
+      "arg": 28,
+      "health": 0,
+      "message": "You need a red key to open this door"
+    },
+    {
+      "kind": 1,
+      "arg": 32,
+      "health": 0,
+      "message": "You need a blue key to open this door"
+    },
+    {
+      "kind": 1,
+      "arg": 33,
+      "health": 0,
+      "message": "You need a red key to open this door"
+    },
+    {
+      "kind": 1,
+      "arg": 34,
+      "health": 0,
+      "message": "You need a yellow key to open this door"
+    }
+  ],
+  "native": {
+    "pickupExtractions": [
+      {
+        "file": "p_inter.c",
+        "function": "P_GiveAmmo",
+        "startLine": 73,
+        "endLine": 160,
+        "sha256": "dcbcd1cf2695d756aeb3592ba144d673afc62ef49f80f65b8cff44b4ee910dc9"
+      },
+      {
+        "file": "p_inter.c",
+        "function": "P_GiveWeapon",
+        "startLine": 167,
+        "endLine": 220,
+        "sha256": "b95cca389a8fcaf19303cee853fb6b75c9bd2b82952a42e0028e8c280f0f0f58"
+      },
+      {
+        "file": "p_inter.c",
+        "function": "P_GiveBody",
+        "startLine": 228,
+        "endLine": 242,
+        "sha256": "4cd6d0f24d23b8569906df4635e9b4bd1c3ecf5893829490d37de42dc7647b72"
+      },
+      {
+        "file": "p_inter.c",
+        "function": "P_GiveArmor",
+        "startLine": 251,
+        "endLine": 266,
+        "sha256": "beae6f3d7564ebba878a5145106f5681092c709bbdbcf36bc14b7ab0fc07616c"
+      },
+      {
+        "file": "p_inter.c",
+        "function": "P_GiveCard",
+        "startLine": 273,
+        "endLine": 283,
+        "sha256": "340b764f1dfd8ee67d719593d48a22957eb67343386a6ddaf68cd110f3b79185"
+      },
+      {
+        "file": "p_inter.c",
+        "function": "P_GivePower",
+        "startLine": 289,
+        "endLine": 331,
+        "sha256": "4c288905f4b3183fe14aaf669cdd8da9542ce0518d25e33cf1d2e75802cef108"
+      },
+      {
+        "file": "p_inter.c",
+        "function": "P_TouchSpecialThing",
+        "startLine": 338,
+        "endLine": 661,
+        "sha256": "0139eb43ac50bcc649c2d11fc63ef8e54fae5dd53540cf554efd1e38b881d965"
+      }
+    ],
+    "pickupGeneratedSha256": "012b3f16407ad6c7bff3a6075d24dfa1e3e710d6367e9683a3d6e3e6dd18bd80",
+    "doorDriverSha256": "b163cfcb422d90569e8ec87280e7a3ae022e1a021059ff788b1f8d41880f4949",
+    "doorScope": "Entire original p_doors.c through existing world host; locked manual doors return before thinker allocation",
+    "profiles": "O0/O2/ASan+UBSan exact",
+    "hosts": {
+      "phase3_combat/host.c": "558f3eea882bf6a2253ec7e443b8b899b9f3d9735e315514710f9072e1d85f3a",
+      "phase3_combat/reference.py": "5bca64fc22335a9358740a6998b6eecce7b9937d761468807d6cdaf33f7eaa15",
+      "phase3_world/host.c": "4cb3c617f08a975ec872c00aa051cc52c382db44c41a5e4d34be5f44388642fb",
+      "phase3_world/reference.py": "eb36a57abe7b028aa2636b712dc3d5b069d01ad45f12467c15f361ef82868d77"
+    },
+    "sources": {
+      "p_inter.c": "72e9bbabe560ef548c2f2522494786347d5c831b0e1f0ecb5cb29d8d8e682356",
+      "p_doors.c": "2e44a6051f27206971c7bf9629431db201e1dc3441d974119ec9d88655e5ec12",
+      "info.c": "e09631527669ee528bdae20a47be79e1cb33972b39964c33ac4814e1701a0949",
+      "d_englsh.h": "b018968e3aef65e0009d6ec676d40c8731b33e2882758640d3028c530c87a789"
+    }
+  },
+  "sha256": "29f112f46a083f95e7374c592f8d58e91df0e97c476e45cc3ac396ee0345e1ed"
+}
