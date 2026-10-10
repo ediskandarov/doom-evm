@@ -1,0 +1,18 @@
+Compiling 1 files with Solc 0.8.37
+Solc 0.8.37 finished in 5.79s
+Compiler run successful with warnings:
+Warning (2319): This declaration shadows a builtin symbol.
+  --> src/doom/z_zone.sol:63:5:
+   |
+63 |     function block(ZoneState memory z, uint32 id) private pure returns (ZoneBlock memory b) {
+   |     ^ (Relevant source part starts here and spans across multiple lines).
+
+
+Ran 4 tests for test/unit/r_data.t.sol:RDataTest
+[PASS] testNamesAndWidthMaskRules() (gas: 18611)
+[PASS] testNativeAllE1M1MapFields() (gas: 240469879)
+[PASS] testNativeAllLookupAndSpriteMetadata() (gas: 884653737)
+[PASS] testResourceReadAcrossChunksAndOrdinaryDeploy() (gas: 11303917)
+Suite result: ok. 4 passed; 0 failed; 0 skipped; finished in 1.23s (1.24s CPU time)
+
+Ran 1 test suite in 1.23s (1.23s CPU time): 4 tests passed, 0 failed, 0 skipped (4 total tests)

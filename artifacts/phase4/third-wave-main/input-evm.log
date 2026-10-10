@@ -1,0 +1,11 @@
+Authenticated resource runtime 250 /1755
+Authenticated resource runtime 500 /1755
+Authenticated resource runtime 750 /1755
+Authenticated resource runtime 1000 /1755
+Authenticated resource runtime 1250 /1755
+Authenticated resource runtime 1500 /1755
+Authenticated resource runtime 1750 /1755
+PASS production Cheats/Automap tic 20 / 51
+PASS production Cheats/Automap tic 40 / 51
+PASS production Cheats/Automap tic 51 / 51
+{"pass":true,"tics":51,"frames":36,"evidence":"/Users/eduard/sandbox/doom-evm/artifacts/phase4/third-wave-main/input-evm.json"}

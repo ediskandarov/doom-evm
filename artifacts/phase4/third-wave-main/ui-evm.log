@@ -1,0 +1,19 @@
+Authenticated resource runtime 250 /1755
+Authenticated resource runtime 500 /1755
+Authenticated resource runtime 750 /1755
+Authenticated resource runtime 1000 /1755
+Authenticated resource runtime 1250 /1755
+Authenticated resource runtime 1500 /1755
+Authenticated resource runtime 1750 /1755
+PASS production UI tic 20 / 210
+PASS production UI tic 40 / 210
+PASS production UI tic 60 / 210
+PASS production UI tic 80 / 210
+PASS production UI tic 100 / 210
+PASS production UI tic 120 / 210
+PASS production UI tic 140 / 210
+PASS production UI tic 160 / 210
+PASS production UI tic 180 / 210
+PASS production UI tic 200 / 210
+PASS production UI tic 210 / 210
+{"pass":true,"tics":210,"frames":14,"evidence":"/Users/eduard/sandbox/doom-evm/artifacts/phase4/third-wave-main/ui-evm.json"}

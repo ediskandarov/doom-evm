@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "/Users/eduard/sandbox/doom-evm/tools/reference/intermission/reference.py", line 147, in <module>
+    if __name__=='__main__':main()
+                            ~~~~^^
+  File "/Users/eduard/sandbox/doom-evm/tools/reference/intermission/reference.py", line 143, in main
+    for name,b in files.items():assert (FIX/name).read_bytes()==b,'stale '+name
+                                       ^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: stale native.json

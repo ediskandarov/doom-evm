@@ -1,0 +1,33 @@
+{
+  "productionAbiSha256": "672c8cbf05f5ec7db5022e0a86821aa484d4b8e700f947683808060f3a8dd166",
+  "productionRuntimeTemplateSha256": "81bd5b10267232a10c5289893fa985d91a947b2c9862dade07007870a1affcca",
+  "runtimeBytes": 675417,
+  "featureCertificateBindingsExact": true,
+  "FrameAndFramePaletteUnchanged": true,
+  "compiler": {
+    "version": "0.8.37+commit.f401782d"
+  },
+  "settings": {
+    "remappings": [],
+    "optimizer": {
+      "enabled": true,
+      "runs": 200
+    },
+    "metadata": {
+      "bytecodeHash": "ipfs"
+    },
+    "compilationTarget": {
+      "src/evm/Doom.sol": "Doom"
+    },
+    "evmVersion": "cancun",
+    "libraries": {},
+    "viaIR": true
+  },
+  "artifactHashes": {
+    "out/Doom.sol/Doom.json": "9c5b18257343ab59115c9845daf04568dce20406356d3be0e48bcd8a250ffb4d",
+    "out/IntermissionProbe.sol/IntermissionProbe.json": "c1b3af51bb20b6be77c00afe1a153d9d13d2ffc185810a8ac119dcf4618f0cdd",
+    "out/EpisodeStartupProbe.sol/EpisodeStartupProbe.json": "a525f45b5b588f01a3a0dbadc44e166e4ade58511130e3587c6fdfcb510443d3",
+    "out/ResourceStore.sol/ResourceStore.json": "4323f6813681cce939f4f2156e81fa950623868373928a0460d8404dd37565a0"
+  },
+  "setupAttempt": "An initial supplementary ABI shape assertion used an incorrect five-field FramePalette assumption. Corrected from the unchanged six-field baseline declaration; feature ABI/runtime hash equality had already passed. No existing test or source changed."
+}

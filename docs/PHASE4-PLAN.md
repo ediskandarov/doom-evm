@@ -994,3 +994,136 @@ Goal4.13a source/support integration is complete within that domain. The commit
 containing this checkpoint/certificate is integration-specific publication.
 Stop after normal push, verified clean main/origin synchronization; do not begin
 production transitions or another goal.
+
+## Phase 4 third wave — Verified main integration (2026-10-10)
+
+Authorized scope: integrate completed Episode Startup, Intermission and Input
+Runtime while preserving original commits, implementations, tests and evidence.
+Only the designated Single Writer modified main. No production transitions,
+Intermission wiring, Finale, browser level selection or new feature work was
+performed. AGENTS.md already supplies all required instructions and remains exact.
+
+Measured start: **2026-10-10T13:48:39Z**. Refreshed clean main/origin/main matched
+**5bfe5d8a69fe195b202a6260f9aba795b022f643**; the remote still matched this baseline
+after verification. Episode Startup tip522b589 was already an ancestor through
+merge0297f05 and checkpoint5bfe5d8, so no duplicate merge was made. Intermission
+and Input Runtime both branch from completed Production UI checkpoint9f7d091.
+Their changed files are disjoint; startup's additive files are also disjoint.
+Intermission merged first, Input Runtime last, with **no conflicts or integration
+code changes**. Every feature change is byte-identical to its supplied branch tip.
+
+| Goal | Implementation | Main integration | Verification | Original source commits | Remaining production boundary |
+|---|---|---|---|---|---|
+| 4.13a Episode Startup | Complete authenticated fresh Episode1 initializer | Already integrated by0297f05; original5bfe5d8 checkpoint retained |16 startup tests pass again with affected setup/zone/Gameflow/resource dependencies; prior12 ordinary startups/12 rollbacks and native evidence preserved |ff1ba3a,8557b53,522b589 |Fresh initializer only; production selection, prepared-context reload/transition and lifecycle persistence remain pending |
+| 4.14a Intermission | Complete independent original Episode1 WI |Mergee7d1cce2bae92a341bf70e4f8a4580dd63c1ecf3 |12 WI tests;34 native/EVM scenarios,1,215 snapshots,34 full indexed Frames,30 persistence calls,6 mined rollbacks |ebca08be66e783019ade6198fb75285215777324,d032db6831b038fdcd56c619cc42a172562bdf89 |No production WI/Gameflow/Episode Runtime/display wiring |
+| 4.12 Input Runtime | Complete original keyboard/Cheats/Automap adapter |Mergefceac5972bcca5853f4c4f0b21be9f8916992893 |Focused adapter/consumer tests;51 fresh native-equal EVM tics,35 gameplay Frames plus1 static,10 full-storage rollbacks; legacy UI210 tics/13 UI Frames plus1 static/6 rollbacks |1cfd318c89f1b2ea3c446f2f05290277c345565c,83217e1994150d862646387baa614a8433fc24f5 |Accepted finite retail E1M1 raw-keyboard profile; IDCLEV requests persist without loading |
+
+The Gitmoji commit containing this ledger and the separate integration evidence
+is the publication checkpoint. All original feature commits remain ancestors;
+feature branches/worktrees were not changed. The original ledger body, memory
+audit, Video/Status Bar/HUD/Gameflow/UI/startup/resource/cheat/automap records,
+tests, fixtures, licenses and acceptance certificates are preserved. The only
+seven existing baseline files changed are the Input Runtime branch's declared
+production/browser adapters; all1865 other tracked baseline blobs excluding this
+ledger remain exact. No original C, shared engine state, resource schema, compiler
+configuration, Frame protocol or execution budget changed.
+
+### Executed combined verification
+
+**288 Forge tests pass,0 failed,0 skipped**: one combined284-test/36-suite gate,
+then four selected R_Data dependencies. Coverage includes raw responders,
+Cheats/Automap, Production UI, WI, startup, Gameflow, native zone/setup/backing,
+player/command/storage and affected video/renderer consumers. Pinned fuzz seed
+0x412 and256-run existing fuzz assertions were retained. The combined130-file
+compile took481.59s; tests took10.38s. The resource root compiled5.79s and ran1.23s.
+**124 Node tests pass,0 failed/skip** for raw and legacy keyboard/DOM/transaction
+queues, palette/Frame transport, budgets and69 WAD/Episode resource cases.
+
+The explicit Doom/EpisodeStartupProbe/IntermissionProbe/ResourceStore build passes
+under Solc0.8.37/viaIR/optimizer200/Cancun (77 files,116.76s). Production Doom ABI
+and675,417-byte runtime template exactly match the feature acceptance certificate;
+Frame and the existing six-field FramePalette ABI remain unchanged. The final
+37,453-byte WI artifact also equals all four actually deployed WI runtimes.
+Source formatting, whitespace with preserved CRLF licenses, original-C pin/clean
+state, historical evidence identities and merged interface/resource checks pass.
+
+Fresh native Input Runtime regeneration agrees across O0/O2/ASan+UBSan/allocation
+fill for51 tics/35 Frames. All observation/Frame/palette outputs match accepted
+hashes; only its build manifest's absolute trace.h include path is relocated.
+WI's unchanged --check agrees across all three profiles and reproduces all193
+other generated files, including1,215 state/frame observations. Its final
+native.json assertion **fails** solely on a leading './' in sanitized compiler
+warning source paths. A read-only diagnostic captures the original failure and
+verifies all other manifest fields exactly after accounting for that path spelling.
+The original checker, assertions, manifests and fixtures were not changed; this
+metadata failure remains recorded, rather than relabeled a passing original gate.
+Owned helper setup mistakes were corrected without changing engine/tests.
+
+Fresh ordinary EVM checks pass on isolated18914 (WI),18915 (raw input) and18916
+(legacy UI). WI validates44 immutable resource CREATEs,34 complete64,000-index
+Frames and all native snapshots, plus separate persistence/completion guards.
+Each production replay validates all1,755 ordinary immutable resource runtimes
+and source-bound Doom CREATEs. Raw input compares74 scalar fields,15 parser
+sequences, all81 HUD bytes,20 mark coordinates, every linedef flag and native
+pixels/palettes, including16 no-render tics and pending IDCLEV. Legacy UI retains
+its native pickup/HUD expiry/palette/fullscreen profile. Receipt/WS fallback and
+deduplication remain covered. All22 mined rejection checks preserve full storage
+roots and emit no logs.
+
+The production runners ran in an owned archive snapshot of merged HEAD because
+the raw runner writes a local palette even without Chrome. Main's existing
+browser config/palette hashes remain exact. All three owned nodes stopped and
+their ports are closed; reserved playground18880/8088 and other owners' runtimes,
+worktrees and branches were not used or altered.
+
+### Production interfaces and deferred work
+
+`EpisodeStartup.initialize` remains a fresh context/flow initializer, never a
+live-world transition helper. Production Episode Runtime must provide prepared
+context setup, preserve player/cache/zone/global history and mutable difficulty
+definitions, and refresh callbacks/map/resource/translation/native-zone aliases.
+Its flow must reconcile with InputRuntimeState.flow atomically.
+
+Input mode requires a fresh deployment and explicit initializeGameInput(bool),
+with gameplay/productionUI/rawKeyboard=true in client configuration. Ordered
+stepEvents/stepEventsAndRender accept at most64 [type,key] pairs; AM_Map alone
+owns IDDT. Preserve parser/AM histories and original malformed AM_Stop notices.
+Future G_Ticker action dispatch must consume the exact deferred IDCLEV selection,
+clear native gamekeydown at G_DoLoadLevel, synchronize AM/flow flags and restart
+ST/HU at their original spawn boundary while retaining statics. Never run both
+the old level-only path and full Gameflow tick for one command.
+
+WI_Start/Ticker/Drawer/loadData need persistent WiState, a canonical completion
+snapshot (zero-based episode/last/next and original denominator normalization),
+authoritative command buttons/player latches/miscellaneous RNG, borrowed graphics
+and separate screens0/1. Gameflow hook signatures still need a frozen explicit WI
+context extension. Dispatch WI in place of gameplay/ST/AM/HU during intermission;
+consume worldDoneRequested once at WI_End -> G_WorldDone, suppress post-completion
+drawing, then let the following original action boundary load synchronously.
+Production display must restore base PLAYPAL/gamma through FramePalette. E1M8
+continues to bypass WI; finale is separate. No such wiring was installed here.
+
+Full inherited Phase0–3/final Phase4 acceptance, fresh Chrome/Canvas replay,
+actual production Episode startup/transitions/rebirth/warp, whole-episode loading/
+progression, WI production/browser display, Finale/wipes and whole-process zone/
+unknown-memory equivalence remain deferred. The transport cleanup test that
+mutates local browser configuration was not rerun; its unchanged historical proof
+is preserved, while raw/legacy transport and runtime ownership were checked here.
+No new peak-memory or whole-episode performance claim is made.
+
+Suggested future integration order: prepared-context Episode Runtime and unified
+Gameflow/input persistence; production WI lifecycle/palette/display; then separate
+Finale/completed-episode/final acceptance goals. Do not start them automatically.
+
+See [integration certificate](../artifacts/phase4/third-wave-main/integration.json),
+[focused Forge log](../artifacts/phase4/third-wave-main/focused.log),
+[Node log](../artifacts/phase4/third-wave-main/node.log),
+[WI receipts](../artifacts/phase4/third-wave-main/intermission-evm.json),
+[raw receipts](../artifacts/phase4/third-wave-main/input-evm.json),
+[UI compatibility receipts](../artifacts/phase4/third-wave-main/ui-evm.json) and
+[native metadata reconciliation](../artifacts/phase4/third-wave-main/native-reconciliation.json).
+Original handoffs/certificates in PHASE4-EPISODE-STARTUP.md,
+PHASE4-INTERMISSION.md and PHASE4-INPUT-RUNTIME.md remain untouched.
+The certificate records measured verification end, elapsed time and available
+goal-counter attribution. Stop after normal push and verified clean synchronized
+main; no subsequent development goal is authorized by this integration.
