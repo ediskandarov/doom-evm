@@ -459,3 +459,76 @@ remain separate goals. **No blocker remains for this Status Bar integration.**
 The commit containing this checkpoint and the two new integration artifacts is
 the publication. Stop after successful commit/push and main/origin synchronization;
 no production adapter or further Phase4 implementation follows.
+
+
+## Goal 4.4 — Original DOOM cheat codes (feature branch handoff)
+
+Worktree `/Users/eduard/sandbox/doom-evm-cheats`, branch `feat/phase4-cheats`.
+Initial source/interface investigation occurred at `6d7630e`; after the user's
+pause/resume, authoritative branch baseline is accepted Status Bar integration
+`9f98ed1d38e6de3f2577f5d76b07ec136fc70d52`. The task uses that current accepted
+ST/HU/gameflow context. No main/other branch changes or independent shared
+production adapter/interface changes are part of this task.
+
+| Deliverable | Implementation | Integration | Verification | Remaining |
+|---|---|---|---|---|
+| Original m_cheat recognition and supported ST cheat effects | Complete in new m_cheat.sol/st_cheats.sol; IDMUS/sound excluded | Accepted GameContext/Player/P_GivePower/GameflowState APIs unchanged | 150 native scenarios / 4,196 event snapshots; 793 native primitive cases; O0/O2/ASan/UBSan exact | Production event dispatch deferred |
+| IDDT and IDCLEV | Complete recognition, original gates, reveal cycle, parameter/reset/mode validation and deferred request | Independent AM helper and accepted G_DeferedInitNew call | Native scenarios, ordinary EVM raw-key/storage comparisons | AM rendering, authenticated additional-map setup and production routing deferred |
+| Status/HUD/gameplay consumers | Cheat effects feed accepted unchanged modules | Dedicated composition only | 15 exact native full-frame/status-background/palette checkpoints; damage/armor/noclip/power-expiry tests | Production persistence/composition deferred |
+| Tests/evidence/commits | Dedicated subsystem/support/oracle/tests/docs complete | No inherited assertions or historic certificates changed | 69 focused Foundry tests pass (20 new, 49 directly affected); 20 ordinary-EVM scenarios / 491 native event hashes across 254 input transactions | Full inherited regression deferred to final Phase 4 |
+
+The implementation preserves mismatch-without-retry, case sensitivity, exact
+short-circuit responder order, mutable parameter bytes, raw signed-char warp
+parameters, health/weapon/key/power mutations, original messages and unpadded
+hex position formatting. Both noclip strings work in every native mode;
+nightmare/dead/paused do not independently disable ST cheats. ST's netgame gate,
+IDCLEV outside that gate and AM's deathmatch/active-branch gate remain exact.
+Original commercial IDCLEV rejects every warp because its computed episode is
+zero. Original IDCHOPPERS grants invulnerability one, expiring next player tic.
+Early first-NUL warp parameters expose uninitialized C buf[1]; parser changes
+are verified, but that undefined gameplay request is safely rejected in Solidity.
+
+All sixteen cursors/sequences and supplemental AM reveal/position state must be
+persisted atomically with gameplay/deferred flow; level/UI lifecycle calls must
+not reset global recognition. The [cheat handoff](PHASE4-CHEATS.md) specifies
+native HU→ST→AM→ordinary-key event ordering, active-AM branch semantics, input
+ordering/authorization ownership, next-tic consumers, pending level setup and
+required rollback. These APIs are documented for the separate integration goal;
+this task does not change browser, input/Frame ABI, map schema or production
+adapters. IDDT geometry/pixels and actual multi-map loading are not claimed.
+
+Native source/harness/fixture spans and hashes accompany the fixtures. The
+presentation sanitizer uses the accepted variable-column-table array-bounds and
+asset leak-detection exclusions; pure recognizer/effect comparisons use full
+ASan/UBSan. Ordinary support CREATE costs 5,228,348 gas; input receipt costs and
+runtime/source bindings are in [cheat receipts](../artifacts/phase4/cheats-evm.json).
+These measure the storage/observation probe, not isolated production performance.
+Solc 0.8.37/viaIR/optimizer200/Cancun and 10B budget remain unchanged.
+
+[Cheat verification](../artifacts/phase4/cheats-verification.json) binds the
+69-test gate, native counts, 15 presentation checkpoints, ordinary rollback/
+retry/sequence proof and preservation of accepted baseline files. Commands live
+in the handoff and tools/reference/cheats/README.md. One root agent performed this
+goal; no subagents or transcript usage mining. Precise runtime model/category
+usage is not exposed; goal-tool counters are separate from telemetry.
+
+Implementation and independent Goal 4.4 feature verification are complete;
+production integration is intentionally deferred under the user boundary. No
+current blocker or remaining cheat-subsystem work. Commit on this feature branch,
+do not merge into main, and stop after Goal 4.4. No later goal or full Phase 4
+acceptance starts automatically. Completion/commit metadata follows separately.
+
+
+### Verified cheat implementation checkpoint
+
+Implementation/native/test commit **1eeed581edb17b7dd2def01d8796a37d10b751f8** is
+verified on `feat/phase4-cheats`. The following documentation/evidence commit
+publishes source-bound native/Foundry/ordinary-EVM results and the independent
+integration API. Native rebuild/check, focused 69-test gate, owned-file formatting,
+proof/source preservation and staged diff checks pass. Work remains local on
+this feature branch; no merge or remote-main publication is performed.
+
+The resumed structured goal began 2026-10-10T10:15:35Z (createdAt1791627335).
+Its counter excludes the earlier cleared investigative goal. Goal-tool closure
+will record the actual end/elapsed/token counter separately; these are not
+per-category telemetry and are never added to historical/session token totals.
