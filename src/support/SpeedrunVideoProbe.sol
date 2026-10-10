@@ -35,12 +35,13 @@ contract SpeedrunVideoProbe is WadResources, IFrameProtocol {
         initializeProfile(1);
     }
 
-    /// @notice Test-only selection of existing policies:0 strict,1 legacy initialized,2 Episode.
+    /// @notice Test-only explicit policies:0 strict,1 initialized,2 Episode,3 experimental virtual.
     function initializeProfile(uint8 profile) public {
         if (msg.sender != driver || initialized) revert InvalidReplay();
-        if (profile > 2) revert InvalidReplay();
+        if (profile > 3) revert InvalidReplay();
         (GameContext memory c,) = EpisodeStartup.initialize(_resourceView(), 1, 1, 0, false, profile != 0);
-        c.state.nativeZone.canonicalPointerHighBytes = profile == 2;
+        c.state.nativeZone.canonicalPointerHighBytes = profile >= 2;
+        c.state.nativeZone.experimentalVirtualPointers = profile == 3;
         saved = c.state;
         initialized = true;
         emit Observation(0, Snapshot.observe(c.state));
