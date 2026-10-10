@@ -94,16 +94,34 @@ contract Doom is IFrameProtocol, WadResources {
     }
 
     function _initializeEpisode(int32 map, int32 skill, bool fullscreen) private {
-        (GameContext memory c, GameflowState memory f) =
-            EpisodeStartup.initialize(_resourceView(), 1, map, skill, false, true);
+        (GameContext memory c, UIState memory u, InputRuntimeState memory s, EpisodeState memory e) =
+            _newEpisodeContext(map, skill, fullscreen);
+        _saveEpisode(c, s, u, e);
+    }
+
+    /// @dev Retain the authenticated startup context for an atomic menu selection.
+    /// Storing then reloading it in the same call needlessly decoded a second
+    /// complete resource/context graph, exceeding the fixed memory limit on E1M7.
+    function _newEpisodeContext(int32 map, int32 skill, bool fullscreen) private view returns (
+        GameContext memory c, UIState memory u, InputRuntimeState memory s, EpisodeState memory e
+    ) {
+        GameflowState memory f;
+        (c, f) = EpisodeStartup.initialize(_resourceView(), 1, map, skill, false, true);
         c.state.nativeZone.canonicalPointerHighBytes = true;
-        UIState memory u;
+        // Same aliases installed by DoomGame.load, without a second decode.
+        c.map = c.state.map;
+        c.move = c.state.move;
+        c.path = c.state.path;
+        c.resources.nativeZone = c.state.nativeZone;
+        c.resources.texturetranslation = c.state.texturetranslation;
+        c.resources.flattranslation = c.state.flattranslation;
         DoomUI.initialize(u, c, fullscreen);
-        InputRuntimeState memory s;
         InputProtocol.initialize(s);
         s.flow = f;
-        EpisodeState memory e;
         EpisodeRuntime.saveDifficulty(c, e);
+    }
+
+    function _saveEpisode(GameContext memory c, InputRuntimeState memory s, UIState memory u, EpisodeState memory e) private {
         gameState = c.state;
         uiState = u;
         inputRuntime = s;
@@ -361,7 +379,11 @@ contract Doom is IFrameProtocol, WadResources {
         if (m.startRequested) {
             menuState.startRequested = false;
             if (!gameStarted) {
-                _initializeEpisode(m.selectedMap, m.selectedSkill, uiState.fullscreen);
+                (GameContext memory c, UIState memory u, InputRuntimeState memory s, EpisodeState memory e) =
+                    _newEpisodeContext(m.selectedMap, m.selectedSkill, uiState.fullscreen);
+                c.state.menuactive = false;
+                _finishEpisode(c, s, u, e, bytes(""), sequence, draw);
+                return;
             } else {
                 GameState memory state = gameState;
                 GameflowState memory flow = inputRuntime.flow;
@@ -390,13 +412,17 @@ contract Doom is IFrameProtocol, WadResources {
         UIState memory u = uiState;
         InputRuntimeState memory s = inputRuntime;
         EpisodeState memory e = episodeState;
+        _finishEpisode(c, s, u, e, events, sequence, draw);
+    }
+
+    function _finishEpisode(
+        GameContext memory c, InputRuntimeState memory s, UIState memory u, EpisodeState memory e,
+        bytes memory events, uint32 sequence, bool draw
+    ) private {
         EpisodeRuntime.tick(c, s, u, e, events);
         bytes memory pixels;
         if (draw) pixels = EpisodeRuntime.draw(c, s, u, e);
-        gameState = c.state;
-        uiState = u;
-        inputRuntime = s;
-        episodeState = e;
+        _saveEpisode(c, s, u, e);
         inputSeq = sequence;
         if (draw) _emitFrame(sequence, pixels);
     }

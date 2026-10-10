@@ -17,6 +17,7 @@ const palettePath = option('--palette', 'artifacts/local/gameplay-production.pal
 const prefix = option('--output-prefix', 'artifacts/local/phase3-gameplay-browser');
 const sha = value => createHash('sha256').update(value).digest('hex');
 const config = JSON.parse(await readFile(configPath, 'utf8'));
+config.menuMode = false; // Preserve this inherited legacy gameplay/browser gate.
 const palette = JSON.parse(await readFile(palettePath, 'utf8'));
 const native = JSON.parse(await readFile(resolve(nativePath, 'manifest.json'), 'utf8'));
 const packets = JSON.parse(await readFile(resolve(nativePath, 'packets.json'), 'utf8'));

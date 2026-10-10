@@ -29,6 +29,7 @@ async function appFixture({ gameplay = false, autotest = false, started = false,
   document.querySelector = selector => selectors.get(selector) ?? nodes.find(node => '#' + node.id === selector);
   document.createElement = tag => new Element(tag);
   const config = { rpcUrl: 'http://local.invalid/rpc', wsUrl: 'ws://local.invalid/ws', address: '0x1234', driver: '0xabcd',
+    menuMode: false, // These inherited tests explicitly exercise the legacy launcher profile.
     deploymentBlock: '0x0', rendererKind: 'doom-world-view', paletteUrl: '/palette.json', paletteKind: 'synthetic', resourceIdentity: palette.resourceIdentity };
   if (gameplay) config.gameplay = true;
   if (nativeZone) config.nativeZone = true;

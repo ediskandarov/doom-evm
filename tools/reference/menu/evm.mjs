@@ -39,8 +39,8 @@ async function rpc(name,params=[]) {
   return data.result;
 }
 async function until(check,label) { const end=Date.now()+300000; while(Date.now()<end) { const value=await check();if(value)return value;await sleep(20); } throw Error('Timeout '+label); }
-async function transaction(data,to,status='0x1',from=driver) {
-  const start=performance.now(), hash=await rpc('eth_sendTransaction',[{from,data,gas,...(to?{to}:{})}]);
+async function transaction(data,to,status='0x1',from=driver,transactionGas=gas) {
+  const start=performance.now(), hash=await rpc('eth_sendTransaction',[{from,data,gas:transactionGas,...(to?{to}:{})}]);
   const receipt=await until(()=>rpc('eth_getTransactionReceipt',[hash]),'receipt');
   if(receipt.status!==status) { try { await rpc('eth_call',[{from,to,data,gas},'latest']); } catch(error) { report.failedTransaction={hash,error:error.rpcError};console.error(report.failedTransaction); } }
   assert.equal(receipt.status,status,hash+' gas '+BigInt(receipt.gasUsed));
@@ -70,10 +70,10 @@ async function events(address,packet=[],draw=true,label='keyboard',expected) {
 }
 const key = n => [[0,n],[1,n]];
 const text = value => [...value].flatMap(c=>key(c.charCodeAt(0)));
-async function rollback(address,data,label,from=driver) {
-  const before=await rpc('eth_getProof',[address,[],'latest']);const result=await transaction(data,address,'0x0',from);
+async function rollback(address,data,label,from=driver,transactionGas=gas) {
+  const before=await rpc('eth_getProof',[address,[],'latest']);const result=await transaction(data,address,'0x0',from,transactionGas);
   const after=await rpc('eth_getProof',[address,[],'latest']);assert.equal(after.storageHash,before.storageHash);assert.equal(result.receipt.logs.length,0);
-  report.rollbacks.push({label,transaction:result.receipt.transactionHash,storageRoot:before.storageHash,allStorageUnchanged:true,noLogs:true});
+  report.rollbacks.push({label,transaction:result.receipt.transactionHash,storageRoot:before.storageHash,gasLimit:Number(BigInt(transactionGas)),allStorageUnchanged:true,noLogs:true});
 }
 const configuration = address => ({rpcUrl:url,wsUrl:url.replace('http','ws'),address,driver,
   rendererKind:'doom-world-view',gameplay:true,productionUI:true,rawKeyboard:true,episodeMode:true,menuMode:true,
@@ -136,6 +136,9 @@ try {
     await events(address,key(13),true,'New Game episode selection');
     await events(address,key(13),true,'Original skill default',await readFile('test/fixtures/evm_menu/skill-2.bin'));
     await events(address,key(13),true,'New Game E1M1');
+    const previousFirstFrame=await readFile('artifacts/phase4/menu/checkpoint-c-attempt2-frame-3.pixels');
+    assert.equal(report.frames.at(-1).pixelSha256,sha(previousFirstFrame),'authenticated context reuse preserves previous first gameplay Frame');
+    report.firstGameplayFrameMatchesCheckpointC=true;
     assert.deepEqual((await episode(address)).slice(0,5),[1,2,0,0,0]);assert.deepEqual((await game(address)).slice(1),[1,100,0,1]);
     // Menu opening stops a previously held movement/fire/weapon state. Its
     // redraws and unknown keys never advance gameplay or any cheat recognizer.
@@ -175,6 +178,10 @@ try {
     await events(address,key(121),true,'Nightmare accepted');assert.deepEqual((await episode(address)).slice(0,4),[1,4,0,0]);
     await events(address,key(27).concat(key(110),key(13),key(13),key(104),key(13)),true,'Original easy skill');
     assert.equal((await episode(address))[1],1);
+    for(const [skill,hotkey] of [[0,105],[3,117]]) {
+      await events(address,key(27).concat(key(110),key(13),key(13),key(hotkey),key(13)),true,'Original skill '+skill);
+      assert.equal((await episode(address))[1],skill);
+    }
     // Explicit game pause remains paused through menu open/close and redraws.
     await events(address,key(255),true,'Gameplay Pause');const pauseTime=(await game(address))[1];
     await events(address,key(27),true,'Menu while explicitly paused');await events(address,[],true,'Paused menu redraw');await events(address,key(27),true,'Escape retains explicit pause');
@@ -186,6 +193,25 @@ try {
     await events(legacy,[[0,119],[0,182]],true,'Legacy raw-input first native frame',native);
     report.legacy={rawInitializer:true,frameABIUnchanged:true,nativeFirstFrameExact:true};
     const staticAddress=await deploy();await transaction(method('renderFrame()'),staticAddress);report.legacy.staticRenderBeforeGameplay=true;
+    // Fresh heavy-map initialization uses the same menu and authenticated factory
+    // as the first user selection. An OOG after menu state writes proves complete
+    // atomic rollback of startup, sequence and emitted logs; retry uses the same seq.
+    const heavy=await deploy();await transaction(method('initializeMenu(bool)')+word(0),heavy);
+    await events(heavy,key(115).concat(key(13),key(55),key(13)),true,'Fresh E1M7 skill screen');
+    const heavySeq=(counters.get(heavy)??0)+1, heavyPacket=Buffer.from(key(13).flat());
+    await rollback(heavy,method('stepEventsAndRender(bytes,uint32)')+word(64)+word(heavySeq)+tail(heavyPacket),'OOG after menu writes during fresh heavy startup',driver,'0x5f5e100');
+    assert.equal(await call(heavy,method('gameStarted()')),'0x'+word(0));assert.equal((await menu(heavy))[2],2);
+    await events(heavy,key(13),true,'Fresh E1M7 startup after rollback');assert.deepEqual((await episode(heavy)).slice(0,4),[7,2,0,0]);
+    report.freshHeavyStartup={map:7,retriedSameSequence:true,noIntermission:true};
+    report.freshSelections=[{map:7,state:0,leveltime:1,skill:2}];
+    for(const map of [1,2,3,4,5,6,8,9]) {
+      const fresh=await deploy();await transaction(method('initializeMenu(bool)')+word(0),fresh);
+      await events(fresh,key(115).concat(key(13),key(48+map),key(13)),false,'Fresh E1M'+map+' menu selection');
+      await events(fresh,key(13),true,'Fresh first-game E1M'+map);
+      const state=await episode(fresh),status=await game(fresh);
+      assert.deepEqual(state.slice(0,5),[map,2,0,0,0]);assert.deepEqual(status.slice(1),[1,100,0,1]);
+      report.freshSelections.push({map,state:state[2],leveltime:status[1],skill:state[1]});console.log('PASS fresh first-game E1M'+map);
+    }
     if(args.includes('--browser')) {
       const browserAddress=await deploy(), configPath=prefix+'.config.json';await writeFile(configPath,JSON.stringify(configuration(browserAddress),null,2)+'\n');
       const browser=spawn(process.execPath,['tools/transport/menu-browser-check.mjs','--config',configPath,'--output-prefix',prefix+'-browser'],{stdio:'inherit'});

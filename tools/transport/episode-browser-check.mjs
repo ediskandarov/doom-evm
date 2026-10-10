@@ -12,6 +12,8 @@ import {decodeFramePalette,FRAME_PALETTE_TOPIC} from '../../web/ui-palette.mjs';
 const args=process.argv.slice(2),opt=(n,d)=>args.includes(n)?args[args.indexOf(n)+1]:d;
 const prefix=opt('--output-prefix','artifacts/phase4/episode-completion/browser');
 const config=JSON.parse(await readFile(opt('--config','artifacts/phase4/episode-completion/evm.config.json')));
+// This inherited launcher-control gate deliberately selects the legacy browser profile.
+config.menuMode=false;
 assert(config.episodeMode&&config.rawKeyboard&&config.productionUI);
 const rpc=makeRpc(config.rpcUrl),sha=b=>createHash('sha256').update(b).digest('hex');
 const report={kind:'episode-one-real-chrome-canvas',pass:false,startedUtc:new Date().toISOString(),config,frames:[],controls:[],sourceHashes:{}};

@@ -5,5 +5,11 @@
     "Failed: missing platform globals and M_DoSave stub at link.",
     "Failed: M_DoSave needed a forward declaration before extracted responder."
   ],
-  "resolution": "Corrected harness declarations/platform shims only; original function bodies and existing fixtures unchanged. Subsequent O0/O2/sanitized runs and --check passed."
+  "resolution": "Corrected harness declarations/platform shims only; original function bodies and existing fixtures unchanged. Subsequent O0/O2/sanitized runs and --check passed.",
+  "productionAttempts": [
+    {"evidence": "checkpoint-c.json", "failure": "Anvil default 2 MiB HTTP request cap rejected the CREATE payload after all resources deployed.", "resolution": "Owned runner disables request body cap; EVM budget, hardfork and compiler unchanged."},
+    {"evidence": "final.json", "failure": "First-game E1M7 startup plus tick/render exceeded unchanged 1 GiB interpreter memory limit (MemoryOOG). Earlier retained-runtime E1M7 selection and fresh E1M9 browser selection had passed.", "resolution": "Doom adapter retains and rebinds authenticated EpisodeStartup context for first tick/render, instead of saving then decoding a second context in the same transaction. All nine fresh startup transactions subsequently pass; no memory/provenance relaxation."},
+    {"evidence": "release-browser.json", "failure": "Reload harness observed old-document ready flag before navigation completed, then tried the new-document fixtureClient before initialization.", "resolution": "Wait for a document marker to change and the new menu client/Frame to be ready; product state or rendering logic unchanged."},
+    {"failure": "Sandbox EPERM blocked menu Anvil and inherited Node lifecycle test localhost sockets.", "resolution": "Reran with authorized localhost access; lifecycle test and 65 other browser/transport tests passed."}
+  ]
 }

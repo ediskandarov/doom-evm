@@ -4,13 +4,18 @@ import { validatePalette } from './palette.mjs';
 import { KeyboardInput, RawKeyboardInput, bindKeyboard } from './input.mjs';
 import { InputTransactions, GameplayLoop } from './input-loop.mjs';
 import { FramePresentation } from './ui-palette.mjs';
+import { usesEVMMenu } from './menu-input.mjs';
 const status = document.querySelector('#status'), button = document.querySelector('#step'), canvas = document.querySelector('#frame');
 const proof = window.__transportProof = { ready: false, frames: [], errors: [], inputs: [], fallbackVerified: false };
-const fail = error => { status.textContent = error.message; proof.errors.push(error.message); };
+const fail = error => { status.textContent = error.message; (window.__transportProof ?? proof).errors.push(error.message); const debug = document.querySelector('#debug'); if (debug) debug.open = true; };
 const hex = bytes => [...bytes].map(x => x.toString(16).padStart(2, '0')).join('');
 let subscription, reconnectTimer, stopped = false, transactions, loop, binding;
 try {
   const config = await (await fetch('/config.local.json')).json();
+  if (usesEVMMenu(config)) {
+    await (await import('./menu-app.mjs')).openMenu(config);
+  } else {
+  for (const selector of ['.eyebrow','h1','.pill','p','#step']) document.querySelector(selector).hidden = false;
   const genuine = config.rendererKind === 'doom-world-view';
   const gameplay = config.gameplay === true;
   if (genuine) {
@@ -192,6 +197,7 @@ try {
     await nextFrame(); await nextFrame({ disconnect: true });
     proof.rgbaSha256 = hex(new Uint8Array(await crypto.subtle.digest('SHA-256', canvas.getContext('2d').getImageData(0, 0, 320, 200).data)));
     proof.done = true;
+  }
   }
 } catch (error) { loop?.stop(); fail(error); }
 window.addEventListener('beforeunload', () => { stopped = true; loop?.stop(); binding?.dispose(); transactions?.invalidate(); clearTimeout(reconnectTimer); subscription?.close(); });

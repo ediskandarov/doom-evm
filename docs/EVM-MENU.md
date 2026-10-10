@@ -123,6 +123,148 @@ and HTTP-limit attempts remain separate failures; no resource, native backing,
 gas/memory/hardfork/compiler policy was relaxed. Peak EVM memory is unmeasured.
 Browser acceptance and integration handoff remain pending.
 
+## Checkpoint D implementation and source mapping
+
+The normal production gameplay browser selects the EVM menu by default, including
+configurations without a menu flag. `menuMode=false` explicitly selects inherited
+diagnostic/test launcher behavior. Those existing test fixtures/runners now set
+that flag; their assertions are unchanged. Static and synthetic profiles remain
+available. No HTML Start Game, map chooser, restart or pause controls are created
+in the normal menu profile. Initially hidden legacy markup prevents a launcher
+flash during config fetch. The browser forwards raw keyboard packets, validates
+Frame/Palette receipts and expands indexes to Canvas; it computes no menu actions
+or menu graphics. Gas budget, transaction and Frame counters appear only in the
+collapsed Debug panel. Focus/visibility handling retains the existing input loop.
+
+`fixtureClient` retains programmatic `startGame`, `nextFrame`, `stopGame`,
+`episodeControl`, keyboard, transactions and loop inspection APIs. Menu-mode
+`startGame` initializes/resumes the menu transport and does not select a game.
+The EVM decides map, skill and startup from keyboard input. Reload reopens the
+authoritative menu over persisted gameplay.
+
+| Original source/function | Feature implementation/adaptation |
+|---|---|
+| `m_menu.c` menu definitions, M_Init/M_Ticker | `src/doom/m_menu.sol` MenuState, original lastOn/hurtme/skull counters; supported retail subset |
+| M_DrawMainMenu/M_DrawNewGame/M_DrawEpisode/M_Drawer | Same-named functions, original WAD patches/coordinates/16-pixel spacing/skull offset; modified production Main/Episode subsets and SelectDef documented above |
+| M_WriteText/M_StringWidth/M_StringHeight | Original uppercasing, HU font widths, newline12 and centered four-line Nightmare prompt; the retained fixed prompt's height is four original font heights |
+| M_Responder/M_StartControlPanel/M_ClearMenus/M_SetupNextMenu | Same-named keyboard branches, exact supported hotkeys/wrap/Enter/Escape/Backspace and lastOn; mouse, joystick, sliders and unsupported function keys excluded |
+| M_NewGame/M_Episode/M_ChooseSkill/M_VerifyNightmare | Original Episode One/skill flow and deferred-new-game request; SELECT LEVEL reuses skill flow with explicit map1..9 |
+| `d_main.c` D_ProcessEvents/D_PageDrawer/D_Display | `DoomMenu.respond` menu-first packet ownership; TITLEPIC before initial menu, saved gameplay framebuffer before overlay, original menu last |
+| `g_game.c` G_DeferedInitNew/G_DoNewGame/G_InitNew | Unchanged G_Game/EpisodeStartup/EpisodeRuntime modules; no legitimate exit or Intermission used for selection |
+| `v_video.c` patch drawing | Unchanged V_Video; authenticated ResourceView supplies all patch/font bytes |
+
+The final startup adapter retains the authenticated EpisodeStartup context and
+rebinds the same map/move/path/translation/native-zone aliases as DoomGame.load
+before its first tick/render. The earlier store-then-reload path duplicated the
+resource/context graph and failed fresh E1M7 under1GiB. This fix reduces ordinary
+EVM memory allocations; it does not change the native-zone allocation chronology,
+initial-byte policy, pointer-high predicate, source algorithms or resource inputs.
+All nine fresh starts subsequently pass. The first E1M1 gameplay Frame remains
+byte-identical to checkpoint C. Final production compilation took124.98s.
+
+Source spans/hashes for the mechanically extracted original menu functions are
+in the [native manifest](../test/fixtures/evm_menu/manifest.json). Native graphics
+borrow exact immutable WAD bytes and V_Init buffers outside a gameplay zone,
+matching the established UI adapter. Source-original full Main/Episode/skill
+drawings and responder vectors are separate from modified production screens.
+The [RESTRICT audit](PHASE4-NATIVE-MEMORY-AUDIT.md) remains applicable: successful
+finite frames do not establish a universally portable native heap/pointer model.
+
+## Reproduction and integration handoff
+
+Prerequisites: pinned local toolchain and original source; Freedoom IWAD and full
+authenticated resource bundle under ignored `artifacts/local`. Menu fixture
+patch bytes carry the preserved [Freedoom license](../test/fixtures/evm_menu/COPYING.txt).
+Refuse occupied ports. The menu runner starts/stops only its own Anvil18781;
+Chrome gates use a temporary profile and ephemeral server port.
+
+```sh
+python3 tools/reference/phase2_data/prepare_chunks.py
+python3 tools/reference/menu/reference.py --check
+.toolchain/bin/forge build src/evm/Doom.sol src/evm/ResourceStore.sol --offline --no-lint
+.toolchain/bin/forge test --match-path test/unit/m_menu.t.sol --skip Doom.sol --skip GameplayProbe --skip RendererProbe --skip WadResourcesProbe --skip ProductionUI.t.sol --skip DoomRenderer.t.sol --offline -vv
+python3 tools/reference/menu/focused.py
+python3 tools/reference/ui/reference.py --output artifacts/local/menu-legacy-native
+node --test web/*.test.mjs tools/transport/protocol.test.mjs tools/transport/palette.test.mjs tools/transport/ui-palette.test.mjs tools/transport/lifecycle.test.mjs
+node tools/reference/menu/evm.mjs --port 18781 --browser --output-prefix artifacts/local/menu-reproduction
+python3 tools/reference/menu/checkpoint.py --check
+```
+
+For an interactive local launch with a fresh production deployment:
+
+```sh
+node tools/reference/menu/evm.mjs --play --port 18781 --http-port 18782 --output-prefix artifacts/local/menu-play
+```
+
+Open the printed URL. The menu loads automatically. Arrows navigate, Enter
+selects, Escape closes/reopens, Backspace returns to the previous screen, and
+original letter hotkeys remain supported. Select Level supports digits1..9.
+During gameplay all accepted original/raw and additional browser bindings remain
+available. Ctrl-C stops only that launcher's owned Anvil/server. No reserved
+18880/8088 or speedrun-owned process/files are used.
+
+Integration interfaces: additive initializeMenu(bool), menuMode(), menuStatus();
+existing Frame/FramePalette/raw-event and gameplay APIs unchanged. Deploy fresh
+bytecode; no storage upgrade is claimed. The main integrator must reconcile the
+feature's Doom/browser adapter edits and shared Phase4 ledger. No main merge,
+main push, published-history rewrite or automatic later goal is part of this task.
+Checkpoint commits: A `2406f71`, B `fd90725`, C `7ef2412`; the final D tip is given
+in the clean-tree handoff. Full inherited Phase0–3/final Phase4 acceptance remains
+the integrator's separate release gate.
+
+## Final feature verification
+
+Accepted EVM run: **2026-10-10T18:19:29.428Z–18:21:28.476Z**. All1,755
+ordinary resource CREATE runtimes match exact authenticated bytes; production
+Doom runtime/source identities are checked. **79 input transactions,60 recorded
+Frames, nine retained-runtime selections and nine fresh first-game selections**
+pass. All five skills, fresh inventory, no Intermission, menu pause/isolation,
+Escape/Resume and independent explicit Pause pass. Eight mined rejection receipts
+prove complete storage-root rollback and no logs, including an underfunded fresh
+E1M7 startup followed by success with the same sequence. The failed historical
+MemoryOOG run is preserved separately and remains failed.
+
+Final runtime: **848,394 bytes**, SHA256
+`c8066d3b4674294af01f515a1df285c0a85849cf1f9c3675dc2e87f4ecd0e401`.
+Maximum measured input gas: **7,813,461,627**. Fresh E1M7 startup/tick/Frame uses
+7,123,880,330 gas and succeeds under the unchanged1GiB interpreter limit.
+These are local finite measurements; peak MSIZE/memory and FPS are not measured.
+
+Chrome155 accepted run: **18:21:16.476Z–18:21:28.406Z**,16 Canvas checkpoints,
+each matching every indexed byte, EVM palette and all256,000 expanded RGBA bytes.
+Actual DOM keydown/keyup and held-key input navigate Select Level, launch E1M9,
+reopen/close the menu, resume gameplay, start original New Game E1M1, verify
+receipt fallback/backfill dedup and reload persisted state. No visible HTML
+launcher is present; Debug remains collapsed. Canvas screenshots were inspected.
+The earlier reload harness race is separate failed evidence; the final checker
+waits for the new document and its initialized menu client.
+
+Five menu Forge tests (nine original pixel screens,28 responder events/13 fields,
+storage round-trips and extension/isolation) and27 focused inherited input,
+video and Episode lifecycle tests pass. The66 browser/transport Node tests pass,
+including existing launcher assertions under explicit legacy profiles. No
+assertion, existing engine fixture/golden, original C, allocator, shared
+Frame ABI, toolchain or execution budget was weakened or changed.
+
+Evidence: [accepted EVM receipts](../artifacts/phase4/menu/accepted.json),
+[Canvas proof](../artifacts/phase4/menu/accepted-browser.json),
+[focused Forge result](../artifacts/phase4/menu/inherited-focused.json),
+[Node result](../artifacts/phase4/menu/node.json),
+[preserved attempts](../artifacts/phase4/menu/attempts.json), and
+[source/evidence certificate](../artifacts/phase4/menu/verification.json).
+The certificate checker validates hashes and protected source identity; it does
+not rerun or replace the execution gates.
+
+Measured report checkpoint/end: **2026-10-10 18:21:43 UTC**. Available goal-tool
+attribution at this checkpoint:549,002 aggregate tokens and2,306 elapsed seconds.
+Missing monetary/approval/subtask breakdowns are not estimated. Final Git commit,
+certificate checking and clean-tree bookkeeping follow this checkpoint.
+
+No implementation blocker remains for the declared menu domain. Integration into
+main and frozen final Phase4 acceptance remain pending with the main integrator.
+All owned verification runtimes are stopped; reserved/speedrun environments and
+other worktrees were preserved. The feature stops at its clean committed handoff.
+
 Unsupported Save/Load/Options/Help/Quit have no player-facing rows or fake
 actions. No audio, demo carousel, wipe, multiplayer or other episode support is
 added by this goal.
