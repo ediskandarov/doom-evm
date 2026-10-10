@@ -3,14 +3,13 @@
 Phase 3 is complete and remains accepted. Optional Phase 4 work follows
 [the extra plan](04-IMPLEMENTATION-PLAN-EXTRA.md). **Goals 4.0 and 4.1 are complete and verified.
 The Goal 4.0a architectural review is complete, accepted and integrated.
-Completed Goals 4.3 (HUD) and 4.6 (Gameflow) are merged into main; the current
-integration checkpoint is recorded below.**
+Completed Goals 4.2 (Status Bar), 4.3 (HUD) and 4.6 (Gameflow) are merged into
+main; the current integration checkpoints are recorded below.**
 The checkpoints below are historical; their authorization, ownership and stop
 boundaries describe the tasks at the time they were recorded. The latest user
-request authorizes integration of the two completed branches on top of Astra's
-accepted audit. Goal 4.2 (Status Bar) continues independently. Its worktree and
-branch are outside this integration's scope. Production adapter integration
-remains a separate goal after Status Bar completion.
+request authorizes integration of the completed Status Bar branch on top of the
+accepted HUD, Gameflow and Astra audit work. Only the main worktree is modified.
+Production adapter integration remains a separate goal and has not begun.
 
 ## Recovery checkpoint
 
@@ -376,3 +375,87 @@ acceptance are deferred; this checkpoint makes no new production/browser proof.
 The commit containing this checkpoint and the separate integration certificate
 is the integration-specific publication. Stop after committing and pushing
 verified main; no Status Bar or production adapter development follows.
+
+
+## Goal 4.2 — Verified Status Bar main integration (2026-10-10)
+
+Authorized scope: integrate the completed `feat/phase4-statusbar` into latest
+main, preserve original commits and accepted work, run focused dependency and
+targeted EVM verification, update this ledger, commit and push verified main.
+Only this main worktree is modified. No production adapter wiring, new feature,
+other agent worktree change, force-push or history rewrite is part of this goal.
+
+Clean main and refreshed origin/main both matched
+`6d7630e603efd5f2c596fcc01d91a8521fcc3270` before merging. This includes the
+verified HUD/Gameflow integration and Astra's audit `9a5da1a`.
+Original feature commit **87d422f059e32b0b43555fc4287efc48488af6fa** is preserved
+as the second parent of merge **0729a9276db15df0b2d16a84153146af2a607d0e**.
+The merge had no conflicts. All 170 feature files are byte-identical to the
+completed branch. Before ledger updates, all 1,452 pre-existing tracked files
+were unchanged; all historical checkpoint sections remain exact afterward.
+
+| Deliverable | Implementation | Main integration | Verification/acceptance | Remaining |
+|---|---|---|---|---|
+| Goal 4.2 original widgets/status bar | Complete at `87d422f` | Conflict-free additive merge; original commit preserved | All 17 original focused tests pass; 1,299 native steps / 11 sequences agree across O0/O2/ASan+UBSan | Module integration complete |
+| World/status composition and legacy mode | Existing renderer plus unchanged new consumer | 320x168 world + status32, frozen 320x200 Frame ABI | Exact native complete frame and unchanged legacy fullscreen golden; targeted view modes 10/11 and invalid-domain checks pass | Production view/UI lifecycle deferred |
+| HUD, Gameflow and affected dependencies | Existing accepted implementation retained | No shared layout, engine or adapter change | 58 additional tests pass: HUD14, Gameflow14, video17, resources6, Frame3, RNG1, view-size3 | Production callback/persistence binding deferred |
+| Ordinary EVM Frame/palette and rollback | Existing dedicated test consumer, no production endpoint | Isolated Anvil port18696; own node stopped | Three native-matching mined frames (192,000 pixels) and palettes; malformed mined revert has no logs/counter mutation | Approved browser palette transport deferred |
+| Documentation/evidence | Original reports and certificates retained | Separate integration certificate/receipts; earlier ledger sections preserved | 171 Status Bar source/fixture bindings and 28 native mappings checked; HUD/Gameflow certificate bindings exact | Complete |
+
+Shared-interface review: only `st_lib.sol` and `st_stuff.sol` are added under
+src. Their `STState`, `STGraphics` and widget types are consumer-owned.
+Existing GameState/Player/GameDefinitions, resource/renderer/video layouts,
+Frame/input ABI, compiler, budget and production adapters remain unchanged.
+Status uses its own320x32 screen4 backing; HUD uses screen0/screen1. ST_Ticker
+uses the existing miscellaneous M_Random stream, not gameplay P_Random.
+The gameflow callback order remains P/ST/AM/HU, including paused UI tics.
+There is no conflicting interface and no integration source adjustment.
+
+Risk-based verification follows section5 of the extra plan. **75 tests pass,
+0 fail/skip:**72 in the combined status/HUD/gameflow/video/resource/RNG/Frame gate
+and3 targeted renderer view-size/domain tests. The first gate compiles91 files
+with unchanged Solc0.8.37/viaIR/optimizer200/Cancun in110.06s (reported compile
+wall time), then runs tests in2.51s. The separate renderer dependency compiles
+one test root in43.37s and runs three tests in228.68ms. Two unchanged fuzz tests
+run256 cases each with seed0x42. The explicit build of all five ST/HU/gameflow
+module roots passes using that cache. Compiler warnings are retained; no
+assertion, golden, compiler setting or execution budget was relaxed.
+
+Native status and world rebuild/check, focused formatting, feature byte
+identity, preserved baseline files, source mappings, gamma/palette/resource
+hashes and original certificate bindings all pass. The branch-specific
+checkpoint generator is not rerun on main or used to overwrite its historical
+certificate; its source-map/binding calculations are checked read-only.
+
+The ordinary EVM gate deploys authentic resource chunks through ResourceStore
+CREATE and uses the unchanged dedicated StatusBarFrame consumer. Base status,
+damage flash and hidden fullscreen frames/palettes match the native fixtures.
+Measured render receipts use32,667,985–38,679,331 gas, including setup/resources/
+events; these are not production gameplay or isolated widget costs. The receipt
+upper background is seeded; actual world/status composition is verified by the
+separate native/Foundry test. StatusPalette remains a test-consumer event; the
+production Frame ABI/browser protocol has not changed.
+
+Evidence: [integration certificate](../artifacts/phase4/statusbar-integration.json)
+and [new ordinary receipts](../artifacts/phase4/statusbar-integration-evm.json).
+Original [Status Bar handoff](PHASE4-STATUSBAR.md),
+[verification](../artifacts/phase4/statusbar-verification.json),
+[source map](../artifacts/phase4/statusbar-source-map.json) and
+[feature receipts](../artifacts/phase4/statusbar-evm.json) remain byte-identical.
+HUD/Gameflow integration evidence, all earlier acceptance artifacts and Astra's
+memory audit report are unchanged. Full inherited Phase0–3 and production
+browser acceptance were not run; they remain final Phase4 gates.
+
+Remaining production integration dependencies: authorize a separate adapter
+goal; retain STState/widget history, HudState, GameState/GameflowState and mutable
+difficulty definitions with atomic storage/rollback; bind synchronous setup,
+ST/HU start and ordered ticker/draw/input lifecycles; retain correct M_Random
+state and one command/ticker/gametic path; alias screen0 to the full framebuffer,
+own screen4 and explicitly choose status168 versus legacy200 view/refresh;
+select and verify production palette/gamma transport and browser consumption.
+Later automap/cheats/multi-map/intermission/finale and full episode acceptance
+remain separate goals. **No blocker remains for this Status Bar integration.**
+
+The commit containing this checkpoint and the two new integration artifacts is
+the publication. Stop after successful commit/push and main/origin synchronization;
+no production adapter or further Phase4 implementation follows.
