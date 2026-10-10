@@ -4,6 +4,7 @@ import gzip
 import json
 from pathlib import Path
 import struct
+import subprocess
 import sys
 
 from replay import ROOT, sha, decode, delta_encode
@@ -80,11 +81,18 @@ assert final[1:7] == (279, 279, 143, 0, 6, 0)
 assert sha(states[-1]) == evm['exit']['finalStateSha256']
 
 # The EVM run predates adding only native footer checksum/manifest metadata.
-# Every EVM library and runner must still match the recorded executed source.
+# Bind historical receipts to their preserved executed-source checkpoint. Main
+# may integrate later engine changes; fresh EVM runners bind their own current
+# sources and compare every observation independently.
 # Both native builds must have identical generated input/exit observer sources.
+source_checkpoint = 'bb16afd879d5fe818ada5a21834027c07a4b3803'
+subprocess.run(['git', '-C', str(ROOT), 'merge-base', '--is-ancestor',
+                source_checkpoint, 'HEAD'], check=True)
 for file, digest in evm['sourceHashes'].items():
     if file != 'tools/reference/speedrun/replay.py':
-        assert sha((ROOT / file).read_bytes()) == digest, file + ' executed-source drift'
+        executed_source = subprocess.check_output(
+            ['git', '-C', str(ROOT), 'show', source_checkpoint + ':' + file])
+        assert sha(executed_source) == digest, file + ' historical executed-source drift'
 assert read('native-recheck-O2-build.json')['speedrunBuilderSha256'] == sha((ROOT / 'tools/reference/speedrun/replay.py').read_bytes())
 for profile in ['O2', 'O0', 'sanitize']:
     before, after = read('native-' + profile + '-build.json'), read('native-recheck-' + profile + '-build.json')
@@ -92,6 +100,7 @@ for profile in ['O2', 'O0', 'sanitize']:
         assert before[key] == after[key], key
 assert evm['ownedRuntimeStopped']
 print(json.dumps(dict(pass_=True, originalDemoBytes=len(demo), decodedTics=len(tape),
+    historicalSourceCheckpoint=source_checkpoint, currentEngineAcceptance=False,
     nativeProfiles=4, nativeRecheckProfiles=4, exactReceiptWorlds=len(observations),
     resourceAndProbeReceipts=len(deployment), startupReceipts=1, replayReceipts=56,
     totalReplayGas=evm['totalReplayGas'], fullStateStreamSha256=sha(evm_stream)), indent=2))
