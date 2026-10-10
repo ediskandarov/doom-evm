@@ -15,9 +15,16 @@
 
 ## Independent worktree ownership
 
+- One Goal / One Worktree / One Owner: assign each feature goal a dedicated worktree and owner; integration happens only in the designated main worktree.
 - Each feature agent works only in its assigned branch/worktree and owned files. Check branch, HEAD and working-tree status before starting; protect existing changes.
 - Do not modify, clean, reset, rebase or remove another agent's worktree or branch. Do not change shared files outside assigned ownership; hand required changes to the integrator.
 - Handoff includes the exact commit SHA, changed files, reproducible verification commands/results, evidence paths, interface requirements and remaining dependencies.
+
+## Independent runtime ownership
+
+- Use an isolated runtime and unoccupied ports for each goal; refuse occupied ports. Never attach to, reset, reconfigure or terminate another owner's Anvil/runtime.
+- The current playground reserves `127.0.0.1:18880` (Anvil) and `127.0.0.1:8088` (browser). Do not use these ports for verification.
+- Track runtimes started by the goal and stop only those instances during cleanup; preserve external environments.
 
 ## Goal-specific progress
 
