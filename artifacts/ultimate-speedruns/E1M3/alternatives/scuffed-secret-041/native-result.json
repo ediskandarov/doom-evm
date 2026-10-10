@@ -1,0 +1,197 @@
+{
+  "pass_": false,
+  "startUnix": 1791668387.27987,
+  "endUnix": 1791668399.801593,
+  "upstreamCommit": "a77dfb96cb91780ca334d0d4cfd86957558007e0",
+  "demoSha256": "f74289f75b7d300bd1ed99cc7953ab305fa86f5ecb73053faf65c510a9806609",
+  "wadSha256": "6fdf361847b46228cfebd9f3af09cd844282ac75f3edbb61ca4cb27103ce2e7f",
+  "settings": {
+    "version": 109,
+    "skill": 3,
+    "episode": 1,
+    "map": 3,
+    "deathmatch": 0,
+    "respawn": 0,
+    "fast": 0,
+    "nomonsters": 0,
+    "consoleplayer": 0,
+    "playeringame": [
+      1,
+      0,
+      0,
+      0
+    ]
+  },
+  "profiles": [
+    {
+      "profile": "O2",
+      "command": [
+        "/private/tmp/doom-evm-ultimate-speedruns/artifacts/local/episode-speedruns/native-build-O2/speedrun",
+        "/private/tmp/doom-evm-ultimate-speedruns/artifacts/local/ultimate-doom/DOOM.WAD",
+        "/private/tmp/doom-evm-ultimate-speedruns/artifacts/local/ultimate-speedruns/E1M3/alternatives/scuffed-secret-041/native-O2",
+        "/private/tmp/doom-evm-ultimate-speedruns/artifacts/local/ultimate-speedruns/E1M3/alternatives/scuffed-secret-041/commands.txt",
+        "3",
+        "3",
+        "0"
+      ],
+      "elapsedSeconds": 1.5075113330967724,
+      "returncode": 0,
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "statesSha256": "639f12748e5b6b98e329172a878bd8c7033dc22cac032aee799bb9abca33f27b",
+      "compressedStatesSha256": "aab92d7f64811cf368d80501f07fe43b745d4fe846028fae15d191aaf132fcdc",
+      "executedTics": 1453,
+      "exitEvents": [
+        [
+          1453,
+          1453,
+          6,
+          1,
+          -1
+        ]
+      ]
+    },
+    {
+      "profile": "O0",
+      "command": [
+        "/private/tmp/doom-evm-ultimate-speedruns/artifacts/local/episode-speedruns/native-build-O0/speedrun",
+        "/private/tmp/doom-evm-ultimate-speedruns/artifacts/local/ultimate-doom/DOOM.WAD",
+        "/private/tmp/doom-evm-ultimate-speedruns/artifacts/local/ultimate-speedruns/E1M3/alternatives/scuffed-secret-041/native-O0",
+        "/private/tmp/doom-evm-ultimate-speedruns/artifacts/local/ultimate-speedruns/E1M3/alternatives/scuffed-secret-041/commands.txt",
+        "3",
+        "3",
+        "0"
+      ],
+      "elapsedSeconds": 2.4491557921282947,
+      "returncode": 0,
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "statesSha256": "639f12748e5b6b98e329172a878bd8c7033dc22cac032aee799bb9abca33f27b",
+      "compressedStatesSha256": "aab92d7f64811cf368d80501f07fe43b745d4fe846028fae15d191aaf132fcdc",
+      "executedTics": 1453,
+      "exitEvents": [
+        [
+          1453,
+          1453,
+          6,
+          1,
+          -1
+        ]
+      ]
+    },
+    {
+      "profile": "sanitize",
+      "command": [
+        "/private/tmp/doom-evm-ultimate-speedruns/artifacts/local/episode-speedruns/native-build-sanitize/speedrun",
+        "/private/tmp/doom-evm-ultimate-speedruns/artifacts/local/ultimate-doom/DOOM.WAD",
+        "/private/tmp/doom-evm-ultimate-speedruns/artifacts/local/ultimate-speedruns/E1M3/alternatives/scuffed-secret-041/native-sanitize",
+        "/private/tmp/doom-evm-ultimate-speedruns/artifacts/local/ultimate-speedruns/E1M3/alternatives/scuffed-secret-041/commands.txt",
+        "3",
+        "3",
+        "0"
+      ],
+      "elapsedSeconds": 2.463567500002682,
+      "returncode": 0,
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "statesSha256": "639f12748e5b6b98e329172a878bd8c7033dc22cac032aee799bb9abca33f27b",
+      "compressedStatesSha256": "aab92d7f64811cf368d80501f07fe43b745d4fe846028fae15d191aaf132fcdc",
+      "executedTics": 1453,
+      "exitEvents": [
+        [
+          1453,
+          1453,
+          6,
+          1,
+          -1
+        ]
+      ]
+    },
+    {
+      "profile": "sanitize-fill",
+      "command": [
+        "/private/tmp/doom-evm-ultimate-speedruns/artifacts/local/episode-speedruns/native-build-sanitize/speedrun",
+        "/private/tmp/doom-evm-ultimate-speedruns/artifacts/local/ultimate-doom/DOOM.WAD",
+        "/private/tmp/doom-evm-ultimate-speedruns/artifacts/local/ultimate-speedruns/E1M3/alternatives/scuffed-secret-041/native-sanitize-fill",
+        "/private/tmp/doom-evm-ultimate-speedruns/artifacts/local/ultimate-speedruns/E1M3/alternatives/scuffed-secret-041/commands.txt",
+        "3",
+        "3",
+        "0"
+      ],
+      "elapsedSeconds": 2.3287566248327494,
+      "returncode": 0,
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "statesSha256": "afc4178e97fe8aa3419b40205343a19427dfda587546a23172625c593ba84bd9",
+      "compressedStatesSha256": "0eb140978d05b001c3259f5a855f0669b4d69911010c017cc9a0cf6cdf85a40f"
+    }
+  ],
+  "exitReached": false,
+  "allProfilesExact": false,
+  "failure": {
+    "stage": "native-profile-divergence",
+    "profile": "sanitize-fill",
+    "changedFiles": [
+      "states.bin"
+    ],
+    "baselineStatesSha256": "639f12748e5b6b98e329172a878bd8c7033dc22cac032aee799bb9abca33f27b",
+    "profileStatesSha256": "afc4178e97fe8aa3419b40205343a19427dfda587546a23172625c593ba84bd9"
+  },
+  "executedTics": 1453,
+  "leveltime": 1453,
+  "inGameSeconds": 41.51428571428571,
+  "finalPlayer": {
+    "leveltime": 1453,
+    "gametic": 1453,
+    "prndindex": 36,
+    "rndindex": 0,
+    "x": -72113822,
+    "y": -98038815,
+    "z": 4194304,
+    "angle": -905969664,
+    "momx": 182234,
+    "momy": -623343,
+    "momz": 0,
+    "viewz": 6901976,
+    "viewheight": 2686976,
+    "deltaviewheight": 0,
+    "bob": 1048576,
+    "floorz": 4194304,
+    "ceilingz": 12582912,
+    "subsector": 87,
+    "playerHealth": 82,
+    "actorHealth": 82,
+    "armorpoints": 81,
+    "armortype": 1,
+    "readyweapon": 3,
+    "pendingweapon": 10,
+    "usedown": 1,
+    "attackdown": 0,
+    "refire": 0,
+    "state": 152,
+    "tics": 2,
+    "flags": 33557574,
+    "ammoClip": 104,
+    "ammoShell": 50,
+    "ammoCell": 0,
+    "ammoMissile": 0,
+    "weaponState": 49,
+    "weaponTics": 1,
+    "weaponX": -335360,
+    "weaponY": 3066048,
+    "flashState": -1,
+    "flashTics": 0,
+    "flashX": -335360,
+    "flashY": 3066048,
+    "thinkerCount": 357,
+    "totalKills": 131,
+    "totalItems": 95,
+    "totalSecrets": 7,
+    "killcount": 33,
+    "itemcount": 16,
+    "secretcount": 4,
+    "damagecount": 0,
+    "bonuscount": 0,
+    "extralight": 0,
+    "fixedcolormap": 0
+  },
+  "statesSha256": "639f12748e5b6b98e329172a878bd8c7033dc22cac032aee799bb9abca33f27b",
+  "commandsSha256": "36f4b444f4012385420312b298c0b3e6da5e64b5ea246c125409f5044af36af7",
+  "levelCommandsSha256": "763a8fdd8123ac77e3ecb6d22648f639cba60aeb67bece96c00d477d75cd4b80"
+}

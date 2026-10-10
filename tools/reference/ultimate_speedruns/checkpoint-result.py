@@ -4,7 +4,7 @@ import argparse,hashlib,json,subprocess,time
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[3]
 sha=lambda p:hashlib.sha256(p.read_bytes()).hexdigest()
-ap=argparse.ArgumentParser();ap.add_argument('map');a=ap.parse_args();base=ROOT/'artifacts/local/ultimate-speedruns'/a.map;recording=base/'full-rate';out=ROOT/'artifacts/ultimate-speedruns'/a.map;out.mkdir(exist_ok=True)
+ap=argparse.ArgumentParser();ap.add_argument('map');ap.add_argument('--base',type=Path);a=ap.parse_args();base=(a.base or ROOT/'artifacts/local/ultimate-speedruns'/a.map).resolve();assert base.is_relative_to(ROOT/'artifacts/local/ultimate-speedruns');recording=base/'full-rate';out=ROOT/'artifacts/ultimate-speedruns'/base.relative_to(ROOT/'artifacts/local/ultimate-speedruns');out.mkdir(parents=True,exist_ok=True)
 r=json.loads((recording/'evm.json').read_text());v=json.loads((recording/'verification.json').read_text());m=json.loads((recording/'frame-manifest.json').read_text());n=json.loads((base/'native-result.json').read_text());s=json.loads((base/'source.json').read_text())
 assert r['pass'] and v['evidenceVerified'] and v['recordingComplete'] and v['mediaVerified']
 pixel=json.loads((recording/'pixel-domain.json').read_text());assert pixel['pass_'] and pixel['recordingComplete'] and pixel['frames']==len(r['frames']) and pixel['sourceReportSha256']==sha(recording/'evm.json')

@@ -1,0 +1,67 @@
+{
+  "map": "E1M3",
+  "alternate": "scuffed secret exit e1m3s-041",
+  "normalNativeExitTic": 1453,
+  "normalProfilesExact": true,
+  "alternateAllocationGatePassed": false,
+  "existingNativeDomainAuditPassed": false,
+  "firstDifferingFields": [
+    {
+      "tic": 833,
+      "field": "thinker[543].special.low",
+      "O2": 1,
+      "freshFill": -1515870811
+    },
+    {
+      "tic": 834,
+      "field": "thinker[543].special.low",
+      "O2": 1,
+      "freshFill": -1515870811
+    },
+    {
+      "tic": 835,
+      "field": "thinker[543].special.low",
+      "O2": 1,
+      "freshFill": -1515870811
+    },
+    {
+      "tic": 836,
+      "field": "thinker[543].special.low",
+      "O2": 1,
+      "freshFill": -1515870811
+    },
+    {
+      "tic": 837,
+      "field": "thinker[543].special.low",
+      "O2": 1,
+      "freshFill": -1515870811
+    },
+    {
+      "tic": 838,
+      "field": "thinker[543].special.low",
+      "O2": 1,
+      "freshFill": -1515870811
+    },
+    {
+      "tic": 839,
+      "field": "thinker[543].special.low",
+      "O2": 1,
+      "freshFill": -1515870811
+    },
+    {
+      "tic": 840,
+      "field": "thinker[543].special.low",
+      "O2": 1,
+      "freshFill": -1515870811
+    }
+  ],
+  "firstUnsupportedAuditValue": {
+    "tic": 833,
+    "field": "thinker[543].special.low",
+    "O2": 1,
+    "freshFill": -1515870811
+  },
+  "EVMNotAttempted": true,
+  "reason": "The alternate fails the existing allocation-domain audit; it is not admitted by broadening that gate. No engine/source/tape/fixture change.",
+  "nativeResultSha256": "8f3f2b26faec4bea20add07856d0328364db567fe96df7b72c75e6f70c4de45b"
+}

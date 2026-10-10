@@ -52,3 +52,16 @@ full gameplay proof; `render-diagnostic` preserves the error-only reproduction.
 [Evidence manifest](../artifacts/ultimate-speedruns/E1M3/evidence-manifest.json) binds these local proofs.
 Commercial geometry/resources/artwork stay local. Unknown owner-slot bytes are
 the unresolved rendering blocker.
+
+One further authentic alternate was evaluated: DSDA's E1M3s UV Speed
+[e1m3s-041.lmp](https://dsdarchive.com/files/demos/doom/72539/e1m3s-041.zip),
+listed under scuffed, with the original author note naming Distortion. Normal
+O2/O0/sanitized C profiles reach the secret exit at tic 1,453 and agree exactly.
+The allocation-fill diagnostic differs first at tic 833 in
+`thinker[543].special.low`: normal C reads 1, fresh fill reads `0xa5a5a5a5`.
+This fails the existing normal-zone admission audit, which establishes only
+zero-valued uninitialized stair/platform fields. The gate is not broadened to
+admit it, and EVM rendering is not attempted for this alternate.
+[Archive, native result and failed audit](../artifacts/ultimate-speedruns/E1M3/alternatives/scuffed-secret-041/failed-domain-audit.json)
+remain separate recovery evidence. This bounded additional search did not
+produce a complete E1M3 recording.
