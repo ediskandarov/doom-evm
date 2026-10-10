@@ -1,13 +1,14 @@
 // SPDX-License-Identifier: GPL-2.0-only
 // One accepted packet advances one EVM tic. No movement/world/pixel computation here.
 import { FRAME_TOPIC, decodeFrame, receipt } from './protocol.mjs';
-import { inputStepData } from './input.mjs';
+import { inputStepData, eventStepData } from './input.mjs';
 import { resolveGasBudget } from './budget.mjs';
 
 // Generated with pinned cast sig. Existing Frame/step ABI remains unchanged.
 export const GAME_STARTED_SELECTOR = '0x5e123ce4';
 export const INITIALIZE_GAME_SELECTOR = '0xa0a1f49b';
 export const INITIALIZE_GAME_UI_SELECTOR = '0xaf544bfc';
+export const INITIALIZE_GAME_INPUT_SELECTOR = '0xc81d0ef4';
 export const LAST_INPUT_SELECTOR = '0x3464285a';
 export const GAME_RESOURCES_PREPARED_SELECTOR = '0x8874965d';
 export const PREPARE_GAME_RESOURCES_SELECTOR = '0x4cc5dc3f';
@@ -82,6 +83,7 @@ export class InputTransactions {
   async startGame({ shouldContinue = () => true } = {}) {
     this._available();
     if (this.config.gameplay !== true) throw Error('Gameplay unavailable for this deployment');
+    if (this.config.rawKeyboard === true && this.config.productionUI !== true) throw Error('Raw input requires production UI');
     this.busy = true; this.pending = true; this._state();
     try {
       // Reload/resume can follow frames from another local controller. Reads precede
@@ -111,7 +113,8 @@ export class InputTransactions {
         if (!shouldContinue()) return;
         this._startupValid();
         const startup = this.config.productionUI === true
-          ? INITIALIZE_GAME_UI_SELECTOR + (this.config.uiFullscreen === true ? '1' : '0').padStart(64, '0')
+          ? (this.config.rawKeyboard === true ? INITIALIZE_GAME_INPUT_SELECTOR : INITIALIZE_GAME_UI_SELECTOR)
+            + (this.config.uiFullscreen === true ? '1' : '0').padStart(64, '0')
           : INITIALIZE_GAME_SELECTOR;
         const mined = await this._send(startup);
         // Mined initialization is confirmed separately; it need not emit a Frame.
@@ -128,10 +131,23 @@ export class InputTransactions {
 
   async nextFrame(mask = 0, { beforeSend = () => {} } = {}) {
     this._available();
+    if (this.config.rawKeyboard === true) throw Error('Use raw keyboard events for this deployment');
     if (this.config.productionUI === true && !this.started) throw Error('Start UI gameplay before rendering');
     if (!this.started && mask !== 0) throw Error('Start gameplay before sending keys');
     const sequence = this.sequence + 1;
     const data = inputStepData(mask, sequence); // Validation occurs before taking the lock.
+    return this._submitStep(data, sequence, { mask }, true, beforeSend);
+  }
+
+  async nextEvents(events, { beforeSend = () => {}, draw = true } = {}) {
+    this._available();
+    if (this.config.rawKeyboard !== true || !this.started) throw Error('Start raw-input gameplay before sending events');
+    const sequence = this.sequence + 1;
+    const data = eventStepData(events, sequence, draw);
+    return this._submitStep(data, sequence, { events: [...events] }, draw, beforeSend);
+  }
+
+  async _submitStep(data, sequence, input, draw, beforeSend) {
     this.busy = true; this.pending = true; this._state();
     try {
       beforeSend(); // Run only after packet validation and exclusive channel reservation.
@@ -142,11 +158,13 @@ export class InputTransactions {
       try {
         const logs = mined.logs.filter(log => log.address?.toLowerCase() === this.config.address.toLowerCase()
           && log.topics?.[0]?.toLowerCase() === FRAME_TOPIC);
-        if (logs.length !== 1) throw Error('Frame transaction must emit exactly one Frame');
+        if (logs.length !== (draw ? 1 : 0)) throw Error(draw
+          ? 'Frame transaction must emit exactly one Frame' : 'No-render transaction must emit no Frame');
+        if (!draw) return mined;
         const frame = decodeFrame(logs[0]);
         if (frame.inputSeq !== sequence) throw Error('Frame input sequence mismatch');
         this.inbox.accept(logs[0], 'receipt');
-        this.onFrame({ mask, sequence, transactionHash: mined.transactionHash, frameId: String(frame.frameId) });
+        this.onFrame({ ...input, sequence, transactionHash: mined.transactionHash, frameId: String(frame.frameId) });
       } catch (error) { this.invalidated = true; throw error; }
       return mined;
     } finally { this.busy = this.uncertain; this.pending = false; this._state(); }
@@ -159,18 +177,27 @@ export class GameplayLoop {
     this.transactions = transactions; this.keyboard = keyboard;
     this.schedule = schedule; this.cancel = cancel; this.now = now;
     this.onState = onState; this.onError = onError; this.minimumPeriod = minimumPeriod;
-    this.running = false; this.starting = false; this.epoch = 0; this.timer = null;
+    this.running = false; this.starting = false; this.epoch = 0; this.timer = null; this.failed = false;
   }
   _state() { this.onState(this); }
   stop() {
     this.running = false; ++this.epoch; this.keyboard.clear();
     if (this.timer !== null) this.cancel(this.timer);
     this.timer = null; this._state();
+    if (this.keyboard.raw) this._flushReleases().catch(this.onError);
+  }
+  async _flushReleases() {
+    if (this.failed || this.running || !this.transactions.started || !this.transactions.canSend) return;
+    while (!this.running && this.keyboard.events.length && this.transactions.canSend) {
+      const events = this.keyboard.packet();
+      await this.transactions.nextEvents(events, { draw: false });
+      this.keyboard.acknowledge(events.length);
+    }
   }
   async start() {
     if (this.running) return false;
     if (this.starting || this.transactions.busy) throw Error('Previous transaction still pending');
-    this.keyboard.clear(); this.running = true; this.starting = true;
+    this.keyboard.clear(); this.failed = false; this.running = true; this.starting = true;
     const epoch = ++this.epoch; this._state();
     try {
       await this.transactions.startGame({ shouldContinue: () => this.running && epoch === this.epoch });
@@ -186,9 +213,16 @@ export class GameplayLoop {
     if (!this.running || epoch !== this.epoch) return;
     const started = this.now();
     try {
-      const held = this.keyboard.sample();
-      await this.transactions.nextFrame(held);
+      if (this.keyboard.raw) {
+        const events = this.keyboard.packet();
+        await this.transactions.nextEvents(events);
+        this.keyboard.acknowledge(events.length);
+      } else {
+        const held = this.keyboard.sample();
+        await this.transactions.nextFrame(held);
+      }
       if (this.running && epoch === this.epoch) this._schedule(epoch, Math.max(0, this.minimumPeriod - (this.now() - started)));
-    } catch (error) { this.stop(); this.onError(error); }
+    } catch (error) { this.failed = true; this.stop(); this.onError(error); }
+    finally { if (this.keyboard.raw && !this.running) await this._flushReleases().catch(this.onError); }
   }
 }

@@ -7,7 +7,7 @@ import {WadResources} from "./WadResources.sol";
 import {DoomRenderer} from "./DoomRenderer.sol";
 import {RenderContext} from "../doom/r_render_state.sol";
 import {DoomGame} from "./DoomGame.sol";
-import {InputProtocol} from "./InputProtocol.sol";
+import {InputProtocol, InputRuntimeState} from "./InputProtocol.sol";
 import {GameState, GameContext, Player, Mobj} from "../doom/p_game_state.sol";
 import {Ticcmd} from "../doom/d_ticcmd.sol";
 import {DoomUI, UIState} from "./DoomUI.sol";
@@ -22,6 +22,8 @@ contract Doom is IFrameProtocol, WadResources {
     error GameAlreadyStarted();
     error GameNotStarted();
     error UINotEnabled();
+    error RawInputRequired();
+    error RawInputNotEnabled();
 
     /// @notice EVM-selected RGB8 palette for the matching unchanged indexed8 Frame.
     event FramePalette(
@@ -41,6 +43,8 @@ contract Doom is IFrameProtocol, WadResources {
     bool public gameStarted;
     GameState internal gameState;
     UIState internal uiState;
+    bool public rawInput;
+    InputRuntimeState internal inputRuntime;
 
     constructor(address[] memory chunks, bytes memory directory) WadResources(chunks, directory) {}
 
@@ -58,6 +62,20 @@ contract Doom is IFrameProtocol, WadResources {
     /// @notice Start original Status Bar/HUD; fullscreen keeps HUD and palette effects.
     /// @dev Existing initializeGame retains the accepted world-only profile.
     function initializeGameUI(bool fullscreen) external {
+        _initializeUI(fullscreen);
+    }
+
+    /// @notice Opt into original raw keyboard events, Cheats and Automap.
+    /// @dev Retains the accepted UI/legacy initializers and Frame ABI unchanged.
+    function initializeGameInput(bool fullscreen) external {
+        _initializeUI(fullscreen);
+        InputRuntimeState memory s;
+        InputProtocol.initialize(s);
+        inputRuntime = s;
+        rawInput = true;
+    }
+
+    function _initializeUI(bool fullscreen) private {
         _initializeGame(true);
         GameContext memory c = DoomGame.load(_resourceView(), gameState);
         UIState memory u;
@@ -101,6 +119,7 @@ contract Doom is IFrameProtocol, WadResources {
 
     function _step(uint32 buttons, uint32 sequence, bool draw) private {
         if (msg.sender != driver) revert NotDriver();
+        if (rawInput) revert RawInputRequired();
         if (inputSeq == type(uint32).max || sequence != inputSeq + 1) revert BadSequence();
         if (gameStarted) {
             GameState memory state = gameState;
@@ -133,6 +152,137 @@ contract Doom is IFrameProtocol, WadResources {
         fuzzpos = ctx.rs.fuzzpos;
         inputSeq = sequence;
         _emitFrame(sequence, ctx.rs.framebuffer);
+    }
+
+    function stepEventsAndRender(bytes calldata events, uint32 sequence) external {
+        _stepEvents(events, sequence, true);
+    }
+
+    function stepEvents(bytes calldata events, uint32 sequence) external {
+        _stepEvents(events, sequence, false);
+    }
+
+    /// @dev Original event -> command -> level tic boundary. IDCLEV's deferred
+    /// GA_NEWGAME and selected skill/episode/map remain pending for Episode Runtime.
+    /// No full G_Ticker action dispatch or map substitution occurs in this goal.
+    function _stepEvents(bytes memory events, uint32 sequence, bool draw) private {
+        if (msg.sender != driver) revert NotDriver();
+        if (!rawInput) revert RawInputNotEnabled();
+        if (inputSeq == type(uint32).max || sequence != inputSeq + 1) revert BadSequence();
+        GameContext memory c = DoomGame.load(_resourceView(), gameState);
+        UIState memory u = uiState;
+        InputRuntimeState memory s = inputRuntime;
+        InputProtocol.respond(s, c, u, events);
+        Ticcmd memory cmd = InputProtocol.build(s, c);
+        // Original G_Ticker special-button branch; full gameaction dispatch is
+        // reserved for Episode Runtime. Pause precedes P_Ticker in this profile.
+        if (cmd.buttons & 128 != 0 && cmd.buttons & 3 == 1) c.state.paused = !c.state.paused;
+        DoomGame.tick(c, cmd);
+        DoomUI.tick(u, c, s.automap);
+        bytes memory pixels;
+        if (draw) {
+            DoomUI.erase(u, s.automap.active);
+            if (s.automap.active) pixels = DoomUI.drawAutomap(c, s.automap);
+            DoomUI.drawStatus(u, c, s.automap.active);
+            if (!s.automap.active) pixels = DoomGame.render(c, u.fullscreen ? 11 : 10);
+            DoomUI.drawHUD(u, c.resources.source, pixels, s.automap.active);
+            DoomUI.drawPause(c, pixels);
+        }
+        inputRuntime = s;
+        uiState = u;
+        gameState = c.state;
+        inputSeq = sequence;
+        if (draw) _emitFrame(sequence, pixels);
+    }
+
+    /// @notice Original cheat mutations and pending Episode Runtime selection.
+    function cheatStatus()
+        external
+        view
+        returns (
+            int32 cheats,
+            int32[6] memory powers,
+            int32 action,
+            int32 skill,
+            int32 episode,
+            int32 map,
+            uint256 gamekeydown
+        )
+    {
+        Player storage p = gameState.players[uint32(gameState.consoleplayer)];
+        return (
+            p.cheats,
+            p.powers,
+            gameState.gameaction,
+            inputRuntime.flow.deferredSkill,
+            inputRuntime.flow.deferredEpisode,
+            inputRuntime.flow.deferredMap,
+            inputRuntime.gamekeydown
+        );
+    }
+
+    function cheatSequence(uint8 index) external view returns (bytes memory sequence, uint32 cursor) {
+        return (inputRuntime.cheats.sequences[index].sequence, inputRuntime.cheats.sequences[index].cursor);
+    }
+
+    function automapStatus()
+        external
+        view
+        returns (
+            bool active,
+            bool viewactive,
+            bool follow,
+            bool grid,
+            uint32 cheating,
+            uint32 cheatPos,
+            int32 x,
+            int32 y,
+            int32 w,
+            int32 h,
+            int32 scale,
+            int32 zoomM,
+            int32 panX,
+            int32 panY,
+            uint32 mark,
+            uint32 loads,
+            uint32 unloads
+        )
+    {
+        return (
+            inputRuntime.automap.active,
+            inputRuntime.automap.viewactive,
+            inputRuntime.automap.follow,
+            inputRuntime.automap.grid,
+            inputRuntime.automap.cheating,
+            inputRuntime.automap.cheatPos,
+            inputRuntime.automap.x,
+            inputRuntime.automap.y,
+            inputRuntime.automap.w,
+            inputRuntime.automap.h,
+            inputRuntime.automap.scale,
+            inputRuntime.automap.zoomM,
+            inputRuntime.automap.panX,
+            inputRuntime.automap.panY,
+            inputRuntime.automap.mark,
+            inputRuntime.automap.loads,
+            inputRuntime.automap.unloads
+        );
+    }
+
+    function automapMark(uint8 index) external view returns (int32 x, int32 y) {
+        return (inputRuntime.automap.marks[index].x, inputRuntime.automap.marks[index].y);
+    }
+
+    /// @notice Original ordered linedef flags; discovery remains renderer-owned.
+    function automapDiscovery() external view returns (uint32 mapped, bytes32 flagsSha256) {
+        bytes memory flags = new bytes(gameState.map.lines.length * 2);
+        for (uint256 i; i < gameState.map.lines.length; ++i) {
+            uint16 value = gameState.map.lines[i].flags;
+            if (value & 256 != 0) ++mapped;
+            flags[i * 2] = bytes1(uint8(value >> 8));
+            flags[i * 2 + 1] = bytes1(uint8(value));
+        }
+        flagsSha256 = sha256(flags);
     }
 
     function _emitFrame(uint32 sequence, bytes memory pixels) private {
