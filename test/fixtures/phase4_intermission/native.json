@@ -1,0 +1,760 @@
+{
+  "schemaVersion": 1,
+  "goal": "4.14a",
+  "upstreamCommit": "a77dfb96cb91780ca334d0d4cfd86957558007e0",
+  "compiler": [
+    "Apple clang version 17.0.0 (clang-1700.0.13.5)",
+    "Target: arm64-apple-darwin24.6.0"
+  ],
+  "flags": [
+    "-std=c11",
+    "-DRANGECHECK",
+    "-fsigned-char",
+    "-fno-strict-aliasing",
+    "-ffp-contract=off",
+    "-fno-fast-math"
+  ],
+  "profiles": {
+    "O0": [
+      "-O0"
+    ],
+    "O2": [
+      "-O2"
+    ],
+    "sanitized": [
+      "-O1",
+      "-g",
+      "-fsanitize=address,undefined",
+      "-fno-sanitize=array-bounds",
+      "-fno-sanitize-recover=all"
+    ]
+  },
+  "exactNativeAgreement": true,
+  "caseCount": 34,
+  "snapshots": 1215,
+  "stateWords": 113,
+  "compactSnapshotBytes": 532,
+  "wadSha256": "7323bcc168c5a45ff10749b339960e98314740a734c30d4b9f3337001f9e703d",
+  "resources": [
+    {
+      "name": "WIMAP0",
+      "lumpId": 944,
+      "length": 68168,
+      "sha256": "da9d16a271b7f39de60bfb75f456ce31f669e531993ecbc76bfe1e8bcd5bec12"
+    },
+    {
+      "name": "WILV00",
+      "lumpId": 894,
+      "length": 2476,
+      "sha256": "b8e1ceef5bd860c4ac75fb1c13f77ba2087beb6ef7961aff3d8ef0c00e9d4936"
+    },
+    {
+      "name": "WILV01",
+      "lumpId": 895,
+      "length": 4590,
+      "sha256": "9b9f07497539dd4a0d7c111e12c6c39b714dd89ea3931ee9f1a408162e054eb3"
+    },
+    {
+      "name": "WILV02",
+      "lumpId": 896,
+      "length": 3101,
+      "sha256": "d6d179202fa39111dc6dca83c51f7a3102d4b77597e1b390ffc2b04825b7a11c"
+    },
+    {
+      "name": "WILV03",
+      "lumpId": 897,
+      "length": 2421,
+      "sha256": "6ae92715e729abc6c32481d88b347a1b16e9aca7cc670eb890619342699ad469"
+    },
+    {
+      "name": "WILV04",
+      "lumpId": 898,
+      "length": 1410,
+      "sha256": "ae1a3a08689067b45b8e168897fbac945d8b43c273f4e12c369d9bc4a6426f6c"
+    },
+    {
+      "name": "WILV05",
+      "lumpId": 899,
+      "length": 3421,
+      "sha256": "c35bade969b9789302c058a22df8b21022829e39df45116df2d154fb5028ec20"
+    },
+    {
+      "name": "WILV06",
+      "lumpId": 900,
+      "length": 5033,
+      "sha256": "b5099d8e55dd55b024eec473025f0db89f31002a9f1929a4a3f5dcfc662794e8"
+    },
+    {
+      "name": "WILV07",
+      "lumpId": 901,
+      "length": 2929,
+      "sha256": "ad1dbeb6f080648a390c3c5b8cb139a813fbeff8e70f6a1ddb19805f4c734a97"
+    },
+    {
+      "name": "WILV08",
+      "lumpId": 902,
+      "length": 3715,
+      "sha256": "2c5419f9dc3e2ad808e988196dfe5ce86372fca2b760f68d5db2a98622844907"
+    },
+    {
+      "name": "WIURH0",
+      "lumpId": 941,
+      "length": 13,
+      "sha256": "4e12c6a8f6c49ca0c05e776d63164654186b22b79b6a64c37297631fa00141ef"
+    },
+    {
+      "name": "WIURH1",
+      "lumpId": 942,
+      "length": 13,
+      "sha256": "4e12c6a8f6c49ca0c05e776d63164654186b22b79b6a64c37297631fa00141ef"
+    },
+    {
+      "name": "WISPLAT",
+      "lumpId": 943,
+      "length": 13,
+      "sha256": "4e12c6a8f6c49ca0c05e776d63164654186b22b79b6a64c37297631fa00141ef"
+    },
+    {
+      "name": "WIA00000",
+      "lumpId": 972,
+      "length": 13,
+      "sha256": "4e12c6a8f6c49ca0c05e776d63164654186b22b79b6a64c37297631fa00141ef"
+    },
+    {
+      "name": "WIA00001",
+      "lumpId": 973,
+      "length": 13,
+      "sha256": "4e12c6a8f6c49ca0c05e776d63164654186b22b79b6a64c37297631fa00141ef"
+    },
+    {
+      "name": "WIA00002",
+      "lumpId": 974,
+      "length": 13,
+      "sha256": "4e12c6a8f6c49ca0c05e776d63164654186b22b79b6a64c37297631fa00141ef"
+    },
+    {
+      "name": "WIA00100",
+      "lumpId": 969,
+      "length": 13,
+      "sha256": "4e12c6a8f6c49ca0c05e776d63164654186b22b79b6a64c37297631fa00141ef"
+    },
+    {
+      "name": "WIA00101",
+      "lumpId": 970,
+      "length": 13,
+      "sha256": "4e12c6a8f6c49ca0c05e776d63164654186b22b79b6a64c37297631fa00141ef"
+    },
+    {
+      "name": "WIA00102",
+      "lumpId": 971,
+      "length": 13,
+      "sha256": "4e12c6a8f6c49ca0c05e776d63164654186b22b79b6a64c37297631fa00141ef"
+    },
+    {
+      "name": "WIA00200",
+      "lumpId": 966,
+      "length": 13,
+      "sha256": "4e12c6a8f6c49ca0c05e776d63164654186b22b79b6a64c37297631fa00141ef"
+    },
+    {
+      "name": "WIA00201",
+      "lumpId": 967,
+      "length": 13,
+      "sha256": "4e12c6a8f6c49ca0c05e776d63164654186b22b79b6a64c37297631fa00141ef"
+    },
+    {
+      "name": "WIA00202",
+      "lumpId": 968,
+      "length": 13,
+      "sha256": "4e12c6a8f6c49ca0c05e776d63164654186b22b79b6a64c37297631fa00141ef"
+    },
+    {
+      "name": "WIA00300",
+      "lumpId": 963,
+      "length": 13,
+      "sha256": "4e12c6a8f6c49ca0c05e776d63164654186b22b79b6a64c37297631fa00141ef"
+    },
+    {
+      "name": "WIA00301",
+      "lumpId": 964,
+      "length": 13,
+      "sha256": "4e12c6a8f6c49ca0c05e776d63164654186b22b79b6a64c37297631fa00141ef"
+    },
+    {
+      "name": "WIA00302",
+      "lumpId": 965,
+      "length": 13,
+      "sha256": "4e12c6a8f6c49ca0c05e776d63164654186b22b79b6a64c37297631fa00141ef"
+    },
+    {
+      "name": "WIA00400",
+      "lumpId": 960,
+      "length": 13,
+      "sha256": "4e12c6a8f6c49ca0c05e776d63164654186b22b79b6a64c37297631fa00141ef"
+    },
+    {
+      "name": "WIA00401",
+      "lumpId": 961,
+      "length": 13,
+      "sha256": "4e12c6a8f6c49ca0c05e776d63164654186b22b79b6a64c37297631fa00141ef"
+    },
+    {
+      "name": "WIA00402",
+      "lumpId": 962,
+      "length": 13,
+      "sha256": "4e12c6a8f6c49ca0c05e776d63164654186b22b79b6a64c37297631fa00141ef"
+    },
+    {
+      "name": "WIA00500",
+      "lumpId": 957,
+      "length": 13,
+      "sha256": "4e12c6a8f6c49ca0c05e776d63164654186b22b79b6a64c37297631fa00141ef"
+    },
+    {
+      "name": "WIA00501",
+      "lumpId": 958,
+      "length": 13,
+      "sha256": "4e12c6a8f6c49ca0c05e776d63164654186b22b79b6a64c37297631fa00141ef"
+    },
+    {
+      "name": "WIA00502",
+      "lumpId": 959,
+      "length": 13,
+      "sha256": "4e12c6a8f6c49ca0c05e776d63164654186b22b79b6a64c37297631fa00141ef"
+    },
+    {
+      "name": "WIA00600",
+      "lumpId": 954,
+      "length": 13,
+      "sha256": "4e12c6a8f6c49ca0c05e776d63164654186b22b79b6a64c37297631fa00141ef"
+    },
+    {
+      "name": "WIA00601",
+      "lumpId": 955,
+      "length": 13,
+      "sha256": "4e12c6a8f6c49ca0c05e776d63164654186b22b79b6a64c37297631fa00141ef"
+    },
+    {
+      "name": "WIA00602",
+      "lumpId": 956,
+      "length": 13,
+      "sha256": "4e12c6a8f6c49ca0c05e776d63164654186b22b79b6a64c37297631fa00141ef"
+    },
+    {
+      "name": "WIA00700",
+      "lumpId": 951,
+      "length": 13,
+      "sha256": "4e12c6a8f6c49ca0c05e776d63164654186b22b79b6a64c37297631fa00141ef"
+    },
+    {
+      "name": "WIA00701",
+      "lumpId": 952,
+      "length": 13,
+      "sha256": "4e12c6a8f6c49ca0c05e776d63164654186b22b79b6a64c37297631fa00141ef"
+    },
+    {
+      "name": "WIA00702",
+      "lumpId": 953,
+      "length": 13,
+      "sha256": "4e12c6a8f6c49ca0c05e776d63164654186b22b79b6a64c37297631fa00141ef"
+    },
+    {
+      "name": "WIA00800",
+      "lumpId": 948,
+      "length": 13,
+      "sha256": "4e12c6a8f6c49ca0c05e776d63164654186b22b79b6a64c37297631fa00141ef"
+    },
+    {
+      "name": "WIA00801",
+      "lumpId": 949,
+      "length": 13,
+      "sha256": "4e12c6a8f6c49ca0c05e776d63164654186b22b79b6a64c37297631fa00141ef"
+    },
+    {
+      "name": "WIA00802",
+      "lumpId": 950,
+      "length": 13,
+      "sha256": "4e12c6a8f6c49ca0c05e776d63164654186b22b79b6a64c37297631fa00141ef"
+    },
+    {
+      "name": "WIA00900",
+      "lumpId": 945,
+      "length": 13,
+      "sha256": "4e12c6a8f6c49ca0c05e776d63164654186b22b79b6a64c37297631fa00141ef"
+    },
+    {
+      "name": "WIA00901",
+      "lumpId": 946,
+      "length": 13,
+      "sha256": "4e12c6a8f6c49ca0c05e776d63164654186b22b79b6a64c37297631fa00141ef"
+    },
+    {
+      "name": "WIA00902",
+      "lumpId": 947,
+      "length": 13,
+      "sha256": "4e12c6a8f6c49ca0c05e776d63164654186b22b79b6a64c37297631fa00141ef"
+    },
+    {
+      "name": "WIMINUS",
+      "lumpId": 863,
+      "length": 125,
+      "sha256": "0f46066f971e954397d4963c80fc58253aa57fb2963d1d80e6ac55e8db721f4b"
+    },
+    {
+      "name": "WINUM0",
+      "lumpId": 865,
+      "length": 256,
+      "sha256": "54377aef0c6626841e0112700c0a62de99e6ea0358979088058efabf1ecd5d31"
+    },
+    {
+      "name": "WINUM1",
+      "lumpId": 866,
+      "length": 173,
+      "sha256": "674a42f8768019cff03a52ae9a21e60033b343588b051a3bd51bd94edcdf74e2"
+    },
+    {
+      "name": "WINUM2",
+      "lumpId": 867,
+      "length": 280,
+      "sha256": "50566fe8a6e7d1bbb93bcfa789b9aa3b7a7e4e17bd8ebdbcc1458db8497f4ca3"
+    },
+    {
+      "name": "WINUM3",
+      "lumpId": 868,
+      "length": 251,
+      "sha256": "22380f20fd996289665be3bfa9952bd2959d99aebd72256e9dcd53a6d5dcf2f5"
+    },
+    {
+      "name": "WINUM4",
+      "lumpId": 869,
+      "length": 260,
+      "sha256": "7323f9446e8c4af2ec68ac84be853891b0a608bf037233cb5fe08556a3db14d7"
+    },
+    {
+      "name": "WINUM5",
+      "lumpId": 870,
+      "length": 297,
+      "sha256": "acabac30663dd26e824458d1e9268746d141ee5b76041b6bcf77d5f49e9607a2"
+    },
+    {
+      "name": "WINUM6",
+      "lumpId": 871,
+      "length": 255,
+      "sha256": "bc413251ecb09d467b7a75099fccc5faba4c82b315502666fedb5182caa182f0"
+    },
+    {
+      "name": "WINUM7",
+      "lumpId": 872,
+      "length": 286,
+      "sha256": "f4cfd5051c5a87b9aa6e23555700b2c26b331ce9373eb9cf41278380828c401a"
+    },
+    {
+      "name": "WINUM8",
+      "lumpId": 873,
+      "length": 278,
+      "sha256": "75740be06c9f9a7572deab5e1f62813a55e2b02b2dac5159b963ff2bcfeaf3c3"
+    },
+    {
+      "name": "WINUM9",
+      "lumpId": 874,
+      "length": 270,
+      "sha256": "6d3b4df78f32bb6cc5ef0e42860368818d251d997f29d56327e51b639ebd6c73"
+    },
+    {
+      "name": "WIPCNT",
+      "lumpId": 864,
+      "length": 278,
+      "sha256": "8348695681fba8cc795d0f912d55b4d29cd83f7a46a71cbbc04d3d3298883405"
+    },
+    {
+      "name": "WIF",
+      "lumpId": 856,
+      "length": 1750,
+      "sha256": "38e61cd11fae00646b2306998cea128e45ef4b41778c705f0c8eb3e710afa46f"
+    },
+    {
+      "name": "WIENTER",
+      "lumpId": 889,
+      "length": 2127,
+      "sha256": "6fd785ec4600569174486ceb8b18b6d77653319af3833613d4f7cd4971715547"
+    },
+    {
+      "name": "WIOSTK",
+      "lumpId": 854,
+      "length": 1050,
+      "sha256": "2472c37f31b02ee3a64d339b93a25da208e6790c209a106b70180f032f3e251d"
+    },
+    {
+      "name": "WIOSTS",
+      "lumpId": 858,
+      "length": 910,
+      "sha256": "e18e24ac4b324eb8272c64946279de87c45fbf4af8ad75b5996253aead508064"
+    },
+    {
+      "name": "WISCRT2",
+      "lumpId": 888,
+      "length": 1320,
+      "sha256": "4e90ab8fed87f6b74af756577ec8017085b5c40b55816d42e8a7e687a5f8bc81"
+    },
+    {
+      "name": "WIOSTI",
+      "lumpId": 855,
+      "length": 1162,
+      "sha256": "3ddf419c3d0646b90b62c9703f5a19a41e841415446ce814f4e9274d51cff3df"
+    },
+    {
+      "name": "WIFRGS",
+      "lumpId": 877,
+      "length": 894,
+      "sha256": "e32853f131302ead972be018c76cc78dc8befd52ca4777cfb7a871bb598d88d7"
+    },
+    {
+      "name": "WICOLON",
+      "lumpId": 875,
+      "length": 103,
+      "sha256": "553323243a48020f48924958c8d9641eb9c9c85efd06a45320c9444fca6b5239"
+    },
+    {
+      "name": "WITIME",
+      "lumpId": 860,
+      "length": 1007,
+      "sha256": "fb50a92dd6d63189bd5736e6ed4c64384fbc44aa41e93c3a15c0fb7c3c0b66fb"
+    },
+    {
+      "name": "WISUCKS",
+      "lumpId": 876,
+      "length": 1215,
+      "sha256": "37b5350d81060a75e7a4a925a2f8471111ac5e3a95c77a4472e57bca53438320"
+    },
+    {
+      "name": "WIPAR",
+      "lumpId": 861,
+      "length": 751,
+      "sha256": "a444a436ce28857c8475961f5f2756283999d246cac59216082894164609c993"
+    },
+    {
+      "name": "WIKILRS",
+      "lumpId": 886,
+      "length": 450,
+      "sha256": "176b16d06551b8380916ff8b6c2bd0eef0a73ba8fd60c05882af0148fa89218c"
+    },
+    {
+      "name": "WIVCTMS",
+      "lumpId": 887,
+      "length": 828,
+      "sha256": "78c5a70884f14b7a155d789ae3cb58c2073aa0b2765f8ba93a8ba7e990c1ea46"
+    },
+    {
+      "name": "WIMSTT",
+      "lumpId": 857,
+      "length": 1160,
+      "sha256": "90e0c115eb7fe9581adddac1fc9d6b6819b414ad2660de581b106978106eeb5e"
+    },
+    {
+      "name": "STFST01",
+      "lumpId": 726,
+      "length": 818,
+      "sha256": "cd3c8b21ffe4b46881392beed92a71b3abc1a6676b8e0705124931eee0b83c28"
+    },
+    {
+      "name": "STFDEAD0",
+      "lumpId": 767,
+      "length": 819,
+      "sha256": "ffab885656df2ed6fecacc7e84e394ca46b9499bd78c3b990a9a02258be7c216"
+    },
+    {
+      "name": "STPB0",
+      "lumpId": 723,
+      "length": 1478,
+      "sha256": "bb8c9101a43c5e38700cda4bb123abde1b04edafc8d213bec5f8477d74b39a1e"
+    },
+    {
+      "name": "WIBP1",
+      "lumpId": 882,
+      "length": 409,
+      "sha256": "69c435c984a6c523c001a56cd314300ce6ea6f9bdf0ce002eacad919a530af95"
+    },
+    {
+      "name": "STPB1",
+      "lumpId": 722,
+      "length": 1478,
+      "sha256": "b1e0c37b4023ab8ee0294b6f491eae547e427fa31fc090619441ebadfcba705a"
+    },
+    {
+      "name": "WIBP2",
+      "lumpId": 883,
+      "length": 515,
+      "sha256": "9a24590ec1bdf4a222eb184573d6f3d94d47247054a5a8cd9d03c5377f8b1607"
+    },
+    {
+      "name": "STPB2",
+      "lumpId": 724,
+      "length": 1478,
+      "sha256": "70d8217c6e34ede88f0d2ac75a3b88c79a5a13a05ecf0df457ea80f46d636124"
+    },
+    {
+      "name": "WIBP3",
+      "lumpId": 884,
+      "length": 486,
+      "sha256": "b2b13ec19f80a95dfa17d6889643e5f06d5efa266574f5be802ddc17ce43828c"
+    },
+    {
+      "name": "STPB3",
+      "lumpId": 725,
+      "length": 1478,
+      "sha256": "54936f1badc3f6106b92c8e7d93d51d15e0cd4c285fe5b311cdf8828b8e2139f"
+    },
+    {
+      "name": "WIBP4",
+      "lumpId": 885,
+      "length": 494,
+      "sha256": "ee8cdaf0e24ba2234d607c3087d66832b3166bf7dc56f4a658ed3a624ebf2af6"
+    }
+  ],
+  "assetProfiles": [
+    {
+      "profile": 0,
+      "sha256": "f45da579316e705efd4c584dba61c392a037c5675a75f7b96bcb954af7af5678",
+      "blobSha256": "1c0efcc6fb811681d957411872ac2e0111adafce9ca3a2ec06c604d42614a5fa",
+      "blobBytes": 124882,
+      "namedLumps": 79
+    },
+    {
+      "profile": 1,
+      "sha256": "97f00e99c7b01a79892fc54dd2bec0a172bdda781ee36d23032a0b349b10b0b0",
+      "blobSha256": "cb602ba62de688288dd96831c4a09aec8e4a82e880fd21b230da9f0dc7ad1f57",
+      "blobBytes": 125124,
+      "namedLumps": 79
+    },
+    {
+      "profile": 2,
+      "sha256": "2cb1d3a510236793a00fb213cac81dafa38f4ff1091a8dc9a3680088bf8700f2",
+      "blobSha256": "cf9f0d525d78060ab11fe5093f6dbed0e03e998814e08612a865add8be3b5164",
+      "blobBytes": 191884,
+      "namedLumps": 79
+    },
+    {
+      "profile": 3,
+      "sha256": "7f264f4d80340b3dbce8d76fb1062d40173de042b3e4c3a9239c463aa48fbc40",
+      "blobSha256": "1d69da5d058f38fe20f4785b980f123586bdce601a5b34e9364c731bdcdaa392",
+      "blobBytes": 258694,
+      "namedLumps": 79
+    }
+  ],
+  "synthetic": {
+    "WIURH0": "fe636a5ec2b35e3b133b44e37fd2b41e7a68d70c463fc0ddcb335f09f9a37183",
+    "WIURH1": "e1e20ed9e82d864dc4d63409ef405195c67ccc7d116f4119b77ba61102aaa7b0",
+    "WISPLAT": "3e17ef5322ea05123f80959e1fbbe1c788cddc26017b82b29edecaf15eb05440",
+    "WIA00000": "aae85f2ff4b8cc67427a650c8ffe841325ce90041a454ec5fd2101bcf9fcb8fc",
+    "HUGE": "e6beeccf021d5c0171fc3a33dcac5aea1160fcfee381360894de77e2cd483a6f"
+  },
+  "functionMapping": [
+    {
+      "function": "WI_Start",
+      "startLine": 1838,
+      "endLine": 1850,
+      "sha256": "13fff1e19f44ccb3fd6022ada7391d3d6b8b0bf1b5e7f17559d1ce63258c4cb1"
+    },
+    {
+      "function": "WI_initVariables",
+      "startLine": 1796,
+      "endLine": 1836,
+      "sha256": "af707a7b3f7230a72cfd7aec186d098509306d7df9b46109c2b0d70b31cdab6a"
+    },
+    {
+      "function": "WI_loadData",
+      "startLine": 1538,
+      "endLine": 1706,
+      "sha256": "4833527d27eab43e259f8510e37ab28d341c256a2dbc098d88b414c6b988baef"
+    },
+    {
+      "function": "WI_unloadData",
+      "startLine": 1708,
+      "endLine": 1770,
+      "sha256": "428f46be6a6343b5301d2f543ca844ccb7bbd9cb7c7dd39dd22105902cfabf53"
+    },
+    {
+      "function": "WI_End",
+      "startLine": 724,
+      "endLine": 728,
+      "sha256": "c192ed66884d9481e72726746af4583eb28b8e4f2e71b4d6740f410c91777d62"
+    },
+    {
+      "function": "WI_Ticker",
+      "startLine": 1503,
+      "endLine": 1536,
+      "sha256": "c463b406d1a9acbacb42c7cf2944e52c9686fbce868427abdf4cee354228e87b"
+    },
+    {
+      "function": "WI_checkForAccelerate",
+      "startLine": 1470,
+      "endLine": 1498,
+      "sha256": "177e6299654c6d127cf2ac61a035acad14e098527edb81087ff8373ebf624fd9"
+    },
+    {
+      "function": "WI_Drawer",
+      "startLine": 1772,
+      "endLine": 1793,
+      "sha256": "c3132ab1cf862ca71358852f2f7ce24fc2f6d128da4cee0a830b571f64df144d"
+    },
+    {
+      "function": "WI_Responder",
+      "startLine": 414,
+      "endLine": 417,
+      "sha256": "f16720da5140b689994a1224ff93c1aa69dbdaf76054ac68a2d6d7c306672612"
+    },
+    {
+      "function": "WI_initStats",
+      "startLine": 1318,
+      "endLine": 1328,
+      "sha256": "8b10c094ef786e4daf6b5949de1b3535d38a905fc029164ac2cee810d2463ff4"
+    },
+    {
+      "function": "WI_updateStats",
+      "startLine": 1330,
+      "endLine": 1434,
+      "sha256": "39b61de8061bf4ea52fbc73b16f0b66b260a5f666fa392b1ea2975283c8d8053"
+    },
+    {
+      "function": "WI_drawStats",
+      "startLine": 1436,
+      "endLine": 1468,
+      "sha256": "a2974d21493b15c776b908cc71dffe34219e26a11c5d226b99c2dddb9f94d68e"
+    },
+    {
+      "function": "WI_initShowNextLoc",
+      "startLine": 752,
+      "endLine": 759,
+      "sha256": "cc5cbf417ff8c160332ee230e4da9ab5209c99c28d921d0da14e21ed7f12d699"
+    },
+    {
+      "function": "WI_updateShowNextLoc",
+      "startLine": 761,
+      "endLine": 769,
+      "sha256": "7b422fad8ac85e2b9034654012eede4bec6daaa906b1be1f823ed5801213b929"
+    },
+    {
+      "function": "WI_drawShowNextLoc",
+      "startLine": 771,
+      "endLine": 810,
+      "sha256": "1f1fbd79d1b4ea81ad4a198444def10790eca0048990bd833180ee54860b4c5b"
+    },
+    {
+      "function": "WI_initNoState",
+      "startLine": 730,
+      "endLine": 735,
+      "sha256": "b061570a588f45d6b7e057d286aef3280ab5eea263fc402be681a1946243eedb"
+    },
+    {
+      "function": "WI_updateNoState",
+      "startLine": 737,
+      "endLine": 747,
+      "sha256": "72acf74782204cdb681a4d7f9f4e4e427d5c31a1af4fe3704b0692f70a74c43e"
+    },
+    {
+      "function": "WI_drawNoState",
+      "startLine": 812,
+      "endLine": 816,
+      "sha256": "2268859b13603505871a091f2c39f4d989df14e1b297409e11c1f094e6fab696"
+    },
+    {
+      "function": "WI_initAnimatedBack",
+      "startLine": 503,
+      "endLine": 530,
+      "sha256": "7c317897d8ef9d98fdc5887a55f6bfdc5e25d8c3adad431e66baca310dc2e6cd"
+    },
+    {
+      "function": "WI_updateAnimatedBack",
+      "startLine": 532,
+      "endLine": 581,
+      "sha256": "4cff6371fe8676cbc2f2a87ccb125e28179e3bbcb2529c58f351b674b15c87cf"
+    },
+    {
+      "function": "WI_drawAnimatedBack",
+      "startLine": 583,
+      "endLine": 602,
+      "sha256": "b1230936d5034299d8b84db17f75699947ebcb79e06051764fc059b82cb9ea57"
+    },
+    {
+      "function": "WI_slamBackground",
+      "startLine": 406,
+      "endLine": 410,
+      "sha256": "75c41dfcfcdd7ab2fe4af65e212e0e1a738bb4ee01190c3620495bf8c23886bc"
+    },
+    {
+      "function": "WI_drawLF",
+      "startLine": 421,
+      "endLine": 434,
+      "sha256": "42ee42c510ee497e5f2569bd6920f2ea9457e594fa6796465d898adbafb0425f"
+    },
+    {
+      "function": "WI_drawEL",
+      "startLine": 439,
+      "endLine": 453,
+      "sha256": "3796a7c45114ffafef7fdcfbf509707503d7b942714dc5de7db494f288becde8"
+    },
+    {
+      "function": "WI_drawOnLnode",
+      "startLine": 455,
+      "endLine": 499,
+      "sha256": "1179373c423a6633301171795ea23845ede54d791e34b3cba35e7adecd50e653"
+    },
+    {
+      "function": "WI_drawNum",
+      "startLine": 611,
+      "endLine": 666,
+      "sha256": "131333a9dd08418372b46952cd17004716fa654341868ddc12347aeed062bc60"
+    },
+    {
+      "function": "WI_drawPercent",
+      "startLine": 668,
+      "endLine": 679,
+      "sha256": "186e6bf4fe4715512f96c87199ae81c5099d4551fd14ebc2d00e59b16bc0194d"
+    },
+    {
+      "function": "WI_drawTime",
+      "startLine": 687,
+      "endLine": 721,
+      "sha256": "cd1409a5911eaaed084c2333aafeafab917899754a12c9a9be2116046a08ca04"
+    }
+  ],
+  "sourceSha256": {
+    "wi_stuff.c": "d894ead3416d3d21eb9c197b0644882637725b0339ef28a4fd9afa0a43ff9581",
+    "wi_stuff.h": "57ab19c222d6e54158b3fff8ea6ea23d23e7646925aab830b06cf8cfc1e84f5e",
+    "v_video.c": "52fb89efb1e6de3842c197b32009d620dcd1578f7111a7502abe6110a925e5eb",
+    "v_video.h": "728500c3b693d1baff1a43c5df6d0c6d55d1ec343247becd7db33c1be747635b",
+    "m_random.c": "8d89f5cfcbbd0170e46b55538c4c272b3cf5b5d7dce91023b8aa8d9b922b21ee",
+    "m_bbox.c": "98f3aea4f43d4d75fe452a25a65678fbd8368cfef3928b869767996e2165f42c",
+    "d_player.h": "9c9a342ab7c3661ab02d32890bd0d74ede94a0745ae0d622de83a9ae11046ffb",
+    "doomdef.h": "643daca966fb762fa86f39ce9a1779355117578527bf2e295163647f9ad0d74e",
+    "d_event.h": "24ba8629e157f4f76c4da0821a9f1bf71c34c2aec5cbc1ee4ec5898751225d22"
+  },
+  "harnessSha256": {
+    "reference.py": "e94c7b6cba114992778cbb38799e8e33110514f1a663b2546c617525ee61c64b",
+    "compat.h": "aecf3d64ff57bd2676f46d4fa04c1640d51652773700bbfcd902a9cd0557b5bc",
+    "host.c": "8ac2cfd3164433547a2555863490a9988db0b827fc1fea1244aa70d682f01b0d"
+  },
+  "casesSha256": "98ccc47d82dac94572417ce26c5a785bc02d42fc8697e2840977383a5a0a7ac0",
+  "compileWarnings": [
+    {
+      "profile": "O0",
+      "stderr": ""
+    },
+    {
+      "profile": "O2",
+      "stderr": ""
+    },
+    {
+      "profile": "sanitized",
+      "stderr": "In file included from ./tools/reference/intermission/host.c:35:\noriginal/DOOM/linuxdoom-1.10/wi_stuff.c:1548:2: warning: 'sprintf' is deprecated: This function is provided for compatibility reasons only.  Due to security concerns inherent in the design of sprintf(3), it is highly recommended that you use snprintf(3) instead. [-Wdeprecated-declarations]\n 1548 |         sprintf(name, \"WIMAP%d\", wbs->epsd);\n      |         ^\n/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/_stdio.h:278:1: note: 'sprintf' has been explicitly marked deprecated here\n  278 | __deprecated_msg(\"This function is provided for compatibility reasons only.  Due to security concerns inherent in the design of sprintf(3), it is highly recommended that you use snprintf(3) instead.\")\n      | ^\n/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/sys/cdefs.h:218:48: note: expanded from macro '__deprecated_msg'\n  218 |         #define __deprecated_msg(_msg) __attribute__((__deprecated__(_msg)))\n      |                                                       ^\nIn file included from ./tools/reference/intermission/host.c:35:\noriginal/DOOM/linuxdoom-1.10/wi_stuff.c:1579:6: warning: 'sprintf' is deprecated: This function is provided for compatibility reasons only.  Due to security concerns inherent in the design of sprintf(3), it is highly recommended that you use snprintf(3) instead. [-Wdeprecated-declarations]\n 1579 |             sprintf(name, \"CWILV%2.2d\", i);\n      |             ^\n/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/_stdio.h:278:1: note: 'sprintf' has been explicitly marked deprecated here\n  278 | __deprecated_msg(\"This function is provided for compatibility reasons only.  Due to security concerns inherent in the design of sprintf(3), it is highly recommended that you use snprintf(3) instead.\")\n      | ^\n/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/sys/cdefs.h:218:48: note: expanded from macro '__deprecated_msg'\n  218 |         #define __deprecated_msg(_msg) __attribute__((__deprecated__(_msg)))\n      |                                                       ^\nIn file included from ./tools/reference/intermission/host.c:35:\noriginal/DOOM/linuxdoom-1.10/wi_stuff.c:1589:6: warning: 'sprintf' is deprecated: This function is provided for compatibility reasons only.  Due to security concerns inherent in the design of sprintf(3), it is highly recommended that you use snprintf(3) instead. [-Wdeprecated-declarations]\n 1589 |             sprintf(name, \"WILV%d%d\", wbs->epsd, i);\n      |             ^\n/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/_stdio.h:278:1: note: 'sprintf' has been explicitly marked deprecated here\n  278 | __deprecated_msg(\"This function is provided for compatibility reasons only.  Due to security concerns inherent in the design of sprintf(3), it is highly recommended that you use snprintf(3) instead.\")\n      | ^\n/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/sys/cdefs.h:218:48: note: expanded from macro '__deprecated_msg'\n  218 |         #define __deprecated_msg(_msg) __attribute__((__deprecated__(_msg)))\n      |                                                       ^\nIn file included from ./tools/reference/intermission/host.c:35:\noriginal/DOOM/linuxdoom-1.10/wi_stuff.c:1613:4: warning: 'sprintf' is deprecated: This function is provided for compatibility reasons only.  Due to security concerns inherent in the design of sprintf(3), it is highly recommended that you use snprintf(3) instead. [-Wdeprecated-declarations]\n 1613 |                         sprintf(name, \"WIA%d%.2d%.2d\", wbs->epsd, j, i);  \n      |                         ^\n/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/_stdio.h:278:1: note: 'sprintf' has been explicitly marked deprecated here\n  278 | __deprecated_msg(\"This function is provided for compatibility reasons only.  Due to security concerns inherent in the design of sprintf(3), it is highly recommended that you use snprintf(3) instead.\")\n      | ^\n/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/sys/cdefs.h:218:48: note: expanded from macro '__deprecated_msg'\n  218 |         #define __deprecated_msg(_msg) __attribute__((__deprecated__(_msg)))\n      |                                                       ^\nIn file included from ./tools/reference/intermission/host.c:35:\noriginal/DOOM/linuxdoom-1.10/wi_stuff.c:1632:2: warning: 'sprintf' is deprecated: This function is provided for compatibility reasons only.  Due to security concerns inherent in the design of sprintf(3), it is highly recommended that you use snprintf(3) instead. [-Wdeprecated-declarations]\n 1632 |         sprintf(name, \"WINUM%d\", i);     \n      |         ^\n/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/_stdio.h:278:1: note: 'sprintf' has been explicitly marked deprecated here\n  278 | __deprecated_msg(\"This function is provided for compatibility reasons only.  Due to security concerns inherent in the design of sprintf(3), it is highly recommended that you use snprintf(3) instead.\")\n      | ^\n/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/sys/cdefs.h:218:48: note: expanded from macro '__deprecated_msg'\n  218 |         #define __deprecated_msg(_msg) __attribute__((__deprecated__(_msg)))\n      |                                                       ^\nIn file included from ./tools/reference/intermission/host.c:35:\noriginal/DOOM/linuxdoom-1.10/wi_stuff.c:1698:2: warning: 'sprintf' is deprecated: This function is provided for compatibility reasons only.  Due to security concerns inherent in the design of sprintf(3), it is highly recommended that you use snprintf(3) instead. [-Wdeprecated-declarations]\n 1698 |         sprintf(name, \"STPB%d\", i);      \n      |         ^\n/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/_stdio.h:278:1: note: 'sprintf' has been explicitly marked deprecated here\n  278 | __deprecated_msg(\"This function is provided for compatibility reasons only.  Due to security concerns inherent in the design of sprintf(3), it is highly recommended that you use snprintf(3) instead.\")\n      | ^\n/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/sys/cdefs.h:218:48: note: expanded from macro '__deprecated_msg'\n  218 |         #define __deprecated_msg(_msg) __attribute__((__deprecated__(_msg)))\n      |                                                       ^\nIn file included from ./tools/reference/intermission/host.c:35:\noriginal/DOOM/linuxdoom-1.10/wi_stuff.c:1702:2: warning: 'sprintf' is deprecated: This function is provided for compatibility reasons only.  Due to security concerns inherent in the design of sprintf(3), it is highly recommended that you use snprintf(3) instead. [-Wdeprecated-declarations]\n 1702 |         sprintf(name, \"WIBP%d\", i+1);     \n      |         ^\n/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/_stdio.h:278:1: note: 'sprintf' has been explicitly marked deprecated here\n  278 | __deprecated_msg(\"This function is provided for compatibility reasons only.  Due to security concerns inherent in the design of sprintf(3), it is highly recommended that you use snprintf(3) instead.\")\n      | ^\n/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/sys/cdefs.h:218:48: note: expanded from macro '__deprecated_msg'\n  218 |         #define __deprecated_msg(_msg) __attribute__((__deprecated__(_msg)))\n      |                                                       ^\n7 warnings generated.\n"
+    }
+  ],
+  "hostAdaptations": [
+    "Original wi_stuff.c included unchanged, original video/bbox/RNG compiled unchanged; platform declarations only",
+    "Immutable named WAD buffers borrowed by W_CacheLumpName; Z_Malloc owns lnames only, Z_ChangeTag inert; no native zone trace claim",
+    "Audio calls inert permanently; G_WorldDone records completion without loading/progression",
+    "Host diagnostic printf inert; visible synthetic markers and oversized candidates are separately declared resource profiles",
+    "ASan/UBSan disables only original variable-length patch columnofs array-bounds check; physical ASan remains active; borrowed-buffer leak checks disabled",
+    "Only Episode One, player0, modes0/1/3; native signed overflow and invalid pointers excluded"
+  ]
+}
