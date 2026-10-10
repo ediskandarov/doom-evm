@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "goal": "4.1",
+  "status": "complete",
+  "start": "2026-10-10T07:54:16.000Z",
+  "completion": "2026-10-10T08:13:29.000Z",
+  "publishedVerificationRevision": "db200bdd3b13b9c0063c5138b2f1bd981e2ca38f",
+  "structuredGoalCounter": {
+    "tokensUsed": 211052,
+    "timeUsedSeconds": 1153,
+    "createdAt": 1791618856,
+    "updatedAt": 1791620009
+  },
+  "counterScope": "Separate structured goal counter; not input/cached-input/output/reasoning totals, not summed with collector usage or agents. Exact per-agent/category usage not exposed here.",
+  "agentAttribution": [
+    "/root",
+    "/root/video_native"
+  ],
+  "modelAttribution": "Inherited runtime model; exact model identifier not exposed by goal counter.",
+  "privacy": "No session transcripts accessed.",
+  "stop": "Goal4.1 only; no later Phase4 implementation authorized by this goal."
+}

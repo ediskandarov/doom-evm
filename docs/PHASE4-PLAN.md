@@ -222,6 +222,14 @@ arbitrary-WAD/undefined-C/contiguous-pointer equivalence is claimed. The native
 sanitizer's variable column-table array-bounds and unsupported leak-detection
 exclusions are documented. Gamma/palette presentation remains for4.2.
 
+Verified publication **db200bdd3b13b9c0063c5138b2f1bd981e2ca38f** is pushed to origin/main,
+following implementation checkpoint498081b. Actual structured closure:
+2026-10-10T08:13:29Z; elapsed1153s (19m13s),211,052 separate goal-counter tokens.
+[Closure record](../artifacts/phase4/goal4.1-completion.json). These counters are
+not per-category/session/agent telemetry and must never be added to it.
+The worktree was clean at verified publication; this final metadata-only
+checkpoint records closure without altering source or proof bindings.
+
 Remaining Goal4.1 work/blockers: **none**. Astra's independent worktree/audit was
 not inspected, modified or waited on. All later features remain unstarted.
 Recommended4.2 entry: original st_lib widget drawing through VideoState,
