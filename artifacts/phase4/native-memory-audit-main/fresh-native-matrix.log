@@ -1,0 +1,37 @@
+{
+  "status": "PASS with expected align4 sanitizer failures",
+  "builds": 7,
+  "runs": 66,
+  "expectedFailures": 3,
+  "elapsedSeconds": 2.7016311660408974,
+  "addressDiversity": {
+    "O0": {
+      "uniqueZoneBases": 12,
+      "runs": 12
+    },
+    "O2": {
+      "uniqueZoneBases": 12,
+      "runs": 12
+    },
+    "asan-ubsan": {
+      "uniqueZoneBases": 2,
+      "runs": 12
+    },
+    "auto-init-zero": {
+      "uniqueZoneBases": 12,
+      "runs": 12
+    },
+    "no-wrapv": {
+      "uniqueZoneBases": 11,
+      "runs": 12
+    },
+    "original-align4": {
+      "uniqueZoneBases": 3,
+      "runs": 3
+    },
+    "original-align4-sanitized": {
+      "uniqueZoneBases": 0,
+      "runs": 0
+    }
+  }
+}

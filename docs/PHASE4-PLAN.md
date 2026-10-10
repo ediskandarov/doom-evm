@@ -1,5 +1,10 @@
 # Phase 4 progress ledger
 
+Native memory audit checkpoint (2026-10-10): **RESTRICT**. The completed audit
+is integrated by an exact `-x` cherry-pick. Retain the hybrid model and restrict
+native-equivalence claims to explicitly named profiles; production code and
+memory semantics are unchanged. See the final audit integration entry.
+
 Latest main checkpoint (2026-10-10): **Episode One Completion and E1M1 speedrun
 replay/video are integrated and focused-verified.** Nine-map runtime, transitions,
 WI, E1 finale and browser controls pass production EVM/Canvas checks. The original
@@ -1332,3 +1337,79 @@ See [Episode production proof](../artifacts/phase4/episode-speedrun-main/episode
 [sampled video verification](../artifacts/phase4/episode-speedrun-main/video-video-verification.json),
 and [memory/ABI review](../artifacts/phase4/episode-speedrun-main/interfaces.json).
 Stop after the normal main push and synchronized clean-tree check.
+
+## Native Memory Compatibility Audit — Integrated RESTRICT verdict (2026-10-10)
+
+The designated Single Writer integrated ONLY audit commit
+`2ec982c4b9e7c3787cd6978a20b1af71a6cc0bf5` from
+`feat/phase4-episode-completion` with `git cherry-pick -x`.
+Its parent `b12eb212fa1f33ba787490327e327611b156f9a0` was already integrated.
+Baseline main `67d7ee5a29b24c99282385a84623528d87be2def` was clean and matched
+refreshed origin/main. The source commit and its patch were not already present.
+Cherry-pick `ca00030c8ad2d18a0e11563110a03a68ff10ee06` was clean; the old
+feature branch was not merged, rewritten or otherwise changed.
+
+Audit implementation: complete. Main integration: complete. Focused audit
+verification: passed. Production/release acceptance is unchanged. All154 audit
+deliverables remain byte-exact from the source commit:
+[report](PHASE4-NATIVE-MEMORY-AUDIT.md), `tools/reference/native_memory_audit/`
+and `artifacts/phase4/native-memory-audit/`.
+
+**Verdict: RESTRICT.** Retain the hybrid typed-state/virtual-zone implementation;
+restrict native-equivalence claims to named execution profiles and defer
+architectural refactoring. No production correctness defect was demonstrated
+in the reviewed finite domain, and no production patch is recommended by this
+audit. Documentation/profile-accounting improvements remain explicit follow-ups.
+
+Preserved limits:
+
+- The adapted Apple Clang17/arm64 little-endian LP64 profile is distinct from
+  historical Linux execution. The26 native layouts match; Linux i386/x86_64
+  comparisons are modern-Clang compilation only, without gameplay execution.
+- Whole-zone initial calloc, per-allocation fill and separate/borrowed renderer
+  or UI allocation are different profiles. Initial-zero provenance requires
+  the declared initial arena and observed byte-preservation policy. Malloc,
+  padding, reused bodies and retired headers do not acquire portable zero values.
+- Episode pointer provenance3 remains conditional on eight-byte little-endian
+  data pointers below2^48, only the selected high bytes of CURRENT written
+  header fields, including current free headers. Lower pointers, retired
+  headers, pointer-bearing bodies and arbitrary/tagged/wider addresses remain
+  unsupported. The small pointer proof does not guard every full-map sample.
+- Strict is a conservative knownness policy, not a separate native execution
+  environment. Initial-zero and pointer flags are independent; shared live
+  composite reconstruction is source-written evidence across modes, requiring
+  current allocated ownership and complete write coverage.
+- Equal finite outputs, O0/O2 agreement and ASan/UBSan do not prove universal ISO-C
+  definedness, initialization or whole-process memory equality. MSan was not
+  available/run. Original UB, host adaptations, sanitizer exclusions and missing
+  historical environment accounting remain visible. The three unadapted-align4
+  sanitizer failures remain expected failures, not successful observations.
+- Arbitrary WAD holes, unsupported tail spans, mutable/freed/history backing,
+  full-map pointer/frame fidelity and long-lived resource costs require separate
+  profiles/proofs. No broader portability or full Episode equivalence is claimed.
+
+Executed on main: preserved read-only audit checker; fresh native matrix;
+fresh compiler/macro/layout inventory; checker against that fresh evidence; and
+`python3 tools/zone/generate-layout.py --check`. Results: **105 source bindings,
+7 builds/66 processes,63 successes/3 expected misalignment failures,26 native
+types/3 compile-only ABI comparisons,963 texture records/338 nonempty composites/
+zero recorded holes, record76 bound and9 retained blood observations**.
+Fresh raw pointers/executable hashes remain observations, not byte-for-byte goldens.
+Counts describe the same finite cases rerun; they are not added to earlier audit
+or coordinator counts as new coverage.
+
+Source/evidence preservation, Python syntax, local links and source/documentation
+whitespace were checked. Full Phase0–4 regression and Forge/EVM/browser gates
+were deferred as unnecessary for this documentation/test-only integration.
+No production Solidity, original C, compiler settings, fixtures or memory
+semantics changed. No runtime was started; the active speedrun-debug worktree,
+its processes and all other worktrees were untouched. The separate tic52
+investigation remains outside this task.
+
+Measured integration start: `2026-10-10T17:28:26Z`; native verification completed
+`2026-10-10T17:29:55Z`. Publication checks follow separately. No new goal-service
+usage attribution was captured for this standalone task; no usage estimate is made.
+[Main integration record](../artifacts/phase4/native-memory-audit-main/integration.json)
+binds commands, preservation checks, this ledger and the separately retained
+fresh replay. Historical audit reports/certificates were not overwritten.
+Stop after the normal main push and clean/synchronized check.

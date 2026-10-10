@@ -1,0 +1,1 @@
+{"matchedNativeTypes": 26, "abiComparisons": {"arm64-apple-darwin24.6.0": [4, 8, 8, 40, 8, 56, 0, 8, 16, 20, 24, 32], "i386-unknown-linux-gnu": [4, 4, 4, 24, 4, 32, 0, 4, 8, 12, 16, 20], "x86_64-unknown-linux-gnu": [4, 8, 8, 40, 8, 56, 0, 8, 16, 20, 24, 32]}}

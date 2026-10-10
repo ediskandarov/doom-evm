@@ -1,0 +1,11 @@
+{
+  "command": [
+    "python3",
+    "tools/reference/native_memory_audit/check.py"
+  ],
+  "exitCode": 0,
+  "startedUtc": "2026-10-10T17:29:51.657547+00:00",
+  "endedUtc": "2026-10-10T17:29:51.717149+00:00",
+  "seconds": 0.05961337499320507,
+  "logSha256": "c02c32530996288d15abb7a81a24eed26dca2524ad0906666da113055f1f415c"
+}

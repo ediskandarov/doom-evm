@@ -1,0 +1,12 @@
+{
+  "command": [
+    "python3",
+    "tools/zone/generate-layout.py",
+    "--check"
+  ],
+  "exitCode": 0,
+  "startedUtc": "2026-10-10T17:29:54.970181+00:00",
+  "endedUtc": "2026-10-10T17:29:55.007369+00:00",
+  "seconds": 0.03721770877018571,
+  "logSha256": "5f500cb2749b1c6e31860e00b5eaff2f28f58599a43590ee897c62d1e1a39dd0"
+}

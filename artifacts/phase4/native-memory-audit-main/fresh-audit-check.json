@@ -1,0 +1,13 @@
+{
+  "command": [
+    "python3",
+    "tools/reference/native_memory_audit/check.py",
+    "--output",
+    "/Users/eduard/sandbox/doom-evm/artifacts/local/native-memory-audit-main/replay"
+  ],
+  "exitCode": 0,
+  "startedUtc": "2026-10-10T17:29:54.919613+00:00",
+  "endedUtc": "2026-10-10T17:29:54.969964+00:00",
+  "seconds": 0.050377500243484974,
+  "logSha256": "71b4ba330addd67347731da2d4f59c7da7a73360738eb64dab2124b99d21e622"
+}

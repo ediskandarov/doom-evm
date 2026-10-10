@@ -1,0 +1,14 @@
+{
+  "command": [
+    "python3",
+    "tools/reference/native_memory_audit/inventory.py",
+    "--output",
+    "/Users/eduard/sandbox/doom-evm/artifacts/local/native-memory-audit-main/replay"
+  ],
+  "exitCode": 0,
+  "startedUtc": "2026-10-10T17:29:54.506656+00:00",
+  "endedUtc": "2026-10-10T17:29:54.919406+00:00",
+  "seconds": 0.4127708333544433,
+  "logSha256": "75998b0b62315110a8bc83b90b4f4ced60aeecfd927ba8b230e8d35772865ed6",
+  "recordRecovery": "Exact command metadata recovered from captured tool stdout after the owned helper copied native inventory data over the command record; original log and native replay preserved."
+}
