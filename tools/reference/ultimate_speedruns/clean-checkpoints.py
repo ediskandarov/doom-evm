@@ -3,7 +3,7 @@
 import argparse,gzip,hashlib,json,time,re
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[3]
-ap=argparse.ArgumentParser();ap.add_argument('roots',nargs='+',type=Path);a=ap.parse_args();removed=[]
+ap=argparse.ArgumentParser();ap.add_argument('roots',nargs='+',type=Path);ap.add_argument('--audit-log',type=Path,default=ROOT/'artifacts/local/ultimate-speedruns/checkpoint-cleanup.jsonl');a=ap.parse_args();removed=[]
 sha=lambda p:hashlib.sha256(p.read_bytes()).hexdigest()
 def sibling(pointer,file,digest):
  p=pointer.parent/Path(file).name
@@ -27,6 +27,6 @@ for root in a.roots:
    assert p.is_file() and not p.is_symlink()
    if not any(p.name.endswith(suffix) for suffix in ['.chain.gz','.bin.gz','.deployment.json.gz','.replay.json.gz','.capture.json.gz']):continue
    size=p.stat().st_size;digest=sha(p);p.unlink();removed.append(dict(file=str(p),bytes=size,sha256=digest,reason='Superseded Anvil dump or duplicate checkpoint receipts; latest pointer, state and receipts verified and retained; final proof receipts unaffected'))
-log=ROOT/'artifacts/local/ultimate-speedruns/checkpoint-cleanup.jsonl';log.parent.mkdir(parents=True,exist_ok=True)
+log=a.audit_log;log.parent.mkdir(parents=True,exist_ok=True)
 with log.open('a') as f:f.write(json.dumps(dict(UTC=time.strftime('%Y-%m-%dT%H:%M:%SZ',time.gmtime()),removed=removed))+'\n')
 print(json.dumps(dict(removed=len(removed),bytesFreed=sum(r['bytes'] for r in removed))))
