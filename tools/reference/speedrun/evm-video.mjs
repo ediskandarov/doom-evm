@@ -19,8 +19,10 @@ const batch = Number(option('--batch', '5'));
 const prefix = resolve(option('--output-prefix', base + '/video/evm'));
 const sampleEvery = Number(option('--sample-every', '5'));
 const memoryProfile = option('--memory-profile', 'legacy');
-const profileNumber = {strict: 0, legacy: 1, episode: 2}[memoryProfile];
-assert(profileNumber !== undefined, 'Supported memory profiles: strict, legacy, episode');
+const profileNumber = {strict: 0, legacy: 1, episode: 2, virtual: 3}[memoryProfile];
+assert(profileNumber !== undefined, 'Supported memory profiles: strict, legacy, episode, virtual (experimental)');
+const provenanceObserver = args.includes('--provenance-observer');
+assert(!provenanceObserver || memoryProfile === 'virtual', 'Observer requires explicit experimental profile');
 const requestedTics = args.includes('--capture-tics') ? option('--capture-tics').split(',').map(Number) : null;
 assert(!requestedTics || requestedTics.every(tic => Number.isInteger(tic) && tic >= 1 && tic <= 279));
 const frameDirectory = resolve(prefix, '..', 'frames');
@@ -83,7 +85,7 @@ const rgb = Buffer.from(palette.rgbHex, 'hex');
 assert.equal(rgb.length, 768);
 assert.equal(sha(rgb), bundle.resourceIdentity.paletteSha256);
 await writeFile(resolve(prefix, '..', 'palette.bin'), rgb);
-const report = {kind: 'real-freedoom-e1m1-evm-video', pass: false, sampleEvery, memoryProfile, requestedTics, frames: [],
+const report = {kind: 'real-freedoom-e1m1-evm-video', pass: false, sampleEvery, memoryProfile, provenanceObserver, requestedTics, frames: [],
   startedUTC: new Date().toISOString(), sourceHashes, demoSha256: sha(demo),
   originalCommandBytesSha256: sha(commands), nativeStatesSha256: native.statesSha256,
   resourceIdentity: bundle.resourceIdentity, port, batch, executionBudget: budget,
@@ -150,14 +152,17 @@ async function capture(from, address, tic) {
     report.renderFailure.errorDataSha256 = typeof errorData === 'string' ? sha(Buffer.from(errorData.slice(2), 'hex')) : null;
     throw Error('EVM render reverted at tic ' + tic + ' (' + report.renderFailure.gas + ' gas; error data preserved in report)');
   }
-  assert.equal(receipt.logs.length, 2);
+  assert.equal(receipt.logs.length, provenanceObserver ? 3 : 2);
   assert(receipt.logs.every(log => log.address === address));
   const frameLog = receipt.logs.find(log => log.topics[0] === FRAME_TOPIC);
   assert(frameLog, 'Missing standard EVM Frame event');
   const frame = decodeFrame(frameLog);
   assert.equal(frame.inputSeq, tic); assert.equal(frame.frameId, BigInt(report.frames.length + 1));
   assert.equal(frame.width, 320); assert.equal(frame.height, 200);
-  const proofLog = receipt.logs.find(log => log !== frameLog);
+  const virtualTopic = provenanceObserver ? await rpc('web3_sha3', ['0x' + Buffer.from('VirtualSamples(uint32,bytes)').toString('hex')]) : null;
+  const virtualLog = provenanceObserver ? receipt.logs.find(log => log.topics[0] === virtualTopic) : null;
+  assert(!provenanceObserver || virtualLog, 'Missing observer sample event');
+  const proofLog = receipt.logs.find(log => log !== frameLog && log !== virtualLog);
   assert.equal(proofLog.topics.length, 2);
   assert.equal(Number(BigInt(proofLog.topics[1])), tic);
   const proof = Buffer.from(proofLog.data.slice(2), 'hex');
@@ -168,10 +173,35 @@ async function capture(from, address, tic) {
   await compare(stored, tic);
   assert.equal(await digest(), beforeDigest, 'Successful capture changed saved storage');
   const pixels = Buffer.from(frame.pixels);
+  const virtualSamples = [];
+  if (virtualLog) {
+    assert.equal(Number(BigInt(virtualLog.topics[1])), tic);
+    const samples = abiBytes(Buffer.from(virtualLog.data.slice(2), 'hex'), 0);
+    assert.equal(samples.length % 512, 0);
+    const names = 'sourceBlock physicalOffset headerBlock headerOffset relative fieldOffset targetOffset virtualPointer sourceByte drawnPixel x y sampleIndex logicalLength sourceOffset provenance'.split(' ');
+    for (let at = 0; at < samples.length; at += 512) {
+      const sample = Object.fromEntries(names.map((name, i) => [name, uint(samples, at + i * 32)]));
+      assert.equal(sample.provenance, 4);
+      assert.equal(sample.physicalOffset, sample.headerOffset + sample.relative);
+      assert([8, 24, 32].includes(sample.fieldOffset));
+      const byteIndex = sample.relative - sample.fieldOffset;
+      assert(byteIndex >= 0 && byteIndex < 8);
+      const pointer = BigInt(sample.virtualPointer);
+      if (sample.fieldOffset === 8) assert(pointer === 0n || pointer === 2n);
+      else assert.equal(pointer, 0x0000001000000000n + BigInt(sample.targetOffset));
+      assert.equal(sample.sourceByte, Number((pointer >> BigInt(byteIndex * 8)) & 255n));
+      sample.virtualPointer = '0x' + pointer.toString(16).padStart(16, '0');
+      sample.pointerBytesLittleEndian = Buffer.from(Array.from({length: 8}, (_, i) => Number((pointer >> BigInt(i * 8)) & 255n))).toString('hex');
+      sample.finalPixel = pixels[sample.y * 320 + sample.x];
+      sample.drawnValueSurvives = sample.drawnPixel === sample.finalPixel;
+      virtualSamples.push(sample);
+    }
+  }
   const filename = `frame-${String(tic).padStart(6, '0')}.indexed8`;
   await writeFile(resolve(frameDirectory, filename), pixels);
   const previousTic = report.frames.at(-1)?.tic ?? 0;
   report.frames.push({tic, frameId: String(frame.frameId), file: 'frames/' + filename,
+    ...(provenanceObserver ? {virtualSamples} : {}),
     indexed8Sha256: sha(pixels), transactionHash: receipt.transactionHash, blockNumber: receipt.blockNumber,
     gas: Number(BigInt(receipt.gasUsed)), elapsedMs, renderGas: uint(proof, 192),
     beforeStateSha256: beforeState, renderedMemoryStateSha256: proof.subarray(32, 64).toString('hex'),
@@ -302,7 +332,7 @@ try {
   report.captureTransactionElapsedMs = report.frames.reduce((n, f) => n + f.elapsedMs, 0);
   report.totalGasIncludingStartupAndDeployment = report.totalReplayGas + report.totalCaptureGas + (report.startup?.gas ?? 0) + (report.deployment?.totalGas ?? 0);
   report.captureReceiptsSha256 = sha(await readFile(prefix + '.capture-receipts.json.gz'));
-  await writeFile(resolve(prefix, '..', 'frame-manifest.json'), JSON.stringify({schemaVersion: 1, pass: report.pass, ticRate: 35, gameplayTics: native.executedTics, sampleEvery, width: 320, height: 200, source: 'Solidity DoomGame.render -> standard mined Frame events', authenticatedPaletteSha256: sha(rgb), demoSha256: sha(demo), frames: report.frames}, null, 2) + '\n');
+  await writeFile(resolve(prefix, '..', 'frame-manifest.json'), JSON.stringify({schemaVersion: 1, pass: report.pass, ticRate: 35, gameplayTics: native.executedTics, sampleEvery, memoryProfile, provenanceObserver, width: 320, height: 200, source: 'Solidity DoomGame.render -> standard mined Frame events', authenticatedPaletteSha256: sha(rgb), demoSha256: sha(demo), frames: report.frames}, null, 2) + '\n');
   report.deploymentReceiptsSha256 = sha(await readFile(prefix + '.deployment-receipts.json.gz'));
   report.replayReceiptsSha256 = sha(await readFile(prefix + '.replay-receipts.json.gz'));
   if (child?.pid && child.exitCode === null && child.signalCode === null) {

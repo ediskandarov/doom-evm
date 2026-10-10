@@ -33,6 +33,10 @@ struct ZoneState {
     // Only the two high bytes of CURRENT header pointer fields are then known.
     // Legacy/strict profiles leave this disabled; low address bytes remain unknown.
     bool canonicalPointerHighBytes;
+    // Separate explicit experimental profile. Current supported header pointers
+    // use Z_ZoneVirtual.VIRTUAL_ZONE_BASE; never a native process address.
+    // No production initializer selects this bit. Retired/external pointers stay unknown.
+    bool experimentalVirtualPointers;
     ZoneBlock[] blocks;
     uint32[] ownerBlocks;
 }

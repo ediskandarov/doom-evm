@@ -5,9 +5,11 @@ import {RenderResources} from "./r_data_types.sol";
 import {DrawColumn} from "./r_state.sol";
 import {R_Data} from "./r_data.sol";
 import {NativeZoneLayout as N} from "./native_zone_layout.sol";
+import {Z_ZoneVirtual} from "./z_zone_virtual.sol";
 
 /// @dev Source-derived LP64 physical backing, with explicit per-byte knownness.
-/// No address, pointer, padding, free payload or allocation slack is synthesized.
+/// Existing initialization/address-domain assumptions retain provenance2/3.
+/// Explicit experimental virtual addresses add provenance4 only for supported current fields.
 library Z_ZoneBacking {
     error InvalidBacking();
 
@@ -73,6 +75,7 @@ library Z_ZoneBacking {
         uint32 payloadLength;
         uint256 written;
         bytes payload;
+        bool virtualEligible;
     }
 
     function tail(RenderResources memory resources, uint32 sourceBlock, uint32 logicalLength, uint32 length)
@@ -82,11 +85,11 @@ library Z_ZoneBacking {
     {
         (data, known) = tailWithProvenance(resources, sourceBlock, logicalLength, length);
         for (uint256 i; i < known.length; ++i) {
-            if (known[i] == 0x02 || known[i] == 0x03) known[i] = 0x01;
+            if (known[i] == 0x02 || known[i] == 0x03 || known[i] == 0x04) known[i] = 0x01;
         }
     }
 
-    /// @notice 0=unknown/invalid, 1=original source-written, 2=initial-zone zero, 3=bounded LP64 address high byte.
+    /// @notice 0=unknown, 1=source-written, 2=initial zero, 3=bounded pointer high byte, 4=experimental virtual pointer.
     /// @dev Initialization never establishes provenance for a pointer, an
     /// unmodeled written body, a reused body or a byte outside the initial zone.
     function tailWithProvenance(
@@ -111,6 +114,9 @@ library Z_ZoneBacking {
         known = new bytes(length);
         work.physical = uint256(work.current.offset) + N.MEMBLOCK_SIZE + logicalLength;
         work.id = sourceBlock;
+        if (work.zone.experimentalVirtualPointers) {
+            work.virtualEligible = Z_ZoneVirtual.validTopology(work.zone, sourceBlock);
+        }
 
         while (work.cursor < length && work.physical < work.zone.byteLength) {
             if (work.id == 0 || work.id >= work.zone.blockCount) revert InvalidBacking();
@@ -133,6 +139,13 @@ library Z_ZoneBacking {
                     // In the explicitly bounded <2^48 platform domain their high
                     // two bytes are zero. No lower pointer byte or old body is inferred.
                     known[work.cursor] = 0x03;
+                } else if (work.virtualEligible) {
+                    (value, isKnown) =
+                        Z_ZoneVirtual.byteFromValidatedHeader(work.zone, work.id, work.relative);
+                    if (isKnown) {
+                        data[work.cursor] = value;
+                        known[work.cursor] = 0x04;
+                    }
                 }
                 ++work.cursor;
                 ++work.physical;
