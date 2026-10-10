@@ -1,7 +1,7 @@
 # Phase 4 progress ledger
 
 Phase 3 is complete and remains accepted. Optional Phase 4 work follows
-[the extra plan](04-IMPLEMENTATION-PLAN-EXTRA.md). **Goal 4.0 is complete and verified. Goal 4.1 is now active.**
+[the extra plan](04-IMPLEMENTATION-PLAN-EXTRA.md). **Goals 4.0 and 4.1 are complete and verified.**
 The Goal 4.0 entries below are historical; their stop/read-only rules applied to that completed task.
 The current user authorizes video primitives on main while Astra independently audits a separate worktree.
 The pasted user instructions supersede the aborted memory-audit goal. Do not
@@ -121,7 +121,7 @@ current unflushed usage or later accounting publication is not estimated.
 Stop at4.0. No audit/refactor/other Phase4 task is active.
 
 
-## Goal 4.1 — Video primitives (active)
+## Goal 4.1 — Video primitives (complete)
 
 Start 2026-10-10T07:54:16Z (structured createdAt 1791618856).
 Baseline `b16c2a4`; clean main confirmed. Historical Phase 0–3 certificates and
@@ -136,10 +136,10 @@ the integrator owns shared interfaces, tests, support and documentation.
 
 | Deliverable | Implementation | Integration | Verification | Remaining |
 |---|---|---|---|---|
-| Eight original V_* functions and header globals | Implemented | Memory-only VideoState, no engine changes | 15 focused unit tests pass; 58 native cases exact | Dependency/receipt gates |
+| Eight original V_* functions and header globals | Implemented | Memory-only VideoState, no engine changes | 15 focused tests, 58 native cases pass | Complete |
 | Real WAD patch/native oracle | Implemented | Separate original-C host | O0/O2/sanitizers exact; rebuild/check pass | Complete |
-| Renderer/frame compatibility | Implemented | Existing resource reader + screen0 alias + frozen Frame | Two Foundry integration cases pass (168/200) | Ordinary receipts + legacy world case |
-| Source mapping/evidence | Pending | Separate Phase 4 artifacts | Pending | Final report/bindings |
+| Renderer/frame compatibility | Implemented | Existing resource reader + screen0 alias + frozen Frame | Two Foundry cases, seven ordinary Frame receipts, legacy world case pass | Complete |
+| Source mapping/evidence | Implemented | Separate Phase 4 artifacts; frozen history unchanged | Integrity/source mapping check passes | Complete |
 
 Original RANGECHECK patch behavior is retained: normal/direct out-of-box patches
 are ignored, flipped patches error; original v_video has no partial clipping or
@@ -175,3 +175,62 @@ expectation now decodes face offsets as signed shorts. All17 assertions pass
 on the current sources. No completed workstream is left as an unverified batch.
 Acceptance of Goal4.1 is still pending ordinary receipts/dependency/legacy
 world checks and final integrity/source mapping. No actual blocker.
+
+
+### Goal 4.1 final verification and handoff
+
+Implementation/interface/native checkpoint **498081bd591c64f0aac4785cc1241f881718a250**.
+All applicable Goal4.1 gates passed. Source files and fixtures remain at that
+verified checkpoint; final publication adds reproducible receipt tooling,
+separate verification/mapping evidence and this handoff.
+
+- Native:58 cases x O0/O2/sanitizers agree;48 successful cases compare five
+  screen buffers/dirty/GetBlock against Solidity,10 original error cases match
+  control/rejection behavior. Six authentic Freedoom patches and synthetic
+  transparent/offset/post data; provenance/license preserved.
+- Foundry:17 new focused tests (15 unit incl256 malformed fuzz runs;2 integration),
+  33 directly affected existing tests (bbox/draw/backing/initialized-zone/WAD
+  source/Frame),1 unchanged accepted static full-world angle0 test. **51 pass,
+  none fail/skip.** No inherited test/assertion changed.
+- Ordinary isolated Anvil:seven complete320x200 Frame receipts, six exact
+  original-C patch frames (384,000 pixels), one168-world/status32 composition
+  (64,000 pixels), malformed mined revert with no Frame/counter mutation.
+  ResourceStore ordinary CREATE and R_Data reads retain byte identity;
+  WIMAP0 crosses five chunks. Production UI dispatch is not integrated.
+- Source integrity:all eight original function spans/current bindings recorded;
+  every existing engine source, accepted test, browser, compiler/budget and
+  Phase0–3/DrawBounds certificate is unchanged relative to baseline b16c2a4.
+  This is separate Phase4 evidence, not a revision of historical acceptance.
+- Measured support transactions25,454,065–47,461,948 gas; probe CREATE1,115,987.
+  These include setup/resource/event work and are not production-engine or
+  isolated primitive costs. Pinned Solc0.8.37/viaIR/opt200/Cancun and configurable
+  10B budget unchanged. Isolated node18694 stopped; original live node untouched.
+
+Evidence: [video verification](../artifacts/phase4/video-verification.json),
+[source map](../artifacts/phase4/video-source-map.json),
+[ordinary receipts](../artifacts/phase4/video-evm.json),
+[behavior and deviations](PHASE4-VIDEO.md).
+Rebuild native with `python3 tools/reference/video/reference.py --check`;
+validate frozen source/proof bindings with
+`python3 tools/reference/video/checkpoint.py --check`.
+The receipt runner consumes existing build artifacts and starts/stops only its
+own fresh Anvil; no private live-state capture is required.
+
+Full inherited Phase0–3 suite and actual browser UI acceptance are deferred to
+final Phase4 acceptance by explicit user instruction. No phase acceptance or
+arbitrary-WAD/undefined-C/contiguous-pointer equivalence is claimed. The native
+sanitizer's variable column-table array-bounds and unsupported leak-detection
+exclusions are documented. Gamma/palette presentation remains for4.2.
+
+Remaining Goal4.1 work/blockers: **none**. Astra's independent worktree/audit was
+not inspected, modified or waited on. All later features remain unstarted.
+Recommended4.2 entry: original st_lib widget drawing through VideoState,
+consumer-owned320x32 screen4, then st_stuff face/state and explicitly selected
+168-row world mode; retain legacy fullscreen and design palette transport
+separately. **Stop at4.1; do not automatically proceed.**
+
+Model/agent attribution: root integrator plus one independent inherited-model
+native-oracle worker `/root/video_native`; precise runtime model identifier and
+per-agent token category totals are not exposed by the goal counter. The actual
+structured closure counter is recorded separately and must not be added to
+collector input/cached/output/reasoning totals. No session transcript was read.

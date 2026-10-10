@@ -1,0 +1,124 @@
+{
+  "schemaVersion": 1,
+  "goal": "4.1",
+  "pass": true,
+  "kind": "ordinary isolated Anvil video support integration",
+  "productionEngineModified": false,
+  "resourceScope": "Six authentic patches verified against fixture hashes, supplied through existing immutable ResourceStore/R_Data reader; this support probe does not authenticate a full WAD deployment.",
+  "rpcPort": 18694,
+  "compiler": {
+    "version": "0.8.37+commit.f401782d",
+    "settings": {
+      "remappings": [],
+      "optimizer": {
+        "enabled": true,
+        "runs": 200
+      },
+      "metadata": {
+        "bytecodeHash": "ipfs"
+      },
+      "compilationTarget": {
+        "src/support/VideoProbe.sol": "VideoProbe"
+      },
+      "evmVersion": "cancun",
+      "libraries": {},
+      "viaIR": true
+    }
+  },
+  "gasBudget": 10000000000,
+  "contract": "0x5fbdb2315678afecb367f032d93f642f64180aa3",
+  "creationTransaction": "0x95f0947114e73823ad539a71e83f30163eccd929917fff6be903f8b3b0a2110a",
+  "deploymentGas": 1115987,
+  "runtimeBytes": 4915,
+  "runtimeSha256": "5a404d56871cdb9112d8d9fee26e107f020e2450d19738e232b5f16cb20e60f6",
+  "rows": [
+    {
+      "patch": "STBAR",
+      "profile": "320x200",
+      "transaction": "0x5d030cc20b5f3d045effdf5dddb6df72d76fb314fe597bef39ecc330651e09bd",
+      "status": "0x1",
+      "gasUsed": 29508219,
+      "frameSha256": "3c0e6b47f39eaf405ea4ab16222458da02d7155870954c0939aa22474c73f9cd",
+      "nativeCase": "patch-STBAR",
+      "pixelCount": 64000
+    },
+    {
+      "patch": "STTNUM0",
+      "profile": "320x200",
+      "transaction": "0x26eed691ad44254f6f0bed07715327dcfe0b8a72ce09b3d1dc4084858fa623d6",
+      "status": "0x1",
+      "gasUsed": 25521861,
+      "frameSha256": "18aef788a68cb316651799c8d2f65e0bd1d1f3101f41ad8c36ca7d528e4ac664",
+      "nativeCase": "patch-STTNUM0",
+      "pixelCount": 64000
+    },
+    {
+      "patch": "STFST00",
+      "profile": "320x200",
+      "transaction": "0x99ac232f3f292e639aeef5d125b8591479a40fbf3f6793e06c9cc3d200eedc60",
+      "status": "0x1",
+      "gasUsed": 25688796,
+      "frameSha256": "aac3ef34c4350bc5a38a8294aa3297f99d4b992c0e5affcae7ef9528fd8c5921",
+      "nativeCase": "patch-STFST00",
+      "pixelCount": 64000
+    },
+    {
+      "patch": "STFST00",
+      "profile": "320x168 world + untouched32 rows",
+      "transaction": "0x5a12134b31c1fdf4c9740162e7b899e0a088c6a13750ac219c193768978f38b3",
+      "status": "0x1",
+      "gasUsed": 25778678,
+      "frameSha256": "cfc9954d2b3df02efe62415a5aab0d74703991800e87919e0fde309d6dc62623",
+      "pixelCount": 64000,
+      "scope": "Same authentic patch/native-equivalent base frame; original R_Draw column shares screen0 alias, only first168 column0 pixels changed."
+    },
+    {
+      "patch": "STCFN033",
+      "profile": "320x200",
+      "transaction": "0x4a89004bca83714ab9a29bb2cddae484d2ae0f62ee13267ca95a4d02e7cc70bf",
+      "status": "0x1",
+      "gasUsed": 25461103,
+      "frameSha256": "07b2b505e25b7c216b2fa9791c7423c40598595ff59cf786e179ed3c72d525c0",
+      "nativeCase": "patch-STCFN033",
+      "pixelCount": 64000
+    },
+    {
+      "patch": "AMMNUM0",
+      "profile": "320x200",
+      "transaction": "0x320714b136356e7b7f3fcc6395370daa0d1ce2ae4f0bd5b147d21798a5b5dcec",
+      "status": "0x1",
+      "gasUsed": 25454065,
+      "frameSha256": "4f247ced1ec5e67775b6e3687ec46973d99d22782d5c58303c9cbdfc57f07f07",
+      "nativeCase": "patch-AMMNUM0",
+      "pixelCount": 64000
+    },
+    {
+      "patch": "WIMAP0",
+      "profile": "320x200",
+      "transaction": "0xa74843c4a89192c92d002ba77dd93f011b0aad9bc78b8d6d654cc7dd2f426f9c",
+      "status": "0x1",
+      "gasUsed": 47461948,
+      "frameSha256": "581b0ebd8d6bc48dc8951c86e72c7b523f44f9b1e89928634b7d3dc2277826fd",
+      "nativeCase": "patch-WIMAP0",
+      "pixelCount": 64000
+    }
+  ],
+  "rollback": {
+    "transaction": "0x1607a0897f05cbb1206097a64b5d90c520998de9384e45fad4c112f280cf6299",
+    "status": "0x0",
+    "logs": 0,
+    "gasUsed": 24837040,
+    "counterUnchanged": true
+  },
+  "sourceSha256": {
+    "src/doom/v_video.sol": "be75fe69e7cd2486ce93408ec204cdf470ea097569e37fbedd867e9a2f3adf1f",
+    "src/doom/v_video_types.sol": "266890b0c8003e89f78baf8415048d24e4ca14865a1c8518ad77bb6a9f6b4d35",
+    "src/support/VideoProbe.sol": "a539072b0cb59d66d5f691a1db6e4cc723449cf93ca679e20222b0de9b4034fb",
+    "foundry.toml": "afe04c66f0e684b5a936821f6543605a3739f62164ceb4398426db7403452393",
+    "execution-budget.json": "acde01f1b9cf248f9265f1ffcff7181d01d77620a2dfcd9a4d4d0b1c79df2be7",
+    "tools/reference/video/evm.mjs": "af6e5ff826820741c4330adec4d2d331f1fd425a9a498c384d70399085bf686b",
+    "test/fixtures/phase4_video/cases.bin": "b4e71a78178fa7190baf925d7ccb593d068fae0c88585258a9857565d796664e",
+    "test/fixtures/phase4_video/patches.json": "0bd86a0efa1af2a2a3c7d401424146271b5b923cd26e1fbe59b01f8d04cc7a98",
+    "web/protocol.mjs": "fec5104a0e13b7ca8666200431a1804d53cdb6537c1f0f8f02fb5b69dd70f47e"
+  }
+}

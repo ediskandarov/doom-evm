@@ -1,0 +1,186 @@
+{
+  "schemaVersion": 1,
+  "goal": "4.1",
+  "pass": true,
+  "status": "complete verified goal, not final Phase4 acceptance",
+  "start": "2026-10-10T07:54:16Z",
+  "structuredGoalCreatedAt": 1791618856,
+  "implementationCommit": "498081bd591c64f0aac4785cc1241f881718a250",
+  "agents": [
+    {
+      "name": "/root",
+      "ownership": "Solidity/interfaces/tests/integration/ledger"
+    },
+    {
+      "name": "/root/video_native",
+      "ownership": "Native oracle and fixtures",
+      "status": "completed",
+      "model": "Inherited; specific runtime model identifier not exposed"
+    }
+  ],
+  "usage": "Actual structured goal closure counter recorded separately; never added to input/cached/output/reasoning counts. No raw sessions ingested.",
+  "historicalAcceptance": {
+    "baselineRevision": "b16c2a49cf40f3952f4d8322b30ac261c9375d29",
+    "allExistingProtectedSourcesTestsAndEvidenceUnchanged": true,
+    "acceptedCertificate": {
+      "path": "artifacts/phase3/acceptance.json",
+      "sha256": "1bebb1edfa40585901067b0dc10501e969654e457eadee2eab0be35e996e3e33"
+    },
+    "postAcceptanceCompatibility": {
+      "path": "artifacts/phase3/drawbounds-compatibility.json",
+      "sha256": "74447a9fe0ad870564fbe860022d08c8d23e3d1080ce9674cb151873992d00ca"
+    },
+    "auditWorktree": "Not inspected or modified; no dependency on independent memory audit."
+  },
+  "gates": {
+    "focused": {
+      "pass": true,
+      "command": ".toolchain/bin/forge test --match-path 'test/{unit/v_video,integration/VideoPrimitives}.t.sol' --skip Doom --skip GameplayProbe --skip RendererProbe --skip WadResourcesProbe -vv",
+      "tests": 17,
+      "testNames": [
+        "testEVMResourcePatchFrameFullScreen()",
+        "testEVMResourcePatchFrameWorld168AndStatus32()",
+        "testFuzzMalformedPatchRejectsWithoutPanic(bytes,int32,int32,int32,bool)",
+        "testInitFourScreensAndLeavesCallerScreen4AndDirtybox()",
+        "testMalformedHeadersOffsetsPostsAndPhysicalBounds()",
+        "testNativeCases00to07()",
+        "testNativeCases08to15()",
+        "testNativeCases16to23()",
+        "testNativeCases24to31()",
+        "testNativeCases32to39()",
+        "testNativeCases40to47()",
+        "testNativeCases48to57()",
+        "testNormalOutOfBoundsIgnoredBeforeDirtyMark()",
+        "testOffsetsTransparencyFlippedAndDirect()",
+        "testRectBoundsShortBuffersAndUndefinedOverlap()",
+        "testRectScreen4StatusBarCopyAndGet()",
+        "testVerticalCopyRetainsOriginalRowOrder()"
+      ],
+      "logPath": "artifacts/local/video/final-focused.log",
+      "logSha256": "9e2d4894e91905fc7c146a11ce447861c279bd42ee063762108bbeebb8bea87c",
+      "reportedCompileSeconds": [
+        1.75
+      ],
+      "logsAvailability": "Ignored local output; compact test names/counts/source bindings are committed."
+    },
+    "dependencies": {
+      "pass": true,
+      "command": ".toolchain/bin/forge test --match-path 'test/{unit/{m_bbox,r_draw,z_zone_backing,z_zone_initialization,WadResources},integration/FrameEvent}.t.sol' --skip Doom --skip GameplayProbe --skip RendererProbe --skip WadResourcesProbe -vv",
+      "tests": 33,
+      "testNames": [
+        "testAllOriginalBoundingStreams()",
+        "testFreeAndClearNeverReseedWrittenHistory()",
+        "testMatrixFreshAndReusedLengthsKeepSourceBytesAndPointerRejection()",
+        "testReportedBLUDA0FirstPostMatchesExplicitNativeZeroInitializedProfile()",
+        "testReportedBLUDA0StillRejectsInStrictDiagnosticMode()",
+        "testReusedPayloadNeverSilentlyBecomesInitializedPadding()",
+        "testThreeProvenanceClassesAndInvalidDomain()",
+        "testCompletePayloadExactlyOneFrameAndSequentialIds()",
+        "testInvalidSequenceDriverAndButtonsHaveNoLogsOrStateChange()",
+        "testRevertAfterFrameRollsBackCounters()",
+        "testBoundsRejections()",
+        "testMeasuredPrimitives()",
+        "testOriginalBufferLookups()",
+        "testOriginalColumnPixels()",
+        "testOriginalFuzzPixelsAndState()",
+        "testOriginalLowColumnPixelsAndMutation()",
+        "testOriginalLowSpanCountQuirkAndMutation()",
+        "testOriginalSpanPixels()",
+        "testOriginalTranslatedInteriorPointers()",
+        "testOriginalTranslationTables()",
+        "testOriginalVideoErase()",
+        "testBindingClearsStaleTailAndFastPathAllocatesNothing()",
+        "testCacheHitChangesTagAndOwnerReallocation()",
+        "testCompositeReconstructionKeepsNativeCacheAndPurgeRegenerates()",
+        "testEveryOriginalPhysicalTailAndKnownHeaderPixel()",
+        "testUnknownAndInvalidKnownMasksRemainRejected()",
+        "testUnknownPhysicalPaddingPointersSlackAndFragmentsReject()",
+        "testPinnedBytesAcceptedAndReadableAcrossChunkBoundary()",
+        "testRejectsAlteredLastPayloadByte()",
+        "testRejectsModifiedDirectory()",
+        "testRejectsNonStopPrefix()",
+        "testRejectsReorderedChunksWithValidLengths()",
+        "testRejectsWrongChunkDimensions()"
+      ],
+      "logPath": "artifacts/local/video/dependencies.log",
+      "logSha256": "553c6ef30a56c266a47f7f535a0c2208aab4bbaeb1dd918cca00eb8a12d54d7b",
+      "reportedCompileSeconds": [
+        14.34
+      ],
+      "logsAvailability": "Ignored local output; compact test names/counts/source bindings are committed."
+    },
+    "legacyWorld": {
+      "pass": true,
+      "command": ".toolchain/bin/forge test --match-path test/integration/DoomRenderer.t.sol --match-test testFullNativeAngle0 -vv",
+      "tests": 1,
+      "testNames": [
+        "testFullNativeAngle0()"
+      ],
+      "logPath": "artifacts/local/video/legacy-world.log",
+      "logSha256": "7337f12ea2b390fe88dfecaf60805355f099de4c06d2063636d8954010e06034",
+      "reportedCompileSeconds": [
+        29.4
+      ],
+      "logsAvailability": "Ignored local output; compact test names/counts/source bindings are committed."
+    },
+    "native": {
+      "pass": true,
+      "command": "python3 tools/reference/video/reference.py --check",
+      "profiles": 3,
+      "cases": 58,
+      "successfulCases": 48,
+      "rangeErrorCases": 10,
+      "scope": "Successful Solidity cases compare all five buffers, dirtybox and GetBlock digests; error cases compare original rejection/control behavior.",
+      "proof": {
+        "path": "test/fixtures/phase4_video/native.json",
+        "sha256": "783a76acee5cb6c7a56c6f033661d37d30538d870b3a46d57fda233234283dde"
+      }
+    },
+    "ordinaryEVM": {
+      "pass": true,
+      "command": "node tools/reference/video/evm.mjs",
+      "frames": 7,
+      "completePixelComparisons": 448000,
+      "originalCPatchFrames": 6,
+      "originalCPixelComparisons": 384000,
+      "proof": {
+        "path": "artifacts/phase4/video-evm.json",
+        "sha256": "090bd97bdb190b05884f406cb6c1ca4aeec21e657ccca329e4f24ae817f51093"
+      }
+    },
+    "formatAndIntegrity": {
+      "pass": true,
+      "commands": [
+        ".toolchain/bin/forge fmt --check src/doom/v_video.sol src/doom/v_video_types.sol src/support/VideoProbe.sol test/unit/v_video.t.sol test/integration/VideoPrimitives.t.sol",
+        "git diff --check",
+        "node --check tools/reference/video/evm.mjs",
+        "python3 tools/reference/video/checkpoint.py --check"
+      ]
+    }
+  },
+  "sourceMapSha256": "7cfe195b23c437d1190031b6cbb186cb454963c3c668962511994c815978e223",
+  "measuredGas": {
+    "scope": "Support-probe total transactions including pattern construction/resource reads/Frame, not production DOOM costs or isolated drawing-loop cost.",
+    "deployment": 1115987,
+    "renderMinimum": 25454065,
+    "renderMaximum": 47461948,
+    "budget": 10000000000
+  },
+  "deferred": [
+    "Full inherited Phase0\u20133 suite until final Phase4 acceptance",
+    "Real browser UI/transport acceptance until feature integration",
+    "Status bar/HUD/automap/intermission/palette and all later goals"
+  ],
+  "resolvedHarnessFailures": [
+    "Unused patchId=-1 incorrectly selected fixture filename; fixed loader only.",
+    "Integration expectation treated negative face offsets as unsigned; fixed expectation only.",
+    "Anvil mutually exclusive disable-block-gas-limit and gas-limit flags; use explicit configurable10B block/transaction budget."
+  ],
+  "risks": [
+    "Finite well-formed IWAD/RANGECHECK comparison domain; no arbitrary malformed-WAD native equivalence.",
+    "Four screen arrays preserve logical layout, not contiguous C pointers.",
+    "No production UI consumer or cross-transaction screen persistence integrated yet.",
+    "Gamma/palette event design belongs to Goal4.2; independent audit remains separate."
+  ],
+  "stop": "Do not proceed beyond Goal4.1. Goal4.2 starts at st_lib widgets, screen4 backing and explicit legacy/fullscreen vs168-row mode."
+}

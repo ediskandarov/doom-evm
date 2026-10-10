@@ -1,0 +1,237 @@
+{
+  "schemaVersion": 1,
+  "goal": "4.1",
+  "kind": "separate-phase4-video-source-binding",
+  "pass": true,
+  "historicalAcceptance": {
+    "baselineRevision": "b16c2a49cf40f3952f4d8322b30ac261c9375d29",
+    "allExistingProtectedSourcesTestsAndEvidenceUnchanged": true,
+    "acceptedCertificate": {
+      "path": "artifacts/phase3/acceptance.json",
+      "sha256": "1bebb1edfa40585901067b0dc10501e969654e457eadee2eab0be35e996e3e33"
+    },
+    "postAcceptanceCompatibility": {
+      "path": "artifacts/phase3/drawbounds-compatibility.json",
+      "sha256": "74447a9fe0ad870564fbe860022d08c8d23e3d1080ce9674cb151873992d00ca"
+    },
+    "auditWorktree": "Not inspected or modified; no dependency on independent memory audit."
+  },
+  "upstreamCommit": "a77dfb96cb91780ca334d0d4cfd86957558007e0",
+  "functionBindings": [
+    {
+      "function": "V_Init",
+      "original": {
+        "function": "V_Init",
+        "source": "original/DOOM/linuxdoom-1.10/v_video.c",
+        "lineStart": 482,
+        "lineEnd": 493,
+        "sourceSpanSha256": "55101eec0c3f8d11104fbc7f2f623ad9d7e986758d2b09e9f7f74bfd0fd00792"
+      },
+      "port": {
+        "path": "src/doom/v_video.sol",
+        "startLine": 17,
+        "endLine": 22,
+        "bodySha256": "d183c7fc06c978ab7cd9d5d5a31a4b6b9c5e6f1f28b65c074e44069829b2ab58",
+        "declaration": "functionV_Init(VideoStatememoryv)internalpure"
+      },
+      "verificationScope": "Bounded native RANGECHECK fixtures; not exhaustive branch/invalid-memory equivalence."
+    },
+    {
+      "function": "V_MarkRect",
+      "original": {
+        "function": "V_MarkRect",
+        "source": "original/DOOM/linuxdoom-1.10/v_video.c",
+        "lineStart": 143,
+        "lineEnd": 151,
+        "sourceSpanSha256": "36b0e9ab59af6dff5c124f080916f8f99d398ec7e3e9a1c218b057328d3699aa"
+      },
+      "port": {
+        "path": "src/doom/v_video.sol",
+        "startLine": 24,
+        "endLine": 29,
+        "bodySha256": "e6bc6385edb426c7c2a46a8a7cb863cdf025f7c2a1f40ba955e54fa6f7a4733d",
+        "declaration": "functionV_MarkRect(VideoStatememoryv,int32x,int32y,int32width,int32height)internalpure"
+      },
+      "verificationScope": "Bounded native RANGECHECK fixtures; not exhaustive branch/invalid-memory equivalence."
+    },
+    {
+      "function": "V_CopyRect",
+      "original": {
+        "function": "V_CopyRect",
+        "source": "original/DOOM/linuxdoom-1.10/v_video.c",
+        "lineStart": 158,
+        "lineEnd": 196,
+        "sourceSpanSha256": "3bf5ab65753721eec2f106b83a3db26d81199b88b2f4af54c1a3576598503768"
+      },
+      "port": {
+        "path": "src/doom/v_video.sol",
+        "startLine": 31,
+        "endLine": 54,
+        "bodySha256": "8c8b888f65506a6f70e9d4e198983421ca00150512542f78a55f9266e3464569",
+        "declaration": "functionV_CopyRect(VideoStatememoryv,int32srcx,int32srcy,int32srcscrn,int32width,int32height,int32destx,int32desty,int32destscrn)internalpure"
+      },
+      "verificationScope": "Bounded native RANGECHECK fixtures; not exhaustive branch/invalid-memory equivalence."
+    },
+    {
+      "function": "V_DrawPatch",
+      "original": {
+        "function": "V_DrawPatch",
+        "source": "original/DOOM/linuxdoom-1.10/v_video.c",
+        "lineStart": 204,
+        "lineEnd": 263,
+        "sourceSpanSha256": "9f1b2fe5fffaedb65bece0856ff3208d4d4ab051d0991b0cdfbdfd0f1c29f8f1"
+      },
+      "port": {
+        "path": "src/doom/v_video.sol",
+        "startLine": 56,
+        "endLine": 61,
+        "bodySha256": "c6e157c947f1f02ac8f72cf8c29d458a6e9900708eaca40e322cd7ff8339467d",
+        "declaration": "functionV_DrawPatch(VideoStatememoryv,int32x,int32y,int32scrn,bytesmemorypatch)internalpure"
+      },
+      "verificationScope": "Bounded native RANGECHECK fixtures; not exhaustive branch/invalid-memory equivalence."
+    },
+    {
+      "function": "V_DrawPatchFlipped",
+      "original": {
+        "function": "V_DrawPatchFlipped",
+        "source": "original/DOOM/linuxdoom-1.10/v_video.c",
+        "lineStart": 271,
+        "lineEnd": 328,
+        "sourceSpanSha256": "277c17bd0572c5e9a69b01c402858a4015f726a1d6c1b57f9d6988d9174379e7"
+      },
+      "port": {
+        "path": "src/doom/v_video.sol",
+        "startLine": 63,
+        "endLine": 68,
+        "bodySha256": "1892563570702444fcb242107cc51876a39725216f377ba56c55a9dd4f4056cc",
+        "declaration": "functionV_DrawPatchFlipped(VideoStatememoryv,int32x,int32y,int32scrn,bytesmemorypatch)internalpure"
+      },
+      "verificationScope": "Bounded native RANGECHECK fixtures; not exhaustive branch/invalid-memory equivalence."
+    },
+    {
+      "function": "V_DrawPatchDirect",
+      "original": {
+        "function": "V_DrawPatchDirect",
+        "source": "original/DOOM/linuxdoom-1.10/v_video.c",
+        "lineStart": 337,
+        "lineEnd": 396,
+        "sourceSpanSha256": "bcb6c6ebf74292526eded011a01abe81e8fdcd7285f9a88cfd05db1083dabe32"
+      },
+      "port": {
+        "path": "src/doom/v_video.sol",
+        "startLine": 70,
+        "endLine": 75,
+        "bodySha256": "f3c2c642d47ebd3c570dd10826054178bace2e15d0e7679e36766ec2db7edbde",
+        "declaration": "functionV_DrawPatchDirect(VideoStatememoryv,int32x,int32y,int32scrn,bytesmemorypatch)internalpure"
+      },
+      "verificationScope": "Bounded native RANGECHECK fixtures; not exhaustive branch/invalid-memory equivalence."
+    },
+    {
+      "function": "V_DrawBlock",
+      "original": {
+        "function": "V_DrawBlock",
+        "source": "original/DOOM/linuxdoom-1.10/v_video.c",
+        "lineStart": 405,
+        "lineEnd": 436,
+        "sourceSpanSha256": "7abbdfccad6932214439e72c937989c52664eeadec4fc4e6a403e6c005fad354"
+      },
+      "port": {
+        "path": "src/doom/v_video.sol",
+        "startLine": 128,
+        "endLine": 147,
+        "bodySha256": "024eef49c8db5cc118a0a76065067a498bfbe8d6815920bf98d721a712ec3bf5",
+        "declaration": "functionV_DrawBlock(VideoStatememoryv,int32x,int32y,int32scrn,int32width,int32height,bytesmemorysrc)internalpure"
+      },
+      "verificationScope": "Bounded native RANGECHECK fixtures; not exhaustive branch/invalid-memory equivalence."
+    },
+    {
+      "function": "V_GetBlock",
+      "original": {
+        "function": "V_GetBlock",
+        "source": "original/DOOM/linuxdoom-1.10/v_video.c",
+        "lineStart": 445,
+        "lineEnd": 474,
+        "sourceSpanSha256": "154a52c58f959375cb0dc21a059c907f7e11dffd991f66e0d092a009030878c3"
+      },
+      "port": {
+        "path": "src/doom/v_video.sol",
+        "startLine": 149,
+        "endLine": 167,
+        "bodySha256": "c262de68afe7c686ae355404e2eb26d5518f105cb69e6ee9850e1792447399be",
+        "declaration": "functionV_GetBlock(VideoStatememoryv,int32x,int32y,int32scrn,int32width,int32height,bytesmemorydest)internalpure"
+      },
+      "verificationScope": "Bounded native RANGECHECK fixtures; not exhaustive branch/invalid-memory equivalence."
+    }
+  ],
+  "sourceSha256": {
+    "src/doom/v_video.sol": "be75fe69e7cd2486ce93408ec204cdf470ea097569e37fbedd867e9a2f3adf1f",
+    "src/doom/v_video_types.sol": "266890b0c8003e89f78baf8415048d24e4ca14865a1c8518ad77bb6a9f6b4d35",
+    "src/support/VideoProbe.sol": "a539072b0cb59d66d5f691a1db6e4cc723449cf93ca679e20222b0de9b4034fb",
+    "src/doom/r_draw.sol": "afe958ea0c2962b739bff58b98d8bccc25c48d3d0838cacd46142c242b5d6477",
+    "src/doom/r_state.sol": "80951a13733e3a08f4182937a37def33ffda21eaae4b43a2a1bdba2043adab6b",
+    "src/doom/m_bbox.sol": "f4c60efe3627a97d0288fc5cd0283535527b1f51029568534c80bb8fbbf8f272",
+    "src/doom/r_data.sol": "5b404d561f8bce538e8a8221b4f36d62c9b9826fc833307640d96fcbfdca2d0a",
+    "src/evm/FrameProtocol.sol": "4665be3f613b8e817d616d2db1dc4a644325c44a6ade476a35d7d9d003625ace",
+    "src/evm/ResourceStore.sol": "5ab3acc5d09f155a4cf25973c847f23e47f386a364704b76996c86be5862e3a8",
+    "test/unit/v_video.t.sol": "38053bdcf859f5824e0f514c1a64714c0e82ed738544d9a9d414c9fc2f34e31f",
+    "test/integration/VideoPrimitives.t.sol": "66191c68c51942b20cd9111360622c6ca819abc3bf4d12c9135b8fce1da18e59",
+    "tools/reference/video/checkpoint.py": "c161411090a3dbd3782fd501cdf5428bf1c2d25a4b73e817b73c495788a5b979",
+    "tools/reference/video/evm.mjs": "af6e5ff826820741c4330adec4d2d331f1fd425a9a498c384d70399085bf686b",
+    "tools/reference/video/reference.py": "e11569029e225094c2ddb36f4834a9c4dbc004b12d7d59bc919f5f122c8462a9",
+    "tools/reference/video/compat.h": "5dd893b680484fd34a2e522799732e2b64dd5348132c847f85f77b402140145f",
+    "tools/reference/video/host.c": "358e7eef8ba98ce4b6e35d8c472f3aa2f36ecf3f3542bab05c9728f832d6df7a",
+    "foundry.toml": "afe04c66f0e684b5a936821f6543605a3739f62164ceb4398426db7403452393",
+    "execution-budget.json": "acde01f1b9cf248f9265f1ffcff7181d01d77620a2dfcd9a4d4d0b1c79df2be7",
+    "web/protocol.mjs": "fec5104a0e13b7ca8666200431a1804d53cdb6537c1f0f8f02fb5b69dd70f47e"
+  },
+  "headerBinding": {
+    "original": "original/DOOM/linuxdoom-1.10/v_video.h",
+    "port": "src/doom/v_video_types.sol",
+    "globals": [
+      "screens[5]",
+      "dirtybox[4]"
+    ],
+    "deferred": [
+      "gammatable[5][256]",
+      "usegamma"
+    ]
+  },
+  "context": "Memory-only VideoState; screen0 aliases existing indexed8 framebuffer; no production engine/Frame/storage schema change.",
+  "newHelpers": {
+    "_short": {
+      "path": "src/doom/v_video.sol",
+      "startLine": 77,
+      "endLine": 79,
+      "bodySha256": "91055c38e9ee0ca30a6ed31176d992aded7176c47ef86672dd2f7e0c604de5bf",
+      "declaration": "function_short(bytesmemorypatch,uint256at)privatepurereturns(int32)"
+    },
+    "_patch": {
+      "path": "src/doom/v_video.sol",
+      "startLine": 81,
+      "endLine": 126,
+      "bodySha256": "7332ed307be85e8c7f552bf55d6831612400fe66b97e18c1e845f2ec671d1602",
+      "declaration": "function_patch(VideoStatememoryv,int32x,int32y,int32scrn,bytesmemorypatch,boolflipped)privatepure"
+    },
+    "_inRect": {
+      "path": "src/doom/v_video.sol",
+      "startLine": 169,
+      "endLine": 172,
+      "bodySha256": "16c9344e94b3549ab0ac00236c3e24e6d293eef0840e4a3e079e6c0e95c84660",
+      "declaration": "function_inRect(int32x,int32y,int32width,int32height,int32scrn)privatepurereturns(bool)"
+    },
+    "_rect": {
+      "path": "src/doom/v_video.sol",
+      "startLine": 174,
+      "endLine": 176,
+      "bodySha256": "9ace5ae6e50794769912f61dd4564fb594dce4ced7a6c8e84f0f63bd8368ebd2",
+      "declaration": "function_rect(int32x,int32y,int32width,int32height,int32scrn)privatepure"
+    },
+    "_copy": {
+      "path": "src/doom/v_video.sol",
+      "startLine": 178,
+      "endLine": 193,
+      "bodySha256": "69c7d1336fd6d68aed0c7955f23fc8d755a47ae0e7ca8faa02a0b51c9f6c4033",
+      "declaration": "function_copy(bytesmemorydest,uint256d,bytesmemorysrc,uint256s,uint256n)privatepure"
+    }
+  }
+}
