@@ -1,0 +1,8 @@
+phase,compactions,compaction_seconds,compaction_duration_missing,context_before_missing,context_after_missing,approval_requests,approval_wait_seconds,human_wait_seconds,automatic_wait_seconds,execution_records,execution_seconds_sum,execution_interval_union_seconds,compiler_wall_seconds,compiler_duration_missing,test_wall_seconds,forge_invocation_wall_seconds,other_tool_wall_seconds
+phase0,0,,0,0,0,0,,,,115,112.841864216,101.10999999999999,0.009380000000000001,0,,,79.340157879
+phase1,0,,0,0,0,0,,,,144,232.091692381,226.35500000000005,79.51,0,0.47631,,146.358413171
+phase2,5,799.764,0,5,5,0,,,,759,3842.262086862,3186.1660000000015,1137.43379,5,27.70839,999.06004633,2638.14728049
+phase3,9,1363.734,0,9,9,0,,,,1592,7668.156850486,6803.907000000012,1479.104463458,19,16.60444,2527.4609583760002,4873.143723983
+phase4-goal4.0,0,,0,0,0,0,,,,53,16.671763873,16.677999999999997,,0,,,11.70054533
+telemetry,1,158.416,0,1,1,0,,,,52,2.461300043,2.4699999999999998,,0,,,2.2963490859999998
+unattributed,2,236.036,0,2,2,0,,,,19,6.280863791000001,6.284,,0,,,3.2867166670000003

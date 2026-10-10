@@ -1,0 +1,1 @@
+session_id,thread_id,agent,phase,goal_id,model,turn_id,event_id,timestamp,source_id,line,start,end,resolver,outcome,waiting_seconds,human_wait_seconds,automatic_wait_seconds

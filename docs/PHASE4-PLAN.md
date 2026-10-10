@@ -95,7 +95,7 @@ and protected source/export fingerprints. Code hardening retains original
 reported stage values alongside validated subtotals and a declared0.5s timer
 consistency tolerance; no value is adjusted or estimated.
 
-Implementation, integration and verification for Goal4.0 are complete. Human
-report and metadata exports are ready to commit/push. Observability gaps are
+Implementation, integration and verification for Goal4.0 are complete. Implementation checkpoint `f57acd8` is verified; human report and metadata
+exports are ready for their separate publication checkpoint. Observability gaps are
 limitations, not blockers or invented measurements. Stop after publication;
 Goal4.0a and all other optional Phase4 work remain unstarted.

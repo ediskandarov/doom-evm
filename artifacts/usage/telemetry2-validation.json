@@ -1,0 +1,57 @@
+{
+  "schemaVersion": 1,
+  "goal": "4.0",
+  "baselineCommit": "38d8a4392b21e2c78a1977d381bedf6e1cd5e6c7",
+  "baselineTag": "phase3-accepted-38d8a43",
+  "pass": true,
+  "tests": {
+    "command": "python3 -m unittest discover -s tools/usage -p 'test_*.py'",
+    "pass": 50,
+    "fail": 0,
+    "existing": 20,
+    "new": 30,
+    "logSha256": "d2ac71befb75d450551b041d15428d24ee64a0bfe73238e30e749859abca4e65"
+  },
+  "schemaCSVPrivacy": {
+    "command": "python3 tools/usage/validate.py artifacts/usage/telemetry2",
+    "pass": true,
+    "logSha256": "d0024d14b1b1f31e47ebd16bec37ec25fe308187f21f00e66813e80f9a3d4bff"
+  },
+  "tokenAccounting": {
+    "legacyVsNewExact": [
+      "totals",
+      "phase_totals",
+      "aggregates",
+      "segments",
+      "records"
+    ],
+    "historicalPhase0To3AllFieldsExact": true,
+    "historicalBoundariesExact": true
+  },
+  "scope": {
+    "protectedEngineSourceHashesMatch": true,
+    "noEngineRendererGameplayAcceptanceTestCompilerChanges": true,
+    "oldUsageExportsUnchanged": true,
+    "noOtherPhase4Work": true
+  },
+  "observations": {
+    "compactions": 17,
+    "compactionsWithMatchedDurations": 17,
+    "beforeContextMissing": 17,
+    "afterContextMissing": 17,
+    "approvalLifecycleRecords": 0,
+    "approvalWaitUnknown": true,
+    "commandRecords": 2734
+  },
+  "exports": {
+    "artifacts/usage/telemetry2/activity-phase-totals.csv": "a4cd2199fc1e35a6351f10c2e8518671c9c9dda50ebaebc7dea2c5f97d510bb3",
+    "artifacts/usage/telemetry2/approvals.csv": "1a2bef46bf5982750cb726146f1e2d246227b6d59970c58a00069f551cb51cec",
+    "artifacts/usage/telemetry2/compactions.csv": "11288297bb21c5746e962175331e74214b816cdf419f75ed6256eec598b2ed58",
+    "artifacts/usage/telemetry2/executions.csv": "30846433d059b89a4c20ce7220d6a28ffe9941c45b3d317439d6cce3e3000d1c",
+    "artifacts/usage/telemetry2/goals.csv": "09979c20c8eacb0101ccf021d0111abe2aa0e4d23a5de49adc35fb2eb6d1c4fa",
+    "artifacts/usage/telemetry2/metrics.csv": "e6a311b2506c74359d7a6c70e9eb747f136ff6ae40e1daaa59a9943d978dc901",
+    "artifacts/usage/telemetry2/phase-totals.csv": "004ad4717a9d465232c877a860770eab3d0d380b7994017f3250aa0be541405a",
+    "artifacts/usage/telemetry2/telemetry-report.md": "fb84c3f551d60194d5318a44a2fc776b4847c69e668b6c09b7335bce2613c5f0",
+    "artifacts/usage/telemetry2/usage.json": "1f447b7dd90bf21c957e7f2971bd901061d908776488172e857e7755c44364af"
+  }
+}
