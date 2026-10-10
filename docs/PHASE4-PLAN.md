@@ -2,12 +2,15 @@
 
 Phase 3 is complete and remains accepted. Optional Phase 4 work follows
 [the extra plan](04-IMPLEMENTATION-PLAN-EXTRA.md). **Goals 4.0 and 4.1 are complete and verified.
-The Goal 4.0a architectural review is complete, accepted and integrated.**
+The Goal 4.0a architectural review is complete, accepted and integrated.
+Completed Goals 4.3 (HUD) and 4.6 (Gameflow) are merged into main; the current
+integration checkpoint is recorded below.**
 The checkpoints below are historical; their authorization, ownership and stop
-boundaries describe the tasks at the time they were recorded. The later user
-request accepts the architectural review and authorizes documentation-only
-integration into main. Status Bar, HUD and Gameflow development continues in
-independent worktrees outside this integration's scope.
+boundaries describe the tasks at the time they were recorded. The latest user
+request authorizes integration of the two completed branches on top of Astra's
+accepted audit. Goal 4.2 (Status Bar) continues independently. Its worktree and
+branch are outside this integration's scope. Production adapter integration
+remains a separate goal after Status Bar completion.
 
 ## Recovery checkpoint
 
@@ -307,3 +310,69 @@ test, fixture, verification infrastructure or historical acceptance certificate
 is changed. The Status Bar, HUD and Gameflow worktrees and branches are untouched.
 The commit containing this checkpoint records the integration; no development
 or refactoring follows from it.
+
+
+## Goals 4.3 and 4.6 — Verified main integration (2026-10-10)
+
+Authorized scope: merge the independently verified HUD and Gameflow branches,
+preserve their commits and evidence, perform focused integration/dependency
+verification, update this ledger, commit and push main. No new feature or
+production adapter wiring is part of this checkpoint. Goal 4.2 (Status Bar)
+continues independently; its branch and worktree were not modified.
+
+Clean main and remote main were checked before merging: baseline
+`9a5da1a0374916e38a2813467a943b2934b1a3b0`, including Astra's accepted memory audit.
+A subsequent refresh confirmed origin/main still at that baseline. The audit
+commit/report and all earlier progress checkpoint sections remain preserved.
+Neither reset nor rebase was used.
+
+| Deliverable | Implementation | Main integration | Verification/acceptance | Remaining |
+|---|---|---|---|---|
+| Goal 4.3 HUD messages/text widgets | Complete at `2a35bf0851591fc03ec372130a3805b17f09f01c` | Merge `6875795efa050a4cb7292e39c12bc8dd76ba0313`; all 83 changed files exact | 14 focused tests; 209 native scenarios / 575 snapshots; 44 gameplay producer frame comparisons | Production composition deferred |
+| Goal 4.6 Episode One gameflow | Complete at `7cc1fd3ca9430597ce7ea84de0ab4c39ac27972a` | Merge `01de4fa8dd9c14e2da7957a59df58e378e69c6e4`; all 22 changed files exact | 14 dedicated tests plus 14 inherited input tests; 219 native cases; E1M1 setup/first-tic native state proof and lifecycle invariants | Production persistence/hooks and later map/presentation goals deferred |
+| Combined modules and affected dependencies | No integration source changes needed | Conflict-free; both original commits remain ancestors of main | 86 tests across 14 suites pass, 0 fail/skip; combined pinned Solidity compilation succeeds | No blocker to this merge/publication |
+| Historical evidence and audit | Existing contents retained | Separate integration certificate; original feature certificates unchanged | Branch file/certificate hashes, all baseline files except authorized g_game/ledger edits, and all historical ledger sections checked | Complete |
+
+The branches have no overlapping changed paths. `HudState`/`HuSText` are owned by
+HUD; `GameflowState`/`GameflowHooks` are owned by gameflow. Existing `GameState`,
+`Player`, `VideoState`, renderer/resource layouts, Frame/input ABI, compiler and
+execution budget stay unchanged. HUD consumes the existing console
+`Player.message`; gameflow calls ST/AM/HU hooks in that order, including paused
+level tics. There is no conflicting shared-interface change and no implicit
+production dispatch. The existing keyboard builder/rebirth/exit helpers are
+retained and pass their affected inherited tests.
+
+Risk-based verification follows section 5 of the extra plan. The combined gate
+runs all HUD/gameflow tests and affected keyboard, lifecycle, player, pickup,
+ticker, video/resource-composition and Frame tests. **86 pass, none fail/skip**;
+HUD capacity and video malformed-patch fuzzing each run 256 cases with fixed
+seed `0x4346`. The 89-file compile uses unchanged Solc 0.8.37, viaIR, optimizer
+200 and Cancun settings; reported compiler time is 153.04s, test wall time
+2.04s. The explicit build of g_game/hu_lib/hu_stuff roots passes with the same
+cache (no second compilation). Compiler identifier/shadowing/mutability warnings
+remain warnings; no settings or assertions were relaxed.
+
+Original-C HUD and gameflow checks reproduce all three profiles exactly.
+The inherited input oracle reproduces 41,007 vectors. Observation-schema and
+legacy serializer/fixture provenance checks, focused formatting, original
+feature certificate bindings and preserved baseline file checks also pass.
+Branch-specific certificate generators enforce their original isolated-branch
+ownership and are not rerun to overwrite historical evidence after integration.
+The new [integration certificate](../artifacts/phase4/hud-gameflow-integration.json)
+records commands, results, source hashes and preservation checks. Original
+[HUD evidence](../artifacts/phase4/hud/verification.json),
+[gameflow evidence](../artifacts/phase4/gameflow-verification.json),
+[HUD handoff](PHASE4-HUD.md) and [gameflow handoff](PHASE4-GAMEFLOW.md) are exact.
+
+Remaining integration dependencies: finish and independently verify Goal 4.2;
+then authorize the separate production adapter goal. That goal must persist HUD,
+GameState/GameflowState and mutable difficulty definitions atomically; rebind
+hooks after load; preserve one command/build/ticker/gametic path; and provide
+synchronous setup, status/HUD lifecycle and selected input/UI composition.
+Multi-map resources, automap, intermission/finale presentation and final episode
+acceptance remain later goals. Full inherited Phase 0–3 and browser/ordinary-RPC
+acceptance are deferred; this checkpoint makes no new production/browser proof.
+
+The commit containing this checkpoint and the separate integration certificate
+is the integration-specific publication. Stop after committing and pushing
+verified main; no Status Bar or production adapter development follows.
