@@ -1,0 +1,40 @@
+No files changed, compilation skipped
+
+Ran 1 test for test/unit/m_random.t.sol:RandomTest
+[PASS] testOriginalIndependentStreamsWrapAndClear() (gas: 5357784)
+Suite result: ok. 1 passed; 0 failed; 0 skipped; finished in 27.20ms (22.49ms CPU time)
+
+Ran 15 tests for test/unit/v_video.t.sol:VVideoTest
+[PASS] testFuzzMalformedPatchRejectsWithoutPanic(bytes,int32,int32,int32,bool) (runs: 256, μ: 202856, ~: 202902)
+[PASS] testInitFourScreensAndLeavesCallerScreen4AndDirtybox() (gas: 189943)
+[PASS] testMalformedHeadersOffsetsPostsAndPhysicalBounds() (gas: 2048219)
+[PASS] testNativeCases00to07() (gas: 8478348)
+[PASS] testNativeCases08to15() (gas: 7819581)
+[PASS] testNativeCases16to23() (gas: 17518110)
+[PASS] testNativeCases24to31() (gas: 59463327)
+[PASS] testNativeCases32to39() (gas: 8489711)
+[PASS] testNativeCases40to47() (gas: 12173322)
+[PASS] testNativeCases48to57() (gas: 9745885)
+[PASS] testNormalOutOfBoundsIgnoredBeforeDirtyMark() (gas: 181626)
+[PASS] testOffsetsTransparencyFlippedAndDirect() (gas: 342416)
+[PASS] testRectBoundsShortBuffersAndUndefinedOverlap() (gas: 999103)
+[PASS] testRectScreen4StatusBarCopyAndGet() (gas: 198461)
+[PASS] testVerticalCopyRetainsOriginalRowOrder() (gas: 180129)
+Suite result: ok. 15 passed; 0 failed; 0 skipped; finished in 1.06s (1.51s CPU time)
+
+Ran 12 tests for test/intermission/Intermission.t.sol:IntermissionTest
+[PASS] testFrameEventContainsComputedNativePixelsAndSourceAlias() (gas: 139633631)
+[PASS] testMalformedBackgroundResourceRejectsBeforePublishingState() (gas: 41545232)
+[PASS] testMalformedSourceAndUnauthorizedCallsRollBack() (gas: 149966537)
+[PASS] testNativeEveryEnteringTitleAndNode() (gas: 535508443)
+[PASS] testNativeEveryFinishedTitle() (gas: 390857531)
+[PASS] testNativeInputSecretRepeatAndCounterQuirks() (gas: 577750974)
+[PASS] testNativeNaturalCountingEveryTicAndTimeout() (gas: 193917953)
+[PASS] testNativeNumericFormattingAndCandidateFallbacks() (gas: 324864941)
+[PASS] testNativeStateAcrossSeparateStorageCallsAndRollback() (gas: 564205294)
+[PASS] testNativeZeroTotalsAllSupportedModes() (gas: 354606814)
+[PASS] testStartNormalizesCanonicalSnapshotWithoutResettingPointerOrLatches() (gas: 18279)
+[PASS] testUnsupportedAndUndefinedDomainsAreExplicit() (gas: 339935)
+Suite result: ok. 12 passed; 0 failed; 0 skipped; finished in 1.11s (5.89s CPU time)
+
+Ran 3 test suites in 1.12s (2.20s CPU time): 28 tests passed, 0 failed, 0 skipped (28 total tests)

@@ -1,0 +1,24 @@
+{
+  "paletteSha256": "fd895921b5d0a394612bb29852ed003d44d69f76dec31c0dc6b5d5fc7d63f7bb",
+  "presentation": "Base raw PLAYPAL; indexed-pixel equivalence is the acceptance claim, PNG RGB is a review aid",
+  "rows": [
+    {
+      "name": "statistics",
+      "pixelSha256": "b641f305242512f8f0176848b86b5cf5a37ced37623e2b66f023f59c50b360dd",
+      "pngSha256": "79a2dc5c56a11f183bd0edcd20f37ed0fbace6619811c5c955ddc315d31a85eb",
+      "scope": "original WAD statistics, completion input from case4"
+    },
+    {
+      "name": "next-map",
+      "pixelSha256": "0fd1db18d2314ca00388e695ea3341b545902ebfdb436f0ac58f0f080beee5b6",
+      "pngSha256": "5986c9eea149ea5d0fd3eac0de6099a6796e82383a801a70b0e400999cc99ac5",
+      "scope": "original WAD next-map presentation; transparent original marker assets"
+    },
+    {
+      "name": "secret-return",
+      "pixelSha256": "48b0dad2635b9179777ddd4ffd89844924209d86ffc100c90a0757f49cb3796b",
+      "pngSha256": "27736b30e5421ff8b7bd74aa57f48702460103e16f258003aaa999a484e9261a",
+      "scope": "original WAD background/titles and declared synthetic visible marker assets"
+    }
+  ]
+}
