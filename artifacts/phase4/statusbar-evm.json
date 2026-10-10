@@ -1,0 +1,112 @@
+{
+  "goal": "4.2",
+  "pass": true,
+  "kind": "ordinary isolated Anvil status-bar consumer",
+  "scope": "Authentic resource bytes loaded through ordinary ResourceStore CREATE; all status pixels, face selection and gamma palette produced in EVM. Seeded top168 background for these receipts; real native world composition verified separately in dedicated Foundry integration.",
+  "productionAdaptersModified": false,
+  "port": 18695,
+  "gasBudget": 10000000000,
+  "compiler": {
+    "version": "0.8.37+commit.f401782d"
+  },
+  "compilerSettings": {
+    "remappings": [],
+    "optimizer": {
+      "enabled": true,
+      "runs": 200
+    },
+    "metadata": {
+      "bytecodeHash": "ipfs"
+    },
+    "compilationTarget": {
+      "test/statusbar/StatusBarFrame.sol": "StatusBarFrame"
+    },
+    "evmVersion": "cancun",
+    "libraries": {},
+    "viaIR": true
+  },
+  "runtimeSha256": "2458bf42e1d7924c70ef4de7d6d50a16fd59e7ee568638e33e1fb5530f7764c2",
+  "artifactSha256": "5edd3ee18099097a58f85cf02fe32501b2a127a7919bb885d440f66a2a4b443f",
+  "creation": {
+    "transaction": "0x018f93a9656cf65f8528004bd82cc0bf2849eff626bba248fbdfeb4ff4b43ca8",
+    "gasUsed": 43709558
+  },
+  "resourceDeployments": [
+    {
+      "transaction": "0x0c81c37e6a0d8ff54902ac497952734da20f849e0ec9924a7d13967919b15431",
+      "bytes": 16384,
+      "gasUsed": 3595597
+    },
+    {
+      "transaction": "0xd850b0f8a8fa96bcf5926356ddfed24c8290682f5a32a00eeafc26d390e4ccc3",
+      "bytes": 16384,
+      "gasUsed": 3599893
+    },
+    {
+      "transaction": "0x87139708889b35c3804571d9ac9cc87a7f62259f74db577c242b01558237a6d4",
+      "bytes": 16384,
+      "gasUsed": 3590365
+    },
+    {
+      "transaction": "0x29e92987989da8362b6391f4789e7d13d801746d3b201e21d3ac63f2fdbf1798",
+      "bytes": 16384,
+      "gasUsed": 3597493
+    },
+    {
+      "transaction": "0xa1bb8f2b233b19f900457bced6d69b142614fdd116cca1de1774cddb12b8d242",
+      "bytes": 5681,
+      "gasUsed": 1285717
+    }
+  ],
+  "rows": [
+    {
+      "suite": "inventory",
+      "legacy": false,
+      "damage": 0,
+      "transaction": "0x58d8b05f4e558ec7c07ced05cd026994050f68363e0077c40fe10fbdc8af89d4",
+      "gasUsed": 38679413,
+      "frameSha256": "a35ca749d8046a0680d8241e5e687da4052567eea6e297ff6d00e1f82a70b12b",
+      "paletteSha256": "12bafa34214682ae20c2cb6f4e38f21575564de88c4599f3410661e9b7a5c6d3",
+      "paletteIndex": 0,
+      "pixelCount": 64000
+    },
+    {
+      "suite": "receipt_damage",
+      "legacy": false,
+      "damage": 9,
+      "transaction": "0xf229ec7c4515457ffad52d03e9c98f1646c744e16efcd5563b54f1503286691d",
+      "gasUsed": 38666238,
+      "frameSha256": "b0c337c314921e438fa78a1b1b8f5ea364629913c7eb9f1464345b25921f854d",
+      "paletteSha256": "e4d8a516fe50c284cd36df0922ff23a0cb7de9856221a57cb87be65f3f5da4ca",
+      "paletteIndex": 3,
+      "pixelCount": 64000
+    },
+    {
+      "suite": "palettes",
+      "legacy": true,
+      "damage": 0,
+      "transaction": "0xc5b896ac5334b066e4ff40fbad321def6793002b205e396e8eb89012639c853c",
+      "gasUsed": 32668067,
+      "frameSha256": "3353393e928809b6b6498d54028ab7240d2f449d8dc1f416ca04d596d8b4f276",
+      "paletteSha256": "12bafa34214682ae20c2cb6f4e38f21575564de88c4599f3410661e9b7a5c6d3",
+      "paletteIndex": 0,
+      "pixelCount": 64000
+    }
+  ],
+  "rollback": {
+    "transaction": "0x7992b12817cf0234ea65a03c54262f41f9c16c3d8abd4b7d0ea3ca7c4f4799f5",
+    "status": "0x0",
+    "logs": 0,
+    "counterUnchanged": true
+  },
+  "sourceSha256": {
+    "src/doom/st_lib.sol": "5307f52151fbd73e442a60d8b87cbfbed3d38a28704a81e952f56672de667299",
+    "src/doom/st_stuff.sol": "c4d549eebf7210b28c9ed7f6e1b89f4f276ea6c3f0e82d944a65df0cac8813bc",
+    "test/statusbar/StatusBarFrame.sol": "f2e89204db57cf48a33b22d0cfb807e71ac917351d286ececa9b744b1d098220",
+    "tools/reference/statusbar/evm.mjs": "92973958491f41ff9593e8680fdbb9278950e77846bc98f7dba55176e1f5f01e",
+    "test/fixtures/phase4_statusbar/resources.bin": "cd2c7a2461785c11539b6c2c20fbad721369a10f390efb951cbd333414e87460",
+    "test/fixtures/phase4_statusbar/cases.json": "f92f6e028e65b78343c5bb88cc09949a39537544bd2cc3486f69c4cb4b64cd49",
+    "foundry.toml": "afe04c66f0e684b5a936821f6543605a3739f62164ceb4398426db7403452393",
+    "execution-budget.json": "acde01f1b9cf248f9265f1ffcff7181d01d77620a2dfcd9a4d4d0b1c79df2be7"
+  }
+}
