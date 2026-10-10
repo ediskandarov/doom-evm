@@ -1,0 +1,8 @@
+{
+  "reports": [
+    "attempt3.json",
+    "diagnostic1.json"
+  ],
+  "pass": false,
+  "correction": "Early quick diagnostic reports inherited the planned nativeGameplay summary, but executed zero native gameplay tics. Their failed E1M4 receipts and source hashes remain exact. attempt2 executed all 210 native tics; later runners report actual executed scope."
+}

@@ -5,10 +5,11 @@ damage, doors and world interactions, with 2,355 native-equivalent gameplay tics
 31 exact frames, complete independent production replay and real Chrome pixels.
 The browser submits input and displays EVM Frame pixels.
 
-The accepted profile is Freedoom E1M1, one player, medium skill and full-screen
+The frozen Phase 3 acceptance profile is Freedoom E1M1, one player, medium skill and full-screen
 world view. This is a readable port of original `linuxdoom-1.10` to Solidity/Yul;
 full original DOOM, automatic level progression, menus/HUD/audio and multiplayer
-remain outside the accepted profile. See the [Phase 3 report](docs/PHASE3-REPORT.md)
+remain outside that historical profile. Episode One functional integration is
+documented separately below. See the [Phase 3 report](docs/PHASE3-REPORT.md)
 and [feature matrix](docs/PHASE3-FEATURE-MATRIX.md).
 
 ## Press start
@@ -25,7 +26,34 @@ python3 scripts/verify-phase2.py
 
 Tools install under ignored `.toolchain/`; global Foundry is left alone. No npm dependencies are required. Set `CHROME_BIN` if Chrome is not at its standard macOS path. The full verifier downloads and checks the pinned Freedoom archive, builds the original C oracle, preserves every Phase 0 gate, starts and stops temporary localhost nodes and a headless browser, and writes fresh results to `artifacts/local/`. The original `python3 scripts/verify-phase0.py` command remains available.
 
-## Play the EVM game
+## Play Episode One
+
+The opt-in Episode application connects all nine Freedoom maps, original gameflow,
+Status Bar/HUD, keyboard cheats, Automap, intermission and the E1 ending. This is
+functional integration; full episode input replay and exhaustive release
+acceptance remain separate. See the [integration report](docs/PHASE4-EPISODE-COMPLETION.md)
+for the verified scope and explicit native memory profile.
+
+Prepare the pinned resources and build the production root without running the
+historical verification suite:
+
+```sh
+source scripts/env.sh
+node tools/wad/download.ts artifacts/local/freedoom
+node tools/wad/episode-pack.ts pack artifacts/local/freedoom/freedoom1.wad artifacts/local/wad
+forge build src/evm/Doom.sol --skip test --skip GameplayProbe --skip RendererProbe --skip WadResourcesProbe --skip EpisodeStartupProbe --skip IntermissionProbe --skip CheatProbe --skip AutomapProbe --skip VideoProbe --skip EpisodeResourcesProbe
+node tools/reference/episode_completion/evm.mjs --play --output-prefix artifacts/local/episode-play
+```
+
+Open <http://127.0.0.1:18762>, choose E1M1–E1M9 and click **New Game**. WASD moves,
+arrows turn, Shift runs, Ctrl fires, Space/E uses doors, and 1–8 select weapons.
+Tab opens the Automap; type original cheat codes, including IDCLEV.
+Fire or Use advances intermission. **Restart** reloads the current level;
+**Pause/Resume** pauses the EVM game. **Stop input** and blur release keyboard
+input. The launcher refuses occupied ports and Ctrl-C stops its own Anvil and
+HTTP server. All gameplay and game-screen pixels come from the EVM.
+
+## Play the accepted E1M1 mode
 
 After the verifier prepares the resources:
 

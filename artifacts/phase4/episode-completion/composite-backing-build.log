@@ -1,0 +1,408 @@
+Compiling 42 files with Solc 0.8.37
+Solc 0.8.37 finished in 134.12s
+Compiler run successful with warnings:
+Warning (6335): "at" will be promoted to keyword in the future and will not be allowed as an identifier anymore.
+  --> src/doom/v_video.sol:77:41:
+   |
+77 |     function _short(bytes memory patch, uint256 at) private pure returns (int32) {
+   |                                         ^^^^^^^^^^
+
+Warning (6335): "at" will be promoted to keyword in the future and will not be allowed as an identifier anymore.
+   --> src/doom/v_video.sol:102:13:
+    |
+102 |             uint256 at = 8 + uint32(flipped ? width - 1 - col : col) * 4;
+    |             ^^^^^^^^^^
+
+Warning (6335): "at" will be promoted to keyword in the future and will not be allowed as an identifier anymore.
+  --> src/doom/hu_lib.sol:69:41:
+   |
+69 |     function patchShort(bytes memory p, uint256 at) internal pure returns (int32) {
+   |                                         ^^^^^^^^^^
+
+Warning (6335): "at" will be promoted to keyword in the future and will not be allowed as an identifier anymore.
+  --> src/doom/f_finale.sol:77:9:
+   |
+77 |         uint256 at;
+   |         ^^^^^^^^^^
+
+Warning (6335): "at" will be promoted to keyword in the future and will not be allowed as an identifier anymore.
+  --> src/doom/p_switch.sol:76:9:
+   |
+76 |         uint256 at;
+   |         ^^^^^^^^^^
+
+Warning (6335): "at" will be promoted to keyword in the future and will not be allowed as an identifier anymore.
+   --> src/doom/p_spec.sol:216:9:
+    |
+216 |         uint256 at;
+    |         ^^^^^^^^^^
+
+Warning (6335): "at" will be promoted to keyword in the future and will not be allowed as an identifier anymore.
+   --> src/doom/p_spec.sol:383:9:
+    |
+383 |         uint256 at;
+    |         ^^^^^^^^^^
+
+Warning (6335): "at" will be promoted to keyword in the future and will not be allowed as an identifier anymore.
+   --> src/doom/p_maputl.sol:285:13:
+    |
+285 |             uint32 at = C.NULL;
+    |             ^^^^^^^^^
+
+Warning (6335): "at" will be promoted to keyword in the future and will not be allowed as an identifier anymore.
+   --> src/doom/st_lib.sol:170:36:
+    |
+170 |     function SHORT(bytes memory p, uint256 at) internal pure returns (int32) {
+    |                                    ^^^^^^^^^^
+
+Warning (2319): This declaration shadows a builtin symbol.
+  --> src/doom/z_zone.sol:63:5:
+   |
+63 |     function block(ZoneState memory z, uint32 id) private pure returns (ZoneBlock memory b) {
+   |     ^ (Relevant source part starts here and spans across multiple lines).
+
+Warning (2319): This declaration shadows a builtin symbol.
+   --> src/doom/hu_lib.sol:145:77:
+    |
+145 |     function HUlib_addMessageToSText(HuSText memory s, bytes memory prefix, bytes memory msg) internal pure {
+    |                                                                             ^^^^^^^^^^^^^^^^
+
+Warning (2319): This declaration shadows a builtin symbol.
+   --> src/doom/p_maputl.sol:165:21:
+    |
+165 |                     uint32 block = uint32(by * c.state.blockmap.width + bx);
+    |                     ^^^^^^^^^^^^
+
+Warning (2319): This declaration shadows a builtin symbol.
+   --> src/doom/p_enemy.sol:163:13:
+    |
+163 |             int32 tx = actor.x + info(c, id).speed * xspeed(actor.movedir);
+    |             ^^^^^^^^
+
+Warning (2519): This declaration shadows an existing declaration.
+   --> src/doom/p_map.sol:407:17:
+    |
+407 |                 int32 frac = hit.frac - F.FixedDiv(4 * 65536, c.move.attackrange);
+    |                 ^^^^^^^^^^
+Note: The shadowed declaration is here:
+   --> src/doom/p_map.sol:427:13:
+    |
+427 |             int32 frac = hit.frac - F.FixedDiv(10 * 65536, c.move.attackrange);
+    |             ^^^^^^^^^^
+
+Warning (2519): This declaration shadows an existing declaration.
+   --> src/doom/p_map.sol:408:17:
+    |
+408 |                 int32 x = c.path.trace.x + F.FixedMul(c.path.trace.dx, frac);
+    |                 ^^^^^^^
+Note: The shadowed declaration is here:
+   --> src/doom/p_map.sol:428:13:
+    |
+428 |             int32 x = c.path.trace.x + F.FixedMul(c.path.trace.dx, frac);
+    |             ^^^^^^^
+
+Warning (2519): This declaration shadows an existing declaration.
+   --> src/doom/p_map.sol:409:17:
+    |
+409 |                 int32 y = c.path.trace.y + F.FixedMul(c.path.trace.dy, frac);
+    |                 ^^^^^^^
+Note: The shadowed declaration is here:
+   --> src/doom/p_map.sol:429:13:
+    |
+429 |             int32 y = c.path.trace.y + F.FixedMul(c.path.trace.dy, frac);
+    |             ^^^^^^^
+
+Warning (2519): This declaration shadows an existing declaration.
+   --> src/doom/p_map.sol:410:17:
+    |
+410 |                 int32 z = c.move.shootz + F.FixedMul(c.move.aimslope, F.FixedMul(frac, c.move.attackrange));
+    |                 ^^^^^^^
+Note: The shadowed declaration is here:
+   --> src/doom/p_map.sol:430:13:
+    |
+430 |             int32 z = c.move.shootz + F.FixedMul(c.move.aimslope, F.FixedMul(frac, c.move.attackrange));
+    |             ^^^^^^^
+
+Warning (2319): This declaration shadows a builtin symbol.
+   --> src/doom/r_things.sol:145:13:
+    |
+145 |             int32 tx = -(M_Fixed.FixedMul(tr_y, c.rs.viewcos) - M_Fixed.FixedMul(tr_x, c.rs.viewsin));
+    |             ^^^^^^^^
+
+Warning (2319): This declaration shadows a builtin symbol.
+   --> src/doom/r_things.sol:323:13:
+    |
+323 |             int32 tx = p.sx - 160 * 65536 - c.resources.spriteoffset[l];
+    |             ^^^^^^^^
+
+Warning (2519): This declaration shadows an existing declaration.
+   --> src/evm/InputProtocol.sol:136:49:
+    |
+136 |     function build(GameInputState memory state, uint32 held) internal pure returns (Ticcmd memory) {
+    |                                                 ^^^^^^^^^^^
+Note: The shadowed declaration is here:
+   --> src/evm/InputProtocol.sol:108:5:
+    |
+108 |     function held(InputRuntimeState memory s, uint32 key) private pure returns (bool) {
+    |     ^ (Relevant source part starts here and spans across multiple lines).
+
+Warning (2018): Function state mutability can be restricted to pure
+   --> src/doom/p_switch.sol:129:5:
+    |
+129 |     function P_UseSpecialLine(GameContext memory c, uint32 thing, uint32 line, int32 side)
+    |     ^ (Relevant source part starts here and spans across multiple lines).
+
+Warning (2018): Function state mutability can be restricted to pure
+   --> src/doom/p_spec.sol:346:5:
+    |
+346 |     function P_SpawnSpecials(GameContext memory c) internal view {
+    |     ^ (Relevant source part starts here and spans across multiple lines).
+
+Warning (2018): Function state mutability can be restricted to pure
+   --> src/doom/p_spec.sol:598:5:
+    |
+598 |     function P_ShootSpecialLine(GameContext memory c, uint32 thing, uint32 line) internal view {
+    |     ^ (Relevant source part starts here and spans across multiple lines).
+
+Warning (2018): Function state mutability can be restricted to pure
+   --> src/doom/r_plane.sol:123:5:
+    |
+123 |     function R_MapPlane(RenderContext memory ctx, int32 y, int32 x1, int32 x2) internal view {
+    |     ^ (Relevant source part starts here and spans across multiple lines).
+
+Warning (2018): Function state mutability can be restricted to pure
+   --> src/evm/DoomGame.sol:388:5:
+    |
+388 |     function bossFloor(GameContext memory c, int32 tag, FloorType kind) private view returns (bool) {
+    |     ^ (Relevant source part starts here and spans across multiple lines).
+
+Warning (2018): Function state mutability can be restricted to pure
+   --> src/evm/EpisodeRuntime.sol:165:5:
+    |
+165 |     function automapStop(GameContext memory c, GameflowState memory f) private view {
+    |     ^ (Relevant source part starts here and spans across multiple lines).
+
+warning[missing-events-access-control]: `gameState` is changed without an event but is used for access control
+   ╭▸ src/evm/Doom.sol:71:9
+   │
+71 │         gameState = c.state;
+   │         ━━━━━━━━━
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/missing-events-access-control
+
+warning[missing-events-access-control]: `gameState` is changed without an event but is used for access control
+   ╭▸ src/evm/Doom.sol:89:9
+   │
+89 │         gameState = state;
+   │         ━━━━━━━━━
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/missing-events-access-control
+
+warning[missing-events-access-control]: `inputRuntime` is changed without an event but is used for access control
+   ╭▸ src/evm/Doom.sol:90:9
+   │
+90 │         inputRuntime.flow = flow;
+   │         ━━━━━━━━━━━━━━━━━
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/missing-events-access-control
+
+warning[missing-events-access-control]: `uiState` is changed without an event but is used for access control
+    ╭▸ src/evm/Doom.sol:308:9
+    │
+308 │         uiState = u;
+    │         ━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/missing-events-access-control
+
+warning[missing-events-access-control]: `episodeState` is changed without an event but is used for access control
+    ╭▸ src/evm/Doom.sol:310:9
+    │
+310 │         episodeState = e;
+    │         ━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/missing-events-access-control
+
+warning[missing-events-access-control]: `inputSeq` is changed without an event but is used for access control
+    ╭▸ src/evm/Doom.sol:311:9
+    │
+311 │         inputSeq = sequence;
+    │         ━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/missing-events-access-control
+
+warning[missing-events-access-control]: `gameState` is changed without an event but is used for access control
+    ╭▸ src/evm/Doom.sol:100:9
+    │
+100 │         gameState = state;
+    │         ━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/missing-events-access-control
+
+warning[missing-events-access-control]: `inputRuntime` is changed without an event but is used for access control
+    ╭▸ src/evm/Doom.sol:309:9
+    │
+309 │         inputRuntime = s;
+    │         ━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/missing-events-access-control
+
+warning[missing-events-access-control]: `gameState` is changed without an event but is used for access control
+    ╭▸ src/evm/Doom.sol:307:9
+    │
+307 │         gameState = c.state;
+    │         ━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/missing-events-access-control
+
+warning[missing-events-access-control]: `uiState` is changed without an event but is used for access control
+    ╭▸ src/evm/Doom.sol:187:13
+    │
+187 │             uiState.fullscreen = fullscreen;
+    │             ━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/missing-events-access-control
+
+warning[missing-events-access-control]: `uiState` is changed without an event but is used for access control
+    ╭▸ src/evm/Doom.sol:239:28
+    │
+239 │             if (u.enabled) uiState = u;
+    │                            ━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/missing-events-access-control
+
+warning[missing-events-access-control]: `gameState` is changed without an event but is used for access control
+    ╭▸ src/evm/Doom.sol:240:13
+    │
+240 │             gameState = c.state;
+    │             ━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/missing-events-access-control
+
+warning[missing-events-access-control]: `inputSeq` is changed without an event but is used for access control
+    ╭▸ src/evm/Doom.sol:241:13
+    │
+241 │             inputSeq = sequence;
+    │             ━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/missing-events-access-control
+
+warning[reentrancy-events]: event emitted after an external call; reentrancy can reorder or fabricate logs that off-chain consumers rely on
+    ╭▸ src/evm/Doom.sol:409:13
+    │
+409 │ ┏             emit FramePalette(
+410 │ ┃                 frameId,
+411 │ ┃                 sequence,
+412 │ ┃                 uiState.status.paletteRevision,
+    ‡ ┃
+415 │ ┃                 uiState.status.paletteRGB
+416 │ ┃             );
+    │ ┗━━━━━━━━━━━━━━┛
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/reentrancy-events
+
+warning[reentrancy-events]: event emitted after an external call; reentrancy can reorder or fabricate logs that off-chain consumers rely on
+    ╭▸ src/evm/Doom.sol:418:9
+    │
+418 │         emit Frame(frameId, sequence, 320, 200, pixels);
+    │         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/reentrancy-events
+
+warning[unsafe-typecast]: typecast can truncate values
+    ╭▸ src/evm/Doom.sol:329:46
+    │
+329 │         Player storage p = gameState.players[uint32(gameState.consoleplayer)];
+    │                                              ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ├ note: consider disabling this lint if you're certain the cast is safe
+    │       
+    │       // casting to 'uint32' is safe because [explain why]
+    │       // forge-lint: disable-next-line(unsafe-typecast)
+    │       
+    │       
+    ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[unsafe-typecast]: typecast can truncate values
+    ╭▸ src/evm/Doom.sol:399:35
+    │
+399 │             flags[i * 2] = bytes1(uint8(value >> 8));
+    │                                   ━━━━━━━━━━━━━━━━━
+    │
+    ├ note: consider disabling this lint if you're certain the cast is safe
+    │       
+    │       // casting to 'uint8' is safe because [explain why]
+    │       // forge-lint: disable-next-line(unsafe-typecast)
+    │       
+    │       
+    ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[unsafe-typecast]: typecast can truncate values
+    ╭▸ src/evm/Doom.sol:400:39
+    │
+400 │             flags[i * 2 + 1] = bytes1(uint8(value));
+    │                                       ━━━━━━━━━━━━
+    │
+    ├ note: consider disabling this lint if you're certain the cast is safe
+    │       
+    │       // casting to 'uint8' is safe because [explain why]
+    │       // forge-lint: disable-next-line(unsafe-typecast)
+    │       
+    │       
+    ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[unsafe-typecast]: typecast can truncate values
+    ╭▸ src/evm/Doom.sol:462:46
+    │
+462 │         Player storage p = gameState.players[uint32(gameState.consoleplayer)];
+    │                                              ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ├ note: consider disabling this lint if you're certain the cast is safe
+    │       
+    │       // casting to 'uint32' is safe because [explain why]
+    │       // forge-lint: disable-next-line(unsafe-typecast)
+    │       
+    │       
+    ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[unsafe-typecast]: typecast can truncate values
+    ╭▸ src/evm/Doom.sol:473:25
+    │
+473 │         uint32 player = uint32(gameState.consoleplayer);
+    │                         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ├ note: consider disabling this lint if you're certain the cast is safe
+    │       
+    │       // casting to 'uint32' is safe because [explain why]
+    │       // forge-lint: disable-next-line(unsafe-typecast)
+    │       
+    │       
+    ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[unsafe-typecast]: typecast can truncate values
+    ╭▸ src/evm/Doom.sol:479:13
+    │
+479 │             int32(uint32(gameState.players[player].readyweapon))
+    │             ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ├ note: consider disabling this lint if you're certain the cast is safe
+    │       
+    │       // casting to 'int32' is safe because [explain why]
+    │       // forge-lint: disable-next-line(unsafe-typecast)
+    │       
+    │       
+    ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[unsafe-typecast]: typecast can truncate values
+    ╭▸ src/evm/Doom.sol:500:51
+    │
+500 │         Player storage player = gameState.players[uint32(gameState.consoleplayer)];
+    │                                                   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ├ note: consider disabling this lint if you're certain the cast is safe
+    │       
+    │       // casting to 'uint32' is safe because [explain why]
+    │       // forge-lint: disable-next-line(unsafe-typecast)
+    │       
+    │       
+    ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
