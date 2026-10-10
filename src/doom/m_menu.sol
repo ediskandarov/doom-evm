@@ -22,6 +22,7 @@ struct MenuState {
     int32 selectedSkill;
     bool startRequested;
     bool messageToPrint;
+    bool directSelection;
 }
 
 /// @custom:source linuxdoom-1.10/m_menu.c, m_menu.h at a77dfb96cb91780ca334d0d4cfd86957558007e0
@@ -45,6 +46,132 @@ library M_Menu {
             m.whichSkull ^= 1;
             m.skullAnimCounter = 8;
         }
+    }
+
+    function M_StartControlPanel(MenuState memory m) internal pure {
+        if (m.menuactive) return;
+        m.menuactive = true;
+        m.currentMenu = 0;
+        m.itemOn = m.lastOn[0];
+    }
+
+    function M_ClearMenus(MenuState memory m) internal pure {
+        m.menuactive = false;
+    }
+
+    function M_SetupNextMenu(MenuState memory m, uint8 menu) internal pure {
+        m.currentMenu = menu;
+        m.itemOn = m.lastOn[menu];
+    }
+
+    function M_NewGame(MenuState memory m) internal pure {
+        m.directSelection = false;
+        m.selectedMap = 1;
+        M_SetupNextMenu(m, 1);
+    }
+
+    function M_Episode(MenuState memory m, int32 choice) internal pure {
+        // Other episodes are explicitly unsupported, never clamped to E1.
+        if (choice != 0) return;
+        M_SetupNextMenu(m, 2);
+    }
+
+    function M_VerifyNightmare(MenuState memory m, int32 ch) internal pure {
+        if (ch != 121) return;
+        m.selectedSkill = 4;
+        m.startRequested = true;
+        M_ClearMenus(m);
+    }
+
+    function M_ChooseSkill(MenuState memory m, int32 choice) internal pure {
+        if (choice == 4) {
+            m.messageToPrint = true;
+            m.menuactive = true;
+            return;
+        }
+        m.selectedSkill = choice;
+        m.startRequested = true;
+        M_ClearMenus(m);
+    }
+
+    function numitems(MenuState memory m) private pure returns (int32) {
+        if (m.currentMenu == 0) return m.extended ? int32(2) : int32(6);
+        if (m.currentMenu == 1) return m.extended ? int32(1) : int32(4);
+        return m.currentMenu == 2 ? int32(5) : int32(9);
+    }
+
+    function alpha(MenuState memory m, int32 item) private pure returns (int32) {
+        if (m.currentMenu == 0) {
+            if (m.extended) return item == 0 ? int32(110) : int32(115);
+            return int32(uint32(uint8(bytes("nolsrq")[uint32(item)])));
+        }
+        if (m.currentMenu == 1) return int32(uint32(uint8(bytes("ktit")[uint32(item)])));
+        if (m.currentMenu == 2) return int32(uint32(uint8(bytes("ihhun")[uint32(item)])));
+        return item + 49;
+    }
+
+    /// @custom:source m_menu.c M_Responder keyboard/menu branches, M_NewGame/M_Episode/M_ChooseSkill.
+    /// @dev Audio and unsupported function-key/Save/Load/Options branches are absent.
+    /// Original false returns are preserved here; production dispatch separately
+    /// isolates all active-menu input from gameplay, including unknown keys/keyups.
+    function M_Responder(MenuState memory m, int32 kind, int32 ch) internal pure returns (bool) {
+        if (kind != 0) return false;
+        if (m.messageToPrint) {
+            if (ch != 32 && ch != 110 && ch != 121 && ch != 27) return false;
+            m.messageToPrint = false;
+            M_VerifyNightmare(m, ch);
+            m.menuactive = false;
+            return true;
+        }
+        if (!m.menuactive) {
+            if (ch != 27) return false;
+            M_StartControlPanel(m);
+            return true;
+        }
+        if (ch == 175) { // KEY_DOWNARROW
+            m.itemOn = m.itemOn + 1 > numitems(m) - 1 ? int32(0) : m.itemOn + 1;
+            return true;
+        }
+        if (ch == 173) { // KEY_UPARROW
+            m.itemOn = m.itemOn == 0 ? numitems(m) - 1 : m.itemOn - 1;
+            return true;
+        }
+        if (ch == 172 || ch == 174) return true; // no status2 slider in supported menus
+        if (ch == 13) {
+            m.lastOn[m.currentMenu] = m.itemOn;
+            if (m.currentMenu == 0) {
+                if (m.itemOn == 0) M_NewGame(m);
+                else if (m.extended && m.itemOn == 1) {
+                    m.directSelection = true;
+                    M_SetupNextMenu(m, 3);
+                }
+            } else if (m.currentMenu == 1) M_Episode(m, m.itemOn);
+            else if (m.currentMenu == 2) M_ChooseSkill(m, m.itemOn);
+            else {
+                m.selectedMap = m.itemOn + 1;
+                M_SetupNextMenu(m, 2);
+            }
+            return true;
+        }
+        if (ch == 27) {
+            m.lastOn[m.currentMenu] = m.itemOn;
+            M_ClearMenus(m);
+            return true;
+        }
+        if (ch == 127) {
+            m.lastOn[m.currentMenu] = m.itemOn;
+            if (m.currentMenu != 0) {
+                M_SetupNextMenu(m, m.currentMenu == 2 ? (m.directSelection ? uint8(3) : uint8(1)) : uint8(0));
+            }
+            return true;
+        }
+        for (int32 i = m.itemOn + 1; i < numitems(m); ++i) {
+            if (alpha(m, i) == ch) { m.itemOn = i; return true; }
+        }
+        for (int32 i; i <= m.itemOn; ++i) {
+            if (alpha(m, i) == ch) { m.itemOn = i; return true; }
+        }
+        return false;
     }
 
     function patch(ResourceView memory source, bytes8 name) private view returns (bytes memory) {

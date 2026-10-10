@@ -38,6 +38,20 @@ the requested menu is implemented, focused gates pass, evidence and source
 mapping are recorded, and the feature branch is clean with a recoverable handoff.
 Full historical/final Phase 4 acceptance belongs to the integrator.
 
+Checkpoint B: five focused Forge tests pass, including 28 original responder
+events compared field-by-field (13 fields) after external storage round-trips.
+Arrow wrapping, left/right consumption, Enter, Escape, Backspace, remembered
+selections, duplicate skill hotkeys, Nightmare cancellation/acceptance and skull
+timing match the native trace. Extended E1M9 navigation and menu packet isolation
+pass. Compilation 151.96s; test suite 467ms. Checkpoint A commit `2406f71`.
+
+Production input isolation is an explicit packet-boundary adaptation: the
+complete packet is validated first; a packet containing menu-owned input never
+reaches G_Responder/ST cheats. Keyups and unknown active-menu keys are isolated
+even where original M_Responder returns false. Held gameplay keys are cleared
+on menu ownership transitions to avoid stuck movement after Resume. This does
+not change the standalone original responder's return values.
+
 ## Progress
 
 Checkpoint A implementation: `src/doom/m_menu.sol` ports original menu drawing,

@@ -3,12 +3,14 @@ pragma solidity 0.8.37;
 import {M_Menu, MenuState} from "../../src/doom/m_menu.sol";
 import {ResourceView} from "../../src/doom/r_data_types.sol";
 import {LumpDescriptor} from "../../src/evm/ResourceTypes.sol";
+import {DoomMenu} from "../../src/evm/DoomMenu.sol";
 interface MenuVm {
     function readFileBinary(string calldata) external view returns (bytes memory);
     function etch(address, bytes calldata) external;
 }
 contract MenuTest {
     MenuVm constant vm = MenuVm(address(uint160(uint256(keccak256("hevm cheat code")))));
+    MenuState private saved;
     function source() internal returns (ResourceView memory r) {
         bytes memory blob = vm.readFileBinary("test/fixtures/evm_menu/resources.bin");
         bytes memory dir = vm.readFileBinary("test/fixtures/evm_menu/directory.bin");
@@ -74,5 +76,59 @@ contract MenuTest {
             require(pixels.length == 64000 && hash != prior, "distinct bounded EVM skull selection");
             prior = hash;
         }
+    }
+
+    function be32(bytes memory data, uint256 at) private pure returns (int32 n) {
+        uint32 value;
+        for (uint256 i; i < 4; ++i) value = (value << 8) | uint8(data[at+i]);
+        return int32(value);
+    }
+    function respond(int32 kind, int32 key) external returns (MenuState memory m, bool consumed) {
+        m = saved;
+        consumed = M_Menu.M_Responder(m, kind, key);
+        M_Menu.M_Ticker(m);
+        saved = m;
+    }
+    function testOriginalResponderNativeStateAndStorage() public {
+        MenuState memory m;
+        M_Menu.M_Init(m, false);
+        saved = m;
+        bytes memory events = hex"001b011b000d000d00af00af00ad00ac00ae00680068007f007f001b001b000d000d006e000d000d006e001b001b000d000d006e000d0079";
+        bytes memory expected = vm.readFileBinary("test/fixtures/evm_menu/responder.bin");
+        for (uint256 i; i < events.length / 2; ++i) {
+            bool consumed;
+            (m, consumed) = this.respond(int32(uint32(uint8(events[i*2]))), int32(uint32(uint8(events[i*2+1]))));
+            int32[13] memory actual = [consumed ? int32(1) : int32(0),m.menuactive ? int32(1) : int32(0),
+                int32(uint32(m.currentMenu)),m.itemOn,m.whichSkull,m.skullAnimCounter,m.lastOn[0],m.lastOn[1],m.lastOn[2],
+                m.messageToPrint ? int32(1) : int32(0),m.startRequested ? m.selectedSkill : int32(-1),
+                m.startRequested ? int32(1) : int32(-1),m.startRequested ? m.selectedMap : int32(-1)];
+            for (uint256 j; j < 13; ++j) require(actual[j] == be32(expected,i*52+j*4), "original responder field");
+        }
+    }
+    function testMenuOwnsUnknownKeyupsAndWholeStartupPacket() public pure {
+        MenuState memory m;
+        M_Menu.M_Init(m, true);
+        M_Menu.M_StartControlPanel(m);
+        require(DoomMenu.respond(m, hex"006901690031019d", true), "menu intercepts letters, weapons and releases");
+        require(m.currentMenu == 0 && !m.startRequested, "unrecognized menu input changes no selection");
+        DoomMenu.respond(m, hex"00af000d0039000d000d0077009d", true);
+        require(m.startRequested && m.selectedMap == 9 && m.selectedSkill == 2, "E1M9 new-game request before trailing gameplay input");
+        require(!m.menuactive, "new-game closes menu");
+    }
+    function testEscapeBackspaceAndOriginalHotkeyCycling() public pure {
+        MenuState memory m;
+        M_Menu.M_Init(m, true);
+        M_Menu.M_StartControlPanel(m);
+        M_Menu.M_Responder(m,0,13); M_Menu.M_Responder(m,0,13);
+        require(m.currentMenu == 2 && m.itemOn == 2, "original hurtme default");
+        M_Menu.M_Responder(m,0,104); require(m.itemOn == 1, "h wraps to rough");
+        M_Menu.M_Responder(m,0,104); require(m.itemOn == 2, "h cycles hurtme");
+        M_Menu.M_Responder(m,0,127); require(m.currentMenu == 1, "original skill previous episode");
+        M_Menu.M_Responder(m,0,27); require(!m.menuactive, "original Escape closes all menus");
+        M_Menu.M_Responder(m,0,27); require(m.menuactive && m.currentMenu == 0, "original Escape reopens main");
+        M_Menu.M_Responder(m,0,173); require(m.itemOn == 1, "up wraps to select level");
+        M_Menu.M_Responder(m,0,13); M_Menu.M_Responder(m,0,173); M_Menu.M_Responder(m,0,13);
+        require(m.selectedMap == 9 && m.currentMenu == 2, "nine-map wrap and skill screen");
+        M_Menu.M_Responder(m,0,127); require(m.currentMenu == 3 && m.itemOn == 8, "extension remembers selected level");
     }
 }
