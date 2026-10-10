@@ -1,0 +1,38 @@
+[
+  {
+    "attempt": "full35",
+    "pass": false,
+    "sampleEvery": 1,
+    "executedTics": 52,
+    "verifiedTics": 52,
+    "successfulFrames": 51,
+    "error": "AssertionError [ERR_ASSERTION]: EVM render reverted at tic 52\n\n'0x0' !== '0x1'\n",
+    "resultSha256": "fd6fdfeeb55fdea3178253a54ecc4c8e43e33fc1f31fc9f477132b267742c51b",
+    "captureReceiptsSha256": "3fa9fda49118c57aa93ed9bce1a589539c84afe134138cbb13b89bc9182b4355",
+    "ownedRuntimeStopped": true,
+    "actualWorldPrefixMatchesNative": true
+  },
+  {
+    "attempt": "tic52-diagnostic",
+    "pass": false,
+    "sampleEvery": 52,
+    "executedTics": 52,
+    "verifiedTics": 52,
+    "successfulFrames": 0,
+    "error": {
+      "tic": 52,
+      "transactionHash": "0xb9449ff32f2b3dd2c536b096a85138bb635f5906173a8178cd45931cd17c9f7b",
+      "gas": 641531003,
+      "elapsedMs": 445.0770840000041,
+      "rpcError": {
+        "code": 3,
+        "message": "execution reverted: custom error 0x5b9a48fe",
+        "data": "0x5b9a48fe"
+      }
+    },
+    "resultSha256": "f6b0b2ffd58817256aa04b8f5b46c2885cfbe1e1e5bc737489d7641fe29087fc",
+    "captureReceiptsSha256": "ded19ad7e907c93bc03b5e6229141153f24e1cfd625e0c47dc6122b9f3c20e7c",
+    "ownedRuntimeStopped": true,
+    "actualWorldPrefixMatchesNative": true
+  }
+]

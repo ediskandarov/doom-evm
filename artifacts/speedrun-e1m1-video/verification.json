@@ -1,0 +1,15 @@
+{
+  "pass_": true,
+  "gameplayWorlds": 280,
+  "originalTics": 279,
+  "genuineExit": true,
+  "standardEVMFrames": 56,
+  "pngPaletteExpansionExact": true,
+  "encodedFrames": 279,
+  "durationSeconds": 7.971429,
+  "sampleAspectRatio": "5:6",
+  "displayAspectRatio": "4:3",
+  "frameManifestSha256": "1d0448bdcbbc6a9c71b1b0205b56c29adfa714032d0d714bd3bdb889bf73be0b",
+  "totalCaptureGas": 40039679375,
+  "totalReplayGas": 21207385329
+}
