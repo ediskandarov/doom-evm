@@ -1,0 +1,241 @@
+Compiling 95 files with Solc 0.8.37
+Solc 0.8.37 finished in 108.29s
+Compiler run successful with warnings:
+Warning (6335): "at" will be promoted to keyword in the future and will not be allowed as an identifier anymore.
+  --> src/doom/v_video.sol:77:41:
+   |
+77 |     function _short(bytes memory patch, uint256 at) private pure returns (int32) {
+   |                                         ^^^^^^^^^^
+
+Warning (6335): "at" will be promoted to keyword in the future and will not be allowed as an identifier anymore.
+   --> src/doom/v_video.sol:102:13:
+    |
+102 |             uint256 at = 8 + uint32(flipped ? width - 1 - col : col) * 4;
+    |             ^^^^^^^^^^
+
+Warning (6335): "at" will be promoted to keyword in the future and will not be allowed as an identifier anymore.
+  --> src/doom/hu_lib.sol:69:41:
+   |
+69 |     function patchShort(bytes memory p, uint256 at) internal pure returns (int32) {
+   |                                         ^^^^^^^^^^
+
+Warning (6335): "at" will be promoted to keyword in the future and will not be allowed as an identifier anymore.
+  --> src/doom/p_switch.sol:76:9:
+   |
+76 |         uint256 at;
+   |         ^^^^^^^^^^
+
+Warning (6335): "at" will be promoted to keyword in the future and will not be allowed as an identifier anymore.
+   --> src/doom/p_spec.sol:216:9:
+    |
+216 |         uint256 at;
+    |         ^^^^^^^^^^
+
+Warning (6335): "at" will be promoted to keyword in the future and will not be allowed as an identifier anymore.
+   --> src/doom/p_spec.sol:383:9:
+    |
+383 |         uint256 at;
+    |         ^^^^^^^^^^
+
+Warning (6335): "at" will be promoted to keyword in the future and will not be allowed as an identifier anymore.
+   --> src/doom/p_maputl.sol:285:13:
+    |
+285 |             uint32 at = C.NULL;
+    |             ^^^^^^^^^
+
+Warning (6335): "at" will be promoted to keyword in the future and will not be allowed as an identifier anymore.
+   --> src/doom/st_lib.sol:170:36:
+    |
+170 |     function SHORT(bytes memory p, uint256 at) internal pure returns (int32) {
+    |                                    ^^^^^^^^^^
+
+Warning (6335): "at" will be promoted to keyword in the future and will not be allowed as an identifier anymore.
+  --> test/unit/z_zone.t.sol:21:38:
+   |
+21 |     function word(bytes memory data, uint256 at) private pure returns (uint32) {
+   |                                      ^^^^^^^^^^
+
+Warning (6335): "at" will be promoted to keyword in the future and will not be allowed as an identifier anymore.
+  --> test/unit/z_zone.t.sol:27:9:
+   |
+27 |         uint256 at = out.cursor;
+   |         ^^^^^^^^^^
+
+Warning (6335): "at" will be promoted to keyword in the future and will not be allowed as an identifier anymore.
+  --> test/unit/z_zone.t.sol:87:9:
+   |
+87 |         uint256 at = 4;
+   |         ^^^^^^^^^^
+
+Warning (6335): "at" will be promoted to keyword in the future and will not be allowed as an identifier anymore.
+  --> test/unit/z_zone_backing.t.sol:23:38:
+   |
+23 |     function word(bytes memory data, uint256 at) private pure returns (uint32) {
+   |                                      ^^^^^^^^^^
+
+Warning (6335): "at" will be promoted to keyword in the future and will not be allowed as an identifier anymore.
+  --> test/unit/z_zone_backing.t.sol:78:13:
+   |
+78 |             uint256 at = 4 + uint256(row) * 276;
+   |             ^^^^^^^^^^
+
+Warning (2319): This declaration shadows a builtin symbol.
+  --> src/doom/z_zone.sol:63:5:
+   |
+63 |     function block(ZoneState memory z, uint32 id) private pure returns (ZoneBlock memory b) {
+   |     ^ (Relevant source part starts here and spans across multiple lines).
+
+Warning (2319): This declaration shadows a builtin symbol.
+   --> src/doom/hu_lib.sol:145:77:
+    |
+145 |     function HUlib_addMessageToSText(HuSText memory s, bytes memory prefix, bytes memory msg) internal pure {
+    |                                                                             ^^^^^^^^^^^^^^^^
+
+Warning (2319): This declaration shadows a builtin symbol.
+   --> src/doom/p_maputl.sol:165:21:
+    |
+165 |                     uint32 block = uint32(by * c.state.blockmap.width + bx);
+    |                     ^^^^^^^^^^^^
+
+Warning (2319): This declaration shadows a builtin symbol.
+   --> src/doom/p_enemy.sol:163:13:
+    |
+163 |             int32 tx = actor.x + info(c, id).speed * xspeed(actor.movedir);
+    |             ^^^^^^^^
+
+Warning (2519): This declaration shadows an existing declaration.
+   --> src/doom/p_map.sol:407:17:
+    |
+407 |                 int32 frac = hit.frac - F.FixedDiv(4 * 65536, c.move.attackrange);
+    |                 ^^^^^^^^^^
+Note: The shadowed declaration is here:
+   --> src/doom/p_map.sol:427:13:
+    |
+427 |             int32 frac = hit.frac - F.FixedDiv(10 * 65536, c.move.attackrange);
+    |             ^^^^^^^^^^
+
+Warning (2519): This declaration shadows an existing declaration.
+   --> src/doom/p_map.sol:408:17:
+    |
+408 |                 int32 x = c.path.trace.x + F.FixedMul(c.path.trace.dx, frac);
+    |                 ^^^^^^^
+Note: The shadowed declaration is here:
+   --> src/doom/p_map.sol:428:13:
+    |
+428 |             int32 x = c.path.trace.x + F.FixedMul(c.path.trace.dx, frac);
+    |             ^^^^^^^
+
+Warning (2519): This declaration shadows an existing declaration.
+   --> src/doom/p_map.sol:409:17:
+    |
+409 |                 int32 y = c.path.trace.y + F.FixedMul(c.path.trace.dy, frac);
+    |                 ^^^^^^^
+Note: The shadowed declaration is here:
+   --> src/doom/p_map.sol:429:13:
+    |
+429 |             int32 y = c.path.trace.y + F.FixedMul(c.path.trace.dy, frac);
+    |             ^^^^^^^
+
+Warning (2519): This declaration shadows an existing declaration.
+   --> src/doom/p_map.sol:410:17:
+    |
+410 |                 int32 z = c.move.shootz + F.FixedMul(c.move.aimslope, F.FixedMul(frac, c.move.attackrange));
+    |                 ^^^^^^^
+Note: The shadowed declaration is here:
+   --> src/doom/p_map.sol:430:13:
+    |
+430 |             int32 z = c.move.shootz + F.FixedMul(c.move.aimslope, F.FixedMul(frac, c.move.attackrange));
+    |             ^^^^^^^
+
+Warning (2319): This declaration shadows a builtin symbol.
+   --> src/doom/r_things.sol:145:13:
+    |
+145 |             int32 tx = -(M_Fixed.FixedMul(tr_y, c.rs.viewcos) - M_Fixed.FixedMul(tr_x, c.rs.viewsin));
+    |             ^^^^^^^^
+
+Warning (2319): This declaration shadows a builtin symbol.
+   --> src/doom/r_things.sol:323:13:
+    |
+323 |             int32 tx = p.sx - 160 * 65536 - c.resources.spriteoffset[l];
+    |             ^^^^^^^^
+
+Warning (2018): Function state mutability can be restricted to pure
+   --> src/doom/p_switch.sol:129:5:
+    |
+129 |     function P_UseSpecialLine(GameContext memory c, uint32 thing, uint32 line, int32 side)
+    |     ^ (Relevant source part starts here and spans across multiple lines).
+
+Warning (2018): Function state mutability can be restricted to pure
+   --> src/doom/p_spec.sol:346:5:
+    |
+346 |     function P_SpawnSpecials(GameContext memory c) internal view {
+    |     ^ (Relevant source part starts here and spans across multiple lines).
+
+Warning (2018): Function state mutability can be restricted to pure
+   --> src/doom/p_spec.sol:598:5:
+    |
+598 |     function P_ShootSpecialLine(GameContext memory c, uint32 thing, uint32 line) internal view {
+    |     ^ (Relevant source part starts here and spans across multiple lines).
+
+Warning (2018): Function state mutability can be restricted to pure
+   --> src/doom/r_plane.sol:123:5:
+    |
+123 |     function R_MapPlane(RenderContext memory ctx, int32 y, int32 x1, int32 x2) internal view {
+    |     ^ (Relevant source part starts here and spans across multiple lines).
+
+Warning (2018): Function state mutability can be restricted to pure
+   --> src/evm/DoomGame.sol:321:5:
+    |
+321 |     function bossFloor(GameContext memory c, int32 tag, FloorType kind) private view returns (bool) {
+    |     ^ (Relevant source part starts here and spans across multiple lines).
+
+Warning (2018): Function state mutability can be restricted to pure
+   --> test/unit/z_zone_backing.t.sol:187:5:
+    |
+187 |     function rejected(uint32 which) external {
+    |     ^ (Relevant source part starts here and spans across multiple lines).
+
+Warning (2018): Function state mutability can be restricted to view
+   --> test/unit/z_zone_initialization.t.sol:106:5:
+    |
+106 |     function testMatrixFreshAndReusedLengthsKeepSourceBytesAndPointerRejection() public {
+    |     ^ (Relevant source part starts here and spans across multiple lines).
+
+
+Ran 3 tests for test/unit/GameZoneHeap.t.sol:GameZoneHeapTest
+[PASS] testAllEmbeddedPayloadSizesTagsAndNoThinkerDoubleAllocation() (gas: 269692)
+[PASS] testLazyFreeAndPhysicalReuseKeepStablePayloadIdentity() (gas: 179426)
+[PASS] testPoolGrowthZoneStorageAndResourceAlias() (gas: 4507520)
+Suite result: ok. 3 passed; 0 failed; 0 skipped; finished in 17.91ms (9.01ms CPU time)
+
+Ran 6 tests for test/unit/z_zone_initialization.t.sol:ZoneInitializationTest
+[PASS] testFreeAndClearNeverReseedWrittenHistory() (gas: 368174)
+[PASS] testMatrixFreshAndReusedLengthsKeepSourceBytesAndPointerRejection() (gas: 1236843)
+[PASS] testReportedBLUDA0FirstPostMatchesExplicitNativeZeroInitializedProfile() (gas: 371973)
+[PASS] testReportedBLUDA0StillRejectsInStrictDiagnosticMode() (gas: 346128)
+[PASS] testReusedPayloadNeverSilentlyBecomesInitializedPadding() (gas: 366599)
+[PASS] testThreeProvenanceClassesAndInvalidDomain() (gas: 6347878)
+Suite result: ok. 6 passed; 0 failed; 0 skipped; finished in 17.91ms (21.46ms CPU time)
+
+Ran 6 tests for test/unit/z_zone_backing.t.sol:ZoneBackingTest
+[PASS] testBindingClearsStaleTailAndFastPathAllocatesNothing() (gas: 159140)
+[PASS] testCacheHitChangesTagAndOwnerReallocation() (gas: 132869)
+[PASS] testCompositeReconstructionKeepsNativeCacheAndPurgeRegenerates() (gas: 112474)
+[PASS] testEveryOriginalPhysicalTailAndKnownHeaderPixel() (gas: 38585117)
+[PASS] testUnknownAndInvalidKnownMasksRemainRejected() (gas: 584185)
+[PASS] testUnknownPhysicalPaddingPointersSlackAndFragmentsReject() (gas: 2102428)
+Suite result: ok. 6 passed; 0 failed; 0 skipped; finished in 57.05ms (63.77ms CPU time)
+
+Ran 2 tests for test/unit/z_zone.t.sol:ZoneTest
+[PASS] testAllOriginalZoneSequences() (gas: 496375931)
+[PASS] testOriginalFatalDomains() (gas: 82300)
+Suite result: ok. 2 passed; 0 failed; 0 skipped; finished in 402.34ms (398.71ms CPU time)
+
+Ran 4 tests for test/unit/p_zone_setup.t.sol:PZoneSetupTest
+[PASS] testActualSetupGeometryFunctionsMatchNativeHeaders() (gas: 903939306)
+[PASS] testFullAtomicInitializationMatchesNativeHeaders() (gas: 1816428277)
+[PASS] testOriginalGeometryOperationOrderAndHeaders() (gas: 818917409)
+[PASS] testWholeOriginalSetupWithRealSpawnHooksMatchesNativeHeaders() (gas: 992104423)
+Suite result: ok. 4 passed; 0 failed; 0 skipped; finished in 1.45s (2.03s CPU time)
+
+Ran 5 test suites in 1.46s (1.95s CPU time): 21 tests passed, 0 failed, 0 skipped (21 total tests)

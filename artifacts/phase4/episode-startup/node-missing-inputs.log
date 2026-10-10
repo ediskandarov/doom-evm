@@ -1,0 +1,98 @@
+✔ nine-map package preserves accepted bundle and palette identities and exact golden catalog (173.252541ms)
+✔ E1M1: all ten raw lumps have original IDs, names, offsets, bytes and checksums (128.689875ms)
+✔ E1M2: all ten raw lumps have original IDs, names, offsets, bytes and checksums (140.886834ms)
+✔ E1M3: all ten raw lumps have original IDs, names, offsets, bytes and checksums (140.403208ms)
+✔ E1M4: all ten raw lumps have original IDs, names, offsets, bytes and checksums (137.060417ms)
+✔ E1M5: all ten raw lumps have original IDs, names, offsets, bytes and checksums (129.844333ms)
+✔ E1M6: all ten raw lumps have original IDs, names, offsets, bytes and checksums (140.738875ms)
+✔ E1M7: all ten raw lumps have original IDs, names, offsets, bytes and checksums (158.276042ms)
+✔ E1M8: all ten raw lumps have original IDs, names, offsets, bytes and checksums (128.8865ms)
+✔ E1M9: all ten raw lumps have original IDs, names, offsets, bytes and checksums (140.937291ms)
+✖ native C covers every map field, ten raw lumps and accepted shared resources (1725.221792ms)
+✔ full catalog, bundle and blob verify by deterministic regeneration (1712.494416ms)
+✔ forged catalog with freshly computed hashes cannot rebind E1M2 to E1M1 (1752.086875ms)
+✔ valid-looking catalog cannot omit or reorder maps or change provenance (5090.373417ms)
+✔ source corruption is rejected by WAD pin, bundle and blob verification (3416.943166ms)
+✔ schema rejects unknown fields, other episodes, missing lumps, malformed hashes and signed offsets (33.542125ms)
+✔ map-scoped parsing rejects E1M7 corruption without reading another maps geometry (10.832041ms)
+✔ later duplicate map markers retain original last-match selection and strict relative layout (3.403917ms)
+✔ complete minimal classic IWAD validates each resource family (1.6845ms)
+✔ directory last-match uses original strncpy padding; raw names, duplicates and markers preserved (0.284959ms)
+✔ rejects invalid WAD envelope without allocating from hostile counts (0.882041ms)
+✔ rejects vertex record remainder (0.222459ms)
+✔ rejects signed vertex reference (0.162583ms)
+✔ rejects oversized side reference (0.133875ms)
+✔ rejects invalid negative side (0.1445ms)
+✔ rejects two-sided absent back (0.474459ms)
+✔ rejects missing front side (0.136833ms)
+✔ rejects side sector index (0.168333ms)
+✔ rejects seg vertex index (0.138041ms)
+✔ rejects seg line index (0.127ms)
+✔ rejects seg side domain (0.124542ms)
+✔ rejects seg absent back (0.127625ms)
+✔ rejects subsector span (0.111833ms)
+✔ rejects negative firstseg (0.096959ms)
+✔ rejects empty subsector (0.09675ms)
+✔ rejects node child index (0.10625ms)
+✔ rejects leaf child index (0.126667ms)
+✔ rejects BSP cycle (0.140709ms)
+✔ rejects REJECT matrix (0.128709ms)
+✔ rejects BLOCKMAP dimensions (0.146ms)
+✔ rejects BLOCKMAP negative offset (0.366833ms)
+✔ rejects BLOCKMAP header offset (0.14175ms)
+✔ rejects BLOCKMAP initial zero (0.11825ms)
+✔ rejects BLOCKMAP linedef (0.114416ms)
+✔ rejects BLOCKMAP terminator (0.130542ms)
+✔ rejects PLAYPAL stride (0.149375ms)
+✔ rejects COLORMAP count (0.1275ms)
+✔ rejects PNAMES count (0.121333ms)
+✔ rejects PNAMES missing patch (0.125709ms)
+✔ rejects TEXTURE count (0.105458ms)
+✔ rejects TEXTURE offset (0.113417ms)
+✔ rejects TEXTURE dimensions (0.114334ms)
+✔ rejects TEXTURE patch count (0.106292ms)
+✔ rejects TEXTURE patch index (0.103166ms)
+✔ rejects patch column offset (0.109959ms)
+✔ rejects patch length (0.098583ms)
+✔ rejects patch terminator (0.236208ms)
+✔ rejects flat length (0.14875ms)
+✔ rejects missing sector flat (0.113625ms)
+✔ rejects missing sidedef texture (0.11025ms)
+✔ rejects extended map layouts and retains classic zero-node map (0.150917ms)
+✔ snapshot raw bytes and record signedness retain upstream disk ABI (1.571708ms)
+✔ canonical manifest is recursive, compact ASCII JSON with sorted keys (0.114708ms)
+✔ v0 palette schema rejects unknown fields, missing identity, malformed hex and booleans (1.660042ms)
+✔ BSP detects multi-node and disconnected cycles while permitting shared children (0.303ms)
+✔ near-end offsets and counts reject one-byte truncations, not only integer extremes (0.649292ms)
+✔ original absolute patch post offsets permit clipping without tall-patch normalization (0.125834ms)
+✔ BSP root cannot overlap NF_SUBSECTOR flag (42.160458ms)
+✔ WAD magic compares all eight bits of each byte (0.265333ms)
+ℹ tests 69
+ℹ suites 0
+ℹ pass 68
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 16995.179084
+
+✖ failing tests:
+
+test at tools/wad/episode.test.ts:33:1
+✖ native C covers every map field, ten raw lumps and accepted shared resources (1725.221792ms)
+  Error: ENOENT: no such file or directory, open '/private/tmp/doom-evm-episode-startup/artifacts/local/wad/episode-native/E1M1.blockmap.bin'
+      at Object.openSync (node:fs:560:18)
+      at readFileSync (node:fs:444:35)
+      at compareNative (file:///private/tmp/doom-evm-episode-startup/tools/wad/episode-native.ts:44:17)
+      at TestContext.<anonymous> (file:///private/tmp/doom-evm-episode-startup/tools/wad/episode.test.ts:34:18)
+      at Test.runInAsyncScope (node:async_hooks:214:14)
+      at Test.run (node:internal/test_runner/test:1106:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:788:18)
+      at Test.postRun (node:internal/test_runner/test:1235:19)
+      at Test.run (node:internal/test_runner/test:1163:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:788:7) {
+    errno: -2,
+    code: 'ENOENT',
+    syscall: 'open',
+    path: '/private/tmp/doom-evm-episode-startup/artifacts/local/wad/episode-native/E1M1.blockmap.bin'
+  }

@@ -45,7 +45,7 @@ explicit deterministic initial-zone policy, and no host world/state injection.
 
 | Checkpoint | Implementation | Integration | Verification | Next action |
 |---|---|---|---|---|
-| Foundation verification | Implemented in independent EpisodeStartup library | Production adapters and shared interfaces unchanged | 12 native startup profiles;16 setup/identity tests;21 allocator tests;69 resource tests;12 ordinary-EVM comparisons and12 rollback receipts pass | Commit verified foundation and acceptance handoff |
+| Foundation verification | Implemented in independent EpisodeStartup library | Production adapters and shared interfaces unchanged | 12 native startup profiles;16 setup/identity tests;21 allocator tests;69 resource tests;12 ordinary-EVM comparisons and12 rollback receipts pass | Acceptance handoff ready; stop after evidence commit |
 
 Usage attribution: goal-tool counters are available; no monetary usage measurement
 has been collected. End time, exact commits, commands, results, evidence hashes,
@@ -204,3 +204,18 @@ Evidence: [ordinary EVM receipts](../artifacts/phase4/episode-startup/evm.json),
 [acceptance certificate](../artifacts/phase4/episode-startup/verification.json).
 Source-bound logs are retained beside the certificate. The certificate checker
 is `python3 tools/reference/episode_startup/checkpoint.py --check`.
+
+
+## Verified handoff checkpoint
+
+Implementation commit: `ff1ba3a648b494560a80ed03146da7198c89fcef` —
+`✨ Add authenticated Episode One startup foundation`.
+
+Verification/handoff checkpoint: `2026-10-10 12:56:36 UTC`, 24m33s after the
+measured start. Goal-tool usage snapshot at that checkpoint: 150,487 attributed
+tokens and 1,473 elapsed seconds. This is available tool attribution, not a
+monetary estimate; publication of the evidence commit follows this checkpoint.
+
+The evidence commit records the certificate and source-bound logs. Both feature
+commits must be preserved when handing this branch to the integrator. No main
+merge, push, production integration or later goal was performed.
