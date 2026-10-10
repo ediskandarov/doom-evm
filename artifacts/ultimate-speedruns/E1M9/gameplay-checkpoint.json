@@ -1,0 +1,43 @@
+{
+  "map": "E1M9",
+  "kind": "complete-gameplay-only-zero-rendered-frames",
+  "tics": 1598,
+  "observations": 1599,
+  "nativeStateBytesExact": true,
+  "exit": {
+    "reached": true,
+    "gameaction": 6,
+    "secretexit": 0,
+    "leveltime": 1598,
+    "inGameSeconds": 45.65714285714286,
+    "nativeExitLine": 551,
+    "finalStoredDSG1Exact": true,
+    "finalStateSha256": "b949af3e2d7a6d45a14ab0de87bbc16653e3b4f0f1edbebe046b34edf4af006e"
+  },
+  "gas": 35513934754,
+  "startedUTC": "2026-10-10T21:42:08.719Z",
+  "endedUTC": "2026-10-10T21:42:59.341Z",
+  "replaySeconds": 27.816038,
+  "proofs": [
+    {
+      "path": "artifacts/local/ultimate-speedruns/E1M9/gameplay/evm.json",
+      "bytes": 32239,
+      "SHA256": "44ba44190b8ab9e68a2a1dd45c98c1a934bff332e59b033744e9baf4e6c8d0c3"
+    },
+    {
+      "path": "artifacts/local/ultimate-speedruns/E1M9/gameplay/verification.json",
+      "bytes": 713,
+      "SHA256": "3d930e89c2f2fd56a69ff76ebd24476d60a10aa2377a4cb80628bfeeb2d83791"
+    },
+    {
+      "path": "artifacts/local/ultimate-speedruns/E1M9/gameplay/evm.replay-receipts.json.gz",
+      "bytes": 28065380,
+      "SHA256": "02b6a0feeab45172a959774cd9231bd695d794849aaa3a36e97ada5f7c3563c7"
+    },
+    {
+      "path": "artifacts/local/ultimate-speedruns/E1M9/gameplay/evm.states.bin.gz",
+      "bytes": 21439002,
+      "SHA256": "2b44e04687385c227625ee80915dc09f1f13510865d834a16aa524c4d4b8f986"
+    }
+  ]
+}

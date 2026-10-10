@@ -1,0 +1,71 @@
+{
+  "infrastructureChanges": [
+    {
+      "change": "RPC request body ceiling disabled",
+      "configuration": "--no-request-size-limit",
+      "reason": "Large authenticated state restore exceeds default 2MB request cap; actual restore uses --load-state file"
+    },
+    {
+      "change": "State serialization streamed to gzip",
+      "reason": "Avoid Node512MiB string ceiling; no chain bytes omitted"
+    },
+    {
+      "change": "Owned history bounded",
+      "configuration": "--prune-history 2 --transaction-block-keeper 2",
+      "reason": "Prevent episode-wide historical state growth; all accepted receipts saved independently"
+    },
+    {
+      "change": "Temporary restore JSON removed after owned Anvil load",
+      "reason": "Avoid retaining a second uncompressed state copy"
+    },
+    {
+      "change": "Superseded checkpoints cleaned",
+      "reason": "Validate current chain/receipt SHA; remove only older checkpoint files; retain latest restore point and final proof receipts"
+    },
+    {
+      "change": "RPC and receipt deadlines",
+      "configuration": "300s; state dumps900s",
+      "reason": "Allow legitimate slow local EVM operations"
+    },
+    {
+      "change": "Memory and gas",
+      "configuration": "1GiB EVM memory;10B transaction/block gas; Cancun unchanged",
+      "reason": "Existing authorized local settings suffice; no increases required in completed attempts"
+    }
+  ],
+  "failuresAndRecovery": [
+    {
+      "kind": "User disk pause",
+      "action": "Stopped owned workers/runtimes, preserved evidence, resumed after user reclaimed disk"
+    },
+    {
+      "kind": "Gameplay-only checkpoint assertion expected rendered frames",
+      "action": "Corrected runner-only assertion to zero frames; first attempts and original runner version remain local; engine unchanged"
+    },
+    {
+      "kind": "E1M9 localhost transport EPERM in sandbox",
+      "action": "Zero-tic failed report/receipts preserved; isolated localhost launch retried with authorized escalation"
+    },
+    {
+      "kind": "Renderer unknown owner-slot bytes",
+      "action": "No invented values or relaxed guards; exact saved-state diagnostics and separate complete gameplay proof"
+    },
+    {
+      "kind": "Native E1M8 intercept overflow",
+      "action": "Error-only guard confirms first out-of-array write; original tape retained and compatible authentic alternate selected"
+    }
+  ],
+  "unchanged": [
+    "solc0.8.37",
+    "viaIR/optimizer",
+    "Cancun hardfork",
+    "original input bytes",
+    "game rules",
+    "allocator semantics",
+    "draw bounds",
+    "unknown-memory provenance checks",
+    "authenticated WAD identities",
+    "golden fixtures"
+  ],
+  "runtimeOwnership": "Only goal-owned children on checked-free localhost18641\u201318644; no reserved endpoints used or external process terminated"
+}
