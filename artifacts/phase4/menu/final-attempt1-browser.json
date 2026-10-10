@@ -1,0 +1,669 @@
+{
+  "kind": "evm-menu-real-chrome-canvas",
+  "pass": true,
+  "startedUtc": "2026-10-10T18:09:13.934Z",
+  "config": {
+    "rpcUrl": "http://127.0.0.1:18781",
+    "wsUrl": "ws://127.0.0.1:18781",
+    "address": "0x7f6f314d460c7751bf1f9784d34bba2c2ae82ceb",
+    "driver": "0xf39fd6e51aad88f6f4ce6ab8827279cfffb92266",
+    "rendererKind": "doom-world-view",
+    "gameplay": true,
+    "productionUI": true,
+    "rawKeyboard": true,
+    "episodeMode": true,
+    "menuMode": true,
+    "uiFullscreen": false,
+    "deploymentBlock": "0x0",
+    "paletteUrl": "/palette.local.json",
+    "paletteKind": "wad",
+    "resourceIdentity": {
+      "schemaVersion": 0,
+      "wadSha256": "7323bcc168c5a45ff10749b339960e98314740a734c30d4b9f3337001f9e703d",
+      "bundleSha256": "d379076f21645cf7cc5acb056663d0faacc4065489a0ca99738479323c9f7a47",
+      "paletteSha256": "fd895921b5d0a394612bb29852ed003d44d69f76dec31c0dc6b5d5fc7d63f7bb",
+      "paletteVariant": 0
+    },
+    "gasLimit": 10000000000
+  },
+  "frames": [
+    {
+      "label": "Page load main menu",
+      "menu": {
+        "enabled": 1,
+        "active": 1,
+        "screen": 0,
+        "item": 0,
+        "skull": 0,
+        "animation": 8,
+        "map": 1,
+        "skill": 0,
+        "confirmation": 0
+      },
+      "state": {
+        "map": 0,
+        "skill": 0,
+        "state": 0,
+        "action": 0,
+        "paused": 0,
+        "last": 0,
+        "next": 0,
+        "wiStage": 0,
+        "wiTic": 0,
+        "finaleStage": 0,
+        "finaleTic": 0
+      },
+      "transaction": "0xcf9edeb46cfb06881de195fb575b62bd800fd41c9a2cba25a98090ca45112a50",
+      "inputSeq": 2,
+      "pixelSha256": "8fc18043939d3e723f830a0b9ffc9e8d019dd07716a36e1672d43774b80c732a",
+      "rgbaSha256": "362b809002912f2a5b3f33135153ce0667d455edacb4b7c8a33de098b0b9a57c",
+      "allCanvasPixelsExact": true,
+      "screenshot": "artifacts/phase4/menu/final-attempt1-browser-0.png"
+    },
+    {
+      "label": "Select Level",
+      "menu": {
+        "enabled": 1,
+        "active": 1,
+        "screen": 3,
+        "item": 0,
+        "skull": 0,
+        "animation": 7,
+        "map": 1,
+        "skill": 0,
+        "confirmation": 0
+      },
+      "state": {
+        "map": 0,
+        "skill": 0,
+        "state": 0,
+        "action": 0,
+        "paused": 0,
+        "last": 0,
+        "next": 0,
+        "wiStage": 0,
+        "wiTic": 0,
+        "finaleStage": 0,
+        "finaleTic": 0
+      },
+      "transaction": "0xa4b64ce206d6af67bb47207c5fdad5d57d1ab900d1a45764d7ca95dddcfbf825",
+      "inputSeq": 3,
+      "pixelSha256": "b557b56120576000f87b14ef3fcba9a893ced246adab3935a3c3aa9ba59512a8",
+      "rgbaSha256": "e9332e9a0b9c461ed290c5cdee4dcdefa65d180dca8ffc4b76da45a70a391b1d",
+      "allCanvasPixelsExact": true,
+      "screenshot": "artifacts/phase4/menu/final-attempt1-browser-1.png"
+    },
+    {
+      "label": "E1M9 original skill screen",
+      "menu": {
+        "enabled": 1,
+        "active": 1,
+        "screen": 2,
+        "item": 2,
+        "skull": 0,
+        "animation": 6,
+        "map": 9,
+        "skill": 0,
+        "confirmation": 0
+      },
+      "state": {
+        "map": 0,
+        "skill": 0,
+        "state": 0,
+        "action": 0,
+        "paused": 0,
+        "last": 0,
+        "next": 0,
+        "wiStage": 0,
+        "wiTic": 0,
+        "finaleStage": 0,
+        "finaleTic": 0
+      },
+      "transaction": "0x7d52b7fe07b8a2bc88507531e051b9788ac345e28ced7ed43814828d40fcaaa6",
+      "inputSeq": 4,
+      "pixelSha256": "080105db7663d173d7a7a1fa0e9c5e1ce1998f926b2db783c9f8e7003f1b49c3",
+      "rgbaSha256": "392a0e95ac523aed4ea2ad9ecf792db360208f85b0eea6f22f5380a54e896443",
+      "allCanvasPixelsExact": true,
+      "screenshot": "artifacts/phase4/menu/final-attempt1-browser-2.png"
+    },
+    {
+      "label": "Start E1M9",
+      "menu": {
+        "enabled": 1,
+        "active": 0,
+        "screen": 2,
+        "item": 2,
+        "skull": 0,
+        "animation": 5,
+        "map": 9,
+        "skill": 2,
+        "confirmation": 0
+      },
+      "state": {
+        "map": 9,
+        "skill": 2,
+        "state": 0,
+        "action": 0,
+        "paused": 0,
+        "last": 0,
+        "next": 0,
+        "wiStage": 0,
+        "wiTic": 0,
+        "finaleStage": 0,
+        "finaleTic": 0
+      },
+      "transaction": "0x9ce0361f43aca1dc59d8888468faee4563e5defb251b65d80e70e5f508bb639b",
+      "inputSeq": 5,
+      "pixelSha256": "cd35708c4d3c0329c89827f06a5f4809ee17c87592c6bc4a8ae28b35c327d340",
+      "rgbaSha256": "0a396c70d1ef932273d53a462114bc35073a64c674bea5f0921b7959520700bf",
+      "allCanvasPixelsExact": true,
+      "screenshot": "artifacts/phase4/menu/final-attempt1-browser-3.png"
+    },
+    {
+      "label": "Held gameplay keyboard",
+      "menu": {
+        "enabled": 1,
+        "active": 0,
+        "screen": 2,
+        "item": 2,
+        "skull": 0,
+        "animation": 4,
+        "map": 9,
+        "skill": 2,
+        "confirmation": 0
+      },
+      "state": {
+        "map": 9,
+        "skill": 2,
+        "state": 0,
+        "action": 0,
+        "paused": 0,
+        "last": 0,
+        "next": 0,
+        "wiStage": 0,
+        "wiTic": 0,
+        "finaleStage": 0,
+        "finaleTic": 0
+      },
+      "transaction": "0x961703d75fbec918a8723a8b07a341e1e90d5be118fc0cd2ef21234d7fdbb4e7",
+      "inputSeq": 6,
+      "pixelSha256": "1d5491df0469184ae4914ed949efb511d7ba08d1b996cde3aac024accf83ba72",
+      "rgbaSha256": "1ab55abdb79afb2f5c63bc51315efd84c13faed487707f2170a4418146bbe718",
+      "allCanvasPixelsExact": true,
+      "screenshot": "artifacts/phase4/menu/final-attempt1-browser-4.png"
+    },
+    {
+      "label": "Release gameplay key",
+      "menu": {
+        "enabled": 1,
+        "active": 0,
+        "screen": 2,
+        "item": 2,
+        "skull": 0,
+        "animation": 3,
+        "map": 9,
+        "skill": 2,
+        "confirmation": 0
+      },
+      "state": {
+        "map": 9,
+        "skill": 2,
+        "state": 0,
+        "action": 0,
+        "paused": 0,
+        "last": 0,
+        "next": 0,
+        "wiStage": 0,
+        "wiTic": 0,
+        "finaleStage": 0,
+        "finaleTic": 0
+      },
+      "transaction": "0xb9d9ffe25710f03ece8879584d7a9c45c8dedcb276ff872dcbf03d3025dd02de",
+      "inputSeq": 7,
+      "pixelSha256": "fc730dccaa42947013c1c17c50c0ac6cad78a35097e253e45f4a384a1c8196e3",
+      "rgbaSha256": "e17b66fd49f1387ddc91fb3317aa37400124472dd636a5419acdbeb2c97b9016",
+      "allCanvasPixelsExact": true,
+      "screenshot": "artifacts/phase4/menu/final-attempt1-browser-5.png"
+    },
+    {
+      "label": "Reopen menu in gameplay",
+      "menu": {
+        "enabled": 1,
+        "active": 1,
+        "screen": 0,
+        "item": 1,
+        "skull": 0,
+        "animation": 2,
+        "map": 9,
+        "skill": 2,
+        "confirmation": 0
+      },
+      "state": {
+        "map": 9,
+        "skill": 2,
+        "state": 0,
+        "action": 0,
+        "paused": 0,
+        "last": 0,
+        "next": 0,
+        "wiStage": 0,
+        "wiTic": 0,
+        "finaleStage": 0,
+        "finaleTic": 0
+      },
+      "transaction": "0xeba3260ecbc7a08f843b9b13ba893b35ac19f558a33ced8e340e5fc16a646b5f",
+      "inputSeq": 8,
+      "pixelSha256": "c62800a07546023f1b95e479f97ded304cc6cfa0c4b67f33f7e66fa8cbdcb5c1",
+      "rgbaSha256": "3d8eb236aa79cba612fa40a1bc7de1d49b6b9a7a955f220d214938254a7c4813",
+      "allCanvasPixelsExact": true,
+      "screenshot": "artifacts/phase4/menu/final-attempt1-browser-6.png"
+    },
+    {
+      "label": "Menu input isolation",
+      "menu": {
+        "enabled": 1,
+        "active": 1,
+        "screen": 0,
+        "item": 1,
+        "skull": 0,
+        "animation": 1,
+        "map": 9,
+        "skill": 2,
+        "confirmation": 0
+      },
+      "state": {
+        "map": 9,
+        "skill": 2,
+        "state": 0,
+        "action": 0,
+        "paused": 0,
+        "last": 0,
+        "next": 0,
+        "wiStage": 0,
+        "wiTic": 0,
+        "finaleStage": 0,
+        "finaleTic": 0
+      },
+      "transaction": "0xac8a57f8e99cfccf200e071282c940867aca3470ac44c00f766e3597314a72d9",
+      "inputSeq": 9,
+      "pixelSha256": "c62800a07546023f1b95e479f97ded304cc6cfa0c4b67f33f7e66fa8cbdcb5c1",
+      "rgbaSha256": "3d8eb236aa79cba612fa40a1bc7de1d49b6b9a7a955f220d214938254a7c4813",
+      "allCanvasPixelsExact": true,
+      "screenshot": "artifacts/phase4/menu/final-attempt1-browser-7.png"
+    },
+    {
+      "label": "Menu redraw remains paused",
+      "menu": {
+        "enabled": 1,
+        "active": 1,
+        "screen": 0,
+        "item": 1,
+        "skull": 1,
+        "animation": 8,
+        "map": 9,
+        "skill": 2,
+        "confirmation": 0
+      },
+      "state": {
+        "map": 9,
+        "skill": 2,
+        "state": 0,
+        "action": 0,
+        "paused": 0,
+        "last": 0,
+        "next": 0,
+        "wiStage": 0,
+        "wiTic": 0,
+        "finaleStage": 0,
+        "finaleTic": 0
+      },
+      "transaction": "0x2fccad63107104e989660ebe0bcd88d9446db77b6086131259993b276026f9ba",
+      "inputSeq": 10,
+      "pixelSha256": "f5dc6d4f7464a880524b0a8c20f65fcccae0d62cda848dcdf44f01cdaab9f4a1",
+      "rgbaSha256": "bf5cf40c1e7aa327cf7a3c058601ae931124f434fb6c1b8a2711ed5d2207fe7b",
+      "allCanvasPixelsExact": true,
+      "screenshot": "artifacts/phase4/menu/final-attempt1-browser-8.png"
+    },
+    {
+      "label": "Escape Resume",
+      "menu": {
+        "enabled": 1,
+        "active": 0,
+        "screen": 0,
+        "item": 1,
+        "skull": 1,
+        "animation": 7,
+        "map": 9,
+        "skill": 2,
+        "confirmation": 0
+      },
+      "state": {
+        "map": 9,
+        "skill": 2,
+        "state": 0,
+        "action": 0,
+        "paused": 0,
+        "last": 0,
+        "next": 0,
+        "wiStage": 0,
+        "wiTic": 0,
+        "finaleStage": 0,
+        "finaleTic": 0
+      },
+      "transaction": "0x08e8c1b2f8c11bed868cb096cbc40f3dae66868bce5a246da38bd5e9dbab92cd",
+      "inputSeq": 11,
+      "pixelSha256": "fc730dccaa42947013c1c17c50c0ac6cad78a35097e253e45f4a384a1c8196e3",
+      "rgbaSha256": "e17b66fd49f1387ddc91fb3317aa37400124472dd636a5419acdbeb2c97b9016",
+      "allCanvasPixelsExact": true,
+      "screenshot": "artifacts/phase4/menu/final-attempt1-browser-9.png"
+    },
+    {
+      "label": "Gameplay tic resumes",
+      "menu": {
+        "enabled": 1,
+        "active": 0,
+        "screen": 0,
+        "item": 1,
+        "skull": 1,
+        "animation": 6,
+        "map": 9,
+        "skill": 2,
+        "confirmation": 0
+      },
+      "state": {
+        "map": 9,
+        "skill": 2,
+        "state": 0,
+        "action": 0,
+        "paused": 0,
+        "last": 0,
+        "next": 0,
+        "wiStage": 0,
+        "wiTic": 0,
+        "finaleStage": 0,
+        "finaleTic": 0
+      },
+      "transaction": "0xc3d5ad6d6849f90a5004fe482d4a5d5795b66c5dea10530ec6aeaff402149e65",
+      "inputSeq": 12,
+      "pixelSha256": "0057c1172a55421fe706a72261c6ab221fd8bbcd84afc52bc8c56f5d0bd15877",
+      "rgbaSha256": "3c135c3025bdc2b1e20a42985781465981f29ae7aa7725b2f193e3c95c1fa20a",
+      "allCanvasPixelsExact": true,
+      "screenshot": "artifacts/phase4/menu/final-attempt1-browser-10.png"
+    },
+    {
+      "label": "Original New Game skill selection",
+      "menu": {
+        "enabled": 1,
+        "active": 1,
+        "screen": 2,
+        "item": 2,
+        "skull": 1,
+        "animation": 5,
+        "map": 1,
+        "skill": 2,
+        "confirmation": 0
+      },
+      "state": {
+        "map": 9,
+        "skill": 2,
+        "state": 0,
+        "action": 0,
+        "paused": 0,
+        "last": 0,
+        "next": 0,
+        "wiStage": 0,
+        "wiTic": 0,
+        "finaleStage": 0,
+        "finaleTic": 0
+      },
+      "transaction": "0x08af3f01258b4117bf0a5111ec9bc1a8f3b9b74f953c60b39c47564cd6c10c1d",
+      "inputSeq": 13,
+      "pixelSha256": "25f731b6386bb9be51089ddc01d44c24bd5881eefab8f0be831b8ead9588ba78",
+      "rgbaSha256": "ac22702a89f51906b1939d39b780dbb26e992e9fcfc6ec9a09649ab493c574aa",
+      "allCanvasPixelsExact": true,
+      "screenshot": "artifacts/phase4/menu/final-attempt1-browser-11.png"
+    },
+    {
+      "label": "New Game E1M1",
+      "menu": {
+        "enabled": 1,
+        "active": 0,
+        "screen": 2,
+        "item": 2,
+        "skull": 1,
+        "animation": 4,
+        "map": 1,
+        "skill": 2,
+        "confirmation": 0
+      },
+      "state": {
+        "map": 1,
+        "skill": 2,
+        "state": 0,
+        "action": 0,
+        "paused": 0,
+        "last": 0,
+        "next": 0,
+        "wiStage": 0,
+        "wiTic": 0,
+        "finaleStage": 0,
+        "finaleTic": 0
+      },
+      "transaction": "0xc2a5cdd7102a74d4548f92562fe4d74a19a8ab9eb1e6e829834fdf0741a00a80",
+      "inputSeq": 14,
+      "pixelSha256": "66672b024cee7e41808c7b6a5e1f6f1e04dde53db910bd20bc0f77a4f84228eb",
+      "rgbaSha256": "5db3e3b9565f553eaac57fbfe4234cfe54febe0b5b37aa91df3eb51a09fd1e3c",
+      "allCanvasPixelsExact": true,
+      "screenshot": "artifacts/phase4/menu/final-attempt1-browser-12.png"
+    },
+    {
+      "label": "Menu before fallback",
+      "menu": {
+        "enabled": 1,
+        "active": 1,
+        "screen": 0,
+        "item": 0,
+        "skull": 1,
+        "animation": 3,
+        "map": 1,
+        "skill": 2,
+        "confirmation": 0
+      },
+      "state": {
+        "map": 1,
+        "skill": 2,
+        "state": 0,
+        "action": 0,
+        "paused": 0,
+        "last": 0,
+        "next": 0,
+        "wiStage": 0,
+        "wiTic": 0,
+        "finaleStage": 0,
+        "finaleTic": 0
+      },
+      "transaction": "0x812d5131b6c3b5b124b8b3b772260c3f3514cd43a3a375d630c512b7ac1f88ee",
+      "inputSeq": 15,
+      "pixelSha256": "ad974cfe2ff9a47046174cb7c1142c754175e7bedca7a5ed27b76d9935d979af",
+      "rgbaSha256": "60d1e2271bd54fb283deb576703250e52265006ffd6bf801cabedb84dc318964",
+      "allCanvasPixelsExact": true,
+      "screenshot": "artifacts/phase4/menu/final-attempt1-browser-13.png"
+    },
+    {
+      "label": "Receipt fallback and backfill",
+      "menu": {
+        "enabled": 1,
+        "active": 1,
+        "screen": 0,
+        "item": 0,
+        "skull": 1,
+        "animation": 2,
+        "map": 1,
+        "skill": 2,
+        "confirmation": 0
+      },
+      "state": {
+        "map": 1,
+        "skill": 2,
+        "state": 0,
+        "action": 0,
+        "paused": 0,
+        "last": 0,
+        "next": 0,
+        "wiStage": 0,
+        "wiTic": 0,
+        "finaleStage": 0,
+        "finaleTic": 0
+      },
+      "transaction": "0x45c7bd63b3e889a9ab83e15daf1785a30b03cc9362a7033562e441e24eb8f464",
+      "inputSeq": 16,
+      "pixelSha256": "ad974cfe2ff9a47046174cb7c1142c754175e7bedca7a5ed27b76d9935d979af",
+      "rgbaSha256": "60d1e2271bd54fb283deb576703250e52265006ffd6bf801cabedb84dc318964",
+      "allCanvasPixelsExact": true,
+      "screenshot": "artifacts/phase4/menu/final-attempt1-browser-14.png"
+    },
+    {
+      "label": "Reload persisted EVM menu",
+      "menu": {
+        "enabled": 1,
+        "active": 1,
+        "screen": 0,
+        "item": 0,
+        "skull": 0,
+        "animation": 8,
+        "map": 1,
+        "skill": 2,
+        "confirmation": 0
+      },
+      "state": {
+        "map": 1,
+        "skill": 2,
+        "state": 0,
+        "action": 0,
+        "paused": 0,
+        "last": 0,
+        "next": 0,
+        "wiStage": 0,
+        "wiTic": 0,
+        "finaleStage": 0,
+        "finaleTic": 0
+      },
+      "transaction": "0x4e2e394d22e2f87022afb608df2e9bd0fa458798af361d0fb5daa8ae1a5ddde0",
+      "inputSeq": 18,
+      "pixelSha256": "3b9585e3a61bdab51c334e00943bf1717bffa74fd8656f9184be00a45ca2cbe7",
+      "rgbaSha256": "38d412b9b24917618cd51a5e24669470407af7419421523a7032662a01297a27",
+      "allCanvasPixelsExact": true,
+      "screenshot": "artifacts/phase4/menu/final-attempt1-browser-15.png"
+    }
+  ],
+  "keyboard": [
+    {
+      "codes": [
+        "ArrowDown",
+        "Enter"
+      ],
+      "label": "Select Level"
+    },
+    {
+      "codes": [
+        "Digit9",
+        "Enter"
+      ],
+      "label": "E1M9 original skill screen"
+    },
+    {
+      "codes": [
+        "Enter"
+      ],
+      "label": "Start E1M9"
+    },
+    {
+      "codes": [
+        "ArrowUp"
+      ],
+      "label": "Held gameplay keyboard"
+    },
+    {
+      "codes": [
+        "ArrowUp"
+      ],
+      "label": "Release gameplay key"
+    },
+    {
+      "codes": [
+        "Escape"
+      ],
+      "label": "Reopen menu in gameplay"
+    },
+    {
+      "codes": [
+        "KeyI",
+        "KeyD",
+        "KeyD",
+        "KeyQ",
+        "KeyD",
+        "ControlLeft",
+        "Digit1"
+      ],
+      "label": "Menu input isolation"
+    },
+    {
+      "codes": [],
+      "label": "Menu redraw remains paused"
+    },
+    {
+      "codes": [
+        "Escape"
+      ],
+      "label": "Escape Resume"
+    },
+    {
+      "codes": [],
+      "label": "Gameplay tic resumes"
+    },
+    {
+      "codes": [
+        "Escape",
+        "KeyN",
+        "Enter",
+        "Enter"
+      ],
+      "label": "Original New Game skill selection"
+    },
+    {
+      "codes": [
+        "Enter"
+      ],
+      "label": "New Game E1M1"
+    },
+    {
+      "codes": [
+        "Escape"
+      ],
+      "label": "Menu before fallback"
+    }
+  ],
+  "sourceHashes": {
+    "web/app.mjs": "46cc889f43fa670be3615762e6cda4f7ab957d70d9deecc9a64ff41d665c9bfd",
+    "web/menu-app.mjs": "6663f486a1421e165139e4dd67b674121f548ce4eeedc5b53ecea1770e02cb4d",
+    "web/menu-input.mjs": "6c3e383f9b3be91eeccf38988586269b76b4b7302159a966593ce27a11240582",
+    "web/index.html": "2a5a1424a59dfb1aac24b15a6ff1cbb6f7da7015481a1608d54e3906c41f866b",
+    "web/input-loop.mjs": "3dcd20308e6a448e03ae3650d831070f4baa05b41290160d5845cb1a733c6eee",
+    "web/input.mjs": "3087524e9257a664fa8872f88f747f0b37c56a276ea73b7a2b14f7a933c7cd83",
+    "web/protocol.mjs": "fec5104a0e13b7ca8666200431a1804d53cdb6537c1f0f8f02fb5b69dd70f47e",
+    "web/ui-palette.mjs": "31614c2e32d7105ee075758bb73f5c7cc5f5944a240edaee26e6c374cb415645",
+    "tools/transport/menu-browser-check.mjs": "3b0774c9989d5160fdd8ea60753c13d0bc79240f7653e0de12dfb66fca9cb233"
+  },
+  "noVisibleHTMLLauncher": true,
+  "receiptFallbackAndDedup": true,
+  "storageReload": true,
+  "browser": {
+    "protocolVersion": "1.3",
+    "product": "Chrome/155.0.8059.40",
+    "revision": "@cfaadc5a132d78e1828635aa8405a499f3e14864",
+    "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36",
+    "jsVersion": "15.5.35.20"
+  },
+  "endedUtc": "2026-10-10T18:09:26.324Z",
+  "stoppedOwnedBrowser": true
+}

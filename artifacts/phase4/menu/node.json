@@ -1,0 +1,7 @@
+{
+  "kind": "focused-menu-browser-transport-node",
+  "passed": 66,
+  "failed": 0,
+  "command": "node --test web/*.test.mjs tools/transport/protocol.test.mjs tools/transport/palette.test.mjs tools/transport/ui-palette.test.mjs tools/transport/lifecycle.test.mjs",
+  "logSha256": "bc8001e7186ca5f4dce02fee62f42e21247a5d9a8499faebb68fd228117eb258"
+}

@@ -1,0 +1,2309 @@
+{
+  "kind": "evm-menu-production",
+  "pass": true,
+  "startedUtc": "2026-10-10T18:01:35.576Z",
+  "executionBudget": {
+    "gasLimit": 10000000000,
+    "gasHex": "0x2540be400",
+    "source": "/Users/eduard/sandbox/doom-evm-menu/execution-budget.json"
+  },
+  "compiler": {
+    "version": "0.8.37+commit.f401782d",
+    "settings": {
+      "remappings": [],
+      "optimizer": {
+        "enabled": true,
+        "runs": 200
+      },
+      "metadata": {
+        "bytecodeHash": "ipfs"
+      },
+      "compilationTarget": {
+        "src/evm/Doom.sol": "Doom"
+      },
+      "evmVersion": "cancun",
+      "libraries": {},
+      "viaIR": true
+    }
+  },
+  "resourceIdentity": {
+    "schemaVersion": 0,
+    "wadSha256": "7323bcc168c5a45ff10749b339960e98314740a734c30d4b9f3337001f9e703d",
+    "bundleSha256": "d379076f21645cf7cc5acb056663d0faacc4065489a0ca99738479323c9f7a47",
+    "paletteSha256": "fd895921b5d0a394612bb29852ed003d44d69f76dec31c0dc6b5d5fc7d63f7bb",
+    "paletteVariant": 0
+  },
+  "sourceHashes": {
+    "src/doom/am_map.sol": "3c5da949fc635d095659d4333d153408499e89e4178b469cb335e31cf52f6020",
+    "src/doom/am_map_types.sol": "7347073682c367c15c918aa51ff924c664b6d05efdbf4f0392d4f404b31a9039",
+    "src/doom/d_ticcmd.sol": "508d0332d3e8b83e1b68d37581a3befc100a9974fcaa0900cc44116cd75ff2ef",
+    "src/doom/doomstat.sol": "4c40da3914c629017959a0a4c0516d83346900674c92f5e55a766aba1b506fea",
+    "src/doom/f_finale.sol": "a337e7c0b0d5c3fab8b98a40d67c29dd4f63e7ef0d47773d65879f8dc3111c8f",
+    "src/doom/g_game.sol": "ea632f47ca5904819dd0dc254fc547799b56696e08e37d96a503d71da145f89c",
+    "src/doom/hu_lib.sol": "bf11331f06c38565650e93ce5ece611d048d5656ae2c8442b6568de5ce079a06",
+    "src/doom/hu_stuff.sol": "fcf57390d8c8e6d5ec935164264870509bb64197179536a39cd2a14dddb9588e",
+    "src/doom/info.sol": "4611205149173e42d3b0f1d91820c8042f6bc5fc48fb53aec84ad4bc501dca8e",
+    "src/doom/m_bbox.sol": "f4c60efe3627a97d0288fc5cd0283535527b1f51029568534c80bb8fbbf8f272",
+    "src/doom/m_cheat.sol": "e79d73bd9e159b0f05639464bf7c9cb7f40dc069780c3459336dfffb50394f82",
+    "src/doom/m_fixed.sol": "3f64bef1f62f61faead3a5b8f382bf1c66e1b3739ce4ac8d59a6fcef0451ef9f",
+    "src/doom/m_menu.sol": "53396f97acb67d3a8233b5d5c64aba7b9bf8899e567981f646042d16924f4db1",
+    "src/doom/m_random.sol": "5267b881138cfb7e0d683449005619513006c70e3ed557f64697b36c4ed40c7b",
+    "src/doom/native_zone_layout.sol": "118b2d17165826fb0857d9cb296e2214db2a28917769299a82e70d0c0790f6e8",
+    "src/doom/p_ceilng.sol": "696f3f620f5bddb3cea64fda824e3203c780f53db890630f0685794454dc37f9",
+    "src/doom/p_doors.sol": "945bf600ce86d8286718fb75ecaf905a0c4631d79d2dac7260c91c9dc2013f8d",
+    "src/doom/p_enemy.sol": "eff76cce23b0877833a5c446a1a09d8ae01918a6925b6d3265240b144c09dfe7",
+    "src/doom/p_floor.sol": "b7c90baafa0b74fd7ff80cf60dcbc430148f6d6d068ba54ca0fbc7ba1bca7069",
+    "src/doom/p_game_state.sol": "06cbccba214717193fbab7c290e2962c4fb05b3f34c6543247ee1ec8e45d085a",
+    "src/doom/p_heap.sol": "3cc2e0a8c3239523db66c07fea33720f931754baedd312b5ca7cc2ebe763d2e0",
+    "src/doom/p_info.sol": "a48840479115ea8bf849ca5ec448d1b2bec7a6cfe58c5314e140635a898de792",
+    "src/doom/p_inter.sol": "8be27f9bba47beb46b3edf2a8a2674b3cd7218d2abb8ef5f8855803393d067de",
+    "src/doom/p_lights.sol": "6f63cbc6b41fc492a46ce43aef464deb9d08b7fa1dd8b213b546eec3e4f08276",
+    "src/doom/p_map.sol": "6b6d48523a45acab9090dfb0ec3d6dbab4e6de18afa89453df8b5a87088da0f3",
+    "src/doom/p_maputl.sol": "ac5ac60e7e058a5fc537e7042c7254bc0f51c77165149a22e141437b4e0ad0b6",
+    "src/doom/p_mobj.sol": "e6138aceee2be933f2c36e3fc18e6d2baa22ffa6a1197d9db89c744d42d78e56",
+    "src/doom/p_plats.sol": "6904df762b270f840daa99b34d2a5c689dbb2fef3aed3d33c2ac1a3f3e4d5722",
+    "src/doom/p_pspr.sol": "cfa2db3438d689c38d9c957fc4aee598c58740f025d6efead2b5f9671eb0c863",
+    "src/doom/p_setup.sol": "9498e1298bf4e53ccedc484a50d4c7f9f85315f6cb700719d474b721e382243b",
+    "src/doom/p_setup_static.sol": "c8100a42bb0bac190c583bbb2c82168599009f88a766e4c05b9a9231a5f69792",
+    "src/doom/p_sight.sol": "7ed366237fc3fec069ffb6336e95e038004d1f379622cf67f55fb8c6b1a6488c",
+    "src/doom/p_spec.sol": "2363640e75c22c9d017db677dda7148ad221380f0a23639167e145e933fc72b7",
+    "src/doom/p_switch.sol": "5404d359793e05c6c24a7804c07632150009b46f38d03068412d7ac53260dfe2",
+    "src/doom/p_telept.sol": "745f0fa4ed6f0515c398bfd2469c59aac82316965b7bac25263aeb82555d61b8",
+    "src/doom/p_tick.sol": "1993dd0c94853dabc4db554dfa0ca04375cef0a22075400ba0e7b56b525022ab",
+    "src/doom/p_user.sol": "963a46850e1b17171f79dd65bff9b5006ce6f97a935ad2023d1d526a6ec35c37",
+    "src/doom/p_zone_setup.sol": "e0308bd1197fd84a01eb1ee208be73c711851d6b0bc30be1d07a7c61b18b223d",
+    "src/doom/r_bsp.sol": "0ae5df313515692d0b2b970d5d39d107e014629cff2305fb37c14371a9524040",
+    "src/doom/r_data.sol": "ef5f26f230c1bed1a073f73b489613d947b420c220faa6f2c16a6f583045010c",
+    "src/doom/r_data_types.sol": "0448302d68447c8a5a4c46df4016e8845863e42bf6eaca8bcab8ab0c9707fdf8",
+    "src/doom/r_defs.sol": "558d5a9bfd131e816bbe28986e2dad6144a08e5a16ccfed1b199d7558a1ea0e2",
+    "src/doom/r_draw.sol": "afe958ea0c2962b739bff58b98d8bccc25c48d3d0838cacd46142c242b5d6477",
+    "src/doom/r_main.sol": "df403bf04fdbbcfc68c4fd9c5e19b5201ca711498efc34db406a4010ad3b2af5",
+    "src/doom/r_plane.sol": "c7a5abcbca84dddcd2a3c8bb160a609605c5c1842e73704dff4860df3280e463",
+    "src/doom/r_render_hooks.sol": "f026ccb8fffb68d8fbcb0966103212f52884b86350fe3fb52a401d146f3fb312",
+    "src/doom/r_render_state.sol": "072bd2f73b98e1eb775fc8093e95a69c184f3fa50a89a5d64a7beccd59493398",
+    "src/doom/r_segs.sol": "9d4e4dea06739278aab3698fb422818de6dd7726359c8822d60a162e886621cb",
+    "src/doom/r_sprite_state.sol": "735b3de85cbf455e05d3cb8e992cf4e477960bd4192bbd367f5c66c803b96363",
+    "src/doom/r_state.sol": "80951a13733e3a08f4182937a37def33ffda21eaae4b43a2a1bdba2043adab6b",
+    "src/doom/r_things.sol": "86705ab6b1f79b7ef07798b881cc547502d9911c97b57dc516a744e17c1977f5",
+    "src/doom/st_cheats.sol": "e35b8253b068f1ad807073bc322e2b62205ef3ffa95bb06f36acef7a79721677",
+    "src/doom/st_lib.sol": "5307f52151fbd73e442a60d8b87cbfbed3d38a28704a81e952f56672de667299",
+    "src/doom/st_stuff.sol": "936cf09f8f0dcc9c0555a9d533d9d1a50f65941462b0d3325a5c7850b5be2e49",
+    "src/doom/tables.sol": "bf14202b419075f6d187653205a37e211d8267c7fc4c0bebf5a8c5713afddf38",
+    "src/doom/v_video.sol": "be75fe69e7cd2486ce93408ec204cdf470ea097569e37fbedd867e9a2f3adf1f",
+    "src/doom/v_video_types.sol": "266890b0c8003e89f78baf8415048d24e4ca14865a1c8518ad77bb6a9f6b4d35",
+    "src/doom/w_zone_cache.sol": "03c07404765de9620b3d1ff15727809cdad911c8a78d822019b63500fa5018c2",
+    "src/doom/wi_stuff.sol": "a4290c7bef956c868d62ffc269e076e90cebb25ae9eb2143bf167c8cabb4a39e",
+    "src/doom/wi_stuff_types.sol": "7d7d56059e363e6311c693b0dde47fb5f10e7c27aaa903d20de2f9a7eaff9e60",
+    "src/doom/z_zone.sol": "b4e75218021d65aaf3389cf78a68663feebc2084c82457821be17247dc8106c5",
+    "src/doom/z_zone_backing.sol": "85b1b604ad7eb460e24c8a2035ce1d79b4aa5fe03239bfba9d87be9df51dd62a",
+    "src/doom/z_zone_types.sol": "f543690360a07b6df0ac5633e061b4bd1b348b5e26ba7283a4bf3f1f017ab0a7",
+    "src/evm/Doom.sol": "ce509e5a490218ed3520089a754f4ed682cec2d311faf53329b705d824adad0f",
+    "src/evm/DoomGame.sol": "d9451a915ab977bae137340e3e6626a270a4b84b8b6ea9449a8c4f0f578296df",
+    "src/evm/DoomMenu.sol": "eaf1a4716982bfa5ce510cfc018d42ddc3d81c96d7e9f15ba725a66b5419897f",
+    "src/evm/DoomRenderer.sol": "5639d82431350ea76c26d43457d26d0c3c0f410eaddf02db6adbcfb03a569ba0",
+    "src/evm/DoomScene.sol": "9ad7c8ccee4c9e05deb5608326baabacfa40f686b8d8445fb8aaa7352ab64569",
+    "src/evm/DoomUI.sol": "c2fa44363eeb962acabb51779fc780b8b6c5d46d5291448d44a585690e9ea9f9",
+    "src/evm/DoomZoneStartup.sol": "2d178494456a7ae3c730310f257ce2aa635d37d18c90cac039cf002cdb3f50dc",
+    "src/evm/EpisodeRuntime.sol": "7be9205e74af487a1a2722d861465be5e5d155607221cfdf84178cc11680afa8",
+    "src/evm/EpisodeStartup.sol": "bb574f20cdc09e63385261f7e8e203a49a90a15b87903d70dfe43d396bc3255e",
+    "src/evm/FrameProtocol.sol": "4665be3f613b8e817d616d2db1dc4a644325c44a6ade476a35d7d9d003625ace",
+    "src/evm/InputProtocol.sol": "bd9df1b10f19be3754cef8efcdc109ce54228f4475c50b197cb32b5bab8a7808",
+    "src/evm/ResourceTypes.sol": "159865364cfa57aae508cd94c49509cbccabd6aeeba55e92b9fcf816bdec4d6b",
+    "src/evm/WadResources.sol": "25a1acc0a44ac35cc29e5f9bd953ba66b85db4f665b732430571b416ef927895",
+    "tools/reference/menu/evm.mjs": "cfb372ec963207716e191c3559edd5a235be90dbdc2fa8accc12d85c03ae339e"
+  },
+  "operations": [
+    {
+      "operation": "CREATE Doom",
+      "address": "0x5ae1f4bb68f8eac39cfdbdfda2b7344ccbd80faf",
+      "transaction": "0x743a0384326b5e0fb0bb12f4db1e872fe9806192d1334404d98bb1773ee62729",
+      "gas": 353039871,
+      "runtimeBytes": 969768,
+      "runtimeSha256": "e3c4b971622bafd030b332fe54e31eaf07ffbb0edaa483fb37c9195897ea61d2"
+    },
+    {
+      "operation": "initializeMenu",
+      "gas": 14957292,
+      "transaction": "0x175695bd08e00e45519b1f0c2264a5f2e98a75758fb4bed1d983207f8ad9a110",
+      "noGameStartup": true,
+      "noFrame": true
+    },
+    {
+      "operation": "CREATE Doom",
+      "address": "0x1aaad333a7d363a8576779b71bf589580cc9d82e",
+      "transaction": "0x097dc9a1eb2b55fffa254121b36e7091e664e5658400d8da79045f217a26903f",
+      "gas": 353039871,
+      "runtimeBytes": 969768,
+      "runtimeSha256": "e3c4b971622bafd030b332fe54e31eaf07ffbb0edaa483fb37c9195897ea61d2"
+    },
+    {
+      "operation": "CREATE Doom",
+      "address": "0x66a2bece75fce45ddfe2c06216ce9350a4c46498",
+      "transaction": "0x06d89abd48c23f9fc969d5170247c91ce541e253e8c42c0ea0d4ae308ec5dd5f",
+      "gas": 353039871,
+      "runtimeBytes": 969768,
+      "runtimeSha256": "e3c4b971622bafd030b332fe54e31eaf07ffbb0edaa483fb37c9195897ea61d2"
+    }
+  ],
+  "frames": [
+    {
+      "label": "Initial EVM main menu",
+      "transaction": "0xa337ee9e8db0d7607590a550e3eff2762622960b43ad6c8a8e565355c717ccf8",
+      "inputSeq": 1,
+      "frameId": "1",
+      "pixelSha256": "8fc18043939d3e723f830a0b9ffc9e8d019dd07716a36e1672d43774b80c732a",
+      "paletteSha256": "12bafa34214682ae20c2cb6f4e38f21575564de88c4599f3410661e9b7a5c6d3",
+      "palette": 0,
+      "nativeExact": false,
+      "pixelsPath": "artifacts/phase4/menu/checkpoint-c-attempt2-frame-0.pixels",
+      "gas": 168242980,
+      "milliseconds": 216.3377079999991
+    },
+    {
+      "label": "New Game episode selection",
+      "transaction": "0x2c49b9b44b9952a1db2056ed2b17fd849b329c7fbbc809a91e2fe58eb7ec7dd6",
+      "inputSeq": 2,
+      "frameId": "2",
+      "pixelSha256": "c22377b6874a68b1ae161e365da6d1fa0c3a0b3cf289801280d5ef8b290d5026",
+      "paletteSha256": "12bafa34214682ae20c2cb6f4e38f21575564de88c4599f3410661e9b7a5c6d3",
+      "palette": 0,
+      "nativeExact": false,
+      "pixelsPath": "artifacts/phase4/menu/checkpoint-c-attempt2-frame-1.pixels",
+      "gas": 167486735,
+      "milliseconds": 192.44700000000012
+    },
+    {
+      "label": "Original skill default",
+      "transaction": "0x55398e654ef62b0b315d9a6d13e0e09ebcc063b2b3db8244cbbb3e78cbff4998",
+      "inputSeq": 3,
+      "frameId": "3",
+      "pixelSha256": "080105db7663d173d7a7a1fa0e9c5e1ce1998f926b2db783c9f8e7003f1b49c3",
+      "paletteSha256": "12bafa34214682ae20c2cb6f4e38f21575564de88c4599f3410661e9b7a5c6d3",
+      "palette": 0,
+      "nativeExact": true,
+      "pixelsPath": "artifacts/phase4/menu/checkpoint-c-attempt2-frame-2.pixels",
+      "gas": 178685111,
+      "milliseconds": 213.93633299999783
+    },
+    {
+      "label": "New Game E1M1",
+      "transaction": "0x1d65e7560ebe7d583281c0b5fae7fbc872f74b6eed0f11d67036f3623eb6e51e",
+      "inputSeq": 4,
+      "frameId": "4",
+      "pixelSha256": "a297ba2dfa2d1eae509b975c96471640802a189389ea15ad741c399218782d54",
+      "paletteSha256": "12bafa34214682ae20c2cb6f4e38f21575564de88c4599f3410661e9b7a5c6d3",
+      "palette": 0,
+      "nativeExact": false,
+      "pixelsPath": "artifacts/phase4/menu/checkpoint-c-attempt2-frame-3.pixels",
+      "gas": 4874580986,
+      "milliseconds": 1954.5606249999983
+    },
+    {
+      "label": "Escape opens gameplay menu",
+      "transaction": "0x8ed643930bbeaf07cac3dcd19e31bb2b5d6dfffc743921c3edb4796a9ef0eef4",
+      "inputSeq": 6,
+      "frameId": "5",
+      "pixelSha256": "576b1a4bcb7be997aa864a06d97a706de9836fbe40069777008b3af837e5217a",
+      "paletteSha256": "12bafa34214682ae20c2cb6f4e38f21575564de88c4599f3410661e9b7a5c6d3",
+      "palette": 0,
+      "nativeExact": false,
+      "pixelsPath": "artifacts/phase4/menu/checkpoint-c-attempt2-frame-4.pixels",
+      "gas": 145905502,
+      "milliseconds": 191.79937500000233
+    },
+    {
+      "label": "Menu pause redraw 0",
+      "transaction": "0x48e551b586ecdf269c1772afbe5fd06c082839942c02af236432d653d0031b96",
+      "inputSeq": 7,
+      "frameId": "6",
+      "pixelSha256": "576b1a4bcb7be997aa864a06d97a706de9836fbe40069777008b3af837e5217a",
+      "paletteSha256": "12bafa34214682ae20c2cb6f4e38f21575564de88c4599f3410661e9b7a5c6d3",
+      "palette": 0,
+      "nativeExact": false,
+      "pixelsPath": "artifacts/phase4/menu/checkpoint-c-attempt2-frame-5.pixels",
+      "gas": 145919073,
+      "milliseconds": 171.27370900000096
+    },
+    {
+      "label": "Menu pause redraw 1",
+      "transaction": "0x1a847b77e465cbdf37e3cf0f9da0a553ccdfa58ff3459dd0e0bc7d190ef53c13",
+      "inputSeq": 8,
+      "frameId": "7",
+      "pixelSha256": "576b1a4bcb7be997aa864a06d97a706de9836fbe40069777008b3af837e5217a",
+      "paletteSha256": "12bafa34214682ae20c2cb6f4e38f21575564de88c4599f3410661e9b7a5c6d3",
+      "palette": 0,
+      "nativeExact": false,
+      "pixelsPath": "artifacts/phase4/menu/checkpoint-c-attempt2-frame-6.pixels",
+      "gas": 145899833,
+      "milliseconds": 171.51491700000042
+    },
+    {
+      "label": "Menu pause redraw 2",
+      "transaction": "0x1eea84e802a0234ed2f159e4f6c38c10c66ff71df6226f7ddd508e64d9a0fab1",
+      "inputSeq": 9,
+      "frameId": "8",
+      "pixelSha256": "576b1a4bcb7be997aa864a06d97a706de9836fbe40069777008b3af837e5217a",
+      "paletteSha256": "12bafa34214682ae20c2cb6f4e38f21575564de88c4599f3410661e9b7a5c6d3",
+      "palette": 0,
+      "nativeExact": false,
+      "pixelsPath": "artifacts/phase4/menu/checkpoint-c-attempt2-frame-7.pixels",
+      "gas": 145899833,
+      "milliseconds": 191.606958999997
+    },
+    {
+      "label": "Escape resumes cached gameplay",
+      "transaction": "0x26ab8f31ed2602ea09675ca37c42314145408df71f4486f306a7295c2c73633c",
+      "inputSeq": 10,
+      "frameId": "9",
+      "pixelSha256": "a297ba2dfa2d1eae509b975c96471640802a189389ea15ad741c399218782d54",
+      "paletteSha256": "12bafa34214682ae20c2cb6f4e38f21575564de88c4599f3410661e9b7a5c6d3",
+      "palette": 0,
+      "nativeExact": false,
+      "pixelsPath": "artifacts/phase4/menu/checkpoint-c-attempt2-frame-8.pixels",
+      "gas": 17109496,
+      "milliseconds": 22.23158400000102
+    },
+    {
+      "label": "Ordinary gameplay resumes",
+      "transaction": "0x67c8ebbc72d0eaa21f004cf9828c7396e8705dea91d54f3c1d7a829f631b8ddc",
+      "inputSeq": 11,
+      "frameId": "10",
+      "pixelSha256": "2dd6569bd40f58f560c7a0363a0e9c9c2ac6021f3e3911dd4c08130c575c147c",
+      "paletteSha256": "12bafa34214682ae20c2cb6f4e38f21575564de88c4599f3410661e9b7a5c6d3",
+      "palette": 0,
+      "nativeExact": false,
+      "pixelsPath": "artifacts/phase4/menu/checkpoint-c-attempt2-frame-9.pixels",
+      "gas": 1352898397,
+      "milliseconds": 1165.4246669999993
+    },
+    {
+      "label": "SELECT LEVEL",
+      "transaction": "0x3db5a9a4065f8796b2882775aca6cd92d4474a6f3fa90118699d6f484de47703",
+      "inputSeq": 14,
+      "frameId": "11",
+      "pixelSha256": "132d2d67607ac35730097e0d7109dbb0a1a93f74e86d799365c0f81edf1cd0dd",
+      "paletteSha256": "12bafa34214682ae20c2cb6f4e38f21575564de88c4599f3410661e9b7a5c6d3",
+      "palette": 0,
+      "nativeExact": false,
+      "pixelsPath": "artifacts/phase4/menu/checkpoint-c-attempt2-frame-10.pixels",
+      "gas": 142190801,
+      "milliseconds": 172.63550000000396
+    },
+    {
+      "label": "E1M1 skill selection",
+      "transaction": "0x820bdca2bfc2821c2b1d3e0715045c7165e06d3ec26d70a4522fe35d1a97c80f",
+      "inputSeq": 15,
+      "frameId": "12",
+      "pixelSha256": "53762ded005e14c7685305b74acb9f98dc96cbdd69f9d96c95b310b38a98c9a4",
+      "paletteSha256": "12bafa34214682ae20c2cb6f4e38f21575564de88c4599f3410661e9b7a5c6d3",
+      "palette": 0,
+      "nativeExact": false,
+      "pixelsPath": "artifacts/phase4/menu/checkpoint-c-attempt2-frame-11.pixels",
+      "gas": 156331189,
+      "milliseconds": 192.7200410000005
+    },
+    {
+      "label": "Direct new game E1M1",
+      "transaction": "0x5e583955f77251238de85e4c3e68f70094b53b816b5901f52f36f8e3c9cbd22f",
+      "inputSeq": 16,
+      "frameId": "13",
+      "pixelSha256": "66672b024cee7e41808c7b6a5e1f6f1e04dde53db910bd20bc0f77a4f84228eb",
+      "paletteSha256": "12bafa34214682ae20c2cb6f4e38f21575564de88c4599f3410661e9b7a5c6d3",
+      "palette": 0,
+      "nativeExact": false,
+      "pixelsPath": "artifacts/phase4/menu/checkpoint-c-attempt2-frame-12.pixels",
+      "gas": 3225635302,
+      "milliseconds": 1783.3630830000038
+    },
+    {
+      "label": "SELECT LEVEL",
+      "transaction": "0x1287758eb07c36628adfad2842268258b43f52545cf0f4c64b8b6cbb181d38b0",
+      "inputSeq": 18,
+      "frameId": "14",
+      "pixelSha256": "9ee6225c48d4ad587cae527e5cce758197880082998c6d5b985168eb5f44d70a",
+      "paletteSha256": "12bafa34214682ae20c2cb6f4e38f21575564de88c4599f3410661e9b7a5c6d3",
+      "palette": 0,
+      "nativeExact": false,
+      "pixelsPath": "artifacts/phase4/menu/checkpoint-c-attempt2-frame-13.pixels",
+      "gas": 142190419,
+      "milliseconds": 170.81516700000066
+    },
+    {
+      "label": "E1M2 skill selection",
+      "transaction": "0xb4ecdbaca0043839dfe2d968c460087b34717d83f1647b77dffd245c61371ada",
+      "inputSeq": 19,
+      "frameId": "15",
+      "pixelSha256": "aa20fe05c2d2d33aed0fe281b201ce8225c401a82dfa7ec65d192af5938cbf8a",
+      "paletteSha256": "12bafa34214682ae20c2cb6f4e38f21575564de88c4599f3410661e9b7a5c6d3",
+      "palette": 0,
+      "nativeExact": false,
+      "pixelsPath": "artifacts/phase4/menu/checkpoint-c-attempt2-frame-14.pixels",
+      "gas": 156332731,
+      "milliseconds": 192.4952919999996
+    },
+    {
+      "label": "Direct new game E1M2",
+      "transaction": "0x29ebb7e874a1063cd44f1abd83ac938ebb74c412a1700e2ac4ff5b0b8a0edc67",
+      "inputSeq": 20,
+      "frameId": "16",
+      "pixelSha256": "be5058026ae975206bfab9b9e3637b3b903d4f4bfa1ef3efea49dd75eeac8055",
+      "paletteSha256": "12bafa34214682ae20c2cb6f4e38f21575564de88c4599f3410661e9b7a5c6d3",
+      "palette": 0,
+      "nativeExact": false,
+      "pixelsPath": "artifacts/phase4/menu/checkpoint-c-attempt2-frame-15.pixels",
+      "gas": 4334368262,
+      "milliseconds": 2157.542542000003
+    },
+    {
+      "label": "SELECT LEVEL",
+      "transaction": "0x0008d13cbbfedeb4256a6be0ad1a66036637625385ffae1be7379fbc76d42599",
+      "inputSeq": 22,
+      "frameId": "17",
+      "pixelSha256": "b7c84d72da7aedb4296e0186bdded60d910e1555401b777a958c2da712acd6aa",
+      "paletteSha256": "12bafa34214682ae20c2cb6f4e38f21575564de88c4599f3410661e9b7a5c6d3",
+      "palette": 0,
+      "nativeExact": false,
+      "pixelsPath": "artifacts/phase4/menu/checkpoint-c-attempt2-frame-16.pixels",
+      "gas": 142190341,
+      "milliseconds": 170.51658399999724
+    },
+    {
+      "label": "E1M3 skill selection",
+      "transaction": "0xeb45678add3b47b7eed860f26308129ef0153fa116a724a4fbbd25b6527e0db3",
+      "inputSeq": 23,
+      "frameId": "18",
+      "pixelSha256": "f7e17e18a81ddcc248ddb04418c89778cfc0c3b6bcaa407740be42f9315d8c1b",
+      "paletteSha256": "12bafa34214682ae20c2cb6f4e38f21575564de88c4599f3410661e9b7a5c6d3",
+      "palette": 0,
+      "nativeExact": false,
+      "pixelsPath": "artifacts/phase4/menu/checkpoint-c-attempt2-frame-17.pixels",
+      "gas": 156332731,
+      "milliseconds": 193.75179199999548
+    },
+    {
+      "label": "Direct new game E1M3",
+      "transaction": "0x8c64a69de477a0edf06e796960b65ed22c0b8787322e1f9c2dc5e3a8c1e04b49",
+      "inputSeq": 24,
+      "frameId": "19",
+      "pixelSha256": "76c71748531495fbd965a2aa2b2740027ee2ec6ba12da67e3198e924817346ca",
+      "paletteSha256": "12bafa34214682ae20c2cb6f4e38f21575564de88c4599f3410661e9b7a5c6d3",
+      "palette": 0,
+      "nativeExact": false,
+      "pixelsPath": "artifacts/phase4/menu/checkpoint-c-attempt2-frame-18.pixels",
+      "gas": 4156955643,
+      "milliseconds": 1792.1800000000003
+    },
+    {
+      "label": "SELECT LEVEL",
+      "transaction": "0xd5031b3c817e239dec47e6cd1aa4654d8e54a889edeeed73c37ac61754a1fa51",
+      "inputSeq": 26,
+      "frameId": "20",
+      "pixelSha256": "c12d2b06aded636ae07fe23b6ea8002b6d2adc04960e35e0147fffa8d9858fe7",
+      "paletteSha256": "12bafa34214682ae20c2cb6f4e38f21575564de88c4599f3410661e9b7a5c6d3",
+      "palette": 0,
+      "nativeExact": false,
+      "pixelsPath": "artifacts/phase4/menu/checkpoint-c-attempt2-frame-19.pixels",
+      "gas": 142188414,
+      "milliseconds": 172.5323750000025
+    },
+    {
+      "label": "E1M4 skill selection",
+      "transaction": "0xcd11366bddd71f07e7cd9cbd74aa1cd1d4b17d0d0e77ed9dec08565d26da88b9",
+      "inputSeq": 27,
+      "frameId": "21",
+      "pixelSha256": "3c46993d2db260eb70373295bf434c94c0a1c21e23b1c6a09922da2b59ccd29a",
+      "paletteSha256": "12bafa34214682ae20c2cb6f4e38f21575564de88c4599f3410661e9b7a5c6d3",
+      "palette": 0,
+      "nativeExact": false,
+      "pixelsPath": "artifacts/phase4/menu/checkpoint-c-attempt2-frame-20.pixels",
+      "gas": 156330726,
+      "milliseconds": 193.35299999999552
+    },
+    {
+      "label": "Direct new game E1M4",
+      "transaction": "0xac31196edc2f972cd1d64a088cff9b51e9d573688dd000c6442f3579a9229271",
+      "inputSeq": 28,
+      "frameId": "22",
+      "pixelSha256": "18ab5c789885db75432efaa48b4b190891c3a154286f12c5315a61235337e414",
+      "paletteSha256": "12bafa34214682ae20c2cb6f4e38f21575564de88c4599f3410661e9b7a5c6d3",
+      "palette": 0,
+      "nativeExact": false,
+      "pixelsPath": "artifacts/phase4/menu/checkpoint-c-attempt2-frame-21.pixels",
+      "gas": 4497997017,
+      "milliseconds": 2192.4195000000036
+    },
+    {
+      "label": "SELECT LEVEL",
+      "transaction": "0x36838a67aea3e29b39cf541cee52bcd71750cfb69ebb30a803e9d4f3f871cd72",
+      "inputSeq": 30,
+      "frameId": "23",
+      "pixelSha256": "642dcb36e076f690ebb0fdd0bfbcb5b0b207a61dc4ef886169aea50eb3c5b099",
+      "paletteSha256": "12bafa34214682ae20c2cb6f4e38f21575564de88c4599f3410661e9b7a5c6d3",
+      "palette": 0,
+      "nativeExact": false,
+      "pixelsPath": "artifacts/phase4/menu/checkpoint-c-attempt2-frame-22.pixels",
+      "gas": 142188336,
+      "milliseconds": 170.42391700000007
+    },
+    {
+      "label": "E1M5 skill selection",
+      "transaction": "0x5d93f6678c4934cfe9e43ca8d0b7e02eda56e11e6cac48e64f3892b6add36ec2",
+      "inputSeq": 31,
+      "frameId": "24",
+      "pixelSha256": "b1adedb5f0a85d198d03f368d95fa5bd557e084866663e5aa6f2780d43d76d6a",
+      "paletteSha256": "12bafa34214682ae20c2cb6f4e38f21575564de88c4599f3410661e9b7a5c6d3",
+      "palette": 0,
+      "nativeExact": false,
+      "pixelsPath": "artifacts/phase4/menu/checkpoint-c-attempt2-frame-23.pixels",
+      "gas": 156330726,
+      "milliseconds": 192.55220800000097
+    },
+    {
+      "label": "Direct new game E1M5",
+      "transaction": "0x05c1d0295ed836fc10503ff5d0900a9027cf2a0a67433e625ced6a86ef9ae143",
+      "inputSeq": 32,
+      "frameId": "25",
+      "pixelSha256": "022067ff7240701befd92e63279fc39887e1da071e99bc4544a43c43372c4c52",
+      "paletteSha256": "12bafa34214682ae20c2cb6f4e38f21575564de88c4599f3410661e9b7a5c6d3",
+      "palette": 0,
+      "nativeExact": false,
+      "pixelsPath": "artifacts/phase4/menu/checkpoint-c-attempt2-frame-24.pixels",
+      "gas": 3583676273,
+      "milliseconds": 1469.0676250000033
+    },
+    {
+      "label": "SELECT LEVEL",
+      "transaction": "0x48d309e463b6ed04d582a9bd2089da84e0a3081247b2bb780db4935a57c5e859",
+      "inputSeq": 34,
+      "frameId": "26",
+      "pixelSha256": "0d37f9eb6e76b26915e13c8d6c0d6e13caa1f86a0041d24a2156b3100267ce37",
+      "paletteSha256": "12bafa34214682ae20c2cb6f4e38f21575564de88c4599f3410661e9b7a5c6d3",
+      "palette": 0,
+      "nativeExact": false,
+      "pixelsPath": "artifacts/phase4/menu/checkpoint-c-attempt2-frame-25.pixels",
+      "gas": 142190419,
+      "milliseconds": 169.0515830000004
+    },
+    {
+      "label": "E1M6 skill selection",
+      "transaction": "0x3d0b807e8e3603d4ee7b126b07743fb8486f9dc96880740c966470106efe09aa",
+      "inputSeq": 35,
+      "frameId": "27",
+      "pixelSha256": "ad0caea9a14f58e603b2ae0771e69cda9461def60b844862e3d6590af1552063",
+      "paletteSha256": "12bafa34214682ae20c2cb6f4e38f21575564de88c4599f3410661e9b7a5c6d3",
+      "palette": 0,
+      "nativeExact": false,
+      "pixelsPath": "artifacts/phase4/menu/checkpoint-c-attempt2-frame-26.pixels",
+      "gas": 156332731,
+      "milliseconds": 190.5067080000008
+    },
+    {
+      "label": "Direct new game E1M6",
+      "transaction": "0xd7964a76f0ed0d900b258f041693dacf2d17bb3da824979e2f9f0d954cb8e3bf",
+      "inputSeq": 36,
+      "frameId": "28",
+      "pixelSha256": "6f7acfc232f8582d4d8c7921c20543272805f088c84e6b350f39ec3984531941",
+      "paletteSha256": "12bafa34214682ae20c2cb6f4e38f21575564de88c4599f3410661e9b7a5c6d3",
+      "palette": 0,
+      "nativeExact": false,
+      "pixelsPath": "artifacts/phase4/menu/checkpoint-c-attempt2-frame-27.pixels",
+      "gas": 5576158377,
+      "milliseconds": 3132.7843749999956
+    },
+    {
+      "label": "SELECT LEVEL",
+      "transaction": "0xd6bada46dfa5689fd05580720b5e13a17d1f2645b0c4521b8d7d68d70a4d20a2",
+      "inputSeq": 38,
+      "frameId": "29",
+      "pixelSha256": "17606a75e05e706f0f777364b364dde0eb7009b816e0aa1611e3b6d5b93e3be7",
+      "paletteSha256": "12bafa34214682ae20c2cb6f4e38f21575564de88c4599f3410661e9b7a5c6d3",
+      "palette": 0,
+      "nativeExact": false,
+      "pixelsPath": "artifacts/phase4/menu/checkpoint-c-attempt2-frame-28.pixels",
+      "gas": 142190341,
+      "milliseconds": 171.50954100000672
+    },
+    {
+      "label": "E1M7 skill selection",
+      "transaction": "0x8e605742bc62cd40c1d0ae6fb8e65b8e5eb59f56f4d177a65ad671f7df02ffca",
+      "inputSeq": 39,
+      "frameId": "30",
+      "pixelSha256": "ea3f3a9e0183b04df4d5708f4af3ef9fc58395e37a1c25bc7ef5aebd14457277",
+      "paletteSha256": "12bafa34214682ae20c2cb6f4e38f21575564de88c4599f3410661e9b7a5c6d3",
+      "palette": 0,
+      "nativeExact": false,
+      "pixelsPath": "artifacts/phase4/menu/checkpoint-c-attempt2-frame-29.pixels",
+      "gas": 156332731,
+      "milliseconds": 192.53349999999045
+    },
+    {
+      "label": "Direct new game E1M7",
+      "transaction": "0x2daf4c316be6ba2a50a7e7bd5660900fbb93cab46c882fc1faa92e3b4d5fcba5",
+      "inputSeq": 40,
+      "frameId": "31",
+      "pixelSha256": "06589afcb771057a22aa23ec0ecfc72bbda85e80c41c6d6c9982296a95f5b43f",
+      "paletteSha256": "12bafa34214682ae20c2cb6f4e38f21575564de88c4599f3410661e9b7a5c6d3",
+      "palette": 0,
+      "nativeExact": false,
+      "pixelsPath": "artifacts/phase4/menu/checkpoint-c-attempt2-frame-30.pixels",
+      "gas": 7813562258,
+      "milliseconds": 3083.3946670000005
+    },
+    {
+      "label": "SELECT LEVEL",
+      "transaction": "0xe3e74af0e2f7a401502ca502cc46c988a89afb40cf166f260dc192959325323a",
+      "inputSeq": 42,
+      "frameId": "32",
+      "pixelSha256": "5add5c8d1d86086d78d96147b13a61a7786c7aa633b82a40dae2b8556b0a14dd",
+      "paletteSha256": "12bafa34214682ae20c2cb6f4e38f21575564de88c4599f3410661e9b7a5c6d3",
+      "palette": 0,
+      "nativeExact": false,
+      "pixelsPath": "artifacts/phase4/menu/checkpoint-c-attempt2-frame-31.pixels",
+      "gas": 142188414,
+      "milliseconds": 171.33849999999802
+    },
+    {
+      "label": "E1M8 skill selection",
+      "transaction": "0x5d19dffbb06f715d891fac55ae816cd2b745aa72f774938f489143c0b2914849",
+      "inputSeq": 43,
+      "frameId": "33",
+      "pixelSha256": "28ad925c5d73e90dddd8ffb96d65f36de5260d5e9fb21fd83d04d32a87a377ae",
+      "paletteSha256": "12bafa34214682ae20c2cb6f4e38f21575564de88c4599f3410661e9b7a5c6d3",
+      "palette": 0,
+      "nativeExact": false,
+      "pixelsPath": "artifacts/phase4/menu/checkpoint-c-attempt2-frame-32.pixels",
+      "gas": 156330726,
+      "milliseconds": 213.24670800000604
+    },
+    {
+      "label": "Direct new game E1M8",
+      "transaction": "0x4338de706b8c2e1d5cd985aa6c35e29587546c95977d75e42bd0a4af5f692ae5",
+      "inputSeq": 44,
+      "frameId": "34",
+      "pixelSha256": "36bbcccb5dc578edabe3d700847b65773a8d74920e94f318d23871715990692e",
+      "paletteSha256": "12bafa34214682ae20c2cb6f4e38f21575564de88c4599f3410661e9b7a5c6d3",
+      "palette": 0,
+      "nativeExact": false,
+      "pixelsPath": "artifacts/phase4/menu/checkpoint-c-attempt2-frame-33.pixels",
+      "gas": 4963959117,
+      "milliseconds": 1494.7958749999962
+    },
+    {
+      "label": "SELECT LEVEL",
+      "transaction": "0xaeebb6aa5b3e946685d1ff389f9a4bbce0f7b1fb844e22fcccfc07a5084796b9",
+      "inputSeq": 46,
+      "frameId": "35",
+      "pixelSha256": "19dba4947ca0de0eba0da1f21e3123ac53d23a7c354c0aff40d7a2d5fa505b63",
+      "paletteSha256": "12bafa34214682ae20c2cb6f4e38f21575564de88c4599f3410661e9b7a5c6d3",
+      "palette": 0,
+      "nativeExact": false,
+      "pixelsPath": "artifacts/phase4/menu/checkpoint-c-attempt2-frame-34.pixels",
+      "gas": 142188336,
+      "milliseconds": 171.36291599999822
+    },
+    {
+      "label": "E1M9 skill selection",
+      "transaction": "0xc297fdc9f702fee628b41364635926641588cf4fcb8cf7e8d8474a879cbb1a5d",
+      "inputSeq": 47,
+      "frameId": "36",
+      "pixelSha256": "df5ef97311988b0a78ad47e6d756271924ec44234a5039244d29fa2b9a4ac032",
+      "paletteSha256": "12bafa34214682ae20c2cb6f4e38f21575564de88c4599f3410661e9b7a5c6d3",
+      "palette": 0,
+      "nativeExact": false,
+      "pixelsPath": "artifacts/phase4/menu/checkpoint-c-attempt2-frame-35.pixels",
+      "gas": 156330726,
+      "milliseconds": 191.69837500000722
+    },
+    {
+      "label": "Direct new game E1M9",
+      "transaction": "0x8fd14c7a30385bca7f5ad17d81c66bf398f2291e8bfc6781f70de28bc6fede6d",
+      "inputSeq": 48,
+      "frameId": "37",
+      "pixelSha256": "b07c82597f5e81c8a02c2fd7350b3de5cc034b7a46e6004480b392164d14f009",
+      "paletteSha256": "12bafa34214682ae20c2cb6f4e38f21575564de88c4599f3410661e9b7a5c6d3",
+      "palette": 0,
+      "nativeExact": false,
+      "pixelsPath": "artifacts/phase4/menu/checkpoint-c-attempt2-frame-36.pixels",
+      "gas": 3378724256,
+      "milliseconds": 1704.7369580000086
+    },
+    {
+      "label": "Nightmare confirmation",
+      "transaction": "0x9476208ef763de402a898b57cd0b3e5b4ee2115f3c98385c0488e57a7fcafe16",
+      "inputSeq": 49,
+      "frameId": "38",
+      "pixelSha256": "f4fa4c784f22e66d0987e372e2cfe5ad4bb8df26928acf7f936fba748ccf7a3e",
+      "paletteSha256": "12bafa34214682ae20c2cb6f4e38f21575564de88c4599f3410661e9b7a5c6d3",
+      "palette": 0,
+      "nativeExact": false,
+      "pixelsPath": "artifacts/phase4/menu/checkpoint-c-attempt2-frame-37.pixels",
+      "gas": 141139332,
+      "milliseconds": 193.85962499999732
+    },
+    {
+      "label": "Nightmare cancellation",
+      "transaction": "0x3afea1a1a715a8303bf54564db53fcca3db1694e08a3c540738abe393b10aec5",
+      "inputSeq": 50,
+      "frameId": "39",
+      "pixelSha256": "b07c82597f5e81c8a02c2fd7350b3de5cc034b7a46e6004480b392164d14f009",
+      "paletteSha256": "12bafa34214682ae20c2cb6f4e38f21575564de88c4599f3410661e9b7a5c6d3",
+      "palette": 0,
+      "nativeExact": false,
+      "pixelsPath": "artifacts/phase4/menu/checkpoint-c-attempt2-frame-38.pixels",
+      "gas": 17109376,
+      "milliseconds": 22.406208000000333
+    },
+    {
+      "label": "Nightmare confirm again",
+      "transaction": "0x94fecec4f3ede92ea68525376ebd56bfbcfdbce8e9ed369ea775ed72912a916f",
+      "inputSeq": 51,
+      "frameId": "40",
+      "pixelSha256": "f4fa4c784f22e66d0987e372e2cfe5ad4bb8df26928acf7f936fba748ccf7a3e",
+      "paletteSha256": "12bafa34214682ae20c2cb6f4e38f21575564de88c4599f3410661e9b7a5c6d3",
+      "palette": 0,
+      "nativeExact": false,
+      "pixelsPath": "artifacts/phase4/menu/checkpoint-c-attempt2-frame-39.pixels",
+      "gas": 141138918,
+      "milliseconds": 172.51245800001197
+    },
+    {
+      "label": "Nightmare accepted",
+      "transaction": "0x8b90a9065502f99303e9626799cb81bf499e7e95ba26e045bf9c341225cc380d",
+      "inputSeq": 52,
+      "frameId": "41",
+      "pixelSha256": "66672b024cee7e41808c7b6a5e1f6f1e04dde53db910bd20bc0f77a4f84228eb",
+      "paletteSha256": "12bafa34214682ae20c2cb6f4e38f21575564de88c4599f3410661e9b7a5c6d3",
+      "palette": 0,
+      "nativeExact": false,
+      "pixelsPath": "artifacts/phase4/menu/checkpoint-c-attempt2-frame-40.pixels",
+      "gas": 4790301691,
+      "milliseconds": 2050.350792000012
+    },
+    {
+      "label": "Original easy skill",
+      "transaction": "0xd2349c69ccd03bcf3ba0ffa2c2f2c3a3253db18bc8fd731cec1ed3dc5040a345",
+      "inputSeq": 53,
+      "frameId": "42",
+      "pixelSha256": "66672b024cee7e41808c7b6a5e1f6f1e04dde53db910bd20bc0f77a4f84228eb",
+      "paletteSha256": "12bafa34214682ae20c2cb6f4e38f21575564de88c4599f3410661e9b7a5c6d3",
+      "palette": 0,
+      "nativeExact": false,
+      "pixelsPath": "artifacts/phase4/menu/checkpoint-c-attempt2-frame-41.pixels",
+      "gas": 4193352878,
+      "milliseconds": 2067.090790999995
+    },
+    {
+      "label": "Gameplay Pause",
+      "transaction": "0x980eca4f7a612aaea4cb208886ff7237fffcd2e43e88262bf8b0a9f7f4540382",
+      "inputSeq": 54,
+      "frameId": "43",
+      "pixelSha256": "891dd4df95d94aef78f80f98beecc32acd6b105d2d4bb26e6649310a4b8b02f2",
+      "paletteSha256": "12bafa34214682ae20c2cb6f4e38f21575564de88c4599f3410661e9b7a5c6d3",
+      "palette": 0,
+      "nativeExact": false,
+      "pixelsPath": "artifacts/phase4/menu/checkpoint-c-attempt2-frame-42.pixels",
+      "gas": 1817680669,
+      "milliseconds": 1472.463208000001
+    },
+    {
+      "label": "Menu while explicitly paused",
+      "transaction": "0x912c53adb2e6c56d95d63f85db3f084b50b92fd93080b8c75ee9b86b6108a573",
+      "inputSeq": 55,
+      "frameId": "44",
+      "pixelSha256": "3eddb6e6d72078ec44e8e5240ba319fb384cc7284beab4198c0fa5bbadc87dfc",
+      "paletteSha256": "12bafa34214682ae20c2cb6f4e38f21575564de88c4599f3410661e9b7a5c6d3",
+      "palette": 0,
+      "nativeExact": false,
+      "pixelsPath": "artifacts/phase4/menu/checkpoint-c-attempt2-frame-43.pixels",
+      "gas": 145907502,
+      "milliseconds": 192.46054200000071
+    },
+    {
+      "label": "Paused menu redraw",
+      "transaction": "0x379eed01a3040607f3ff44aaa0550b909bae387cf3686ec6de337236635e4482",
+      "inputSeq": 56,
+      "frameId": "45",
+      "pixelSha256": "3eddb6e6d72078ec44e8e5240ba319fb384cc7284beab4198c0fa5bbadc87dfc",
+      "paletteSha256": "12bafa34214682ae20c2cb6f4e38f21575564de88c4599f3410661e9b7a5c6d3",
+      "palette": 0,
+      "nativeExact": false,
+      "pixelsPath": "artifacts/phase4/menu/checkpoint-c-attempt2-frame-44.pixels",
+      "gas": 145899833,
+      "milliseconds": 193.55795899999794
+    },
+    {
+      "label": "Escape retains explicit pause",
+      "transaction": "0x865ba999dd9e408fc12f09e8a8db76652312d23c73954e931ea4181b9ca3337a",
+      "inputSeq": 57,
+      "frameId": "46",
+      "pixelSha256": "891dd4df95d94aef78f80f98beecc32acd6b105d2d4bb26e6649310a4b8b02f2",
+      "paletteSha256": "12bafa34214682ae20c2cb6f4e38f21575564de88c4599f3410661e9b7a5c6d3",
+      "palette": 0,
+      "nativeExact": false,
+      "pixelsPath": "artifacts/phase4/menu/checkpoint-c-attempt2-frame-45.pixels",
+      "gas": 17109418,
+      "milliseconds": 22.24787500000093
+    },
+    {
+      "label": "Resume explicit pause",
+      "transaction": "0xee9cca9c9621daf96a803cb25deb766256624d2ca00858edd46a2abb6ea4b591",
+      "inputSeq": 58,
+      "frameId": "47",
+      "pixelSha256": "66672b024cee7e41808c7b6a5e1f6f1e04dde53db910bd20bc0f77a4f84228eb",
+      "paletteSha256": "12bafa34214682ae20c2cb6f4e38f21575564de88c4599f3410661e9b7a5c6d3",
+      "palette": 0,
+      "nativeExact": false,
+      "pixelsPath": "artifacts/phase4/menu/checkpoint-c-attempt2-frame-46.pixels",
+      "gas": 1816673486,
+      "milliseconds": 1450.8642500000133
+    },
+    {
+      "label": "Legacy raw-input first native frame",
+      "transaction": "0xe341762076f5cd769135920854d3bf28d1ee2b62fad20aeb3218ff71f65410e1",
+      "inputSeq": 1,
+      "frameId": "1",
+      "pixelSha256": "5cbda18c022ea2d48b88810a53d7a4c463f7f069bc5f48d53ede22e274dafdf8",
+      "paletteSha256": "12bafa34214682ae20c2cb6f4e38f21575564de88c4599f3410661e9b7a5c6d3",
+      "palette": 0,
+      "nativeExact": true,
+      "pixelsPath": "artifacts/phase4/menu/checkpoint-c-attempt2-frame-47.pixels",
+      "gas": 1447456892,
+      "milliseconds": 1194.0663749999949
+    }
+  ],
+  "inputs": [
+    {
+      "address": "0x5ae1f4bb68f8eac39cfdbdfda2b7344ccbd80faf",
+      "sequence": 1,
+      "events": [],
+      "draw": true,
+      "transaction": "0xa337ee9e8db0d7607590a550e3eff2762622960b43ad6c8a8e565355c717ccf8",
+      "gas": 168242980,
+      "milliseconds": 216.3377079999991
+    },
+    {
+      "address": "0x5ae1f4bb68f8eac39cfdbdfda2b7344ccbd80faf",
+      "sequence": 2,
+      "events": [
+        [
+          0,
+          13
+        ],
+        [
+          1,
+          13
+        ]
+      ],
+      "draw": true,
+      "transaction": "0x2c49b9b44b9952a1db2056ed2b17fd849b329c7fbbc809a91e2fe58eb7ec7dd6",
+      "gas": 167486735,
+      "milliseconds": 192.44700000000012
+    },
+    {
+      "address": "0x5ae1f4bb68f8eac39cfdbdfda2b7344ccbd80faf",
+      "sequence": 3,
+      "events": [
+        [
+          0,
+          13
+        ],
+        [
+          1,
+          13
+        ]
+      ],
+      "draw": true,
+      "transaction": "0x55398e654ef62b0b315d9a6d13e0e09ebcc063b2b3db8244cbbb3e78cbff4998",
+      "gas": 178685111,
+      "milliseconds": 213.93633299999783
+    },
+    {
+      "address": "0x5ae1f4bb68f8eac39cfdbdfda2b7344ccbd80faf",
+      "sequence": 4,
+      "events": [
+        [
+          0,
+          13
+        ],
+        [
+          1,
+          13
+        ]
+      ],
+      "draw": true,
+      "transaction": "0x1d65e7560ebe7d583281c0b5fae7fbc872f74b6eed0f11d67036f3623eb6e51e",
+      "gas": 4874580986,
+      "milliseconds": 1954.5606249999983
+    },
+    {
+      "address": "0x5ae1f4bb68f8eac39cfdbdfda2b7344ccbd80faf",
+      "sequence": 5,
+      "events": [
+        [
+          0,
+          119
+        ],
+        [
+          0,
+          157
+        ],
+        [
+          0,
+          49
+        ]
+      ],
+      "draw": false,
+      "transaction": "0x8cc9220b9ddda49347a5ce085b054694c371c6415159f2fb50d8ae8aec3f22f1",
+      "gas": 381101886,
+      "milliseconds": 150.17370800000208
+    },
+    {
+      "address": "0x5ae1f4bb68f8eac39cfdbdfda2b7344ccbd80faf",
+      "sequence": 6,
+      "events": [
+        [
+          0,
+          27
+        ],
+        [
+          1,
+          27
+        ]
+      ],
+      "draw": true,
+      "transaction": "0x8ed643930bbeaf07cac3dcd19e31bb2b5d6dfffc743921c3edb4796a9ef0eef4",
+      "gas": 145905502,
+      "milliseconds": 191.79937500000233
+    },
+    {
+      "address": "0x5ae1f4bb68f8eac39cfdbdfda2b7344ccbd80faf",
+      "sequence": 7,
+      "events": [
+        [
+          0,
+          105
+        ],
+        [
+          1,
+          105
+        ],
+        [
+          0,
+          100
+        ],
+        [
+          1,
+          100
+        ],
+        [
+          0,
+          100
+        ],
+        [
+          1,
+          100
+        ],
+        [
+          0,
+          113
+        ],
+        [
+          1,
+          113
+        ],
+        [
+          0,
+          100
+        ],
+        [
+          1,
+          100
+        ],
+        [
+          0,
+          157
+        ],
+        [
+          1,
+          157
+        ],
+        [
+          0,
+          49
+        ],
+        [
+          1,
+          49
+        ]
+      ],
+      "draw": true,
+      "transaction": "0x48e551b586ecdf269c1772afbe5fd06c082839942c02af236432d653d0031b96",
+      "gas": 145919073,
+      "milliseconds": 171.27370900000096
+    },
+    {
+      "address": "0x5ae1f4bb68f8eac39cfdbdfda2b7344ccbd80faf",
+      "sequence": 8,
+      "events": [],
+      "draw": true,
+      "transaction": "0x1a847b77e465cbdf37e3cf0f9da0a553ccdfa58ff3459dd0e0bc7d190ef53c13",
+      "gas": 145899833,
+      "milliseconds": 171.51491700000042
+    },
+    {
+      "address": "0x5ae1f4bb68f8eac39cfdbdfda2b7344ccbd80faf",
+      "sequence": 9,
+      "events": [],
+      "draw": true,
+      "transaction": "0x1eea84e802a0234ed2f159e4f6c38c10c66ff71df6226f7ddd508e64d9a0fab1",
+      "gas": 145899833,
+      "milliseconds": 191.606958999997
+    },
+    {
+      "address": "0x5ae1f4bb68f8eac39cfdbdfda2b7344ccbd80faf",
+      "sequence": 10,
+      "events": [
+        [
+          0,
+          27
+        ],
+        [
+          1,
+          27
+        ]
+      ],
+      "draw": true,
+      "transaction": "0x26ab8f31ed2602ea09675ca37c42314145408df71f4486f306a7295c2c73633c",
+      "gas": 17109496,
+      "milliseconds": 22.23158400000102
+    },
+    {
+      "address": "0x5ae1f4bb68f8eac39cfdbdfda2b7344ccbd80faf",
+      "sequence": 11,
+      "events": [],
+      "draw": true,
+      "transaction": "0x67c8ebbc72d0eaa21f004cf9828c7396e8705dea91d54f3c1d7a829f631b8ddc",
+      "gas": 1352898397,
+      "milliseconds": 1165.4246669999993
+    },
+    {
+      "address": "0x5ae1f4bb68f8eac39cfdbdfda2b7344ccbd80faf",
+      "sequence": 12,
+      "events": [
+        [
+          0,
+          105
+        ],
+        [
+          1,
+          105
+        ],
+        [
+          0,
+          100
+        ],
+        [
+          1,
+          100
+        ],
+        [
+          0,
+          107
+        ],
+        [
+          1,
+          107
+        ],
+        [
+          0,
+          102
+        ],
+        [
+          1,
+          102
+        ],
+        [
+          0,
+          97
+        ],
+        [
+          1,
+          97
+        ]
+      ],
+      "draw": false,
+      "transaction": "0x6808623b81a2c9e99e3c3d27febefcf0c5d484dba0f2223b0dc33921054a2b09",
+      "gas": 381174203,
+      "milliseconds": 170.4435420000009
+    },
+    {
+      "address": "0x5ae1f4bb68f8eac39cfdbdfda2b7344ccbd80faf",
+      "sequence": 13,
+      "events": [
+        [
+          0,
+          27
+        ],
+        [
+          1,
+          27
+        ]
+      ],
+      "draw": false,
+      "transaction": "0xdf52114d38c5b7707054d93fb0b9888629170b925091df37dfcfdf5251c57d57",
+      "gas": 60260,
+      "milliseconds": 22.03483299999789
+    },
+    {
+      "address": "0x5ae1f4bb68f8eac39cfdbdfda2b7344ccbd80faf",
+      "sequence": 14,
+      "events": [
+        [
+          0,
+          115
+        ],
+        [
+          1,
+          115
+        ],
+        [
+          0,
+          13
+        ],
+        [
+          1,
+          13
+        ]
+      ],
+      "draw": true,
+      "transaction": "0x3db5a9a4065f8796b2882775aca6cd92d4474a6f3fa90118699d6f484de47703",
+      "gas": 142190801,
+      "milliseconds": 172.63550000000396
+    },
+    {
+      "address": "0x5ae1f4bb68f8eac39cfdbdfda2b7344ccbd80faf",
+      "sequence": 15,
+      "events": [
+        [
+          0,
+          49
+        ],
+        [
+          1,
+          49
+        ],
+        [
+          0,
+          13
+        ],
+        [
+          1,
+          13
+        ]
+      ],
+      "draw": true,
+      "transaction": "0x820bdca2bfc2821c2b1d3e0715045c7165e06d3ec26d70a4522fe35d1a97c80f",
+      "gas": 156331189,
+      "milliseconds": 192.7200410000005
+    },
+    {
+      "address": "0x5ae1f4bb68f8eac39cfdbdfda2b7344ccbd80faf",
+      "sequence": 16,
+      "events": [
+        [
+          0,
+          13
+        ],
+        [
+          1,
+          13
+        ]
+      ],
+      "draw": true,
+      "transaction": "0x5e583955f77251238de85e4c3e68f70094b53b816b5901f52f36f8e3c9cbd22f",
+      "gas": 3225635302,
+      "milliseconds": 1783.3630830000038
+    },
+    {
+      "address": "0x5ae1f4bb68f8eac39cfdbdfda2b7344ccbd80faf",
+      "sequence": 17,
+      "events": [
+        [
+          0,
+          27
+        ],
+        [
+          1,
+          27
+        ]
+      ],
+      "draw": false,
+      "transaction": "0xee29b9ac41391e862de3950680d82165e2b3ff1eb4dd406516401f8e793d93f5",
+      "gas": 60260,
+      "milliseconds": 21.078125
+    },
+    {
+      "address": "0x5ae1f4bb68f8eac39cfdbdfda2b7344ccbd80faf",
+      "sequence": 18,
+      "events": [
+        [
+          0,
+          115
+        ],
+        [
+          1,
+          115
+        ],
+        [
+          0,
+          13
+        ],
+        [
+          1,
+          13
+        ]
+      ],
+      "draw": true,
+      "transaction": "0x1287758eb07c36628adfad2842268258b43f52545cf0f4c64b8b6cbb181d38b0",
+      "gas": 142190419,
+      "milliseconds": 170.81516700000066
+    },
+    {
+      "address": "0x5ae1f4bb68f8eac39cfdbdfda2b7344ccbd80faf",
+      "sequence": 19,
+      "events": [
+        [
+          0,
+          50
+        ],
+        [
+          1,
+          50
+        ],
+        [
+          0,
+          13
+        ],
+        [
+          1,
+          13
+        ]
+      ],
+      "draw": true,
+      "transaction": "0xb4ecdbaca0043839dfe2d968c460087b34717d83f1647b77dffd245c61371ada",
+      "gas": 156332731,
+      "milliseconds": 192.4952919999996
+    },
+    {
+      "address": "0x5ae1f4bb68f8eac39cfdbdfda2b7344ccbd80faf",
+      "sequence": 20,
+      "events": [
+        [
+          0,
+          13
+        ],
+        [
+          1,
+          13
+        ]
+      ],
+      "draw": true,
+      "transaction": "0x29ebb7e874a1063cd44f1abd83ac938ebb74c412a1700e2ac4ff5b0b8a0edc67",
+      "gas": 4334368262,
+      "milliseconds": 2157.542542000003
+    },
+    {
+      "address": "0x5ae1f4bb68f8eac39cfdbdfda2b7344ccbd80faf",
+      "sequence": 21,
+      "events": [
+        [
+          0,
+          27
+        ],
+        [
+          1,
+          27
+        ]
+      ],
+      "draw": false,
+      "transaction": "0x761b3ba693232206ae679e101376870ddf67b6338b606f17337e7a7054a9d62a",
+      "gas": 60260,
+      "milliseconds": 22.016374999999243
+    },
+    {
+      "address": "0x5ae1f4bb68f8eac39cfdbdfda2b7344ccbd80faf",
+      "sequence": 22,
+      "events": [
+        [
+          0,
+          115
+        ],
+        [
+          1,
+          115
+        ],
+        [
+          0,
+          13
+        ],
+        [
+          1,
+          13
+        ]
+      ],
+      "draw": true,
+      "transaction": "0x0008d13cbbfedeb4256a6be0ad1a66036637625385ffae1be7379fbc76d42599",
+      "gas": 142190341,
+      "milliseconds": 170.51658399999724
+    },
+    {
+      "address": "0x5ae1f4bb68f8eac39cfdbdfda2b7344ccbd80faf",
+      "sequence": 23,
+      "events": [
+        [
+          0,
+          51
+        ],
+        [
+          1,
+          51
+        ],
+        [
+          0,
+          13
+        ],
+        [
+          1,
+          13
+        ]
+      ],
+      "draw": true,
+      "transaction": "0xeb45678add3b47b7eed860f26308129ef0153fa116a724a4fbbd25b6527e0db3",
+      "gas": 156332731,
+      "milliseconds": 193.75179199999548
+    },
+    {
+      "address": "0x5ae1f4bb68f8eac39cfdbdfda2b7344ccbd80faf",
+      "sequence": 24,
+      "events": [
+        [
+          0,
+          13
+        ],
+        [
+          1,
+          13
+        ]
+      ],
+      "draw": true,
+      "transaction": "0x8c64a69de477a0edf06e796960b65ed22c0b8787322e1f9c2dc5e3a8c1e04b49",
+      "gas": 4156955643,
+      "milliseconds": 1792.1800000000003
+    },
+    {
+      "address": "0x5ae1f4bb68f8eac39cfdbdfda2b7344ccbd80faf",
+      "sequence": 25,
+      "events": [
+        [
+          0,
+          27
+        ],
+        [
+          1,
+          27
+        ]
+      ],
+      "draw": false,
+      "transaction": "0xc8d9b18e266fc46185ae58bcf863d3b0939f4499eb96ab6f769f676a9fc84c4b",
+      "gas": 60260,
+      "milliseconds": 21.88524999999936
+    },
+    {
+      "address": "0x5ae1f4bb68f8eac39cfdbdfda2b7344ccbd80faf",
+      "sequence": 26,
+      "events": [
+        [
+          0,
+          115
+        ],
+        [
+          1,
+          115
+        ],
+        [
+          0,
+          13
+        ],
+        [
+          1,
+          13
+        ]
+      ],
+      "draw": true,
+      "transaction": "0xd5031b3c817e239dec47e6cd1aa4654d8e54a889edeeed73c37ac61754a1fa51",
+      "gas": 142188414,
+      "milliseconds": 172.5323750000025
+    },
+    {
+      "address": "0x5ae1f4bb68f8eac39cfdbdfda2b7344ccbd80faf",
+      "sequence": 27,
+      "events": [
+        [
+          0,
+          52
+        ],
+        [
+          1,
+          52
+        ],
+        [
+          0,
+          13
+        ],
+        [
+          1,
+          13
+        ]
+      ],
+      "draw": true,
+      "transaction": "0xcd11366bddd71f07e7cd9cbd74aa1cd1d4b17d0d0e77ed9dec08565d26da88b9",
+      "gas": 156330726,
+      "milliseconds": 193.35299999999552
+    },
+    {
+      "address": "0x5ae1f4bb68f8eac39cfdbdfda2b7344ccbd80faf",
+      "sequence": 28,
+      "events": [
+        [
+          0,
+          13
+        ],
+        [
+          1,
+          13
+        ]
+      ],
+      "draw": true,
+      "transaction": "0xac31196edc2f972cd1d64a088cff9b51e9d573688dd000c6442f3579a9229271",
+      "gas": 4497997017,
+      "milliseconds": 2192.4195000000036
+    },
+    {
+      "address": "0x5ae1f4bb68f8eac39cfdbdfda2b7344ccbd80faf",
+      "sequence": 29,
+      "events": [
+        [
+          0,
+          27
+        ],
+        [
+          1,
+          27
+        ]
+      ],
+      "draw": false,
+      "transaction": "0x2992b1cf36dd4a6e6454aca22a44e58157c4034ebcd099147f1fcc5b46df6e05",
+      "gas": 60260,
+      "milliseconds": 21.799749999998312
+    },
+    {
+      "address": "0x5ae1f4bb68f8eac39cfdbdfda2b7344ccbd80faf",
+      "sequence": 30,
+      "events": [
+        [
+          0,
+          115
+        ],
+        [
+          1,
+          115
+        ],
+        [
+          0,
+          13
+        ],
+        [
+          1,
+          13
+        ]
+      ],
+      "draw": true,
+      "transaction": "0x36838a67aea3e29b39cf541cee52bcd71750cfb69ebb30a803e9d4f3f871cd72",
+      "gas": 142188336,
+      "milliseconds": 170.42391700000007
+    },
+    {
+      "address": "0x5ae1f4bb68f8eac39cfdbdfda2b7344ccbd80faf",
+      "sequence": 31,
+      "events": [
+        [
+          0,
+          53
+        ],
+        [
+          1,
+          53
+        ],
+        [
+          0,
+          13
+        ],
+        [
+          1,
+          13
+        ]
+      ],
+      "draw": true,
+      "transaction": "0x5d93f6678c4934cfe9e43ca8d0b7e02eda56e11e6cac48e64f3892b6add36ec2",
+      "gas": 156330726,
+      "milliseconds": 192.55220800000097
+    },
+    {
+      "address": "0x5ae1f4bb68f8eac39cfdbdfda2b7344ccbd80faf",
+      "sequence": 32,
+      "events": [
+        [
+          0,
+          13
+        ],
+        [
+          1,
+          13
+        ]
+      ],
+      "draw": true,
+      "transaction": "0x05c1d0295ed836fc10503ff5d0900a9027cf2a0a67433e625ced6a86ef9ae143",
+      "gas": 3583676273,
+      "milliseconds": 1469.0676250000033
+    },
+    {
+      "address": "0x5ae1f4bb68f8eac39cfdbdfda2b7344ccbd80faf",
+      "sequence": 33,
+      "events": [
+        [
+          0,
+          27
+        ],
+        [
+          1,
+          27
+        ]
+      ],
+      "draw": false,
+      "transaction": "0x07dc46a2c9c23760c2f35739d801bdef8a7139a2d8f3605dd6aa22bbb2adb991",
+      "gas": 60260,
+      "milliseconds": 21.888417000001937
+    },
+    {
+      "address": "0x5ae1f4bb68f8eac39cfdbdfda2b7344ccbd80faf",
+      "sequence": 34,
+      "events": [
+        [
+          0,
+          115
+        ],
+        [
+          1,
+          115
+        ],
+        [
+          0,
+          13
+        ],
+        [
+          1,
+          13
+        ]
+      ],
+      "draw": true,
+      "transaction": "0x48d309e463b6ed04d582a9bd2089da84e0a3081247b2bb780db4935a57c5e859",
+      "gas": 142190419,
+      "milliseconds": 169.0515830000004
+    },
+    {
+      "address": "0x5ae1f4bb68f8eac39cfdbdfda2b7344ccbd80faf",
+      "sequence": 35,
+      "events": [
+        [
+          0,
+          54
+        ],
+        [
+          1,
+          54
+        ],
+        [
+          0,
+          13
+        ],
+        [
+          1,
+          13
+        ]
+      ],
+      "draw": true,
+      "transaction": "0x3d0b807e8e3603d4ee7b126b07743fb8486f9dc96880740c966470106efe09aa",
+      "gas": 156332731,
+      "milliseconds": 190.5067080000008
+    },
+    {
+      "address": "0x5ae1f4bb68f8eac39cfdbdfda2b7344ccbd80faf",
+      "sequence": 36,
+      "events": [
+        [
+          0,
+          13
+        ],
+        [
+          1,
+          13
+        ]
+      ],
+      "draw": true,
+      "transaction": "0xd7964a76f0ed0d900b258f041693dacf2d17bb3da824979e2f9f0d954cb8e3bf",
+      "gas": 5576158377,
+      "milliseconds": 3132.7843749999956
+    },
+    {
+      "address": "0x5ae1f4bb68f8eac39cfdbdfda2b7344ccbd80faf",
+      "sequence": 37,
+      "events": [
+        [
+          0,
+          27
+        ],
+        [
+          1,
+          27
+        ]
+      ],
+      "draw": false,
+      "transaction": "0xcd432af89a5a8cc715869f438125680ffbc94a89776aeec34a8e582a1b8f8630",
+      "gas": 60260,
+      "milliseconds": 21.94908299999952
+    },
+    {
+      "address": "0x5ae1f4bb68f8eac39cfdbdfda2b7344ccbd80faf",
+      "sequence": 38,
+      "events": [
+        [
+          0,
+          115
+        ],
+        [
+          1,
+          115
+        ],
+        [
+          0,
+          13
+        ],
+        [
+          1,
+          13
+        ]
+      ],
+      "draw": true,
+      "transaction": "0xd6bada46dfa5689fd05580720b5e13a17d1f2645b0c4521b8d7d68d70a4d20a2",
+      "gas": 142190341,
+      "milliseconds": 171.50954100000672
+    },
+    {
+      "address": "0x5ae1f4bb68f8eac39cfdbdfda2b7344ccbd80faf",
+      "sequence": 39,
+      "events": [
+        [
+          0,
+          55
+        ],
+        [
+          1,
+          55
+        ],
+        [
+          0,
+          13
+        ],
+        [
+          1,
+          13
+        ]
+      ],
+      "draw": true,
+      "transaction": "0x8e605742bc62cd40c1d0ae6fb8e65b8e5eb59f56f4d177a65ad671f7df02ffca",
+      "gas": 156332731,
+      "milliseconds": 192.53349999999045
+    },
+    {
+      "address": "0x5ae1f4bb68f8eac39cfdbdfda2b7344ccbd80faf",
+      "sequence": 40,
+      "events": [
+        [
+          0,
+          13
+        ],
+        [
+          1,
+          13
+        ]
+      ],
+      "draw": true,
+      "transaction": "0x2daf4c316be6ba2a50a7e7bd5660900fbb93cab46c882fc1faa92e3b4d5fcba5",
+      "gas": 7813562258,
+      "milliseconds": 3083.3946670000005
+    },
+    {
+      "address": "0x5ae1f4bb68f8eac39cfdbdfda2b7344ccbd80faf",
+      "sequence": 41,
+      "events": [
+        [
+          0,
+          27
+        ],
+        [
+          1,
+          27
+        ]
+      ],
+      "draw": false,
+      "transaction": "0x2bf3c3f14d5d9e457617eab96178a4bb1f8720508d01ee76a72860f6f540d15a",
+      "gas": 60260,
+      "milliseconds": 42.47429199999897
+    },
+    {
+      "address": "0x5ae1f4bb68f8eac39cfdbdfda2b7344ccbd80faf",
+      "sequence": 42,
+      "events": [
+        [
+          0,
+          115
+        ],
+        [
+          1,
+          115
+        ],
+        [
+          0,
+          13
+        ],
+        [
+          1,
+          13
+        ]
+      ],
+      "draw": true,
+      "transaction": "0xe3e74af0e2f7a401502ca502cc46c988a89afb40cf166f260dc192959325323a",
+      "gas": 142188414,
+      "milliseconds": 171.33849999999802
+    },
+    {
+      "address": "0x5ae1f4bb68f8eac39cfdbdfda2b7344ccbd80faf",
+      "sequence": 43,
+      "events": [
+        [
+          0,
+          56
+        ],
+        [
+          1,
+          56
+        ],
+        [
+          0,
+          13
+        ],
+        [
+          1,
+          13
+        ]
+      ],
+      "draw": true,
+      "transaction": "0x5d19dffbb06f715d891fac55ae816cd2b745aa72f774938f489143c0b2914849",
+      "gas": 156330726,
+      "milliseconds": 213.24670800000604
+    },
+    {
+      "address": "0x5ae1f4bb68f8eac39cfdbdfda2b7344ccbd80faf",
+      "sequence": 44,
+      "events": [
+        [
+          0,
+          13
+        ],
+        [
+          1,
+          13
+        ]
+      ],
+      "draw": true,
+      "transaction": "0x4338de706b8c2e1d5cd985aa6c35e29587546c95977d75e42bd0a4af5f692ae5",
+      "gas": 4963959117,
+      "milliseconds": 1494.7958749999962
+    },
+    {
+      "address": "0x5ae1f4bb68f8eac39cfdbdfda2b7344ccbd80faf",
+      "sequence": 45,
+      "events": [
+        [
+          0,
+          27
+        ],
+        [
+          1,
+          27
+        ]
+      ],
+      "draw": false,
+      "transaction": "0x1b573f198f842f5c5f69dafaad942792ef93a914d23e4b496107d8dc6a1c96c5",
+      "gas": 60260,
+      "milliseconds": 43.48958300000231
+    },
+    {
+      "address": "0x5ae1f4bb68f8eac39cfdbdfda2b7344ccbd80faf",
+      "sequence": 46,
+      "events": [
+        [
+          0,
+          115
+        ],
+        [
+          1,
+          115
+        ],
+        [
+          0,
+          13
+        ],
+        [
+          1,
+          13
+        ]
+      ],
+      "draw": true,
+      "transaction": "0xaeebb6aa5b3e946685d1ff389f9a4bbce0f7b1fb844e22fcccfc07a5084796b9",
+      "gas": 142188336,
+      "milliseconds": 171.36291599999822
+    },
+    {
+      "address": "0x5ae1f4bb68f8eac39cfdbdfda2b7344ccbd80faf",
+      "sequence": 47,
+      "events": [
+        [
+          0,
+          57
+        ],
+        [
+          1,
+          57
+        ],
+        [
+          0,
+          13
+        ],
+        [
+          1,
+          13
+        ]
+      ],
+      "draw": true,
+      "transaction": "0xc297fdc9f702fee628b41364635926641588cf4fcb8cf7e8d8474a879cbb1a5d",
+      "gas": 156330726,
+      "milliseconds": 191.69837500000722
+    },
+    {
+      "address": "0x5ae1f4bb68f8eac39cfdbdfda2b7344ccbd80faf",
+      "sequence": 48,
+      "events": [
+        [
+          0,
+          13
+        ],
+        [
+          1,
+          13
+        ]
+      ],
+      "draw": true,
+      "transaction": "0x8fd14c7a30385bca7f5ad17d81c66bf398f2291e8bfc6781f70de28bc6fede6d",
+      "gas": 3378724256,
+      "milliseconds": 1704.7369580000086
+    },
+    {
+      "address": "0x5ae1f4bb68f8eac39cfdbdfda2b7344ccbd80faf",
+      "sequence": 49,
+      "events": [
+        [
+          0,
+          27
+        ],
+        [
+          1,
+          27
+        ],
+        [
+          0,
+          110
+        ],
+        [
+          1,
+          110
+        ],
+        [
+          0,
+          13
+        ],
+        [
+          1,
+          13
+        ],
+        [
+          0,
+          13
+        ],
+        [
+          1,
+          13
+        ],
+        [
+          0,
+          110
+        ],
+        [
+          1,
+          110
+        ],
+        [
+          0,
+          13
+        ],
+        [
+          1,
+          13
+        ]
+      ],
+      "draw": true,
+      "transaction": "0x9476208ef763de402a898b57cd0b3e5b4ee2115f3c98385c0488e57a7fcafe16",
+      "gas": 141139332,
+      "milliseconds": 193.85962499999732
+    },
+    {
+      "address": "0x5ae1f4bb68f8eac39cfdbdfda2b7344ccbd80faf",
+      "sequence": 50,
+      "events": [
+        [
+          0,
+          110
+        ],
+        [
+          1,
+          110
+        ]
+      ],
+      "draw": true,
+      "transaction": "0x3afea1a1a715a8303bf54564db53fcca3db1694e08a3c540738abe393b10aec5",
+      "gas": 17109376,
+      "milliseconds": 22.406208000000333
+    },
+    {
+      "address": "0x5ae1f4bb68f8eac39cfdbdfda2b7344ccbd80faf",
+      "sequence": 51,
+      "events": [
+        [
+          0,
+          27
+        ],
+        [
+          1,
+          27
+        ],
+        [
+          0,
+          110
+        ],
+        [
+          1,
+          110
+        ],
+        [
+          0,
+          13
+        ],
+        [
+          1,
+          13
+        ],
+        [
+          0,
+          13
+        ],
+        [
+          1,
+          13
+        ],
+        [
+          0,
+          110
+        ],
+        [
+          1,
+          110
+        ],
+        [
+          0,
+          13
+        ],
+        [
+          1,
+          13
+        ]
+      ],
+      "draw": true,
+      "transaction": "0x94fecec4f3ede92ea68525376ebd56bfbcfdbce8e9ed369ea775ed72912a916f",
+      "gas": 141138918,
+      "milliseconds": 172.51245800001197
+    },
+    {
+      "address": "0x5ae1f4bb68f8eac39cfdbdfda2b7344ccbd80faf",
+      "sequence": 52,
+      "events": [
+        [
+          0,
+          121
+        ],
+        [
+          1,
+          121
+        ]
+      ],
+      "draw": true,
+      "transaction": "0x8b90a9065502f99303e9626799cb81bf499e7e95ba26e045bf9c341225cc380d",
+      "gas": 4790301691,
+      "milliseconds": 2050.350792000012
+    },
+    {
+      "address": "0x5ae1f4bb68f8eac39cfdbdfda2b7344ccbd80faf",
+      "sequence": 53,
+      "events": [
+        [
+          0,
+          27
+        ],
+        [
+          1,
+          27
+        ],
+        [
+          0,
+          110
+        ],
+        [
+          1,
+          110
+        ],
+        [
+          0,
+          13
+        ],
+        [
+          1,
+          13
+        ],
+        [
+          0,
+          13
+        ],
+        [
+          1,
+          13
+        ],
+        [
+          0,
+          104
+        ],
+        [
+          1,
+          104
+        ],
+        [
+          0,
+          13
+        ],
+        [
+          1,
+          13
+        ]
+      ],
+      "draw": true,
+      "transaction": "0xd2349c69ccd03bcf3ba0ffa2c2f2c3a3253db18bc8fd731cec1ed3dc5040a345",
+      "gas": 4193352878,
+      "milliseconds": 2067.090790999995
+    },
+    {
+      "address": "0x5ae1f4bb68f8eac39cfdbdfda2b7344ccbd80faf",
+      "sequence": 54,
+      "events": [
+        [
+          0,
+          255
+        ],
+        [
+          1,
+          255
+        ]
+      ],
+      "draw": true,
+      "transaction": "0x980eca4f7a612aaea4cb208886ff7237fffcd2e43e88262bf8b0a9f7f4540382",
+      "gas": 1817680669,
+      "milliseconds": 1472.463208000001
+    },
+    {
+      "address": "0x5ae1f4bb68f8eac39cfdbdfda2b7344ccbd80faf",
+      "sequence": 55,
+      "events": [
+        [
+          0,
+          27
+        ],
+        [
+          1,
+          27
+        ]
+      ],
+      "draw": true,
+      "transaction": "0x912c53adb2e6c56d95d63f85db3f084b50b92fd93080b8c75ee9b86b6108a573",
+      "gas": 145907502,
+      "milliseconds": 192.46054200000071
+    },
+    {
+      "address": "0x5ae1f4bb68f8eac39cfdbdfda2b7344ccbd80faf",
+      "sequence": 56,
+      "events": [],
+      "draw": true,
+      "transaction": "0x379eed01a3040607f3ff44aaa0550b909bae387cf3686ec6de337236635e4482",
+      "gas": 145899833,
+      "milliseconds": 193.55795899999794
+    },
+    {
+      "address": "0x5ae1f4bb68f8eac39cfdbdfda2b7344ccbd80faf",
+      "sequence": 57,
+      "events": [
+        [
+          0,
+          27
+        ],
+        [
+          1,
+          27
+        ]
+      ],
+      "draw": true,
+      "transaction": "0x865ba999dd9e408fc12f09e8a8db76652312d23c73954e931ea4181b9ca3337a",
+      "gas": 17109418,
+      "milliseconds": 22.24787500000093
+    },
+    {
+      "address": "0x5ae1f4bb68f8eac39cfdbdfda2b7344ccbd80faf",
+      "sequence": 58,
+      "events": [
+        [
+          0,
+          255
+        ],
+        [
+          1,
+          255
+        ]
+      ],
+      "draw": true,
+      "transaction": "0xee9cca9c9621daf96a803cb25deb766256624d2ca00858edd46a2abb6ea4b591",
+      "gas": 1816673486,
+      "milliseconds": 1450.8642500000133
+    },
+    {
+      "address": "0x1aaad333a7d363a8576779b71bf589580cc9d82e",
+      "sequence": 1,
+      "events": [
+        [
+          0,
+          119
+        ],
+        [
+          0,
+          182
+        ]
+      ],
+      "draw": true,
+      "transaction": "0xe341762076f5cd769135920854d3bf28d1ee2b62fad20aeb3218ff71f65410e1",
+      "gas": 1447456892,
+      "milliseconds": 1194.0663749999949
+    }
+  ],
+  "rollbacks": [
+    {
+      "label": "menu driver authentication",
+      "transaction": "0x8908210e9371ab21ae2aa5217ad7408f0100e8c1b10aecd65964be4293d9fddb",
+      "storageRoot": "0x53c9244305359b06b2bf9d3cab2830ad2369139177d9e1b329a17b46f7f0c221",
+      "allStorageUnchanged": true,
+      "noLogs": true
+    },
+    {
+      "label": "duplicate menu initialization",
+      "transaction": "0x85954d8d483f2e302c13930e9b88f56d6180b9658543171b6c1e1c694249da79",
+      "storageRoot": "0xa540ab4600aaf99f5b5f26b1387cda3b5c586c19e8f2e80437d95c05e01aa0e4",
+      "allStorageUnchanged": true,
+      "noLogs": true
+    },
+    {
+      "label": "legacy initializer cannot replace active menu",
+      "transaction": "0xa9e9c5c0041a6a77cbcb58b4f882ef0948001379aa4d3fa4474c08352085b5da",
+      "storageRoot": "0xa540ab4600aaf99f5b5f26b1387cda3b5c586c19e8f2e80437d95c05e01aa0e4",
+      "allStorageUnchanged": true,
+      "noLogs": true
+    },
+    {
+      "label": "bad menu sequence",
+      "transaction": "0x1b0d82a87becbed42bbcfaa249af41352e10a405cad1b65ccc2d0656a85baee4",
+      "storageRoot": "0xa540ab4600aaf99f5b5f26b1387cda3b5c586c19e8f2e80437d95c05e01aa0e4",
+      "allStorageUnchanged": true,
+      "noLogs": true
+    },
+    {
+      "label": "invalid event after navigation",
+      "transaction": "0xa982acd67b8aaa8787d58ef862b419f165d38329cc0cc8a199a812f62feb1ebd",
+      "storageRoot": "0xa540ab4600aaf99f5b5f26b1387cda3b5c586c19e8f2e80437d95c05e01aa0e4",
+      "allStorageUnchanged": true,
+      "noLogs": true
+    },
+    {
+      "label": "odd event bytes",
+      "transaction": "0x5aed4106c25aa01c99b0009220175c5b4d43129655c3e719fa0515bba1c54a3c",
+      "storageRoot": "0xa540ab4600aaf99f5b5f26b1387cda3b5c586c19e8f2e80437d95c05e01aa0e4",
+      "allStorageUnchanged": true,
+      "noLogs": true
+    },
+    {
+      "label": "oversized packet",
+      "transaction": "0x3af4e7fe36526eeaa37d592c961356a2a1ddc8bc8639e19a936c3bbaea1a27d9",
+      "storageRoot": "0xa540ab4600aaf99f5b5f26b1387cda3b5c586c19e8f2e80437d95c05e01aa0e4",
+      "allStorageUnchanged": true,
+      "noLogs": true
+    }
+  ],
+  "selections": [
+    {
+      "map": 1,
+      "skill": 2,
+      "state": 0,
+      "leveltime": 1,
+      "freshInventory": true,
+      "noIntermission": true,
+      "inputSeq": 16
+    },
+    {
+      "map": 2,
+      "skill": 2,
+      "state": 0,
+      "leveltime": 1,
+      "freshInventory": true,
+      "noIntermission": true,
+      "inputSeq": 20
+    },
+    {
+      "map": 3,
+      "skill": 2,
+      "state": 0,
+      "leveltime": 1,
+      "freshInventory": true,
+      "noIntermission": true,
+      "inputSeq": 24
+    },
+    {
+      "map": 4,
+      "skill": 2,
+      "state": 0,
+      "leveltime": 1,
+      "freshInventory": true,
+      "noIntermission": true,
+      "inputSeq": 28
+    },
+    {
+      "map": 5,
+      "skill": 2,
+      "state": 0,
+      "leveltime": 1,
+      "freshInventory": true,
+      "noIntermission": true,
+      "inputSeq": 32
+    },
+    {
+      "map": 6,
+      "skill": 2,
+      "state": 0,
+      "leveltime": 1,
+      "freshInventory": true,
+      "noIntermission": true,
+      "inputSeq": 36
+    },
+    {
+      "map": 7,
+      "skill": 2,
+      "state": 0,
+      "leveltime": 1,
+      "freshInventory": true,
+      "noIntermission": true,
+      "inputSeq": 40
+    },
+    {
+      "map": 8,
+      "skill": 2,
+      "state": 0,
+      "leveltime": 1,
+      "freshInventory": true,
+      "noIntermission": true,
+      "inputSeq": 44
+    },
+    {
+      "map": 9,
+      "skill": 2,
+      "state": 0,
+      "leveltime": 1,
+      "freshInventory": true,
+      "noIntermission": true,
+      "inputSeq": 48
+    }
+  ],
+  "runtime": {
+    "port": 18781,
+    "args": [
+      "--host",
+      "127.0.0.1",
+      "--port",
+      "18781",
+      "--hardfork",
+      "cancun",
+      "--disable-code-size-limit",
+      "--disable-block-gas-limit",
+      "--no-request-size-limit",
+      "--memory-limit",
+      "1073741824",
+      "--prune-history",
+      "64",
+      "--silent"
+    ],
+    "client": "anvil/v1.8.5"
+  },
+  "resources": {
+    "chunks": 1755,
+    "allRuntimeBytesExact": true,
+    "cumulativeGas": 6271928016,
+    "receiptsSha256": "f304564c56d1d689746d0d1f8f9ac0d5ee7b4eef5ae6ff6a71d1577b4808645d"
+  },
+  "legacy": {
+    "rawInitializer": true,
+    "frameABIUnchanged": true,
+    "nativeFirstFrameExact": true,
+    "staticRenderBeforeGameplay": true
+  },
+  "endedUtc": "2026-10-10T18:03:00.594Z",
+  "stoppedOwnedAnvil": true
+}

@@ -14,6 +14,8 @@ import {DoomUI, UIState} from "./DoomUI.sol";
 import {EpisodeStartup} from "./EpisodeStartup.sol";
 import {EpisodeRuntime, EpisodeState} from "./EpisodeRuntime.sol";
 import {G_Game, GameflowState} from "../doom/g_game.sol";
+import {M_Menu, MenuState} from "../doom/m_menu.sol";
+import {DoomMenu} from "./DoomMenu.sol";
 
 /// @notice Freedoom E1M1 rendering and original gameplay inside the ordinary EVM.
 /// @dev Explicit startup preserves the accepted static renderer before gameplay begins.
@@ -51,23 +53,75 @@ contract Doom is IFrameProtocol, WadResources {
     InputRuntimeState internal inputRuntime;
     bool public episodeMode;
     EpisodeState internal episodeState;
+    bool public menuMode;
+    MenuState internal menuState;
 
     constructor(address[] memory chunks, bytes memory directory) WadResources(chunks, directory) {}
+
+    /// @notice Begin the authenticated title/menu profile without initializing or ticking gameplay.
+    /// @dev Startup consumes no input or Frame; renderFrame/stepEventsAndRender draws the menu.
+    function initializeMenu(bool fullscreen) external {
+        if (msg.sender != driver) revert NotDriver();
+        if (gameStarted || menuMode) revert GameAlreadyStarted();
+        MenuState memory m;
+        M_Menu.M_Init(m, true);
+        M_Menu.M_StartControlPanel(m);
+        menuState = m;
+        UIState memory u;
+        u.enabled = true;
+        u.fullscreen = fullscreen;
+        DoomUI.basePalette(u, _resourceView());
+        uiState = u;
+        menuMode = true;
+        rawInput = true;
+        episodeMode = true;
+    }
+
+    function menuStatus() external view returns (
+        bool enabled, bool active, uint8 screen, int32 item, int32 skull,
+        int32 animation, int32 map, int32 skill, bool confirmation
+    ) {
+        MenuState storage m = menuState;
+        return (menuMode, m.menuactive, m.currentMenu, m.itemOn, m.whichSkull,
+            m.skullAnimCounter, m.selectedMap, m.selectedSkill, m.messageToPrint);
+    }
 
     /// @notice Opt into the complete Episode One lifecycle and original keyboard input.
     function initializeEpisode(int32 map, int32 skill, bool fullscreen) external {
         if (msg.sender != driver) revert NotDriver();
-        if (gameStarted) revert GameAlreadyStarted();
-        (GameContext memory c, GameflowState memory f) =
-            EpisodeStartup.initialize(_resourceView(), 1, map, skill, false, true);
+        if (gameStarted || menuMode) revert GameAlreadyStarted();
+        _initializeEpisode(map, skill, fullscreen);
+    }
+
+    function _initializeEpisode(int32 map, int32 skill, bool fullscreen) private {
+        (GameContext memory c, UIState memory u, InputRuntimeState memory s, EpisodeState memory e) =
+            _newEpisodeContext(map, skill, fullscreen);
+        _saveEpisode(c, s, u, e);
+    }
+
+    /// @dev Retain the authenticated startup context for an atomic menu selection.
+    /// Storing then reloading it in the same call needlessly decoded a second
+    /// complete resource/context graph, exceeding the fixed memory limit on E1M7.
+    function _newEpisodeContext(int32 map, int32 skill, bool fullscreen) private view returns (
+        GameContext memory c, UIState memory u, InputRuntimeState memory s, EpisodeState memory e
+    ) {
+        GameflowState memory f;
+        (c, f) = EpisodeStartup.initialize(_resourceView(), 1, map, skill, false, true);
         c.state.nativeZone.canonicalPointerHighBytes = true;
-        UIState memory u;
+        // Same aliases installed by DoomGame.load, without a second decode.
+        c.map = c.state.map;
+        c.move = c.state.move;
+        c.path = c.state.path;
+        c.resources.nativeZone = c.state.nativeZone;
+        c.resources.texturetranslation = c.state.texturetranslation;
+        c.resources.flattranslation = c.state.flattranslation;
         DoomUI.initialize(u, c, fullscreen);
-        InputRuntimeState memory s;
         InputProtocol.initialize(s);
         s.flow = f;
-        EpisodeState memory e;
         EpisodeRuntime.saveDifficulty(c, e);
+    }
+
+    function _saveEpisode(GameContext memory c, InputRuntimeState memory s, UIState memory u, EpisodeState memory e) private {
         gameState = c.state;
         uiState = u;
         inputRuntime = s;
@@ -88,12 +142,14 @@ contract Doom is IFrameProtocol, WadResources {
         G_Game.G_DeferedInitNew(state, flow, skill, 1, map);
         gameState = state;
         inputRuntime.flow = flow;
+        _closeMenu();
         _stepEpisode(bytes(""), sequence, true);
     }
 
     /// @notice Restart the current level through the original rebirth/load lifecycle.
     function restartEpisode(uint32 sequence) external {
         _episodeDriver();
+        _closeMenu();
         gameState.players[0].playerstate = PlayerState.reborn;
         GameState memory state = gameState;
         G_Game.G_DoReborn(state, 0);
@@ -110,6 +166,15 @@ contract Doom is IFrameProtocol, WadResources {
     function _episodeDriver() private view {
         if (msg.sender != driver) revert NotDriver();
         if (!episodeMode) revert EpisodeNotEnabled();
+        if (!gameStarted) revert GameNotStarted();
+    }
+
+    function _closeMenu() private {
+        if (!menuMode) return;
+        menuState.menuactive = false;
+        menuState.messageToPrint = false;
+        gameState.menuactive = false;
+        inputRuntime.gamekeydown = 0;
     }
 
     function episodeStatus()
@@ -191,7 +256,7 @@ contract Doom is IFrameProtocol, WadResources {
 
     function _initializeGame(bool initializeZone) private {
         if (msg.sender != driver) revert NotDriver();
-        if (gameStarted) revert GameAlreadyStarted();
+        if (gameStarted || menuMode) revert GameAlreadyStarted();
         GameContext memory c = DoomGame.initializeNativeWithPolicy(_resourceView(), false, initializeZone);
         gameState = c.state;
         gameStarted = true;
@@ -199,6 +264,10 @@ contract Doom is IFrameProtocol, WadResources {
 
     function renderFrame() external {
         if (inputSeq == type(uint32).max) revert BadSequence();
+        if (menuMode) {
+            _stepEvents(bytes(""), inputSeq + 1, true);
+            return;
+        }
         _step(0, inputSeq + 1, true);
     }
 
@@ -265,6 +334,10 @@ contract Doom is IFrameProtocol, WadResources {
         if (msg.sender != driver) revert NotDriver();
         if (!rawInput) revert RawInputNotEnabled();
         if (inputSeq == type(uint32).max || sequence != inputSeq + 1) revert BadSequence();
+        if (menuMode) {
+            _stepMenu(events, sequence, draw);
+            return;
+        }
         if (episodeMode) {
             _stepEpisode(events, sequence, draw);
             return;
@@ -295,19 +368,61 @@ contract Doom is IFrameProtocol, WadResources {
         if (draw) _emitFrame(sequence, pixels);
     }
 
+    /// @dev Title/menu packets advance only M_Ticker. The saved EVM gameplay
+    /// framebuffer is borrowed as the underlay; redraw does not invoke G_Ticker,
+    /// RNG, thinkers, ST/HU tickers, movement, cheat or Intermission responders.
+    function _stepMenu(bytes memory events, uint32 sequence, bool draw) private {
+        MenuState memory m = menuState;
+        bool intercepted = DoomMenu.respond(m, events, gameStarted);
+        if (intercepted) inputRuntime.gamekeydown = 0;
+        menuState = m;
+        if (m.startRequested) {
+            menuState.startRequested = false;
+            if (!gameStarted) {
+                (GameContext memory c, UIState memory u, InputRuntimeState memory s, EpisodeState memory e) =
+                    _newEpisodeContext(m.selectedMap, m.selectedSkill, uiState.fullscreen);
+                c.state.menuactive = false;
+                _finishEpisode(c, s, u, e, bytes(""), sequence, draw);
+                return;
+            } else {
+                GameState memory state = gameState;
+                GameflowState memory flow = inputRuntime.flow;
+                G_Game.G_DeferedInitNew(state, flow, m.selectedSkill, 1, m.selectedMap);
+                gameState = state;
+                inputRuntime.flow = flow;
+            }
+            gameState.menuactive = false;
+            _stepEpisode(bytes(""), sequence, draw);
+            return;
+        }
+        if (gameStarted) gameState.menuactive = m.menuactive;
+        if (intercepted) {
+            inputSeq = sequence;
+            if (draw) {
+                bytes memory pixels = gameStarted ? gameState.renderFramebuffer : M_Menu.title(_resourceView());
+                M_Menu.M_Drawer(m, _resourceView(), pixels);
+                _emitFrame(sequence, pixels);
+            }
+        } else _stepEpisode(events, sequence, draw);
+    }
+
     function _stepEpisode(bytes memory events, uint32 sequence, bool draw) private {
         if (inputSeq == type(uint32).max || sequence != inputSeq + 1) revert BadSequence();
         GameContext memory c = DoomGame.load(_resourceView(), gameState);
         UIState memory u = uiState;
         InputRuntimeState memory s = inputRuntime;
         EpisodeState memory e = episodeState;
+        _finishEpisode(c, s, u, e, events, sequence, draw);
+    }
+
+    function _finishEpisode(
+        GameContext memory c, InputRuntimeState memory s, UIState memory u, EpisodeState memory e,
+        bytes memory events, uint32 sequence, bool draw
+    ) private {
         EpisodeRuntime.tick(c, s, u, e, events);
         bytes memory pixels;
         if (draw) pixels = EpisodeRuntime.draw(c, s, u, e);
-        gameState = c.state;
-        uiState = u;
-        inputRuntime = s;
-        episodeState = e;
+        _saveEpisode(c, s, u, e);
         inputSeq = sequence;
         if (draw) _emitFrame(sequence, pixels);
     }

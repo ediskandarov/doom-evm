@@ -1,0 +1,8 @@
+{
+  "kind": "evm-menu-responder-checkpoint",
+  "pass": true,
+  "forge": { "tests": 5, "passed": 5, "failed": 0, "compileSeconds": 151.96, "suiteMilliseconds": 466.68 },
+  "nativeComparison": { "events": 28, "fieldsPerEvent": 13, "externalStorageRoundTrips": true },
+  "newChecks": ["menu packet isolation", "E1M9 request and trailing-input discard", "Escape and Backspace", "original duplicate hotkey cycling", "extended map wrapping and remembered selection"],
+  "productionIntegration": "pending real-EVM verification"
+}
