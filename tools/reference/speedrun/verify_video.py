@@ -41,7 +41,7 @@ def dynamic(data, offset_word):
     return result
 
 
-def verify(directory):
+def verify(directory, source_revision=None):
     report = json.loads((directory / 'evm.json').read_text())
     manifest = json.loads((directory / 'frame-manifest.json').read_text())
     assert report['pass'] and manifest['pass'] and report['exit']['reached'] and report['ownedRuntimeStopped']
@@ -95,7 +95,8 @@ def verify(directory):
         assert Image.open(png).convert('RGB').tobytes() == rgb
         assert sha(rgb) == frame['rgbSha256'] and sha(png.read_bytes()) == frame['pngSha256']
     for file, digest in report['sourceHashes'].items():
-        assert sha((ROOT / file).read_bytes()) == digest, file + ' executed source changed'
+        content = subprocess.check_output(['git', '-C', str(ROOT), 'show', source_revision + ':' + file]) if source_revision else (ROOT / file).read_bytes()
+        assert sha(content) == digest, file + ' executed source changed'
     assert sha((directory / 'evm.capture-receipts.json.gz').read_bytes()) == report['captureReceiptsSha256']
     assert sha((directory / 'evm.replay-receipts.json.gz').read_bytes()) == report['replayReceiptsSha256']
     assert sum(f['gas'] for f in manifest['frames']) == report['totalCaptureGas']
@@ -122,4 +123,6 @@ def verify(directory):
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument('directory', type=Path)
-    verify(parser.parse_args().directory.resolve())
+    parser.add_argument('--source-revision', help='Verify preserved executed source against an exact Git revision')
+    args = parser.parse_args()
+    verify(args.directory.resolve(), args.source_revision)
