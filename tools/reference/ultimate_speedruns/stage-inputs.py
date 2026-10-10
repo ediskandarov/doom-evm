@@ -10,7 +10,10 @@ for metadata in sorted(source.rglob('source.json')):
   assert not any(n.lower().endswith('.wad') for n in z.namelist()),'Commercial WAD in input archive'
   demos=[n for n in z.namelist() if n.lower().endswith('.lmp')];assert demos==[s['originalName']]
   data=z.read(s['originalName']);assert sha(data)==s['demoSha256']
- assert s['IWADMD5']=='c4fe9fd920207691a9f493668e0a2083' and s['IWADSHA256']=='6fdf361847b46228cfebd9f3af09cd844282ac75f3edbb61ca4cb27103ce2e7f'
+ # Legacy alternate metadata records the same authenticated SHA under
+ # wadSha256. The resource packer independently requires both IWAD hashes.
+ assert s.get('IWADSHA256',s.get('wadSha256'))=='6fdf361847b46228cfebd9f3af09cd844282ac75f3edbb61ca4cb27103ce2e7f'
+ if 'IWADMD5' in s:assert s['IWADMD5']=='c4fe9fd920207691a9f493668e0a2083'
  out=dest/metadata.parent.relative_to(source);out.mkdir(parents=True,exist_ok=True)
  for name,body in [('original.zip',raw),('source-download',data)]:
   p=out/name
@@ -19,7 +22,8 @@ for metadata in sorted(source.rglob('source.json')):
  p=out/'source.json'
  if p.exists():
   existing=json.loads(p.read_text())
-  for key in ['demoSha256','archiveSha256','originalName','downloadUrl','IWADMD5','IWADSHA256']:assert existing[key]==s[key],'Existing provenance differs: '+str(p)
+  for key in ['demoSha256','archiveSha256','originalName','downloadUrl']:assert existing[key]==s[key],'Existing provenance differs: '+str(p)
+  assert existing.get('IWADSHA256',existing.get('wadSha256'))==s.get('IWADSHA256',s.get('wadSha256'))
  else:p.write_bytes(metadata.read_bytes())
  count+=1
 print(json.dumps(dict(authenticatedOriginalArchives=count,existingAttemptsPreserved=True,commercialPayloadsCopied=False)))
