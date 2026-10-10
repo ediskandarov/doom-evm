@@ -1,5 +1,12 @@
 # Phase 4 progress ledger
 
+Tic52 diagnosis checkpoint (2026-10-10): **diagnosis integrated; full-rate
+rendering remains blocked**. The sampled sprite read reaches byte1 of a current
+neighboring header next pointer, whose native value varies by environment.
+Strict, deterministic and Episode policies correctly reject it. No production
+memory behavior or renderer fix changed; source verification was preserved
+without rerunning tests. See the final diagnostic integration entry.
+
 Native memory audit checkpoint (2026-10-10): **RESTRICT**. The completed audit
 is integrated by an exact `-x` cherry-pick. Retain the hybrid model and restrict
 native-equivalence claims to explicitly named profiles; production code and
@@ -1413,3 +1420,55 @@ usage attribution was captured for this standalone task; no usage estimate is ma
 binds commands, preservation checks, this ledger and the separately retained
 fresh replay. Historical audit reports/certificates were not overwritten.
 Stop after the normal main push and clean/synchronized check.
+
+## E1M1 speedrun tic52 diagnosis — Main integration (2026-10-10)
+
+Scope: Git operations and documentation consistency only. The designated
+Single Writer started at `2026-10-10T18:02:14Z` on clean main
+`1e7033c149ddab6641be3116af3974d5ed585183`, matching refreshed origin/main.
+Both requested commits were absent by ancestry and patch checks.
+
+| Source commit | Main cherry-pick with -x | Result |
+|---|---|---|
+| `97301518654ad1232933d7d965b1d542c9c1fb1b` | `bb19f2012c38a2ba7b7ac705c57ecb9bbcb8129f` | Clean; diagnostic adapters/tools, rejection regressions and authenticated fixtures |
+| `001240b7b9f9dc794260dd75711ef1029b264357` | `5f589b99e7cf422e95a5f3a61c08be5470e3dadf` | Clean; report and native/EVM checkpoint |
+
+Diagnostic implementation: complete. Main integration: complete. Verification:
+the source agent's completed verification is retained; no integration test run
+was performed. [Diagnosis and reproducibility report](SPEEDRUN-TIC52.md) and
+[original checkpoint](../artifacts/speedrun-tic52/checkpoint.json) remain byte-exact.
+All diagnostic/regression tools, tests and native comparison evidence delivered
+by the two commits are preserved. Earlier audit and integration records remain
+historical and unchanged.
+
+**Preserved finding:** the sprite source sample at absolute lump offset265
+reaches byte25 of the neighboring allocation header: byte1 of its LP64
+`next` pointer. The native environment changes that byte (O0/O2 observed25;
+ASan+UBSan observed97), changing the one pixel at(301,155). All three supported
+policies correctly reject this unsupported lower pointer byte. Deterministic
+initial-zero backing cannot override a written pointer; Episode's conditional
+provenance3 covers only high pointer bytes6/7. No general pointer value, portable
+tic52 pixel golden or production fix is justified by this evidence.
+
+Source verification, **not rerun during integration**:44 focused Forge tests;
+280 matching native/EVM gameplay worlds and real exit;56 sampled hashes exact;
+51 full-rate native-matching EVM frames before tic52 rejection;279 independent
+original-C frames per O0/O2/sanitizer profile, with only one varying pixel at52;
+three policy rejection/complete-storage rollback proofs. Detailed measurements,
+source identities, limitations and retained local-evidence hashes remain in the
+source report/checkpoint. Full-rate success remains false and no full-rate MP4
+is claimed. A broader native address/alignment domain would need separately
+authorized architectural review; it was not introduced here.
+
+Integration checks: exact commit diffs/history, source-file preservation, local
+documentation links and whitespace consistency. **No Forge, Node, native or EVM
+tests were run**, and no runtime or other worktree/process was touched. Production
+Solidity/memory libraries, original C, compiler settings, existing fixtures and
+historical acceptance evidence are unchanged. The test-only probe exposes the
+existing policies and saved-state digest; its default remains the legacy profile.
+
+Documentation/Git consistency endpoint: `2026-10-10T18:05:38Z`. No task-specific
+usage measurement was captured; no estimate is made.
+
+Stop after the normal main push and synchronized clean-tree check. No subsequent
+debugging, memory implementation or other task is authorized by this integration.
