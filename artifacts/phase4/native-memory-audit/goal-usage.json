@@ -1,0 +1,20 @@
+{
+  "kind": "available goal counters before publication",
+  "capturedClock": {
+    "current_time": "2026-10-10 17:19:07 UTC"
+  },
+  "goalToolResult": {
+    "goal": {
+      "threadId": "01a12649-dd56-7071-98c4-2b48d0e90adb",
+      "objective": "Audit Native C Memory Compatibility Assumptions independently: inventory original and reference build profiles, inspect EVM memory modes/provenance, run focused isolated native experiments, produce docs/PHASE4-NATIVE-MEMORY-AUDIT.md with evidence and KEEP/RESTRICT/REFACTOR verdict, commit documentation/test-only evidence in the existing feature worktree, and hand off without production fixes or main changes.",
+      "status": "active",
+      "tokensUsed": 249689,
+      "timeUsedSeconds": 884,
+      "createdAt": 1791651833,
+      "updatedAt": 1791652717
+    },
+    "remainingTokens": null,
+    "completionBudgetReport": null
+  },
+  "scope": "Exact tool values; aggregate attribution as supplied by the goal service. No per-model, dollar or missing usage estimate."
+}

@@ -1,0 +1,26 @@
+{
+  "status": "PASS",
+  "kind": "independent coordinator replay",
+  "start": "2026-10-10T17:12:28.868746+00:00",
+  "end": "2026-10-10T17:12:31.456082+00:00",
+  "command": [
+    "python3",
+    "tools/reference/native_memory_audit/run.py",
+    "--output",
+    "/private/tmp/doom-native-memory-audit-review-l2cr1rq2"
+  ],
+  "exitCode": 0,
+  "stdout": "{\n  \"status\": \"PASS with expected align4 sanitizer failures\",\n  \"builds\": 7,\n  \"runs\": 66,\n  \"expectedFailures\": 3,\n  \"elapsedSeconds\": 2.510742333251983,\n  \"addressDiversity\": {\n    \"O0\": {\n      \"uniqueZoneBases\": 12,\n      \"runs\": 12\n    },\n    \"O2\": {\n      \"uniqueZoneBases\": 12,\n      \"runs\": 12\n    },\n    \"asan-ubsan\": {\n      \"uniqueZoneBases\": 2,\n      \"runs\": 12\n    },\n    \"auto-init-zero\": {\n      \"uniqueZoneBases\": 11,\n      \"runs\": 12\n    },\n    \"no-wrapv\": {\n      \"uniqueZoneBases\": 12,\n      \"runs\": 12\n    },\n    \"original-align4\": {\n      \"uniqueZoneBases\": 3,\n      \"runs\": 3\n    },\n    \"original-align4-sanitized\": {\n      \"uniqueZoneBases\": 0,\n      \"runs\": 0\n    }\n  }\n}\n",
+  "stderr": "",
+  "manifestSha256": "bda03869c737724961f149cd77a5c1709862cdfcae92f397a22aecd9f707b455",
+  "sameSourceBindings": true,
+  "sameProfileOutcomes": true,
+  "successfulRuns": 63,
+  "expectedMisalignmentFailures": 3,
+  "scope": "Re-execution of new isolated native audit probe only; pointers/executable hashes may differ. No engine regression or historical fixture generation.",
+  "retainedReplay": {
+    "path": "artifacts/phase4/native-memory-audit/root-replay.tar.gz",
+    "sha256": "90c6c676f52a4f4a17fe643ee2f9565f3704620c41fdbd9742d95d9d7719d06f",
+    "files": 140
+  }
+}

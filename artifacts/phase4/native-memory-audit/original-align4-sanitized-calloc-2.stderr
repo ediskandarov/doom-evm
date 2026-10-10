@@ -1,0 +1,5 @@
+/var/folders/s1/n2td_1bs17v7fyxf3t0mwsdc0000gn/T/doom-native-memory-audit-r9oih01q/zone.c:254:12: runtime error: member access within misaligned address 0x625000000164 for type 'memblock_t' (aka 'struct memblock_s'), which requires 8 byte alignment
+0x625000000164: note: pointer points here
+  00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00
+              ^ 
+SUMMARY: UndefinedBehaviorSanitizer: undefined-behavior /var/folders/s1/n2td_1bs17v7fyxf3t0mwsdc0000gn/T/doom-native-memory-audit-r9oih01q/zone.c:254:12 

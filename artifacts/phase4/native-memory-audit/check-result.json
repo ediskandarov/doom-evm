@@ -1,0 +1,77 @@
+{
+  "status": "PASS",
+  "sourceBindings": 105,
+  "successfulProcessRuns": 63,
+  "expectedMisalignmentFailures": 3,
+  "textureRecords": 963,
+  "nonemptyComposites": 338,
+  "compositeHoleBytes": 0,
+  "record76Bound": true,
+  "bloodRows": 9,
+  "distinctObservedPointerValues": 582,
+  "observedPadding": {
+    "O0/calloc": [
+      "00000000"
+    ],
+    "O0/malloc-zero": [
+      "00000000"
+    ],
+    "O0/a5": [
+      "a5a5a5a5"
+    ],
+    "O0/malloc": [
+      "00000000"
+    ],
+    "O2/calloc": [
+      "00000000"
+    ],
+    "O2/malloc-zero": [
+      "00000000"
+    ],
+    "O2/a5": [
+      "a5a5a5a5"
+    ],
+    "O2/malloc": [
+      "00000000"
+    ],
+    "asan-ubsan/calloc": [
+      "00000000"
+    ],
+    "asan-ubsan/malloc-zero": [
+      "00000000"
+    ],
+    "asan-ubsan/a5": [
+      "a5a5a5a5"
+    ],
+    "asan-ubsan/malloc": [
+      "bebebebe"
+    ],
+    "auto-init-zero/calloc": [
+      "00000000"
+    ],
+    "auto-init-zero/malloc-zero": [
+      "00000000"
+    ],
+    "auto-init-zero/a5": [
+      "a5a5a5a5"
+    ],
+    "auto-init-zero/malloc": [
+      "00000000"
+    ],
+    "no-wrapv/calloc": [
+      "00000000"
+    ],
+    "no-wrapv/malloc-zero": [
+      "00000000"
+    ],
+    "no-wrapv/a5": [
+      "a5a5a5a5"
+    ],
+    "no-wrapv/malloc": [
+      "00000000"
+    ],
+    "original-align4/calloc": [
+      "00000000"
+    ]
+  }
+}

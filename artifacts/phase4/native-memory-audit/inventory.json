@@ -1,0 +1,636 @@
+{
+  "compiler": "/usr/bin/clang",
+  "version": "Apple clang version 17.0.0 (clang-1700.0.13.5)\nTarget: arm64-apple-darwin24.6.0\nThread model: posix\nInstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin\n",
+  "records": [
+    {
+      "kind": "fresh native all-type layout",
+      "command": [
+        "/usr/bin/clang",
+        "-std=c11",
+        "-I/Users/eduard/sandbox/doom-evm-episode-completion/original/DOOM/linuxdoom-1.10",
+        "/var/folders/s1/n2td_1bs17v7fyxf3t0mwsdc0000gn/T/doom-memory-layout-0g4f6edi/layout.c",
+        "-o",
+        "/var/folders/s1/n2td_1bs17v7fyxf3t0mwsdc0000gn/T/doom-memory-layout-0g4f6edi/layout"
+      ],
+      "sourceSha256": "30f19e10cb874d46d58262276d7588347f3cea072b9cd33ce5974b4274070fc6",
+      "executableSha256": "f9f81e4aaba30741f63fe5efca9dd39f535d7036aa85ef1b51d025381ccc0f97",
+      "matchedTypes": 26,
+      "measured": {
+        "memblock_t": {
+          "offsets": {
+            "size": 0,
+            "user": 8,
+            "tag": 16,
+            "id": 20,
+            "next": 24,
+            "prev": 32
+          },
+          "size": 40,
+          "alignment": 8
+        },
+        "memzone_t": {
+          "offsets": {
+            "size": 0,
+            "blocklist": 8,
+            "rover": 48
+          },
+          "size": 56,
+          "alignment": 8
+        },
+        "vertex_t": {
+          "offsets": {
+            "x": 0,
+            "y": 4
+          },
+          "size": 8,
+          "alignment": 4
+        },
+        "sector_t": {
+          "offsets": {
+            "floorheight": 0,
+            "ceilingheight": 4,
+            "floorpic": 8,
+            "ceilingpic": 10,
+            "lightlevel": 12,
+            "special": 14,
+            "tag": 16,
+            "soundtraversed": 20,
+            "soundtarget": 24,
+            "blockbox": 32,
+            "soundorg": 48,
+            "validcount": 88,
+            "thinglist": 96,
+            "linecount": 112,
+            "lines": 120,
+            "specialdata": 104
+          },
+          "size": 128,
+          "alignment": 8
+        },
+        "side_t": {
+          "offsets": {
+            "textureoffset": 0,
+            "rowoffset": 4,
+            "toptexture": 8,
+            "bottomtexture": 10,
+            "midtexture": 12,
+            "sector": 16
+          },
+          "size": 24,
+          "alignment": 8
+        },
+        "line_t": {
+          "offsets": {
+            "v1": 0,
+            "v2": 8,
+            "dx": 16,
+            "dy": 20,
+            "flags": 24,
+            "special": 26,
+            "tag": 28,
+            "sidenum": 30,
+            "bbox": 36,
+            "slopetype": 52,
+            "frontsector": 56,
+            "backsector": 64,
+            "validcount": 72,
+            "specialdata": 80
+          },
+          "size": 88,
+          "alignment": 8
+        },
+        "seg_t": {
+          "offsets": {
+            "v1": 0,
+            "v2": 8,
+            "offset": 16,
+            "angle": 20,
+            "sidedef": 24,
+            "linedef": 32,
+            "frontsector": 40,
+            "backsector": 48
+          },
+          "size": 56,
+          "alignment": 8
+        },
+        "subsector_t": {
+          "offsets": {
+            "sector": 0,
+            "numlines": 8,
+            "firstline": 10
+          },
+          "size": 16,
+          "alignment": 8
+        },
+        "node_t": {
+          "offsets": {
+            "x": 0,
+            "y": 4,
+            "dx": 8,
+            "dy": 12,
+            "bbox": 16,
+            "children": 48
+          },
+          "size": 52,
+          "alignment": 4
+        },
+        "mapthing_t": {
+          "offsets": {
+            "x": 0,
+            "y": 2,
+            "angle": 4,
+            "type": 6,
+            "options": 8
+          },
+          "size": 10,
+          "alignment": 2
+        },
+        "mobj_t": {
+          "offsets": {
+            "thinker": 0,
+            "x": 24,
+            "y": 28,
+            "z": 32,
+            "snext": 40,
+            "sprev": 48,
+            "angle": 56,
+            "sprite": 60,
+            "frame": 64,
+            "bnext": 72,
+            "bprev": 80,
+            "subsector": 88,
+            "floorz": 96,
+            "ceilingz": 100,
+            "radius": 104,
+            "height": 108,
+            "momx": 112,
+            "momy": 116,
+            "momz": 120,
+            "validcount": 124,
+            "type": 128,
+            "info": 136,
+            "tics": 144,
+            "state": 152,
+            "flags": 160,
+            "health": 164,
+            "movedir": 168,
+            "movecount": 172,
+            "target": 176,
+            "reactiontime": 184,
+            "threshold": 188,
+            "player": 192,
+            "lastlook": 200,
+            "spawnpoint": 204,
+            "tracer": 216
+          },
+          "size": 224,
+          "alignment": 8
+        },
+        "vldoor_t": {
+          "offsets": {
+            "thinker": 0,
+            "type": 24,
+            "sector": 32,
+            "topheight": 40,
+            "speed": 44,
+            "direction": 48,
+            "topwait": 52,
+            "topcountdown": 56
+          },
+          "size": 64,
+          "alignment": 8
+        },
+        "floormove_t": {
+          "offsets": {
+            "thinker": 0,
+            "type": 24,
+            "crush": 28,
+            "sector": 32,
+            "direction": 40,
+            "newspecial": 44,
+            "texture": 48,
+            "floordestheight": 52,
+            "speed": 56
+          },
+          "size": 64,
+          "alignment": 8
+        },
+        "ceiling_t": {
+          "offsets": {
+            "thinker": 0,
+            "type": 24,
+            "sector": 32,
+            "bottomheight": 40,
+            "topheight": 44,
+            "speed": 48,
+            "crush": 52,
+            "direction": 56,
+            "tag": 60,
+            "olddirection": 64
+          },
+          "size": 72,
+          "alignment": 8
+        },
+        "plat_t": {
+          "offsets": {
+            "thinker": 0,
+            "sector": 24,
+            "speed": 32,
+            "low": 36,
+            "high": 40,
+            "wait": 44,
+            "count": 48,
+            "status": 52,
+            "oldstatus": 56,
+            "crush": 60,
+            "tag": 64,
+            "type": 68
+          },
+          "size": 72,
+          "alignment": 8
+        },
+        "fireflicker_t": {
+          "offsets": {
+            "thinker": 0,
+            "sector": 24,
+            "count": 32,
+            "maxlight": 36,
+            "minlight": 40
+          },
+          "size": 48,
+          "alignment": 8
+        },
+        "lightflash_t": {
+          "offsets": {
+            "thinker": 0,
+            "sector": 24,
+            "count": 32,
+            "maxlight": 36,
+            "minlight": 40,
+            "maxtime": 44,
+            "mintime": 48
+          },
+          "size": 56,
+          "alignment": 8
+        },
+        "strobe_t": {
+          "offsets": {
+            "thinker": 0,
+            "sector": 24,
+            "count": 32,
+            "minlight": 36,
+            "maxlight": 40,
+            "darktime": 44,
+            "brighttime": 48
+          },
+          "size": 56,
+          "alignment": 8
+        },
+        "glow_t": {
+          "offsets": {
+            "thinker": 0,
+            "sector": 24,
+            "minlight": 32,
+            "maxlight": 36,
+            "direction": 40
+          },
+          "size": 48,
+          "alignment": 8
+        },
+        "spritedef_t": {
+          "offsets": {
+            "numframes": 0,
+            "spriteframes": 8
+          },
+          "size": 16,
+          "alignment": 8
+        },
+        "spriteframe_t": {
+          "offsets": {
+            "rotate": 0,
+            "lump": 4,
+            "flip": 20
+          },
+          "size": 28,
+          "alignment": 4
+        },
+        "vissprite_t": {
+          "offsets": {
+            "prev": 0,
+            "next": 8,
+            "x1": 16,
+            "x2": 20,
+            "gx": 24,
+            "gy": 28,
+            "gz": 32,
+            "gzt": 36,
+            "startfrac": 40,
+            "scale": 44,
+            "xiscale": 48,
+            "texturemid": 52,
+            "patch": 56,
+            "colormap": 64,
+            "mobjflags": 72
+          },
+          "size": 80,
+          "alignment": 8
+        },
+        "visplane_t": {
+          "offsets": {
+            "height": 0,
+            "picnum": 4,
+            "lightlevel": 8,
+            "minx": 12,
+            "maxx": 16,
+            "pad1": 20,
+            "top": 21,
+            "pad2": 341,
+            "pad3": 342,
+            "bottom": 343,
+            "pad4": 663
+          },
+          "size": 664,
+          "alignment": 4
+        },
+        "texpatch_t": {
+          "offsets": {
+            "originx": 0,
+            "originy": 4,
+            "patch": 8
+          },
+          "size": 12,
+          "alignment": 4
+        },
+        "texture_t": {
+          "offsets": {
+            "name": 0,
+            "width": 8,
+            "height": 10,
+            "patchcount": 12,
+            "patches": 16
+          },
+          "size": 28,
+          "alignment": 4
+        },
+        "thinker_t": {
+          "offsets": {
+            "prev": 0,
+            "next": 8,
+            "function": 16
+          },
+          "size": 24,
+          "alignment": 8
+        }
+      }
+    },
+    {
+      "kind": "compile-only ABI comparison",
+      "target": "arm64-apple-darwin24.6.0",
+      "command": [
+        "/usr/bin/clang",
+        "-target",
+        "arm64-apple-darwin24.6.0",
+        "-ffreestanding",
+        "-std=c11",
+        "-S",
+        "-emit-llvm",
+        "/var/folders/s1/n2td_1bs17v7fyxf3t0mwsdc0000gn/T/doom-memory-layout-0g4f6edi/abi.c",
+        "-o",
+        "-"
+      ],
+      "sourceSha256": "da24f34d599adcacc00c4a33d46a9126a76e2cd9e79f47eeab171b4c0a19b9d3",
+      "irSha256": "c6052f36fef4ec9eb20344270d44f516295fdf6d4b1a4cf8e93376bc3cb3c31b",
+      "labels": [
+        "sizeof(int)",
+        "sizeof(long)",
+        "sizeof(void*)",
+        "sizeof(memblock_t)",
+        "_Alignof(memblock_t)",
+        "sizeof(memzone_t)",
+        "__builtin_offsetof(memblock_t,size)",
+        "__builtin_offsetof(memblock_t,user)",
+        "__builtin_offsetof(memblock_t,tag)",
+        "__builtin_offsetof(memblock_t,id)",
+        "__builtin_offsetof(memblock_t,next)",
+        "__builtin_offsetof(memblock_t,prev)"
+      ],
+      "values": [
+        4,
+        8,
+        8,
+        40,
+        8,
+        56,
+        0,
+        8,
+        16,
+        20,
+        24,
+        32
+      ]
+    },
+    {
+      "kind": "compile-only ABI comparison",
+      "target": "i386-unknown-linux-gnu",
+      "command": [
+        "/usr/bin/clang",
+        "-target",
+        "i386-unknown-linux-gnu",
+        "-ffreestanding",
+        "-std=c11",
+        "-S",
+        "-emit-llvm",
+        "/var/folders/s1/n2td_1bs17v7fyxf3t0mwsdc0000gn/T/doom-memory-layout-0g4f6edi/abi.c",
+        "-o",
+        "-"
+      ],
+      "sourceSha256": "da24f34d599adcacc00c4a33d46a9126a76e2cd9e79f47eeab171b4c0a19b9d3",
+      "irSha256": "a1ef02472191892ffaa03439f7b3723d137550c6f030bfff4a88d66500fd6c15",
+      "labels": [
+        "sizeof(int)",
+        "sizeof(long)",
+        "sizeof(void*)",
+        "sizeof(memblock_t)",
+        "_Alignof(memblock_t)",
+        "sizeof(memzone_t)",
+        "__builtin_offsetof(memblock_t,size)",
+        "__builtin_offsetof(memblock_t,user)",
+        "__builtin_offsetof(memblock_t,tag)",
+        "__builtin_offsetof(memblock_t,id)",
+        "__builtin_offsetof(memblock_t,next)",
+        "__builtin_offsetof(memblock_t,prev)"
+      ],
+      "values": [
+        4,
+        4,
+        4,
+        24,
+        4,
+        32,
+        0,
+        4,
+        8,
+        12,
+        16,
+        20
+      ]
+    },
+    {
+      "kind": "compile-only ABI comparison",
+      "target": "x86_64-unknown-linux-gnu",
+      "command": [
+        "/usr/bin/clang",
+        "-target",
+        "x86_64-unknown-linux-gnu",
+        "-ffreestanding",
+        "-std=c11",
+        "-S",
+        "-emit-llvm",
+        "/var/folders/s1/n2td_1bs17v7fyxf3t0mwsdc0000gn/T/doom-memory-layout-0g4f6edi/abi.c",
+        "-o",
+        "-"
+      ],
+      "sourceSha256": "da24f34d599adcacc00c4a33d46a9126a76e2cd9e79f47eeab171b4c0a19b9d3",
+      "irSha256": "ef2813e6ed6407bd74e488f123ec1a911c267339aef09336e6409f11c39a9648",
+      "labels": [
+        "sizeof(int)",
+        "sizeof(long)",
+        "sizeof(void*)",
+        "sizeof(memblock_t)",
+        "_Alignof(memblock_t)",
+        "sizeof(memzone_t)",
+        "__builtin_offsetof(memblock_t,size)",
+        "__builtin_offsetof(memblock_t,user)",
+        "__builtin_offsetof(memblock_t,tag)",
+        "__builtin_offsetof(memblock_t,id)",
+        "__builtin_offsetof(memblock_t,next)",
+        "__builtin_offsetof(memblock_t,prev)"
+      ],
+      "values": [
+        4,
+        8,
+        8,
+        40,
+        8,
+        56,
+        0,
+        8,
+        16,
+        20,
+        24,
+        32
+      ]
+    }
+  ],
+  "macros": {
+    "base": {
+      "command": [
+        "/usr/bin/clang",
+        "-std=c99",
+        "-dM",
+        "-E",
+        "-I/Users/eduard/sandbox/doom-evm-episode-completion/original/DOOM/linuxdoom-1.10",
+        "-include",
+        "doomdef.h",
+        "-x",
+        "c",
+        "/dev/null"
+      ],
+      "sha256": "33ab439c320a8b3d908189db21b1a899883530e1c0835e505827f9226926e1d9",
+      "selected": {
+        "__APPLE__": "1",
+        "__MACH__": "1",
+        "__aarch64__": "1",
+        "__arm64__": "1",
+        "__LP64__": "1",
+        "__SIZEOF_INT__": "4",
+        "__SIZEOF_LONG__": "8",
+        "__SIZEOF_POINTER__": "8",
+        "__BYTE_ORDER__": "__ORDER_LITTLE_ENDIAN__",
+        "__ORDER_LITTLE_ENDIAN__": "1234",
+        "__CHAR_UNSIGNED__": null,
+        "__STDC_VERSION__": "199901L",
+        "RANGECHECK": "",
+        "NORMALUNIX": null,
+        "LINUX": null,
+        "USEASM": null,
+        "__BIG_ENDIAN__": null
+      }
+    },
+    "gameplay": {
+      "command": [
+        "/usr/bin/clang",
+        "-std=c99",
+        "-fsigned-char",
+        "-DNORMALUNIX",
+        "-dM",
+        "-E",
+        "-I/Users/eduard/sandbox/doom-evm-episode-completion/original/DOOM/linuxdoom-1.10",
+        "-include",
+        "doomdef.h",
+        "-x",
+        "c",
+        "/dev/null"
+      ],
+      "sha256": "65daebced11b34e698fe28f071d00bc7cbb126c6c9d76a99359a80bddd3f5493",
+      "selected": {
+        "__APPLE__": "1",
+        "__MACH__": "1",
+        "__aarch64__": "1",
+        "__arm64__": "1",
+        "__LP64__": "1",
+        "__SIZEOF_INT__": "4",
+        "__SIZEOF_LONG__": "8",
+        "__SIZEOF_POINTER__": "8",
+        "__BYTE_ORDER__": "__ORDER_LITTLE_ENDIAN__",
+        "__ORDER_LITTLE_ENDIAN__": "1234",
+        "__CHAR_UNSIGNED__": null,
+        "__STDC_VERSION__": "199901L",
+        "RANGECHECK": "",
+        "NORMALUNIX": "1",
+        "LINUX": null,
+        "USEASM": null,
+        "__BIG_ENDIAN__": null
+      }
+    }
+  },
+  "sourceHashes": {
+    "tools/reference/native_memory_audit/inventory.py": "73e68588bb86be18dfb04bd0981a519b6d3f995f305058ef0ccdf858d63e1c38",
+    "tools/reference/native_memory_audit/check.py": "17f3af94b52330f936eeab9aed47bffa1e125b55351f4da9014ae1161b31deee",
+    "tools/reference/reference.py": "800bcdff3c05634aab27f4cc38bf12bc564ed4644bb88845aff9aa9ce12dc8ee",
+    "tools/reference/renderer/build.py": "f699de7c8089962588d5a4d46ce314892e53d583a01dc4c6d315123b63a08918",
+    "tools/reference/renderer/host.c": "c6ed685b77767853ce8534b17f9c999573dddbb283e199dd5295143fe1b8eb4f",
+    "tools/reference/gameplay/build.py": "234b79169ec39f1faf3858a564e8ad25f680cd7e84a110c3d3c32f37eec4387d",
+    "tools/reference/gameplay/host.c": "8eb17208506ae56f18cad6bd4f6a10a8bfdd4070391e8e3a19685958c5625ec3",
+    "tools/reference/phase2_data/reference.py": "0c23f13de42b5e392a78c1917c37498d79513be14f63d4fd20feec4bfc6bcaec",
+    "tools/reference/phase2_data/compat.h": "2d4b3dcae770c1cf75407f649c2bfa6ac81846a10edcc4f2a93f78343d998498",
+    "tools/reference/phase2_data/driver.c": "c32e13146769e984d8d63cafdd077aa9fbf1e7664a46a5ff0e9a3b193ed9b9cc",
+    "tools/reference/phase3_zone_allocator/reference.py": "264be33c47f4ec6f7d4fb90c145b58b4a2d8634ebcc62891dbdad4527fa577da",
+    "tools/reference/phase3_zone_allocator/host.c": "2d1200dac107372fbd639dc7ff371d4598aa9a7711f61d10c5900d4e5adf7424",
+    "tools/reference/phase3_zone_backing/reference.py": "4fe6c0f9a554c578cfaba157b8407751292e4ab72a8fcb47483f0ca1543f266a",
+    "tools/reference/phase3_zone_lifecycle/layout.py": "c6b1625239433e54ab25de305ce6c3cc701fb483b8094500606b83042f37d259",
+    "tools/zone/generate-layout.py": "69afc56c6ba8ac3ddb6edea856120f47c1526bd175ccbb0788b2cc968fe78b16",
+    "tools/reference/phase3_zone_lifecycle/reference.py": "0a1bdd685eee95bb8876f5c1484bebca5354fdd6d3d88d40145807253d9da4da",
+    "tools/reference/ui/reference.py": "4a2a5f8a933652bc0b38d31ad6ed360122b52de45ac7c6faeca0154a90ed4b09",
+    "tools/reference/input-runtime/reference.py": "20d4ea6dca87686c4c92d6579ff4a310a391668fe15787ccf59105eb8783f662",
+    "tools/reference/episode_startup/reference.py": "c9db4448a1d40a3edc1caec0c2ff9e84bf9afc0287e7f3fecd822691946543a0",
+    "tools/reference/drawbounds_blood/reference.py": "c782c04926240be620dd393e7b55aa7b00a63282c526594ef6fe21c704d03dec",
+    "tools/reference/drawbounds_blood/host.c": "35aa164d35fbc34ccefa536f057b28ba6ac489bcce1f1cd491c3811018835e76",
+    "tools/reference/episode_completion/pointer.py": "3139a2b92f5b89fe69bbcbf5bfd390d0955e2c6d1349f0ca5f68e13f6137ffd2",
+    "src/doom/z_zone.sol": "b4e75218021d65aaf3389cf78a68663feebc2084c82457821be17247dc8106c5",
+    "src/doom/z_zone_types.sol": "f543690360a07b6df0ac5633e061b4bd1b348b5e26ba7283a4bf3f1f017ab0a7",
+    "src/doom/z_zone_backing.sol": "85b1b604ad7eb460e24c8a2035ce1d79b4aa5fe03239bfba9d87be9df51dd62a",
+    "src/doom/native_zone_layout.sol": "118b2d17165826fb0857d9cb296e2214db2a28917769299a82e70d0c0790f6e8",
+    "src/doom/r_data.sol": "ef5f26f230c1bed1a073f73b489613d947b420c220faa6f2c16a6f583045010c",
+    "src/doom/w_zone_cache.sol": "03c07404765de9620b3d1ff15727809cdad911c8a78d822019b63500fa5018c2",
+    "src/evm/Doom.sol": "fa07a57c356d2c0cffe2d09affaad4d620fa6dd929c8ba78ffa46c6595f3a1a2",
+    "src/evm/DoomGame.sol": "d9451a915ab977bae137340e3e6626a270a4b84b8b6ea9449a8c4f0f578296df",
+    "src/evm/EpisodeStartup.sol": "bb574f20cdc09e63385261f7e8e203a49a90a15b87903d70dfe43d396bc3255e",
+    "test/fixtures/phase3_zone_lifecycle/layout.json": "81e871d8639a55ee9058e8a12e8f5bbeeab8bdd55675ed7c3fc938a4147275f4",
+    "test/fixtures/phase2_data/manifest.json": "9ea7c4bd041b0ab21e266a8246538fc581e744e1f9a6e5d1c45c7fa59ffe3060",
+    "test/fixtures/phase2_data/resources.bin": "e04d5e79980752550f726ac5d093911c60c58a6bcb94c3ba0bbb3c6f06949ad0",
+    "artifacts/phase4/episode-completion/pointer-native.json": "b2fdd86711cb3b8ba74fdfd0444da114d13c1b5a75fa37e0853b948c6e48eaf1",
+    "artifacts/phase4/episode-completion/composite-native-binding.json": "47881f6ac17c8021febad44c9139f3737f907115d2424dc0b6c322356712cbe2"
+  },
+  "scope": "Fresh all-type native layout plus compile-only selected ABI comparison. No historic Linux execution or historical GCC identity claimed."
+}

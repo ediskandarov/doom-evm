@@ -1,0 +1,5 @@
+In file included from /Users/eduard/sandbox/doom-evm-episode-completion/tools/reference/native_memory_audit/probe.c:22:
+/var/folders/s1/n2td_1bs17v7fyxf3t0mwsdc0000gn/T/doom-native-memory-audit-r9oih01q/zone.c:440:33: warning: cast to smaller integer type 'unsigned int' from 'void **' [-Wpointer-to-int-cast]
+  440 |     if (tag >= PU_PURGELEVEL && (unsigned)block->user < 0x100)
+      |                                 ^~~~~~~~~~~~~~~~~~~~~
+1 warning generated.

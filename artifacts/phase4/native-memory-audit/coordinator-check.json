@@ -1,0 +1,96 @@
+{
+  "status": "PASS",
+  "time": "2026-10-10T17:19:22.454752+00:00",
+  "baseline": "b12eb212fa1f33ba787490327e327611b156f9a0",
+  "reportSha256": "e1e96d7b2ae91c324416ca64b6a315b9d4f3b44318550678e0812f76df300cd7",
+  "checkerCommand": [
+    "python3",
+    "tools/reference/native_memory_audit/check.py"
+  ],
+  "checkerResult": {
+    "status": "PASS",
+    "sourceBindings": 105,
+    "successfulProcessRuns": 63,
+    "expectedMisalignmentFailures": 3,
+    "textureRecords": 963,
+    "nonemptyComposites": 338,
+    "compositeHoleBytes": 0,
+    "record76Bound": true,
+    "bloodRows": 9,
+    "distinctObservedPointerValues": 582,
+    "observedPadding": {
+      "O0/calloc": [
+        "00000000"
+      ],
+      "O0/malloc-zero": [
+        "00000000"
+      ],
+      "O0/a5": [
+        "a5a5a5a5"
+      ],
+      "O0/malloc": [
+        "00000000"
+      ],
+      "O2/calloc": [
+        "00000000"
+      ],
+      "O2/malloc-zero": [
+        "00000000"
+      ],
+      "O2/a5": [
+        "a5a5a5a5"
+      ],
+      "O2/malloc": [
+        "00000000"
+      ],
+      "asan-ubsan/calloc": [
+        "00000000"
+      ],
+      "asan-ubsan/malloc-zero": [
+        "00000000"
+      ],
+      "asan-ubsan/a5": [
+        "a5a5a5a5"
+      ],
+      "asan-ubsan/malloc": [
+        "bebebebe"
+      ],
+      "auto-init-zero/calloc": [
+        "00000000"
+      ],
+      "auto-init-zero/malloc-zero": [
+        "00000000"
+      ],
+      "auto-init-zero/a5": [
+        "a5a5a5a5"
+      ],
+      "auto-init-zero/malloc": [
+        "00000000"
+      ],
+      "no-wrapv/calloc": [
+        "00000000"
+      ],
+      "no-wrapv/malloc-zero": [
+        "00000000"
+      ],
+      "no-wrapv/a5": [
+        "a5a5a5a5"
+      ],
+      "no-wrapv/malloc": [
+        "00000000"
+      ],
+      "original-align4/calloc": [
+        "00000000"
+      ]
+    }
+  },
+  "localLinks": 41,
+  "allLinksExist": true,
+  "protectedTrackedFilesUnchanged": true,
+  "originalSubmoduleClean": true,
+  "newFilesConfinedToAuditPaths": true,
+  "replayArchiveAndManifestHashesMatch": true,
+  "newFileCountBeforeThisReport": 152,
+  "rawEvidenceFormatting": "Initial staged whitespace check flagged compiler macro definitions and sanitizer diagnostics. Audit-local .gitattributes exempts only *-macros.txt and *.stderr from style whitespace checks; source bytes and evidence hashes are unchanged.",
+  "publicationCheckTime": "2026-10-10T17:19:47.275560+00:00"
+}

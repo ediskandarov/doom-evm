@@ -1,0 +1,3 @@
+# Preserve exact compiler and sanitizer output, including emitted whitespace.
+*-macros.txt -whitespace
+*.stderr -whitespace
