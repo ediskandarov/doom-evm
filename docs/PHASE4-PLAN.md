@@ -1,5 +1,10 @@
 # Phase 4 progress ledger
 
+Current UI checkpoint: **Goal4.11 Production UI is integrated into main and
+verified in the declared E1M1 profile; clients must opt in with productionUI:true.**
+Earlier source-only wave records remain historical; broader Phase4 production
+lifecycle and final acceptance remain pending. See the latest checkpoint below.
+
 Current integration: **Wave2 source Goals4.4 (Cheats),4.5 (Automap) and4.7a
 (Episode resources) are integrated and verified within module/support scope.**
 Production integration remains pending. The newest Wave2 checkpoint below is
@@ -744,3 +749,125 @@ exits plus Intermission/Finale, followed by full regression/production E2E.
 No blocker remains for this source merge. The commit containing this checkpoint
 and certificate is integration-specific publication. Stop after normal push,
 clean main and origin/main synchronization; no later goal starts automatically.
+
+
+## Goal 4.11 — Verified Production UI main integration (2026-10-10)
+
+The user authorized integration of the completed Production UI implementation
+from `feat/phase4-ui-integration`. Scope is merge verification/publication only;
+no new functionality, other worktree change or later Phase4 goal follows.
+Goal start2026-10-10T12:03:39Z. Clean main and refreshed origin/main matched
+`b833ff844aeccc644a9174b63e8229f1dd40d567`, the completed/published Wave2 baseline.
+
+Original commits preserved: `0b65825bd589b9f824ef08172cb780c5b928ab9b`,
+`49802693238a51fb24de4e5f206980530809a28b`,
+`fe427b0a59deb6f0d4251e14d9cfd3fe60dae389`,
+`2bea0ea9f2b7a626fde5b8674c700c8b972216a2`,
+`a84afeba63aa8bc54e9f0e9c7a0c36d1e5a340cf`.
+Merge **4345a872645c69dee0d9ed3c72c02c6892fb08af** uses Gitmoji/no-ff and has
+no conflicts. Every one of29 changed feature files matches the source tip,
+including documentation, test extensions, original logs/certificates/screenshots.
+
+| Deliverable | Implementation | Main integration | Verification | Remaining |
+|---|---|---|---|---|
+| Persistent original ST/HU/video consumer | Complete at `0b65825`; separate UIState/borrowed immutable graphics | Integrated in production Doom/DoomGame/DoomUI without integration source edits |159 focused tests;276 controlled native storage snapshots;210 fresh native-matching production tics |Declared single-player E1M1 UI scope complete |
+| View sizes, palettes and browser presentation |Explicit UI startup/fullscreen, upper168+status32, frame-bound EVM gamma palettes |Feature web input/palette implementation retained exactly |50 Node tests;13 fresh native-equal UI Frames/palettes; original210-tic/13-Canvas Chrome evidence preserved and source-bound |Fresh browser rerun deferred at this conflict-free merge |
+| Legacy world-only profile |Existing startup/Frame/constructor/input ABI retained; render overload defaults11 |All existing engine modules/layouts/resource identity/config retained |Fresh129-tic legacy replay,6 gameplay+1 static Frames,13 storage rollback checks pass |Full inherited/final Phase4 acceptance deferred |
+| History/evidence/publication |All five feature commits and prior Phase4 history retained |Original UI report/evidence remain exact; separate main-integration evidence |Original certificate checker and all29-file identity checks pass;1741 protected baseline files exact before ledger update |No blocker for this merge |
+
+### Executed merge verification
+
+- Original `tools/reference/ui/checkpoint.py --check` passes on the merged main
+  source/evidence. This validates preserved proof bindings; executed gates are
+  recorded separately below, not inferred from the certificate alone.
+- The unchanged focused runner executes159 Foundry tests across18 suites,0
+  failure/skip: ProductionUI consumer/storage vectors plus ST/HU/video, actual
+  player/pickup/door producers, psprites/weapons, storage, renderer view/draw/
+  plane/sprite/pass-order dependencies. Two existing fuzz tests run256 cases.
+  The105-file compile uses pinned Solc0.8.37/viaIR/optimizer200/Cancun and reports
+  244.56s; test wall time5.31s. The explicit production Doom/ResourceStore build
+  compiles2 affected roots in75.79s and passes with unchanged settings/budget.
+- 50 Node input/palette/protocol/lifecycle/budget tests pass,0 failure/skip.
+  The first sandbox run had49 pass/1 failure because the runtime-cleanup test
+  could not bind its owned test socket. The unchanged authorized rerun passes.
+  That cleanup test's synthetic-deploy helper temporarily overwrote ignored
+  web/config.local.json. Its exact original bytes were recovered from an existing
+  local copy matching the pre-test SHA256; palette identity was also checked.
+  Both files are now exact, and the fresh runtime gates verify them afterward.
+  No existing chain was reset, reconfigured or terminated.
+- Original UI oracle rebuild:210 tics/13 Frames, O0/O2/ASan+UBSan/alternate-fill
+  profiles agree. The new manifest/build metadata match the preserved feature
+  evidence byte-for-byte. Independent legacy native rebuild also passes129 tics.
+- Fresh UI Anvil18911: all1755 resource runtimes and updated production Doom
+  deployed ordinarily;210 tics match45 native scalar fields and all81 message
+  backing bytes each, including197 no-render tics. All13 UI Frames match64,000
+  native indexes and768 palette bytes; a pre-start static Frame also matches.
+  Six whole-storage driver/startup/sequence/input rejections pass. Fullscreen
+  transitions before tics70/101 preserve counters; pickup and HUD expiry pass.
+- Fresh legacy Anvil18912: unchanged inherited production runner verifies129
+  native tics,6 gameplay+1 static Frames and13 full-storage rollback checks.
+  Both owned nodes stop after their runners complete. Browser harnesses were
+  not invoked by these replays; the legacy runner disables browser-palette writes.
+  Playground18880/8088 are not used by these runtime gates.
+
+No inherited assertion, C oracle, native golden or historical acceptance
+certificate was weakened or overwritten. Earlier audit/video/ST/HU/Gameflow/
+Cheats/Automap/Episode source and evidence remain exact. Feature-authorized
+changes to Doom/DoomGame and web input/presentation are retained exactly; the
+web input test change adds UI coverage and preserves existing legacy assertions.
+
+### Required deployment/client configuration
+
+**Deploy the updated Doom contract to a new address.** This merge does not
+upgrade code/storage of an existing deployment or redeploy the playground.
+Before starting UI gameplay, set these boolean fields in the browser's existing
+local configuration, alongside the new address, matching RPC/driver/resource
+identity and execution budget:
+
+```json
+{
+  "gameplay": true,
+  "productionUI": true,
+  "uiFullscreen": false
+}
+```
+
+`productionUI:true` is a browser configuration requirement, not a constructor
+argument. It selects `initializeGameUI(bool)` and requires the companion
+FramePalette event. Optional `uiFullscreen:true` selects320x200 world with HUD/
+palette effects; false selects320x168 world plus the original32-row status bar.
+`setUIFullscreen(bool)` is driver-only and does not advance tic/input/Frame
+counters. Configure the UI profile before startup; a legacy-started deployment
+cannot be converted by calling UI initialization again. Configurations without
+productionUI:true retain world-only startup/presentation.
+
+Frame stays the frozen indexed8 320x200 ABI. Consumers select Frame by topic
+and bind FramePalette by address, transaction, block, frameId and inputSeq;
+EVM-selected768-byte gamma RGB data supplies presentation. Receipt/WS/historical
+association and stale asynchronous delivery rules remain those verified in the
+feature. No new browser drawing or host gameplay logic is introduced.
+
+### Evidence, deferred checks and handoff
+
+Original [Goal4.11 report](PHASE4-UI-INTEGRATION.md),
+[certificate](../artifacts/phase4/ui/verification.json),
+[Chrome proof](../artifacts/phase4/ui/browser.json) and all screenshots/logs are
+preserved byte-for-byte. New [main-integration certificate](../artifacts/phase4/ui-main-integration/integration.json),
+[focused log](../artifacts/phase4/ui-main-integration/focused.log),
+[Node log](../artifacts/phase4/ui-main-integration/node.log),
+[fresh UI receipts](../artifacts/phase4/ui-main-integration/production.json) and
+[fresh legacy receipts](../artifacts/phase4/ui-main-integration/legacy.json)
+record the executed merged-source checks. The original Chrome Canvas run is
+validated/preserved rather than repeated; no new Chrome measurement is claimed.
+
+Full inherited Phase0–3 and final Phase4 suite/production-browser acceptance
+remain deferred. Current verified UI covers declared single-player retail E1M1,
+default gamma0/showMessages=true; controlled vectors cover broader inventory/
+face domains without claiming a whole-episode playthrough. Cheats/Automap/raw
+responders, multi-map gameplay, Gameflow lifecycle/progression, Intermission/
+Finale and restart UI-stat retention still require their separate integration
+goals. No memory-architecture or storage-upgrade claim is added.
+
+Implementation/source/runtime UI integration is complete within that scope.
+The commit containing this checkpoint and separate certificate is publication;
+stop after normal push and clean main/origin synchronization.

@@ -1,0 +1,406 @@
+{
+  "schemaVersion": 1,
+  "status": "passed within declared UI merge scope",
+  "baselineMain": "b833ff844aeccc644a9174b63e8229f1dd40d567",
+  "refreshedOriginMain": "b833ff844aeccc644a9174b63e8229f1dd40d567",
+  "verifiedSourceCommit": "4345a872645c69dee0d9ed3c72c02c6892fb08af",
+  "integratedBranch": "feat/phase4-ui-integration",
+  "sourceCommits": [
+    "0b65825bd589b9f824ef08172cb780c5b928ab9b",
+    "49802693238a51fb24de4e5f206980530809a28b",
+    "fe427b0a59deb6f0d4251e14d9cfd3fe60dae389",
+    "2bea0ea9f2b7a626fde5b8674c700c8b972216a2",
+    "a84afeba63aa8bc54e9f0e9c7a0c36d1e5a340cf"
+  ],
+  "mergeCommit": "4345a872645c69dee0d9ed3c72c02c6892fb08af",
+  "mergeConflicts": [],
+  "featureChangedFiles": 29,
+  "allFeatureFilesByteIdentical": true,
+  "integrationSourceChangesRequired": false,
+  "verificationCompletedAt": "2026-10-10T12:22:45.500588+00:00",
+  "checks": [
+    {
+      "name": "focused-forge",
+      "command": [
+        "python3",
+        "tools/reference/ui/verify.py"
+      ],
+      "startedAt": "2026-10-10T12:07:47.666994+00:00",
+      "elapsedSeconds": 250.708,
+      "exitCode": 0,
+      "logSha256": "2793dca41aa252afe3edc36285f1519998fc3885fc12dcc1c345825b76777581"
+    },
+    {
+      "name": "production-build",
+      "command": [
+        ".toolchain/bin/forge",
+        "build",
+        "--offline",
+        "src/evm/Doom.sol",
+        "src/evm/ResourceStore.sol",
+        "test/integration/ProductionUI.t.sol",
+        "--skip",
+        "test",
+        "--skip",
+        "script",
+        "--no-lint"
+      ],
+      "startedAt": "2026-10-10T12:11:58.376559+00:00",
+      "elapsedSeconds": 75.857,
+      "exitCode": 0,
+      "logSha256": "909953e2c027574431d27fe58f1c362fb9a77adb7cdb481d61d22cc91979d03b"
+    },
+    {
+      "name": "focused-node",
+      "command": [
+        "python3",
+        "tools/reference/ui/verify.py",
+        "--node-only"
+      ],
+      "startedAt": "2026-10-10T12:09:04.584161+00:00",
+      "elapsedSeconds": 0.891,
+      "exitCode": 0,
+      "logSha256": "3b7d1e9c4900844eb686545147a4707c8d280ba5be9907ea56b1483ace2328b4"
+    },
+    {
+      "name": "ui-native",
+      "command": [
+        "python3",
+        "tools/reference/ui/reference.py",
+        "--output",
+        "artifacts/local/ui-main-integration/native"
+      ],
+      "startedAt": "2026-10-10T12:07:47.666997+00:00",
+      "elapsedSeconds": 19.884,
+      "exitCode": 0,
+      "logSha256": "2ba10b3a0713a14dc6fffb4ff8f24144de3b31d8b7038a1b1605795e875105e7"
+    },
+    {
+      "name": "legacy-native",
+      "command": [
+        "python3",
+        "tools/reference/gameplay/production.py",
+        "--output",
+        "artifacts/local/ui-main-integration/legacy-native"
+      ],
+      "startedAt": "2026-10-10T12:08:07.551950+00:00",
+      "elapsedSeconds": 10.708,
+      "exitCode": 0,
+      "logSha256": "239d1649c73ab214829df9fbbe836c003e39780172f6a6b790fdffb0d53bdbea"
+    },
+    {
+      "name": "ui-production-evm",
+      "command": [
+        "node",
+        "tools/reference/ui/production.mjs",
+        "--port",
+        "18911",
+        "--native",
+        "artifacts/local/ui-main-integration/native",
+        "--output-prefix",
+        "artifacts/local/ui-main-integration/production"
+      ],
+      "startedAt": "2026-10-10T12:14:18.670472+00:00",
+      "elapsedSeconds": 93.409,
+      "exitCode": 0,
+      "logSha256": "4ebf8293c7f94607fb06efdf2153d6bca472fc0c7f9aebcbf8e418262e96bb13"
+    },
+    {
+      "name": "legacy-production-evm",
+      "command": [
+        "node",
+        "tools/reference/gameplay/production.mjs",
+        "--port",
+        "18912",
+        "--native",
+        "artifacts/local/ui-main-integration/legacy-native",
+        "--output-prefix",
+        "artifacts/local/ui-main-integration/legacy",
+        "--no-web-palette-write"
+      ],
+      "startedAt": "2026-10-10T12:15:52.082196+00:00",
+      "elapsedSeconds": 83.336,
+      "exitCode": 0,
+      "logSha256": "6cfe3af9dfcb197403d1a1fd0caab296233d34b97d12363e610f668e8cfdf929"
+    }
+  ],
+  "focused": {
+    "foundryPassed": 159,
+    "foundryFailed": 0,
+    "foundrySkipped": 0,
+    "foundrySuites": 18,
+    "consumerStorageSnapshots": 276,
+    "compiledFiles": 105,
+    "compilerSeconds": 244.56,
+    "testWallSeconds": 5.31,
+    "productionCompileFiles": 2,
+    "productionCompilerSeconds": 75.79,
+    "fuzzTests": 2,
+    "fuzzRunsEach": 256,
+    "nodePassed": 50,
+    "nodeFailed": 0,
+    "nodeSkipped": 0,
+    "nodeInitialSandboxFailure": [
+      {
+        "name": "focused-node",
+        "command": [
+          "python3",
+          "tools/reference/ui/verify.py",
+          "--node-only"
+        ],
+        "startedAt": "2026-10-10T12:07:47.666994+00:00",
+        "elapsedSeconds": 0.548,
+        "exitCode": 1,
+        "logSha256": "6991e5d739a0ccb9297941f19290b75fdf47ee492f2964170f4a319221e447ba"
+      }
+    ],
+    "runtimeCleanupConfigRestoration": {
+      "issue": "Runtime-cleanup test synthetic deployment overwrote ignored local browser configuration",
+      "resolution": "Exact pre-test SHA256 recovered from an existing matching local copy; original config restored byte-for-byte; palette unchanged",
+      "runtime": "Test owned Anvil18551, no existing node reset/termination",
+      "restoredAndVerified": true
+    }
+  },
+  "native": {
+    "uiTics": 210,
+    "uiFrames": 13,
+    "profiles": [
+      "O0",
+      "O2",
+      "ASan/UBSan",
+      "ASan/UBSan allocation-fill0xa5"
+    ],
+    "originalManifestAndBuildExact": true,
+    "manifestSha256": "0a5fcf08f1a14d7cb3eb4eb99bf33895c69138bff5c680f55744fdb9405c1195",
+    "legacyTics": 129
+  },
+  "ordinaryUI": {
+    "tics": 210,
+    "uiFrames": 13,
+    "staticFrames": 1,
+    "noRenderTics": 197,
+    "nativeScalarsPerTic": 45,
+    "nativeMessageBackingBytesPerTic": 81,
+    "allFramePixels": 64000,
+    "allPaletteBytes": 768,
+    "storageRollbacks": 6,
+    "modeTransitions": [
+      {
+        "beforeTic": 70,
+        "fullscreen": true,
+        "transactionHash": "0xc4d71019290118124d46e53919f6fce670e825cff7cd8b2382ba628c076511b3"
+      },
+      {
+        "beforeTic": 101,
+        "fullscreen": false,
+        "transactionHash": "0x2b072bf8372536c001db29c860de830c47f8df4bb7c2e53e2873bef237909ff4"
+      }
+    ],
+    "resourceCreates": 1755,
+    "port": 18911,
+    "ownedNodeStopped": true,
+    "report": "artifacts/phase4/ui-main-integration/production.json"
+  },
+  "inheritedLegacy": {
+    "tics": 129,
+    "gameplayFrames": 6,
+    "staticFrames": 1,
+    "storageRollbacks": 13,
+    "resourceCreates": 1755,
+    "port": 18912,
+    "ownedNodeStopped": true,
+    "report": "artifacts/phase4/ui-main-integration/legacy.json"
+  },
+  "preservedBrowser": {
+    "rerun": false,
+    "pass_": true,
+    "tics": 210,
+    "canvasFrames": 13,
+    "certificate": "artifacts/phase4/ui/browser.json",
+    "sha256": "181ca86cd94a4ca58b0d2d5417d11714fe9e41bfb871a2635cbffb4b50904884",
+    "allSourcesAndEvidenceBound": true
+  },
+  "deploymentRequirement": {
+    "newDoomDeploymentRequired": true,
+    "storageUpgradeClaim": false,
+    "browserConfig": {
+      "gameplay": true,
+      "productionUI": true,
+      "uiFullscreen": false
+    },
+    "flagIsConstructorArgument": false,
+    "uiStartup": "initializeGameUI(bool)",
+    "legacyStartup": "initializeGame/initializeGameStrict retain world-only",
+    "companionEvent": "FramePalette associated by address/transaction/block/frameId/inputSeq",
+    "frameABI": "unchanged 320x200 indexed8"
+  },
+  "preservation": {
+    "unchangedBaselineFilesBeforeLedger": 1741,
+    "unchangedBaselineFilesAfterLedger": 1740,
+    "protectedIndexSha256": "251ba5cf8277c7984981780d9adee80073ab32aacd7f9547d910131a715ad7e7",
+    "allowedModifiedBaselineFiles": [
+      "docs/PHASE4-PLAN.md",
+      "src/evm/Doom.sol",
+      "src/evm/DoomGame.sol",
+      "web/app.mjs",
+      "web/input-loop.mjs",
+      "web/input-loop.test.mjs"
+    ],
+    "historicalLedgerBodyExact": true,
+    "originalUiCertificateSha256": "7a253b5f5540d0cdc23328916ba3f09c2a72ab3c26ddc6015980a4aaafa2ddee",
+    "originalUiEvidenceSha256": {
+      "browser.json": "181ca86cd94a4ca58b0d2d5417d11714fe9e41bfb871a2635cbffb4b50904884",
+      "canvas-tic204.png": "e4616d285cdb4e0d79e260b7dc9f1bb736415b7adb94a7b20b780a8d5114feb5",
+      "canvas-tic64.png": "0cdad30983677d143171d417c7e38f2a106ed9bb40abdf9e0352c47db3a69c6a",
+      "canvas-tic70.png": "ffed8b9ee19767aacc21df57dda3bfc8eebbb6b96fe22c8f35bc8116c65726c3",
+      "focused.json": "ba7205cece4732aa9f796c7acb02ab473edc709f9709ec5c8c29a23cb7c040f4",
+      "focused.log": "6d6af6bb62d7dd617d7d9a412c2dfd70ee49cc2abfee1560fe92b56a669f3575",
+      "legacy.json": "b563af46268b064965e64809e6f3a133cb120942aa6b1b0266cc28c3b66e51f4",
+      "native-build.json": "97b993bf228003124b73f8307edebe82acae5fb25bac43db72986d6aadf0301f",
+      "native.json": "0a5fcf08f1a14d7cb3eb4eb99bf33895c69138bff5c680f55744fdb9405c1195",
+      "node.json": "755979356d61c2c6938337bfb6d69833ce0b56d74bc99921a79eee26cb8369cb",
+      "node.log": "994b5e7c26789f45db3c37568dfd5122fbee6c86fdea289c10926858ff9cac28",
+      "production.json": "3546f203577a928fd9423be175dda5512eea10955be05f6c3779c522befa60e8"
+    },
+    "allPriorPhase4AuditModulesTestsFixturesEvidencePreserved": true,
+    "featureBranchTipUnchanged": true,
+    "otherWorktreesModified": false,
+    "externalBrowserConfigBeforeAndAfter": {
+      "web/config.local.json": {
+        "exists": true,
+        "sha256": "c8b874acc45fe3f353fe2fe18d3fc8a6f62cdf81515503d2172d61673ed3ac98"
+      },
+      "web/palette.local.json": {
+        "exists": true,
+        "sha256": "a9cf61c57f81d5299a6c1229e8eabf1dd74254f10e2d185108c790636ade98ad"
+      }
+    },
+    "externalBrowserConfigRestoredExact": true,
+    "playgroundDeploymentModified": false
+  },
+  "sourceSha256": {
+    "src/doom/am_map.sol": "3c5da949fc635d095659d4333d153408499e89e4178b469cb335e31cf52f6020",
+    "src/doom/am_map_types.sol": "7347073682c367c15c918aa51ff924c664b6d05efdbf4f0392d4f404b31a9039",
+    "src/doom/d_ticcmd.sol": "508d0332d3e8b83e1b68d37581a3befc100a9974fcaa0900cc44116cd75ff2ef",
+    "src/doom/doomstat.sol": "4c40da3914c629017959a0a4c0516d83346900674c92f5e55a766aba1b506fea",
+    "src/doom/doomtype.sol": "5fbe4b1d0fe96d04453b00d1c3f1c6781c6c8ab5147ee0ac512d17597a5a3c56",
+    "src/doom/g_game.sol": "ea632f47ca5904819dd0dc254fc547799b56696e08e37d96a503d71da145f89c",
+    "src/doom/hu_lib.sol": "bf11331f06c38565650e93ce5ece611d048d5656ae2c8442b6568de5ce079a06",
+    "src/doom/hu_stuff.sol": "fcf57390d8c8e6d5ec935164264870509bb64197179536a39cd2a14dddb9588e",
+    "src/doom/info.sol": "4611205149173e42d3b0f1d91820c8042f6bc5fc48fb53aec84ad4bc501dca8e",
+    "src/doom/m_bbox.sol": "f4c60efe3627a97d0288fc5cd0283535527b1f51029568534c80bb8fbbf8f272",
+    "src/doom/m_cheat.sol": "e79d73bd9e159b0f05639464bf7c9cb7f40dc069780c3459336dfffb50394f82",
+    "src/doom/m_fixed.sol": "3f64bef1f62f61faead3a5b8f382bf1c66e1b3739ce4ac8d59a6fcef0451ef9f",
+    "src/doom/m_random.sol": "5267b881138cfb7e0d683449005619513006c70e3ed557f64697b36c4ed40c7b",
+    "src/doom/native_zone_layout.sol": "118b2d17165826fb0857d9cb296e2214db2a28917769299a82e70d0c0790f6e8",
+    "src/doom/p_ceilng.sol": "696f3f620f5bddb3cea64fda824e3203c780f53db890630f0685794454dc37f9",
+    "src/doom/p_doors.sol": "945bf600ce86d8286718fb75ecaf905a0c4631d79d2dac7260c91c9dc2013f8d",
+    "src/doom/p_enemy.sol": "eff76cce23b0877833a5c446a1a09d8ae01918a6925b6d3265240b144c09dfe7",
+    "src/doom/p_floor.sol": "b7c90baafa0b74fd7ff80cf60dcbc430148f6d6d068ba54ca0fbc7ba1bca7069",
+    "src/doom/p_game_state.sol": "0f9d60aae9424cad17c614d4fcc93c9eb6fe8a43c7bce070d2460fcf2c34f649",
+    "src/doom/p_heap.sol": "3cc2e0a8c3239523db66c07fea33720f931754baedd312b5ca7cc2ebe763d2e0",
+    "src/doom/p_info.sol": "a48840479115ea8bf849ca5ec448d1b2bec7a6cfe58c5314e140635a898de792",
+    "src/doom/p_inter.sol": "8be27f9bba47beb46b3edf2a8a2674b3cd7218d2abb8ef5f8855803393d067de",
+    "src/doom/p_lights.sol": "6f63cbc6b41fc492a46ce43aef464deb9d08b7fa1dd8b213b546eec3e4f08276",
+    "src/doom/p_map.sol": "6b6d48523a45acab9090dfb0ec3d6dbab4e6de18afa89453df8b5a87088da0f3",
+    "src/doom/p_maputl.sol": "ac5ac60e7e058a5fc537e7042c7254bc0f51c77165149a22e141437b4e0ad0b6",
+    "src/doom/p_mobj.sol": "78e9c05b327100bd34cafe086454e3a5499beb92af878ad4756baeca18445ffa",
+    "src/doom/p_plats.sol": "6904df762b270f840daa99b34d2a5c689dbb2fef3aed3d33c2ac1a3f3e4d5722",
+    "src/doom/p_pspr.sol": "cfa2db3438d689c38d9c957fc4aee598c58740f025d6efead2b5f9671eb0c863",
+    "src/doom/p_setup.sol": "9498e1298bf4e53ccedc484a50d4c7f9f85315f6cb700719d474b721e382243b",
+    "src/doom/p_setup_static.sol": "c8100a42bb0bac190c583bbb2c82168599009f88a766e4c05b9a9231a5f69792",
+    "src/doom/p_sight.sol": "7ed366237fc3fec069ffb6336e95e038004d1f379622cf67f55fb8c6b1a6488c",
+    "src/doom/p_spec.sol": "2363640e75c22c9d017db677dda7148ad221380f0a23639167e145e933fc72b7",
+    "src/doom/p_switch.sol": "5404d359793e05c6c24a7804c07632150009b46f38d03068412d7ac53260dfe2",
+    "src/doom/p_telept.sol": "745f0fa4ed6f0515c398bfd2469c59aac82316965b7bac25263aeb82555d61b8",
+    "src/doom/p_tick.sol": "1993dd0c94853dabc4db554dfa0ca04375cef0a22075400ba0e7b56b525022ab",
+    "src/doom/p_user.sol": "963a46850e1b17171f79dd65bff9b5006ce6f97a935ad2023d1d526a6ec35c37",
+    "src/doom/p_zone_setup.sol": "e0308bd1197fd84a01eb1ee208be73c711851d6b0bc30be1d07a7c61b18b223d",
+    "src/doom/r_bsp.sol": "0ae5df313515692d0b2b970d5d39d107e014629cff2305fb37c14371a9524040",
+    "src/doom/r_data.sol": "5b404d561f8bce538e8a8221b4f36d62c9b9826fc833307640d96fcbfdca2d0a",
+    "src/doom/r_data_types.sol": "0448302d68447c8a5a4c46df4016e8845863e42bf6eaca8bcab8ab0c9707fdf8",
+    "src/doom/r_defs.sol": "558d5a9bfd131e816bbe28986e2dad6144a08e5a16ccfed1b199d7558a1ea0e2",
+    "src/doom/r_draw.sol": "afe958ea0c2962b739bff58b98d8bccc25c48d3d0838cacd46142c242b5d6477",
+    "src/doom/r_main.sol": "df403bf04fdbbcfc68c4fd9c5e19b5201ca711498efc34db406a4010ad3b2af5",
+    "src/doom/r_plane.sol": "c7a5abcbca84dddcd2a3c8bb160a609605c5c1842e73704dff4860df3280e463",
+    "src/doom/r_render_hooks.sol": "f026ccb8fffb68d8fbcb0966103212f52884b86350fe3fb52a401d146f3fb312",
+    "src/doom/r_render_state.sol": "072bd2f73b98e1eb775fc8093e95a69c184f3fa50a89a5d64a7beccd59493398",
+    "src/doom/r_segs.sol": "9d4e4dea06739278aab3698fb422818de6dd7726359c8822d60a162e886621cb",
+    "src/doom/r_sprite_state.sol": "735b3de85cbf455e05d3cb8e992cf4e477960bd4192bbd367f5c66c803b96363",
+    "src/doom/r_state.sol": "80951a13733e3a08f4182937a37def33ffda21eaae4b43a2a1bdba2043adab6b",
+    "src/doom/r_things.sol": "86705ab6b1f79b7ef07798b881cc547502d9911c97b57dc516a744e17c1977f5",
+    "src/doom/st_cheats.sol": "e35b8253b068f1ad807073bc322e2b62205ef3ffa95bb06f36acef7a79721677",
+    "src/doom/st_lib.sol": "5307f52151fbd73e442a60d8b87cbfbed3d38a28704a81e952f56672de667299",
+    "src/doom/st_stuff.sol": "c4d549eebf7210b28c9ed7f6e1b89f4f276ea6c3f0e82d944a65df0cac8813bc",
+    "src/doom/tables.sol": "bf14202b419075f6d187653205a37e211d8267c7fc4c0bebf5a8c5713afddf38",
+    "src/doom/v_video.sol": "be75fe69e7cd2486ce93408ec204cdf470ea097569e37fbedd867e9a2f3adf1f",
+    "src/doom/v_video_types.sol": "266890b0c8003e89f78baf8415048d24e4ca14865a1c8518ad77bb6a9f6b4d35",
+    "src/doom/w_zone_cache.sol": "03c07404765de9620b3d1ff15727809cdad911c8a78d822019b63500fa5018c2",
+    "src/doom/z_zone.sol": "b4e75218021d65aaf3389cf78a68663feebc2084c82457821be17247dc8106c5",
+    "src/doom/z_zone_backing.sol": "1253ffab18a977b75a63d7387514eb360bf9b5e4eb3881eb0928c4b23096a398",
+    "src/doom/z_zone_types.sol": "8eaf75209f619565bfffd1b26ea0d5cc24e7e63da6ca16c58c183139a8e2ef4e",
+    "src/evm/Doom.sol": "5a8cf9d4f463fe1241316b17b2b823865b7f84993026adac9ba266a84d515c36",
+    "src/evm/DoomGame.sol": "227373ca371d3a2c57d9b3c78663eed0bace86848b119000e6c485c26d63ed3f",
+    "src/evm/DoomRenderer.sol": "5639d82431350ea76c26d43457d26d0c3c0f410eaddf02db6adbcfb03a569ba0",
+    "src/evm/DoomScene.sol": "9ad7c8ccee4c9e05deb5608326baabacfa40f686b8d8445fb8aaa7352ab64569",
+    "src/evm/DoomUI.sol": "10c2014f1422615522f061914440eafc67d7581dc5a73b5baf8346684d090b2f",
+    "src/evm/DoomZoneStartup.sol": "2d178494456a7ae3c730310f257ce2aa635d37d18c90cac039cf002cdb3f50dc",
+    "src/evm/FrameProtocol.sol": "4665be3f613b8e817d616d2db1dc4a644325c44a6ade476a35d7d9d003625ace",
+    "src/evm/InputProtocol.sol": "df068ec9030d7241de7d6160059f8e46fe647f6655123f03849789b359bee51b",
+    "src/evm/ResourceStore.sol": "5ab3acc5d09f155a4cf25973c847f23e47f386a364704b76996c86be5862e3a8",
+    "src/evm/ResourceTypes.sol": "159865364cfa57aae508cd94c49509cbccabd6aeeba55e92b9fcf816bdec4d6b",
+    "src/evm/WadResources.sol": "25a1acc0a44ac35cc29e5f9bd953ba66b85db4f665b732430571b416ef927895",
+    "src/support/AutomapFixture.sol": "fb1ebf9df83871de40924df81fdf00f513462399209255aaa299684e5d4f2040",
+    "src/support/AutomapProbe.sol": "455d5e04e4a1f6dad454a0e55324ad5e616ad071609b5eae1e7f36ac3840f8d0",
+    "src/support/CheatFixture.sol": "3829e6c8660f09974b83d59f7699cf66dcb736df72e4a7825c434109a35fe1f0",
+    "src/support/CheatProbe.sol": "879fb2ee19041ef64fdfd83a1d3344fce8ed69ead26d09f84bbe581ff8ba90a5",
+    "src/support/EpisodeResourcesProbe.sol": "f63c53e36ed4d9d61d8abbf8bda5ee29616ad3d31b72578b037b8401e85e6437",
+    "src/support/FrameFixture.sol": "1de9a0f7c1ae276041f6d71111da36413f2604b9a43a95176dd4dfae82bbc799",
+    "src/support/GameplayProbe.sol": "fd29ba99ea2ca2c0db9ed44fb061c93c40e3a6aefbb14e07e8e7b8bd9ae859b5",
+    "src/support/RendererProbe.sol": "14dc07178db80fde8c9ae5d5500f8205049ed41e21da48dd7818304407785856",
+    "src/support/ResourceAccessProbe.sol": "4aa343501917ddfc0117cbb9fc543b543ce16124c7b25127dcf41d22cab10e3c",
+    "src/support/ResourcePlacement.sol": "3febd551f07205b96c4960d496acb27ab06c571bf8e4ce1983595491b0acd6ab",
+    "src/support/StackPressure.sol": "fa49240fd75c2810e813e3b7620492f24270a0e985ef900e88e8b81fd1fb41af",
+    "src/support/VideoProbe.sol": "a539072b0cb59d66d5f691a1db6e4cc723449cf93ca679e20222b0de9b4034fb",
+    "src/support/WadResourcesProbe.sol": "c05e160a1c62e5d2e71159466e7d0c5f030166501d986a7059c3f4c9870dc973"
+  },
+  "webSourceSha256": {
+    "web/app.mjs": "72306912cd0be6f67f303b03c31684ed00988ec1ad69fe102fb35ab531ab50e9",
+    "web/budget.mjs": "b24e411daa2933c20e9d61d4ba3d54cbce4d76b3287d2b0faad06ce8c1606778",
+    "web/budget.test.mjs": "0d9dae2ec3e2167ff81e177d24d1ce12498110407fe8cfd3bb47e546d427b2a0",
+    "web/input-app.test.mjs": "127b8535de4e61803e7c23a5daeac2b22368fb23bf69f49731a04792abae6fd5",
+    "web/input-loop.mjs": "da9d6a3176ad6bf9ae4f123bf62319b1db01edcbe01e9edc99740f79e364ff9b",
+    "web/input-loop.test.mjs": "aff21e288f5cef4663866cdbf75bc7a9065477e462b22854796bf80369aeb5f2",
+    "web/input.mjs": "f9ed0064ccdccc4588632798aa0a1ce99e4bfc83a4e7c910450c48328ea729f6",
+    "web/input.test.mjs": "b4b03e3960abf5da7815d741571b9d658a5139d29a93b3be68823a2d35412ab8",
+    "web/palette.mjs": "110c2c0af974ecfa935d37da60d32eedc47114484fc7b994043bfd24e95bc8ae",
+    "web/protocol.mjs": "fec5104a0e13b7ca8666200431a1804d53cdb6537c1f0f8f02fb5b69dd70f47e",
+    "web/ui-palette.mjs": "31614c2e32d7105ee075758bb73f5c7cc5f5944a240edaee26e6c374cb415645"
+  },
+  "configurationSha256": {
+    "foundry.toml": "afe04c66f0e684b5a936821f6543605a3739f62164ceb4398426db7403452393",
+    "toolchain.lock.json": "7675376b9fb9fe3256f2581760c8ad8fe896cdfae6ee9cc8b70b53497fb1b7c0",
+    "execution-budget.json": "acde01f1b9cf248f9265f1ffcff7181d01d77620a2dfcd9a4d4d0b1c79df2be7"
+  },
+  "publishedEvidenceSha256": {
+    "focused.json": "4ab27848fe070bda09633d5e926969464b37618cbe70b1d361cf749751ab7137",
+    "focused.log": "73953f58f5a6c632250177c471165b7610b8f3a8d9e8eeec8f21e7826dad7568",
+    "legacy.json": "34771668d7d00f693fd60ac96d10b174f6dbd7cbb72679ffdcded35b7e31eaf1",
+    "node.json": "5276d79b01894c066d797253342f235352b599cd5278fa679bacd02421388254",
+    "node.log": "fca9bbc01038df188e0980c6732fdcfc2cc53341730fec3a1c821511e89238da",
+    "production.json": "ded45572ae666466997bd37e56eafbbcadf6c692a046e801ce29ef76511d81ba"
+  },
+  "deferred": [
+    "Full inherited Phase0\u20133 suite and final Phase4 acceptance",
+    "Fresh Chrome Canvas replay at main merge; original source-bound Chrome proof preserved",
+    "Broader episode/cheats/automap/responders/gameflow/progression/intermission/finale integration",
+    "Restart UI-static retention and arbitrary-WAD/native whole-process-zone equivalence"
+  ],
+  "limitations": [
+    "Ordinary production stream exercises natural health-bonus pickup, fire/ammo and HUD expiry; armor, every weapon/key, damage directions and original face quirks have controlled original-C consumer/storage vectors and inherited module proofs.",
+    "Only exported production scalar fields and HUD backing are compared each transaction, not whole-world canonical records.",
+    "Native immutable UI patch/screen4 buffers use declared consumer ownership outside the existing gameplay zone; no whole-process native-zone equivalence claim.",
+    "UI startup uses default original gamma0/showMessages=true and no chat/automap/responders or lifecycle integration. Legacy startup remains world-only.",
+    "Browser UI deployments require productionUI:true and use explicit UI startup; legacy configurations retain raw PLAYPAL behavior."
+  ]
+}
