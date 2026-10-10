@@ -110,7 +110,8 @@ python3 tools/reference/ultimate_speedruns/clean-checkpoints.py artifacts/local/
 ```
 
 Cleanup validates the latest compressed chain/receipt SHA before removing
-superseded state dumps and duplicate checkpoint receipts. It retains the latest
+state dumps and duplicate checkpoint receipts strictly older than the validated
+head. It never removes a new checkpoint awaiting atomic pointer publication. It retains the latest
 restore point, all final proof receipts, demo inputs, failed evidence and source
 fixtures. Relocated evidence is resolved by sibling filename and SHA. Every
 removal records size/SHA/reason in `checkpoint-cleanup.jsonl`. Do not delete

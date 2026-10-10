@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """Remove only superseded goal-owned Anvil chain dumps after validating the head."""
-import argparse,gzip,hashlib,json,time
+import argparse,gzip,hashlib,json,time,re
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[3]
 ap=argparse.ArgumentParser();ap.add_argument('roots',nargs='+',type=Path);a=ap.parse_args();removed=[]
@@ -20,6 +20,10 @@ for root in a.roots:
    keep.add(sibling(pointer,c['payload'],c['payloadSha256']))
   for p in pointer.parent.glob('evm.checkpoint-*'):
    if p.resolve() in keep or p.name.endswith('.tmp'):continue
+   match=re.match(r'^evm\.checkpoint-(\d+)\.',p.name)
+   # A live runner can finish a new file just before atomically advancing its
+   # pointer. Never remove that future checkpoint or any current-tic file.
+   if not match or int(match[1])>=c['tic']:continue
    assert p.is_file() and not p.is_symlink()
    if not any(p.name.endswith(suffix) for suffix in ['.chain.gz','.bin.gz','.deployment.json.gz','.replay.json.gz','.capture.json.gz']):continue
    size=p.stat().st_size;digest=sha(p);p.unlink();removed.append(dict(file=str(p),bytes=size,sha256=digest,reason='Superseded Anvil dump or duplicate checkpoint receipts; latest pointer, state and receipts verified and retained; final proof receipts unaffected'))
