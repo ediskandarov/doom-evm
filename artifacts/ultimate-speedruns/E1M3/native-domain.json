@@ -1,0 +1,177 @@
+{
+  "pass": true,
+  "profile": "initial-zero-zone",
+  "scope": "Pinned original C with existing64MiB calloc zone, no fresh-allocation fill; full O2/O0/ASan-UBSan DSG1 equality. Alternate fresh0xa5 allocation diagnostic is preserved separately and remains failed where original stair/platform fields are uninitialized.",
+  "demoSha256": "d91a896d529672e5bbc011b7607de75308c183643ee204d722e8704e348a9f5e",
+  "wadSha256": "6fdf361847b46228cfebd9f3af09cd844282ac75f3edbb61ca4cb27103ce2e7f",
+  "nativeStatesSha256": "64c87e8ee2de8ee51b59a8b82d81626c10048df920acaec653419b7188bb211d",
+  "nativeResultSha256": "82dc16cc444411237baf8d14800e66c95d29bd8088f271b8a5bab733d3425f65",
+  "gameplayObservations": 1292,
+  "profiles": [
+    {
+      "name": "O2",
+      "statesSha256": "64c87e8ee2de8ee51b59a8b82d81626c10048df920acaec653419b7188bb211d",
+      "exit": [
+        1291,
+        1291,
+        6,
+        0,
+        982
+      ],
+      "allStateBytesEqual": true
+    },
+    {
+      "name": "O0",
+      "statesSha256": "64c87e8ee2de8ee51b59a8b82d81626c10048df920acaec653419b7188bb211d",
+      "exit": [
+        1291,
+        1291,
+        6,
+        0,
+        982
+      ],
+      "allStateBytesEqual": true
+    },
+    {
+      "name": "sanitize",
+      "statesSha256": "64c87e8ee2de8ee51b59a8b82d81626c10048df920acaec653419b7188bb211d",
+      "exit": [
+        1291,
+        1291,
+        6,
+        0,
+        982
+      ],
+      "allStateBytesEqual": true
+    },
+    {
+      "name": "sanitize-fill",
+      "statesSha256": "0238cc29f7217a777e5b8d1aa70214ecc2227089e13dfb105a49a7d3e8b6353a",
+      "exit": [
+        1291,
+        1291,
+        6,
+        0,
+        982
+      ],
+      "allStateBytesEqual": false
+    }
+  ],
+  "firstDifference": {
+    "tic": 962,
+    "field": "thinker[644].special.type",
+    "initialZero": 0,
+    "freshFill": -1515870811
+  },
+  "differingFields": [
+    {
+      "field": "thinker[644].special.type",
+      "observations": 33
+    },
+    {
+      "field": "thinker[644].special.crush",
+      "observations": 33
+    },
+    {
+      "field": "thinker[645].special.type",
+      "observations": 65
+    },
+    {
+      "field": "thinker[645].special.crush",
+      "observations": 65
+    },
+    {
+      "field": "thinker[646].special.type",
+      "observations": 97
+    },
+    {
+      "field": "thinker[646].special.crush",
+      "observations": 97
+    },
+    {
+      "field": "thinker[647].special.type",
+      "observations": 129
+    },
+    {
+      "field": "thinker[647].special.crush",
+      "observations": 129
+    },
+    {
+      "field": "thinker[648].special.type",
+      "observations": 161
+    },
+    {
+      "field": "thinker[648].special.crush",
+      "observations": 161
+    },
+    {
+      "field": "thinker[649].special.type",
+      "observations": 193
+    },
+    {
+      "field": "thinker[649].special.crush",
+      "observations": 193
+    },
+    {
+      "field": "thinker[650].special.type",
+      "observations": 225
+    },
+    {
+      "field": "thinker[650].special.crush",
+      "observations": 225
+    },
+    {
+      "field": "thinker[651].special.type",
+      "observations": 257
+    },
+    {
+      "field": "thinker[651].special.crush",
+      "observations": 257
+    },
+    {
+      "field": "thinker[652].special.type",
+      "observations": 289
+    },
+    {
+      "field": "thinker[652].special.crush",
+      "observations": 289
+    },
+    {
+      "field": "thinker[653].special.type",
+      "observations": 321
+    },
+    {
+      "field": "thinker[653].special.crush",
+      "observations": 321
+    }
+  ],
+  "originalSources": [
+    {
+      "function": "EV_BuildStairs",
+      "file": "p_floor.c",
+      "span": [
+        453,
+        554
+      ],
+      "cause": "Original stairs never initialize type or crush; T_MoveFloor and the observer read them."
+    },
+    {
+      "function": "EV_DoPlat",
+      "file": "p_plats.c",
+      "span": [
+        139,
+        277
+      ],
+      "cause": "raiseAndChange and raiseToNearestAndChange never initialize low; the observer serializes it. The field is irrelevant while the raising platform completes normally."
+    }
+  ],
+  "sourceHashes": {
+    "original/DOOM/linuxdoom-1.10/p_floor.c": "c22ad7b7112d28c8b8c54a26ff611b98664a6d7a40d8d300680e6ca465468d47",
+    "original/DOOM/linuxdoom-1.10/p_plats.c": "15f27dd1282ef9730ffce010b1fcaec1283a9cd37e143b863576a690aba514f6",
+    "tools/reference/gameplay/host.c": "8eb17208506ae56f18cad6bd4f6a10a8bfdd4070391e8e3a19685958c5625ec3",
+    "tools/reference/episode_startup/reference.py": "c9db4448a1d40a3edc1caec0c2ff9e84bf9afc0287e7f3fecd822691946543a0",
+    "tools/reference/ultimate_speedruns/native-domain.mjs": "9f6394e3613e4d79ca0aa353d6f5e21aca06b568961e401e4fb71dff3c01ce6d"
+  },
+  "allAllocationProfilesExact": false,
+  "limitations": "Finite equality to the declared existing native profile; no universal native allocation equivalence. No field is masked in EVM comparison; no source, tape, fixture, state or provenance check is changed."
+}
