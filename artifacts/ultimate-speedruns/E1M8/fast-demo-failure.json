@@ -1,0 +1,23 @@
+{
+  "originalDemo": "Zero-Master e1m8-017.lmp",
+  "demoSha256": "3b24a44c2603aea15a91897b11eb4f1f52e29b2353c61b36d6957ac89c825f22",
+  "nativeO2Signal": 11,
+  "sanitizedFailure": "PTR_AimTraverse called through P_PathTraverse/P_AimLineAttack/P_BulletSlope/A_FirePistol",
+  "completeWorldPrefixObservations": 159,
+  "diagnostic": "SPEEDRUN_INTERCEPT_OVERFLOW gametic=158 count=128 max=128\n",
+  "cause": "Original p_maputl.c writes intercepts[MAXINTERCEPTS] without a bound check. The observational guard stops at gametic158, count128/max128, immediately before the first out-of-array write; the next gameplay tic is159.",
+  "domain": "Original-C LP64 defined-behavior profile cannot reproduce this overflow-dependent ghost route. Do not emulate DOS overwritten globals or invent bytes to force it.",
+  "alternative": {
+    "author": "Sedlo",
+    "source": "https://dsdarchive.com/files/demos/doom/30217/e1m8-046.zip",
+    "demoSha256": "a47622d63d3b797280842c86b858cf80a7d85b7b1df03882db08f5f16fb261ef",
+    "nativeAllProfilesExact": true,
+    "tics": 1638
+  },
+  "sourceSHA256": "4d93e06d11160fb935e94750babbdcc9a4469d96f593764872db87cefd37c0a1",
+  "localEvidencePaths": [
+    "artifacts/local/ultimate-speedruns/E1M8/native-O2",
+    "artifacts/local/ultimate-speedruns/E1M8/diagnostic-sanitize",
+    "artifacts/local/ultimate-speedruns/E1M8/intercept-audit"
+  ]
+}

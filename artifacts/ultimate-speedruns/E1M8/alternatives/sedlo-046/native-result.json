@@ -1,0 +1,199 @@
+{
+  "pass_": true,
+  "startUnix": 1791663228.216251,
+  "endUnix": 1791663233.396301,
+  "upstreamCommit": "a77dfb96cb91780ca334d0d4cfd86957558007e0",
+  "demoSha256": "a47622d63d3b797280842c86b858cf80a7d85b7b1df03882db08f5f16fb261ef",
+  "wadSha256": "6fdf361847b46228cfebd9f3af09cd844282ac75f3edbb61ca4cb27103ce2e7f",
+  "settings": {
+    "version": 109,
+    "skill": 3,
+    "episode": 1,
+    "map": 8,
+    "deathmatch": 0,
+    "respawn": 0,
+    "fast": 0,
+    "nomonsters": 0,
+    "consoleplayer": 0,
+    "playeringame": [
+      1,
+      0,
+      0,
+      0
+    ]
+  },
+  "profiles": [
+    {
+      "profile": "O2",
+      "command": [
+        "/private/tmp/doom-evm-ultimate-speedruns/artifacts/local/episode-speedruns/native-build-O2/speedrun",
+        "/private/tmp/doom-evm-ultimate-speedruns/artifacts/local/ultimate-doom/DOOM.WAD",
+        "/private/tmp/doom-evm-ultimate-speedruns/artifacts/local/ultimate-speedruns/E1M8/alternatives/sedlo-046/native-O2",
+        "/private/tmp/doom-evm-ultimate-speedruns/artifacts/local/ultimate-speedruns/E1M8/alternatives/sedlo-046/commands.txt",
+        "8",
+        "3",
+        "0"
+      ],
+      "elapsedSeconds": 0.660583000164479,
+      "returncode": 0,
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "statesSha256": "d46aa1bcfc505194b73c14388355b4325c11eba4965a217dbb97637aa13bfbea",
+      "compressedStatesSha256": "764250cdab14067e8e2d5885fb603a2b4c9bf03328c8c62406521d7944fd93ac",
+      "executedTics": 1638,
+      "exitEvents": [
+        [
+          1638,
+          1638,
+          6,
+          0,
+          -1
+        ]
+      ]
+    },
+    {
+      "profile": "O0",
+      "command": [
+        "/private/tmp/doom-evm-ultimate-speedruns/artifacts/local/episode-speedruns/native-build-O0/speedrun",
+        "/private/tmp/doom-evm-ultimate-speedruns/artifacts/local/ultimate-doom/DOOM.WAD",
+        "/private/tmp/doom-evm-ultimate-speedruns/artifacts/local/ultimate-speedruns/E1M8/alternatives/sedlo-046/native-O0",
+        "/private/tmp/doom-evm-ultimate-speedruns/artifacts/local/ultimate-speedruns/E1M8/alternatives/sedlo-046/commands.txt",
+        "8",
+        "3",
+        "0"
+      ],
+      "elapsedSeconds": 0.8904563328251243,
+      "returncode": 0,
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "statesSha256": "d46aa1bcfc505194b73c14388355b4325c11eba4965a217dbb97637aa13bfbea",
+      "compressedStatesSha256": "764250cdab14067e8e2d5885fb603a2b4c9bf03328c8c62406521d7944fd93ac",
+      "executedTics": 1638,
+      "exitEvents": [
+        [
+          1638,
+          1638,
+          6,
+          0,
+          -1
+        ]
+      ]
+    },
+    {
+      "profile": "sanitize",
+      "command": [
+        "/private/tmp/doom-evm-ultimate-speedruns/artifacts/local/episode-speedruns/native-build-sanitize/speedrun",
+        "/private/tmp/doom-evm-ultimate-speedruns/artifacts/local/ultimate-doom/DOOM.WAD",
+        "/private/tmp/doom-evm-ultimate-speedruns/artifacts/local/ultimate-speedruns/E1M8/alternatives/sedlo-046/native-sanitize",
+        "/private/tmp/doom-evm-ultimate-speedruns/artifacts/local/ultimate-speedruns/E1M8/alternatives/sedlo-046/commands.txt",
+        "8",
+        "3",
+        "0"
+      ],
+      "elapsedSeconds": 1.076062791980803,
+      "returncode": 0,
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "statesSha256": "d46aa1bcfc505194b73c14388355b4325c11eba4965a217dbb97637aa13bfbea",
+      "compressedStatesSha256": "764250cdab14067e8e2d5885fb603a2b4c9bf03328c8c62406521d7944fd93ac",
+      "executedTics": 1638,
+      "exitEvents": [
+        [
+          1638,
+          1638,
+          6,
+          0,
+          -1
+        ]
+      ]
+    },
+    {
+      "profile": "sanitize-fill",
+      "command": [
+        "/private/tmp/doom-evm-ultimate-speedruns/artifacts/local/episode-speedruns/native-build-sanitize/speedrun",
+        "/private/tmp/doom-evm-ultimate-speedruns/artifacts/local/ultimate-doom/DOOM.WAD",
+        "/private/tmp/doom-evm-ultimate-speedruns/artifacts/local/ultimate-speedruns/E1M8/alternatives/sedlo-046/native-sanitize-fill",
+        "/private/tmp/doom-evm-ultimate-speedruns/artifacts/local/ultimate-speedruns/E1M8/alternatives/sedlo-046/commands.txt",
+        "8",
+        "3",
+        "0"
+      ],
+      "elapsedSeconds": 1.0811369167640805,
+      "returncode": 0,
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "statesSha256": "d46aa1bcfc505194b73c14388355b4325c11eba4965a217dbb97637aa13bfbea",
+      "compressedStatesSha256": "764250cdab14067e8e2d5885fb603a2b4c9bf03328c8c62406521d7944fd93ac",
+      "executedTics": 1638,
+      "exitEvents": [
+        [
+          1638,
+          1638,
+          6,
+          0,
+          -1
+        ]
+      ]
+    }
+  ],
+  "exitReached": true,
+  "allProfilesExact": true,
+  "failure": null,
+  "executedTics": 1638,
+  "leveltime": 1638,
+  "inGameSeconds": 46.8,
+  "finalPlayer": {
+    "leveltime": 1638,
+    "gametic": 1638,
+    "prndindex": 4,
+    "rndindex": 0,
+    "x": 39845888,
+    "y": 423624704,
+    "z": -8912896,
+    "angle": 0,
+    "momx": 0,
+    "momy": 0,
+    "momz": 0,
+    "viewz": -6225920,
+    "viewheight": 2686976,
+    "deltaviewheight": 0,
+    "bob": 0,
+    "floorz": -8912896,
+    "ceilingz": -3670016,
+    "subsector": 147,
+    "playerHealth": 3,
+    "actorHealth": 3,
+    "armorpoints": 53,
+    "armortype": 1,
+    "readyweapon": 3,
+    "pendingweapon": 10,
+    "usedown": 0,
+    "attackdown": 0,
+    "refire": 0,
+    "state": 151,
+    "tics": 4,
+    "flags": 33557574,
+    "ammoClip": 6,
+    "ammoShell": 0,
+    "ammoCell": 0,
+    "ammoMissile": 0,
+    "weaponState": 49,
+    "weaponTics": 1,
+    "weaponX": 65536,
+    "weaponY": 2097152,
+    "flashState": -1,
+    "flashTics": 0,
+    "flashX": 65536,
+    "flashY": 2097152,
+    "thinkerCount": 118,
+    "totalKills": 41,
+    "totalItems": 3,
+    "totalSecrets": 1,
+    "killcount": 2,
+    "itemcount": 0,
+    "secretcount": 0,
+    "damagecount": 0,
+    "bonuscount": 0,
+    "extralight": 0,
+    "fixedcolormap": 0
+  },
+  "statesSha256": "d46aa1bcfc505194b73c14388355b4325c11eba4965a217dbb97637aa13bfbea",
+  "commandsSha256": "80f9602c165c3d80df04c86af330730e82a9d8d89dbf0cd77b5c613d4ac07f28",
+  "levelCommandsSha256": "72147e522ceeed96d4874d0981c0e2bad25fd254249bfb78a539e0fb07b4c2a7"
+}
