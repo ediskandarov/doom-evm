@@ -258,5 +258,6 @@
     "runtimeBytes": 518098,
     "passedTics": 445,
     "samePerTicGasAsFirstArtifact": true
-  }
+  },
+  "integrationCommit": "79b93e7413bdd2569b108993580e753fbd01252f"
 }

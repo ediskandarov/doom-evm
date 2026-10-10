@@ -4,7 +4,7 @@
   "pass": true,
   "checkpoint": {
     "path": "artifacts/phase3/drawbounds-compatibility.json",
-    "sha256": "87021b2ea4dbd7b61b47c3eccfe630e9402287b48a547a3484f4bbb4d147b177"
+    "sha256": "74447a9fe0ad870564fbe860022d08c8d23e3d1080ce9674cb151873992d00ca"
   },
   "historicalAcceptance": {
     "path": "artifacts/phase3/acceptance.json",

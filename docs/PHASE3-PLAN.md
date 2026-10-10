@@ -228,8 +228,9 @@ M2/M3 acceptance or retrospective native pixel claims.
 | Captured initialized replay | Complete | Complete | Two source/settings-identical bytecode variants each pass445tics, all14 fields and445 whole64000-byte frames; comparisons explicitly use deterministic initialization profile. |
 | Separate source audit | Complete | Complete | New checkpoint binds current source hashes and388 function mappings;5 integrity tests; old audit/certificate preserved and checked at frozen revision. |
 
-Integration commit hash is recorded by the following ledger checkpoint after the
-verified fix commit exists. Remaining implementation/blockers: none for this
+Verified independent compatibility fix commit: `79b93e7413bdd2569b108993580e753fbd01252f`.
+Separate audit/checkpoint publication records that commit without rewriting
+historical Phase3 acceptance. Remaining implementation/blockers: none for this
 compatibility fix. Unknown overwritten/unmodeled bodies and pointers remain
 rejected; this is not a complete native heap model. The current live deployment
 on Anvil18579 is preserved, and its browser binding is restored. No Phase4

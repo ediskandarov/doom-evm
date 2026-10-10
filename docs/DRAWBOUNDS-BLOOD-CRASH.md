@@ -219,3 +219,6 @@ audit is unchanged and deliberately does not certify newly changed sources.
 
 - [Public transaction/authentication/rollback regression](../artifacts/phase3/drawbounds-public-production.json)
 - [Actual Chrome regression](../artifacts/phase3/drawbounds-browser.json)
+
+Verified fix commit: `79b93e7413bdd2569b108993580e753fbd01252f`. The subsequent ledger publication records
+this identity; engine sources and measurements are unchanged.
