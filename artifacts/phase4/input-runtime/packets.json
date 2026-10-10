@@ -1,0 +1,1749 @@
+[
+  {
+    "tic": 1,
+    "name": "prefix-before-punctuation",
+    "events": [
+      [
+        0,
+        105
+      ],
+      [
+        1,
+        105
+      ],
+      [
+        0,
+        100
+      ],
+      [
+        1,
+        100
+      ],
+      [
+        0,
+        100
+      ],
+      [
+        1,
+        100
+      ]
+    ],
+    "render": false,
+    "fullscreen": false
+  },
+  {
+    "tic": 2,
+    "name": "punctuation-resets-prefix",
+    "events": [
+      [
+        0,
+        59
+      ],
+      [
+        1,
+        59
+      ]
+    ],
+    "render": false,
+    "fullscreen": false
+  },
+  {
+    "tic": 3,
+    "name": "suffix-after-reset-does-not-cheat",
+    "events": [
+      [
+        0,
+        113
+      ],
+      [
+        1,
+        113
+      ],
+      [
+        0,
+        100
+      ],
+      [
+        1,
+        100
+      ]
+    ],
+    "render": false,
+    "fullscreen": false
+  },
+  {
+    "tic": 4,
+    "name": "god-prefix",
+    "events": [
+      [
+        0,
+        105
+      ],
+      [
+        1,
+        105
+      ],
+      [
+        0,
+        100
+      ],
+      [
+        1,
+        100
+      ],
+      [
+        0,
+        100
+      ],
+      [
+        1,
+        100
+      ]
+    ],
+    "render": false,
+    "fullscreen": false
+  },
+  {
+    "tic": 5,
+    "name": "HUD-consumes-enter",
+    "events": [
+      [
+        0,
+        13
+      ],
+      [
+        1,
+        13
+      ]
+    ],
+    "render": false,
+    "fullscreen": false
+  },
+  {
+    "tic": 6,
+    "name": "spy-key-preserves-prefix",
+    "events": [
+      [
+        0,
+        216
+      ],
+      [
+        1,
+        216
+      ]
+    ],
+    "render": false,
+    "fullscreen": false
+  },
+  {
+    "tic": 7,
+    "name": "god-completion",
+    "events": [
+      [
+        0,
+        113
+      ],
+      [
+        1,
+        113
+      ],
+      [
+        0,
+        100
+      ],
+      [
+        1,
+        100
+      ]
+    ],
+    "render": true,
+    "fullscreen": false
+  },
+  {
+    "tic": 8,
+    "name": "all-keys-weapons-ammo",
+    "events": [
+      [
+        0,
+        105
+      ],
+      [
+        1,
+        105
+      ],
+      [
+        0,
+        100
+      ],
+      [
+        1,
+        100
+      ],
+      [
+        0,
+        107
+      ],
+      [
+        1,
+        107
+      ],
+      [
+        0,
+        102
+      ],
+      [
+        1,
+        102
+      ],
+      [
+        0,
+        97
+      ],
+      [
+        1,
+        97
+      ]
+    ],
+    "render": true,
+    "fullscreen": false
+  },
+  {
+    "tic": 9,
+    "name": "no-keys-ammo",
+    "events": [
+      [
+        0,
+        105
+      ],
+      [
+        1,
+        105
+      ],
+      [
+        0,
+        100
+      ],
+      [
+        1,
+        100
+      ],
+      [
+        0,
+        102
+      ],
+      [
+        1,
+        102
+      ],
+      [
+        0,
+        97
+      ],
+      [
+        1,
+        97
+      ]
+    ],
+    "render": true,
+    "fullscreen": false
+  },
+  {
+    "tic": 10,
+    "name": "noclip-on",
+    "events": [
+      [
+        0,
+        105
+      ],
+      [
+        1,
+        105
+      ],
+      [
+        0,
+        100
+      ],
+      [
+        1,
+        100
+      ],
+      [
+        0,
+        99
+      ],
+      [
+        1,
+        99
+      ],
+      [
+        0,
+        108
+      ],
+      [
+        1,
+        108
+      ],
+      [
+        0,
+        105
+      ],
+      [
+        1,
+        105
+      ],
+      [
+        0,
+        112
+      ],
+      [
+        1,
+        112
+      ]
+    ],
+    "render": true,
+    "fullscreen": false
+  },
+  {
+    "tic": 11,
+    "name": "move-with-held-alias",
+    "events": [
+      [
+        0,
+        119
+      ]
+    ],
+    "render": false,
+    "fullscreen": false
+  },
+  {
+    "tic": 12,
+    "name": "hold-moves-without-new-events",
+    "events": [],
+    "render": false,
+    "fullscreen": false
+  },
+  {
+    "tic": 13,
+    "name": "release-alias",
+    "events": [
+      [
+        1,
+        119
+      ]
+    ],
+    "render": true,
+    "fullscreen": false
+  },
+  {
+    "tic": 14,
+    "name": "original-noclip-off",
+    "events": [
+      [
+        0,
+        105
+      ],
+      [
+        1,
+        105
+      ],
+      [
+        0,
+        100
+      ],
+      [
+        1,
+        100
+      ],
+      [
+        0,
+        115
+      ],
+      [
+        1,
+        115
+      ],
+      [
+        0,
+        112
+      ],
+      [
+        1,
+        112
+      ],
+      [
+        0,
+        105
+      ],
+      [
+        1,
+        105
+      ],
+      [
+        0,
+        115
+      ],
+      [
+        1,
+        115
+      ],
+      [
+        0,
+        112
+      ],
+      [
+        1,
+        112
+      ],
+      [
+        0,
+        111
+      ],
+      [
+        1,
+        111
+      ],
+      [
+        0,
+        112
+      ],
+      [
+        1,
+        112
+      ],
+      [
+        0,
+        100
+      ],
+      [
+        1,
+        100
+      ]
+    ],
+    "render": true,
+    "fullscreen": false
+  },
+  {
+    "tic": 15,
+    "name": "power-menu",
+    "events": [
+      [
+        0,
+        105
+      ],
+      [
+        1,
+        105
+      ],
+      [
+        0,
+        100
+      ],
+      [
+        1,
+        100
+      ],
+      [
+        0,
+        98
+      ],
+      [
+        1,
+        98
+      ],
+      [
+        0,
+        101
+      ],
+      [
+        1,
+        101
+      ],
+      [
+        0,
+        104
+      ],
+      [
+        1,
+        104
+      ],
+      [
+        0,
+        111
+      ],
+      [
+        1,
+        111
+      ],
+      [
+        0,
+        108
+      ],
+      [
+        1,
+        108
+      ],
+      [
+        0,
+        100
+      ],
+      [
+        1,
+        100
+      ]
+    ],
+    "render": true,
+    "fullscreen": false
+  },
+  {
+    "tic": 16,
+    "name": "power-v",
+    "events": [
+      [
+        0,
+        105
+      ],
+      [
+        1,
+        105
+      ],
+      [
+        0,
+        100
+      ],
+      [
+        1,
+        100
+      ],
+      [
+        0,
+        98
+      ],
+      [
+        1,
+        98
+      ],
+      [
+        0,
+        101
+      ],
+      [
+        1,
+        101
+      ],
+      [
+        0,
+        104
+      ],
+      [
+        1,
+        104
+      ],
+      [
+        0,
+        111
+      ],
+      [
+        1,
+        111
+      ],
+      [
+        0,
+        108
+      ],
+      [
+        1,
+        108
+      ],
+      [
+        0,
+        100
+      ],
+      [
+        1,
+        100
+      ],
+      [
+        0,
+        118
+      ],
+      [
+        1,
+        118
+      ]
+    ],
+    "render": true,
+    "fullscreen": false
+  },
+  {
+    "tic": 17,
+    "name": "power-s",
+    "events": [
+      [
+        0,
+        105
+      ],
+      [
+        1,
+        105
+      ],
+      [
+        0,
+        100
+      ],
+      [
+        1,
+        100
+      ],
+      [
+        0,
+        98
+      ],
+      [
+        1,
+        98
+      ],
+      [
+        0,
+        101
+      ],
+      [
+        1,
+        101
+      ],
+      [
+        0,
+        104
+      ],
+      [
+        1,
+        104
+      ],
+      [
+        0,
+        111
+      ],
+      [
+        1,
+        111
+      ],
+      [
+        0,
+        108
+      ],
+      [
+        1,
+        108
+      ],
+      [
+        0,
+        100
+      ],
+      [
+        1,
+        100
+      ],
+      [
+        0,
+        115
+      ],
+      [
+        1,
+        115
+      ]
+    ],
+    "render": true,
+    "fullscreen": false
+  },
+  {
+    "tic": 18,
+    "name": "power-i",
+    "events": [
+      [
+        0,
+        105
+      ],
+      [
+        1,
+        105
+      ],
+      [
+        0,
+        100
+      ],
+      [
+        1,
+        100
+      ],
+      [
+        0,
+        98
+      ],
+      [
+        1,
+        98
+      ],
+      [
+        0,
+        101
+      ],
+      [
+        1,
+        101
+      ],
+      [
+        0,
+        104
+      ],
+      [
+        1,
+        104
+      ],
+      [
+        0,
+        111
+      ],
+      [
+        1,
+        111
+      ],
+      [
+        0,
+        108
+      ],
+      [
+        1,
+        108
+      ],
+      [
+        0,
+        100
+      ],
+      [
+        1,
+        100
+      ],
+      [
+        0,
+        105
+      ],
+      [
+        1,
+        105
+      ]
+    ],
+    "render": true,
+    "fullscreen": false
+  },
+  {
+    "tic": 19,
+    "name": "power-r",
+    "events": [
+      [
+        0,
+        105
+      ],
+      [
+        1,
+        105
+      ],
+      [
+        0,
+        100
+      ],
+      [
+        1,
+        100
+      ],
+      [
+        0,
+        98
+      ],
+      [
+        1,
+        98
+      ],
+      [
+        0,
+        101
+      ],
+      [
+        1,
+        101
+      ],
+      [
+        0,
+        104
+      ],
+      [
+        1,
+        104
+      ],
+      [
+        0,
+        111
+      ],
+      [
+        1,
+        111
+      ],
+      [
+        0,
+        108
+      ],
+      [
+        1,
+        108
+      ],
+      [
+        0,
+        100
+      ],
+      [
+        1,
+        100
+      ],
+      [
+        0,
+        114
+      ],
+      [
+        1,
+        114
+      ]
+    ],
+    "render": true,
+    "fullscreen": false
+  },
+  {
+    "tic": 20,
+    "name": "power-a",
+    "events": [
+      [
+        0,
+        105
+      ],
+      [
+        1,
+        105
+      ],
+      [
+        0,
+        100
+      ],
+      [
+        1,
+        100
+      ],
+      [
+        0,
+        98
+      ],
+      [
+        1,
+        98
+      ],
+      [
+        0,
+        101
+      ],
+      [
+        1,
+        101
+      ],
+      [
+        0,
+        104
+      ],
+      [
+        1,
+        104
+      ],
+      [
+        0,
+        111
+      ],
+      [
+        1,
+        111
+      ],
+      [
+        0,
+        108
+      ],
+      [
+        1,
+        108
+      ],
+      [
+        0,
+        100
+      ],
+      [
+        1,
+        100
+      ],
+      [
+        0,
+        97
+      ],
+      [
+        1,
+        97
+      ]
+    ],
+    "render": true,
+    "fullscreen": false
+  },
+  {
+    "tic": 21,
+    "name": "power-l",
+    "events": [
+      [
+        0,
+        105
+      ],
+      [
+        1,
+        105
+      ],
+      [
+        0,
+        100
+      ],
+      [
+        1,
+        100
+      ],
+      [
+        0,
+        98
+      ],
+      [
+        1,
+        98
+      ],
+      [
+        0,
+        101
+      ],
+      [
+        1,
+        101
+      ],
+      [
+        0,
+        104
+      ],
+      [
+        1,
+        104
+      ],
+      [
+        0,
+        111
+      ],
+      [
+        1,
+        111
+      ],
+      [
+        0,
+        108
+      ],
+      [
+        1,
+        108
+      ],
+      [
+        0,
+        100
+      ],
+      [
+        1,
+        100
+      ],
+      [
+        0,
+        108
+      ],
+      [
+        1,
+        108
+      ]
+    ],
+    "render": true,
+    "fullscreen": false
+  },
+  {
+    "tic": 22,
+    "name": "position-message",
+    "events": [
+      [
+        0,
+        105
+      ],
+      [
+        1,
+        105
+      ],
+      [
+        0,
+        100
+      ],
+      [
+        1,
+        100
+      ],
+      [
+        0,
+        109
+      ],
+      [
+        1,
+        109
+      ],
+      [
+        0,
+        121
+      ],
+      [
+        1,
+        121
+      ],
+      [
+        0,
+        112
+      ],
+      [
+        1,
+        112
+      ],
+      [
+        0,
+        111
+      ],
+      [
+        1,
+        111
+      ],
+      [
+        0,
+        115
+      ],
+      [
+        1,
+        115
+      ]
+    ],
+    "render": true,
+    "fullscreen": false
+  },
+  {
+    "tic": 23,
+    "name": "choppers-one-tic-expiry",
+    "events": [
+      [
+        0,
+        105
+      ],
+      [
+        1,
+        105
+      ],
+      [
+        0,
+        100
+      ],
+      [
+        1,
+        100
+      ],
+      [
+        0,
+        99
+      ],
+      [
+        1,
+        99
+      ],
+      [
+        0,
+        104
+      ],
+      [
+        1,
+        104
+      ],
+      [
+        0,
+        111
+      ],
+      [
+        1,
+        111
+      ],
+      [
+        0,
+        112
+      ],
+      [
+        1,
+        112
+      ],
+      [
+        0,
+        112
+      ],
+      [
+        1,
+        112
+      ],
+      [
+        0,
+        101
+      ],
+      [
+        1,
+        101
+      ],
+      [
+        0,
+        114
+      ],
+      [
+        1,
+        114
+      ],
+      [
+        0,
+        115
+      ],
+      [
+        1,
+        115
+      ]
+    ],
+    "render": true,
+    "fullscreen": false
+  },
+  {
+    "tic": 24,
+    "name": "inactive-IDDT",
+    "events": [
+      [
+        0,
+        105
+      ],
+      [
+        1,
+        105
+      ],
+      [
+        0,
+        100
+      ],
+      [
+        1,
+        100
+      ],
+      [
+        0,
+        100
+      ],
+      [
+        1,
+        100
+      ],
+      [
+        0,
+        116
+      ],
+      [
+        1,
+        116
+      ]
+    ],
+    "render": false,
+    "fullscreen": false
+  },
+  {
+    "tic": 25,
+    "name": "open-map",
+    "events": [
+      [
+        0,
+        9
+      ],
+      [
+        1,
+        9
+      ]
+    ],
+    "render": true,
+    "fullscreen": false
+  },
+  {
+    "tic": 26,
+    "name": "follow-arrow-falls-through",
+    "events": [
+      [
+        0,
+        173
+      ]
+    ],
+    "render": false,
+    "fullscreen": false
+  },
+  {
+    "tic": 27,
+    "name": "follow-held-movement",
+    "events": [],
+    "render": false,
+    "fullscreen": false
+  },
+  {
+    "tic": 28,
+    "name": "release-and-disable-follow",
+    "events": [
+      [
+        1,
+        173
+      ],
+      [
+        0,
+        102
+      ],
+      [
+        1,
+        102
+      ]
+    ],
+    "render": true,
+    "fullscreen": false
+  },
+  {
+    "tic": 29,
+    "name": "pan-right-consumed",
+    "events": [
+      [
+        0,
+        174
+      ]
+    ],
+    "render": false,
+    "fullscreen": false
+  },
+  {
+    "tic": 30,
+    "name": "pan-held",
+    "events": [],
+    "render": true,
+    "fullscreen": false
+  },
+  {
+    "tic": 31,
+    "name": "pan-release",
+    "events": [
+      [
+        1,
+        174
+      ]
+    ],
+    "render": true,
+    "fullscreen": false
+  },
+  {
+    "tic": 32,
+    "name": "zoom-in-held",
+    "events": [
+      [
+        0,
+        61
+      ]
+    ],
+    "render": false,
+    "fullscreen": false
+  },
+  {
+    "tic": 33,
+    "name": "zoom-in-tic",
+    "events": [],
+    "render": true,
+    "fullscreen": false
+  },
+  {
+    "tic": 34,
+    "name": "zoom-release-and-grid",
+    "events": [
+      [
+        1,
+        61
+      ],
+      [
+        0,
+        103
+      ],
+      [
+        1,
+        103
+      ]
+    ],
+    "render": true,
+    "fullscreen": false
+  },
+  {
+    "tic": 35,
+    "name": "mark-center",
+    "events": [
+      [
+        0,
+        109
+      ],
+      [
+        1,
+        109
+      ]
+    ],
+    "render": true,
+    "fullscreen": false
+  },
+  {
+    "tic": 36,
+    "name": "IDDT-wall-stage",
+    "events": [
+      [
+        0,
+        105
+      ],
+      [
+        1,
+        105
+      ],
+      [
+        0,
+        100
+      ],
+      [
+        1,
+        100
+      ],
+      [
+        0,
+        100
+      ],
+      [
+        1,
+        100
+      ],
+      [
+        0,
+        116
+      ],
+      [
+        1,
+        116
+      ]
+    ],
+    "render": true,
+    "fullscreen": false
+  },
+  {
+    "tic": 37,
+    "name": "IDDT-things-stage",
+    "events": [
+      [
+        0,
+        105
+      ],
+      [
+        1,
+        105
+      ],
+      [
+        0,
+        100
+      ],
+      [
+        1,
+        100
+      ],
+      [
+        0,
+        100
+      ],
+      [
+        1,
+        100
+      ],
+      [
+        0,
+        116
+      ],
+      [
+        1,
+        116
+      ]
+    ],
+    "render": true,
+    "fullscreen": true
+  },
+  {
+    "tic": 38,
+    "name": "overview",
+    "events": [
+      [
+        0,
+        48
+      ],
+      [
+        1,
+        48
+      ]
+    ],
+    "render": true,
+    "fullscreen": true
+  },
+  {
+    "tic": 39,
+    "name": "overview-restore",
+    "events": [
+      [
+        0,
+        48
+      ],
+      [
+        1,
+        48
+      ]
+    ],
+    "render": true,
+    "fullscreen": true
+  },
+  {
+    "tic": 40,
+    "name": "IDDT-normal-stage",
+    "events": [
+      [
+        0,
+        105
+      ],
+      [
+        1,
+        105
+      ],
+      [
+        0,
+        100
+      ],
+      [
+        1,
+        100
+      ],
+      [
+        0,
+        100
+      ],
+      [
+        1,
+        100
+      ],
+      [
+        0,
+        116
+      ],
+      [
+        1,
+        116
+      ]
+    ],
+    "render": true,
+    "fullscreen": true
+  },
+  {
+    "tic": 41,
+    "name": "close-map-fullscreen",
+    "events": [
+      [
+        0,
+        9
+      ],
+      [
+        1,
+        9
+      ]
+    ],
+    "render": true,
+    "fullscreen": true
+  },
+  {
+    "tic": 42,
+    "name": "reopen-same-map",
+    "events": [
+      [
+        0,
+        9
+      ],
+      [
+        1,
+        9
+      ]
+    ],
+    "render": true,
+    "fullscreen": false
+  },
+  {
+    "tic": 43,
+    "name": "clear-marks",
+    "events": [
+      [
+        0,
+        99
+      ],
+      [
+        1,
+        99
+      ]
+    ],
+    "render": true,
+    "fullscreen": false
+  },
+  {
+    "tic": 44,
+    "name": "warp-prefix-before-close",
+    "events": [
+      [
+        0,
+        105
+      ],
+      [
+        1,
+        105
+      ],
+      [
+        0,
+        100
+      ],
+      [
+        1,
+        100
+      ],
+      [
+        0,
+        99
+      ],
+      [
+        1,
+        99
+      ],
+      [
+        0,
+        108
+      ],
+      [
+        1,
+        108
+      ],
+      [
+        0,
+        101
+      ],
+      [
+        1,
+        101
+      ],
+      [
+        0,
+        118
+      ],
+      [
+        1,
+        118
+      ]
+    ],
+    "render": false,
+    "fullscreen": false
+  },
+  {
+    "tic": 45,
+    "name": "stop-notification-enters-ST-parser",
+    "events": [
+      [
+        0,
+        9
+      ],
+      [
+        1,
+        9
+      ]
+    ],
+    "render": true,
+    "fullscreen": false
+  },
+  {
+    "tic": 46,
+    "name": "warp-new-prefix",
+    "events": [
+      [
+        0,
+        105
+      ],
+      [
+        1,
+        105
+      ],
+      [
+        0,
+        100
+      ],
+      [
+        1,
+        100
+      ],
+      [
+        0,
+        99
+      ],
+      [
+        1,
+        99
+      ],
+      [
+        0,
+        108
+      ],
+      [
+        1,
+        108
+      ],
+      [
+        0,
+        101
+      ],
+      [
+        1,
+        101
+      ],
+      [
+        0,
+        118
+      ],
+      [
+        1,
+        118
+      ],
+      [
+        0,
+        49
+      ],
+      [
+        1,
+        49
+      ]
+    ],
+    "render": false,
+    "fullscreen": false
+  },
+  {
+    "tic": 47,
+    "name": "warp-selection-persisted",
+    "events": [
+      [
+        0,
+        57
+      ],
+      [
+        1,
+        57
+      ]
+    ],
+    "render": true,
+    "fullscreen": false
+  },
+  {
+    "tic": 48,
+    "name": "pending-warp-keeps-current-level",
+    "events": [],
+    "render": true,
+    "fullscreen": false
+  },
+  {
+    "tic": 49,
+    "name": "pause",
+    "events": [
+      [
+        0,
+        255
+      ],
+      [
+        1,
+        255
+      ]
+    ],
+    "render": false,
+    "fullscreen": false
+  },
+  {
+    "tic": 50,
+    "name": "paused-god-off",
+    "events": [
+      [
+        0,
+        105
+      ],
+      [
+        1,
+        105
+      ],
+      [
+        0,
+        100
+      ],
+      [
+        1,
+        100
+      ],
+      [
+        0,
+        100
+      ],
+      [
+        1,
+        100
+      ],
+      [
+        0,
+        113
+      ],
+      [
+        1,
+        113
+      ],
+      [
+        0,
+        100
+      ],
+      [
+        1,
+        100
+      ]
+    ],
+    "render": true,
+    "fullscreen": false
+  },
+  {
+    "tic": 51,
+    "name": "resume",
+    "events": [
+      [
+        0,
+        255
+      ],
+      [
+        1,
+        255
+      ]
+    ],
+    "render": true,
+    "fullscreen": false
+  }
+]

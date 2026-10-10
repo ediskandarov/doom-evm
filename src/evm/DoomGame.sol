@@ -40,6 +40,7 @@ import {DoomRenderer} from "./DoomRenderer.sol";
 import {DoomZoneStartup} from "./DoomZoneStartup.sol";
 import {ZoneState} from "../doom/z_zone_types.sol";
 import {Z_Zone} from "../doom/z_zone.sol";
+import {AMWorld, AMPoint, AMWall, AMLine, AMActor} from "../doom/am_map_types.sol";
 
 /// @notice Integrator adapter for original gameplay, persistent globals and renderer projection.
 /// @dev No world decisions or pixels are accepted from a host. Hooks are internal calls only.
@@ -209,6 +210,72 @@ library DoomGame {
         c.state.players[uint32(c.state.consoleplayer)].cmd = cmd;
         P_Tick.P_Ticker(c);
         ++c.state.gametic; // original outer loop, independent of whether P_Ticker paused
+    }
+
+    /// @dev Borrow the original live vertex/linedef/player/sector-snext order.
+    /// This is an adapter projection, never a second persistent world or host input.
+    function automapWorld(GameContext memory c, uint32 player) internal pure returns (AMWorld memory w) {
+        w.vertices = new AMPoint[](c.map.vertexes.length);
+        for (uint256 i; i < w.vertices.length; ++i) {
+            w.vertices[i] = AMPoint(c.map.vertexes[i].x, c.map.vertexes[i].y);
+        }
+        w.walls = new AMWall[](c.map.lines.length);
+        for (uint256 i; i < w.walls.length; ++i) {
+            uint32 front = c.map.lines[i].frontsector;
+            uint32 back = c.map.lines[i].backsector;
+            w.walls[i] = AMWall(
+                AMLine(w.vertices[c.map.lines[i].v1], w.vertices[c.map.lines[i].v2]),
+                c.map.lines[i].flags,
+                c.map.lines[i].special,
+                back != GameConst.NULL,
+                c.map.sectors[front].floorheight,
+                back == GameConst.NULL ? int32(0) : c.map.sectors[back].floorheight,
+                c.map.sectors[front].ceilingheight,
+                back == GameConst.NULL ? int32(0) : c.map.sectors[back].ceilingheight
+            );
+        }
+        for (uint32 i; i < 4; ++i) {
+            if (!c.state.playeringame[i]) continue;
+            uint32 mo = c.state.players[i].mo;
+            if (mo >= c.state.mobjCount || !c.state.mobjs[mo].allocated) revert InvalidGameplayState();
+            w.players[i] = AMActor(
+                c.state.mobjs[mo].x,
+                c.state.mobjs[mo].y,
+                c.state.mobjs[mo].angle,
+                true,
+                c.state.players[i].powers[2] != 0
+            );
+        }
+        uint256 count;
+        for (uint256 sector; sector < c.state.sectors.length; ++sector) {
+            uint32 mo = c.state.sectors[sector].thinglist;
+            while (mo != GameConst.NULL) {
+                if (mo >= c.state.mobjCount || !c.state.mobjs[mo].allocated || ++count > c.state.mobjCount) {
+                    revert InvalidGameplayState();
+                }
+                mo = c.state.mobjs[mo].snext;
+            }
+        }
+        w.things = new AMActor[](count);
+        count = 0;
+        for (uint256 sector; sector < c.state.sectors.length; ++sector) {
+            uint32 mo = c.state.sectors[sector].thinglist;
+            while (mo != GameConst.NULL) {
+                w.things[count++] = AMActor(
+                    c.state.mobjs[mo].x, c.state.mobjs[mo].y, c.state.mobjs[mo].angle, true, false
+                );
+                mo = c.state.mobjs[mo].snext;
+            }
+        }
+        w.blockX = c.state.blockmap.orgx;
+        w.blockY = c.state.blockmap.orgy;
+        w.episode = c.state.gameepisode;
+        w.map = c.state.gamemap;
+        w.consolePlayer = uint32(c.state.consoleplayer);
+        w.allmap = c.state.players[player].powers[4] != 0;
+        w.netgame = c.state.netgame;
+        w.deathmatch = c.state.deathmatch != 0;
+        // The production domain excludes demos; original singledemo is false.
     }
 
     function render(GameContext memory c) internal view returns (bytes memory pixels) {

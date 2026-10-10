@@ -1,0 +1,44 @@
+[
+  {
+    "error": "Error: connect EPERM 127.0.0.1:18721 - Local (0.0.0.0:0)\n    at internalConnect (node:net:1110:16)\n    at defaultTriggerAsyncIdScope (node:internal/async_hooks:472:18)\n    at node:net:1356:9\n    at process.processTicksAndRejections (node:internal/process/task_queues:85:11)",
+    "exitCode": null,
+    "passed": false,
+    "path": "artifacts/local/input-runtime/production-first.json",
+    "sha256": "6cbcf64b22ab03ffa123cdb8e54777421e844d5e972751ef5056ab88209b8b15"
+  },
+  {
+    "error": "AssertionError [ERR_ASSERTION]: Chrome UI gate\n\n1 !== 0\n\n    at file:///private/tmp/doom-evm-input-runtime/tools/reference/input-runtime/production.mjs:180:107\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)",
+    "exitCode": null,
+    "passed": false,
+    "path": "artifacts/local/input-runtime/failed-production-browser.json",
+    "sha256": "55f5699f32d769cb01a9968cd41ff315e7416d80c4feac84ac32d79cf3348ae7"
+  },
+  {
+    "error": "SyntaxError: Invalid or unexpected token",
+    "exitCode": null,
+    "passed": false,
+    "path": "artifacts/local/input-runtime/failed-production-browser-browser.json",
+    "sha256": "e327b695c9836f499d2238adb2b7b4678a8d352c0d5f54d9ef05beba0afefcfc"
+  },
+  {
+    "error": null,
+    "exitCode": 1,
+    "passed": false,
+    "path": "artifacts/local/input-runtime/failed-focused.json",
+    "sha256": "92a6be9ec11522b0ece3df4520a162c710ebda7c08d326e5628a1ba5a9e982a3"
+  },
+  {
+    "error": null,
+    "exitCode": 1,
+    "passed": false,
+    "path": "artifacts/local/input-runtime/initial-adapter.json",
+    "sha256": "06bde5a8475ef980281533898203227a558ee3d9e3e7ab466af00de1eb1f7022"
+  },
+  {
+    "error": null,
+    "exitCode": 1,
+    "passed": false,
+    "path": "artifacts/local/input-runtime/initial-node.json",
+    "sha256": "0dc10f3958085098cbf64f37e4f389b485e38f389091031f538d56612072d042"
+  }
+]

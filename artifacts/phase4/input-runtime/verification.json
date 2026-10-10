@@ -1,0 +1,119 @@
+{
+  "abiSha256": "672c8cbf05f5ec7db5022e0a86821aa484d4b8e700f947683808060f3a8dd166",
+  "baseline": "9f7d09120a1a250fe38f85b4f4bcba6cc78b5117",
+  "branch": "feat/phase4-input-runtime",
+  "compiler": {
+    "version": "0.8.37+commit.f401782d"
+  },
+  "complete": true,
+  "evidenceHashes": {
+    "attempts.json": "879ae7716f771cb1f70b0a0cf4c008ab8f24a664a1ea9f24b1c5de667e122cdf",
+    "browser.json": "9a882f165deae29f142ed0c86911c3936e3ab3da51eb80c3c8f23db2e96a9b69",
+    "canvas-IDDT-things-stage.png": "1049416cab2214be5f0e1bbbac9e02116b9312dbe842ba226c6844125ddf2c03",
+    "canvas-god-completion.png": "4d5ec8245a2557896ff244f87dadb3b2b74cb199aa9c8bf42d1fb9035d0b02b1",
+    "canvas-open-map.png": "8ca0a0b0106ab500e122a768b57a7d1b231a03857e7f94b25afd881ef30e137a",
+    "canvas-pending-warp-keeps-current-level.png": "8fa640d9586a4982dee5c3a112fc0d53738087ef2a100ae381ca51ab37bae6dd",
+    "focused.json": "16e9ddca725848573401ba727b62c8da047fe8455757d8cf0ec0af2dd68d63ba",
+    "focused.log": "fc113be38959fabe8102ca7d969a486e824d6615aa6a4ab0fc7e8eb94ffec23c",
+    "native-build.json": "175d5c948de1d01e4099487c1597ed0e209da3f997ab9f894bc0ef294121e67c",
+    "native-players.json": "3dd616babcd62c8de007cdbd36445e945f3fb3514ad30d4bfcd07ebca4e24eff",
+    "native-runtime.json": "c82965b4f2a9ba052b9f566c657def021432f7b855a41edf317df492680fb177",
+    "native-ui.json": "4ba21096c9cdd0b3d78b22a90ead309087edf8192e74122aa68d1ddf1eef19b8",
+    "native.json": "2ba04c77ceb2605671b44c5938427e16b9d3540f687c6caf2c7fb0af228d2845",
+    "node.json": "bdb2240ae93382c9d8d44944c997a1907f372f16b791de870e43a72ea19d6c22",
+    "node.log": "08b4106e4c31e693956fc1f447fdc1a155688eefad8f1fa77bfd46cef87e4d91",
+    "packets.json": "5ca400a8a16362653ca0453c1204b081175b0731a27ee3c87402d961f69aaa9a",
+    "production.json": "8ae20e719db16bc66158012997260ca85da9b22c2dc5a5273f887622b0f45674",
+    "ui-regression.json": "69f5e616a0371684bee40d8a4e61858b67b1d4405265a5ff88e5d6ecb813d4fc"
+  },
+  "executionBudget": {
+    "gasHex": "0x2540be400",
+    "gasLimit": 10000000000,
+    "source": "/private/tmp/doom-evm-input-runtime/execution-budget.json"
+  },
+  "interfaces": {
+    "eventPacket": "<=64 ordered [type,key] byte pairs; keydown0/keyup1",
+    "frame": "unchanged indexed8 Frame plus existing Goal4.11 FramePalette",
+    "idClev": "GA_NEWGAME and exact deferred skill/episode/map persist; Episode Runtime owns consumption/loading",
+    "idDTOwner": "AM_Map; AutomapState.cheatPos/cheating"
+  },
+  "kind": "phase4-goal4.12-production-input-runtime",
+  "limits": [
+    "Single-player retail E1M1 medium-skill startup; original US keyboard byte profile.",
+    "No menu/demo/chat/network/mouse/joystick or full gameflow dispatch.",
+    "Immutable borrowed UI/AM graphics boundary; no new whole-process zone or peak-memory claim.",
+    "Finite native scalar/parser/flags/pixel coverage; not whole-world or episode acceptance."
+  ],
+  "measurements": {
+    "endedUtc": "2026-10-10T13:32:10.494Z",
+    "noRenderGasRange": [
+      325858476,
+      1512137268
+    ],
+    "renderedGasRange": [
+      755220313,
+      3709835264
+    ],
+    "runtimeBytes": 675417,
+    "startedUtc": "2026-10-10T13:29:56.681Z",
+    "startupGas": 2930540533
+  },
+  "resourceIdentity": {
+    "bundleSha256": "d379076f21645cf7cc5acb056663d0faacc4065489a0ca99738479323c9f7a47",
+    "paletteSha256": "fd895921b5d0a394612bb29852ed003d44d69f76dec31c0dc6b5d5fc7d63f7bb",
+    "paletteVariant": 0,
+    "schemaVersion": 0,
+    "wadSha256": "7323bcc168c5a45ff10749b339960e98314740a734c30d4b9f3337001f9e703d"
+  },
+  "results": {
+    "chromeFrames": 35,
+    "evmFrames": 35,
+    "evmTics": 51,
+    "forgePassed": 220,
+    "fullInheritedAcceptance": false,
+    "legacyUIFrames": 13,
+    "legacyUITics": 210,
+    "minedRollbackChecks": 10,
+    "nativeFrames": 35,
+    "nativeProfiles": 4,
+    "nativeTics": 51,
+    "nodePassed": 56,
+    "staticFrames": 1,
+    "wholeEpisodeAcceptance": false
+  },
+  "runtimeTemplateSha256": "81bd5b10267232a10c5289893fa985d91a947b2c9862dade07007870a1affcca",
+  "settings": {
+    "compilationTarget": {
+      "src/evm/Doom.sol": "Doom"
+    },
+    "evmVersion": "cancun",
+    "libraries": {},
+    "metadata": {
+      "bytecodeHash": "ipfs"
+    },
+    "optimizer": {
+      "enabled": true,
+      "runs": 200
+    },
+    "remappings": [],
+    "viaIR": true
+  },
+  "sourceHashes": {
+    "src/evm/Doom.sol": "3533f736d0ad497bc2c4c030c1b4f17353fe1245c631d9dda9fc5e107e182a95",
+    "src/evm/DoomGame.sol": "d9451a915ab977bae137340e3e6626a270a4b84b8b6ea9449a8c4f0f578296df",
+    "src/evm/DoomUI.sol": "7173d0bde3e57ff3e018687e438be6409fec8b25508472c5d5babb763ea12b2a",
+    "src/evm/InputProtocol.sol": "590bbe22b2549985f3ad12f5f0d1d81252cfeaa2f5f6ad79d61b15d9fa5aab3a",
+    "test/integration/InputRuntime.t.sol": "da609962db79a62ea982bc4e906cccaf57ef1237428c7ef3f9b3b77e3a1f117c",
+    "tools/reference/input-runtime/README.md": "2915f89da63499ae3f2c200dbe1b4a0ad9238d23ec7e8bdfb5f908d86b092e93",
+    "tools/reference/input-runtime/checkpoint.py": "8ddfbab4d262f194f0ac9edcc058f2f621fa21df9df0433fb97c1516bf59fcc3",
+    "tools/reference/input-runtime/production.mjs": "50457bf979bd34e5cf9e8dfb4580459f70fbe7e13831217a487c27554f7c978c",
+    "tools/reference/input-runtime/reference.py": "20d4ea6dca87686c4c92d6579ff4a310a391668fe15787ccf59105eb8783f662",
+    "tools/reference/input-runtime/verify.py": "5cd66ae931b71bc04a10fe26f61497376b4700ac025db796be432bec4dd3bc03",
+    "tools/transport/input-runtime-browser-check.mjs": "b5438992dced31ac11ffcaa1783cbb1b19b6f72e162f4a98c77add3ac6948f51",
+    "web/app.mjs": "02b7d2e448946a361444d25e523e6faa2810e6fcee8d70417c7ece173cc0c184",
+    "web/input-loop.mjs": "d5378a5093f82f841de7ab6af8cbb892f58ba9e9943ebe7b44b5f2b267d185f5",
+    "web/input-runtime.test.mjs": "82fc3892c86d43b34063bcb23684ca9e0a7efc9c7fc7a315474b3d0edaca487e",
+    "web/input.mjs": "3087524e9257a664fa8872f88f747f0b37c56a276ea73b7a2b14f7a933c7cd83"
+  },
+  "upstreamCommit": "a77dfb96cb91780ca334d0d4cfd86957558007e0"
+}

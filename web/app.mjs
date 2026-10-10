@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: GPL-2.0-only
 import { makeRpc, FrameInbox, FrameSubscription, backfill, expandPalette } from './protocol.mjs';
 import { validatePalette } from './palette.mjs';
-import { KeyboardInput, bindKeyboard } from './input.mjs';
+import { KeyboardInput, RawKeyboardInput, bindKeyboard } from './input.mjs';
 import { InputTransactions, GameplayLoop } from './input-loop.mjs';
 import { FramePresentation } from './ui-palette.mjs';
 const status = document.querySelector('#status'), button = document.querySelector('#step'), canvas = document.querySelector('#frame');
@@ -23,6 +23,8 @@ try {
       : 'Walls, floors, ceilings and sprites rendered by the DOOM port in the EVM. Send a transaction to draw the next frame.';
     canvas.setAttribute('aria-label', gameplay ? 'Freedoom gameplay rendered in the EVM' : 'Freedoom world view rendered in the EVM');
     button.textContent = 'Run DOOM →';
+    if (config.rawKeyboard === true) document.querySelector('p').textContent +=
+      ' Tab opens the automap; F toggles follow, arrows pan, =/− zoom, G toggles grid, M marks and C clears. Type original cheat codes while playing.';
   }
   proof.rendererKind = genuine ? 'doom-world-view' : 'synthetic';
   proof.gameplayAvailable = gameplay;
@@ -71,11 +73,15 @@ try {
   });
   await transactions.load();
   proof.gasLimit = transactions.gas; proof.gasBudgetSource = transactions.gasSource;
-  const keyboard = new KeyboardInput();
+  const keyboard = config.rawKeyboard === true ? new RawKeyboardInput() : new KeyboardInput();
   const nextFrame = async ({ disconnect = false, buttons = 0 } = {}) => {
     if (stopped) throw Error('Session invalidated; reload after checking the local chain');
     if (loop?.running) throw Error('Stop continuous input before a manual step');
-    const mined = await transactions.nextFrame(buttons, { beforeSend: disconnect ? () => subscription.close() : undefined });
+    const events = keyboard.raw ? keyboard.packet() : null;
+    if (events && buttons !== 0) throw Error('Use keyboard events for this deployment');
+    const options = { beforeSend: disconnect ? () => subscription.close() : undefined };
+    const mined = events ? await transactions.nextEvents(events, options) : await transactions.nextFrame(buttons, options);
+    if (events) keyboard.acknowledge(events.length);
     await pendingPresentation;
     if (disconnect) {
       proof.fallbackVerified = proof.frames.at(-1).source === 'receipt';
