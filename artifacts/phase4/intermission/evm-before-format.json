@@ -1,0 +1,1205 @@
+{
+  "schemaVersion": 1,
+  "goal": "4.14a",
+  "pass": true,
+  "start": "2026-10-10T12:55:54.997Z",
+  "end": "2026-10-10T12:56:01.500Z",
+  "rpcPort": 18746,
+  "gasBudget": 10000000000,
+  "scope": "Independent WI support host; compact named UI fixtures with original-WAD provenance, separately declared synthetic profiles; no production/full-WAD authentication, level progression or browser integration claim",
+  "compiler": {
+    "version": "0.8.37+commit.f401782d",
+    "settings": {
+      "remappings": [],
+      "optimizer": {
+        "enabled": true,
+        "runs": 200
+      },
+      "metadata": {
+        "bytecodeHash": "ipfs"
+      },
+      "compilationTarget": {
+        "src/support/IntermissionProbe.sol": "IntermissionProbe"
+      },
+      "evmVersion": "cancun",
+      "libraries": {},
+      "viaIR": true
+    }
+  },
+  "resources": [
+    {
+      "profile": 0,
+      "offset": 0,
+      "length": 16384,
+      "address": "0x5fbdb2315678afecb367f032d93f642f64180aa3",
+      "transaction": "0xb3875331e4beb2335bc16bc300129b496ffe7f0d2bbf669d0f41ad9ddb46eeb0",
+      "gasUsed": 3604873,
+      "runtimeSha256": "56f3933e1f863ae07002d1415516ae6b68f9ecbeea3f2560bb2f015d419ba0da"
+    },
+    {
+      "profile": 0,
+      "offset": 16384,
+      "length": 16384,
+      "address": "0xe7f1725e7734ce288f8367e1bb143e90bb3f0512",
+      "transaction": "0x33f37062b69125c5cae57736c76037e6b339a6d562e49633596ee19d65b0f0d7",
+      "gasUsed": 3612433,
+      "runtimeSha256": "1d358dc9c29464b10a19b733e24ecf934b667dfe7780ffebdd2af63fe5567c00"
+    },
+    {
+      "profile": 0,
+      "offset": 32768,
+      "length": 16384,
+      "address": "0x9fe46736679d2d9a65f0992f2272de9f3c7fa6e0",
+      "transaction": "0xdf4924a1b79305ee1a091acd09609df280f5b5e899e5344ff06b0c14b4a196da",
+      "gasUsed": 3612421,
+      "runtimeSha256": "bb6f8b848db354dd91927c5a0ad18baa5d6096851360a2e8b79c5a52156b402b"
+    },
+    {
+      "profile": 0,
+      "offset": 49152,
+      "length": 16384,
+      "address": "0xcf7ed3acca5a467e9e704c703e8d87f634fb0fc9",
+      "transaction": "0x000a8cb88c21e72c5f1633050307ebc4414af9bcc66262f44ab66329503d1dc1",
+      "gasUsed": 3612433,
+      "runtimeSha256": "430c0581fb4d136ef4aa726c2b231f5b626f87951b9f5294941df08bce82373b"
+    },
+    {
+      "profile": 0,
+      "offset": 65536,
+      "length": 16384,
+      "address": "0xdc64a140aa3e981100a9beca4e685f962f0cf6c9",
+      "transaction": "0xa634b73890a6ef5fb4ca9f6d865245237dd6d6ead672d48db30e635c0156717e",
+      "gasUsed": 3592309,
+      "runtimeSha256": "baff138ccb042f8137c890a02080703f6a6979fea894ab16ebe33c4244a2fab1"
+    },
+    {
+      "profile": 0,
+      "offset": 81920,
+      "length": 16384,
+      "address": "0x5fc8d32690cc91d4c39d9d3abcbd16989f875707",
+      "transaction": "0x5a237f0447c9532bdd2de2731be9a0999a0b883aea068c6c40681a6ea69cef90",
+      "gasUsed": 3584509,
+      "runtimeSha256": "1f5d3ec85dd3415e7e1ad4ffcd7eb00439852bc9c15c7f7ac3df84f828345b0f"
+    },
+    {
+      "profile": 0,
+      "offset": 98304,
+      "length": 16384,
+      "address": "0x0165878a594ca255338adfa4d48449f69242eb8f",
+      "transaction": "0xce5dcc29b1eb0133b116c83f0dc41a340a025d743c5e942dd79a20f8109fb3a8",
+      "gasUsed": 3576253,
+      "runtimeSha256": "1c642eaf336b57df36beaf0638915ad5ede4ff4564aedbac5fbf2fa6873cabc3"
+    },
+    {
+      "profile": 0,
+      "offset": 114688,
+      "length": 10194,
+      "address": "0xa513e6e4b8f2a923d98304ec87f64353c4d5c853",
+      "transaction": "0x388caf7fa88454e58ae2ff7503800e851b0a876619530cd44a2c2e5f0c31b033",
+      "gasUsed": 2257892,
+      "runtimeSha256": "c30875d4f9354f7de74700d39313c893e61a9d052a56cf23b2aef4d036901f52"
+    },
+    {
+      "profile": 1,
+      "offset": 0,
+      "length": 16384,
+      "address": "0x8a791620dd6260079bf849dc5567adc3f2fdc318",
+      "transaction": "0xf72a1da6e0bb4d5529967a980e393beeed5b4d760e17d42ab6e343df7d2ece6a",
+      "gasUsed": 3604873,
+      "runtimeSha256": "56f3933e1f863ae07002d1415516ae6b68f9ecbeea3f2560bb2f015d419ba0da"
+    },
+    {
+      "profile": 1,
+      "offset": 16384,
+      "length": 16384,
+      "address": "0x610178da211fef7d417bc0e6fed39f05609ad788",
+      "transaction": "0x6168b32be5fdccc1d7f674d14a108b3d80a0d7e15d0aeb9816dd3c073995b7cf",
+      "gasUsed": 3612433,
+      "runtimeSha256": "1d358dc9c29464b10a19b733e24ecf934b667dfe7780ffebdd2af63fe5567c00"
+    },
+    {
+      "profile": 1,
+      "offset": 32768,
+      "length": 16384,
+      "address": "0xb7f8bc63bbcad18155201308c8f3540b07f84f5e",
+      "transaction": "0xab39c2de8efb97b230feab572ed76b56b84642c4e96c00640ace531ff1022620",
+      "gasUsed": 3612421,
+      "runtimeSha256": "bb6f8b848db354dd91927c5a0ad18baa5d6096851360a2e8b79c5a52156b402b"
+    },
+    {
+      "profile": 1,
+      "offset": 49152,
+      "length": 16384,
+      "address": "0xa51c1fc2f0d1a1b8494ed1fe312d7c3a78ed91c0",
+      "transaction": "0x7b50371817d9deb249319b3487eecadbc79daea181867ad9e22dbe86a2e0dd92",
+      "gasUsed": 3612433,
+      "runtimeSha256": "430c0581fb4d136ef4aa726c2b231f5b626f87951b9f5294941df08bce82373b"
+    },
+    {
+      "profile": 1,
+      "offset": 65536,
+      "length": 16384,
+      "address": "0x0dcd1bf9a1b36ce34237eeafef220932846bcd82",
+      "transaction": "0x7ad2a4d056a2e06f11fd55811da79e6ebad684ac4f0460c4c9b8dbfc78105e15",
+      "gasUsed": 3592309,
+      "runtimeSha256": "baff138ccb042f8137c890a02080703f6a6979fea894ab16ebe33c4244a2fab1"
+    },
+    {
+      "profile": 1,
+      "offset": 81920,
+      "length": 16384,
+      "address": "0x9a676e781a523b5d0c0e43731313a708cb607508",
+      "transaction": "0x564a4200acb4a64c41bbdaa4e551b07787797a83e9a938d17dec382360786589",
+      "gasUsed": 3584377,
+      "runtimeSha256": "8f524667ec5c99fc7689ff213f27d6a518f7b8bb98682d86b763ff894b62dfe1"
+    },
+    {
+      "profile": 1,
+      "offset": 98304,
+      "length": 16384,
+      "address": "0x0b306bf915c4d645ff596e518faf3f9669b97016",
+      "transaction": "0x0d6da753cc0551355da443fcd1264bea1cb33dbecdabd5c15a6b1b84db1c4cd0",
+      "gasUsed": 3575845,
+      "runtimeSha256": "95db83fea153baac5a5ffc7595b564c4f0350c18346fc2f80ef3971663148744"
+    },
+    {
+      "profile": 1,
+      "offset": 114688,
+      "length": 10436,
+      "address": "0x959922be3caee4b8cd9a407cc3ac1c251c2007b1",
+      "transaction": "0x428724072b28af3360514551aedb288fdf6c42a4bfb3b71323b41558aef1e12f",
+      "gasUsed": 2309824,
+      "runtimeSha256": "b4cce3b3e25ba411fa94c4ac1ff9f0efbe689756c95cc9ff08924348f5f49072"
+    },
+    {
+      "profile": 2,
+      "offset": 0,
+      "length": 16384,
+      "address": "0x68b1d87f95878fe05b998f19b66f4baba5de1aed",
+      "transaction": "0x24e709a77d19227b6d04f5ee830a97489e1cf006c163460f94b98564680e1271",
+      "gasUsed": 3604873,
+      "runtimeSha256": "56f3933e1f863ae07002d1415516ae6b68f9ecbeea3f2560bb2f015d419ba0da"
+    },
+    {
+      "profile": 2,
+      "offset": 16384,
+      "length": 16384,
+      "address": "0x3aa5ebb10dc797cac828524e59a333d0a371443c",
+      "transaction": "0x4e03fd01b5f1bd04af66851ed69358d803c1d243c19bd7b6c6376d102b108fb2",
+      "gasUsed": 3612433,
+      "runtimeSha256": "1d358dc9c29464b10a19b733e24ecf934b667dfe7780ffebdd2af63fe5567c00"
+    },
+    {
+      "profile": 2,
+      "offset": 32768,
+      "length": 16384,
+      "address": "0xc6e7df5e7b4f2a278906862b61205850344d4e7d",
+      "transaction": "0x6c12abd54d73e30dabbc7a0fbe9a169ac4b8dbf05113c6b7afe76417e2f59a2f",
+      "gasUsed": 3612421,
+      "runtimeSha256": "bb6f8b848db354dd91927c5a0ad18baa5d6096851360a2e8b79c5a52156b402b"
+    },
+    {
+      "profile": 2,
+      "offset": 49152,
+      "length": 16384,
+      "address": "0x59b670e9fa9d0a427751af201d676719a970857b",
+      "transaction": "0xebb8c16d1cc2a4208d6761f1454a9550fb419df2cffcc62fbf57631d7b5da274",
+      "gasUsed": 3612433,
+      "runtimeSha256": "430c0581fb4d136ef4aa726c2b231f5b626f87951b9f5294941df08bce82373b"
+    },
+    {
+      "profile": 2,
+      "offset": 65536,
+      "length": 16384,
+      "address": "0x4ed7c70f96b99c776995fb64377f0d4ab3b0e1c1",
+      "transaction": "0xb1fd38cd0cca9a48ce826dc1e986a92ff34d0f10e85d8e9e84715e95bbe7a806",
+      "gasUsed": 3592309,
+      "runtimeSha256": "baff138ccb042f8137c890a02080703f6a6979fea894ab16ebe33c4244a2fab1"
+    },
+    {
+      "profile": 2,
+      "offset": 81920,
+      "length": 16384,
+      "address": "0x322813fd9a801c5507c9de605d63cea4f2ce6c44",
+      "transaction": "0x30e26ebbfd46b87375aefa8302efcc824392fb641c085d913a2fa4b0a8480f7f",
+      "gasUsed": 3584341,
+      "runtimeSha256": "c8956e663d7c336311ad53e36e43f5ee64e1e91c7cd204db9c774a793a6197b0"
+    },
+    {
+      "profile": 2,
+      "offset": 98304,
+      "length": 16384,
+      "address": "0xa85233c63b9ee964add6f2cffe00fd84eb32338f",
+      "transaction": "0x70abf1b12685edecc42c63c85cc523a2e9afa944a17b0a091591d2cacc43d41e",
+      "gasUsed": 3608401,
+      "runtimeSha256": "4e26698a076ec8129a5d18d5c80d46ec9a070fc4456c37f5ddcc5732b463e40c"
+    },
+    {
+      "profile": 2,
+      "offset": 114688,
+      "length": 16384,
+      "address": "0x4a679253410272dd5232b3ff7cf5dbb88f295319",
+      "transaction": "0x11cfa0e21e2cab155f4fd10fa9939dfc13b6039a4742ff19d30189bb888bd9cb",
+      "gasUsed": 3609529,
+      "runtimeSha256": "2faf79a9b8b37a4ed389017969d9d1f2633dddb286b98135165fbf51346b8a24"
+    },
+    {
+      "profile": 2,
+      "offset": 131072,
+      "length": 16384,
+      "address": "0x7a2088a1bfc9d81c55368ae168c2c02570cb814f",
+      "transaction": "0x52347f53119fa21776ab01ae9f4f5467762808e196974206daf282568a5e95e7",
+      "gasUsed": 3609757,
+      "runtimeSha256": "ccd9d4475b13e2aaa87a820384d39b76dbd69807ac895770ac67f53a8b4e7b67"
+    },
+    {
+      "profile": 2,
+      "offset": 147456,
+      "length": 16384,
+      "address": "0x09635f643e140090a9a8dcd712ed6285858cebef",
+      "transaction": "0x1c1693654feb3275353eef9d2657ebd0e7393a62349fed3788b0f337617ab6db",
+      "gasUsed": 3609985,
+      "runtimeSha256": "de3e5dd53790350a5517d8b81323adc517d25dc54cefc315b7683cf1963707f6"
+    },
+    {
+      "profile": 2,
+      "offset": 163840,
+      "length": 16384,
+      "address": "0xc5a5c42992decbae36851359345fe25997f5c42d",
+      "transaction": "0x4f7bc07ea72e58d830f4faa459f4af8c8083ffb02c713ee4c533f6688bc9386f",
+      "gasUsed": 3573217,
+      "runtimeSha256": "c80e212c318a19ab8592152fc48daa470899a0e70adb267fdcb11486e870064b"
+    },
+    {
+      "profile": 2,
+      "offset": 180224,
+      "length": 11660,
+      "address": "0x67d269191c92caf3cd7723f116c85e6e9bf55933",
+      "transaction": "0x7452f1fe68c8b3a4aa112bff657999c9b0f163cf6f5479db9356e3b91f3bd0df",
+      "gasUsed": 2572354,
+      "runtimeSha256": "4020a1f9073b4baf9de2d78dd98737d74a0d5bd35d8c0d4971d262b3e2adb5fb"
+    },
+    {
+      "profile": 3,
+      "offset": 0,
+      "length": 16384,
+      "address": "0xc3e53f4d16ae77db1c982e75a937b9f60fe63690",
+      "transaction": "0xe4fb4fc959f94a71584e51bc916f32a67d856d2fc02a119e6bf4cac836b85dfd",
+      "gasUsed": 3604873,
+      "runtimeSha256": "56f3933e1f863ae07002d1415516ae6b68f9ecbeea3f2560bb2f015d419ba0da"
+    },
+    {
+      "profile": 3,
+      "offset": 16384,
+      "length": 16384,
+      "address": "0x84ea74d481ee0a5332c457a4d796187f6ba67feb",
+      "transaction": "0x47b1f87282a5a92a0510a5cd79d1e178ee44dc0e5709a591458ff809c16a6b49",
+      "gasUsed": 3612433,
+      "runtimeSha256": "1d358dc9c29464b10a19b733e24ecf934b667dfe7780ffebdd2af63fe5567c00"
+    },
+    {
+      "profile": 3,
+      "offset": 32768,
+      "length": 16384,
+      "address": "0x9e545e3c0baab3e08cdfd552c960a1050f373042",
+      "transaction": "0x1791b7c22555431037d00a793520621f59467eb5e52ac3b3c5b2e6be68f4b8be",
+      "gasUsed": 3612421,
+      "runtimeSha256": "bb6f8b848db354dd91927c5a0ad18baa5d6096851360a2e8b79c5a52156b402b"
+    },
+    {
+      "profile": 3,
+      "offset": 49152,
+      "length": 16384,
+      "address": "0xa82ff9afd8f496c3d6ac40e2a0f282e47488cfc9",
+      "transaction": "0x4d3128e5027e0933bacdb3557679035b1913677c22e5f469eb63df39dc777fce",
+      "gasUsed": 3612433,
+      "runtimeSha256": "430c0581fb4d136ef4aa726c2b231f5b626f87951b9f5294941df08bce82373b"
+    },
+    {
+      "profile": 3,
+      "offset": 65536,
+      "length": 16384,
+      "address": "0x1613beb3b2c4f22ee086b2b38c1476a3ce7f78e8",
+      "transaction": "0x5ac4ac8491e740347eba14204cf585d02b0789854c4badad9ab26fe6eb98fcd5",
+      "gasUsed": 3592309,
+      "runtimeSha256": "baff138ccb042f8137c890a02080703f6a6979fea894ab16ebe33c4244a2fab1"
+    },
+    {
+      "profile": 3,
+      "offset": 81920,
+      "length": 16384,
+      "address": "0x851356ae760d987e095750cceb3bc6014560891c",
+      "transaction": "0x78a8bc664b3690010d308a9846c7ddcc26b4ecff0726fa8a36d770e5d81e5bef",
+      "gasUsed": 3584341,
+      "runtimeSha256": "c8956e663d7c336311ad53e36e43f5ee64e1e91c7cd204db9c774a793a6197b0"
+    },
+    {
+      "profile": 3,
+      "offset": 98304,
+      "length": 16384,
+      "address": "0xf5059a5d33d5853360d16c683c16e67980206f36",
+      "transaction": "0x4ea2f066083374bc2c335e8e9688525ff8951075a96bccc4dca9d819cb4ff11b",
+      "gasUsed": 3608401,
+      "runtimeSha256": "4e26698a076ec8129a5d18d5c80d46ec9a070fc4456c37f5ddcc5732b463e40c"
+    },
+    {
+      "profile": 3,
+      "offset": 114688,
+      "length": 16384,
+      "address": "0x95401dc811bb5740090279ba06cfa8fcf6113778",
+      "transaction": "0xbc08a636a74345cfcf9b94b2dab20e322f1968f9628521407703c4c37e9b4d8e",
+      "gasUsed": 3609529,
+      "runtimeSha256": "2faf79a9b8b37a4ed389017969d9d1f2633dddb286b98135165fbf51346b8a24"
+    },
+    {
+      "profile": 3,
+      "offset": 131072,
+      "length": 16384,
+      "address": "0x998abeb3e57409262ae5b751f60747921b33613e",
+      "transaction": "0x52337a40fe091ed569282ecb649f169b727e10fded92ae53f6caf6f026b13b67",
+      "gasUsed": 3609757,
+      "runtimeSha256": "ccd9d4475b13e2aaa87a820384d39b76dbd69807ac895770ac67f53a8b4e7b67"
+    },
+    {
+      "profile": 3,
+      "offset": 147456,
+      "length": 16384,
+      "address": "0x70e0ba845a1a0f2da3359c97e0285013525ffc49",
+      "transaction": "0x490eb8580ce21f9820d917a6327a432208fd68244cd65699a85f2f3b97bc4aad",
+      "gasUsed": 3609985,
+      "runtimeSha256": "de3e5dd53790350a5517d8b81323adc517d25dc54cefc315b7683cf1963707f6"
+    },
+    {
+      "profile": 3,
+      "offset": 163840,
+      "length": 16384,
+      "address": "0x4826533b4897376654bb4d4ad88b7fafd0c98528",
+      "transaction": "0x42345e679c437d78f98a42b48c4773ff92e9fc98c73f4c98dcc08e169cc25f5a",
+      "gasUsed": 3602365,
+      "runtimeSha256": "7c7f22d1c85dd04eb438adb1459910dc0fceab7f0a4ac32941cf5f8b3234cad7"
+    },
+    {
+      "profile": 3,
+      "offset": 180224,
+      "length": 16384,
+      "address": "0x99bba657f2bbc93c02d617f8ba121cb8fc104acf",
+      "transaction": "0x823ad154896593224597741470ef19f386738102f7eae3839cc18e0a562fac50",
+      "gasUsed": 3609529,
+      "runtimeSha256": "aaf9d1cd891f7ebc535f69df6b18e32eec20b89516d775f93c67f94cf6c568c2"
+    },
+    {
+      "profile": 3,
+      "offset": 196608,
+      "length": 16384,
+      "address": "0x0e801d84fa97b50751dbf25036d067dcf18858bf",
+      "transaction": "0xde6f58aea7f46f076a36a9f536ad555692a3f7b1c39906e0b682820bc957d103",
+      "gasUsed": 3609709,
+      "runtimeSha256": "ab5f49f4826700d1c7773ed9348e3f7e6a9ec5bac7bac54f52e030ec574a2551"
+    },
+    {
+      "profile": 3,
+      "offset": 212992,
+      "length": 16384,
+      "address": "0x8f86403a4de0bb5791fa46b8e795c547942fe4cf",
+      "transaction": "0x33b0fa85c1ac8dfe5a6e4039afbd71475e0a10f20250b7eb5f39e9958c95af74",
+      "gasUsed": 3610057,
+      "runtimeSha256": "093e7bc88f2264eae3c9ade2553f09ee1476104a8be75a12d9b368b1ebe2fe89"
+    },
+    {
+      "profile": 3,
+      "offset": 229376,
+      "length": 16384,
+      "address": "0x9d4454b023096f34b160d6b654540c56a1f81688",
+      "transaction": "0xb64032fd2964d861cf5ae88ef41836b3679ac5bd9d41e84c1000ba92bda01373",
+      "gasUsed": 3575629,
+      "runtimeSha256": "9a57e79403c25cfdbf0c88c33604bb22567362bbe9992f012f436c7344cbc9e4"
+    },
+    {
+      "profile": 3,
+      "offset": 245760,
+      "length": 12934,
+      "address": "0x5eb3bc0a489c5a8288765d2336659ebca68fcd00",
+      "transaction": "0xf8b192ef5af5ccf0ba0788a5088f5577f176c0566b4789db5e4ca8b53d7d39b1",
+      "gasUsed": 2846592,
+      "runtimeSha256": "cd2ee6334cee3a5adffad3026cbadb00626a23079eb75ab49d17e7576c5ab11c"
+    }
+  ],
+  "deployments": [
+    {
+      "profile": 0,
+      "address": "0x2279b7a0a67db372996a5fab50d91eaa73d2ebe6",
+      "transaction": "0x845f2c2bc4f042c7381750546915fb6bf0023fdb9e7ab7dea0586c80a6bd4871",
+      "gasUsed": 10267869,
+      "runtimeBytes": 37453,
+      "runtimeSha256": "30bbe000db8d6bb359bee324d31c3d5766afa829f2f4f8ffd5b2672708c2452d"
+    },
+    {
+      "profile": 1,
+      "address": "0x9a9f2ccfde556a7e9ff0848998aa4a0cfd8863ae",
+      "transaction": "0x42fb934e48e1307752a22b70b8de5d10ac56316033d31fb6158cbf2eae875ecf",
+      "gasUsed": 10267869,
+      "runtimeBytes": 37453,
+      "runtimeSha256": "30bbe000db8d6bb359bee324d31c3d5766afa829f2f4f8ffd5b2672708c2452d"
+    },
+    {
+      "profile": 2,
+      "address": "0xe6e340d132b5f46d1e472debcd681b2abc16e57e",
+      "transaction": "0xebbdf542b755e61d58c37dc57b39514fd1d2fb753ec337e3f5dcbb2013372281",
+      "gasUsed": 10358628,
+      "runtimeBytes": 37453,
+      "runtimeSha256": "30bbe000db8d6bb359bee324d31c3d5766afa829f2f4f8ffd5b2672708c2452d"
+    },
+    {
+      "profile": 3,
+      "address": "0x36c02da8a0983159322a80ffe9f24b1acff8b570",
+      "transaction": "0xe7042c27abe20bffdd180f78aae87ab9f3cf0ed8c7f709917c27e4454e39ec11",
+      "gasUsed": 10449412,
+      "runtimeBytes": 37453,
+      "runtimeSha256": "30bbe000db8d6bb359bee324d31c3d5766afa829f2f4f8ffd5b2672708c2452d"
+    }
+  ],
+  "rows": [
+    {
+      "case": 0,
+      "name": "natural-counting-all-tics-and-timeout",
+      "profile": 0,
+      "transaction": "0xf63587ba1aa33b560649b9b6816db1dea3a25de38351a3e0a6681086c3b72ad4",
+      "gasUsed": 269766699,
+      "measuredMilliseconds": 210.71787499999982,
+      "nativeSnapshots": 356,
+      "frameSha256": "0fd1db18d2314ca00388e695ea3341b545902ebfdb436f0ac58f0f080beee5b6",
+      "exactIndexedPixels": 64000,
+      "inputSeq": 1,
+      "frameId": "1"
+    },
+    {
+      "case": 1,
+      "name": "zero-totals-mode-0",
+      "profile": 0,
+      "transaction": "0xf1b525e3f5e9493cc2f13888cdded0842cfdd21b41109cb04da6f69e40653386",
+      "gasUsed": 125872432,
+      "measuredMilliseconds": 132.50412500000016,
+      "nativeSnapshots": 204,
+      "frameSha256": "0fd1db18d2314ca00388e695ea3341b545902ebfdb436f0ac58f0f080beee5b6",
+      "exactIndexedPixels": 64000,
+      "inputSeq": 2,
+      "frameId": "2"
+    },
+    {
+      "case": 2,
+      "name": "zero-totals-mode-1",
+      "profile": 0,
+      "transaction": "0xf3b3649a1be85b462c5410b38fb440345f0863d8c73547276ba52145f088e616",
+      "gasUsed": 125895752,
+      "measuredMilliseconds": 132.65150000000017,
+      "nativeSnapshots": 204,
+      "frameSha256": "0fd1db18d2314ca00388e695ea3341b545902ebfdb436f0ac58f0f080beee5b6",
+      "exactIndexedPixels": 64000,
+      "inputSeq": 3,
+      "frameId": "3"
+    },
+    {
+      "case": 3,
+      "name": "zero-totals-mode-3",
+      "profile": 0,
+      "transaction": "0x3feda44411c888d51c38108ddb5f2835eee585f8001f3fbd2d9abfec753a7ab3",
+      "gasUsed": 125888508,
+      "measuredMilliseconds": 133.3157920000001,
+      "nativeSnapshots": 204,
+      "frameSha256": "0fd1db18d2314ca00388e695ea3341b545902ebfdb436f0ac58f0f080beee5b6",
+      "exactIndexedPixels": 64000,
+      "inputSeq": 4,
+      "frameId": "4"
+    },
+    {
+      "case": 4,
+      "name": "fire-use-hold-release-and-skip",
+      "profile": 0,
+      "transaction": "0x0fc253c59ed04bf947fc3111017fcea5ac82362ee21d275c8dd884dc1cca7482",
+      "gasUsed": 59551685,
+      "measuredMilliseconds": 80.08433400000013,
+      "nativeSnapshots": 10,
+      "frameSha256": "0fd1db18d2314ca00388e695ea3341b545902ebfdb436f0ac58f0f080beee5b6",
+      "exactIndexedPixels": 64000,
+      "inputSeq": 5,
+      "frameId": "5"
+    },
+    {
+      "case": 5,
+      "name": "secret-entry-visible-markers",
+      "profile": 1,
+      "transaction": "0xc628f08b8e82191a96e56a186df21e8aa5ae32b6d9207e536cf333ccb4e2e7d3",
+      "gasUsed": 99400690,
+      "measuredMilliseconds": 80.3619590000003,
+      "nativeSnapshots": 10,
+      "frameSha256": "997f730507e039c4a0266271a97f0e4a50f6c2df70d32ded071d5899b0827215",
+      "exactIndexedPixels": 64000,
+      "inputSeq": 1,
+      "frameId": "1"
+    },
+    {
+      "case": 6,
+      "name": "secret-return-visible-markers",
+      "profile": 1,
+      "transaction": "0xd956dc9a8dda00e3ba4a1edc89023ba618f258a2a64140bb9e0b5ad2bb8607af",
+      "gasUsed": 58114129,
+      "measuredMilliseconds": 79.28466600000002,
+      "nativeSnapshots": 10,
+      "frameSha256": "48b0dad2635b9179777ddd4ffd89844924209d86ffc100c90a0757f49cb3796b",
+      "exactIndexedPixels": 64000,
+      "inputSeq": 2,
+      "frameId": "2"
+    },
+    {
+      "case": 7,
+      "name": "repeated-intermission-pointer-latches-rng",
+      "profile": 1,
+      "transaction": "0xde4c00e5abb3d17670576ddf3ea77d460624e64db5891b67e18173495ffd47d7",
+      "gasUsed": 109827381,
+      "measuredMilliseconds": 133.07612500000005,
+      "nativeSnapshots": 20,
+      "frameSha256": "78697466977bbb07111fe0710b6a019d65a8a1918cd4ef32064712bf4451e10b",
+      "exactIndexedPixels": 64000,
+      "inputSeq": 3,
+      "frameId": "3"
+    },
+    {
+      "case": 8,
+      "name": "inherited-held-latches",
+      "profile": 0,
+      "transaction": "0xdb1d0b6375560e97d0c9486a6b695bb63bd2a61978af18369a18215151dc0821",
+      "gasUsed": 65784215,
+      "measuredMilliseconds": 132.17920800000002,
+      "nativeSnapshots": 12,
+      "frameSha256": "0fd1db18d2314ca00388e695ea3341b545902ebfdb436f0ac58f0f080beee5b6",
+      "exactIndexedPixels": 64000,
+      "inputSeq": 6,
+      "frameId": "6"
+    },
+    {
+      "case": 9,
+      "name": "special-pause-attack-overlap",
+      "profile": 0,
+      "transaction": "0x1ecc579a175f872c47212cac7d12c8ce339b3307f9341c8de548a3c4f86f60b3",
+      "gasUsed": 52983875,
+      "measuredMilliseconds": 79.22375000000011,
+      "nativeSnapshots": 7,
+      "frameSha256": "0fd1db18d2314ca00388e695ea3341b545902ebfdb436f0ac58f0f080beee5b6",
+      "exactIndexedPixels": 64000,
+      "inputSeq": 7,
+      "frameId": "7"
+    },
+    {
+      "case": 10,
+      "name": "percentages-above-100-and-time-overflow",
+      "profile": 0,
+      "transaction": "0x4647420e5917361ea37861cffe46aa9a662e73d85def4e408bf8835439f949af",
+      "gasUsed": 60408973,
+      "measuredMilliseconds": 79.52883400000019,
+      "nativeSnapshots": 10,
+      "frameSha256": "0fd1db18d2314ca00388e695ea3341b545902ebfdb436f0ac58f0f080beee5b6",
+      "exactIndexedPixels": 64000,
+      "inputSeq": 8,
+      "frameId": "8"
+    },
+    {
+      "case": 11,
+      "name": "number-sentinel-percentage-1994",
+      "profile": 0,
+      "transaction": "0xb943adfe60deb716128d1cab0fdb9b3854d3bb07e22c7da6f192f91d0211f82a",
+      "gasUsed": 59031727,
+      "measuredMilliseconds": 80.42824999999993,
+      "nativeSnapshots": 10,
+      "frameSha256": "0fd1db18d2314ca00388e695ea3341b545902ebfdb436f0ac58f0f080beee5b6",
+      "exactIndexedPixels": 64000,
+      "inputSeq": 9,
+      "frameId": "9"
+    },
+    {
+      "case": 12,
+      "name": "finished-title-0",
+      "profile": 0,
+      "transaction": "0x16dc4c193b301fa5a5560582394e61d5316c15aa52bc4d04d8e6ca9ea1daf58d",
+      "gasUsed": 43099943,
+      "measuredMilliseconds": 52.749041000000034,
+      "nativeSnapshots": 3,
+      "frameSha256": "b641f305242512f8f0176848b86b5cf5a37ced37623e2b66f023f59c50b360dd",
+      "exactIndexedPixels": 64000,
+      "inputSeq": 10,
+      "frameId": "10"
+    },
+    {
+      "case": 13,
+      "name": "finished-title-1",
+      "profile": 0,
+      "transaction": "0xc4c0f92f15ffbf64b1a78a2981b991f6f251b75d0b257b260f14ee5535b0ac65",
+      "gasUsed": 43080507,
+      "measuredMilliseconds": 53.84808299999986,
+      "nativeSnapshots": 3,
+      "frameSha256": "6adf6d0accbcfa20d21deda583e97a13b871facbb46ff2eab6cfe99c21a4d3b5",
+      "exactIndexedPixels": 64000,
+      "inputSeq": 11,
+      "frameId": "11"
+    },
+    {
+      "case": 14,
+      "name": "finished-title-2",
+      "profile": 0,
+      "transaction": "0x88bba750b863d378dd2e351ee41ba6fc1e124e6ad169148e3c11f9f62af45fd1",
+      "gasUsed": 42221759,
+      "measuredMilliseconds": 53.492707999999766,
+      "nativeSnapshots": 3,
+      "frameSha256": "755aa56a4e59ef0acd932191f1e090241b6d7e57a62f3f2effc0565203dd1b14",
+      "exactIndexedPixels": 64000,
+      "inputSeq": 12,
+      "frameId": "12"
+    },
+    {
+      "case": 15,
+      "name": "finished-title-3",
+      "profile": 0,
+      "transaction": "0x1230fa108eba7670bc03028b60ef14ece000810db1dec06f6885a2515135e71e",
+      "gasUsed": 41744875,
+      "measuredMilliseconds": 53.37424999999985,
+      "nativeSnapshots": 3,
+      "frameSha256": "28cc9ffb4f2a439d857ff7fa8190c335710374160d77e6f48a029835548a94dd",
+      "exactIndexedPixels": 64000,
+      "inputSeq": 13,
+      "frameId": "13"
+    },
+    {
+      "case": 16,
+      "name": "finished-title-4",
+      "profile": 0,
+      "transaction": "0x26194289a53e115b9a7f3054c2166dfb1327dc1d33720a31961c37fa38827f8c",
+      "gasUsed": 41082043,
+      "measuredMilliseconds": 52.97400000000016,
+      "nativeSnapshots": 3,
+      "frameSha256": "5f781909b28a9d603b3e33a1c1574bede9c172bb3d6159f3a82e2af1a3077bda",
+      "exactIndexedPixels": 64000,
+      "inputSeq": 14,
+      "frameId": "14"
+    },
+    {
+      "case": 17,
+      "name": "finished-title-5",
+      "profile": 0,
+      "transaction": "0xc5a5300b56fa3389e6ea208c618e2f377bd06a8502714058b492cf26e46f0868",
+      "gasUsed": 42320495,
+      "measuredMilliseconds": 52.87024999999994,
+      "nativeSnapshots": 3,
+      "frameSha256": "3ad9b9fc19606f4399ca57b6c2610ae0ac70a7520222b2076ce8d0a0b3b2ca79",
+      "exactIndexedPixels": 64000,
+      "inputSeq": 15,
+      "frameId": "15"
+    },
+    {
+      "case": 18,
+      "name": "finished-title-6",
+      "profile": 0,
+      "transaction": "0x3ef5c98eb770324866fa726df4d5d332f066adbe5e8302cf8f14f28c165db1e4",
+      "gasUsed": 43333891,
+      "measuredMilliseconds": 52.93004199999996,
+      "nativeSnapshots": 3,
+      "frameSha256": "0222947a3560c2f190000b0da9d00ffd8ae4f50768bb5e38ca295f75e8259e71",
+      "exactIndexedPixels": 64000,
+      "inputSeq": 16,
+      "frameId": "16"
+    },
+    {
+      "case": 19,
+      "name": "finished-title-7",
+      "profile": 0,
+      "transaction": "0x13fc4ef4528182cc7fe374b91c8384e1a22c2a1951e78449c40f3ee2d17956d9",
+      "gasUsed": 42113611,
+      "measuredMilliseconds": 53.794624999999996,
+      "nativeSnapshots": 3,
+      "frameSha256": "63751ecb5fa610dae41b5a81b2ca455715137ace59713a208358fcedf29bc817",
+      "exactIndexedPixels": 64000,
+      "inputSeq": 17,
+      "frameId": "17"
+    },
+    {
+      "case": 20,
+      "name": "finished-title-8",
+      "profile": 0,
+      "transaction": "0x1e13a5b67fd42414153622c7f27ecd06cf2250ef858452b3c34b90d8f4c4bb60",
+      "gasUsed": 42494371,
+      "measuredMilliseconds": 52.708958000000166,
+      "nativeSnapshots": 3,
+      "frameSha256": "a9483d1ca3cb3201baec4fc2a7efbbb3b7b0c49ad6759538fe33fbdeaa7de5cd",
+      "exactIndexedPixels": 64000,
+      "inputSeq": 18,
+      "frameId": "18"
+    },
+    {
+      "case": 21,
+      "name": "entering-title-node-0",
+      "profile": 1,
+      "transaction": "0x92dffcf288c619c2693e4164a139cfe01a20cd3f2b9d93090d7e0669cc07d7d7",
+      "gasUsed": 56836038,
+      "measuredMilliseconds": 80.2822500000002,
+      "nativeSnapshots": 10,
+      "frameSha256": "0f11ca5477ca9ae9ac570658bdcad5f7473500989fc5d512440ed7679c85a36b",
+      "exactIndexedPixels": 64000,
+      "inputSeq": 4,
+      "frameId": "4"
+    },
+    {
+      "case": 22,
+      "name": "entering-title-node-1",
+      "profile": 1,
+      "transaction": "0x20334205c52b519857bc19f06026ac8b08327c03c6fe9a192f2ef76002da35dc",
+      "gasUsed": 59987630,
+      "measuredMilliseconds": 79.32620899999984,
+      "nativeSnapshots": 10,
+      "frameSha256": "7a65484c803c56d16a32c06646b28b84ba6f509e52cfd8501b26475b88222509",
+      "exactIndexedPixels": 64000,
+      "inputSeq": 5,
+      "frameId": "5"
+    },
+    {
+      "case": 23,
+      "name": "entering-title-node-2",
+      "profile": 1,
+      "transaction": "0x76ffadc1f7f8d0a09bf54d135702fc5ecf1e3fa3e1102d3b372fd661175a92a9",
+      "gasUsed": 57840760,
+      "measuredMilliseconds": 80.67612499999996,
+      "nativeSnapshots": 10,
+      "frameSha256": "cf8d73e95e30ea2d1a7a6b6e3c2a1ebd5977b2da15c852bf4d2e2b1a48c88d2f",
+      "exactIndexedPixels": 64000,
+      "inputSeq": 6,
+      "frameId": "6"
+    },
+    {
+      "case": 24,
+      "name": "entering-title-node-3",
+      "profile": 1,
+      "transaction": "0x2ecdd3bae3016b696bd1020e9f2b908b278c872ed2f1e6f3b9556213cc571d3e",
+      "gasUsed": 56770350,
+      "measuredMilliseconds": 80.6480419999998,
+      "nativeSnapshots": 10,
+      "frameSha256": "b04b371941357c212b29ea873be005df5e268c0a07877ebd43197eea61382012",
+      "exactIndexedPixels": 64000,
+      "inputSeq": 7,
+      "frameId": "7"
+    },
+    {
+      "case": 25,
+      "name": "entering-title-node-4",
+      "profile": 1,
+      "transaction": "0xe59c957a29bd28fba7b520a5605e4b0f91037fb049ef9b2f8df1e821ec0b9a3a",
+      "gasUsed": 55235070,
+      "measuredMilliseconds": 80.42824999999993,
+      "nativeSnapshots": 10,
+      "frameSha256": "0aa1e6ccbcdc8d2a4200f8d2fb6f370e1dceefb805847478854a0a85096e303b",
+      "exactIndexedPixels": 64000,
+      "inputSeq": 8,
+      "frameId": "8"
+    },
+    {
+      "case": 26,
+      "name": "entering-title-node-5",
+      "profile": 1,
+      "transaction": "0x8045babfce0cc6bb14af9b559c79980b743624e0de27b26bd00fa0e8189af5fd",
+      "gasUsed": 58213600,
+      "measuredMilliseconds": 80.64158399999997,
+      "nativeSnapshots": 10,
+      "frameSha256": "655ec0c419e5036dd8c77112e8bdf7058417e646fe25bb9d22cdc676ceeea988",
+      "exactIndexedPixels": 64000,
+      "inputSeq": 9,
+      "frameId": "9"
+    },
+    {
+      "case": 27,
+      "name": "entering-title-node-6",
+      "profile": 1,
+      "transaction": "0x2540cc308c8478a0ca9394a00927b7e1549cc51d7c5afd950a0bf05db0e277c3",
+      "gasUsed": 60621090,
+      "measuredMilliseconds": 79.3749170000001,
+      "nativeSnapshots": 10,
+      "frameSha256": "078daf2133cfa0219e5f8b872033db11c8c387a121105f1df5a23e5327324a7d",
+      "exactIndexedPixels": 64000,
+      "inputSeq": 10,
+      "frameId": "10"
+    },
+    {
+      "case": 28,
+      "name": "entering-title-node-7",
+      "profile": 1,
+      "transaction": "0x30f5acc88b978035ceab36c9513181e8b5172c4789b95202ee97b5dc2ba56d5f",
+      "gasUsed": 57553590,
+      "measuredMilliseconds": 78.70570899999984,
+      "nativeSnapshots": 10,
+      "frameSha256": "ff21a3353af427835a79fea725694f311c94bef4778ce12316a58210cb3d5a6c",
+      "exactIndexedPixels": 64000,
+      "inputSeq": 11,
+      "frameId": "11"
+    },
+    {
+      "case": 29,
+      "name": "entering-title-node-8",
+      "profile": 1,
+      "transaction": "0xb51ae5ddf64b0722c6154fd33d90bc5b013f5d3e81102435fd9bb31225047270",
+      "gasUsed": 58618920,
+      "measuredMilliseconds": 80.66225000000031,
+      "nativeSnapshots": 10,
+      "frameSha256": "026d9e18f190bc552ccded763c92b79c30e7d213cb78b988af0f9d9c95a24c0b",
+      "exactIndexedPixels": 64000,
+      "inputSeq": 12,
+      "frameId": "12"
+    },
+    {
+      "case": 30,
+      "name": "draw-number-percent-time-quirks",
+      "profile": 0,
+      "transaction": "0x8b43966323427431b3fe0161caa35548ea97b35508f43c9ffb2343d6e9750763",
+      "gasUsed": 36716143,
+      "measuredMilliseconds": 53.931249999999636,
+      "nativeSnapshots": 17,
+      "frameSha256": "0e61e66dab59bd75bd215cacc1c9911a01704ac0d8eda1186555232293a84a68",
+      "exactIndexedPixels": 64000,
+      "inputSeq": 19,
+      "frameId": "19"
+    },
+    {
+      "case": 31,
+      "name": "pointer-fallback-second-candidate",
+      "profile": 2,
+      "transaction": "0x0505c1c883ffb974c6d878e38e1914b390b39ee625fb5b546eb19db3858bd107",
+      "gasUsed": 37982097,
+      "measuredMilliseconds": 53.88354100000015,
+      "nativeSnapshots": 10,
+      "frameSha256": "633a6758f85c23d0f42c7ce55afdea47879ecab453ef63a3d4883062156b3c07",
+      "exactIndexedPixels": 64000,
+      "inputSeq": 1,
+      "frameId": "1"
+    },
+    {
+      "case": 32,
+      "name": "pointer-neither-candidate-fits",
+      "profile": 3,
+      "transaction": "0x67220f8a6acf6ed68778b6deec2dca921a1475c5f9199fedb95fe1d8d6730aac",
+      "gasUsed": 37123846,
+      "measuredMilliseconds": 53.1073750000005,
+      "nativeSnapshots": 10,
+      "frameSha256": "4f7988030a00d082fe445e00a2ac5dab502300ff1b80e8592dd569867b60ef74",
+      "exactIndexedPixels": 64000,
+      "inputSeq": 1,
+      "frameId": "1"
+    },
+    {
+      "case": 33,
+      "name": "pinned-animation-draw-suppressed",
+      "profile": 1,
+      "transaction": "0x479b9ce9bc94049b42ee22943fe73071f9b093f3bd773d421b76c9729f231af3",
+      "gasUsed": 38580928,
+      "measuredMilliseconds": 52.78083400000014,
+      "nativeSnapshots": 4,
+      "frameSha256": "236e92cb53435f4410f23324b6e03e8f42b4d3c00c73c27ec114cd3062b45983",
+      "exactIndexedPixels": 64000,
+      "inputSeq": 13,
+      "frameId": "13"
+    }
+  ],
+  "storageRows": [
+    {
+      "case": 4,
+      "action": "begin",
+      "transaction": "0x53973594324cc4869ef95b5ac857c1c335c084a7329d83e21ac85bd358f7b6a8",
+      "gasUsed": 33155425,
+      "nativeSnapshot": 0
+    },
+    {
+      "case": 4,
+      "action": 0,
+      "transaction": "0xcc3936e27e05710516f26f99641345a9f91ebf8c5f1009ef4aa686323f3b49cd",
+      "gasUsed": 77999289,
+      "nativeSnapshot": 1,
+      "rendered": true
+    },
+    {
+      "case": 4,
+      "action": 1,
+      "transaction": "0x3ce8ffa3a8ec6e08b45740a8d7e2526a6f160e2618385d2d8d0cdf13e92e58c2",
+      "gasUsed": 38144153,
+      "nativeSnapshot": 2,
+      "rendered": true
+    },
+    {
+      "case": 4,
+      "action": 2,
+      "transaction": "0xd69a1c05ca693bd3abd074d0c99e622119c1c44ff4e148baf5d620404b73ca2a",
+      "gasUsed": 38140048,
+      "nativeSnapshot": 3,
+      "rendered": true
+    },
+    {
+      "case": 4,
+      "action": 3,
+      "transaction": "0x1c86bd151ded9331e05359595d702a6e53bee21a5dabd26a7b51afb1c3a92ed1",
+      "gasUsed": 37544285,
+      "nativeSnapshot": 4,
+      "rendered": true
+    },
+    {
+      "case": 4,
+      "action": 4,
+      "transaction": "0x8cf42de5d5c4053ed35e85506c5375c731437b675cbfd105cdd512d218b3e298",
+      "gasUsed": 36001958,
+      "nativeSnapshot": 5,
+      "rendered": true
+    },
+    {
+      "case": 4,
+      "action": 5,
+      "transaction": "0x186ac0efff6925eabcdea5ade8d4dcbba53cb11db14e933f0807bd5d1cfac6fc",
+      "gasUsed": 35987286,
+      "nativeSnapshot": 6,
+      "rendered": true
+    },
+    {
+      "case": 4,
+      "action": 6,
+      "transaction": "0x26d213ac0559eb653d833f5c6015d71baeab7a0fb4c21de76518554a2749c59a",
+      "gasUsed": 36037287,
+      "nativeSnapshot": 7,
+      "rendered": true
+    },
+    {
+      "case": 4,
+      "action": 7,
+      "transaction": "0x7c088ca10a30a54f8b8205e555dea36b68b17bfcf3203bbbb9487bacf15ee7b2",
+      "gasUsed": 36054106,
+      "nativeSnapshot": 8,
+      "rendered": true
+    },
+    {
+      "case": 4,
+      "action": 8,
+      "transaction": "0x47294005e25449740e83a2a1298b65a70c32458abea44d14712b6c4d051f749c",
+      "gasUsed": 33361362,
+      "nativeSnapshot": 9,
+      "rendered": false
+    },
+    {
+      "case": 7,
+      "action": "begin",
+      "transaction": "0x74436e110cdd183ed816b14da6587ed6e59a164ae1f56c8e6d21d2684164f5a3",
+      "gasUsed": 31186166,
+      "nativeSnapshot": 0
+    },
+    {
+      "case": 7,
+      "action": 0,
+      "transaction": "0x9337cb5eb792071992200fec25c8b089df962dd50b847502e0d0f7a2eba4c853",
+      "gasUsed": 77999658,
+      "nativeSnapshot": 1,
+      "rendered": true
+    },
+    {
+      "case": 7,
+      "action": 1,
+      "transaction": "0xc1a731dbfb1a0d414a4831546850caa39de7c5b8326095ab17d1368f9e36711d",
+      "gasUsed": 38144522,
+      "nativeSnapshot": 2,
+      "rendered": true
+    },
+    {
+      "case": 7,
+      "action": 2,
+      "transaction": "0x33b4bf1f74b1c3518938dce672e3501c46bad5c435326998ba5adc56d234b5ba",
+      "gasUsed": 38140417,
+      "nativeSnapshot": 3,
+      "rendered": true
+    },
+    {
+      "case": 7,
+      "action": 3,
+      "transaction": "0xd81adba36dcf430eee11c62314df44447987bea64044705fa38467d30853c119",
+      "gasUsed": 37561450,
+      "nativeSnapshot": 4,
+      "rendered": true
+    },
+    {
+      "case": 7,
+      "action": 4,
+      "transaction": "0xf112262b4fbdc108d4eb6d121a8147cae140f8554a8f3c731577a6e4753e24b8",
+      "gasUsed": 36059665,
+      "nativeSnapshot": 5,
+      "rendered": true
+    },
+    {
+      "case": 7,
+      "action": 5,
+      "transaction": "0xd18cbab759b0b383b2d41cbdd1cc67b0bf30a132ab15c97e302bdb1a07299580",
+      "gasUsed": 36028193,
+      "nativeSnapshot": 6,
+      "rendered": true
+    },
+    {
+      "case": 7,
+      "action": 6,
+      "transaction": "0xa4de381a376ea2cd8e7ae7589f8b634910838d47aca6f502122eaf40f5fd07bb",
+      "gasUsed": 36078194,
+      "nativeSnapshot": 7,
+      "rendered": true
+    },
+    {
+      "case": 7,
+      "action": 7,
+      "transaction": "0xe151e69780a7073fed8501caa0af1ac2f86b284920905d8cf6ad9acc85c167f0",
+      "gasUsed": 36095013,
+      "nativeSnapshot": 8,
+      "rendered": true
+    },
+    {
+      "case": 7,
+      "action": 8,
+      "transaction": "0x29928ca580268a2a69b73c013c2b3bd1122049ff0501c46d15ef38d42b577b67",
+      "gasUsed": 33361731,
+      "nativeSnapshot": 9,
+      "rendered": false
+    },
+    {
+      "case": 7,
+      "action": 9,
+      "transaction": "0x708eee9d474c762d02ea6a8ba58c4ac8ee653f4ed76ed136634df145de7e682f",
+      "gasUsed": 61867002,
+      "nativeSnapshot": 10,
+      "rendered": true
+    },
+    {
+      "case": 7,
+      "action": 10,
+      "transaction": "0xc7ac4bd9819f23c626c5c77847c77e646953a407093657246d624b542ee878bf",
+      "gasUsed": 39712524,
+      "nativeSnapshot": 11,
+      "rendered": true
+    },
+    {
+      "case": 7,
+      "action": 11,
+      "transaction": "0xc44ca62884a8dd6d4db91f168ada861acaef9ded95709a877c0709f2697f68f3",
+      "gasUsed": 38128060,
+      "nativeSnapshot": 12,
+      "rendered": true
+    },
+    {
+      "case": 7,
+      "action": 12,
+      "transaction": "0xd833815f97a228c42e7ec2371c45241b2e998d2441ef8bf590ecf09fc9c687d2",
+      "gasUsed": 38117903,
+      "nativeSnapshot": 13,
+      "rendered": true
+    },
+    {
+      "case": 7,
+      "action": 13,
+      "transaction": "0xce54c6b51b2cd72e0a673456abfadeffdc2c74b5e27c3799844882e83c2dc717",
+      "gasUsed": 36636733,
+      "nativeSnapshot": 14,
+      "rendered": true
+    },
+    {
+      "case": 7,
+      "action": 14,
+      "transaction": "0xe6228ab4e65d184e339df162887fdc37d3fe4497030298fa8685f728dd217e30",
+      "gasUsed": 35184401,
+      "nativeSnapshot": 15,
+      "rendered": true
+    },
+    {
+      "case": 7,
+      "action": 15,
+      "transaction": "0xddae5b3b6c369323476e8c0ff5eba0f635b53dd5bfe4282f75628021a1e5d2a1",
+      "gasUsed": 35174233,
+      "nativeSnapshot": 16,
+      "rendered": true
+    },
+    {
+      "case": 7,
+      "action": 16,
+      "transaction": "0x838af930bbb1924dcd0b9a02790d479f3bad2b847ba5b3f9db8b34bfacf658e0",
+      "gasUsed": 35225138,
+      "nativeSnapshot": 17,
+      "rendered": true
+    },
+    {
+      "case": 7,
+      "action": 17,
+      "transaction": "0x3d030049730b5846dba2439dc1e9996db9ad0473dd1ba3c36481159f48c31c22",
+      "gasUsed": 35218249,
+      "nativeSnapshot": 18,
+      "rendered": true
+    },
+    {
+      "case": 7,
+      "action": 18,
+      "transaction": "0x5494bb2a2303459cad0cbc671f525390ce5bc5a7f08bc4b7cb8fb363cdcf32b6",
+      "gasUsed": 33361720,
+      "nativeSnapshot": 19,
+      "rendered": false
+    }
+  ],
+  "rejections": [
+    {
+      "name": "stale sequence",
+      "transaction": "0x99b43b3bdebf0f7e84d85e26d16c54af4d9d6a4768da45e011ae76544386a49f",
+      "gasUsed": 26047,
+      "storageRootUnchanged": true,
+      "logs": 0
+    },
+    {
+      "name": "unauthorized driver",
+      "transaction": "0xae1a6163024009b6a146f32384d21256db19c55f76cdaac0cf1b583327e24416",
+      "gasUsed": 25850,
+      "storageRootUnchanged": true,
+      "logs": 0
+    },
+    {
+      "name": "malformed script",
+      "transaction": "0xca5414837d04ee6a4ed81ab14ae59bed8da59877df4256a375bf1fa43fb81099",
+      "gasUsed": 257967,
+      "storageRootUnchanged": true,
+      "logs": 0
+    },
+    {
+      "name": "post-completion tick",
+      "transaction": "0x8c8b8bba13a39c6cdcfe28211f2331c374a5c3c2699a025c31e26397fba6bde4",
+      "gasUsed": 32695877,
+      "storageRootUnchanged": true,
+      "logs": 0
+    },
+    {
+      "name": "post-free draw",
+      "transaction": "0x74db1a8be5ac6c83ed5738aa481323770a7f94923833226f2cfff7ae3d9c0d1a",
+      "gasUsed": 32695145,
+      "storageRootUnchanged": true,
+      "logs": 0
+    },
+    {
+      "name": "commercial mode",
+      "transaction": "0x554de3826d4a99e383516b0701f728deba28636ad286e46a2785857c95ffc291",
+      "gasUsed": 468467,
+      "storageRootUnchanged": true,
+      "logs": 0
+    }
+  ],
+  "snapshotsCompared": 1215,
+  "sourceSha256": {
+    "src/doom/wi_stuff.sol": "418902ce89f7750d361ca258657870294c5a48b15613873b32ca3b96270ae47d",
+    "src/doom/wi_stuff_types.sol": "7d7d56059e363e6311c693b0dde47fb5f10e7c27aaa903d20de2f9a7eaff9e60",
+    "src/support/IntermissionFixture.sol": "2722a11fddacc99bd46fd2f89cbac199f44c8a86f31f43f9213ae3425722e771",
+    "src/support/IntermissionProbe.sol": "2f9b6ef0e233b4a388dafb94429979fd45633f61e49acac02bad951f138289f4",
+    "src/doom/v_video.sol": "be75fe69e7cd2486ce93408ec204cdf470ea097569e37fbedd867e9a2f3adf1f",
+    "src/doom/m_random.sol": "5267b881138cfb7e0d683449005619513006c70e3ed557f64697b36c4ed40c7b",
+    "src/doom/r_data.sol": "5b404d561f8bce538e8a8221b4f36d62c9b9826fc833307640d96fcbfdca2d0a",
+    "foundry.toml": "afe04c66f0e684b5a936821f6543605a3739f62164ceb4398426db7403452393",
+    "execution-budget.json": "acde01f1b9cf248f9265f1ffcff7181d01d77620a2dfcd9a4d4d0b1c79df2be7",
+    "tools/reference/intermission/evm.mjs": "b639bce25b499b063fa5704cec7426faf1411df42cf49fc0254006ec9b2cc3fe",
+    "test/fixtures/phase4_intermission/native.json": "7d5a921a59b2a1aedb671ad51133fc5b9be1d45dbafd33fb5c220093a5e19d36",
+    "test/fixtures/phase4_intermission/cases.bin": "98ccc47d82dac94572417ce26c5a785bc02d42fc8697e2840977383a5a0a7ac0",
+    "web/protocol.mjs": "fec5104a0e13b7ca8666200431a1804d53cdb6537c1f0f8f02fb5b69dd70f47e"
+  }
+}
