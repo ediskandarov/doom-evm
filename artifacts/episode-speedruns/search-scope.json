@@ -1,0 +1,20 @@
+{
+  "queries": [
+    "Freedoom E1M3 demo lmp",
+    "Freedoom E1M4 demo",
+    "Freedoom E1M5 speedrun demo lmp download 0.13",
+    "Freedoom E1M6 speedrun demo lmp download 0.13",
+    "Freedoom E1M7 demo speedrun",
+    "Freedoom E1M8 speedrun demo lmp download 0.13",
+    "Freedoom E1M9 speedrun demo"
+  ],
+  "notes": "Map-specific search did not yield an additional directly downloadable verified 0.13 Episode One tape. Search result snippets are discovery only; author-linked original demo bytes and native replay are the compatibility gate.",
+  "checkedEndpoints": [
+    "https://www.speedrun.com/freedoom_phase_1/levels",
+    "https://www.speedrun.com/freedoom_phase_1/levels?h=EC-Speed&x=jdro8q0d",
+    "https://www.speedrun.com/freedoom_phase_1/levels?h=ec-max-0-13-0&x=7dgjq4xd",
+    "https://dsdarchive.com/wads/freedoom"
+  ],
+  "dsdaHTTP": 404,
+  "browserLimitation": "No browser surfaces available; native computer control permissions not granted."
+}
