@@ -56,6 +56,11 @@ def markdown(report):
             f" | {r['context_before_missing']}/{r['context_after_missing']} | "+' | '.join(value(r[k]) for k in ('approval_requests','human_wait_seconds','automatic_wait_seconds'))+' |')
     lines += ['', 'Zero observed approval requests is not zero actual human waiting. Policy context alone proves no lifecycle or resolver.', '',
         'Compaction request input tokens are model-request usage, not a measurement of context occupancy before/after compaction.', '',
+        '## Compactions by goal and agent', '',
+        '| Goal ID | Phase | Agent | Observed compactions |', '|---|---|---|---:|']
+    for r in a['compactions_by_goal_agent']:
+        lines.append('| '+r['goal_id']+' | '+r['phase']+' | '+r['agent']+' | '+str(r['count'])+' |')
+    lines += ['',
         '## Compiler, test and execution measurements', '',
         '| Phase | Command records | Execution sum seconds | Interval union seconds | Reported compiler seconds | Missing compiler stages | Overall test-suite seconds | Forge invocation seconds | Other command seconds |',
         '|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|']

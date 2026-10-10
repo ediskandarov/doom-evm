@@ -6,6 +6,7 @@ from pathlib import Path
 sys.path.insert(0,str(Path(__file__).parent))
 import activity
 import collect
+import validate
 import test_collect as fixtures
 context,response,usage,event,ts = fixtures.context,fixtures.response,fixtures.usage,fixtures.event,fixtures.ts
 
@@ -176,3 +177,15 @@ class ActivityTests(unittest.TestCase):
         self.file('a.jsonl',[context(),execution('a',2,5),execution('later',41,45)])
         r=collect.collect([self.logs],self.project,self.config,closed_only=True)
         self.assertEqual(len(r['activity']['executions']),1)
+
+    def test_schema_privacy_and_csv_contract(self):
+        self.activity([context(),response('a',usage(100)),execution('a',2,5)])
+        r=self.run_collect();collect.export(r,self.base/'export');validate.validate(self.base/'export')
+        r['activity']['executions'][0]['aggregated_output']='DO_NOT_LEAK'
+        with self.assertRaises(ValueError):validate.privacy(r)
+
+    def test_invalid_context_fields_and_sequential_stage_sum(self):
+        a=self.activity([context(),event('compacted',{'compaction_response_id':'a','context_tokens_before':2.5,'started_at':'DO_NOT_LEAK'},2),
+            execution('x',2,6,['forge','test'],'Solc 0.8.37 finished in 3s\nRan 1 test suite in 3s (4s CPU time)\n')])
+        self.assertNotIn('DO_NOT_LEAK',json.dumps(a));self.assertIsNone(a['compactions'][0]['context_tokens_before'])
+        self.assertIsNone(a['executions'][0]['compiler_wall_seconds']);self.assertEqual(a['coverage']['diagnostics']['inconsistent_sequential_stage_sum'],1)

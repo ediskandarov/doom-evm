@@ -27,6 +27,12 @@ def mapping(value):
     return value if isinstance(value,dict) else {}
 
 
+def safe_timestamp(value):
+    from collect import timestamp
+    try:return timestamp(value)
+    except (ValueError,TypeError):return None
+
+
 def iso_ms(value):
     return datetime.fromtimestamp(value / 1000, timezone.utc).isoformat(timespec='milliseconds').replace('+00:00', 'Z')
 
@@ -226,10 +232,10 @@ def collect_activity(files, config, closed_only=False):
                     'turn_id': resume.get('last_started_turn_id') or common['turn_id'],
                     'model': settings.get('model') or 'unknown',
                     'model_evidence': 'compaction_resume_settings' if settings.get('model') else 'unknown',
-                    'context_tokens_before': number(p.get('context_tokens_before')),
-                    'context_tokens_after': number(p.get('context_tokens_after')),
+                    'context_tokens_before': p.get('context_tokens_before') if type(p.get('context_tokens_before')) is int and p['context_tokens_before']>=0 else None,
+                    'context_tokens_after': p.get('context_tokens_after') if type(p.get('context_tokens_after')) is int and p['context_tokens_after']>=0 else None,
                     'duration_seconds': seconds(p.get('duration_seconds')),
-                    'start': p.get('started_at'), 'end': p.get('completed_at'),
+                    'start': safe_timestamp(p.get('started_at')), 'end': safe_timestamp(p.get('completed_at')),
                     'request_input_tokens': counts(latest.get('usage'))['input_tokens'] if same_response else None,
                     'window_number': p.get('window_number') if type(p.get('window_number')) is int else None,
                     'measurement': 'explicit_compaction_record'})
@@ -357,10 +363,12 @@ def collect_activity(files, config, closed_only=False):
                  e.get('parent_execution_id') and p['event_id']==e['parent_execution_id']]
         e['included_in_execution_sum']=not parents
         e['nested_in_execution_id']=parents[0]['event_id'] if parents else None
-        if e['compiler_wall_seconds'] is not None and e['wall_seconds'] is not None and e['compiler_wall_seconds']>e['wall_seconds']+0.5:
+        if e['compiler_wall_seconds'] is not None and e['wall_seconds'] is not None and e['compiler_wall_seconds']>e['wall_seconds']+0.01:
             diag['inconsistent_compiler_stage_duration']+=1;e['compiler_wall_seconds']=None
-        if e['test_wall_seconds'] is not None and e['wall_seconds'] is not None and e['test_wall_seconds']>e['wall_seconds']+0.5:
+        if e['test_wall_seconds'] is not None and e['wall_seconds'] is not None and e['test_wall_seconds']>e['wall_seconds']+0.01:
             diag['inconsistent_test_stage_duration']+=1;e['test_wall_seconds']=None
+        if e['compiler_wall_seconds'] is not None and e['test_wall_seconds'] is not None and e['wall_seconds'] is not None and e['compiler_wall_seconds']+e['test_wall_seconds']>e['wall_seconds']+0.01:
+            diag['inconsistent_sequential_stage_sum']+=1;e['compiler_wall_seconds']=None;e['test_wall_seconds']=None
         # Explicit nested compiler records supersede their parent's stdout stage
         # annotation. Containment alone does not prove parentage/concurrency.
         e['compiler_time_included']=not any(child.get('parent_execution_id')==e['event_id'] and
