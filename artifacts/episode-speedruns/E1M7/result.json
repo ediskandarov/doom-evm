@@ -1,0 +1,51 @@
+{
+  "map": "E1M7",
+  "status": "blocked-demo-acquisition",
+  "originalDemoCandidates": [
+    {
+      "runId": "zx62vd5z",
+      "runUrl": "https://www.speedrun.com/freedoom_phase_1/runs/zx62vd5z",
+      "map": "E1M7",
+      "category": "EC-Max (0.12.1)",
+      "author": [
+        "Shepardus"
+      ],
+      "submitted": "2021-01-26T11:52:07Z",
+      "status": {
+        "status": "verified",
+        "examiner": "y8d1wg58",
+        "verify-date": "2021-01-26T11:52:07Z"
+      },
+      "seconds": 585.8,
+      "demoUrls": [
+        "https://www.doomworld.com/applications/core/interface/file/attachment.php?id=109917"
+      ],
+      "comment": "Demo: https://www.doomworld.com/applications/core/interface/file/attachment.php?id=109917\r\n\r\nPlenty of minor mistakes in this run, but my goal was to get under 10 minutes, so I'm fine with the imperfections. I feel that this level leans too heavily on shotgunning; the provided ammo for the other weapons doesn't last long against all the pinkies, spectres, and imps the map throws at you, and the rocket launcher comes quite late in the level (assuming you even figure out its secret). There's also some cell ammo which I can only assume is for continuous play, since there's no plasma gun to be found; I can imagine the map being more fun with a plasma gun and spare rockets carried over from the previous map."
+    }
+  ],
+  "acquisitionAttempts": [
+    {
+      "map": "E1M7",
+      "runId": "zx62vd5z",
+      "url": "https://www.doomworld.com/applications/core/interface/file/attachment.php?id=109917",
+      "UTC": "2026-10-10T19:31:27Z",
+      "http": "403",
+      "returncode": 0,
+      "stderr": "",
+      "bytes": 5508
+    }
+  ],
+  "originalDemoSha256": null,
+  "nativeCompatibility": "Not established: original tape unavailable; indexed demos label Freedoom 0.12.1",
+  "gameplayTics": null,
+  "nativeEVMSnapshotAgreement": null,
+  "EVMFramesRendered": 0,
+  "pixelEquality": "Not tested",
+  "virtualPointerDerivedPixelCount": null,
+  "gasConsumed": 0,
+  "executionTimeSeconds": null,
+  "MP4Path": null,
+  "unresolvedFailure": "Every indexed original demo download returned HTTP 403; no 0.13 compatible downloadable tape found in searched sources.",
+  "startupPath": "EpisodeSpeedrunProbe.initializeMap -> EpisodeStartup.initialize -> DoomGame.load once before G_InitNew; does not call menu first-game startup.",
+  "E1M7MemoryOOG": "Not exercised; no map complexity or duplicate context allocation diagnosis asserted."
+}

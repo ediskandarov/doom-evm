@@ -1,0 +1,51 @@
+{
+  "map": "E1M3",
+  "status": "blocked-demo-acquisition",
+  "originalDemoCandidates": [
+    {
+      "runId": "yj1lklgy",
+      "runUrl": "https://www.speedrun.com/freedoom_phase_1/runs/yj1lklgy",
+      "map": "E1M3",
+      "category": "EC-Max (0.12.1)",
+      "author": [
+        "Shepardus"
+      ],
+      "submitted": "2021-01-26T11:31:14Z",
+      "status": {
+        "status": "verified",
+        "examiner": "y8d1wg58",
+        "verify-date": "2021-01-26T11:31:14Z"
+      },
+      "seconds": 285.51,
+      "demoUrls": [
+        "https://www.doomworld.com/applications/core/interface/file/attachment.php?id=108435"
+      ],
+      "comment": "Demo: https://www.doomworld.com/applications/core/interface/file/attachment.php?id=108435 \r\n\r\nThis is one of the better levels in the episode, even if part of that is due to obvious inspiration from the original shareware episode. I had fun routing out the early sections of the map, and the introduction of the chaingun and the rocket launcher means more tools to play with compared to the previous two maps."
+    }
+  ],
+  "acquisitionAttempts": [
+    {
+      "map": "E1M3",
+      "runId": "yj1lklgy",
+      "url": "https://www.doomworld.com/applications/core/interface/file/attachment.php?id=108435",
+      "UTC": "2026-10-10T19:31:27Z",
+      "http": "403",
+      "returncode": 0,
+      "stderr": "",
+      "bytes": 5508
+    }
+  ],
+  "originalDemoSha256": null,
+  "nativeCompatibility": "Not established: original tape unavailable; indexed demos label Freedoom 0.12.1",
+  "gameplayTics": null,
+  "nativeEVMSnapshotAgreement": null,
+  "EVMFramesRendered": 0,
+  "pixelEquality": "Not tested",
+  "virtualPointerDerivedPixelCount": null,
+  "gasConsumed": 0,
+  "executionTimeSeconds": null,
+  "MP4Path": null,
+  "unresolvedFailure": "Every indexed original demo download returned HTTP 403; no 0.13 compatible downloadable tape found in searched sources.",
+  "startupPath": "EpisodeSpeedrunProbe.initializeMap -> EpisodeStartup.initialize -> DoomGame.load once before G_InitNew; does not call menu first-game startup.",
+  "E1M7MemoryOOG": null
+}

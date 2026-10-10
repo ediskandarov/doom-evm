@@ -1,0 +1,9 @@
+{
+  "map": "E1M8",
+  "files": {
+    "result.json": "6d112fc6fcb3db3ec4a48b9c5a81805ed415e20d7c5f25bdb3c38bc9d7dd1e17"
+  },
+  "sourceIndex": "../source-index.json",
+  "sourceIndexSha256": "4be1b841642db75f899bd2e88a6cbba52e34a829ae0f8541753cfac54bcda514",
+  "acquisitionAttemptsSha256": "5ef04ebad259174517b54ac61912756940e2b0500720394ac3f87c1597973f23"
+}
