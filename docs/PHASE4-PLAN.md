@@ -1,5 +1,65 @@
 # Phase 4 progress ledger
 
+## Goal 4.7a — Episode One resources (complete)
+
+Current user-defined milestone: prepare and verify all E1M1–E1M9 resources.
+This supersedes the older extra plan's 4.7a startup/frame split for this task.
+No gameplay startup, level progression, transition, intermission, renderer
+algorithm, browser WAD upload, sound or other-episode support was implemented.
+
+Feature worktree `/Users/eduard/sandbox/doom-evm-multimap`, branch
+`feat/phase4-multimap`, baseline `9f98ed1d38e6de3f2577f5d76b07ec136fc70d52`.
+The baseline includes the Status Bar integration received during the pause.
+Implementation/evidence commit **b6debb2** is verified; this handoff adds the
+final ownership/requirements certificate. Nothing is merged into main.
+
+| Deliverable | Implementation | Verification | Remaining |
+|---|---|---|---|
+| Nine-map parser/packer tooling | Additive v1 catalog and nine map descriptor files, unchanged v0 bundle/palette | Every map file regenerated, repeated packing exact, all ten lump bytes/IDs/names/offsets/checksums verified | None |
+| Shared resources and provenance | Original texture/PNAMES precedence, flat/sprite indices and opaque resources preserved | Original bundle identity exact; native shared lookup/composite/flat/sprite fixture exact | None |
+| Native C comparisons | Seven verbatim geometry loaders, P_LoadBlockMap, original mapthing_t, raw REJECT/lumps | All nine maps, every runtime geometry field and raw lump; O0/O2/UBSan-except-shift agree | None |
+| Focused tests | 18 new episode tests, existing parser/resource tests retained | 69 Node tests (51 existing + 18 new), four targeted Foundry resource tests pass, zero failure/skip | None |
+| Packaging and ordinary EVM costs | Three pack runs, isolated full resource CREATE deployment, separate resource-only harness | 1,755 exact runtimes, nine mined native-equal map receipts, one mined other-episode rejection | None |
+| Integration contract and boundaries | Versioned schema, packEpisode/verifyEpisode APIs and resource handoff document | 1,622 protected baseline files exact; production adapters/compiler/browser/history unchanged | None |
+
+The resource identity remains the accepted WAD
+`7323bcc168c5a45ff10749b339960e98314740a734c30d4b9f3337001f9e703d`, bundle
+`d379076f21645cf7cc5acb056663d0faacc4065489a0ca99738479323c9f7a47`, palette
+`fd895921b5d0a394612bb29852ed003d44d69f76dec31c0dc6b5d5fc7d63f7bb` variant zero.
+Catalog SHA-256:
+`1af6a076fdf0427be1df9beae42c8f87a931058fed89d1f104543eb8b1188c9e`.
+All maps share the original 28,741,889-byte blob; their ten-lump payloads total
+2,190,770 bytes. Packaging measured 1.67–1.74 seconds across three in-process
+runs, excluding writes. RSS snapshots and per-map descriptor/chunk/dependency
+costs are recorded without claiming isolated peak memory.
+
+Ordinary full-blob deployment: 6,271,928,016 cumulative gas across 1,755 CREATEs.
+Probe CREATE: 3,413,631 gas. Lazy resource initialization: 47,204,473 gas.
+Map operation: 102,778,863–538,495,563 gas. Whole map verification receipts:
+238,852,926–984,718,924 gas, including calldata/decoding, initialization,
+serialization/checksums and event work. These are resource support measurements,
+not production storage-backed startup or gameplay/frame costs. The isolated
+node used port18747 and was stopped; existing nodes were not reused.
+
+The native reference reuses the accepted explicit disk/allocator/64-bit-pointer
+adapter. Original signed negative shifts remain pinned-profile extensions;
+UBSan shift checks are excluded for the mixed map/sprite/BLOCKMAP run. THINGS
+retain every signed disk field without spawning/filtering. No complete
+multi-level gameplay or episode acceptance is claimed. The full inherited
+regression suite was not run, as explicitly requested.
+
+Handoff: [resource integration contract](PHASE4-EPISODE-RESOURCES.md),
+[native comparison](../artifacts/phase4/episode-native-comparison.json),
+[packaging measurements](../artifacts/phase4/episode-packaging.json),
+[ordinary EVM evidence](../artifacts/phase4/episode-evm.json),
+[requirements and ownership certificate](../artifacts/phase4/episode-verification.json).
+Reproduce with the focused commands in the contract; validate current source
+bindings with `python3 tools/reference/episode/checkpoint.py --check`.
+
+Remaining Goal4.7a work/blockers: **none**. Future goals own level startup,
+native zone setup/reset, collision-state initialization, gameplay spawning and
+progression. **Stop after4.7a; do not automatically proceed or merge main.**
+
 Phase 3 is complete and remains accepted. Optional Phase 4 work follows
 [the extra plan](04-IMPLEMENTATION-PLAN-EXTRA.md). **Goals 4.0 and 4.1 are complete and verified.
 The Goal 4.0a architectural review is complete, accepted and integrated.
