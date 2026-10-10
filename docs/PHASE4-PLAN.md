@@ -1,7 +1,7 @@
 # Phase 4 progress ledger
 
 Phase 3 is complete and remains accepted. Optional Phase 4 work follows
-[the extra plan](04-IMPLEMENTATION-PLAN-EXTRA.md). This run is **Goal 4.0 only**.
+[the extra plan](04-IMPLEMENTATION-PLAN-EXTRA.md). **Goal 4.0 is complete and verified.** This run covers Goal 4.0 only.
 The pasted user instructions supersede the aborted memory-audit goal. Do not
 start 4.0a, gameplay/UI work, refactoring or an Astra benchmark.
 
@@ -26,7 +26,7 @@ Only tools/usage/**, new telemetry evidence and documentation are owned.
 | Compaction metadata/durations | Implemented side adapter, ID/fork/duplicate guards, unique same-turn interval join |17 explicit compacted and 17 timed ContextCompaction items observed; pair by unique same-thread/same-turn interval. Dedicated before/after context size absent |
 | Human approval latency | Implemented explicit lifecycle/provenance parser |No explicit approval lifecycle records in current selected logs; policy/escalation intent is not a human wait |
 | Compilation/test/tool duration separation | Implemented compiler/test/stage/envelope separation |Structured completed CommandExecution duration, terminal code and stdout stage summaries available; avoid wrapper/child/stage double counting |
-| Goals, JSON/CSV schemas and human report | v2 additive schema, five new CSVs, metadata report and schema/privacy checker implemented |50 focused tests PASS; goals use structured metadata; no objective/command text exported. Final article/export handoff pending |
+| Goals, JSON/CSV schemas and human report | v2 additive schema, five new CSVs, metadata report and schema/privacy checker implemented |50 focused tests PASS; source/schema/CSV/privacy and exact token comparison verified; article/export handoff committed25ebf8b |
 | Historical Phases0–3 recovery | Programmatic first scan complete |Recover only available measurements; old artifacts/boundaries/totals retained |
 
 ## Remaining work and blockers
@@ -83,8 +83,8 @@ missing and per-suite CPU is never summed as wall time.
 
 Current article/report and additive metadata-only exports live at
 [CODEX-TELEMETRY-2.md](CODEX-TELEMETRY-2.md) and artifacts/usage/telemetry2/.
-All prior exports remain intact. Final test/baseline/ownership/source checks and
-publication commit/push are next; no further Phase4 goal is authorized.
+All prior exports remain intact. Final tests/baseline/ownership/source checks PASS; publication25ebf8b and
+accepted baseline tag are pushed. No further Phase4 goal is authorized.
 
 ## Final verification and handoff
 
@@ -95,7 +95,16 @@ and protected source/export fingerprints. Code hardening retains original
 reported stage values alongside validated subtotals and a declared0.5s timer
 consistency tolerance; no value is adjusted or estimated.
 
-Implementation, integration and verification for Goal4.0 are complete. Implementation checkpoint `f57acd8` is verified; human report and metadata
-exports are ready for their separate publication checkpoint. Observability gaps are
+Implementation, integration and verification for Goal4.0 are complete. Implementation checkpoint `f57acd8` and separate report/export checkpoint
+`25ebf8b` are verified and published. Observability gaps are
 limitations, not blockers or invented measurements. Stop after publication;
 Goal4.0a and all other optional Phase4 work remain unstarted.
+
+## Published checkpoint `25ebf8b`
+
+Complete v2 collector,50 focused tests, formal JSON/CSV contracts, unchanged
+legacy accounting/historical data, recovered Phase0–3 metadata, human report
+and limitations are committed/pushed. Origin/main and baseline tag verified.
+No engine, renderer, gameplay, original acceptance test, compiler or prior
+export was modified. Goal4.0a and every other optional improvement remain
+unstarted. Stop here; no current blocker or remaining implementation work.
