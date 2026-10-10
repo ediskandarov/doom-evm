@@ -15,4 +15,4 @@ headers and owners, startup flow globals and mutable difficulty values.
 Reproduce with `python3 tools/reference/episode_startup/reference.py --check`.
 These files are expected results only. Production initialization receives
 original authenticated resources; no fixture/world/allocation tape is injected.
-See ../../../../docs/PHASE4-EPISODE-STARTUP.md for coverage and finite-domain limits.
+See the [goal report](../../../docs/PHASE4-EPISODE-STARTUP.md) for coverage and finite-domain limits.
