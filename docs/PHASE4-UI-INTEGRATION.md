@@ -139,9 +139,9 @@ accepted native golden was edited.
   `Picked up a health bonus.` at tic 64/counter 140; tic 203 remains visible with
   counter 1, and tic 204 expires. Bonus palette 10 and both viewport switches match.
   See [browser proof](../artifacts/phase4/ui/browser.json),
-  [pickup Canvas](../artifacts/phase4/ui/canvas-tic 64.png),
+  [pickup Canvas](../artifacts/phase4/ui/canvas-tic64.png),
   [fullscreen Canvas](../artifacts/phase4/ui/canvas-tic70.png), and
-  [expiry Canvas](../artifacts/phase4/ui/canvas-tic 204.png).
+  [expiry Canvas](../artifacts/phase4/ui/canvas-tic204.png).
 - Preserved high-risk inherited production gate: **129 tics, six gameplay Frames,
   one static Frame, 13 full-storage rollback checks** pass using the unchanged
   accepted runner on an independent node. See
