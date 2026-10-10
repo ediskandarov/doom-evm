@@ -1,0 +1,1904 @@
+{
+  "schemaVersion": 1,
+  "caseBytes": 260,
+  "caseCount": 58,
+  "inputFields": [
+    "op",
+    "x",
+    "y",
+    "scrn",
+    "width",
+    "height",
+    "destx",
+    "desty",
+    "destscrn",
+    "patchId",
+    "seed",
+    "screen4Height",
+    "expectedError"
+  ],
+  "dirtyFields": [
+    "top",
+    "bottom",
+    "left",
+    "right"
+  ],
+  "hashFields": [
+    "screen0",
+    "screen1",
+    "screen2",
+    "screen3",
+    "screen4",
+    "getBlock"
+  ],
+  "operations": [
+    "V_Init",
+    "V_MarkRect",
+    "V_CopyRect",
+    "V_DrawPatch",
+    "V_DrawPatchFlipped",
+    "V_DrawPatchDirect",
+    "V_DrawBlock",
+    "V_GetBlock"
+  ],
+  "casesSha256": "b4e71a78178fa7190baf925d7ccb593d068fae0c88585258a9857565d796664e",
+  "gammaSha256": "e14a1da57838e65bcb7a5bdc3f866eea41361b9e067d1539b08557f0577de63a",
+  "cases": [
+    {
+      "name": "init-four-contiguous-screen-buffers",
+      "inputs": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        -1,
+        19,
+        32,
+        0
+      ],
+      "dirtybox": [
+        -2147483648,
+        2147483647,
+        2147483647,
+        -2147483648
+      ],
+      "sha256": [
+        "3353393e928809b6b6498d54028ab7240d2f449d8dc1f416ca04d596d8b4f276",
+        "40e4741cfe496f230429f1ab3badc37dce37c52945fc1f55d2a17c27e830f481",
+        "75fcecac67b32c51504296fd184bb823945b472807b9891e5e8a5dca0f2f7e45",
+        "b55977b82abe1c5c17007c6cae66fcfdafa6f72ec70c12138993593198bd60dd",
+        "f620c8e9df67c3f3e069fc02de23417413eda824778614ca8483d94f5f8a9f9c",
+        "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      ]
+    },
+    {
+      "name": "mark-normal",
+      "inputs": [
+        1,
+        10,
+        20,
+        0,
+        30,
+        40,
+        0,
+        0,
+        0,
+        -1,
+        19,
+        32,
+        0
+      ],
+      "dirtybox": [
+        59,
+        20,
+        10,
+        39
+      ],
+      "sha256": [
+        "3353393e928809b6b6498d54028ab7240d2f449d8dc1f416ca04d596d8b4f276",
+        "40e4741cfe496f230429f1ab3badc37dce37c52945fc1f55d2a17c27e830f481",
+        "75fcecac67b32c51504296fd184bb823945b472807b9891e5e8a5dca0f2f7e45",
+        "b55977b82abe1c5c17007c6cae66fcfdafa6f72ec70c12138993593198bd60dd",
+        "f620c8e9df67c3f3e069fc02de23417413eda824778614ca8483d94f5f8a9f9c",
+        "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      ]
+    },
+    {
+      "name": "mark-single-pixel",
+      "inputs": [
+        1,
+        7,
+        11,
+        0,
+        1,
+        1,
+        0,
+        0,
+        0,
+        -1,
+        19,
+        32,
+        0
+      ],
+      "dirtybox": [
+        11,
+        11,
+        7,
+        7
+      ],
+      "sha256": [
+        "3353393e928809b6b6498d54028ab7240d2f449d8dc1f416ca04d596d8b4f276",
+        "40e4741cfe496f230429f1ab3badc37dce37c52945fc1f55d2a17c27e830f481",
+        "75fcecac67b32c51504296fd184bb823945b472807b9891e5e8a5dca0f2f7e45",
+        "b55977b82abe1c5c17007c6cae66fcfdafa6f72ec70c12138993593198bd60dd",
+        "f620c8e9df67c3f3e069fc02de23417413eda824778614ca8483d94f5f8a9f9c",
+        "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      ]
+    },
+    {
+      "name": "mark-zero-size-original-two-points",
+      "inputs": [
+        1,
+        7,
+        11,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        -1,
+        19,
+        32,
+        0
+      ],
+      "dirtybox": [
+        -2147483648,
+        10,
+        6,
+        -2147483648
+      ],
+      "sha256": [
+        "3353393e928809b6b6498d54028ab7240d2f449d8dc1f416ca04d596d8b4f276",
+        "40e4741cfe496f230429f1ab3badc37dce37c52945fc1f55d2a17c27e830f481",
+        "75fcecac67b32c51504296fd184bb823945b472807b9891e5e8a5dca0f2f7e45",
+        "b55977b82abe1c5c17007c6cae66fcfdafa6f72ec70c12138993593198bd60dd",
+        "f620c8e9df67c3f3e069fc02de23417413eda824778614ca8483d94f5f8a9f9c",
+        "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      ]
+    },
+    {
+      "name": "mark-negative-coordinate-unrestricted",
+      "inputs": [
+        1,
+        -20,
+        -30,
+        0,
+        7,
+        9,
+        0,
+        0,
+        0,
+        -1,
+        19,
+        32,
+        0
+      ],
+      "dirtybox": [
+        -22,
+        -30,
+        -20,
+        -14
+      ],
+      "sha256": [
+        "3353393e928809b6b6498d54028ab7240d2f449d8dc1f416ca04d596d8b4f276",
+        "40e4741cfe496f230429f1ab3badc37dce37c52945fc1f55d2a17c27e830f481",
+        "75fcecac67b32c51504296fd184bb823945b472807b9891e5e8a5dca0f2f7e45",
+        "b55977b82abe1c5c17007c6cae66fcfdafa6f72ec70c12138993593198bd60dd",
+        "f620c8e9df67c3f3e069fc02de23417413eda824778614ca8483d94f5f8a9f9c",
+        "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      ]
+    },
+    {
+      "name": "copy-cross-screen-nonzero-destination",
+      "inputs": [
+        2,
+        11,
+        27,
+        1,
+        17,
+        13,
+        151,
+        93,
+        0,
+        -1,
+        19,
+        32,
+        0
+      ],
+      "dirtybox": [
+        105,
+        93,
+        151,
+        167
+      ],
+      "sha256": [
+        "662f97bb5952b364404595db3209a0bc350c7e1d76e1b12d0e113a07c44ec342",
+        "40e4741cfe496f230429f1ab3badc37dce37c52945fc1f55d2a17c27e830f481",
+        "75fcecac67b32c51504296fd184bb823945b472807b9891e5e8a5dca0f2f7e45",
+        "b55977b82abe1c5c17007c6cae66fcfdafa6f72ec70c12138993593198bd60dd",
+        "f620c8e9df67c3f3e069fc02de23417413eda824778614ca8483d94f5f8a9f9c",
+        "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      ]
+    },
+    {
+      "name": "copy-destination-screen2-still-marks-dirty",
+      "inputs": [
+        2,
+        0,
+        0,
+        0,
+        320,
+        32,
+        0,
+        0,
+        2,
+        -1,
+        19,
+        32,
+        0
+      ],
+      "dirtybox": [
+        31,
+        0,
+        0,
+        319
+      ],
+      "sha256": [
+        "3353393e928809b6b6498d54028ab7240d2f449d8dc1f416ca04d596d8b4f276",
+        "40e4741cfe496f230429f1ab3badc37dce37c52945fc1f55d2a17c27e830f481",
+        "8648332e8b5b5d24e9c77ee2dc527c5abf1136fb02401a9d901cbbb61de4581f",
+        "b55977b82abe1c5c17007c6cae66fcfdafa6f72ec70c12138993593198bd60dd",
+        "f620c8e9df67c3f3e069fc02de23417413eda824778614ca8483d94f5f8a9f9c",
+        "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      ]
+    },
+    {
+      "name": "copy-status-backing-to-screen0",
+      "inputs": [
+        2,
+        0,
+        0,
+        4,
+        320,
+        32,
+        0,
+        168,
+        0,
+        -1,
+        19,
+        32,
+        0
+      ],
+      "dirtybox": [
+        199,
+        168,
+        0,
+        319
+      ],
+      "sha256": [
+        "ef7d929b33431af4ba17961087230a6fad8c57a19a9af0c603e38fcf62c9a61e",
+        "40e4741cfe496f230429f1ab3badc37dce37c52945fc1f55d2a17c27e830f481",
+        "75fcecac67b32c51504296fd184bb823945b472807b9891e5e8a5dca0f2f7e45",
+        "b55977b82abe1c5c17007c6cae66fcfdafa6f72ec70c12138993593198bd60dd",
+        "f620c8e9df67c3f3e069fc02de23417413eda824778614ca8483d94f5f8a9f9c",
+        "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      ]
+    },
+    {
+      "name": "copy-screen0-to-status-backing",
+      "inputs": [
+        2,
+        0,
+        168,
+        0,
+        320,
+        32,
+        0,
+        0,
+        4,
+        -1,
+        19,
+        32,
+        0
+      ],
+      "dirtybox": [
+        31,
+        0,
+        0,
+        319
+      ],
+      "sha256": [
+        "3353393e928809b6b6498d54028ab7240d2f449d8dc1f416ca04d596d8b4f276",
+        "40e4741cfe496f230429f1ab3badc37dce37c52945fc1f55d2a17c27e830f481",
+        "75fcecac67b32c51504296fd184bb823945b472807b9891e5e8a5dca0f2f7e45",
+        "b55977b82abe1c5c17007c6cae66fcfdafa6f72ec70c12138993593198bd60dd",
+        "fd4fd83657a6a8376679531017dd7f1cc517a5535c027583bd06f87e914c2113",
+        "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      ]
+    },
+    {
+      "name": "copy-rowwise-overlap-cascades-down",
+      "inputs": [
+        2,
+        0,
+        0,
+        0,
+        320,
+        4,
+        0,
+        1,
+        0,
+        -1,
+        19,
+        32,
+        0
+      ],
+      "dirtybox": [
+        4,
+        1,
+        0,
+        319
+      ],
+      "sha256": [
+        "4cce7a83043ce567bed48d7d292fa5993993235340482311775b18fac7e6d86d",
+        "40e4741cfe496f230429f1ab3badc37dce37c52945fc1f55d2a17c27e830f481",
+        "75fcecac67b32c51504296fd184bb823945b472807b9891e5e8a5dca0f2f7e45",
+        "b55977b82abe1c5c17007c6cae66fcfdafa6f72ec70c12138993593198bd60dd",
+        "f620c8e9df67c3f3e069fc02de23417413eda824778614ca8483d94f5f8a9f9c",
+        "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      ]
+    },
+    {
+      "name": "copy-rowwise-overlap-up",
+      "inputs": [
+        2,
+        0,
+        1,
+        0,
+        320,
+        4,
+        0,
+        0,
+        0,
+        -1,
+        19,
+        32,
+        0
+      ],
+      "dirtybox": [
+        3,
+        0,
+        0,
+        319
+      ],
+      "sha256": [
+        "f09ccc77daddb395195eb09072300686e0cc4f86efd0b60915a32616bd0c24d6",
+        "40e4741cfe496f230429f1ab3badc37dce37c52945fc1f55d2a17c27e830f481",
+        "75fcecac67b32c51504296fd184bb823945b472807b9891e5e8a5dca0f2f7e45",
+        "b55977b82abe1c5c17007c6cae66fcfdafa6f72ec70c12138993593198bd60dd",
+        "f620c8e9df67c3f3e069fc02de23417413eda824778614ca8483d94f5f8a9f9c",
+        "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      ]
+    },
+    {
+      "name": "copy-zero-width",
+      "inputs": [
+        2,
+        10,
+        20,
+        0,
+        0,
+        3,
+        13,
+        27,
+        1,
+        -1,
+        19,
+        32,
+        0
+      ],
+      "dirtybox": [
+        29,
+        27,
+        12,
+        -2147483648
+      ],
+      "sha256": [
+        "3353393e928809b6b6498d54028ab7240d2f449d8dc1f416ca04d596d8b4f276",
+        "40e4741cfe496f230429f1ab3badc37dce37c52945fc1f55d2a17c27e830f481",
+        "75fcecac67b32c51504296fd184bb823945b472807b9891e5e8a5dca0f2f7e45",
+        "b55977b82abe1c5c17007c6cae66fcfdafa6f72ec70c12138993593198bd60dd",
+        "f620c8e9df67c3f3e069fc02de23417413eda824778614ca8483d94f5f8a9f9c",
+        "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      ]
+    },
+    {
+      "name": "copy-zero-height",
+      "inputs": [
+        2,
+        10,
+        20,
+        0,
+        3,
+        0,
+        13,
+        27,
+        1,
+        -1,
+        19,
+        32,
+        0
+      ],
+      "dirtybox": [
+        -2147483648,
+        26,
+        13,
+        15
+      ],
+      "sha256": [
+        "3353393e928809b6b6498d54028ab7240d2f449d8dc1f416ca04d596d8b4f276",
+        "40e4741cfe496f230429f1ab3badc37dce37c52945fc1f55d2a17c27e830f481",
+        "75fcecac67b32c51504296fd184bb823945b472807b9891e5e8a5dca0f2f7e45",
+        "b55977b82abe1c5c17007c6cae66fcfdafa6f72ec70c12138993593198bd60dd",
+        "f620c8e9df67c3f3e069fc02de23417413eda824778614ca8483d94f5f8a9f9c",
+        "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      ]
+    },
+    {
+      "name": "copy-invalid-source-coordinate",
+      "inputs": [
+        2,
+        -1,
+        0,
+        0,
+        1,
+        1,
+        0,
+        0,
+        0,
+        -1,
+        19,
+        32,
+        1
+      ],
+      "dirtybox": [
+        -2147483648,
+        2147483647,
+        2147483647,
+        -2147483648
+      ],
+      "sha256": [
+        "3353393e928809b6b6498d54028ab7240d2f449d8dc1f416ca04d596d8b4f276",
+        "40e4741cfe496f230429f1ab3badc37dce37c52945fc1f55d2a17c27e830f481",
+        "75fcecac67b32c51504296fd184bb823945b472807b9891e5e8a5dca0f2f7e45",
+        "b55977b82abe1c5c17007c6cae66fcfdafa6f72ec70c12138993593198bd60dd",
+        "f620c8e9df67c3f3e069fc02de23417413eda824778614ca8483d94f5f8a9f9c",
+        "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      ]
+    },
+    {
+      "name": "copy-invalid-destination-coordinate",
+      "inputs": [
+        2,
+        0,
+        0,
+        0,
+        1,
+        1,
+        320,
+        0,
+        1,
+        -1,
+        19,
+        32,
+        1
+      ],
+      "dirtybox": [
+        -2147483648,
+        2147483647,
+        2147483647,
+        -2147483648
+      ],
+      "sha256": [
+        "3353393e928809b6b6498d54028ab7240d2f449d8dc1f416ca04d596d8b4f276",
+        "40e4741cfe496f230429f1ab3badc37dce37c52945fc1f55d2a17c27e830f481",
+        "75fcecac67b32c51504296fd184bb823945b472807b9891e5e8a5dca0f2f7e45",
+        "b55977b82abe1c5c17007c6cae66fcfdafa6f72ec70c12138993593198bd60dd",
+        "f620c8e9df67c3f3e069fc02de23417413eda824778614ca8483d94f5f8a9f9c",
+        "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      ]
+    },
+    {
+      "name": "copy-invalid-source-screen",
+      "inputs": [
+        2,
+        0,
+        0,
+        -1,
+        1,
+        1,
+        0,
+        0,
+        0,
+        -1,
+        19,
+        32,
+        1
+      ],
+      "dirtybox": [
+        -2147483648,
+        2147483647,
+        2147483647,
+        -2147483648
+      ],
+      "sha256": [
+        "3353393e928809b6b6498d54028ab7240d2f449d8dc1f416ca04d596d8b4f276",
+        "40e4741cfe496f230429f1ab3badc37dce37c52945fc1f55d2a17c27e830f481",
+        "75fcecac67b32c51504296fd184bb823945b472807b9891e5e8a5dca0f2f7e45",
+        "b55977b82abe1c5c17007c6cae66fcfdafa6f72ec70c12138993593198bd60dd",
+        "f620c8e9df67c3f3e069fc02de23417413eda824778614ca8483d94f5f8a9f9c",
+        "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      ]
+    },
+    {
+      "name": "copy-invalid-destination-screen",
+      "inputs": [
+        2,
+        0,
+        0,
+        0,
+        1,
+        1,
+        0,
+        0,
+        5,
+        -1,
+        19,
+        32,
+        1
+      ],
+      "dirtybox": [
+        -2147483648,
+        2147483647,
+        2147483647,
+        -2147483648
+      ],
+      "sha256": [
+        "3353393e928809b6b6498d54028ab7240d2f449d8dc1f416ca04d596d8b4f276",
+        "40e4741cfe496f230429f1ab3badc37dce37c52945fc1f55d2a17c27e830f481",
+        "75fcecac67b32c51504296fd184bb823945b472807b9891e5e8a5dca0f2f7e45",
+        "b55977b82abe1c5c17007c6cae66fcfdafa6f72ec70c12138993593198bd60dd",
+        "f620c8e9df67c3f3e069fc02de23417413eda824778614ca8483d94f5f8a9f9c",
+        "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      ]
+    },
+    {
+      "name": "patch-STBAR",
+      "inputs": [
+        3,
+        0,
+        168,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        19,
+        32,
+        0
+      ],
+      "dirtybox": [
+        199,
+        168,
+        0,
+        319
+      ],
+      "sha256": [
+        "3c0e6b47f39eaf405ea4ab16222458da02d7155870954c0939aa22474c73f9cd",
+        "40e4741cfe496f230429f1ab3badc37dce37c52945fc1f55d2a17c27e830f481",
+        "75fcecac67b32c51504296fd184bb823945b472807b9891e5e8a5dca0f2f7e45",
+        "b55977b82abe1c5c17007c6cae66fcfdafa6f72ec70c12138993593198bd60dd",
+        "f620c8e9df67c3f3e069fc02de23417413eda824778614ca8483d94f5f8a9f9c",
+        "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      ]
+    },
+    {
+      "name": "patch-flipped-STBAR",
+      "inputs": [
+        4,
+        0,
+        168,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        19,
+        32,
+        0
+      ],
+      "dirtybox": [
+        199,
+        168,
+        0,
+        319
+      ],
+      "sha256": [
+        "a363ae3cd8bd4cf0346a230da7bfaaa3f576ecbfa384b3eccee189b5c69b0f1b",
+        "40e4741cfe496f230429f1ab3badc37dce37c52945fc1f55d2a17c27e830f481",
+        "75fcecac67b32c51504296fd184bb823945b472807b9891e5e8a5dca0f2f7e45",
+        "b55977b82abe1c5c17007c6cae66fcfdafa6f72ec70c12138993593198bd60dd",
+        "f620c8e9df67c3f3e069fc02de23417413eda824778614ca8483d94f5f8a9f9c",
+        "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      ]
+    },
+    {
+      "name": "patch-STTNUM0",
+      "inputs": [
+        3,
+        20,
+        30,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        19,
+        32,
+        0
+      ],
+      "dirtybox": [
+        45,
+        30,
+        20,
+        32
+      ],
+      "sha256": [
+        "18aef788a68cb316651799c8d2f65e0bd1d1f3101f41ad8c36ca7d528e4ac664",
+        "40e4741cfe496f230429f1ab3badc37dce37c52945fc1f55d2a17c27e830f481",
+        "75fcecac67b32c51504296fd184bb823945b472807b9891e5e8a5dca0f2f7e45",
+        "b55977b82abe1c5c17007c6cae66fcfdafa6f72ec70c12138993593198bd60dd",
+        "f620c8e9df67c3f3e069fc02de23417413eda824778614ca8483d94f5f8a9f9c",
+        "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      ]
+    },
+    {
+      "name": "patch-flipped-STTNUM0",
+      "inputs": [
+        4,
+        20,
+        30,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        19,
+        32,
+        0
+      ],
+      "dirtybox": [
+        45,
+        30,
+        20,
+        32
+      ],
+      "sha256": [
+        "7a4c2bdd41848162862fa4802659e79115413f53d0858e399a712ed4afba32ec",
+        "40e4741cfe496f230429f1ab3badc37dce37c52945fc1f55d2a17c27e830f481",
+        "75fcecac67b32c51504296fd184bb823945b472807b9891e5e8a5dca0f2f7e45",
+        "b55977b82abe1c5c17007c6cae66fcfdafa6f72ec70c12138993593198bd60dd",
+        "f620c8e9df67c3f3e069fc02de23417413eda824778614ca8483d94f5f8a9f9c",
+        "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      ]
+    },
+    {
+      "name": "patch-STFST00",
+      "inputs": [
+        3,
+        20,
+        30,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        2,
+        19,
+        32,
+        0
+      ],
+      "dirtybox": [
+        60,
+        32,
+        25,
+        48
+      ],
+      "sha256": [
+        "aac3ef34c4350bc5a38a8294aa3297f99d4b992c0e5affcae7ef9528fd8c5921",
+        "40e4741cfe496f230429f1ab3badc37dce37c52945fc1f55d2a17c27e830f481",
+        "75fcecac67b32c51504296fd184bb823945b472807b9891e5e8a5dca0f2f7e45",
+        "b55977b82abe1c5c17007c6cae66fcfdafa6f72ec70c12138993593198bd60dd",
+        "f620c8e9df67c3f3e069fc02de23417413eda824778614ca8483d94f5f8a9f9c",
+        "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      ]
+    },
+    {
+      "name": "patch-flipped-STFST00",
+      "inputs": [
+        4,
+        20,
+        30,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        2,
+        19,
+        32,
+        0
+      ],
+      "dirtybox": [
+        60,
+        32,
+        25,
+        48
+      ],
+      "sha256": [
+        "49c5bdcd20227a6b95fabc83167d10156ca84d100dcb1b3ba400facc145f508f",
+        "40e4741cfe496f230429f1ab3badc37dce37c52945fc1f55d2a17c27e830f481",
+        "75fcecac67b32c51504296fd184bb823945b472807b9891e5e8a5dca0f2f7e45",
+        "b55977b82abe1c5c17007c6cae66fcfdafa6f72ec70c12138993593198bd60dd",
+        "f620c8e9df67c3f3e069fc02de23417413eda824778614ca8483d94f5f8a9f9c",
+        "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      ]
+    },
+    {
+      "name": "patch-STCFN033",
+      "inputs": [
+        3,
+        20,
+        30,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        3,
+        19,
+        32,
+        0
+      ],
+      "dirtybox": [
+        36,
+        30,
+        20,
+        23
+      ],
+      "sha256": [
+        "07b2b505e25b7c216b2fa9791c7423c40598595ff59cf786e179ed3c72d525c0",
+        "40e4741cfe496f230429f1ab3badc37dce37c52945fc1f55d2a17c27e830f481",
+        "75fcecac67b32c51504296fd184bb823945b472807b9891e5e8a5dca0f2f7e45",
+        "b55977b82abe1c5c17007c6cae66fcfdafa6f72ec70c12138993593198bd60dd",
+        "f620c8e9df67c3f3e069fc02de23417413eda824778614ca8483d94f5f8a9f9c",
+        "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      ]
+    },
+    {
+      "name": "patch-flipped-STCFN033",
+      "inputs": [
+        4,
+        20,
+        30,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        3,
+        19,
+        32,
+        0
+      ],
+      "dirtybox": [
+        36,
+        30,
+        20,
+        23
+      ],
+      "sha256": [
+        "d28a94d5436a7dec3fef36dd08fd276a292ca011b158002a000984d5327e8764",
+        "40e4741cfe496f230429f1ab3badc37dce37c52945fc1f55d2a17c27e830f481",
+        "75fcecac67b32c51504296fd184bb823945b472807b9891e5e8a5dca0f2f7e45",
+        "b55977b82abe1c5c17007c6cae66fcfdafa6f72ec70c12138993593198bd60dd",
+        "f620c8e9df67c3f3e069fc02de23417413eda824778614ca8483d94f5f8a9f9c",
+        "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      ]
+    },
+    {
+      "name": "patch-AMMNUM0",
+      "inputs": [
+        3,
+        20,
+        30,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        4,
+        19,
+        32,
+        0
+      ],
+      "dirtybox": [
+        34,
+        30,
+        21,
+        23
+      ],
+      "sha256": [
+        "4f247ced1ec5e67775b6e3687ec46973d99d22782d5c58303c9cbdfc57f07f07",
+        "40e4741cfe496f230429f1ab3badc37dce37c52945fc1f55d2a17c27e830f481",
+        "75fcecac67b32c51504296fd184bb823945b472807b9891e5e8a5dca0f2f7e45",
+        "b55977b82abe1c5c17007c6cae66fcfdafa6f72ec70c12138993593198bd60dd",
+        "f620c8e9df67c3f3e069fc02de23417413eda824778614ca8483d94f5f8a9f9c",
+        "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      ]
+    },
+    {
+      "name": "patch-flipped-AMMNUM0",
+      "inputs": [
+        4,
+        20,
+        30,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        4,
+        19,
+        32,
+        0
+      ],
+      "dirtybox": [
+        34,
+        30,
+        21,
+        23
+      ],
+      "sha256": [
+        "1e54725d39d37aac370219d7b10b6e198a143147543fd35ae7c9ceef84cfed76",
+        "40e4741cfe496f230429f1ab3badc37dce37c52945fc1f55d2a17c27e830f481",
+        "75fcecac67b32c51504296fd184bb823945b472807b9891e5e8a5dca0f2f7e45",
+        "b55977b82abe1c5c17007c6cae66fcfdafa6f72ec70c12138993593198bd60dd",
+        "f620c8e9df67c3f3e069fc02de23417413eda824778614ca8483d94f5f8a9f9c",
+        "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      ]
+    },
+    {
+      "name": "patch-WIMAP0",
+      "inputs": [
+        3,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        5,
+        19,
+        32,
+        0
+      ],
+      "dirtybox": [
+        199,
+        0,
+        0,
+        319
+      ],
+      "sha256": [
+        "581b0ebd8d6bc48dc8951c86e72c7b523f44f9b1e89928634b7d3dc2277826fd",
+        "40e4741cfe496f230429f1ab3badc37dce37c52945fc1f55d2a17c27e830f481",
+        "75fcecac67b32c51504296fd184bb823945b472807b9891e5e8a5dca0f2f7e45",
+        "b55977b82abe1c5c17007c6cae66fcfdafa6f72ec70c12138993593198bd60dd",
+        "f620c8e9df67c3f3e069fc02de23417413eda824778614ca8483d94f5f8a9f9c",
+        "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      ]
+    },
+    {
+      "name": "patch-flipped-WIMAP0",
+      "inputs": [
+        4,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        5,
+        19,
+        32,
+        0
+      ],
+      "dirtybox": [
+        199,
+        0,
+        0,
+        319
+      ],
+      "sha256": [
+        "82cc7f85183487ba8a5a00b96d8667841dedebcca1d78463abe499fb78577380",
+        "40e4741cfe496f230429f1ab3badc37dce37c52945fc1f55d2a17c27e830f481",
+        "75fcecac67b32c51504296fd184bb823945b472807b9891e5e8a5dca0f2f7e45",
+        "b55977b82abe1c5c17007c6cae66fcfdafa6f72ec70c12138993593198bd60dd",
+        "f620c8e9df67c3f3e069fc02de23417413eda824778614ca8483d94f5f8a9f9c",
+        "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      ]
+    },
+    {
+      "name": "patch-STBAR-status-backing",
+      "inputs": [
+        3,
+        0,
+        0,
+        4,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        19,
+        32,
+        0
+      ],
+      "dirtybox": [
+        -2147483648,
+        2147483647,
+        2147483647,
+        -2147483648
+      ],
+      "sha256": [
+        "3353393e928809b6b6498d54028ab7240d2f449d8dc1f416ca04d596d8b4f276",
+        "40e4741cfe496f230429f1ab3badc37dce37c52945fc1f55d2a17c27e830f481",
+        "75fcecac67b32c51504296fd184bb823945b472807b9891e5e8a5dca0f2f7e45",
+        "b55977b82abe1c5c17007c6cae66fcfdafa6f72ec70c12138993593198bd60dd",
+        "cda42d3c14ace9feae3c1d161ed3e58b73eb2433243cea79e581f81e873f769c",
+        "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      ]
+    },
+    {
+      "name": "patch-direct-STTNUM0",
+      "inputs": [
+        5,
+        27,
+        164,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        19,
+        32,
+        0
+      ],
+      "dirtybox": [
+        179,
+        164,
+        27,
+        39
+      ],
+      "sha256": [
+        "ddad681236f3677160a3a001669af4b27cdfbe42f7dda4b4682b0a37cba6bc62",
+        "40e4741cfe496f230429f1ab3badc37dce37c52945fc1f55d2a17c27e830f481",
+        "75fcecac67b32c51504296fd184bb823945b472807b9891e5e8a5dca0f2f7e45",
+        "b55977b82abe1c5c17007c6cae66fcfdafa6f72ec70c12138993593198bd60dd",
+        "f620c8e9df67c3f3e069fc02de23417413eda824778614ca8483d94f5f8a9f9c",
+        "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      ]
+    },
+    {
+      "name": "patch-other-screen-no-dirty",
+      "inputs": [
+        3,
+        50,
+        50,
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        19,
+        32,
+        0
+      ],
+      "dirtybox": [
+        -2147483648,
+        2147483647,
+        2147483647,
+        -2147483648
+      ],
+      "sha256": [
+        "3353393e928809b6b6498d54028ab7240d2f449d8dc1f416ca04d596d8b4f276",
+        "40e4741cfe496f230429f1ab3badc37dce37c52945fc1f55d2a17c27e830f481",
+        "a90aa27212ef9d6579bf859626caf3c596ff5d7f2d86f71179bba8ecf4234372",
+        "b55977b82abe1c5c17007c6cae66fcfdafa6f72ec70c12138993593198bd60dd",
+        "f620c8e9df67c3f3e069fc02de23417413eda824778614ca8483d94f5f8a9f9c",
+        "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      ]
+    },
+    {
+      "name": "patch-synthetic-transparent-posts-signed-offsets",
+      "inputs": [
+        3,
+        7,
+        12,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        6,
+        19,
+        32,
+        0
+      ],
+      "dirtybox": [
+        17,
+        10,
+        10,
+        13
+      ],
+      "sha256": [
+        "95e2256592eeb219b33c3cd282bebe703bc68ca2b6f664f56908fbd2140763bf",
+        "40e4741cfe496f230429f1ab3badc37dce37c52945fc1f55d2a17c27e830f481",
+        "75fcecac67b32c51504296fd184bb823945b472807b9891e5e8a5dca0f2f7e45",
+        "b55977b82abe1c5c17007c6cae66fcfdafa6f72ec70c12138993593198bd60dd",
+        "f620c8e9df67c3f3e069fc02de23417413eda824778614ca8483d94f5f8a9f9c",
+        "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      ]
+    },
+    {
+      "name": "patch-synthetic-flipped",
+      "inputs": [
+        4,
+        7,
+        12,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        6,
+        19,
+        32,
+        0
+      ],
+      "dirtybox": [
+        17,
+        10,
+        10,
+        13
+      ],
+      "sha256": [
+        "099477fbcf60cb74f8367c1727c9c82039e4c96aa6c6f18e1f1155d1b8345567",
+        "40e4741cfe496f230429f1ab3badc37dce37c52945fc1f55d2a17c27e830f481",
+        "75fcecac67b32c51504296fd184bb823945b472807b9891e5e8a5dca0f2f7e45",
+        "b55977b82abe1c5c17007c6cae66fcfdafa6f72ec70c12138993593198bd60dd",
+        "f620c8e9df67c3f3e069fc02de23417413eda824778614ca8483d94f5f8a9f9c",
+        "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      ]
+    },
+    {
+      "name": "patch-synthetic-right-bottom-exact-edge",
+      "inputs": [
+        3,
+        313,
+        194,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        6,
+        19,
+        32,
+        0
+      ],
+      "dirtybox": [
+        199,
+        192,
+        316,
+        319
+      ],
+      "sha256": [
+        "0ffce6feac5a4ff09dfdd4639217cdd39fe8e962ffc043a5d5a5dc676187932c",
+        "40e4741cfe496f230429f1ab3badc37dce37c52945fc1f55d2a17c27e830f481",
+        "75fcecac67b32c51504296fd184bb823945b472807b9891e5e8a5dca0f2f7e45",
+        "b55977b82abe1c5c17007c6cae66fcfdafa6f72ec70c12138993593198bd60dd",
+        "f620c8e9df67c3f3e069fc02de23417413eda824778614ca8483d94f5f8a9f9c",
+        "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      ]
+    },
+    {
+      "name": "patch-offset-causes-negative-origin-ignored",
+      "inputs": [
+        3,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        6,
+        19,
+        32,
+        0
+      ],
+      "dirtybox": [
+        -2147483648,
+        2147483647,
+        2147483647,
+        -2147483648
+      ],
+      "sha256": [
+        "3353393e928809b6b6498d54028ab7240d2f449d8dc1f416ca04d596d8b4f276",
+        "40e4741cfe496f230429f1ab3badc37dce37c52945fc1f55d2a17c27e830f481",
+        "75fcecac67b32c51504296fd184bb823945b472807b9891e5e8a5dca0f2f7e45",
+        "b55977b82abe1c5c17007c6cae66fcfdafa6f72ec70c12138993593198bd60dd",
+        "f620c8e9df67c3f3e069fc02de23417413eda824778614ca8483d94f5f8a9f9c",
+        "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      ]
+    },
+    {
+      "name": "patch-left-offscreen-ignored-whole-patch",
+      "inputs": [
+        3,
+        -4,
+        30,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        6,
+        19,
+        32,
+        0
+      ],
+      "dirtybox": [
+        -2147483648,
+        2147483647,
+        2147483647,
+        -2147483648
+      ],
+      "sha256": [
+        "3353393e928809b6b6498d54028ab7240d2f449d8dc1f416ca04d596d8b4f276",
+        "40e4741cfe496f230429f1ab3badc37dce37c52945fc1f55d2a17c27e830f481",
+        "75fcecac67b32c51504296fd184bb823945b472807b9891e5e8a5dca0f2f7e45",
+        "b55977b82abe1c5c17007c6cae66fcfdafa6f72ec70c12138993593198bd60dd",
+        "f620c8e9df67c3f3e069fc02de23417413eda824778614ca8483d94f5f8a9f9c",
+        "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      ]
+    },
+    {
+      "name": "patch-right-offscreen-ignored-whole-patch",
+      "inputs": [
+        3,
+        314,
+        30,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        6,
+        19,
+        32,
+        0
+      ],
+      "dirtybox": [
+        -2147483648,
+        2147483647,
+        2147483647,
+        -2147483648
+      ],
+      "sha256": [
+        "3353393e928809b6b6498d54028ab7240d2f449d8dc1f416ca04d596d8b4f276",
+        "40e4741cfe496f230429f1ab3badc37dce37c52945fc1f55d2a17c27e830f481",
+        "75fcecac67b32c51504296fd184bb823945b472807b9891e5e8a5dca0f2f7e45",
+        "b55977b82abe1c5c17007c6cae66fcfdafa6f72ec70c12138993593198bd60dd",
+        "f620c8e9df67c3f3e069fc02de23417413eda824778614ca8483d94f5f8a9f9c",
+        "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      ]
+    },
+    {
+      "name": "patch-bottom-offscreen-ignored-whole-patch",
+      "inputs": [
+        3,
+        7,
+        195,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        6,
+        19,
+        32,
+        0
+      ],
+      "dirtybox": [
+        -2147483648,
+        2147483647,
+        2147483647,
+        -2147483648
+      ],
+      "sha256": [
+        "3353393e928809b6b6498d54028ab7240d2f449d8dc1f416ca04d596d8b4f276",
+        "40e4741cfe496f230429f1ab3badc37dce37c52945fc1f55d2a17c27e830f481",
+        "75fcecac67b32c51504296fd184bb823945b472807b9891e5e8a5dca0f2f7e45",
+        "b55977b82abe1c5c17007c6cae66fcfdafa6f72ec70c12138993593198bd60dd",
+        "f620c8e9df67c3f3e069fc02de23417413eda824778614ca8483d94f5f8a9f9c",
+        "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      ]
+    },
+    {
+      "name": "patch-invalid-screen-ignored",
+      "inputs": [
+        3,
+        7,
+        12,
+        -1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        6,
+        19,
+        32,
+        0
+      ],
+      "dirtybox": [
+        -2147483648,
+        2147483647,
+        2147483647,
+        -2147483648
+      ],
+      "sha256": [
+        "3353393e928809b6b6498d54028ab7240d2f449d8dc1f416ca04d596d8b4f276",
+        "40e4741cfe496f230429f1ab3badc37dce37c52945fc1f55d2a17c27e830f481",
+        "75fcecac67b32c51504296fd184bb823945b472807b9891e5e8a5dca0f2f7e45",
+        "b55977b82abe1c5c17007c6cae66fcfdafa6f72ec70c12138993593198bd60dd",
+        "f620c8e9df67c3f3e069fc02de23417413eda824778614ca8483d94f5f8a9f9c",
+        "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      ]
+    },
+    {
+      "name": "patch-flipped-offscreen-fatal",
+      "inputs": [
+        4,
+        -4,
+        30,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        6,
+        19,
+        32,
+        1
+      ],
+      "dirtybox": [
+        -2147483648,
+        2147483647,
+        2147483647,
+        -2147483648
+      ],
+      "sha256": [
+        "3353393e928809b6b6498d54028ab7240d2f449d8dc1f416ca04d596d8b4f276",
+        "40e4741cfe496f230429f1ab3badc37dce37c52945fc1f55d2a17c27e830f481",
+        "75fcecac67b32c51504296fd184bb823945b472807b9891e5e8a5dca0f2f7e45",
+        "b55977b82abe1c5c17007c6cae66fcfdafa6f72ec70c12138993593198bd60dd",
+        "f620c8e9df67c3f3e069fc02de23417413eda824778614ca8483d94f5f8a9f9c",
+        "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      ]
+    },
+    {
+      "name": "patch-flipped-invalid-screen-fatal",
+      "inputs": [
+        4,
+        7,
+        12,
+        5,
+        0,
+        0,
+        0,
+        0,
+        0,
+        6,
+        19,
+        32,
+        1
+      ],
+      "dirtybox": [
+        -2147483648,
+        2147483647,
+        2147483647,
+        -2147483648
+      ],
+      "sha256": [
+        "3353393e928809b6b6498d54028ab7240d2f449d8dc1f416ca04d596d8b4f276",
+        "40e4741cfe496f230429f1ab3badc37dce37c52945fc1f55d2a17c27e830f481",
+        "75fcecac67b32c51504296fd184bb823945b472807b9891e5e8a5dca0f2f7e45",
+        "b55977b82abe1c5c17007c6cae66fcfdafa6f72ec70c12138993593198bd60dd",
+        "f620c8e9df67c3f3e069fc02de23417413eda824778614ca8483d94f5f8a9f9c",
+        "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      ]
+    },
+    {
+      "name": "patch-direct-offscreen-ignored",
+      "inputs": [
+        5,
+        -4,
+        30,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        6,
+        19,
+        32,
+        0
+      ],
+      "dirtybox": [
+        -2147483648,
+        2147483647,
+        2147483647,
+        -2147483648
+      ],
+      "sha256": [
+        "3353393e928809b6b6498d54028ab7240d2f449d8dc1f416ca04d596d8b4f276",
+        "40e4741cfe496f230429f1ab3badc37dce37c52945fc1f55d2a17c27e830f481",
+        "75fcecac67b32c51504296fd184bb823945b472807b9891e5e8a5dca0f2f7e45",
+        "b55977b82abe1c5c17007c6cae66fcfdafa6f72ec70c12138993593198bd60dd",
+        "f620c8e9df67c3f3e069fc02de23417413eda824778614ca8483d94f5f8a9f9c",
+        "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      ]
+    },
+    {
+      "name": "drawblock-screen0",
+      "inputs": [
+        6,
+        89,
+        113,
+        0,
+        27,
+        19,
+        0,
+        0,
+        0,
+        -1,
+        19,
+        32,
+        0
+      ],
+      "dirtybox": [
+        131,
+        113,
+        89,
+        115
+      ],
+      "sha256": [
+        "793f99e396c5cec472d6ce00b7e72f11ba2c1e8bf782a25d2e58fd22e116e435",
+        "40e4741cfe496f230429f1ab3badc37dce37c52945fc1f55d2a17c27e830f481",
+        "75fcecac67b32c51504296fd184bb823945b472807b9891e5e8a5dca0f2f7e45",
+        "b55977b82abe1c5c17007c6cae66fcfdafa6f72ec70c12138993593198bd60dd",
+        "f620c8e9df67c3f3e069fc02de23417413eda824778614ca8483d94f5f8a9f9c",
+        "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      ]
+    },
+    {
+      "name": "drawblock-screen3-still-marks-dirty",
+      "inputs": [
+        6,
+        10,
+        20,
+        3,
+        8,
+        5,
+        0,
+        0,
+        0,
+        -1,
+        19,
+        32,
+        0
+      ],
+      "dirtybox": [
+        24,
+        20,
+        10,
+        17
+      ],
+      "sha256": [
+        "3353393e928809b6b6498d54028ab7240d2f449d8dc1f416ca04d596d8b4f276",
+        "40e4741cfe496f230429f1ab3badc37dce37c52945fc1f55d2a17c27e830f481",
+        "75fcecac67b32c51504296fd184bb823945b472807b9891e5e8a5dca0f2f7e45",
+        "63e933d23ca0d077533b27a985eeef453021fb9d7b7973b4866dc3b19ed3168a",
+        "f620c8e9df67c3f3e069fc02de23417413eda824778614ca8483d94f5f8a9f9c",
+        "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      ]
+    },
+    {
+      "name": "drawblock-status-backing",
+      "inputs": [
+        6,
+        0,
+        0,
+        4,
+        320,
+        32,
+        0,
+        0,
+        0,
+        -1,
+        19,
+        32,
+        0
+      ],
+      "dirtybox": [
+        31,
+        0,
+        0,
+        319
+      ],
+      "sha256": [
+        "3353393e928809b6b6498d54028ab7240d2f449d8dc1f416ca04d596d8b4f276",
+        "40e4741cfe496f230429f1ab3badc37dce37c52945fc1f55d2a17c27e830f481",
+        "75fcecac67b32c51504296fd184bb823945b472807b9891e5e8a5dca0f2f7e45",
+        "b55977b82abe1c5c17007c6cae66fcfdafa6f72ec70c12138993593198bd60dd",
+        "48c84762ab7583cbc7e9d65f75e8675436230fccbeb18b2c2d308e25e1dba723",
+        "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      ]
+    },
+    {
+      "name": "drawblock-right-bottom-edge",
+      "inputs": [
+        6,
+        313,
+        191,
+        0,
+        7,
+        9,
+        0,
+        0,
+        0,
+        -1,
+        19,
+        32,
+        0
+      ],
+      "dirtybox": [
+        199,
+        191,
+        313,
+        319
+      ],
+      "sha256": [
+        "141592d999ef8d714288a079004eb415612fb770116398d7490f6d812b826026",
+        "40e4741cfe496f230429f1ab3badc37dce37c52945fc1f55d2a17c27e830f481",
+        "75fcecac67b32c51504296fd184bb823945b472807b9891e5e8a5dca0f2f7e45",
+        "b55977b82abe1c5c17007c6cae66fcfdafa6f72ec70c12138993593198bd60dd",
+        "f620c8e9df67c3f3e069fc02de23417413eda824778614ca8483d94f5f8a9f9c",
+        "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      ]
+    },
+    {
+      "name": "drawblock-zero-width",
+      "inputs": [
+        6,
+        30,
+        40,
+        0,
+        0,
+        7,
+        0,
+        0,
+        0,
+        -1,
+        19,
+        32,
+        0
+      ],
+      "dirtybox": [
+        46,
+        40,
+        29,
+        -2147483648
+      ],
+      "sha256": [
+        "3353393e928809b6b6498d54028ab7240d2f449d8dc1f416ca04d596d8b4f276",
+        "40e4741cfe496f230429f1ab3badc37dce37c52945fc1f55d2a17c27e830f481",
+        "75fcecac67b32c51504296fd184bb823945b472807b9891e5e8a5dca0f2f7e45",
+        "b55977b82abe1c5c17007c6cae66fcfdafa6f72ec70c12138993593198bd60dd",
+        "f620c8e9df67c3f3e069fc02de23417413eda824778614ca8483d94f5f8a9f9c",
+        "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      ]
+    },
+    {
+      "name": "drawblock-zero-height",
+      "inputs": [
+        6,
+        30,
+        40,
+        0,
+        7,
+        0,
+        0,
+        0,
+        0,
+        -1,
+        19,
+        32,
+        0
+      ],
+      "dirtybox": [
+        -2147483648,
+        39,
+        30,
+        36
+      ],
+      "sha256": [
+        "3353393e928809b6b6498d54028ab7240d2f449d8dc1f416ca04d596d8b4f276",
+        "40e4741cfe496f230429f1ab3badc37dce37c52945fc1f55d2a17c27e830f481",
+        "75fcecac67b32c51504296fd184bb823945b472807b9891e5e8a5dca0f2f7e45",
+        "b55977b82abe1c5c17007c6cae66fcfdafa6f72ec70c12138993593198bd60dd",
+        "f620c8e9df67c3f3e069fc02de23417413eda824778614ca8483d94f5f8a9f9c",
+        "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      ]
+    },
+    {
+      "name": "drawblock-invalid-coordinate",
+      "inputs": [
+        6,
+        319,
+        199,
+        0,
+        2,
+        1,
+        0,
+        0,
+        0,
+        -1,
+        19,
+        32,
+        1
+      ],
+      "dirtybox": [
+        -2147483648,
+        2147483647,
+        2147483647,
+        -2147483648
+      ],
+      "sha256": [
+        "3353393e928809b6b6498d54028ab7240d2f449d8dc1f416ca04d596d8b4f276",
+        "40e4741cfe496f230429f1ab3badc37dce37c52945fc1f55d2a17c27e830f481",
+        "75fcecac67b32c51504296fd184bb823945b472807b9891e5e8a5dca0f2f7e45",
+        "b55977b82abe1c5c17007c6cae66fcfdafa6f72ec70c12138993593198bd60dd",
+        "f620c8e9df67c3f3e069fc02de23417413eda824778614ca8483d94f5f8a9f9c",
+        "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      ]
+    },
+    {
+      "name": "drawblock-invalid-screen",
+      "inputs": [
+        6,
+        0,
+        0,
+        5,
+        2,
+        1,
+        0,
+        0,
+        0,
+        -1,
+        19,
+        32,
+        1
+      ],
+      "dirtybox": [
+        -2147483648,
+        2147483647,
+        2147483647,
+        -2147483648
+      ],
+      "sha256": [
+        "3353393e928809b6b6498d54028ab7240d2f449d8dc1f416ca04d596d8b4f276",
+        "40e4741cfe496f230429f1ab3badc37dce37c52945fc1f55d2a17c27e830f481",
+        "75fcecac67b32c51504296fd184bb823945b472807b9891e5e8a5dca0f2f7e45",
+        "b55977b82abe1c5c17007c6cae66fcfdafa6f72ec70c12138993593198bd60dd",
+        "f620c8e9df67c3f3e069fc02de23417413eda824778614ca8483d94f5f8a9f9c",
+        "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      ]
+    },
+    {
+      "name": "getblock-screen0-no-dirty",
+      "inputs": [
+        7,
+        89,
+        113,
+        0,
+        27,
+        19,
+        0,
+        0,
+        0,
+        -1,
+        19,
+        32,
+        0
+      ],
+      "dirtybox": [
+        -2147483648,
+        2147483647,
+        2147483647,
+        -2147483648
+      ],
+      "sha256": [
+        "3353393e928809b6b6498d54028ab7240d2f449d8dc1f416ca04d596d8b4f276",
+        "40e4741cfe496f230429f1ab3badc37dce37c52945fc1f55d2a17c27e830f481",
+        "75fcecac67b32c51504296fd184bb823945b472807b9891e5e8a5dca0f2f7e45",
+        "b55977b82abe1c5c17007c6cae66fcfdafa6f72ec70c12138993593198bd60dd",
+        "f620c8e9df67c3f3e069fc02de23417413eda824778614ca8483d94f5f8a9f9c",
+        "ac98b1802fe81c42f1cf4e47d442edf37c9cea8d676c53679d9c15258d21ea07"
+      ]
+    },
+    {
+      "name": "getblock-status-backing",
+      "inputs": [
+        7,
+        0,
+        0,
+        4,
+        320,
+        32,
+        0,
+        0,
+        0,
+        -1,
+        19,
+        32,
+        0
+      ],
+      "dirtybox": [
+        -2147483648,
+        2147483647,
+        2147483647,
+        -2147483648
+      ],
+      "sha256": [
+        "3353393e928809b6b6498d54028ab7240d2f449d8dc1f416ca04d596d8b4f276",
+        "40e4741cfe496f230429f1ab3badc37dce37c52945fc1f55d2a17c27e830f481",
+        "75fcecac67b32c51504296fd184bb823945b472807b9891e5e8a5dca0f2f7e45",
+        "b55977b82abe1c5c17007c6cae66fcfdafa6f72ec70c12138993593198bd60dd",
+        "f620c8e9df67c3f3e069fc02de23417413eda824778614ca8483d94f5f8a9f9c",
+        "f620c8e9df67c3f3e069fc02de23417413eda824778614ca8483d94f5f8a9f9c"
+      ]
+    },
+    {
+      "name": "getblock-right-bottom-edge",
+      "inputs": [
+        7,
+        313,
+        191,
+        3,
+        7,
+        9,
+        0,
+        0,
+        0,
+        -1,
+        19,
+        32,
+        0
+      ],
+      "dirtybox": [
+        -2147483648,
+        2147483647,
+        2147483647,
+        -2147483648
+      ],
+      "sha256": [
+        "3353393e928809b6b6498d54028ab7240d2f449d8dc1f416ca04d596d8b4f276",
+        "40e4741cfe496f230429f1ab3badc37dce37c52945fc1f55d2a17c27e830f481",
+        "75fcecac67b32c51504296fd184bb823945b472807b9891e5e8a5dca0f2f7e45",
+        "b55977b82abe1c5c17007c6cae66fcfdafa6f72ec70c12138993593198bd60dd",
+        "f620c8e9df67c3f3e069fc02de23417413eda824778614ca8483d94f5f8a9f9c",
+        "2bf5dead7318f0d7ab5473eb0662545c1b297d8ffd74ec42c21899752062182b"
+      ]
+    },
+    {
+      "name": "getblock-zero-width",
+      "inputs": [
+        7,
+        30,
+        40,
+        0,
+        0,
+        7,
+        0,
+        0,
+        0,
+        -1,
+        19,
+        32,
+        0
+      ],
+      "dirtybox": [
+        -2147483648,
+        2147483647,
+        2147483647,
+        -2147483648
+      ],
+      "sha256": [
+        "3353393e928809b6b6498d54028ab7240d2f449d8dc1f416ca04d596d8b4f276",
+        "40e4741cfe496f230429f1ab3badc37dce37c52945fc1f55d2a17c27e830f481",
+        "75fcecac67b32c51504296fd184bb823945b472807b9891e5e8a5dca0f2f7e45",
+        "b55977b82abe1c5c17007c6cae66fcfdafa6f72ec70c12138993593198bd60dd",
+        "f620c8e9df67c3f3e069fc02de23417413eda824778614ca8483d94f5f8a9f9c",
+        "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      ]
+    },
+    {
+      "name": "getblock-zero-height",
+      "inputs": [
+        7,
+        30,
+        40,
+        0,
+        7,
+        0,
+        0,
+        0,
+        0,
+        -1,
+        19,
+        32,
+        0
+      ],
+      "dirtybox": [
+        -2147483648,
+        2147483647,
+        2147483647,
+        -2147483648
+      ],
+      "sha256": [
+        "3353393e928809b6b6498d54028ab7240d2f449d8dc1f416ca04d596d8b4f276",
+        "40e4741cfe496f230429f1ab3badc37dce37c52945fc1f55d2a17c27e830f481",
+        "75fcecac67b32c51504296fd184bb823945b472807b9891e5e8a5dca0f2f7e45",
+        "b55977b82abe1c5c17007c6cae66fcfdafa6f72ec70c12138993593198bd60dd",
+        "f620c8e9df67c3f3e069fc02de23417413eda824778614ca8483d94f5f8a9f9c",
+        "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      ]
+    },
+    {
+      "name": "getblock-invalid-coordinate",
+      "inputs": [
+        7,
+        319,
+        199,
+        0,
+        2,
+        1,
+        0,
+        0,
+        0,
+        -1,
+        19,
+        32,
+        1
+      ],
+      "dirtybox": [
+        -2147483648,
+        2147483647,
+        2147483647,
+        -2147483648
+      ],
+      "sha256": [
+        "3353393e928809b6b6498d54028ab7240d2f449d8dc1f416ca04d596d8b4f276",
+        "40e4741cfe496f230429f1ab3badc37dce37c52945fc1f55d2a17c27e830f481",
+        "75fcecac67b32c51504296fd184bb823945b472807b9891e5e8a5dca0f2f7e45",
+        "b55977b82abe1c5c17007c6cae66fcfdafa6f72ec70c12138993593198bd60dd",
+        "f620c8e9df67c3f3e069fc02de23417413eda824778614ca8483d94f5f8a9f9c",
+        "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      ]
+    },
+    {
+      "name": "getblock-invalid-screen",
+      "inputs": [
+        7,
+        0,
+        0,
+        -1,
+        2,
+        1,
+        0,
+        0,
+        0,
+        -1,
+        19,
+        32,
+        1
+      ],
+      "dirtybox": [
+        -2147483648,
+        2147483647,
+        2147483647,
+        -2147483648
+      ],
+      "sha256": [
+        "3353393e928809b6b6498d54028ab7240d2f449d8dc1f416ca04d596d8b4f276",
+        "40e4741cfe496f230429f1ab3badc37dce37c52945fc1f55d2a17c27e830f481",
+        "75fcecac67b32c51504296fd184bb823945b472807b9891e5e8a5dca0f2f7e45",
+        "b55977b82abe1c5c17007c6cae66fcfdafa6f72ec70c12138993593198bd60dd",
+        "f620c8e9df67c3f3e069fc02de23417413eda824778614ca8483d94f5f8a9f9c",
+        "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      ]
+    }
+  ]
+}

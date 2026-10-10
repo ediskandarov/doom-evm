@@ -1,0 +1,116 @@
+{
+  "provenance": {
+    "kind": "wad",
+    "wadName": "freedoom1.wad",
+    "wadSha256": "7323bcc168c5a45ff10749b339960e98314740a734c30d4b9f3337001f9e703d",
+    "upstreamCommit": "a77dfb96cb91780ca334d0d4cfd86957558007e0",
+    "license": "Freedoom BSD-3-Clause; see test/fixtures/wad/COPYING.txt"
+  },
+  "resourceBlobSha256": "0a07ab5de33592142c3427d29e8f2eaf25d0e4fa21e03ac9c9b0fb5d77531d16",
+  "patches": [
+    {
+      "id": 0,
+      "name": "STBAR",
+      "path": "patch-0.bin",
+      "lumpId": 605,
+      "resourceOffset": 14274966,
+      "length": 13128,
+      "sha256": "30e2952570a2ffa26eaaae104a762fac48572f86ae0cc37c9f20c52c01d94a84",
+      "dimensionsOffsets": [
+        320,
+        32,
+        0,
+        0
+      ]
+    },
+    {
+      "id": 1,
+      "name": "STTNUM0",
+      "path": "patch-1.bin",
+      "lumpId": 617,
+      "resourceOffset": 14288926,
+      "length": 279,
+      "sha256": "ebb5e945c146e5466ec6ccbbcbef1e22e86c68ac33640e9660868a2ccf4533fd",
+      "dimensionsOffsets": [
+        13,
+        16,
+        0,
+        0
+      ]
+    },
+    {
+      "id": 2,
+      "name": "STFST00",
+      "path": "patch-2.bin",
+      "lumpId": 727,
+      "resourceOffset": 14316002,
+      "length": 818,
+      "sha256": "30dff4d9e73b54fdf8ccf0da57ce469fa1c7609eeef9360a4b4eb4f3c4465230",
+      "dimensionsOffsets": [
+        24,
+        29,
+        -5,
+        -2
+      ]
+    },
+    {
+      "id": 3,
+      "name": "STCFN033",
+      "path": "patch-3.bin",
+      "lumpId": 650,
+      "resourceOffset": 14296112,
+      "length": 72,
+      "sha256": "9b75dc3391a1742499282e7e1da8b9fadacf8595b82cca71d1cbd7337b6a6446",
+      "dimensionsOffsets": [
+        4,
+        7,
+        0,
+        0
+      ]
+    },
+    {
+      "id": 4,
+      "name": "AMMNUM0",
+      "path": "patch-4.bin",
+      "lumpId": 595,
+      "resourceOffset": 14274439,
+      "length": 49,
+      "sha256": "5be2383752db7606348d21a80bc61a2dd3430c8358419f90d9923eb24a2f3b85",
+      "dimensionsOffsets": [
+        3,
+        5,
+        -1,
+        0
+      ]
+    },
+    {
+      "id": 5,
+      "name": "WIMAP0",
+      "path": "patch-5.bin",
+      "lumpId": 944,
+      "resourceOffset": 14938250,
+      "length": 68168,
+      "sha256": "da9d16a271b7f39de60bfb75f456ce31f669e531993ecbc76bfe1e8bcd5bec12",
+      "dimensionsOffsets": [
+        320,
+        200,
+        0,
+        0
+      ]
+    },
+    {
+      "id": 6,
+      "name": "SYNTHETIC",
+      "path": "patch-6.bin",
+      "length": 60,
+      "sha256": "2c183e79c5699f49dd97cd5c2a41ff02cfe6193bc93a6fd014877393a12fd394",
+      "dimensionsOffsets": [
+        4,
+        8,
+        -3,
+        2
+      ],
+      "license": "Project test fixture; transparent multi-post columns, signed offsets"
+    }
+  ]
+}

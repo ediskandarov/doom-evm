@@ -1,0 +1,149 @@
+{
+  "schemaVersion": 1,
+  "status": "passed",
+  "upstreamCommit": "a77dfb96cb91780ca334d0d4cfd86957558007e0",
+  "sourceSha256": {
+    "original/DOOM/linuxdoom-1.10/v_video.c": "52fb89efb1e6de3842c197b32009d620dcd1578f7111a7502abe6110a925e5eb",
+    "original/DOOM/linuxdoom-1.10/v_video.h": "728500c3b693d1baff1a43c5df6d0c6d55d1ec343247becd7db33c1be747635b",
+    "original/DOOM/linuxdoom-1.10/m_bbox.c": "98f3aea4f43d4d75fe452a25a65678fbd8368cfef3928b869767996e2165f42c",
+    "original/DOOM/linuxdoom-1.10/r_defs.h": "d8856503bea02282f5f338f3533885e87c6c430ce4f11511d6a04b5fc040db31",
+    "original/DOOM/linuxdoom-1.10/i_system.c": "19bd049d4c421a8893f6b262569400c2b068a7cee03f18dbd78999ee27a8b3a0",
+    "tools/reference/video/compat.h": "5dd893b680484fd34a2e522799732e2b64dd5348132c847f85f77b402140145f",
+    "tools/reference/video/host.c": "358e7eef8ba98ce4b6e35d8c472f3aa2f36ecf3f3542bab05c9728f832d6df7a",
+    "tools/reference/video/reference.py": "e11569029e225094c2ddb36f4834a9c4dbc004b12d7d59bc919f5f122c8462a9"
+  },
+  "profiles": [
+    {
+      "profile": "O0",
+      "flags": [
+        "-O0"
+      ],
+      "caseCount": 58,
+      "outputSha256": "4aa17018eec6eece5334274e1464142f2777335ff26fdc0962c9213da2b1970a",
+      "expectedRangecheckStderrSha256": "7b9a488de353bd6a42021e16b521cb47d7f9ad62ff6635001541cfdcabed9557",
+      "returnCode": 0
+    },
+    {
+      "profile": "O2",
+      "flags": [
+        "-O2"
+      ],
+      "caseCount": 58,
+      "outputSha256": "4aa17018eec6eece5334274e1464142f2777335ff26fdc0962c9213da2b1970a",
+      "expectedRangecheckStderrSha256": "7b9a488de353bd6a42021e16b521cb47d7f9ad62ff6635001541cfdcabed9557",
+      "returnCode": 0
+    },
+    {
+      "profile": "sanitized",
+      "flags": [
+        "-O1",
+        "-g",
+        "-fsanitize=address,undefined",
+        "-fno-sanitize=array-bounds",
+        "-fno-omit-frame-pointer"
+      ],
+      "caseCount": 58,
+      "outputSha256": "4aa17018eec6eece5334274e1464142f2777335ff26fdc0962c9213da2b1970a",
+      "expectedRangecheckStderrSha256": "7b9a488de353bd6a42021e16b521cb47d7f9ad62ff6635001541cfdcabed9557",
+      "returnCode": 0
+    }
+  ],
+  "exactAgreement": true,
+  "functionMapping": [
+    {
+      "function": "V_Init",
+      "source": "original/DOOM/linuxdoom-1.10/v_video.c",
+      "lineStart": 482,
+      "lineEnd": 493,
+      "sourceSpanSha256": "55101eec0c3f8d11104fbc7f2f623ad9d7e986758d2b09e9f7f74bfd0fd00792"
+    },
+    {
+      "function": "V_MarkRect",
+      "source": "original/DOOM/linuxdoom-1.10/v_video.c",
+      "lineStart": 143,
+      "lineEnd": 151,
+      "sourceSpanSha256": "36b0e9ab59af6dff5c124f080916f8f99d398ec7e3e9a1c218b057328d3699aa"
+    },
+    {
+      "function": "V_CopyRect",
+      "source": "original/DOOM/linuxdoom-1.10/v_video.c",
+      "lineStart": 158,
+      "lineEnd": 196,
+      "sourceSpanSha256": "3bf5ab65753721eec2f106b83a3db26d81199b88b2f4af54c1a3576598503768"
+    },
+    {
+      "function": "V_DrawPatch",
+      "source": "original/DOOM/linuxdoom-1.10/v_video.c",
+      "lineStart": 204,
+      "lineEnd": 263,
+      "sourceSpanSha256": "9f1b2fe5fffaedb65bece0856ff3208d4d4ab051d0991b0cdfbdfd0f1c29f8f1"
+    },
+    {
+      "function": "V_DrawPatchFlipped",
+      "source": "original/DOOM/linuxdoom-1.10/v_video.c",
+      "lineStart": 271,
+      "lineEnd": 328,
+      "sourceSpanSha256": "277c17bd0572c5e9a69b01c402858a4015f726a1d6c1b57f9d6988d9174379e7"
+    },
+    {
+      "function": "V_DrawPatchDirect",
+      "source": "original/DOOM/linuxdoom-1.10/v_video.c",
+      "lineStart": 337,
+      "lineEnd": 396,
+      "sourceSpanSha256": "bcb6c6ebf74292526eded011a01abe81e8fdcd7285f9a88cfd05db1083dabe32"
+    },
+    {
+      "function": "V_DrawBlock",
+      "source": "original/DOOM/linuxdoom-1.10/v_video.c",
+      "lineStart": 405,
+      "lineEnd": 436,
+      "sourceSpanSha256": "7abbdfccad6932214439e72c937989c52664eeadec4fc4e6a403e6c005fad354"
+    },
+    {
+      "function": "V_GetBlock",
+      "source": "original/DOOM/linuxdoom-1.10/v_video.c",
+      "lineStart": 445,
+      "lineEnd": 474,
+      "sourceSpanSha256": "154a52c58f959375cb0dc21a059c907f7e11dffd991f66e0d092a009030878c3"
+    },
+    {
+      "function": "M_ClearBox",
+      "source": "original/DOOM/linuxdoom-1.10/m_bbox.c",
+      "lineStart": 39,
+      "lineEnd": 43,
+      "sourceSpanSha256": "9ecbd4ba73eea1ca768eef2b0c05c981db1396da66c644abe81b75ca38b7066a"
+    },
+    {
+      "function": "M_AddToBox",
+      "source": "original/DOOM/linuxdoom-1.10/m_bbox.c",
+      "lineStart": 46,
+      "lineEnd": 59,
+      "sourceSpanSha256": "471518ea020b051fcad3d4916f9a5d6c0ac0a9b9385f44cf7178d57ab773bf22"
+    },
+    {
+      "function": "I_AllocLow",
+      "source": "original/DOOM/linuxdoom-1.10/i_system.c",
+      "lineStart": 147,
+      "lineEnd": 154,
+      "sourceSpanSha256": "44fb5686884a87e76c71985f087740fc12bbaad05ed59ede241d39e7f85dfb94"
+    }
+  ],
+  "rangecheck": true,
+  "caseCount": 58,
+  "bufferPixelsComparedPerProfile": 15441920,
+  "compiler": "Apple clang version 17.0.0 (clang-1700.0.13.5)",
+  "sanitizerScope": "ASan and UBSan enabled; array-bounds alone disabled for original patch_t.columnofs[8] variable-sized WAD extension. All actual byte accesses remain ASan-checked. Leak detection disabled (unsupported by Apple runtime); this gate makes no leak-safety claim.",
+  "excludedUndefinedCases": [
+    "same-row overlapping memcpy",
+    "negative dimensions causing unbounded size_t copies",
+    "posts extending outside physical screen buffers",
+    "signed int arithmetic overflow"
+  ],
+  "hostAdaptations": [
+    "Only host/platform declarations in compatibility prelude; original v_video.c and m_bbox.c compiled unchanged",
+    "I_AllocLow calloc is equivalent to original malloc followed by memset zero; caller then fills explicit reproducible indexed8 pattern",
+    "screen4 is caller-owned 320x32 status backing; not allocated by V_Init",
+    "I_Error captured with longjmp only for known rangecheck failures",
+    "M_ClearBox called by fixture after V_Init; original V_Init does not initialize dirtybox"
+  ]
+}

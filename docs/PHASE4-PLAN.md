@@ -1,7 +1,9 @@
 # Phase 4 progress ledger
 
 Phase 3 is complete and remains accepted. Optional Phase 4 work follows
-[the extra plan](04-IMPLEMENTATION-PLAN-EXTRA.md). **Goal 4.0 is complete and verified.** This run covers Goal 4.0 only.
+[the extra plan](04-IMPLEMENTATION-PLAN-EXTRA.md). **Goal 4.0 is complete and verified. Goal 4.1 is now active.**
+The Goal 4.0 entries below are historical; their stop/read-only rules applied to that completed task.
+The current user authorizes video primitives on main while Astra independently audits a separate worktree.
 The pasted user instructions supersede the aborted memory-audit goal. Do not
 start 4.0a, gameplay/UI work, refactoring or an Astra benchmark.
 
@@ -117,3 +119,59 @@ has the actual completion endpoint; previous Phase0–3 windows remain identical
 Published telemetry/report remains an as-of snapshot and is not overwritten;
 current unflushed usage or later accounting publication is not estimated.
 Stop at4.0. No audit/refactor/other Phase4 task is active.
+
+
+## Goal 4.1 — Video primitives (active)
+
+Start 2026-10-10T07:54:16Z (structured createdAt 1791618856).
+Baseline `b16c2a4`; clean main confirmed. Historical Phase 0–3 certificates and
+post-acceptance DrawBounds evidence remain unchanged. Astra's independent
+worktree/branch/audit is outside this goal and has not been inspected or modified.
+
+Ownership: new `src/doom/v_video.sol`, `v_video_types.sol`, video-only support,
+new focused unit/integration tests, `tools/reference/video/`,
+`test/fixtures/phase4_video/`, new Phase 4 evidence, PORTING.md and this ledger.
+One independent native-oracle agent owns only the reference/fixture directories;
+the integrator owns shared interfaces, tests, support and documentation.
+
+| Deliverable | Implementation | Integration | Verification | Remaining |
+|---|---|---|---|---|
+| Eight original V_* functions and header globals | Implemented | Memory-only VideoState, no engine changes | 15 focused unit tests pass; 58 native cases exact | Dependency/receipt gates |
+| Real WAD patch/native oracle | Implemented | Separate original-C host | O0/O2/sanitizers exact; rebuild/check pass | Complete |
+| Renderer/frame compatibility | Implemented | Existing resource reader + screen0 alias + frozen Frame | Two Foundry integration cases pass (168/200) | Ordinary receipts + legacy world case |
+| Source mapping/evidence | Pending | Separate Phase 4 artifacts | Pending | Final report/bindings |
+
+Original RANGECHECK patch behavior is retained: normal/direct out-of-box patches
+are ignored, flipped patches error; original v_video has no partial clipping or
+scaling. The upcoming 320x168 view still uses a 320x200 framebuffer. No status
+bar/HUD/automap/intermission or palette/gamma presentation is implemented.
+Negative rectangle dimensions, malformed patches, invalid physical backing and
+partial overlapping row memcpy are explicitly rejected, not clamped.
+
+Planned gates: focused video/native cases, affected bbox/draw/backing tests,
+targeted Frame/resource/renderer integration, one accepted world-frame case,
+format/source-evidence integrity. Full inherited Phase 0–3 runs are deferred to
+final Phase 4 acceptance per user instruction. No blockers currently.
+Stop after verified commit/push and Goal 4.1 handoff; do not enter Goal 4.2.
+
+
+### Verified video/interface checkpoint
+
+`python3 tools/reference/video/reference.py --check`: 58 cases x three native
+profiles agree. Six authentic patches plus synthetic transparency/offset/post
+cases; all five native buffers and dirty/GetBlock hashes compared. Native
+function spans/source hashes are in the fixture manifest. 15 video unit tests
+and two resource/Frame/render-buffer integration tests pass; malformed fuzz
+runs256. Command: `forge test --match-path
+'test/{unit/v_video,integration/VideoPrimitives}.t.sol' --skip Doom
+--skip GameplayProbe --skip RendererProbe --skip WadResourcesProbe -vv`.
+The skips exclude unrelated build roots, not any test within this gate.
+Pinned compiler/settings remain unchanged. Full logs are ignored local files
+under artifacts/local/video; final evidence will bind their numeric summaries.
+
+Initial harness-only failures were corrected without changing native goldens:
+unused patchId=-1 now avoids a file lookup; the independent integration
+expectation now decodes face offsets as signed shorts. All17 assertions pass
+on the current sources. No completed workstream is left as an unverified batch.
+Acceptance of Goal4.1 is still pending ordinary receipts/dependency/legacy
+world checks and final integrity/source mapping. No actual blocker.
