@@ -1,0 +1,13 @@
+{
+  "goal": "4.0",
+  "session_id": "01a11fdf-1d25-7201-abb8-1afdaaab6b9c",
+  "start": "2026-10-10T05:01:34.000Z",
+  "end": "2026-10-10T05:57:49.000Z",
+  "elapsed_wall_seconds": 3375,
+  "reported_goal_seconds": 3374,
+  "separate_goal_tokens": 566101,
+  "source": "structured functions.update_goal complete result",
+  "precision": "second-level timestamps; counter seconds retain separate semantics",
+  "snapshot": "artifacts/usage/telemetry2/ remains the preserved as-of data before completion. Current unflushed response not estimated; later bookkeeping is outside goal window.",
+  "stop": "No4.0a or other Phase4 work begun."
+}

@@ -119,12 +119,22 @@
       "phase": "phase4-goal4.0",
       "session_id": "01a11fdf-1d25-7201-abb8-1afdaaab6b9c",
       "start": "2026-10-10T05:01:34.000Z",
-      "end": null,
+      "end": "2026-10-10T05:57:49.000Z",
       "goal_created_at_unix": 1791608494,
       "start_evidence": {
         "kind": "structured_active_goal",
         "goal_created_at_unix": 1791608494,
         "source": "functions.get_goal after reading explicit pasted Goal4.0 instructions; no historical windows changed"
+      },
+      "end_evidence": {
+        "kind": "structured_goal_completion",
+        "goal_updated_at_unix": 1791611869,
+        "source": "functions.update_goal complete after published d0f0b5a and clean worktree",
+        "precision": "seconds"
+      },
+      "separate_goal_counter": {
+        "tokensUsed": 566101,
+        "timeUsedSeconds": 3374
       }
     }
   ],

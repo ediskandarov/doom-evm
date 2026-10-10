@@ -31,11 +31,9 @@ Only tools/usage/**, new telemetry evidence and documentation are owned.
 
 ## Remaining work and blockers
 
-No blocker. Side adapter and 50 focused tests pass; token ledger exact baseline
-comparison passes. Finish bounded historical exports/article report and limitations,
-run final schema/CSV/privacy/ownership checks, produce checkpoint evidence,
-update this ledger, commit/push and stop. Raw JSONL is processed programmatically;
-only schema keys, IDs, times and numeric summaries enter model context.
+None. Goal 4.0 is complete, verified and published. All implementation,
+integration, evidence/schema/privacy tests, preserved-history comparison and
+report/export handoff passed. Stop; no memory audit or other Phase 4 work began.
 
 Original Phase 4 forecast remains unchanged: 25h elapsed, 17–38h plausible band,
 50h+ adverse tail; separate 4.0a estimate 1–3h. Actual measured goal durations belong
@@ -108,3 +106,14 @@ and limitations are committed/pushed. Origin/main and baseline tag verified.
 No engine, renderer, gameplay, original acceptance test, compiler or prior
 export was modified. Goal4.0a and every other optional improvement remain
 unstarted. Stop here; no current blocker or remaining implementation work.
+
+## Actual goal completion
+
+Start2026-10-10T05:01:34Z; completion2026-10-10T05:57:49Z, structured tool
+updatedAt1791611869. Measured timestamp interval3375s; separate goal counter
+3374s (about56m) and566,101 tokens. Counters are never added to response usage.
+[Closure record](../artifacts/usage/goal4.0-completion.json). The phase window now
+has the actual completion endpoint; previous Phase0–3 windows remain identical.
+Published telemetry/report remains an as-of snapshot and is not overwritten;
+current unflushed usage or later accounting publication is not estimated.
+Stop at4.0. No audit/refactor/other Phase4 task is active.

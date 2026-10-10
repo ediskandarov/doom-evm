@@ -193,3 +193,15 @@ Separate goal counters retain their own semantics and are never added to respons
 - Logs can be unavailable, rotated or unflushed. These are observed measurements, not proof of complete activity or a final bill.
 
 Activity diagnostics (numeric metadata only): `{"duplicate_activity_copies_excluded": 0}`.
+
+## Goal 4.0 completion accounting
+
+The completed goal interval is2026-10-10T05:01:34Z–05:57:49Z (3375 wall seconds,
+second precision). The tool reports3374 goal seconds, about56 minutes, and
+**566,101 separate goal tokens**. These retain different semantics from session
+response usage and are never summed with it.
+[Structured closure record](../artifacts/usage/goal4.0-completion.json) and the
+current phase ledger preserve the actual endpoint. The dataset above remains
+the as-of snapshot before completion, with open-goal values truthful at that
+time. Unflushed current usage and later bookkeeping remain unavailable/outside
+the closed goal window; no estimate is substituted.
