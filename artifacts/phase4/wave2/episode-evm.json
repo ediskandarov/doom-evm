@@ -1,0 +1,317 @@
+{
+  "schemaVersion": 1,
+  "goal": "4.7a",
+  "pass": true,
+  "scope": "Nine-map resources, no gameplay startup or frames",
+  "resourceIdentity": {
+    "schemaVersion": 0,
+    "wadSha256": "7323bcc168c5a45ff10749b339960e98314740a734c30d4b9f3337001f9e703d",
+    "bundleSha256": "d379076f21645cf7cc5acb056663d0faacc4065489a0ca99738479323c9f7a47",
+    "paletteSha256": "fd895921b5d0a394612bb29852ed003d44d69f76dec31c0dc6b5d5fc7d63f7bb",
+    "paletteVariant": 0
+  },
+  "catalogSha256": "1af6a076fdf0427be1df9beae42c8f87a931058fed89d1f104543eb8b1188c9e",
+  "client": "anvil/v1.8.5",
+  "serverArgs": [
+    "--host",
+    "127.0.0.1",
+    "--port",
+    "18947",
+    "--hardfork",
+    "cancun",
+    "--disable-code-size-limit",
+    "--gas-limit",
+    "10000000000",
+    "--memory-limit",
+    "1073741824",
+    "--silent"
+  ],
+  "compiler": {
+    "version": "0.8.37+commit.f401782d",
+    "settings": {
+      "remappings": [],
+      "optimizer": {
+        "enabled": true,
+        "runs": 200
+      },
+      "metadata": {
+        "bytecodeHash": "ipfs"
+      },
+      "compilationTarget": {
+        "src/support/EpisodeResourcesProbe.sol": "EpisodeResourcesProbe"
+      },
+      "evmVersion": "cancun",
+      "libraries": {},
+      "viaIR": true
+    }
+  },
+  "gasLimit": 10000000000,
+  "deployment": {
+    "chunks": 1755,
+    "allRuntimeBytesVerified": true,
+    "blobBytes": 28741889,
+    "totalChunkGas": 6271928016,
+    "chunkDeploymentMs": 52601.019708,
+    "receiptsSha256": "9c958f6e4e68c6e33fb55ac07b299fd61aaa0f4afd449d755db3375ba970f578",
+    "probe": {
+      "transaction": "0x661f30c667b0bb90dedbebc6b618a1da712c2e24abdd61914c040649c5c862bc",
+      "gas": 3413631,
+      "runtimeBytes": 15539,
+      "runtimeSha256": "57876ff7c7458c403b385e42a0e2db4751c4116e35268c74a4204ef786accaad"
+    }
+  },
+  "results": [
+    {
+      "map": "E1M1",
+      "packageSha256": "9b368475f9437e0e3b1add8243230925bdbd675e39beddd8c0ab01b35f986ede",
+      "counts": {
+        "THINGS": 292,
+        "LINEDEFS": 1175,
+        "SIDEDEFS": 1829,
+        "VERTEXES": 1196,
+        "SEGS": 2057,
+        "SSECTORS": 682,
+        "NODES": 681,
+        "SECTORS": 182
+      },
+      "geometrySha256": "aba7dd72c1ea0a61bd207f719cb99a3b3221fa23fcb2b3afc609406124769117",
+      "thingsSha256": "8d0c41bb52e90d8d87c8206a640777144b6cb287e2994d8f6560215d28c94268",
+      "blockmapSha256": "9e50e07de1f89be97b5f01a72550063bc512c79399e9032a17762ca45b10aba6",
+      "rejectSha256": "4c919d0a687d503d9fc5e88e810c6332d08c8d5d0e9309624d7579ab16359a56",
+      "tenRawLumpsExact": true,
+      "transaction": "0x82c58daa79cd391cac7b0a26641f53b85ecde7ef9d0940651a86fe69097bd6ba",
+      "transactionGas": 277950284,
+      "initGas": 47204473,
+      "mapGas": 124476404,
+      "callAndReceiptMs": 457.8299580000021,
+      "calldataBytes": 360196
+    },
+    {
+      "map": "E1M2",
+      "packageSha256": "b6d1310906586805cdc21f6f2a1894f44fcf4e8e1597fd46f42ce215488792cd",
+      "counts": {
+        "THINGS": 356,
+        "LINEDEFS": 2290,
+        "SIDEDEFS": 3296,
+        "VERTEXES": 2231,
+        "SEGS": 3650,
+        "SSECTORS": 1104,
+        "NODES": 1103,
+        "SECTORS": 380
+      },
+      "geometrySha256": "ad1dea536f68db75693d11cd4ffb40bb678a03e07b476f37fec205660bf1ac1e",
+      "thingsSha256": "5c64a257073bbc95602ad988f219078df7a1e3f3409e996220d3b49d0fa273ad",
+      "blockmapSha256": "6fc419d821bde9093423a8453f8a6f3e03eae66053f3c0afd51b3543c3a65a8e",
+      "rejectSha256": "b10fc950619274e061900a0f181fad2b7aefe72f8bc3b12ebb06448bc9d59b6a",
+      "tenRawLumpsExact": true,
+      "transaction": "0xb5d4837ff3754622f907b3b65c32f65394962792414c442987934fddc6cdd514",
+      "transactionGas": 476936231,
+      "initGas": 47204473,
+      "mapGas": 236252065,
+      "callAndReceiptMs": 660.5758330000026,
+      "calldataBytes": 360196
+    },
+    {
+      "map": "E1M3",
+      "packageSha256": "4d5138a3041618dccd007208e6590c39af8378f74bbc7fcf512ae00855fbc36d",
+      "counts": {
+        "THINGS": 382,
+        "LINEDEFS": 2169,
+        "SIDEDEFS": 2822,
+        "VERTEXES": 1976,
+        "SEGS": 2981,
+        "SSECTORS": 821,
+        "NODES": 820,
+        "SECTORS": 330
+      },
+      "geometrySha256": "164204267511d285d7de835cf001ba6c6cce7565c6df613b699fbfd4e8a1d290",
+      "thingsSha256": "dfbabf10c3c8d3e2c3b390862f73afbfe5ed03c79ecc15fd0caa4ef6780065dd",
+      "blockmapSha256": "355c8ef87eafc60be9aa9ac779e9844c467278e787033a9d58954686abebd8c2",
+      "rejectSha256": "31139624ef572549d130df2515a57697ae5e171a77653319df0af6535c4893c9",
+      "tenRawLumpsExact": true,
+      "transaction": "0xaf72cccdadd361a5beb8dad89d6e79a3347c1d41791aad89ce3868bb981ed034",
+      "transactionGas": 410984388,
+      "initGas": 47204473,
+      "mapGas": 198513867,
+      "callAndReceiptMs": 576.3430410000001,
+      "calldataBytes": 360196
+    },
+    {
+      "map": "E1M4",
+      "packageSha256": "91360efe8e6c47a53b3714d480f2f13246bf479fcec79b01809e45632638ac0a",
+      "counts": {
+        "THINGS": 378,
+        "LINEDEFS": 2283,
+        "SIDEDEFS": 3211,
+        "VERTEXES": 2270,
+        "SEGS": 3502,
+        "SSECTORS": 1202,
+        "NODES": 1201,
+        "SECTORS": 274
+      },
+      "geometrySha256": "be9fd8df18ec8918f991a19835b72f0fb9f95d505d1b376717d775d77b5c72fa",
+      "thingsSha256": "6974ec90305e152baf4aff879a32a187879f7b7b3eea6fab534fee88225bbfdf",
+      "blockmapSha256": "3680df6d5c51bafb9af8e052129531f2fc57c71a4761584f57c311dc6a0a270f",
+      "rejectSha256": "1c9a2f2c00a806447097cdc9dfec69a5c6c2abfb2fb462cf4552b717d553a94e",
+      "tenRawLumpsExact": true,
+      "transaction": "0xfba38752459c6e7d3b5ab5c19fa5ea195617206f7b5f09a7e7657e6908b134cb",
+      "transactionGas": 477810174,
+      "initGas": 47204473,
+      "mapGas": 234692254,
+      "callAndReceiptMs": 655.1064159999951,
+      "calldataBytes": 360196
+    },
+    {
+      "map": "E1M5",
+      "packageSha256": "3184a5e364fa023bd9d8be3b39f9e98721747cbe4476f3dd13f7f8c910252f69",
+      "counts": {
+        "THINGS": 364,
+        "LINEDEFS": 1215,
+        "SIDEDEFS": 1831,
+        "VERTEXES": 1082,
+        "SEGS": 1933,
+        "SSECTORS": 501,
+        "NODES": 500,
+        "SECTORS": 214
+      },
+      "geometrySha256": "af88ec5d6fbf62b052bc66ce21150f05e99f75addb9a06f6ba1eee70615e0000",
+      "thingsSha256": "6b52ac091ca65c6dae3e4dc227acde83e2e82c02c515a48290298c8e81818c57",
+      "blockmapSha256": "45c5f0706032ccc46df3be1cac50517636b8726a14fe77b6f9ac7f1924638a03",
+      "rejectSha256": "3560bae908360807ba111f2232c7ee59e2b6e95b6b369632d3568ab65d1d77a3",
+      "tenRawLumpsExact": true,
+      "transaction": "0xbbeabd3926cc625bfed4a1b181a408cf1b8e00dcc222802ca0c8e2e8dde4ac0d",
+      "transactionGas": 268180157,
+      "initGas": 47204473,
+      "mapGas": 118727481,
+      "callAndReceiptMs": 399.89450000000215,
+      "calldataBytes": 360196
+    },
+    {
+      "map": "E1M6",
+      "packageSha256": "816bd08480de386c8784abb5099e7c8568720a01e273be23dd0b09d6e6995ea2",
+      "counts": {
+        "THINGS": 490,
+        "LINEDEFS": 2818,
+        "SIDEDEFS": 3972,
+        "VERTEXES": 2760,
+        "SEGS": 4409,
+        "SSECTORS": 1398,
+        "NODES": 1397,
+        "SECTORS": 395
+      },
+      "geometrySha256": "c25748465b6799011bd19904a746eb182211a76ba30bf4fd3e82bb005cec0c1b",
+      "thingsSha256": "faa1e457dc54c07c2c0683c3b342506decb275592a6deb23570ca480e3ca367f",
+      "blockmapSha256": "559adda090df1650257c84f30a6d9b8b4a2d6dc349f35a72fac362ed49a9058c",
+      "rejectSha256": "b8451faaf90e0a4688f58b3a144ad2bfbd0fb2bd0167c4e7de195cf50d69e6b2",
+      "tenRawLumpsExact": true,
+      "transaction": "0xcd94c9f751372853dade3f1e4b75c63336b16b8b48d7ab6c15df2a46df8fcc7f",
+      "transactionGas": 594395312,
+      "initGas": 47204473,
+      "mapGas": 304111002,
+      "callAndReceiptMs": 763.1991669999989,
+      "calldataBytes": 360196
+    },
+    {
+      "map": "E1M7",
+      "packageSha256": "e10a5f6e7c13674b3719163a86c5ac8c54abfc88d62d8c34b8d25c11fdb13342",
+      "counts": {
+        "THINGS": 714,
+        "LINEDEFS": 4337,
+        "SIDEDEFS": 6253,
+        "VERTEXES": 4217,
+        "SEGS": 6947,
+        "SSECTORS": 2064,
+        "NODES": 2063,
+        "SECTORS": 699
+      },
+      "geometrySha256": "c3ae60747c54ff3e0544cdf792d929a3cd6f5ec8775dcfd7165742ccfca9c60c",
+      "thingsSha256": "d0af9bed9e63d93375e42962cf14d4eb8ca0ee4c3ea71c9a07a8e67f52de5a07",
+      "blockmapSha256": "45ec0613d72dc8c6f54071b92b42fd81d1238869f991b1194a8f3189ca2f1f24",
+      "rejectSha256": "55da919c8326fd758ec5cd9d089510067fdad96623fb2adb19ea521781a88e71",
+      "tenRawLumpsExact": true,
+      "transaction": "0xef5bbaf0f988f4eb6764aa8f2d617bffbee41eb381adc09e9183833e8fe18033",
+      "transactionGas": 984718924,
+      "initGas": 47204473,
+      "mapGas": 538495563,
+      "callAndReceiptMs": 1115.4475840000014,
+      "calldataBytes": 360196
+    },
+    {
+      "map": "E1M8",
+      "packageSha256": "0e997e429ca7a52eb6ad95f987bb8d32354455bca7b203eacf9002551e9eeca7",
+      "counts": {
+        "THINGS": 123,
+        "LINEDEFS": 930,
+        "SIDEDEFS": 1446,
+        "VERTEXES": 1165,
+        "SEGS": 1796,
+        "SSECTORS": 627,
+        "NODES": 626,
+        "SECTORS": 97
+      },
+      "geometrySha256": "22a6fe5fd27b13e47352c3397cbb62aefafa6680ec01c9c85f7dcd397c127099",
+      "thingsSha256": "cc2476aef68e0b01dba572a7f1020a1c028bfcba57e604d40c9e91c42da9aa07",
+      "blockmapSha256": "db047b413d01c26d8e01d69dd15001a243820d47738696ca4073f1e9f2a6e1a9",
+      "rejectSha256": "5ba99419ff855229d88c60a907f74848de63933c66003f30368d5ec1bfdcaa8d",
+      "tenRawLumpsExact": true,
+      "transaction": "0x25c7a566c57d8eac4fd167b79b72017728825e000b7c08e2e4db1a1d6eedaf5f",
+      "transactionGas": 238852926,
+      "initGas": 47204473,
+      "mapGas": 102778863,
+      "callAndReceiptMs": 389.81654100000014,
+      "calldataBytes": 360196
+    },
+    {
+      "map": "E1M9",
+      "packageSha256": "fa96b72b74984d95c401ea4392f55069ab4bff53d86bd8b9ad0810207e705d04",
+      "counts": {
+        "THINGS": 368,
+        "LINEDEFS": 1935,
+        "SIDEDEFS": 2908,
+        "VERTEXES": 1821,
+        "SEGS": 3164,
+        "SSECTORS": 913,
+        "NODES": 912,
+        "SECTORS": 297
+      },
+      "geometrySha256": "40fe5914f305ec8e1f5ae839d25d1a467f89cbad18b896ec7847bae4dc21339b",
+      "thingsSha256": "8876302ca5d92c940ab49e6b50c9bd3ea732bc37277891fa2b94000b20721927",
+      "blockmapSha256": "ef3a512a32170b318e9eeddbb6694ecec47cdfde5130c2a7401ad91bfe80cc50",
+      "rejectSha256": "1f7e702965fc5c64585434f73613cd4e240d58fe39850e2eac8e7ee4b113f234",
+      "tenRawLumpsExact": true,
+      "transaction": "0x9f1cecd2ce9960e9c8708ecfdb29a9b0aece7a80e055ad341f1ddc9ad1c0c7db",
+      "transactionGas": 410909967,
+      "initGas": 47204473,
+      "mapGas": 198659953,
+      "callAndReceiptMs": 575.9417080000057,
+      "calldataBytes": 360196
+    }
+  ],
+  "otherEpisodeRejected": {
+    "transaction": "0x839e15eedee46f138ccb25739e8c4bd196ffd37bfe639a8e8f56ff4e31931850",
+    "status": "0x0",
+    "logs": 0
+  },
+  "sourceSha256": {
+    "src/support/EpisodeResourcesProbe.sol": "f63c53e36ed4d9d61d8abbf8bda5ee29616ad3d31b72578b037b8401e85e6437",
+    "src/doom/r_data.sol": "5b404d561f8bce538e8a8221b4f36d62c9b9826fc833307640d96fcbfdca2d0a",
+    "src/doom/r_data_types.sol": "0448302d68447c8a5a4c46df4016e8845863e42bf6eaca8bcab8ab0c9707fdf8",
+    "src/doom/r_defs.sol": "558d5a9bfd131e816bbe28986e2dad6144a08e5a16ccfed1b199d7558a1ea0e2",
+    "src/evm/ResourceStore.sol": "5ab3acc5d09f155a4cf25973c847f23e47f386a364704b76996c86be5862e3a8",
+    "tools/reference/episode/evm.mjs": "ab13518c0706792c7b180e9696fbcdc07639e0534e323e9c76b63ec9fe1384c0",
+    "tools/wad/episode.ts": "70c17afe32d0c0d3f24de2bc75133bc43e4e971401d30509594a1c4bed5a3263",
+    "tools/wad/wad.ts": "5180c179fe2b5deddfb1f11557f82e94449f6c184dc11189611bc517976307f7",
+    "schemas/episode-resources-v1.schema.json": "0290193f27d3f22318fe0cde21c69ef93ae977fe581fa202c5e4b7d22e54b8cd",
+    "foundry.toml": "afe04c66f0e684b5a936821f6543605a3739f62164ceb4398426db7403452393",
+    "execution-budget.json": "acde01f1b9cf248f9265f1ffcff7181d01d77620a2dfcd9a4d4d0b1c79df2be7",
+    "test/fixtures/phase4_episode/native.json": "a68db308c4a66c4ad6f07df81c32547590d738ddbfe1e4579ca708adb5666af5",
+    "artifacts/phase4/episode-native-comparison.json": "a19cd4c7645e7b8613930a47117881dca33a6459c0fe4c1756efe52f02f6788a"
+  },
+  "notes": [
+    "Full original shared blob deployed once by ordinary CREATE; all STOP-prefixed runtime bytes verified. No etch/setCode, production adapter modifications or compiler changes.",
+    "Every map transaction invokes existing lazy resource initialization and R_LoadMap, then compares all geometry fields/THINGS and signed BLOCKMAP words/REJECT bytes with native hashes.",
+    "ResourceView is supplied as calldata. Receipt gas includes calldata, decoding, lazy init, map loading, checksum serialization and event emission. It is not the production storage-backed startup cost.",
+    "initGas and mapGas are gasleft deltas around existing resource operations. Wall timings include RPC/client/mining and a preceding eth_call.",
+    "Resource validation and host identity checking precede deployment. This support probe is not an on-chain WAD authentication or level-loading integration."
+  ]
+}

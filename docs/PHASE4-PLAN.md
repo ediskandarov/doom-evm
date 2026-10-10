@@ -1,5 +1,11 @@
 # Phase 4 progress ledger
 
+Current integration: **Wave2 source Goals4.4 (Cheats),4.5 (Automap) and4.7a
+(Episode resources) are integrated and verified within module/support scope.**
+Production integration remains pending. The newest Wave2 checkpoint below is
+authoritative; feature handoffs and their earlier no-merge/stop boundaries are
+retained as historical records.
+
 ## Goal 4.7a — Episode One resources (complete)
 
 Current user-defined milestone: prepare and verify all E1M1–E1M9 resources.
@@ -607,3 +613,134 @@ The following metadata-only commit records closure without changing verified
 source, fixtures or proof bindings. All dedicated and affected checks passed,
 the feature worktree is clean at handoff, no merge/push to main occurred, and no
 later goal starts. Stop after Goal 4.4.
+
+
+## Phase 4 Wave 2 — Verified source integration (2026-10-10)
+
+Scope: source integration of completed Goals4.4,4.5 and4.7a, preserving feature
+history/tests/reports/evidence. No production adapter wiring, level gameplay
+loading/progression, Intermission or new gameplay functionality is implemented.
+These source/module results do **not** accept production functionality.
+
+Goal start2026-10-10T10:55:10Z. Clean main and refreshed origin/main matched
+`d9d00e6558a392fad810c903a2b7acd983712402`. Previous Status/HUD/Gameflow integration
+was complete and published (`9f98ed1` and prior merges); Astra audit and Video
+Primitives are retained. Only the designated main worktree was modified.
+
+Instruction-only commit **8baa7b78de7a9fd21c25b412a641e3fc01df4725** separately
+adds One Goal / One Worktree / One Owner and independent runtime ownership to
+AGENTS.md. Original feature messages/history were not rewritten; every new
+instruction, merge and publication commit follows Gitmoji.
+
+| Goal | Implementation | Integration | Verification | Source commits | Integration commit | Deferred / production dependency |
+|---|---|---|---|---|---|---|
+| 4.4 Cheats | Complete original supported recognition/effects | Source integrated | Original69-test gate covered in combined run;4,196 native event snapshots,793 primitives,15 ST/HU presentation checkpoints;491 ordinary snapshots/254 input transactions pass | `1eeed58`, `939ea99`, `9b5f50a` | `b5a857f95d520f0040dcfb02b192d5e8d17b4b7d` | Authenticated raw events, atomic parser/player/flow persistence, unified IDDT ownership, actual IDCLEV loading |
+| 4.5 Automap | Complete original geometry/state/drawing | Source integrated | All19 focused tests covered;383 native snapshots/22 scenarios;22 ordinary Frames and rollback pass | `728fa25`, `266d926` | `01fa1993310458a6975348b678c9711428f99ff9` | Live AMWorld projection, state/event notifications, markers, renderer discovery flags and production composition |
+| 4.7a Episode resources | Complete E1M1–E1M9 packaging/authentication | Source/schema integrated | 69 Node tests,4 focused resource tests,3 native profiles,9 mined map proofs and1,755 exact resource runtimes pass | `b6debb2`, `ceb35b8` | `d9bc0e57f633cc816403489326e283826f89a14d` | Synchronous P_SetupLevel, native zone/thinker/collision reset, gameplay spawning and resource-backed transitions |
+
+All three workstreams share accepted baseline9f98ed1. The merges were sequential
+and preserved all seven original feature commits as ancestors. No conflicts
+occurred; Git auto-merged the shared ledger additions. The prior ledger body,
+original Cheats append and Episode Resources handoff are retained verbatim.
+All feature files except that combined ledger match their branch tips exactly.
+All1,622 protected baseline files are unchanged. Only AGENTS.md, this ledger and
+tools/wad/README.md differ among pre-existing files; the README is the exact
+resource-branch addition. Existing source, tests, fixtures, schemas, production
+adapters/browser/configuration and historical acceptance evidence remain exact.
+
+### Executed verification
+
+- **138 Foundry tests pass,0 fail/skip**:134 across21 focused suites covering
+  Cheats69, Automap19 and affected Gameflow/video/ST/HU/player/lifecycle/resource/
+  RNG/Frame dependencies, then4 targeted R_Data tests. The three unchanged fuzz
+  tests run256 cases each with seed0x434844. The integrated108-file compile uses
+  pinned Solc0.8.37/viaIR/optimizer200/Cancun, reported220.45s. The additional
+  resource test root compiles in5.88s. All three support probes and ResourceStore
+  build from that cache. Warnings remain warnings; no settings/assertions change.
+- **69 Node tests pass,0 fail/skip**:51 inherited WAD cases plus18 Episode cases.
+  An initial run had68 pass/1 failure because its fixed local oracle directory
+  lacked generated native inputs. The validated38 oracle outputs were copied
+  only into missing paths, with existing-file identity checked; no tests or
+  tracked fixtures were modified. The first log is retained separately, and
+  the unchanged suite reran successfully.
+- Native rebuild/check: Cheats150 scenarios/4,196 snapshots and793 primitives;
+  15 status/HUD native pixel/palette checkpoints; Automap22 scenarios/383 state
+  and full-frame snapshots; all nine maps under three declared C profiles.
+  New disk/native comparison is byte-identical to the original resource report.
+  Existing native-profile adaptations/exclusions remain documented unchanged.
+- Strict Episode v1 catalog/schema verification, repeated pack exactness, each
+  map descriptor and raw lump checks, plus the legacy pack checker pass. The
+  canonical catalog, v0 shared28,741,889-byte bundle, palette identity, original
+  directory indices and map-relative ABI remain unchanged. Catalog/schema
+  shape alone is not authentication; full identity/regeneration checks remain.
+- Fresh ordinary EVM gates: Cheats491 native snapshots/254 input transactions
+  with storage, mined rollback/retry and duplicate rejection; Automap22 frozen
+  Frame receipts/383 snapshots, bottom32 preservation and malformed rollback;
+  Episode1,755 ordinary resource CREATEs with exact STOP-prefixed runtime bytes,
+  nine native-equal geometry/THINGS/BLOCKMAP/REJECT map receipts and mined E2M1
+  rejection. These are support-consumer proofs, not production E2E or gameplay
+  startup. Receipt gas includes decoding/setup/hash/events; no production cost
+  or new timing estimate is inferred.
+
+Runtimes use fresh ports18941,18945,18947, refuse occupied ports and terminate
+only their own children. All runners completed cleanup. The playground ports
+18880/8088 and all pre-existing Anvil instances were not used or modified.
+Original branch certificate generators retain isolated-branch ownership guards;
+they were not changed or rerun to overwrite historical evidence. Source/fixture/
+compiler bindings and original certificates were checked directly instead.
+
+New evidence: [Wave2 certificate](../artifacts/phase4/wave2/integration.json),
+[Cheats receipts](../artifacts/phase4/wave2/cheats-evm.json),
+[Automap receipts](../artifacts/phase4/wave2/automap-evm.json),
+[Episode receipts](../artifacts/phase4/wave2/episode-evm.json).
+Original handoffs [Cheats](PHASE4-CHEATS.md), [Automap](PHASE4-AUTOMAP.md) and
+[Episode Resources](PHASE4-EPISODE-RESOURCES.md), all feature certificates and
+source maps, earlier Phase4 evidence and the memory audit remain unchanged.
+
+### Required production APIs and integration decisions
+
+1. Persist CheatState, AutomapState, STState, HudState, GameState/GameflowState
+   and mutable difficulty definitions atomically; rebind hooks/live memory
+   views after loading. Cheat cursors/sequences survive death, map changes and
+   ST/HU/AM lifecycle. Failed downstream setup must roll back requests, parser,
+   messages, mutations and input sequence together.
+2. Route original authenticated events once, in HUD -> status/cheats -> AM ->
+   ordinary keyboard order. Held-key bitmaps cannot replace raw cheat events.
+   **IDDT ownership must be resolved before production:** AM_Responder already
+   updates AutomapState.cheatPos/cheating; the standalone ST_Cheats AM helper
+   maintains a second parser/reveal state. Use one authoritative event/state
+   path, preserving entered-active-branch/deathmatch/TAB semantics; do not
+   independently route/update two divergent owners. This wave changes neither
+   verified implementation and claims no combined production routing proof.
+3. Build a live AMWorld from original ordered linedefs/vertices, current
+   ML_MAPPED flags, sector heights, players/powers and sector/snext thing order.
+   Synchronize AM/flow active/view flags, selected-player messages, marker
+   load/unload requests and raw ST notifications after each event. Preserve
+   the original malformed AM_Stop notification initializer; any deliberate
+   adapter interpretation needs explicit fidelity tests, not oracle edits.
+4. Own AMMNUM0..9 resources and render AM into upper168 rows of the existing
+   full64,000-byte framebuffer, then compose status/HUD without changing Frame
+   ABI. Palette/gamma browser transport and persistence remain separate work.
+5. Verify catalog and source identity, construct the existing v0 ResourceView
+   and select geometry by marker-relative lump IDs. Episode descriptors do
+   not encode gameplay state, spawning, next maps or secret exits. A later
+   loader must finish synchronous P_SetupLevel with native zone/thinker/
+   collision reset and refreshed context aliases; reject unsupported IDCLEV
+   selections atomically rather than substituting E1M1.
+
+### Deferred checks and suggested next order
+
+Full inherited Phase0–3 regression, final Phase4 acceptance, production browser/
+Frame readback, direct combined Cheat/AM routing, actual nine-map gameplay
+startup/restart, production IDCLEV, level progression/secret-exit routes and
+Intermission/Finale remain unexecuted. Native-source and support-probe acceptance
+must not be relabeled as any of those production claims.
+
+Suggested separate goals: (1) production adapter foundation for atomic Gameflow/
+ST/HU state, hooks, view/palette composition and raw-event contract; (2) resource-
+backed synchronous multi-map gameplay loading/rollback, then Cheats/Automap
+routing with one IDDT owner and live-world projection; (3) progression/secret
+exits plus Intermission/Finale, followed by full regression/production E2E.
+No blocker remains for this source merge. The commit containing this checkpoint
+and certificate is integration-specific publication. Stop after normal push,
+clean main and origin/main synchronization; no later goal starts automatically.

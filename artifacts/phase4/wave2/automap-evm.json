@@ -1,0 +1,256 @@
+{
+  "schemaVersion": 1,
+  "goal": "4.5",
+  "pass": true,
+  "kind": "ordinary isolated Anvil CREATE and automap Frame receipts",
+  "productionAdaptersModified": false,
+  "rpcPort": 18945,
+  "gasBudget": 10000000000,
+  "compiler": {
+    "version": "0.8.37+commit.f401782d",
+    "settings": {
+      "remappings": [],
+      "optimizer": {
+        "enabled": true,
+        "runs": 200
+      },
+      "metadata": {
+        "bytecodeHash": "ipfs"
+      },
+      "compilationTarget": {
+        "src/support/AutomapProbe.sol": "AutomapProbe"
+      },
+      "evmVersion": "cancun",
+      "libraries": {},
+      "viaIR": true
+    }
+  },
+  "contract": "0x5fbdb2315678afecb367f032d93f642f64180aa3",
+  "creationTransaction": "0x975fddd309d3ed059b92c7888082d8bff8a27f85ff92e4df5b365e83ba92622b",
+  "deploymentGas": 16609686,
+  "runtimeBytes": 77148,
+  "runtimeSha256": "cdb3bcae897514c5138b62e57b9f278c40afd604e987e32479468af378ff9efa",
+  "nativeCases": 22,
+  "statesCompared": 383,
+  "rows": [
+    {
+      "case": "walls-discovery-allmap-cheat-cycle",
+      "transaction": "0x067f1c4802dd41b919527985ab2631f6e4eca44a8dd61295bb8aad5f48b65e8a",
+      "status": "0x1",
+      "gasUsed": 33458559,
+      "statesCompared": 22,
+      "frameSha256": "4008f1dcaa6a1b143d29f46427e5f905f095669026a8d7969c25c22aad0d6297",
+      "pixels": 64000
+    },
+    {
+      "case": "pan-zoom-follow",
+      "transaction": "0xbd85ecae6ceb7676234a591a36305759a6b0b218ee4661e74f66cfdd85c3d3aa",
+      "status": "0x1",
+      "gasUsed": 31708433,
+      "statesCompared": 24,
+      "frameSha256": "892d3acef4398a638e8d423a1a328ebdb45d0f41f165da58681409572172ae41",
+      "pixels": 64000
+    },
+    {
+      "case": "clamps-big-restore-and-reopen",
+      "transaction": "0x3e30c6476e346c7ec637bd1b4563bdcb5f27933603caddc666a696f70b90149e",
+      "status": "0x1",
+      "gasUsed": 33755735,
+      "statesCompared": 29,
+      "frameSha256": "751fbaa16f1214dbd441395c6e59c0bdca4c248a304b8546087a4b8699399c3e",
+      "pixels": 64000
+    },
+    {
+      "case": "grid-negative-origin-marks",
+      "transaction": "0x7186e0035b5731377e7328d3c0027820bf0beffa72e3a23d3f5347f9549c5905",
+      "status": "0x1",
+      "gasUsed": 48565539,
+      "statesCompared": 55,
+      "frameSha256": "5108d08ed80bcd7908f11ce6cf7e3392c3bb72bfdc16ab272e1f4158a1e877a3",
+      "pixels": 64000
+    },
+    {
+      "case": "follow-stationary-zoom-restore",
+      "transaction": "0xefd53c9e266a73a880bed61004efaca47011f9aa0067c4abbda91b8224768cfb",
+      "status": "0x1",
+      "gasUsed": 30890496,
+      "statesCompared": 16,
+      "frameSha256": "5e8d05d3e63806172f3a606e0a80bf26517db04f9cfe21502e4295b02c47dcb4",
+      "pixels": 64000
+    },
+    {
+      "case": "cheat-mismatch-event-and-deathmatch",
+      "transaction": "0x1c8fa7d62bd90c1243bbf96e02e4c83ec24679dc9db4dcff129bcf97f28af3e0",
+      "status": "0x1",
+      "gasUsed": 34143779,
+      "statesCompared": 27,
+      "frameSha256": "49736ed0af528df5aa3b47e6c75e9c3c12e112d8d569082b33f4e86b1587c211",
+      "pixels": 64000
+    },
+    {
+      "case": "fallback-player",
+      "transaction": "0xbb55ee845e599dd8ba3bdf33633e695dac9e5f6bb73d8f6cc9d25848dfda1c7c",
+      "status": "0x1",
+      "gasUsed": 30365789,
+      "statesCompared": 9,
+      "frameSha256": "c0fac49d0c691723798eccc142c41b2ef33df5222895648e640f89306115b4ea",
+      "pixels": 64000
+    },
+    {
+      "case": "mark-edge-and-sentinel",
+      "transaction": "0x2b58421370a564906287db5384f47b0cff529a848af310af9f16d11e4965789d",
+      "status": "0x1",
+      "gasUsed": 28958548,
+      "statesCompared": 9,
+      "frameSha256": "219be08c77820d84fc718dae21c0969b2fe6512a1b55381bc8aa8238e9dfe964",
+      "pixels": 64000
+    },
+    {
+      "case": "rotation-0",
+      "transaction": "0xa80af355187c6e7d0729d698767579e10de926ec9aacab81961b28b963d9f6a4",
+      "status": "0x1",
+      "gasUsed": 31071616,
+      "statesCompared": 14,
+      "frameSha256": "d5e027c16921db9d2fa16be6ece8f95df1ae94f12fd39c7774e3bcf424c9b0e7",
+      "pixels": 64000
+    },
+    {
+      "case": "rotation-1",
+      "transaction": "0x1f3cb33f0a1bdff383083302d1857a364d41784bad04ec43c75e99dae0bcf9b7",
+      "status": "0x1",
+      "gasUsed": 31166234,
+      "statesCompared": 14,
+      "frameSha256": "a8e5dd316c88af647d4142c8ad1ea82be1db9e17fdb7319a224c3b61cbdc9446",
+      "pixels": 64000
+    },
+    {
+      "case": "rotation-2",
+      "transaction": "0x543b22792d0e3478896d861234ee493b35ae87f40c26dc9d94547728b3b94d81",
+      "status": "0x1",
+      "gasUsed": 31281988,
+      "statesCompared": 14,
+      "frameSha256": "4334cc510c19d079d422164a260e34796482f5e842219368292a81a4f256bd31",
+      "pixels": 64000
+    },
+    {
+      "case": "rotation-3",
+      "transaction": "0x388fcb984274ab94a02eea1ed36b2e55fa3c61b92f15062181a539d5cf8601a0",
+      "status": "0x1",
+      "gasUsed": 31179928,
+      "statesCompared": 14,
+      "frameSha256": "42943fadbca9066928b9ca5a612ce2a1439d495f6ab5a6c1c073ff5695f4f27e",
+      "pixels": 64000
+    },
+    {
+      "case": "rotation-4",
+      "transaction": "0x9127742f135c8c96b594cf246a89774bcf71d65615f1d626b0a4e55efb5ba3f5",
+      "status": "0x1",
+      "gasUsed": 31195472,
+      "statesCompared": 14,
+      "frameSha256": "57063eaa037fb39e9bb61ae9d0d009e21d66f9c1fff7e403b970d15d16a94c2c",
+      "pixels": 64000
+    },
+    {
+      "case": "rotation-5",
+      "transaction": "0xe2be1d17ff243dc85dd44bbd239e0019c6a2b76d0064de0e94fe1dd5921da6f7",
+      "status": "0x1",
+      "gasUsed": 31221254,
+      "statesCompared": 14,
+      "frameSha256": "f28ceaf37511097c8f8e4a12bef3e5ab91a3727d2501e1bcf41d6fe242becb5f",
+      "pixels": 64000
+    },
+    {
+      "case": "rotation-6",
+      "transaction": "0x9f3cb293850c41d77e01889af686e0e90c436e1671b40cdca79522775dbf55b8",
+      "status": "0x1",
+      "gasUsed": 31250294,
+      "statesCompared": 14,
+      "frameSha256": "cf8ed4d84b21eee9224c57c608862510503c8d5e46245f42d94391fcc93f9176",
+      "pixels": 64000
+    },
+    {
+      "case": "rotation-7",
+      "transaction": "0x273c019cf611a540c2dd2a7f24d8b0b41e0fd879d70077a57817c0f5e21602e2",
+      "status": "0x1",
+      "gasUsed": 31378445,
+      "statesCompared": 14,
+      "frameSha256": "43c6da8cabc8e99c46885076d414ae798ef5fb4789403a8d20b065a4ac7fb548",
+      "pixels": 64000
+    },
+    {
+      "case": "rotation-8",
+      "transaction": "0x97b3999c25f1bc1faf734348cb9dad554a6b620b3b9ef7b2d19a76d0e0240cfa",
+      "status": "0x1",
+      "gasUsed": 31200095,
+      "statesCompared": 14,
+      "frameSha256": "cce7b98347bff2285da02fae7491a64f33989fdad10b516fd53d7043e3f259db",
+      "pixels": 64000
+    },
+    {
+      "case": "clip-octants-boundaries",
+      "transaction": "0x47ed6096ec96b511bd663bfb90edd4ac1cfec2ba072ba37422251badc008f8b8",
+      "status": "0x1",
+      "gasUsed": 31177325,
+      "statesCompared": 7,
+      "frameSha256": "aff1c5238de6ba3f6b29d6309cf6a97232fed63dba65dcf87fa975cb650d1eb2",
+      "pixels": 64000
+    },
+    {
+      "case": "e1m1-discovered-grid-allmap-cheats",
+      "transaction": "0xdcc6e0ae293afeee171f04d68daaa7b6ee6bcc1b59fea94e454a170de0b32c21",
+      "status": "0x1",
+      "gasUsed": 140831313,
+      "statesCompared": 21,
+      "frameSha256": "f45bba124cee8803425fa690c4b7ca7eacf1acb802f4f458da78a31939d6d124",
+      "pixels": 64000
+    },
+    {
+      "case": "random-fixed-coordinate-clipping",
+      "transaction": "0xff86de6b933b90dafef9e6e0caae3e90327f18ab03220e4c587bf88d49d5fa1b",
+      "status": "0x1",
+      "gasUsed": 38055650,
+      "statesCompared": 7,
+      "frameSha256": "ec01f492014b7eedb7d2920f685e7ae9b2284619495b8d14ae4985bd5c7db0c1",
+      "pixels": 64000
+    },
+    {
+      "case": "original-slope-and-light-helpers",
+      "transaction": "0xfb15c7b24dff1dd82debdb9410d1022bb34dd57c33eaf7ac45c5c52b16604c2b",
+      "status": "0x1",
+      "gasUsed": 30658483,
+      "statesCompared": 27,
+      "frameSha256": "d227b8570a52d082063f59cbbc42ff6dc82536642376b517f3a1997c086870ab",
+      "pixels": 64000
+    },
+    {
+      "case": "boundary-vertex-order",
+      "transaction": "0xc1714acb7629306480e30602c7f57f68ecbd072f11daf13ad2e3792bc99ad117",
+      "status": "0x1",
+      "gasUsed": 28748138,
+      "statesCompared": 4,
+      "frameSha256": "8d785f58cc6793f7750effe250df0143911f50473907218f9b5392eb8a9e8d1c",
+      "pixels": 64000
+    }
+  ],
+  "rollback": {
+    "transaction": "0x797af2b64c4c68b2bedb53e706882da8d7c51c1c43b5aa53e3d7eff08d3414d5",
+    "status": "0x0",
+    "logs": 0,
+    "counterUnchanged": true,
+    "gasUsed": 47860
+  },
+  "sourceSha256": {
+    "src/doom/am_map.sol": "3c5da949fc635d095659d4333d153408499e89e4178b469cb335e31cf52f6020",
+    "src/doom/am_map_types.sol": "7347073682c367c15c918aa51ff924c664b6d05efdbf4f0392d4f404b31a9039",
+    "src/support/AutomapFixture.sol": "fb1ebf9df83871de40924df81fdf00f513462399209255aaa299684e5d4f2040",
+    "src/support/AutomapProbe.sol": "455d5e04e4a1f6dad454a0e55324ad5e616ad071609b5eae1e7f36ac3840f8d0",
+    "src/doom/v_video.sol": "be75fe69e7cd2486ce93408ec204cdf470ea097569e37fbedd867e9a2f3adf1f",
+    "src/doom/tables.sol": "bf14202b419075f6d187653205a37e211d8267c7fc4c0bebf5a8c5713afddf38",
+    "foundry.toml": "afe04c66f0e684b5a936821f6543605a3739f62164ceb4398426db7403452393",
+    "execution-budget.json": "acde01f1b9cf248f9265f1ffcff7181d01d77620a2dfcd9a4d4d0b1c79df2be7",
+    "tools/reference/automap/evm.mjs": "92b60e3a67646b67eb87681dacd5f821b083c5aa0d43aac16b9b6b5a1c35508e",
+    "test/fixtures/phase4_automap/cases.bin": "d57ec9d6d3510766b799f2d6ed85e751acc27ce6cac138b2f4c7094f3c9d47db",
+    "test/fixtures/phase4_automap/native.json": "8490d6f7a61cbf7d06f1dda4128e4208ca2dfb68f88dae266e3aeff4f7e47406",
+    "web/protocol.mjs": "fec5104a0e13b7ca8666200431a1804d53cdb6537c1f0f8f02fb5b69dd70f47e"
+  }
+}
