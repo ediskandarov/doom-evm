@@ -1,0 +1,263 @@
+{
+  "goal": "4.2",
+  "upstreamCommit": "a77dfb96cb91780ca334d0d4cfd86957558007e0",
+  "functions": [
+    {
+      "function": "STlib_init",
+      "solidity": "src/doom/st_lib.sol",
+      "solidityLine": 44,
+      "native": "original/DOOM/linuxdoom-1.10/st_lib.c",
+      "nativeLine": 58,
+      "nativeSpanSha256": "e98047449211cd4ee9df1d307712593ed2c50ba577d0ef4452b60010363ad892",
+      "scope": "status-bar function; documented context/resource adapters"
+    },
+    {
+      "function": "STlib_initNum",
+      "solidity": "src/doom/st_lib.sol",
+      "solidityLine": 48,
+      "native": "original/DOOM/linuxdoom-1.10/st_lib.c",
+      "nativeLine": 66,
+      "nativeSpanSha256": "0e4c50fc6ccd082b7dd50dd0e62db7609d0f7582104974afe12faf63d98b8083",
+      "scope": "status-bar function; documented context/resource adapters"
+    },
+    {
+      "function": "STlib_drawNum",
+      "solidity": "src/doom/st_lib.sol",
+      "solidityLine": 59,
+      "native": "original/DOOM/linuxdoom-1.10/st_lib.c",
+      "nativeLine": 91,
+      "nativeSpanSha256": "b7ede2a20db30974df93a5aa58a6bf9f181325ba569d72a976b3cddba2bbc22a",
+      "scope": "status-bar function; documented context/resource adapters"
+    },
+    {
+      "function": "STlib_updateNum",
+      "solidity": "src/doom/st_lib.sol",
+      "solidityLine": 89,
+      "native": "original/DOOM/linuxdoom-1.10/st_lib.c",
+      "nativeLine": 153,
+      "nativeSpanSha256": "06602462c8d51fd4da5a169d9da19a88d8351aad6e597b38894ef955cce558d0",
+      "scope": "status-bar function; documented context/resource adapters"
+    },
+    {
+      "function": "STlib_initPercent",
+      "solidity": "src/doom/st_lib.sol",
+      "solidityLine": 101,
+      "native": "original/DOOM/linuxdoom-1.10/st_lib.c",
+      "nativeLine": 163,
+      "nativeSpanSha256": "4337dc09146448933dc74beea82a84eb7bbf669462bcd9df3dfb46474c43f3d2",
+      "scope": "status-bar function; documented context/resource adapters"
+    },
+    {
+      "function": "STlib_updatePercent",
+      "solidity": "src/doom/st_lib.sol",
+      "solidityLine": 109,
+      "native": "original/DOOM/linuxdoom-1.10/st_lib.c",
+      "nativeLine": 180,
+      "nativeSpanSha256": "51ff2f25ca343549ed078326f8e67051d6c3357c91cd09e2fc818f60ee5f8603",
+      "scope": "status-bar function; documented context/resource adapters"
+    },
+    {
+      "function": "STlib_initMultIcon",
+      "solidity": "src/doom/st_lib.sol",
+      "solidityLine": 121,
+      "native": "original/DOOM/linuxdoom-1.10/st_lib.c",
+      "nativeLine": 193,
+      "nativeSpanSha256": "af51c150779a6132b2b75eab1be127f670e8a05a6a35816cba571eac1846083b",
+      "scope": "status-bar function; documented context/resource adapters"
+    },
+    {
+      "function": "STlib_updateMultIcon",
+      "solidity": "src/doom/st_lib.sol",
+      "solidityLine": 128,
+      "native": "original/DOOM/linuxdoom-1.10/st_lib.c",
+      "nativeLine": 212,
+      "nativeSpanSha256": "06c9492a6d3c328dee7b537258d51b3456941a0c44aa210e066ff3c02c33ae7e",
+      "scope": "status-bar function; documented context/resource adapters"
+    },
+    {
+      "function": "STlib_initBinIcon",
+      "solidity": "src/doom/st_lib.sol",
+      "solidityLine": 143,
+      "native": "original/DOOM/linuxdoom-1.10/st_lib.c",
+      "nativeLine": 245,
+      "nativeSpanSha256": "14ed20037ff554c2f0e49f6e5a660d3a92acaa3db3c15341e5d2b73ea3af53ad",
+      "scope": "status-bar function; documented context/resource adapters"
+    },
+    {
+      "function": "STlib_updateBinIcon",
+      "solidity": "src/doom/st_lib.sol",
+      "solidityLine": 150,
+      "native": "original/DOOM/linuxdoom-1.10/st_lib.c",
+      "nativeLine": 264,
+      "nativeSpanSha256": "53959337adb24166e09a8a04b1a2017ca74418fa7881172def6b246695baed02",
+      "scope": "status-bar function; documented context/resource adapters"
+    },
+    {
+      "function": "ST_Init",
+      "solidity": "src/doom/st_stuff.sol",
+      "solidityLine": 80,
+      "native": "original/DOOM/linuxdoom-1.10/st_stuff.c",
+      "nativeLine": 1466,
+      "nativeSpanSha256": "ea7a4b4f76b88f5080b7d75e6db996028a773edebbad3a4da33f25fe7ceb5b49",
+      "scope": "status-bar function; documented context/resource adapters"
+    },
+    {
+      "function": "ST_loadData",
+      "solidity": "src/doom/st_stuff.sol",
+      "solidityLine": 107,
+      "native": "original/DOOM/linuxdoom-1.10/st_stuff.c",
+      "nativeLine": 1201,
+      "nativeSpanSha256": "d190dbd95042d211c7ec131590cf8d040d60920437a2b06a9a43920fabc884f7",
+      "scope": "status-bar function; documented context/resource adapters"
+    },
+    {
+      "function": "ST_loadGraphics",
+      "solidity": "src/doom/st_stuff.sol",
+      "solidityLine": 112,
+      "native": "original/DOOM/linuxdoom-1.10/st_stuff.c",
+      "nativeLine": 1124,
+      "nativeSpanSha256": "0f4ba7d667537ef3e64464d92720616ee06162c1bde24a1b4503bba20d975a15",
+      "scope": "status-bar function; documented context/resource adapters"
+    },
+    {
+      "function": "ST_initData",
+      "solidity": "src/doom/st_stuff.sol",
+      "solidityLine": 150,
+      "native": "original/DOOM/linuxdoom-1.10/st_stuff.c",
+      "nativeLine": 1249,
+      "nativeSpanSha256": "7b9268a951dcdedc9be7655f980725ceac6b57c67f38663ad0a600773a7792a6",
+      "scope": "status-bar function; documented context/resource adapters"
+    },
+    {
+      "function": "ST_createWidgets",
+      "solidity": "src/doom/st_stuff.sol",
+      "solidityLine": 172,
+      "native": "original/DOOM/linuxdoom-1.10/st_stuff.c",
+      "nativeLine": 1282,
+      "nativeSpanSha256": "dcfa0e9bc4f166b31847cf46958cc48b3915bd1a414d87b2698244e192827891",
+      "scope": "status-bar function; documented context/resource adapters"
+    },
+    {
+      "function": "ST_Start",
+      "solidity": "src/doom/st_stuff.sol",
+      "solidityLine": 203,
+      "native": "original/DOOM/linuxdoom-1.10/st_stuff.c",
+      "nativeLine": 1444,
+      "nativeSpanSha256": "fceee5ba95c30b0e7214854bfa54060463d2d7e224f7f8e7c48aa9eb5bcc5709",
+      "scope": "status-bar function; documented context/resource adapters"
+    },
+    {
+      "function": "ST_Stop",
+      "solidity": "src/doom/st_stuff.sol",
+      "solidityLine": 213,
+      "native": "original/DOOM/linuxdoom-1.10/st_stuff.c",
+      "nativeLine": 1456,
+      "nativeSpanSha256": "26910143a1cbe7d146e19d47909e580f9039aa7f2903a44295e92763cbd4a0ca",
+      "scope": "status-bar function; documented context/resource adapters"
+    },
+    {
+      "function": "ST_calcPainOffset",
+      "solidity": "src/doom/st_stuff.sol",
+      "solidityLine": 220,
+      "native": "original/DOOM/linuxdoom-1.10/st_stuff.c",
+      "nativeLine": 729,
+      "nativeSpanSha256": "e3e40d3f7597e1817d633c65d16399553431e8d1343ee2c99edd5007b86f9a50",
+      "scope": "status-bar function; documented context/resource adapters"
+    },
+    {
+      "function": "ST_updateFaceWidget",
+      "solidity": "src/doom/st_stuff.sol",
+      "solidityLine": 229,
+      "native": "original/DOOM/linuxdoom-1.10/st_stuff.c",
+      "nativeLine": 752,
+      "nativeSpanSha256": "d98bb6b108c6bb7295c41f2ab97643f36b80b4121a58b64e452ea31a98b6c842",
+      "scope": "status-bar function; documented context/resource adapters"
+    },
+    {
+      "function": "ST_updateWidgets",
+      "solidity": "src/doom/st_stuff.sol",
+      "solidityLine": 319,
+      "native": "original/DOOM/linuxdoom-1.10/st_stuff.c",
+      "nativeLine": 924,
+      "nativeSpanSha256": "5ee51441e7c77c3864371e925ce1c95f61fac49affbe7fa1aef3cd056ad59c87",
+      "scope": "status-bar function; documented context/resource adapters"
+    },
+    {
+      "function": "ST_Ticker",
+      "solidity": "src/doom/st_stuff.sol",
+      "solidityLine": 341,
+      "native": "original/DOOM/linuxdoom-1.10/st_stuff.c",
+      "nativeLine": 988,
+      "nativeSpanSha256": "326284bdc86b64a6b057e3ddf4041164b6a5e6d8d405efb9941610b50fb626b3",
+      "scope": "status-bar function; documented context/resource adapters"
+    },
+    {
+      "function": "ST_doPaletteStuff",
+      "solidity": "src/doom/st_stuff.sol",
+      "solidityLine": 350,
+      "native": "original/DOOM/linuxdoom-1.10/st_stuff.c",
+      "nativeLine": 1000,
+      "nativeSpanSha256": "31dd44d27a45cbcbf2f797c756054bf58a49ac29cee6f9dd84f861b414719277",
+      "scope": "status-bar function; documented context/resource adapters"
+    },
+    {
+      "function": "ST_refreshBackground",
+      "solidity": "src/doom/st_stuff.sol",
+      "solidityLine": 388,
+      "native": "original/DOOM/linuxdoom-1.10/st_stuff.c",
+      "nativeLine": 499,
+      "nativeSpanSha256": "21164ef27b7ff2ecafb403b9d702e9d27ac832191f28db1442f8880666aa7d25",
+      "scope": "status-bar function; documented context/resource adapters"
+    },
+    {
+      "function": "ST_drawWidgets",
+      "solidity": "src/doom/st_stuff.sol",
+      "solidityLine": 399,
+      "native": "original/DOOM/linuxdoom-1.10/st_stuff.c",
+      "nativeLine": 1054,
+      "nativeSpanSha256": "49de25f36ec1496fe8705f17356fee061d307122695122da5d15cd3f532197cd",
+      "scope": "status-bar function; documented context/resource adapters"
+    },
+    {
+      "function": "ST_doRefresh",
+      "solidity": "src/doom/st_stuff.sol",
+      "solidityLine": 433,
+      "native": "original/DOOM/linuxdoom-1.10/st_stuff.c",
+      "nativeLine": 1089,
+      "nativeSpanSha256": "acec9d2aaaf3268d335d73178c0d5b5985a0be8516e41a83e41f98df8f6e4bac",
+      "scope": "status-bar function; documented context/resource adapters"
+    },
+    {
+      "function": "ST_diffDraw",
+      "solidity": "src/doom/st_stuff.sol",
+      "solidityLine": 445,
+      "native": "original/DOOM/linuxdoom-1.10/st_stuff.c",
+      "nativeLine": 1102,
+      "nativeSpanSha256": "482b486fc99f658545af7aaa1f0d7cd4ffa864101e36303c7f4d4d914c54589b",
+      "scope": "status-bar function; documented context/resource adapters"
+    },
+    {
+      "function": "ST_Drawer",
+      "solidity": "src/doom/st_stuff.sol",
+      "solidityLine": 455,
+      "native": "original/DOOM/linuxdoom-1.10/st_stuff.c",
+      "nativeLine": 1108,
+      "nativeSpanSha256": "3431e1fc99fc96dfbc1a69891fb07805a48468a2be399cfc8c68f70f2513f68f",
+      "scope": "status-bar function; documented context/resource adapters"
+    },
+    {
+      "function": "ST_Responder",
+      "solidity": "src/doom/st_stuff.sol",
+      "solidityLine": 473,
+      "native": "original/DOOM/linuxdoom-1.10/st_stuff.c",
+      "nativeLine": 518,
+      "nativeSpanSha256": "dd4a049badf12b4c1ce09c045f9189ef9ad2a6de7b61ea2127c35384743f1ab0",
+      "scope": "automap status messages only; cheats deferred to4.4"
+    }
+  ],
+  "excludedFunctions": {
+    "ST_unloadGraphics": "Native zone retag only; caller owns immutable bytes. No shared allocator changes.",
+    "ST_unloadData": "Delegates native zone retag; no consumer API needed."
+  },
+  "palette": "Original st_stuff selection + all1280 v_video gamma bytes; i_video UploadNewPalette RGB8 channels, no X11 call."
+}

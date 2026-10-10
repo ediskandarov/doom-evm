@@ -1,0 +1,31 @@
+{
+  "profiles": [
+    {
+      "name": "O0",
+      "sha256": "a488cad77e69052be8b0463d04f35f6e3e20a4ba20ba6d770b2f0ac03b268cd2"
+    },
+    {
+      "name": "O2",
+      "sha256": "a488cad77e69052be8b0463d04f35f6e3e20a4ba20ba6d770b2f0ac03b268cd2"
+    },
+    {
+      "name": "sanitized",
+      "sha256": "a488cad77e69052be8b0463d04f35f6e3e20a4ba20ba6d770b2f0ac03b268cd2"
+    }
+  ],
+  "worldView": [
+    320,
+    168
+  ],
+  "frame": [
+    320,
+    200
+  ],
+  "barSource": "phase4_statusbar/inventory-0.frame",
+  "barSha256": "bf1bf1fa8de3a1676fa856bdbe1c5e9e7ffb787a7e8a56ff50612f60265a50b6",
+  "frameSha256": "14a18e2e73413f0ebd17185a66454c979bf9bd5155a787f658bf94e19b2e0de3",
+  "rendererBuilderSha256": "f699de7c8089962588d5a4d46ce314892e53d583a01dc4c6d315123b63a08918",
+  "originalHostSha256": "c6ed685b77767853ce8534b17f9c999573dddbb283e199dd5295143fe1b8eb4f",
+  "adaptedHostSha256": "62d4922b0cf63f227a0febb38623cae8e8554fe11ded6d303ecad14f712076a7",
+  "adaptation": "Host screenblocks=11 -> screenblocks=10; original R_ExecuteSetViewSize chooses 320x168. Original native status first-refresh bottom32 copied into complete native world frame. No gameplay ticks/world edits."
+}
