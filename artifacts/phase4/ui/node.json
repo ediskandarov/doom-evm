@@ -1,0 +1,17 @@
+{
+  "command": [
+    "node",
+    "--test",
+    "tools/transport/ui-palette.test.mjs",
+    "tools/transport/protocol.test.mjs",
+    "tools/transport/palette.test.mjs",
+    "tools/transport/lifecycle.test.mjs",
+    "web/input-loop.test.mjs",
+    "web/input-app.test.mjs",
+    "web/input.test.mjs",
+    "web/budget.test.mjs"
+  ],
+  "exitCode": 0,
+  "seconds": 0.8153190612792969,
+  "logSha256": "994b5e7c26789f45db3c37568dfd5122fbee6c86fdea289c10926858ff9cac28"
+}

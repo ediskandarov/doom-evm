@@ -1,0 +1,62 @@
+{
+  "kind": "original-production-ui-oracle",
+  "upstreamCommit": "a77dfb96cb91780ca334d0d4cfd86957558007e0",
+  "resourceIdentity": {
+    "schemaVersion": 0,
+    "wadSha256": "7323bcc168c5a45ff10749b339960e98314740a734c30d4b9f3337001f9e703d",
+    "bundleSha256": "d379076f21645cf7cc5acb056663d0faacc4065489a0ca99738479323c9f7a47",
+    "paletteSha256": "fd895921b5d0a394612bb29852ed003d44d69f76dec31c0dc6b5d5fc7d63f7bb",
+    "paletteVariant": 0
+  },
+  "tics": 210,
+  "profiles": [
+    "O0",
+    "O2",
+    "ASan/UBSan",
+    "ASan/UBSan allocation-fill0xa5"
+  ],
+  "keyboardExtraction": {
+    "file": "g_game.c",
+    "function": "G_BuildTiccmd",
+    "startLine": 237,
+    "endLine": 437,
+    "sha256": "59fcd9cdeef89c6abc5b8021b3caa2ed7c4d69ffc1fc8ee2a11b55c6073c94d1"
+  },
+  "sourceHashes": {
+    "tools/reference/ui/reference.py": "4a2a5f8a933652bc0b38d31ad6ed360122b52de45ac7c6faeca0154a90ed4b09"
+  },
+  "files": {
+    "build-manifest.json": "97b993bf228003124b73f8307edebe82acae5fb25bac43db72986d6aadf0301f",
+    "events.json": "72d7590400e03a7d5c22accbe616e4a624902ceda928232cbb0c6a29e95fe965",
+    "frame-000001.bin": "5cbda18c022ea2d48b88810a53d7a4c463f7f069bc5f48d53ede22e274dafdf8",
+    "frame-000020.bin": "17f4e09de10a24421bfc0c9577053c3090cc9522e0b86f44810a9e368bf37660",
+    "frame-000040.bin": "afb334785147745752bec58b1f3e34a4483545484876fc94b6b65a7d15134a7c",
+    "frame-000056.bin": "dbbbf47a5d8b6551c28f88c431ffb511fa9f8f90819ce078b57f6c6cc85e2985",
+    "frame-000064.bin": "bfb517e22fe992d952ff4bc4829ac90559b4f1193d3d1d374e747c5f7d4b0c6e",
+    "frame-000065.bin": "c2896f45a1cd402d95b84c3569d2a6c41ede3831414148e19f4eac7efcb4e8ee",
+    "frame-000070.bin": "e3b04f7b091b3d62d4c981358eaf08f3aedacdc5e7f7ab873c3b45252a3a621e",
+    "frame-000100.bin": "96aa7ecaab9f0488cfdb7af9b8fbe5e7229796aee408c001eb9de64be1783ec9",
+    "frame-000101.bin": "31226c4d25e8b657b287cd8bbac24e3494931dfc54b676df39b31cf8ee64fca5",
+    "frame-000125.bin": "72314bcbfcb2538940a5750f0a499ef762aa25d9d6b29ff07c88a5255106e9ad",
+    "frame-000203.bin": "2dcb785a94ac738ccf6aded456e618e0995acb474d2ff80bc00df41facfce031",
+    "frame-000204.bin": "7b688d3097402564b1066ad80beb9c844f9d51c5c9573b1c05876ed8a2b8583c",
+    "frame-000210.bin": "c9df2a59f97561b70f9845a1631774d6e82123806992fa4d3cf1a4b62575d816",
+    "packets.json": "22de27e4760e5fb3c65fdb4bb3a257a835806a1ef7500f055911142653f317f9",
+    "palette-000001.bin": "12bafa34214682ae20c2cb6f4e38f21575564de88c4599f3410661e9b7a5c6d3",
+    "palette-000020.bin": "12bafa34214682ae20c2cb6f4e38f21575564de88c4599f3410661e9b7a5c6d3",
+    "palette-000040.bin": "12bafa34214682ae20c2cb6f4e38f21575564de88c4599f3410661e9b7a5c6d3",
+    "palette-000056.bin": "12bafa34214682ae20c2cb6f4e38f21575564de88c4599f3410661e9b7a5c6d3",
+    "palette-000064.bin": "dfa5a88ca0357a87096a1f93c7c744cdec79e6ddef0ecf47ff8fb4e3687280d8",
+    "palette-000065.bin": "dfa5a88ca0357a87096a1f93c7c744cdec79e6ddef0ecf47ff8fb4e3687280d8",
+    "palette-000070.bin": "12bafa34214682ae20c2cb6f4e38f21575564de88c4599f3410661e9b7a5c6d3",
+    "palette-000100.bin": "12bafa34214682ae20c2cb6f4e38f21575564de88c4599f3410661e9b7a5c6d3",
+    "palette-000101.bin": "12bafa34214682ae20c2cb6f4e38f21575564de88c4599f3410661e9b7a5c6d3",
+    "palette-000125.bin": "12bafa34214682ae20c2cb6f4e38f21575564de88c4599f3410661e9b7a5c6d3",
+    "palette-000203.bin": "12bafa34214682ae20c2cb6f4e38f21575564de88c4599f3410661e9b7a5c6d3",
+    "palette-000204.bin": "12bafa34214682ae20c2cb6f4e38f21575564de88c4599f3410661e9b7a5c6d3",
+    "palette-000210.bin": "12bafa34214682ae20c2cb6f4e38f21575564de88c4599f3410661e9b7a5c6d3",
+    "players.json": "38070bf2befc84328a93f12e48487460344ba37def058f0e6c5339dce638bbd6",
+    "summary.json": "d6ce19bd59c4b51d06ba31e2074a8db1e98957bd5ff61595b446fea15095697a",
+    "ui.json": "8a1a4b32c17eb946d00ccb9509a3cc492b97b9a21cc7ba600b4754c47eaabdfd"
+  }
+}
