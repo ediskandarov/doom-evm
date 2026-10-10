@@ -1,0 +1,30 @@
+Verified resource CREATE 300 /1755
+Verified resource CREATE 600 /1755
+Verified resource CREATE 900 /1755
+Verified resource CREATE 1200 /1755
+Verified resource CREATE 1500 /1755
+PASS rollback NotDriver()
+PASS rollback UnsupportedSelection(int32,int32,int32)
+PASS rollback UnsupportedSelection(int32,int32,int32)
+PASS rollback UnsupportedSelection(int32,int32,int32)
+PASS rollback UnsupportedSelection(int32,int32,int32)
+PASS rollback UnsupportedSelection(int32,int32,int32)
+PASS rollback ResourceIdentityMismatch()
+PASS rollback ResourceDirectoryMismatch()
+PASS rollback ResourceChunksMismatch()
+PASS rollback ResourceChunksMismatch()
+PASS rollback InjectedPostSetupFailure()
+PASS ordinary EVM E1M1-skill2 : native startup exact; 2385103843 gas
+PASS ordinary EVM E1M2-skill2 : native startup exact; 3423997552 gas
+PASS rollback AlreadyInitialized()
+PASS ordinary EVM E1M3-skill2 : native startup exact; 3179331576 gas
+PASS ordinary EVM E1M4-skill2 : native startup exact; 3325158270 gas
+PASS ordinary EVM E1M5-skill2 : native startup exact; 2405931774 gas
+PASS ordinary EVM E1M6-skill2 : native startup exact; 3905863064 gas
+PASS ordinary EVM E1M7-skill2 : native startup exact; 6087177788 gas
+PASS ordinary EVM E1M8-skill2 : native startup exact; 2052734836 gas
+PASS ordinary EVM E1M9-skill2 : native startup exact; 3097307861 gas
+PASS ordinary EVM E1M2-skill0 : native startup exact; 3303487466 gas
+PASS ordinary EVM E1M2-skill4 : native startup exact; 3439965564 gas
+PASS ordinary EVM E1M2-skill2-nomonsters : native startup exact; 3283335572 gas
+{"pass":true,"cases":12,"rejections":12,"output":"artifacts/phase4/episode-startup/evm.json"}
