@@ -5,15 +5,19 @@ from pathlib import Path
 ROOT=Path(__file__).resolve().parents[3]
 ap=argparse.ArgumentParser();ap.add_argument('roots',nargs='+',type=Path);a=ap.parse_args();removed=[]
 sha=lambda p:hashlib.sha256(p.read_bytes()).hexdigest()
+def sibling(pointer,file,digest):
+ p=pointer.parent/Path(file).name
+ assert p.is_file() and not p.is_symlink() and sha(p)==digest, str(p)+' checkpoint identity mismatch'
+ return p.resolve()
 for root in a.roots:
  root=root.resolve();assert '/artifacts/local/' in str(root)
  for pointer in root.rglob('evm.checkpoint.json'):
   c=json.loads(pointer.read_text());keep={pointer.resolve()}
   if c['schemaVersion']==2:
-   assert sha(Path(c['chain']['file']))==c['chain']['sha256'];keep.add(Path(c['chain']['file']).resolve())
-   for item in c['receipts'].values():assert sha(Path(item['file']))==item['sha256'];keep.add(Path(item['file']).resolve())
+   keep.add(sibling(pointer,c['chain']['file'],c['chain']['sha256']))
+   for item in c['receipts'].values():keep.add(sibling(pointer,item['file'],item['sha256']))
   else:
-   assert sha(Path(c['payload']))==c['payloadSha256'];keep.add(Path(c['payload']).resolve())
+   keep.add(sibling(pointer,c['payload'],c['payloadSha256']))
   for p in pointer.parent.glob('evm.checkpoint-*'):
    if p.resolve() in keep or p.name.endswith('.tmp'):continue
    assert p.is_file() and not p.is_symlink()
