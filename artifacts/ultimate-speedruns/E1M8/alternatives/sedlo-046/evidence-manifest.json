@@ -1,0 +1,142 @@
+{
+  "map": "E1M8",
+  "UTC": "2026-10-10T21:38:05Z",
+  "commercialPayloadsLocalOnly": true,
+  "files": [
+    {
+      "path": "artifacts/local/ultimate-speedruns/E1M8/alternatives/sedlo-046/source.json",
+      "bytes": 2718,
+      "SHA256": "43cbde60b0f43b4a2b5236c2589c4f182233d5fe26421c65c4b2070a40c4a28b"
+    },
+    {
+      "path": "artifacts/local/ultimate-speedruns/E1M8/alternatives/sedlo-046/native-result.json",
+      "bytes": 6382,
+      "SHA256": "5093fa7af0962827d0603b5e5994c7485695773e93276b6bec329b0e6b00753a"
+    },
+    {
+      "path": "artifacts/local/ultimate-speedruns/E1M8/alternatives/sedlo-046/native-domain.json",
+      "bytes": 3162,
+      "SHA256": "9a4615c37104484296d69dff06df7385d51033a966ca875dcbb4df30728c9da9"
+    },
+    {
+      "path": "artifacts/local/ultimate-speedruns/E1M8/alternatives/sedlo-046/native-full/native-frames.json",
+      "bytes": 1801557,
+      "SHA256": "7f9462f5a15a0344fc35dc17d4f3d29896f0970e1789c9a14a1715de10b647e1"
+    },
+    {
+      "path": "artifacts/local/ultimate-speedruns/E1M8/alternatives/sedlo-046/full-rate/evm.deployment-receipts.json.gz",
+      "bytes": 99458,
+      "SHA256": "daad430a674bd9b659d4253dcec742ae8737b24308c84e7bf1ad1751d846a1c1"
+    },
+    {
+      "path": "artifacts/local/ultimate-speedruns/E1M8/alternatives/sedlo-046/full-rate/pixel-domain.json",
+      "bytes": 41337,
+      "SHA256": "5e008fc6251c62ad0125aaffb581e0ea32b8fe2da2f14b5ccd04544cc5578e39"
+    },
+    {
+      "path": "artifacts/local/ultimate-speedruns/E1M8/alternatives/sedlo-046/full-rate/frame-manifest.json",
+      "bytes": 257198,
+      "SHA256": "8c0c8b1b386a733e5c9d74528e19e7f33b6968aebe1c988447053a9e719c9b69"
+    },
+    {
+      "path": "artifacts/local/ultimate-speedruns/E1M8/alternatives/sedlo-046/full-rate/evm.capture-receipts.json.gz",
+      "bytes": 6278871,
+      "SHA256": "ddeb57f08cb94d7012383c0f7b81883f41d5581ab103f0f756120b6817199759"
+    },
+    {
+      "path": "artifacts/local/ultimate-speedruns/E1M8/alternatives/sedlo-046/full-rate/virtual-samples.json",
+      "bytes": 3,
+      "SHA256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+    },
+    {
+      "path": "artifacts/local/ultimate-speedruns/E1M8/alternatives/sedlo-046/full-rate/verification.json",
+      "bytes": 43031,
+      "SHA256": "a4d8b1178379824548d4583c536e96d10f97d8ac5ffb15e20fd2d5fe219181c3"
+    },
+    {
+      "path": "artifacts/local/ultimate-speedruns/E1M8/alternatives/sedlo-046/full-rate/evm.replay-receipts.json.gz",
+      "bytes": 2478089,
+      "SHA256": "afbcf9f5e2b9daefcf9db36b8b0fc1dc6898bb151a4c46bc1f50b03a3e6dfb20"
+    },
+    {
+      "path": "artifacts/local/ultimate-speedruns/E1M8/alternatives/sedlo-046/full-rate/evm.json",
+      "bytes": 330056,
+      "SHA256": "5f98f231afc20130d2d2d0a70f2bbcf84215a590d107f5361a079ceb5d05dcf3"
+    },
+    {
+      "path": "artifacts/local/ultimate-speedruns/E1M8/alternatives/sedlo-046/gameplay/evm.deployment-receipts.json.gz",
+      "bytes": 99391,
+      "SHA256": "b85c49d8d8e65bcf81e0006f39bc5cf25b669c5d5dafd69f3d1614ef18a066db"
+    },
+    {
+      "path": "artifacts/local/ultimate-speedruns/E1M8/alternatives/sedlo-046/gameplay/frame-manifest.json",
+      "bytes": 482,
+      "SHA256": "8154759524ee1a950d4b56dc066e4dac002fcbfe05f08c401c612a7db9d20ffa"
+    },
+    {
+      "path": "artifacts/local/ultimate-speedruns/E1M8/alternatives/sedlo-046/gameplay/evm.capture-receipts.json.gz",
+      "bytes": 22,
+      "SHA256": "b10fc33372658c09f9ac8d29c823d6826b2e34bfac1dd7e4725c6ed9ebaabca5"
+    },
+    {
+      "path": "artifacts/local/ultimate-speedruns/E1M8/alternatives/sedlo-046/gameplay/verification.json",
+      "bytes": 699,
+      "SHA256": "a167ab5d7ff8a12c5bd7148fcaa69b157cf144352fbd423571e998f252d83c95"
+    },
+    {
+      "path": "artifacts/local/ultimate-speedruns/E1M8/alternatives/sedlo-046/gameplay/evm.replay-receipts.json.gz",
+      "bytes": 15584354,
+      "SHA256": "7eba18b2cd611703e25b641d5cf137a5e829c1ed1ba26ed3aa8a5f24c891f3eb"
+    },
+    {
+      "path": "artifacts/local/ultimate-speedruns/E1M8/alternatives/sedlo-046/gameplay/evm.json",
+      "bytes": 32681,
+      "SHA256": "358a837fba1079829ee8d752c25d6bbf03da83d2cf3c6560721df81ca7d12320"
+    },
+    {
+      "path": "artifacts/local/ultimate-speedruns/E1M8/alternatives/sedlo-046/render-diagnostic/evm.deployment-receipts.json.gz",
+      "bytes": 99409,
+      "SHA256": "165ed53c176e07ec055bfd04ea28dac53a86b123aaedf810bdc0686cfeae9585"
+    },
+    {
+      "path": "artifacts/local/ultimate-speedruns/E1M8/alternatives/sedlo-046/render-diagnostic/frame-manifest.json",
+      "bytes": 485,
+      "SHA256": "031613e97bcb92c1e6784f62e5dbf98831bc69ab5756ed7349e29ea387e8de2e"
+    },
+    {
+      "path": "artifacts/local/ultimate-speedruns/E1M8/alternatives/sedlo-046/render-diagnostic/decoded.json",
+      "bytes": 1123,
+      "SHA256": "52782f42dc3da93443888d363b08b81d715d88ea30658706cf1a0d7daa603997"
+    },
+    {
+      "path": "artifacts/local/ultimate-speedruns/E1M8/alternatives/sedlo-046/render-diagnostic/evm.capture-receipts.json.gz",
+      "bytes": 356,
+      "SHA256": "3a943be3be36e48764736a90cf2fd0f9b6550d9713c50380f3fa24c7a8db63f0"
+    },
+    {
+      "path": "artifacts/local/ultimate-speedruns/E1M8/alternatives/sedlo-046/render-diagnostic/evm.replay-receipts.json.gz",
+      "bytes": 2419199,
+      "SHA256": "682379bb2ea9454e104951384a4936bd7fd9396e9423bd60ebac6adf92ef59a2"
+    },
+    {
+      "path": "artifacts/local/ultimate-speedruns/E1M8/alternatives/sedlo-046/render-diagnostic/evm.json",
+      "bytes": 5600035,
+      "SHA256": "fa05686c9ea2f3c18d38aaebd6b7035f105de63dcb4b4663dbdcd356a2caf46d"
+    },
+    {
+      "path": "artifacts/ultimate-speedruns/E1M8/alternatives/sedlo-046/result.json",
+      "bytes": 16627,
+      "SHA256": "8b6afa6391e81bdac98d67cd9969eef301eda4e9c2297f69874e6e818b4d5b99"
+    },
+    {
+      "path": "artifacts/ultimate-speedruns/E1M8/alternatives/sedlo-046/decoded-diagnostic.json",
+      "bytes": 1123,
+      "SHA256": "52782f42dc3da93443888d363b08b81d715d88ea30658706cf1a0d7daa603997"
+    },
+    {
+      "path": "artifacts/ultimate-speedruns/E1M8/alternatives/sedlo-046/virtual-samples.json",
+      "bytes": 3,
+      "SHA256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+    }
+  ]
+}
