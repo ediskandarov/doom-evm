@@ -14,6 +14,7 @@ import time
 FIELDS = ('input_tokens', 'cached_input_tokens', 'cache_write_input_tokens',
           'output_tokens', 'reasoning_tokens', 'total_tokens')
 VERSION = 1
+REPORT_VERSION = 2
 
 
 def timestamp(value):
@@ -360,7 +361,7 @@ def collect(roots, project, config, closed_only=False):
         if current:
             segments.append(segment(current))
     unique_models = {(m['thread_id'], m['turn_id'], m['timestamp'], m['model']): m for m in models}
-    return {'version': VERSION, 'collected_at': now(), 'scope': 'project-matched rollouts and explicitly linked child threads',
+    report = {'version': REPORT_VERSION, 'collected_at': now(), 'scope': 'project-matched rollouts and explicitly linked child threads',
             'selection': 'closed_phase_windows' if closed_only else 'all_observed_usage',
             'units': 'tokens; cached input and reasoning are subsets, not additional totals',
             'attribution': 'response event timestamps in half-open phase windows; configured model, not proof of backend routing',
@@ -373,6 +374,9 @@ def collect(roots, project, config, closed_only=False):
                              for group in [[r for r in rows if r['phase'] == phase]]],
             'aggregates': aggregate(rows), 'segments': segments,
             'model_events': sorted(unique_models.values(), key=lambda m: (m['timestamp'], m['thread_id'])), 'records': rows}
+    from activity import collect_activity
+    report['activity'] = collect_activity(files, config, closed_only)
+    return report
 
 
 def segment(rows):
@@ -394,6 +398,8 @@ def export(report, output):
         writer = csv.DictWriter(stream, fieldnames=['phase', 'records', *columns[7:]])
         writer.writeheader();writer.writerows(report['phase_totals'])
     (output/'phase-totals.csv.tmp').replace(output/'phase-totals.csv')
+    from reporting import export_activity
+    export_activity(report, output)
 
 
 def main():

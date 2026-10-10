@@ -114,6 +114,18 @@
         "tokensUsed": 6818723,
         "timeUsedSeconds": 26155
       }
+    },
+    {
+      "phase": "phase4-goal4.0",
+      "session_id": "01a11fdf-1d25-7201-abb8-1afdaaab6b9c",
+      "start": "2026-10-10T05:01:34.000Z",
+      "end": null,
+      "goal_created_at_unix": 1791608494,
+      "start_evidence": {
+        "kind": "structured_active_goal",
+        "goal_created_at_unix": 1791608494,
+        "source": "functions.get_goal after reading explicit pasted Goal4.0 instructions; no historical windows changed"
+      }
     }
   ],
   "incomplete_goals": []

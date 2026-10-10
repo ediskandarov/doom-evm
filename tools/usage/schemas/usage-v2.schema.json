@@ -1,0 +1,331 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:doom-evm:codex-telemetry:2",
+  "title": "Additive Codex usage and activity metadata v2",
+  "type": "object",
+  "required": [
+    "version",
+    "collected_at",
+    "totals",
+    "phase_totals",
+    "aggregates",
+    "activity"
+  ],
+  "properties": {
+    "version": {
+      "const": 2
+    },
+    "collected_at": {
+      "type": "string"
+    },
+    "totals": {
+      "type": "object"
+    },
+    "phase_totals": {
+      "type": "array"
+    },
+    "aggregates": {
+      "type": "array"
+    },
+    "activity": {
+      "type": "object",
+      "required": [
+        "schema_version",
+        "compactions",
+        "approvals",
+        "executions",
+        "goals",
+        "phase_totals",
+        "coverage",
+        "sources",
+        "limitations"
+      ],
+      "properties": {
+        "schema_version": {
+          "const": 1
+        },
+        "goals": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "goal_id",
+              "start",
+              "end",
+              "phase",
+              "status",
+              "elapsed_wall_seconds"
+            ],
+            "properties": {
+              "goal_id": {
+                "type": "string"
+              },
+              "elapsed_wall_seconds": {
+                "type": [
+                  "number",
+                  "null"
+                ],
+                "minimum": 0
+              },
+              "reported_goal_seconds": {
+                "type": [
+                  "number",
+                  "null"
+                ],
+                "minimum": 0
+              },
+              "reported_goal_tokens": {
+                "type": [
+                  "number",
+                  "null"
+                ],
+                "minimum": 0
+              }
+            }
+          }
+        },
+        "phase_totals": {
+          "type": "array"
+        },
+        "sources": {
+          "type": "array"
+        },
+        "coverage": {
+          "type": "object"
+        },
+        "limitations": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "compactions": {
+          "type": "array",
+          "items": {
+            "allOf": [
+              {
+                "$ref": "#/$defs/event"
+              },
+              {
+                "type": "object",
+                "properties": {
+                  "duration_seconds": {
+                    "type": [
+                      "number",
+                      "null"
+                    ],
+                    "minimum": 0
+                  },
+                  "context_tokens_before": {
+                    "type": [
+                      "number",
+                      "null"
+                    ],
+                    "minimum": 0
+                  },
+                  "context_tokens_after": {
+                    "type": [
+                      "number",
+                      "null"
+                    ],
+                    "minimum": 0
+                  },
+                  "request_input_tokens": {
+                    "type": [
+                      "number",
+                      "null"
+                    ],
+                    "minimum": 0
+                  },
+                  "start": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "end": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  }
+                }
+              }
+            ]
+          }
+        },
+        "approvals": {
+          "type": "array",
+          "items": {
+            "allOf": [
+              {
+                "$ref": "#/$defs/event"
+              },
+              {
+                "type": "object",
+                "properties": {
+                  "waiting_seconds": {
+                    "type": [
+                      "number",
+                      "null"
+                    ],
+                    "minimum": 0
+                  },
+                  "human_wait_seconds": {
+                    "type": [
+                      "number",
+                      "null"
+                    ],
+                    "minimum": 0
+                  },
+                  "automatic_wait_seconds": {
+                    "type": [
+                      "number",
+                      "null"
+                    ],
+                    "minimum": 0
+                  },
+                  "start": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "end": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  }
+                }
+              }
+            ]
+          }
+        },
+        "executions": {
+          "type": "array",
+          "items": {
+            "allOf": [
+              {
+                "$ref": "#/$defs/event"
+              },
+              {
+                "type": "object",
+                "properties": {
+                  "wall_seconds": {
+                    "type": [
+                      "number",
+                      "null"
+                    ],
+                    "minimum": 0
+                  },
+                  "compiler_wall_seconds": {
+                    "type": [
+                      "number",
+                      "null"
+                    ],
+                    "minimum": 0
+                  },
+                  "test_wall_seconds": {
+                    "type": [
+                      "number",
+                      "null"
+                    ],
+                    "minimum": 0
+                  },
+                  "start": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "end": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "exit_code": {
+                    "type": [
+                      "integer",
+                      "null"
+                    ]
+                  },
+                  "included_in_execution_sum": {
+                    "type": "boolean"
+                  },
+                  "compiler_time_included": {
+                    "type": "boolean"
+                  },
+                  "category": {
+                    "type": "string"
+                  },
+                  "command_sha256": {
+                    "type": "string",
+                    "pattern": "^[0-9a-f]{64}$"
+                  }
+                }
+              }
+            ]
+          }
+        }
+      }
+    }
+  },
+  "$defs": {
+    "event": {
+      "type": "object",
+      "required": [
+        "thread_id",
+        "session_id",
+        "agent",
+        "phase",
+        "event_id",
+        "timestamp",
+        "goal_id"
+      ],
+      "properties": {
+        "thread_id": {
+          "type": "string"
+        },
+        "session_id": {
+          "type": "string"
+        },
+        "agent": {
+          "type": "string"
+        },
+        "phase": {
+          "type": "string"
+        },
+        "event_id": {
+          "type": "string"
+        },
+        "timestamp": {
+          "type": "string"
+        },
+        "source_id": {
+          "type": "string"
+        },
+        "goal_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "model": {
+          "type": "string"
+        },
+        "turn_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "line": {
+          "type": "integer",
+          "minimum": 1
+        }
+      }
+    }
+  }
+}
