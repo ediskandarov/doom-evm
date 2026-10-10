@@ -1,0 +1,34 @@
+{
+  "mediaVerified": false,
+  "evidenceVerified": true,
+  "recordingComplete": false,
+  "gameplayObservations": 11,
+  "verifiedGameplayTics": 10,
+  "EVMFrames": 10,
+  "virtualSampleUses": 0,
+  "virtualDerivedDestinations": 0,
+  "nativePixelComparisons": [
+    {
+      "tic": 1,
+      "O2Equal": true,
+      "equalProfiles": [
+        "O2",
+        "O0",
+        "sanitize"
+      ],
+      "virtualSamples": 0
+    },
+    {
+      "tic": 10,
+      "O2Equal": true,
+      "equalProfiles": [
+        "O2",
+        "O0",
+        "sanitize"
+      ],
+      "virtualSamples": 0
+    }
+  ],
+  "unresolvedFailure": "Error: Requested checkpoint stop; use --resume",
+  "totalGas": 29896807148
+}

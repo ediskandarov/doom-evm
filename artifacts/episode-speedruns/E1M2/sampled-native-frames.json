@@ -1,0 +1,240 @@
+{
+  "startedUTC": "2026-10-10T19:35:07Z",
+  "scope": "Independent no-render prefix + one original-C full-screen render per process; no persistent render history",
+  "profiles": [
+    {
+      "name": "O2",
+      "captures": [
+        {
+          "tic": 1,
+          "sha256": "f09e89523a84721438ab2dd4789a06678394668fa1e90b48e0ad23ce8fb04c36",
+          "preRenderWorldExact": true,
+          "elapsedSeconds": 0.28921575006097555,
+          "stdoutSha256": "94adb81976506c0d4c25a88649815a1169b0e3c7c037c00b3c4c516df30590fb"
+        },
+        {
+          "tic": 10,
+          "sha256": "014555143b933a739e46b246404729e4af2cf27e08ab2a596afc023013b205ac",
+          "preRenderWorldExact": true,
+          "elapsedSeconds": 0.07067000027745962,
+          "stdoutSha256": "94adb81976506c0d4c25a88649815a1169b0e3c7c037c00b3c4c516df30590fb"
+        },
+        {
+          "tic": 25,
+          "sha256": "bb9c4169c2b6ebc753ce1d7724c50974103b6c1d4198727aa43ac8c9ffa96dd9",
+          "preRenderWorldExact": true,
+          "elapsedSeconds": 0.08231845824047923,
+          "stdoutSha256": "94adb81976506c0d4c25a88649815a1169b0e3c7c037c00b3c4c516df30590fb"
+        },
+        {
+          "tic": 50,
+          "sha256": "4b147275dbfd12b0de58cc6142df0babc497ff7420e58155f42dd365e32f3d73",
+          "preRenderWorldExact": true,
+          "elapsedSeconds": 0.07106966711580753,
+          "stdoutSha256": "94adb81976506c0d4c25a88649815a1169b0e3c7c037c00b3c4c516df30590fb"
+        },
+        {
+          "tic": 100,
+          "sha256": "449a7592ae1d11a6a2c663fde5663802d3acc3949f7fe1eb097c3a00d2411722",
+          "preRenderWorldExact": true,
+          "elapsedSeconds": 0.08532412489876151,
+          "stdoutSha256": "94adb81976506c0d4c25a88649815a1169b0e3c7c037c00b3c4c516df30590fb"
+        },
+        {
+          "tic": 500,
+          "sha256": "7066ea94f844d1acabd9821ea75c1e7ee92e53fc685aa982fb3161fd1d590294",
+          "preRenderWorldExact": true,
+          "elapsedSeconds": 0.09060404216870666,
+          "stdoutSha256": "94adb81976506c0d4c25a88649815a1169b0e3c7c037c00b3c4c516df30590fb"
+        },
+        {
+          "tic": 1000,
+          "sha256": "aeb1e2625d57213291b9a8585b4d6f3473eb91dc61d9457e8c620c26c4687f4c",
+          "preRenderWorldExact": true,
+          "elapsedSeconds": 0.07507120817899704,
+          "stdoutSha256": "94adb81976506c0d4c25a88649815a1169b0e3c7c037c00b3c4c516df30590fb"
+        },
+        {
+          "tic": 1942,
+          "sha256": "640d78b244ffc997d034d0e355a3cf1300063d1133645615377554d8bb785658",
+          "preRenderWorldExact": true,
+          "elapsedSeconds": 0.08378033386543393,
+          "stdoutSha256": "c13113842ee87259738f6986421e5ead8116347cbc969325aeedf86011356b11"
+        }
+      ],
+      "compiler": "Apple clang version 17.0.0 (clang-1700.0.13.5)",
+      "buildManifestSha256": "2313bcb2d3833575538bae60aa57f4c252c1b2bd0a28c3d223f962d65edc4d04"
+    },
+    {
+      "name": "O0",
+      "captures": [
+        {
+          "tic": 1,
+          "sha256": "f09e89523a84721438ab2dd4789a06678394668fa1e90b48e0ad23ce8fb04c36",
+          "preRenderWorldExact": true,
+          "elapsedSeconds": 0.3179235002025962,
+          "stdoutSha256": "94adb81976506c0d4c25a88649815a1169b0e3c7c037c00b3c4c516df30590fb"
+        },
+        {
+          "tic": 10,
+          "sha256": "014555143b933a739e46b246404729e4af2cf27e08ab2a596afc023013b205ac",
+          "preRenderWorldExact": true,
+          "elapsedSeconds": 0.09795333305373788,
+          "stdoutSha256": "94adb81976506c0d4c25a88649815a1169b0e3c7c037c00b3c4c516df30590fb"
+        },
+        {
+          "tic": 25,
+          "sha256": "bb9c4169c2b6ebc753ce1d7724c50974103b6c1d4198727aa43ac8c9ffa96dd9",
+          "preRenderWorldExact": true,
+          "elapsedSeconds": 0.07956233387812972,
+          "stdoutSha256": "94adb81976506c0d4c25a88649815a1169b0e3c7c037c00b3c4c516df30590fb"
+        },
+        {
+          "tic": 50,
+          "sha256": "4b147275dbfd12b0de58cc6142df0babc497ff7420e58155f42dd365e32f3d73",
+          "preRenderWorldExact": true,
+          "elapsedSeconds": 0.10521237505599856,
+          "stdoutSha256": "94adb81976506c0d4c25a88649815a1169b0e3c7c037c00b3c4c516df30590fb"
+        },
+        {
+          "tic": 100,
+          "sha256": "449a7592ae1d11a6a2c663fde5663802d3acc3949f7fe1eb097c3a00d2411722",
+          "preRenderWorldExact": true,
+          "elapsedSeconds": 0.10183625016361475,
+          "stdoutSha256": "94adb81976506c0d4c25a88649815a1169b0e3c7c037c00b3c4c516df30590fb"
+        },
+        {
+          "tic": 500,
+          "sha256": "7066ea94f844d1acabd9821ea75c1e7ee92e53fc685aa982fb3161fd1d590294",
+          "preRenderWorldExact": true,
+          "elapsedSeconds": 0.08029166609048843,
+          "stdoutSha256": "94adb81976506c0d4c25a88649815a1169b0e3c7c037c00b3c4c516df30590fb"
+        },
+        {
+          "tic": 1000,
+          "sha256": "aeb1e2625d57213291b9a8585b4d6f3473eb91dc61d9457e8c620c26c4687f4c",
+          "preRenderWorldExact": true,
+          "elapsedSeconds": 0.09036441706120968,
+          "stdoutSha256": "94adb81976506c0d4c25a88649815a1169b0e3c7c037c00b3c4c516df30590fb"
+        },
+        {
+          "tic": 1942,
+          "sha256": "640d78b244ffc997d034d0e355a3cf1300063d1133645615377554d8bb785658",
+          "preRenderWorldExact": true,
+          "elapsedSeconds": 0.10964562464505434,
+          "stdoutSha256": "c13113842ee87259738f6986421e5ead8116347cbc969325aeedf86011356b11"
+        }
+      ],
+      "compiler": "Apple clang version 17.0.0 (clang-1700.0.13.5)",
+      "buildManifestSha256": "cc8d8f54f95243217d5cecd33fb0b0ae158bd8dcd7d59e19af5443f6e29b3314"
+    },
+    {
+      "name": "sanitize",
+      "captures": [
+        {
+          "tic": 1,
+          "sha256": "f09e89523a84721438ab2dd4789a06678394668fa1e90b48e0ad23ce8fb04c36",
+          "preRenderWorldExact": true,
+          "elapsedSeconds": 0.39887595921754837,
+          "stdoutSha256": "94adb81976506c0d4c25a88649815a1169b0e3c7c037c00b3c4c516df30590fb"
+        },
+        {
+          "tic": 10,
+          "sha256": "014555143b933a739e46b246404729e4af2cf27e08ab2a596afc023013b205ac",
+          "preRenderWorldExact": true,
+          "elapsedSeconds": 0.1334346253424883,
+          "stdoutSha256": "94adb81976506c0d4c25a88649815a1169b0e3c7c037c00b3c4c516df30590fb"
+        },
+        {
+          "tic": 25,
+          "sha256": "bb9c4169c2b6ebc753ce1d7724c50974103b6c1d4198727aa43ac8c9ffa96dd9",
+          "preRenderWorldExact": true,
+          "elapsedSeconds": 0.14110150001943111,
+          "stdoutSha256": "94adb81976506c0d4c25a88649815a1169b0e3c7c037c00b3c4c516df30590fb"
+        },
+        {
+          "tic": 50,
+          "sha256": "4b147275dbfd12b0de58cc6142df0babc497ff7420e58155f42dd365e32f3d73",
+          "preRenderWorldExact": true,
+          "elapsedSeconds": 0.15017991745844483,
+          "stdoutSha256": "94adb81976506c0d4c25a88649815a1169b0e3c7c037c00b3c4c516df30590fb"
+        },
+        {
+          "tic": 100,
+          "sha256": "449a7592ae1d11a6a2c663fde5663802d3acc3949f7fe1eb097c3a00d2411722",
+          "preRenderWorldExact": true,
+          "elapsedSeconds": 0.14752866700291634,
+          "stdoutSha256": "94adb81976506c0d4c25a88649815a1169b0e3c7c037c00b3c4c516df30590fb"
+        },
+        {
+          "tic": 500,
+          "sha256": "7066ea94f844d1acabd9821ea75c1e7ee92e53fc685aa982fb3161fd1d590294",
+          "preRenderWorldExact": true,
+          "elapsedSeconds": 0.14157379232347012,
+          "stdoutSha256": "94adb81976506c0d4c25a88649815a1169b0e3c7c037c00b3c4c516df30590fb"
+        },
+        {
+          "tic": 1000,
+          "sha256": "aeb1e2625d57213291b9a8585b4d6f3473eb91dc61d9457e8c620c26c4687f4c",
+          "preRenderWorldExact": true,
+          "elapsedSeconds": 0.1735449582338333,
+          "stdoutSha256": "94adb81976506c0d4c25a88649815a1169b0e3c7c037c00b3c4c516df30590fb"
+        },
+        {
+          "tic": 1942,
+          "sha256": "640d78b244ffc997d034d0e355a3cf1300063d1133645615377554d8bb785658",
+          "preRenderWorldExact": true,
+          "elapsedSeconds": 0.18434008304029703,
+          "stdoutSha256": "c13113842ee87259738f6986421e5ead8116347cbc969325aeedf86011356b11"
+        }
+      ],
+      "compiler": "Apple clang version 17.0.0 (clang-1700.0.13.5)",
+      "buildManifestSha256": "c71bd23c630b51b892bbe53663a3a06eae5a7c9efde242219be0419fb5ad8060"
+    }
+  ],
+  "frames": [
+    {
+      "tic": 1,
+      "file": "frame-000001.indexed8",
+      "indexed8Sha256": "f09e89523a84721438ab2dd4789a06678394668fa1e90b48e0ad23ce8fb04c36"
+    },
+    {
+      "tic": 10,
+      "file": "frame-000010.indexed8",
+      "indexed8Sha256": "014555143b933a739e46b246404729e4af2cf27e08ab2a596afc023013b205ac"
+    },
+    {
+      "tic": 25,
+      "file": "frame-000025.indexed8",
+      "indexed8Sha256": "bb9c4169c2b6ebc753ce1d7724c50974103b6c1d4198727aa43ac8c9ffa96dd9"
+    },
+    {
+      "tic": 50,
+      "file": "frame-000050.indexed8",
+      "indexed8Sha256": "4b147275dbfd12b0de58cc6142df0babc497ff7420e58155f42dd365e32f3d73"
+    },
+    {
+      "tic": 100,
+      "file": "frame-000100.indexed8",
+      "indexed8Sha256": "449a7592ae1d11a6a2c663fde5663802d3acc3949f7fe1eb097c3a00d2411722"
+    },
+    {
+      "tic": 500,
+      "file": "frame-000500.indexed8",
+      "indexed8Sha256": "7066ea94f844d1acabd9821ea75c1e7ee92e53fc685aa982fb3161fd1d590294"
+    },
+    {
+      "tic": 1000,
+      "file": "frame-001000.indexed8",
+      "indexed8Sha256": "aeb1e2625d57213291b9a8585b4d6f3473eb91dc61d9457e8c620c26c4687f4c"
+    },
+    {
+      "tic": 1942,
+      "file": "frame-001942.indexed8",
+      "indexed8Sha256": "640d78b244ffc997d034d0e355a3cf1300063d1133645615377554d8bb785658"
+    }
+  ],
+  "pass_": true,
+  "endedUTC": "2026-10-10T19:35:34Z",
+  "elapsedSeconds": 27.53803095826879
+}
