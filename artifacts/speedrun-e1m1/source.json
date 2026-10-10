@@ -1,0 +1,58 @@
+{
+  "runUrl": "https://www.speedrun.com/freedoom_phase_1/runs/zg677ovm",
+  "downloadUrl": "https://drive.google.com/uc?export=download&id=1ofW23JwBMdzYd_k3NCz0GdIV5FrlvolK",
+  "demoSha256": "111aec6cabcd2718f0e4fab662980bb68c1831bfc1db12a438fe7e8af2fb5782",
+  "demoBytes": 1700,
+  "header": {
+    "version": 109,
+    "skill": 0,
+    "episode": 1,
+    "map": 1,
+    "deathmatch": 0,
+    "respawn": 0,
+    "fast": 0,
+    "nomonsters": 0,
+    "consoleplayer": 0,
+    "playeringame": [
+      1,
+      0,
+      0,
+      0
+    ]
+  },
+  "totalDemoTics": 370,
+  "markerOffset": 1493,
+  "footer": {
+    "FEATURES": "Menu, Extended HUD\n0x00000000000000000000000000000003-68712648751c1048b2cd9aa95a725bfb\u0000\u0000\u0000\u0000",
+    "PORTNAME": "dsda-doom 0.29.0",
+    "CMDLINE": "-iwad \"freedoom1.wad\" -complevel 3 "
+  },
+  "wadSha256": "7323bcc168c5a45ff10749b339960e98314740a734c30d4b9f3337001f9e703d",
+  "originalDecoder": {
+    "file": "g_game.c",
+    "function": "G_ReadDemoTiccmd",
+    "startLine": 1491,
+    "endLine": 1503,
+    "sha256": "77f7b1aeca0bf6da361bf3c29af3cde4f2f291f8deeaa9426017b12dbbdcb345"
+  },
+  "decoderExact": true,
+  "stockLoaderCompatible": false,
+  "reason": "Demo VERSION109; pinned Linux DOOM VERSION110 rejects it before G_InitNew. Direct original command reader/ticker can be tested without editing VERSION.",
+  "recordingWadIdentity": "Not independently known; footer CMDLINE names freedoom1.wad without a full IWAD checksum.",
+  "dsdaFooterChecksumVerified": true,
+  "dsdaFooterChecksumScope": "MD5(demo bytes including marker + reversed FEATURES bitmap); not an IWAD hash or cryptographic signer identity.",
+  "recordingSourceInspection": [
+    {
+      "url": "https://raw.githubusercontent.com/kraflab/dsda-doom/v0.29.0/prboom2/src/g_game.c",
+      "sha256": "5e41195771560c038e6aacc191aca05c2d22daa4828b8bbfc66de8630bfe9535"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/kraflab/dsda-doom/v0.29.0/prboom2/src/dsda/demo.c",
+      "sha256": "7d77d8aab4d648861c7d73297d1e9365d1f7ebb537fd55675c685197cd038cd5"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/kraflab/dsda-doom/v0.29.0/prboom2/src/dsda/exdemo.c",
+      "sha256": "10715de222cb035f28143df95b799d8d204e4275ee18b58a95f7617330d903a9"
+    }
+  ]
+}
