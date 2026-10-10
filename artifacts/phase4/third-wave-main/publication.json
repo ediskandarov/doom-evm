@@ -1,0 +1,39 @@
+{
+  "kind": "phase4-third-wave-publication-record",
+  "priorCheckpointCommit": "4e0139f48bf9a40ec4f977099c8294bbb8fce757",
+  "integrationCertificateSha256": "124bba9323f21282456111deb40e6da73486630e1a9efdaf7725a370149cd573",
+  "finalLedgerSha256": "c4a77e817fc2592c694baae5957d417278ef88aa5b1815b720dfa6f65332e353",
+  "recordedUtc": "2026-10-10T14:42:38.170715+00:00",
+  "rawLogWhitespaceCheck": {
+    "command": [
+      "git",
+      "diff",
+      "--cached",
+      "--check"
+    ],
+    "exitCode": 2,
+    "message": "artifacts/phase4/third-wave-main/build.log:172: new blank line at EOF.",
+    "resolution": "Preserve exact raw compiler output and existing hashes; no source/test/fixture/assertion/certificate change."
+  },
+  "sourceDocumentationWhitespaceCheck": {
+    "command": [
+      "git",
+      "-c",
+      "core.whitespace=cr-at-eol",
+      "diff",
+      "--check",
+      "5bfe5d8",
+      "--",
+      "docs",
+      "src",
+      "web",
+      "tools",
+      "test"
+    ],
+    "exitCode": 0,
+    "licensePolicy": "Retain original CRLF Freedoom license exactly. Default Git whitespace reports CR endings; cr-at-eol was already the declared feature policy."
+  },
+  "earlierIntegrationCertificateAndAllItsEvidenceUnchanged": true,
+  "historicalLedgerBodyRetained": true,
+  "publication": "The commit containing this additive publication record and ledger note is the final integration checkpoint."
+}

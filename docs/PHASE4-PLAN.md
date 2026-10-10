@@ -1127,3 +1127,9 @@ PHASE4-INTERMISSION.md and PHASE4-INPUT-RUNTIME.md remain untouched.
 The certificate records measured verification end, elapsed time and available
 goal-counter attribution. Stop after normal push and verified clean synchronized
 main; no subsequent development goal is authorized by this integration.
+
+Publication note: checkpoint4e0139f preserves the raw compiler log exactly.
+The staged git whitespace check reported one extra blank line at that log's EOF;
+the captured output and its evidence hashes were retained. Source/documentation
+whitespace checks pass. The additive [publication record](../artifacts/phase4/third-wave-main/publication.json)
+binds the final ledger and preserves the earlier integration certificate unchanged.
