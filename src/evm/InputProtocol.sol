@@ -5,7 +5,7 @@ import {G_Game} from "../doom/g_game.sol";
 import {GameflowState} from "../doom/g_game.sol";
 import {GameContext} from "../doom/p_game_state.sol";
 import {CheatState, ST_Cheats} from "../doom/st_cheats.sol";
-import {AutomapState} from "../doom/am_map_types.sol";
+import {AutomapState, AMWorld} from "../doom/am_map_types.sol";
 import {AM_Map} from "../doom/am_map.sol";
 import {HU_Stuff} from "../doom/hu_stuff.sol";
 import {ST_Stuff} from "../doom/st_stuff.sol";
@@ -54,6 +54,8 @@ library InputProtocol {
         view
     {
         if (events.length > 128 || events.length % 2 != 0) revert InvalidKeyboardEvents();
+        AMWorld memory world;
+        bool worldLoaded;
         for (uint256 i; i < events.length; i += 2) {
             int32 kind = int32(uint32(uint8(events[i])));
             int32 key = int32(uint32(uint8(events[i + 1])));
@@ -82,8 +84,15 @@ library InputProtocol {
                 bool activeBranch = s.automap.active && kind == 0;
                 uint32 loads = s.automap.loads;
                 uint32 unloads = s.automap.unloads;
-                bool consumed =
-                    AM_Map.AM_Responder(s.automap, DoomGame.automapWorld(c, s.automap.player), kind, key);
+                // Original responders borrow the same world pointers for the
+                // whole event batch. No world tic/load occurs between these events;
+                // cheats do not alter the geometry/player positions used by AM_Responder.
+                // Rebuilding this projection for every event exhausted E1M9's packet budget.
+                if (!worldLoaded) {
+                    world = DoomGame.automapWorld(c, s.automap.player);
+                    worldLoaded = true;
+                }
+                bool consumed = AM_Map.AM_Responder(s.automap, world, kind, key);
                 if (s.automap.loads != loads || s.automap.unloads != unloads) {
                     // Stop's malformed [keydown,1,AM_MSGEXITED] also reaches ST cheats.
                     statusEvent(s, c, u, s.automap.notification[0], s.automap.notification[1]);
