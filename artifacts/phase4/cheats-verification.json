@@ -1,0 +1,232 @@
+{
+  "schemaVersion": 1,
+  "goal": "4.4",
+  "implementation": "Complete original supported cheat recognition/effects in new Solidity modules; IDMUS/sound omitted.",
+  "integration": "Independent accepted GameContext/Gameflow/ST/HU composition verified; shared production adapters unchanged. AM pixels, multi-map loading and browser routing deferred under ownership boundaries.",
+  "native": {
+    "scenarios": 150,
+    "eventSnapshots": 4196,
+    "primitives": 793,
+    "profiles": {
+      "O0": [
+        "-O0"
+      ],
+      "O2": [
+        "-O2"
+      ],
+      "sanitize": [
+        "-O2",
+        "-fsanitize=address,undefined",
+        "-fno-sanitize-recover=all"
+      ]
+    },
+    "sourceSpans": [
+      {
+        "file": "m_cheat.c",
+        "function": "cht_CheckCheat",
+        "startLine": 42,
+        "endLine": 75,
+        "sha256": "3c2c3289e73a95f5b4990f53c26b68d8cd049edce85bba212571785cd99294a0"
+      },
+      {
+        "file": "m_cheat.c",
+        "function": "cht_GetParam",
+        "startLine": 77,
+        "endLine": 99,
+        "sha256": "474a61ecd3053ca9a92bc3ca10918dc6313a1aafe205ae51f2035d808bb2b861"
+      },
+      {
+        "file": "st_stuff.c",
+        "function": "ST_Responder",
+        "startLine": 517,
+        "endLine": 725,
+        "sha256": "18ff082fb51218b45f0774573279839ede593572642a6b0d28b57cadadedac09",
+        "excludedMusicBranchSha256": "c7a11daea481ee00ae2fd3644ce1dead1473ca92441c40950041ddba5d090a18"
+      },
+      {
+        "file": "p_inter.c",
+        "function": "P_GiveBody",
+        "startLine": 228,
+        "endLine": 242,
+        "sha256": "4cd6d0f24d23b8569906df4635e9b4bd1c3ecf5893829490d37de42dc7647b72"
+      },
+      {
+        "file": "p_inter.c",
+        "function": "P_GivePower",
+        "startLine": 289,
+        "endLine": 331,
+        "sha256": "4c288905f4b3183fe14aaf669cdd8da9542ce0518d25e33cf1d2e75802cef108"
+      },
+      {
+        "file": "am_map.c",
+        "function": "AM_Responder cheat branch",
+        "startLine": 701,
+        "endLine": 705,
+        "sha256": "e113cfae40a157edfd570f41029739d58724d452b9181ec7f75ddf84278a2fcf"
+      }
+    ],
+    "presentationCheckpoints": 15,
+    "presentationProfiles": {
+      "O0": [
+        "-O0"
+      ],
+      "O2": [
+        "-O2"
+      ],
+      "sanitize": [
+        "-O1",
+        "-g",
+        "-fsanitize=address,undefined",
+        "-fno-sanitize=array-bounds",
+        "-fno-omit-frame-pointer"
+      ]
+    },
+    "presentationSanitizerExclusions": "Native v_video variable-width column table excludes array-bounds instrumentation, as accepted video/statusbar profile; leak detection disabled for process-lifetime assets.",
+    "earlyNulWarp": "Native uninitialized buf[1] gameplay domain excluded; exact primitive/parser mutations verified and Solidity rejects the request."
+  },
+  "foundry": {
+    "suites": 9,
+    "passed": 69,
+    "failed": 0,
+    "skipped": 0,
+    "newCheatTests": 20,
+    "affectedInheritedTests": 49,
+    "tests": [
+      "testCheatsReachDamageAndArmorConsumers",
+      "testNativeRawCheatsRenderStatusPaletteAndHud",
+      "testNoclipAppliesOnNextPlayerTic",
+      "testPersistPrefixParamAndIndependentAutomapState",
+      "testPowerOffAndChoppersExpireOnNextTic",
+      "testRollbackIncludesParserEffectMessageAndInputSequence",
+      "testNativeEveryWadGlyph",
+      "testNativeGameplayProducedMessages",
+      "testNativeMessageTimingVisibilityAndWidgets",
+      "testNativeTitlesAndErasure",
+      "testOriginalWadFontResourceLoading",
+      "testUndefinedMapIndexesRejected",
+      "testFuzzTextCapacityAndTrailingNul",
+      "testLineCapacityNulDeletionAndClearUpdateCounts",
+      "testPositionUsesPatchOffsetsWithoutGlyphScaling",
+      "testPrefixAndMessageShareEightyByteLimit",
+      "testUndefinedScrollingWidgetHeightRejected",
+      "testInvalidAmmoRejectsErrorAndOriginalArrayOverrunDomain",
+      "testOriginalCAllPickupSprites",
+      "testOriginalCDamageArmorPowerExitAndDeath",
+      "testOriginalCGiveAmmoCell",
+      "testOriginalCGiveAmmoClip",
+      "testOriginalCGiveAmmoMissile",
+      "testOriginalCGiveAmmoShell",
+      "testOriginalCGiveArmor",
+      "testOriginalCGiveBody",
+      "testOriginalCGiveCard",
+      "testOriginalCGiveNoAmmo",
+      "testOriginalCGivePower",
+      "testOriginalCGiveWeapon",
+      "testOriginalCMonsterDeathsGibsDropsAndKillCounting",
+      "testOriginalCWeaponAmmoSelection",
+      "testEmbeddedNulClearsOnlyVisitedParameter",
+      "testGodNullMobjAndUnrelatedFlags",
+      "testMarkerKeySkipsNextSlotExactlyLikeC",
+      "testMismatchConsumesWithoutRetry",
+      "testNativeMixedStreams",
+      "testNativePrimitiveAllByteValuesAndParameters",
+      "testNativeRecognitionAndEffects",
+      "testNativeRestrictionsAndPowers",
+      "testNativeWarpValidation",
+      "testNoCaseFoldingMusicOrTickFiltering",
+      "testParameterSlotsAndGetParam",
+      "testPositionFormattingZeroAndUnsignedTwosComplement",
+      "testScramblePermutation",
+      "testUndefinedEarlyNulWarpDoesNotScheduleLevel",
+      "testNative_G_ExitLevel",
+      "testNative_G_PlayerReborn",
+      "testNative_G_SecretExitLevel",
+      "testNativeAllPaletteThresholdsAndGamma",
+      "testNativeAttackerDirectionsAndOriginalOuchBug",
+      "testNativeEveryFaceAssetPixels",
+      "testNativeFacePixelsAcrossPainTiers",
+      "testNativeFacePrioritiesTrace",
+      "testNativeFirstDamageReceiptState",
+      "testNativeFullscreenAutomapAndRefresh",
+      "testNativeIdlePainAndRestartTrace",
+      "testNativeInventoryAndNumericPixels",
+      "testNativeNumericEdgesAndSentinels",
+      "testNativeSustainedFireAndReleaseTrace",
+      "testNative_P_CalcHeight",
+      "testNative_P_DeathThink",
+      "testNative_P_MovePlayer",
+      "testNative_P_PlayerThink",
+      "testNative_P_Thrust",
+      "testBinaryIconFalseRestoresBackground",
+      "testDisabledWidgetsDoNotReadPatchesOrScreens",
+      "testMultIconOffsetsRestoreAndMinusOneLeavesHistory",
+      "testRejectsOriginalWidgetFatalBoundsAndUndefinedNegation"
+    ],
+    "command": ".toolchain/bin/forge test --offline --fuzz-seed 0x434844 --match-path 'test/{unit/m_cheat,unit/p_inter,unit/p_user,unit/g_game_lifecycle,unit/st_lib,unit/st_stuff,unit/hu_lib,unit/hu_stuff,integration/Cheats}.t.sol' --skip Doom --skip GameplayProbe --skip RendererProbe --skip WadResourcesProbe -vv",
+    "compilerSeconds": 11.77,
+    "fullInheritedRegression": "deferred to final Phase 4"
+  },
+  "ordinaryEvm": {
+    "cases": 20,
+    "nativeSnapshots": 491,
+    "inputTransactions": 254,
+    "deploymentGas": 5228348,
+    "inputTransactionGasMin": 664476,
+    "inputTransactionGasMax": 1228227,
+    "gasScope": "Support probe includes storage and observation work, not isolated cheat or production engine cost.",
+    "storageRoundTrip": true,
+    "minedRollbackRetryAndSequenceRejection": true,
+    "report": "artifacts/phase4/cheats-evm.json"
+  },
+  "originalToSolidity": {
+    "m_cheat.c cht_CheckCheat/cht_GetParam": "src/doom/m_cheat.sol",
+    "st_stuff.c cheat sequences/ST_Responder cheat branches": "src/doom/st_cheats.sol ST_Responder",
+    "am_map.c cheat_amap/AM_Responder cheat branch": "src/doom/st_cheats.sol AM_CheckCheat",
+    "p_inter.c P_GivePower": "accepted src/doom/p_inter.sol",
+    "g_game.c G_DeferedInitNew": "accepted src/doom/g_game.sol"
+  },
+  "agentAttribution": "One root agent; no subagents. Runtime model identifier/category token usage unavailable from goal counter; no transcript mining.",
+  "sourceSha256": {
+    "artifacts/phase4/cheats-evm.json": "683203638b4a0eda3ff7fb4482ff0e0f212c14850460e334bb7aa0557e448486",
+    "docs/PHASE4-CHEATS.md": "43a1d90b2c15c5198465758bb8b742364c81ca6980d0050b7b7933e7f021eb68",
+    "execution-budget.json": "acde01f1b9cf248f9265f1ffcff7181d01d77620a2dfcd9a4d4d0b1c79df2be7",
+    "foundry.toml": "afe04c66f0e684b5a936821f6543605a3739f62164ceb4398426db7403452393",
+    "src/doom/m_cheat.sol": "e79d73bd9e159b0f05639464bf7c9cb7f40dc069780c3459336dfffb50394f82",
+    "src/doom/st_cheats.sol": "e35b8253b068f1ad807073bc322e2b62205ef3ffa95bb06f36acef7a79721677",
+    "src/support/CheatFixture.sol": "3829e6c8660f09974b83d59f7699cf66dcb736df72e4a7825c434109a35fe1f0",
+    "src/support/CheatProbe.sol": "879fb2ee19041ef64fdfd83a1d3344fce8ed69ead26d09f84bbe581ff8ba90a5",
+    "test/fixtures/phase4_cheats/cases.json": "bc5d2e4392929fe1db36e5cccbff9ff94451082deb2f5cfe5a642872780fd1d5",
+    "test/fixtures/phase4_cheats/manifest.json": "3969ae9fac383cb82601ccbd16a9ede661e8e5bebbefe2cab28c8cc6b583fccd",
+    "test/fixtures/phase4_cheats/presentation.bin": "5a52cdec9ef0424a0cb5f297dfc6455477ddb7fdfb6c8dc5672d4a5d97c24edf",
+    "test/fixtures/phase4_cheats/presentation.json": "8a8653ad4853b6a2b64e3b605110d52029924220bc07fb58802f3e32b6217f62",
+    "test/fixtures/phase4_cheats/primitive.bin": "a11d9a4cabbb1ed7dc1a964eec888e87bd13f52e58363359a2a10645284fffeb",
+    "test/fixtures/phase4_cheats/vectors.bin": "309f3fbb3bf0c1367f8a7b8bd97918d44da3ada68b2573f8537a063b6b89c1e8",
+    "test/integration/Cheats.t.sol": "3885af051e6a62451de8bed192e754dd851ca37e3974e1c58f5606c0adfa5fe7",
+    "test/unit/m_cheat.t.sol": "4f2adca1e3ea9a7edfc1cad0cede12c0ab7fc8b82304893ee8bb96ba9f8906f6",
+    "tools/reference/cheats/README.md": "aa6eb0e4f5adf23e52eba7cc6fffde8764177ca8291b08964059fd9b707f680c",
+    "tools/reference/cheats/checkpoint.py": "4ca695dead1ce9ee936cc6a2eaa28257f121f88bd9fbe4bb3e046c66d918e818",
+    "tools/reference/cheats/driver.c": "1f379a901331389fc3556814d076990cc9959550b6ec888d8fabbac089300ca6",
+    "tools/reference/cheats/evm.mjs": "94908477c6af83213b2366798d11e239db89c69cdff06142d933996379c7fb83",
+    "tools/reference/cheats/host.c": "fba2f9866fc2a7855f2902f1a3f7479f1c062b838ddcf26a457ca1e1c0b0001e",
+    "tools/reference/cheats/presentation.py": "4df47bc968231983864069ee2c4997ee945ca5ec3009e00e1f2dd047686e3de4",
+    "tools/reference/cheats/presentation_driver.c": "68d4ae810be780ebed5c89ee539eeb071d193643e1dd5484322b1e529f19ac5f",
+    "tools/reference/cheats/primitive_driver.c": "17c16ed17642158de898b83334e3e21dd8b54d051c6caff6089be903752780fa",
+    "tools/reference/cheats/reference.py": "71b16e86e22bedd06cee9ffdfbe9a59647cd52b5119ed96e172fc75e41d6d07e"
+  },
+  "localLogSha256": {
+    "artifacts/local/cheats/forge-final.log": "c46768d50539c97649fbc7dee0fe5e78b6f2c1aaed7324928c5cdf69573c1a6d",
+    "artifacts/local/cheats/native-final.log": "767d689b7a8736f104e999735560a475178bd6377aa9c353ca0aeb81b1aecb89",
+    "artifacts/local/cheats/presentation-final.log": "b0cbab6c38900a828e0ab933e2b85cde0cfb9b74135802e599a2d9a6cff1dc5c",
+    "artifacts/local/cheats/evm-final.log": "44a97a64d2438fdd9bf15aa04bbf2dd14138e5c3b1c2eba9427e82ed2099b1bf"
+  },
+  "preservation": {
+    "baseline": "9f98ed1d38e6de3f2577f5d76b07ec136fc70d52",
+    "baselineFiles": 1624,
+    "allowedChangedFiles": [
+      "docs/PHASE4-PLAN.md"
+    ],
+    "sharedProductionInterfacesAdaptersBrowserCompilerHistoricalEvidence": "unchanged",
+    "mainAndOtherBranchesModified": false
+  },
+  "pass": true
+}

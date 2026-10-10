@@ -1,0 +1,1469 @@
+{
+  "schemaVersion": 1,
+  "goal": "4.4",
+  "pass": true,
+  "scope": "Dedicated raw-key support probe, actual Solidity cheat modules and original-C event hashes across ordinary transactions. Production adapters/browser, AM pixels and actual map load are not integrated.",
+  "rpcPort": 18695,
+  "gasBudget": 10000000000,
+  "compiler": {
+    "version": "0.8.37+commit.f401782d"
+  },
+  "settings": {
+    "remappings": [],
+    "optimizer": {
+      "enabled": true,
+      "runs": 200
+    },
+    "metadata": {
+      "bytecodeHash": "ipfs"
+    },
+    "compilationTarget": {
+      "src/support/CheatProbe.sol": "CheatProbe"
+    },
+    "evmVersion": "cancun",
+    "libraries": {},
+    "viaIR": true
+  },
+  "contract": "0x5fbdb2315678afecb367f032d93f642f64180aa3",
+  "creationTransaction": "0xe44b9e7d3b5886192ec7176e68c7efc7f812bfb1967e92d262cd42d08e16dde1",
+  "deploymentGas": 5228348,
+  "runtimeBytes": 23937,
+  "runtimeSha256": "5555d41cc4730b04c9de80c3a58d88a22dd43de9dd736ea86682a249c981a953",
+  "cases": 20,
+  "snapshots": 491,
+  "rows": [
+    {
+      "nativeCase": "iddqd",
+      "events": 15,
+      "resetTransaction": "0x05a382eeb8b4ca8ab3782b47a97773af00a8b38cd0b19f931c812d3b6e0b014d",
+      "transactions": [
+        {
+          "transaction": "0x2526761990f47a27afea4385f5b12f44eca6a47e5612c77ff302d7abbb40f2b6",
+          "gasUsed": 1091665,
+          "events": 2
+        },
+        {
+          "transaction": "0x13339b39028521745ace044d69a6497aab985936520ea6c40210b6802cc663c8",
+          "gasUsed": 669335,
+          "events": 1
+        },
+        {
+          "transaction": "0x7652d056bc433c38a3af323f5ed6c625f95238b4395676aedfb81ea3920e7b57",
+          "gasUsed": 1146426,
+          "events": 3
+        },
+        {
+          "transaction": "0xed7f3c7d8b0224328d441a1364f7fbaded90c18523e19231d3a0b6fe6b9af2c1",
+          "gasUsed": 737708,
+          "events": 1
+        },
+        {
+          "transaction": "0x90341bc5ea9672dde22b101e286f5f861f6a6f733c1855f498417461aaf43fc2",
+          "gasUsed": 669682,
+          "events": 1
+        },
+        {
+          "transaction": "0xdcb857403f075036e703590c0f3159cfec7242e8c35b69949132d0cb8cf7b913",
+          "gasUsed": 1167431,
+          "events": 4
+        },
+        {
+          "transaction": "0xcca1acf9f65ae60e9266f65f2905f2171c07889bf2b795f5d165cd2e38d3b857",
+          "gasUsed": 727923,
+          "events": 2
+        },
+        {
+          "transaction": "0x7681d25fe2ef6a870d00866d46adb3b88b5aa29524b0d7f6bfd0a5f4dbb3b28c",
+          "gasUsed": 710144,
+          "events": 1
+        }
+      ]
+    },
+    {
+      "nativeCase": "idkfa",
+      "events": 15,
+      "resetTransaction": "0x67df44e6426aec058766b7fc82774a8788786e2352b0e1642144e2356e4b27bb",
+      "transactions": [
+        {
+          "transaction": "0xcbc0c01b8409f2003a4f306288b2de01d3d2e549c1c885457d57b5056c23b9bd",
+          "gasUsed": 1091665,
+          "events": 2
+        },
+        {
+          "transaction": "0xbbbd406df58ee26625c6656ec1e115f74d15152963013c6f134a5623963c6e49",
+          "gasUsed": 664476,
+          "events": 1
+        },
+        {
+          "transaction": "0x3bd522326a78409807d3e7d5768b4be05f19d4d1267c3a1fecd86770d3920fc4",
+          "gasUsed": 1153308,
+          "events": 3
+        },
+        {
+          "transaction": "0x211c841e6cfc532f93354e9753987a8f040488a7439e6c48cab5cb9826a80b7d",
+          "gasUsed": 737708,
+          "events": 1
+        },
+        {
+          "transaction": "0xf8da76e711f5c84f68d84b6ed764a070d6f659006a2e560615b34da8d9396ba4",
+          "gasUsed": 664823,
+          "events": 1
+        },
+        {
+          "transaction": "0x44345ff1306ff0647c21776645b7f0de8433165ad26fbe8a0ed9e8d692a519df",
+          "gasUsed": 1187979,
+          "events": 4
+        },
+        {
+          "transaction": "0x76af66fce28cf31f347ae2eb9bb34bffda8aebf803469d14da40a9ce9b57c9c0",
+          "gasUsed": 727864,
+          "events": 2
+        },
+        {
+          "transaction": "0xa70403665ca19b4ee7e5d46de2cf268217bd6dbcf18ca3df3bb37689374f1ede",
+          "gasUsed": 691526,
+          "events": 1
+        }
+      ]
+    },
+    {
+      "nativeCase": "idfa",
+      "events": 12,
+      "resetTransaction": "0xfc60c618061ff2439f0ad95f13599f1155a31fe31a7cf1963b54c8665667ee64",
+      "transactions": [
+        {
+          "transaction": "0xf0651d56650105c4605fb4e9f2ab01d0ae7e8eead0d07f7391c457cd127fb981",
+          "gasUsed": 1091665,
+          "events": 2
+        },
+        {
+          "transaction": "0xd9baeedbee12e4aade1b8b09d3fe7afafc146bfc4c4bb98ba5e43ed77fae4674",
+          "gasUsed": 664476,
+          "events": 1
+        },
+        {
+          "transaction": "0x00971813aa33f6ae7b47c8347a6874156766120133eab0082ee4e926487c5577",
+          "gasUsed": 1150105,
+          "events": 3
+        },
+        {
+          "transaction": "0x17154e9ae0b10cf302af92d3458e83b54deed6cdb5e653ddcdde51f4d793a47d",
+          "gasUsed": 664801,
+          "events": 1
+        },
+        {
+          "transaction": "0xcd7e047cdefe567206f733db6577a4aac1c8e10c1887946aa6879684c9238a95",
+          "gasUsed": 689972,
+          "events": 1
+        },
+        {
+          "transaction": "0x752c6d7a2afc8ccfaf0bb4dcbe2f6bca8e4c7f489eb90b766ea069f149a9be3b",
+          "gasUsed": 885039,
+          "events": 4
+        }
+      ]
+    },
+    {
+      "nativeCase": "idspispopd",
+      "events": 30,
+      "resetTransaction": "0x5ffd6d965f79a53bfdbec3eaa797b430b2c677f2f5597f9be764b78cdcb5053b",
+      "transactions": [
+        {
+          "transaction": "0x749888b6eb12f5c94d3c6f5e5e60284aeb8ed191f2ba4bf4f228700a61746f8b",
+          "gasUsed": 1091665,
+          "events": 2
+        },
+        {
+          "transaction": "0xbe225d653bbeb96af0228ab088d59977f1425d221398ee0988c667ff79d0646b",
+          "gasUsed": 664476,
+          "events": 1
+        },
+        {
+          "transaction": "0xac01f545c78856af70b2f41f320df4265a88f3aaf78ede70673c9e02b4083154",
+          "gasUsed": 821508,
+          "events": 3
+        },
+        {
+          "transaction": "0x0117d2a9fd969bff22c685143c3bca4f4439509285e60814c7ccf0243fd77a37",
+          "gasUsed": 694476,
+          "events": 1
+        },
+        {
+          "transaction": "0xf047c821d53b074816a46904f567fa8142d36a3fd2eca6e5ad695fed2376bfe4",
+          "gasUsed": 694476,
+          "events": 1
+        },
+        {
+          "transaction": "0xb97d4351fed2578592d69a35d15f6877d8f460f8282e1f7a5835d260c848b084",
+          "gasUsed": 1225301,
+          "events": 4
+        },
+        {
+          "transaction": "0x2e353af302668213812690f8e6b42ec1e07d529f85b2345f617f5435c0fc0cc6",
+          "gasUsed": 727769,
+          "events": 2
+        },
+        {
+          "transaction": "0x770fc12d7f02eeec63bbd532a43c4b6bdac4d51b2dd592f71be254431593e745",
+          "gasUsed": 994164,
+          "events": 1
+        },
+        {
+          "transaction": "0x7e4e02f7462c702e6200735adf9e870268b41861bd49581b432d6637acbab04e",
+          "gasUsed": 791503,
+          "events": 3
+        },
+        {
+          "transaction": "0x1698852aaab1257dc5f6a2a8c246f9523d35cd8f531a1da2e197ef6c402478c1",
+          "gasUsed": 694779,
+          "events": 1
+        },
+        {
+          "transaction": "0xc6b02c881ae63a6b3cfc81234c458637140d1fb18e5982fa73caf11c598acb1e",
+          "gasUsed": 690365,
+          "events": 1
+        },
+        {
+          "transaction": "0x973891438ae030ebed1f015b2fc0f511f8a0fdca2bc59d0bee9feae543d89cb7",
+          "gasUsed": 904958,
+          "events": 4
+        },
+        {
+          "transaction": "0xf58e33fe4d4509936b5672a406fcd58cd218d5ed5e5685cb2af5b48e17504d61",
+          "gasUsed": 758702,
+          "events": 2
+        },
+        {
+          "transaction": "0x32070bbb9e2fa35ed43e922d38c095b32bf1c415599f75fff6836d799e02fec6",
+          "gasUsed": 694801,
+          "events": 1
+        },
+        {
+          "transaction": "0x4741593928efab7b24fac24735521cb8588ed234f34bbbd7b891a39b61cdfd20",
+          "gasUsed": 839013,
+          "events": 3
+        }
+      ]
+    },
+    {
+      "nativeCase": "idclip",
+      "events": 18,
+      "resetTransaction": "0x59fb1b57b7256952e79115eed395249c951afdf351845bc36edcbbf1e79926c8",
+      "transactions": [
+        {
+          "transaction": "0x526c954305fe1365846ee0e3ed66e7ab400a5f4b64313bf114ce3b3dd5681c93",
+          "gasUsed": 1091665,
+          "events": 2
+        },
+        {
+          "transaction": "0xefc8b4bdf88769671b34ab79f0d58c1ba495e746219a0fbc60beff9cc2ee5426",
+          "gasUsed": 674194,
+          "events": 1
+        },
+        {
+          "transaction": "0x80216ae6aaf1328ddbe158c3bd916731a4f530db1cae1afc1f9a13ea33048107",
+          "gasUsed": 853141,
+          "events": 3
+        },
+        {
+          "transaction": "0xcc557a39459c49528053344ddaa9740f843e267958d6ae6d83de8d5ba5dd8025",
+          "gasUsed": 1011264,
+          "events": 1
+        },
+        {
+          "transaction": "0xff7c06f727758679419f674049f4ab011f7e9499fae664ad24552125d28480a9",
+          "gasUsed": 737664,
+          "events": 1
+        },
+        {
+          "transaction": "0xd60123c16fe70ef74f4b2e71945ce7589cb83c28ab6f531c36a6c06a00fc397c",
+          "gasUsed": 853338,
+          "events": 4
+        },
+        {
+          "transaction": "0x26d4d39781baab0048930d33c827ffe309eac51d4f4855bf2ba8f3207f06f6b3",
+          "gasUsed": 1075187,
+          "events": 2
+        },
+        {
+          "transaction": "0x59d92fd09f8a49ae2ae2579a5b54ef34a3e30b5a3d86dc85861d01ef711c4992",
+          "gasUsed": 674519,
+          "events": 1
+        },
+        {
+          "transaction": "0x61ebc0549887acf948c3275f354c1a54e81ae26c1544e854ca5e4a5052803432",
+          "gasUsed": 836652,
+          "events": 3
+        }
+      ]
+    },
+    {
+      "nativeCase": "idbeholdv",
+      "events": 27,
+      "resetTransaction": "0x6401f8eb38dce7d17507b4a3fdd75bdf4359572ecbdb1c34ab98d932862dd35b",
+      "transactions": [
+        {
+          "transaction": "0x781e4f0d69dd38e7f74eb3554b73f13ddc2bd437bc7303a51c2c6ccd4388ef6d",
+          "gasUsed": 1091665,
+          "events": 2
+        },
+        {
+          "transaction": "0xecf61d855b5ad7acfafa625a98177aa9982c95d0988e0eb84cf84f51384772e3",
+          "gasUsed": 693630,
+          "events": 1
+        },
+        {
+          "transaction": "0x2ec09a2e971c3cc3e9911cda6414424b869a4984f46c80ac78d1d360e6e0f855",
+          "gasUsed": 838485,
+          "events": 3
+        },
+        {
+          "transaction": "0x7bac9c03712c2933d297cdc34c7ab90f9a58fc0d4200b5a581a04ac7667c3051",
+          "gasUsed": 711630,
+          "events": 1
+        },
+        {
+          "transaction": "0x51bc98a4cca875bb185c2b72e844de924fb5ba2f1b8f0a670f0ede2f399dd241",
+          "gasUsed": 770410,
+          "events": 1
+        },
+        {
+          "transaction": "0x7554e242c8af737715e810f987cf0dfb71740f4e6b9bdb8797ffbb7a9ec802af",
+          "gasUsed": 945867,
+          "events": 4
+        },
+        {
+          "transaction": "0x63010f5835ca0a2aa2ac799317b24d8b9b56635ae58fd33eac145b9e6046a221",
+          "gasUsed": 775091,
+          "events": 2
+        },
+        {
+          "transaction": "0xf9a326ac9d423feb52da9249b0983be36ba02058c89faaef0436ee46f06b7852",
+          "gasUsed": 711836,
+          "events": 1
+        },
+        {
+          "transaction": "0x057139380e9a6e838b51e0e93e7bf2406c65ce1eeb116000854e6a6aa81bf4af",
+          "gasUsed": 807532,
+          "events": 3
+        },
+        {
+          "transaction": "0xcd82036101caf4ea7f1f589abea7bdf3509d23283958b31531f79a09617ac76a",
+          "gasUsed": 1011167,
+          "events": 1
+        },
+        {
+          "transaction": "0xf0305357ef3c01c8a1ae75f2355fe223cf1d6564a2a40551d65f2fe77184f026",
+          "gasUsed": 737567,
+          "events": 1
+        },
+        {
+          "transaction": "0xb33a636001b67a062cdba3dcedd3c4fa74b12cf2e2b259795698e19ccde850d0",
+          "gasUsed": 885798,
+          "events": 4
+        },
+        {
+          "transaction": "0x4b4ef18e511f5707fc1a8d9c7f1df099766fa0398027949a36924696b76e8e75",
+          "gasUsed": 816616,
+          "events": 2
+        },
+        {
+          "transaction": "0xaf9e0b33e572ab82b08e0456274f171b52dd216f25b8801e86b957d807b8312f",
+          "gasUsed": 684061,
+          "events": 1
+        }
+      ]
+    },
+    {
+      "nativeCase": "idbeholds",
+      "events": 27,
+      "resetTransaction": "0x26df76ce3818396da78341c560d6992a3449c9a0d365bf0a0cc43de1a02f9487",
+      "transactions": [
+        {
+          "transaction": "0xc099d6b1d09ef627ae6ac97fd838e0e33c50cdb13b43f91e70f3abdfe0004f5d",
+          "gasUsed": 1091665,
+          "events": 2
+        },
+        {
+          "transaction": "0xce84fdb2bff5b61e640a2c7223e57e5623bb8671cdccbfbf0e1d9e90fbf9a7c4",
+          "gasUsed": 693630,
+          "events": 1
+        },
+        {
+          "transaction": "0xbd267dd771a72c1238fc1677561f03f6112680a9c34aece56dd47ae0978d5fe2",
+          "gasUsed": 838485,
+          "events": 3
+        },
+        {
+          "transaction": "0x1311e2aadc9e629a32d9561b3a6b0bb9ee61265b927ee9e620736438f5239827",
+          "gasUsed": 711630,
+          "events": 1
+        },
+        {
+          "transaction": "0x4801d6c4237a6572561ae3b57fcaec31080e636ea64363a623944deb32f722e8",
+          "gasUsed": 770410,
+          "events": 1
+        },
+        {
+          "transaction": "0xf4f88c9facc5729e582155a13d88e07e5ff9dd9d9c594c1d5b7b41813b8bc9eb",
+          "gasUsed": 951945,
+          "events": 4
+        },
+        {
+          "transaction": "0x4cac8ddfeb4b95521e0f94d3410353aff06b864b08cbb299b81226ecd5af0c63",
+          "gasUsed": 775091,
+          "events": 2
+        },
+        {
+          "transaction": "0x2ac7f36733da49d3c86e727d72ac13bf872416718ff52ed462c96e397e8481c0",
+          "gasUsed": 711836,
+          "events": 1
+        },
+        {
+          "transaction": "0x9cac3639efff4552f4180b920943bf6fca207fea9b852e82cec7fb3e1665814e",
+          "gasUsed": 802732,
+          "events": 3
+        },
+        {
+          "transaction": "0x895b8b802717d2e645c6acf45d9e5dc9d66c858692623975ff16789bd50d8c20",
+          "gasUsed": 1011167,
+          "events": 1
+        },
+        {
+          "transaction": "0xe53573673cb6344ef872c0a62415ac297ee6be038981fa86705ec7c2e3326773",
+          "gasUsed": 737567,
+          "events": 1
+        },
+        {
+          "transaction": "0x8df1a227a5329c2ecb30a884704ec36cded068cb20b7bec201cef6d1e5e5d1eb",
+          "gasUsed": 885798,
+          "events": 4
+        },
+        {
+          "transaction": "0xe2d4d79d5ab752058a9e4bd009e666e5e253cadc70999cde0c39b27eaebf14b8",
+          "gasUsed": 816616,
+          "events": 2
+        },
+        {
+          "transaction": "0xc3ae39a29e9b1326bb72cf06f0065b68f3911cce7bf1358704990b632ef7d940",
+          "gasUsed": 704418,
+          "events": 1
+        }
+      ]
+    },
+    {
+      "nativeCase": "idbeholdi",
+      "events": 27,
+      "resetTransaction": "0x8ce975ad0ea16e196750a5570616a20a50ff7cc5677ca61f893be017ffa81429",
+      "transactions": [
+        {
+          "transaction": "0xff2388e937fca1589033a346e608860e7d1112b2f5064a1942e0a67f7e5c2705",
+          "gasUsed": 1091665,
+          "events": 2
+        },
+        {
+          "transaction": "0x18a05decb43388a927a7d8c8c12181fedd6745c846138de80341cd32ff48ff85",
+          "gasUsed": 693630,
+          "events": 1
+        },
+        {
+          "transaction": "0x99269614608d867694e6d49617c15cf689c4e0aea853f5ef053c958757d6ad45",
+          "gasUsed": 838485,
+          "events": 3
+        },
+        {
+          "transaction": "0xd7520d214fb54e22ee59a268d3f84a52c3cf63fbc1ebe844933ba885835c2ab0",
+          "gasUsed": 711630,
+          "events": 1
+        },
+        {
+          "transaction": "0x6d37321423c2b68f08db7b6dc8c57608cbd0da9b38d404f2e413aeaac18e1862",
+          "gasUsed": 770410,
+          "events": 1
+        },
+        {
+          "transaction": "0x003b5354018fb6335ad58eea62ab644435a5e62475d80ba505d33a09c4e5519d",
+          "gasUsed": 945383,
+          "events": 4
+        },
+        {
+          "transaction": "0x8cb989bfe6ea638d57d143fd96d5e6834c51f0f30a85f4fbcc0e508f4612d98e",
+          "gasUsed": 772173,
+          "events": 2
+        },
+        {
+          "transaction": "0x73f56bb13a410d34b4e7cad147294f16afbc4c7f07cadb455914282f3f52f2f9",
+          "gasUsed": 708977,
+          "events": 1
+        },
+        {
+          "transaction": "0x2d243bdc34f170485f77646e44909827d4edc425cf8826aaa408631c00ee8eeb",
+          "gasUsed": 1009859,
+          "events": 3
+        },
+        {
+          "transaction": "0xfe47963cdcb12788b59d171d58d338d3ca986ca6d1b4f3d7c93a4243f6cfe43c",
+          "gasUsed": 791577,
+          "events": 1
+        },
+        {
+          "transaction": "0x512905a88816d085bf5d3912d5e2d1b9dce04f1adf7b3ff38ba58eaf4ec1d92c",
+          "gasUsed": 708977,
+          "events": 1
+        },
+        {
+          "transaction": "0x736be086b4a935fe64b8248d51b4553074dd76020e316c0a175ae7f08c0ceed4",
+          "gasUsed": 900762,
+          "events": 4
+        },
+        {
+          "transaction": "0xa2ecd89a4229aec5f3a09ffd66f261dc1883750cce9976b08ae7cca72a5f9efc",
+          "gasUsed": 772173,
+          "events": 2
+        },
+        {
+          "transaction": "0xb698f32593e01952d7e45baeaf27955945df8b2b44673d0d75cae37f35e999ca",
+          "gasUsed": 879928,
+          "events": 1
+        }
+      ]
+    },
+    {
+      "nativeCase": "idbeholdr",
+      "events": 27,
+      "resetTransaction": "0x3ebc8ab25144fa6684b4b5cf47a3c12e611d56012daa73b2d394dceedc884d23",
+      "transactions": [
+        {
+          "transaction": "0x32242329aad6e6bb64113eda3295d138b4126964928add0a7305521135c08875",
+          "gasUsed": 1091665,
+          "events": 2
+        },
+        {
+          "transaction": "0x2b14efaf1b4b493efddb34cb829b05d61ee593fd533c1754938b0b8685216213",
+          "gasUsed": 693630,
+          "events": 1
+        },
+        {
+          "transaction": "0xcc954ede309215032ef4a4a92f57617cd7d81e13038f94aebf1e0f538dffe940",
+          "gasUsed": 838485,
+          "events": 3
+        },
+        {
+          "transaction": "0x69ff58c21de0769eff2380f251385ec08433ea2283e19559880ee897eba2b234",
+          "gasUsed": 711630,
+          "events": 1
+        },
+        {
+          "transaction": "0xd535d504cf00c931e5719832352d852c172353eed9833081163054cf85562c65",
+          "gasUsed": 770410,
+          "events": 1
+        },
+        {
+          "transaction": "0xe09ff5b7b4c3f877f1f57c2adde94a57b72a3c2eed6770fd6e41183a1554fbb2",
+          "gasUsed": 945933,
+          "events": 4
+        },
+        {
+          "transaction": "0xec477cb50526685596ac86e01b65ea8f5e563047f92b162af11194f0191f7137",
+          "gasUsed": 775091,
+          "events": 2
+        },
+        {
+          "transaction": "0x78e60bc27c5b34d4536cc203fb8ab1a0c9d2c83b05a1dde4889ad3a4b5b33c2f",
+          "gasUsed": 711836,
+          "events": 1
+        },
+        {
+          "transaction": "0x668023afd3635669f0df858edb19120737d85d77f167551ba82e5da312bcfba5",
+          "gasUsed": 807532,
+          "events": 3
+        },
+        {
+          "transaction": "0x46a416a82411a768fa1dd803cc7948e00e91eb8d78e56f048d6e25e8883c70ce",
+          "gasUsed": 1011167,
+          "events": 1
+        },
+        {
+          "transaction": "0x978f7f87e621d703615ebf59f86d9057cb5213a0b29e80e51151a1f83a143101",
+          "gasUsed": 737567,
+          "events": 1
+        },
+        {
+          "transaction": "0xc710926707afbe92d6e34bc352616c2e8fe5c75974f52ae43a9d848a6ac3a01c",
+          "gasUsed": 885798,
+          "events": 4
+        },
+        {
+          "transaction": "0x868fef48f19dd3913277ecc62a3e7d0bc7349299b1903f07dffbc224dfe06815",
+          "gasUsed": 816616,
+          "events": 2
+        },
+        {
+          "transaction": "0xb56c6520191a3efd873f2a87e04925e61cfe929c25d4c5ce9154bc0711ebd404",
+          "gasUsed": 684061,
+          "events": 1
+        }
+      ]
+    },
+    {
+      "nativeCase": "idbeholda",
+      "events": 27,
+      "resetTransaction": "0x663c90716b60871658c138be441d5479f219338118aacec627ff3434de5021aa",
+      "transactions": [
+        {
+          "transaction": "0xdde396a3694e47980d8368a26570b7a49fdc7d3a0c25433f0e6ce8ab56913ce7",
+          "gasUsed": 1091665,
+          "events": 2
+        },
+        {
+          "transaction": "0x8663f52866d51eb16c477abc606e7b5cf5c40630a9b5953c72f35a806b365382",
+          "gasUsed": 693630,
+          "events": 1
+        },
+        {
+          "transaction": "0xb65a9431db0c8eff7590052f56f0c689e478828cb4b7ed6262da9b0f333a24dc",
+          "gasUsed": 838485,
+          "events": 3
+        },
+        {
+          "transaction": "0x8c299306ff39d03a80d424cc25fad1575a43302148e2f0c737161132848f0e74",
+          "gasUsed": 711630,
+          "events": 1
+        },
+        {
+          "transaction": "0x0d7a45e560dbf33525c2b616c5405e66cbfb8742f69d8721a32c39903cc57471",
+          "gasUsed": 770410,
+          "events": 1
+        },
+        {
+          "transaction": "0x59b6f5fe1e1772f7193ae56bd8ac6044d1cc80ca694722e13dab2a080fecab5e",
+          "gasUsed": 946051,
+          "events": 4
+        },
+        {
+          "transaction": "0xc75453cef96dd9049bd43b1a281755e90933492cddfb1602636d3ea1d0068bc1",
+          "gasUsed": 775091,
+          "events": 2
+        },
+        {
+          "transaction": "0x3f190286dd515515bf0d3b8ccd9ac33df94322ff46f5dc04cbee046c598ee827",
+          "gasUsed": 711836,
+          "events": 1
+        },
+        {
+          "transaction": "0x3c88f4c78e0173b57dda0aace0dc871eddf97a6e8e4b262ae773917e2ced3654",
+          "gasUsed": 804732,
+          "events": 3
+        },
+        {
+          "transaction": "0x895f6f463f6c337a457e73c6742179a115ef09b0daf696aa27344e262f012a38",
+          "gasUsed": 1011167,
+          "events": 1
+        },
+        {
+          "transaction": "0x353e27c255300416a9c660392c506c9d6e74e463906eb1c107950ef6c3108bbf",
+          "gasUsed": 737567,
+          "events": 1
+        },
+        {
+          "transaction": "0xc2dc3df755144aa0158cf6cea592145fbd952a9a578652978b77791001230552",
+          "gasUsed": 885798,
+          "events": 4
+        },
+        {
+          "transaction": "0xc553e49e69a2d0fd8f7c4848cb8cbb1bef1a119ffe4d1cdc564b36d501a98842",
+          "gasUsed": 816616,
+          "events": 2
+        },
+        {
+          "transaction": "0x6ee5e9b801320f9f92d3970d6bc46080c13ee0851269b7f103020c2c84300ea4",
+          "gasUsed": 684061,
+          "events": 1
+        }
+      ]
+    },
+    {
+      "nativeCase": "idbeholdl",
+      "events": 27,
+      "resetTransaction": "0xe8ee9510ca73bc1eac80aa317ece2a263ae854eda8251f99fdb8bf2e44235e46",
+      "transactions": [
+        {
+          "transaction": "0x4e0af2d39b69c92fe7f0c63bb44c448dac4833ba969ec32f6bd5e379b92c7b68",
+          "gasUsed": 1091665,
+          "events": 2
+        },
+        {
+          "transaction": "0x794292435b976396376735f5434b0b8c9c2737cfe6c1009da0dd6c8547c31186",
+          "gasUsed": 693630,
+          "events": 1
+        },
+        {
+          "transaction": "0x1759e05e4475f0de817260ab5828917faa43fbd41c32c8df8d39d980f088d6eb",
+          "gasUsed": 838485,
+          "events": 3
+        },
+        {
+          "transaction": "0x1da2df3c4fe119fa089b3fda2c2231ee77753a60cef90d91fb35bbfa76f9f273",
+          "gasUsed": 711630,
+          "events": 1
+        },
+        {
+          "transaction": "0xfe395e122decb9f02a0d0639aca3d84a499a24e49f75e54a996ddd20ebf2f330",
+          "gasUsed": 770410,
+          "events": 1
+        },
+        {
+          "transaction": "0x57c64ce2eed112d368632da9a9d70f1c0c9743d5d206bd6f7f5f2cef299ab65e",
+          "gasUsed": 945911,
+          "events": 4
+        },
+        {
+          "transaction": "0x67c146282479f3f65b108a6238d25e0b40d1e10448a02cf16085bf85a0a18792",
+          "gasUsed": 775091,
+          "events": 2
+        },
+        {
+          "transaction": "0xa58b68cce217fd7ef51a5feebfae5b91af40690bc540998bd60aa3075e5a2b1b",
+          "gasUsed": 711836,
+          "events": 1
+        },
+        {
+          "transaction": "0x3e1c931325ebc8fa75cabfc137f4a425829c7d44810cbbc1f0f5394a8f6e8114",
+          "gasUsed": 807532,
+          "events": 3
+        },
+        {
+          "transaction": "0x6c3fb3b586e9f52970bf0d0853a0985e20ee39d61ec3da86040e71a4a4293dc2",
+          "gasUsed": 1011167,
+          "events": 1
+        },
+        {
+          "transaction": "0x98c0195595fe32df4626c4059036635a922063ac95c6ca3a4c67672f35b2bb46",
+          "gasUsed": 737567,
+          "events": 1
+        },
+        {
+          "transaction": "0x3815abdf009f08dfb993607a68a3f928a96185148ef5c6074bf22f5955589391",
+          "gasUsed": 885798,
+          "events": 4
+        },
+        {
+          "transaction": "0x0c4cd175e177516cbd6fb7f9ce0c91b3b581edf4819b7fc5a0e8998fcd17845a",
+          "gasUsed": 816616,
+          "events": 2
+        },
+        {
+          "transaction": "0x9747ab18fa7eddadbcada4dff22b1148d2a6cf8057ed0963cbad3f31ef19a592",
+          "gasUsed": 684061,
+          "events": 1
+        }
+      ]
+    },
+    {
+      "nativeCase": "idchoppers",
+      "events": 30,
+      "resetTransaction": "0x0f999451974d6aedf231111fcf4bd4891134c088d3326a96a1e3cc6d2f146099",
+      "transactions": [
+        {
+          "transaction": "0x3551be70e7e25f1b15a97aa4db0c90c024525120c4c31c623099c89959891fb1",
+          "gasUsed": 1091665,
+          "events": 2
+        },
+        {
+          "transaction": "0x1f46e56c6133fd2f9b12038bbcaf95b53ce44691aa8267e0f15745c9b1793f82",
+          "gasUsed": 674194,
+          "events": 1
+        },
+        {
+          "transaction": "0xdeb7b3e430ff1c4573eda31e516f1613ae0eecb86962565ace6dfb6cdf892aec",
+          "gasUsed": 816623,
+          "events": 3
+        },
+        {
+          "transaction": "0x0f5a69bd69a391d7cea39437095410aa8c95ba8d1d15f8e5b27aca24dcce5265",
+          "gasUsed": 694476,
+          "events": 1
+        },
+        {
+          "transaction": "0x3150096d7b409421d00d3c208c519e9d0187d77cfcf53b324eccefc7826ceb0e",
+          "gasUsed": 694476,
+          "events": 1
+        },
+        {
+          "transaction": "0x3fec8b2f1b6b7f357653136ec56f522a9a21f517c6f18fbc57b65841c1fa0fe7",
+          "gasUsed": 1228227,
+          "events": 4
+        },
+        {
+          "transaction": "0xf45f28091e24d5452429a5c576bb89347735a4dfff6b23eadc92736c05c4dcf7",
+          "gasUsed": 727982,
+          "events": 2
+        },
+        {
+          "transaction": "0x8cdb29ccb551a433fd5ef0f2f1297cc7145fa7accea3ee9e8c61f0d39be6014d",
+          "gasUsed": 694823,
+          "events": 1
+        },
+        {
+          "transaction": "0x73fdfaab7627cf2255d8e3efdf476d64e6181351d1b21fb252b2fe6da0f35dbb",
+          "gasUsed": 821656,
+          "events": 3
+        },
+        {
+          "transaction": "0xaf38f1914203a6639e5111f32203d19000da245edbf1ce3408790fd4f9020287",
+          "gasUsed": 694823,
+          "events": 1
+        },
+        {
+          "transaction": "0x09ac92b0f566d4a9f5b2860139d8ea337aa678c65d1c408e037907bc8e5cd89f",
+          "gasUsed": 689538,
+          "events": 1
+        },
+        {
+          "transaction": "0x1989d7b9660667afe7825c21e3d9e7e0b387f8abb948e8735fa64867f2c3502e",
+          "gasUsed": 905184,
+          "events": 4
+        },
+        {
+          "transaction": "0x1c77479f7b3049261df0b779ee5cb05575c33b2583434057e9bc10621acb5df1",
+          "gasUsed": 757864,
+          "events": 2
+        },
+        {
+          "transaction": "0x606c62f649b28547427b65476bb641acc3e763a5bbc4fee731e6e4fca30cbaea",
+          "gasUsed": 694823,
+          "events": 1
+        },
+        {
+          "transaction": "0x9f09e18f225d782bdc7ab1b95f3105b8b1e884447a1cc18a82322df68f54bba9",
+          "gasUsed": 816377,
+          "events": 3
+        }
+      ]
+    },
+    {
+      "nativeCase": "idmypos",
+      "events": 21,
+      "resetTransaction": "0x73fc38a1d46a901ba2f3f252470afe12ae9c87a7910c461bb5164f967b86149d",
+      "transactions": [
+        {
+          "transaction": "0x57c4de2d0a9e9d7b990fd8fdf1b3db8a5de1119c0c1d11da45ea84c41e965273",
+          "gasUsed": 1091665,
+          "events": 2
+        },
+        {
+          "transaction": "0xe7030ddcef4e1923c851219f4548acd3a7f73c30a1ea1afbc412f58780e1bc03",
+          "gasUsed": 664476,
+          "events": 1
+        },
+        {
+          "transaction": "0xdbdee9b5391bfb04c19bb18edd55196204e07a08b51f9c8ecaf82ed2886a0ce8",
+          "gasUsed": 820623,
+          "events": 3
+        },
+        {
+          "transaction": "0xc9e42022f9867e836be24fdcf98f05803a92cde765306b1073139bee88d843d6",
+          "gasUsed": 837538,
+          "events": 1
+        },
+        {
+          "transaction": "0x105f34e897687ea0c727634bc60b1f7ddfb988e7f199e2df565031db7003be3d",
+          "gasUsed": 1021222,
+          "events": 1
+        },
+        {
+          "transaction": "0x7e7319fc692eba996d7d53f0412c004388af64d79a579578b4027094adf5a150",
+          "gasUsed": 867889,
+          "events": 4
+        },
+        {
+          "transaction": "0xe85dd5686fc5123efb8453043d15d8d26864aa95b6e4a4a273b6fad2f5266ee8",
+          "gasUsed": 781984,
+          "events": 2
+        },
+        {
+          "transaction": "0xd980149e1164342ce04bc7eca737b4f6bbcaec91e909de5bf1c8a62db357d552",
+          "gasUsed": 1021222,
+          "events": 1
+        },
+        {
+          "transaction": "0x236bb07adb2e7980c4e8ff57347462585abcece0ae6d98c429904fdf7c550a34",
+          "gasUsed": 803016,
+          "events": 3
+        },
+        {
+          "transaction": "0xb6de300fa63193f79211dec43415f9a347ed9673cddb03f63509c7de6f69e21f",
+          "gasUsed": 704737,
+          "events": 1
+        },
+        {
+          "transaction": "0x81b2024553704abc51ea2339dc2bae31e916c46c72d7392f6ef881c1a429faf8",
+          "gasUsed": 704737,
+          "events": 1
+        },
+        {
+          "transaction": "0x97963a7b446b3f1127279246226d571902c025a99fd8b6484a27e4e6eae76651",
+          "gasUsed": 718642,
+          "events": 1
+        }
+      ]
+    },
+    {
+      "nativeCase": "warp-0-3139",
+      "events": 16,
+      "resetTransaction": "0xcaee0bd21642fe6261e6f72656a956abb2f5a2f50f4e9f2fdfc72134e9ad5fcc",
+      "transactions": [
+        {
+          "transaction": "0x2d82973ebc2f7e279733b0288a08a768c42a42a43557aaa42a0532564aec1c4a",
+          "gasUsed": 1091665,
+          "events": 2
+        },
+        {
+          "transaction": "0x7f2e862e0a7e9aff860e2f250e1981458e61534d29132097256a60227536cc0f",
+          "gasUsed": 674194,
+          "events": 1
+        },
+        {
+          "transaction": "0xcb563e146eab35a8497aa93db76ee821f82c637d0f93b11bd737ef8d61e8ff12",
+          "gasUsed": 816623,
+          "events": 3
+        },
+        {
+          "transaction": "0x6e86216510c31efe42bcd411b8d675bcdff7fd0a9cdb970aca0f783757a376f5",
+          "gasUsed": 697140,
+          "events": 1
+        },
+        {
+          "transaction": "0xe86b9591717149dcafa302c1b876c1091ec49fdef2644d26153ce1aa5681c651",
+          "gasUsed": 736949,
+          "events": 1
+        },
+        {
+          "transaction": "0x3f1f25255e3a29e312a683327534a0ea3a955b6ef0a0359cc9aae7c7457f24d8",
+          "gasUsed": 924529,
+          "events": 4
+        },
+        {
+          "transaction": "0x63a2d319445ec926ddbb923a91c82768042c3a6cc28c4253d6c176159f0d95d7",
+          "gasUsed": 755524,
+          "events": 2
+        },
+        {
+          "transaction": "0x7dd37ef4f091509ad9b15dd7ba88d65f95d112c556359fed2c193a5d7bb1c581",
+          "gasUsed": 697346,
+          "events": 1
+        },
+        {
+          "transaction": "0xabe28a08b550ce73616f8f095a696a59d0b613e43ca3e111a31732e721e8a2ea",
+          "gasUsed": 699968,
+          "events": 1
+        }
+      ]
+    },
+    {
+      "nativeCase": "warp-2-3131",
+      "events": 16,
+      "resetTransaction": "0x2f9ef3cce85e60c889c726a0a5c84b572e31732221b186617e900c0499ec6436",
+      "transactions": [
+        {
+          "transaction": "0x551854aefdf6be3d34eb206fcdae11b4a14f105afbeaead1da2a5cc604360ec2",
+          "gasUsed": 1091665,
+          "events": 2
+        },
+        {
+          "transaction": "0xb250a1304796e49052cdc9d6790a4915de940dfec24fc641748bf5427d2de110",
+          "gasUsed": 674194,
+          "events": 1
+        },
+        {
+          "transaction": "0x579f0efb3b1beedf1cdc75b18aa81ee85cfa2cc826471e71e3e72991a50f3d78",
+          "gasUsed": 816623,
+          "events": 3
+        },
+        {
+          "transaction": "0x6acb4e94fb4e2c9de88c184fcc49b0885ea418c87dd424de15bb7060de184e2b",
+          "gasUsed": 697140,
+          "events": 1
+        },
+        {
+          "transaction": "0xd5b0d74eece1e5e3e7e6a6c41c7ffe6391fef3c089806fc584343959b54b7ba5",
+          "gasUsed": 696476,
+          "events": 1
+        },
+        {
+          "transaction": "0xfe78206c36d1d511b649d1e55859cc1c638eef004a652c8d186cb0ea4f5e2ac0",
+          "gasUsed": 923707,
+          "events": 4
+        },
+        {
+          "transaction": "0x0c70848848af43c1f9a0961a3f5a89da28ad1c772774f953fdf92f60d2323e5d",
+          "gasUsed": 755136,
+          "events": 2
+        },
+        {
+          "transaction": "0xfe21c94210df3ecc5f886462383a56f2827b85648bf23f891d24fa283383ce26",
+          "gasUsed": 697140,
+          "events": 1
+        },
+        {
+          "transaction": "0x6403bd9a86f2f69b005adf01eb08db733f6889518912f49f79bf6c8eab608f32",
+          "gasUsed": 696476,
+          "events": 1
+        }
+      ]
+    },
+    {
+      "nativeCase": "iddt",
+      "events": 12,
+      "resetTransaction": "0xcd2edf617ff2ffada73c09b1ee4be296d81d08f9122ff5eca99934e90600cb8e",
+      "transactions": [
+        {
+          "transaction": "0x59726e4daefeee4666510cddac753dfac0df46598f591099e93c9f6b8c70ba07",
+          "gasUsed": 1091665,
+          "events": 2
+        },
+        {
+          "transaction": "0x02f0fe74cc42588f8d9fe56f104724ff0b1622ac89a606670a4d9dfb1c90bc42",
+          "gasUsed": 669335,
+          "events": 1
+        },
+        {
+          "transaction": "0x7adc02db6169de77882974ca59549561b143dd72af53f072459dfa8553db18ae",
+          "gasUsed": 1123805,
+          "events": 3
+        },
+        {
+          "transaction": "0x13e0a2d1594714239a7fdc3f75c7df2c776d7edcb236aad481665e02c6dbc371",
+          "gasUsed": 669335,
+          "events": 1
+        },
+        {
+          "transaction": "0x7acdc47fa10b0a5caaacf287727c04c71c23e0ca7f65c2d26395a848e7138465",
+          "gasUsed": 690588,
+          "events": 1
+        },
+        {
+          "transaction": "0xbee0b06e4b4a1471ca697fd7cef38ab51fcce9dacd9082384533f24d94457cb3",
+          "gasUsed": 881901,
+          "events": 4
+        }
+      ]
+    },
+    {
+      "nativeCase": "dt-gated-interleave",
+      "events": 6,
+      "resetTransaction": "0x992c4e17905fd5d3a41885c829b959c9b2e57e293b3e50b607938646412c8e81",
+      "transactions": [
+        {
+          "transaction": "0x502f7beb2abe7c717ba4a32599dc6db7e0d32a0666bb721f0f441a6c857aedaf",
+          "gasUsed": 791338,
+          "events": 2
+        },
+        {
+          "transaction": "0x941fbee053ab737af9e1d913dff2437eea7bd0866a6c9a471ab47cd16425811a",
+          "gasUsed": 694476,
+          "events": 1
+        },
+        {
+          "transaction": "0xe745d77ef3fca6ce23b0287855a9bab3f19bed2922943eeaf8617804c22a8c51",
+          "gasUsed": 834981,
+          "events": 3
+        }
+      ]
+    },
+    {
+      "nativeCase": "netgame",
+      "events": 121,
+      "resetTransaction": "0xb290838dc398641bf4d32500aa6c9dc8074a1c82c8f9a5026214147521b77658",
+      "transactions": [
+        {
+          "transaction": "0x775e9fa040f714bd1bab56822acb3e4c968c3ae4bb93129825a3fdda243bca7d",
+          "gasUsed": 787945,
+          "events": 2
+        },
+        {
+          "transaction": "0xec8f9794ba2ac4db761acd74cae76cc0284da04344ee0902461ae37c64bee773",
+          "gasUsed": 680742,
+          "events": 1
+        },
+        {
+          "transaction": "0x1ed856fa41dd5dacb620c5b5f3814a4cbc62da89bfdfa8cf592e538edbdca665",
+          "gasUsed": 805262,
+          "events": 3
+        },
+        {
+          "transaction": "0xcaf12f46eaec1ce2b360a0ef1292ccdb3ba795dafc76621abcd0583209f1bd03",
+          "gasUsed": 685601,
+          "events": 1
+        },
+        {
+          "transaction": "0x98bc05eb5ba41d20288541c8d6cae77d1a528def47b312b3416dcd5230274de6",
+          "gasUsed": 675883,
+          "events": 1
+        },
+        {
+          "transaction": "0x7acb59d24abd0677523a3f6b3f4f2d6aae7269e8428aea83b88ba3b5420967f4",
+          "gasUsed": 874824,
+          "events": 4
+        },
+        {
+          "transaction": "0x9d0d8b329290965eea0f132a6c0b8b4e6159d83ab8806e8371d61f506cb2497f",
+          "gasUsed": 726809,
+          "events": 2
+        },
+        {
+          "transaction": "0xb8c7af5de29d901931c1dbb5de21f307e88580803016583a27bb7ee11fc5a3ec",
+          "gasUsed": 719801,
+          "events": 1
+        },
+        {
+          "transaction": "0xe31d4b116317e4c2acd3ee97f3617f258f1df3b50baa056ce5c6b069df107ca3",
+          "gasUsed": 778562,
+          "events": 3
+        },
+        {
+          "transaction": "0xcc9bb78330d8bbce2675160b42ffd55dd5772fcc737dd2bd2e15c90be18cabc6",
+          "gasUsed": 719801,
+          "events": 1
+        },
+        {
+          "transaction": "0x0b34795d1aa40f896c88be5aa6fe295ebaa043a9b1f23dcea0ad31e85e7a02f1",
+          "gasUsed": 675883,
+          "events": 1
+        },
+        {
+          "transaction": "0x3f0690b52205452eb9904210b065328f573005e89c1d71f5c57e6259e7a132d8",
+          "gasUsed": 834788,
+          "events": 4
+        },
+        {
+          "transaction": "0xb6efbafe06b2353a8d791a3fa9612c03fbd3aa2c9b1e32c9d714f38aecc66e7c",
+          "gasUsed": 770845,
+          "events": 2
+        },
+        {
+          "transaction": "0x0d07eded857ecac8988a545fbd363f80c87f4ffd77bbc3e7f87832c1b1083de6",
+          "gasUsed": 680742,
+          "events": 1
+        },
+        {
+          "transaction": "0xbdf59ad08debe23d3a5b76e90ba5fce20ec1fa7013e9914eeef07061b9815523",
+          "gasUsed": 780562,
+          "events": 3
+        },
+        {
+          "transaction": "0xcf1587010c87c047a295d787c9549a3a5fd98b0e4be14d43db999251c765443f",
+          "gasUsed": 719801,
+          "events": 1
+        },
+        {
+          "transaction": "0xfcd9eae543655ddc38320593b6136c74f7eac890a58dbda11efb2e59754ef162",
+          "gasUsed": 685601,
+          "events": 1
+        },
+        {
+          "transaction": "0x206fa754ddc99e00333ff4cffb1f0906930b7680e4739e3aaa534b68718fb518",
+          "gasUsed": 830788,
+          "events": 4
+        },
+        {
+          "transaction": "0x53db9ef5d1e6086f9c8e0003b85c0177e5acbd69cb2fe28b6354c47c353baba2",
+          "gasUsed": 730809,
+          "events": 2
+        },
+        {
+          "transaction": "0x22c9818cdd13f50b83b6d4e121273bcf26abb64ce31435d99cb6f6b8dc9d3429",
+          "gasUsed": 719801,
+          "events": 1
+        },
+        {
+          "transaction": "0x88439277c1df91a8f6a2528554cb969b602f116b4d38d5dff21cce98789be435",
+          "gasUsed": 778562,
+          "events": 3
+        },
+        {
+          "transaction": "0xcd765a8e3594b3f4bcc3b5520dea90404d4510276a076055d4de37fae5a13438",
+          "gasUsed": 679883,
+          "events": 1
+        },
+        {
+          "transaction": "0xf81c6afc5be6b6de3b50fd28cc58fb6f82b12245fba5cc867eedd6c1fad01b68",
+          "gasUsed": 679883,
+          "events": 1
+        },
+        {
+          "transaction": "0x28fbb5367b091925d82a139aebb8ec34f8f83fcb8651b212b287b8be8dfcfe1e",
+          "gasUsed": 874706,
+          "events": 4
+        },
+        {
+          "transaction": "0x9de0a39218ac8e1b46e5aeaee95e686115dcb6a5d0eae424b88aa5b2e68bda8f",
+          "gasUsed": 726927,
+          "events": 2
+        },
+        {
+          "transaction": "0xaa8f93a2eefe8c4f21dbcbfe33102bcfc1fec26c30d7f134130b4b4b83a7f887",
+          "gasUsed": 679883,
+          "events": 1
+        },
+        {
+          "transaction": "0x0065c80cac17fff07c91aa2ee00620700b347d5277784e2a6b3c4c6255c05635",
+          "gasUsed": 782444,
+          "events": 3
+        },
+        {
+          "transaction": "0xdafc413e3bfee89c3794266bab7b33045658bc5ef779841d9a4b29ccd23d429a",
+          "gasUsed": 679883,
+          "events": 1
+        },
+        {
+          "transaction": "0x4389638676a56723c83da259c3d061c14ec30a8409b7f1c650258f0153390eb9",
+          "gasUsed": 679883,
+          "events": 1
+        },
+        {
+          "transaction": "0xc784819cef2cca5639d98332604d477ccadfced37f62d4045526d0974fd63939",
+          "gasUsed": 835024,
+          "events": 4
+        },
+        {
+          "transaction": "0x70ea305ea0fd02b512721a80d8eeb3b97ef685127bc5237faca35462d89c15c1",
+          "gasUsed": 730809,
+          "events": 2
+        },
+        {
+          "transaction": "0x811071eaf54c959d4c5e77178dc547df306d6dcbf4277da4955d53d2a25ea9e3",
+          "gasUsed": 679883,
+          "events": 1
+        },
+        {
+          "transaction": "0x551226ef2fd4a0176ee90eb82789d7b58f1641170e04d46a75da1c93bc4c9a40",
+          "gasUsed": 782562,
+          "events": 3
+        },
+        {
+          "transaction": "0xc0abd38b1136d510866590569af8fbc64af7dc263eb3c9c4ce169e0a759c5ff1",
+          "gasUsed": 679883,
+          "events": 1
+        },
+        {
+          "transaction": "0x4dc321569eb583ee91f52e67e68a04f4e8398e61dc0b1038a9da9d235380971b",
+          "gasUsed": 679883,
+          "events": 1
+        },
+        {
+          "transaction": "0x9a77b0e27c7bf57cb2a1e18c99e69d5d25722aa9cb06e5319279072601d4e94f",
+          "gasUsed": 834788,
+          "events": 4
+        },
+        {
+          "transaction": "0xe30fa95986c59f1a4d18067840b73cef1c7f57f02870ceedc40b6f6b7c4494ed",
+          "gasUsed": 730809,
+          "events": 2
+        },
+        {
+          "transaction": "0x47123b8060183f69915335b2d13102f9d23339902439ca8d2dc7fdeb7298360d",
+          "gasUsed": 719801,
+          "events": 1
+        },
+        {
+          "transaction": "0x6d6872b3d15c33b8da597926c12013235352c954bea68d8ee096ab929f3c574a",
+          "gasUsed": 778562,
+          "events": 3
+        },
+        {
+          "transaction": "0x31eb665e25dac019ce5482701d57e3c0f9d47a05c340f647bb7c47ddf7468baf",
+          "gasUsed": 679883,
+          "events": 1
+        },
+        {
+          "transaction": "0xadc134244a41c0e91fe5b64c1818a9216bb64925ce66f1facfc63769cb224cf4",
+          "gasUsed": 679883,
+          "events": 1
+        },
+        {
+          "transaction": "0x24190c57b5e9c61897450ff5026d64612bc0575fe013d4ba4ac951dcb11467e8",
+          "gasUsed": 874706,
+          "events": 4
+        },
+        {
+          "transaction": "0x3fea7a932eb92316ec41f7770926a2ec379baf2f065325e695040a565400c421",
+          "gasUsed": 726927,
+          "events": 2
+        },
+        {
+          "transaction": "0x5c34dc1356b93e12d678095b83e06564c0d5f08b6b31f1f933d7325a905f234d",
+          "gasUsed": 679883,
+          "events": 1
+        },
+        {
+          "transaction": "0x27368da8e611ca71ba5937cdb57c553fd73d4d45e1bb14cbb69acd933f0abab5",
+          "gasUsed": 782444,
+          "events": 3
+        },
+        {
+          "transaction": "0xd74f0530932b078723e0ac96b0664e31596f5c4c0f7e91049094bd0606ecdae0",
+          "gasUsed": 679883,
+          "events": 1
+        },
+        {
+          "transaction": "0xfb7e45a8edfb1e2bdc6f2e9f8c67ee3f12623eb57b1452e3f8b0e703f7127e88",
+          "gasUsed": 679883,
+          "events": 1
+        },
+        {
+          "transaction": "0x12fe942a369abc7f355b6c9cb882a76161222afc672b8d0bae9d4a15dc790eb9",
+          "gasUsed": 835083,
+          "events": 4
+        },
+        {
+          "transaction": "0xecc5da44b99461cf634028f5a75a551a5698eb288646aff5dff5debad16ed0c4",
+          "gasUsed": 730809,
+          "events": 2
+        },
+        {
+          "transaction": "0xf9885165011e6607570916dd25db4460df1205e10c0fc8ed0438d0825c668143",
+          "gasUsed": 679883,
+          "events": 1
+        },
+        {
+          "transaction": "0x8408f7f45192362f9ab648b9b4250b3392b90c0d83591ca09a97906aa1ea7da1",
+          "gasUsed": 782444,
+          "events": 3
+        },
+        {
+          "transaction": "0x19e2988fd5bcc28c44abf2e97dcdb0894ebf0ba529df5f4339fbba3023fff109",
+          "gasUsed": 719801,
+          "events": 1
+        },
+        {
+          "transaction": "0xe5fc32a5f941a9966aa0c2aa805c37a13c6ffa914547362e021e3182157f94f7",
+          "gasUsed": 685601,
+          "events": 1
+        },
+        {
+          "transaction": "0x8d83baa22ccf1a07d0627f51204459bf60ca3dd9f53b1346b86ff42a71888008",
+          "gasUsed": 830788,
+          "events": 4
+        },
+        {
+          "transaction": "0x78a4a56bfd5aba51487ed7216567ca9c926b21a2259c64151d6da4815887c403",
+          "gasUsed": 770727,
+          "events": 2
+        },
+        {
+          "transaction": "0xef83f875099066c6793b878da3936ed82597b9a8abbd44503dd825d0f3a8ff5e",
+          "gasUsed": 685601,
+          "events": 1
+        },
+        {
+          "transaction": "0xf984d3160b2e4afaa5db80b1e7e5df11ee31daa786f469e49790432c24accfdc",
+          "gasUsed": 783421,
+          "events": 3
+        },
+        {
+          "transaction": "0xd0a49b9c88998cadb854a6d00686a122d09dc4d16fadae49ce22cc18c2e2c00c",
+          "gasUsed": 682683,
+          "events": 1
+        },
+        {
+          "transaction": "0xb756be35da87c3fbd6a2ea9ba75dceda315f2d4cbf97ab251a547e967f11ba74",
+          "gasUsed": 685406,
+          "events": 1
+        },
+        {
+          "transaction": "0x0e0f1bbf0e6881cbd9243cad9303d29dc22b824faedf350fc397645fc71ee808",
+          "gasUsed": 900946,
+          "events": 4
+        },
+        {
+          "transaction": "0xd396586b330b4432040f96e788e2151ce6b071131b65b6ff325f74212fcaa690",
+          "gasUsed": 698160,
+          "events": 1
+        }
+      ]
+    },
+    {
+      "nativeCase": "st-high-key-bits",
+      "events": 5,
+      "resetTransaction": "0xd024b2c1d0b1310405c1d6d4ae703b8ff34f5d8709b7294599933ea4b55c3e47",
+      "transactions": [
+        {
+          "transaction": "0xe8dc8545fb5798fc286841ab840b8b0cc1c13dedde83710e967fe9101ee8c3af",
+          "gasUsed": 1091689,
+          "events": 2
+        },
+        {
+          "transaction": "0x6a5986e44cb9ad48a15fbeb412b2f2124473c3e880477a8a5ff0bfd8ea168888",
+          "gasUsed": 669347,
+          "events": 1
+        },
+        {
+          "transaction": "0xb7f52c01e667bc8c01da4529348489d4903dc70fa64d93eac592eae1ab9d828b",
+          "gasUsed": 793593,
+          "events": 2
+        }
+      ]
+    },
+    {
+      "nativeCase": "music-excluded",
+      "events": 12,
+      "resetTransaction": "0xdcfacc2059aaa3dcf62a6af1e4f3755556ae7725fbbef7c0a44eaab2b94d51b7",
+      "transactions": [
+        {
+          "transaction": "0xb7408a1a4d05841a4b286fc208a28554333bb4244dc60ed19b43b3c691803ee5",
+          "gasUsed": 1091665,
+          "events": 2
+        },
+        {
+          "transaction": "0x7b3ce77eca4d81376b1bd6853df002cb5d3a6a9ef6b5dbde563b0b7fa9b0bb55",
+          "gasUsed": 664476,
+          "events": 1
+        },
+        {
+          "transaction": "0xc3ea681011ed03d06b6ad68ed136dc57891bf79ac6554f7adfd4ac81fa6dd00d",
+          "gasUsed": 815646,
+          "events": 3
+        },
+        {
+          "transaction": "0xa024e2be5b32f24689b6c642821ae60d0d6e72b425a239e3f4fa318993f8b5ca",
+          "gasUsed": 691617,
+          "events": 1
+        },
+        {
+          "transaction": "0x3eefa4ee4398ebbb89c3a96253b09bef4da8aee57ba19334de288345c2482f7a",
+          "gasUsed": 1010961,
+          "events": 1
+        },
+        {
+          "transaction": "0x5b9dc88dafaef0a4ce3e066f653bbe1bb15ead6487b9668aedbcc213be63644d",
+          "gasUsed": 894128,
+          "events": 4
+        }
+      ]
+    }
+  ],
+  "rollback": {
+    "transaction": "0x62afbc90ea96855c12877ca54423976020e8e50cbf51e328f2b1e39cf18de4d1",
+    "status": "0x0",
+    "gasUsed": 737716,
+    "logs": 0,
+    "parserAndPlayerUnchanged": true,
+    "inputSeqUnchanged": true,
+    "retryTransaction": "0x1c4fa3163bbb1714ec9085e8a4b6169cf5a4217e0739a94539282e21bfecb429",
+    "retryOriginalCMatch": true,
+    "duplicateTransaction": "0xbc883b93bb9be0d102b8a44f6cb4bdc09d1949e941bfd70be1193721e5ae4cbc",
+    "duplicateStatus": "0x0"
+  },
+  "sourceSha256": {
+    "src/doom/m_cheat.sol": "e79d73bd9e159b0f05639464bf7c9cb7f40dc069780c3459336dfffb50394f82",
+    "src/doom/st_cheats.sol": "e35b8253b068f1ad807073bc322e2b62205ef3ffa95bb06f36acef7a79721677",
+    "src/support/CheatFixture.sol": "3829e6c8660f09974b83d59f7699cf66dcb736df72e4a7825c434109a35fe1f0",
+    "src/support/CheatProbe.sol": "879fb2ee19041ef64fdfd83a1d3344fce8ed69ead26d09f84bbe581ff8ba90a5",
+    "tools/reference/cheats/evm.mjs": "94908477c6af83213b2366798d11e239db89c69cdff06142d933996379c7fb83",
+    "test/fixtures/phase4_cheats/cases.json": "bc5d2e4392929fe1db36e5cccbff9ff94451082deb2f5cfe5a642872780fd1d5",
+    "test/fixtures/phase4_cheats/manifest.json": "3969ae9fac383cb82601ccbd16a9ede661e8e5bebbefe2cab28c8cc6b583fccd",
+    "foundry.toml": "afe04c66f0e684b5a936821f6543605a3739f62164ceb4398426db7403452393",
+    "execution-budget.json": "acde01f1b9cf248f9265f1ffcff7181d01d77620a2dfcd9a4d4d0b1c79df2be7"
+  }
+}
