@@ -372,7 +372,10 @@ library P_Mobj {
                 player.cards[i] = true;
             }
         }
-        // ST_Start/HU_Start are host UI initialization, outside world simulation.
+        // Original console-player ST_Start/HU_Start boundary; legacy hosts opt out.
+        if (c.playerUIEnabled && playerId == uint32(c.state.consoleplayer)) {
+            c.hooks.startPlayerUI(c, playerId);
+        }
     }
 
     function findType(GameContext memory c, int16 doomednum) private pure returns (uint32) {

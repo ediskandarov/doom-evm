@@ -371,6 +371,11 @@ library ST_Stuff {
         }
     }
 
+    /// @dev D_Display restores PLAYPAL outside GS_LEVEL without changing st_palette.
+    function ST_BasePalette(STState memory s, bytes memory playpal) internal pure {
+        _setPalette(s, playpal, 0);
+    }
+
     function _setPalette(STState memory s, bytes memory playpal, int32 palette) private pure {
         if (palette < 0 || uint32(palette) * 768 + 768 > playpal.length || s.usegamma > 4) {
             revert StatusDomain();

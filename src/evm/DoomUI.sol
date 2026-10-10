@@ -23,6 +23,28 @@ struct UIState {
 }
 
 library DoomUI {
+    /// @dev Per-level ST_Start/HU_Start preserve original file-static histories.
+    function restart(UIState memory u, GameContext memory c) internal view {
+        STGraphics memory a;
+        ST_Stuff.ST_loadData(a, c.resources.source, uint32(c.state.consoleplayer));
+        ST_Stuff.ST_Start(u.status, a, c.state, c.definitions);
+        HU_Stuff.HU_Start(
+            u.hud,
+            HU_Stuff.HU_Init(c.resources.source),
+            c.state.gamemode,
+            c.state.gameepisode,
+            c.state.gamemap
+        );
+        u.refresh = true;
+        releaseGraphics(u);
+    }
+
+    function basePalette(UIState memory u, ResourceView memory source) internal view {
+        ST_Stuff.ST_BasePalette(
+            u.status, R_Data.W_CacheLumpNum(source, R_Data.W_GetNumForName(source, "PLAYPAL"))
+        );
+    }
+
     function initialize(UIState memory u, GameContext memory c, bool fullscreen) internal view {
         u.enabled = true;
         u.fullscreen = fullscreen;

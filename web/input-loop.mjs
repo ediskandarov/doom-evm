@@ -12,6 +12,16 @@ export const INITIALIZE_GAME_INPUT_SELECTOR = '0xc81d0ef4';
 export const LAST_INPUT_SELECTOR = '0x3464285a';
 export const GAME_RESOURCES_PREPARED_SELECTOR = '0x8874965d';
 export const PREPARE_GAME_RESOURCES_SELECTOR = '0x4cc5dc3f';
+export const INITIALIZE_EPISODE_SELECTOR = '0xda2ebb7a';
+export const NEW_EPISODE_SELECTOR = '0x25729a0f';
+export const RESTART_EPISODE_SELECTOR = '0x6fcaecbb';
+export const PAUSE_EPISODE_SELECTOR = '0xb4218932';
+export const EPISODE_STATUS_SELECTOR = '0xb496ea18';
+const word = n => BigInt(n).toString(16).padStart(64, '0');
+function episodeSelection(map, skill) {
+  if (!Number.isInteger(map) || map < 1 || map > 9 || !Number.isInteger(skill) || skill < 0 || skill > 4) throw Error('Invalid Episode One selection');
+  return word(map) + word(skill);
+}
 
 function uintWord(data, maximum, label) {
   if (!/^0x[\da-f]{64}$/i.test(data)) throw Error(`Malformed ${label}`);
@@ -112,7 +122,9 @@ export class InputTransactions {
         // settled, but initialization is a future transaction and must wait for Start.
         if (!shouldContinue()) return;
         this._startupValid();
-        const startup = this.config.productionUI === true
+        const startup = this.config.episodeMode === true
+          ? INITIALIZE_EPISODE_SELECTOR + episodeSelection(this.config.startMap ?? 1, this.config.skill ?? 2) + word(this.config.uiFullscreen === true ? 1 : 0)
+          : this.config.productionUI === true
           ? (this.config.rawKeyboard === true ? INITIALIZE_GAME_INPUT_SELECTOR : INITIALIZE_GAME_UI_SELECTOR)
             + (this.config.uiFullscreen === true ? '1' : '0').padStart(64, '0')
           : INITIALIZE_GAME_SELECTOR;
@@ -145,6 +157,25 @@ export class InputTransactions {
     const sequence = this.sequence + 1;
     const data = eventStepData(events, sequence, draw);
     return this._submitStep(data, sequence, { events: [...events] }, draw, beforeSend);
+  }
+
+  async episodeControl(action, { map = 1, skill = 2, paused = false } = {}) {
+    this._available();
+    if (this.config.episodeMode !== true || !this.started) throw Error('Start Episode One before using its controls');
+    const sequence = this.sequence + 1;
+    let data;
+    if (action === 'new') data = NEW_EPISODE_SELECTOR + episodeSelection(map, skill) + word(sequence);
+    else if (action === 'restart') data = RESTART_EPISODE_SELECTOR + word(sequence);
+    else if (action === 'pause') data = PAUSE_EPISODE_SELECTOR + word(paused ? 1 : 0) + word(sequence);
+    else throw Error('Unknown episode control');
+    return this._submitStep(data, sequence, { control: action }, true, () => {});
+  }
+
+  async episodeStatus() {
+    const data = await this.rpc('eth_call', [{ to: this.config.address, data: EPISODE_STATUS_SELECTOR }, 'latest']);
+    if (!/^0x([\da-f]{64}){11}$/i.test(data)) throw Error('Malformed episode status');
+    const values = data.slice(2).match(/.{64}/g).map(n => Number(BigInt.asIntN(256, BigInt('0x' + n))));
+    return Object.fromEntries(['map', 'skill', 'state', 'action', 'paused', 'last', 'next', 'wiStage', 'wiTic', 'finaleStage', 'finaleTic'].map((key, i) => [key, values[i]]));
   }
 
   async _submitStep(data, sequence, input, draw, beforeSend) {
