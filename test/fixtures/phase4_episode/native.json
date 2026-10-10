@@ -1,0 +1,365 @@
+{
+  "schemaVersion": 1,
+  "goal": "4.7a",
+  "upstreamCommit": "a77dfb96cb91780ca334d0d4cfd86957558007e0",
+  "wadSha256": "7323bcc168c5a45ff10749b339960e98314740a734c30d4b9f3337001f9e703d",
+  "maps": [
+    "E1M1",
+    "E1M2",
+    "E1M3",
+    "E1M4",
+    "E1M5",
+    "E1M6",
+    "E1M7",
+    "E1M8",
+    "E1M9"
+  ],
+  "compiler": "Apple clang version 17.0.0 (clang-1700.0.13.5)",
+  "target": "arm64-apple-darwin24.6.0",
+  "flags": [
+    "-std=c99",
+    "-O2",
+    "-fwrapv",
+    "-fno-strict-aliasing",
+    "-ffp-contract=off",
+    "-fno-fast-math"
+  ],
+  "profiles": [
+    "O0",
+    "O2",
+    "UBSan-except-shift"
+  ],
+  "extractions": [
+    {
+      "file": "w_wad.c",
+      "function": "W_CheckNumForName",
+      "startLine": 351,
+      "endLine": 390,
+      "sha256": "10c5f34f7928eb60b67509372cfb9ac4337380d1638b272f2a0b5c4c0019bcc0"
+    },
+    {
+      "file": "w_wad.c",
+      "function": "W_GetNumForName",
+      "startLine": 399,
+      "endLine": 409,
+      "sha256": "6da257255b4eeab16fcb06b5c2dd1f9a6a8b9b22ec720a551135fc23af1fc363"
+    },
+    {
+      "file": "r_data.c",
+      "function": "R_DrawColumnInCache",
+      "startLine": 184,
+      "endLine": 218,
+      "sha256": "241db59557b398f0acfec381e1676e5407a5b5ec8df311fff9fb6453f6eb7220"
+    },
+    {
+      "file": "r_data.c",
+      "function": "R_GenerateComposite",
+      "startLine": 228,
+      "endLine": 289,
+      "sha256": "1d48b121215893710562d4335f7dc63ae214d73c68927d52fc888beb7f21798a"
+    },
+    {
+      "file": "r_data.c",
+      "function": "R_GenerateLookup",
+      "startLine": 296,
+      "endLine": 374,
+      "sha256": "cf3ca6ee276b8e781eb7e0d843b356df54c91a0ad20077c0d0fe8a5c4ba9ab68"
+    },
+    {
+      "file": "r_data.c",
+      "function": "R_GetColumn",
+      "startLine": 382,
+      "endLine": 401,
+      "sha256": "04821850cb1d72b62b51adff8258e00caee43158dbd20e9ef5c825abe66e9c86"
+    },
+    {
+      "file": "r_data.c",
+      "function": "R_InitFlats",
+      "startLine": 581,
+      "endLine": 594,
+      "sha256": "e9c1e0c09970872072e963789dd28ac25f361ef0ec5638b76d0430d7d8dc3e60"
+    },
+    {
+      "file": "r_data.c",
+      "function": "R_InitSpriteLumps",
+      "startLine": 603,
+      "endLine": 626,
+      "sha256": "2da6d50507189decc3609d3148a3a1889262cbdfce316588c3c5df4d42a5a754"
+    },
+    {
+      "file": "r_data.c",
+      "function": "R_FlatNumForName",
+      "startLine": 672,
+      "endLine": 686,
+      "sha256": "4f17803437167e7ee4bcf1f900451377ca1f8cd01cb4057fd0c10c6b4a8cdcbe"
+    },
+    {
+      "file": "r_data.c",
+      "function": "R_CheckTextureNumForName",
+      "startLine": 696,
+      "endLine": 709,
+      "sha256": "ab84f308e244a3d6e6977a27bae289c6d68ae5f8d14404d844108a737876f9d9"
+    },
+    {
+      "file": "r_data.c",
+      "function": "R_TextureNumForName",
+      "startLine": 718,
+      "endLine": 730,
+      "sha256": "eac4ffafd4d021bf4ce3337a4496947f636179af79d4dc7d381829c110d6de5c"
+    },
+    {
+      "file": "m_fixed.c",
+      "function": "FixedDiv",
+      "startLine": 57,
+      "endLine": 65,
+      "sha256": "97f73f12dd005f2b2d84f31baf9153f076f3aba300a48bdb0fe7d4b78cf933f4"
+    },
+    {
+      "file": "m_fixed.c",
+      "function": "FixedDiv2",
+      "startLine": 69,
+      "endLine": 87,
+      "sha256": "30c5f8fd2dd75b476d09aec6faca76b383464f1489b53de6b00bc8b214e746ff"
+    },
+    {
+      "file": "p_setup.c",
+      "function": "P_LoadVertexes",
+      "startLine": 122,
+      "endLine": 152,
+      "sha256": "29256886dacf075fbbd69f11214336d81e96908d5328cae969f30cd104d22587"
+    },
+    {
+      "file": "p_setup.c",
+      "function": "P_LoadSectors",
+      "startLine": 231,
+      "endLine": 258,
+      "sha256": "43c2c088784783f31ab12bfe0b93698b1c618e82f6ae2f259094e8d917634e2a"
+    },
+    {
+      "file": "p_setup.c",
+      "function": "P_LoadSideDefs",
+      "startLine": 438,
+      "endLine": 463,
+      "sha256": "37b853507a9786030006dba6564eda4b29ec4cb08b737e8f0b3f0db6654872b8"
+    },
+    {
+      "file": "p_setup.c",
+      "function": "P_LoadLineDefs",
+      "startLine": 357,
+      "endLine": 432,
+      "sha256": "6439cb31f24e90d53582c460d98cba203b4be6c86c41da580bf35be279fc0822"
+    },
+    {
+      "file": "p_setup.c",
+      "function": "P_LoadSegs",
+      "startLine": 159,
+      "endLine": 196,
+      "sha256": "7f570bd776da2ab01067d69676b666d702458ad54b9646ffeeb1cb25ecca3c49"
+    },
+    {
+      "file": "p_setup.c",
+      "function": "P_LoadSubsectors",
+      "startLine": 202,
+      "endLine": 224,
+      "sha256": "dcafcd6e9e4ce76a0f6e33a0fc5c2eddb8f3385943e34a8bc9338dfc9d21ad48"
+    },
+    {
+      "file": "p_setup.c",
+      "function": "P_LoadNodes",
+      "startLine": 264,
+      "endLine": 295,
+      "sha256": "55d0b96e048cd954270e6c924dc54eeeaed5f86efdee0427d6469186f3b388b0"
+    },
+    {
+      "file": "p_setup.c",
+      "function": "P_LoadBlockMap",
+      "startLine": 469,
+      "endLine": 490,
+      "sha256": "3c6c03d7124f32df86c45e5765537f52b7053a87df9368fa8c62474e465bb6d7"
+    }
+  ],
+  "diskTypes": [
+    {
+      "file": "doomdata.h",
+      "type": "mapthing_t",
+      "startLine": 203,
+      "endLine": 210,
+      "sha256": "a785571687a5426f256e2953eb61a8e7ae448e4a7fd231f992d6ba9105f0d81b"
+    }
+  ],
+  "sources": {
+    "r_data.c": "0d0e83faec506d6bbf8d0a7aa5256b8e660f6deebc48c87d2c77bdb6ace4bf8d",
+    "w_wad.c": "a193860a2a1f671a680999aaa93ca294f90c9b1d6b5ba33152c0aa92000074a9",
+    "p_setup.c": "cc56c3ef5eb73aaec4db8be855fd3c192af19bf8f775478d002e9b2e9225872d",
+    "m_fixed.c": "a4472841bc8890c5d5a41b325ecf56d10d7026a7489967aa29100b5dee759fea",
+    "r_defs.h": "d8856503bea02282f5f338f3533885e87c6c430ce4f11511d6a04b5fc040db31",
+    "doomdata.h": "f0504fd3926491ee56c61c8e9c732f0bf7e74306cba482eb267beda5022accca"
+  },
+  "harness": {
+    "tools/reference/episode/reference.py": "d78de2d7b70b1e57275d99f5ac90d82adb500dcb7711e638820ab11bf270bcff",
+    "tools/reference/episode/driver.c": "21e99708c50a894bde7f229137219869eba1d13c4aa29f0e76f70e8376b80601",
+    "tools/reference/phase2_data/compat.h": "2d4b3dcae770c1cf75407f649c2bfa6ac81846a10edcc4f2a93f78343d998498",
+    "tools/reference/phase2_data/driver.c": "c32e13146769e984d8d63cafdd077aa9fbf1e7664a46a5ff0e9a3b193ed9b9cc"
+  },
+  "generatedSourceSha256": "a604908b2d632109444678225efcd4801cee751c2ef6eeedf07768b134e50467",
+  "outputs": {
+    "E1M1.blockmap.bin": {
+      "bytes": 15072,
+      "sha256": "9e50e07de1f89be97b5f01a72550063bc512c79399e9032a17762ca45b10aba6"
+    },
+    "E1M1.map.bin": {
+      "bytes": 244476,
+      "sha256": "aba7dd72c1ea0a61bd207f719cb99a3b3221fa23fcb2b3afc609406124769117"
+    },
+    "E1M1.raw.bin": {
+      "bytes": 141989,
+      "sha256": "ff6ec67f4a6623ec38d34140e40d77e9a0e1b41d61077109bdfebea11bb06ae5"
+    },
+    "E1M1.things.bin": {
+      "bytes": 5844,
+      "sha256": "8d0c41bb52e90d8d87c8206a640777144b6cb287e2994d8f6560215d28c94268"
+    },
+    "E1M2.blockmap.bin": {
+      "bytes": 21568,
+      "sha256": "6fc419d821bde9093423a8453f8a6f3e03eae66053f3c0afd51b3543c3a65a8e"
+    },
+    "E1M2.map.bin": {
+      "bytes": 442956,
+      "sha256": "ad1dea536f68db75693d11cd4ffb40bb678a03e07b476f37fec205660bf1ac1e"
+    },
+    "E1M2.raw.bin": {
+      "bytes": 261314,
+      "sha256": "fa6cc6bc60491a45e341d6c5e7fd02cae686a6756b99f2f1a473d1d61b12d9f6"
+    },
+    "E1M2.things.bin": {
+      "bytes": 7124,
+      "sha256": "5c64a257073bbc95602ad988f219078df7a1e3f3409e996220d3b49d0fa273ad"
+    },
+    "E1M3.blockmap.bin": {
+      "bytes": 19652,
+      "sha256": "355c8ef87eafc60be9aa9ac779e9844c467278e787033a9d58954686abebd8c2"
+    },
+    "E1M3.map.bin": {
+      "bytes": 380144,
+      "sha256": "164204267511d285d7de835cf001ba6c6cce7565c6df613b699fbfd4e8a1d290"
+    },
+    "E1M3.raw.bin": {
+      "bytes": 220861,
+      "sha256": "76bdd38354b236a1b3e056c4e4c44bfb4bb48af733b1ef8ac436dbb1e989427d"
+    },
+    "E1M3.things.bin": {
+      "bytes": 7644,
+      "sha256": "dfbabf10c3c8d3e2c3b390862f73afbfe5ed03c79ecc15fd0caa4ef6780065dd"
+    },
+    "E1M4.blockmap.bin": {
+      "bytes": 28436,
+      "sha256": "3680df6d5c51bafb9af8e052129531f2fc57c71a4761584f57c311dc6a0a270f"
+    },
+    "E1M4.map.bin": {
+      "bytes": 440588,
+      "sha256": "be9fd8df18ec8918f991a19835b72f0fb9f95d505d1b376717d775d77b5c72fa"
+    },
+    "E1M4.raw.bin": {
+      "bytes": 252415,
+      "sha256": "8ee960535e7ce991bcfa80128606cdcf429731fe788535197bb9488944691178"
+    },
+    "E1M4.things.bin": {
+      "bytes": 7564,
+      "sha256": "6974ec90305e152baf4aff879a32a187879f7b7b3eea6fab534fee88225bbfdf"
+    },
+    "E1M5.blockmap.bin": {
+      "bytes": 17848,
+      "sha256": "45c5f0706032ccc46df3be1cac50517636b8726a14fe77b6f9ac7f1924638a03"
+    },
+    "E1M5.map.bin": {
+      "bytes": 230536,
+      "sha256": "af88ec5d6fbf62b052bc66ce21150f05e99f75addb9a06f6ba1eee70615e0000"
+    },
+    "E1M5.raw.bin": {
+      "bytes": 139397,
+      "sha256": "38f86cdebd80d538acc5310af6ba65f8bde05662ef1999d282a1a4964b6f50c1"
+    },
+    "E1M5.things.bin": {
+      "bytes": 7284,
+      "sha256": "6b52ac091ca65c6dae3e4dc227acde83e2e82c02c515a48290298c8e81818c57"
+    },
+    "E1M6.blockmap.bin": {
+      "bytes": 29032,
+      "sha256": "559adda090df1650257c84f30a6d9b8b4a2d6dc349f35a72fac362ed49a9058c"
+    },
+    "E1M6.map.bin": {
+      "bytes": 541784,
+      "sha256": "c25748465b6799011bd19904a746eb182211a76ba30bf4fd3e82bb005cec0c1b"
+    },
+    "E1M6.raw.bin": {
+      "bytes": 316534,
+      "sha256": "95c250a7548c7b479727a92f3b8060e3aa0247c147dec3adbad06d27e334da1b"
+    },
+    "E1M6.things.bin": {
+      "bytes": 9804,
+      "sha256": "faa1e457dc54c07c2c0683c3b342506decb275592a6deb23570ca480e3ca367f"
+    },
+    "E1M7.blockmap.bin": {
+      "bytes": 42528,
+      "sha256": "45ec0613d72dc8c6f54071b92b42fd81d1238869f991b1194a8f3189ca2f1f24"
+    },
+    "E1M7.map.bin": {
+      "bytes": 837984,
+      "sha256": "c3ae60747c54ff3e0544cdf792d929a3cd6f5ec8775dcfd7165742ccfca9c60c"
+    },
+    "E1M7.raw.bin": {
+      "bytes": 522290,
+      "sha256": "00075624e053336df69e651e43cf171e3c13b2eb2830e5bb415c07dceedd6ab7"
+    },
+    "E1M7.things.bin": {
+      "bytes": 14284,
+      "sha256": "d0af9bed9e63d93375e42962cf14d4eb8ca0ee4c3ea71c9a07a8e67f52de5a07"
+    },
+    "E1M8.blockmap.bin": {
+      "bytes": 13680,
+      "sha256": "db047b413d01c26d8e01d69dd15001a243820d47738696ca4073f1e9f2a6e1a9"
+    },
+    "E1M8.map.bin": {
+      "bytes": 205564,
+      "sha256": "22a6fe5fd27b13e47352c3397cbb62aefafa6680ec01c9c85f7dcd397c127099"
+    },
+    "E1M8.raw.bin": {
+      "bytes": 114493,
+      "sha256": "fd9b6e912c82f5e59b4adf766c6e6fa4314e0c5394ca36d0d3e3fb00c17f5fc3"
+    },
+    "E1M8.things.bin": {
+      "bytes": 2464,
+      "sha256": "cc2476aef68e0b01dba572a7f1020a1c028bfcba57e604d40c9e91c42da9aa07"
+    },
+    "E1M9.blockmap.bin": {
+      "bytes": 21916,
+      "sha256": "ef3a512a32170b318e9eeddbb6694ecec47cdfde5130c2a7401ad91bfe80cc50"
+    },
+    "E1M9.map.bin": {
+      "bytes": 377444,
+      "sha256": "40fe5914f305ec8e1f5ae839d25d1a467f89cbad18b896ec7847bae4dc21339b"
+    },
+    "E1M9.raw.bin": {
+      "bytes": 222233,
+      "sha256": "ea970995acc8f414a54a5b3094f7a71f74c947da53f6afa4fb359f17b792159a"
+    },
+    "E1M9.things.bin": {
+      "bytes": 7364,
+      "sha256": "8876302ca5d92c940ab49e6b50c9bd3ea732bc37277891fa2b94000b20721927"
+    },
+    "shared.bin": {
+      "bytes": 7533216,
+      "sha256": "591f6d427e41e774e553a84d28a4712dd4de06ca3547f84a16b11fcea765f800"
+    },
+    "shared.indices.bin": {
+      "bytes": 22072,
+      "sha256": "d8b5ee993087ff73374ea644e75ab11015b058c3b05c73d4841be4c9dd56569e"
+    }
+  },
+  "audit": [
+    "Original negative signed shifts in map/sprite/blockmap loading are pinned-profile extensions; UBSan shift checks disabled in this mixed resource run, other undefined checks enabled.",
+    "Reused Phase 2 host adapter: 64-bit runtime pointers, original 16/32-bit disk records, immutable W_CacheLumpNum input, Z_Free no-op; no gameplay spawning or P_SetupLevel execution.",
+    "THINGS are signed mapthing disk words, including every entry regardless of skill/type. BLOCKMAP uses verbatim P_LoadBlockMap; REJECT retains raw W_CacheLumpNum bytes.",
+    "R_InitTextures is the existing explicit disk/allocator adapter. Original texture name resolution, lookup/composite and flat/sprite initialization bodies are extracted verbatim."
+  ]
+}

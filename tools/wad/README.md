@@ -26,3 +26,17 @@ node tools/wad/snapshot.ts artifacts/local/freedoom/freedoom1.wad
 ```
 
 No renderer or Phase 2 code is included. The real palette may color the existing synthetic event frame without making it a DOOM frame.
+
+Goal 4.7a adds resource selections for all nine Episode One maps without changing
+the shared v0 bundle or its identity:
+
+```sh
+node tools/wad/episode-pack.ts pack artifacts/local/freedoom/freedoom1.wad artifacts/local/wad
+node tools/wad/episode-pack.ts check artifacts/local/freedoom/freedoom1.wad artifacts/local/wad
+python3 tools/reference/episode/reference.py --check
+node --test tools/wad/wad.test.ts tools/wad/episode.test.ts
+```
+
+The [resource integration contract](../../docs/PHASE4-EPISODE-RESOURCES.md) defines
+the catalog/map descriptors, shared indices, checksums, native comparisons and
+focused ordinary-EVM resource verification. This is resource preparation only.
