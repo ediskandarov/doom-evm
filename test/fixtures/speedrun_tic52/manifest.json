@@ -1,0 +1,21 @@
+{
+  "wadSha256": "7323bcc168c5a45ff10749b339960e98314740a734c30d4b9f3337001f9e703d",
+  "license": "Freedoom BSD; see COPYING.txt",
+  "scope": "Authenticated lump bytes for a rejection regression; no address-dependent pixel golden",
+  "lumps": [
+    {
+      "name": "BON1D0",
+      "index": 1552,
+      "bundleOffset": 17090086,
+      "length": 238,
+      "sha256": "2bfd9f66618cd1298fb35978d69c78a1de0f094e0e14a6401bcc8fec8e0d5678"
+    },
+    {
+      "name": "BON2A0",
+      "index": 1553,
+      "bundleOffset": 17090324,
+      "length": 340,
+      "sha256": "979e94d7de7ef4dbfd52cd7ba03d50789db4d468b6e2daf9192faf7fe6bb2370"
+    }
+  ]
+}

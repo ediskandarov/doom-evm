@@ -18,6 +18,11 @@ const port = Number(option('--port', '18620'));
 const batch = Number(option('--batch', '5'));
 const prefix = resolve(option('--output-prefix', base + '/video/evm'));
 const sampleEvery = Number(option('--sample-every', '5'));
+const memoryProfile = option('--memory-profile', 'legacy');
+const profileNumber = {strict: 0, legacy: 1, episode: 2}[memoryProfile];
+assert(profileNumber !== undefined, 'Supported memory profiles: strict, legacy, episode');
+const requestedTics = args.includes('--capture-tics') ? option('--capture-tics').split(',').map(Number) : null;
+assert(!requestedTics || requestedTics.every(tic => Number.isInteger(tic) && tic >= 1 && tic <= 279));
 const frameDirectory = resolve(prefix, '..', 'frames');
 assert(Number.isInteger(sampleEvery) && sampleEvery >= 1 && sampleEvery <= 279);
 await mkdir(frameDirectory, {recursive: true});
@@ -60,7 +65,7 @@ const blob = await readFile(base + '/wad/resources.bin');
 const directory = await readFile('test/fixtures/phase2_data/directory.bin');
 assert.equal(sha(blob), bundle.blobSha256);
 assert.equal(bundle.resourceIdentity.wadSha256, native.wadSha256);
-const artifact = await json('out/SpeedrunVideoProbe.sol/SpeedrunVideoProbe.json');
+const artifact = await json(option('--artifact', 'out/SpeedrunVideoProbe.sol/SpeedrunVideoProbe.json'));
 const store = await json('out/ResourceStore.sol/ResourceStore.json');
 const method = name => '0x' + artifact.methodIdentifiers[name];
 const budget = loadGasBudget(), gas = budget.gasHex;
@@ -78,7 +83,7 @@ const rgb = Buffer.from(palette.rgbHex, 'hex');
 assert.equal(rgb.length, 768);
 assert.equal(sha(rgb), bundle.resourceIdentity.paletteSha256);
 await writeFile(resolve(prefix, '..', 'palette.bin'), rgb);
-const report = {kind: 'real-freedoom-e1m1-evm-video', pass: false, sampleEvery, frames: [],
+const report = {kind: 'real-freedoom-e1m1-evm-video', pass: false, sampleEvery, memoryProfile, requestedTics, frames: [],
   startedUTC: new Date().toISOString(), sourceHashes, demoSha256: sha(demo),
   originalCommandBytesSha256: sha(commands), nativeStatesSha256: native.statesSha256,
   resourceIdentity: bundle.resourceIdentity, port, batch, executionBudget: budget,
@@ -120,6 +125,8 @@ async function compare(state, tic) {
   }
 }
 async function capture(from, address, tic) {
+  const digest = () => rpc('eth_call', [{from, to: address, data: method('savedDigest()'), gas}, 'latest']);
+  const beforeDigest = await digest();
   const result = await send(from, method('capture(uint32)') + word(tic), address);
   const {receipt, elapsedMs} = result;
   captureReceipts.push(receipt);
@@ -131,7 +138,17 @@ async function capture(from, address, tic) {
     } catch (error) {
       report.renderFailure.rpcError = error.rpcError ?? String(error);
     }
-    throw Error('EVM render reverted at tic ' + tic + ': ' + JSON.stringify(report.renderFailure));
+    const stored = abiBytes(Buffer.from((await rpc('eth_call', [{from, to: address, data: method('snapshot()'), gas}, 'latest'])).slice(2), 'hex'), 0);
+    await compare(stored, tic);
+    assert.equal(await digest(), beforeDigest, 'Failed render changed saved storage');
+    assert.equal(receipt.logs.length, 0, 'Reverted render retained logs');
+    const counter = await rpc('eth_call', [{from, to: address, data: method('frameId()'), gas}, 'latest']);
+    assert.equal(BigInt(counter), BigInt(report.frames.length), 'Failed render changed frame counter');
+    report.renderFailure.rollback = {allSavedFieldsUnchanged: true, savedDigest: beforeDigest,
+      nativeWorldExact: true, frameCounterUnchanged: true, noLogs: true};
+    const errorData = report.renderFailure.rpcError?.data;
+    report.renderFailure.errorDataSha256 = typeof errorData === 'string' ? sha(Buffer.from(errorData.slice(2), 'hex')) : null;
+    throw Error('EVM render reverted at tic ' + tic + ' (' + report.renderFailure.gas + ' gas; error data preserved in report)');
   }
   assert.equal(receipt.logs.length, 2);
   assert(receipt.logs.every(log => log.address === address));
@@ -149,6 +166,7 @@ async function capture(from, address, tic) {
   assert.equal(beforeState, sha(states[tic]));
   const stored = abiBytes(Buffer.from((await rpc('eth_call', [{from, to: address, data: method('snapshot()'), gas}, 'latest'])).slice(2), 'hex'), 0);
   await compare(stored, tic);
+  assert.equal(await digest(), beforeDigest, 'Successful capture changed saved storage');
   const pixels = Buffer.from(frame.pixels);
   const filename = `frame-${String(tic).padStart(6, '0')}.indexed8`;
   await writeFile(resolve(frameDirectory, filename), pixels);
@@ -158,7 +176,7 @@ async function capture(from, address, tic) {
     gas: Number(BigInt(receipt.gasUsed)), elapsedMs, renderGas: uint(proof, 192),
     beforeStateSha256: beforeState, renderedMemoryStateSha256: proof.subarray(32, 64).toString('hex'),
     validBefore: uint(proof, 64), validAfter: uint(proof, 96), mappedBefore: uint(proof, 128), mappedAfter: uint(proof, 160),
-    savedStateUnchanged: true, displayStartSeconds: previousTic / 35, durationTics: tic - previousTic,
+    savedStateUnchanged: true, savedDigest: beforeDigest, displayStartSeconds: previousTic / 35, durationTics: tic - previousTic,
     durationSeconds: (tic - previousTic) / 35});
   console.log(`EVM Frame tic ${tic}: ${Number(BigInt(receipt.gasUsed))} gas, ${Math.round(elapsedMs)}ms; saved world exact`);
 }
@@ -219,7 +237,7 @@ try {
     totalGas: deploymentReceipts.reduce((n, r) => n + Number(BigInt(r.gasUsed)), 0),
     probeGas: Number(BigInt(deployed.gasUsed)), runtimeSha256: sha(actualRuntime),
     immutableReferences: artifact.deployedBytecode.immutableReferences, immutableDriver: from};
-  const init = await send(from, method('initialize()'), address);
+  const init = await send(from, method('initializeProfile(uint8)') + word(profileNumber), address);
   replayReceipts.push(init.receipt); assert.equal(init.receipt.status, '0x1');
   assert.equal(init.receipt.logs.length, 1);
   const initial = observation(init.receipt.logs[0], address); assert.equal(initial.tic, 0);
@@ -229,7 +247,9 @@ try {
   console.log('PASS E1M1 skill0 startup: exact full original-C DSG1');
   replayStart = performance.now();
   for (let tic = 0; tic < native.executedTics;) {
-    const nextSample = Math.min(Math.ceil((tic + 1) / sampleEvery) * sampleEvery, native.executedTics);
+    const nextSample = requestedTics
+      ? Math.min(...requestedTics.filter(n => n > tic), native.executedTics)
+      : Math.min(Math.ceil((tic + 1) / sampleEvery) * sampleEvery, native.executedTics);
     const count = Math.min(batch, native.executedTics - tic, nextSample - tic);
     const {receipt, elapsedMs} = await send(from, method('advance(bytes)') + word(32) + tail(commands.subarray(tic * 4, (tic + count) * 4)), address);
     replayReceipts.push(receipt);
@@ -243,7 +263,7 @@ try {
       actual.push(o.state); await compare(o.state, o.tic); report.verifiedTics = o.tic;
     }
     tic += count;
-    if (tic === nextSample) await capture(from, address, tic);
+    if (tic === nextSample && (!requestedTics || requestedTics.includes(tic))) await capture(from, address, tic);
     if (report.verifiedTics % 25 === 0 || report.verifiedTics === native.executedTics) {
       console.log(`PASS exact original world ${report.verifiedTics}/${native.executedTics} tics; gas ${Number(BigInt(receipt.gasUsed))}`);
     }
