@@ -532,3 +532,18 @@ The resumed structured goal began 2026-10-10T10:15:35Z (createdAt1791627335).
 Its counter excludes the earlier cleared investigative goal. Goal-tool closure
 will record the actual end/elapsed/token counter separately; these are not
 per-category telemetry and are never added to historical/session token totals.
+
+### Goal 4.4 actual closure
+
+Verified handoff commit **939ea99** follows implementation **1eeed58** on the
+local feature branch. Structured goal status is **complete**, start
+2026-10-10T10:15:35Z, completion2026-10-10T10:39:10Z. Timestamp interval1,415s;
+separate goal elapsed counter1,414s (23m34s), token counter132,376. The earlier
+cleared investigation is excluded; these counters are not per-category/session
+telemetry and must not be added to collector totals. Exact fields are in the
+[closure record](../artifacts/phase4/cheats-goal-completion.json).
+
+The following metadata-only commit records closure without changing verified
+source, fixtures or proof bindings. All dedicated and affected checks passed,
+the feature worktree is clean at handoff, no merge/push to main occurred, and no
+later goal starts. Stop after Goal 4.4.
