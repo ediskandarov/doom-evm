@@ -1,0 +1,38 @@
+{
+  "pass": true,
+  "features": {
+    "experiment/virtual-pointer-memory": {
+      "tip": "6fb54ce443399ec661ea3c0d64e23aacc15d98e0",
+      "preservedFiles": 30
+    },
+    "feat/evm-menu": {
+      "tip": "fa67651d2b149367aa1254909b641e1b73d14700",
+      "preservedFiles": 376
+    }
+  },
+  "scope": "Git blob/source/evidence integrity and archived-result consistency; no historical tests rerun.",
+  "menuHistoricalBindings": 449,
+  "menuInheritedCounts": {
+    "nativeScreens": 9,
+    "nativeProfiles": 3,
+    "nativeResponderEvents": 28,
+    "nativeFieldsPerEvent": 13,
+    "menuForgeTests": 5,
+    "inheritedForgeTests": 27,
+    "nodeTests": 66,
+    "evmInputs": 79,
+    "evmFrames": 60,
+    "rollbackReceipts": 8,
+    "retainedMapSelections": 9,
+    "freshMapSelections": 9,
+    "canvasCheckpoints": 16
+  },
+  "virtualArchivedFiles": 190,
+  "preservedSampledHashes": 56,
+  "disabledTic52Policies": [
+    "strict",
+    "legacy",
+    "episode"
+  ],
+  "sourceDefaultPolicyChecks": true
+}

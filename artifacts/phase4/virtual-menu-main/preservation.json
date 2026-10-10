@@ -1,0 +1,32 @@
+{
+  "pass": true,
+  "changedPaths": 394,
+  "sourceDeliveredUnion": 406,
+  "unrelatedMainChanges": [],
+  "protectedUnchanged": [
+    "original",
+    "AGENTS.md",
+    "foundry.toml",
+    "execution-budget.json",
+    "docs/PHASE4-PLAN.md",
+    "artifacts/phase4/native-memory-audit",
+    "artifacts/phase4/native-memory-audit-main",
+    "artifacts/phase4/episode-speedrun-main",
+    "artifacts/speedrun-e1m1",
+    "artifacts/speedrun-e1m1-video",
+    "artifacts/speedrun-tic52",
+    "test/fixtures/speedrun_tic52",
+    "test/unit/SpeedrunTic52Backing.t.sol"
+  ],
+  "featureTipsBefore": {
+    "experiment/virtual-pointer-memory": "6fb54ce443399ec661ea3c0d64e23aacc15d98e0",
+    "feat/evm-menu": "fa67651d2b149367aa1254909b641e1b73d14700"
+  },
+  "featureTipsNow": {
+    "experiment/virtual-pointer-memory": "6fb54ce443399ec661ea3c0d64e23aacc15d98e0",
+    "feat/evm-menu": "fa67651d2b149367aa1254909b641e1b73d14700"
+  },
+  "otherWorktreesModifiedByIntegrator": false,
+  "registryComparison": "--- \n\n+++ \n\n@@ -131,7 +131,7 @@\n\n branch refs/heads/fix/speedrun-tic52\n \n worktree /Users/eduard/sandbox/doom-evm-speedruns-vptr\n-HEAD 6fb54ce443399ec661ea3c0d64e23aacc15d98e0\n+HEAD 5c1abec5b6c55a3294ccea7051ec64885d18ddb9\n branch refs/heads/feat/episode-speedruns-vptr\n \n worktree /Users/eduard/sandbox/doom-evm-statusbar",
+  "externalActivity": "Unrelated feat/episode-speedruns-vptr advanced independently during integration; integrator issued no writes or process commands in that worktree."
+}

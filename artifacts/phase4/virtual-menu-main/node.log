@@ -1,0 +1,21 @@
+✔ old static DOM/autotest remains zero-button WS→receipt→Canvas flow (66.552666ms)
+✔ capable deployment still does not initialize merely loading/autotesting (60.820875ms)
+✔ actual Start/Stop wiring samples DOM keyboard, pauses on blur, and resumes without duplicate initialize (20.166959ms)
+✔ native-zone capable autotest remains static; explicit Start serializes preparation and initialization (65.235959ms)
+✔ native-zone prepared reload starts without preparing again (1.457625ms)
+✔ nativeZone atomic app needs one startup transaction and retains static/held-frame transport (58.16775ms)
+✔ old static app without gas config discovers node budget and preserves zero-input Frames (41.447209ms)
+✔ every production player defaults to EVM menu with explicit legacy opt-out (0.353583ms)
+✔ automatic menu startup consumes neither a game nor sequence and reuses persisted menu (0.935083ms)
+✔ title events retain exact shared raw ABI and malformed packets send nothing (0.339875ms)
+✔ pending menu navigation excludes overlapping input and mined revert keeps sequence (0.265208ms)
+✔ uncertain menu submission blocks subsequent mutation (0.596166ms)
+✔ existing legacy game cannot silently switch startup profile (0.127792ms)
+ℹ tests 13
+ℹ suites 0
+ℹ pass 13
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 360.786041

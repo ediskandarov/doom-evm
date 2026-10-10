@@ -1,0 +1,5 @@
+Traceback (most recent call last):
+  File "/Users/eduard/sandbox/doom-evm/artifacts/local/virtual-menu-main/integrity.py", line 29, in <module>
+    assert not report["pass"] and failure["tic"]==52 and failure["allSavedFieldsUnchanged"] and failure["frameCounterUnchanged"] and failure["noLogs"]
+                                                         ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyError: 'allSavedFieldsUnchanged'

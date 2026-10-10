@@ -1,5 +1,14 @@
 # Phase 4 progress ledger
 
+Virtual pointer + EVM menu checkpoint (2026-10-10): **both features integrated
+and focused-verified on main**. The normal browser starts in the EVM menu;
+New Game, five skills, direct E1M1–E1M9 selection and Escape/Resume retain their
+verified source implementation. Experimental virtual addressing remains an
+explicit video/library opt-in: it resolves tic52 only in that deterministic
+extension. Strict, deterministic and Episode policies still reject the unsupported
+native pointer byte. Historical checkpoints below keep their original scope;
+see the final integration entry for fresh versus inherited verification.
+
 Tic52 diagnosis checkpoint (2026-10-10): **diagnosis integrated; full-rate
 rendering remains blocked**. The sampled sprite read reaches byte1 of a current
 neighboring header next pointer, whose native value varies by environment.
@@ -1472,3 +1481,141 @@ usage measurement was captured; no estimate is made.
 
 Stop after the normal main push and synchronized clean-tree check. No subsequent
 debugging, memory implementation or other task is authorized by this integration.
+
+## Virtual Pointer Memory and EVM Main Menu — Main integration (2026-10-10)
+
+Scope: integrate the two completed branches on clean, refreshed main
+`50a6e267b5689d30164401dae7af2c8972b7a183`. Fast-forward-only synchronization
+confirmed main equaled origin/main. Both requested handoff tips matched the
+actual source branches. No unrelated feature history or production work was added.
+
+| Workstream | Implementation / integration / verification | Handoff tip | Main merge commit |
+|---|---|---|---|
+| Experimental Virtual Pointer Memory | Complete / integrated / inherited source gates preserved plus focused merged-main gates passed | `6fb54ce443399ec661ea3c0d64e23aacc15d98e0` | `9da28298a0ba401d092b427f319941e791087e9b` |
+| Original EVM Main Menu | Complete for declared supported domain / production source integrated / inherited source gates preserved plus focused merged-main gates passed | `fa67651d2b149367aa1254909b641e1b73d14700` | `6a8ac6456c2a31444cd70915a43ae474bf04c157` |
+
+Both branches share merge base `1e7033c149ddab6641be3116af3974d5ed585183` and
+were integrated in the requested order using normal `--no-ff` merges. Virtual
+feature commits: `573be4f`, `4a6ef7d`, `6fb54ce`, with diagnostic dependency merge
+`c8392e9`. That dependency preserves original diagnostic commits `9730151` and
+`001240b`, already present on main as equivalent `-x` cherry-picks `bb19f20` and
+`5f589b9`. Menu commits: `2406f71`, `fd90725`, `7ef2412`, `fa67651d`.
+All original commits are now ancestors of main; neither feature branch was rewritten.
+
+Three virtual merge conflicts affected `SpeedrunVideoProbe.sol`,
+`decode-diagnostic.py` and `evm-video.mjs`: the prior diagnostic cherry-picks and
+the feature extension edited the same hunks. Each resolution retains the exact
+verified virtual-branch file, including backward decoding compatibility and
+existing default profile1/legacy. The menu merge had no conflicts. All30 virtual
+and376 menu delivered files match their source-tip blobs exactly. Earlier
+memory audits, diagnostic evidence, speedrun tape/goldens, accepted certificates,
+original C, existing tests, compiler/hardfork/budgets and prior ledger text remain
+preserved. The integrator changed no production source beyond the merged features.
+
+### Memory and production boundaries
+
+`ZoneState.experimentalVirtualPointers` defaults false. The profile reconstructs
+eligible CURRENT same-zone header pointer bytes at base `0x0000001000000000`,
+with validated topology/lifetime/domain and provenance4. Existing known bytes
+retain precedence; unsupported owners, stale headers and arbitrary bodies remain
+unknown. DrawBounds and unknown-byte guards remain intact. No production Doom
+initializer enables the experiment and opening the menu cannot enable it.
+Explicit video `initializeProfile(3)` / `--memory-profile virtual` remain available;
+default video profile1/legacy and production Episode initialization/high-byte
+policy remain unchanged. There is no new public memory-policy UI selector.
+
+The tic52 read is still byte1 of a neighboring allocation header's next pointer.
+Actual native bytes differ across environments. Experimental virtual pixels are
+a deterministic extension, not universal native equivalence: normal O0/O2 agree
+with the observed virtual pixel73, while the sanitizer pixel105 differs. Strict,
+ordinary deterministic and Episode continue rejecting this unsupported byte.
+The Native Memory Compatibility Audit's **RESTRICT** verdict and named-profile
+limitations remain in force. No full virtual byte heap, stale-pointer inference,
+production persistent-render-stream equivalence or storage upgrade is claimed.
+
+The default production browser presents the EVM-rendered menu directly. All five
+skills and nine direct maps are implemented, with original Nightmare confirmation,
+New Game and Escape/Resume. Selections use authenticated WAD resources and the
+existing Episode startup/deferred-new-game path, without Intermission. The HTML
+launcher survives only as explicit `menuMode=false` diagnostic/legacy opt-out.
+Unsupported Save/Load/Options/Help/Quit, other episodes, audio, wipes and demo
+carousel remain outside this feature; modified Main/Episode/Select Level screens
+have no original retail pixel-equivalence claim. Deploy fresh combined bytecode;
+no migration of existing contract storage is supported by this integration.
+
+### Verification executed on combined main
+
+Fresh evidence: [verification summary](../artifacts/phase4/virtual-menu-main/verification-summary.json),
+[historical integrity checks](../artifacts/phase4/virtual-menu-main/integrity-result.json),
+[menu EVM smoke](../artifacts/phase4/virtual-menu-main/menu-evm.json), and
+[speedrun boundary checks](../artifacts/phase4/virtual-menu-main/speedrun-boundary-check.json).
+Exact measured commands and raw logs/receipts/frames are retained in that folder.
+
+- Affected `Doom`, `SpeedrunVideoProbe` and `ResourceStore` build passed:80 files,
+  solc0.8.37,173.387s. Only storage-layout output was added for read-only policy
+  inspection; compiler optimization/viaIR/Cancun/budgets are unchanged.
+- Focused Forge:16 passed,0 failed/skipped (8 virtual-pointer cases including256
+  fuzz runs,3 unchanged Strict/deterministic/Episode tic52 rejection regressions,
+  5 menu pixel/responder/storage/isolation cases). No complete inherited suite ran.
+- Focused Node:13 passed,0 failed/skipped (`menu-input` plus inherited `input-app`),
+  covering default menu selection, explicit legacy opt-out, input/sequence isolation,
+  initialization, uncertain submission and existing launcher/static transport.
+- Decoder checks passed for the actual checkpoint-bound historical diagnostic
+  receipt plus independently encoded new ABI with both boolean values.
+- Isolated real-EVM menu smoke:9 input transactions/9 Frames; initial menu,
+  original native skill screen and prior E1M1 production pixels compare exactly
+  within their respective declared scopes. E1M1 startup and direct E1M9 selection,
+  Escape/Resume, menu-owned input isolation, menu pause cadence and2 complete
+  storage-root rejection rollbacks passed. Menu-open policy bits are all0; gameplay
+  bits are initial-zero1/high-byte1/experimental0. Actual Doom runtime850,900 bytes,
+  SHA256 `906de17e4e96eb5982283d8a60b547022f0ee705c296ffb20300fc7734488859`.
+- Isolated real-EVM speedrun prefixes:53 exact native gameplay worlds per policy
+  through tic52. Explicit virtual mode renders tics5/52; the CLI default legacy
+  renders tic5 then rejects tic52 with `DrawBounds()` (`0x5b9a48fe`), complete saved
+  state/native-world/frame-counter rollback and no logs. Legacy's nonzero runner
+  exit is expected rejection evidence. Tic5 matches the original sampled hash
+  under both profiles; virtual tic52 matches the verified source extension hash.
+  Successful captures preserve saved state. No279-frame replay or MP4 was regenerated.
+- Git/evidence integrity:406 source-delivered files preserved,449 menu source/evidence
+  bindings verified against handoff Git blobs/pinned original C,190 archived virtual
+  evidence files/hash verified, all56 original sampled hashes agree with inherited
+  legacy evidence, and protected historical paths remain unchanged.
+
+The speedrun ABI, source identities and compiler settings match the inherited
+artifact, but the combined build's compiled bytes differ. Fresh limited EVM checks
+therefore establish the relevant boundary instead of claiming identical bytecode.
+Historical source-specific certificates remain frozen; their current-checkout
+source guards are not relaxed to accept this new checkpoint. Own helper failures
+(wrong ordinary receipt, Git newline trimming, reference-checkout/nested-field
+handling and a build-only Forge flag) are retained separately; corrected helpers
+passed without changing production, tests, fixtures or historical evidence.
+
+### Inherited evidence and deferred acceptance
+
+[Virtual report](EXPERIMENTAL-VIRTUAL-POINTERS.md) and
+[profile manifest](../artifacts/virtual-pointer/virtual-profile-manifest.json):
+52 focused tests,279 mined frames,280 exact worlds/genuine E1M1 exit,56 preserved
+sampled hashes, three disabled-policy rejection/rollback proofs, native pointer
+measurements and the explicit one-pixel sanitized divergence. These source-agent
+runs were preserved, not rerun in full.
+
+[Menu report](EVM-MENU.md) and
+[feature certificate](../artifacts/phase4/menu/verification.json):32 Forge,
+66 Node, native bounded menu comparisons,79 ordinary Anvil input transactions,
+all five skills/nine retained and nine fresh selections,8 rollback receipts and
+16 Canvas checkpoints. Fresh browser/native compilation, all-map/all-skill replay,
+full-rate media and the complete inherited Phase0–4 acceptance are deferred.
+No new full release, peak-memory, FPS or universal native-fidelity acceptance is asserted.
+
+Verification used only owned Anvil18961/18962/18963; all were stopped and ports
+confirmed closed. Reserved18880/8088 and external processes were untouched.
+An unrelated `feat/episode-speedruns-vptr` worktree advanced independently during
+this goal; it received no integrator writes or runtime commands. Source branch tips
+remain unchanged. No generated MP4 or ignored temporary artifact was added to Git.
+
+Measured start:2026-10-10 19:21:39 UTC; verified evidence checkpoint:
+19:31:35 UTC. Available goal-service attribution at that checkpoint:130,143 aggregate
+tokens and573 elapsed seconds. Documentation/publication follow that checkpoint;
+missing cost/usage breakdowns are not estimated. Stop after committing this
+integration record, normal push and clean main/origin synchronization; no later
+feature or memory investigation is started.

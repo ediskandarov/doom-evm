@@ -1,0 +1,10 @@
+{
+  "pass": true,
+  "ownedPortsClosed": {
+    "18961": true,
+    "18962": true,
+    "18963": true
+  },
+  "reservedPortsUsed": false,
+  "otherOwnersProcessesModified": false
+}

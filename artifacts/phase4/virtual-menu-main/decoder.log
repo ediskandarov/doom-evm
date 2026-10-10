@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "/Users/eduard/sandbox/doom-evm/artifacts/local/virtual-menu-main/decoder-check.py", line 52, in <module>
+    check(ap.parse_args().diagnostic)
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/eduard/sandbox/doom-evm/artifacts/local/virtual-menu-main/decoder-check.py", line 20, in check
+    before=decoder.decode(report)
+  File "/Users/eduard/sandbox/doom-evm/tools/reference/speedrun/decode-diagnostic.py", line 42, in decode
+    assert sample
+           ^^^^^^
+AssertionError

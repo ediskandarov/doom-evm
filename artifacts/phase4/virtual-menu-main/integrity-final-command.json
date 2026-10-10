@@ -1,0 +1,10 @@
+{
+  "command": [
+    "python3",
+    "artifacts/local/virtual-menu-main/integrity.py"
+  ],
+  "startedUTC": "2026-10-10T19:27:27.627306+00:00",
+  "exitCode": 0,
+  "elapsedSeconds": 10.083,
+  "endedUTC": "2026-10-10T19:27:37.710791+00:00"
+}

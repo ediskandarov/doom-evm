@@ -1,0 +1,22 @@
+{
+  "command": [
+    "node",
+    "artifacts/local/virtual-menu-main/speedrun-prefix.mjs",
+    "--port",
+    "18962",
+    "--artifacts",
+    "artifacts/local/virtual-menu-main/speedrun-inputs",
+    "--artifact",
+    "artifacts/local/virtual-menu-main/SpeedrunVideoProbe.json",
+    "--memory-profile",
+    "virtual",
+    "--capture-tics",
+    "5,52",
+    "--output-prefix",
+    "artifacts/local/virtual-menu-main/virtual-prefix/evm"
+  ],
+  "startedUTC": "2026-10-10T19:29:28.622638+00:00",
+  "exitCode": 0,
+  "elapsedSeconds": 53.252,
+  "endedUTC": "2026-10-10T19:30:21.874670+00:00"
+}

@@ -1,0 +1,5 @@
+Traceback (most recent call last):
+  File "/Users/eduard/sandbox/doom-evm/artifacts/local/virtual-menu-main/integrity.py", line 12, in <module>
+    for path,h in menu["sourceEvidenceSha256"].items():assert sha(git("show","fa67651d:"+path))==h,path
+                                                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: artifacts/phase4/menu/accepted-browser.json

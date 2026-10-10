@@ -1,0 +1,17 @@
+{
+  "command": [
+    ".toolchain/bin/forge",
+    "build",
+    "src/evm/Doom.sol",
+    "src/support/SpeedrunVideoProbe.sol",
+    "src/evm/ResourceStore.sol",
+    "--offline",
+    "--no-lint",
+    "--extra-output",
+    "storageLayout"
+  ],
+  "startedUTC": "2026-10-10T19:24:02.482766+00:00",
+  "exitCode": 0,
+  "elapsedSeconds": 173.387,
+  "endedUTC": "2026-10-10T19:26:55.934571+00:00"
+}

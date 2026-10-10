@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 1,
+  "pass": false,
+  "ticRate": 35,
+  "gameplayTics": 279,
+  "sampleEvery": 5,
+  "memoryProfile": "legacy",
+  "provenanceObserver": false,
+  "width": 320,
+  "height": 200,
+  "source": "Solidity DoomGame.render -> standard mined Frame events",
+  "authenticatedPaletteSha256": "fd895921b5d0a394612bb29852ed003d44d69f76dec31c0dc6b5d5fc7d63f7bb",
+  "demoSha256": "111aec6cabcd2718f0e4fab662980bb68c1831bfc1db12a438fe7e8af2fb5782",
+  "frames": [
+    {
+      "tic": 5,
+      "frameId": "1",
+      "file": "frames/frame-000005.indexed8",
+      "indexed8Sha256": "19dfba0cc5ed493315d49a003b631cca7909fa99ac4781e5617d7e33c9b47e82",
+      "transactionHash": "0x1cdc6fee06e682091c153a8dbfcc59a50c6c699a861796f39d0d75060346cffb",
+      "blockNumber": "0x6df",
+      "gas": 923135854,
+      "elapsedMs": 764.7545419999951,
+      "renderGas": 613363913,
+      "beforeStateSha256": "36b3bdb5e512d3a61c6796cf4ce84602f82048a092ba8dcb78b847f9b479ae4a",
+      "renderedMemoryStateSha256": "4cde99d40ad7c067f147017a4749522959a69febb444407d3509f9039724baa4",
+      "validBefore": 7,
+      "validAfter": 8,
+      "mappedBefore": 0,
+      "mappedAfter": 63,
+      "savedStateUnchanged": true,
+      "savedDigest": "0xcf87d69a2ce96a84d007d43dbaaa873aa897c50913471133327fa5636ac0da87",
+      "displayStartSeconds": 0,
+      "durationTics": 5,
+      "durationSeconds": 0.14285714285714285
+    }
+  ]
+}

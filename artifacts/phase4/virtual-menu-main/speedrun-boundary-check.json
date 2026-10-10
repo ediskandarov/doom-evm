@@ -1,0 +1,24 @@
+{
+  "pass": true,
+  "scope": "Fresh two-policy prefix through tic52, not all279 rendering or full native/EVM acceptance.",
+  "exactGameplayWorldsPerProfile": 53,
+  "virtualFrames": [
+    5,
+    52
+  ],
+  "legacySuccessfulFrames": [
+    5
+  ],
+  "legacyTic52ExpectedRejection": true,
+  "legacyRollback": {
+    "allSavedFieldsUnchanged": true,
+    "savedDigest": "0x04148d176e3f6261eaec7b5557b4bd9f15ccac74aafc841ad5bd2d4745cd72b3",
+    "nativeWorldExact": true,
+    "frameCounterUnchanged": true,
+    "noLogs": true
+  },
+  "tic5OriginalSampledHashExact": true,
+  "virtualTic52SourceFrameHashExact": true,
+  "virtualSuccessfulCapturesSavedStateUnchanged": true,
+  "ownedRuntimesStopped": true
+}

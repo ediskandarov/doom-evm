@@ -1,0 +1,12 @@
+{
+  "kind": "merged-speedrun-artifact-compatibility",
+  "methodIdentifiersExact": true,
+  "creationBytecodeExact": false,
+  "runtimeBytecodeExact": false,
+  "runtimeWithoutMetadataExact": false,
+  "runtimeBytes": 492679,
+  "sourceRuntimeBytes": 493348,
+  "runtimeSha256": "70ea5dbab681f3bcf2955efe21dc9c0ef790dcf57e77bbb3707a2f5ac9f244b9",
+  "compilerSettingsExact": true,
+  "sourceHashesExact": true
+}

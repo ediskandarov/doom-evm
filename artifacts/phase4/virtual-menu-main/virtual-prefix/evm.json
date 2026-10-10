@@ -1,0 +1,339 @@
+{
+  "kind": "focused-merged-main-speedrun-prefix",
+  "pass": true,
+  "sampleEvery": 5,
+  "memoryProfile": "virtual",
+  "provenanceObserver": false,
+  "requestedTics": [
+    5,
+    52
+  ],
+  "frames": [
+    {
+      "tic": 5,
+      "frameId": "1",
+      "file": "frames/frame-000005.indexed8",
+      "indexed8Sha256": "19dfba0cc5ed493315d49a003b631cca7909fa99ac4781e5617d7e33c9b47e82",
+      "transactionHash": "0x1cdc6fee06e682091c153a8dbfcc59a50c6c699a861796f39d0d75060346cffb",
+      "blockNumber": "0x6df",
+      "gas": 1217791563,
+      "elapsedMs": 1161.4149170000019,
+      "renderGas": 908019622,
+      "beforeStateSha256": "36b3bdb5e512d3a61c6796cf4ce84602f82048a092ba8dcb78b847f9b479ae4a",
+      "renderedMemoryStateSha256": "4cde99d40ad7c067f147017a4749522959a69febb444407d3509f9039724baa4",
+      "validBefore": 7,
+      "validAfter": 8,
+      "mappedBefore": 0,
+      "mappedAfter": 63,
+      "savedStateUnchanged": true,
+      "savedDigest": "0x82813c9439d55530a251bc9c7514a357dfa80614094b66bef60fb660bcbc1fdd",
+      "displayStartSeconds": 0,
+      "durationTics": 5,
+      "durationSeconds": 0.14285714285714285
+    },
+    {
+      "tic": 52,
+      "frameId": "2",
+      "file": "frames/frame-000052.indexed8",
+      "indexed8Sha256": "669b3f07ded8f849531f056d760bf88e986da9ade4f1af9003f7b55ed653d42f",
+      "transactionHash": "0x86859536e10591809b080317894bdb7a705bad8a27feae42e481caa8c2806149",
+      "blockNumber": "0x6ea",
+      "gas": 715966203,
+      "elapsedMs": 554.6235000000015,
+      "renderGas": 406456443,
+      "beforeStateSha256": "a5d87f7a8cd7af60111b91bada88dd9e8e283a2b617c7b7e9fc24bd6192b31ad",
+      "renderedMemoryStateSha256": "add2aa827da341af2f50ed7b48e385708cbbba3b5a6e2ea16233e549354f9620",
+      "validBefore": 154,
+      "validAfter": 155,
+      "mappedBefore": 0,
+      "mappedAfter": 29,
+      "savedStateUnchanged": true,
+      "savedDigest": "0x277fc0050f875662808a8bada9164e3791893e9d15a10ec3bfcecee9fa798ae6",
+      "displayStartSeconds": 0.14285714285714285,
+      "durationTics": 47,
+      "durationSeconds": 1.3428571428571427
+    }
+  ],
+  "startedUTC": "2026-10-10T19:29:28.986Z",
+  "sourceHashes": {
+    "src/doom/am_map_types.sol": "7347073682c367c15c918aa51ff924c664b6d05efdbf4f0392d4f404b31a9039",
+    "src/doom/d_ticcmd.sol": "508d0332d3e8b83e1b68d37581a3befc100a9974fcaa0900cc44116cd75ff2ef",
+    "src/doom/g_game.sol": "ea632f47ca5904819dd0dc254fc547799b56696e08e37d96a503d71da145f89c",
+    "src/doom/info.sol": "4611205149173e42d3b0f1d91820c8042f6bc5fc48fb53aec84ad4bc501dca8e",
+    "src/doom/m_bbox.sol": "f4c60efe3627a97d0288fc5cd0283535527b1f51029568534c80bb8fbbf8f272",
+    "src/doom/m_fixed.sol": "3f64bef1f62f61faead3a5b8f382bf1c66e1b3739ce4ac8d59a6fcef0451ef9f",
+    "src/doom/m_random.sol": "5267b881138cfb7e0d683449005619513006c70e3ed557f64697b36c4ed40c7b",
+    "src/doom/native_zone_layout.sol": "118b2d17165826fb0857d9cb296e2214db2a28917769299a82e70d0c0790f6e8",
+    "src/doom/p_ceilng.sol": "696f3f620f5bddb3cea64fda824e3203c780f53db890630f0685794454dc37f9",
+    "src/doom/p_doors.sol": "945bf600ce86d8286718fb75ecaf905a0c4631d79d2dac7260c91c9dc2013f8d",
+    "src/doom/p_enemy.sol": "eff76cce23b0877833a5c446a1a09d8ae01918a6925b6d3265240b144c09dfe7",
+    "src/doom/p_floor.sol": "b7c90baafa0b74fd7ff80cf60dcbc430148f6d6d068ba54ca0fbc7ba1bca7069",
+    "src/doom/p_game_state.sol": "06cbccba214717193fbab7c290e2962c4fb05b3f34c6543247ee1ec8e45d085a",
+    "src/doom/p_heap.sol": "3cc2e0a8c3239523db66c07fea33720f931754baedd312b5ca7cc2ebe763d2e0",
+    "src/doom/p_info.sol": "a48840479115ea8bf849ca5ec448d1b2bec7a6cfe58c5314e140635a898de792",
+    "src/doom/p_inter.sol": "8be27f9bba47beb46b3edf2a8a2674b3cd7218d2abb8ef5f8855803393d067de",
+    "src/doom/p_lights.sol": "6f63cbc6b41fc492a46ce43aef464deb9d08b7fa1dd8b213b546eec3e4f08276",
+    "src/doom/p_map.sol": "6b6d48523a45acab9090dfb0ec3d6dbab4e6de18afa89453df8b5a87088da0f3",
+    "src/doom/p_maputl.sol": "ac5ac60e7e058a5fc537e7042c7254bc0f51c77165149a22e141437b4e0ad0b6",
+    "src/doom/p_mobj.sol": "e6138aceee2be933f2c36e3fc18e6d2baa22ffa6a1197d9db89c744d42d78e56",
+    "src/doom/p_plats.sol": "6904df762b270f840daa99b34d2a5c689dbb2fef3aed3d33c2ac1a3f3e4d5722",
+    "src/doom/p_pspr.sol": "cfa2db3438d689c38d9c957fc4aee598c58740f025d6efead2b5f9671eb0c863",
+    "src/doom/p_setup.sol": "9498e1298bf4e53ccedc484a50d4c7f9f85315f6cb700719d474b721e382243b",
+    "src/doom/p_setup_static.sol": "c8100a42bb0bac190c583bbb2c82168599009f88a766e4c05b9a9231a5f69792",
+    "src/doom/p_sight.sol": "7ed366237fc3fec069ffb6336e95e038004d1f379622cf67f55fb8c6b1a6488c",
+    "src/doom/p_spec.sol": "2363640e75c22c9d017db677dda7148ad221380f0a23639167e145e933fc72b7",
+    "src/doom/p_switch.sol": "5404d359793e05c6c24a7804c07632150009b46f38d03068412d7ac53260dfe2",
+    "src/doom/p_telept.sol": "745f0fa4ed6f0515c398bfd2469c59aac82316965b7bac25263aeb82555d61b8",
+    "src/doom/p_tick.sol": "1993dd0c94853dabc4db554dfa0ca04375cef0a22075400ba0e7b56b525022ab",
+    "src/doom/p_user.sol": "963a46850e1b17171f79dd65bff9b5006ce6f97a935ad2023d1d526a6ec35c37",
+    "src/doom/p_zone_setup.sol": "e0308bd1197fd84a01eb1ee208be73c711851d6b0bc30be1d07a7c61b18b223d",
+    "src/doom/r_bsp.sol": "0ae5df313515692d0b2b970d5d39d107e014629cff2305fb37c14371a9524040",
+    "src/doom/r_data.sol": "ef5f26f230c1bed1a073f73b489613d947b420c220faa6f2c16a6f583045010c",
+    "src/doom/r_data_types.sol": "0448302d68447c8a5a4c46df4016e8845863e42bf6eaca8bcab8ab0c9707fdf8",
+    "src/doom/r_defs.sol": "558d5a9bfd131e816bbe28986e2dad6144a08e5a16ccfed1b199d7558a1ea0e2",
+    "src/doom/r_draw.sol": "afe958ea0c2962b739bff58b98d8bccc25c48d3d0838cacd46142c242b5d6477",
+    "src/doom/r_main.sol": "df403bf04fdbbcfc68c4fd9c5e19b5201ca711498efc34db406a4010ad3b2af5",
+    "src/doom/r_plane.sol": "c7a5abcbca84dddcd2a3c8bb160a609605c5c1842e73704dff4860df3280e463",
+    "src/doom/r_render_hooks.sol": "f026ccb8fffb68d8fbcb0966103212f52884b86350fe3fb52a401d146f3fb312",
+    "src/doom/r_render_state.sol": "072bd2f73b98e1eb775fc8093e95a69c184f3fa50a89a5d64a7beccd59493398",
+    "src/doom/r_segs.sol": "9d4e4dea06739278aab3698fb422818de6dd7726359c8822d60a162e886621cb",
+    "src/doom/r_sprite_state.sol": "735b3de85cbf455e05d3cb8e992cf4e477960bd4192bbd367f5c66c803b96363",
+    "src/doom/r_state.sol": "80951a13733e3a08f4182937a37def33ffda21eaae4b43a2a1bdba2043adab6b",
+    "src/doom/r_things.sol": "86705ab6b1f79b7ef07798b881cc547502d9911c97b57dc516a744e17c1977f5",
+    "src/doom/tables.sol": "bf14202b419075f6d187653205a37e211d8267c7fc4c0bebf5a8c5713afddf38",
+    "src/doom/w_zone_cache.sol": "03c07404765de9620b3d1ff15727809cdad911c8a78d822019b63500fa5018c2",
+    "src/doom/z_zone.sol": "b4e75218021d65aaf3389cf78a68663feebc2084c82457821be17247dc8106c5",
+    "src/doom/z_zone_backing.sol": "0c5bfbbd3415a9cd23fcf72339cd13b9a77166183c75ed425d878495e7a3e37e",
+    "src/doom/z_zone_types.sol": "11ab3f95678ba3852ab5f0c2dc9e85e715bec6897e65f04cd1919bba9bb73dbd",
+    "src/doom/z_zone_virtual.sol": "415955fd2fda9e19c5ef15c2db03ced075e5af5d05640179564fc3b10958a7d6",
+    "src/evm/DoomGame.sol": "d9451a915ab977bae137340e3e6626a270a4b84b8b6ea9449a8c4f0f578296df",
+    "src/evm/DoomRenderer.sol": "5639d82431350ea76c26d43457d26d0c3c0f410eaddf02db6adbcfb03a569ba0",
+    "src/evm/DoomScene.sol": "9ad7c8ccee4c9e05deb5608326baabacfa40f686b8d8445fb8aaa7352ab64569",
+    "src/evm/DoomZoneStartup.sol": "2d178494456a7ae3c730310f257ce2aa635d37d18c90cac039cf002cdb3f50dc",
+    "src/evm/EpisodeStartup.sol": "bb574f20cdc09e63385261f7e8e203a49a90a15b87903d70dfe43d396bc3255e",
+    "src/evm/FrameProtocol.sol": "4665be3f613b8e817d616d2db1dc4a644325c44a6ade476a35d7d9d003625ace",
+    "src/evm/ResourceTypes.sol": "159865364cfa57aae508cd94c49509cbccabd6aeeba55e92b9fcf816bdec4d6b",
+    "src/evm/WadResources.sol": "25a1acc0a44ac35cc29e5f9bd953ba66b85db4f665b732430571b416ef927895",
+    "src/support/EpisodeStartupSnapshot.sol": "3f2a274619a786200fe209111e0ca6f2f5cb97537f584dd77a4f3d23e4d3635e",
+    "src/support/SpeedrunVideoProbe.sol": "72171bbe3c32a9e6b46bb25d161436261416d9db61bcea32953baede9bb28328",
+    "foundry.toml": "afe04c66f0e684b5a936821f6543605a3739f62164ceb4398426db7403452393",
+    "execution-budget.json": "acde01f1b9cf248f9265f1ffcff7181d01d77620a2dfcd9a4d4d0b1c79df2be7",
+    "tools/reference/speedrun/evm-video.mjs": "b9e6d3de13289d2a2e53a5888c739686938b0318106a08543695761a035a661a",
+    "web/protocol.mjs": "fec5104a0e13b7ca8666200431a1804d53cdb6537c1f0f8f02fb5b69dd70f47e",
+    "tools/reference/speedrun/dsg1.mjs": "3b9a1858116f1eee7663b0eeb9773abc8aaf8261ee929c4ece585c35e9329836",
+    "tools/reference/speedrun/replay.py": "bbd1a3eea1eed282a81f38591a6ca396d3e204d6d308a749b6b2d2ceb04b2719"
+  },
+  "demoSha256": "111aec6cabcd2718f0e4fab662980bb68c1831bfc1db12a438fe7e8af2fb5782",
+  "originalCommandBytesSha256": "a3e456a2354c0bb8a0aaab6ddf73036eda858414f8d444b00a3754f1786e5704",
+  "nativeStatesSha256": "82ea9cd129ba41274de70fe4b2e829d9e5c47ac3f18c5b6f9456183a7d339010",
+  "resourceIdentity": {
+    "schemaVersion": 0,
+    "wadSha256": "7323bcc168c5a45ff10749b339960e98314740a734c30d4b9f3337001f9e703d",
+    "bundleSha256": "d379076f21645cf7cc5acb056663d0faacc4065489a0ca99738479323c9f7a47",
+    "paletteSha256": "fd895921b5d0a394612bb29852ed003d44d69f76dec31c0dc6b5d5fc7d63f7bb",
+    "paletteVariant": 0
+  },
+  "port": 18962,
+  "batch": 5,
+  "executionBudget": {
+    "gasLimit": 10000000000,
+    "gasHex": "0x2540be400",
+    "source": "/Users/eduard/sandbox/doom-evm/execution-budget.json"
+  },
+  "compiler": {
+    "version": "0.8.37+commit.f401782d",
+    "settings": {
+      "remappings": [],
+      "optimizer": {
+        "enabled": true,
+        "runs": 200
+      },
+      "metadata": {
+        "bytecodeHash": "ipfs"
+      },
+      "compilationTarget": {
+        "src/support/SpeedrunVideoProbe.sol": "SpeedrunVideoProbe"
+      },
+      "evmVersion": "cancun",
+      "libraries": {},
+      "viaIR": true
+    }
+  },
+  "abiSha256": "8bcd520c596800b7642804a70894470ef38fdcf51a897c9ec1ab89f0612a026c",
+  "executedTics": 52,
+  "verifiedTics": 52,
+  "replayTransactions": [
+    {
+      "firstTic": 1,
+      "tics": 5,
+      "hash": "0x443e4428b14961c1e2d2a534de8a040b64b7c9635b15e4713521eabda2b4d02d",
+      "status": "0x1",
+      "gas": 376992276,
+      "elapsedMs": 212.74404200000572
+    },
+    {
+      "firstTic": 6,
+      "tics": 5,
+      "hash": "0xe2fa80060a89ee5c0a4d424c62ae2bf4c4f5af7b182f1bd1bd8795e0ecca31e6",
+      "status": "0x1",
+      "gas": 376433712,
+      "elapsedMs": 212.80066700000316
+    },
+    {
+      "firstTic": 11,
+      "tics": 5,
+      "hash": "0xf58ca04b705c4d621ec6235f9a50e4ae52c4b027dc8b40d6e64f6efdd3fbd3fb",
+      "status": "0x1",
+      "gas": 376804203,
+      "elapsedMs": 212.5454580000005
+    },
+    {
+      "firstTic": 16,
+      "tics": 5,
+      "hash": "0x3ba84db725a31923e5956c4e7b62b8ee80208f977e48e56319b74397c718fb45",
+      "status": "0x1",
+      "gas": 376691041,
+      "elapsedMs": 212.8301250000004
+    },
+    {
+      "firstTic": 21,
+      "tics": 5,
+      "hash": "0x29c63aa5a8b646f44ba7f8a72b5c7361a774f14eae18145681e3bb7658e99096",
+      "status": "0x1",
+      "gas": 377045203,
+      "elapsedMs": 213.70779200000106
+    },
+    {
+      "firstTic": 26,
+      "tics": 5,
+      "hash": "0x09cb570b12dbc20dc412a4b3c544c235909f79f3c0a60f30d665b33c0768bdc5",
+      "status": "0x1",
+      "gas": 376670013,
+      "elapsedMs": 212.88516600000003
+    },
+    {
+      "firstTic": 31,
+      "tics": 5,
+      "hash": "0xccfa66f23100f7e6b39ddc64bbb67e7fc3fa09fce63b7110651b3d48b3363007",
+      "status": "0x1",
+      "gas": 379001362,
+      "elapsedMs": 212.9658750000017
+    },
+    {
+      "firstTic": 36,
+      "tics": 5,
+      "hash": "0x7788723bf30ffe9c70cc6dcfdcfcfbd8d3a3a7e02a0a9f41cefc2c3b79ad2023",
+      "status": "0x1",
+      "gas": 380865377,
+      "elapsedMs": 210.9851669999989
+    },
+    {
+      "firstTic": 41,
+      "tics": 5,
+      "hash": "0x5aa9a0f3212ba3f84b7d94574872cdd07905322a919ade5892e5b9d11fd70627",
+      "status": "0x1",
+      "gas": 379454483,
+      "elapsedMs": 212.05479199999536
+    },
+    {
+      "firstTic": 46,
+      "tics": 5,
+      "hash": "0xb74c262cd27373019b5e3c70580e087180f0f36066d1f2a5e8e7f54c3a1130e5",
+      "status": "0x1",
+      "gas": 378843048,
+      "elapsedMs": 213.7048749999958
+    },
+    {
+      "firstTic": 51,
+      "tics": 2,
+      "hash": "0xd9304c4ba4fb3af8c694d6d532b086c0dd5f47946e74dff7e4aee8507dd5215e",
+      "status": "0x1",
+      "gas": 342703897,
+      "elapsedMs": 188.36179200000333
+    }
+  ],
+  "notes": [
+    "Test adapter, not production Doom.step performance or production API acceptance.",
+    "Exact original command bytes only; no native gameplay states supplied to EVM.",
+    "Captures invoke unmodified DoomGame.render on a temporary memory copy and emit standard Frame receipts. No native rendering, UI or progression.",
+    "Render memory state changes are reported; saved gameplay is checked unchanged after every capture. Full DSG1 compared at every tic.",
+    "Gas includes observation events and storage; wall time includes local RPC/mining and comparison. Deployment/startup reported separately."
+  ],
+  "serverArgs": [
+    "--host",
+    "127.0.0.1",
+    "--port",
+    "18962",
+    "--hardfork",
+    "cancun",
+    "--disable-code-size-limit",
+    "--gas-limit",
+    "10000000000",
+    "--memory-limit",
+    "1073741824",
+    "--silent"
+  ],
+  "ownedAnvilPid": 78605,
+  "client": "anvil/v1.8.5",
+  "deployment": {
+    "address": "0x5ae1f4bb68f8eac39cfdbdfda2b7344ccbd80faf",
+    "transaction": "0x2fab33ae12e4643bcd0dcddcc6fcea4dbc825caad010848baaa770dc40beb29c",
+    "chunks": 1755,
+    "allResourceRuntimeBytesVerified": true,
+    "elapsedMs": 47807.613709,
+    "totalGas": 6519448053,
+    "probeGas": 247520037,
+    "runtimeSha256": "c65c5efd9f1881bb4b4fe8f6335dd320bc4e1202cd0778e22ea25b94e6b15093",
+    "immutableReferences": {
+      "109807": [
+        {
+          "start": 8992,
+          "length": 32
+        },
+        {
+          "start": 23913,
+          "length": 32
+        },
+        {
+          "start": 54752,
+          "length": 32
+        },
+        {
+          "start": 75846,
+          "length": 32
+        },
+        {
+          "start": 94202,
+          "length": 32
+        }
+      ]
+    },
+    "immutableDriver": "0xf39fd6e51aad88f6f4ce6ab8827279cfffb92266"
+  },
+  "startup": {
+    "transaction": "0x9bd02df51987bb8bfd2e26e117ee124a012f9da782e6063005bcad8096128105",
+    "gas": 2107312941,
+    "elapsedMs": 555.333166000004,
+    "nativeSha256": "f9756a3def3265222a355c1d2a9cc867da9d1ac6962433459bc563df10f03581",
+    "evmSha256": "f9756a3def3265222a355c1d2a9cc867da9d1ac6962433459bc563df10f03581",
+    "exact": true
+  },
+  "replayElapsedMs": 4155.440124999994,
+  "prefixOnly": true,
+  "scope": "Focused merged-main explicit/default-profile replay through tic52; no complete source replay/media verification rerun.",
+  "endedUTC": "2026-10-10T19:30:21.600Z",
+  "replayTransactionCount": 11,
+  "totalReplayGas": 4121504615,
+  "gasPerExecutedTic": 79259704.13461539,
+  "replayTransactionElapsedMs": 2315.585751000006,
+  "actualStateStreamSha256": "1748c3c9d1e07fb6de1e27093e351f145869f8439fe2f1cbee6414ffc4a8e022",
+  "captureTransactionCount": 2,
+  "totalCaptureGas": 1933757766,
+  "totalRendererGas": 1314476065,
+  "captureTransactionElapsedMs": 1716.0384170000034,
+  "totalGasIncludingStartupAndDeployment": 14682023375,
+  "captureReceiptsSha256": "6290f86b6118571874f04fc735f0bb58f09bd63b3b39968a8ee3c27a6c7989a4",
+  "deploymentReceiptsSha256": "ab790ab8292dd77754b6ab137ef19633837a3c3812131fa58a22b7e1db537116",
+  "replayReceiptsSha256": "f7febcd2831d559d7f53d228e4654cac7be341ebbfa9fcb60970abdd751328d3",
+  "ownedRuntimeStopped": true
+}

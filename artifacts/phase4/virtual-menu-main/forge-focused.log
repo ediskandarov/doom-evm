@@ -1,0 +1,228 @@
+Compiling 104 files with Solc 0.8.37
+Solc 0.8.37 finished in 176.81s
+Compiler run successful with warnings:
+Warning (6335): "at" will be promoted to keyword in the future and will not be allowed as an identifier anymore.
+  --> src/doom/v_video.sol:77:41:
+   |
+77 |     function _short(bytes memory patch, uint256 at) private pure returns (int32) {
+   |                                         ^^^^^^^^^^
+
+Warning (6335): "at" will be promoted to keyword in the future and will not be allowed as an identifier anymore.
+   --> src/doom/v_video.sol:102:13:
+    |
+102 |             uint256 at = 8 + uint32(flipped ? width - 1 - col : col) * 4;
+    |             ^^^^^^^^^^
+
+Warning (6335): "at" will be promoted to keyword in the future and will not be allowed as an identifier anymore.
+  --> src/doom/hu_lib.sol:69:41:
+   |
+69 |     function patchShort(bytes memory p, uint256 at) internal pure returns (int32) {
+   |                                         ^^^^^^^^^^
+
+Warning (6335): "at" will be promoted to keyword in the future and will not be allowed as an identifier anymore.
+  --> src/doom/f_finale.sol:77:9:
+   |
+77 |         uint256 at;
+   |         ^^^^^^^^^^
+
+Warning (6335): "at" will be promoted to keyword in the future and will not be allowed as an identifier anymore.
+  --> src/doom/p_switch.sol:76:9:
+   |
+76 |         uint256 at;
+   |         ^^^^^^^^^^
+
+Warning (6335): "at" will be promoted to keyword in the future and will not be allowed as an identifier anymore.
+   --> src/doom/p_spec.sol:216:9:
+    |
+216 |         uint256 at;
+    |         ^^^^^^^^^^
+
+Warning (6335): "at" will be promoted to keyword in the future and will not be allowed as an identifier anymore.
+   --> src/doom/p_spec.sol:383:9:
+    |
+383 |         uint256 at;
+    |         ^^^^^^^^^^
+
+Warning (6335): "at" will be promoted to keyword in the future and will not be allowed as an identifier anymore.
+   --> src/doom/p_maputl.sol:285:13:
+    |
+285 |             uint32 at = C.NULL;
+    |             ^^^^^^^^^
+
+Warning (6335): "at" will be promoted to keyword in the future and will not be allowed as an identifier anymore.
+   --> src/doom/st_lib.sol:170:36:
+    |
+170 |     function SHORT(bytes memory p, uint256 at) internal pure returns (int32) {
+    |                                    ^^^^^^^^^^
+
+Warning (6335): "at" will be promoted to keyword in the future and will not be allowed as an identifier anymore.
+  --> test/unit/m_menu.t.sol:81:38:
+   |
+81 |     function be32(bytes memory data, uint256 at) private pure returns (int32 n) {
+   |                                      ^^^^^^^^^^
+
+Warning (2319): This declaration shadows a builtin symbol.
+  --> src/doom/z_zone.sol:63:5:
+   |
+63 |     function block(ZoneState memory z, uint32 id) private pure returns (ZoneBlock memory b) {
+   |     ^ (Relevant source part starts here and spans across multiple lines).
+
+Warning (2319): This declaration shadows a builtin symbol.
+   --> src/doom/hu_lib.sol:145:77:
+    |
+145 |     function HUlib_addMessageToSText(HuSText memory s, bytes memory prefix, bytes memory msg) internal pure {
+    |                                                                             ^^^^^^^^^^^^^^^^
+
+Warning (2519): This declaration shadows an existing declaration.
+   --> src/doom/m_menu.sol:267:13:
+    |
+267 |             int32 y = 100 - height * 4 / 2;
+    |             ^^^^^^^
+Note: The shadowed declaration is here:
+   --> src/doom/m_menu.sol:280:9:
+    |
+280 |         int32 y = m.currentMenu == 0 ? int32(64) : int32(63);
+    |         ^^^^^^^
+
+Warning (2319): This declaration shadows a builtin symbol.
+   --> src/doom/p_maputl.sol:165:21:
+    |
+165 |                     uint32 block = uint32(by * c.state.blockmap.width + bx);
+    |                     ^^^^^^^^^^^^
+
+Warning (2319): This declaration shadows a builtin symbol.
+   --> src/doom/p_enemy.sol:163:13:
+    |
+163 |             int32 tx = actor.x + info(c, id).speed * xspeed(actor.movedir);
+    |             ^^^^^^^^
+
+Warning (2519): This declaration shadows an existing declaration.
+   --> src/doom/p_map.sol:407:17:
+    |
+407 |                 int32 frac = hit.frac - F.FixedDiv(4 * 65536, c.move.attackrange);
+    |                 ^^^^^^^^^^
+Note: The shadowed declaration is here:
+   --> src/doom/p_map.sol:427:13:
+    |
+427 |             int32 frac = hit.frac - F.FixedDiv(10 * 65536, c.move.attackrange);
+    |             ^^^^^^^^^^
+
+Warning (2519): This declaration shadows an existing declaration.
+   --> src/doom/p_map.sol:408:17:
+    |
+408 |                 int32 x = c.path.trace.x + F.FixedMul(c.path.trace.dx, frac);
+    |                 ^^^^^^^
+Note: The shadowed declaration is here:
+   --> src/doom/p_map.sol:428:13:
+    |
+428 |             int32 x = c.path.trace.x + F.FixedMul(c.path.trace.dx, frac);
+    |             ^^^^^^^
+
+Warning (2519): This declaration shadows an existing declaration.
+   --> src/doom/p_map.sol:409:17:
+    |
+409 |                 int32 y = c.path.trace.y + F.FixedMul(c.path.trace.dy, frac);
+    |                 ^^^^^^^
+Note: The shadowed declaration is here:
+   --> src/doom/p_map.sol:429:13:
+    |
+429 |             int32 y = c.path.trace.y + F.FixedMul(c.path.trace.dy, frac);
+    |             ^^^^^^^
+
+Warning (2519): This declaration shadows an existing declaration.
+   --> src/doom/p_map.sol:410:17:
+    |
+410 |                 int32 z = c.move.shootz + F.FixedMul(c.move.aimslope, F.FixedMul(frac, c.move.attackrange));
+    |                 ^^^^^^^
+Note: The shadowed declaration is here:
+   --> src/doom/p_map.sol:430:13:
+    |
+430 |             int32 z = c.move.shootz + F.FixedMul(c.move.aimslope, F.FixedMul(frac, c.move.attackrange));
+    |             ^^^^^^^
+
+Warning (2319): This declaration shadows a builtin symbol.
+   --> src/doom/r_things.sol:145:13:
+    |
+145 |             int32 tx = -(M_Fixed.FixedMul(tr_y, c.rs.viewcos) - M_Fixed.FixedMul(tr_x, c.rs.viewsin));
+    |             ^^^^^^^^
+
+Warning (2319): This declaration shadows a builtin symbol.
+   --> src/doom/r_things.sol:323:13:
+    |
+323 |             int32 tx = p.sx - 160 * 65536 - c.resources.spriteoffset[l];
+    |             ^^^^^^^^
+
+Warning (2519): This declaration shadows an existing declaration.
+   --> src/evm/InputProtocol.sol:145:49:
+    |
+145 |     function build(GameInputState memory state, uint32 held) internal pure returns (Ticcmd memory) {
+    |                                                 ^^^^^^^^^^^
+Note: The shadowed declaration is here:
+   --> src/evm/InputProtocol.sol:117:5:
+    |
+117 |     function held(InputRuntimeState memory s, uint32 key) private pure returns (bool) {
+    |     ^ (Relevant source part starts here and spans across multiple lines).
+
+Warning (2018): Function state mutability can be restricted to pure
+   --> src/doom/p_switch.sol:129:5:
+    |
+129 |     function P_UseSpecialLine(GameContext memory c, uint32 thing, uint32 line, int32 side)
+    |     ^ (Relevant source part starts here and spans across multiple lines).
+
+Warning (2018): Function state mutability can be restricted to pure
+   --> src/doom/p_spec.sol:346:5:
+    |
+346 |     function P_SpawnSpecials(GameContext memory c) internal view {
+    |     ^ (Relevant source part starts here and spans across multiple lines).
+
+Warning (2018): Function state mutability can be restricted to pure
+   --> src/doom/p_spec.sol:598:5:
+    |
+598 |     function P_ShootSpecialLine(GameContext memory c, uint32 thing, uint32 line) internal view {
+    |     ^ (Relevant source part starts here and spans across multiple lines).
+
+Warning (2018): Function state mutability can be restricted to pure
+   --> src/doom/r_plane.sol:123:5:
+    |
+123 |     function R_MapPlane(RenderContext memory ctx, int32 y, int32 x1, int32 x2) internal view {
+    |     ^ (Relevant source part starts here and spans across multiple lines).
+
+Warning (2018): Function state mutability can be restricted to pure
+   --> src/evm/DoomGame.sol:388:5:
+    |
+388 |     function bossFloor(GameContext memory c, int32 tag, FloorType kind) private view returns (bool) {
+    |     ^ (Relevant source part starts here and spans across multiple lines).
+
+Warning (2018): Function state mutability can be restricted to pure
+   --> src/evm/EpisodeRuntime.sol:165:5:
+    |
+165 |     function automapStop(GameContext memory c, GameflowState memory f) private view {
+    |     ^ (Relevant source part starts here and spans across multiple lines).
+
+
+Ran 3 tests for test/unit/SpeedrunTic52Backing.t.sol:SpeedrunTic52BackingTest
+[PASS] testEpisodeRejectsExactTic52PointerSample() (gas: 393156)
+[PASS] testLegacyRejectsExactTic52PointerSample() (gas: 385238)
+[PASS] testStrictRejectsExactTic52PointerSample() (gas: 331852)
+Suite result: ok. 3 passed; 0 failed; 0 skipped; finished in 3.70ms (6.94ms CPU time)
+
+Ran 8 tests for test/unit/VirtualPointers.t.sol:VirtualPointersTest
+[PASS] testAllCurrentLinksIncludingSentinelAndRoverAtSentinel() (gas: 152310)
+[PASS] testCorruptIdentityGeometryAndLifetimeRemainUnknown() (gas: 524743)
+[PASS] testExplicitSelectionAndDomain() (gas: 6687)
+[PASS] testFuzzPointerCalculations(uint32) (runs: 256, μ: 3215, ~: 3215)
+[PASS] testNullMarkerZoneBaseAndUnsupportedOwners() (gas: 22775)
+[PASS] testProvenanceAndExistingKnownBytesArePreserved() (gas: 1078236)
+[PASS] testRetiredHeadersAndClearDoNotReconstructHistoricalPointers() (gas: 232135)
+[PASS] testStoragePersistenceAndDrawBoundsRollback() (gas: 4702100)
+Suite result: ok. 8 passed; 0 failed; 0 skipped; finished in 3.92ms (13.06ms CPU time)
+
+Ran 5 tests for test/unit/m_menu.t.sol:MenuTest
+[PASS] testEscapeBackspaceAndOriginalHotkeyCycling() (gas: 9220)
+[PASS] testExtendedLevelScreenBoundsAndUniqueSelection() (gas: 305922906)
+[PASS] testMenuOwnsUnknownKeyupsAndWholeStartupPacket() (gas: 16444)
+[PASS] testOriginalMenuNativePixelsAndSkullAnimation() (gas: 312709453)
+[PASS] testOriginalResponderNativeStateAndStorage() (gas: 1626502)
+Suite result: ok. 5 passed; 0 failed; 0 skipped; finished in 481.88ms (956.40ms CPU time)
+
+Ran 3 test suites in 482.30ms (489.50ms CPU time): 16 tests passed, 0 failed, 0 skipped (16 total tests)

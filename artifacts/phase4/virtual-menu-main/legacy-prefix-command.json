@@ -1,0 +1,20 @@
+{
+  "command": [
+    "node",
+    "artifacts/local/virtual-menu-main/speedrun-prefix.mjs",
+    "--port",
+    "18963",
+    "--artifacts",
+    "artifacts/local/virtual-menu-main/speedrun-inputs",
+    "--artifact",
+    "artifacts/local/virtual-menu-main/SpeedrunVideoProbe.json",
+    "--capture-tics",
+    "5,52",
+    "--output-prefix",
+    "artifacts/local/virtual-menu-main/legacy-prefix/evm"
+  ],
+  "startedUTC": "2026-10-10T19:29:30.056589+00:00",
+  "exitCode": 1,
+  "elapsedSeconds": 53.009,
+  "endedUTC": "2026-10-10T19:30:23.065240+00:00"
+}

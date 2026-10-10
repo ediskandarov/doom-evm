@@ -1,0 +1,10 @@
+{
+  "files": [
+    "src/support/SpeedrunVideoProbe.sol",
+    "tools/reference/speedrun/decode-diagnostic.py",
+    "tools/reference/speedrun/evm-video.mjs"
+  ],
+  "cause": "Already cherry-picked diagnosis meets feature extension in the same hunks; equivalent dependency history has different ancestry.",
+  "resolution": "Retain exact verified virtual-feature file blobs; defaults remain profile1/legacy and old policy mappings0..2 unchanged; decoder supports both layouts.",
+  "semanticRewrite": false
+}

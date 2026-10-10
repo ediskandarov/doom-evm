@@ -1,0 +1,37 @@
+{
+  "helperAttempts": [
+    {
+      "name": "decoder",
+      "result": "failed",
+      "reason": "Integration helper selected ordinary DrawBounds receipt rather than the extended diagnostic receipt; exact checkpoint-bound diagnostic input passed on retry."
+    },
+    {
+      "name": "integrity",
+      "result": "failed",
+      "reason": "Integration helper trimmed trailing newlines from Git show blob data; corrected to exact bytes."
+    },
+    {
+      "name": "integrity-exact",
+      "result": "failed",
+      "reason": "Original C is a pinned independent checkout, not ordinary parent-repository blobs; original source bindings handled explicitly."
+    },
+    {
+      "name": "integrity-bound",
+      "result": "failed",
+      "reason": "Integration helper used flat rollback fields; preserved source report stores them under renderFailure.rollback."
+    },
+    {
+      "name": "forge",
+      "result": "not run",
+      "reason": "Installed forge test does not accept build-only --no-lint; corrected invocation ran unchanged focused tests."
+    },
+    {
+      "name": "preservation registry check",
+      "result": "overstrict check rejected external activity",
+      "reason": "Unrelated feature owner independently advanced its own worktree; main protected paths/source refs passed and no integrator wrote that worktree."
+    }
+  ],
+  "productionOrTestChanges": false,
+  "historicalEvidenceModified": false,
+  "speedrunArtifactComparison": "Source identities, compiler settings and ABI agree; compiled bytes differ, so fresh limited real-EVM profile-prefix checks are executed instead of claiming identical execution bytes."
+}

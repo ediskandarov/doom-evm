@@ -1,0 +1,7 @@
+error: unexpected argument '--no-lint' found
+
+  tip: a similar argument exists: '--no-gas-limit'
+
+Usage: forge test --match-path <GLOB> --skip <SKIP>... --offline --disable-block-gas-limit [PATH]
+
+For more information, try '--help'.

@@ -1,0 +1,12 @@
+Resource CREATE/readback 300/1755
+Resource CREATE/readback 600/1755
+Resource CREATE/readback 900/1755
+Resource CREATE/readback 1200/1755
+Resource CREATE/readback 1500/1755
+PASS E1M1 skill0 startup: exact full original-C DSG1
+EVM Frame tic 5: 1217791563 gas, 1161ms; saved world exact
+PASS exact original world 25/52 tics; gas 377045203
+PASS exact original world 50/52 tics; gas 378843048
+EVM Frame tic 52: 715966203 gas, 555ms; saved world exact
+PASS exact original world 52/52 tics; gas 342703897
+{"pass":true,"executedTics":52,"verifiedTics":52,"totalReplayGas":4121504615,"replayElapsedMs":4155.440124999994,"frames":2,"captureGas":1933757766,"captureElapsedMs":1716.0384170000034,"output":"/Users/eduard/sandbox/doom-evm/artifacts/local/virtual-menu-main/virtual-prefix/evm.json"}

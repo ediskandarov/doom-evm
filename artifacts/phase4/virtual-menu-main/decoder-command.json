@@ -1,0 +1,11 @@
+{
+  "command": [
+    "python3",
+    "artifacts/local/virtual-menu-main/decoder-check.py",
+    "artifacts/local/virtual-menu-main/historical-diagnostic.json"
+  ],
+  "startedUTC": "2026-10-10T19:24:37.158342+00:00",
+  "exitCode": 1,
+  "elapsedSeconds": 0.043,
+  "endedUTC": "2026-10-10T19:24:37.201185+00:00"
+}

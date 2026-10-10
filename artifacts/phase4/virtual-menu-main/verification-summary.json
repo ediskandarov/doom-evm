@@ -1,0 +1,87 @@
+{
+  "pass": true,
+  "verifiedMain": "6a8ac6456c2a31444cd70915a43ae474bf04c157",
+  "baseline": "50a6e267b5689d30164401dae7af2c8972b7a183",
+  "sourceTips": {
+    "virtualPointers": "6fb54ce443399ec661ea3c0d64e23aacc15d98e0",
+    "menu": "fa67651d2b149367aa1254909b641e1b73d14700"
+  },
+  "mergeCommits": {
+    "virtualPointers": "9da28298a0ba401d092b427f319941e791087e9b",
+    "menu": "6a8ac6456c2a31444cd70915a43ae474bf04c157"
+  },
+  "fresh": {
+    "buildRoots": [
+      "Doom",
+      "SpeedrunVideoProbe",
+      "ResourceStore"
+    ],
+    "compilerPolicyUnchanged": true,
+    "storageLayoutOutputOnly": true,
+    "forgeTests": 16,
+    "fuzzCases": 256,
+    "nodeTests": 13,
+    "productionMenuInputs": 9,
+    "productionMenuFrames": 9,
+    "productionRollbackReceipts": 2,
+    "productionMenuPolicies": {
+      "deterministicInitialization": 0,
+      "canonicalPointerHighBytes": 0,
+      "experimentalVirtualPointers": 0
+    },
+    "productionGamePolicies": {
+      "deterministicInitialization": 1,
+      "canonicalPointerHighBytes": 1,
+      "experimentalVirtualPointers": 0
+    },
+    "speedrunPrefixWorldsPerPolicy": 53,
+    "virtualFrames": [
+      5,
+      52
+    ],
+    "defaultLegacySuccessFrame": 5,
+    "defaultLegacyExpectedRejectionTic": 52,
+    "legacyRollbackVerified": true,
+    "decoderOldAndNewLayouts": true
+  },
+  "comparisonScopes": {
+    "Initial EVM main menu": "Exact committed feature main-menu pixels; modified production MainDef, not original retail native equivalence.",
+    "Original skill default": "Exact original-C menu fixture pixels under declared borrowed-resource profile.",
+    "New Game E1M1": "Exact prior committed production gameplay frame.",
+    "menuReportNativeExactField": "Inherited runner labels any supplied expected-pixel match nativeExact; the three comparison sources above delimit the actual claims."
+  },
+  "inherited": {
+    "virtualForge": 52,
+    "virtualGameplayWorlds": 280,
+    "virtualFrames": 279,
+    "originalSampledHashes": 56,
+    "genuineExit": true,
+    "menuForge": 32,
+    "menuNode": 66,
+    "menuAnvilInputs": 79,
+    "menuCanvasCheckpoints": 16
+  },
+  "freshRuntime": {
+    "operation": "CREATE Doom",
+    "address": "0x5ae1f4bb68f8eac39cfdbdfda2b7344ccbd80faf",
+    "transaction": "0xb0cfd675420bb28d040474edb871509c75e9a770fb7bc28d793b9892f3d54c66",
+    "gas": 326669391,
+    "runtimeBytes": 850900,
+    "runtimeSha256": "906de17e4e96eb5982283d8a60b547022f0ee705c296ffb20300fc7734488859"
+  },
+  "limitations": [
+    "Virtual addresses are an explicit deterministic extension, not universal native pixel equality.",
+    "Strict/deterministic/Episode policies remain unchanged and reject the unsupported tic52 pointer byte.",
+    "Production menu/gameplay never selects experimental addressing; video profile3 is explicit.",
+    "Historical source-specific certificates remain frozen; their evidence is checked against handoff Git blobs, not regenerated for changed merged sources.",
+    "No complete279-frame replay, all-map/skill browser run, native compilation, media regeneration or full Phase0\u20134 acceptance rerun.",
+    "No storage-upgrade/migration, peak-memory, FPS or public-chain deployment claim."
+  ],
+  "startedUTC": "2026-10-10T19:21:39Z",
+  "verificationCheckpointUTC": "2026-10-10T19:31:35Z",
+  "usageCheckpoint": {
+    "aggregateTokens": 130143,
+    "goalElapsedSeconds": 573,
+    "scope": "Available goal service attribution before documentation/publication; not a monetary estimate."
+  }
+}

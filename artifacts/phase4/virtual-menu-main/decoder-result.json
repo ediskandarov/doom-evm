@@ -1,0 +1,23 @@
+{
+  "pass_": true,
+  "oldABI": true,
+  "newABIFalse": true,
+  "newABITrue": true,
+  "diagnosticEvidenceSha256": "c6d4ecd534461bca0fdf2ad16f7ab5d180e7e956096d53f95f392ed14c5c6eaf",
+  "physicalOffset": 12785689,
+  "sampleBlock": {
+    "blockId": 4497,
+    "offset": 12785664,
+    "size": 384,
+    "prev": 4496,
+    "next": 4498,
+    "owner": 1553,
+    "id": 1919505,
+    "tag": 101,
+    "allocated": 1,
+    "idKnown": 1,
+    "payloadExtent": 340,
+    "relative": 25
+  },
+  "scope": "Actual preserved error plus independently encoded extended ZoneState ABI, not a new EVM failure."
+}
