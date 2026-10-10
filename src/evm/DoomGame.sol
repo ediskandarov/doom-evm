@@ -212,6 +212,12 @@ library DoomGame {
     }
 
     function render(GameContext memory c) internal view returns (bytes memory pixels) {
+        return render(c, 11);
+    }
+
+    /// @dev Original supported view sizes: 10 is 320x168, 11 is 320x200.
+    function render(GameContext memory c, uint8 blocks) internal view returns (bytes memory pixels) {
+        if (blocks != 10 && blocks != 11) revert InvalidGameplayState();
         RenderContext memory r;
         r.map = c.map;
         r.resources = c.resources;
@@ -226,7 +232,7 @@ library DoomGame {
         r.wall = c.state.renderWall;
         r.plane = c.state.renderPlane;
         R_Main.R_InitLightTables(r.rs);
-        R_Main.R_ExecuteSetViewSize(r.rs, 11, 0);
+        R_Main.R_ExecuteSetViewSize(r.rs, blocks, 0);
         InfoData memory info = Info.load();
         R_Things.R_InitSprites(r, info.spriteNames);
         r.sectorValidcount = new uint32[](c.state.sectors.length);

@@ -7,6 +7,7 @@ import { resolveGasBudget } from './budget.mjs';
 // Generated with pinned cast sig. Existing Frame/step ABI remains unchanged.
 export const GAME_STARTED_SELECTOR = '0x5e123ce4';
 export const INITIALIZE_GAME_SELECTOR = '0xa0a1f49b';
+export const INITIALIZE_GAME_UI_SELECTOR = '0xaf544bfc';
 export const LAST_INPUT_SELECTOR = '0x3464285a';
 export const GAME_RESOURCES_PREPARED_SELECTOR = '0x8874965d';
 export const PREPARE_GAME_RESOURCES_SELECTOR = '0x4cc5dc3f';
@@ -109,7 +110,10 @@ export class InputTransactions {
         // settled, but initialization is a future transaction and must wait for Start.
         if (!shouldContinue()) return;
         this._startupValid();
-        const mined = await this._send(INITIALIZE_GAME_SELECTOR);
+        const startup = this.config.productionUI === true
+          ? INITIALIZE_GAME_UI_SELECTOR + (this.config.uiFullscreen === true ? '1' : '0').padStart(64, '0')
+          : INITIALIZE_GAME_SELECTOR;
+        const mined = await this._send(startup);
         // Mined initialization is confirmed separately; it need not emit a Frame.
         this.uncertain = true;
         this._startupFrameCheck(mined);
@@ -124,6 +128,7 @@ export class InputTransactions {
 
   async nextFrame(mask = 0, { beforeSend = () => {} } = {}) {
     this._available();
+    if (this.config.productionUI === true && !this.started) throw Error('Start UI gameplay before rendering');
     if (!this.started && mask !== 0) throw Error('Start gameplay before sending keys');
     const sequence = this.sequence + 1;
     const data = inputStepData(mask, sequence); // Validation occurs before taking the lock.

@@ -1,0 +1,143 @@
+{
+  "status": "passed",
+  "baseline": "b833ff844aeccc644a9174b63e8229f1dd40d567",
+  "implementationCommit": "0b65825bd589b9f824ef08172cb780c5b928ab9b",
+  "scope": "Goal4.11 single-player retail E1M1; no complete Phase0-3/final Phase4 acceptance claim",
+  "sourceSha256": {
+    "src/evm/Doom.sol": "5a8cf9d4f463fe1241316b17b2b823865b7f84993026adac9ba266a84d515c36",
+    "src/evm/DoomGame.sol": "227373ca371d3a2c57d9b3c78663eed0bace86848b119000e6c485c26d63ed3f",
+    "src/evm/DoomUI.sol": "10c2014f1422615522f061914440eafc67d7581dc5a73b5baf8346684d090b2f",
+    "web/app.mjs": "72306912cd0be6f67f303b03c31684ed00988ec1ad69fe102fb35ab531ab50e9",
+    "web/input-loop.mjs": "da9d6a3176ad6bf9ae4f123bf62319b1db01edcbe01e9edc99740f79e364ff9b",
+    "web/ui-palette.mjs": "31614c2e32d7105ee075758bb73f5c7cc5f5944a240edaee26e6c374cb415645",
+    "tools/reference/ui/reference.py": "4a2a5f8a933652bc0b38d31ad6ed360122b52de45ac7c6faeca0154a90ed4b09",
+    "tools/reference/ui/production.mjs": "5532c327de435e84dcd1fc6d5f382163614e5f5a834aefd27d1e16aad6d36716",
+    "tools/reference/ui/verify.py": "12bd3f08943f70fd46cd8ddba072b361c66680ec8ed9eb4fd04ee3766f780070",
+    "tools/reference/ui/checkpoint.py": "69d7ef4c0ca225f716db06c986509012fbd39065e7d4d9ec19b13653bc8bbb32",
+    "tools/transport/ui-browser-check.mjs": "cd76d91da3982b776d04518e535548deb7532e4836e1313c807cd4926d4937b0",
+    "tools/transport/ui-palette.test.mjs": "9337ca86777885adccc3e256e4a3f4941ba82a0081e23356379ebd39ecf7d1e4",
+    "test/integration/ProductionUI.t.sol": "4d5f9c7e697cb0689541144546fc12611d62573d0c963c5b392f1dffa1162e9b",
+    "web/input-loop.test.mjs": "aff21e288f5cef4663866cdbf75bc7a9065477e462b22854796bf80369aeb5f2",
+    "src/doom/st_stuff.sol": "c4d549eebf7210b28c9ed7f6e1b89f4f276ea6c3f0e82d944a65df0cac8813bc",
+    "src/doom/st_lib.sol": "5307f52151fbd73e442a60d8b87cbfbed3d38a28704a81e952f56672de667299",
+    "src/doom/hu_stuff.sol": "fcf57390d8c8e6d5ec935164264870509bb64197179536a39cd2a14dddb9588e",
+    "src/doom/hu_lib.sol": "bf11331f06c38565650e93ce5ece611d048d5656ae2c8442b6568de5ce079a06",
+    "src/doom/v_video.sol": "be75fe69e7cd2486ce93408ec204cdf470ea097569e37fbedd867e9a2f3adf1f",
+    "src/doom/v_video_types.sol": "266890b0c8003e89f78baf8415048d24e4ca14865a1c8518ad77bb6a9f6b4d35",
+    "src/doom/p_game_state.sol": "0f9d60aae9424cad17c614d4fcc93c9eb6fe8a43c7bce070d2460fcf2c34f649",
+    "src/evm/FrameProtocol.sol": "4665be3f613b8e817d616d2db1dc4a644325c44a6ade476a35d7d9d003625ace",
+    "src/evm/InputProtocol.sol": "df068ec9030d7241de7d6160059f8e46fe647f6655123f03849789b359bee51b",
+    "src/evm/WadResources.sol": "25a1acc0a44ac35cc29e5f9bd953ba66b85db4f665b732430571b416ef927895",
+    "foundry.toml": "afe04c66f0e684b5a936821f6543605a3739f62164ceb4398426db7403452393",
+    "execution-budget.json": "acde01f1b9cf248f9265f1ffcff7181d01d77620a2dfcd9a4d4d0b1c79df2be7"
+  },
+  "evidenceSha256": {
+    "browser.json": "181ca86cd94a4ca58b0d2d5417d11714fe9e41bfb871a2635cbffb4b50904884",
+    "canvas-tic204.png": "e4616d285cdb4e0d79e260b7dc9f1bb736415b7adb94a7b20b780a8d5114feb5",
+    "canvas-tic64.png": "0cdad30983677d143171d417c7e38f2a106ed9bb40abdf9e0352c47db3a69c6a",
+    "canvas-tic70.png": "ffed8b9ee19767aacc21df57dda3bfc8eebbb6b96fe22c8f35bc8116c65726c3",
+    "focused.json": "ba7205cece4732aa9f796c7acb02ab473edc709f9709ec5c8c29a23cb7c040f4",
+    "focused.log": "6d6af6bb62d7dd617d7d9a412c2dfd70ee49cc2abfee1560fe92b56a669f3575",
+    "legacy.json": "b563af46268b064965e64809e6f3a133cb120942aa6b1b0266cc28c3b66e51f4",
+    "native-build.json": "97b993bf228003124b73f8307edebe82acae5fb25bac43db72986d6aadf0301f",
+    "native.json": "0a5fcf08f1a14d7cb3eb4eb99bf33895c69138bff5c680f55744fdb9405c1195",
+    "node.json": "755979356d61c2c6938337bfb6d69833ce0b56d74bc99921a79eee26cb8369cb",
+    "node.log": "994b5e7c26789f45db3c37568dfd5122fbee6c86fdea289c10926858ff9cac28",
+    "production.json": "3546f203577a928fd9423be175dda5512eea10955be05f6c3779c522befa60e8"
+  },
+  "native": {
+    "tics": 210,
+    "frames": 13,
+    "profiles": [
+      "O0",
+      "O2",
+      "ASan/UBSan",
+      "ASan/UBSan allocation-fill0xa5"
+    ],
+    "upstreamCommit": "a77dfb96cb91780ca334d0d4cfd86957558007e0"
+  },
+  "focusedTests": 159,
+  "nodeTests": 50,
+  "consumerStorageVectors": 276,
+  "production": {
+    "tics": 210,
+    "scalarNativeFieldsPerTic": 45,
+    "allMessageBackingBytesPerTic": 81,
+    "nativePixelFrames": 14,
+    "nativeUIFrames": 13,
+    "allFramePixels": 64000,
+    "allPaletteBytes": 768,
+    "rollbacks": 6,
+    "viewportTransitions": [
+      {
+        "beforeTic": 70,
+        "fullscreen": true,
+        "transactionHash": "0xc4d71019290118124d46e53919f6fce670e825cff7cd8b2382ba628c076511b3"
+      },
+      {
+        "beforeTic": 101,
+        "fullscreen": false,
+        "transactionHash": "0x2b072bf8372536c001db29c860de830c47f8df4bb7c2e53e2873bef237909ff4"
+      }
+    ]
+  },
+  "browser": {
+    "tics": 210,
+    "nativeCanvasFrames": 13,
+    "rgbaBytesPerFrame": 256000,
+    "receiptFallback": true,
+    "blurStopsBeforeNextCommand": true
+  },
+  "legacy": {
+    "tics": 129,
+    "frames": 7,
+    "rollbacks": 13
+  },
+  "measurements": {
+    "executionBudget": {
+      "gasLimit": 10000000000,
+      "gasHex": "0x2540be400",
+      "source": "/Users/eduard/sandbox/doom-evm-ui-integration/execution-budget.json"
+    },
+    "startupGas": 2928643720,
+    "uiFrameGasRange": [
+      1025760389,
+      1378285802
+    ],
+    "noRenderGasRange": [
+      325568136,
+      328534796
+    ],
+    "uiFrameMsRange": [
+      849.2462910000031,
+      1168.2675000000017
+    ],
+    "productionStartedUtc": "2026-10-10T11:45:40.675Z",
+    "productionEndedUtc": "2026-10-10T11:47:57.598Z",
+    "browserMs": 46414.10829199999,
+    "focusedGateSeconds": 251.61502599716187,
+    "productionRuntimeBytes": 592441,
+    "peakEvmMemory": "not measured in this goal; no MSIZE claim"
+  },
+  "unchangedBaselineFiles": [
+    "src/doom/st_stuff.sol",
+    "src/doom/st_lib.sol",
+    "src/doom/hu_stuff.sol",
+    "src/doom/hu_lib.sol",
+    "src/doom/v_video.sol",
+    "src/doom/v_video_types.sol",
+    "src/doom/p_game_state.sol",
+    "src/evm/FrameProtocol.sol",
+    "src/evm/InputProtocol.sol",
+    "src/evm/WadResources.sol",
+    "foundry.toml",
+    "execution-budget.json"
+  ],
+  "limitations": [
+    "Ordinary production stream exercises natural health-bonus pickup, fire/ammo and HUD expiry; armor, every weapon/key, damage directions and original face quirks have controlled original-C consumer/storage vectors and inherited module proofs.",
+    "Only exported production scalar fields and HUD backing are compared each transaction, not whole-world canonical records.",
+    "Native immutable UI patch/screen4 buffers use declared consumer ownership outside the existing gameplay zone; no whole-process native-zone equivalence claim.",
+    "UI startup uses default original gamma0/showMessages=true and no chat/automap/responders or lifecycle integration. Legacy startup remains world-only.",
+    "Browser UI deployments require productionUI:true and use explicit UI startup; legacy configurations retain raw PLAYPAL behavior."
+  ]
+}

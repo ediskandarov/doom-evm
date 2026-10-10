@@ -3,6 +3,7 @@ import { makeRpc, FrameInbox, FrameSubscription, backfill, expandPalette } from 
 import { validatePalette } from './palette.mjs';
 import { KeyboardInput, bindKeyboard } from './input.mjs';
 import { InputTransactions, GameplayLoop } from './input-loop.mjs';
+import { FramePresentation } from './ui-palette.mjs';
 const status = document.querySelector('#status'), button = document.querySelector('#step'), canvas = document.querySelector('#frame');
 const proof = window.__transportProof = { ready: false, frames: [], errors: [], inputs: [], fallbackVerified: false };
 const fail = error => { status.textContent = error.message; proof.errors.push(error.message); };
@@ -32,15 +33,22 @@ try {
   const rgb = await validatePalette(palette, config.resourceIdentity, config.paletteKind ?? 'synthetic');
   proof.paletteKind = palette.kind; proof.paletteSha256 = palette.resourceIdentity.paletteSha256;
   let latestBlock = config.deploymentBlock;
-  const inbox = new FrameInbox((frame, source) => {
+  const presentation = new FramePresentation(rpc, rgb, config.productionUI === true, (frame, source, frameRGB, framePalette) => {
     canvas.width = frame.width; canvas.height = frame.height;
-    canvas.getContext('2d').putImageData(new ImageData(expandPalette(frame, rgb), frame.width, frame.height), 0, 0);
+    canvas.getContext('2d').putImageData(new ImageData(expandPalette(frame, frameRGB), frame.width, frame.height), 0, 0);
     latestBlock = frame.log.blockNumber;
     proof.frames.push({ frameId: String(frame.frameId), inputSeq: frame.inputSeq, source, transactionHash: frame.log.transactionHash, pixelBytes: frame.pixels.length });
     proof.latestPixelsHex = hex(frame.pixels);
+    proof.latestPalette = framePalette ? { revision: framePalette.revision, palette: framePalette.palette,
+      gamma: framePalette.gamma, rgbHex: hex(frameRGB) } : null;
     status.textContent = `Frame ${frame.frameId} · input ${frame.inputSeq} · ${frame.width}×${frame.height}\n${frame.pixels.length.toLocaleString()} indexed8 bytes · via ${source}\n${frame.log.transactionHash}`;
   });
-  const invalidate = () => { stopped = true; loop?.stop(); transactions?.invalidate(); button.disabled = true; subscription?.close(); };
+  let pendingPresentation = Promise.resolve();
+  const inbox = new FrameInbox((frame, source) => {
+    pendingPresentation = presentation.present(frame, source);
+    pendingPresentation.catch(error => { invalidate(); fail(error); });
+  });
+  const invalidate = () => { stopped = true; presentation.invalidate(); loop?.stop(); transactions?.invalidate(); button.disabled = true; subscription?.close(); };
   const reconnect = async () => {
     try { await subscription.connect(); await backfill(rpc, config.address, latestBlock, inbox); }
     catch (error) {
@@ -68,6 +76,7 @@ try {
     if (stopped) throw Error('Session invalidated; reload after checking the local chain');
     if (loop?.running) throw Error('Stop continuous input before a manual step');
     const mined = await transactions.nextFrame(buttons, { beforeSend: disconnect ? () => subscription.close() : undefined });
+    await pendingPresentation;
     if (disconnect) {
       proof.fallbackVerified = proof.frames.at(-1).source === 'receipt';
       await subscription.connect();
@@ -89,7 +98,7 @@ try {
       proof.gameStarted = transactions.started;
       if (config.stagedInitialization === true) proof.resourcesPrepared = transactions.prepared;
       proof.gameplayRunning = loop.running;
-      button.disabled = stopped || !transactions.canSend || loop.running;
+      button.disabled = stopped || !transactions.canSend || loop.running || (config.productionUI === true && !transactions.started);
       button.textContent = transactions.started ? 'Step one tic →' : 'Run DOOM →';
       startButton.disabled = stopped || !transactions.canSend || loop.running || loop.starting;
       startButton.textContent = loop.running ? (loop.starting ? 'Starting…' : 'Running…') : transactions.started ? 'Resume game →' : 'Start game →';
