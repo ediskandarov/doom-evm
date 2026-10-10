@@ -1,0 +1,22 @@
+{
+  "kind": "MP4-timescale-only-recovery",
+  "originalContainer": {
+    "/moov/mvhd": {
+      "timescale": 1000,
+      "duration": 45658
+    },
+    "/moov/trak/edts/elst": {
+      "version": 0,
+      "entries": 1,
+      "firstSegmentDuration": 45657
+    },
+    "/moov/trak/mdia/mdhd": {
+      "timescale": 35000,
+      "duration": 1598000
+    }
+  },
+  "originalDiagnosisSHA256": "8fe8b7eb0d834bd73e07af3a86d726c924f31c512b14c8735cd859614d945f4c",
+  "correction": "Pin video_track_timescale and movie_timescale to35000; retain exact frame/rate/duration assertions",
+  "oldVideoLocalOnly": true,
+  "framesOrInputsModified": false
+}

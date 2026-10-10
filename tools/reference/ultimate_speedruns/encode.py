@@ -10,5 +10,7 @@ assert [f['tic'] for f in m['frames']]==list(range(1,n+1))
 # Preserve encoder logic; adapt only the E1M1 count and output basename.
 source=ROOT/'tools/reference/speedrun/encode_video.py'
 text=source.read_text().replace('279',str(n)).replace('speedrun-e1m1',f"speedrun-{m.get('map','episode').lower()}")
+# Pin both MP4 clocks to whole tic units; preserve the strict duration gate.
+text=text.replace("'-video_track_timescale', '35000',", "'-video_track_timescale', '35000', '-movie_timescale', '35000',")
 namespace={'__name__':'episode_palette_encoder','__file__':str(source)}
 exec(compile(text,str(source),'exec'),namespace);namespace['encode'](directory)
