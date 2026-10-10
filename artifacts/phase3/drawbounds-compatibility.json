@@ -1,0 +1,262 @@
+{
+  "schemaVersion": 1,
+  "kind": "phase3-post-acceptance-compatibility",
+  "pass": true,
+  "scope": "General conservative zero-initialized local zone backing, retained strict diagnostic mode and captured E1M1 blood-sprite crash regression. No renewed M2/M3 or universal original-native pixel acceptance.",
+  "historicalAcceptance": {
+    "path": "artifacts/phase3/acceptance.json",
+    "sha256": "1bebb1edfa40585901067b0dc10501e969654e457eadee2eab0be35e996e3e33",
+    "frozenSourceRevision": "9279bf9d332cf65dca8e40774d6d56f9e78fcba0"
+  },
+  "historicalFeatureMatrixSha256": "297d35c45ac9829995280876aafd5fcc326c0251ba68bcacd30d2552b3daae45",
+  "sourceHashes": {
+    "src/doom/d_ticcmd.sol": "508d0332d3e8b83e1b68d37581a3befc100a9974fcaa0900cc44116cd75ff2ef",
+    "src/doom/doomstat.sol": "4c40da3914c629017959a0a4c0516d83346900674c92f5e55a766aba1b506fea",
+    "src/doom/doomtype.sol": "5fbe4b1d0fe96d04453b00d1c3f1c6781c6c8ab5147ee0ac512d17597a5a3c56",
+    "src/doom/g_game.sol": "2714f783a532bc2a525d7f50813c472f299c541ee9062a7a5d078e1818791e70",
+    "src/doom/info.sol": "4611205149173e42d3b0f1d91820c8042f6bc5fc48fb53aec84ad4bc501dca8e",
+    "src/doom/m_bbox.sol": "f4c60efe3627a97d0288fc5cd0283535527b1f51029568534c80bb8fbbf8f272",
+    "src/doom/m_fixed.sol": "3f64bef1f62f61faead3a5b8f382bf1c66e1b3739ce4ac8d59a6fcef0451ef9f",
+    "src/doom/m_random.sol": "5267b881138cfb7e0d683449005619513006c70e3ed557f64697b36c4ed40c7b",
+    "src/doom/native_zone_layout.sol": "118b2d17165826fb0857d9cb296e2214db2a28917769299a82e70d0c0790f6e8",
+    "src/doom/p_ceilng.sol": "696f3f620f5bddb3cea64fda824e3203c780f53db890630f0685794454dc37f9",
+    "src/doom/p_doors.sol": "945bf600ce86d8286718fb75ecaf905a0c4631d79d2dac7260c91c9dc2013f8d",
+    "src/doom/p_enemy.sol": "eff76cce23b0877833a5c446a1a09d8ae01918a6925b6d3265240b144c09dfe7",
+    "src/doom/p_floor.sol": "b7c90baafa0b74fd7ff80cf60dcbc430148f6d6d068ba54ca0fbc7ba1bca7069",
+    "src/doom/p_game_state.sol": "0f9d60aae9424cad17c614d4fcc93c9eb6fe8a43c7bce070d2460fcf2c34f649",
+    "src/doom/p_heap.sol": "3cc2e0a8c3239523db66c07fea33720f931754baedd312b5ca7cc2ebe763d2e0",
+    "src/doom/p_info.sol": "a48840479115ea8bf849ca5ec448d1b2bec7a6cfe58c5314e140635a898de792",
+    "src/doom/p_inter.sol": "8be27f9bba47beb46b3edf2a8a2674b3cd7218d2abb8ef5f8855803393d067de",
+    "src/doom/p_lights.sol": "6f63cbc6b41fc492a46ce43aef464deb9d08b7fa1dd8b213b546eec3e4f08276",
+    "src/doom/p_map.sol": "6b6d48523a45acab9090dfb0ec3d6dbab4e6de18afa89453df8b5a87088da0f3",
+    "src/doom/p_maputl.sol": "ac5ac60e7e058a5fc537e7042c7254bc0f51c77165149a22e141437b4e0ad0b6",
+    "src/doom/p_mobj.sol": "78e9c05b327100bd34cafe086454e3a5499beb92af878ad4756baeca18445ffa",
+    "src/doom/p_plats.sol": "6904df762b270f840daa99b34d2a5c689dbb2fef3aed3d33c2ac1a3f3e4d5722",
+    "src/doom/p_pspr.sol": "cfa2db3438d689c38d9c957fc4aee598c58740f025d6efead2b5f9671eb0c863",
+    "src/doom/p_setup.sol": "9498e1298bf4e53ccedc484a50d4c7f9f85315f6cb700719d474b721e382243b",
+    "src/doom/p_setup_static.sol": "c8100a42bb0bac190c583bbb2c82168599009f88a766e4c05b9a9231a5f69792",
+    "src/doom/p_sight.sol": "7ed366237fc3fec069ffb6336e95e038004d1f379622cf67f55fb8c6b1a6488c",
+    "src/doom/p_spec.sol": "2363640e75c22c9d017db677dda7148ad221380f0a23639167e145e933fc72b7",
+    "src/doom/p_switch.sol": "5404d359793e05c6c24a7804c07632150009b46f38d03068412d7ac53260dfe2",
+    "src/doom/p_telept.sol": "745f0fa4ed6f0515c398bfd2469c59aac82316965b7bac25263aeb82555d61b8",
+    "src/doom/p_tick.sol": "1993dd0c94853dabc4db554dfa0ca04375cef0a22075400ba0e7b56b525022ab",
+    "src/doom/p_user.sol": "963a46850e1b17171f79dd65bff9b5006ce6f97a935ad2023d1d526a6ec35c37",
+    "src/doom/p_zone_setup.sol": "e0308bd1197fd84a01eb1ee208be73c711851d6b0bc30be1d07a7c61b18b223d",
+    "src/doom/r_bsp.sol": "0ae5df313515692d0b2b970d5d39d107e014629cff2305fb37c14371a9524040",
+    "src/doom/r_data.sol": "5b404d561f8bce538e8a8221b4f36d62c9b9826fc833307640d96fcbfdca2d0a",
+    "src/doom/r_data_types.sol": "0448302d68447c8a5a4c46df4016e8845863e42bf6eaca8bcab8ab0c9707fdf8",
+    "src/doom/r_defs.sol": "558d5a9bfd131e816bbe28986e2dad6144a08e5a16ccfed1b199d7558a1ea0e2",
+    "src/doom/r_draw.sol": "afe958ea0c2962b739bff58b98d8bccc25c48d3d0838cacd46142c242b5d6477",
+    "src/doom/r_main.sol": "df403bf04fdbbcfc68c4fd9c5e19b5201ca711498efc34db406a4010ad3b2af5",
+    "src/doom/r_plane.sol": "c7a5abcbca84dddcd2a3c8bb160a609605c5c1842e73704dff4860df3280e463",
+    "src/doom/r_render_hooks.sol": "f026ccb8fffb68d8fbcb0966103212f52884b86350fe3fb52a401d146f3fb312",
+    "src/doom/r_render_state.sol": "072bd2f73b98e1eb775fc8093e95a69c184f3fa50a89a5d64a7beccd59493398",
+    "src/doom/r_segs.sol": "9d4e4dea06739278aab3698fb422818de6dd7726359c8822d60a162e886621cb",
+    "src/doom/r_sprite_state.sol": "735b3de85cbf455e05d3cb8e992cf4e477960bd4192bbd367f5c66c803b96363",
+    "src/doom/r_state.sol": "80951a13733e3a08f4182937a37def33ffda21eaae4b43a2a1bdba2043adab6b",
+    "src/doom/r_things.sol": "86705ab6b1f79b7ef07798b881cc547502d9911c97b57dc516a744e17c1977f5",
+    "src/doom/tables.sol": "bf14202b419075f6d187653205a37e211d8267c7fc4c0bebf5a8c5713afddf38",
+    "src/doom/w_zone_cache.sol": "03c07404765de9620b3d1ff15727809cdad911c8a78d822019b63500fa5018c2",
+    "src/doom/z_zone.sol": "b4e75218021d65aaf3389cf78a68663feebc2084c82457821be17247dc8106c5",
+    "src/doom/z_zone_backing.sol": "1253ffab18a977b75a63d7387514eb360bf9b5e4eb3881eb0928c4b23096a398",
+    "src/doom/z_zone_types.sol": "8eaf75209f619565bfffd1b26ea0d5cc24e7e63da6ca16c58c183139a8e2ef4e",
+    "src/evm/Doom.sol": "04f0eebfab72eb686117e0bd4ec20274b230cb153762810b2e83cd9df127f809",
+    "src/evm/DoomGame.sol": "1bd4feac092668f18cd3b9bd696478dd96d3f86400a4a386b5d71549ff5fe4c6",
+    "src/evm/DoomRenderer.sol": "5639d82431350ea76c26d43457d26d0c3c0f410eaddf02db6adbcfb03a569ba0",
+    "src/evm/DoomScene.sol": "9ad7c8ccee4c9e05deb5608326baabacfa40f686b8d8445fb8aaa7352ab64569",
+    "src/evm/DoomZoneStartup.sol": "2d178494456a7ae3c730310f257ce2aa635d37d18c90cac039cf002cdb3f50dc",
+    "src/evm/FrameProtocol.sol": "4665be3f613b8e817d616d2db1dc4a644325c44a6ade476a35d7d9d003625ace",
+    "src/evm/InputProtocol.sol": "df068ec9030d7241de7d6160059f8e46fe647f6655123f03849789b359bee51b",
+    "src/evm/ResourceStore.sol": "5ab3acc5d09f155a4cf25973c847f23e47f386a364704b76996c86be5862e3a8",
+    "src/evm/ResourceTypes.sol": "159865364cfa57aae508cd94c49509cbccabd6aeeba55e92b9fcf816bdec4d6b",
+    "src/evm/WadResources.sol": "25a1acc0a44ac35cc29e5f9bd953ba66b85db4f665b732430571b416ef927895",
+    "src/support/FrameFixture.sol": "1de9a0f7c1ae276041f6d71111da36413f2604b9a43a95176dd4dfae82bbc799",
+    "src/support/GameplayProbe.sol": "fd29ba99ea2ca2c0db9ed44fb061c93c40e3a6aefbb14e07e8e7b8bd9ae859b5",
+    "src/support/RendererProbe.sol": "14dc07178db80fde8c9ae5d5500f8205049ed41e21da48dd7818304407785856",
+    "src/support/ResourceAccessProbe.sol": "4aa343501917ddfc0117cbb9fc543b543ce16124c7b25127dcf41d22cab10e3c",
+    "src/support/ResourcePlacement.sol": "3febd551f07205b96c4960d496acb27ab06c571bf8e4ce1983595491b0acd6ab",
+    "src/support/StackPressure.sol": "fa49240fd75c2810e813e3b7620492f24270a0e985ef900e88e8b81fd1fb41af",
+    "src/support/WadResourcesProbe.sol": "c05e160a1c62e5d2e71159466e7d0c5f030166501d986a7059c3f4c9870dc973"
+  },
+  "proofs": {
+    "regressions": {
+      "path": "artifacts/phase3/drawbounds-regressions.json",
+      "sha256": "0f1102bc49fc0273d33287c51a99e20a022cfba0b6d91a681052b346d56994e8"
+    },
+    "nativeIndeterminate": {
+      "path": "test/fixtures/drawbounds_blood/native.json",
+      "sha256": "0ac0d2d4be10f85145483ec48570c503087d952a4dd4c76e9fce50c5b3fc3e85"
+    },
+    "nativeReplay": {
+      "path": "test/fixtures/drawbounds_blood/replay-native.json",
+      "sha256": "f4849d6ed657d504365d3d3a65cc32368cfda35a3f1a507a93b123bfca5b82b9"
+    },
+    "fixture": {
+      "path": "test/fixtures/drawbounds_blood/manifest.json",
+      "sha256": "75f281187da438303d378bf53b7b447cbd0bcebfe2024848125276189bf26639"
+    },
+    "initializedReplay": {
+      "path": "artifacts/phase3/drawbounds-replay-initialized.json",
+      "sha256": "f46ebf4b0b8e69ebd4f51320bb3cea2af72673a18d328c2eadccede790258aca"
+    },
+    "strictReplay": {
+      "path": "artifacts/phase3/drawbounds-replay-strict.json",
+      "sha256": "737abd392059b492ae2c2afb496e9b17ede0eb586e4b88b3b0b55f68217f9ec0"
+    },
+    "kernel": {
+      "path": "artifacts/phase3/drawbounds-kernel.json",
+      "sha256": "840f928bdd76ba72b59e3c766171794448be0b3de86b3e2dfe67af0c204388a0"
+    },
+    "storageLayout": {
+      "path": "artifacts/phase3/drawbounds-storage-layout.json",
+      "sha256": "01ce49b95cea0ddc82f285d10ff048c998f3affc1c8a5e3fe30b6aadc4dce46d"
+    },
+    "finalArtifactReplay": {
+      "path": "artifacts/phase3/drawbounds-replay-final-artifact.json",
+      "sha256": "14970977f81a0ecb86c21f0af5b68586256b0fd95e1a0be54c5aba61b925a31b"
+    },
+    "public-production": {
+      "path": "artifacts/phase3/drawbounds-public-production.json",
+      "sha256": "759a3f3345b582e1a8a84e3f68c499b41bdb3693cc1ebc45cee47e72f31e9923"
+    },
+    "browser": {
+      "path": "artifacts/phase3/drawbounds-browser.json",
+      "sha256": "9a62dbfb9242cdd94baf7ab63a0bcb06a2af8c163267a513fce3f56e826bbc83"
+    }
+  },
+  "regressionGates": {
+    "phase0": {
+      "pass": true,
+      "commands": 12
+    },
+    "phase1": {
+      "pass": true,
+      "commands": 13
+    },
+    "phase2": {
+      "pass": true,
+      "commands": 24
+    },
+    "phase3Regressions": {
+      "pass": true,
+      "commands": 32
+    },
+    "foundry": {
+      "pass": true,
+      "tests": 409,
+      "seed": "0x44"
+    },
+    "capturedInitialized": {
+      "pass": true,
+      "tics": 445,
+      "fields": 6244,
+      "frames": 445,
+      "pixelComparisons": 28480000
+    },
+    "capturedStrict": {
+      "pass": true,
+      "priorTics": 444,
+      "frames": 444,
+      "expectedRevertTic": 445,
+      "selector": "0x5b9a48fe"
+    },
+    "wholeKernel": {
+      "pass": true,
+      "scenarios": 9,
+      "tics": 2355,
+      "frames": 31,
+      "finalStoredStates": 9
+    },
+    "storageLayout": {
+      "pass": true,
+      "priorTypesCompared": 107
+    },
+    "nativeIndeterminate": {
+      "pass": true,
+      "profiles": [
+        "O0",
+        "O2",
+        "ASan/UBSan"
+      ],
+      "initialHeapPatterns": [
+        0,
+        85,
+        165
+      ]
+    },
+    "publicProduction": {
+      "pass": true,
+      "tics": 129,
+      "liveFrames": 6,
+      "staticFrames": 1,
+      "storageRollbackChecks": 13
+    },
+    "browser": {
+      "pass": true,
+      "frames": 6,
+      "nativeFieldsExact": true,
+      "allNativeAndCanvasPixelsExact": true,
+      "fallbackVerified": true
+    }
+  },
+  "artifact": {
+    "artifactAtRunSha256": "fe9e080581a97a1f88977e325b64783b72486b0ce60612e997d92d6b52ea77a6",
+    "retainedLocalArtifact": "artifacts/local/drawbounds-crash/production-artifact.json",
+    "runtimeTemplateSha256": "2bdbf5e724432ba89ae8fd462a4c2f743527ea8f1d7c1690a0090bef94fce5eb",
+    "runtimeBytes": 518359,
+    "compiler": {
+      "version": "0.8.37+commit.f401782d"
+    },
+    "settings": {
+      "remappings": [],
+      "optimizer": {
+        "enabled": true,
+        "runs": 200
+      },
+      "metadata": {
+        "bytecodeHash": "ipfs"
+      },
+      "compilationTarget": {
+        "src/evm/Doom.sol": "Doom"
+      },
+      "evmVersion": "cancun",
+      "libraries": {},
+      "viaIR": true
+    },
+    "initializedRunnerAtRunSha256": "e6f78217491727c8a7ee7d7daf576c185fb15fbd744c0391cd551ed32cacabab",
+    "finalStrictRunnerSha256": "1a3fc5bbb95b7392eaca0c48713c896b3c074ed4e23c649bdd2fdfe990ad4e15"
+  },
+  "gas": {
+    "historicalFailure": 659898736,
+    "deterministicInitialization": 1712979721,
+    "deterministicTic445": 1792487625,
+    "deterministicFrameRange": [
+      674869826,
+      1971621098
+    ],
+    "newStrictInitialization": 1713104122,
+    "newStrictTic445": 673665669,
+    "budget": 10000000000
+  },
+  "liveStatePreserved": {
+    "address": "0x631cc89bab95812b5fbdfd65a039a103210105b5",
+    "storageRoot": "0xbf948f0b7a93f218c6da5eb35605ff48df1dbc9efbe11bd5e7385cd8cf5b56eb",
+    "beforeAfterEqual": true,
+    "writesSentToOriginalNode": 0
+  },
+  "limitations": [
+    "Indeterminate-byte frames compare only with the separately declared zero-initialized native platform profile, never arbitrary original malloc contents.",
+    "Unmodeled written/reused bodies and native pointer bytes remain unknown and reject; initialization is not a complete raw native heap model.",
+    "The frozen Phase3 certificate, original source hashes, source audit and prior measurements remain historical and byte-identical.",
+    "No new native branch coverage, complete original DOOM/all-map claim or production peak-memory claim.",
+    "Existing live deployment is unchanged. Policy is selected before startup and verified by fresh replay, not retroactive metadata injection."
+  ],
+  "finalArtifact": {
+    "retainedLocalArtifact": "artifacts/local/drawbounds-crash/final-artifact.json",
+    "artifactSha256": "822d837eb9f91a4b5328e09f2e67b5ed4ef6cf22c8e1782a887749340a24f126",
+    "runtimeTemplateSha256": "e10accea72a1b160c22aca016f9965f8435975a8d7bf187fc99b618a7b2c6667",
+    "runtimeBytes": 518098,
+    "passedTics": 445,
+    "samePerTicGasAsFirstArtifact": true
+  }
+}

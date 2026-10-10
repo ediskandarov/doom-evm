@@ -1,0 +1,97 @@
+{
+  "scope": "Original unchanged renderer and allocator with accepted LP64 align8 adapter; controlled initial heap bytes demonstrate source-unwritten padding, not goldens for unmodified malloc. Zero-seed is the explicit deterministic platform profile.",
+  "pass": true,
+  "rows": [
+    {
+      "profile": "O0",
+      "seed": 0,
+      "paddingBefore": 0,
+      "paddingAfter": 0,
+      "firstPixel": 0,
+      "expectedPixel": 0,
+      "relativePhysicalAddress": 332
+    },
+    {
+      "profile": "O0",
+      "seed": 85,
+      "paddingBefore": 85,
+      "paddingAfter": 85,
+      "firstPixel": 85,
+      "expectedPixel": 85,
+      "relativePhysicalAddress": 332
+    },
+    {
+      "profile": "O0",
+      "seed": 165,
+      "paddingBefore": 165,
+      "paddingAfter": 165,
+      "firstPixel": 165,
+      "expectedPixel": 165,
+      "relativePhysicalAddress": 332
+    },
+    {
+      "profile": "O2",
+      "seed": 0,
+      "paddingBefore": 0,
+      "paddingAfter": 0,
+      "firstPixel": 0,
+      "expectedPixel": 0,
+      "relativePhysicalAddress": 332
+    },
+    {
+      "profile": "O2",
+      "seed": 85,
+      "paddingBefore": 85,
+      "paddingAfter": 85,
+      "firstPixel": 85,
+      "expectedPixel": 85,
+      "relativePhysicalAddress": 332
+    },
+    {
+      "profile": "O2",
+      "seed": 165,
+      "paddingBefore": 165,
+      "paddingAfter": 165,
+      "firstPixel": 165,
+      "expectedPixel": 165,
+      "relativePhysicalAddress": 332
+    },
+    {
+      "profile": "sanitized",
+      "seed": 0,
+      "paddingBefore": 0,
+      "paddingAfter": 0,
+      "firstPixel": 0,
+      "expectedPixel": 0,
+      "relativePhysicalAddress": 332
+    },
+    {
+      "profile": "sanitized",
+      "seed": 85,
+      "paddingBefore": 85,
+      "paddingAfter": 85,
+      "firstPixel": 85,
+      "expectedPixel": 85,
+      "relativePhysicalAddress": 332
+    },
+    {
+      "profile": "sanitized",
+      "seed": 165,
+      "paddingBefore": 165,
+      "paddingAfter": 165,
+      "firstPixel": 165,
+      "expectedPixel": 165,
+      "relativePhysicalAddress": 332
+    }
+  ],
+  "sourceHashes": {
+    "original/DOOM/linuxdoom-1.10/z_zone.c": "80174204a0a2c96e89ceb059e0922238046106be4fd5116f1c0a6a530df9010b",
+    "original/DOOM/linuxdoom-1.10/i_system.c": "19bd049d4c421a8893f6b262569400c2b068a7cee03f18dbd78999ee27a8b3a0",
+    "original/DOOM/linuxdoom-1.10/r_draw.c": "b19edd950d3d56d2d1d6168677d6345c190f081baa8269bfac3d2f3920a36a96",
+    "original/DOOM/linuxdoom-1.10/r_things.c": "b3ff03ba213782ed6488a9e0fb0afa0a0ee1f5cfbff8ce498c7133e93e01e0e3",
+    "tools/reference/drawbounds_blood/host.c": "35aa164d35fbc34ccefa536f057b28ba6ac489bcce1f1cd491c3811018835e76",
+    "tools/reference/drawbounds_blood/reference.py": "c782c04926240be620dd393e7b55aa7b00a63282c526594ef6fe21c704d03dec",
+    "test/fixtures/drawbounds_blood/source.bin": "912aa03ff6a252484cd84126c7f9e57134f43831ce6f3ee614fc0e0c7d7a205e",
+    "test/fixtures/drawbounds_blood/colormap.bin": "18f893e44919107b67346ce65c64d5a2ca3f64bbbee6f3c7c01f85c2e3856e8e"
+  }
+}

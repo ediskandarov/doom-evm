@@ -120,6 +120,7 @@ library Z_Zone {
             z.blocks[base].owner = C.NULL; // original non-pointer user value 2
         }
         z.blocks[base].allocated = true;
+        if (payloadSize > z.blocks[base].payloadExtent) z.blocks[base].payloadExtent = payloadSize;
         z.blocks[base].tag = tag;
         z.rover = z.blocks[base].next;
         z.blocks[base].id = C.ZONEID;

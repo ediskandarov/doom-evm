@@ -1,0 +1,55 @@
+{
+  "schemaVersion": 1,
+  "reportedTransaction": "0xfb434064c3b69ab521010869b0906ca7e8dd4340ad95d4e5f2fd91176f3e3030",
+  "contract": "0x631cc89bab95812b5fbdfd65a039a103210105b5",
+  "rpc": "http://127.0.0.1:18579",
+  "preservation": "Read-only transaction/history/prestate/code/proof capture; diagnostics and all writes on separate nodes.",
+  "liveStorageRoot": "0xbf948f0b7a93f218c6da5eb35605ff48df1dbc9efbe11bd5e7385cd8cf5b56eb",
+  "reportedGasUsed": 659898736,
+  "revertedTic": 445,
+  "lump": {
+    "id": 1546,
+    "nameHex": "424c554441300000",
+    "offset": 17088755,
+    "length": 324
+  },
+  "resourceIdentity": {
+    "schemaVersion": 0,
+    "wadSha256": "7323bcc168c5a45ff10749b339960e98314740a734c30d4b9f3337001f9e703d",
+    "bundleSha256": "d379076f21645cf7cc5acb056663d0faacc4065489a0ca99738479323c9f7a47",
+    "paletteSha256": "fd895921b5d0a394612bb29852ed003d44d69f76dec31c0dc6b5d5fc7d63f7bb",
+    "paletteVariant": 0
+  },
+  "draw": {
+    "x": 123,
+    "yl": 178,
+    "yh": 198,
+    "iscale": 9472,
+    "texturemid": -738855,
+    "sourceOffset": 205,
+    "sourceLength": 324,
+    "sourceSha256": "912aa03ff6a252484cd84126c7f9e57134f43831ce6f3ee614fc0e0c7d7a205e",
+    "tailLength": 9,
+    "tailHex": "00000000f000000000",
+    "knownHex": "000000000101010100"
+  },
+  "centery": 100,
+  "firstFrac": -39,
+  "sampleIndex": 332,
+  "tailIndex": 8,
+  "physicalDomain": "LP64 successor memblock header padding at offset4; source-unwritten original malloc byte.",
+  "baselineGuardPC": 416446,
+  "baselineRuntimeSha256": "41f40c32965875ab77ddcf666d6b371473032cf713f16fb8a9acb235d7bf9d11",
+  "nativeClaim": "Explicit zero-initialized platform only for frames dependent on initial bytes; no universal unmodified malloc pixel claim.",
+  "fixtureRole": "Authentic source bytes and native comparison data, never engine world/pixel inputs.",
+  "files": {
+    "colormap.bin": "18f893e44919107b67346ce65c64d5a2ca3f64bbbee6f3c7c01f85c2e3856e8e",
+    "commands.json": "69cdd387655f8f939eb757b9a5bbb18fdaf864693fee649fce2f2f2d3e412f75",
+    "frame-000444.bin": "3b13b92ac82dabf5ac7b3b8412cd1142e6b913f1b355cdef1957ccc376740122",
+    "frame-000445.bin": "3a922d385b8c886414c51721d58723a761f5b52121b606d6a230e833f2185c0b",
+    "native.json": "0ac0d2d4be10f85145483ec48570c503087d952a4dd4c76e9fce50c5b3fc3e85",
+    "players.json": "c2a584c670e39d80971441c0fb6e882dffccb35cadde5f01135bb42caf072668",
+    "replay-native.json": "f4849d6ed657d504365d3d3a65cc32368cfda35a3f1a507a93b123bfca5b82b9",
+    "source.bin": "912aa03ff6a252484cd84126c7f9e57134f43831ce6f3ee614fc0e0c7d7a205e"
+  }
+}

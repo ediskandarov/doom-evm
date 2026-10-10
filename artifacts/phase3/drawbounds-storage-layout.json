@@ -1,0 +1,19 @@
+{
+  "pass": true,
+  "scope": "All prior Doom storage entries and recursively reachable old struct fields preserve byte offsets and type sizes; new metadata occupies unused packed bytes. Native allocation layout is unchanged separately.",
+  "typesCompared": 107,
+  "newFields": [
+    {
+      "type": "struct ZoneBlock",
+      "field": "payloadExtent",
+      "slot": "0",
+      "offset": 27
+    },
+    {
+      "type": "struct ZoneState",
+      "field": "deterministicInitialization",
+      "slot": "0",
+      "offset": 12
+    }
+  ]
+}

@@ -80,6 +80,21 @@ library Z_ZoneBacking {
         view
         returns (bytes memory data, bytes memory known)
     {
+        (data, known) = tailWithProvenance(resources, sourceBlock, logicalLength, length);
+        for (uint256 i; i < known.length; ++i) {
+            if (known[i] == 0x02) known[i] = 0x01;
+        }
+    }
+
+    /// @notice 0=unknown/invalid, 1=original source-written, 2=initial-zone zero.
+    /// @dev Initialization never establishes provenance for a pointer, an
+    /// unmodeled written body, a reused body or a byte outside the initial zone.
+    function tailWithProvenance(
+        RenderResources memory resources,
+        uint32 sourceBlock,
+        uint32 logicalLength,
+        uint32 length
+    ) internal view returns (bytes memory data, bytes memory known) {
         TailWork memory work;
         work.zone = resources.nativeZone;
         if (work.zone.byteLength == 0 || sourceBlock == 0 || sourceBlock >= work.zone.blockCount) {
@@ -142,6 +157,58 @@ library Z_ZoneBacking {
                 }
                 work.cursor += work.count;
                 work.physical += work.count;
+            }
+        }
+        if (work.zone.deterministicInitialization) {
+            initializedBytes(
+                work.zone, work.zone.blocks[sourceBlock].offset + N.MEMBLOCK_SIZE + logicalLength, data, known
+            );
+        }
+    }
+
+    function exclude(bytes memory candidates, uint256 start, uint256 end, uint256 first) private pure {
+        uint256 limit = first + candidates.length;
+        if (end <= first || start >= limit) return;
+        if (start < first) start = first;
+        if (end > limit) end = limit;
+        for (uint256 address_ = start; address_ < end; ++address_) {
+            candidates[address_ - first] = 0x00;
+        }
+    }
+
+    /// @dev Sparse zero-initialized platform backing. Historical header records
+    /// and monotonically increasing payload extents exclude every potentially
+    /// overwritten byte. Unknown mutable bodies are deliberately conservative.
+    function initializedBytes(
+        ZoneState memory zone,
+        uint256 first,
+        bytes memory data,
+        bytes memory provenance
+    ) private pure {
+        bytes memory candidates = new bytes(data.length);
+        bool needed;
+        for (uint256 i; i < data.length; ++i) {
+            if (provenance[i] == 0x00 && first + i >= N.MEMZONE_SIZE && first + i < zone.byteLength) {
+                candidates[i] = 0x01;
+                needed = true;
+            }
+        }
+        if (!needed) return;
+        for (uint32 id = 1; id < zone.blockCount; ++id) {
+            ZoneBlock memory b = zone.blocks[id];
+            uint256 header = b.offset;
+            // Header size and pointer fields are always written. Tag/ID are
+            // excluded conservatively even when a particular fragment did not
+            // write them. Only genuine ABI padding remains eligible.
+            exclude(candidates, header, header + 4, first);
+            exclude(candidates, header + N.MEMBLOCK_USER_OFFSET, header + N.MEMBLOCK_SIZE, first);
+            exclude(candidates, header + N.MEMBLOCK_SIZE, header + N.MEMBLOCK_SIZE + b.payloadExtent, first);
+        }
+        for (uint256 i; i < data.length; ++i) {
+            if (candidates[i] == 0x01) {
+                // The value comes from the explicit zero-initialized domain;
+                // no resource/index/pixel-specific replacement is involved.
+                provenance[i] = 0x02;
             }
         }
     }

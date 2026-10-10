@@ -1,0 +1,1192 @@
+{
+  "pass": true,
+  "scope": "All applicable existing commands and assertions; execution split to serialize builds and permit local networking, with verified passing compilation/tests reused. Historical acceptance and audit gate remain intact.",
+  "foundation": {
+    "phase0": 12,
+    "phase1": 13,
+    "rows": [
+      {
+        "phase": "phase0",
+        "gate": "toolchain",
+        "exitCode": 0,
+        "alreadyExecuted": true,
+        "command": [
+          "python3",
+          "scripts/check-toolchain.py"
+        ],
+        "logSha256": "b7bc741ee4244c8b92a94136b4067e4c41098c9261c9c8b9d292b43e4abc359d"
+      },
+      {
+        "phase": "phase0",
+        "gate": "schemas",
+        "exitCode": 0,
+        "alreadyExecuted": true,
+        "command": [
+          "python3",
+          "scripts/check-schemas.py"
+        ],
+        "logSha256": "caa139dbf79c8cc62e7fcf7f3ca672ade967b31221cad7c60aa69fdcdb747686"
+      },
+      {
+        "phase": "phase0",
+        "gate": "format",
+        "exitCode": 0,
+        "alreadyExecuted": true,
+        "command": [
+          ".toolchain/bin/forge",
+          "fmt",
+          "--check"
+        ],
+        "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "phase": "phase0",
+        "gate": "build",
+        "exitCode": 0,
+        "alreadyExecuted": true,
+        "command": [
+          ".toolchain/bin/forge",
+          "build",
+          "--force"
+        ],
+        "logSha256": "c4077c037c00c62792af3713a16e1a259003bbd749b83a5e0f057cd49e512d35"
+      },
+      {
+        "phase": "phase0",
+        "gate": "foundry-tests",
+        "exitCode": 0,
+        "alreadyExecuted": true,
+        "command": [
+          ".toolchain/bin/forge",
+          "test",
+          "--fuzz-seed",
+          "0x44",
+          "-vv"
+        ],
+        "logSha256": "5051dfc0981b8cf283176442dfa2ab6992d7c146e26a7efc3a722899a9a76104"
+      },
+      {
+        "phase": "phase0",
+        "gate": "protocol-tests",
+        "exitCode": 0,
+        "alreadyExecuted": true,
+        "command": [
+          "node",
+          "--test",
+          "tools/transport/protocol.test.mjs"
+        ],
+        "logSha256": "dddb430660ddb8fbe02cd4c02eb755ebfbe616bfc014bd531c3ded5a06d7b9fc"
+      },
+      {
+        "phase": "phase0",
+        "gate": "browser-failure-cleanup",
+        "exitCode": 0,
+        "alreadyExecuted": true,
+        "command": [
+          "node",
+          "--test",
+          "tools/transport/lifecycle.test.mjs"
+        ],
+        "logSha256": "5dfb0b4f4e4a067eb59b8d0c89e110751c6236159edc27aa7493ac4c6da8f7b7"
+      },
+      {
+        "phase": "phase0",
+        "gate": "stack-compile",
+        "exitCode": 0,
+        "alreadyExecuted": true,
+        "command": [
+          "python3",
+          "scripts/stack-pressure.py"
+        ],
+        "logSha256": "495a0c1fde43af72696d2ef3896e81b783a1d63fa93abf02e2db932742923dc9"
+      },
+      {
+        "phase": "phase0",
+        "gate": "launcher",
+        "exitCode": 0,
+        "alreadyExecuted": true,
+        "command": [
+          "scripts/start-anvil.sh",
+          "--check",
+          "--quiet"
+        ],
+        "logSha256": "1c6941155be5dd830c8d5948e042b9424ecf9838aa1239e3dcad34b3dafbc41e"
+      },
+      {
+        "phase": "phase0",
+        "gate": "runtime-limits",
+        "exitCode": 0,
+        "alreadyExecuted": true,
+        "command": [
+          "python3",
+          "scripts/probe-limits.py"
+        ],
+        "logSha256": "e6d9571de2e08208c6ca7369bed40da283a82fc3174cbcfd5ae535747756f3dc"
+      },
+      {
+        "phase": "phase0",
+        "gate": "transport",
+        "exitCode": 0,
+        "alreadyExecuted": true,
+        "command": [
+          "node",
+          "tools/transport/benchmark.mjs"
+        ],
+        "logSha256": "804bba1f8a815c835e129c5f0a5dbad221f30dca73f662e69b6de3b7463c2de3"
+      },
+      {
+        "phase": "phase0",
+        "gate": "browser",
+        "exitCode": 0,
+        "alreadyExecuted": true,
+        "command": [
+          "node",
+          "tools/transport/browser-check.mjs"
+        ],
+        "logSha256": "8ca5938d87e42fec9975b308bdb3622e88dd8935c4ac3da847a1e93703c639ad"
+      },
+      {
+        "phase": "phase1",
+        "gate": "wad-download",
+        "exitCode": 0,
+        "alreadyExecuted": true,
+        "command": [
+          "node",
+          "tools/wad/download.ts",
+          "artifacts/local/freedoom"
+        ],
+        "logSha256": "ec86879e1458934cb13aef5342c5694ae112f3f5b1f8266b028d7c147434383c"
+      },
+      {
+        "phase": "phase1",
+        "gate": "wad-pack",
+        "exitCode": 0,
+        "alreadyExecuted": true,
+        "command": [
+          "node",
+          "tools/wad/pack.ts",
+          "artifacts/local/freedoom/freedoom1.wad",
+          "artifacts/local/wad"
+        ],
+        "logSha256": "c7b57c5ffd50b58c278a2e70286cc9d9f917f71ac48e4cbfca9f3c58242a796f"
+      },
+      {
+        "phase": "phase1",
+        "gate": "wad-tests",
+        "exitCode": 0,
+        "alreadyExecuted": true,
+        "command": [
+          "node",
+          "--test",
+          "tools/wad/wad.test.ts"
+        ],
+        "logSha256": "1415b360b3f0e7982082eb0abe340102412f006c92090d79fc52790559d8e79f"
+      },
+      {
+        "phase": "phase1",
+        "gate": "wad-reproducibility",
+        "exitCode": 0,
+        "alreadyExecuted": true,
+        "command": [
+          "node",
+          "tools/wad/check.ts",
+          "artifacts/local/freedoom/freedoom1.wad",
+          "artifacts/local/wad"
+        ],
+        "logSha256": "3e495119e6ea5bbfe896d63593f0e998db67f9290d9c6b57260baea09a99b426"
+      },
+      {
+        "phase": "phase1",
+        "gate": "original-c-oracle",
+        "exitCode": 0,
+        "alreadyExecuted": true,
+        "command": [
+          "python3",
+          "tools/reference/reference.py",
+          "--check",
+          "--wad",
+          "artifacts/local/freedoom/freedoom1.wad"
+        ],
+        "logSha256": "516ab5ec814605d8002f89436182898f164bbdf21f749cca8d2c93873f868563"
+      },
+      {
+        "phase": "phase1",
+        "gate": "reference-infrastructure",
+        "exitCode": 0,
+        "alreadyExecuted": true,
+        "command": [
+          "python3",
+          "tools/reference/test_reference.py"
+        ],
+        "logSha256": "a05bddb8351f9e0189a7e72d695253d2886de4e3b881a9f13fdb9f60009bfd07"
+      },
+      {
+        "phase": "phase1",
+        "gate": "native-tables",
+        "exitCode": 0,
+        "alreadyExecuted": true,
+        "command": [
+          "python3",
+          "tools/tables/generate.py"
+        ],
+        "logSha256": "3af5220ce81bd64e850bf2580b2d343632b6c208a3c7c170fa55ef6e71161be7"
+      },
+      {
+        "phase": "phase1",
+        "gate": "phase1-schemas",
+        "exitCode": 0,
+        "alreadyExecuted": true,
+        "command": [
+          "python3",
+          "scripts/check-phase1-schemas.py"
+        ],
+        "logSha256": "4c6aadc5f318cd535802830f938dd4abdc3b7bf223c8b9b5986e56d06f0e621f"
+      },
+      {
+        "phase": "phase1",
+        "gate": "palette-validation",
+        "exitCode": 0,
+        "alreadyExecuted": true,
+        "command": [
+          "node",
+          "--test",
+          "tools/transport/palette.test.mjs"
+        ],
+        "logSha256": "69a9ff65f820a64dde0cee9c6fb602b86b13df4e22e327faa12bf12bc0449816"
+      },
+      {
+        "phase": "phase1",
+        "gate": "all-phase0-gates",
+        "exitCode": 0,
+        "evidence": "All original Phase0 commands, reused verified successful compilation/tests plus rerun sandbox-blocked and remaining gates."
+      },
+      {
+        "phase": "phase1",
+        "gate": "resource-identity-rejections",
+        "exitCode": 0,
+        "alreadyExecuted": true,
+        "command": [
+          "node",
+          "--test",
+          "tools/resources/identity.test.mjs"
+        ],
+        "logSha256": "81e91692141ed538cb546c8bcfa77cbb582cd94aebc7e027dec0fe50e1e4a081"
+      },
+      {
+        "phase": "phase1",
+        "gate": "resource-placement",
+        "command": [
+          "node",
+          "tools/resources/benchmark.mjs",
+          "--bundle",
+          "artifacts/local/wad/bundle.json"
+        ],
+        "exitCode": 0,
+        "seconds": 1.372,
+        "logSha256": "9583cbf52e3d5c53a0a5b243bc1d742c24cc18c844184ccb1d2bb72a49a2581b"
+      },
+      {
+        "phase": "phase1",
+        "gate": "wad-palette-browser",
+        "command": [
+          "node",
+          "tools/transport/browser-check.mjs",
+          "--palette",
+          "artifacts/local/wad/palette.json",
+          "--output-prefix",
+          "artifacts/local/wad-browser"
+        ],
+        "exitCode": 0,
+        "seconds": 1.604,
+        "logSha256": "637fe9ad9ff3048282f294c9105898e46aa18f6c5cb73fd5667d3bf2597a4377"
+      }
+    ],
+    "sourceGuard": true
+  },
+  "phase2": {
+    "count": 24,
+    "separateGates": [
+      "format",
+      "foundry-tests",
+      "unchanged-phase1"
+    ],
+    "rows": [
+      {
+        "gate": "wad-bootstrap-download",
+        "command": [
+          "node",
+          "tools/wad/download.ts",
+          "artifacts/local/freedoom"
+        ],
+        "timeout_seconds": 180,
+        "environment_overrides": {},
+        "exit_code": 0,
+        "execution_budget": {
+          "gasLimit": 10000000000,
+          "gasHex": "0x2540be400",
+          "source": "/Users/eduard/sandbox/doom-evm/execution-budget.json",
+          "config_path": "execution-budget.json",
+          "config_sha256": "acde01f1b9cf248f9265f1ffcff7181d01d77620a2dfcd9a4d4d0b1c79df2be7",
+          "python_helper_sha256": "b7e111be390383b0a2e487bcc0f123c0dbbe5f6f552a79f05acb6d07bdc53879",
+          "node_helper_sha256": "dbf68241139422195203f57a08d8e382afa6d1d493848ae68fbebca9265eec78"
+        },
+        "elapsed_seconds": 0.353,
+        "log_sha256": "ec86879e1458934cb13aef5342c5694ae112f3f5b1f8266b028d7c147434383c"
+      },
+      {
+        "gate": "wad-bootstrap-pack",
+        "command": [
+          "node",
+          "tools/wad/pack.ts",
+          "artifacts/local/freedoom/freedoom1.wad",
+          "artifacts/local/wad"
+        ],
+        "timeout_seconds": 120,
+        "environment_overrides": {},
+        "exit_code": 0,
+        "execution_budget": {
+          "gasLimit": 10000000000,
+          "gasHex": "0x2540be400",
+          "source": "/Users/eduard/sandbox/doom-evm/execution-budget.json",
+          "config_path": "execution-budget.json",
+          "config_sha256": "acde01f1b9cf248f9265f1ffcff7181d01d77620a2dfcd9a4d4d0b1c79df2be7",
+          "python_helper_sha256": "b7e111be390383b0a2e487bcc0f123c0dbbe5f6f552a79f05acb6d07bdc53879",
+          "node_helper_sha256": "dbf68241139422195203f57a08d8e382afa6d1d493848ae68fbebca9265eec78"
+        },
+        "elapsed_seconds": 0.352,
+        "log_sha256": "c7b57c5ffd50b58c278a2e70286cc9d9f917f71ac48e4cbfca9f3c58242a796f"
+      },
+      {
+        "gate": "pinned-test-chunks",
+        "command": [
+          "python3",
+          "tools/reference/phase2_data/prepare_chunks.py"
+        ],
+        "timeout_seconds": 120,
+        "environment_overrides": {},
+        "exit_code": 0,
+        "execution_budget": {
+          "gasLimit": 10000000000,
+          "gasHex": "0x2540be400",
+          "source": "/Users/eduard/sandbox/doom-evm/execution-budget.json",
+          "config_path": "execution-budget.json",
+          "config_sha256": "acde01f1b9cf248f9265f1ffcff7181d01d77620a2dfcd9a4d4d0b1c79df2be7",
+          "python_helper_sha256": "b7e111be390383b0a2e487bcc0f123c0dbbe5f6f552a79f05acb6d07bdc53879",
+          "node_helper_sha256": "dbf68241139422195203f57a08d8e382afa6d1d493848ae68fbebca9265eec78"
+        },
+        "elapsed_seconds": 0.294,
+        "log_sha256": "67e0f0a25ee9462a8648a0b8852a85789283456377e08080c33ae94038bf7df4"
+      },
+      {
+        "gate": "all-index-tables",
+        "command": [
+          "python3",
+          "tools/tables/generate.py"
+        ],
+        "timeout_seconds": 600,
+        "environment_overrides": {},
+        "exit_code": 0,
+        "execution_budget": {
+          "gasLimit": 10000000000,
+          "gasHex": "0x2540be400",
+          "source": "/Users/eduard/sandbox/doom-evm/execution-budget.json",
+          "config_path": "execution-budget.json",
+          "config_sha256": "acde01f1b9cf248f9265f1ffcff7181d01d77620a2dfcd9a4d4d0b1c79df2be7",
+          "python_helper_sha256": "b7e111be390383b0a2e487bcc0f123c0dbbe5f6f552a79f05acb6d07bdc53879",
+          "node_helper_sha256": "dbf68241139422195203f57a08d8e382afa6d1d493848ae68fbebca9265eec78"
+        },
+        "elapsed_seconds": 0.569,
+        "log_sha256": "3af5220ce81bd64e850bf2580b2d343632b6c208a3c7c170fa55ef6e71161be7"
+      },
+      {
+        "gate": "geometry-native",
+        "command": [
+          "python3",
+          "tools/reference/phase2_geometry/reference.py",
+          "--check"
+        ],
+        "timeout_seconds": 600,
+        "environment_overrides": {},
+        "exit_code": 0,
+        "execution_budget": {
+          "gasLimit": 10000000000,
+          "gasHex": "0x2540be400",
+          "source": "/Users/eduard/sandbox/doom-evm/execution-budget.json",
+          "config_path": "execution-budget.json",
+          "config_sha256": "acde01f1b9cf248f9265f1ffcff7181d01d77620a2dfcd9a4d4d0b1c79df2be7",
+          "python_helper_sha256": "b7e111be390383b0a2e487bcc0f123c0dbbe5f6f552a79f05acb6d07bdc53879",
+          "node_helper_sha256": "dbf68241139422195203f57a08d8e382afa6d1d493848ae68fbebca9265eec78"
+        },
+        "elapsed_seconds": 1.908,
+        "log_sha256": "1d2068dc3b9b1aa5fb78e57399be5d8adbe1654e491eb72cfd66840c9aa6e29b"
+      },
+      {
+        "gate": "data-native",
+        "command": [
+          "python3",
+          "tools/reference/phase2_data/reference.py",
+          "--check"
+        ],
+        "timeout_seconds": 600,
+        "environment_overrides": {},
+        "exit_code": 0,
+        "execution_budget": {
+          "gasLimit": 10000000000,
+          "gasHex": "0x2540be400",
+          "source": "/Users/eduard/sandbox/doom-evm/execution-budget.json",
+          "config_path": "execution-budget.json",
+          "config_sha256": "acde01f1b9cf248f9265f1ffcff7181d01d77620a2dfcd9a4d4d0b1c79df2be7",
+          "python_helper_sha256": "b7e111be390383b0a2e487bcc0f123c0dbbe5f6f552a79f05acb6d07bdc53879",
+          "node_helper_sha256": "dbf68241139422195203f57a08d8e382afa6d1d493848ae68fbebca9265eec78"
+        },
+        "elapsed_seconds": 2.147,
+        "log_sha256": "ef322f4d3fe02523a2d3b046b2141d1408ef114a995fa0011ea29edc2dd72711"
+      },
+      {
+        "gate": "draw-native",
+        "command": [
+          "python3",
+          "tools/reference/phase2_draw/reference.py",
+          "--check"
+        ],
+        "timeout_seconds": 600,
+        "environment_overrides": {},
+        "exit_code": 0,
+        "execution_budget": {
+          "gasLimit": 10000000000,
+          "gasHex": "0x2540be400",
+          "source": "/Users/eduard/sandbox/doom-evm/execution-budget.json",
+          "config_path": "execution-budget.json",
+          "config_sha256": "acde01f1b9cf248f9265f1ffcff7181d01d77620a2dfcd9a4d4d0b1c79df2be7",
+          "python_helper_sha256": "b7e111be390383b0a2e487bcc0f123c0dbbe5f6f552a79f05acb6d07bdc53879",
+          "node_helper_sha256": "dbf68241139422195203f57a08d8e382afa6d1d493848ae68fbebca9265eec78"
+        },
+        "elapsed_seconds": 1.002,
+        "log_sha256": "680a237461c88bb082e7cdf00b259a3a3dcab995c3a5a2c43be777e9a4b76052"
+      },
+      {
+        "gate": "info-native",
+        "command": [
+          "python3",
+          "tools/reference/info/generate.py",
+          "--check"
+        ],
+        "timeout_seconds": 600,
+        "environment_overrides": {},
+        "exit_code": 0,
+        "execution_budget": {
+          "gasLimit": 10000000000,
+          "gasHex": "0x2540be400",
+          "source": "/Users/eduard/sandbox/doom-evm/execution-budget.json",
+          "config_path": "execution-budget.json",
+          "config_sha256": "acde01f1b9cf248f9265f1ffcff7181d01d77620a2dfcd9a4d4d0b1c79df2be7",
+          "python_helper_sha256": "b7e111be390383b0a2e487bcc0f123c0dbbe5f6f552a79f05acb6d07bdc53879",
+          "node_helper_sha256": "dbf68241139422195203f57a08d8e382afa6d1d493848ae68fbebca9265eec78"
+        },
+        "elapsed_seconds": 0.674,
+        "log_sha256": "69922292f76554614dec5e2ef5ff2123750117762f161814ba8c93f0550759c9"
+      },
+      {
+        "gate": "full-native-renderer",
+        "command": [
+          "python3",
+          "tools/reference/renderer/verify.py",
+          "--check"
+        ],
+        "timeout_seconds": 600,
+        "environment_overrides": {},
+        "exit_code": 0,
+        "execution_budget": {
+          "gasLimit": 10000000000,
+          "gasHex": "0x2540be400",
+          "source": "/Users/eduard/sandbox/doom-evm/execution-budget.json",
+          "config_path": "execution-budget.json",
+          "config_sha256": "acde01f1b9cf248f9265f1ffcff7181d01d77620a2dfcd9a4d4d0b1c79df2be7",
+          "python_helper_sha256": "b7e111be390383b0a2e487bcc0f123c0dbbe5f6f552a79f05acb6d07bdc53879",
+          "node_helper_sha256": "dbf68241139422195203f57a08d8e382afa6d1d493848ae68fbebca9265eec78"
+        },
+        "elapsed_seconds": 6.407,
+        "log_sha256": "af4d823ae095171c8fc1b9f7236cab90a79295832d5a4e4e7ff63ceba442a6c6"
+      },
+      {
+        "gate": "bsp-native",
+        "command": [
+          "python3",
+          "tools/reference/phase2_bsp/reference.py",
+          "--check"
+        ],
+        "timeout_seconds": 600,
+        "environment_overrides": {},
+        "exit_code": 0,
+        "execution_budget": {
+          "gasLimit": 10000000000,
+          "gasHex": "0x2540be400",
+          "source": "/Users/eduard/sandbox/doom-evm/execution-budget.json",
+          "config_path": "execution-budget.json",
+          "config_sha256": "acde01f1b9cf248f9265f1ffcff7181d01d77620a2dfcd9a4d4d0b1c79df2be7",
+          "python_helper_sha256": "b7e111be390383b0a2e487bcc0f123c0dbbe5f6f552a79f05acb6d07bdc53879",
+          "node_helper_sha256": "dbf68241139422195203f57a08d8e382afa6d1d493848ae68fbebca9265eec78"
+        },
+        "elapsed_seconds": 0.894,
+        "log_sha256": "f0d70e755e0539b8cf7caebb2f610d7d83cfc665f5d1ee1b647d4bd50fe52904"
+      },
+      {
+        "gate": "bsp-instrumentation",
+        "command": [
+          "python3",
+          "tools/reference/phase2_bsp/instrument.py",
+          "--check"
+        ],
+        "timeout_seconds": 600,
+        "environment_overrides": {},
+        "exit_code": 0,
+        "execution_budget": {
+          "gasLimit": 10000000000,
+          "gasHex": "0x2540be400",
+          "source": "/Users/eduard/sandbox/doom-evm/execution-budget.json",
+          "config_path": "execution-budget.json",
+          "config_sha256": "acde01f1b9cf248f9265f1ffcff7181d01d77620a2dfcd9a4d4d0b1c79df2be7",
+          "python_helper_sha256": "b7e111be390383b0a2e487bcc0f123c0dbbe5f6f552a79f05acb6d07bdc53879",
+          "node_helper_sha256": "dbf68241139422195203f57a08d8e382afa6d1d493848ae68fbebca9265eec78"
+        },
+        "elapsed_seconds": 0.079,
+        "log_sha256": "fe0d173c9a8cdc0a1976e3b75ab42ca7ded38f39b46a098cf3c409f18fc504f9"
+      },
+      {
+        "gate": "segs-native",
+        "command": [
+          "python3",
+          "tools/reference/phase2_segs/reference.py",
+          "--check"
+        ],
+        "timeout_seconds": 600,
+        "environment_overrides": {},
+        "exit_code": 0,
+        "execution_budget": {
+          "gasLimit": 10000000000,
+          "gasHex": "0x2540be400",
+          "source": "/Users/eduard/sandbox/doom-evm/execution-budget.json",
+          "config_path": "execution-budget.json",
+          "config_sha256": "acde01f1b9cf248f9265f1ffcff7181d01d77620a2dfcd9a4d4d0b1c79df2be7",
+          "python_helper_sha256": "b7e111be390383b0a2e487bcc0f123c0dbbe5f6f552a79f05acb6d07bdc53879",
+          "node_helper_sha256": "dbf68241139422195203f57a08d8e382afa6d1d493848ae68fbebca9265eec78"
+        },
+        "elapsed_seconds": 6.478,
+        "log_sha256": "6842fd208755639d8cdea4ec5f78e75fd99002c5fa69816c72d0412f97d1d771"
+      },
+      {
+        "gate": "planes-native",
+        "command": [
+          "python3",
+          "tools/reference/phase2_planes/reference.py",
+          "--check"
+        ],
+        "timeout_seconds": 600,
+        "environment_overrides": {},
+        "exit_code": 0,
+        "execution_budget": {
+          "gasLimit": 10000000000,
+          "gasHex": "0x2540be400",
+          "source": "/Users/eduard/sandbox/doom-evm/execution-budget.json",
+          "config_path": "execution-budget.json",
+          "config_sha256": "acde01f1b9cf248f9265f1ffcff7181d01d77620a2dfcd9a4d4d0b1c79df2be7",
+          "python_helper_sha256": "b7e111be390383b0a2e487bcc0f123c0dbbe5f6f552a79f05acb6d07bdc53879",
+          "node_helper_sha256": "dbf68241139422195203f57a08d8e382afa6d1d493848ae68fbebca9265eec78"
+        },
+        "elapsed_seconds": 5.642,
+        "log_sha256": "6fc8eae1a7c7589546bd4af065f1c630374c2cba99051f8e8176b7b7eae78caa"
+      },
+      {
+        "gate": "sprites-native",
+        "command": [
+          "python3",
+          "tools/reference/phase2_sprites/verify.py",
+          "--check"
+        ],
+        "timeout_seconds": 600,
+        "environment_overrides": {},
+        "exit_code": 0,
+        "execution_budget": {
+          "gasLimit": 10000000000,
+          "gasHex": "0x2540be400",
+          "source": "/Users/eduard/sandbox/doom-evm/execution-budget.json",
+          "config_path": "execution-budget.json",
+          "config_sha256": "acde01f1b9cf248f9265f1ffcff7181d01d77620a2dfcd9a4d4d0b1c79df2be7",
+          "python_helper_sha256": "b7e111be390383b0a2e487bcc0f123c0dbbe5f6f552a79f05acb6d07bdc53879",
+          "node_helper_sha256": "dbf68241139422195203f57a08d8e382afa6d1d493848ae68fbebca9265eec78"
+        },
+        "elapsed_seconds": 3.431,
+        "log_sha256": "7b7206f778f27d061243c377fabe30ad4bed124f6b405ea4dfbad450193358a7"
+      },
+      {
+        "gate": "source-commitments",
+        "command": [
+          "node",
+          "tools/wad/check-source-identity.mjs"
+        ],
+        "timeout_seconds": 600,
+        "environment_overrides": {},
+        "exit_code": 0,
+        "execution_budget": {
+          "gasLimit": 10000000000,
+          "gasHex": "0x2540be400",
+          "source": "/Users/eduard/sandbox/doom-evm/execution-budget.json",
+          "config_path": "execution-budget.json",
+          "config_sha256": "acde01f1b9cf248f9265f1ffcff7181d01d77620a2dfcd9a4d4d0b1c79df2be7",
+          "python_helper_sha256": "b7e111be390383b0a2e487bcc0f123c0dbbe5f6f552a79f05acb6d07bdc53879",
+          "node_helper_sha256": "dbf68241139422195203f57a08d8e382afa6d1d493848ae68fbebca9265eec78"
+        },
+        "elapsed_seconds": 0.134,
+        "log_sha256": "6979bf973d20c583865823678be89a4831c7314444a712243dff5cfa568a176c"
+      },
+      {
+        "gate": "telemetry-patcher-tests",
+        "command": [
+          "node",
+          "--test",
+          "tools/reference/phase2_data/instrument.test.mjs"
+        ],
+        "timeout_seconds": 600,
+        "environment_overrides": {},
+        "exit_code": 0,
+        "execution_budget": {
+          "gasLimit": 10000000000,
+          "gasHex": "0x2540be400",
+          "source": "/Users/eduard/sandbox/doom-evm/execution-budget.json",
+          "config_path": "execution-budget.json",
+          "config_sha256": "acde01f1b9cf248f9265f1ffcff7181d01d77620a2dfcd9a4d4d0b1c79df2be7",
+          "python_helper_sha256": "b7e111be390383b0a2e487bcc0f123c0dbbe5f6f552a79f05acb6d07bdc53879",
+          "node_helper_sha256": "dbf68241139422195203f57a08d8e382afa6d1d493848ae68fbebca9265eec78"
+        },
+        "elapsed_seconds": 0.128,
+        "log_sha256": "c526b46daaaef585f243ac83597d34c08f0991c6132785a51920e4f0c2fa93dc"
+      },
+      {
+        "gate": "draw-measurements",
+        "command": [
+          "node",
+          "tools/reference/phase2_draw/measure.mjs",
+          "/Users/eduard/sandbox/doom-evm/artifacts/local/drawbounds-crash/phase2-regression/draw-measurements.json"
+        ],
+        "timeout_seconds": 600,
+        "environment_overrides": {
+          "DRAW_ANVIL_PORT": "18691"
+        },
+        "exit_code": 0,
+        "execution_budget": {
+          "gasLimit": 10000000000,
+          "gasHex": "0x2540be400",
+          "source": "/Users/eduard/sandbox/doom-evm/execution-budget.json",
+          "config_path": "execution-budget.json",
+          "config_sha256": "acde01f1b9cf248f9265f1ffcff7181d01d77620a2dfcd9a4d4d0b1c79df2be7",
+          "python_helper_sha256": "b7e111be390383b0a2e487bcc0f123c0dbbe5f6f552a79f05acb6d07bdc53879",
+          "node_helper_sha256": "dbf68241139422195203f57a08d8e382afa6d1d493848ae68fbebca9265eec78"
+        },
+        "elapsed_seconds": 5.891,
+        "log_sha256": "7962099e72171873b3fd82d679212f6593b33f28d2c3c690cc0b1b505f3cd3f8"
+      },
+      {
+        "gate": "resource-measurements",
+        "command": [
+          "node",
+          "tools/reference/phase2_data/benchmark.mjs",
+          "--output",
+          "/Users/eduard/sandbox/doom-evm/artifacts/local/drawbounds-crash/phase2-regression/resource-measurements.json",
+          "--port",
+          "18691"
+        ],
+        "timeout_seconds": 1200,
+        "environment_overrides": {},
+        "exit_code": 0,
+        "execution_budget": {
+          "gasLimit": 10000000000,
+          "gasHex": "0x2540be400",
+          "source": "/Users/eduard/sandbox/doom-evm/execution-budget.json",
+          "config_path": "execution-budget.json",
+          "config_sha256": "acde01f1b9cf248f9265f1ffcff7181d01d77620a2dfcd9a4d4d0b1c79df2be7",
+          "python_helper_sha256": "b7e111be390383b0a2e487bcc0f123c0dbbe5f6f552a79f05acb6d07bdc53879",
+          "node_helper_sha256": "dbf68241139422195203f57a08d8e382afa6d1d493848ae68fbebca9265eec78"
+        },
+        "elapsed_seconds": 57.845,
+        "log_sha256": "c9d83ba0a6b406e993b4ad540185d210257931b67f1c7e8f92dda8f904111806"
+      },
+      {
+        "gate": "source-measurements",
+        "command": [
+          "node",
+          "tools/reference/phase2_source/verify.mjs",
+          "--output",
+          "/Users/eduard/sandbox/doom-evm/artifacts/local/drawbounds-crash/phase2-regression/source-measurements.json",
+          "--port",
+          "18691"
+        ],
+        "timeout_seconds": 1200,
+        "environment_overrides": {},
+        "exit_code": 0,
+        "execution_budget": {
+          "gasLimit": 10000000000,
+          "gasHex": "0x2540be400",
+          "source": "/Users/eduard/sandbox/doom-evm/execution-budget.json",
+          "config_path": "execution-budget.json",
+          "config_sha256": "acde01f1b9cf248f9265f1ffcff7181d01d77620a2dfcd9a4d4d0b1c79df2be7",
+          "python_helper_sha256": "b7e111be390383b0a2e487bcc0f123c0dbbe5f6f552a79f05acb6d07bdc53879",
+          "node_helper_sha256": "dbf68241139422195203f57a08d8e382afa6d1d493848ae68fbebca9265eec78"
+        },
+        "elapsed_seconds": 55.729,
+        "log_sha256": "581711c89cbf9293a67581da39a2420885e13f98954ba83bd4a750d5d22506a8"
+      },
+      {
+        "gate": "wall-measurements",
+        "command": [
+          "node",
+          "tools/reference/phase2_segs/benchmark.mjs",
+          "--output",
+          "/Users/eduard/sandbox/doom-evm/artifacts/local/drawbounds-crash/phase2-regression/wall-measurements.json",
+          "--port",
+          "18691"
+        ],
+        "timeout_seconds": 1200,
+        "environment_overrides": {},
+        "exit_code": 0,
+        "execution_budget": {
+          "gasLimit": 10000000000,
+          "gasHex": "0x2540be400",
+          "source": "/Users/eduard/sandbox/doom-evm/execution-budget.json",
+          "config_path": "execution-budget.json",
+          "config_sha256": "acde01f1b9cf248f9265f1ffcff7181d01d77620a2dfcd9a4d4d0b1c79df2be7",
+          "python_helper_sha256": "b7e111be390383b0a2e487bcc0f123c0dbbe5f6f552a79f05acb6d07bdc53879",
+          "node_helper_sha256": "dbf68241139422195203f57a08d8e382afa6d1d493848ae68fbebca9265eec78"
+        },
+        "elapsed_seconds": 76.297,
+        "log_sha256": "19d6a6fa454f23eadd107a6c741d63fd5991e3f8d413932fae056b6848682b7a"
+      },
+      {
+        "gate": "full-renderer-e2e",
+        "command": [
+          "node",
+          "tools/renderer/verify.mjs",
+          "--output-prefix",
+          "/Users/eduard/sandbox/doom-evm/artifacts/local/drawbounds-crash/phase2-regression/renderer",
+          "--port",
+          "18691"
+        ],
+        "timeout_seconds": 1800,
+        "environment_overrides": {},
+        "exit_code": 0,
+        "execution_budget": {
+          "gasLimit": 10000000000,
+          "gasHex": "0x2540be400",
+          "source": "/Users/eduard/sandbox/doom-evm/execution-budget.json",
+          "config_path": "execution-budget.json",
+          "config_sha256": "acde01f1b9cf248f9265f1ffcff7181d01d77620a2dfcd9a4d4d0b1c79df2be7",
+          "python_helper_sha256": "b7e111be390383b0a2e487bcc0f123c0dbbe5f6f552a79f05acb6d07bdc53879",
+          "node_helper_sha256": "dbf68241139422195203f57a08d8e382afa6d1d493848ae68fbebca9265eec78"
+        },
+        "elapsed_seconds": 150.203,
+        "log_sha256": "84d13775e73c267434ff1ed4b452de3e72372f07039985f1ac2c1edbec8a6e09"
+      }
+    ],
+    "sourceGuard": true
+  },
+  "phase3Regressions": [
+    {
+      "command": [
+        "python3",
+        "tools/reference/gameplay_info/generate.py",
+        "--check"
+      ],
+      "exitCode": 0,
+      "logSha256": "de80d4aa8282af018c9ec065e11c6e8aa7417b85d888039bde6c9cef2f673580"
+    },
+    {
+      "command": [
+        "python3",
+        "tools/reference/gameplay_info/generate_random.py",
+        "--check"
+      ],
+      "exitCode": 0,
+      "logSha256": "2a64f09a20ab2fd556cd30bc610b03a3d85c807edbf5088bb73128b2bea42c7a"
+    },
+    {
+      "command": [
+        "python3",
+        "tools/reference/phase3_input/reference.py",
+        "--check"
+      ],
+      "exitCode": 0,
+      "logSha256": "1192558370326e7acc1050a3a22ec9c4b5fc23ca7f99a3af905dcf2639e46520"
+    },
+    {
+      "command": [
+        "python3",
+        "tools/reference/phase3_map/geometry.py",
+        "--check"
+      ],
+      "exitCode": 0,
+      "logSha256": "c7901e6ed5c21d9523cf6348524f99c32ff74a309ddbe5306293e5353113dc64"
+    },
+    {
+      "command": [
+        "python3",
+        "tools/reference/phase3_map/scenarios.py",
+        "--check"
+      ],
+      "exitCode": 0,
+      "logSha256": "46d9f4bcea04676cce1f963236587cf63359ce20be776e7c1176d015c524cdb9"
+    },
+    {
+      "command": [
+        "python3",
+        "tools/reference/phase3_tick/reference.py",
+        "--check"
+      ],
+      "exitCode": 0,
+      "logSha256": "0cd0cff00a95278ebdf0511b96781342b420ab0382c426c15f8fc89d4a28c2a6"
+    },
+    {
+      "command": [
+        "python3",
+        "tools/reference/phase3_combat/reference.py",
+        "--check"
+      ],
+      "exitCode": 0,
+      "logSha256": "d3a7b0c88d1e81bf1684deefa97aa1107e6b2cb71653eaf9b8e2134629301882"
+    },
+    {
+      "command": [
+        "python3",
+        "tools/reference/phase3_combat/weapons.py",
+        "--check"
+      ],
+      "exitCode": 0,
+      "logSha256": "5de209236f3848052a98e2f29a77c23f938eae99c36207e6e0416668fcde2396"
+    },
+    {
+      "command": [
+        "python3",
+        "tools/reference/phase3_enemy/reference.py",
+        "--check"
+      ],
+      "exitCode": 0,
+      "logSha256": "e73e99cff6e0c1dba4628cffa3f605554239b3103de37fa0b9306736649bbf48"
+    },
+    {
+      "command": [
+        "python3",
+        "tools/reference/phase3_lifecycle/reference.py",
+        "--check"
+      ],
+      "exitCode": 0,
+      "logSha256": "51f0a225f083bc302e9723c1f54de9dab4753dc2e65543af1febb498d9219788"
+    },
+    {
+      "command": [
+        "python3",
+        "tools/reference/phase3_bbox/reference.py",
+        "--check"
+      ],
+      "exitCode": 0,
+      "logSha256": "14a289e05b3b4791ff96e9b7688b4ceb1e61edd11085b1a2413ffe0a918270c7"
+    },
+    {
+      "command": [
+        "python3",
+        "tools/reference/phase3_world/reference.py",
+        "--check"
+      ],
+      "exitCode": 0,
+      "logSha256": "1aed05ebb550197d1116edf20d2b7b77682bd7f365353cc871323e4b11d4dc00"
+    },
+    {
+      "command": [
+        "python3",
+        "tools/reference/phase3_world/planes.py",
+        "--check"
+      ],
+      "exitCode": 0,
+      "logSha256": "0d1c61739a4cfbfecf4c810e5c9b464e661eedf72ed79d0e7630c49f0c5a0eef"
+    },
+    {
+      "command": [
+        "python3",
+        "tools/reference/phase3_world/domains.py",
+        "--check"
+      ],
+      "exitCode": 0,
+      "logSha256": "0e6de11acb327c49c8de589445a76dcea0e609a62fe09a5fefb9d1769df5a495"
+    },
+    {
+      "command": [
+        "python3",
+        "tools/reference/phase3_world/undefined_floor.py",
+        "--check"
+      ],
+      "exitCode": 0,
+      "logSha256": "ac295cbd7143cb7a8604f7bce1701793a74ceffe315952303258f3d741b5ac96"
+    },
+    {
+      "command": [
+        "python3",
+        "tools/reference/phase3_world/mover_casts.py",
+        "--check"
+      ],
+      "exitCode": 0,
+      "logSha256": "f70d21ecc48b8477440d0ca8ea6bc228cc64f0c6e9c2eb9775d09e1598b27ce2"
+    },
+    {
+      "command": [
+        "python3",
+        "tools/reference/phase3_specials/reference.py",
+        "--check"
+      ],
+      "exitCode": 0,
+      "logSha256": "e4e5f1c815796ca4f99b68da371595f2134923f2848f1e6eed0fdfa25b915dc6"
+    },
+    {
+      "command": [
+        "python3",
+        "tools/reference/phase3_specials/dispatch.py",
+        "--check"
+      ],
+      "exitCode": 0,
+      "logSha256": "808caae42be0b037e9396fd191fc6c3d7dbad9dac181331ced0e07757b231a47"
+    },
+    {
+      "command": [
+        "python3",
+        "tools/reference/phase3_specials/generate_dispatch.py",
+        "--check"
+      ],
+      "exitCode": 0,
+      "logSha256": "2f467dda4733f55b3f14ea60249b3d99fd9c54e50415979f6afaa129489dee49"
+    },
+    {
+      "command": [
+        "python3",
+        "tools/reference/phase3_zone_allocator/reference.py",
+        "--check"
+      ],
+      "exitCode": 0,
+      "logSha256": "309cac36f42d50f456fb1c08973614fee6ead473f6badd559e4d92662be1d8ab"
+    },
+    {
+      "command": [
+        "python3",
+        "tools/reference/phase3_zone_lifecycle/reference.py",
+        "--check"
+      ],
+      "exitCode": 0,
+      "logSha256": "a556bd3261b8e66ca57c1a26d53b13ec82a614f9220c8ffccaf5e8a5b3c7eaac"
+    },
+    {
+      "command": [
+        "python3",
+        "tools/reference/phase3_zone_startup/reference.py",
+        "--check"
+      ],
+      "exitCode": 0,
+      "logSha256": "1d9ee5ecc13417ec33fee325ef2e4fc9653fac29c4b5b5ae76ecd5df26d3fadb"
+    },
+    {
+      "command": [
+        "python3",
+        "tools/reference/phase3_zone_setup/reference.py",
+        "--check"
+      ],
+      "exitCode": 0,
+      "logSha256": "5e9b7ea5ffe521ea4b57d235c73c6671af76168fd084bc7a4cda21233ebb2170"
+    },
+    {
+      "command": [
+        "python3",
+        "tools/reference/phase3_zone_backing/reference.py",
+        "--check"
+      ],
+      "exitCode": 0,
+      "logSha256": "86c6c77d6e9c70e14590d0b3f7cb9b30b6a1f68cd47b3a96e29dd4431fd3b2e8"
+    },
+    {
+      "command": [
+        "python3",
+        "tools/reference/gameplay/verify.py",
+        "--check"
+      ],
+      "exitCode": 0,
+      "logSha256": "f2e369a50a4a36114286e35db774a145132d668e77ba1bcae8a95baeba06b376"
+    },
+    {
+      "command": [
+        "python3",
+        "tools/reference/gameplay/post_render.py",
+        "--check"
+      ],
+      "exitCode": 0,
+      "logSha256": "4a8a92a533886296dc8f0abd9c41b41c07f28f6b3c7e55651be0a345a94b3836"
+    },
+    {
+      "command": [
+        "python3",
+        "tools/reference/gameplay_projectile/reference.py",
+        "--check"
+      ],
+      "exitCode": 0,
+      "logSha256": "3ed79ae2d7e50fc77ec332895d85561381938a03e73043b7a12ef44d7588417f"
+    },
+    {
+      "command": [
+        "python3",
+        "tools/reference/gameplay/production.py",
+        "--check",
+        "--output",
+        "artifacts/local/gameplay-production-native-final"
+      ],
+      "exitCode": 0,
+      "logSha256": "239d1649c73ab214829df9fbbe836c003e39780172f6a6b790fdffb0d53bdbea"
+    },
+    {
+      "command": [
+        "python3",
+        "tools/reference/gameplay/production.py",
+        "--profile",
+        "browser",
+        "--check",
+        "--output",
+        "artifacts/local/gameplay-browser-native-final"
+      ],
+      "exitCode": 0,
+      "logSha256": "f6563636a2ae67e72d3e863b81a82aed3b10bab3422218ef854d1fc33a1a94df"
+    },
+    {
+      "command": [
+        "python3",
+        "tools/zone/generate-layout.py",
+        "--check"
+      ],
+      "exitCode": 0,
+      "logSha256": "5f500cb2749b1c6e31860e00b5eaff2f28f58599a43590ee897c62d1e1a39dd0"
+    },
+    {
+      "command": [
+        "node",
+        "--test",
+        "web/input.test.mjs",
+        "web/input-loop.test.mjs",
+        "web/input-app.test.mjs",
+        "web/budget.test.mjs",
+        "tools/execution-budget.test.mjs",
+        "tools/reference/gameplay/production-memory.test.mjs",
+        "tools/reference/phase2_data/instrument.test.mjs"
+      ],
+      "exitCode": 0,
+      "logSha256": "7cfc4fd66bf6df378f46167a3bc4d32fbbdd95d53411fb254f6484dadd69468b"
+    },
+    {
+      "command": [
+        "python3",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tools/usage",
+        "-p",
+        "test_*.py"
+      ],
+      "exitCode": 0,
+      "logSha256": "52ec0ee85d35c729f8acf9e20708b9602f9aaac8ea48ed03f97b423e14eded27"
+    }
+  ],
+  "foundry": {
+    "passed": 409,
+    "failed": 0,
+    "seed": "0x44",
+    "logSha256": "5051dfc0981b8cf283176442dfa2ab6992d7c146e26a7efc3a722899a9a76104"
+  },
+  "historicalAudit": {
+    "unchanged": true,
+    "command": [
+      "python3",
+      "tools/audit/phase3_features.py",
+      "--check"
+    ],
+    "currentResult": "Expected stale accepted source rejection; historical certificate applies to frozen code, not this fix. Separate compatibility audit checks new bindings."
+  },
+  "nativeTests": {
+    "commands": 32,
+    "javascriptTests": 53,
+    "usageCollectorTests": 50
+  },
+  "preservedFailures": {
+    "sandboxLifecycle": "EPERM loopback listen; unchanged gate passed with permitted networking.",
+    "resourcePlacement": "Existing120s gate timed out during an implicit cold rebuild; sustained455.54s prebuild warmed cache and the unchanged gate was rerun.",
+    "strictReplay": "One abandoned isolated run collided with another same-sender replay; final run serialized and fully verified, same artifact."
+  },
+  "sourceHashes": {
+    "src/doom/d_ticcmd.sol": "508d0332d3e8b83e1b68d37581a3befc100a9974fcaa0900cc44116cd75ff2ef",
+    "src/doom/doomstat.sol": "4c40da3914c629017959a0a4c0516d83346900674c92f5e55a766aba1b506fea",
+    "src/doom/doomtype.sol": "5fbe4b1d0fe96d04453b00d1c3f1c6781c6c8ab5147ee0ac512d17597a5a3c56",
+    "src/doom/g_game.sol": "2714f783a532bc2a525d7f50813c472f299c541ee9062a7a5d078e1818791e70",
+    "src/doom/info.sol": "4611205149173e42d3b0f1d91820c8042f6bc5fc48fb53aec84ad4bc501dca8e",
+    "src/doom/m_bbox.sol": "f4c60efe3627a97d0288fc5cd0283535527b1f51029568534c80bb8fbbf8f272",
+    "src/doom/m_fixed.sol": "3f64bef1f62f61faead3a5b8f382bf1c66e1b3739ce4ac8d59a6fcef0451ef9f",
+    "src/doom/m_random.sol": "5267b881138cfb7e0d683449005619513006c70e3ed557f64697b36c4ed40c7b",
+    "src/doom/native_zone_layout.sol": "118b2d17165826fb0857d9cb296e2214db2a28917769299a82e70d0c0790f6e8",
+    "src/doom/p_ceilng.sol": "696f3f620f5bddb3cea64fda824e3203c780f53db890630f0685794454dc37f9",
+    "src/doom/p_doors.sol": "945bf600ce86d8286718fb75ecaf905a0c4631d79d2dac7260c91c9dc2013f8d",
+    "src/doom/p_enemy.sol": "eff76cce23b0877833a5c446a1a09d8ae01918a6925b6d3265240b144c09dfe7",
+    "src/doom/p_floor.sol": "b7c90baafa0b74fd7ff80cf60dcbc430148f6d6d068ba54ca0fbc7ba1bca7069",
+    "src/doom/p_game_state.sol": "0f9d60aae9424cad17c614d4fcc93c9eb6fe8a43c7bce070d2460fcf2c34f649",
+    "src/doom/p_heap.sol": "3cc2e0a8c3239523db66c07fea33720f931754baedd312b5ca7cc2ebe763d2e0",
+    "src/doom/p_info.sol": "a48840479115ea8bf849ca5ec448d1b2bec7a6cfe58c5314e140635a898de792",
+    "src/doom/p_inter.sol": "8be27f9bba47beb46b3edf2a8a2674b3cd7218d2abb8ef5f8855803393d067de",
+    "src/doom/p_lights.sol": "6f63cbc6b41fc492a46ce43aef464deb9d08b7fa1dd8b213b546eec3e4f08276",
+    "src/doom/p_map.sol": "6b6d48523a45acab9090dfb0ec3d6dbab4e6de18afa89453df8b5a87088da0f3",
+    "src/doom/p_maputl.sol": "ac5ac60e7e058a5fc537e7042c7254bc0f51c77165149a22e141437b4e0ad0b6",
+    "src/doom/p_mobj.sol": "78e9c05b327100bd34cafe086454e3a5499beb92af878ad4756baeca18445ffa",
+    "src/doom/p_plats.sol": "6904df762b270f840daa99b34d2a5c689dbb2fef3aed3d33c2ac1a3f3e4d5722",
+    "src/doom/p_pspr.sol": "cfa2db3438d689c38d9c957fc4aee598c58740f025d6efead2b5f9671eb0c863",
+    "src/doom/p_setup.sol": "9498e1298bf4e53ccedc484a50d4c7f9f85315f6cb700719d474b721e382243b",
+    "src/doom/p_setup_static.sol": "c8100a42bb0bac190c583bbb2c82168599009f88a766e4c05b9a9231a5f69792",
+    "src/doom/p_sight.sol": "7ed366237fc3fec069ffb6336e95e038004d1f379622cf67f55fb8c6b1a6488c",
+    "src/doom/p_spec.sol": "2363640e75c22c9d017db677dda7148ad221380f0a23639167e145e933fc72b7",
+    "src/doom/p_switch.sol": "5404d359793e05c6c24a7804c07632150009b46f38d03068412d7ac53260dfe2",
+    "src/doom/p_telept.sol": "745f0fa4ed6f0515c398bfd2469c59aac82316965b7bac25263aeb82555d61b8",
+    "src/doom/p_tick.sol": "1993dd0c94853dabc4db554dfa0ca04375cef0a22075400ba0e7b56b525022ab",
+    "src/doom/p_user.sol": "963a46850e1b17171f79dd65bff9b5006ce6f97a935ad2023d1d526a6ec35c37",
+    "src/doom/p_zone_setup.sol": "e0308bd1197fd84a01eb1ee208be73c711851d6b0bc30be1d07a7c61b18b223d",
+    "src/doom/r_bsp.sol": "0ae5df313515692d0b2b970d5d39d107e014629cff2305fb37c14371a9524040",
+    "src/doom/r_data.sol": "5b404d561f8bce538e8a8221b4f36d62c9b9826fc833307640d96fcbfdca2d0a",
+    "src/doom/r_data_types.sol": "0448302d68447c8a5a4c46df4016e8845863e42bf6eaca8bcab8ab0c9707fdf8",
+    "src/doom/r_defs.sol": "558d5a9bfd131e816bbe28986e2dad6144a08e5a16ccfed1b199d7558a1ea0e2",
+    "src/doom/r_draw.sol": "afe958ea0c2962b739bff58b98d8bccc25c48d3d0838cacd46142c242b5d6477",
+    "src/doom/r_main.sol": "df403bf04fdbbcfc68c4fd9c5e19b5201ca711498efc34db406a4010ad3b2af5",
+    "src/doom/r_plane.sol": "c7a5abcbca84dddcd2a3c8bb160a609605c5c1842e73704dff4860df3280e463",
+    "src/doom/r_render_hooks.sol": "f026ccb8fffb68d8fbcb0966103212f52884b86350fe3fb52a401d146f3fb312",
+    "src/doom/r_render_state.sol": "072bd2f73b98e1eb775fc8093e95a69c184f3fa50a89a5d64a7beccd59493398",
+    "src/doom/r_segs.sol": "9d4e4dea06739278aab3698fb422818de6dd7726359c8822d60a162e886621cb",
+    "src/doom/r_sprite_state.sol": "735b3de85cbf455e05d3cb8e992cf4e477960bd4192bbd367f5c66c803b96363",
+    "src/doom/r_state.sol": "80951a13733e3a08f4182937a37def33ffda21eaae4b43a2a1bdba2043adab6b",
+    "src/doom/r_things.sol": "86705ab6b1f79b7ef07798b881cc547502d9911c97b57dc516a744e17c1977f5",
+    "src/doom/tables.sol": "bf14202b419075f6d187653205a37e211d8267c7fc4c0bebf5a8c5713afddf38",
+    "src/doom/w_zone_cache.sol": "03c07404765de9620b3d1ff15727809cdad911c8a78d822019b63500fa5018c2",
+    "src/doom/z_zone.sol": "b4e75218021d65aaf3389cf78a68663feebc2084c82457821be17247dc8106c5",
+    "src/doom/z_zone_backing.sol": "1253ffab18a977b75a63d7387514eb360bf9b5e4eb3881eb0928c4b23096a398",
+    "src/doom/z_zone_types.sol": "8eaf75209f619565bfffd1b26ea0d5cc24e7e63da6ca16c58c183139a8e2ef4e",
+    "src/evm/Doom.sol": "04f0eebfab72eb686117e0bd4ec20274b230cb153762810b2e83cd9df127f809",
+    "src/evm/DoomGame.sol": "1bd4feac092668f18cd3b9bd696478dd96d3f86400a4a386b5d71549ff5fe4c6",
+    "src/evm/DoomRenderer.sol": "5639d82431350ea76c26d43457d26d0c3c0f410eaddf02db6adbcfb03a569ba0",
+    "src/evm/DoomScene.sol": "9ad7c8ccee4c9e05deb5608326baabacfa40f686b8d8445fb8aaa7352ab64569",
+    "src/evm/DoomZoneStartup.sol": "2d178494456a7ae3c730310f257ce2aa635d37d18c90cac039cf002cdb3f50dc",
+    "src/evm/FrameProtocol.sol": "4665be3f613b8e817d616d2db1dc4a644325c44a6ade476a35d7d9d003625ace",
+    "src/evm/InputProtocol.sol": "df068ec9030d7241de7d6160059f8e46fe647f6655123f03849789b359bee51b",
+    "src/evm/ResourceStore.sol": "5ab3acc5d09f155a4cf25973c847f23e47f386a364704b76996c86be5862e3a8",
+    "src/evm/ResourceTypes.sol": "159865364cfa57aae508cd94c49509cbccabd6aeeba55e92b9fcf816bdec4d6b",
+    "src/evm/WadResources.sol": "25a1acc0a44ac35cc29e5f9bd953ba66b85db4f665b732430571b416ef927895",
+    "src/support/FrameFixture.sol": "1de9a0f7c1ae276041f6d71111da36413f2604b9a43a95176dd4dfae82bbc799",
+    "src/support/GameplayProbe.sol": "fd29ba99ea2ca2c0db9ed44fb061c93c40e3a6aefbb14e07e8e7b8bd9ae859b5",
+    "src/support/RendererProbe.sol": "14dc07178db80fde8c9ae5d5500f8205049ed41e21da48dd7818304407785856",
+    "src/support/ResourceAccessProbe.sol": "4aa343501917ddfc0117cbb9fc543b543ce16124c7b25127dcf41d22cab10e3c",
+    "src/support/ResourcePlacement.sol": "3febd551f07205b96c4960d496acb27ab06c571bf8e4ce1983595491b0acd6ab",
+    "src/support/StackPressure.sol": "fa49240fd75c2810e813e3b7620492f24270a0e985ef900e88e8b81fd1fb41af",
+    "src/support/WadResourcesProbe.sol": "c05e160a1c62e5d2e71159466e7d0c5f030166501d986a7059c3f4c9870dc973"
+  }
+}

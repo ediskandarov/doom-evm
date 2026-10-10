@@ -211,3 +211,26 @@ response usage. The actual goal closure and earlier engineering-acceptance
 marker are both preserved in tools/usage/phases.json. Completion JSON/CSV are
 separate from the preserved engineering snapshot; all20 collector tests pass.
 No engine, compiler setting, correctness gate or acceptance scope changed.
+
+## Post-acceptance interactive blood-sprite correction
+
+The original acceptance certificate, frozen source hashes, feature matrix and
+measurements remain byte-identical. This correction has a
+[separate investigation/evidence ledger](DRAWBOUNDS-BLOOD-CRASH.md), not renewed
+M2/M3 acceptance or retrospective native pixel claims.
+
+| Work | Implemented | Integrated | Verification evidence |
+|---|---|---|---|
+| Exact crash diagnosis | Complete | Complete | Captured live prestate/inputs; ordinary-column knownness guard at baseline PC416446; BLUDA0 index332 reads source-unwritten header padding. Live storage root unchanged. |
+| General initial-zone zero policy and provenance | Complete | Complete | Native O0/O2/ASan/UBSan padding-dependence proof; six focused tests; reuse/Clear/length matrix; original renderer arithmetic, allocator order/layout and guards retained. |
+| Strict diagnostic mode | Complete | Complete | Fresh strict deployment matches444 prior frames/tics, then rejects445 with DrawBounds and rollback. |
+| Integration regression | Complete | Complete | 409 seeded Foundry tests; all12/13/24 inherited command gates;32 Phase3 native/JS/telemetry commands;9 whole-world scenarios/2355tics/31frames/9stored snapshots;129 public tics/13 rollback guards;6 actual Chrome frames. |
+| Captured initialized replay | Complete | Complete | Two source/settings-identical bytecode variants each pass445tics, all14 fields and445 whole64000-byte frames; comparisons explicitly use deterministic initialization profile. |
+| Separate source audit | Complete | Complete | New checkpoint binds current source hashes and388 function mappings;5 integrity tests; old audit/certificate preserved and checked at frozen revision. |
+
+Integration commit hash is recorded by the following ledger checkpoint after the
+verified fix commit exists. Remaining implementation/blockers: none for this
+compatibility fix. Unknown overwritten/unmodeled bodies and pointers remain
+rejected; this is not a complete native heap model. The current live deployment
+on Anvil18579 is preserved, and its browser binding is restored. No Phase4
+memory audit/refactor functionality was implemented.

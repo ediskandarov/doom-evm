@@ -13,6 +13,9 @@ struct ZoneBlock {
     uint8 tag;
     bool allocated;
     bool idKnown;
+    // Conservative written-body history at this header address. Never shrinks on
+    // free, coalescing or Clear; prevents reseeding reused bytes as virgin memory.
+    uint32 payloadExtent;
 }
 
 /// @dev Block zero is the permanent blocklist sentinel. UINT32_MAX is no owner.
@@ -23,6 +26,9 @@ struct ZoneState {
     uint32 byteLength;
     uint32 rover;
     uint32 blockCount;
+    // Explicit platform policy: untouched bytes of the initial zone are zero.
+    // False retains the original strict source-written-only diagnostic profile.
+    bool deterministicInitialization;
     ZoneBlock[] blocks;
     uint32[] ownerBlocks;
 }

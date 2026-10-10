@@ -135,12 +135,23 @@ library DoomGame {
         view
         returns (GameContext memory c)
     {
+        return initializeNativeWithPolicy(source, nomonsters, false);
+    }
+
+    /// @dev Explicit local-platform zone initialization; original allocation and
+    /// renderer algorithms remain unchanged. Strict callers retain false.
+    function initializeNativeWithPolicy(ResourceView memory source, bool nomonsters, bool initializeZone)
+        internal
+        view
+        returns (GameContext memory c)
+    {
         c.resources = R_Data.R_InitDataLazy(source);
         RenderContext memory renderer;
         renderer.resources = c.resources;
         R_Things.R_InitSprites(renderer, Info.load().spriteNames);
         c.state.nativeZone =
             Z_Zone.Z_Init(64 * 1024 * 1024, uint32(source.lumps.length + c.resources.textures.length));
+        c.state.nativeZone.deterministicInitialization = initializeZone;
         DoomZoneStartup.replay(c.state.nativeZone, c.resources, renderer.sprite.definitions);
         initializeContext(c, nomonsters);
     }

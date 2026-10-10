@@ -34,9 +34,18 @@ contract Doom is IFrameProtocol, WadResources {
     /// @notice Start original single-player retail E1M1 at medium skill.
     /// @dev Startup has no command, tic or Frame; the first accepted input advances tic one.
     function initializeGame() external {
+        _initializeGame(true);
+    }
+
+    /// @notice Diagnostic profile: reject every source-unwritten backing byte.
+    function initializeGameStrict() external {
+        _initializeGame(false);
+    }
+
+    function _initializeGame(bool initializeZone) private {
         if (msg.sender != driver) revert NotDriver();
         if (gameStarted) revert GameAlreadyStarted();
-        GameContext memory c = DoomGame.initializeNative(_resourceView(), false);
+        GameContext memory c = DoomGame.initializeNativeWithPolicy(_resourceView(), false, initializeZone);
         gameState = c.state;
         gameStarted = true;
     }
