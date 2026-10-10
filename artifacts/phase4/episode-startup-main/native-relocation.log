@@ -1,0 +1,16 @@
+Built original native O0
+Built original native O2
+Built original native sanitize
+PASS original native E1M1-skill2: world/collision/flow/difficulty/zone exact
+PASS original native E1M2-skill2: world/collision/flow/difficulty/zone exact
+PASS original native E1M3-skill2: world/collision/flow/difficulty/zone exact
+PASS original native E1M4-skill2: world/collision/flow/difficulty/zone exact
+PASS original native E1M5-skill2: world/collision/flow/difficulty/zone exact
+PASS original native E1M6-skill2: world/collision/flow/difficulty/zone exact
+PASS original native E1M7-skill2: world/collision/flow/difficulty/zone exact
+PASS original native E1M8-skill2: world/collision/flow/difficulty/zone exact
+PASS original native E1M9-skill2: world/collision/flow/difficulty/zone exact
+PASS original native E1M2-skill0: world/collision/flow/difficulty/zone exact
+PASS original native E1M2-skill4: world/collision/flow/difficulty/zone exact
+PASS original native E1M2-skill2-nomonsters: world/collision/flow/difficulty/zone exact
+{"name": "native-relocation-verification", "command": ["python3", "artifacts/local/episode-startup-main/check_native_relocation.py"], "startedAt": "2026-10-10T13:24:31.432400+00:00", "elapsedSeconds": 21.266, "exitCode": 0, "originalCheckerExit": "AssertionError: native fixture drift manifest.json", "onlyDifference": {"field": "build.flags trace header include", "featurePath": "/private/tmp/doom-evm-episode-startup/tools/reference/renderer/trace.h", "mainPath": "/Users/eduard/sandbox/doom-evm/tools/reference/renderer/trace.h", "headerSha256": "48c52a94b9601cc8cbaa84da117c6fec77537051e2b2b1352e580a55668fe53a"}, "allOtherManifestFieldsExact": true, "all60FixtureHashesExact": true, "cases": 12, "profiles": ["O0", "O2", "sanitize"], "originalCheckerOrFixturesModified": false}

@@ -1,5 +1,10 @@
 # Phase 4 progress ledger
 
+Current startup checkpoint: **Goal4.13a Episode One fresh-startup foundation
+is integrated and verified in its declared source/support domain.** Production
+endpoint and level transitions remain pending; Doom.sol is unchanged by this
+integration. Earlier checkpoints are retained as historical records.
+
 Current UI checkpoint: **Goal4.11 Production UI is integrated into main and
 verified in the declared E1M1 profile; clients must opt in with productionUI:true.**
 Earlier source-only wave records remain historical; broader Phase4 production
@@ -871,3 +876,121 @@ goals. No memory-architecture or storage-upgrade claim is added.
 Implementation/source/runtime UI integration is complete within that scope.
 The commit containing this checkpoint and separate certificate is publication;
 stop after normal push and clean main/origin synchronization.
+
+
+## Goal 4.13a — Verified Episode startup main integration (2026-10-10)
+
+Authorized scope: Git integration of the independently verified fresh Episode
+One startup foundation from `feat/phase4-episode-startup`, focused merge and
+shared-dependency verification, preserved evidence/commits, ledger and normal
+push. No production transition, Doom.sol edit, other worktree/runtime change or
+subsequent goal is part of this task.
+
+Goal start2026-10-10T13:12:55Z. Clean main and refreshed origin/main matched
+`9f7d09120a1a250fe38f85b4f4bcba6cc78b5117`, the completed/published Production UI
+integration. This is also the feature branch's exact common ancestor.
+Original commits preserved: **ff1ba3a648b494560a80ed03146da7198c89fcef**,
+**8557b539ec24cfe75a5717882fd49feea68ccc90**,
+**522b589ceb1eb9c08b554390f736ac800b9393b1**.
+Merge **0297f0538629e9daebb4aa6c6fd3e11176f14e5b** is Gitmoji/no-ff and has
+no conflicts. All84 feature files are exact; all1777 pre-existing tracked files
+were unchanged before this ledger update. No source/interface fix was needed.
+
+| Deliverable | Implementation | Integration | Verification | Remaining |
+|---|---|---|---|---|
+| Authenticated EpisodeStartup foundation |Complete fresh initializer at `ff1ba3a` |Source integrated; no production endpoint |16 startup tests,12 ordinary native-equal persisted startups,12 mined rollback receipts |Production state/endpoint integration deferred |
+| Gameflow/setup/zone/resource dependencies |Existing original-source libraries retained |Existing GameContext/GameflowState/ResourceView used without edits |21 allocator tests,13 Gameflow tests,4 focused R_Data tests;69 Node resource tests pass |Transitions require a separate prepared-context setup API |
+| Native source fidelity |12 cases: nine medium maps plus E1M2 baby/nightmare/no-monsters |Original60 observation binaries and manifest preserved |O0/O2/ASan+UBSan exact; all five observations/case match; only recorded absolute include path differs on main |No rendering/reuse/arbitrary-memory acceptance |
+| History/evidence/publication |All three feature commits, logs/certificates/fixtures retained |Separate merge evidence, earlier ledger body exact |Original acceptance checker passes against merged source/artifacts before ledger reconciliation; source/fixture/proof hashes checked afterward |No merge blocker |
+
+### Executed focused verification
+
+**54 Foundry tests pass,0 fail/skip**: the combined gate has50 tests across8
+suites (16 startup,21 inherited allocator/setup/backing/heap,13 Gameflow), then
+four selected R_Data cases. **69 Node tests pass,0 fail/skip** for original WAD
+and nine-map packaging/authentication. All assertions and expected fixtures are
+unchanged. The98-file pinned Solc0.8.37 compile reports178.80s and the focused
+suite runs5.14s; the resource test root compiles6.02s and runs1.27s. The explicit
+EpisodeStartupProbe/ResourceStore build passes from cache. Compiler/viaIR/
+optimizer200/Cancun and the10B budget remain unchanged.
+
+The original-C --check rebuild agrees across all three profiles and compares
+all60 observation binaries successfully. Its final manifest equality assertion
+fails solely because build.flags contains the feature worktree's absolute
+renderer/trace.h include path. A read-only diagnostic capture reruns the original
+checker without changing its assertions, records that failure, and verifies the
+entire generated manifest after accounting for exactly that one relocated path.
+The header SHA256, all other manifest fields, source hashes/profiles/case summaries
+and all60 fixture hashes are exact. The original checker, manifest and fixtures
+were not edited. The unmodified historical acceptance certificate checker also
+passes on main before the authorized ledger update; its historical protected
+scope includes that ledger, so final preservation is bound separately here.
+
+The first ordinary-EVM attempt stopped before starting Anvil because the required
+local episode.json catalog was absent. The tracked nine-map catalog was fully
+verified against the existing pinned WAD/bundle/blob and copied only into that
+missing ignored path; no existing resource file changed. The unchanged runner
+then passes all12 cases/12 rollback receipts on fresh isolated Anvil18913.
+
+The EVM runner deploys1755 ordinary ResourceStore contracts and verifies every
+runtime byte, then fresh support hosts for all nine medium-skill maps and three
+E1M2 variations. World/DSG1, collision/grouping/starts/scrollers, normalized live
+zone/owners, flow and difficulty digests match native results and are reobserved
+from actual typed storage. No native world or allocator tape is injected.
+Invalid driver/selections/identity/directory/runtime order/missing runtime,
+post-setup injected failure and repeated startup preserve the entire storage
+root and emit zero logs. No tic or Frame is consumed/emitted. The owned node
+stops on completion; no existing Anvil or playground18880/8088 is used. Browser
+config/palette hashes remain exact. Startup receipt costs are support-host
+measurements, not Doom.sol startup/frame or transition performance claims.
+
+### Production handoff and boundaries
+
+`EpisodeStartup.initialize(source, episode, map, skill, nomonsters,
+deterministicInitialization)` returns fresh `(GameContext, GameflowState)`.
+Supported selection is retail single-player Episode1/maps1..9/skills0..4;
+invalid identifiers reject before original menu clamping. `validate(source)`
+authenticates the complete original v0 identity/directory/ordered STOP-prefixed
+runtime hashes before decoding/setup. These constants match frozen WadResources;
+the additive v1 Episode catalog does not alter the v0 resource identity.
+
+Future production integration must persist GameState/GameflowState atomically
+and preserve the13 demon-state tic values plus three projectile speeds, restore
+mutable definitions after load and rebind gameplay callbacks/map/move/path/
+translation/native-zone aliases. Initial UI startup can use the returned
+context with existing DoomUI.initialize; restart ST/HU statics and lifecycles
+need explicit original-source handling. Production authorization, sequence,
+frame counters and palette events remain owned by Doom.sol.
+
+This is a **fresh-runtime initializer, not a transition/reload API**. Calling it
+on live gameplay would recreate the zone and inventory. Later transitions need
+prepared-context setup that retains player/global/cache/allocator history.
+Doom.sol, DoomGame.sol, DoomUI.sol, all src/doom modules, browser, compiler/budget,
+prior tests/fixtures/certificates and the memory audit remain byte-identical to
+the baseline. No production loading endpoint or level transition was added.
+
+### Evidence, deferred checks and stop
+
+Original [startup handoff](PHASE4-EPISODE-STARTUP.md),
+[acceptance certificate](../artifacts/phase4/episode-startup/verification.json),
+[native manifest](../test/fixtures/phase4_episode_startup/manifest.json), all
+source-bound logs, fixture/license files and feature receipts remain exact.
+New [main-integration certificate](../artifacts/phase4/episode-startup-main/integration.json),
+[fresh EVM receipts](../artifacts/phase4/episode-startup-main/evm.json),
+[focused log](../artifacts/phase4/episode-startup-main/startup-and-dependencies.log),
+[resource log](../artifacts/phase4/episode-startup-main/resource-dependencies.log),
+[Node log](../artifacts/phase4/episode-startup-main/resource-node-tests.log) and
+[native relocation comparison](../artifacts/phase4/episode-startup-main/native-relocation.json)
+record executed checks and the resolved local-input/path issues.
+
+Complete Phase0–3/final Phase4 regression, production endpoint/transition
+integration, new allocation-history renderer/backing proofs, ticks/Frames/UI,
+browser/E2E, progression, Intermission/Finale and arbitrary-memory/undefined-C
+coverage remain deferred. The fresh initial-zero/LP64 native profile and finite
+DSG1/supplementary observations are the accepted domain; no production episode
+or whole-process/unknown-padding equivalence is claimed.
+
+Goal4.13a source/support integration is complete within that domain. The commit
+containing this checkpoint/certificate is integration-specific publication.
+Stop after normal push, verified clean main/origin synchronization; do not begin
+production transitions or another goal.

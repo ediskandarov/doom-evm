@@ -1,0 +1,23 @@
+Built original native O0
+Built original native O2
+Built original native sanitize
+PASS original native E1M1-skill2: world/collision/flow/difficulty/zone exact
+PASS original native E1M2-skill2: world/collision/flow/difficulty/zone exact
+PASS original native E1M3-skill2: world/collision/flow/difficulty/zone exact
+PASS original native E1M4-skill2: world/collision/flow/difficulty/zone exact
+PASS original native E1M5-skill2: world/collision/flow/difficulty/zone exact
+PASS original native E1M6-skill2: world/collision/flow/difficulty/zone exact
+PASS original native E1M7-skill2: world/collision/flow/difficulty/zone exact
+PASS original native E1M8-skill2: world/collision/flow/difficulty/zone exact
+PASS original native E1M9-skill2: world/collision/flow/difficulty/zone exact
+PASS original native E1M2-skill0: world/collision/flow/difficulty/zone exact
+PASS original native E1M2-skill4: world/collision/flow/difficulty/zone exact
+PASS original native E1M2-skill2-nomonsters: world/collision/flow/difficulty/zone exact
+Traceback (most recent call last):
+  File "/Users/eduard/sandbox/doom-evm/tools/reference/episode_startup/reference.py", line 161, in <module>
+    if __name__=='__main__':main()
+                            ~~~~^^
+  File "/Users/eduard/sandbox/doom-evm/tools/reference/episode_startup/reference.py", line 154, in main
+    if args.check:assert p.read_bytes()==data,'native fixture drift '+name
+                         ^^^^^^^^^^^^^^^^^^^^
+AssertionError: native fixture drift manifest.json

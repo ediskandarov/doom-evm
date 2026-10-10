@@ -1,0 +1,689 @@
+{
+  "goal": "4.13a",
+  "kind": "episode-startup-ordinary-evm",
+  "pass": true,
+  "startedUtc": "2026-10-10T13:28:02.648Z",
+  "resourceIdentity": {
+    "schemaVersion": 0,
+    "wadSha256": "7323bcc168c5a45ff10749b339960e98314740a734c30d4b9f3337001f9e703d",
+    "bundleSha256": "d379076f21645cf7cc5acb056663d0faacc4065489a0ca99738479323c9f7a47",
+    "paletteSha256": "fd895921b5d0a394612bb29852ed003d44d69f76dec31c0dc6b5d5fc7d63f7bb",
+    "paletteVariant": 0
+  },
+  "catalogSha256": "1af6a076fdf0427be1df9beae42c8f87a931058fed89d1f104543eb8b1188c9e",
+  "nativeManifestSha256": "0177434ab517a536157d4e6a4079e9014133d81e52761158d542fc09eb223e86",
+  "compiler": {
+    "version": "0.8.37+commit.f401782d",
+    "settings": {
+      "remappings": [],
+      "optimizer": {
+        "enabled": true,
+        "runs": 200
+      },
+      "metadata": {
+        "bytecodeHash": "ipfs"
+      },
+      "compilationTarget": {
+        "src/support/EpisodeStartupProbe.sol": "EpisodeStartupProbe"
+      },
+      "evmVersion": "cancun",
+      "libraries": {},
+      "viaIR": true
+    }
+  },
+  "executionBudget": {
+    "gasLimit": 10000000000,
+    "gasHex": "0x2540be400",
+    "source": "/Users/eduard/sandbox/doom-evm/execution-budget.json"
+  },
+  "sourceHashes": {
+    "src/doom/d_ticcmd.sol": "508d0332d3e8b83e1b68d37581a3befc100a9974fcaa0900cc44116cd75ff2ef",
+    "src/doom/g_game.sol": "ea632f47ca5904819dd0dc254fc547799b56696e08e37d96a503d71da145f89c",
+    "src/doom/info.sol": "4611205149173e42d3b0f1d91820c8042f6bc5fc48fb53aec84ad4bc501dca8e",
+    "src/doom/m_bbox.sol": "f4c60efe3627a97d0288fc5cd0283535527b1f51029568534c80bb8fbbf8f272",
+    "src/doom/m_fixed.sol": "3f64bef1f62f61faead3a5b8f382bf1c66e1b3739ce4ac8d59a6fcef0451ef9f",
+    "src/doom/m_random.sol": "5267b881138cfb7e0d683449005619513006c70e3ed557f64697b36c4ed40c7b",
+    "src/doom/native_zone_layout.sol": "118b2d17165826fb0857d9cb296e2214db2a28917769299a82e70d0c0790f6e8",
+    "src/doom/p_ceilng.sol": "696f3f620f5bddb3cea64fda824e3203c780f53db890630f0685794454dc37f9",
+    "src/doom/p_doors.sol": "945bf600ce86d8286718fb75ecaf905a0c4631d79d2dac7260c91c9dc2013f8d",
+    "src/doom/p_enemy.sol": "eff76cce23b0877833a5c446a1a09d8ae01918a6925b6d3265240b144c09dfe7",
+    "src/doom/p_floor.sol": "b7c90baafa0b74fd7ff80cf60dcbc430148f6d6d068ba54ca0fbc7ba1bca7069",
+    "src/doom/p_game_state.sol": "0f9d60aae9424cad17c614d4fcc93c9eb6fe8a43c7bce070d2460fcf2c34f649",
+    "src/doom/p_heap.sol": "3cc2e0a8c3239523db66c07fea33720f931754baedd312b5ca7cc2ebe763d2e0",
+    "src/doom/p_info.sol": "a48840479115ea8bf849ca5ec448d1b2bec7a6cfe58c5314e140635a898de792",
+    "src/doom/p_inter.sol": "8be27f9bba47beb46b3edf2a8a2674b3cd7218d2abb8ef5f8855803393d067de",
+    "src/doom/p_lights.sol": "6f63cbc6b41fc492a46ce43aef464deb9d08b7fa1dd8b213b546eec3e4f08276",
+    "src/doom/p_map.sol": "6b6d48523a45acab9090dfb0ec3d6dbab4e6de18afa89453df8b5a87088da0f3",
+    "src/doom/p_maputl.sol": "ac5ac60e7e058a5fc537e7042c7254bc0f51c77165149a22e141437b4e0ad0b6",
+    "src/doom/p_mobj.sol": "78e9c05b327100bd34cafe086454e3a5499beb92af878ad4756baeca18445ffa",
+    "src/doom/p_plats.sol": "6904df762b270f840daa99b34d2a5c689dbb2fef3aed3d33c2ac1a3f3e4d5722",
+    "src/doom/p_pspr.sol": "cfa2db3438d689c38d9c957fc4aee598c58740f025d6efead2b5f9671eb0c863",
+    "src/doom/p_setup.sol": "9498e1298bf4e53ccedc484a50d4c7f9f85315f6cb700719d474b721e382243b",
+    "src/doom/p_setup_static.sol": "c8100a42bb0bac190c583bbb2c82168599009f88a766e4c05b9a9231a5f69792",
+    "src/doom/p_sight.sol": "7ed366237fc3fec069ffb6336e95e038004d1f379622cf67f55fb8c6b1a6488c",
+    "src/doom/p_spec.sol": "2363640e75c22c9d017db677dda7148ad221380f0a23639167e145e933fc72b7",
+    "src/doom/p_switch.sol": "5404d359793e05c6c24a7804c07632150009b46f38d03068412d7ac53260dfe2",
+    "src/doom/p_telept.sol": "745f0fa4ed6f0515c398bfd2469c59aac82316965b7bac25263aeb82555d61b8",
+    "src/doom/p_tick.sol": "1993dd0c94853dabc4db554dfa0ca04375cef0a22075400ba0e7b56b525022ab",
+    "src/doom/p_user.sol": "963a46850e1b17171f79dd65bff9b5006ce6f97a935ad2023d1d526a6ec35c37",
+    "src/doom/p_zone_setup.sol": "e0308bd1197fd84a01eb1ee208be73c711851d6b0bc30be1d07a7c61b18b223d",
+    "src/doom/r_bsp.sol": "0ae5df313515692d0b2b970d5d39d107e014629cff2305fb37c14371a9524040",
+    "src/doom/r_data.sol": "5b404d561f8bce538e8a8221b4f36d62c9b9826fc833307640d96fcbfdca2d0a",
+    "src/doom/r_data_types.sol": "0448302d68447c8a5a4c46df4016e8845863e42bf6eaca8bcab8ab0c9707fdf8",
+    "src/doom/r_defs.sol": "558d5a9bfd131e816bbe28986e2dad6144a08e5a16ccfed1b199d7558a1ea0e2",
+    "src/doom/r_draw.sol": "afe958ea0c2962b739bff58b98d8bccc25c48d3d0838cacd46142c242b5d6477",
+    "src/doom/r_main.sol": "df403bf04fdbbcfc68c4fd9c5e19b5201ca711498efc34db406a4010ad3b2af5",
+    "src/doom/r_plane.sol": "c7a5abcbca84dddcd2a3c8bb160a609605c5c1842e73704dff4860df3280e463",
+    "src/doom/r_render_hooks.sol": "f026ccb8fffb68d8fbcb0966103212f52884b86350fe3fb52a401d146f3fb312",
+    "src/doom/r_render_state.sol": "072bd2f73b98e1eb775fc8093e95a69c184f3fa50a89a5d64a7beccd59493398",
+    "src/doom/r_segs.sol": "9d4e4dea06739278aab3698fb422818de6dd7726359c8822d60a162e886621cb",
+    "src/doom/r_sprite_state.sol": "735b3de85cbf455e05d3cb8e992cf4e477960bd4192bbd367f5c66c803b96363",
+    "src/doom/r_state.sol": "80951a13733e3a08f4182937a37def33ffda21eaae4b43a2a1bdba2043adab6b",
+    "src/doom/r_things.sol": "86705ab6b1f79b7ef07798b881cc547502d9911c97b57dc516a744e17c1977f5",
+    "src/doom/tables.sol": "bf14202b419075f6d187653205a37e211d8267c7fc4c0bebf5a8c5713afddf38",
+    "src/doom/w_zone_cache.sol": "03c07404765de9620b3d1ff15727809cdad911c8a78d822019b63500fa5018c2",
+    "src/doom/z_zone.sol": "b4e75218021d65aaf3389cf78a68663feebc2084c82457821be17247dc8106c5",
+    "src/doom/z_zone_backing.sol": "1253ffab18a977b75a63d7387514eb360bf9b5e4eb3881eb0928c4b23096a398",
+    "src/doom/z_zone_types.sol": "8eaf75209f619565bfffd1b26ea0d5cc24e7e63da6ca16c58c183139a8e2ef4e",
+    "src/evm/DoomGame.sol": "227373ca371d3a2c57d9b3c78663eed0bace86848b119000e6c485c26d63ed3f",
+    "src/evm/DoomRenderer.sol": "5639d82431350ea76c26d43457d26d0c3c0f410eaddf02db6adbcfb03a569ba0",
+    "src/evm/DoomScene.sol": "9ad7c8ccee4c9e05deb5608326baabacfa40f686b8d8445fb8aaa7352ab64569",
+    "src/evm/DoomZoneStartup.sol": "2d178494456a7ae3c730310f257ce2aa635d37d18c90cac039cf002cdb3f50dc",
+    "src/evm/EpisodeStartup.sol": "bb574f20cdc09e63385261f7e8e203a49a90a15b87903d70dfe43d396bc3255e",
+    "src/evm/ResourceTypes.sol": "159865364cfa57aae508cd94c49509cbccabd6aeeba55e92b9fcf816bdec4d6b",
+    "src/evm/WadResources.sol": "25a1acc0a44ac35cc29e5f9bd953ba66b85db4f665b732430571b416ef927895",
+    "src/support/EpisodeStartupProbe.sol": "1b5d4030bf588ef9d9e6298b22eb8335f7709f41ff0120db4952d86800139fc4",
+    "src/support/EpisodeStartupSnapshot.sol": "3f2a274619a786200fe209111e0ca6f2f5cb97537f584dd77a4f3d23e4d3635e",
+    "tools/reference/episode_startup/reference.py": "c9db4448a1d40a3edc1caec0c2ff9e84bf9afc0287e7f3fecd822691946543a0",
+    "tools/reference/episode_startup/observe.inc": "3240d15e6599cfe90ea1afd812c12b9360135c36628ad8ce00c11f6e546dfb49",
+    "tools/reference/episode_startup/evm.mjs": "c976be2c5065e07bdbdfa97efe60aa55542ea1efaab22e6c22154583ea19db02",
+    "foundry.toml": "afe04c66f0e684b5a936821f6543605a3739f62164ceb4398426db7403452393",
+    "execution-budget.json": "acde01f1b9cf248f9265f1ffcff7181d01d77620a2dfcd9a4d4d0b1c79df2be7"
+  },
+  "cases": [
+    {
+      "name": "E1M1-skill2",
+      "map": 1,
+      "skill": 2,
+      "nomonsters": false,
+      "deployment": {
+        "address": "0xa3df7367c5010a3f02e6c65f57dd080d7c129bdf",
+        "transaction": "0x322c2261ac42fecc01115542fea7fd2d650079df354069ac54b6a742678d7374",
+        "gas": 222040845,
+        "ms": 46.51266699999542,
+        "runtimeBytes": 376854,
+        "runtimeSha256": "50c9d51cc9a1d10dff03ce742bef2bd654d3ed7450dacb347fdb289ad76f2179"
+      },
+      "transaction": "0x9f58e0fcedc32ed3df4634d6c35571a1d0f7141a1e958850a1f2d692b95ef0b9",
+      "gas": 2385103843,
+      "ms": 549.731667,
+      "digests": {
+        "world": "b8cfcff84e0542ee70afc9a05fd39cc0cd78db2086b01d538f74a706dde87500",
+        "collision": "067fa096537b6ed5c865f6a6dd4d53f1edabbec1955252ebd551df6dbefa0f25",
+        "zone": "307187e50f79b0f2d80e44118ca5ad548eb3119c93f42097098e2b123ddc33f4",
+        "flow": "9799f56ade9dae301070862fdad18bc1e86b9bd71d48e7f4d3d131a5a232e2ee",
+        "difficulty": "0a6d0f2d1795d2b3450a49d4770357852f37f396f459db48f36d46f56b4c0721"
+      },
+      "startupStatus": [
+        1,
+        1,
+        2,
+        0,
+        0,
+        210,
+        219,
+        182,
+        1,
+        1
+      ],
+      "persistedWorldExact": true,
+      "emittedFrames": 0
+    },
+    {
+      "name": "E1M2-skill2",
+      "map": 2,
+      "skill": 2,
+      "nomonsters": false,
+      "deployment": {
+        "address": "0xa4ae41b9bb88eb03048ea3bb71ab32a62ebc7188",
+        "transaction": "0xe4d720ce28214bde370e9f2639afc3bc914d83a6c515d13a48a22d0f7ff610ad",
+        "gas": 222040845,
+        "ms": 46.69804199999635,
+        "runtimeBytes": 376854,
+        "runtimeSha256": "50c9d51cc9a1d10dff03ce742bef2bd654d3ed7450dacb347fdb289ad76f2179"
+      },
+      "transaction": "0x5b6ae5c2521b4a17df34cee2b43ad805bc46722711b58b86fcf2b291a8f9ff9e",
+      "gas": 3423997552,
+      "ms": 915.4729169999991,
+      "digests": {
+        "world": "56601c83f642ef124cc48d915dc5e75f805a6698c0a72363c9ca0d843191e30d",
+        "collision": "faa64c74dfb687f2e1bafb5060aab15f99c48a646c61c70639da37e57e2e7814",
+        "zone": "c313c2a882c3eda7472b99201fac20a3e582f6d3cf99fee7933b4746e0712713",
+        "flow": "a4ade57b7cddf33278b22902d259a7e464dc02407c63d4baf1163314d5d41c98",
+        "difficulty": "0a6d0f2d1795d2b3450a49d4770357852f37f396f459db48f36d46f56b4c0721"
+      },
+      "startupStatus": [
+        1,
+        2,
+        2,
+        0,
+        0,
+        273,
+        291,
+        380,
+        1,
+        1
+      ],
+      "persistedWorldExact": true,
+      "emittedFrames": 0
+    },
+    {
+      "name": "E1M3-skill2",
+      "map": 3,
+      "skill": 2,
+      "nomonsters": false,
+      "deployment": {
+        "address": "0x63763137c765be274f1953e3c2e41e5668459977",
+        "transaction": "0x04eb3d3ec4edda5a3b51061bf1fc3f854194639d29ac4ce622dd69b86ee018ef",
+        "gas": 222040845,
+        "ms": 48.85041700000147,
+        "runtimeBytes": 376854,
+        "runtimeSha256": "50c9d51cc9a1d10dff03ce742bef2bd654d3ed7450dacb347fdb289ad76f2179"
+      },
+      "transaction": "0x2cd7f4588d34708cfdb971bdf8d9eaa60a0722a86bb597c46786282acf8766c9",
+      "gas": 3179331576,
+      "ms": 828.2592079999959,
+      "digests": {
+        "world": "90f8ec79f4ef81d1b8cb45864b25aac87bed1ca665d3a71aed51db9c0fd8d590",
+        "collision": "b7f8c77a95b6c701d53fec803e18df158c37989663472e458867add48624cfbe",
+        "zone": "f0578cf45df853e44a23337f9c973abce14adc7ea2c913069b85ccb3b1140271",
+        "flow": "4638cf0686a519ac8a260b6ea4448bed14f7200273e61e361b9d022336c6fc7c",
+        "difficulty": "0a6d0f2d1795d2b3450a49d4770357852f37f396f459db48f36d46f56b4c0721"
+      },
+      "startupStatus": [
+        1,
+        3,
+        2,
+        0,
+        0,
+        311,
+        338,
+        330,
+        1,
+        1
+      ],
+      "persistedWorldExact": true,
+      "emittedFrames": 0
+    },
+    {
+      "name": "E1M4-skill2",
+      "map": 4,
+      "skill": 2,
+      "nomonsters": false,
+      "deployment": {
+        "address": "0x3369da4782b69e8abd04bcdcae761215825bd0e6",
+        "transaction": "0x6667c7ee460155443e6e1b207f9e522f00cb549ca1f54facd32727e4df1d44af",
+        "gas": 222040845,
+        "ms": 45.541541999999026,
+        "runtimeBytes": 376854,
+        "runtimeSha256": "50c9d51cc9a1d10dff03ce742bef2bd654d3ed7450dacb347fdb289ad76f2179"
+      },
+      "transaction": "0x6e0574947cda6d24a25317eced7379f7d51b125488149b6c447f6893631988c7",
+      "gas": 3325158270,
+      "ms": 808.0486670000028,
+      "digests": {
+        "world": "f7128ae75b2ded75adf28c5b72bc95ce16c1e47e9aa9d81ce67167fe68e9e3d1",
+        "collision": "051e8d71384d7dff6c96081ac0512615fea67fd2ea28cc09481d41e007a42f31",
+        "zone": "913fd062468d54c54c64781c79f09741d5899fd364ee5c59345687f6f76dc00d",
+        "flow": "ac1136d22d3291c903a144002149e8ca75869fa5e1f7f81fcf1aa8b63e1283b6",
+        "difficulty": "0a6d0f2d1795d2b3450a49d4770357852f37f396f459db48f36d46f56b4c0721"
+      },
+      "startupStatus": [
+        1,
+        4,
+        2,
+        0,
+        0,
+        300,
+        302,
+        274,
+        1,
+        1
+      ],
+      "persistedWorldExact": true,
+      "emittedFrames": 0
+    },
+    {
+      "name": "E1M5-skill2",
+      "map": 5,
+      "skill": 2,
+      "nomonsters": false,
+      "deployment": {
+        "address": "0x90fcca181e4100a42a3cde0ff7dacdf046d4e8a0",
+        "transaction": "0xb60705ce7d0d8489f2837a6e7a747e246c10893b9c64009963d060fb1768f6c8",
+        "gas": 222040845,
+        "ms": 46.513749999998254,
+        "runtimeBytes": 376854,
+        "runtimeSha256": "50c9d51cc9a1d10dff03ce742bef2bd654d3ed7450dacb347fdb289ad76f2179"
+      },
+      "transaction": "0x6dcdfd6d8557e690e4d1efab7e482740f5e5740455e4c9c340d965f152481df3",
+      "gas": 2405931774,
+      "ms": 578.119584,
+      "digests": {
+        "world": "b08f6822d9fb1f4ea713d58c6b6ad4d5b948e23888ebeee590e120a1df2f46ec",
+        "collision": "34f33bb42302442f58e822604edff9a8a45ad3aed7f41ff79a0950ce00d1126e",
+        "zone": "ef148fb227872b559aade6d8ba8763db988bf40166951843d12c1d112ac92780",
+        "flow": "56aa4e9d70b6a8ccabfa4fba6a7128f923fbca7b415a931d4f56e734ceb798b0",
+        "difficulty": "0a6d0f2d1795d2b3450a49d4770357852f37f396f459db48f36d46f56b4c0721"
+      },
+      "startupStatus": [
+        1,
+        5,
+        2,
+        0,
+        0,
+        254,
+        257,
+        214,
+        1,
+        1
+      ],
+      "persistedWorldExact": true,
+      "emittedFrames": 0
+    },
+    {
+      "name": "E1M6-skill2",
+      "map": 6,
+      "skill": 2,
+      "nomonsters": false,
+      "deployment": {
+        "address": "0x90e49f941bd68341a363225f5a2386d34a7ffd92",
+        "transaction": "0x31dc3d2b512e9256a8ca1f91ebb0c906cca8e36a37728dd92e696a97cc271dd3",
+        "gas": 222040845,
+        "ms": 46.33350000000064,
+        "runtimeBytes": 376854,
+        "runtimeSha256": "50c9d51cc9a1d10dff03ce742bef2bd654d3ed7450dacb347fdb289ad76f2179"
+      },
+      "transaction": "0xbfe1fc2b60940ad4feccf41985885ec4b5ae4207c56c7d902ad6c848540f8b11",
+      "gas": 3905863064,
+      "ms": 1114.3728330000013,
+      "digests": {
+        "world": "b5afc27b323eb11917ac25a917ef9599f99ff154664f4759abd66732ab0a0bd1",
+        "collision": "3c9f100c959da1c6b1508c38acd9b668b5e4081a3b813a4feb2e6b2bdda86ca0",
+        "zone": "c2dcefbb81d7f9224214c95699ab5bf65d89045bd6a277878805476b51b0230d",
+        "flow": "3bd2513ef18379d8f70203a921e18b5f09cbd8773de8fd8acaa8f2876f3a3536",
+        "difficulty": "0a6d0f2d1795d2b3450a49d4770357852f37f396f459db48f36d46f56b4c0721"
+      },
+      "startupStatus": [
+        1,
+        6,
+        2,
+        0,
+        0,
+        372,
+        387,
+        395,
+        1,
+        1
+      ],
+      "persistedWorldExact": true,
+      "emittedFrames": 0
+    },
+    {
+      "name": "E1M7-skill2",
+      "map": 7,
+      "skill": 2,
+      "nomonsters": false,
+      "deployment": {
+        "address": "0xf99add941432ec09b498ea1b680be13f2e717d88",
+        "transaction": "0x1236d3889314872ef681c41ca245c6c1bf89acf8e7edf72d239005a50779d59f",
+        "gas": 222040845,
+        "ms": 67.84799999999814,
+        "runtimeBytes": 376854,
+        "runtimeSha256": "50c9d51cc9a1d10dff03ce742bef2bd654d3ed7450dacb347fdb289ad76f2179"
+      },
+      "transaction": "0xba05ce25b8a3c8783f2ab64578c2579b02cc52f4ae42e462943bf5a389343163",
+      "gas": 6087177788,
+      "ms": 2048.011833000004,
+      "digests": {
+        "world": "482573075c68a974be42a0ddd38547b413a7d9e24a82113f8571a096b05a60ad",
+        "collision": "edf6de961b2e6a7bb2fd61ca0312759e5ad5cfd0aef46ce6fe13276c6b5a154f",
+        "zone": "2013446a1958a98f275c1d4327f4caf08459a1e77c83215ec7224a9895d1dbcf",
+        "flow": "9921f888edd5dd84694d0ea2ca182834f97cafd0409e5181afe19af0ff37d9d5",
+        "difficulty": "0a6d0f2d1795d2b3450a49d4770357852f37f396f459db48f36d46f56b4c0721"
+      },
+      "startupStatus": [
+        1,
+        7,
+        2,
+        0,
+        0,
+        560,
+        565,
+        699,
+        1,
+        1
+      ],
+      "persistedWorldExact": true,
+      "emittedFrames": 0
+    },
+    {
+      "name": "E1M8-skill2",
+      "map": 8,
+      "skill": 2,
+      "nomonsters": false,
+      "deployment": {
+        "address": "0xed0626e8eea7098c1e03b72c1c72b89a43ef4812",
+        "transaction": "0xeb5c3f31795163bdbf16e217e40d6dd10a7ff570f47cdbc95f296efec2d87fbe",
+        "gas": 222040845,
+        "ms": 68.17379200000141,
+        "runtimeBytes": 376854,
+        "runtimeSha256": "50c9d51cc9a1d10dff03ce742bef2bd654d3ed7450dacb347fdb289ad76f2179"
+      },
+      "transaction": "0x726341cd660043851db491a586e1ff76cd594b005cc0c13181fea041e473b919",
+      "gas": 2052734836,
+      "ms": 467.7636249999996,
+      "digests": {
+        "world": "969157bda64f3b9361bc0752955e600b9d8c50544d78be7504ade6271137abba",
+        "collision": "c6a71777ca70d9030ba4061a610d96c2f34bda9ff2bc601b0806b42719430309",
+        "zone": "e6e308081e9711e988897aac32e229bc4316f53d2c9f6181770617a6c4f4fde6",
+        "flow": "c9a081aee8173b7438bfbd92bd70f7047fbdbf48b2134c309eac4d7853661dc3",
+        "difficulty": "0a6d0f2d1795d2b3450a49d4770357852f37f396f459db48f36d46f56b4c0721"
+      },
+      "startupStatus": [
+        1,
+        8,
+        2,
+        0,
+        0,
+        42,
+        42,
+        97,
+        1,
+        1
+      ],
+      "persistedWorldExact": true,
+      "emittedFrames": 0
+    },
+    {
+      "name": "E1M9-skill2",
+      "map": 9,
+      "skill": 2,
+      "nomonsters": false,
+      "deployment": {
+        "address": "0x6699a372477f62caa0b0e3465cda30e789a8f815",
+        "transaction": "0xd16afde67fbcd86f1e83d322679fdfcf08a36d68dc4ad07a886a74f9b771c203",
+        "gas": 222040845,
+        "ms": 46.61000000000058,
+        "runtimeBytes": 376854,
+        "runtimeSha256": "50c9d51cc9a1d10dff03ce742bef2bd654d3ed7450dacb347fdb289ad76f2179"
+      },
+      "transaction": "0xcc46fededf2bc4957514ebe36fc0ea569daf8e7d57c636657512bbf76ed72278",
+      "gas": 3097307861,
+      "ms": 789.5392090000023,
+      "digests": {
+        "world": "231f16dd6216e7f4b7ed75829c7522dd0d66722acf800c52705c0e199037c76f",
+        "collision": "2268c46c7092c24de8a1a175fbc11fdc1f0fc23e2d1808a1e82116f8854b91c2",
+        "zone": "74c0e86f061aac90354451b1aa168e14fb4f2f94c9196466b5cf0486b84a1d6c",
+        "flow": "f59c6977d2f55ab0899cbde1d247c96723c82f7d485125dec52aefe40c354a76",
+        "difficulty": "0a6d0f2d1795d2b3450a49d4770357852f37f396f459db48f36d46f56b4c0721"
+      },
+      "startupStatus": [
+        1,
+        9,
+        2,
+        0,
+        0,
+        304,
+        305,
+        297,
+        1,
+        1
+      ],
+      "persistedWorldExact": true,
+      "emittedFrames": 0
+    },
+    {
+      "name": "E1M2-skill0",
+      "map": 2,
+      "skill": 0,
+      "nomonsters": false,
+      "deployment": {
+        "address": "0xd4185915bd9533575207dcfdeb6fdef798b095d3",
+        "transaction": "0xe44114321438da0159b7e2fc62d1e7c3c505e7fe0e73e6036c52be4add014bc0",
+        "gas": 222040845,
+        "ms": 46.49699999999575,
+        "runtimeBytes": 376854,
+        "runtimeSha256": "50c9d51cc9a1d10dff03ce742bef2bd654d3ed7450dacb347fdb289ad76f2179"
+      },
+      "transaction": "0x44363007533a128fc0de62337d5f3fd162ad6c06027193785fa7a05a96f063b5",
+      "gas": 3303487466,
+      "ms": 937.1974999999948,
+      "digests": {
+        "world": "2ac72d927d99d8424b6448945be3805f99c190fa2f2c3cee773a9c9c13a758aa",
+        "collision": "faa64c74dfb687f2e1bafb5060aab15f99c48a646c61c70639da37e57e2e7814",
+        "zone": "56cb4c5a8e066ed081ba935ba908d5c6a1095392dbb1d5f66e46a5596058a8a5",
+        "flow": "cd6915a9c7618584c9ac510468e209083a1cef3acd11fa27d51bc883a0e31b2a",
+        "difficulty": "0a6d0f2d1795d2b3450a49d4770357852f37f396f459db48f36d46f56b4c0721"
+      },
+      "startupStatus": [
+        1,
+        2,
+        0,
+        0,
+        0,
+        226,
+        244,
+        380,
+        1,
+        1
+      ],
+      "persistedWorldExact": true,
+      "emittedFrames": 0
+    },
+    {
+      "name": "E1M2-skill4",
+      "map": 2,
+      "skill": 4,
+      "nomonsters": false,
+      "deployment": {
+        "address": "0x81ae7583f06c2bc141b9141fb9d701f0f2f59133",
+        "transaction": "0x4962d9feee2f8c6812c5fcd314694ab1e3e9a6f1c966f07cd6c4e00a64205b5c",
+        "gas": 222040845,
+        "ms": 68.21683399999893,
+        "runtimeBytes": 376854,
+        "runtimeSha256": "50c9d51cc9a1d10dff03ce742bef2bd654d3ed7450dacb347fdb289ad76f2179"
+      },
+      "transaction": "0xe7a2085134e618126bb548a897e47ec79f387d120ce972456a0521b2e0f56509",
+      "gas": 3439965564,
+      "ms": 937.0764170000039,
+      "digests": {
+        "world": "cde56427f0e4dc8642230f501f3554044cbae0ffe6a154ab67df63b5e1a64569",
+        "collision": "faa64c74dfb687f2e1bafb5060aab15f99c48a646c61c70639da37e57e2e7814",
+        "zone": "381ce4a9a79a847478b40da7393f8ad35e4facb8947a786fa1c3553d794f7ffa",
+        "flow": "8016cfac25d039b26ccbf6d1ee503345e5a802e745d88915fe8922a0906c09bc",
+        "difficulty": "0a2112658bb094b60cd2ded4842c85f7e7e42eeabad2f619160053b8f8391cff"
+      },
+      "startupStatus": [
+        1,
+        2,
+        4,
+        0,
+        0,
+        308,
+        326,
+        380,
+        1,
+        1
+      ],
+      "persistedWorldExact": true,
+      "emittedFrames": 0
+    },
+    {
+      "name": "E1M2-skill2-nomonsters",
+      "map": 2,
+      "skill": 2,
+      "nomonsters": true,
+      "deployment": {
+        "address": "0xed00171e28b55c3ba9be26a474611755c860e6f0",
+        "transaction": "0x17532f1ee4e10396284b65c46aaec127bccf034230f0671cde2d817c6dd501d4",
+        "gas": 222040845,
+        "ms": 46.669749999993655,
+        "runtimeBytes": 376854,
+        "runtimeSha256": "50c9d51cc9a1d10dff03ce742bef2bd654d3ed7450dacb347fdb289ad76f2179"
+      },
+      "transaction": "0x6ac990c62391d56658b8de32d1139409279a169dc0e234649cb6263a739eaa24",
+      "gas": 3283335572,
+      "ms": 914.8397079999995,
+      "digests": {
+        "world": "1f909008cfdcaea0cf2239f66f15374d1a678f8aaf07b18dbf081451ec3c6dad",
+        "collision": "faa64c74dfb687f2e1bafb5060aab15f99c48a646c61c70639da37e57e2e7814",
+        "zone": "d7fe8774bcbf9c2fe35958e8e22703e856077a388208a6dfd30b18508f669234",
+        "flow": "770b42f0a4fa6fd49c2b91b18d31ba93ca05d9f41142400d61e750e25dd12411",
+        "difficulty": "0a6d0f2d1795d2b3450a49d4770357852f37f396f459db48f36d46f56b4c0721"
+      },
+      "startupStatus": [
+        1,
+        2,
+        2,
+        0,
+        0,
+        180,
+        198,
+        380,
+        1,
+        1
+      ],
+      "persistedWorldExact": true,
+      "emittedFrames": 0
+    }
+  ],
+  "rejections": [
+    {
+      "error": "NotDriver()",
+      "transaction": "0x7ed7b9d3eb6226e24eb596baa4523e0206a3d003aadb6ee856bc865095cccd74",
+      "gas": 22880,
+      "allStorageRollback": true,
+      "logs": 0
+    },
+    {
+      "error": "UnsupportedSelection(int32,int32,int32)",
+      "transaction": "0x71ed45be210e2784603d7172fbf9e2a860ac7738d2f5a75dd7cf46f0d221c464",
+      "gas": 12145304,
+      "allStorageRollback": true,
+      "logs": 0
+    },
+    {
+      "error": "UnsupportedSelection(int32,int32,int32)",
+      "transaction": "0x9ef0ef77cae065cfafce6519a40729f485061777fd8d08d736f97622e487d253",
+      "gas": 12145315,
+      "allStorageRollback": true,
+      "logs": 0
+    },
+    {
+      "error": "UnsupportedSelection(int32,int32,int32)",
+      "transaction": "0xea9c2e88e3350ea416041fa46eb67289761e560d21a79a296752b317212a72e1",
+      "gas": 12145350,
+      "allStorageRollback": true,
+      "logs": 0
+    },
+    {
+      "error": "UnsupportedSelection(int32,int32,int32)",
+      "transaction": "0x1aa350817eb60cc4389047d15bff72ecac68bc0ffaef18a1d2d6fd214920f058",
+      "gas": 12145745,
+      "allStorageRollback": true,
+      "logs": 0
+    },
+    {
+      "error": "UnsupportedSelection(int32,int32,int32)",
+      "transaction": "0xd5567c6ad844aac1d463d310f1ad809082440d1fe40dc9dcd160f8df33f99068",
+      "gas": 12145396,
+      "allStorageRollback": true,
+      "logs": 0
+    },
+    {
+      "error": "ResourceIdentityMismatch()",
+      "transaction": "0xa5a2480eac9d20877db7ee66791b0d23b857543656995c13490480db6f04ac63",
+      "gas": 12144746,
+      "allStorageRollback": true,
+      "logs": 0
+    },
+    {
+      "error": "ResourceDirectoryMismatch()",
+      "transaction": "0x051db636f5bcf5c8899b3b280f545c739b117067ecfca170c24cc74f63eb7667",
+      "gas": 28854290,
+      "allStorageRollback": true,
+      "logs": 0
+    },
+    {
+      "error": "ResourceChunksMismatch()",
+      "transaction": "0xf61db74dc082614f42aeeb5b5de7eabb3beae0ea5221a583a0f284ef601aa50f",
+      "gas": 50936718,
+      "allStorageRollback": true,
+      "logs": 0
+    },
+    {
+      "error": "ResourceChunksMismatch()",
+      "transaction": "0x9f171f78425ac46f84b86a6cecb1a748876730f6e84b45812570ee8e8959859d",
+      "gas": 50791727,
+      "allStorageRollback": true,
+      "logs": 0
+    },
+    {
+      "error": "InjectedPostSetupFailure()",
+      "transaction": "0x3eca19e6a4f4c8047d2f28614e9b794eb3e03f2abb64a1bfffbd87355097052f",
+      "gas": 3425320460,
+      "allStorageRollback": true,
+      "logs": 0
+    },
+    {
+      "error": "AlreadyInitialized()",
+      "transaction": "0xdedf4cfbe615b71f079508beb15dbf1dcf7a31c43c5d89ada191379622a4460b",
+      "gas": 24429,
+      "allStorageRollback": true,
+      "logs": 0
+    }
+  ],
+  "notes": [
+    "Shared original blob deployed once by1755 ordinary ResourceStore CREATEs; every runtime byte is checked.",
+    "Each case creates a fresh authenticated support host, runs synchronous original source-driven startup, and persists typed GameState/GameflowState. No EVM state, allocations or native expected data are injected.",
+    "Five digests compare full DSG1 world, collision/grouping/start/scroller state, complete normalized live zone/owner state, flow globals and mutable difficulty. Persisted-state recomputation must match.",
+    "World-only startup; no tic, Frame, UI, transition, browser, intermission or finale acceptance.",
+    "Receipt gas includes identity validation, setup, comparison serialization, typed state storage and proof event. It is support-host startup cost, not production adapter/frame cost. No EVM-memory measurement is claimed."
+  ],
+  "runtime": {
+    "port": 18913,
+    "args": [
+      "--host",
+      "127.0.0.1",
+      "--port",
+      "18913",
+      "--hardfork",
+      "cancun",
+      "--disable-code-size-limit",
+      "--disable-block-gas-limit",
+      "--memory-limit",
+      "1073741824",
+      "--silent"
+    ],
+    "client": "anvil/v1.8.5"
+  },
+  "resources": {
+    "chunks": 1755,
+    "allRuntimeBytesVerified": true,
+    "blobBytes": 28741889,
+    "cumulativeDeploymentGas": 6271928016,
+    "uploadMs": 46739.593542,
+    "receiptsSha256": "ce19db2086cc9396709160f3403b5d04ac31c3a95b68b9de970f5494010fdba2"
+  },
+  "rollbackHost": {
+    "address": "0x5ae1f4bb68f8eac39cfdbdfda2b7344ccbd80faf",
+    "transaction": "0xb531ef2cbc9da79e1f3e0a32ede81b88985da77de3ed53f40d315e4c549142f8",
+    "gas": 222040845,
+    "ms": 74.21008299999812,
+    "runtimeBytes": 376854,
+    "runtimeSha256": "50c9d51cc9a1d10dff03ce742bef2bd654d3ed7450dacb347fdb289ad76f2179"
+  },
+  "endedUtc": "2026-10-10T13:29:04.625Z",
+  "stoppedOwnedRuntime": true
+}
