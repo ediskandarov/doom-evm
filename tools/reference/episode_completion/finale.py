@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """Extract active finale functions verbatim; compare O0/O2/ASan+UBSan outputs."""
-import hashlib, json, pathlib, re, struct, subprocess, tempfile
+import hashlib, json, pathlib, re, struct, subprocess, tempfile, sys
 ROOT = pathlib.Path(__file__).resolve().parents[3]
 HERE = pathlib.Path(__file__).resolve().parent
 SRC = ROOT/'original/DOOM/linuxdoom-1.10'
@@ -60,13 +60,18 @@ int main(int argc,char **argv) {
 '''
 OUT.mkdir(parents=True,exist_ok=True)
 files = {}; profiles = {}
+def save(name,data):
+    path=OUT/name
+    if '--check' in sys.argv: assert path.read_bytes()==data, name
+    else: path.write_bytes(data)
 blob = bytearray(); records = bytearray()
 for name in names:
     data = directory[name][1]
     records += name.encode().ljust(8,b'\0') + struct.pack('<II',len(blob),len(data))
     blob += data
-(OUT/'resources.bin').write_bytes(blob)
-(OUT/'directory.bin').write_bytes(records)
+save('resources.bin',bytes(blob)); save('directory.bin',bytes(records))
+save('COPYING.txt',(ROOT/'test/fixtures/phase4_episode_startup/COPYING.txt').read_bytes())
+files.update({name:sha((OUT/name).read_bytes()) for name in ['resources.bin','directory.bin','COPYING.txt']})
 with tempfile.TemporaryDirectory() as tmp:
     tmp = pathlib.Path(tmp)
     for name in names:
@@ -91,15 +96,16 @@ with tempfile.TemporaryDirectory() as tmp:
     # Native total-tic checkpoints and state are carried by the exact observations.
     for i in range(27):
         record=expected[i*size:(i+1)*size]
-        (OUT/f'{i}.bin').write_bytes(record)
+        save(f'{i}.bin',record)
         files[f'{i}.bin']=sha(record)
 manifest=dict(kind='original-e1-finale',upstreamCommit=pin,wadSha256=sha(wad),functionMapping=mapping,
     sourceHashes={name:sha((SRC/name).read_bytes()) for name in ['f_finale.c','d_englsh.h','v_video.c','m_bbox.c']},
     harnessHashes={name:sha((HERE/name).read_bytes()) for name in ['finale.py','compat.h']},
+    compiler=subprocess.check_output(['clang','--version'],text=True).splitlines()[0],
     profiles=profiles,exactNativeAgreement=True,records=27,files=files,
     resources=[dict(name=name,lumpId=directory[name][0],sha256=sha(directory[name][1])) for name in names],
     adaptations=['Audio omitted; other-episode/cast boundaries abort if reached; borrowed immutable WAD buffers; calloc video backing.',
         'ASan/UBSan disables variable-tail columnofs array-bounds only; leak detection off for borrowed process-lifetime assets.',
         'No physical-zone or browser/playthrough acceptance claim.'])
-(OUT/'manifest.json').write_text(json.dumps(manifest,indent=2)+'\n')
+save('manifest.json',(json.dumps(manifest,indent=2)+'\n').encode())
 print(json.dumps(dict(pass_=True,records=27,profiles=profiles)))

@@ -40,9 +40,8 @@ contract FinaleTest {
     }
 
     function le32(bytes memory b, uint256 p) private pure returns (uint32) {
-        return
-            uint32(uint8(b[p])) | uint32(uint8(b[p + 1])) << 8 | uint32(uint8(b[p + 2])) << 16
-                | uint32(uint8(b[p + 3])) << 24;
+        return uint32(uint8(b[p])) | uint32(uint8(b[p + 1])) << 8 | uint32(uint8(b[p + 2])) << 16
+            | uint32(uint8(b[p + 3])) << 24;
     }
 
     function profile(int32 mode, uint256 base) private {

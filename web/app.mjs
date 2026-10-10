@@ -70,10 +70,13 @@ try {
   });
   await subscription.connect();
   await backfill(rpc, config.address, config.deploymentBlock, inbox);
-  let updateControls = () => {};
+  let updateControls = () => {}, refreshEpisode;
   transactions = new InputTransactions(rpc, config, inbox, {
     onState: () => updateControls(),
-    onFrame: input => { proof.inputs.push(input); proof.duplicates = inbox.duplicates; },
+    onFrame: input => {
+      proof.inputs.push(input); proof.duplicates = inbox.duplicates;
+      if (refreshEpisode) refreshEpisode(input.sequence).catch(fail);
+    },
   });
   await transactions.load();
   proof.gasLimit = transactions.gas; proof.gasBudgetSource = transactions.gasSource;
@@ -100,12 +103,14 @@ try {
     const controls = document.createElement('div');
     const startButton = document.createElement('button'), stopButton = document.createElement('button');
     controls.setAttribute('aria-label', 'Gameplay controls');
+    controls.style.display = 'flex'; controls.style.flexWrap = 'wrap'; controls.style.gap = '8px'; controls.style.alignItems = 'center';
     startButton.id = 'game-start'; startButton.type = 'button'; startButton.textContent = 'Start game →';
     stopButton.id = 'game-stop'; stopButton.type = 'button'; stopButton.textContent = 'Stop input'; stopButton.style.marginLeft = '8px';
     controls.append(startButton, stopButton); status.before(controls);
     let levelSelect, newButton, restartButton, pauseButton, episodeInfo;
     if (config.episodeMode === true) {
       levelSelect = document.createElement('select'); levelSelect.id = 'episode-level';
+      levelSelect.style.padding = '12px'; levelSelect.style.font = 'inherit';
       levelSelect.setAttribute('aria-label', 'Starting level');
       for (let map = 1; map <= 9; ++map) {
         const option = document.createElement('option'); option.value = String(map); option.textContent = `E1M${map}`;
@@ -150,7 +155,10 @@ try {
     startButton.addEventListener('click', () => startGame().catch(fail));
     stopButton.addEventListener('click', () => loop.stop());
     if (newButton) {
-      const refresh = async () => { proof.episode = await transactions.episodeStatus(); updateControls(); };
+      const refresh = refreshEpisode = async (sequence = transactions.sequence) => {
+        const current = await transactions.episodeStatus();
+        if (sequence === transactions.sequence) { proof.episode = current; updateControls(); }
+      };
       episodeControl = async (action, { run = false, map = Number(levelSelect.value) } = {}) => {
         loop.stop();
         while (transactions.pending) await new Promise(done => setTimeout(done, 20));
@@ -168,7 +176,7 @@ try {
       };
       newButton.addEventListener('click', () => episodeControl('new', { run: true }).catch(fail));
       restartButton.addEventListener('click', () => episodeControl('restart', { run: true }).catch(fail));
-      pauseButton.addEventListener('click', () => episodeControl('pause', { run: !proof.episode?.paused ? false : true }).catch(fail));
+      pauseButton.addEventListener('click', () => episodeControl('pause', { run: true }).catch(fail));
       if (transactions.started) await refresh();
     }
   } else {

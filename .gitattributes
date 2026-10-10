@@ -1,1 +1,4 @@
 *.bin binary
+artifacts/phase4/episode-completion/*.pixels binary
+artifacts/phase4/episode-completion/*.log whitespace=-blank-at-eol,-blank-at-eof
+test/fixtures/phase4_finale/COPYING.txt whitespace=cr-at-eol

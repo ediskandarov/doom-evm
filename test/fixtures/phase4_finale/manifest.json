@@ -35,9 +35,10 @@
     "m_bbox.c": "98f3aea4f43d4d75fe452a25a65678fbd8368cfef3928b869767996e2165f42c"
   },
   "harnessHashes": {
-    "finale.py": "e234508529b00e7d622b329e7047fb9c4e234c4ce30f14d3cfedc437c0f8bb5d",
+    "finale.py": "45d696e809d8389adddcda6d190b48660fe9230eb784d6e06bbc6c0669d9ff08",
     "compat.h": "4675b53fbcaf30a2f9342c5968de0154c77247f07dc147b8a0388a8cf76c1bae"
   },
+  "compiler": "Apple clang version 17.0.0 (clang-1700.0.13.5)",
   "profiles": {
     "O0": "c7ff1560a4428a4937c7f37a6df0c0341de2c59aec6890f1faf867e4b1955550",
     "O2": "c7ff1560a4428a4937c7f37a6df0c0341de2c59aec6890f1faf867e4b1955550",
@@ -46,6 +47,9 @@
   "exactNativeAgreement": true,
   "records": 27,
   "files": {
+    "resources.bin": "529c7cc0ef413dc2e3bd3fd106831103b8b5a705026ce1cc48e5a5f013455c1f",
+    "directory.bin": "10987752e5846a26aea4f88c31816750dccd5b3657c6fc3615001a48a07a3d99",
+    "COPYING.txt": "7c62f2c520769c798774f416637eec4921e5f0aafdac1245ae7c8a8cf65fe102",
     "0.bin": "a41244996f7f6e51213486425ccb7cc24a4fbfde9d8023a8edb16547cc05b187",
     "1.bin": "6a7aeda0b2e1d3aeeadc49199882f18516b09e87fe936b177d4bc1d3be0519f9",
     "2.bin": "3a5571b3427b671197ffbb6afe8eadd7b9a12886b4fcaa4955fc914427b68153",
