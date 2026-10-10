@@ -3,7 +3,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { KeyboardInput, bindKeyboard } from './input.mjs';
 import { FrameInbox, FRAME_TOPIC } from './protocol.mjs';
-import { InputTransactions, GameplayLoop, LAST_INPUT_SELECTOR, GAME_STARTED_SELECTOR, INITIALIZE_GAME_SELECTOR, GAME_RESOURCES_PREPARED_SELECTOR, PREPARE_GAME_RESOURCES_SELECTOR } from './input-loop.mjs';
+import { InputTransactions, GameplayLoop, LAST_INPUT_SELECTOR, GAME_STARTED_SELECTOR, INITIALIZE_GAME_SELECTOR, INITIALIZE_GAME_UI_SELECTOR, GAME_RESOURCES_PREPARED_SELECTOR, PREPARE_GAME_RESOURCES_SELECTOR } from './input-loop.mjs';
 
 const word = n => BigInt(n).toString(16).padStart(64, '0');
 const deferred = () => { let resolve, reject; const promise = new Promise((a, b) => { resolve = a; reject = b; }); return { promise, resolve, reject }; };
@@ -13,7 +13,7 @@ function frameLog(sequence, hash) {
     data: '0x' + word(2) + word(1) + word(96) + word(2) + '0102' + '0'.repeat(60),
     transactionHash: hash, logIndex: '0x0', blockNumber: '0x1' };
 }
-function fixture({ gameplay = true, started = true, sequence = 0, nativeZone = false, stagedInitialization = false, gasLimit = 90000000000, prepared = started } = {}) {
+function fixture({ gameplay = true, started = true, sequence = 0, nativeZone = false, stagedInitialization = false, productionUI = false, uiFullscreen = false, gasLimit = 90000000000, prepared = started } = {}) {
   const chain = { started, sequence, prepared }, calls = [], pending = new Map(), delivered = [];
   const inbox = new FrameInbox((frame, source) => delivered.push({ frame, source }));
   const env = { chain, calls, pending, delivered, inbox, sendError: null, receiptError: null, status: '0x1',
@@ -36,7 +36,7 @@ function fixture({ gameplay = true, started = true, sequence = 0, nativeZone = f
     let logs = [];
     if (env.status === '0x1') {
       if (tx.data === PREPARE_GAME_RESOURCES_SELECTOR) { if (env.prepareEffect) chain.prepared = true; }
-      else if (tx.data === INITIALIZE_GAME_SELECTOR) { if (env.initializeEffect) chain.started = true; }
+      else if (tx.data === INITIALIZE_GAME_SELECTOR || tx.data.startsWith(INITIALIZE_GAME_UI_SELECTOR)) { if (env.initializeEffect) chain.started = true; }
       else {
         chain.sequence = Number(BigInt('0x' + tx.data.slice(74)));
         const log = frameLog(chain.sequence + (env.badSequence ? 1 : 0), hash);
@@ -55,7 +55,7 @@ function fixture({ gameplay = true, started = true, sequence = 0, nativeZone = f
     if (env.wait) await env.wait.promise;
     return env.mine(hash);
   };
-  const client = new InputTransactions(rpc, { address: '0x1234', driver: '0xabcd', gameplay, nativeZone, stagedInitialization, gasLimit }, inbox, { waitReceipt });
+  const client = new InputTransactions(rpc, { address: '0x1234', driver: '0xabcd', gameplay, nativeZone, stagedInitialization, productionUI, uiFullscreen, gasLimit }, inbox, { waitReceipt });
   return { ...env, client, env };
 }
 function scheduler() {
@@ -74,6 +74,21 @@ function loopFixture(f) {
   return { clock, keyboard, loop, errors };
 }
 const submitted = f => f.calls.filter(call => call.method === 'eth_sendTransaction').map(call => call.params[0]);
+
+test('UI profile starts original UI explicitly with selected view and keeps sequence/Frame ABI', async () => {
+  for (const uiFullscreen of [false, true]) {
+    const f = fixture({ started: false, sequence: 7, productionUI: true, uiFullscreen });
+    await f.client.load();
+    await assert.rejects(f.client.nextFrame(), /Start UI gameplay/);
+    assert.equal(submitted(f).length, 0);
+    await f.client.startGame();
+    assert.equal(submitted(f)[0].data, INITIALIZE_GAME_UI_SELECTOR + word(uiFullscreen ? 1 : 0));
+    assert.equal(f.client.sequence, 7); assert(f.chain.started);
+    await f.client.nextFrame(257);
+    assert.equal(f.client.sequence, 8); assert.equal(f.delivered[0].frame.inputSeq, 8);
+    await f.client.startGame(); assert.equal(submitted(f).length, 2);
+  }
+});
 
 test('legacy deployment reads only its counter and keeps static zero-button ABI', async () => {
   const f = fixture({ gameplay: false, started: false, sequence: 7 }); await f.client.load();
