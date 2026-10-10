@@ -17,7 +17,11 @@ def decode(report):
     ledger = payload[at+32:at+32+word(payload, at//32)]
     assert len(ledger) == word(payload, at//32)
     zone = ledger[word(ledger, 0):]
-    at = word(zone, 5)
+    # Preserved pre-experiment ZoneState has blocks at word5. The experimental
+    # layout adds a boolean there and moves the two array offsets to words6/7.
+    # Distinguish canonical bool encoding from a dynamic ABI offset; retain old evidence.
+    experimental_layout = word(zone, 5) in (0, 1)
+    at = word(zone, 6 if experimental_layout else 5)
     capacity = word(zone, at//32)
     blocks = zone[at+32:]
     fields = 'offset size prev next owner id tag allocated idKnown payloadExtent'.split()
@@ -39,6 +43,7 @@ def decode(report):
     result.update(selector=data[:4].hex(), requestedLength=1, physicalOffset=physical,
                   sampleBlock=sample, zoneBlockCount=count, zoneArrayLength=capacity,
                   deterministicInitialization=bool(word(zone, 3)), canonicalPointerHighBytes=bool(word(zone, 4)),
+                  experimentalVirtualPointers=bool(word(zone, 5)) if experimental_layout else False,
                   ledgerSha256=hashlib.sha256(ledger).hexdigest(), errorDataSha256=hashlib.sha256(data).hexdigest())
     return result
 

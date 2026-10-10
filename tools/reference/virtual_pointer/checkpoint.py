@@ -29,7 +29,7 @@ def main():
         files += list((LOCAL/directory).glob('evm.*-receipts.json.gz'))
     files += [LOCAL/'full-rate/frame-manifest.json',LOCAL/'full-rate/video-verification.json',
               LOCAL/'legacy-sampled/video-verification.json',LOCAL/'virtual-profile-manifest.json',
-              LOCAL/'verification.json',LOCAL/'native-frames/native-frames.json',
+              LOCAL/'verification.json',LOCAL/'decoder-check.json',LOCAL/'native-frames/native-frames.json',
               LOCAL/'native-sample/sample.json',LOCAL/'native-pointer/reference.json',
               LOCAL/'observer/manifest.json',LOCAL/'observer/src/doom/r_draw.sol',
               LOCAL/'out/SpeedrunVideoProbe.sol/SpeedrunVideoProbe.json',

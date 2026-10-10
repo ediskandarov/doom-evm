@@ -104,6 +104,8 @@ def main():
         assert n['sourceBlock']['offset']==12785384 and n['sampleBlock']['offset']==s['headerOffset']
     pointer=load(OUT/'native-pointer/reference.json')
     assert pointer['pass_'] and len(pointer['runs'])==12
+    decoder=load(OUT/'decoder-check.json')
+    assert all(decoder[k] for k in ['pass_','oldABI','newABIFalse','newABITrue'])
     rejected=[rejection('baseline-'+p,True) for p in ['strict','legacy','episode']]
     rejected += [rejection('disabled-'+p) for p in ['strict','legacy','episode']]
     tests={}
@@ -115,6 +117,7 @@ def main():
         fullRateFrames=279,originalSampledHashes=56,originalCNormalFrameMatches=279,
         commonNativeExactFrames=278,virtualProfileSamples=samples,remainingRejectedSamples=0,
         nativeProfileDivergence=native['divergences'],rejections=rejected,tests=tests,
+        diagnosticABI=decoder,
         fidelity='One recorded provenance4 sample remains a deterministic extension despite matching '
                  'normal O0/O2 native pixels. Sanitized native tic52 differs. No universal native equivalence.',
         deployment=full['deployment'],sourceHashes=full['sourceHashes'],
