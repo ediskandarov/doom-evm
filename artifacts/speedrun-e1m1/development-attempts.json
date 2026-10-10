@@ -1,0 +1,18 @@
+[
+  {
+    "attempt": "evm",
+    "pass": false,
+    "executedTics": 0,
+    "error": "Error: connect EPERM 127.0.0.1:18620 - Local (0.0.0.0:0)",
+    "ownedRuntimeStopped": true,
+    "sourceResultSha256": "5712e16fc28487371452bc1495868858447bd2db9bef588fc4d8e5676e716c08"
+  },
+  {
+    "attempt": "evm-run1",
+    "pass": false,
+    "executedTics": 0,
+    "error": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n+ actual - expected\n\n+ '0x60c080604052600436101562000013575f80fd5b5f90",
+    "ownedRuntimeStopped": true,
+    "sourceResultSha256": "f73a8cdb85a7fcf2a33372ae88aeb034fd66239b9610a04aa79be64875240776"
+  }
+]

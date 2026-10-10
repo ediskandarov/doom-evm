@@ -36,3 +36,72 @@ Original `G_InitNew` and `G_DoLoadLevel` select skill0 (`-skill 1`), retail E1M1
 **Native result:** genuine normal exit at line407, tic279, `leveltime=279`, `gameaction=6`, `secretexit=0`. All 280 complete DSG1 states (startup plus 279 tics), player summaries and diagnostics agree across O0, O2, ASan/UBSan, and ASan/UBSan with fresh allocation payloads filled `0xa5`. The remaining 91 commands are preserved in the complete tape and are beyond the level exit; progression/intermission is outside this experiment. Initial native O2 process time: 0.615221 seconds, including startup and observation IO, excluding compilation.
 
 Full state stream: 28,562,808 bytes; SHA-256 `82ea9cd129ba41274de70fe4b2e829d9e5c47ac3f18c5b6f9456183a7d339010`. Evidence and input tapes are in [`artifacts/speedrun-e1m1`](../artifacts/speedrun-e1m1/).
+
+## EVM result and metrics
+
+**Passed actual EVM execution.** [`SpeedrunProbe`](../src/support/SpeedrunProbe.sol) is a new test-only host that calls existing authenticated `EpisodeStartup.initialize` for E1M1 skill0, then existing `DoomGame.tick` with the verbatim original four-byte commands. Original Solidity libraries own all gameplay and exit logic. Native states are used only for off-chain comparison. No production source, ABI, budgets, fixture or renderer changed.
+
+Fresh Anvil 1.8.5, Cancun, isolated port18620, ordinary CREATE: all 1,755 STOP-prefixed resource runtimes were read back exactly. The probe runtime was verified against compiled bytes with its immutable driver bound to the actual deployment sender. Solc0.8.37 `f401782d`, viaIR, optimizer200 and the existing 10B transaction budget were retained; focused compilation took 41.62 seconds. The runtime allows the existing local large-code and 1GiB-memory profile; this is not a public-chain deployment claim.
+
+All 280 receipt observations match complete native DSG1 states byte for byte. A final `snapshot()` read of persisted storage also matches. EVM `gameaction=6`, normal exit, `leveltime=279`, no cheats. **No native/EVM divergence was observed.** Final state SHA-256: `db14ca0dff152ef1a209131cba0235a9c94b55ae1aae6ed3f09211af597d3499`. The actual EVM and native full state streams have the same hash quoted above. The comparison covers the observer's full logical world: player/inventory/psprites, RNG, thinker order, actors/AI, sectors, lines, sides, block links, special thinkers and resource translations; it does not compare every raw zone/pointer byte or produce Frame proofs.
+
+| Measurement | Actual result |
+|---|---:|
+| Reported speedrun time | 7.970 seconds |
+| Replayed in-game time | 279/35 = 7.971428571 seconds |
+| Native initial O2 whole process | 0.615221 seconds |
+| Native final recheck O2 whole process | 0.554704 seconds |
+| EVM gameplay replay wall time | 11.948577 seconds |
+| EVM gameplay transaction RPC/receipt time sum | 11.926680 seconds |
+| Executed gameplay tics / transactions | 279 / 56 (five tics per batch; final batch four) |
+| Gameplay transaction gas | 21,203,677,822 |
+| Average gameplay gas per tic | 75,998,845.240 |
+| Authenticated EVM startup | 2,110,363,636 gas; 0.556434 seconds |
+| Resources plus probe deployment | 6,493,412,272 gas; 48.921564 seconds; 1,756 transactions |
+| Entire successful deployment/startup/replay | 29,807,453,730 gas; 1,813 transactions |
+
+Performance is separate from correctness. Native times include startup, full per-tic/zone observations and file IO; EVM replay excludes deployment/startup and includes RPC, mining, full world events, batching, storage and comparisons. These differently instrumented timings are not an engine speedup ratio or production transaction cost. No tic is rendered. Detailed per-transaction hashes/gas/times and compiler/source/ABI/resource identities are in [`evm-result.json`](../artifacts/speedrun-e1m1/evm-result.json); full mined receipts are preserved separately.
+
+Selected checkpoints below match in both engines. Coordinates are original signed 16.16 words; angles are unsigned 32-bit values.
+
+| Tic | x | y | angle | Health | P_Random index | Thinkers |
+|---:|---:|---:|---:|---:|---:|---:|
+| 0 | -27262976 | 16777216 | 0 | 100 | 53 | 219 |
+| 35 | 6749498 | 17125327 | 570425344 | 100 | 58 | 220 |
+| 70 | 50882980 | 23324746 | 1442840576 | 102 | 76 | 218 |
+| 140 | 38823234 | 65752270 | 2164260864 | 102 | 129 | 216 |
+| 210 | 11195467 | 98582884 | 2952790016 | 98 | 236 | 216 |
+| 279 | -24087204 | 85082286 | 2231369728 | 98 | 143 | 215 |
+
+Final player: z=-8388608, health98, armor2/type1, shotgun selected, clip89/shell16/cell0/missile0, kills0/items5/secrets0, real exit switch used. Expanded final player state and initial settings are in [`native-result.json`](../artifacts/speedrun-e1m1/native-result.json).
+
+## Reproduction and evidence
+
+Run from this feature worktree with the pinned toolchain. The original demo is committed with its source/hash; the full IWAD remains an ignored local download. To acquire resources anew:
+
+```sh
+mkdir -p artifacts/local/speedrun-e1m1
+curl --connect-timeout 10 --max-time 30 -fsSL 'https://github.com/freedoom/freedoom/releases/download/v0.13.0/freedoom-0.13.0.zip' -o artifacts/local/speedrun-e1m1/freedoom-0.13.0.zip
+shasum -a 256 artifacts/local/speedrun-e1m1/freedoom-0.13.0.zip
+unzip -p artifacts/local/speedrun-e1m1/freedoom-0.13.0.zip freedoom-0.13.0/freedoom1.wad > artifacts/local/speedrun-e1m1/freedoom1.wad
+cp artifacts/speedrun-e1m1/e1m1-easy.lmp artifacts/local/speedrun-e1m1/source-download
+python3 tools/reference/speedrun/replay.py
+node tools/wad/pack.ts artifacts/local/speedrun-e1m1/freedoom1.wad artifacts/local/speedrun-e1m1/wad
+.toolchain/bin/forge build src/support/SpeedrunProbe.sol src/evm/ResourceStore.sol
+node tools/reference/speedrun/evm.mjs --port 18620 --batch 5
+python3 tools/reference/speedrun/verify_evidence.py
+```
+
+Expected archive SHA-256: `3f9b264f3e3ce503b4fb7f6bdcb1f419d93c7b546f4df3e874dd878db9688f59`. The native runner refuses a non-pinned WAD or different demo. Optional original reacquisition uses the exact `downloadUrl` in [`source.json`](../artifacts/speedrun-e1m1/source.json), then checks the original SHA-256. The EVM runner refuses an occupied port; choose another free isolated port using `--port` if needed. It starts/stops only its own Anvil and records its PID. The successful run started 2026-10-10 15:23:23.263 UTC and ended 15:24:24.786 UTC; port18620 was unoccupied after cleanup.
+
+`verify_evidence.py` independently decodes the original tape and DSDA checksum, reconstructs both exact state streams, validates all 280 mined receipt observations against native bytes, verifies receipt hashes/gas/counts and checks executed EVM sources. Committed delta streams use the existing `verify.py.delta_decode` format; raw original state streams and execution outputs remain under `artifacts/local/speedrun-e1m1`. This offline check examines preserved evidence; the preceding `evm.mjs` command performs fresh actual execution.
+
+Development attempts remain documented in [`development-attempts.json`](../artifacts/speedrun-e1m1/development-attempts.json): sandbox localhost EPERM before deployment, then a runtime-verifier mismatch at immutable address placeholders before any gameplay tic. Both were resolved and no engine expectation changed. Failed-run artifacts remain local. Adding native footer checksum/manifest metadata after the EVM run changed the inspector hash; the final four-profile native recheck confirms identical generated replay/exit observer sources, input tape and complete states. All EVM library/runner hashes still match the actual executed source; the offline verifier checks this distinction explicitly.
+
+## Handoff and limits
+
+This is independent experiment acceptance, not Phase4 release/integration acceptance. Production `Doom.initializeGame` still chooses medium skill and its input APIs build keyboard commands; mouse/joystick are outside that input profile. Supporting this tape in production would require selecting skill before spawn and a reviewed exact ticcmd/demo input endpoint (or appropriate original mouse-command support). Neither change is implemented here. Rendering, UI, intermission and episode progression were not exercised or modified. Recording-time IWAD bytes and all-state equivalence to DSDA remain unverified; the specified tape's successful pinned-original-C and matching EVM replay are proven.
+
+Checkpoints: `99ba341` scope/source; `38efd8c` original tape/native exit. The final EVM checkpoint on `feat/phase4-speedrun-e1m1` contains the isolated adapter, runners and receipt/state evidence. Use `git rev-parse HEAD` for its exact SHA. No integration dependency or production change is required for this experiment; no main changes, merges or pushes occurred. The pre-existing untracked `.toolchain` symlink remains; all other deliverables are committed. Stop after E1M1.
+
+Measured verification end: 2026-10-10 15:30:34 UTC, following the recorded 14:56:09 UTC start. Goal-service attribution at that checkpoint: 176,692 tokens and 2,065 elapsed seconds; no per-stage usage or monetary attribution is available. [`evidence-manifest.json`](../artifacts/speedrun-e1m1/evidence-manifest.json) binds the saved evidence by file size and SHA-256. Focused build, four-profile native replay/recheck, actual EVM receipts/storage comparison, offline receipt verification, Python/Node syntax, Solidity formatting, report links and whitespace checks passed. No full inherited acceptance run was performed.

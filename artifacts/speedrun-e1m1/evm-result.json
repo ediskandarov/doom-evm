@@ -1,0 +1,636 @@
+{
+  "kind": "real-freedoom-e1m1-shorttic-ordinary-evm",
+  "pass": true,
+  "startedUTC": "2026-10-10T15:23:23.263Z",
+  "sourceHashes": {
+    "src/doom/am_map_types.sol": "7347073682c367c15c918aa51ff924c664b6d05efdbf4f0392d4f404b31a9039",
+    "src/doom/d_ticcmd.sol": "508d0332d3e8b83e1b68d37581a3befc100a9974fcaa0900cc44116cd75ff2ef",
+    "src/doom/g_game.sol": "ea632f47ca5904819dd0dc254fc547799b56696e08e37d96a503d71da145f89c",
+    "src/doom/info.sol": "4611205149173e42d3b0f1d91820c8042f6bc5fc48fb53aec84ad4bc501dca8e",
+    "src/doom/m_bbox.sol": "f4c60efe3627a97d0288fc5cd0283535527b1f51029568534c80bb8fbbf8f272",
+    "src/doom/m_fixed.sol": "3f64bef1f62f61faead3a5b8f382bf1c66e1b3739ce4ac8d59a6fcef0451ef9f",
+    "src/doom/m_random.sol": "5267b881138cfb7e0d683449005619513006c70e3ed557f64697b36c4ed40c7b",
+    "src/doom/native_zone_layout.sol": "118b2d17165826fb0857d9cb296e2214db2a28917769299a82e70d0c0790f6e8",
+    "src/doom/p_ceilng.sol": "696f3f620f5bddb3cea64fda824e3203c780f53db890630f0685794454dc37f9",
+    "src/doom/p_doors.sol": "945bf600ce86d8286718fb75ecaf905a0c4631d79d2dac7260c91c9dc2013f8d",
+    "src/doom/p_enemy.sol": "eff76cce23b0877833a5c446a1a09d8ae01918a6925b6d3265240b144c09dfe7",
+    "src/doom/p_floor.sol": "b7c90baafa0b74fd7ff80cf60dcbc430148f6d6d068ba54ca0fbc7ba1bca7069",
+    "src/doom/p_game_state.sol": "0f9d60aae9424cad17c614d4fcc93c9eb6fe8a43c7bce070d2460fcf2c34f649",
+    "src/doom/p_heap.sol": "3cc2e0a8c3239523db66c07fea33720f931754baedd312b5ca7cc2ebe763d2e0",
+    "src/doom/p_info.sol": "a48840479115ea8bf849ca5ec448d1b2bec7a6cfe58c5314e140635a898de792",
+    "src/doom/p_inter.sol": "8be27f9bba47beb46b3edf2a8a2674b3cd7218d2abb8ef5f8855803393d067de",
+    "src/doom/p_lights.sol": "6f63cbc6b41fc492a46ce43aef464deb9d08b7fa1dd8b213b546eec3e4f08276",
+    "src/doom/p_map.sol": "6b6d48523a45acab9090dfb0ec3d6dbab4e6de18afa89453df8b5a87088da0f3",
+    "src/doom/p_maputl.sol": "ac5ac60e7e058a5fc537e7042c7254bc0f51c77165149a22e141437b4e0ad0b6",
+    "src/doom/p_mobj.sol": "78e9c05b327100bd34cafe086454e3a5499beb92af878ad4756baeca18445ffa",
+    "src/doom/p_plats.sol": "6904df762b270f840daa99b34d2a5c689dbb2fef3aed3d33c2ac1a3f3e4d5722",
+    "src/doom/p_pspr.sol": "cfa2db3438d689c38d9c957fc4aee598c58740f025d6efead2b5f9671eb0c863",
+    "src/doom/p_setup.sol": "9498e1298bf4e53ccedc484a50d4c7f9f85315f6cb700719d474b721e382243b",
+    "src/doom/p_setup_static.sol": "c8100a42bb0bac190c583bbb2c82168599009f88a766e4c05b9a9231a5f69792",
+    "src/doom/p_sight.sol": "7ed366237fc3fec069ffb6336e95e038004d1f379622cf67f55fb8c6b1a6488c",
+    "src/doom/p_spec.sol": "2363640e75c22c9d017db677dda7148ad221380f0a23639167e145e933fc72b7",
+    "src/doom/p_switch.sol": "5404d359793e05c6c24a7804c07632150009b46f38d03068412d7ac53260dfe2",
+    "src/doom/p_telept.sol": "745f0fa4ed6f0515c398bfd2469c59aac82316965b7bac25263aeb82555d61b8",
+    "src/doom/p_tick.sol": "1993dd0c94853dabc4db554dfa0ca04375cef0a22075400ba0e7b56b525022ab",
+    "src/doom/p_user.sol": "963a46850e1b17171f79dd65bff9b5006ce6f97a935ad2023d1d526a6ec35c37",
+    "src/doom/p_zone_setup.sol": "e0308bd1197fd84a01eb1ee208be73c711851d6b0bc30be1d07a7c61b18b223d",
+    "src/doom/r_bsp.sol": "0ae5df313515692d0b2b970d5d39d107e014629cff2305fb37c14371a9524040",
+    "src/doom/r_data.sol": "5b404d561f8bce538e8a8221b4f36d62c9b9826fc833307640d96fcbfdca2d0a",
+    "src/doom/r_data_types.sol": "0448302d68447c8a5a4c46df4016e8845863e42bf6eaca8bcab8ab0c9707fdf8",
+    "src/doom/r_defs.sol": "558d5a9bfd131e816bbe28986e2dad6144a08e5a16ccfed1b199d7558a1ea0e2",
+    "src/doom/r_draw.sol": "afe958ea0c2962b739bff58b98d8bccc25c48d3d0838cacd46142c242b5d6477",
+    "src/doom/r_main.sol": "df403bf04fdbbcfc68c4fd9c5e19b5201ca711498efc34db406a4010ad3b2af5",
+    "src/doom/r_plane.sol": "c7a5abcbca84dddcd2a3c8bb160a609605c5c1842e73704dff4860df3280e463",
+    "src/doom/r_render_hooks.sol": "f026ccb8fffb68d8fbcb0966103212f52884b86350fe3fb52a401d146f3fb312",
+    "src/doom/r_render_state.sol": "072bd2f73b98e1eb775fc8093e95a69c184f3fa50a89a5d64a7beccd59493398",
+    "src/doom/r_segs.sol": "9d4e4dea06739278aab3698fb422818de6dd7726359c8822d60a162e886621cb",
+    "src/doom/r_sprite_state.sol": "735b3de85cbf455e05d3cb8e992cf4e477960bd4192bbd367f5c66c803b96363",
+    "src/doom/r_state.sol": "80951a13733e3a08f4182937a37def33ffda21eaae4b43a2a1bdba2043adab6b",
+    "src/doom/r_things.sol": "86705ab6b1f79b7ef07798b881cc547502d9911c97b57dc516a744e17c1977f5",
+    "src/doom/tables.sol": "bf14202b419075f6d187653205a37e211d8267c7fc4c0bebf5a8c5713afddf38",
+    "src/doom/w_zone_cache.sol": "03c07404765de9620b3d1ff15727809cdad911c8a78d822019b63500fa5018c2",
+    "src/doom/z_zone.sol": "b4e75218021d65aaf3389cf78a68663feebc2084c82457821be17247dc8106c5",
+    "src/doom/z_zone_backing.sol": "1253ffab18a977b75a63d7387514eb360bf9b5e4eb3881eb0928c4b23096a398",
+    "src/doom/z_zone_types.sol": "8eaf75209f619565bfffd1b26ea0d5cc24e7e63da6ca16c58c183139a8e2ef4e",
+    "src/evm/DoomGame.sol": "d9451a915ab977bae137340e3e6626a270a4b84b8b6ea9449a8c4f0f578296df",
+    "src/evm/DoomRenderer.sol": "5639d82431350ea76c26d43457d26d0c3c0f410eaddf02db6adbcfb03a569ba0",
+    "src/evm/DoomScene.sol": "9ad7c8ccee4c9e05deb5608326baabacfa40f686b8d8445fb8aaa7352ab64569",
+    "src/evm/DoomZoneStartup.sol": "2d178494456a7ae3c730310f257ce2aa635d37d18c90cac039cf002cdb3f50dc",
+    "src/evm/EpisodeStartup.sol": "bb574f20cdc09e63385261f7e8e203a49a90a15b87903d70dfe43d396bc3255e",
+    "src/evm/ResourceTypes.sol": "159865364cfa57aae508cd94c49509cbccabd6aeeba55e92b9fcf816bdec4d6b",
+    "src/evm/WadResources.sol": "25a1acc0a44ac35cc29e5f9bd953ba66b85db4f665b732430571b416ef927895",
+    "src/support/EpisodeStartupSnapshot.sol": "3f2a274619a786200fe209111e0ca6f2f5cb97537f584dd77a4f3d23e4d3635e",
+    "src/support/SpeedrunProbe.sol": "78ffc38384627b2b15611ff1003da24fe206c606be81631b5bb1ed20f6f49b83",
+    "foundry.toml": "afe04c66f0e684b5a936821f6543605a3739f62164ceb4398426db7403452393",
+    "execution-budget.json": "acde01f1b9cf248f9265f1ffcff7181d01d77620a2dfcd9a4d4d0b1c79df2be7",
+    "tools/reference/speedrun/evm.mjs": "733853193b8ce6c00de821bbe82a78cbab514caf2999ee3ddecfd792a4cce533",
+    "tools/reference/speedrun/dsg1.mjs": "3b9a1858116f1eee7663b0eeb9773abc8aaf8261ee929c4ece585c35e9329836",
+    "tools/reference/speedrun/replay.py": "3e8eefa4a3c291c7d90f6aeee0222268469c285b9fb40df1f0a48e77de16ff67"
+  },
+  "demoSha256": "111aec6cabcd2718f0e4fab662980bb68c1831bfc1db12a438fe7e8af2fb5782",
+  "originalCommandBytesSha256": "a3e456a2354c0bb8a0aaab6ddf73036eda858414f8d444b00a3754f1786e5704",
+  "nativeStatesSha256": "82ea9cd129ba41274de70fe4b2e829d9e5c47ac3f18c5b6f9456183a7d339010",
+  "resourceIdentity": {
+    "schemaVersion": 0,
+    "wadSha256": "7323bcc168c5a45ff10749b339960e98314740a734c30d4b9f3337001f9e703d",
+    "bundleSha256": "d379076f21645cf7cc5acb056663d0faacc4065489a0ca99738479323c9f7a47",
+    "paletteSha256": "fd895921b5d0a394612bb29852ed003d44d69f76dec31c0dc6b5d5fc7d63f7bb",
+    "paletteVariant": 0
+  },
+  "port": 18620,
+  "batch": 5,
+  "executionBudget": {
+    "gasLimit": 10000000000,
+    "gasHex": "0x2540be400",
+    "source": "/Users/eduard/sandbox/doom-evm-speedrun/execution-budget.json"
+  },
+  "compiler": {
+    "version": "0.8.37+commit.f401782d",
+    "settings": {
+      "remappings": [],
+      "optimizer": {
+        "enabled": true,
+        "runs": 200
+      },
+      "metadata": {
+        "bytecodeHash": "ipfs"
+      },
+      "compilationTarget": {
+        "src/support/SpeedrunProbe.sol": "SpeedrunProbe"
+      },
+      "evmVersion": "cancun",
+      "libraries": {},
+      "viaIR": true
+    }
+  },
+  "abiSha256": "b7be2c492d6db30039453e664e38da4fd8a8acb5484e276ffee00bf27dafb728",
+  "executedTics": 279,
+  "verifiedTics": 279,
+  "replayTransactions": [
+    {
+      "firstTic": 1,
+      "tics": 5,
+      "hash": "0x443e4428b14961c1e2d2a534de8a040b64b7c9635b15e4713521eabda2b4d02d",
+      "status": "0x1",
+      "gas": 376649909,
+      "elapsedMs": 214.43170799999643
+    },
+    {
+      "firstTic": 6,
+      "tics": 5,
+      "hash": "0x53a01ed6b097ff6b338746a52d4919913a9a1c45e401cc5e8b70b4476e6f0de2",
+      "status": "0x1",
+      "gas": 376091422,
+      "elapsedMs": 215.0905000000057
+    },
+    {
+      "firstTic": 11,
+      "tics": 5,
+      "hash": "0xb05b3f2ffa00267f5fd52728b2c58d42de1171898139fc777f128bd2614e4bb3",
+      "status": "0x1",
+      "gas": 376461902,
+      "elapsedMs": 213.6719160000066
+    },
+    {
+      "firstTic": 16,
+      "tics": 5,
+      "hash": "0xc5da2f62e874e68d3578bb8fcaa5674bd10a9f5da9a31a9666e2c89a4bc446a3",
+      "status": "0x1",
+      "gas": 376348751,
+      "elapsedMs": 212.87862500000483
+    },
+    {
+      "firstTic": 21,
+      "tics": 5,
+      "hash": "0xd4cbaad604670d7440b77b27ee9f1e48761d3d8e4635f2da41ba5e9dd2b3c515",
+      "status": "0x1",
+      "gas": 376702902,
+      "elapsedMs": 213.3458329999994
+    },
+    {
+      "firstTic": 26,
+      "tics": 5,
+      "hash": "0x574e95d1e5f58dc446f1ecfe0b100913eb32546a13ec15759aeec1b78b6776fa",
+      "status": "0x1",
+      "gas": 376327723,
+      "elapsedMs": 213.52666699999827
+    },
+    {
+      "firstTic": 31,
+      "tics": 5,
+      "hash": "0xcf94b5e99b71b63f13eed284fcf569dbc283ffb5303ad1b86e9a265d8bda36c2",
+      "status": "0x1",
+      "gas": 378658913,
+      "elapsedMs": 212.93070799999987
+    },
+    {
+      "firstTic": 36,
+      "tics": 5,
+      "hash": "0xf0155fc801114dbd18bef9d346996e7ca2aec86778b9007b0c1e6025fa5b0e52",
+      "status": "0x1",
+      "gas": 380522780,
+      "elapsedMs": 214.8159169999999
+    },
+    {
+      "firstTic": 41,
+      "tics": 5,
+      "hash": "0x1641aa90998a9c358485cbcdb2864c3894340fb902a521a0b797773b47ca4f5f",
+      "status": "0x1",
+      "gas": 379112016,
+      "elapsedMs": 213.71729100000084
+    },
+    {
+      "firstTic": 46,
+      "tics": 5,
+      "hash": "0xae3354c847e2a21dbd263c86f6e662e3d794e5152ce96f6af9a975ad1906604f",
+      "status": "0x1",
+      "gas": 378500626,
+      "elapsedMs": 212.62883400000283
+    },
+    {
+      "firstTic": 51,
+      "tics": 5,
+      "hash": "0xd5817965af63360e0984f7f987219881ba21d90e0b3240a4b219fa3dbb5fdb6e",
+      "status": "0x1",
+      "gas": 380030094,
+      "elapsedMs": 212.4406250000029
+    },
+    {
+      "firstTic": 56,
+      "tics": 5,
+      "hash": "0xce8a0f5a4ed98125f680920332ea9bba13ec81a7de558b4121daa3817a41bd57",
+      "status": "0x1",
+      "gas": 378119523,
+      "elapsedMs": 214.01804200000333
+    },
+    {
+      "firstTic": 61,
+      "tics": 5,
+      "hash": "0xc100f169db54eaa6aaa6c1a74ba8ecad71d575d9dd637abe2239a8acb4039923",
+      "status": "0x1",
+      "gas": 378707951,
+      "elapsedMs": 213.62570899999992
+    },
+    {
+      "firstTic": 66,
+      "tics": 5,
+      "hash": "0x753143589701045ac14aec24710e4175e632e4c1bf1c9f1f2ec691c744be71dc",
+      "status": "0x1",
+      "gas": 377998010,
+      "elapsedMs": 212.03949999999895
+    },
+    {
+      "firstTic": 71,
+      "tics": 5,
+      "hash": "0x866020cf565f2445ba7fe466f1fa9904f8c9c662761bb762f57c94cef3edf6cf",
+      "status": "0x1",
+      "gas": 377564146,
+      "elapsedMs": 211.78775000000314
+    },
+    {
+      "firstTic": 76,
+      "tics": 5,
+      "hash": "0xae078f5effd784b4a0af78d0a1a92bf94ace74843064cada3e1c1b041e2c1c00",
+      "status": "0x1",
+      "gas": 380598738,
+      "elapsedMs": 214.5968339999963
+    },
+    {
+      "firstTic": 81,
+      "tics": 5,
+      "hash": "0xd1eedaf652a23d25593b3d8ecdbbcd966befb35f35cededa256662601397dd3a",
+      "status": "0x1",
+      "gas": 377843579,
+      "elapsedMs": 213.8984580000033
+    },
+    {
+      "firstTic": 86,
+      "tics": 5,
+      "hash": "0xd923d4b7eb1915a3d96b2e149954f75e0a02c1f9fd2fedbc779e63c5ff8c7d4c",
+      "status": "0x1",
+      "gas": 378666620,
+      "elapsedMs": 214.47249999999622
+    },
+    {
+      "firstTic": 91,
+      "tics": 5,
+      "hash": "0xbd172f8aae373e1dd7968038aa58ec0204015af886949880049483b1f7d2c4a4",
+      "status": "0x1",
+      "gas": 378049953,
+      "elapsedMs": 212.97666599999502
+    },
+    {
+      "firstTic": 96,
+      "tics": 5,
+      "hash": "0xd58937bf3786597fc016072ccd4d1f3c3a383522da9557437b6b715a775e7b12",
+      "status": "0x1",
+      "gas": 377917366,
+      "elapsedMs": 214.12791599999764
+    },
+    {
+      "firstTic": 101,
+      "tics": 5,
+      "hash": "0xf75d3b0653b9fa3c29a9fe663bf666f4f6b02d50d2eca52dae19b4dcc544c6ed",
+      "status": "0x1",
+      "gas": 378280718,
+      "elapsedMs": 214.20116599999892
+    },
+    {
+      "firstTic": 106,
+      "tics": 5,
+      "hash": "0x8a51845e74d67b9d3af3e1665d74cda21d4f9b780d990cd18e900dcb8434825a",
+      "status": "0x1",
+      "gas": 378152959,
+      "elapsedMs": 215.89670800000022
+    },
+    {
+      "firstTic": 111,
+      "tics": 5,
+      "hash": "0x7f1b5179c32789ea20dc2a5561112e00af704b95e21edeb7941ada5b18e3c8be",
+      "status": "0x1",
+      "gas": 379394664,
+      "elapsedMs": 214.46179100000154
+    },
+    {
+      "firstTic": 116,
+      "tics": 5,
+      "hash": "0xb6ad9682fc7090eb02d3fe08b6e58426d38bfc4b6e02f7ea359cb33fb2d39ecb",
+      "status": "0x1",
+      "gas": 378311073,
+      "elapsedMs": 213.30520799999795
+    },
+    {
+      "firstTic": 121,
+      "tics": 5,
+      "hash": "0xd150a6cad0d89f506ffa58557d46304c26b0d9dbb6e894e46d71f2d99bf1cf2d",
+      "status": "0x1",
+      "gas": 379384505,
+      "elapsedMs": 210.74387500000012
+    },
+    {
+      "firstTic": 126,
+      "tics": 5,
+      "hash": "0xe98a8344c67edce53807fb4955c06aaa1bd07f621ddccaed9aeb0ba4bd91910b",
+      "status": "0x1",
+      "gas": 379109496,
+      "elapsedMs": 214.34054200000537
+    },
+    {
+      "firstTic": 131,
+      "tics": 5,
+      "hash": "0x73b9e7f8910da4f2dddf3fca4436d78749db8c2a6864a8bbf8c246a54f54d715",
+      "status": "0x1",
+      "gas": 380303824,
+      "elapsedMs": 214.1770830000023
+    },
+    {
+      "firstTic": 136,
+      "tics": 5,
+      "hash": "0x103bcfc64df4a8a736a7f1ded6d58af15e6fb87f55a4e0703b0934961a0fcdba",
+      "status": "0x1",
+      "gas": 379749043,
+      "elapsedMs": 212.42766700000357
+    },
+    {
+      "firstTic": 141,
+      "tics": 5,
+      "hash": "0xb2070e15b86403a2a279044a7c73e8727454477e9c94443a4bf1b7cf36ad036b",
+      "status": "0x1",
+      "gas": 379633756,
+      "elapsedMs": 212.66274999999587
+    },
+    {
+      "firstTic": 146,
+      "tics": 5,
+      "hash": "0x5e649ac7ebed5c4405b95f58e5180a441b3ec0f5337f561a4b90b170e673fd6a",
+      "status": "0x1",
+      "gas": 378792459,
+      "elapsedMs": 213.15608300000167
+    },
+    {
+      "firstTic": 151,
+      "tics": 5,
+      "hash": "0x1ecf47cb0673b2bcf4e37636755e17ca7b7a24cd2f61e758d3043d31d198af53",
+      "status": "0x1",
+      "gas": 379187832,
+      "elapsedMs": 212.94995799999742
+    },
+    {
+      "firstTic": 156,
+      "tics": 5,
+      "hash": "0xb3c010ac2d4cf184d048bd2c66ba18b31ce514e57322a0b48c9ebd07b67737e6",
+      "status": "0x1",
+      "gas": 379683512,
+      "elapsedMs": 214.9492919999975
+    },
+    {
+      "firstTic": 161,
+      "tics": 5,
+      "hash": "0x44a5337b019d3d856d1fc4cb0dcddb13dbf674f8d45b5e979352a6d395f20f12",
+      "status": "0x1",
+      "gas": 379064669,
+      "elapsedMs": 214.16804099999717
+    },
+    {
+      "firstTic": 166,
+      "tics": 5,
+      "hash": "0x9e647ba03a8beebe17e89498b2d8ae1ea426e6948be18dc5a66a3a9337e4f063",
+      "status": "0x1",
+      "gas": 380385651,
+      "elapsedMs": 215.1124159999963
+    },
+    {
+      "firstTic": 171,
+      "tics": 5,
+      "hash": "0xb2098cce3e81568c918ff5286c96e391a025cf224f33986df52316211e750ec4",
+      "status": "0x1",
+      "gas": 378724275,
+      "elapsedMs": 214.53341600000567
+    },
+    {
+      "firstTic": 176,
+      "tics": 5,
+      "hash": "0x30d7d89b93ae9e07af7a2162ed4b00e29a3f08b8d7f5df1e4e3fc1f76346efa0",
+      "status": "0x1",
+      "gas": 380337576,
+      "elapsedMs": 212.68579200000386
+    },
+    {
+      "firstTic": 181,
+      "tics": 5,
+      "hash": "0xe578fa5da918e5c6e006d97dd3a9ab43b2fd1c359c07af1674d2dd1496894010",
+      "status": "0x1",
+      "gas": 378436044,
+      "elapsedMs": 213.200874999995
+    },
+    {
+      "firstTic": 186,
+      "tics": 5,
+      "hash": "0xf96b5f6e60e6ca098ec9db649734f12ffa9a112e24270b75ef8dde48ae995e32",
+      "status": "0x1",
+      "gas": 379635877,
+      "elapsedMs": 212.2141249999986
+    },
+    {
+      "firstTic": 191,
+      "tics": 5,
+      "hash": "0xa61cf6ab4ed43e52350b35df86ba953944fddb92aca6fa168216d8992ac72eeb",
+      "status": "0x1",
+      "gas": 379408706,
+      "elapsedMs": 214.07508299999608
+    },
+    {
+      "firstTic": 196,
+      "tics": 5,
+      "hash": "0x0b01d5e7b79af7de0f73d7e3d9573b95b6fb87845aaff8203f730d3f5c6dd072",
+      "status": "0x1",
+      "gas": 380066016,
+      "elapsedMs": 213.07666600000084
+    },
+    {
+      "firstTic": 201,
+      "tics": 5,
+      "hash": "0x5e9efe5e2f6ff7ddc321ec26db0223b286e891319c7c6f144938c826b04d7151",
+      "status": "0x1",
+      "gas": 380498058,
+      "elapsedMs": 213.2222910000055
+    },
+    {
+      "firstTic": 206,
+      "tics": 5,
+      "hash": "0xe2a181d0b42e70b6dad8cb248c025e59802e066797adec4369b6ba7463df188b",
+      "status": "0x1",
+      "gas": 379191614,
+      "elapsedMs": 212.3617499999964
+    },
+    {
+      "firstTic": 211,
+      "tics": 5,
+      "hash": "0x07092dad60f96c5d76d03fadf61ee48da1e937a10757e2785832205e7acf48eb",
+      "status": "0x1",
+      "gas": 378833066,
+      "elapsedMs": 214.64091599999665
+    },
+    {
+      "firstTic": 216,
+      "tics": 5,
+      "hash": "0xc834f7fb5970469c64b48803640f884fe0669fa84abbe327fb40d3683ebe7f2f",
+      "status": "0x1",
+      "gas": 379230602,
+      "elapsedMs": 212.74079199999687
+    },
+    {
+      "firstTic": 221,
+      "tics": 5,
+      "hash": "0x8a3623790d43d01872966d5cebcae4d65e75ec6188cb65d3835ff8e004b41e4d",
+      "status": "0x1",
+      "gas": 379571209,
+      "elapsedMs": 213.7854159999988
+    },
+    {
+      "firstTic": 226,
+      "tics": 5,
+      "hash": "0x0a6bc8af509f5f7210c9202c6ea496cb747440c89098438916d56f6df84df6ba",
+      "status": "0x1",
+      "gas": 378872540,
+      "elapsedMs": 210.54858299999614
+    },
+    {
+      "firstTic": 231,
+      "tics": 5,
+      "hash": "0xc43f34bf2bf13857022d0dd80f5564fa09017435372a999179e4ec7cd3509c99",
+      "status": "0x1",
+      "gas": 381246185,
+      "elapsedMs": 212.23354200000176
+    },
+    {
+      "firstTic": 236,
+      "tics": 5,
+      "hash": "0x48c00bf4ea3647ab40a5940a91d04c7276aba844c65854956dbf30f4109c1fe7",
+      "status": "0x1",
+      "gas": 379097667,
+      "elapsedMs": 213.85874999999942
+    },
+    {
+      "firstTic": 241,
+      "tics": 5,
+      "hash": "0xcd8011f3cc6f17aa3ef8ab2b3774c0c83e8dff91682c76c6afa5762cd4d6b259",
+      "status": "0x1",
+      "gas": 379947159,
+      "elapsedMs": 214.21974999999657
+    },
+    {
+      "firstTic": 246,
+      "tics": 5,
+      "hash": "0x52239a8f10f873876e681146c9ef9390104bbb9585e44ee86346d72c08714197",
+      "status": "0x1",
+      "gas": 378538292,
+      "elapsedMs": 212.8283750000046
+    },
+    {
+      "firstTic": 251,
+      "tics": 5,
+      "hash": "0x5859d71fc7a6cd1aef1e160c2b44b969648b8dac1a5ffe9759e7db15462db262",
+      "status": "0x1",
+      "gas": 378933252,
+      "elapsedMs": 212.8524999999936
+    },
+    {
+      "firstTic": 256,
+      "tics": 5,
+      "hash": "0xec98b6f1bd3ab8b1dc277c8f99dc3527c36b3ad1b63e8f72f633d492edd6155e",
+      "status": "0x1",
+      "gas": 380006922,
+      "elapsedMs": 212.42383300000074
+    },
+    {
+      "firstTic": 261,
+      "tics": 5,
+      "hash": "0x417d738c0fb08f2a8b7b9ac603af737c9e7673c833f91feab8e81094d9b08fc1",
+      "status": "0x1",
+      "gas": 379419559,
+      "elapsedMs": 213.8110419999939
+    },
+    {
+      "firstTic": 266,
+      "tics": 5,
+      "hash": "0x885b521037c21dc431acc981ff60bd6da0d8a2b64577f7f259c9a3c5a15c394c",
+      "status": "0x1",
+      "gas": 378021632,
+      "elapsedMs": 212.5212079999983
+    },
+    {
+      "firstTic": 271,
+      "tics": 5,
+      "hash": "0x1ec4646e0996a4c38839738b1dfa3360dfcf136ec9c15478ee384487737d9258",
+      "status": "0x1",
+      "gas": 378169930,
+      "elapsedMs": 214.08812500000204
+    },
+    {
+      "firstTic": 276,
+      "tics": 4,
+      "hash": "0xa74398f3f3655fa0042aedf0c761563abe0adcf4e8e3a4b727af3807c9b36a1d",
+      "status": "0x1",
+      "gas": 367184556,
+      "elapsedMs": 187.18262500000128
+    }
+  ],
+  "notes": [
+    "Test adapter, not production Doom.step performance or production API acceptance.",
+    "Exact original command bytes only; no native gameplay states supplied to EVM.",
+    "No rendering/UI/progression; stops at original GA_COMPLETED. Full DSG1 compared at every tic.",
+    "Gas includes observation events and storage; wall time includes local RPC/mining and comparison. Deployment/startup reported separately."
+  ],
+  "serverArgs": [
+    "--host",
+    "127.0.0.1",
+    "--port",
+    "18620",
+    "--hardfork",
+    "cancun",
+    "--disable-code-size-limit",
+    "--gas-limit",
+    "10000000000",
+    "--memory-limit",
+    "1073741824",
+    "--silent"
+  ],
+  "ownedAnvilPid": 70365,
+  "client": "anvil/v1.8.5",
+  "deployment": {
+    "address": "0x5ae1f4bb68f8eac39cfdbdfda2b7344ccbd80faf",
+    "transaction": "0x27b7b8c7a12cc1dbe73ed2dbcb537f7e20d1c61de997b45e7451af78a1c86a62",
+    "chunks": 1755,
+    "allResourceRuntimeBytesVerified": true,
+    "elapsedMs": 48921.564334,
+    "totalGas": 6493412272,
+    "probeGas": 221484256,
+    "runtimeSha256": "d76b0af2460e432e5c194d7adbbee21e3e1f50052259d033f30034025e4a7ad4",
+    "immutableReferences": {
+      "85216": [
+        {
+          "start": 10071,
+          "length": 32
+        },
+        {
+          "start": 42695,
+          "length": 32
+        },
+        {
+          "start": 85907,
+          "length": 32
+        }
+      ]
+    },
+    "immutableDriver": "0xf39fd6e51aad88f6f4ce6ab8827279cfffb92266"
+  },
+  "startup": {
+    "transaction": "0xd06b0a6d3f2be685fb8c709ebcbaa5ab913c7ee436195e5e2709c6aeb9a417c3",
+    "gas": 2110363636,
+    "elapsedMs": 556.4341249999998,
+    "nativeSha256": "f9756a3def3265222a355c1d2a9cc867da9d1ac6962433459bc563df10f03581",
+    "evmSha256": "f9756a3def3265222a355c1d2a9cc867da9d1ac6962433459bc563df10f03581",
+    "exact": true
+  },
+  "replayElapsedMs": 11948.576541999995,
+  "exit": {
+    "reached": true,
+    "gameaction": 6,
+    "secretexit": 0,
+    "leveltime": 279,
+    "inGameSeconds": 7.9714285714285715,
+    "nativeExitLine": 407,
+    "finalStoredDSG1Exact": true,
+    "finalStateSha256": "db14ca0dff152ef1a209131cba0235a9c94b55ae1aae6ed3f09211af597d3499"
+  },
+  "endedUTC": "2026-10-10T15:24:24.786Z",
+  "replayTransactionCount": 56,
+  "totalReplayGas": 21203677822,
+  "gasPerExecutedTic": 75998845.24014337,
+  "replayTransactionElapsedMs": 11926.68003399999,
+  "actualStateStreamSha256": "82ea9cd129ba41274de70fe4b2e829d9e5c47ac3f18c5b6f9456183a7d339010",
+  "deploymentReceiptsSha256": "cd0dceff90e37412fc8b69950c2a435a29b7376369906dcd5f882cd567556ead",
+  "replayReceiptsSha256": "3d1af82148821c876b45b092935c73cc97a02074a49b2c44c7505941ed084294",
+  "ownedRuntimeStopped": true
+}
