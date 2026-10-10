@@ -1,11 +1,13 @@
 # Phase 4 progress ledger
 
 Phase 3 is complete and remains accepted. Optional Phase 4 work follows
-[the extra plan](04-IMPLEMENTATION-PLAN-EXTRA.md). **Goals 4.0 and 4.1 are complete and verified.**
-The Goal 4.0 entries below are historical; their stop/read-only rules applied to that completed task.
-The current user authorizes video primitives on main while Astra independently audits a separate worktree.
-The pasted user instructions supersede the aborted memory-audit goal. Do not
-start 4.0a, gameplay/UI work, refactoring or an Astra benchmark.
+[the extra plan](04-IMPLEMENTATION-PLAN-EXTRA.md). **Goals 4.0 and 4.1 are complete and verified.
+The Goal 4.0a architectural review is complete, accepted and integrated.**
+The checkpoints below are historical; their authorization, ownership and stop
+boundaries describe the tasks at the time they were recorded. The later user
+request accepts the architectural review and authorizes documentation-only
+integration into main. Status Bar, HUD and Gameflow development continues in
+independent worktrees outside this integration's scope.
 
 ## Recovery checkpoint
 
@@ -242,3 +244,66 @@ native-oracle worker `/root/video_native`; precise runtime model identifier and
 per-agent token category totals are not exposed by the goal counter. The actual
 structured closure counter is recorded separately and must not be added to
 collector input/cached/output/reasoning totals. No session transcript was read.
+
+## Goal 4.0a — Architectural review checkpoint
+
+Goal start: 2026-10-10T07:51:36Z (structured goal createdAt 1791618696).
+Review: one Codex agent in this session; no subagents or model comparison.
+This checkpoint makes no independently verified model-variant attribution.
+
+Worktree: /Users/eduard/sandbox/doom-evm-memory-audit.
+Branch: audit/phase4-memory.
+Base: b16c2a49cf40f3952f4d8322b30ac261c9375d29, containing the BLUDA0 fix
+79b93e7413bdd2569b108993580e753fbd01252f and its verification ledger.
+
+The user redirected the initial correctness brief to **architectural evaluation**.
+Accepted correctness is assumed. Existing reports/evidence are trusted architectural
+inputs. Focused verification performed before the redirect is not used as an
+argument for architectural superiority; no tests were started after the redirect.
+
+| Deliverable | Implementation/documentation status | Review status |
+|---|---|---|
+| [Independent memory architecture review](PHASE4-MEMORY-AUDIT.md) | Complete; nine requested sections, alternatives and comparative matrices | Architectural judgment complete; no new engine acceptance or alternative benchmark claimed |
+| Recommendation | **B: keep the hybrid, simplify specific components** | Canonical ABI definitions and shared cache ownership operation recommended; full heap replacement not justified |
+| Engine / renderer / gameplay / existing tests / historical certificates | No audit changes | Existing acceptance remains unchanged by this task |
+| Further Phase 4 implementation | Not started by this audit | No implementation action authorized by this checkpoint |
+
+The current implementation is already a sparse hybrid, not a full native byte heap.
+Some allocation geometry and history must remain observable to preserve the chosen
+native-profile pixels. Logical-only resources or synthetic padding change that
+contract; a complete byte heap adds unnecessary integration cost for present needs.
+Separate active topology and compact write-history ranges remain a possible later
+representation choice, contingent on a concrete cost reason.
+
+Only the report and this ledger checkpoint are to be committed. Earlier ignored
+diagnostic scratch remains local to the isolated worktree and is not delivered.
+No cherry-pick, merge, rebase or push is part of this audit. Stop after the
+documentation commit and return the recommendation for human review.
+
+Report finalized: 2026-10-10T08:20:51Z.
+The documentation commit containing this checkpoint is the audit handoff; no
+engine implementation or further goal follows it. Goal-tool closure is recorded
+separately after the commit, not inferred from this timestamp.
+
+### Accepted audit documentation integration — 2026-10-10
+
+The user accepted the architectural review and authorized its documentation-only
+cherry-pick from audit/phase4-memory into main. Original audit commit:
+`28cf8e23bc5d257012b9143720480c85b01837bf`.
+Main integration baseline: `084764b9fed601666b5a9d82dcf84325ca6bbfbf`.
+
+The [accepted report](PHASE4-MEMORY-AUDIT.md) is preserved byte-for-byte from
+that audit commit, including recommendation **B: keep the hybrid, simplify
+specific components**. The ledger conflict is resolved by retaining all existing
+Goal 4.0 and Goal 4.1 checkpoint text and appending the original Goal 4.0a handoff.
+Its no-integration/no-push boundary applied to the completed audit; this later
+request authorizes only publication of the accepted documentation.
+
+Only this ledger and the audit report are included in the integration commit.
+Documentation validation covers the file scope, unchanged report, retained
+checkpoints, local Markdown targets and source line references. No Foundry,
+Solidity compilation, native verification or regression suite is run. No engine,
+test, fixture, verification infrastructure or historical acceptance certificate
+is changed. The Status Bar, HUD and Gameflow worktrees and branches are untouched.
+The commit containing this checkpoint records the integration; no development
+or refactoring follows from it.
