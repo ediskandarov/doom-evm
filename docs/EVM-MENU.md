@@ -81,6 +81,48 @@ uses original NewDef patches/positions and retains Nightmare confirmation.
 TITLEPIC is the initial D_PageDrawer background; during gameplay the original
 menu overlays the last EVM gameplay framebuffer.
 
+## Production checkpoint C
+
+The feature `Doom.initializeMenu(bool)` enables raw events/Episode Mode and the
+original base palette without loading or ticking a game. The first ordinary
+raw-event Frame draws TITLEPIC plus the menu. Existing Frame/FramePalette ABIs
+are unchanged. `menuStatus()` exposes nine authoritative inspection fields.
+`renderFrame()` supports menu redraws. Legacy initializers remain separate and
+cannot replace an initialized menu profile.
+
+Menu selection invokes the existing authenticated EpisodeStartup for the first
+game, or `G_DeferedInitNew -> EpisodeRuntime.tick -> G_DoNewGame/G_InitNew` for
+later games. No exit/completion or WI_Start is used. Selection consumes one
+original gameplay tic and its normal Frame; input after selection is discarded.
+All five original skills remain selectable; Nightmare retains its confirmation.
+SELECT LEVEL remembers map choice, then uses the same original skill screen.
+
+Menu-owned packets advance only the skull ticker, input sequence and Frame ID.
+They borrow the last EVM gameplay framebuffer for overlay and do not run
+G_Ticker, thinkers, gameplay/UI RNG or ST/HU/AM/cheat tickers. Escape closes the
+menu with a cached gameplay Frame; the next ordinary gameplay packet resumes
+ticking. Explicit gameplay Pause is independent and survives opening/closing
+the menu. This render-only cadence is the EVM adapter's deliberate boundary;
+original P_Ticker's menu pause condition remains unchanged.
+
+Production build passed (134.82s). The real-EVM checkpoint ran from
+2026-10-10T18:01:35.576Z to 2026-10-10T18:03:00.594Z on owned Anvil18781:
+59 input transactions,48 recorded Frames, all nine medium-skill map selections,
+New Game, Nightmare cancel/accept, easy skill, inventory reset, no Intermission,
+held-input clearing, paused redraws, Escape/Resume and seven complete-storage
+rollback receipts. Original skill screen and legacy first raw-input frame match
+native pixels. A legacy static render before gameplay also succeeds. Native UI
+oracle reproduction:210 tics/13 Frames, O0/O2/sanitizers/allocation-fill profiles;
+only its first Frame is claimed as the new production regression comparison.
+
+Maximum measured input gas:7,813,562,258 under the unchanged10B budget. Runtime
+size:969,768 bytes under the existing development code-size policy. The ordinary
+CREATE JSON payload exceeds Anvil's default2MiB HTTP limit; this owned runner
+uses `--no-request-size-limit`. This changes transport only. The socket-denied
+and HTTP-limit attempts remain separate failures; no resource, native backing,
+gas/memory/hardfork/compiler policy was relaxed. Peak EVM memory is unmeasured.
+Browser acceptance and integration handoff remain pending.
+
 Unsupported Save/Load/Options/Help/Quit have no player-facing rows or fake
 actions. No audio, demo carousel, wipe, multiplayer or other episode support is
 added by this goal.
