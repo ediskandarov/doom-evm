@@ -1,0 +1,19 @@
+{
+  "command": [
+    "node",
+    "--test",
+    "web/input-runtime.test.mjs",
+    "web/input.test.mjs",
+    "web/input-loop.test.mjs",
+    "web/input-app.test.mjs",
+    "web/budget.test.mjs",
+    "tools/transport/ui-palette.test.mjs",
+    "tools/transport/protocol.test.mjs",
+    "tools/transport/palette.test.mjs",
+    "tools/transport/lifecycle.test.mjs"
+  ],
+  "startedUtc": "2026-10-10 13:23:38 UTC",
+  "seconds": 0.8720989227294922,
+  "exitCode": 0,
+  "logSha256": "08b4106e4c31e693956fc1f447fdc1a155688eefad8f1fa77bfd46cef87e4d91"
+}
