@@ -1,0 +1,7 @@
+{
+  "kind": "evm-menu-renderer-checkpoint",
+  "pass": true,
+  "native": { "command": "python3 tools/reference/menu/reference.py --check", "profiles": ["O0", "O2", "ASan+UBSan"], "screensPerProfile": 9, "responderTracesPerProfile": 1 },
+  "forge": { "command": ".toolchain/bin/forge test --match-path test/unit/m_menu.t.sol --skip Doom.sol --skip GameplayProbe --skip RendererProbe --skip WadResourcesProbe --skip ProductionUI.t.sol --skip DoomRenderer.t.sol --offline -vv", "tests": 2, "passed": 2, "failed": 0, "compileSeconds": 152.52 },
+  "claim": "Unmodified menu drawing profile matches nine complete native indexed8 screens. Select Level screen has bounds and cursor checks only; no original-C pixel-equivalence claim."
+}

@@ -1,0 +1,610 @@
+{
+  "upstreamCommit": "a77dfb96cb91780ca334d0d4cfd86957558007e0",
+  "compiler": "Apple clang version 17.0.0 (clang-1700.0.13.5)",
+  "target": "arm64-apple-darwin24.6.0",
+  "sourceHashes": {
+    "m_menu.c": "62d58889f7dcbdef4a52efd081beb33fed85d7ed46c35e6d7d634652d0ef3e50",
+    "m_menu.h": "ccfc1f2abe50cbb78e83d2ec35eb3812003945f2d668e69551b5b2d56bfc4dfa",
+    "d_main.c": "a100743fc5e53273e749ffbd3af13f5d995020093f4942b25f6370ab6275ee2a",
+    "g_game.c": "bc8e2e0d76a70f8120174946641a82c46f0116a624f51c011b292e2ffcb78a29",
+    "v_video.c": "52fb89efb1e6de3842c197b32009d620dcd1578f7111a7502abe6110a925e5eb"
+  },
+  "adaptations": [
+    "Original menu functions and menu definitions extracted mechanically without body changes.",
+    "Unrelated M_* routines abort if invoked; sound is a no-op, deferred startup is observed only.",
+    "W_CacheLumpName borrows immutable exact WAD buffers outside any zone; screen buffers calloc via original V_Init.",
+    "Apple arm64 LP64, signed-char/wrapv; sanitized variable patch tail uses physical ASan bounds with array-bounds excluded.",
+    "Checkpoint setup selects original menu state directly only in native comparison driver; no native pixels enter production."
+  ],
+  "builds": [
+    {
+      "command": [
+        "clang",
+        "-std=c99",
+        "-O0",
+        "-fwrapv",
+        "-fno-strict-aliasing",
+        "-ffp-contract=off",
+        "-fno-fast-math",
+        "-fsigned-char",
+        "-DNORMALUNIX",
+        "-include",
+        "stdint.h",
+        "-include",
+        "stdlib.h",
+        "-include",
+        "string.h",
+        "-include",
+        "stdio.h",
+        "-ffunction-sections",
+        "-fdata-sections",
+        "-Wno-incompatible-pointer-types",
+        "-Wno-implicit-function-declaration",
+        "-I/Users/eduard/sandbox/doom-evm-menu/original/DOOM/linuxdoom-1.10",
+        "-I/Users/eduard/sandbox/doom-evm-menu/artifacts/local/menu-native/O0",
+        "/Users/eduard/sandbox/doom-evm-menu/artifacts/local/menu-native/O0/menu.c",
+        "/Users/eduard/sandbox/doom-evm-menu/artifacts/local/menu-native/O0/v_video.c",
+        "/Users/eduard/sandbox/doom-evm-menu/artifacts/local/menu-native/O0/m_bbox.c",
+        "/Users/eduard/sandbox/doom-evm-menu/artifacts/local/menu-native/O0/doomstat.c",
+        "-Wl,-dead_strip",
+        "-o",
+        "/Users/eduard/sandbox/doom-evm-menu/artifacts/local/menu-native/O0/menu"
+      ],
+      "executableSha256": "836cc42cd6b901bdec92f1b9a79180faa3f47216162114badacd46a14168283f",
+      "generatedSha256": "96c34a62b3b25ad49da3bed518c519eaad485bc275a96496b64efd2e38195f49",
+      "extractions": [
+        {
+          "file": "m_menu.c",
+          "function": "M_DrawMainMenu",
+          "startLine": 856,
+          "endLine": 859,
+          "sha256": "3ae408ec011c861fa83d57081f895e9555f2d9884a15b4e462a934f37b065d6e"
+        },
+        {
+          "file": "m_menu.c",
+          "function": "M_DrawNewGame",
+          "startLine": 867,
+          "endLine": 871,
+          "sha256": "1f702e1bcd1e392bf02a4af150e1065bc48f0d4a9e7ebf0d7281ea9163b3bbb0"
+        },
+        {
+          "file": "m_menu.c",
+          "function": "M_DrawEpisode",
+          "startLine": 893,
+          "endLine": 896,
+          "sha256": "b3e039b374c566c12e08100d73a1cbfa00930a5cd2f78ff05958b47dc663c7d5"
+        },
+        {
+          "file": "m_menu.c",
+          "function": "M_WriteText",
+          "startLine": 1296,
+          "endLine": 1338,
+          "sha256": "6053516312bc3ecf60fa31f406935826246497d4c0417ca51520dc4ca4ccf24a"
+        },
+        {
+          "file": "m_menu.c",
+          "function": "M_StringWidth",
+          "startLine": 1255,
+          "endLine": 1271,
+          "sha256": "da288d7833a306d0fce5a11fe185b3999568de01e02a842c9b60e288b15ef69c"
+        },
+        {
+          "file": "m_menu.c",
+          "function": "M_StringHeight",
+          "startLine": 1278,
+          "endLine": 1290,
+          "sha256": "11302401d2568ab33fda07a5215df73ad247ad3eb858bc3b40d47898bc4accd4"
+        },
+        {
+          "file": "m_menu.c",
+          "function": "M_Drawer",
+          "startLine": 1740,
+          "endLine": 1805,
+          "sha256": "51a23a3d3b33174bc326576f49f3be11ba846573317cf2fc8d9368d372e5b863"
+        },
+        {
+          "file": "m_menu.c",
+          "function": "M_Ticker",
+          "startLine": 1834,
+          "endLine": 1841,
+          "sha256": "75022fb6b664dcbc43aae9a140beb53378e518b7a58ca3ae5301b3e79981e8d9"
+        },
+        {
+          "file": "m_menu.c",
+          "function": "M_Init",
+          "startLine": 1847,
+          "endLine": 1892,
+          "sha256": "9b102662790853b4cc574992738c00b5df32b5bb77aa8af6d3cf996e0864e2d2"
+        },
+        {
+          "file": "m_menu.c",
+          "function": "M_StartControlPanel",
+          "startLine": 1723,
+          "endLine": 1732,
+          "sha256": "114e4612103858da6a7b36b026bdecb40e4d76c90f7518274382ed46aaf3cbfa"
+        },
+        {
+          "file": "m_menu.c",
+          "function": "M_ClearMenus",
+          "startLine": 1811,
+          "endLine": 1816,
+          "sha256": "5ab44aae66e985e803c128193ab1ba3b5b7caa0c25d01970ef33a3e5f16fd06c"
+        },
+        {
+          "file": "m_menu.c",
+          "function": "M_SetupNextMenu",
+          "startLine": 1824,
+          "endLine": 1828,
+          "sha256": "39a56a7a525090a2be43447a10cf2d027a741602645140853d493ea970beb634"
+        },
+        {
+          "file": "m_menu.c",
+          "function": "M_StartMessage",
+          "startLine": 1227,
+          "endLine": 1240,
+          "sha256": "87214e7d94af614517c693e8e774b588b9b21a74d842d221c7a3bd48e21357a8"
+        },
+        {
+          "file": "m_menu.c",
+          "function": "M_StopMessage",
+          "startLine": 1244,
+          "endLine": 1248,
+          "sha256": "791c47c458f0b57fa05f9131afdc66895af40082404f104b9bf05e212185e721"
+        },
+        {
+          "file": "m_menu.c",
+          "function": "M_NewGame",
+          "startLine": 873,
+          "endLine": 885,
+          "sha256": "59026d71a994417923a348d877e491221e3d57e91741fbedcbca4e713239e200"
+        },
+        {
+          "file": "m_menu.c",
+          "function": "M_Episode",
+          "startLine": 919,
+          "endLine": 940,
+          "sha256": "3c37a66fb6deb94641ee4069f58eb7b871d3298ef754c377880d3b00c85e3b0f"
+        },
+        {
+          "file": "m_menu.c",
+          "function": "M_ChooseSkill",
+          "startLine": 907,
+          "endLine": 917,
+          "sha256": "250439b3103ce7de9edf73f21dcf7a4958d566d4be7e5e1bc17f31917504facf"
+        },
+        {
+          "file": "m_menu.c",
+          "function": "M_VerifyNightmare",
+          "startLine": 898,
+          "endLine": 905,
+          "sha256": "5071129d9fcc21e951de2e67a76e3a8e58a2681279f1164474295be20de273ed"
+        },
+        {
+          "file": "m_menu.c",
+          "function": "M_Responder",
+          "startLine": 1349,
+          "endLine": 1716,
+          "sha256": "c7775dd1cbe1a5cbfaafa7db7ac2f32cbdef39975d05dcf776695fce8f545416"
+        }
+      ],
+      "definitions": {
+        "startLine": 1,
+        "endLine": 507,
+        "sha256": "52726df649c3f4eed01b4cb5f209c583978f918342d0da138c03242f02c84c81"
+      },
+      "profile": "O0",
+      "stderr": "",
+      "outputs": {
+        "skill-1.bin": "b474670b8d8c1415d2d14af4426a8eea74dfb5a7e68196e2966884492bc6db6a",
+        "skill-0.bin": "e74a9d93ccbadc0f4583c662d13e30fc9453cf6bad89293d37cd997c635f0766",
+        "skill-2.bin": "080105db7663d173d7a7a1fa0e9c5e1ce1998f926b2db783c9f8e7003f1b49c3",
+        "skill-3.bin": "59593b86be89856fc4ec79760a6fdb2d220b6b026c0261486fc9496f9c725fb4",
+        "main-skull0.bin": "1f72f91445acd149369ebf533e12d53adc63df26b599c47ed23f83c7ae805a13",
+        "main-skull1.bin": "27c9cc2ba09f1fac13cc01955619917fd80790fdaf5a395e9aef561e5f73c826",
+        "skill-4.bin": "b12f8499c588c52d4ba9069cd6fc2a3a701627dfbef0814e1501e4f0a601611a",
+        "nightmare.bin": "10915ef28b305c061e1d35d7471ca58eb0e47a0f1cbff299040f122871e2d5cf",
+        "responder.bin": "a064009bbb1e00a525a27ff60414944393360beb106066b650da8a78b35b2aef",
+        "episode.bin": "fe73c18737216d40687234de218f56b8b549a6ad2ffc50b4c601639f95bb010f"
+      }
+    },
+    {
+      "command": [
+        "clang",
+        "-std=c99",
+        "-O2",
+        "-fwrapv",
+        "-fno-strict-aliasing",
+        "-ffp-contract=off",
+        "-fno-fast-math",
+        "-fsigned-char",
+        "-DNORMALUNIX",
+        "-include",
+        "stdint.h",
+        "-include",
+        "stdlib.h",
+        "-include",
+        "string.h",
+        "-include",
+        "stdio.h",
+        "-ffunction-sections",
+        "-fdata-sections",
+        "-Wno-incompatible-pointer-types",
+        "-Wno-implicit-function-declaration",
+        "-I/Users/eduard/sandbox/doom-evm-menu/original/DOOM/linuxdoom-1.10",
+        "-I/Users/eduard/sandbox/doom-evm-menu/artifacts/local/menu-native/O2",
+        "/Users/eduard/sandbox/doom-evm-menu/artifacts/local/menu-native/O2/menu.c",
+        "/Users/eduard/sandbox/doom-evm-menu/artifacts/local/menu-native/O2/v_video.c",
+        "/Users/eduard/sandbox/doom-evm-menu/artifacts/local/menu-native/O2/m_bbox.c",
+        "/Users/eduard/sandbox/doom-evm-menu/artifacts/local/menu-native/O2/doomstat.c",
+        "-Wl,-dead_strip",
+        "-o",
+        "/Users/eduard/sandbox/doom-evm-menu/artifacts/local/menu-native/O2/menu"
+      ],
+      "executableSha256": "cd99e32c5954fcfe1e7ce98ac942f641d9fc4e2e52c3ede95824f1f9e190641c",
+      "generatedSha256": "96c34a62b3b25ad49da3bed518c519eaad485bc275a96496b64efd2e38195f49",
+      "extractions": [
+        {
+          "file": "m_menu.c",
+          "function": "M_DrawMainMenu",
+          "startLine": 856,
+          "endLine": 859,
+          "sha256": "3ae408ec011c861fa83d57081f895e9555f2d9884a15b4e462a934f37b065d6e"
+        },
+        {
+          "file": "m_menu.c",
+          "function": "M_DrawNewGame",
+          "startLine": 867,
+          "endLine": 871,
+          "sha256": "1f702e1bcd1e392bf02a4af150e1065bc48f0d4a9e7ebf0d7281ea9163b3bbb0"
+        },
+        {
+          "file": "m_menu.c",
+          "function": "M_DrawEpisode",
+          "startLine": 893,
+          "endLine": 896,
+          "sha256": "b3e039b374c566c12e08100d73a1cbfa00930a5cd2f78ff05958b47dc663c7d5"
+        },
+        {
+          "file": "m_menu.c",
+          "function": "M_WriteText",
+          "startLine": 1296,
+          "endLine": 1338,
+          "sha256": "6053516312bc3ecf60fa31f406935826246497d4c0417ca51520dc4ca4ccf24a"
+        },
+        {
+          "file": "m_menu.c",
+          "function": "M_StringWidth",
+          "startLine": 1255,
+          "endLine": 1271,
+          "sha256": "da288d7833a306d0fce5a11fe185b3999568de01e02a842c9b60e288b15ef69c"
+        },
+        {
+          "file": "m_menu.c",
+          "function": "M_StringHeight",
+          "startLine": 1278,
+          "endLine": 1290,
+          "sha256": "11302401d2568ab33fda07a5215df73ad247ad3eb858bc3b40d47898bc4accd4"
+        },
+        {
+          "file": "m_menu.c",
+          "function": "M_Drawer",
+          "startLine": 1740,
+          "endLine": 1805,
+          "sha256": "51a23a3d3b33174bc326576f49f3be11ba846573317cf2fc8d9368d372e5b863"
+        },
+        {
+          "file": "m_menu.c",
+          "function": "M_Ticker",
+          "startLine": 1834,
+          "endLine": 1841,
+          "sha256": "75022fb6b664dcbc43aae9a140beb53378e518b7a58ca3ae5301b3e79981e8d9"
+        },
+        {
+          "file": "m_menu.c",
+          "function": "M_Init",
+          "startLine": 1847,
+          "endLine": 1892,
+          "sha256": "9b102662790853b4cc574992738c00b5df32b5bb77aa8af6d3cf996e0864e2d2"
+        },
+        {
+          "file": "m_menu.c",
+          "function": "M_StartControlPanel",
+          "startLine": 1723,
+          "endLine": 1732,
+          "sha256": "114e4612103858da6a7b36b026bdecb40e4d76c90f7518274382ed46aaf3cbfa"
+        },
+        {
+          "file": "m_menu.c",
+          "function": "M_ClearMenus",
+          "startLine": 1811,
+          "endLine": 1816,
+          "sha256": "5ab44aae66e985e803c128193ab1ba3b5b7caa0c25d01970ef33a3e5f16fd06c"
+        },
+        {
+          "file": "m_menu.c",
+          "function": "M_SetupNextMenu",
+          "startLine": 1824,
+          "endLine": 1828,
+          "sha256": "39a56a7a525090a2be43447a10cf2d027a741602645140853d493ea970beb634"
+        },
+        {
+          "file": "m_menu.c",
+          "function": "M_StartMessage",
+          "startLine": 1227,
+          "endLine": 1240,
+          "sha256": "87214e7d94af614517c693e8e774b588b9b21a74d842d221c7a3bd48e21357a8"
+        },
+        {
+          "file": "m_menu.c",
+          "function": "M_StopMessage",
+          "startLine": 1244,
+          "endLine": 1248,
+          "sha256": "791c47c458f0b57fa05f9131afdc66895af40082404f104b9bf05e212185e721"
+        },
+        {
+          "file": "m_menu.c",
+          "function": "M_NewGame",
+          "startLine": 873,
+          "endLine": 885,
+          "sha256": "59026d71a994417923a348d877e491221e3d57e91741fbedcbca4e713239e200"
+        },
+        {
+          "file": "m_menu.c",
+          "function": "M_Episode",
+          "startLine": 919,
+          "endLine": 940,
+          "sha256": "3c37a66fb6deb94641ee4069f58eb7b871d3298ef754c377880d3b00c85e3b0f"
+        },
+        {
+          "file": "m_menu.c",
+          "function": "M_ChooseSkill",
+          "startLine": 907,
+          "endLine": 917,
+          "sha256": "250439b3103ce7de9edf73f21dcf7a4958d566d4be7e5e1bc17f31917504facf"
+        },
+        {
+          "file": "m_menu.c",
+          "function": "M_VerifyNightmare",
+          "startLine": 898,
+          "endLine": 905,
+          "sha256": "5071129d9fcc21e951de2e67a76e3a8e58a2681279f1164474295be20de273ed"
+        },
+        {
+          "file": "m_menu.c",
+          "function": "M_Responder",
+          "startLine": 1349,
+          "endLine": 1716,
+          "sha256": "c7775dd1cbe1a5cbfaafa7db7ac2f32cbdef39975d05dcf776695fce8f545416"
+        }
+      ],
+      "definitions": {
+        "startLine": 1,
+        "endLine": 507,
+        "sha256": "52726df649c3f4eed01b4cb5f209c583978f918342d0da138c03242f02c84c81"
+      },
+      "profile": "O2",
+      "stderr": "",
+      "outputs": {
+        "skill-1.bin": "b474670b8d8c1415d2d14af4426a8eea74dfb5a7e68196e2966884492bc6db6a",
+        "skill-0.bin": "e74a9d93ccbadc0f4583c662d13e30fc9453cf6bad89293d37cd997c635f0766",
+        "skill-2.bin": "080105db7663d173d7a7a1fa0e9c5e1ce1998f926b2db783c9f8e7003f1b49c3",
+        "skill-3.bin": "59593b86be89856fc4ec79760a6fdb2d220b6b026c0261486fc9496f9c725fb4",
+        "main-skull0.bin": "1f72f91445acd149369ebf533e12d53adc63df26b599c47ed23f83c7ae805a13",
+        "main-skull1.bin": "27c9cc2ba09f1fac13cc01955619917fd80790fdaf5a395e9aef561e5f73c826",
+        "skill-4.bin": "b12f8499c588c52d4ba9069cd6fc2a3a701627dfbef0814e1501e4f0a601611a",
+        "nightmare.bin": "10915ef28b305c061e1d35d7471ca58eb0e47a0f1cbff299040f122871e2d5cf",
+        "responder.bin": "a064009bbb1e00a525a27ff60414944393360beb106066b650da8a78b35b2aef",
+        "episode.bin": "fe73c18737216d40687234de218f56b8b549a6ad2ffc50b4c601639f95bb010f"
+      }
+    },
+    {
+      "command": [
+        "clang",
+        "-std=c99",
+        "-O2",
+        "-fwrapv",
+        "-fno-strict-aliasing",
+        "-ffp-contract=off",
+        "-fno-fast-math",
+        "-fsigned-char",
+        "-DNORMALUNIX",
+        "-include",
+        "stdint.h",
+        "-include",
+        "stdlib.h",
+        "-include",
+        "string.h",
+        "-include",
+        "stdio.h",
+        "-ffunction-sections",
+        "-fdata-sections",
+        "-Wno-incompatible-pointer-types",
+        "-Wno-implicit-function-declaration",
+        "-fsanitize=address,undefined",
+        "-fno-sanitize=array-bounds",
+        "-fno-sanitize-recover=all",
+        "-I/Users/eduard/sandbox/doom-evm-menu/original/DOOM/linuxdoom-1.10",
+        "-I/Users/eduard/sandbox/doom-evm-menu/artifacts/local/menu-native/sanitized",
+        "/Users/eduard/sandbox/doom-evm-menu/artifacts/local/menu-native/sanitized/menu.c",
+        "/Users/eduard/sandbox/doom-evm-menu/artifacts/local/menu-native/sanitized/v_video.c",
+        "/Users/eduard/sandbox/doom-evm-menu/artifacts/local/menu-native/sanitized/m_bbox.c",
+        "/Users/eduard/sandbox/doom-evm-menu/artifacts/local/menu-native/sanitized/doomstat.c",
+        "-Wl,-dead_strip",
+        "-o",
+        "/Users/eduard/sandbox/doom-evm-menu/artifacts/local/menu-native/sanitized/menu"
+      ],
+      "executableSha256": "9f046c6482cd4a703124ad6927d3a269834f80da9cb7f5a3e7844ff939deb348",
+      "generatedSha256": "96c34a62b3b25ad49da3bed518c519eaad485bc275a96496b64efd2e38195f49",
+      "extractions": [
+        {
+          "file": "m_menu.c",
+          "function": "M_DrawMainMenu",
+          "startLine": 856,
+          "endLine": 859,
+          "sha256": "3ae408ec011c861fa83d57081f895e9555f2d9884a15b4e462a934f37b065d6e"
+        },
+        {
+          "file": "m_menu.c",
+          "function": "M_DrawNewGame",
+          "startLine": 867,
+          "endLine": 871,
+          "sha256": "1f702e1bcd1e392bf02a4af150e1065bc48f0d4a9e7ebf0d7281ea9163b3bbb0"
+        },
+        {
+          "file": "m_menu.c",
+          "function": "M_DrawEpisode",
+          "startLine": 893,
+          "endLine": 896,
+          "sha256": "b3e039b374c566c12e08100d73a1cbfa00930a5cd2f78ff05958b47dc663c7d5"
+        },
+        {
+          "file": "m_menu.c",
+          "function": "M_WriteText",
+          "startLine": 1296,
+          "endLine": 1338,
+          "sha256": "6053516312bc3ecf60fa31f406935826246497d4c0417ca51520dc4ca4ccf24a"
+        },
+        {
+          "file": "m_menu.c",
+          "function": "M_StringWidth",
+          "startLine": 1255,
+          "endLine": 1271,
+          "sha256": "da288d7833a306d0fce5a11fe185b3999568de01e02a842c9b60e288b15ef69c"
+        },
+        {
+          "file": "m_menu.c",
+          "function": "M_StringHeight",
+          "startLine": 1278,
+          "endLine": 1290,
+          "sha256": "11302401d2568ab33fda07a5215df73ad247ad3eb858bc3b40d47898bc4accd4"
+        },
+        {
+          "file": "m_menu.c",
+          "function": "M_Drawer",
+          "startLine": 1740,
+          "endLine": 1805,
+          "sha256": "51a23a3d3b33174bc326576f49f3be11ba846573317cf2fc8d9368d372e5b863"
+        },
+        {
+          "file": "m_menu.c",
+          "function": "M_Ticker",
+          "startLine": 1834,
+          "endLine": 1841,
+          "sha256": "75022fb6b664dcbc43aae9a140beb53378e518b7a58ca3ae5301b3e79981e8d9"
+        },
+        {
+          "file": "m_menu.c",
+          "function": "M_Init",
+          "startLine": 1847,
+          "endLine": 1892,
+          "sha256": "9b102662790853b4cc574992738c00b5df32b5bb77aa8af6d3cf996e0864e2d2"
+        },
+        {
+          "file": "m_menu.c",
+          "function": "M_StartControlPanel",
+          "startLine": 1723,
+          "endLine": 1732,
+          "sha256": "114e4612103858da6a7b36b026bdecb40e4d76c90f7518274382ed46aaf3cbfa"
+        },
+        {
+          "file": "m_menu.c",
+          "function": "M_ClearMenus",
+          "startLine": 1811,
+          "endLine": 1816,
+          "sha256": "5ab44aae66e985e803c128193ab1ba3b5b7caa0c25d01970ef33a3e5f16fd06c"
+        },
+        {
+          "file": "m_menu.c",
+          "function": "M_SetupNextMenu",
+          "startLine": 1824,
+          "endLine": 1828,
+          "sha256": "39a56a7a525090a2be43447a10cf2d027a741602645140853d493ea970beb634"
+        },
+        {
+          "file": "m_menu.c",
+          "function": "M_StartMessage",
+          "startLine": 1227,
+          "endLine": 1240,
+          "sha256": "87214e7d94af614517c693e8e774b588b9b21a74d842d221c7a3bd48e21357a8"
+        },
+        {
+          "file": "m_menu.c",
+          "function": "M_StopMessage",
+          "startLine": 1244,
+          "endLine": 1248,
+          "sha256": "791c47c458f0b57fa05f9131afdc66895af40082404f104b9bf05e212185e721"
+        },
+        {
+          "file": "m_menu.c",
+          "function": "M_NewGame",
+          "startLine": 873,
+          "endLine": 885,
+          "sha256": "59026d71a994417923a348d877e491221e3d57e91741fbedcbca4e713239e200"
+        },
+        {
+          "file": "m_menu.c",
+          "function": "M_Episode",
+          "startLine": 919,
+          "endLine": 940,
+          "sha256": "3c37a66fb6deb94641ee4069f58eb7b871d3298ef754c377880d3b00c85e3b0f"
+        },
+        {
+          "file": "m_menu.c",
+          "function": "M_ChooseSkill",
+          "startLine": 907,
+          "endLine": 917,
+          "sha256": "250439b3103ce7de9edf73f21dcf7a4958d566d4be7e5e1bc17f31917504facf"
+        },
+        {
+          "file": "m_menu.c",
+          "function": "M_VerifyNightmare",
+          "startLine": 898,
+          "endLine": 905,
+          "sha256": "5071129d9fcc21e951de2e67a76e3a8e58a2681279f1164474295be20de273ed"
+        },
+        {
+          "file": "m_menu.c",
+          "function": "M_Responder",
+          "startLine": 1349,
+          "endLine": 1716,
+          "sha256": "c7775dd1cbe1a5cbfaafa7db7ac2f32cbdef39975d05dcf776695fce8f545416"
+        }
+      ],
+      "definitions": {
+        "startLine": 1,
+        "endLine": 507,
+        "sha256": "52726df649c3f4eed01b4cb5f209c583978f918342d0da138c03242f02c84c81"
+      },
+      "profile": "sanitized",
+      "stderr": "",
+      "outputs": {
+        "skill-1.bin": "b474670b8d8c1415d2d14af4426a8eea74dfb5a7e68196e2966884492bc6db6a",
+        "skill-0.bin": "e74a9d93ccbadc0f4583c662d13e30fc9453cf6bad89293d37cd997c635f0766",
+        "skill-2.bin": "080105db7663d173d7a7a1fa0e9c5e1ce1998f926b2db783c9f8e7003f1b49c3",
+        "skill-3.bin": "59593b86be89856fc4ec79760a6fdb2d220b6b026c0261486fc9496f9c725fb4",
+        "main-skull0.bin": "1f72f91445acd149369ebf533e12d53adc63df26b599c47ed23f83c7ae805a13",
+        "main-skull1.bin": "27c9cc2ba09f1fac13cc01955619917fd80790fdaf5a395e9aef561e5f73c826",
+        "skill-4.bin": "b12f8499c588c52d4ba9069cd6fc2a3a701627dfbef0814e1501e4f0a601611a",
+        "nightmare.bin": "10915ef28b305c061e1d35d7471ca58eb0e47a0f1cbff299040f122871e2d5cf",
+        "responder.bin": "a064009bbb1e00a525a27ff60414944393360beb106066b650da8a78b35b2aef",
+        "episode.bin": "fe73c18737216d40687234de218f56b8b549a6ad2ffc50b4c601639f95bb010f"
+      }
+    }
+  ],
+  "fixtures": {
+    "skill-1.bin": "b474670b8d8c1415d2d14af4426a8eea74dfb5a7e68196e2966884492bc6db6a",
+    "skill-0.bin": "e74a9d93ccbadc0f4583c662d13e30fc9453cf6bad89293d37cd997c635f0766",
+    "skill-2.bin": "080105db7663d173d7a7a1fa0e9c5e1ce1998f926b2db783c9f8e7003f1b49c3",
+    "skill-3.bin": "59593b86be89856fc4ec79760a6fdb2d220b6b026c0261486fc9496f9c725fb4",
+    "main-skull0.bin": "1f72f91445acd149369ebf533e12d53adc63df26b599c47ed23f83c7ae805a13",
+    "main-skull1.bin": "27c9cc2ba09f1fac13cc01955619917fd80790fdaf5a395e9aef561e5f73c826",
+    "skill-4.bin": "b12f8499c588c52d4ba9069cd6fc2a3a701627dfbef0814e1501e4f0a601611a",
+    "nightmare.bin": "10915ef28b305c061e1d35d7471ca58eb0e47a0f1cbff299040f122871e2d5cf",
+    "responder.bin": "a064009bbb1e00a525a27ff60414944393360beb106066b650da8a78b35b2aef",
+    "episode.bin": "fe73c18737216d40687234de218f56b8b549a6ad2ffc50b4c601639f95bb010f"
+  },
+  "harnessHashes": {
+    "reference.py": "32bad3f63ba8149bfe2082c4e512571f038938cf18fd35e6f1e38ed546a5faa7",
+    "host.c": "6d75a47b54220a678cf847189773b0c37b8e7af8ad87004e3694ba785cf00177"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "nativeHarnessBootstrap": [
+    "Failed: extracted epi declaration missing, I_AllocLow return type mismatch, macOS values.h absent.",
+    "Failed: values.h shim lacked MININT/MAXINT for standalone m_bbox.c.",
+    "Failed: missing platform globals and M_DoSave stub at link.",
+    "Failed: M_DoSave needed a forward declaration before extracted responder."
+  ],
+  "resolution": "Corrected harness declarations/platform shims only; original function bodies and existing fixtures unchanged. Subsequent O0/O2/sanitized runs and --check passed."
+}
