@@ -60,8 +60,8 @@ Phase 4 goal has started.
 ## Delivered behavior and original-source mapping
 
 `Doom.initializeGameUI(false)` starts the original single-player Status Bar and
-HUD. World view size10 gives 320×168 pixels, and the original status drawing
-supplies rows168–199. `initializeGameUI(true)` uses size11, hides status widgets,
+HUD. World view size 10 gives 320×168 pixels, and the original status drawing
+supplies rows 168–199. `initializeGameUI(true)` uses size 11, hides status widgets,
 and retains messages/palette effects. Driver-only `setUIFullscreen(bool)` changes
 the next view and requests the original refresh without consuming a tic, input
 sequence or Frame. Existing `initializeGame`/`initializeGameStrict` and pre-start
@@ -72,9 +72,9 @@ static rendering retain the accepted world-only profile.
 | `g_game.c:G_Ticker`, level dispatch `P_Ticker → ST_Ticker → HU_Ticker` | Existing `DoomGame.tick`, then `DoomUI.tick`; the same persistent console player and both original RNG streams |
 | `ST_Init`, `ST_Start`, `HU_Init`, `HU_Start` | `DoomUI.initialize` loads authenticated original WAD patches and starts the accepted modules |
 | `d_main.c:D_Display`, `HU_Erase → ST_Drawer → R_RenderPlayerView → HU_Drawer` | `DoomUI.erase`, `drawStatus`, existing `DoomGame.render`, then `drawHUD` |
-| Original view sizes10/11 | Existing `R_ExecuteSetViewSize`; a restricted overload adds viewport selection while the old overload still passes11 |
+| Original view sizes 10/11 | Existing `R_ExecuteSetViewSize`; a restricted overload adds viewport selection while the old overload still passes11 |
 | Original widget and face globals/statics | Persistent `UIState.status`, including old health/weapons, priority, attack timer, facecount, pain cache, keyboxes and widget draw history |
-| Original pending `Player.message` and HUD140-tic timeout | Existing gameplay producers and `HU_Ticker`; retains all81 NUL/stale backing bytes and erase/update history across rendered and no-render transactions |
+| Original pending `Player.message` and HUD 140-tic timeout | Existing gameplay producers and `HU_Ticker`; retains all 81 NUL/stale backing bytes and erase/update history across rendered and no-render transactions |
 | `ST_doPaletteStuff`, original gamma lookup / `I_SetPalette` presentation boundary | Accepted EVM module computes768 RGB8 bytes; `FramePalette` binds them to the matching `frameId`/`inputSeq` before the unchanged `Frame` |
 
 No `ST_*`, `HU_*`, `V_*`, gameplay algorithm or shared `GameState` layout was
@@ -96,21 +96,22 @@ the accepted actual gameplay and renderer. Its declared platform boundary
 borrows immutable UI lumps into host buffers and owns screen4 outside the
 existing gameplay zone, matching the production consumer boundary. This avoids
 changing the accepted renderer backing profile; it is **not** new evidence of
-whole-process original-zone allocation equivalence. Native build adaptations,+source hashes, flags and the upstream pin are preserved in
+whole-process original-zone allocation equivalence. Native build adaptations,
+source hashes, flags and the upstream pin are preserved in
 [native-build.json](../artifacts/phase4/ui/native-build.json). No original C or
 accepted native golden was edited.
 
 ## Verification and evidence
 
-- Affected production/test-root build: pinned solc0.8.37, optimizer200, viaIR,
-  Cancun; successful compile reported89.49 seconds. Existing compiler warnings
+- Affected production/test-root build: pinned solc 0.8.37, optimizer 200, viaIR,
+  Cancun; successful compile reported 89.49 seconds. Existing compiler warnings
   remain visible. Formatting and `git diff --check` pass.
 - Focused Forge gate: **159 passed, 0 failed, 0 skipped**, including video,
   Status Bar, HUD, actual pickup/locked-door message producers, player/interactions,
   all weapons/psprites, storage, renderer view setup/drawing/planes/sprites/pass
   order. Eleven Status Bar tests also run through the inherited consumer-test
   base. New consumer tests compare **276 original-C snapshots** across separate
-  storage calls:22 inventory,168 firing/release,86 damage/direction/pain snapshots.
+  storage calls: 22 inventory, 168 firing/release, 86 damage/direction/pain snapshots.
   This includes every weapon/key, armor, backpack, skull/card priority, original
   stale-key behavior, refresh and original face quirks. See
   [focused log](../artifacts/phase4/ui/focused.log).
@@ -122,31 +123,31 @@ accepted native golden was edited.
   allocation fill agree exactly. Accepted Status Bar oracle also reproduces
   **1,299 steps/11 sequences**, and HUD oracle **209 cases/575 snapshots**.
   [Native manifest](../artifacts/phase4/ui/native.json) binds all generated outputs.
-- Real Anvil: all1,755 resource contracts and production Doom deployed with
+- Real Anvil: all 1,755 resource contracts and production Doom deployed with
   ordinary CREATE, all runtime/resource bytes rechecked. **210 transactions**
-  match45 exported native scalar fields, all81 message backing bytes, and mode
-  selection after each tic, including197 no-render tics. All13 UI Frames match
+  match 45 exported native scalar fields, all 81 message backing bytes, and mode
+  selection after each tic, including 197 no-render tics. All13 UI Frames match
   **64,000 native indexes and768 native gamma/palette bytes**. A pre-start static
   Frame also matches. Six driver/startup/sequence/invalid-input rejections preserve
-  the complete account storage root. Mode changes before tics70/101 preserve
+  the complete account storage root. Mode changes before tics 70/101 preserve
   sequence/Frame counters. See [production evidence](../artifacts/phase4/ui/production.json).
-- Actual Chrome155: a fresh production instance repeats all210 tics;12 rendered
-  tics use real Start/Resume keyboard handling, pickup tic64 uses receipt fallback,
+- Actual Chrome155: a fresh production instance repeats all 210 tics; 12 rendered
+  tics use real Start/Resume keyboard handling, pickup tic 64 uses receipt fallback,
   and intervening no-render commands use ordinary transactions. All13 Canvas
-  images match256,000 native-palette RGBA bytes, with WebSocket/receipt dedup and
-  blur cancellation. The natural pickup produces health101 and message
-  `Picked up a health bonus.` at tic64/counter140; tic203 remains visible with
-  counter1, and tic204 expires. Bonus palette10 and both viewport switches match.
+  images match 256,000 native-palette RGBA bytes, with WebSocket/receipt dedup and
+  blur cancellation. The natural pickup produces health 101 and message
+  `Picked up a health bonus.` at tic 64/counter 140; tic 203 remains visible with
+  counter 1, and tic 204 expires. Bonus palette 10 and both viewport switches match.
   See [browser proof](../artifacts/phase4/ui/browser.json),
-  [pickup Canvas](../artifacts/phase4/ui/canvas-tic64.png),
+  [pickup Canvas](../artifacts/phase4/ui/canvas-tic 64.png),
   [fullscreen Canvas](../artifacts/phase4/ui/canvas-tic70.png), and
-  [expiry Canvas](../artifacts/phase4/ui/canvas-tic204.png).
+  [expiry Canvas](../artifacts/phase4/ui/canvas-tic 204.png).
 - Preserved high-risk inherited production gate: **129 tics, six gameplay Frames,
   one static Frame, 13 full-storage rollback checks** pass using the unchanged
   accepted runner on an independent node. See
   [legacy evidence](../artifacts/phase4/ui/legacy.json).
 
-Initial combined attempts reached all210 native-matching production tics but
+Initial combined attempts reached all 210 native-matching production tics but
 failed the browser harness (first a missing runner, then selecting the companion
 palette as the Frame). They remain failed local checkpoints under
 `artifacts/local/ui/production-before-browser.json` and `production-final.json`.
@@ -165,15 +166,15 @@ python3 tools/reference/hud/reference.py --check
 ```
 
 The certificate checker validates identities/recorded results; it does not
-replace executing these gates. Full inherited Phase0–3/final Phase4 acceptance
+replace executing these gates. Full inherited Phase 0–3/final Phase 4 acceptance
 remains deferred, as authorized.
 
 ## Measurements and limits
 
 The successful combined runtime gate ran from
 `2026-10-10T11:45:40.675Z` to `2026-10-10T11:47:57.598Z`; its Chrome gate took
-46.414 seconds. The focused Forge gate, including compilation, took251.615
-seconds. Source-bound production runtime is592,441 bytes under the existing
+46.414 seconds. The focused Forge gate, including compilation, took 251.615
+seconds. Source-bound production runtime is 592,441 bytes under the existing
 local code-size policy.
 
 | Operation | Measured gas |
@@ -182,13 +183,13 @@ local code-size policy.
 | Rendered UI tic, including storage and events | 1,025,760,389–1,378,285,802 |
 | No-render UI tic, including storage | 325,568,136–328,534,796 |
 
-Rendered UI transactions took849.246–1,168.268 ms on this local node. These are
-measured transaction latency samples, not a real-time35Hz claim. The unchanged
+Rendered UI transactions took 849.246–1,168.268 ms on this local node. These are
+measured transaction latency samples, not a real-time 35 Hz claim. The unchanged
 10,000,000,000 gas budget accommodates every measured operation. Peak EVM memory
 was not measured here; no new MSIZE or memory-architecture claim is made.
 
 Report checkpoint: `2026-10-10 11:55:51 UTC`. Available goal-tool attribution at
-that checkpoint reports248,576 tokens used and2,232 elapsed seconds. These are
+that checkpoint reports 248,576 tokens used and 2,232 elapsed seconds. These are
 the tool's aggregate counters; no missing approval-wait, dollar-cost or other
 usage attribution is estimated. Final handoff timing follows the documentation
 commit in the session completion record.
@@ -197,7 +198,7 @@ The ordinary route exercises natural health-bonus pickup, fire/ammo, viewport
 changes and message timing. Armor/keys/every weapon/damage/death-face domains
 have controlled consumer or inherited module proofs; this is not an honest
 whole-episode or every-pickup playthrough. Whole-world canonical records are not
-compared by the production ABI gate. This goal uses default original gamma0,
+compared by the production ABI gate. This goal uses default original gamma 0,
 `showMessages=true`, and single-player message producers. Chat, raw HUD responder
 input, cheats, automap and level/gameflow lifecycle remain later integration
 work; their implementations were not added here.
@@ -225,10 +226,10 @@ work; their implementations were not added here.
 - No compiler, budget, WAD schema, `Frame` ABI or gameplay-state layout change is
   required. New deployments are required for the added UI consumer storage/API;
   no storage upgrade of an existing deployment is claimed.
-- Verification owned Anvil ports18711/18712 plus temporary Chrome/server/profile
-  instances, all stopped by their owning runners. Ports18579/18880/8088 and other
+- Verification owned Anvil ports 18711/18712 plus temporary Chrome/server/profile
+  instances, all stopped by their owning runners. Ports 18579/18880/8088 and other
   runtimes were not used. No other worktree was modified. No branch was merged
   or pushed to main.
 
-No blocker remains for the declared Goal4.11 scope. Later feature lifecycle
-integration and complete final Phase4 acceptance remain separate dependencies.
+No blocker remains for the declared Goal 4.11 scope. Later feature lifecycle
+integration and complete final Phase 4 acceptance remain separate dependencies.
