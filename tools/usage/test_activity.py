@@ -189,3 +189,7 @@ class ActivityTests(unittest.TestCase):
             execution('x',2,6,['forge','test'],'Solc 0.8.37 finished in 3s\nRan 1 test suite in 3s (4s CPU time)\n')])
         self.assertNotIn('DO_NOT_LEAK',json.dumps(a));self.assertIsNone(a['compactions'][0]['context_tokens_before'])
         self.assertIsNone(a['executions'][0]['compiler_wall_seconds']);self.assertEqual(a['coverage']['diagnostics']['inconsistent_sequential_stage_sum'],1)
+
+    def test_multiline_shell_but_not_heredoc_source(self):
+        self.assertEqual(activity.command_kind(['zsh','-lc','export X=1\nforge build'])[0],'shell_with_forge_build')
+        self.assertIsNone(activity.command_kind(['zsh','-lc',"python3 - <<'PY'\nprint('forge build')\nPY"])[1])

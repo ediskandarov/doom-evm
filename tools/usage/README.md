@@ -121,3 +121,70 @@ and the [input/cache/output/reasoning subset relationship](https://developers.op
 The latter describes public API accounting, not a promise about this internal
 JSONL schema. The collector's adapters are based on the local structured records
 and synthetic regression tests.
+
+## Telemetry 2.0 activity adapter
+
+Goal 4.0 adds `activity.py` independently of the token ledger. The additive JSON
+report is v2; phase configuration and legacy token CSV columns remain compatible.
+All existing historical exports are retained. New files:
+
+- `compactions.csv`: event ID, thread/agent, configured model, goal/phase, matched
+  interval, duration, dedicated context sizes (nullable), separate request input.
+- `approvals.csv`: explicit request/resolution lifecycle, resolver provenance and
+  human/automatic/unknown waiting intervals. Header-only is valid when absent.
+- `executions.csv`: command hash only, process-wall duration, compiler/test stage
+  annotations, preserved reported values, consistency flags and nesting links.
+- `goals.csv`: structured goal IDs/status, audited wall interval and separate
+  goal counters; objective prose is discarded.
+- `activity-phase-totals.csv`: observed counts, known/missing duration fields,
+  process sum versus interval union, partial compiler/test/direct Forge totals.
+- `telemetry-report.md`: human-readable tables with measurement limitations.
+
+```sh
+python3 tools/usage/collect.py --phases tools/usage/phases.json \
+  --aggregate-only --output artifacts/local/codex-telemetry2
+python3 tools/usage/validate.py artifacts/local/codex-telemetry2
+```
+
+Formal JSON/CSV contracts are under `schemas/`. The standard-library validator
+checks the documented schema subset, forbidden transcript fields and exact new
+CSV row reconciliation. It is not a general-purpose JSON Schema implementation.
+
+Compaction duration joins require a unique same-thread/same-turn containing
+ContextCompaction interval; timestamps merely nearby are insufficient. Dedicated
+context occupancy is not derived from cumulative counters, context capacity,
+request input tokens, output/summary length or a tokenizer. Current local data
+has request input usage and timing, but no exact before/after context occupancy.
+
+Approval lifecycle support uses explicit event_msg types `approval_request`,
+`exec_approval_request`, `apply_patch_approval_request`, and matching
+`approval_resolved`, `exec_approval_response`, `apply_patch_approval_response`,
+with approval/request/call IDs. These conservative adapters are synthetic-tested;
+no such historical records are visible in this project's observed CLI snapshot.
+Policy/escalation intent, reviewer settings and tool delays cannot manufacture
+actual human waiting time. Human-resolved intervals cannot isolate thinking
+from delivery/routing unless more explicit timestamps exist.
+
+Compiler-bearing heads include Forge build/test, direct Solc/Clang/GCC, and the
+known stack-pressure script's structured compile_wall_ms reports. Shells with
+one actual Forge head can provide stdout stage time but never a standalone
+Forge duration. Heredoc source/log readers/quoted programs are not parsed as
+executed compiler commands. Hidden subprocesses remain unavailable.
+
+Reported Solc and overall suite wall summaries are distinct from whole command
+duration and per-suite CPU. Explicit skipped compilation is known zero. Larger
+timing conflicts are withheld from subtotals with numeric diagnostics; raw
+reported numbers are still preserved, not adjusted. 0.5s is a consistency tolerance
+for timer origins/rounded output, not an estimate of unrecorded work.
+
+Explicit nested parent IDs suppress repeated elapsed/compile charges. Temporal
+containment alone does not prove parentage; concurrent execution coverage uses
+an interval union separately from summed process duration. Cross-phase/goal
+intervals remain ambiguous, never prorated. Sources have their own bounded-scan
+fingerprints because the activity pass can observe a different live file size
+from the token pass. Duplicates/conflicts/fork history are not new usage.
+
+[Goal 4.0 report and recovered data](../../docs/CODEX-TELEMETRY-2.md) document
+observability gaps. No before/after context, human approval duration, backend
+model reroute, absent goal endpoint or compiler stage is estimated. No service
+or background hook is installed.

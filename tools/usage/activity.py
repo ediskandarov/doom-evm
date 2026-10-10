@@ -61,7 +61,7 @@ def command_kind(argv):
         return 'unknown', None
     words = argv
     if words and words[0].rsplit('/', 1)[-1] in ('bash', 'zsh', 'sh'):
-        if len(words) != 3 or words[1] not in ('-c', '-lc') or '\n' in words[2]:
+        if len(words) != 3 or words[1] not in ('-c', '-lc') or '<<' in words[2]:
             return 'other', None
         try:
             lexer = shlex.shlex(words[2], posix=True, punctuation_chars=';&|()<>')
@@ -69,7 +69,7 @@ def command_kind(argv):
             words = list(lexer)
         except ValueError:
             return 'unknown', None
-        if any(x in (';', '&&', '||', '|', '(', ')', '&') for x in words):
+        if '\n' in argv[2] or any(x in (';', '&&', '||', '|', '(', ')', '&') for x in words):
             # Multi-command wall time is not a standalone Forge duration. Still
             # recover a reported stage when one actual executed head is Forge.
             text = argv[2]
@@ -83,8 +83,8 @@ def command_kind(argv):
                 elif ch in ("'", '"'):quote=ch
                 elif ch=='`' or text[j:j+2]=='$(' or ch in '|()&' and text[j:j+2] not in ('&&','||'):
                     return 'mixed', None
-                elif ch==';' or text[j:j+2] in ('&&','||'):
-                    segments.append(text[begin:j]);j += 0 if ch==';' else 1;begin=j+1
+                elif ch in ';\n' or text[j:j+2] in ('&&','||'):
+                    segments.append(text[begin:j]);j += 0 if ch in ';\n' else 1;begin=j+1
                 j+=1
             segments.append(text[begin:])
             try:heads=[command_kind(shlex.split(s)) for s in segments if s.strip()]
@@ -358,16 +358,19 @@ def collect_activity(files, config, closed_only=False):
 
     executions=[e for e in clean if e['kind']=='execution']
     for e in executions:
+        e['reported_compiler_wall_seconds']=e['compiler_wall_seconds']
+        e['reported_test_wall_seconds']=e['test_wall_seconds']
+        e['timing_tolerance_seconds']=0.5  # Different timer origins/rounded stdout; not a time estimate.
         attribute(e,e['start'],e['end'])
         parents=[p for p in executions if p is not e and p['thread_id']==e['thread_id'] and
                  e.get('parent_execution_id') and p['event_id']==e['parent_execution_id']]
         e['included_in_execution_sum']=not parents
         e['nested_in_execution_id']=parents[0]['event_id'] if parents else None
-        if e['compiler_wall_seconds'] is not None and e['wall_seconds'] is not None and e['compiler_wall_seconds']>e['wall_seconds']+0.01:
+        if e['compiler_wall_seconds'] is not None and e['wall_seconds'] is not None and e['compiler_wall_seconds']>e['wall_seconds']+e['timing_tolerance_seconds']:
             diag['inconsistent_compiler_stage_duration']+=1;e['compiler_wall_seconds']=None
-        if e['test_wall_seconds'] is not None and e['wall_seconds'] is not None and e['test_wall_seconds']>e['wall_seconds']+0.01:
+        if e['test_wall_seconds'] is not None and e['wall_seconds'] is not None and e['test_wall_seconds']>e['wall_seconds']+e['timing_tolerance_seconds']:
             diag['inconsistent_test_stage_duration']+=1;e['test_wall_seconds']=None
-        if e['compiler_wall_seconds'] is not None and e['test_wall_seconds'] is not None and e['wall_seconds'] is not None and e['compiler_wall_seconds']+e['test_wall_seconds']>e['wall_seconds']+0.01:
+        if e['compiler_wall_seconds'] is not None and e['test_wall_seconds'] is not None and e['wall_seconds'] is not None and e['compiler_wall_seconds']+e['test_wall_seconds']>e['wall_seconds']+e['timing_tolerance_seconds']:
             diag['inconsistent_sequential_stage_sum']+=1;e['compiler_wall_seconds']=None;e['test_wall_seconds']=None
         # Explicit nested compiler records supersede their parent's stdout stage
         # annotation. Containment alone does not prove parentage/concurrency.
@@ -407,4 +410,5 @@ def collect_activity(files, config, closed_only=False):
                 'Human-wait means a logged human-resolved approval interval; human thinking, delivery and routing cannot be isolated from those endpoints.',
                 'Execution sum is not goal elapsed/CPU time. Concurrent agents overlap; interval union is wall coverage, not an additive task budget.',
                 'Forge duration includes overhead/possible tests. Solc-reported stage and overall suite wall are separate annotations, never added again to execution totals.',
+                'Reported stage values are preserved separately. Inconsistent stages are withheld from subtotals with a0.5s tolerance for different timers/rounded stdout; no durations are adjusted to fit.',
                 'Compound commands and wrapper-hidden compiler/test subprocesses stay unclassified; redirected compiler output may be unavailable. Missing stage durations are not zero.']}
