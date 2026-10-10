@@ -634,6 +634,7 @@ struct GameHooks {
     function(GameContext memory, int32, FloorType) internal view returns (bool) bossDoFloor;
     function(GameContext memory, int32, DoorType) internal view returns (bool) bossDoDoor;
     function(GameContext memory) internal view exitLevel;
+    function(GameContext memory, uint32) internal view startPlayerUI;
 }
 
 struct GameContext {
@@ -644,4 +645,7 @@ struct GameContext {
     GameHooks hooks;
     MapScratch move;
     PathScratch path;
+    // Ephemeral integration context: callbacks/presentation never enter GameState.
+    bytes adapterData;
+    bool playerUIEnabled;
 }

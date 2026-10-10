@@ -29,6 +29,10 @@ struct ZoneState {
     // Explicit platform policy: untouched bytes of the initial zone are zero.
     // False retains the original strict source-written-only diagnostic profile.
     bool deterministicInitialization;
+    // Explicit Episode LP64 platform domain: native addresses are below 2^48.
+    // Only the two high bytes of CURRENT header pointer fields are then known.
+    // Legacy/strict profiles leave this disabled; low address bytes remain unknown.
+    bool canonicalPointerHighBytes;
     ZoneBlock[] blocks;
     uint32[] ownerBlocks;
 }

@@ -1,5 +1,11 @@
 # Phase 4 progress ledger
 
+Current feature checkpoint: **Episode One functional integration is verified on
+`feat/phase4-episode-completion`; main integration remains pending.** Nine-map
+runtime, original transitions/WI/E1 finale and browser controls are connected.
+This user-defined goal excludes complete input tapes and exhaustive acceptance.
+See the feature checkpoint appended below and its explicit Episode memory domain.
+
 Current startup checkpoint: **Goal4.13a Episode One fresh-startup foundation
 is integrated and verified in its declared source/support domain.** Production
 endpoint and level transitions remain pending; Doom.sol is unchanged by this
@@ -1133,3 +1139,58 @@ The staged git whitespace check reported one extra blank line at that log's EOF;
 the captured output and its evidence hashes were retained. Source/documentation
 whitespace checks pass. The additive [publication record](../artifacts/phase4/third-wave-main/publication.json)
 binds the final ledger and preserves the earlier integration certificate unchanged.
+
+## Episode One Integration — Functional feature handoff
+
+User-defined scope: connect the existing Phase4 components into an EVM application;
+no complete input tapes, speedruns, optimization or full historical acceptance.
+Owner/worktree: `feat/phase4-episode-completion` only; baseline
+`0141708e9772c40a4b43f6fc631e0364fa0eb1a4` matched remote main at start.
+Start `2026-10-10T14:51:41Z`; functional verification/cleanup endpoint
+`2026-10-10T16:06:15Z` (4,474s clock interval). Publication/goal counters are separate.
+
+| Deliverable | Implementation | Integration | Focused verification |
+|---|---|---|---|
+| Episode runtime | Existing G_Ticker hooks, authenticated nine-map setup/reload, mutable difficulty persistence, death/rebirth/pause, IDCLEV without WI | Feature complete; main pending | All9 maps load/render in mined Anvil;210 exact E1M1 native states and13 complete native UI Frames; pause/restart/warp/storage checks |
+| WI | Persistent original WI state, canonical stats/latches/RNG, EVM full-screen drawing and one-shot G_WorldDone | Feature complete; main pending | Genuine E1M1 exit -> WI -> E1M2, E1M3 secret -> E1M9 -> E1M4, retained inventory and actual WI Canvas |
+| E1 finale | Original E1 start/ticker/text/art branches; no Episode2 continuation | Feature complete; main pending | Authenticated E1M8 special52 crossing -> GS_FINALE; initial native pixels and real Chrome;27 original-C/Forge text/art checkpoints |
+| Browser | New Game, E1M1–E1M9 selection, Restart, Pause/Resume; existing input/Frame channel | Feature complete; main pending | Fresh browser initialization plus controls/AM/finale; every checked Canvas byte equals EVM Frame+Palette |
+| Compatibility | Legacy static/world/UI/raw entry points preserved | Feature complete; main pending | Separate ordinary deployments/native pixels;239 unique focused Forge tests and58 Node tests; seven routing-run storage-root rollbacks |
+
+Code checkpoints: `827c95d`, `54b696d`, `e216de0`,
+`4be57da6b67668b8d16260e009249279fb75a418`. No merge or push occurred.
+The final evidence/report publication is a separate feature commit.
+
+Confirmed integration corrections: E1M4 sampled a current allocator pointer's
+high byte and a neighboring live composite. Original-C diagnostics and existing
+963-composite fixtures bind these reads. The composite reader rebuilds only
+current source-written bytes, with no native cache/allocation/tag effects;
+freed/mutable bodies remain unknown. Episode startup alone opts into a guarded
+LP64 address domain below2^48 for current header pointer bytes6/7 (provenance3).
+Legacy pointer-domain flags remain false and all inherited strict cases pass.
+**The integrator must explicitly review this new Episode domain and reader
+extension; no whole-process memory equivalence or lower-pointer inference is claimed.**
+An E1M9 packet MemoryOOG was fixed by borrowing one AM projection for the original
+event-batch lifetime. No compiler, hardfork, per-execution memory or10B budget
+change was made. Anvil history is bounded to64 states off-chain.
+
+Failed attempts remain preserved: DrawBounds diagnoses, packet MemoryOOG,
+unknown owned-node termination, a torch-obstructed E1M8 test approach and a legacy
+UI test using the wrong command for its native golden. Corrected focused cases
+pass; no accepted assertion, original C, golden or historical certificate changed.
+Exit traversals use declared God/noclip original inputs and real authored triggers,
+with no production storage injections. Honest full-episode replay, baron combat
+tapes, audio/wipes, other episodes and full Phase0–4 release acceptance remain
+separate follow-ups. No known functional blocker remains in the demonstrated scope.
+
+Handoff: [full scope, API, tests and limits](PHASE4-EPISODE-COMPLETION.md),
+[current verification certificate](../artifacts/phase4/episode-completion/verification.json),
+[normal/secret routing evidence](../artifacts/phase4/episode-completion/functional.json),
+[passing targeted completion](../artifacts/phase4/episode-completion/completion-final.json),
+[fresh Chrome launch](../artifacts/phase4/episode-completion/browser-fresh.json).
+The routing report's overall failed gate remains failed; its passed subcases and
+the corrected completion gate are distinguished by the roll-up certificate.
+Use the README launcher on18761/18762 for interactive play. All owned runtimes
+were stopped; playground18880/8088 and other owners' environments were preserved.
+Stop for the designated integrator; refresh main and inspect the declared interfaces
+before integration. Do not merge/push main or automatically begin final acceptance.

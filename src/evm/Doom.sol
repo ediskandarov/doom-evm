@@ -8,9 +8,12 @@ import {DoomRenderer} from "./DoomRenderer.sol";
 import {RenderContext} from "../doom/r_render_state.sol";
 import {DoomGame} from "./DoomGame.sol";
 import {InputProtocol, InputRuntimeState} from "./InputProtocol.sol";
-import {GameState, GameContext, Player, Mobj} from "../doom/p_game_state.sol";
+import {GameState, GameContext, Player, Mobj, PlayerState} from "../doom/p_game_state.sol";
 import {Ticcmd} from "../doom/d_ticcmd.sol";
 import {DoomUI, UIState} from "./DoomUI.sol";
+import {EpisodeStartup} from "./EpisodeStartup.sol";
+import {EpisodeRuntime, EpisodeState} from "./EpisodeRuntime.sol";
+import {G_Game, GameflowState} from "../doom/g_game.sol";
 
 /// @notice Freedoom E1M1 rendering and original gameplay inside the ordinary EVM.
 /// @dev Explicit startup preserves the accepted static renderer before gameplay begins.
@@ -24,6 +27,7 @@ contract Doom is IFrameProtocol, WadResources {
     error UINotEnabled();
     error RawInputRequired();
     error RawInputNotEnabled();
+    error EpisodeNotEnabled();
 
     /// @notice EVM-selected RGB8 palette for the matching unchanged indexed8 Frame.
     event FramePalette(
@@ -45,8 +49,100 @@ contract Doom is IFrameProtocol, WadResources {
     UIState internal uiState;
     bool public rawInput;
     InputRuntimeState internal inputRuntime;
+    bool public episodeMode;
+    EpisodeState internal episodeState;
 
     constructor(address[] memory chunks, bytes memory directory) WadResources(chunks, directory) {}
+
+    /// @notice Opt into the complete Episode One lifecycle and original keyboard input.
+    function initializeEpisode(int32 map, int32 skill, bool fullscreen) external {
+        if (msg.sender != driver) revert NotDriver();
+        if (gameStarted) revert GameAlreadyStarted();
+        (GameContext memory c, GameflowState memory f) =
+            EpisodeStartup.initialize(_resourceView(), 1, map, skill, false, true);
+        c.state.nativeZone.canonicalPointerHighBytes = true;
+        UIState memory u;
+        DoomUI.initialize(u, c, fullscreen);
+        InputRuntimeState memory s;
+        InputProtocol.initialize(s);
+        s.flow = f;
+        EpisodeState memory e;
+        EpisodeRuntime.saveDifficulty(c, e);
+        gameState = c.state;
+        uiState = u;
+        inputRuntime = s;
+        episodeState = e;
+        gameStarted = true;
+        rawInput = true;
+        episodeMode = true;
+    }
+
+    /// @notice Original deferred new-game semantics; consumes one sequenced tic and Frame.
+    function newEpisodeGame(int32 map, int32 skill, uint32 sequence) external {
+        _episodeDriver();
+        if (map < 1 || map > 9 || skill < 0 || skill > 4) {
+            revert EpisodeStartup.UnsupportedSelection(1, map, skill);
+        }
+        GameState memory state = gameState;
+        GameflowState memory flow = inputRuntime.flow;
+        G_Game.G_DeferedInitNew(state, flow, skill, 1, map);
+        gameState = state;
+        inputRuntime.flow = flow;
+        _stepEpisode(bytes(""), sequence, true);
+    }
+
+    /// @notice Restart the current level through the original rebirth/load lifecycle.
+    function restartEpisode(uint32 sequence) external {
+        _episodeDriver();
+        gameState.players[0].playerstate = PlayerState.reborn;
+        GameState memory state = gameState;
+        G_Game.G_DoReborn(state, 0);
+        gameState = state;
+        _stepEpisode(bytes(""), sequence, true);
+    }
+
+    function setEpisodePaused(bool paused, uint32 sequence) external {
+        _episodeDriver();
+        if (gameState.paused != paused) inputRuntime.flow.sendpause = true;
+        _stepEpisode(bytes(""), sequence, true);
+    }
+
+    function _episodeDriver() private view {
+        if (msg.sender != driver) revert NotDriver();
+        if (!episodeMode) revert EpisodeNotEnabled();
+    }
+
+    function episodeStatus()
+        external
+        view
+        returns (
+            int32 map,
+            int32 skill,
+            int32 state,
+            int32 action,
+            bool paused,
+            int32 last,
+            int32 next,
+            int32 wiStage,
+            int32 wiTic,
+            int32 finaleStage,
+            int32 finaleTic
+        )
+    {
+        return (
+            gameState.gamemap,
+            gameState.gameskill,
+            gameState.gamestate,
+            gameState.gameaction,
+            gameState.paused,
+            inputRuntime.flow.wminfo.last,
+            inputRuntime.flow.wminfo.next,
+            episodeState.wi.sp_state,
+            episodeState.wi.bcnt,
+            episodeState.finale.finalestage,
+            episodeState.finale.finalecount
+        );
+    }
 
     /// @notice Start original single-player retail E1M1 at medium skill.
     /// @dev Startup has no command, tic or Frame; the first accepted input advances tic one.
@@ -169,6 +265,10 @@ contract Doom is IFrameProtocol, WadResources {
         if (msg.sender != driver) revert NotDriver();
         if (!rawInput) revert RawInputNotEnabled();
         if (inputSeq == type(uint32).max || sequence != inputSeq + 1) revert BadSequence();
+        if (episodeMode) {
+            _stepEpisode(events, sequence, draw);
+            return;
+        }
         GameContext memory c = DoomGame.load(_resourceView(), gameState);
         UIState memory u = uiState;
         InputRuntimeState memory s = inputRuntime;
@@ -191,6 +291,23 @@ contract Doom is IFrameProtocol, WadResources {
         inputRuntime = s;
         uiState = u;
         gameState = c.state;
+        inputSeq = sequence;
+        if (draw) _emitFrame(sequence, pixels);
+    }
+
+    function _stepEpisode(bytes memory events, uint32 sequence, bool draw) private {
+        if (inputSeq == type(uint32).max || sequence != inputSeq + 1) revert BadSequence();
+        GameContext memory c = DoomGame.load(_resourceView(), gameState);
+        UIState memory u = uiState;
+        InputRuntimeState memory s = inputRuntime;
+        EpisodeState memory e = episodeState;
+        EpisodeRuntime.tick(c, s, u, e, events);
+        bytes memory pixels;
+        if (draw) pixels = EpisodeRuntime.draw(c, s, u, e);
+        gameState = c.state;
+        uiState = u;
+        inputRuntime = s;
+        episodeState = e;
         inputSeq = sequence;
         if (draw) _emitFrame(sequence, pixels);
     }
@@ -293,7 +410,7 @@ contract Doom is IFrameProtocol, WadResources {
                 frameId,
                 sequence,
                 uiState.status.paletteRevision,
-                uiState.status.st_palette,
+                episodeMode && gameState.gamestate != 0 ? int32(0) : uiState.status.st_palette,
                 uiState.status.usegamma,
                 uiState.status.paletteRGB
             );

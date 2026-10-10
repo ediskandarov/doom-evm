@@ -291,6 +291,15 @@ library R_Data {
         generateComposite(r, texture, true);
     }
 
+    /// @dev Read an already allocated native composite's physical payload. The
+    /// original generator verifies every densely packed composite column byte.
+    /// Reconstructing ephemeral bytes must not replay Z_Malloc/cache/tag calls.
+    function compositeBacking(RenderResources memory r, uint32 texture) internal view returns (bytes memory) {
+        if (texture >= r.textures.length) revert Bounds();
+        if (!r.textures[texture].compositeReady) generateComposite(r, texture, false);
+        return r.textures[texture].composite;
+    }
+
     /// @dev Rebuilding ephemeral bytes for an existing native cache owner is parsing,
     /// not another original Z_Malloc or W_CacheLumpNum call.
     function generateComposite(RenderResources memory r, uint32 texture, bool nativeCall) private view {

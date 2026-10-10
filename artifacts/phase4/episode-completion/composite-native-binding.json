@@ -1,0 +1,11 @@
+{
+  "kind": "captured-composite-native-binding",
+  "sourceCompositeSha256": "bdf6cf3a76487e51c677749a4794c4a980f2e5470a5014c6c60ab289baed58ba",
+  "originalNativeTextureIndex": 76,
+  "width": 32,
+  "height": 16,
+  "compositesize": 512,
+  "nativeFixtureSha256": "e04d5e79980752550f726ac5d093911c60c58a6bcb94c3ba0bbb3c6f06949ad0",
+  "proof": "All 963 original-C texture composite records are compared by the inherited RData tests. The diagnostic source digest exactly matches record76. The backing extension calls the same generator with native cache effects disabled; dedicated tests prove unchanged allocator/tag/owner state and freed-payload rejection.",
+  "fullMapFrameNativeEquivalenceClaimed": false
+}

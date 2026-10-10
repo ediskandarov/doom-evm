@@ -25,6 +25,10 @@ try {
     button.textContent = 'Run DOOM →';
     if (config.rawKeyboard === true) document.querySelector('p').textContent +=
       ' Tab opens the automap; F toggles follow, arrows pan, =/− zoom, G toggles grid, M marks and C clears. Type original cheat codes while playing.';
+    if (config.episodeMode === true) {
+      document.querySelector('.pill').textContent = 'FREEDOOM · EPISODE ONE';
+      document.querySelector('p').textContent = 'Choose a level and start a new game. WASD moves, arrows turn, Shift runs, Ctrl fires, Space or E uses doors, and 1–8 select weapons. Tab opens the automap. Type original cheat codes while playing. Fire or Use advances the intermission.';
+    }
   }
   proof.rendererKind = genuine ? 'doom-world-view' : 'synthetic';
   proof.gameplayAvailable = gameplay;
@@ -66,10 +70,13 @@ try {
   });
   await subscription.connect();
   await backfill(rpc, config.address, config.deploymentBlock, inbox);
-  let updateControls = () => {};
+  let updateControls = () => {}, refreshEpisode;
   transactions = new InputTransactions(rpc, config, inbox, {
     onState: () => updateControls(),
-    onFrame: input => { proof.inputs.push(input); proof.duplicates = inbox.duplicates; },
+    onFrame: input => {
+      proof.inputs.push(input); proof.duplicates = inbox.duplicates;
+      if (refreshEpisode) refreshEpisode(input.sequence).catch(fail);
+    },
   });
   await transactions.load();
   proof.gasLimit = transactions.gas; proof.gasBudgetSource = transactions.gasSource;
@@ -91,14 +98,31 @@ try {
     proof.duplicates = inbox.duplicates;
     return mined;
   };
-  let startGame;
+  let startGame, episodeControl;
   if (gameplay) {
     const controls = document.createElement('div');
     const startButton = document.createElement('button'), stopButton = document.createElement('button');
     controls.setAttribute('aria-label', 'Gameplay controls');
+    controls.style.display = 'flex'; controls.style.flexWrap = 'wrap'; controls.style.gap = '8px'; controls.style.alignItems = 'center';
     startButton.id = 'game-start'; startButton.type = 'button'; startButton.textContent = 'Start game →';
     stopButton.id = 'game-stop'; stopButton.type = 'button'; stopButton.textContent = 'Stop input'; stopButton.style.marginLeft = '8px';
     controls.append(startButton, stopButton); status.before(controls);
+    let levelSelect, newButton, restartButton, pauseButton, episodeInfo;
+    if (config.episodeMode === true) {
+      levelSelect = document.createElement('select'); levelSelect.id = 'episode-level';
+      levelSelect.style.padding = '12px'; levelSelect.style.font = 'inherit';
+      levelSelect.setAttribute('aria-label', 'Starting level');
+      for (let map = 1; map <= 9; ++map) {
+        const option = document.createElement('option'); option.value = String(map); option.textContent = `E1M${map}`;
+        levelSelect.append(option);
+      }
+      levelSelect.value = String(config.startMap ?? 1);
+      levelSelect.addEventListener('change', () => { config.startMap = Number(levelSelect.value); });
+      const makeButton = (id, label) => { const node = document.createElement('button'); node.id = id; node.type = 'button'; node.textContent = label; return node; };
+      newButton = makeButton('episode-new', 'New Game'); restartButton = makeButton('episode-restart', 'Restart'); pauseButton = makeButton('episode-pause', 'Pause');
+      episodeInfo = document.createElement('span'); episodeInfo.id = 'episode-state'; episodeInfo.style.marginLeft = '12px';
+      controls.prepend(levelSelect, newButton, restartButton, pauseButton, episodeInfo);
+    }
     loop = new GameplayLoop(transactions, keyboard, { onState: () => updateControls(), onError: fail });
     updateControls = () => {
       proof.gameStarted = transactions.started;
@@ -109,6 +133,12 @@ try {
       startButton.disabled = stopped || !transactions.canSend || loop.running || loop.starting;
       startButton.textContent = loop.running ? (loop.starting ? 'Starting…' : 'Running…') : transactions.started ? 'Resume game →' : 'Start game →';
       stopButton.disabled = !loop.running && !loop.starting;
+      if (newButton) {
+        newButton.disabled = stopped || !transactions.canSend || loop.starting;
+        restartButton.disabled = pauseButton.disabled = newButton.disabled || !transactions.started;
+        pauseButton.textContent = proof.episode?.paused ? 'Resume' : 'Pause';
+        episodeInfo.textContent = proof.episode ? `E1M${proof.episode.map} · ${['Playing', 'Intermission', 'Finale'][proof.episode.state]}${proof.episode.paused ? ' · Paused' : ''}` : '';
+      }
     };
     binding = bindKeyboard(window, keyboard, document, {
       enabled: () => loop.running && !stopped,
@@ -124,10 +154,35 @@ try {
     };
     startButton.addEventListener('click', () => startGame().catch(fail));
     stopButton.addEventListener('click', () => loop.stop());
+    if (newButton) {
+      const refresh = refreshEpisode = async (sequence = transactions.sequence) => {
+        const current = await transactions.episodeStatus();
+        if (sequence === transactions.sequence) { proof.episode = current; updateControls(); }
+      };
+      episodeControl = async (action, { run = false, map = Number(levelSelect.value) } = {}) => {
+        loop.stop();
+        while (transactions.pending) await new Promise(done => setTimeout(done, 20));
+        if (!transactions.started) {
+          if (action !== 'new') throw Error('Start a new game first');
+          config.startMap = map; await startGame({ run: false }); await nextFrame();
+        } else {
+          await transactions.load();
+          const current = await transactions.episodeStatus();
+          await transactions.episodeControl(action, { map, skill: config.skill ?? 2, paused: !current.paused });
+          await pendingPresentation;
+        }
+        await refresh();
+        if (run && !proof.episode.paused) await loop.start();
+      };
+      newButton.addEventListener('click', () => episodeControl('new', { run: true }).catch(fail));
+      restartButton.addEventListener('click', () => episodeControl('restart', { run: true }).catch(fail));
+      pauseButton.addEventListener('click', () => episodeControl('pause', { run: true }).catch(fail));
+      if (transactions.started) await refresh();
+    }
   } else {
     updateControls = () => { button.disabled = stopped || !transactions.canSend; };
   }
-  window.fixtureClient = { nextFrame, config, inbox, startGame, stopGame: () => loop?.stop(), keyboard, transactions, loop };
+  window.fixtureClient = { nextFrame, config, inbox, startGame, episodeControl, stopGame: () => loop?.stop(), keyboard, transactions, loop };
   button.addEventListener('click', () => nextFrame().catch(fail)); updateControls(); proof.ready = true;
   status.textContent = gameplay
     ? 'Subscribed. Start gameplay when ready, or render the static view first.'
