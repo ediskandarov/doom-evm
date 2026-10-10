@@ -1,0 +1,92 @@
+{
+  "schemaVersion": 1,
+  "goal": "4.5",
+  "pass": true,
+  "baseline": "9f98ed1d38e6de3f2577f5d76b07ec136fc70d52",
+  "initialBaseline": "6d7630e603efd5f2c596fcc01d91a8521fcc3270",
+  "inheritedAdvance": "Worktree reflog records external merge main fast-forward at 2026-10-10 14:14:20 +0400; all automap changes were untracked new files",
+  "branch": "feat/phase4-automap",
+  "native": {
+    "profiles": 3,
+    "cases": 22,
+    "snapshots": 383,
+    "exactAgreement": true,
+    "nativeManifestSha256": "8490d6f7a61cbf7d06f1dda4128e4208ca2dfb68f88dae266e3aeff4f7e47406",
+    "fixtureSha256": "d57ec9d6d3510766b799f2d6ed85e751acc27ce6cac138b2f4c7094f3c9d47db"
+  },
+  "foundry": {
+    "tests": 19,
+    "failed": 0,
+    "skipped": 0,
+    "fuzzRuns": 256,
+    "passedTests": [
+      "testFrozenFrameAbiContainsNativeEquivalentAutomapPixels",
+      "testFuzzBresenhamEndpointBounds",
+      "testGlyphDrawingDoesNotMutateVectorDefinitions",
+      "testNativeBoundaryVertexOrder",
+      "testNativeCheatMismatchEventsDeathmatch",
+      "testNativeClampsBigRestoreReopen",
+      "testNativeClipOctantsBoundaries",
+      "testNativeE1M1Geometry",
+      "testNativeFallbackPlayer",
+      "testNativeFollowStationaryZoomRestore",
+      "testNativeGridAndMarkerRing",
+      "testNativeMarkerEdgesSentinel",
+      "testNativeOriginalSlopeAndLightHelpers",
+      "testNativePanZoomFollow",
+      "testNativeRandomFixedCoordinateClipping",
+      "testNativeRotations",
+      "testNativeWallDiscoveryAndAllmapCheats",
+      "testRendererScreenZeroAliasAndStatusRowsSurviveDrawer",
+      "testSlopesAndDisabledLightTickerHelper"
+    ],
+    "command": "forge test --match-path 'test/{unit/am_map,integration/AutomapVideo}.t.sol' --skip Doom --skip GameplayProbe --skip RendererProbe --skip WadResourcesProbe -vv"
+  },
+  "evm": {
+    "ordinaryCreate": true,
+    "frames": 22,
+    "statesCompared": 383,
+    "pixelsReturned": 1408000,
+    "rollbackVerified": true,
+    "receiptEvidenceSha256": "749c426554a4e840fa64b1f50683862e58f55c4171c00630350a7b8dfde974e7",
+    "gasRange": [
+      28748138,
+      140831313
+    ]
+  },
+  "ownership": {
+    "allPreexistingTrackedFilesUnchanged": true,
+    "baselineTreeSha256": "74eaf55ce47e5c410cd2f7a84ed78c460aced0d79e711c489fe7a5a832ecba24",
+    "productionAdaptersModified": false,
+    "mainModified": false,
+    "fullInheritedRegression": "deferred to final Phase 4 by user instruction"
+  },
+  "compilerInputSha256": {
+    "src/doom/am_map.sol": "3c5da949fc635d095659d4333d153408499e89e4178b469cb335e31cf52f6020",
+    "src/doom/am_map_types.sol": "7347073682c367c15c918aa51ff924c664b6d05efdbf4f0392d4f404b31a9039",
+    "src/doom/m_bbox.sol": "f4c60efe3627a97d0288fc5cd0283535527b1f51029568534c80bb8fbbf8f272",
+    "src/doom/m_fixed.sol": "3f64bef1f62f61faead3a5b8f382bf1c66e1b3739ce4ac8d59a6fcef0451ef9f",
+    "src/doom/tables.sol": "bf14202b419075f6d187653205a37e211d8267c7fc4c0bebf5a8c5713afddf38",
+    "src/doom/v_video.sol": "be75fe69e7cd2486ce93408ec204cdf470ea097569e37fbedd867e9a2f3adf1f",
+    "src/doom/v_video_types.sol": "266890b0c8003e89f78baf8415048d24e4ca14865a1c8518ad77bb6a9f6b4d35",
+    "src/evm/FrameProtocol.sol": "4665be3f613b8e817d616d2db1dc4a644325c44a6ade476a35d7d9d003625ace",
+    "src/support/AutomapFixture.sol": "fb1ebf9df83871de40924df81fdf00f513462399209255aaa299684e5d4f2040",
+    "src/support/AutomapProbe.sol": "455d5e04e4a1f6dad454a0e55324ad5e616ad071609b5eae1e7f36ac3840f8d0"
+  },
+  "sourceSha256": {
+    "src/doom/am_map.sol": "3c5da949fc635d095659d4333d153408499e89e4178b469cb335e31cf52f6020",
+    "src/doom/am_map_types.sol": "7347073682c367c15c918aa51ff924c664b6d05efdbf4f0392d4f404b31a9039",
+    "src/support/AutomapFixture.sol": "fb1ebf9df83871de40924df81fdf00f513462399209255aaa299684e5d4f2040",
+    "src/support/AutomapProbe.sol": "455d5e04e4a1f6dad454a0e55324ad5e616ad071609b5eae1e7f36ac3840f8d0",
+    "test/unit/am_map.t.sol": "62eb32e57be761360c9d1b098235a0c63c8bd8f3bf079c4f120a4a8e496bef10",
+    "test/integration/AutomapVideo.t.sol": "0f9ab0db416e294942e6526549d9206d5d80011dfde53b10a597bcfcf40f8b0a",
+    "docs/PHASE4-AUTOMAP.md": "dc928734ec564cc3dabc981734114aa5cdb27b10f3af6cdae323cc56e2f55208",
+    "tools/reference/automap/host.c": "f491c82237e352c46fd280a7e6f806c7fdcf0f61e5abc5373744a1898fb54898",
+    "tools/reference/automap/compat.h": "64dea01d5e5695f6ab0c83a26a048be4de6d84ede9b43c20fae9bd150cf20622",
+    "tools/reference/automap/reference.py": "b808a50c5e718ac028e94d3f4d9d5377548b2f649af405709a139f5592200830",
+    "tools/reference/automap/evm.mjs": "92b60e3a67646b67eb87681dacd5f821b083c5aa0d43aac16b9b6b5a1c35508e",
+    "tools/reference/automap/verify.py": "fc55ed75b27bdfd1499292c6b04e4d85f3bc2fd9d7e1d6089c265417436b4bce",
+    "tools/reference/automap/README.md": "e3710b561f0ce8e5e9ce8aac4da599c765fab9c6299741ed05aa7f1265550df5"
+  },
+  "sourceMapSha256": "6b46b452c2e00aa094a3de9f3d2b607efce5d9019f8a7714543d785ddd9e2219"
+}

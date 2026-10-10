@@ -1,0 +1,549 @@
+{
+  "schemaVersion": 1,
+  "goal": "4.5",
+  "upstreamCommit": "a77dfb96cb91780ca334d0d4cfd86957558007e0",
+  "functions": [
+    {
+      "function": "AM_getIslope",
+      "original": {
+        "path": "original/DOOM/linuxdoom-1.10/am_map.c",
+        "lineStart": 309,
+        "lineEnd": 322,
+        "sourceSpanSha256": "4b613ceb52e469ef208a7df61613e0f47f81af968db768e5e30729538beb084c"
+      },
+      "solidity": {
+        "path": "src/doom/am_map.sol",
+        "lineStart": 316,
+        "lineEnd": 323,
+        "sourceSpanSha256": "b3235b77baa3ea40b783d85ff8c55881463670f787a6cd030c711cab0a5446ec"
+      }
+    },
+    {
+      "function": "AM_activateNewScale",
+      "original": {
+        "path": "original/DOOM/linuxdoom-1.10/am_map.c",
+        "lineStart": 327,
+        "lineEnd": 337,
+        "sourceSpanSha256": "b987694f3580459fc78a29fdeb1ffe378d8f6ef68ce9759623b0e9b073ac3bc5"
+      },
+      "solidity": {
+        "path": "src/doom/am_map.sol",
+        "lineStart": 43,
+        "lineEnd": 53,
+        "sourceSpanSha256": "217f031fd48f26a280520d7d5a52f7e8cd4982381e4ebe8e40296c75188c7948"
+      }
+    },
+    {
+      "function": "AM_saveScaleAndLoc",
+      "original": {
+        "path": "original/DOOM/linuxdoom-1.10/am_map.c",
+        "lineStart": 342,
+        "lineEnd": 348,
+        "sourceSpanSha256": "e6c6846b87b20ee29fc885f4f42441f8c67906cc3948bf4fe6c2a00d5e7f6302"
+      },
+      "solidity": {
+        "path": "src/doom/am_map.sol",
+        "lineStart": 55,
+        "lineEnd": 60,
+        "sourceSpanSha256": "81c443db905f9ab8bd0406140de7d1a527e633efb648b8b4f72771e5804177f9"
+      }
+    },
+    {
+      "function": "AM_restoreScaleAndLoc",
+      "original": {
+        "path": "original/DOOM/linuxdoom-1.10/am_map.c",
+        "lineStart": 353,
+        "lineEnd": 372,
+        "sourceSpanSha256": "e8edc60e46a73ab945751bbf23a598e3df13f2d61dc9081c865e148ea7296136"
+      },
+      "solidity": {
+        "path": "src/doom/am_map.sol",
+        "lineStart": 62,
+        "lineEnd": 72,
+        "sourceSpanSha256": "c3a2805e5efa15dacdff8717e1013d4e355bb5f09ec0e9fce9b32d32675ab410"
+      }
+    },
+    {
+      "function": "AM_addMark",
+      "original": {
+        "path": "original/DOOM/linuxdoom-1.10/am_map.c",
+        "lineStart": 377,
+        "lineEnd": 383,
+        "sourceSpanSha256": "f72ec782995cb325c0cca0a1c60a80db3ef2e504f780870a45100ea24a5ccdfb"
+      },
+      "solidity": {
+        "path": "src/doom/am_map.sol",
+        "lineStart": 81,
+        "lineEnd": 86,
+        "sourceSpanSha256": "914c320bf827c8c5dbc7d007f74fac46238f9dbc0cc18b2c83a1b5d86953bfde"
+      }
+    },
+    {
+      "function": "AM_findMinMaxBoundaries",
+      "original": {
+        "path": "original/DOOM/linuxdoom-1.10/am_map.c",
+        "lineStart": 389,
+        "lineEnd": 423,
+        "sourceSpanSha256": "92303e100e8e15e0f6a6520f0c973bb1fb7aace85b1ba7a808037c75972788d6"
+      },
+      "solidity": {
+        "path": "src/doom/am_map.sol",
+        "lineStart": 88,
+        "lineEnd": 108,
+        "sourceSpanSha256": "827f4c164b8595320f816a9f58148e5fb5fe884e7e2298f776c4344fac623ff0"
+      }
+    },
+    {
+      "function": "AM_changeWindowLoc",
+      "original": {
+        "path": "original/DOOM/linuxdoom-1.10/am_map.c",
+        "lineStart": 429,
+        "lineEnd": 452,
+        "sourceSpanSha256": "9e3dbb192ea41e06b7e24e5be6507b9fc9e36a9e32c8ebe10e34baf5ccc9bafc"
+      },
+      "solidity": {
+        "path": "src/doom/am_map.sol",
+        "lineStart": 118,
+        "lineEnd": 132,
+        "sourceSpanSha256": "3316118e6a1850822409b2b62c3d640ea2a5fce415fc06124d9024cf3cc0121c"
+      }
+    },
+    {
+      "function": "AM_initVariables",
+      "original": {
+        "path": "original/DOOM/linuxdoom-1.10/am_map.c",
+        "lineStart": 458,
+        "lineEnd": 497,
+        "sourceSpanSha256": "e48e38ce91eaf6fc481f75dadba5a612648ec609e99d813e2054f3c851f1f7ed"
+      },
+      "solidity": {
+        "path": "src/doom/am_map.sol",
+        "lineStart": 134,
+        "lineEnd": 159,
+        "sourceSpanSha256": "8f1fcd3c6975d6c3b37e9db2149cae638d8bb42c6b2c53afaddba6fd660d913e"
+      },
+      "adaptation": "Selected player index replaces pointer; raw status event exposed through state."
+    },
+    {
+      "function": "AM_loadPics",
+      "original": {
+        "path": "original/DOOM/linuxdoom-1.10/am_map.c",
+        "lineStart": 502,
+        "lineEnd": 513,
+        "sourceSpanSha256": "c2e75c34ea89eec1b83a433c47c9f577644568ec39318a30f41e1a825bc932d7"
+      },
+      "solidity": {
+        "path": "src/doom/am_map.sol",
+        "lineStart": 161,
+        "lineEnd": 163,
+        "sourceSpanSha256": "3c2138ab36509a43d727e5c6a44ca8e890431841c90798659bb8ff429ff00835"
+      },
+      "adaptation": "Caller-supplied original marker patches; observable lifecycle request count replaces resource pointer/tag mutation."
+    },
+    {
+      "function": "AM_unloadPics",
+      "original": {
+        "path": "original/DOOM/linuxdoom-1.10/am_map.c",
+        "lineStart": 515,
+        "lineEnd": 522,
+        "sourceSpanSha256": "d462344d396906973daaa79b664f3e0e5130ed26e69bed2eabac11062be745b0"
+      },
+      "solidity": {
+        "path": "src/doom/am_map.sol",
+        "lineStart": 165,
+        "lineEnd": 167,
+        "sourceSpanSha256": "b621be1242604daaa205a1372e1ee97cc2bdb0ff2769ebf0d77b473c0e3da30a"
+      },
+      "adaptation": "Caller-supplied original marker patches; observable lifecycle request count replaces resource pointer/tag mutation."
+    },
+    {
+      "function": "AM_clearMarks",
+      "original": {
+        "path": "original/DOOM/linuxdoom-1.10/am_map.c",
+        "lineStart": 524,
+        "lineEnd": 531,
+        "sourceSpanSha256": "8620f620ef9e66da4f730282386b325e61b7bbaa48c1d99cb601d883113200f9"
+      },
+      "solidity": {
+        "path": "src/doom/am_map.sol",
+        "lineStart": 74,
+        "lineEnd": 79,
+        "sourceSpanSha256": "8ded4713ea8773845e40190e1f9b151a9df21c785947ca4ad623d97156726654"
+      }
+    },
+    {
+      "function": "AM_LevelInit",
+      "original": {
+        "path": "original/DOOM/linuxdoom-1.10/am_map.c",
+        "lineStart": 537,
+        "lineEnd": 552,
+        "sourceSpanSha256": "5adab965198e11ae488fb0f8895a976951e6c11d5f9fae7cfb39d5109bd4275c"
+      },
+      "solidity": {
+        "path": "src/doom/am_map.sol",
+        "lineStart": 110,
+        "lineEnd": 116,
+        "sourceSpanSha256": "940035791e9489ba352dec2a1b829048da40e7d98b8bb5beee39fbb31e5fd6f9"
+      }
+    },
+    {
+      "function": "AM_Stop",
+      "original": {
+        "path": "original/DOOM/linuxdoom-1.10/am_map.c",
+        "lineStart": 560,
+        "lineEnd": 568,
+        "sourceSpanSha256": "d9e81385f8b1f2f3e29d59291063b1b05078a066372b21e63e1d1c08a11c35fd"
+      },
+      "solidity": {
+        "path": "src/doom/am_map.sol",
+        "lineStart": 169,
+        "lineEnd": 175,
+        "sourceSpanSha256": "83b992afc0320531497c8366e3907dedfe8a4d9db56d87167650fd3bd0e1a598"
+      },
+      "adaptation": "Original malformed exit-event initializer retained as raw observation; Status Bar adapter remains integration-owned."
+    },
+    {
+      "function": "AM_Start",
+      "original": {
+        "path": "original/DOOM/linuxdoom-1.10/am_map.c",
+        "lineStart": 573,
+        "lineEnd": 587,
+        "sourceSpanSha256": "9d5f7eed65b33d61975f848336162978f74c468f929a912f9bb411e4c067875b"
+      },
+      "solidity": {
+        "path": "src/doom/am_map.sol",
+        "lineStart": 177,
+        "lineEnd": 187,
+        "sourceSpanSha256": "e06a4dbf1e4d190ab3ced11193fa408714ba2013ecae03126c0ac59c4962297d"
+      }
+    },
+    {
+      "function": "AM_minOutWindowScale",
+      "original": {
+        "path": "original/DOOM/linuxdoom-1.10/am_map.c",
+        "lineStart": 592,
+        "lineEnd": 597,
+        "sourceSpanSha256": "02af23eaa4a0e4659950099d513e89e22f3bdd54efaa6b96b4a0763ad4a9ff9b"
+      },
+      "solidity": {
+        "path": "src/doom/am_map.sol",
+        "lineStart": 189,
+        "lineEnd": 193,
+        "sourceSpanSha256": "362919d0a77ba45371912155267f2818a36a68d380e3ca6944f6adb83f753063"
+      }
+    },
+    {
+      "function": "AM_maxOutWindowScale",
+      "original": {
+        "path": "original/DOOM/linuxdoom-1.10/am_map.c",
+        "lineStart": 602,
+        "lineEnd": 607,
+        "sourceSpanSha256": "8675c440c0835487da07ea5dcc9c6391bc72c18e4c5ad8b9a36f9251e964fb17"
+      },
+      "solidity": {
+        "path": "src/doom/am_map.sol",
+        "lineStart": 195,
+        "lineEnd": 199,
+        "sourceSpanSha256": "06112291a131409cdf0476183baee867e2d72a7035f552f82fe0847a3fd8d20d"
+      }
+    },
+    {
+      "function": "AM_Responder",
+      "original": {
+        "path": "original/DOOM/linuxdoom-1.10/am_map.c",
+        "lineStart": 614,
+        "lineEnd": 735,
+        "sourceSpanSha256": "7c760f0026eefd10158d256abe1e1110c77605bf3577b577c48f99745dff21a3"
+      },
+      "solidity": {
+        "path": "src/doom/am_map.sol",
+        "lineStart": 201,
+        "lineEnd": 273,
+        "sourceSpanSha256": "15281b351a95535f02bb66a410882b43d35d088bf5b8e25e44cac829357eb275"
+      }
+    },
+    {
+      "function": "AM_changeWindowScale",
+      "original": {
+        "path": "original/DOOM/linuxdoom-1.10/am_map.c",
+        "lineStart": 741,
+        "lineEnd": 754,
+        "sourceSpanSha256": "ecf3adca10d89e6878e7989f347d1ceed5e49213892d89c569ac70e9cb77b0ca"
+      },
+      "solidity": {
+        "path": "src/doom/am_map.sol",
+        "lineStart": 275,
+        "lineEnd": 281,
+        "sourceSpanSha256": "f0464720b832ff99ae2fead5bd19bbedade720c802f7b4bf99f13f3c72b29e07"
+      }
+    },
+    {
+      "function": "AM_doFollowPlayer",
+      "original": {
+        "path": "original/DOOM/linuxdoom-1.10/am_map.c",
+        "lineStart": 760,
+        "lineEnd": 779,
+        "sourceSpanSha256": "5d901abf1454a3be6c0374083c59e1bc5b42637762dd0a1a2d5e30e9479e393f"
+      },
+      "solidity": {
+        "path": "src/doom/am_map.sol",
+        "lineStart": 283,
+        "lineEnd": 292,
+        "sourceSpanSha256": "b8d524d57cabc14b4a934709d2b161821585484723c3ed644dd6c5dd31bfd5ad"
+      }
+    },
+    {
+      "function": "AM_updateLightLev",
+      "original": {
+        "path": "original/DOOM/linuxdoom-1.10/am_map.c",
+        "lineStart": 784,
+        "lineEnd": 799,
+        "sourceSpanSha256": "69cc0e35bba96954848951f9b5e9c875146e76ca5253ac825242c5fd98536cd8"
+      },
+      "solidity": {
+        "path": "src/doom/am_map.sol",
+        "lineStart": 294,
+        "lineEnd": 303,
+        "sourceSpanSha256": "ab14ba04952a878e5b75e7e03589ac2875d39383e93401d07266cb40a0fcfa8f"
+      }
+    },
+    {
+      "function": "AM_Ticker",
+      "original": {
+        "path": "original/DOOM/linuxdoom-1.10/am_map.c",
+        "lineStart": 805,
+        "lineEnd": 827,
+        "sourceSpanSha256": "f7de9b65e53aa3e2d7c3e0f681eb6e65747e3e2566130f2016a7f302a50e9d49"
+      },
+      "solidity": {
+        "path": "src/doom/am_map.sol",
+        "lineStart": 305,
+        "lineEnd": 314,
+        "sourceSpanSha256": "f00cb70e10398751b4d38742a43e4e475acfd42cc5fef94f137b7ddc81ac293a"
+      }
+    },
+    {
+      "function": "AM_clearFB",
+      "original": {
+        "path": "original/DOOM/linuxdoom-1.10/am_map.c",
+        "lineStart": 833,
+        "lineEnd": 836,
+        "sourceSpanSha256": "014d11119aed39a348185bf0650cf751de5b6104c04623658106a3ee694d812e"
+      },
+      "solidity": {
+        "path": "src/doom/am_map.sol",
+        "lineStart": 598,
+        "lineEnd": 606,
+        "sourceSpanSha256": "9dd0d74d262095fbcab611bf597f81e35d3a5dfdd14807e61fbe2a36dd546eab"
+      }
+    },
+    {
+      "function": "AM_clipMline",
+      "original": {
+        "path": "original/DOOM/linuxdoom-1.10/am_map.c",
+        "lineStart": 847,
+        "lineEnd": 970,
+        "sourceSpanSha256": "5a727e67c88157f0d0ed35e39e3a20451172c62c853209c3349a1cdea08d48f2"
+      },
+      "solidity": {
+        "path": "src/doom/am_map.sol",
+        "lineStart": 332,
+        "lineEnd": 392,
+        "sourceSpanSha256": "4b4e409bf568655b5245175b3cbbebc4a18945c4dd1f82841f1ce531e6d40a68"
+      }
+    },
+    {
+      "function": "AM_drawFline",
+      "original": {
+        "path": "original/DOOM/linuxdoom-1.10/am_map.c",
+        "lineStart": 978,
+        "lineEnd": 1049,
+        "sourceSpanSha256": "93ac56c5ff85f523c169f2389014aa37786c037bb7365b6e6d02a51a341401c1"
+      },
+      "solidity": {
+        "path": "src/doom/am_map.sol",
+        "lineStart": 394,
+        "lineEnd": 428,
+        "sourceSpanSha256": "6629daa44a2c15780a7fa35773e3a58abef352d881ebf3bb9f9b93915b362412"
+      }
+    },
+    {
+      "function": "AM_drawMline",
+      "original": {
+        "path": "original/DOOM/linuxdoom-1.10/am_map.c",
+        "lineStart": 1056,
+        "lineEnd": 1064,
+        "sourceSpanSha256": "6ce377d545f3368c33c5c653c0e49450b70f7a8046df377a97b86fadeeb9b10c"
+      },
+      "solidity": {
+        "path": "src/doom/am_map.sol",
+        "lineStart": 430,
+        "lineEnd": 436,
+        "sourceSpanSha256": "4e48e478e8ed0164bd6f8e845e9ad2ceb15b62729c6acd2e889968aa925e1802"
+      }
+    },
+    {
+      "function": "AM_drawGrid",
+      "original": {
+        "path": "original/DOOM/linuxdoom-1.10/am_map.c",
+        "lineStart": 1071,
+        "lineEnd": 1111,
+        "sourceSpanSha256": "1198cad9d9ae13aedf9bb3df680094f85d0dc8df80b122f8a0db9bc57465e88e"
+      },
+      "solidity": {
+        "path": "src/doom/am_map.sol",
+        "lineStart": 438,
+        "lineEnd": 455,
+        "sourceSpanSha256": "bd7f705fa0371999150054d205538d442aa9f53d20e5e39407f1ac19d976922d"
+      }
+    },
+    {
+      "function": "AM_drawWalls",
+      "original": {
+        "path": "original/DOOM/linuxdoom-1.10/am_map.c",
+        "lineStart": 1117,
+        "lineEnd": 1165,
+        "sourceSpanSha256": "a5c02a9c6221b0258f656ea16f369dfac5bfb4717f2ba56db782dd323c21bcf4"
+      },
+      "solidity": {
+        "path": "src/doom/am_map.sol",
+        "lineStart": 457,
+        "lineEnd": 482,
+        "sourceSpanSha256": "f63427e493e0dee9b4e910ae234a16a719433158050a0a6fc69feeaf17f493a6"
+      }
+    },
+    {
+      "function": "AM_rotate",
+      "original": {
+        "path": "original/DOOM/linuxdoom-1.10/am_map.c",
+        "lineStart": 1173,
+        "lineEnd": 1189,
+        "sourceSpanSha256": "214ab83f2614e0fe4333a7a408ef342250f20d806509f2f0fc319083b7ae3763"
+      },
+      "solidity": {
+        "path": "src/doom/am_map.sol",
+        "lineStart": 484,
+        "lineEnd": 492,
+        "sourceSpanSha256": "f8dcaaa56d39427050c51a2d2e6f6ea8a61f9db35fb88e166acf24cb00dff25c"
+      }
+    },
+    {
+      "function": "AM_drawLineCharacter",
+      "original": {
+        "path": "original/DOOM/linuxdoom-1.10/am_map.c",
+        "lineStart": 1192,
+        "lineEnd": 1238,
+        "sourceSpanSha256": "9739a04257d058d5e60cbd095a6f507be81185ca73a80676879641cb85d81739"
+      },
+      "solidity": {
+        "path": "src/doom/am_map.sol",
+        "lineStart": 494,
+        "lineEnd": 525,
+        "sourceSpanSha256": "6ef9956c46bce7d760afa4ec85a6f669d64b3b8a3e8a74644869923f9a74f749"
+      }
+    },
+    {
+      "function": "AM_drawPlayers",
+      "original": {
+        "path": "original/DOOM/linuxdoom-1.10/am_map.c",
+        "lineStart": 1240,
+        "lineEnd": 1282,
+        "sourceSpanSha256": "0c23535ec3afec7bb83b494560b7a636a8b1e7562cc093facc832848c3616817"
+      },
+      "solidity": {
+        "path": "src/doom/am_map.sol",
+        "lineStart": 554,
+        "lineEnd": 568,
+        "sourceSpanSha256": "5e05694d76a0e7a0825bd01637122306a637eb53a5c0601ac9172cc5ae9ab663"
+      }
+    },
+    {
+      "function": "AM_drawThings",
+      "original": {
+        "path": "original/DOOM/linuxdoom-1.10/am_map.c",
+        "lineStart": 1285,
+        "lineEnd": 1303,
+        "sourceSpanSha256": "4afd2488c27e4bf06dde189357747207f7ce21c422d3655f140e30638206e735"
+      },
+      "solidity": {
+        "path": "src/doom/am_map.sol",
+        "lineStart": 570,
+        "lineEnd": 582,
+        "sourceSpanSha256": "e7abe5476665e127a0287f841cdf3999a3063a802bdd3f0881139ac4211e7dda"
+      }
+    },
+    {
+      "function": "AM_drawMarks",
+      "original": {
+        "path": "original/DOOM/linuxdoom-1.10/am_map.c",
+        "lineStart": 1305,
+        "lineEnd": 1324,
+        "sourceSpanSha256": "1a0975af9b0a4053e686de8e183b2dacd11e8def23012513c12878f7da7312ed"
+      },
+      "solidity": {
+        "path": "src/doom/am_map.sol",
+        "lineStart": 584,
+        "lineEnd": 596,
+        "sourceSpanSha256": "cd2587b3d62fcc6b79d8a101ee3e01f612d8f547f682710a168bb106101f65f0"
+      }
+    },
+    {
+      "function": "AM_drawCrosshair",
+      "original": {
+        "path": "original/DOOM/linuxdoom-1.10/am_map.c",
+        "lineStart": 1326,
+        "lineEnd": 1330,
+        "sourceSpanSha256": "9c8e21a70ea1d3105ef615de8d8fc1630441465dc2be494c1eb907f188ebbcc0"
+      },
+      "solidity": {
+        "path": "src/doom/am_map.sol",
+        "lineStart": 608,
+        "lineEnd": 610,
+        "sourceSpanSha256": "a8009f09115c9b38adc1cb5651cdde9589373b1a055ad468a1319bdb75d1e223"
+      }
+    },
+    {
+      "function": "AM_Drawer",
+      "original": {
+        "path": "original/DOOM/linuxdoom-1.10/am_map.c",
+        "lineStart": 1332,
+        "lineEnd": 1349,
+        "sourceSpanSha256": "6106f298275f4ab432d10c416db26ae4fe4081e4189cafcced877b54c2a2db47"
+      },
+      "solidity": {
+        "path": "src/doom/am_map.sol",
+        "lineStart": 612,
+        "lineEnd": 632,
+        "sourceSpanSha256": "4933fc14dae9ad0f0438d17dc6cb47930596ed2a9c2fd8dfdc69aa928d161193"
+      }
+    }
+  ],
+  "sourceSha256": {
+    "src/doom/am_map.sol": "3c5da949fc635d095659d4333d153408499e89e4178b469cb335e31cf52f6020",
+    "src/doom/am_map_types.sol": "7347073682c367c15c918aa51ff924c664b6d05efdbf4f0392d4f404b31a9039",
+    "src/support/AutomapFixture.sol": "fb1ebf9df83871de40924df81fdf00f513462399209255aaa299684e5d4f2040",
+    "src/support/AutomapProbe.sol": "455d5e04e4a1f6dad454a0e55324ad5e616ad071609b5eae1e7f36ac3840f8d0",
+    "test/unit/am_map.t.sol": "62eb32e57be761360c9d1b098235a0c63c8bd8f3bf079c4f120a4a8e496bef10",
+    "test/integration/AutomapVideo.t.sol": "0f9ab0db416e294942e6526549d9206d5d80011dfde53b10a597bcfcf40f8b0a",
+    "docs/PHASE4-AUTOMAP.md": "dc928734ec564cc3dabc981734114aa5cdb27b10f3af6cdae323cc56e2f55208",
+    "tools/reference/automap/host.c": "f491c82237e352c46fd280a7e6f806c7fdcf0f61e5abc5373744a1898fb54898",
+    "tools/reference/automap/compat.h": "64dea01d5e5695f6ab0c83a26a048be4de6d84ede9b43c20fae9bd150cf20622",
+    "tools/reference/automap/reference.py": "b808a50c5e718ac028e94d3f4d9d5377548b2f649af405709a139f5592200830",
+    "tools/reference/automap/evm.mjs": "92b60e3a67646b67eb87681dacd5f821b083c5aa0d43aac16b9b6b5a1c35508e",
+    "tools/reference/automap/verify.py": "fc55ed75b27bdfd1499292c6b04e4d85f3bc2fd9d7e1d6089c265417436b4bce",
+    "tools/reference/automap/README.md": "e3710b561f0ce8e5e9ce8aac4da599c765fab9c6299741ed05aa7f1265550df5"
+  },
+  "definitions": {
+    "am_map_types.sol": "am_map.c globals/points/lines; named-field r_defs.h/player_t/mobj_t projections",
+    "fixedArithmetic": "Existing src/doom/m_fixed.sol",
+    "angles": "Existing Tables.finesine/finecosine; original BAM >>19",
+    "markers": "Existing V_Video.V_DrawPatch with original AMMNUM0..9",
+    "framebuffer": "Existing VideoState.screens[0] alias and V_MarkRect"
+  },
+  "deviations": [
+    "Original pointer/cache/status-bar calls represented by memory references, lifecycle counters and raw notifications",
+    "Original fixed 320x168 map within unchanged 320x200 framebuffer",
+    "Unused triangle_guy glyph is not drawn by original and is not exposed; all drawn glyph coordinates retained",
+    "Undefined C arithmetic/pointer cases are outside equivalence; invalid memory domains revert"
+  ]
+}
