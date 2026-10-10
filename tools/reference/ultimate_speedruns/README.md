@@ -33,7 +33,10 @@ counts and hashes. The observer changes telemetry only and retains provenance
 checks, draw guards and allocator algorithms. It builds with pinned solc
 0.8.37, viaIR, optimizer and Cancun. No production ABI is changed.
 
-Stage the committed original demo archive/source metadata under a per-map local
+Run `python3 tools/reference/ultimate_speedruns/stage-inputs.py` to authenticate
+and stage all committed archives and alternate tapes without overwriting existing
+inputs or derived metadata. For arbitrary new inputs, stage original demo
+archive/source metadata under a per-map local
 directory, extract its single original `.lmp` verbatim as `source-download`, and
 copy `source.json`. Reject archives containing WADs. `native.py DIRECTORY`
 extracts commands, compiles the pinned original command decoder and missing
