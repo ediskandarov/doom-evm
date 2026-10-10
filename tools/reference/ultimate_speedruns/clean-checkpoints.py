@@ -17,8 +17,8 @@ for root in a.roots:
   for p in pointer.parent.glob('evm.checkpoint-*'):
    if p.resolve() in keep or p.name.endswith('.tmp'):continue
    assert p.is_file() and not p.is_symlink()
-   if '.chain.gz' not in p.name and not p.name.endswith('.bin.gz'):continue
-   size=p.stat().st_size;digest=sha(p);p.unlink();removed.append(dict(file=str(p),bytes=size,sha256=digest,reason='Superseded Anvil dump; latest pointer and receipts verified and retained'))
+   if not any(p.name.endswith(suffix) for suffix in ['.chain.gz','.bin.gz','.deployment.json.gz','.replay.json.gz','.capture.json.gz']):continue
+   size=p.stat().st_size;digest=sha(p);p.unlink();removed.append(dict(file=str(p),bytes=size,sha256=digest,reason='Superseded Anvil dump or duplicate checkpoint receipts; latest pointer, state and receipts verified and retained; final proof receipts unaffected'))
 log=ROOT/'artifacts/local/ultimate-speedruns/checkpoint-cleanup.jsonl';log.parent.mkdir(parents=True,exist_ok=True)
 with log.open('a') as f:f.write(json.dumps(dict(UTC=time.strftime('%Y-%m-%dT%H:%M:%SZ',time.gmtime()),removed=removed))+'\n')
 print(json.dumps(dict(removed=len(removed),bytesFreed=sum(r['bytes'] for r in removed))))
