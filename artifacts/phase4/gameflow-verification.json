@@ -1,0 +1,387 @@
+{
+  "goal": "4.6",
+  "status": "verified within gameflow ownership",
+  "startedAt": "2026-10-10T08:38:19.330945+00:00",
+  "completedAt": "2026-10-10T08:39:29.581097+00:00",
+  "branch": "feat/phase4-gameflow",
+  "files": {
+    "docs/PHASE4-GAMEFLOW.md": "7629ff3aca0e79c0e0a024bbf212f40504a1d1082f881d1292762f3217d4b70e",
+    "src/doom/g_game.sol": "ea632f47ca5904819dd0dc254fc547799b56696e08e37d96a503d71da145f89c",
+    "test/fixtures/phase4_gameflow/legacy-idle-0.bin": "b8cfcff84e0542ee70afc9a05fd39cc0cd78db2086b01d538f74a706dde87500",
+    "test/fixtures/phase4_gameflow/legacy-idle-1.bin": "2991d1af9382f62eef138797466657ef20577ddb1f9c989a1572ab57a991abb4",
+    "test/fixtures/phase4_gameflow/legacy.json": "8d236bf6304e8ad82fb3083e84f3317c04431aecad2cffafd186e6eaaa3ef078",
+    "test/fixtures/phase4_gameflow/manifest.json": "6f514f67724f10a770c00a6fd594155f456d91e8bcfeef695190c7c4a88b28b1",
+    "test/fixtures/phase4_gameflow/vectors.bin": "dc4f09d61963ee756022ea80933374dc1e918617fb2b1640b32cb05eba8ab1c5",
+    "test/integration/GameflowE1M1.t.sol": "4719604e67de80d9a5ed886b0fcc9bc9150f9848fbc83515c8781767d6fd8074",
+    "test/unit/Gameflow.t.sol": "e342305079f95a498b76b8df2a31a70da733916113a65aaca76c51058831975d",
+    "test/unit/GameflowHarness.sol": "ef755b4db8b64912ef28a634b58fdd1c06886bd01e65c114e788d1bea140e937",
+    "test/unit/GameflowLegacySnapshot.sol": "0fca5279d30e5a8c7c344b647847f138188b040586daaf2267eb1085f4e41f42",
+    "test/unit/GameflowSnapshot.sol": "d62a4cf2574717ec69aa9930922bc56dab6519da72f5c2679e0912c23c4f0609",
+    "test/unit/GameflowTransactions.t.sol": "c1df344e70b62ba3b25983731359df041349633e553a09a989af82822fc45f2d",
+    "tools/reference/gameflow/README.md": "ddc347a63d84b4729872912f4b9cb356f603c17c098fd344bdbb3c7fd1b77a90",
+    "tools/reference/gameflow/checkpoint.py": "e1f7e3479afc1ba3c39eb043aad0fa681e1a1f68503a4f7ebab29e03d475f1e1",
+    "tools/reference/gameflow/driver.c": "5ac59adeca48ad84a5dfba0f62412e8e1929ff1278acbc0175f0e458440bb709",
+    "tools/reference/gameflow/host.c": "370c950c576f17fb5c733d5b16f911be7ca4110f70239f7e47676df8e9cd659f",
+    "tools/reference/gameflow/legacy.py": "15c2e31f25baaecd0a13d44582f7e3bf517d77345a1864f4882fca6a51d69cc3",
+    "tools/reference/gameflow/reference.py": "71234735675833dea57adb4b12aee6e3fe609d49a0de36c20352ca974c1c0f0a",
+    "tools/reference/gameflow/snapshot.inc": "a258a0b59763b25aa5457554df47536a11c5c20814552c8e6b19c0c613a50ad8",
+    "tools/reference/gameflow/snapshot.py": "910587d57efceb1e897e77055bec235099b5c8078f7599c855610774f547324b"
+  },
+  "preservation": {
+    "baseline": "084764b9fed601666b5a9d82dcf84325ca6bbfbf",
+    "onlyModifiedBaselineFile": "src/doom/g_game.sol",
+    "productionAdapters": "unchanged",
+    "sharedStateInterfaces": "unchanged",
+    "inheritedFixtures": "unchanged",
+    "compilerSettings": "unchanged",
+    "fullInheritedSuiteRun": false
+  },
+  "stages": [
+    {
+      "name": "native",
+      "command": [
+        "python3",
+        "tools/reference/gameflow/reference.py",
+        "--check"
+      ],
+      "exitCode": 0,
+      "seconds": 1.981,
+      "logSha256": "7382c445e3b12fdd9ade19544917cb8b37f58f5987303446cf0493f9cc5df603"
+    },
+    {
+      "name": "observation-schema",
+      "command": [
+        "python3",
+        "tools/reference/gameflow/snapshot.py",
+        "--check"
+      ],
+      "exitCode": 0,
+      "seconds": 0.021,
+      "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "legacy-provenance",
+      "command": [
+        "python3",
+        "tools/reference/gameflow/legacy.py",
+        "--check"
+      ],
+      "exitCode": 0,
+      "seconds": 0.052,
+      "logSha256": "8e9c8449772f7f97a370c3cce06d0caf0b0e2d3ce32b39990949852983a42a2c"
+    },
+    {
+      "name": "inherited-input-native",
+      "command": [
+        "python3",
+        "tools/reference/phase3_input/reference.py",
+        "--check"
+      ],
+      "exitCode": 0,
+      "seconds": 1.018,
+      "logSha256": "1192558370326e7acc1050a3a22ec9c4b5fc23ca7f99a3af905dcf2639e46520"
+    },
+    {
+      "name": "format",
+      "command": [
+        ".toolchain/bin/forge",
+        "fmt",
+        "--check",
+        "src/doom/g_game.sol",
+        "test/unit/Gameflow.t.sol",
+        "test/unit/GameflowHarness.sol",
+        "test/unit/GameflowTransactions.t.sol",
+        "test/integration/GameflowE1M1.t.sol"
+      ],
+      "exitCode": 0,
+      "seconds": 0.012,
+      "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "evm",
+      "command": [
+        ".toolchain/bin/forge",
+        "test",
+        "--match-path",
+        "test/{unit/Gameflow*,unit/g_game,integration/GameflowE1M1}.t.sol",
+        "--skip",
+        "GameplayProbe",
+        "--skip",
+        "RendererProbe",
+        "--skip",
+        "WadResourcesProbe",
+        "--skip",
+        "Doom.sol",
+        "--skip",
+        "DoomRenderer.t.sol",
+        "-vv"
+      ],
+      "exitCode": 0,
+      "seconds": 67.062,
+      "logSha256": "135a4a0c45c66dcfe1bd2a6dd0f58aaf230f1c4418d97e11f0adbd0404168115"
+    }
+  ],
+  "native": {
+    "cases": 219,
+    "profiles": [
+      "O0",
+      "O2",
+      "sanitize"
+    ],
+    "functions": 17,
+    "fixture": "test/fixtures/phase4_gameflow/manifest.json"
+  },
+  "evm": {
+    "passed": 28,
+    "failed": 0,
+    "skipped": 0,
+    "tests": [
+      {
+        "name": "testInvalidStartupStateActionsAndSetupRollback",
+        "gas": 1307338648
+      },
+      {
+        "name": "testSecretRouteAndFinaleAcrossCommittedCalls",
+        "gas": 533907877
+      },
+      {
+        "name": "testStoragePauseResumeAndDeferredNightmareAcrossCalls",
+        "gas": 684372567
+      },
+      {
+        "name": "testCompletionStatsAreCopiedNotAliased",
+        "gas": 1052809
+      },
+      {
+        "name": "testIncomingCommandIsCopiedBeforeWorldTickerClearsSpecial",
+        "gas": 1044673
+      },
+      {
+        "name": "testOriginalCCompletionAllEpisodeOneMaps",
+        "gas": 820904809
+      },
+      {
+        "name": "testOriginalCDeathUseAndFollowingTicReload",
+        "gas": 9953555
+      },
+      {
+        "name": "testOriginalCLoadLevelAndReborn",
+        "gas": 56801060
+      },
+      {
+        "name": "testOriginalCNewGameAndDeferredInitialization",
+        "gas": 1608345996
+      },
+      {
+        "name": "testOriginalCNightmareFastAndInitPlayer",
+        "gas": 15433429
+      },
+      {
+        "name": "testOriginalCPauseMenuAndStateDispatch",
+        "gas": 4997970355
+      },
+      {
+        "name": "testOriginalCWorldDoneAndInventoryCarryover",
+        "gas": 175242566
+      },
+      {
+        "name": "testPauseProducerIsOneShotReplacesButtonsKeepsMovement",
+        "gas": 1011067
+      },
+      {
+        "name": "testDirectBuilderRejectsInvalidWeaponRequest",
+        "gas": 2308
+      },
+      {
+        "name": "testOriginalCIgnoredWeapon9AllKeyboardMasksAndTurnStates",
+        "gas": 91832255
+      },
+      {
+        "name": "testOriginalCNoWeaponAllKeyboardMasksAndTurnStates",
+        "gas": 91717223
+      },
+      {
+        "name": "testOriginalCSequentialTurnAccelerationReleaseAndWeapons",
+        "gas": 11178865
+      },
+      {
+        "name": "testOriginalCWeapon1AllKeyboardMasksAndTurnStates",
+        "gas": 92356301
+      },
+      {
+        "name": "testOriginalCWeapon2AllKeyboardMasksAndTurnStates",
+        "gas": 92356389
+      },
+      {
+        "name": "testOriginalCWeapon3AllKeyboardMasksAndTurnStates",
+        "gas": 92356477
+      },
+      {
+        "name": "testOriginalCWeapon4AllKeyboardMasksAndTurnStates",
+        "gas": 92356235
+      },
+      {
+        "name": "testOriginalCWeapon5AllKeyboardMasksAndTurnStates",
+        "gas": 92356521
+      },
+      {
+        "name": "testOriginalCWeapon6AllKeyboardMasksAndTurnStates",
+        "gas": 92356257
+      },
+      {
+        "name": "testOriginalCWeapon7AllKeyboardMasksAndTurnStates",
+        "gas": 92356411
+      },
+      {
+        "name": "testOriginalCWeapon8AllKeyboardMasksAndTurnStates",
+        "gas": 92356345
+      },
+      {
+        "name": "testRejectsInvalidTurnStateAndOriginalUndefinedCounterOverflow",
+        "gas": 21427
+      },
+      {
+        "name": "testRejectsReservedPacketBitsAndUndefinedWeaponRequests",
+        "gas": 103106
+      },
+      {
+        "name": "testRealE1M1NativeStartupFirstTicPauseDeathRestartAndCompletion",
+        "gas": 1248295170
+      }
+    ],
+    "scope": "Foundry EVM; external-call storage/rollback tests plus actual E1M1 setup/gameplay; no ordinary RPC receipt or browser claim"
+  },
+  "inheritedInput": {
+    "nativeVectors": 41007,
+    "evmTests": 14
+  },
+  "originalSourceMap": [
+    {
+      "file": "g_game.c",
+      "function": "G_PlayerReborn",
+      "startLine": 800,
+      "endLine": 833,
+      "sha256": "f1614f7287fa6ea297e680db337e1c6c7971df1d9c05bf6d730a93c2325c7085"
+    },
+    {
+      "file": "g_game.c",
+      "function": "G_InitPlayer",
+      "startLine": 761,
+      "endLine": 771,
+      "sha256": "2716013749cd259b37b5710b806d21e7a38c2857855cf4ea76d6239694ace5d8"
+    },
+    {
+      "file": "g_game.c",
+      "function": "G_PlayerFinishLevel",
+      "startLine": 779,
+      "endLine": 792,
+      "sha256": "212ed4838df5560804845e51f79a4e3689035bf3eadceba7e842442d5871e4de"
+    },
+    {
+      "file": "g_game.c",
+      "function": "G_DoReborn",
+      "startLine": 924,
+      "endLine": 967,
+      "sha256": "5f34f9cfd649904bd5ec42d1494a8512f08c7d94083e054648f9072a66805c0f"
+    },
+    {
+      "file": "g_game.c",
+      "function": "G_ExitLevel",
+      "startLine": 1002,
+      "endLine": 1006,
+      "sha256": "a849ac6972b2e6337f4157cde12bc559352852aab79310bdbd78ba5e51898487"
+    },
+    {
+      "file": "g_game.c",
+      "function": "G_SecretExitLevel",
+      "startLine": 1009,
+      "endLine": 1018,
+      "sha256": "4e5df7c6f0716427681ea2ad38bd5b395d0ae6bd98be8592c6c17ceefa4a2e94"
+    },
+    {
+      "file": "g_game.c",
+      "function": "G_DoCompleted",
+      "startLine": 1020,
+      "endLine": 1141,
+      "sha256": "6fa8be5694cc910150ba27267ae0ea710580ee8ab4a94cb7e101f53a326d88b1"
+    },
+    {
+      "file": "g_game.c",
+      "function": "G_WorldDone",
+      "startLine": 1147,
+      "endLine": 1170,
+      "sha256": "599de23d97057d977dfaed07f4a7cda74d548906d31315a390c8c05d116b64eb"
+    },
+    {
+      "file": "g_game.c",
+      "function": "G_DoWorldDone",
+      "startLine": 1172,
+      "endLine": 1179,
+      "sha256": "e5358e3b27d8920a8730be05ed65e9a9e1e7c969940cfb538dcd42c5adb343f2"
+    },
+    {
+      "file": "g_game.c",
+      "function": "G_DeferedInitNew",
+      "startLine": 1332,
+      "endLine": 1342,
+      "sha256": "1fe69cef8e72dc538ba4a32eea5a83cd4fbe717cec6b8205ac4fd309e87acb3d"
+    },
+    {
+      "file": "g_game.c",
+      "function": "G_DoNewGame",
+      "startLine": 1345,
+      "endLine": 1358,
+      "sha256": "3b1932ed32e010f3b9a8f4f1b1f0015c62cd9d62cb29112914f409f88f63549d"
+    },
+    {
+      "file": "g_game.c",
+      "function": "G_InitNew",
+      "startLine": 1364,
+      "endLine": 1482,
+      "sha256": "63c435d36fc05c4763c8a63a435194d70b4896300aecd0528ee4d74c4422a61e"
+    },
+    {
+      "file": "g_game.c",
+      "function": "G_DoLoadLevel",
+      "startLine": 445,
+      "endLine": 497,
+      "sha256": "6d5443269570ef90c3f0062c4addbee997f789aa0bf69710c28c3966ba4ceb48"
+    },
+    {
+      "file": "g_game.c",
+      "function": "G_Ticker",
+      "startLine": 605,
+      "endLine": 748,
+      "sha256": "aa9ec3ee3c8e13eb54cd3a3f5317dc5eceb8db6a5df3e714823ebdd53208568e"
+    },
+    {
+      "file": "p_user.c",
+      "function": "P_CalcHeight",
+      "startLine": 77,
+      "endLine": 141,
+      "sha256": "482e0a8aa549ed68fa16994ee84cd9cddf15293ee13038b554859803aafb357c"
+    },
+    {
+      "file": "p_user.c",
+      "function": "P_DeathThink",
+      "startLine": 182,
+      "endLine": 229,
+      "sha256": "a043efeb4911755382bd04b24741ea04912cbccd9b6f111ba79e6ec43e82a981"
+    },
+    {
+      "file": "p_tick.c",
+      "function": "P_Ticker",
+      "startLine": 130,
+      "endLine": 158,
+      "sha256": "2ea4dc0b8b04f2346d20674e7291b87b5c51f6f4d6f01a29239c281b3ec428e7"
+    }
+  ],
+  "integrationHandoff": "docs/PHASE4-GAMEFLOW.md",
+  "limits": [
+    "Only one map is loaded; all nine map transition selections use explicit native boundary doubles.",
+    "Intermission and finale presentation hooks are observed, graphics are excluded.",
+    "Production storage/UI adapters remain integration-owned and unchanged.",
+    "Native full E1M1 DSG1 comparison covers startup and first tic; later sequence assertions test invariants.",
+    "No full inherited verification suite, main merge, or later goal."
+  ]
+}
