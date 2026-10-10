@@ -1,0 +1,90 @@
+{
+  "schemaVersion": 1,
+  "scope": "Independent real Freedoom E1M1 demo replay; original input, native and ordinary EVM receipt/state evidence",
+  "files": {
+    "commands.txt": {
+      "bytes": 4680,
+      "sha256": "c05c63c959a279f77775780a3dba0e06dada80d5060d19d65dcf1cd31204bcb2"
+    },
+    "development-attempts.json": {
+      "bytes": 639,
+      "sha256": "811e936dbcf74aa0b53c941aff2a6296c78723cb8396cc7ca3d715509ef63c14"
+    },
+    "e1m1-easy.lmp": {
+      "bytes": 1700,
+      "sha256": "111aec6cabcd2718f0e4fab662980bb68c1831bfc1db12a438fe7e8af2fb5782"
+    },
+    "evm-deployment-receipts.json.gz": {
+      "bytes": 207875,
+      "sha256": "cd0dceff90e37412fc8b69950c2a435a29b7376369906dcd5f882cd567556ead"
+    },
+    "evm-replay-receipts.json.gz": {
+      "bytes": 5186827,
+      "sha256": "3d1af82148821c876b45b092935c73cc97a02074a49b2c44c7505941ed084294"
+    },
+    "evm-result.json": {
+      "bytes": 22802,
+      "sha256": "34377642f707742d5e605674cf7fb9f76c79cbe113e1dd5f17a56c9f721ed2b2"
+    },
+    "evm-states.delta.bin.gz": {
+      "bytes": 389126,
+      "sha256": "5ed9e50c87bfb866e34037e8e0833c6ba4bef5850bfad0b69a3044b4f7c3c56a"
+    },
+    "level-commands.txt": {
+      "bytes": 3767,
+      "sha256": "c8b96b2c5399db0e8787450f5e8bb657042223b133817dae374b109fadac9c15"
+    },
+    "native-O0-build.json": {
+      "bytes": 40592,
+      "sha256": "07fc4533b33645d201367b96fddbf549cf685179134f5f5778d23b3d4101bf74"
+    },
+    "native-O2-build.json": {
+      "bytes": 40592,
+      "sha256": "49dbdd257ab777b1c104beca06efeef4fd1166e2d68eade6d862e56cf83b1e74"
+    },
+    "native-recheck-O0-build.json": {
+      "bytes": 40687,
+      "sha256": "4f30f2dc380bdfcc0221266fa20fd43b0b667381d22eec59129247b7d7cf8980"
+    },
+    "native-recheck-O2-build.json": {
+      "bytes": 40687,
+      "sha256": "0b82dcf844a15dade20bc2b80753ae208d3b852523327b45c5f323e58dbf70a8"
+    },
+    "native-recheck-result.json": {
+      "bytes": 13405,
+      "sha256": "02231badcbbdeaebc6309d08f9e15da536a986bfca99bb8a5aa29d1c62a93bc4"
+    },
+    "native-recheck-sanitize-build.json": {
+      "bytes": 40756,
+      "sha256": "b2633470ac0706b838f5805d2eb25b8326f037d0e0d0c36e1e935b47a009f3e1"
+    },
+    "native-result.json": {
+      "bytes": 13730,
+      "sha256": "2f982340b5b5ae0fea1d6cdb3d70747c696f8f31ab4e76e39eda4b6f2baad01f"
+    },
+    "native-sanitize-build.json": {
+      "bytes": 40661,
+      "sha256": "378986800b479ff570b316521caf81c7750f702a20790e78e4c0214c688f6a75"
+    },
+    "native-state-hashes.json": {
+      "bytes": 35453,
+      "sha256": "cb630c921c2073b6ee804bc52224556ccea63cc8c536becabd83086ec69e6e76"
+    },
+    "native-states.delta.bin.gz": {
+      "bytes": 389126,
+      "sha256": "5ed9e50c87bfb866e34037e8e0833c6ba4bef5850bfad0b69a3044b4f7c3c56a"
+    },
+    "offline-verification.json": {
+      "bytes": 365,
+      "sha256": "d1193c5575af03b4d0d83a8e83a9f79981cf1d56ffc27f5476eef48be9d7fd31"
+    },
+    "source.json": {
+      "bytes": 2264,
+      "sha256": "1263a63425fe745e99b4a4bc29a48d1740322f658d0d45d33ab4ad7499f80b00"
+    },
+    "tape.json": {
+      "bytes": 62682,
+      "sha256": "330697bb3946fdb17769518f4f02ba4890326998e5d2ec8d7827c6a24a576ffa"
+    }
+  }
+}

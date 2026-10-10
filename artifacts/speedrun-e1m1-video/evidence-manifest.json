@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "scope": "EVM-rendered E1M1 video checkpoint; generated media and full receipts are ignored locally",
+  "files": {
+    "frame-manifest.json": {
+      "bytes": 64820,
+      "sha256": "1d0448bdcbbc6a9c71b1b0205b56c29adfa714032d0d714bd3bdb889bf73be0b"
+    },
+    "recording-result.json": {
+      "bytes": 71685,
+      "sha256": "bd26d2b661418e37a6d060f46a5b5da99e66482c14aabe442562a4f6b3e138f9"
+    },
+    "render-failures.json": {
+      "bytes": 1274,
+      "sha256": "528febe358f03cd3cee2ece0cdc1706ae9d021eea75aeced09097b23a61e0014"
+    },
+    "verification.json": {
+      "bytes": 430,
+      "sha256": "aeb18dcc74c8bf253bb7e3a896f86e61c10d4612ea3efb5fa66188903b83b150"
+    }
+  }
+}
