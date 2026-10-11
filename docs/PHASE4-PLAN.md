@@ -1,5 +1,14 @@
 # Phase 4 progress ledger
 
+Three-game Browser checkpoint (2026-10-11): **source integrated, shared production
+wiring complete, focused acceptance passed**. Freedoom 0.13.0, Ultimate DOOM 1.9
+Episode One and DOOM II 1.9 now Install/Resume/Play through one deployment manager
+and original EVM-rendered menus. Fresh isolated Chrome/Anvil proves all three
+starts/movement, switching, reload/recovery and stale-chain rejection: 21 checks,
+20 exact Canvas Frames. Explicit browser profile3; Solidity defaults unchanged.
+MAP30 text supported, cast rejected. Earlier browser-unavailable checkpoints below
+are historical. See [combined handoff](browser-deployment/THREE-GAME-INTEGRATION.md).
+
 Browser Deployment checkpoint (2026-10-11): **integrated and focused-verified**.
 Fresh browser-managed Freedoom installation reaches the existing EVM menu,
 New Game and actual player movement. Reload/Play resumes the same contract and
@@ -1922,3 +1931,84 @@ this integration manifest. This ordinary integration task has no new goal-servic
 usage attribution; earlier goals' token counts are not reused or estimated.
 
 Stop after normal push, clean main and verified origin/main synchronization.
+
+
+## Ultimate DOOM and DOOM II Browser — Main integration (2026-10-11)
+
+Owner: designated Single Writer to Main; goal start 11:27:14 UTC. Clean refreshed
+baseline main==origin/main=`3cc536dff6c84194bf3784d9183e0d082a2bcf0e`.
+Both branches have that merge base and exactly four unintegrated intended commits.
+Normal no-ff Ultimate then DOOM II merges preserve all eight checkpoints;
+no Git conflicts or unrelated history. Shared browser integration commit:
+`305e27f1a948acf45640207f07dd094b500e8ff7`.
+
+| Feature | Implementation | Main integration | Verification | Source tip / merge |
+|---|---|---|---|---|
+| Ultimate DOOM Browser | Completed Episode One production admission/menu/gameplay | Source and shared launcher integrated | Inherited extensive acceptance + fresh first-map/cross-game acceptance | `f0a36ba765fa806e837b1f783e1827ad6bca65e2` / `42cd2ecf11e6a3aecf78a938898e543f3fa4c76a` |
+| DOOM II Browser | Completed authenticated commercial adapter/menu/lifecycle | Source and shared launcher integrated | Inherited all32 startup/MAP01+MAP07 evidence + fresh MAP01/cross-game acceptance | `cfccc1044d5037a779d7dbe9d42e6f0f94863819` / `b4c812ff8cb06ac1a3bb57cb179bdfa59c6ace8d` |
+
+All source checkpoint commits, exact source reports and verification certificates
+remain preserved. Their original Git evidence bindings pass read-only verification;
+new combined browser artifacts receive separate source/metadata proofs. Main's
+engine/test/original-C/compiler/memory semantics equal the merged features without
+integration-specific edits. Existing memory audit/RESTRICT record and earlier
+HUD, Status Bar, Gameflow, menu, Cheats, Automap and episode evidence remain intact.
+
+Shared Browser Deployment Manager now selects authenticated releases, profile
+journal keys, palettes and explicit initialization/inspection APIs. The isolated
+DOOM II adapter delegates to the same nonce/recovery/lock/discovery implementation.
+The exact DOOM2.WAD manifest replaces its obsolete filename bridge with unchanged
+bundle/directory/chunk hashes. Change game closes the old input/subscription client
+through reload, preserves selected game within the tab and reuses installations.
+HTML provides installation/selection only; actual menus/UI/world pixels remain EVM.
+
+Commercial files stay user-supplied through browser File API. Measured identities:
+Ultimate MD5 `c4fe9fd920207691a9f493668e0a2083`, SHA256
+`6fdf361847b46228cfebd9f3af09cd844282ac75f3edbb61ca4cb27103ce2e7f`;
+DOOM II MD5 `25e1459ca71d321525f84628f45ca8cd`, SHA256
+`10d67824b11025ddd9198e8cfc87ca335ee6e2d3e63af4180fa9b8a471893255`.
+Freedoom SHA256 `7323bcc168c5a45ff10749b339960e98314740a734c30d4b9f3337001f9e703d`.
+Production browser explicitly selects profile3 via the appropriate source API;
+both Solidity defaults stay2. Strict/deterministic/Episode/virtual policies,
+provenance and unknown-byte rejection remain unchanged. No Relaxed Rendering.
+
+Fresh executed verification on integrated code: affected-root compile (82 modules),
+18 focused Forge tests, 71 focused Node tests, six final release checks overlapping
+those 71 tests, ten module parses and release/source/ABI/immutable integrity.
+One final isolated real Chrome/Anvil run: **21 checks / 20 exact Canvas Frames**;
+all three installs, EVM menus, first-map startup, moving players; profile/state
+isolation and zero-redeployment switching/reload; interrupted DOOM II upload and
+actual mined lost-response recovery; same-chainId reset rejects all stale games.
+All three first-gameplay hashes match inherited accepted Frames. Dedicated
+19171/19172 processes stopped; ports independently closed; exact-origin CORS passed.
+Two new-harness bookkeeping failures remain separate and documented; neither
+production memory behavior nor inherited tests/goldens/certificates were changed.
+
+Inherited evidence: Ultimate45 Forge/81 Node/34 browser/24 Canvas checks and all
+nine authentic world-rendered speedruns (14,475 Frames, 14,484 snapshots, nine
+exits). DOOM II132 Forge/81 Node, all32 native/EVM startups, commercial UI/gameflow,
+MAP01(192tics) and MAP07(237tics) native-verified full-rate EVM recordings and actual
+browser movement. These are source-agent counts, not freshly rerun integration
+suites. Seventeen historical MP4s retain SHA256/size/mtime; no videos regenerated.
+
+Deferred: complete inherited Phase0–4 acceptance, all nine Ultimate speedrun reruns,
+both complete DOOM II replay reruns, all32 startup rerun and full32-map gameplay
+acceptance. MAP30 text is supported; original cast explicitly rejects at its
+unported F_StartCast boundary. No host cast replacement, audio/music or multiplayer.
+Virtual-derived pixels retain RESTRICT applicability and explicit provenance;
+finite native profile matches do not imply universal native heap/pixel equivalence.
+
+Ultimate Episode gameplay/full-rate world rendering complete. Final presentation recording pipeline pending: EVM status bar, original intermission, and EVM melt transitions.
+
+The parallel video worktree/branch/processes remain untouched and unmerged.
+
+[Combined browser handoff](browser-deployment/THREE-GAME-INTEGRATION.md),
+[Ultimate source handoff](ULTIMATE-BROWSER.md), [DOOM II source report](doom2/REPORT.md),
+[fresh acceptance](../artifacts/phase4/three-game-browser-main/chrome.json),
+[initial-frame compatibility](../artifacts/phase4/three-game-browser-main/initial-frame-compatibility.json),
+[preserved source ranges](../artifacts/phase4/three-game-browser-main/preflight.json),
+[publication bindings](../artifacts/phase4/three-game-browser-main/integration.json).
+
+Measured publication checkpoint: 2026-10-11 12:03:21 UTC; 2,167 wall seconds
+since first measured preflight, goal-service 240,647 aggregate tokens / 2,155 elapsed
+seconds. Missing attribution/cost is not estimated. Final Git publication follows.

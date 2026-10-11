@@ -1,0 +1,16 @@
+PASS Canvas freedoom original EVM menu
+PASS Canvas freedoom episode menu
+PASS Canvas freedoom original skill menu
+PASS Canvas freedoom actual first-map gameplay
+PASS Canvas freedoom held movement
+PASS Canvas ultimate original EVM menu
+PASS Canvas ultimate episode menu
+PASS Canvas ultimate original skill menu
+PASS Canvas ultimate actual first-map gameplay
+PASS Canvas ultimate held movement
+AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+
+2518 !== 8
+
+    at file:///Users/eduard/sandbox/doom-evm/tools/browser-deployment/three-game-check.mjs:107:11
+Report artifacts/local/three-game-browser-main/acceptance.json

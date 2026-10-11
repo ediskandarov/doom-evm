@@ -1,0 +1,27 @@
+{
+  "pass": true,
+  "games": {
+    "ultimate": {
+      "firstGameplayPixelSHA256": "b851a3170de07678b5ed539a754183deddcf8a25619e2999203450fd3e61910e",
+      "equalsAcceptedSourceFrame": true,
+      "inheritedSourceReport": "artifacts/ultimate-browser/accepted.json",
+      "inheritedLabel": "New Game actual E1M1 gameplay",
+      "freshLabel": "ultimate actual first-map gameplay"
+    },
+    "doom2": {
+      "firstGameplayPixelSHA256": "249f57f6ef71c4caaa78df8ce6759e17556dc1e1b960ac36b29df765e3c93f25",
+      "equalsAcceptedSourceFrame": true,
+      "inheritedSourceReport": "artifacts/doom2/browser.json",
+      "inheritedLabel": "New Game actual MAP01 gameplay",
+      "freshLabel": "doom2 actual first-map gameplay"
+    },
+    "freedoom": {
+      "firstGameplayPixelSHA256": "a297ba2dfa2d1eae509b975c96471640802a189389ea15ad741c399218782d54",
+      "equalsAcceptedSourceFrame": true,
+      "inheritedSourceReport": "artifacts/ultimate-browser/accepted.json",
+      "inheritedLabel": "Freedoom preserved New Game",
+      "freshLabel": "freedoom actual first-map gameplay"
+    }
+  },
+  "scope": "Three fresh genuine startup Frames match existing accepted hashes. No hashes/fixtures changed and no native replay rerun."
+}

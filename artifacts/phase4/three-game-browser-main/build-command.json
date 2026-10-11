@@ -1,0 +1,17 @@
+{
+  "command": [
+    ".toolchain/bin/forge",
+    "build",
+    "src/evm/Doom.sol",
+    "src/evm/Doom2.sol",
+    "src/evm/ResourceStore.sol",
+    "--offline",
+    "--no-lint"
+  ],
+  "cwd": ".",
+  "startedUtc": "2026-10-11T11:28:59.663378+00:00",
+  "endedUtc": "2026-10-11T11:33:03.989975+00:00",
+  "elapsedSeconds": 244.3266220833175,
+  "exitCode": 0,
+  "rawOutput": "/Users/eduard/sandbox/doom-evm/artifacts/phase4/three-game-browser-main/build.log"
+}

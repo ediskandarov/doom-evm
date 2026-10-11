@@ -1,0 +1,20 @@
+{
+  "command": [
+    "node",
+    "--test",
+    "web/browser-profiles.test.mjs",
+    "web/doom2-profile.test.mjs",
+    "web/install.test.mjs",
+    "web/menu-input.test.mjs",
+    "web/input-app.test.mjs",
+    "web/input-loop.test.mjs",
+    "web/episode.test.mjs",
+    "web/input-runtime.test.mjs"
+  ],
+  "cwd": ".",
+  "startedUtc": "2026-10-11T11:30:54.700917+00:00",
+  "endedUtc": "2026-10-11T11:30:55.177208+00:00",
+  "elapsedSeconds": 0.4762426661327481,
+  "exitCode": 1,
+  "rawOutput": "/Users/eduard/sandbox/doom-evm/artifacts/phase4/three-game-browser-main/node.log"
+}

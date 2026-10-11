@@ -1,0 +1,450 @@
+{
+  "pass": true,
+  "checkedLinks": [
+    {
+      "document": "docs/browser-deployment/THREE-GAME-INTEGRATION.md",
+      "target": "../ULTIMATE-BROWSER.md"
+    },
+    {
+      "document": "docs/browser-deployment/THREE-GAME-INTEGRATION.md",
+      "target": "../doom2/REPORT.md"
+    },
+    {
+      "document": "docs/browser-deployment/THREE-GAME-INTEGRATION.md",
+      "target": "../../artifacts/phase4/three-game-browser-main/chrome.json"
+    },
+    {
+      "document": "docs/browser-deployment/THREE-GAME-INTEGRATION.md",
+      "target": "../../artifacts/phase4/three-game-browser-main/initial-frame-compatibility.json"
+    },
+    {
+      "document": "docs/browser-deployment/THREE-GAME-INTEGRATION.md",
+      "target": "../../artifacts/phase4/three-game-browser-main/attempts.json"
+    },
+    {
+      "document": "docs/browser-deployment/README.md",
+      "target": "../ULTIMATE-BROWSER.md#explicit-interactive-memory-policy"
+    },
+    {
+      "document": "docs/browser-deployment/README.md",
+      "target": "../doom2/REPORT.md"
+    },
+    {
+      "document": "docs/browser-deployment/README.md",
+      "target": "THREE-GAME-INTEGRATION.md"
+    },
+    {
+      "document": "docs/PHASE4-PLAN.md",
+      "target": "browser-deployment/THREE-GAME-INTEGRATION.md"
+    },
+    {
+      "document": "docs/PHASE4-PLAN.md",
+      "target": "PHASE4-EPISODE-RESOURCES.md"
+    },
+    {
+      "document": "docs/PHASE4-PLAN.md",
+      "target": "../artifacts/phase4/episode-native-comparison.json"
+    },
+    {
+      "document": "docs/PHASE4-PLAN.md",
+      "target": "../artifacts/phase4/episode-packaging.json"
+    },
+    {
+      "document": "docs/PHASE4-PLAN.md",
+      "target": "../artifacts/phase4/episode-evm.json"
+    },
+    {
+      "document": "docs/PHASE4-PLAN.md",
+      "target": "../artifacts/phase4/episode-verification.json"
+    },
+    {
+      "document": "docs/PHASE4-PLAN.md",
+      "target": "04-IMPLEMENTATION-PLAN-EXTRA.md"
+    },
+    {
+      "document": "docs/PHASE4-PLAN.md",
+      "target": "CODEX-TELEMETRY-2.md"
+    },
+    {
+      "document": "docs/PHASE4-PLAN.md",
+      "target": "../artifacts/usage/telemetry2-validation.json"
+    },
+    {
+      "document": "docs/PHASE4-PLAN.md",
+      "target": "../artifacts/usage/goal4.0-completion.json"
+    },
+    {
+      "document": "docs/PHASE4-PLAN.md",
+      "target": "../artifacts/phase4/video-verification.json"
+    },
+    {
+      "document": "docs/PHASE4-PLAN.md",
+      "target": "../artifacts/phase4/video-source-map.json"
+    },
+    {
+      "document": "docs/PHASE4-PLAN.md",
+      "target": "../artifacts/phase4/video-evm.json"
+    },
+    {
+      "document": "docs/PHASE4-PLAN.md",
+      "target": "PHASE4-VIDEO.md"
+    },
+    {
+      "document": "docs/PHASE4-PLAN.md",
+      "target": "../artifacts/phase4/goal4.1-completion.json"
+    },
+    {
+      "document": "docs/PHASE4-PLAN.md",
+      "target": "PHASE4-MEMORY-AUDIT.md"
+    },
+    {
+      "document": "docs/PHASE4-PLAN.md",
+      "target": "PHASE4-MEMORY-AUDIT.md"
+    },
+    {
+      "document": "docs/PHASE4-PLAN.md",
+      "target": "../artifacts/phase4/hud-gameflow-integration.json"
+    },
+    {
+      "document": "docs/PHASE4-PLAN.md",
+      "target": "../artifacts/phase4/hud/verification.json"
+    },
+    {
+      "document": "docs/PHASE4-PLAN.md",
+      "target": "../artifacts/phase4/gameflow-verification.json"
+    },
+    {
+      "document": "docs/PHASE4-PLAN.md",
+      "target": "PHASE4-HUD.md"
+    },
+    {
+      "document": "docs/PHASE4-PLAN.md",
+      "target": "PHASE4-GAMEFLOW.md"
+    },
+    {
+      "document": "docs/PHASE4-PLAN.md",
+      "target": "../artifacts/phase4/statusbar-integration.json"
+    },
+    {
+      "document": "docs/PHASE4-PLAN.md",
+      "target": "../artifacts/phase4/statusbar-integration-evm.json"
+    },
+    {
+      "document": "docs/PHASE4-PLAN.md",
+      "target": "PHASE4-STATUSBAR.md"
+    },
+    {
+      "document": "docs/PHASE4-PLAN.md",
+      "target": "../artifacts/phase4/statusbar-verification.json"
+    },
+    {
+      "document": "docs/PHASE4-PLAN.md",
+      "target": "../artifacts/phase4/statusbar-source-map.json"
+    },
+    {
+      "document": "docs/PHASE4-PLAN.md",
+      "target": "../artifacts/phase4/statusbar-evm.json"
+    },
+    {
+      "document": "docs/PHASE4-PLAN.md",
+      "target": "PHASE4-CHEATS.md"
+    },
+    {
+      "document": "docs/PHASE4-PLAN.md",
+      "target": "../artifacts/phase4/cheats-evm.json"
+    },
+    {
+      "document": "docs/PHASE4-PLAN.md",
+      "target": "../artifacts/phase4/cheats-verification.json"
+    },
+    {
+      "document": "docs/PHASE4-PLAN.md",
+      "target": "../artifacts/phase4/cheats-goal-completion.json"
+    },
+    {
+      "document": "docs/PHASE4-PLAN.md",
+      "target": "../artifacts/phase4/wave2/integration.json"
+    },
+    {
+      "document": "docs/PHASE4-PLAN.md",
+      "target": "../artifacts/phase4/wave2/cheats-evm.json"
+    },
+    {
+      "document": "docs/PHASE4-PLAN.md",
+      "target": "../artifacts/phase4/wave2/automap-evm.json"
+    },
+    {
+      "document": "docs/PHASE4-PLAN.md",
+      "target": "../artifacts/phase4/wave2/episode-evm.json"
+    },
+    {
+      "document": "docs/PHASE4-PLAN.md",
+      "target": "PHASE4-CHEATS.md"
+    },
+    {
+      "document": "docs/PHASE4-PLAN.md",
+      "target": "PHASE4-AUTOMAP.md"
+    },
+    {
+      "document": "docs/PHASE4-PLAN.md",
+      "target": "PHASE4-EPISODE-RESOURCES.md"
+    },
+    {
+      "document": "docs/PHASE4-PLAN.md",
+      "target": "PHASE4-UI-INTEGRATION.md"
+    },
+    {
+      "document": "docs/PHASE4-PLAN.md",
+      "target": "../artifacts/phase4/ui/verification.json"
+    },
+    {
+      "document": "docs/PHASE4-PLAN.md",
+      "target": "../artifacts/phase4/ui/browser.json"
+    },
+    {
+      "document": "docs/PHASE4-PLAN.md",
+      "target": "../artifacts/phase4/ui-main-integration/integration.json"
+    },
+    {
+      "document": "docs/PHASE4-PLAN.md",
+      "target": "../artifacts/phase4/ui-main-integration/focused.log"
+    },
+    {
+      "document": "docs/PHASE4-PLAN.md",
+      "target": "../artifacts/phase4/ui-main-integration/node.log"
+    },
+    {
+      "document": "docs/PHASE4-PLAN.md",
+      "target": "../artifacts/phase4/ui-main-integration/production.json"
+    },
+    {
+      "document": "docs/PHASE4-PLAN.md",
+      "target": "../artifacts/phase4/ui-main-integration/legacy.json"
+    },
+    {
+      "document": "docs/PHASE4-PLAN.md",
+      "target": "PHASE4-EPISODE-STARTUP.md"
+    },
+    {
+      "document": "docs/PHASE4-PLAN.md",
+      "target": "../artifacts/phase4/episode-startup/verification.json"
+    },
+    {
+      "document": "docs/PHASE4-PLAN.md",
+      "target": "../test/fixtures/phase4_episode_startup/manifest.json"
+    },
+    {
+      "document": "docs/PHASE4-PLAN.md",
+      "target": "../artifacts/phase4/episode-startup-main/integration.json"
+    },
+    {
+      "document": "docs/PHASE4-PLAN.md",
+      "target": "../artifacts/phase4/episode-startup-main/evm.json"
+    },
+    {
+      "document": "docs/PHASE4-PLAN.md",
+      "target": "../artifacts/phase4/episode-startup-main/startup-and-dependencies.log"
+    },
+    {
+      "document": "docs/PHASE4-PLAN.md",
+      "target": "../artifacts/phase4/episode-startup-main/resource-dependencies.log"
+    },
+    {
+      "document": "docs/PHASE4-PLAN.md",
+      "target": "../artifacts/phase4/episode-startup-main/resource-node-tests.log"
+    },
+    {
+      "document": "docs/PHASE4-PLAN.md",
+      "target": "../artifacts/phase4/episode-startup-main/native-relocation.json"
+    },
+    {
+      "document": "docs/PHASE4-PLAN.md",
+      "target": "../artifacts/phase4/third-wave-main/integration.json"
+    },
+    {
+      "document": "docs/PHASE4-PLAN.md",
+      "target": "../artifacts/phase4/third-wave-main/focused.log"
+    },
+    {
+      "document": "docs/PHASE4-PLAN.md",
+      "target": "../artifacts/phase4/third-wave-main/node.log"
+    },
+    {
+      "document": "docs/PHASE4-PLAN.md",
+      "target": "../artifacts/phase4/third-wave-main/intermission-evm.json"
+    },
+    {
+      "document": "docs/PHASE4-PLAN.md",
+      "target": "../artifacts/phase4/third-wave-main/input-evm.json"
+    },
+    {
+      "document": "docs/PHASE4-PLAN.md",
+      "target": "../artifacts/phase4/third-wave-main/ui-evm.json"
+    },
+    {
+      "document": "docs/PHASE4-PLAN.md",
+      "target": "../artifacts/phase4/third-wave-main/native-reconciliation.json"
+    },
+    {
+      "document": "docs/PHASE4-PLAN.md",
+      "target": "../artifacts/phase4/third-wave-main/publication.json"
+    },
+    {
+      "document": "docs/PHASE4-PLAN.md",
+      "target": "PHASE4-EPISODE-COMPLETION.md"
+    },
+    {
+      "document": "docs/PHASE4-PLAN.md",
+      "target": "../artifacts/phase4/episode-completion/verification.json"
+    },
+    {
+      "document": "docs/PHASE4-PLAN.md",
+      "target": "../artifacts/phase4/episode-completion/functional.json"
+    },
+    {
+      "document": "docs/PHASE4-PLAN.md",
+      "target": "../artifacts/phase4/episode-completion/completion-final.json"
+    },
+    {
+      "document": "docs/PHASE4-PLAN.md",
+      "target": "../artifacts/phase4/episode-completion/browser-fresh.json"
+    },
+    {
+      "document": "docs/PHASE4-PLAN.md",
+      "target": "../artifacts/phase4/episode-speedrun-main/integration.json"
+    },
+    {
+      "document": "docs/PHASE4-PLAN.md",
+      "target": "../artifacts/phase4/episode-speedrun-main/episode-evm.json"
+    },
+    {
+      "document": "docs/PHASE4-PLAN.md",
+      "target": "../artifacts/phase4/episode-speedrun-main/fresh-launch-final-browser.json"
+    },
+    {
+      "document": "docs/PHASE4-PLAN.md",
+      "target": "../artifacts/phase4/episode-speedrun-main/speedrun-evm.json"
+    },
+    {
+      "document": "docs/PHASE4-PLAN.md",
+      "target": "../artifacts/phase4/episode-speedrun-main/video-video-verification.json"
+    },
+    {
+      "document": "docs/PHASE4-PLAN.md",
+      "target": "../artifacts/phase4/episode-speedrun-main/interfaces.json"
+    },
+    {
+      "document": "docs/PHASE4-PLAN.md",
+      "target": "PHASE4-NATIVE-MEMORY-AUDIT.md"
+    },
+    {
+      "document": "docs/PHASE4-PLAN.md",
+      "target": "../artifacts/phase4/native-memory-audit-main/integration.json"
+    },
+    {
+      "document": "docs/PHASE4-PLAN.md",
+      "target": "SPEEDRUN-TIC52.md"
+    },
+    {
+      "document": "docs/PHASE4-PLAN.md",
+      "target": "../artifacts/speedrun-tic52/checkpoint.json"
+    },
+    {
+      "document": "docs/PHASE4-PLAN.md",
+      "target": "../artifacts/phase4/virtual-menu-main/verification-summary.json"
+    },
+    {
+      "document": "docs/PHASE4-PLAN.md",
+      "target": "../artifacts/phase4/virtual-menu-main/integrity-result.json"
+    },
+    {
+      "document": "docs/PHASE4-PLAN.md",
+      "target": "../artifacts/phase4/virtual-menu-main/menu-evm.json"
+    },
+    {
+      "document": "docs/PHASE4-PLAN.md",
+      "target": "../artifacts/phase4/virtual-menu-main/speedrun-boundary-check.json"
+    },
+    {
+      "document": "docs/PHASE4-PLAN.md",
+      "target": "EXPERIMENTAL-VIRTUAL-POINTERS.md"
+    },
+    {
+      "document": "docs/PHASE4-PLAN.md",
+      "target": "../artifacts/virtual-pointer/virtual-profile-manifest.json"
+    },
+    {
+      "document": "docs/PHASE4-PLAN.md",
+      "target": "EVM-MENU.md"
+    },
+    {
+      "document": "docs/PHASE4-PLAN.md",
+      "target": "../artifacts/phase4/menu/verification.json"
+    },
+    {
+      "document": "docs/PHASE4-PLAN.md",
+      "target": "../artifacts/phase4/ultimate-main-integration/preflight.json"
+    },
+    {
+      "document": "docs/PHASE4-PLAN.md",
+      "target": "ULTIMATE-OWNER-EPISODE.md"
+    },
+    {
+      "document": "docs/PHASE4-PLAN.md",
+      "target": "../artifacts/ultimate-speedruns/owner-pointer/episode-summary.json"
+    },
+    {
+      "document": "docs/PHASE4-PLAN.md",
+      "target": "../artifacts/ultimate-speedruns/owner-pointer/media-regression.json"
+    },
+    {
+      "document": "docs/PHASE4-PLAN.md",
+      "target": "../artifacts/phase4/ultimate-main-integration/integration.json"
+    },
+    {
+      "document": "docs/PHASE4-PLAN.md",
+      "target": "browser-deployment/REPORT.md"
+    },
+    {
+      "document": "docs/PHASE4-PLAN.md",
+      "target": "browser-deployment/README.md"
+    },
+    {
+      "document": "docs/PHASE4-PLAN.md",
+      "target": "../artifacts/browser-deployment/verification.json"
+    },
+    {
+      "document": "docs/PHASE4-PLAN.md",
+      "target": "../artifacts/phase4/browser-deployment-main/integration.json"
+    },
+    {
+      "document": "docs/PHASE4-PLAN.md",
+      "target": "browser-deployment/INTEGRATION.md"
+    },
+    {
+      "document": "docs/PHASE4-PLAN.md",
+      "target": "browser-deployment/THREE-GAME-INTEGRATION.md"
+    },
+    {
+      "document": "docs/PHASE4-PLAN.md",
+      "target": "ULTIMATE-BROWSER.md"
+    },
+    {
+      "document": "docs/PHASE4-PLAN.md",
+      "target": "doom2/REPORT.md"
+    },
+    {
+      "document": "docs/PHASE4-PLAN.md",
+      "target": "../artifacts/phase4/three-game-browser-main/chrome.json"
+    },
+    {
+      "document": "docs/PHASE4-PLAN.md",
+      "target": "../artifacts/phase4/three-game-browser-main/initial-frame-compatibility.json"
+    },
+    {
+      "document": "docs/PHASE4-PLAN.md",
+      "target": "../artifacts/phase4/three-game-browser-main/preflight.json"
+    }
+  ],
+  "publicationManifestLinkCheckedAfterCreation": true
+}

@@ -1,0 +1,14 @@
+{
+  "command": [
+    "node",
+    "--test",
+    "web/browser-profiles.test.mjs",
+    "web/doom2-profile.test.mjs"
+  ],
+  "cwd": ".",
+  "startedUtc": "2026-10-11T11:38:52.729160+00:00",
+  "endedUtc": "2026-10-11T11:38:52.890421+00:00",
+  "elapsedSeconds": 0.1612036251462996,
+  "exitCode": 0,
+  "rawOutput": "/Users/eduard/sandbox/doom-evm/artifacts/phase4/three-game-browser-main/release-node.log"
+}

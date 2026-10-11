@@ -1,0 +1,13 @@
+{
+  "command": [
+    "node",
+    "tools/browser-deployment/package.mjs",
+    "."
+  ],
+  "cwd": ".",
+  "startedUtc": "2026-10-11T11:33:35.686074+00:00",
+  "endedUtc": "2026-10-11T11:33:36.416317+00:00",
+  "elapsedSeconds": 0.7302025840617716,
+  "exitCode": 0,
+  "rawOutput": "/Users/eduard/sandbox/doom-evm/artifacts/phase4/three-game-browser-main/package-episode.log"
+}

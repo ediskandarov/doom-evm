@@ -1,0 +1,10 @@
+{
+  "http://127.0.0.1:19172": {
+    "allowOrigin": "http://127.0.0.1:19172",
+    "status": 200
+  },
+  "https://untrusted.example": {
+    "allowOrigin": "http://127.0.0.1:19172",
+    "status": 200
+  }
+}

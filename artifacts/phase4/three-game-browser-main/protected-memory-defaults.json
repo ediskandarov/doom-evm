@@ -1,0 +1,15 @@
+{
+  "pass": true,
+  "sourceSHA256": {
+    "src/doom/z_zone.sol": "b4e75218021d65aaf3389cf78a68663feebc2084c82457821be17247dc8106c5",
+    "src/doom/z_zone_backing.sol": "e63201d3bb45e4c8d0796480d4e9facd4deffd4d8a9dd730bed10ff4a108d0b1",
+    "src/doom/z_zone_virtual.sol": "8bc309e89fa4da0667dc50a45adb9f91c58982640e1b3f5f9d38e49893f1e960",
+    "src/doom/z_zone_types.sol": "11ab3f95678ba3852ab5f0c2dc9e85e715bec6897e65f04cd1919bba9bb73dbd",
+    "foundry.toml": "afe04c66f0e684b5a936821f6543605a3739f62164ceb4398426db7403452393",
+    "AGENTS.md": "2d6db59d58f7d8304ef2e0c4064f9c62223f820a8988e4207473552ae1be11c4",
+    "src/evm/Doom.sol": "3ae402de39e33b9c9ff0ae850210bd79a1c76459aee8c491ff83043d2e50aef1",
+    "src/evm/Doom2.sol": "d4bb0b26fa1d753c94cb185cd96b0923a8381e1704c20fb8bf2348aae5f4a59c",
+    "src/doom/f_finale.sol": "4e21a192b8adb1109b51493ab43e770bfc3393b085cf02df53ab589d21c81505"
+  },
+  "SolidityDefaults": "Doom.initializeMenu(bool) and Doom2.initializeMenu(bool) retain 2; four explicit profiles retain source behavior; cast guard exactly source DOOM II"
+}

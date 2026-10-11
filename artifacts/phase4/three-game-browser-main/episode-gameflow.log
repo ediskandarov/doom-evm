@@ -1,0 +1,24 @@
+Compiling 1 files with Solc 0.8.37
+Solc 0.8.37 finished in 27.69s
+Compiler run successful with warnings:
+Warning (2319): This declaration shadows a builtin symbol.
+  --> src/doom/z_zone.sol:63:5:
+   |
+63 |     function block(ZoneState memory z, uint32 id) private pure returns (ZoneBlock memory b) {
+   |     ^ (Relevant source part starts here and spans across multiple lines).
+
+
+Ran 10 tests for test/unit/Gameflow.t.sol:GameflowTest
+[PASS] testCompletionStatsAreCopiedNotAliased() (gas: 1053830)
+[PASS] testIncomingCommandIsCopiedBeforeWorldTickerClearsSpecial() (gas: 1045375)
+[PASS] testOriginalCCompletionAllEpisodeOneMaps() (gas: 821580734)
+[PASS] testOriginalCDeathUseAndFollowingTicReload() (gas: 9957929)
+[PASS] testOriginalCLoadLevelAndReborn() (gas: 56837921)
+[PASS] testOriginalCNewGameAndDeferredInitialization() (gas: 1609689918)
+[PASS] testOriginalCNightmareFastAndInitPlayer() (gas: 15442107)
+[PASS] testOriginalCPauseMenuAndStateDispatch() (gas: 5002233101)
+[PASS] testOriginalCWorldDoneAndInventoryCarryover() (gas: 175383594)
+[PASS] testPauseProducerIsOneShotReplacesButtonsKeepsMovement() (gas: 1011664)
+Suite result: ok. 10 passed; 0 failed; 0 skipped; finished in 228.61ms (557.76ms CPU time)
+
+Ran 1 test suite in 229.14ms (228.61ms CPU time): 10 tests passed, 0 failed, 0 skipped (10 total tests)

@@ -1,0 +1,468 @@
+{
+  "kind": "three-game-integrated-main-real-anvil-chrome",
+  "pass": false,
+  "startedUtc": "2026-10-11T11:35:44.804Z",
+  "port": 19171,
+  "httpPort": 19172,
+  "checks": [
+    {
+      "label": "All three profiles available; no automatic RPC or wallet connection",
+      "pass": true
+    },
+    {
+      "label": "freedoom authenticated browser CREATE/install; Solidity default 2, explicit initializer 3",
+      "pass": true,
+      "address": "0x5ae1f4bb68f8eac39cfdbdfda2b7344ccbd80faf",
+      "identity": {
+        "schemaVersion": 0,
+        "wadSha256": "7323bcc168c5a45ff10749b339960e98314740a734c30d4b9f3337001f9e703d",
+        "bundleSha256": "d379076f21645cf7cc5acb056663d0faacc4065489a0ca99738479323c9f7a47",
+        "paletteSha256": "fd895921b5d0a394612bb29852ed003d44d69f76dec31c0dc6b5d5fc7d63f7bb",
+        "paletteVariant": 0
+      },
+      "defaultPolicy": 2,
+      "initializationTransaction": "0x022fd2d2bb2e9229920c6c2bad8d879e32e29704bb578f34444281d5ae213b4b"
+    },
+    {
+      "label": "freedoom genuine keyboard first-map movement and explicit persisted memory profile",
+      "pass": true,
+      "beforePlayerView": "0xfffffffffffffffffffffffffffffffffffffffffffffffffffffffffe6000000000000000000000000000000000000000000000000000000000000001000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000290000000000000000000000000000000000000000000000000000000000000000003d",
+      "afterPlayerView": "0xfffffffffffffffffffffffffffffffffffffffffffffffffffffffffe60c7ff000000000000000000000000000000000000000000000000000000000100001300000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000b53f000000000000000000000000000000000000000000000000000000000000001100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000290608000000000000000000000000000000000000000000000000000000000000003d"
+    },
+    {
+      "label": "ultimate browser File API exact IWAD",
+      "pass": true,
+      "md5": "c4fe9fd920207691a9f493668e0a2083",
+      "sha256": "6fdf361847b46228cfebd9f3af09cd844282ac75f3edbb61ca4cb27103ce2e7f",
+      "bytes": 12408292
+    },
+    {
+      "label": "ultimate authenticated browser CREATE/install; Solidity default 2, explicit initializer 3",
+      "pass": true,
+      "address": "0xe41bbcf8ec773b477735b0b0d8bf6e7ca6bde9ee",
+      "identity": {
+        "schemaVersion": 0,
+        "wadSha256": "6fdf361847b46228cfebd9f3af09cd844282ac75f3edbb61ca4cb27103ce2e7f",
+        "bundleSha256": "1154fc21f0fa60e793ffb6da569b2293191dfc7f1791e0c083672b764917d7ba",
+        "paletteSha256": "fd895921b5d0a394612bb29852ed003d44d69f76dec31c0dc6b5d5fc7d63f7bb",
+        "paletteVariant": 0
+      },
+      "defaultPolicy": 2,
+      "initializationTransaction": "0x43785a26089281d5d475c34b3cbcc20721689aa0f92570479ebd064fb29b063d"
+    },
+    {
+      "label": "ultimate genuine keyboard first-map movement and explicit persisted memory profile",
+      "pass": true,
+      "beforePlayerView": "0x0000000000000000000000000000000000000000000000000000000004200000fffffffffffffffffffffffffffffffffffffffffffffffffffffffff1e000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000004000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000002900000000000000000000000000000000000000000000000000000000000000000090",
+      "afterPlayerView": "0x00000000000000000000000000000000000000000000000000000000041fffecfffffffffffffffffffffffffffffffffffffffffffffffffffffffff1e0c7ff00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000040000000ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffed000000000000000000000000000000000000000000000000000000000000b53f000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000002906080000000000000000000000000000000000000000000000000000000000000090"
+    },
+    {
+      "label": "doom2 browser File API exact IWAD",
+      "pass": true,
+      "md5": "25e1459ca71d321525f84628f45ca8cd",
+      "sha256": "10d67824b11025ddd9198e8cfc87ca335ee6e2d3e63af4180fa9b8a471893255",
+      "bytes": 14604584
+    }
+  ],
+  "frames": [
+    {
+      "label": "freedoom original EVM menu",
+      "transaction": "0xbfc033c693f8d0e8bc30275f41ac0273edca4b43f58c670b07c384e107ba7b98",
+      "gasUsed": "0xa06eeec",
+      "pixelSha256": "8fc18043939d3e723f830a0b9ffc9e8d019dd07716a36e1672d43774b80c732a",
+      "rgbaSha256": "362b809002912f2a5b3f33135153ce0667d455edacb4b7c8a33de098b0b9a57c",
+      "allCanvasPixelsExact": true,
+      "menu": {
+        "enabled": 1,
+        "active": 1,
+        "screen": 0,
+        "item": 0,
+        "skull": 0,
+        "animation": 8,
+        "map": 1,
+        "skill": 0,
+        "confirmation": 0
+      },
+      "state": {
+        "map": 0,
+        "skill": 0,
+        "state": 0,
+        "action": 0,
+        "paused": 0,
+        "last": 0,
+        "next": 0,
+        "wiStage": 0,
+        "wiTic": 0,
+        "finaleStage": 0,
+        "finaleTic": 0
+      },
+      "screenshot": "artifacts/local/three-game-browser-main/acceptance-0.png",
+      "screenshotSha256": "4c6c73e055a885ab003ed4e1924cb87bdc2ece3c5639dd76e14578c6f8bcfd89"
+    },
+    {
+      "label": "freedoom episode menu",
+      "transaction": "0x6f197df3bfef5b004481a563452bf6402dced3af11c98abaa0c02af0994dee55",
+      "gasUsed": "0x9fba826",
+      "pixelSha256": "c22377b6874a68b1ae161e365da6d1fa0c3a0b3cf289801280d5ef8b290d5026",
+      "rgbaSha256": "2da6c5e8160494bc98a3255a62ed9a9545bc64d2887b01d326dcf14daec5c03c",
+      "allCanvasPixelsExact": true,
+      "menu": {
+        "enabled": 1,
+        "active": 1,
+        "screen": 1,
+        "item": 0,
+        "skull": 0,
+        "animation": 7,
+        "map": 1,
+        "skill": 0,
+        "confirmation": 0
+      },
+      "state": {
+        "map": 0,
+        "skill": 0,
+        "state": 0,
+        "action": 0,
+        "paused": 0,
+        "last": 0,
+        "next": 0,
+        "wiStage": 0,
+        "wiTic": 0,
+        "finaleStage": 0,
+        "finaleTic": 0
+      },
+      "screenshot": "artifacts/local/three-game-browser-main/acceptance-1.png",
+      "screenshotSha256": "a14f913d94484d86efec7decb254b05e385914db04bc53152cb5283de6d68b7a"
+    },
+    {
+      "label": "freedoom original skill menu",
+      "transaction": "0xdf945ce5520c5bf55403ceaeaaf17209393a252537e98d7cee4f30e5baf12aff",
+      "gasUsed": "0xaa68738",
+      "pixelSha256": "080105db7663d173d7a7a1fa0e9c5e1ce1998f926b2db783c9f8e7003f1b49c3",
+      "rgbaSha256": "392a0e95ac523aed4ea2ad9ecf792db360208f85b0eea6f22f5380a54e896443",
+      "allCanvasPixelsExact": true,
+      "menu": {
+        "enabled": 1,
+        "active": 1,
+        "screen": 2,
+        "item": 2,
+        "skull": 0,
+        "animation": 6,
+        "map": 1,
+        "skill": 0,
+        "confirmation": 0
+      },
+      "state": {
+        "map": 0,
+        "skill": 0,
+        "state": 0,
+        "action": 0,
+        "paused": 0,
+        "last": 0,
+        "next": 0,
+        "wiStage": 0,
+        "wiTic": 0,
+        "finaleStage": 0,
+        "finaleTic": 0
+      },
+      "screenshot": "artifacts/local/three-game-browser-main/acceptance-2.png",
+      "screenshotSha256": "b9709de49c9062f2064dcbd974ee553d6f6dd037eb61600a7fe3a10f359e6a6f"
+    },
+    {
+      "label": "freedoom actual first-map gameplay",
+      "transaction": "0xe4ae74f29d0d4219784d34f370eae27eb9f34db02ff5607d9a9656eac3103e71",
+      "gasUsed": "0xf1b7c490",
+      "pixelSha256": "a297ba2dfa2d1eae509b975c96471640802a189389ea15ad741c399218782d54",
+      "rgbaSha256": "e774efbe632c754d4fd0e1488d0a573d2b79b26c3817f08ceaf5c8243b4a0dc5",
+      "allCanvasPixelsExact": true,
+      "menu": {
+        "enabled": 1,
+        "active": 0,
+        "screen": 2,
+        "item": 2,
+        "skull": 0,
+        "animation": 5,
+        "map": 1,
+        "skill": 2,
+        "confirmation": 0
+      },
+      "state": {
+        "map": 1,
+        "skill": 2,
+        "state": 0,
+        "action": 0,
+        "paused": 0,
+        "last": 0,
+        "next": 0,
+        "wiStage": 0,
+        "wiTic": 0,
+        "finaleStage": 0,
+        "finaleTic": 0
+      },
+      "screenshot": "artifacts/local/three-game-browser-main/acceptance-3.png",
+      "screenshotSha256": "7ebdc68219d221b3953d9716940ea1e31d380869f327a9b0b3017ba2633d05ed"
+    },
+    {
+      "label": "freedoom held movement",
+      "transaction": "0x5b04af3f6493846c2e4bc1088c7d365521f86d069407ceedbeada05e327af685",
+      "gasUsed": "0x65804004",
+      "pixelSha256": "f9ecfcdb9cd0d75dccdee10476d06d8e98f940dff01f4e4b6169e0dc55a9138e",
+      "rgbaSha256": "07dd349eff2b87cee8b7e79aae4cfb2f5b4ed66a477c2669a2be95e403e57865",
+      "allCanvasPixelsExact": true,
+      "menu": {
+        "enabled": 1,
+        "active": 0,
+        "screen": 2,
+        "item": 2,
+        "skull": 0,
+        "animation": 4,
+        "map": 1,
+        "skill": 2,
+        "confirmation": 0
+      },
+      "state": {
+        "map": 1,
+        "skill": 2,
+        "state": 0,
+        "action": 0,
+        "paused": 0,
+        "last": 0,
+        "next": 0,
+        "wiStage": 0,
+        "wiTic": 0,
+        "finaleStage": 0,
+        "finaleTic": 0
+      },
+      "screenshot": "artifacts/local/three-game-browser-main/acceptance-4.png",
+      "screenshotSha256": "c161d92222d9455550a2b0418d3e227e3771e3e4d2a985b08ab837f90aaaccad"
+    },
+    {
+      "label": "ultimate original EVM menu",
+      "transaction": "0x7f96103ed0756a5966357e06abf45c6b5b7a8db6a3e8c2a3c8858d969c65f87f",
+      "gasUsed": "0x749566f",
+      "pixelSha256": "b45b124ec94ae414ede1640aab3542da68846f0f521a5a323eb206c4aa6f8118",
+      "rgbaSha256": "6797ff71892265ec773d34c43f765354dadc2feda909edf5b9c0a53abfc6828b",
+      "allCanvasPixelsExact": true,
+      "menu": {
+        "enabled": 1,
+        "active": 1,
+        "screen": 0,
+        "item": 0,
+        "skull": 0,
+        "animation": 8,
+        "map": 1,
+        "skill": 0,
+        "confirmation": 0
+      },
+      "state": {
+        "map": 0,
+        "skill": 0,
+        "state": 0,
+        "action": 0,
+        "paused": 0,
+        "last": 0,
+        "next": 0,
+        "wiStage": 0,
+        "wiTic": 0,
+        "finaleStage": 0,
+        "finaleTic": 0
+      },
+      "screenshot": "artifacts/local/three-game-browser-main/acceptance-5.png",
+      "screenshotSha256": "9bd17627f0401570bdd3c15950b8700deabf22b77fdea5e8410cc15abbd94174"
+    },
+    {
+      "label": "ultimate episode menu",
+      "transaction": "0x72736ceadb70a2f764da1c387ba2ca25d63721c10146796e202108b7f6bd748a",
+      "gasUsed": "0x73d4f75",
+      "pixelSha256": "e786518121647839399555d98278c5560820df4b09ab73724671bc54c7c14155",
+      "rgbaSha256": "09f9e06a89e167b30dd23bb3ddc5b7747385369088b5d983ee209e2bf0732db4",
+      "allCanvasPixelsExact": true,
+      "menu": {
+        "enabled": 1,
+        "active": 1,
+        "screen": 1,
+        "item": 0,
+        "skull": 0,
+        "animation": 7,
+        "map": 1,
+        "skill": 0,
+        "confirmation": 0
+      },
+      "state": {
+        "map": 0,
+        "skill": 0,
+        "state": 0,
+        "action": 0,
+        "paused": 0,
+        "last": 0,
+        "next": 0,
+        "wiStage": 0,
+        "wiTic": 0,
+        "finaleStage": 0,
+        "finaleTic": 0
+      },
+      "screenshot": "artifacts/local/three-game-browser-main/acceptance-6.png",
+      "screenshotSha256": "36ba5e11a03bad1b08ea43d2851d5d8c748c4b3d8c378029e5c58042b67c741e"
+    },
+    {
+      "label": "ultimate original skill menu",
+      "transaction": "0x8bfe88a166494e88d4ccc1063e48aaeb7aeb6d3269571ff642316d686ff5afa1",
+      "gasUsed": "0x7c1c901",
+      "pixelSha256": "f9d0fff14a9313d0f767f2b09261aaa5f2ef439c4e27f79e5179b2556ff335cf",
+      "rgbaSha256": "3425182cd76822ecb09c3c2d13b035f0731da78c356d2f69833eda823c9839dd",
+      "allCanvasPixelsExact": true,
+      "menu": {
+        "enabled": 1,
+        "active": 1,
+        "screen": 2,
+        "item": 2,
+        "skull": 0,
+        "animation": 6,
+        "map": 1,
+        "skill": 0,
+        "confirmation": 0
+      },
+      "state": {
+        "map": 0,
+        "skill": 0,
+        "state": 0,
+        "action": 0,
+        "paused": 0,
+        "last": 0,
+        "next": 0,
+        "wiStage": 0,
+        "wiTic": 0,
+        "finaleStage": 0,
+        "finaleTic": 0
+      },
+      "screenshot": "artifacts/local/three-game-browser-main/acceptance-7.png",
+      "screenshotSha256": "df730e598a7a65db0a23e186d77ab55c315fa24855e1e9c89491110e7d0d1e9c"
+    },
+    {
+      "label": "ultimate actual first-map gameplay",
+      "transaction": "0xcb8fe930c4d37899fe65d0431eb8bec6718a8a0b9c9c1817d4bc9eb9495597a0",
+      "gasUsed": "0x725994c5",
+      "pixelSha256": "b851a3170de07678b5ed539a754183deddcf8a25619e2999203450fd3e61910e",
+      "rgbaSha256": "0094ed1bef17a441b3fa875f975aab48be4e370de91980ddb4b07692be744fcd",
+      "allCanvasPixelsExact": true,
+      "menu": {
+        "enabled": 1,
+        "active": 0,
+        "screen": 2,
+        "item": 2,
+        "skull": 0,
+        "animation": 5,
+        "map": 1,
+        "skill": 2,
+        "confirmation": 0
+      },
+      "state": {
+        "map": 1,
+        "skill": 2,
+        "state": 0,
+        "action": 0,
+        "paused": 0,
+        "last": 0,
+        "next": 0,
+        "wiStage": 0,
+        "wiTic": 0,
+        "finaleStage": 0,
+        "finaleTic": 0
+      },
+      "screenshot": "artifacts/local/three-game-browser-main/acceptance-8.png",
+      "screenshotSha256": "c04702228fc68b57ed3b98ec3b51cc8f473452baffe0681f5c7c8411a33643bf"
+    },
+    {
+      "label": "ultimate held movement",
+      "transaction": "0x5cdc3e847a40d9e3000b6877ceb635f2fa1b64c5466c6b31127b1ae48e2745dc",
+      "gasUsed": "0x3da2e547",
+      "pixelSha256": "a9f70e8d8d273338451bfea26f1e7c2f9f40ac894da4737ee27385d49c0aec91",
+      "rgbaSha256": "9259e73ce4311dc1890f770821bbd0eff82b4a747c5dbc87560a81c8d1b80d3e",
+      "allCanvasPixelsExact": true,
+      "menu": {
+        "enabled": 1,
+        "active": 0,
+        "screen": 2,
+        "item": 2,
+        "skull": 0,
+        "animation": 4,
+        "map": 1,
+        "skill": 2,
+        "confirmation": 0
+      },
+      "state": {
+        "map": 1,
+        "skill": 2,
+        "state": 0,
+        "action": 0,
+        "paused": 0,
+        "last": 0,
+        "next": 0,
+        "wiStage": 0,
+        "wiTic": 0,
+        "finaleStage": 0,
+        "finaleTic": 0
+      },
+      "screenshot": "artifacts/local/three-game-browser-main/acceptance-9.png",
+      "screenshotSha256": "f7618df4c8ff2877ea7080d7e4d1ea8d286b91e3b5f39949a75e215f397ac914"
+    }
+  ],
+  "sourceHashes": {
+    "web/install-engine.mjs": "9a800267c142aaa091fd58b2aaca443f4f96b9fdca4c67771093e89c5f3741b7",
+    "web/install-resources.mjs": "0d00a9bcda798ee5c933183651d7cc1756d6f355ea8c982f6bd80812cdba3e24",
+    "web/install-storage.mjs": "c9ed032f1dc701f250d47f4f985c217fb5aa3450be9a78a3415b235f200b60ac",
+    "web/install-pins.mjs": "1851e91479a0c8aa145298135360302441ae0350b3f7ba1b7c753caf6628866c",
+    "web/launcher.mjs": "a49a7575288038739bcf8abec097fb1b28cf9974b008a4b3fc54cbff6774b40d",
+    "web/menu-app.mjs": "ce46750e2b5b2a5092d8109fb04ed3aff3c0edcc6e2499ed4177f31674ec1659",
+    "web/app.mjs": "0a20f3223db6033b1f5fcc511a2a9bf42efd87d13f8aa01add2f96ce1a28cb85",
+    "web/index.html": "a783a3304bd03b5735b638a928344ea64d0fd670ef77d68f243c2f89c43b5949",
+    "web/browser-profiles.mjs": "c32fc60a6f1a3f8ba39089f0f30621e352ae5744ffffdb2333ed39bd59597643",
+    "web/doom2-profile.mjs": "8aec3d6428f164d8d8615eb940d7060bf82d0ae488da0e04c980d97d92cb2651",
+    "web/doom2-install.mjs": "db60b1e302db6f06d3e4d1db6b75bfb93dcae819484fb284dc87e1e084e719cc",
+    "web/doom2-pins.mjs": "295564c4124822ff963ad4bda256642515178b405cffd215253f41452ca62265",
+    "tools/browser-deployment/three-game-check.mjs": "fc3c540aa97062996436ca244d305d891b96a8df7626c1546589b46af5385bef"
+  },
+  "runtime": {
+    "args": [
+      "--host",
+      "127.0.0.1",
+      "--port",
+      "19171",
+      "--hardfork",
+      "cancun",
+      "--disable-code-size-limit",
+      "--no-request-size-limit",
+      "--memory-limit",
+      "1073741824",
+      "--gas-limit",
+      "10000000000",
+      "--allow-origin",
+      "http://127.0.0.1:19172",
+      "--silent"
+    ],
+    "info": {
+      "currentBlockNumber": "0x0",
+      "currentBlockTimestamp": 1791718544,
+      "currentBlockHash": "0x2aa51c766e5dedb174da088f6529e7aab91dcd434b3e962176a1e93ceddfb2ac",
+      "hardFork": "Cancun",
+      "transactionOrder": "fees",
+      "environment": {
+        "baseFee": "0x3b9aca00",
+        "chainId": 31337,
+        "gasLimit": "0x2540be400",
+        "gasPrice": "0x77359400"
+      },
+      "forkConfig": {
+        "forkUrl": null,
+        "forkBlockNumber": null,
+        "forkRetryBackoff": null
+      },
+      "network": "ethereum"
+    },
+    "client": "anvil/v1.8.5"
+  },
+  "error": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n\n2518 !== 8\n\n    at file:///Users/eduard/sandbox/doom-evm/tools/browser-deployment/three-game-check.mjs:107:11",
+  "endedUtc": "2026-10-11T11:41:12.153Z",
+  "stoppedOwnedRuntimes": true,
+  "fullLocalReportSha256": "a6923ca260aa2a208987d8ce351b697f9b413edf5c0fec2f99d0f47b31193a1a",
+  "failureClassification": "Integration harness assumed an empty cross-game content-addressed cache. Engine/browser Freedoom and Ultimate Frames passed. Correct selected-IWAD chunk and nonce accounting instead; no production change."
+}

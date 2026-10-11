@@ -1,0 +1,14 @@
+{
+  "artifacts": {
+    "Doom": {
+      "url": "/install-assets/Doom.json",
+      "sha256": "984d4d71ecc9a02aff963d46c9b66eb9e16e0a07f242b7c1224dd5119c7d7187"
+    },
+    "ResourceStore": {
+      "url": "/install-assets/ResourceStore.json",
+      "sha256": "2c73efc4886eddb868a91303fac23dda65911e258399b044ff234c73d1ad9315"
+    }
+  },
+  "sources": 79,
+  "freedoomSha256": "7323bcc168c5a45ff10749b339960e98314740a734c30d4b9f3337001f9e703d"
+}

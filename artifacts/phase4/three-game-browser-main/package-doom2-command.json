@@ -1,0 +1,13 @@
+{
+  "command": [
+    "node",
+    "tools/reference/doom2/package.mjs",
+    "."
+  ],
+  "cwd": ".",
+  "startedUtc": "2026-10-11T11:33:36.465339+00:00",
+  "endedUtc": "2026-10-11T11:33:37.106886+00:00",
+  "elapsedSeconds": 0.6414983752183616,
+  "exitCode": 0,
+  "rawOutput": "/Users/eduard/sandbox/doom-evm/artifacts/phase4/three-game-browser-main/package-doom2.log"
+}

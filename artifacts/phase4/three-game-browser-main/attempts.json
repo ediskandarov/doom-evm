@@ -1,0 +1,35 @@
+{
+  "attempts": [
+    {
+      "name": "node-attempt1",
+      "pass": false,
+      "result": "69 passed, one unmodified DOOM II packing test failed because the merged shared packer now requires explicit filename/license metadata. Adapter fixed to authenticate the exact unchanged DOOM2.WAD canonical bundle. Final 71 tests pass."
+    },
+    {
+      "name": "chrome-attempt1",
+      "pass": false,
+      "result": "Freedoom and Ultimate each passed five exact Canvas checkpoints. New harness erroneously required eight total cache entries, but 2,518 entries included authenticated prior-game resources. Corrected to check selected first-eight chunk hashes and exact nonce deltas. No production change; failed source/metadata/logs preserved."
+    },
+    {
+      "name": "forge-filter",
+      "pass": true,
+      "result": "First command ran eight menu tests; Gameflow filename collision excluded the intended Episode suite. Separate scoped command ran all ten Episode gameflow tests. 18 unique passes; no assertions changed."
+    },
+    {
+      "name": "cors-attempt1",
+      "pass": false,
+      "result": "Sandbox denied the read-only owned-runtime socket. Same requests with local-network approval passed exact-origin checks."
+    },
+    {
+      "name": "historical-certificate-current-file-comparison",
+      "pass": false,
+      "result": "A read-only comparison found that repackaged browser artifacts differ from historical certificate hashes, as expected. Original certificates and their Git checkpoint bindings were separately verified unmodified. Current release has separate fresh metadata/source/artifact proofs."
+    },
+    {
+      "name": "chrome-attempt2",
+      "pass": false,
+      "result": "All 20 Canvas checks and three-game gameplay/switching/reload passed. Harness incorrectly demanded an archive counter even for a different-genesis fresh journal. Corrected with distinct fresh-key/preserved-old-record versus same-key/archived-anchor assertions; production unchanged."
+    }
+  ],
+  "sourceTestsGoldensAndCertificatesModified": false
+}

@@ -1,0 +1,22 @@
+{
+  "command": [
+    "node",
+    "tools/browser-deployment/three-game-check.mjs",
+    "--port",
+    "19171",
+    "--http-port",
+    "19172",
+    "--ultimate-wad",
+    "/Users/eduard/Downloads/doom-steam/base/DOOM.WAD",
+    "--doom2-wad",
+    "/Users/eduard/Downloads/doom-steam/base/doom2/DOOM2.WAD",
+    "--output-prefix",
+    "artifacts/local/three-game-browser-main/accepted"
+  ],
+  "cwd": ".",
+  "startedUtc": "2026-10-11T11:42:21.073711+00:00",
+  "endedUtc": "2026-10-11T11:50:14.713212+00:00",
+  "elapsedSeconds": 473.6353828748688,
+  "exitCode": 1,
+  "rawOutput": "/Users/eduard/sandbox/doom-evm/artifacts/phase4/three-game-browser-main/chrome.log"
+}

@@ -1,0 +1,12 @@
+{
+  "ultimate": {
+    "certificateSHA256": "b6fa314b89ee637039d90b16612160c144d70ce04b96dc3fb4a8080ce1981996",
+    "originalGitEvidenceBindingsVerified": 10,
+    "certificateUnmodified": true
+  },
+  "doom2": {
+    "certificateSHA256": "6a668bb4573245e4aeabd9326ee2cf9104c7c7bc560c4a75e82f2e1e0c906cdc",
+    "originalGitEvidenceBindingsVerified": 43,
+    "certificateUnmodified": true
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "episode": {
+    "sources": 79,
+    "artifacts": {
+      "Doom": {
+        "sha256": "984d4d71ecc9a02aff963d46c9b66eb9e16e0a07f242b7c1224dd5119c7d7187",
+        "runtimeBytes": 869382,
+        "creationSha256": "2fd83515014489cc4ebfd58af2d01e0b79d5b1c174204d6af83a937ea959c937"
+      },
+      "ResourceStore": {
+        "sha256": "2c73efc4886eddb868a91303fac23dda65911e258399b044ff234c73d1ad9315",
+        "runtimeBytes": 57,
+        "creationSha256": "6df2335c8e66afd90a86946dd2c1f8cc44cdb123d7eb84998eab64ff7fd6d85e"
+      }
+    },
+    "compiledSourceKeccakVerified": true
+  },
+  "doom2": {
+    "sources": 78,
+    "artifacts": {
+      "Doom": {
+        "sha256": "8d0eb2da8ce374c17a7a29d375ce111309b5e0f4747d7234ef5f468d9b76a15b",
+        "runtimeBytes": 851408,
+        "creationSha256": "cf137f0de3b7883e4ce1ab22be4bbabedd4335bcfc01920ece104d2f2cce2498"
+      },
+      "ResourceStore": {
+        "sha256": "2c73efc4886eddb868a91303fac23dda65911e258399b044ff234c73d1ad9315",
+        "runtimeBytes": 57,
+        "creationSha256": "6df2335c8e66afd90a86946dd2c1f8cc44cdb123d7eb84998eab64ff7fd6d85e"
+      }
+    },
+    "compiledSourceKeccakVerified": true
+  }
+}

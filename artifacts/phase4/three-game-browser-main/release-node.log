@@ -1,0 +1,14 @@
+✔ three production games select their authenticated release and explicit policy API (18.134583ms)
+✔ shared explicit DOOM II initialization keeps exactly two arguments (4.081541ms)
+✔ DOOM II profile key and explicit initializer survive shared deployment manager adaptation (0.604292ms)
+✔ DOOM II adapter authenticates exact packing and resource dimensions (70.802584ms)
+✔ DOOM II release profile explicitly requests virtual pointers without changing shared installer (7.255709ms)
+✔ DOOM II discovery refuses a ready installation using a different memory policy (0.172917ms)
+ℹ tests 6
+ℹ suites 0
+ℹ pass 6
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 130.113

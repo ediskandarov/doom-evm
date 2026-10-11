@@ -1,0 +1,21 @@
+PASS Canvas freedoom original EVM menu
+PASS Canvas freedoom episode menu
+PASS Canvas freedoom original skill menu
+PASS Canvas freedoom actual first-map gameplay
+PASS Canvas freedoom held movement
+PASS Canvas ultimate original EVM menu
+PASS Canvas ultimate episode menu
+PASS Canvas ultimate original skill menu
+PASS Canvas ultimate actual first-map gameplay
+PASS Canvas ultimate held movement
+PASS Canvas doom2 original EVM menu
+PASS Canvas doom2 original skill menu
+PASS Canvas doom2 actual first-map gameplay
+PASS Canvas doom2 held movement
+PASS Canvas freedoom original EVM menu
+PASS Canvas freedoom resume saved gameplay
+PASS Canvas ultimate original EVM menu
+PASS Canvas ultimate resume saved gameplay
+PASS Canvas doom2 original EVM menu
+PASS Canvas doom2 resume saved gameplay
+Report artifacts/local/three-game-browser-main/final.json

@@ -1,0 +1,12 @@
+{
+  "pass": true,
+  "doom2ResourceChunks": 889,
+  "newDoom2ChunkCreates": 888,
+  "existingAuthenticatedResourcesReused": [
+    {
+      "address": "0x37c6d38d67a15c07ff636cfbce99987ff9f1f24a",
+      "digest": "350b6bce282b29883271d058121023d4e3d6798239012b98dd67e73ce75d6d34"
+    }
+  ],
+  "scope": "Actual journal and real CREATE receipts; every installed runtime independently rechecked by production discovery."
+}

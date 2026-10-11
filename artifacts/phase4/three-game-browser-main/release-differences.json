@@ -1,0 +1,18 @@
+{
+  "web/install-assets/Doom.json": {
+    "creationBytesEqualSource": false,
+    "runtimeBytesEqualSource": false,
+    "methodSelectorsEqualSource": true,
+    "immutableReferencesEqualSource": false,
+    "currentRuntimeSHA256": "09d6385be67fe9097a6bd1d2f62248cce077116690eececf7ac2abbc81ee873b",
+    "immutableSpanLayoutEqualSource": false
+  },
+  "web/doom2-assets/Doom.json": {
+    "creationBytesEqualSource": true,
+    "runtimeBytesEqualSource": true,
+    "methodSelectorsEqualSource": true,
+    "immutableReferencesEqualSource": false,
+    "currentRuntimeSHA256": "457f4b0358f960a982d1bfe116e010d662eb84d1c99150859a68e9c3c9e938f0",
+    "immutableSpanLayoutEqualSource": true
+  }
+}

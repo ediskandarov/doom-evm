@@ -1,0 +1,17 @@
+{
+  "pass": true,
+  "utc": "2026-10-11T12:02:52.500385+00:00",
+  "ports": {
+    "19171": {
+      "closed": true,
+      "connectError": 61
+    },
+    "19172": {
+      "closed": true,
+      "connectError": 61
+    }
+  },
+  "allOwnedAcceptanceRuntimesStopped": true,
+  "reserved18880And8088Untouched": true,
+  "otherWorktreesAndRuntimesUntouched": true
+}
