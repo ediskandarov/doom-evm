@@ -1,0 +1,424 @@
+{
+  "measuredUTC": "2026-10-11T16:19:01.375533+00:00",
+  "scope": "Retained local recording manifests and attempt logs only. Failed UI/native gates, requested checkpoint stops and occupied-port refusal are not failed gameplay transactions. Diagnostic and rollback gas are excluded from final recording totals.",
+  "automaticTransactionResubmission": 0,
+  "automaticTransactionResubmissionBasis": "Source audit: recorder send()/rpc() submits once; receipt polling does not resubmit transactions. Manual checkpoint resume counts are separately recorded.",
+  "attempts": [
+    {
+      "path": "artifacts/local/full-videos/E1M1/pilot-clock-fixed/recording.json",
+      "sha256": "4493282a1b69e360e9c37a8cd4d75ac5a0870e8b4393999b1129b36a89f5b2bc",
+      "map": 1,
+      "complete": false,
+      "error": "Error: Recoverable requested stop; resume the frozen checkpoint",
+      "frames": 435,
+      "gameplayTics": 316,
+      "recordedTransactions": 1509,
+      "failedMinedTransactions": 0,
+      "failedReceipts": [],
+      "resumeSessions": [
+        "2026-10-11T09:34:43.150Z",
+        "2026-10-11T09:40:18.842Z"
+      ],
+      "checkpointLineage": null,
+      "gasIncludingInheritedReceipts": 310600488519
+    },
+    {
+      "path": "artifacts/local/full-videos/E1M1/pilot-preflight/recording.json",
+      "sha256": "6b1486414371366b9946fe8fe5e6650cc6ded6fe6b57f02982ff13c96b632661",
+      "map": 1,
+      "complete": false,
+      "error": "Error: Invalid counters",
+      "frames": 0,
+      "gameplayTics": 0,
+      "recordedTransactions": 759,
+      "failedMinedTransactions": 0,
+      "failedReceipts": [],
+      "resumeSessions": [],
+      "checkpointLineage": null,
+      "gasIncludingInheritedReceipts": 3935820509
+    },
+    {
+      "path": "artifacts/local/full-videos/E1M1/pilot-short-exit/recording.json",
+      "sha256": "0a4fa82c4212a8f4f756837eb0d684833830b8f0ad7a4dfca5ccb6543bcdc1dc",
+      "map": 1,
+      "complete": false,
+      "error": null,
+      "frames": 392,
+      "gameplayTics": 316,
+      "recordedTransactions": 1466,
+      "failedMinedTransactions": 0,
+      "failedReceipts": [],
+      "resumeSessions": [],
+      "checkpointLineage": null,
+      "gasIncludingInheritedReceipts": 308461558115
+    },
+    {
+      "path": "artifacts/local/full-videos/E1M1/pilot-short-v1/recording.json",
+      "sha256": "168f2784aa6b8f5a12f1efda30b9b9e0fc41eed91fca9efdcb92b442cf57c6c7",
+      "map": 1,
+      "complete": false,
+      "error": "AssertionError [ERR_ASSERTION]: Frame transaction reverted\n\n'0x0' !== '0x1'\n",
+      "frames": 547,
+      "gameplayTics": 316,
+      "recordedTransactions": 1622,
+      "failedMinedTransactions": 1,
+      "failedReceipts": [
+        {
+          "kind": "presentationTick(bytes,bool)",
+          "hash": "0x6e5e414114af2404d2f7f14e5b3064e63d3d783758d6864634e898c9fe52f5d9",
+          "file": "receipts/0x6e5e414114af2404d2f7f14e5b3064e63d3d783758d6864634e898c9fe52f5d9.json.gz",
+          "receiptSha256": "c4a7c3cb0ced05f982d1bd32e8e2b668cbc8cef9218a7bc1f2400c8d28dca201",
+          "gas": 7776318,
+          "elapsedMs": 27.078125,
+          "status": "0x0"
+        }
+      ],
+      "resumeSessions": [],
+      "checkpointLineage": null,
+      "gasIncludingInheritedReceipts": 324610115210
+    },
+    {
+      "path": "artifacts/local/full-videos/E1M1/pilot-short-v2/recording.json",
+      "sha256": "38d0305dfec5440a7fd3354fc0355a9f838a4d26dad6df7d9cf4af8564cabae6",
+      "map": 1,
+      "complete": true,
+      "error": null,
+      "frames": 547,
+      "gameplayTics": 316,
+      "recordedTransactions": 1621,
+      "failedMinedTransactions": 0,
+      "failedReceipts": [],
+      "resumeSessions": [],
+      "checkpointLineage": {
+        "parentCheckpoint": "/Users/eduard/sandbox/doom-evm-full-videos/artifacts/local/full-videos/E1M1/pilot-short-exit/checkpoint.json",
+        "parentCheckpointSHA256": "23b448630e6bf8113d066fe9985b964f66ab05fe8a1fa149ec54c816d6f54fc9",
+        "inheritedTransactions": 1466,
+        "inheritedFrames": 392,
+        "inheritedRPCSeconds": 327.29759754500003,
+        "parentRecording": "/Users/eduard/sandbox/doom-evm-full-videos/artifacts/local/full-videos/E1M1/pilot-short-exit/recording.json"
+      },
+      "gasIncludingInheritedReceipts": 324602338892
+    },
+    {
+      "path": "artifacts/local/full-videos/E1M1/pilot-v2/recording.json",
+      "sha256": "c36e01f24c35c249e34b8444c7f70591483529a561cc3790722e377b942772e9",
+      "map": 1,
+      "complete": true,
+      "error": null,
+      "frames": 3498,
+      "gameplayTics": 316,
+      "recordedTransactions": 4572,
+      "failedMinedTransactions": 0,
+      "failedReceipts": [],
+      "resumeSessions": [],
+      "checkpointLineage": null,
+      "gasIncludingInheritedReceipts": 689031769853
+    },
+    {
+      "path": "artifacts/local/full-videos/E1M2/complete-short-v1/recording.json",
+      "sha256": "15cc405c60bbe51e3b7772483faf1056987aa1bd46d0ef39d128649d1a10a024",
+      "map": 2,
+      "complete": true,
+      "error": null,
+      "frames": 1029,
+      "gameplayTics": 798,
+      "recordedTransactions": 2585,
+      "failedMinedTransactions": 0,
+      "failedReceipts": [],
+      "resumeSessions": [],
+      "checkpointLineage": {
+        "parentCheckpoint": "/Users/eduard/sandbox/doom-evm-full-videos/artifacts/local/full-videos/E1M2/complete-v2/checkpoint.json",
+        "parentCheckpointSHA256": "f9b335a9fe79750fb57b6226e180fae9a2837ab5c4200d2bec9f273b57c5a79d",
+        "inheritedTransactions": 2030,
+        "inheritedFrames": 674,
+        "inheritedRPCSeconds": 734.5237031170011,
+        "parentRecording": "/Users/eduard/sandbox/doom-evm-full-videos/artifacts/local/full-videos/E1M2/complete-v2/recording.json"
+      },
+      "gasIncludingInheritedReceipts": 917395666205
+    },
+    {
+      "path": "artifacts/local/full-videos/E1M2/complete-v2/recording.json",
+      "sha256": "840ac9a2ff0161554fadee37868f36bd1ab26c597903b7530c67e6fcc724950f",
+      "map": 2,
+      "complete": false,
+      "error": "Error: Recoverable requested stop; resume the frozen checkpoint",
+      "frames": 674,
+      "gameplayTics": 598,
+      "recordedTransactions": 2030,
+      "failedMinedTransactions": 0,
+      "failedReceipts": [],
+      "resumeSessions": [],
+      "checkpointLineage": null,
+      "gasIncludingInheritedReceipts": 686386961462
+    },
+    {
+      "path": "artifacts/local/full-videos/E1M3/complete-short-v1/recording.json",
+      "sha256": "03a7fda860ef9030a54be10c4df73303e4281fe3c4fe78a7076d5994b495850e",
+      "map": 3,
+      "complete": true,
+      "error": null,
+      "frames": 1522,
+      "gameplayTics": 1291,
+      "recordedTransactions": 3571,
+      "failedMinedTransactions": 0,
+      "failedReceipts": [],
+      "resumeSessions": [],
+      "checkpointLineage": null,
+      "gasIncludingInheritedReceipts": 1728806988621
+    },
+    {
+      "path": "artifacts/local/full-videos/E1M4/complete-short-v1/recording.json",
+      "sha256": "488984f2e3993cbbb0f5a537f1d23c932efd60f50416acaf254560fbd7447cbf",
+      "map": 4,
+      "complete": true,
+      "error": null,
+      "frames": 1003,
+      "gameplayTics": 767,
+      "recordedTransactions": 2528,
+      "failedMinedTransactions": 0,
+      "failedReceipts": [],
+      "resumeSessions": [],
+      "checkpointLineage": null,
+      "gasIncludingInheritedReceipts": 811950237036
+    },
+    {
+      "path": "artifacts/local/full-videos/E1M5/complete-short-v1/recording.json",
+      "sha256": "d4b6a9d25c75b50fa52662e26f71fef152fdc89b507588fdce2ae5a8c5d7beb7",
+      "map": 5,
+      "complete": true,
+      "error": null,
+      "frames": 2346,
+      "gameplayTics": 2110,
+      "recordedTransactions": 5214,
+      "failedMinedTransactions": 0,
+      "failedReceipts": [],
+      "resumeSessions": [
+        "2026-10-11T14:42:40.119Z"
+      ],
+      "checkpointLineage": null,
+      "gasIncludingInheritedReceipts": 2635722517898
+    },
+    {
+      "path": "artifacts/local/full-videos/E1M6/complete-short-v1/recording.json",
+      "sha256": "2da341a0477cf85a8730bb4052b84ea8c6a1d3a6e65f5626728563677cec568a",
+      "map": 6,
+      "complete": true,
+      "error": null,
+      "frames": 3619,
+      "gameplayTics": 3385,
+      "recordedTransactions": 7762,
+      "failedMinedTransactions": 0,
+      "failedReceipts": [],
+      "resumeSessions": [
+        "2026-10-11T14:42:40.670Z"
+      ],
+      "checkpointLineage": {
+        "parentCheckpoint": "/Users/eduard/sandbox/doom-evm-full-videos/artifacts/local/full-videos/E1M6/complete-v2/checkpoint.json",
+        "parentCheckpointSHA256": "1f4958b5cee15d4e96acc512511e43b3dbda076a1ca14a9f02409452465e7dc2",
+        "inheritedTransactions": 1904,
+        "inheritedFrames": 611,
+        "inheritedRPCSeconds": 690.9308566509995,
+        "parentRecording": "/Users/eduard/sandbox/doom-evm-full-videos/artifacts/local/full-videos/E1M6/complete-v2/recording.json"
+      },
+      "gasIncludingInheritedReceipts": 5459324203074
+    },
+    {
+      "path": "artifacts/local/full-videos/E1M6/complete-v2/recording.json",
+      "sha256": "ce7722c2d8c5808d4ec8b216f7853ab5d082fe89d0ebd83b29e6cbcc932e501c",
+      "map": 6,
+      "complete": false,
+      "error": "Error: Recoverable requested stop; resume the frozen checkpoint",
+      "frames": 611,
+      "gameplayTics": 535,
+      "recordedTransactions": 1904,
+      "failedMinedTransactions": 0,
+      "failedReceipts": [],
+      "resumeSessions": [],
+      "checkpointLineage": null,
+      "gasIncludingInheritedReceipts": 683749706526
+    },
+    {
+      "path": "artifacts/local/full-videos/E1M7/complete-short-v1/recording.json",
+      "sha256": "207b3f85ff22b2b1f59aafa357a335452195022179c8b1aaf98f1e08d19c7a32",
+      "map": 7,
+      "complete": true,
+      "error": null,
+      "frames": 2808,
+      "gameplayTics": 2572,
+      "recordedTransactions": 6138,
+      "failedMinedTransactions": 0,
+      "failedReceipts": [],
+      "resumeSessions": [],
+      "checkpointLineage": null,
+      "gasIncludingInheritedReceipts": 3305344543682
+    },
+    {
+      "path": "artifacts/local/full-videos/E1M8/complete-short-v1/recording.json",
+      "sha256": "74bef07fe07aa96e93d2f48b433ab17601e03082d59bf90fecfddaabfd162711",
+      "map": 8,
+      "complete": true,
+      "error": null,
+      "frames": 3467,
+      "gameplayTics": 1638,
+      "recordedTransactions": 5863,
+      "failedMinedTransactions": 0,
+      "failedReceipts": [],
+      "resumeSessions": [],
+      "checkpointLineage": null,
+      "gasIncludingInheritedReceipts": 2068482084762
+    },
+    {
+      "path": "artifacts/local/full-videos/E1M9/complete-short-v1/recording.json",
+      "sha256": "1d65c69ebda4e3cf6e10b1be339128e7d067bad8957db9a077b8747857120f38",
+      "map": 9,
+      "complete": true,
+      "error": null,
+      "frames": 1834,
+      "gameplayTics": 1598,
+      "recordedTransactions": 4190,
+      "failedMinedTransactions": 0,
+      "failedReceipts": [],
+      "resumeSessions": [],
+      "checkpointLineage": null,
+      "gasIncludingInheritedReceipts": 1695970243929
+    }
+  ],
+  "logs": [
+    {
+      "path": "artifacts/local/full-videos/E1M1/pilot-short-v1.log",
+      "sha256": "383bf1c6d39bdede5585d0a5ea477166ae0e350437661b9804710121c07e4091",
+      "observedErrors": [
+        {
+          "line": 13,
+          "text": "AssertionError [ERR_ASSERTION]: Frame transaction reverted",
+          "category": "mined EVM frame transaction reverted"
+        }
+      ]
+    },
+    {
+      "path": "artifacts/local/full-videos/E1M1/pilot-short-v2.log",
+      "sha256": "7d3ec8a5a5d9d5092258b05fdcc99871774a34de111aa8bf7cbf909492286410",
+      "observedErrors": []
+    },
+    {
+      "path": "artifacts/local/full-videos/E1M2/complete-short-v1/pipeline.log",
+      "sha256": "97a55e49241706ffc5b962efe044a4fb0db5419dfc46e4de687b7f7551c73375",
+      "observedErrors": [
+        {
+          "line": 33,
+          "text": "AssertionError: (2, 84, 34210, 'common-native pixel mismatch')",
+          "category": "verification assertion"
+        }
+      ]
+    },
+    {
+      "path": "artifacts/local/full-videos/E1M2/complete-v2/pipeline.log",
+      "sha256": "96f80d7ac67f88cacd95d05b63aee1fe0a02be9a325838b9f0f3e8fa8e499596",
+      "observedErrors": [
+        {
+          "line": 26,
+          "text": "Error: Recoverable requested stop; resume the frozen checkpoint",
+          "category": "requested recoverable stop"
+        }
+      ]
+    },
+    {
+      "path": "artifacts/local/full-videos/E1M3/complete-short-v1/pipeline.log",
+      "sha256": "e1daa0cd0a7735eb2136e4d9af5e66a4b86743feea8f3e09e0141b456b45f9fa",
+      "observedErrors": [
+        {
+          "line": 67,
+          "text": "Error: Occupied port",
+          "category": "occupied-port guard"
+        }
+      ]
+    },
+    {
+      "path": "artifacts/local/full-videos/E1M3/complete-v2/pipeline.log",
+      "sha256": "f3aafb9d720220b13aa95a56f96888bb4edb69624c8a79e49c55328998d982cb",
+      "observedErrors": [
+        {
+          "line": 7,
+          "text": "AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:",
+          "category": "verification assertion"
+        }
+      ]
+    },
+    {
+      "path": "artifacts/local/full-videos/E1M4/complete-short-v1/pipeline.log",
+      "sha256": "27003435ee28a4c0f03cb02e01abe4c84cc573d64b2879698f139154b089bf66",
+      "observedErrors": []
+    },
+    {
+      "path": "artifacts/local/full-videos/E1M5/complete-short-v1/pipeline.log",
+      "sha256": "d734682e1b863ba72cb28ab835938df0e5ded66519facc0bec4d393abdc615aa",
+      "observedErrors": [
+        {
+          "line": 49,
+          "text": "Error: Recoverable requested stop; resume the frozen checkpoint",
+          "category": "requested recoverable stop"
+        },
+        {
+          "line": 108,
+          "text": "AssertionError",
+          "category": "verification assertion"
+        }
+      ]
+    },
+    {
+      "path": "artifacts/local/full-videos/E1M5/complete-v2/pipeline.log",
+      "sha256": "00471468d77ffdfd67bddc7b3aa0ecbd738e8da3bd24d5cc10fbfdfa4ad821c0",
+      "observedErrors": [
+        {
+          "line": 7,
+          "text": "AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:",
+          "category": "verification assertion"
+        }
+      ]
+    },
+    {
+      "path": "artifacts/local/full-videos/E1M6/complete-short-v1/pipeline.log",
+      "sha256": "e5ac26852421c308838473afba83775f84ebb1db46b9f0e5d1b7fe46ef5de828",
+      "observedErrors": [
+        {
+          "line": 108,
+          "text": "Error: Recoverable requested stop; resume the frozen checkpoint",
+          "category": "requested recoverable stop"
+        },
+        {
+          "line": 137,
+          "text": "AssertionError: ('UI/melt pixel mismatch', 3462, 16)",
+          "category": "verification assertion"
+        }
+      ]
+    },
+    {
+      "path": "artifacts/local/full-videos/E1M6/complete-v2/pipeline.log",
+      "sha256": "ecd632aa93b9db30e328f92280136b14805f9e5d26eb0b1abd3d547ba67d5dc3",
+      "observedErrors": [
+        {
+          "line": 24,
+          "text": "Error: Recoverable requested stop; resume the frozen checkpoint",
+          "category": "requested recoverable stop"
+        }
+      ]
+    },
+    {
+      "path": "artifacts/local/full-videos/E1M7/complete-short-v1/pipeline.log",
+      "sha256": "58aa0d65bba69cb928c8e238c373e3feccccaeb8cd0daa21766b9ca06f862a98",
+      "observedErrors": []
+    },
+    {
+      "path": "artifacts/local/full-videos/E1M8/complete-short-v1/pipeline.log",
+      "sha256": "6dc2080e5c4f91738b508ae1584a4950541c02812b9d27daf1819ab4eef019bc",
+      "observedErrors": []
+    },
+    {
+      "path": "artifacts/local/full-videos/E1M9/complete-short-v1/pipeline.log",
+      "sha256": "c8b68148151fcae02fcf7d8f4254ed59d858c9355ac7788759796b450e7bc5a3",
+      "observedErrors": []
+    }
+  ],
+  "aggregateAttemptGas": null,
+  "aggregateAttemptGasUnavailableReason": "Attempts/checkpoint policy forks share inherited receipts; summing attempt gas would double-count. Costs per retained attempt are shown with explicit lineage. Unreceipted RPC failures have no measured gas."
+}

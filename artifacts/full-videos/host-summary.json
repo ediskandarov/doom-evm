@@ -1,0 +1,21 @@
+{
+  "samples": 805,
+  "startedUTC": "2026-10-11T09:35:57.374855+00:00",
+  "endedUTC": "2026-10-11T16:18:48.477332+00:00",
+  "hostLog": "artifacts/local/full-videos/host.jsonl",
+  "hostLogSHA256": "da7b2173aa19d6915d359c35f529963f08bf92a643dc57256f46c20e794cfe63",
+  "minimumObservedDiskFreeBytes": 16769888256,
+  "maximumObservedOwnedAnvilRSS": {
+    "timeUTC": "2026-10-11T12:03:14.421910+00:00",
+    "pid": 31213,
+    "RSSBytes": 493600768
+  },
+  "maximumObservedRecorderRSS": {
+    "timeUTC": "2026-10-11T14:48:09.158522+00:00",
+    "pid": 68435,
+    "RSSBytes": 1677787136
+  },
+  "maximumObservedSystemSwapUsedMiB": 8786.75,
+  "samplingIntervalSeconds": 30,
+  "scope": "Observed samples across the goal, including pilots/diagnostics/native verification. RSS is per observed owned process, not combined simultaneous memory. System swap includes other users of the host and is not attributed exclusively to EVM. Sampling maxima are not guaranteed process peaks. No CPU-time estimate or EVM behavior instrumentation."
+}

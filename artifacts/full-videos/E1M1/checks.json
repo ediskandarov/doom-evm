@@ -1,6 +1,16 @@
 {
   "pass_": true,
   "nativeGameplay": {
+    "nativeReferenceProfile": {
+      "displayHistory": true,
+      "profile": "LP64 initialized64MiB zone; all ST/HU/WI borrowed immutable UI resources including ST_lib; temporary per-gameplay render; original source gameplay/WI/finale/melt",
+      "gameplayDirectory": "artifacts/local/full-videos/E1M1/native-display-history",
+      "presentationDirectory": "artifacts/local/full-videos/E1M1/native-display-short-ui",
+      "gameplayManifestSHA256": "0385b8dfc9f05f34cb2da92985747ed94ed531aceef7a94cb5901eeb2af8c152",
+      "presentationManifestSHA256": "4e61551ec7d385cd273c5acdd4c1c494cbf7edf1520e93c8d24ccaaa38925ccf",
+      "reason": "Legacy native adapter missed ST_lib STTMINUS borrowing. Only native cache interception changed; EVM frame/source/provenance unchanged.",
+      "originalNativeReferencesPreserved": true
+    },
     "map": 1,
     "scope": "Finite native comparison with explicit virtual destinations; no universal native pointer-pixel equality.",
     "gameplay": {
@@ -1901,26 +1911,36 @@
         "virtualUses": 0
       }
     },
-    "nativeUIFrames": 3183,
+    "nativeUIFrames": 232,
     "wipeFrames": 80,
     "commonNativePixelsChecked": 20224000,
     "virtualZoneUses": 0,
     "virtualOwnerUses": 0,
     "wholeNativeFramesEqual": 316,
-    "frames": 3498,
+    "frames": 547,
     "pass_": true,
-    "nativeExactAllPresentationFrames": 3498,
+    "nativeExactAllPresentationFrames": 547,
     "finalFrameNativePixelDifferences": 0,
-    "nativeUIpixelComparisons": 203712000
+    "nativeUIpixelComparisons": 14848000
   },
   "nativeUI": {
+    "nativeReferenceProfile": {
+      "displayHistory": true,
+      "profile": "LP64 initialized64MiB zone; all ST/HU/WI borrowed immutable UI resources including ST_lib; temporary per-gameplay render; original source gameplay/WI/finale/melt",
+      "gameplayDirectory": "artifacts/local/full-videos/E1M1/native-display-history",
+      "presentationDirectory": "artifacts/local/full-videos/E1M1/native-display-short-ui",
+      "gameplayManifestSHA256": "0385b8dfc9f05f34cb2da92985747ed94ed531aceef7a94cb5901eeb2af8c152",
+      "presentationManifestSHA256": "4e61551ec7d385cd273c5acdd4c1c494cbf7edf1520e93c8d24ccaaa38925ccf",
+      "reason": "Legacy native adapter missed ST_lib STTMINUS borrowing. Only native cache interception changed; EVM frame/source/provenance unchanged.",
+      "originalNativeReferencesPreserved": true
+    },
     "pass_": true,
     "map": 1,
-    "nativePresentationFrames": 3183,
-    "nativePresentationPixels": 203712000,
+    "nativePresentationFrames": 232,
+    "nativePresentationPixels": 14848000,
     "allPixelsAndPalettesExact": true,
-    "sourceProfile": "Original C borrowed immutable UI resources, existing LP64 initialized zone, one-tic blocking display clock; genuine original-input exit; zero-input original WI/F hold.",
-    "originalTailAndContinuationFrames": 3141,
+    "sourceProfile": "Unchanged original C; declared LP64 initialized-zone/borrowed UI resource profile; differential ST/HU display history where selected; one-tic blocking wipe clock. Identical authentic gameplay prefix and separate post-exit original WI button-edge inputs or zero-input finale, with the same explicit endpoint.",
+    "originalTailAndContinuationFrames": 190,
     "entryWipeFrames": 42,
     "authoritativeStatisticsABIWords": [
       0,
@@ -1974,59 +1994,70 @@
       0,
       0
     ],
-    "nativeManifestSHA256": "92ba457aef6982db3a18f662c87ca068cdfae6b35ec07852bfe8a2ea378334f6",
-    "entryMeltManifestSHA256": "6f92cbf77baad25692efe76a0e13c0caed62e9f60503efcac8935bd274b80b50"
+    "nativeManifestSHA256": "4e61551ec7d385cd273c5acdd4c1c494cbf7edf1520e93c8d24ccaaa38925ccf",
+    "entryMeltManifestSHA256": "dd07e8cee9e84fa53a56fb0ea03672d6e873cf85e5616a88579d9c9cc362d81e"
   },
   "rollback": {
-    "startedUTC": "2026-10-11T10:15:14.833Z",
+    "startedUTC": "2026-10-11T11:08:24.431Z",
     "port": 18959,
-    "checkpointFrame": 3498,
-    "chainSHA256": "6c8c3316b7bc0f59d07f7e48e4b261bd69047b6863633ff9454e972a8f04d487",
+    "checkpointFrame": 547,
+    "chainSHA256": "04106c5e0816e2af61df506f87906842f9ae185effff7504c34bb093bbc62fb5",
     "checks": [
       {
         "name": "capture(uint32)",
-        "hash": "0x1da7a26c2280ea621bbf764b3642b7131d9058b7df1232082f5a5c199225996c",
+        "hash": "0x8903d7c12293599356edac9998501be27b29ad4004d45c57e9a9c3823df21190",
         "gas": 26135,
         "allSavedAndPresentationFieldsUnchanged": true,
         "noLogs": true
       },
       {
         "name": "capture(uint32)",
-        "hash": "0x1c383562f01243974981ffeca5a495795d1f0528c9a42dc69d5e15e6c81b8f88",
+        "hash": "0xb470298cb0f99412c1e6ccc9628134295adfb376b7ae10b1f44acffd74f8afe6",
         "gas": 26159,
         "allSavedAndPresentationFieldsUnchanged": true,
         "noLogs": true
       },
       {
         "name": "stepWipe()",
-        "hash": "0xefc17aa89800dd55d3551e38027489384e1478b87d24dd63b08235c2123275ae",
+        "hash": "0x1aba020454a0b160795cde94e322c5a186164695d2c9a3242127a0b2bb5f2d36",
         "gas": 25778,
         "allSavedAndPresentationFieldsUnchanged": true,
         "noLogs": true
       },
       {
         "name": "presentationTick(bytes,bool)",
-        "hash": "0xfd28b38ddebbbdd998244895a93884270fdfd2ffd14f7ce0cbdde60345fc3cf0",
+        "hash": "0x14075fba0ad36acd5b0b33166eb3107d8348c37cf6a2791e8076f889b7931aa3",
         "gas": 7766307,
         "allSavedAndPresentationFieldsUnchanged": true,
         "noLogs": true
       },
       {
         "name": "initializeMap(uint8,int32,int32,bool)",
-        "hash": "0x95aedff962c73fb5b7b3e7fe5a8b937b74102847b710d8806a59008a6202eb68",
+        "hash": "0x3e97769982c8da05492652aab3978620dbd298ca7057b5b4d1b1dc89dd47173f",
         "gas": 24572,
         "allSavedAndPresentationFieldsUnchanged": true,
         "noLogs": true
       }
     ],
     "pass": true,
+    "recordingEndpoint": {
+      "name": "original Entering screen",
+      "wiState": -1,
+      "remainingNoStateTics": 1,
+      "wiTics": 118,
+      "statisticsStage": 10,
+      "worldDoneRequested": false,
+      "gameplayTics": 316,
+      "G_WorldDoneVerified": false,
+      "nextLevelStartupVerified": false
+    },
     "ownedRuntimeStopped": true,
-    "endedUTC": "2026-10-11T10:15:15.403Z"
+    "endedUTC": "2026-10-11T11:08:24.985Z"
   },
   "media": {
     "pass_": true,
-    "startedUTC": "2026-10-11T10:14:37.371371+00:00",
-    "endedUTC": "2026-10-11T10:14:49.664054+00:00",
+    "startedUTC": "2026-10-11T11:03:14.231841+00:00",
+    "endedUTC": "2026-10-11T11:03:19.978443+00:00",
     "command": [
       "ffmpeg",
       "-hide_banner",
@@ -2059,13 +2090,13 @@
       "35000",
       "-movflags",
       "+faststart",
-      "/Users/eduard/sandbox/doom-evm-full-videos/artifacts/local/full-videos/E1M1/pilot-v2/ultimate-e1m1-complete.mp4"
+      "/Users/eduard/sandbox/doom-evm-full-videos/artifacts/local/full-videos/E1M1/pilot-short-v2/ultimate-e1m1-complete.mp4"
     ],
-    "path": "/Users/eduard/sandbox/doom-evm-full-videos/artifacts/local/full-videos/E1M1/pilot-v2/ultimate-e1m1-complete.mp4",
-    "sha256": "6d65e321e75f3c787fc31dc758d7460b1f4cd25f27e0b193e1d7f204a82d12f4",
-    "bytes": 15996505,
-    "frames": 3498,
-    "durationSeconds": 99.94285714285714,
+    "path": "/Users/eduard/sandbox/doom-evm-full-videos/artifacts/local/full-videos/E1M1/pilot-short-v2/ultimate-e1m1-complete.mp4",
+    "sha256": "4a8be58e4d401e6fd628449e2b99874d359e13c213eb3153bab7e17b5566a3ae",
+    "bytes": 13409260,
+    "frames": 547,
+    "durationSeconds": 15.628571428571428,
     "probe": {
       "programs": [],
       "stream_groups": [],
@@ -2077,12 +2108,12 @@
           "r_frame_rate": "35/1",
           "avg_frame_rate": "35/1",
           "time_base": "1/35000",
-          "duration": "99.942857",
-          "nb_frames": "3498"
+          "duration": "15.628571",
+          "nb_frames": "547"
         }
       ],
       "format": {
-        "duration": "99.942857"
+        "duration": "15.628571"
       }
     },
     "allPacketClocksExact": true,

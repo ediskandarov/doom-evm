@@ -17,5 +17,12 @@ try {
   const hash=await rpc('eth_sendTransaction',[{from,to:address,data:method(name)+data,gas}]);let receipt;while(!(receipt=await rpc('eth_getTransactionReceipt',[hash])))await new Promise(r=>setTimeout(r,25));assert.equal(receipt.status,'0x0');assert.equal(receipt.logs.length,0);
   for(const n of Object.keys(before))assert.equal(await call(n),before[n]);report.checks.push({name,hash,gas:Number(BigInt(receipt.gasUsed)),allSavedAndPresentationFieldsUnchanged:true,noLogs:true});
  }
+ if(cp.identity.presentationPolicy && cp.identity.map!==8){
+  const raw=Buffer.from((await call('presentationState()')).slice(2),'hex');
+  const read=(b,n)=>Number(BigInt.asIntN(256,BigInt('0x'+b.subarray(n*32,(n+1)*32).toString('hex'))));
+  const at=read(raw,0),len=read(raw,at/32),data=raw.subarray(at+32,at+32+len);
+  report.recordingEndpoint={name:'original Entering screen',wiState:read(data,50),remainingNoStateTics:read(data,53),wiTics:read(data,54),statisticsStage:read(data,71),worldDoneRequested:read(data,94)!==0,gameplayTics:cp.report.gameplayTics,G_WorldDoneVerified:false,nextLevelStartupVerified:false};
+  assert.equal(report.recordingEndpoint.wiState,-1);assert.equal(report.recordingEndpoint.remainingNoStateTics,1);assert.equal(report.recordingEndpoint.worldDoneRequested,false);assert.equal(report.recordingEndpoint.statisticsStage,10);
+ }
  report.pass=true;
 }finally{if(child&&child.exitCode===null)await new Promise(done=>{child.on('exit',done);child.kill('SIGTERM');});report.ownedRuntimeStopped=true;report.endedUTC=new Date().toISOString();await unlink(load);await writeFile(base+'/rollback.json',JSON.stringify(report,null,2)+'\n');console.log(JSON.stringify(report));}

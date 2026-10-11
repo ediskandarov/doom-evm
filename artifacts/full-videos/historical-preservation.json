@@ -1,6 +1,6 @@
 {
   "pass_": true,
-  "timeUTC": "2026-10-11T10:06:09.834125+00:00",
+  "timeUTC": "2026-10-11T16:19:01.157994+00:00",
   "scope": "Read-only archive/input/canonical source copy and all nine owner-v1 historical indexed frames, manifests, provenance metadata and preflight-hashed MP4s. No historical file was rewritten.",
   "historicalIndexedFramesVerified": 14475,
   "historicalVirtualUses": 38,

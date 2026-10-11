@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
-"""Compare original tail/hold UI and actual transitions against independent C pixels/palettes."""
+"""Compare original presentation commands/transitions against independent C pixels/palettes."""
 import argparse,json,hashlib,subprocess,collections
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[3];HERE=Path(__file__).parent
-ap=argparse.ArgumentParser();ap.add_argument('recording',type=Path);ap.add_argument('--partial',action='store_true');a=ap.parse_args();out=a.recording.resolve();r=json.loads((out/'recording.json').read_text());m=r['identity']['map'];native=ROOT/f'artifacts/local/full-videos/E1M{m}'/('native-short-ui-v3' if r['identity'].get('presentationPolicy') else 'native-ui');n=json.loads((native/'manifest.json').read_text());assert n['pass_'];assert set(n['profiles'])=={'O2','O0','sanitize'}
+ap=argparse.ArgumentParser();ap.add_argument('recording',type=Path);ap.add_argument('--partial',action='store_true');a=ap.parse_args();out=a.recording.resolve();r=json.loads((out/'recording.json').read_text());m=r['identity']['map'];selection=json.loads((out/'native-profile.json').read_text()) if (out/'native-profile.json').exists() else None;native=ROOT/selection['presentationDirectory'] if selection else ROOT/f'artifacts/local/full-videos/E1M{m}'/('native-short-ui-v3' if r['identity'].get('presentationPolicy') else 'native-ui');n=json.loads((native/'manifest.json').read_text());assert n['pass_'];assert set(n['profiles'])=={'O2','O0','sanitize'}
 sha=lambda b:hashlib.sha256(b).hexdigest();ui=[f for f in r['frames'] if f['kind'] in [1,3,4] or f['kind']==2 and f['demoTic']!=1];reference=n['frames'];assert len(ui)==len(reference) if not a.partial else len(ui)<=len(reference)
 checked=[]
 for actual,expected in zip(ui,reference):
@@ -12,10 +12,10 @@ for actual,expected in zip(ui,reference):
  pal=(out/actual['paletteFile']).read_bytes();assert pal==(native/expected['paletteFile']).read_bytes()
  checked.append(dict(frameId=actual['frameId'],nativeFile=expected['file'],nativeSha256=expected['sha256'],pixelDifferences=0))
 entry=[f for f in r['frames'] if f['kind']==2 and f['demoTic']==1];assert entry
-entryRef=ROOT/f'artifacts/local/full-videos/E1M{m}/native-entry-wipe'
+entryRef=ROOT/f'artifacts/local/full-videos/E1M{m}'/('native-entry-wipe-borrowed' if selection else 'native-entry-wipe')
 if not (entryRef/'manifest.json').exists():
  title=next(x for x in reference if x['kind']==1)
- subprocess.run(['python3',HERE/'wipe-frames.py','--start',native/title['file'],'--end',ROOT/f'artifacts/local/full-videos/E1M{m}/native/gameplay-000001.indexed8','--seed','1','--output',entryRef],check=True)
+ subprocess.run(['python3',HERE/'wipe-frames.py','--start',native/title['file'],'--end',ROOT/selection['gameplayDirectory']/'gameplay-000001.indexed8' if selection else ROOT/f'artifacts/local/full-videos/E1M{m}/native/gameplay-000001.indexed8','--seed','1','--output',entryRef],check=True)
 w=json.loads((entryRef/'manifest.json').read_text());assert len(entry)==len(w['frames'])
 for actual,expected in zip(entry,w['frames']):
  assert actual['rng']==65 # ST tic1, then original 320 wipe random calls, modulo256
@@ -34,6 +34,7 @@ for f in r['frames']:
  if m==9:assert words[1]==1
  stats=words;break
 if not a.partial:assert m==8 or stats
-report=dict(pass_=True,map=m,nativePresentationFrames=len(checked),nativePresentationPixels=len(checked)*64000,allPixelsAndPalettesExact=True,sourceProfile='Original C borrowed immutable UI resources, existing LP64 initialized zone, one-tic blocking display clock; genuine original-input exit; zero-input original WI/F hold.',originalTailAndContinuationFrames=len(ui),entryWipeFrames=len(entry),authoritativeStatisticsABIWords=stats,nativeManifestSHA256=sha((native/'manifest.json').read_bytes()),entryMeltManifestSHA256=sha((entryRef/'manifest.json').read_bytes()),frames=checked)
+if selection:assert sha((native/'manifest.json').read_bytes())==selection['presentationManifestSHA256'] and n['nativeUIResourceProfile']=='all UI including ST_lib borrowed'
+report=dict(nativeReferenceProfile=selection,pass_=True,map=m,nativePresentationFrames=len(checked),nativePresentationPixels=len(checked)*64000,allPixelsAndPalettesExact=True,sourceProfile='Unchanged original C; declared LP64 initialized-zone/borrowed UI resource profile; differential ST/HU display history where selected; one-tic blocking wipe clock. Identical authentic gameplay prefix and separate post-exit original WI button-edge inputs or zero-input finale, with the same explicit endpoint.' if r['identity'].get('presentationPolicy') else 'Historical original C borrowed immutable UI resources, LP64 initialized zone and one-tic wipe clock; full original tape tail plus zero-input hold.',originalTailAndContinuationFrames=len(ui),entryWipeFrames=len(entry),authoritativeStatisticsABIWords=stats,nativeManifestSHA256=sha((native/'manifest.json').read_bytes()),entryMeltManifestSHA256=sha((entryRef/'manifest.json').read_bytes()),frames=checked)
 (out/('partial-ui-verification.json' if a.partial else 'ui-verification.json')).write_text(json.dumps(report,indent=2)+'\n')
 print(json.dumps({k:v for k,v in report.items() if k!='frames'}))

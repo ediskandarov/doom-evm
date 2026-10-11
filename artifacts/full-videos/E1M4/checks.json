@@ -1,0 +1,4829 @@
+{
+  "pass_": true,
+  "nativeGameplay": {
+    "nativeReferenceProfile": {
+      "displayHistory": true,
+      "profile": "LP64 initialized64MiB zone; all ST/HU/WI borrowed immutable UI resources including ST_lib; temporary per-gameplay render; original source gameplay/WI/finale/melt",
+      "gameplayDirectory": "artifacts/local/full-videos/E1M4/native-display-history",
+      "presentationDirectory": "artifacts/local/full-videos/E1M4/native-display-short-ui",
+      "gameplayManifestSHA256": "edb9449022a6cde7c36d93b04fa7d8401769f57f76db2f90e2b868418f58b823",
+      "presentationManifestSHA256": "5b41d64b210071725331af8c979673377fc1825602b40d566eb9d445241056b4",
+      "reason": "Legacy native adapter missed ST_lib STTMINUS borrowing. Only native cache interception changed; EVM frame/source/provenance unchanged.",
+      "originalNativeReferencesPreserved": true
+    },
+    "map": 4,
+    "scope": "Finite native comparison with explicit virtual destinations; no universal native pointer-pixel equality.",
+    "gameplay": {
+      "1": {
+        "frameId": 77,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "2": {
+        "frameId": 78,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "3": {
+        "frameId": 79,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "4": {
+        "frameId": 80,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "5": {
+        "frameId": 81,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "6": {
+        "frameId": 82,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "7": {
+        "frameId": 83,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "8": {
+        "frameId": 84,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "9": {
+        "frameId": 85,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "10": {
+        "frameId": 86,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "11": {
+        "frameId": 87,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "12": {
+        "frameId": 88,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "13": {
+        "frameId": 89,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "14": {
+        "frameId": 90,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "15": {
+        "frameId": 91,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "16": {
+        "frameId": 92,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "17": {
+        "frameId": 93,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "18": {
+        "frameId": 94,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "19": {
+        "frameId": 95,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "20": {
+        "frameId": 96,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "21": {
+        "frameId": 97,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "22": {
+        "frameId": 98,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "23": {
+        "frameId": 99,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "24": {
+        "frameId": 100,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "25": {
+        "frameId": 101,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "26": {
+        "frameId": 102,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "27": {
+        "frameId": 103,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "28": {
+        "frameId": 104,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "29": {
+        "frameId": 105,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "30": {
+        "frameId": 106,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "31": {
+        "frameId": 107,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "32": {
+        "frameId": 108,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "33": {
+        "frameId": 109,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "34": {
+        "frameId": 110,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "35": {
+        "frameId": 111,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "36": {
+        "frameId": 112,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "37": {
+        "frameId": 113,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "38": {
+        "frameId": 114,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "39": {
+        "frameId": 115,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "40": {
+        "frameId": 116,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "41": {
+        "frameId": 117,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "42": {
+        "frameId": 118,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "43": {
+        "frameId": 119,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "44": {
+        "frameId": 120,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "45": {
+        "frameId": 121,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "46": {
+        "frameId": 122,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "47": {
+        "frameId": 123,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "48": {
+        "frameId": 124,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "49": {
+        "frameId": 125,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "50": {
+        "frameId": 126,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "51": {
+        "frameId": 127,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "52": {
+        "frameId": 128,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "53": {
+        "frameId": 129,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "54": {
+        "frameId": 130,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "55": {
+        "frameId": 131,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "56": {
+        "frameId": 132,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "57": {
+        "frameId": 133,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "58": {
+        "frameId": 134,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "59": {
+        "frameId": 135,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "60": {
+        "frameId": 136,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "61": {
+        "frameId": 137,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "62": {
+        "frameId": 138,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "63": {
+        "frameId": 139,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "64": {
+        "frameId": 140,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "65": {
+        "frameId": 141,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "66": {
+        "frameId": 142,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "67": {
+        "frameId": 143,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "68": {
+        "frameId": 144,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "69": {
+        "frameId": 145,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "70": {
+        "frameId": 146,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "71": {
+        "frameId": 147,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "72": {
+        "frameId": 148,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "73": {
+        "frameId": 149,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "74": {
+        "frameId": 150,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "75": {
+        "frameId": 151,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "76": {
+        "frameId": 152,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "77": {
+        "frameId": 153,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "78": {
+        "frameId": 154,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "79": {
+        "frameId": 155,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "80": {
+        "frameId": 156,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "81": {
+        "frameId": 157,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "82": {
+        "frameId": 158,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "83": {
+        "frameId": 159,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "84": {
+        "frameId": 160,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "85": {
+        "frameId": 161,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "86": {
+        "frameId": 162,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "87": {
+        "frameId": 163,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "88": {
+        "frameId": 164,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "89": {
+        "frameId": 165,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "90": {
+        "frameId": 166,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "91": {
+        "frameId": 167,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "92": {
+        "frameId": 168,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "93": {
+        "frameId": 169,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "94": {
+        "frameId": 170,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "95": {
+        "frameId": 171,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "96": {
+        "frameId": 172,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "97": {
+        "frameId": 173,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "98": {
+        "frameId": 174,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "99": {
+        "frameId": 175,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "100": {
+        "frameId": 176,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "101": {
+        "frameId": 177,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "102": {
+        "frameId": 178,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "103": {
+        "frameId": 179,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "104": {
+        "frameId": 180,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "105": {
+        "frameId": 181,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "106": {
+        "frameId": 182,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "107": {
+        "frameId": 183,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "108": {
+        "frameId": 184,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "109": {
+        "frameId": 185,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "110": {
+        "frameId": 186,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "111": {
+        "frameId": 187,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "112": {
+        "frameId": 188,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "113": {
+        "frameId": 189,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "114": {
+        "frameId": 190,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "115": {
+        "frameId": 191,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "116": {
+        "frameId": 192,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "117": {
+        "frameId": 193,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "118": {
+        "frameId": 194,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "119": {
+        "frameId": 195,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "120": {
+        "frameId": 196,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "121": {
+        "frameId": 197,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "122": {
+        "frameId": 198,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "123": {
+        "frameId": 199,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "124": {
+        "frameId": 200,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "125": {
+        "frameId": 201,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "126": {
+        "frameId": 202,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "127": {
+        "frameId": 203,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "128": {
+        "frameId": 204,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "129": {
+        "frameId": 205,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "130": {
+        "frameId": 206,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "131": {
+        "frameId": 207,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "132": {
+        "frameId": 208,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "133": {
+        "frameId": 209,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "134": {
+        "frameId": 210,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "135": {
+        "frameId": 211,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "136": {
+        "frameId": 212,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "137": {
+        "frameId": 213,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "138": {
+        "frameId": 214,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "139": {
+        "frameId": 215,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "140": {
+        "frameId": 216,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "141": {
+        "frameId": 217,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "142": {
+        "frameId": 218,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "143": {
+        "frameId": 219,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "144": {
+        "frameId": 220,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "145": {
+        "frameId": 221,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "146": {
+        "frameId": 222,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "147": {
+        "frameId": 223,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "148": {
+        "frameId": 224,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "149": {
+        "frameId": 225,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "150": {
+        "frameId": 226,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "151": {
+        "frameId": 227,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "152": {
+        "frameId": 228,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "153": {
+        "frameId": 229,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "154": {
+        "frameId": 230,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "155": {
+        "frameId": 231,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "156": {
+        "frameId": 232,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "157": {
+        "frameId": 233,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "158": {
+        "frameId": 234,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "159": {
+        "frameId": 235,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "160": {
+        "frameId": 236,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "161": {
+        "frameId": 237,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "162": {
+        "frameId": 238,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "163": {
+        "frameId": 239,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "164": {
+        "frameId": 240,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "165": {
+        "frameId": 241,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "166": {
+        "frameId": 242,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "167": {
+        "frameId": 243,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "168": {
+        "frameId": 244,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "169": {
+        "frameId": 245,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "170": {
+        "frameId": 246,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "171": {
+        "frameId": 247,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "172": {
+        "frameId": 248,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "173": {
+        "frameId": 249,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "174": {
+        "frameId": 250,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "175": {
+        "frameId": 251,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "176": {
+        "frameId": 252,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "177": {
+        "frameId": 253,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "178": {
+        "frameId": 254,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "179": {
+        "frameId": 255,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "180": {
+        "frameId": 256,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "181": {
+        "frameId": 257,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "182": {
+        "frameId": 258,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "183": {
+        "frameId": 259,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "184": {
+        "frameId": 260,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "185": {
+        "frameId": 261,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "186": {
+        "frameId": 262,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "187": {
+        "frameId": 263,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "188": {
+        "frameId": 264,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "189": {
+        "frameId": 265,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "190": {
+        "frameId": 266,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "191": {
+        "frameId": 267,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "192": {
+        "frameId": 268,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "193": {
+        "frameId": 269,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "194": {
+        "frameId": 270,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "195": {
+        "frameId": 271,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "196": {
+        "frameId": 272,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "197": {
+        "frameId": 273,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "198": {
+        "frameId": 274,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "199": {
+        "frameId": 275,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "200": {
+        "frameId": 276,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "201": {
+        "frameId": 277,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "202": {
+        "frameId": 278,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "203": {
+        "frameId": 279,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "204": {
+        "frameId": 280,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "205": {
+        "frameId": 281,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "206": {
+        "frameId": 282,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "207": {
+        "frameId": 283,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "208": {
+        "frameId": 284,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "209": {
+        "frameId": 285,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "210": {
+        "frameId": 286,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "211": {
+        "frameId": 287,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "212": {
+        "frameId": 288,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "213": {
+        "frameId": 289,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "214": {
+        "frameId": 290,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "215": {
+        "frameId": 291,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "216": {
+        "frameId": 292,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "217": {
+        "frameId": 293,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "218": {
+        "frameId": 294,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "219": {
+        "frameId": 295,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "220": {
+        "frameId": 296,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "221": {
+        "frameId": 297,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "222": {
+        "frameId": 298,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "223": {
+        "frameId": 299,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "224": {
+        "frameId": 300,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "225": {
+        "frameId": 301,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "226": {
+        "frameId": 302,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "227": {
+        "frameId": 303,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "228": {
+        "frameId": 304,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "229": {
+        "frameId": 305,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "230": {
+        "frameId": 306,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "231": {
+        "frameId": 307,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "232": {
+        "frameId": 308,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "233": {
+        "frameId": 309,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "234": {
+        "frameId": 310,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "235": {
+        "frameId": 311,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "236": {
+        "frameId": 312,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "237": {
+        "frameId": 313,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "238": {
+        "frameId": 314,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "239": {
+        "frameId": 315,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "240": {
+        "frameId": 316,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "241": {
+        "frameId": 317,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "242": {
+        "frameId": 318,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "243": {
+        "frameId": 319,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "244": {
+        "frameId": 320,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "245": {
+        "frameId": 321,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "246": {
+        "frameId": 322,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "247": {
+        "frameId": 323,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "248": {
+        "frameId": 324,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "249": {
+        "frameId": 325,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "250": {
+        "frameId": 326,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "251": {
+        "frameId": 327,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "252": {
+        "frameId": 328,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "253": {
+        "frameId": 329,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "254": {
+        "frameId": 330,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "255": {
+        "frameId": 331,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "256": {
+        "frameId": 332,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "257": {
+        "frameId": 333,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "258": {
+        "frameId": 334,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "259": {
+        "frameId": 335,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "260": {
+        "frameId": 336,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "261": {
+        "frameId": 337,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "262": {
+        "frameId": 338,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "263": {
+        "frameId": 339,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "264": {
+        "frameId": 340,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "265": {
+        "frameId": 341,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "266": {
+        "frameId": 342,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "267": {
+        "frameId": 343,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "268": {
+        "frameId": 344,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "269": {
+        "frameId": 345,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "270": {
+        "frameId": 346,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "271": {
+        "frameId": 347,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "272": {
+        "frameId": 348,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "273": {
+        "frameId": 349,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "274": {
+        "frameId": 350,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "275": {
+        "frameId": 351,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "276": {
+        "frameId": 352,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "277": {
+        "frameId": 353,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "278": {
+        "frameId": 354,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "279": {
+        "frameId": 355,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "280": {
+        "frameId": 356,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "281": {
+        "frameId": 357,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "282": {
+        "frameId": 358,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "283": {
+        "frameId": 359,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "284": {
+        "frameId": 360,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "285": {
+        "frameId": 361,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "286": {
+        "frameId": 362,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "287": {
+        "frameId": 363,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "288": {
+        "frameId": 364,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "289": {
+        "frameId": 365,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "290": {
+        "frameId": 366,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "291": {
+        "frameId": 367,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "292": {
+        "frameId": 368,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "293": {
+        "frameId": 369,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "294": {
+        "frameId": 370,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "295": {
+        "frameId": 371,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "296": {
+        "frameId": 372,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "297": {
+        "frameId": 373,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "298": {
+        "frameId": 374,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "299": {
+        "frameId": 375,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "300": {
+        "frameId": 376,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "301": {
+        "frameId": 377,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "302": {
+        "frameId": 378,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "303": {
+        "frameId": 379,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "304": {
+        "frameId": 380,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "305": {
+        "frameId": 381,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "306": {
+        "frameId": 382,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "307": {
+        "frameId": 383,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "308": {
+        "frameId": 384,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "309": {
+        "frameId": 385,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "310": {
+        "frameId": 386,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "311": {
+        "frameId": 387,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "312": {
+        "frameId": 388,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "313": {
+        "frameId": 389,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "314": {
+        "frameId": 390,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "315": {
+        "frameId": 391,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "316": {
+        "frameId": 392,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "317": {
+        "frameId": 393,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "318": {
+        "frameId": 394,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "319": {
+        "frameId": 395,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "320": {
+        "frameId": 396,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "321": {
+        "frameId": 397,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "322": {
+        "frameId": 398,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "323": {
+        "frameId": 399,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "324": {
+        "frameId": 400,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "325": {
+        "frameId": 401,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "326": {
+        "frameId": 402,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "327": {
+        "frameId": 403,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "328": {
+        "frameId": 404,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "329": {
+        "frameId": 405,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "330": {
+        "frameId": 406,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "331": {
+        "frameId": 407,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "332": {
+        "frameId": 408,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "333": {
+        "frameId": 409,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "334": {
+        "frameId": 410,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "335": {
+        "frameId": 411,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "336": {
+        "frameId": 412,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "337": {
+        "frameId": 413,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "338": {
+        "frameId": 414,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "339": {
+        "frameId": 415,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "340": {
+        "frameId": 416,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "341": {
+        "frameId": 417,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "342": {
+        "frameId": 418,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "343": {
+        "frameId": 419,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "344": {
+        "frameId": 420,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "345": {
+        "frameId": 421,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "346": {
+        "frameId": 422,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "347": {
+        "frameId": 423,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "348": {
+        "frameId": 424,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "349": {
+        "frameId": 425,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "350": {
+        "frameId": 426,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "351": {
+        "frameId": 427,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "352": {
+        "frameId": 428,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "353": {
+        "frameId": 429,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "354": {
+        "frameId": 430,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "355": {
+        "frameId": 431,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "356": {
+        "frameId": 432,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "357": {
+        "frameId": 433,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "358": {
+        "frameId": 434,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "359": {
+        "frameId": 435,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "360": {
+        "frameId": 436,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "361": {
+        "frameId": 437,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "362": {
+        "frameId": 438,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "363": {
+        "frameId": 439,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "364": {
+        "frameId": 440,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "365": {
+        "frameId": 441,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "366": {
+        "frameId": 442,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "367": {
+        "frameId": 443,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "368": {
+        "frameId": 444,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "369": {
+        "frameId": 445,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "370": {
+        "frameId": 446,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "371": {
+        "frameId": 447,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "372": {
+        "frameId": 448,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "373": {
+        "frameId": 449,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "374": {
+        "frameId": 450,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "375": {
+        "frameId": 451,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "376": {
+        "frameId": 452,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "377": {
+        "frameId": 453,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "378": {
+        "frameId": 454,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "379": {
+        "frameId": 455,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "380": {
+        "frameId": 456,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "381": {
+        "frameId": 457,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "382": {
+        "frameId": 458,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "383": {
+        "frameId": 459,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "384": {
+        "frameId": 460,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "385": {
+        "frameId": 461,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "386": {
+        "frameId": 462,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "387": {
+        "frameId": 463,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "388": {
+        "frameId": 464,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "389": {
+        "frameId": 465,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "390": {
+        "frameId": 466,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "391": {
+        "frameId": 467,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "392": {
+        "frameId": 468,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "393": {
+        "frameId": 469,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "394": {
+        "frameId": 470,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "395": {
+        "frameId": 471,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "396": {
+        "frameId": 472,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "397": {
+        "frameId": 473,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "398": {
+        "frameId": 474,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "399": {
+        "frameId": 475,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "400": {
+        "frameId": 476,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "401": {
+        "frameId": 477,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "402": {
+        "frameId": 478,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "403": {
+        "frameId": 479,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "404": {
+        "frameId": 480,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "405": {
+        "frameId": 481,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "406": {
+        "frameId": 482,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "407": {
+        "frameId": 483,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "408": {
+        "frameId": 484,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "409": {
+        "frameId": 485,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "410": {
+        "frameId": 486,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "411": {
+        "frameId": 487,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "412": {
+        "frameId": 488,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "413": {
+        "frameId": 489,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "414": {
+        "frameId": 490,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "415": {
+        "frameId": 491,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "416": {
+        "frameId": 492,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "417": {
+        "frameId": 493,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "418": {
+        "frameId": 494,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "419": {
+        "frameId": 495,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "420": {
+        "frameId": 496,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "421": {
+        "frameId": 497,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "422": {
+        "frameId": 498,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "423": {
+        "frameId": 499,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "424": {
+        "frameId": 500,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "425": {
+        "frameId": 501,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "426": {
+        "frameId": 502,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "427": {
+        "frameId": 503,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "428": {
+        "frameId": 504,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "429": {
+        "frameId": 505,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "430": {
+        "frameId": 506,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "431": {
+        "frameId": 507,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "432": {
+        "frameId": 508,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "433": {
+        "frameId": 509,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "434": {
+        "frameId": 510,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "435": {
+        "frameId": 511,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "436": {
+        "frameId": 512,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "437": {
+        "frameId": 513,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "438": {
+        "frameId": 514,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "439": {
+        "frameId": 515,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "440": {
+        "frameId": 516,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "441": {
+        "frameId": 517,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "442": {
+        "frameId": 518,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "443": {
+        "frameId": 519,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "444": {
+        "frameId": 520,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "445": {
+        "frameId": 521,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "446": {
+        "frameId": 522,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "447": {
+        "frameId": 523,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "448": {
+        "frameId": 524,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "449": {
+        "frameId": 525,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "450": {
+        "frameId": 526,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "451": {
+        "frameId": 527,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "452": {
+        "frameId": 528,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "453": {
+        "frameId": 529,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "454": {
+        "frameId": 530,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "455": {
+        "frameId": 531,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "456": {
+        "frameId": 532,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "457": {
+        "frameId": 533,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "458": {
+        "frameId": 534,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "459": {
+        "frameId": 535,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "460": {
+        "frameId": 536,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "461": {
+        "frameId": 537,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "462": {
+        "frameId": 538,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "463": {
+        "frameId": 539,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "464": {
+        "frameId": 540,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "465": {
+        "frameId": 541,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "466": {
+        "frameId": 542,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "467": {
+        "frameId": 543,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "468": {
+        "frameId": 544,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "469": {
+        "frameId": 545,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "470": {
+        "frameId": 546,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "471": {
+        "frameId": 547,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "472": {
+        "frameId": 548,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "473": {
+        "frameId": 549,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "474": {
+        "frameId": 550,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "475": {
+        "frameId": 551,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "476": {
+        "frameId": 552,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "477": {
+        "frameId": 553,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "478": {
+        "frameId": 554,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "479": {
+        "frameId": 555,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "480": {
+        "frameId": 556,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "481": {
+        "frameId": 557,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "482": {
+        "frameId": 558,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "483": {
+        "frameId": 559,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "484": {
+        "frameId": 560,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "485": {
+        "frameId": 561,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "486": {
+        "frameId": 562,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "487": {
+        "frameId": 563,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "488": {
+        "frameId": 564,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "489": {
+        "frameId": 565,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "490": {
+        "frameId": 566,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "491": {
+        "frameId": 567,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "492": {
+        "frameId": 568,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "493": {
+        "frameId": 569,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "494": {
+        "frameId": 570,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "495": {
+        "frameId": 571,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "496": {
+        "frameId": 572,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "497": {
+        "frameId": 573,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "498": {
+        "frameId": 574,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "499": {
+        "frameId": 575,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "500": {
+        "frameId": 576,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "501": {
+        "frameId": 577,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "502": {
+        "frameId": 578,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "503": {
+        "frameId": 579,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "504": {
+        "frameId": 580,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "505": {
+        "frameId": 581,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "506": {
+        "frameId": 582,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "507": {
+        "frameId": 583,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "508": {
+        "frameId": 584,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "509": {
+        "frameId": 585,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "510": {
+        "frameId": 586,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "511": {
+        "frameId": 587,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "512": {
+        "frameId": 588,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "513": {
+        "frameId": 589,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "514": {
+        "frameId": 590,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "515": {
+        "frameId": 591,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "516": {
+        "frameId": 592,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "517": {
+        "frameId": 593,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "518": {
+        "frameId": 594,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "519": {
+        "frameId": 595,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "520": {
+        "frameId": 596,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "521": {
+        "frameId": 597,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "522": {
+        "frameId": 598,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "523": {
+        "frameId": 599,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "524": {
+        "frameId": 600,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "525": {
+        "frameId": 601,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "526": {
+        "frameId": 602,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "527": {
+        "frameId": 603,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "528": {
+        "frameId": 604,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "529": {
+        "frameId": 605,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "530": {
+        "frameId": 606,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "531": {
+        "frameId": 607,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "532": {
+        "frameId": 608,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "533": {
+        "frameId": 609,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "534": {
+        "frameId": 610,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "535": {
+        "frameId": 611,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "536": {
+        "frameId": 612,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "537": {
+        "frameId": 613,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "538": {
+        "frameId": 614,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "539": {
+        "frameId": 615,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "540": {
+        "frameId": 616,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "541": {
+        "frameId": 617,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "542": {
+        "frameId": 618,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "543": {
+        "frameId": 619,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "544": {
+        "frameId": 620,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "545": {
+        "frameId": 621,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "546": {
+        "frameId": 622,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "547": {
+        "frameId": 623,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "548": {
+        "frameId": 624,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "549": {
+        "frameId": 625,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "550": {
+        "frameId": 626,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "551": {
+        "frameId": 627,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "552": {
+        "frameId": 628,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "553": {
+        "frameId": 629,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "554": {
+        "frameId": 630,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "555": {
+        "frameId": 631,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "556": {
+        "frameId": 632,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "557": {
+        "frameId": 633,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "558": {
+        "frameId": 634,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "559": {
+        "frameId": 635,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "560": {
+        "frameId": 636,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "561": {
+        "frameId": 637,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "562": {
+        "frameId": 638,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "563": {
+        "frameId": 639,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "564": {
+        "frameId": 640,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "565": {
+        "frameId": 641,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "566": {
+        "frameId": 642,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "567": {
+        "frameId": 643,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "568": {
+        "frameId": 644,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "569": {
+        "frameId": 645,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "570": {
+        "frameId": 646,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "571": {
+        "frameId": 647,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "572": {
+        "frameId": 648,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "573": {
+        "frameId": 649,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "574": {
+        "frameId": 650,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "575": {
+        "frameId": 651,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "576": {
+        "frameId": 652,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "577": {
+        "frameId": 653,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "578": {
+        "frameId": 654,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "579": {
+        "frameId": 655,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "580": {
+        "frameId": 656,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "581": {
+        "frameId": 657,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "582": {
+        "frameId": 658,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "583": {
+        "frameId": 659,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "584": {
+        "frameId": 660,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "585": {
+        "frameId": 661,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "586": {
+        "frameId": 662,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "587": {
+        "frameId": 663,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "588": {
+        "frameId": 664,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "589": {
+        "frameId": 665,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "590": {
+        "frameId": 666,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "591": {
+        "frameId": 667,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "592": {
+        "frameId": 668,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "593": {
+        "frameId": 669,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "594": {
+        "frameId": 670,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "595": {
+        "frameId": 671,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "596": {
+        "frameId": 672,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "597": {
+        "frameId": 673,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "598": {
+        "frameId": 674,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "599": {
+        "frameId": 675,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "600": {
+        "frameId": 676,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "601": {
+        "frameId": 677,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "602": {
+        "frameId": 678,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "603": {
+        "frameId": 679,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "604": {
+        "frameId": 680,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "605": {
+        "frameId": 681,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "606": {
+        "frameId": 682,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "607": {
+        "frameId": 683,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "608": {
+        "frameId": 684,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "609": {
+        "frameId": 685,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "610": {
+        "frameId": 686,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "611": {
+        "frameId": 687,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "612": {
+        "frameId": 688,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "613": {
+        "frameId": 689,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "614": {
+        "frameId": 690,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "615": {
+        "frameId": 691,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "616": {
+        "frameId": 692,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "617": {
+        "frameId": 693,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "618": {
+        "frameId": 694,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "619": {
+        "frameId": 695,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "620": {
+        "frameId": 696,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "621": {
+        "frameId": 697,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "622": {
+        "frameId": 698,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "623": {
+        "frameId": 699,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "624": {
+        "frameId": 700,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "625": {
+        "frameId": 701,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "626": {
+        "frameId": 702,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "627": {
+        "frameId": 703,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "628": {
+        "frameId": 704,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "629": {
+        "frameId": 705,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "630": {
+        "frameId": 706,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "631": {
+        "frameId": 707,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "632": {
+        "frameId": 708,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "633": {
+        "frameId": 709,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "634": {
+        "frameId": 710,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "635": {
+        "frameId": 711,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "636": {
+        "frameId": 712,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "637": {
+        "frameId": 713,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "638": {
+        "frameId": 714,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "639": {
+        "frameId": 715,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "640": {
+        "frameId": 716,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "641": {
+        "frameId": 717,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "642": {
+        "frameId": 718,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "643": {
+        "frameId": 719,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "644": {
+        "frameId": 720,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "645": {
+        "frameId": 721,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "646": {
+        "frameId": 722,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "647": {
+        "frameId": 723,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "648": {
+        "frameId": 724,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "649": {
+        "frameId": 725,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "650": {
+        "frameId": 726,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "651": {
+        "frameId": 727,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "652": {
+        "frameId": 728,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "653": {
+        "frameId": 729,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "654": {
+        "frameId": 730,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "655": {
+        "frameId": 731,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "656": {
+        "frameId": 732,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "657": {
+        "frameId": 733,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "658": {
+        "frameId": 734,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "659": {
+        "frameId": 735,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "660": {
+        "frameId": 736,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "661": {
+        "frameId": 737,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "662": {
+        "frameId": 738,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "663": {
+        "frameId": 739,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "664": {
+        "frameId": 740,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "665": {
+        "frameId": 741,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "666": {
+        "frameId": 742,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "667": {
+        "frameId": 743,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "668": {
+        "frameId": 744,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "669": {
+        "frameId": 745,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "670": {
+        "frameId": 746,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "671": {
+        "frameId": 747,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "672": {
+        "frameId": 748,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "673": {
+        "frameId": 749,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "674": {
+        "frameId": 750,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "675": {
+        "frameId": 751,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "676": {
+        "frameId": 752,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "677": {
+        "frameId": 753,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "678": {
+        "frameId": 754,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "679": {
+        "frameId": 755,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "680": {
+        "frameId": 756,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "681": {
+        "frameId": 757,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "682": {
+        "frameId": 758,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "683": {
+        "frameId": 759,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "684": {
+        "frameId": 760,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "685": {
+        "frameId": 761,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "686": {
+        "frameId": 762,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "687": {
+        "frameId": 763,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "688": {
+        "frameId": 764,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "689": {
+        "frameId": 765,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "690": {
+        "frameId": 766,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "691": {
+        "frameId": 767,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "692": {
+        "frameId": 768,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "693": {
+        "frameId": 769,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "694": {
+        "frameId": 770,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "695": {
+        "frameId": 771,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "696": {
+        "frameId": 772,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "697": {
+        "frameId": 773,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "698": {
+        "frameId": 774,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "699": {
+        "frameId": 775,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "700": {
+        "frameId": 776,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "701": {
+        "frameId": 777,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "702": {
+        "frameId": 778,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "703": {
+        "frameId": 779,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "704": {
+        "frameId": 780,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "705": {
+        "frameId": 781,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "706": {
+        "frameId": 782,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "707": {
+        "frameId": 783,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "708": {
+        "frameId": 784,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "709": {
+        "frameId": 785,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "710": {
+        "frameId": 786,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "711": {
+        "frameId": 787,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "712": {
+        "frameId": 788,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "713": {
+        "frameId": 789,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "714": {
+        "frameId": 790,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "715": {
+        "frameId": 791,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "716": {
+        "frameId": 792,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "717": {
+        "frameId": 793,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "718": {
+        "frameId": 794,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "719": {
+        "frameId": 795,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "720": {
+        "frameId": 796,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "721": {
+        "frameId": 797,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "722": {
+        "frameId": 798,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "723": {
+        "frameId": 799,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "724": {
+        "frameId": 800,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "725": {
+        "frameId": 801,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "726": {
+        "frameId": 802,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "727": {
+        "frameId": 803,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "728": {
+        "frameId": 804,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "729": {
+        "frameId": 805,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "730": {
+        "frameId": 806,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "731": {
+        "frameId": 807,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "732": {
+        "frameId": 808,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "733": {
+        "frameId": 809,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "734": {
+        "frameId": 810,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "735": {
+        "frameId": 811,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "736": {
+        "frameId": 812,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "737": {
+        "frameId": 813,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "738": {
+        "frameId": 814,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "739": {
+        "frameId": 815,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "740": {
+        "frameId": 816,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "741": {
+        "frameId": 817,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "742": {
+        "frameId": 818,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "743": {
+        "frameId": 819,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "744": {
+        "frameId": 820,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "745": {
+        "frameId": 821,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "746": {
+        "frameId": 822,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "747": {
+        "frameId": 823,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "748": {
+        "frameId": 824,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "749": {
+        "frameId": 825,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "750": {
+        "frameId": 826,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "751": {
+        "frameId": 827,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "752": {
+        "frameId": 828,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "753": {
+        "frameId": 829,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "754": {
+        "frameId": 830,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "755": {
+        "frameId": 831,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "756": {
+        "frameId": 832,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "757": {
+        "frameId": 833,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "758": {
+        "frameId": 834,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "759": {
+        "frameId": 835,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "760": {
+        "frameId": 836,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "761": {
+        "frameId": 837,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "762": {
+        "frameId": 838,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "763": {
+        "frameId": 839,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "764": {
+        "frameId": 840,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "765": {
+        "frameId": 841,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "766": {
+        "frameId": 842,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      },
+      "767": {
+        "frameId": 843,
+        "wholeO2Equal": true,
+        "commonPixels": 64000,
+        "virtualUses": 0
+      }
+    },
+    "nativeUIFrames": 237,
+    "wipeFrames": 85,
+    "commonNativePixelsChecked": 49088000,
+    "virtualZoneUses": 0,
+    "virtualOwnerUses": 0,
+    "wholeNativeFramesEqual": 767,
+    "frames": 1003,
+    "pass_": true,
+    "nativeExactAllPresentationFrames": 1003,
+    "finalFrameNativePixelDifferences": 0,
+    "nativeUIpixelComparisons": 15168000
+  },
+  "nativeUI": {
+    "nativeReferenceProfile": {
+      "displayHistory": true,
+      "profile": "LP64 initialized64MiB zone; all ST/HU/WI borrowed immutable UI resources including ST_lib; temporary per-gameplay render; original source gameplay/WI/finale/melt",
+      "gameplayDirectory": "artifacts/local/full-videos/E1M4/native-display-history",
+      "presentationDirectory": "artifacts/local/full-videos/E1M4/native-display-short-ui",
+      "gameplayManifestSHA256": "edb9449022a6cde7c36d93b04fa7d8401769f57f76db2f90e2b868418f58b823",
+      "presentationManifestSHA256": "5b41d64b210071725331af8c979673377fc1825602b40d566eb9d445241056b4",
+      "reason": "Legacy native adapter missed ST_lib STTMINUS borrowing. Only native cache interception changed; EVM frame/source/provenance unchanged.",
+      "originalNativeReferencesPreserved": true
+    },
+    "pass_": true,
+    "map": 4,
+    "nativePresentationFrames": 237,
+    "nativePresentationPixels": 15168000,
+    "allPixelsAndPalettesExact": true,
+    "sourceProfile": "Unchanged original C; declared LP64 initialized-zone/borrowed UI resource profile; differential ST/HU display history where selected; one-tic blocking wipe clock. Identical authentic gameplay prefix and separate post-exit original WI button-edge inputs or zero-input finale, with the same explicit endpoint.",
+    "originalTailAndContinuationFrames": 195,
+    "entryWipeFrames": 42,
+    "authoritativeStatisticsABIWords": [
+      0,
+      0,
+      3,
+      4,
+      85,
+      45,
+      3,
+      0,
+      3150,
+      0,
+      1,
+      0,
+      5,
+      0,
+      767,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      767,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      767,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      767,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "nativeManifestSHA256": "5b41d64b210071725331af8c979673377fc1825602b40d566eb9d445241056b4",
+    "entryMeltManifestSHA256": "2c5b29313aa9e8f7999277e4c850ecfc806c7862b6e4cfc69974dfb184b6f29a"
+  },
+  "rollback": {
+    "startedUTC": "2026-10-11T11:54:00.793Z",
+    "port": 18959,
+    "checkpointFrame": 1003,
+    "chainSHA256": "f71a34adbc2781cd478266c6a6d7fc3e27ffd073bc03ed158143d8f474ebf7f6",
+    "checks": [
+      {
+        "name": "capture(uint32)",
+        "hash": "0xc3c0cc448bd30751cf3f9a79aeb1b5ff933c10bc1f55a1523fb237a47c4a396c",
+        "gas": 26135,
+        "allSavedAndPresentationFieldsUnchanged": true,
+        "noLogs": true
+      },
+      {
+        "name": "capture(uint32)",
+        "hash": "0xacdbfe6bc7585f0b7b1295c5a505e7b1ecfafd2f545a82ae8177b261d8870136",
+        "gas": 26147,
+        "allSavedAndPresentationFieldsUnchanged": true,
+        "noLogs": true
+      },
+      {
+        "name": "stepWipe()",
+        "hash": "0x9862f9b1918d25d4ffd5334d6f3286bee0c33e691cce1db9a16398d9f3d82d47",
+        "gas": 25778,
+        "allSavedAndPresentationFieldsUnchanged": true,
+        "noLogs": true
+      },
+      {
+        "name": "presentationTick(bytes,bool)",
+        "hash": "0x6cd595068475f0d6c10618086a047cc7b0c16275101f9b9a405dfbe3106792ca",
+        "gas": 7766307,
+        "allSavedAndPresentationFieldsUnchanged": true,
+        "noLogs": true
+      },
+      {
+        "name": "initializeMap(uint8,int32,int32,bool)",
+        "hash": "0xd2998f49d526c0e2d599ac079bb4aa6df71ad4b29a3e9ec0b99d4b37dffebefd",
+        "gas": 24572,
+        "allSavedAndPresentationFieldsUnchanged": true,
+        "noLogs": true
+      }
+    ],
+    "pass": true,
+    "recordingEndpoint": {
+      "name": "original Entering screen",
+      "wiState": -1,
+      "remainingNoStateTics": 1,
+      "wiTics": 118,
+      "statisticsStage": 10,
+      "worldDoneRequested": false,
+      "gameplayTics": 767,
+      "G_WorldDoneVerified": false,
+      "nextLevelStartupVerified": false
+    },
+    "ownedRuntimeStopped": true,
+    "endedUTC": "2026-10-11T11:54:01.426Z"
+  },
+  "media": {
+    "pass_": true,
+    "startedUTC": "2026-10-11T11:54:02.619110+00:00",
+    "endedUTC": "2026-10-11T11:54:18.000529+00:00",
+    "command": [
+      "ffmpeg",
+      "-hide_banner",
+      "-loglevel",
+      "error",
+      "-f",
+      "rawvideo",
+      "-pix_fmt",
+      "rgb24",
+      "-s",
+      "320x200",
+      "-r",
+      "35",
+      "-i",
+      "pipe:0",
+      "-an",
+      "-vf",
+      "scale=1280:960:flags=neighbor,setsar=1",
+      "-c:v",
+      "libx264",
+      "-preset",
+      "slow",
+      "-crf",
+      "16",
+      "-pix_fmt",
+      "yuv420p",
+      "-video_track_timescale",
+      "35000",
+      "-movie_timescale",
+      "35000",
+      "-movflags",
+      "+faststart",
+      "/Users/eduard/sandbox/doom-evm-full-videos/artifacts/local/full-videos/E1M4/complete-short-v1/ultimate-e1m4-complete.mp4"
+    ],
+    "path": "/Users/eduard/sandbox/doom-evm-full-videos/artifacts/local/full-videos/E1M4/complete-short-v1/ultimate-e1m4-complete.mp4",
+    "sha256": "271ff48062705ae1819029407fefd119a5f5e584412bf03f3ec6b05cb0c920a3",
+    "bytes": 34189023,
+    "frames": 1003,
+    "durationSeconds": 28.65714285714286,
+    "probe": {
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "width": 1280,
+          "height": 960,
+          "display_aspect_ratio": "4:3",
+          "r_frame_rate": "35/1",
+          "avg_frame_rate": "35/1",
+          "time_base": "1/35000",
+          "duration": "28.657143",
+          "nb_frames": "1003"
+        }
+      ],
+      "format": {
+        "duration": "28.657143"
+      }
+    },
+    "allPacketClocksExact": true,
+    "presentation": "35 FPS, nearest 1280x960, square-pixel 4:3, original per-frame EVM palette, CRF16 H.264, silent",
+    "limitations": "H.264 is lossy; indexed8/native comparisons establish exact pixels before encoding."
+  }
+}

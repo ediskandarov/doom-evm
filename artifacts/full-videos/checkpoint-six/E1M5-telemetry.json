@@ -1,0 +1,1081 @@
+{
+  "map": "E1M5",
+  "recordingComplete": true,
+  "evidenceVerified": true,
+  "measurementBasis": "Actual receipts, authenticated indexed frame manifests, recorded RPC elapsedMs, UTC endpoints and ffprobe. No inferred gas subdivision or EVM-only CPU time.",
+  "gameplay": {
+    "identity": {
+      "author": "trioct",
+      "originalName": "e1m5-100.lmp",
+      "downloadUrl": "https://dsdarchive.com/files/demos/doom/51000/e1m5-100.zip",
+      "demoSha256": "4a3ffd0a1f92ac2980e9c3b5aafde01a6ec2fb4eaca0fdde61ab85d51e1ea48e",
+      "archiveSha256": "2d25bcb4e1977d8a8da21ce62c037ee1b806d8cb222cda11743ef20ecfc075b6"
+    },
+    "tics": 2110,
+    "durationSeconds": 60.285714285714285,
+    "genuineExit": true,
+    "exitGameaction": 6,
+    "statistics": {
+      "kills": 60,
+      "items": 6,
+      "secrets": 1,
+      "totalKills": 131,
+      "totalItems": 29,
+      "totalSecrets": 9,
+      "timeTics": 2110,
+      "timeSecondsInteger": 60,
+      "parSeconds": 165,
+      "parSource": "EVM completion snapshot, verified against original C",
+      "intermissionShown": true
+    },
+    "nextLevelGameplayTics": 0,
+    "originalDemoTics": 2110,
+    "originalDemoTotalTics": 2362,
+    "postExitPresentationTics": 118,
+    "postExitInputSequence": [
+      {
+        "index": 1,
+        "rawHex": "00000000",
+        "buttons": 0,
+        "frameId": 2187
+      },
+      {
+        "index": 2,
+        "rawHex": "00000001",
+        "buttons": 1,
+        "frameId": 2230
+      },
+      {
+        "index": 3,
+        "rawHex": "00000000",
+        "buttons": 0,
+        "frameId": 2231
+      },
+      {
+        "index": 4,
+        "rawHex": "00000000",
+        "buttons": 0,
+        "frameId": 2232
+      },
+      {
+        "index": 5,
+        "rawHex": "00000000",
+        "buttons": 0,
+        "frameId": 2233
+      },
+      {
+        "index": 6,
+        "rawHex": "00000000",
+        "buttons": 0,
+        "frameId": 2234
+      },
+      {
+        "index": 7,
+        "rawHex": "00000000",
+        "buttons": 0,
+        "frameId": 2235
+      },
+      {
+        "index": 8,
+        "rawHex": "00000000",
+        "buttons": 0,
+        "frameId": 2236
+      },
+      {
+        "index": 9,
+        "rawHex": "00000000",
+        "buttons": 0,
+        "frameId": 2237
+      },
+      {
+        "index": 10,
+        "rawHex": "00000000",
+        "buttons": 0,
+        "frameId": 2238
+      },
+      {
+        "index": 11,
+        "rawHex": "00000000",
+        "buttons": 0,
+        "frameId": 2239
+      },
+      {
+        "index": 12,
+        "rawHex": "00000000",
+        "buttons": 0,
+        "frameId": 2240
+      },
+      {
+        "index": 13,
+        "rawHex": "00000000",
+        "buttons": 0,
+        "frameId": 2241
+      },
+      {
+        "index": 14,
+        "rawHex": "00000000",
+        "buttons": 0,
+        "frameId": 2242
+      },
+      {
+        "index": 15,
+        "rawHex": "00000000",
+        "buttons": 0,
+        "frameId": 2243
+      },
+      {
+        "index": 16,
+        "rawHex": "00000000",
+        "buttons": 0,
+        "frameId": 2244
+      },
+      {
+        "index": 17,
+        "rawHex": "00000000",
+        "buttons": 0,
+        "frameId": 2245
+      },
+      {
+        "index": 18,
+        "rawHex": "00000000",
+        "buttons": 0,
+        "frameId": 2246
+      },
+      {
+        "index": 19,
+        "rawHex": "00000000",
+        "buttons": 0,
+        "frameId": 2247
+      },
+      {
+        "index": 20,
+        "rawHex": "00000000",
+        "buttons": 0,
+        "frameId": 2248
+      },
+      {
+        "index": 21,
+        "rawHex": "00000000",
+        "buttons": 0,
+        "frameId": 2249
+      },
+      {
+        "index": 22,
+        "rawHex": "00000000",
+        "buttons": 0,
+        "frameId": 2250
+      },
+      {
+        "index": 23,
+        "rawHex": "00000000",
+        "buttons": 0,
+        "frameId": 2251
+      },
+      {
+        "index": 24,
+        "rawHex": "00000000",
+        "buttons": 0,
+        "frameId": 2252
+      },
+      {
+        "index": 25,
+        "rawHex": "00000000",
+        "buttons": 0,
+        "frameId": 2253
+      },
+      {
+        "index": 26,
+        "rawHex": "00000000",
+        "buttons": 0,
+        "frameId": 2254
+      },
+      {
+        "index": 27,
+        "rawHex": "00000000",
+        "buttons": 0,
+        "frameId": 2255
+      },
+      {
+        "index": 28,
+        "rawHex": "00000000",
+        "buttons": 0,
+        "frameId": 2256
+      },
+      {
+        "index": 29,
+        "rawHex": "00000000",
+        "buttons": 0,
+        "frameId": 2257
+      },
+      {
+        "index": 30,
+        "rawHex": "00000000",
+        "buttons": 0,
+        "frameId": 2258
+      },
+      {
+        "index": 31,
+        "rawHex": "00000000",
+        "buttons": 0,
+        "frameId": 2259
+      },
+      {
+        "index": 32,
+        "rawHex": "00000000",
+        "buttons": 0,
+        "frameId": 2260
+      },
+      {
+        "index": 33,
+        "rawHex": "00000000",
+        "buttons": 0,
+        "frameId": 2261
+      },
+      {
+        "index": 34,
+        "rawHex": "00000000",
+        "buttons": 0,
+        "frameId": 2262
+      },
+      {
+        "index": 35,
+        "rawHex": "00000000",
+        "buttons": 0,
+        "frameId": 2263
+      },
+      {
+        "index": 36,
+        "rawHex": "00000000",
+        "buttons": 0,
+        "frameId": 2264
+      },
+      {
+        "index": 37,
+        "rawHex": "00000000",
+        "buttons": 0,
+        "frameId": 2265
+      },
+      {
+        "index": 38,
+        "rawHex": "00000000",
+        "buttons": 0,
+        "frameId": 2266
+      },
+      {
+        "index": 39,
+        "rawHex": "00000000",
+        "buttons": 0,
+        "frameId": 2267
+      },
+      {
+        "index": 40,
+        "rawHex": "00000000",
+        "buttons": 0,
+        "frameId": 2268
+      },
+      {
+        "index": 41,
+        "rawHex": "00000000",
+        "buttons": 0,
+        "frameId": 2269
+      },
+      {
+        "index": 42,
+        "rawHex": "00000000",
+        "buttons": 0,
+        "frameId": 2270
+      },
+      {
+        "index": 43,
+        "rawHex": "00000000",
+        "buttons": 0,
+        "frameId": 2271
+      },
+      {
+        "index": 44,
+        "rawHex": "00000000",
+        "buttons": 0,
+        "frameId": 2272
+      },
+      {
+        "index": 45,
+        "rawHex": "00000000",
+        "buttons": 0,
+        "frameId": 2273
+      },
+      {
+        "index": 46,
+        "rawHex": "00000000",
+        "buttons": 0,
+        "frameId": 2274
+      },
+      {
+        "index": 47,
+        "rawHex": "00000000",
+        "buttons": 0,
+        "frameId": 2275
+      },
+      {
+        "index": 48,
+        "rawHex": "00000000",
+        "buttons": 0,
+        "frameId": 2276
+      },
+      {
+        "index": 49,
+        "rawHex": "00000000",
+        "buttons": 0,
+        "frameId": 2277
+      },
+      {
+        "index": 50,
+        "rawHex": "00000000",
+        "buttons": 0,
+        "frameId": 2278
+      },
+      {
+        "index": 51,
+        "rawHex": "00000000",
+        "buttons": 0,
+        "frameId": 2279
+      },
+      {
+        "index": 52,
+        "rawHex": "00000000",
+        "buttons": 0,
+        "frameId": 2280
+      },
+      {
+        "index": 53,
+        "rawHex": "00000000",
+        "buttons": 0,
+        "frameId": 2281
+      },
+      {
+        "index": 54,
+        "rawHex": "00000000",
+        "buttons": 0,
+        "frameId": 2282
+      },
+      {
+        "index": 55,
+        "rawHex": "00000000",
+        "buttons": 0,
+        "frameId": 2283
+      },
+      {
+        "index": 56,
+        "rawHex": "00000000",
+        "buttons": 0,
+        "frameId": 2284
+      },
+      {
+        "index": 57,
+        "rawHex": "00000000",
+        "buttons": 0,
+        "frameId": 2285
+      },
+      {
+        "index": 58,
+        "rawHex": "00000000",
+        "buttons": 0,
+        "frameId": 2286
+      },
+      {
+        "index": 59,
+        "rawHex": "00000000",
+        "buttons": 0,
+        "frameId": 2287
+      },
+      {
+        "index": 60,
+        "rawHex": "00000000",
+        "buttons": 0,
+        "frameId": 2288
+      },
+      {
+        "index": 61,
+        "rawHex": "00000000",
+        "buttons": 0,
+        "frameId": 2289
+      },
+      {
+        "index": 62,
+        "rawHex": "00000000",
+        "buttons": 0,
+        "frameId": 2290
+      },
+      {
+        "index": 63,
+        "rawHex": "00000000",
+        "buttons": 0,
+        "frameId": 2291
+      },
+      {
+        "index": 64,
+        "rawHex": "00000000",
+        "buttons": 0,
+        "frameId": 2292
+      },
+      {
+        "index": 65,
+        "rawHex": "00000000",
+        "buttons": 0,
+        "frameId": 2293
+      },
+      {
+        "index": 66,
+        "rawHex": "00000000",
+        "buttons": 0,
+        "frameId": 2294
+      },
+      {
+        "index": 67,
+        "rawHex": "00000000",
+        "buttons": 0,
+        "frameId": 2295
+      },
+      {
+        "index": 68,
+        "rawHex": "00000000",
+        "buttons": 0,
+        "frameId": 2296
+      },
+      {
+        "index": 69,
+        "rawHex": "00000000",
+        "buttons": 0,
+        "frameId": 2297
+      },
+      {
+        "index": 70,
+        "rawHex": "00000000",
+        "buttons": 0,
+        "frameId": 2298
+      },
+      {
+        "index": 71,
+        "rawHex": "00000000",
+        "buttons": 0,
+        "frameId": 2299
+      },
+      {
+        "index": 72,
+        "rawHex": "00000000",
+        "buttons": 0,
+        "frameId": 2300
+      },
+      {
+        "index": 73,
+        "rawHex": "00000000",
+        "buttons": 0,
+        "frameId": 2301
+      },
+      {
+        "index": 74,
+        "rawHex": "00000000",
+        "buttons": 0,
+        "frameId": 2302
+      },
+      {
+        "index": 75,
+        "rawHex": "00000000",
+        "buttons": 0,
+        "frameId": 2303
+      },
+      {
+        "index": 76,
+        "rawHex": "00000000",
+        "buttons": 0,
+        "frameId": 2304
+      },
+      {
+        "index": 77,
+        "rawHex": "00000000",
+        "buttons": 0,
+        "frameId": 2305
+      },
+      {
+        "index": 78,
+        "rawHex": "00000000",
+        "buttons": 0,
+        "frameId": 2306
+      },
+      {
+        "index": 79,
+        "rawHex": "00000000",
+        "buttons": 0,
+        "frameId": 2307
+      },
+      {
+        "index": 80,
+        "rawHex": "00000000",
+        "buttons": 0,
+        "frameId": 2308
+      },
+      {
+        "index": 81,
+        "rawHex": "00000000",
+        "buttons": 0,
+        "frameId": 2309
+      },
+      {
+        "index": 82,
+        "rawHex": "00000000",
+        "buttons": 0,
+        "frameId": 2310
+      },
+      {
+        "index": 83,
+        "rawHex": "00000000",
+        "buttons": 0,
+        "frameId": 2311
+      },
+      {
+        "index": 84,
+        "rawHex": "00000000",
+        "buttons": 0,
+        "frameId": 2312
+      },
+      {
+        "index": 85,
+        "rawHex": "00000000",
+        "buttons": 0,
+        "frameId": 2313
+      },
+      {
+        "index": 86,
+        "rawHex": "00000000",
+        "buttons": 0,
+        "frameId": 2314
+      },
+      {
+        "index": 87,
+        "rawHex": "00000000",
+        "buttons": 0,
+        "frameId": 2315
+      },
+      {
+        "index": 88,
+        "rawHex": "00000000",
+        "buttons": 0,
+        "frameId": 2316
+      },
+      {
+        "index": 89,
+        "rawHex": "00000000",
+        "buttons": 0,
+        "frameId": 2317
+      },
+      {
+        "index": 90,
+        "rawHex": "00000000",
+        "buttons": 0,
+        "frameId": 2318
+      },
+      {
+        "index": 91,
+        "rawHex": "00000000",
+        "buttons": 0,
+        "frameId": 2319
+      },
+      {
+        "index": 92,
+        "rawHex": "00000000",
+        "buttons": 0,
+        "frameId": 2320
+      },
+      {
+        "index": 93,
+        "rawHex": "00000000",
+        "buttons": 0,
+        "frameId": 2321
+      },
+      {
+        "index": 94,
+        "rawHex": "00000000",
+        "buttons": 0,
+        "frameId": 2322
+      },
+      {
+        "index": 95,
+        "rawHex": "00000000",
+        "buttons": 0,
+        "frameId": 2323
+      },
+      {
+        "index": 96,
+        "rawHex": "00000000",
+        "buttons": 0,
+        "frameId": 2324
+      },
+      {
+        "index": 97,
+        "rawHex": "00000000",
+        "buttons": 0,
+        "frameId": 2325
+      },
+      {
+        "index": 98,
+        "rawHex": "00000000",
+        "buttons": 0,
+        "frameId": 2326
+      },
+      {
+        "index": 99,
+        "rawHex": "00000000",
+        "buttons": 0,
+        "frameId": 2327
+      },
+      {
+        "index": 100,
+        "rawHex": "00000000",
+        "buttons": 0,
+        "frameId": 2328
+      },
+      {
+        "index": 101,
+        "rawHex": "00000000",
+        "buttons": 0,
+        "frameId": 2329
+      },
+      {
+        "index": 102,
+        "rawHex": "00000000",
+        "buttons": 0,
+        "frameId": 2330
+      },
+      {
+        "index": 103,
+        "rawHex": "00000000",
+        "buttons": 0,
+        "frameId": 2331
+      },
+      {
+        "index": 104,
+        "rawHex": "00000000",
+        "buttons": 0,
+        "frameId": 2332
+      },
+      {
+        "index": 105,
+        "rawHex": "00000000",
+        "buttons": 0,
+        "frameId": 2333
+      },
+      {
+        "index": 106,
+        "rawHex": "00000000",
+        "buttons": 0,
+        "frameId": 2334
+      },
+      {
+        "index": 107,
+        "rawHex": "00000001",
+        "buttons": 1,
+        "frameId": 2335
+      },
+      {
+        "index": 108,
+        "rawHex": "00000000",
+        "buttons": 0,
+        "frameId": 2336
+      },
+      {
+        "index": 109,
+        "rawHex": "00000001",
+        "buttons": 1,
+        "frameId": 2337
+      },
+      {
+        "index": 110,
+        "rawHex": "00000000",
+        "buttons": 0,
+        "frameId": 2338
+      },
+      {
+        "index": 111,
+        "rawHex": "00000000",
+        "buttons": 0,
+        "frameId": 2339
+      },
+      {
+        "index": 112,
+        "rawHex": "00000000",
+        "buttons": 0,
+        "frameId": 2340
+      },
+      {
+        "index": 113,
+        "rawHex": "00000000",
+        "buttons": 0,
+        "frameId": 2341
+      },
+      {
+        "index": 114,
+        "rawHex": "00000000",
+        "buttons": 0,
+        "frameId": 2342
+      },
+      {
+        "index": 115,
+        "rawHex": "00000000",
+        "buttons": 0,
+        "frameId": 2343
+      },
+      {
+        "index": 116,
+        "rawHex": "00000000",
+        "buttons": 0,
+        "frameId": 2344
+      },
+      {
+        "index": 117,
+        "rawHex": "00000000",
+        "buttons": 0,
+        "frameId": 2345
+      },
+      {
+        "index": 118,
+        "rawHex": "00000000",
+        "buttons": 0,
+        "frameId": 2346
+      }
+    ],
+    "presentationPolicy": {
+      "name": "original-WI-edges-105-v1",
+      "finalStatisticsFrames": 105,
+      "postExitCommandSHA256": "f01e5a0ccb8671bfa211aa01b7ce6ce6811418624181900cfbfe7aa825d5b21b",
+      "originalTrailerExecuted": false,
+      "ending": "original WI Entering/NoState cnt=1 endpoint; final handoff unsupported; no next-map P_Ticker"
+    }
+  },
+  "video": {
+    "gameplayFrames": 2109,
+    "gameplayRenderedTargets": 2110,
+    "completeStatusBarFrames": 2111,
+    "nextLevelEntryHoldFrames": 0,
+    "menuFrames": 0,
+    "titleFrames": 35,
+    "meltWipeFrames": 85,
+    "intermissionFrames": 117,
+    "finaleFrames": 0,
+    "totalEncodedFrames": 2346,
+    "totalEVMFrames": 2346,
+    "durationSeconds": 67.02857142857142,
+    "resolution": [
+      1280,
+      960
+    ],
+    "MP4": "/Users/eduard/sandbox/doom-evm-full-videos/artifacts/local/full-videos/E1M5/complete-short-v1/ultimate-e1m5-complete.mp4",
+    "MP4SHA256": "2ba361f008a4059155e6c0f59e3c197738f89944b77a50ccf2da6f073459d211",
+    "frameRate": 35,
+    "displayAspect": "4:3",
+    "notes": "Gameplay targets hidden by a D_Display wipe are accounted in wipe frames. Complete status-bar coverage is overlapping, not added to the mutually exclusive total. The legacy consumer menuFrames counter contains TITLEPIC/demo-screen frames; no M_Drawer menu is included. MP4 encoding is lossy."
+  },
+  "evm": {
+    "totalGas": 2635722517898,
+    "successfulTransactions": 5214,
+    "gasPerSuccessfulTransaction": {
+      "count": 5214,
+      "min": 239560,
+      "avg": 505508729.9382432,
+      "median": 227442078.5,
+      "max": 5555860946
+    },
+    "gasPerRenderedFrameTransaction": {
+      "count": 2346,
+      "min": 20129268,
+      "avg": 938743940.1227622,
+      "median": 784974631.5,
+      "max": 5555860946
+    },
+    "gasByOperationCategory": {
+      "capture(uint32)": {
+        "gas": 2183068774045,
+        "transactionGas": {
+          "count": 2110,
+          "min": 634423940,
+          "avg": 1034629750.7322274,
+          "median": 818244443.5,
+          "max": 5555860946
+        },
+        "rpcSeconds": 2315.103244958
+      },
+      "deployment": {
+        "gas": 216816188,
+        "transactionGas": {
+          "count": 1,
+          "min": 216816188,
+          "avg": 216816188,
+          "median": 216816188,
+          "max": 216816188
+        },
+        "rpcSeconds": 0.03340233399999852
+      },
+      "gameplay": {
+        "gas": 429286527002,
+        "transactionGas": {
+          "count": 2110,
+          "min": 187910298,
+          "avg": 203453330.3327014,
+          "median": 193517991.5,
+          "max": 251766293
+        },
+        "rpcSeconds": 285.3096665340005
+      },
+      "presentationTick(bytes,bool)": {
+        "gas": 15054072656,
+        "transactionGas": {
+          "count": 118,
+          "min": 123202880,
+          "avg": 127576886.91525424,
+          "median": 124079696.0,
+          "max": 545247431
+        },
+        "rpcSeconds": 19.56054338100087
+      },
+      "resource": {
+        "gas": 2703344079,
+        "transactionGas": {
+          "count": 756,
+          "min": 239560,
+          "avg": 3575851.956349206,
+          "median": 3602281.0,
+          "max": 3613369
+        },
+        "rpcSeconds": 21.20283291899998
+      },
+      "startup": {
+        "gas": 1222547101,
+        "transactionGas": {
+          "count": 1,
+          "min": 1222547101,
+          "avg": 1222547101,
+          "median": 1222547101,
+          "max": 1222547101
+        },
+        "rpcSeconds": 0.6291375000000007
+      },
+      "stepWipe()": {
+        "gas": 2637875635,
+        "transactionGas": {
+          "count": 83,
+          "min": 20129268,
+          "avg": 31781634.156626508,
+          "median": 31000080,
+          "max": 49519245
+        },
+        "rpcSeconds": 3.7308435020003197
+      },
+      "title()": {
+        "gas": 1532561192,
+        "transactionGas": {
+          "count": 35,
+          "min": 42635705,
+          "avg": 43787462.62857143,
+          "median": 42635705,
+          "max": 82947222
+        },
+        "rpcSeconds": 1.9750042110000103
+      }
+    },
+    "maximumObservedTransactionGas": 5555860946,
+    "failedMinedTransactions": 0,
+    "failures": [],
+    "optionalSeparateGameplayStatusBarRenderGas": null,
+    "optionalSeparateGasReason": "Gameplay advance includes P_Ticker and ST/HU ticker/observation; capture includes world rendering and ST/HU/palette/frame publication. Their internal costs cannot be isolated from receipts.",
+    "transportFailuresAndRetries": null,
+    "transportFailureNote": "Preserved attempt logs list observed errors. Calls that fail before obtaining a receipt have no measured gas. Resume sessions are recorded below."
+  },
+  "execution": {
+    "startedUTC": "2026-10-11T11:54:55.134Z",
+    "endedUTC": "2026-10-11T15:05:39.599Z",
+    "elapsedWindowSeconds": 11444.465,
+    "elapsedWindowIncludesRecoveryDowntime": true,
+    "activeWallClockProcessingSeconds": 2731.349,
+    "activeWallClockReason": "UTC recorder interval after source/input validation; excludes native reference, encoding and prior attempts. For a checkpoint policy fork, this interval covers only new execution; inherited receipt timings are measured, inherited prefix wall-clock bounds are unavailable. Resumed active-session wall bounds are unavailable.",
+    "measuredRPCTransactionSeconds": 2647.544675339001,
+    "renderTransactionSeconds": 2340.3696360520007,
+    "renderedFramesPerRPCSecond": 1.0024057584157933,
+    "effectiveFramesPerElapsedWindowSecond": 0.20498992307635175,
+    "effectiveFramesPerActiveProcessingSecond": 0.8589162351643821,
+    "elapsedWindowToVideoDurationRatio": 170.74010017050298,
+    "activeProcessingToVideoDurationRatio": 40.74902600170503,
+    "measuredSessionWindows": [
+      {
+        "startedUTC": "2026-10-11T11:54:55.134Z",
+        "endedUTC": "2026-10-11T12:17:27.003Z",
+        "source": "artifacts/local/full-videos/E1M5/complete-short-v1/pre-restart-session.json"
+      },
+      {
+        "startedUTC": "2026-10-11T14:42:40.119Z",
+        "endedUTC": "2026-10-11T15:05:39.599Z",
+        "source": "artifacts/local/full-videos/E1M5/complete-short-v1/recording.json"
+      }
+    ],
+    "inheritedWallClockSeconds": null,
+    "measuredRPCToVideoDurationRatio": 39.49874835330991,
+    "deploymentSetupRPCSeconds": 21.86537275299998,
+    "resumeSessions": [
+      "2026-10-11T14:42:40.119Z"
+    ],
+    "checkpointLineage": null,
+    "newSessionWallClockSeconds": 11444.465,
+    "newSessionTransactionRPCSeconds": 2647.544675339001,
+    "throughputScope": "Local JSON-RPC/mining transaction intervals include transport and receipt polling. EVM-only CPU execution time is unavailable."
+  },
+  "fidelity": {
+    "nativeReferenceProfile": {
+      "displayHistory": true,
+      "profile": "LP64 initialized64MiB zone; all ST/HU/WI borrowed immutable UI resources including ST_lib; temporary per-gameplay render; original source gameplay/WI/finale/melt",
+      "gameplayDirectory": "artifacts/local/full-videos/E1M5/native-display-history",
+      "presentationDirectory": "artifacts/local/full-videos/E1M5/native-display-short-ui",
+      "gameplayManifestSHA256": "c92779fb5022a81179bec740dce8099bf6e6c73ee8413b9597fbc13284816e46",
+      "presentationManifestSHA256": "2f717c8f06bef30a323cb1cf63888d7573c88d24c7c6fba7bded4c74b76b5e05",
+      "reason": "Legacy native adapter missed ST_lib STTMINUS borrowing. Only native cache interception changed; EVM frame/source/provenance unchanged.",
+      "originalNativeReferencesPreserved": true
+    },
+    "matchingGameplaySnapshots": 2111,
+    "gameplayNativeExactFrames": 2109,
+    "nativeExactAllPresentationFrames": 2345,
+    "framesWithDirectVirtualSamples": 2,
+    "directVirtualSampleUses": 8,
+    "virtualProvenanceCounts": {
+      "5": 6,
+      "4": 2
+    },
+    "supportedNativePixelsChecked": 135039992,
+    "finalFrameNativePixelDifferences": 0,
+    "virtualScope": "Zone address provenance4 and authenticated WAD-owner address provenance5 remain experimental even if pixel values agree. Wipe-origin propagation is separately verified; direct draw sample counts are not universal native equality."
+  },
+  "environment": {
+    "anvilVersion": "anvil/v1.8.5",
+    "anvilArguments": [
+      "--host",
+      "127.0.0.1",
+      "--port",
+      "18945",
+      "--hardfork",
+      "cancun",
+      "--disable-code-size-limit",
+      "--gas-limit",
+      "10000000000",
+      "--memory-limit",
+      "1073741824",
+      "--no-request-size-limit",
+      "--prune-history",
+      "2",
+      "--transaction-block-keeper",
+      "2",
+      "--silent",
+      "--load-state",
+      "/Users/eduard/sandbox/doom-evm-full-videos/artifacts/local/full-videos/E1M5/complete-short-v1/restore.json"
+    ],
+    "gasLimit": 10000000000,
+    "EVMmemoryLimitBytes": 1073741824,
+    "RPCSettings": {
+      "localhostOnly": true,
+      "port": "18945",
+      "requestSizeLimit": "disabled",
+      "requestReceiptTimeoutSeconds": 300,
+      "stateDumpTimeoutSeconds": 900
+    },
+    "engineCommitSHA": "94a8e3909f81cd1d891f99eed1b0a0cff7b4d0f8",
+    "sourceHashes": {
+      "artifacts/local/full-videos/observer-v2/src/doom/am_map.sol": "3c5da949fc635d095659d4333d153408499e89e4178b469cb335e31cf52f6020",
+      "artifacts/local/full-videos/observer-v2/src/doom/am_map_types.sol": "7347073682c367c15c918aa51ff924c664b6d05efdbf4f0392d4f404b31a9039",
+      "artifacts/local/full-videos/observer-v2/src/doom/d_ticcmd.sol": "508d0332d3e8b83e1b68d37581a3befc100a9974fcaa0900cc44116cd75ff2ef",
+      "artifacts/local/full-videos/observer-v2/src/doom/f_finale.sol": "a337e7c0b0d5c3fab8b98a40d67c29dd4f63e7ef0d47773d65879f8dc3111c8f",
+      "artifacts/local/full-videos/observer-v2/src/doom/f_wipe.sol": "12e3ead7d43142647ee9ee1f33be25ca6bf372116b432474dc315952464e95a7",
+      "artifacts/local/full-videos/observer-v2/src/doom/g_game.sol": "ea632f47ca5904819dd0dc254fc547799b56696e08e37d96a503d71da145f89c",
+      "artifacts/local/full-videos/observer-v2/src/doom/hu_lib.sol": "bf11331f06c38565650e93ce5ece611d048d5656ae2c8442b6568de5ce079a06",
+      "artifacts/local/full-videos/observer-v2/src/doom/hu_stuff.sol": "fcf57390d8c8e6d5ec935164264870509bb64197179536a39cd2a14dddb9588e",
+      "artifacts/local/full-videos/observer-v2/src/doom/info.sol": "4611205149173e42d3b0f1d91820c8042f6bc5fc48fb53aec84ad4bc501dca8e",
+      "artifacts/local/full-videos/observer-v2/src/doom/m_bbox.sol": "f4c60efe3627a97d0288fc5cd0283535527b1f51029568534c80bb8fbbf8f272",
+      "artifacts/local/full-videos/observer-v2/src/doom/m_fixed.sol": "3f64bef1f62f61faead3a5b8f382bf1c66e1b3739ce4ac8d59a6fcef0451ef9f",
+      "artifacts/local/full-videos/observer-v2/src/doom/m_random.sol": "5267b881138cfb7e0d683449005619513006c70e3ed557f64697b36c4ed40c7b",
+      "artifacts/local/full-videos/observer-v2/src/doom/native_zone_layout.sol": "118b2d17165826fb0857d9cb296e2214db2a28917769299a82e70d0c0790f6e8",
+      "artifacts/local/full-videos/observer-v2/src/doom/p_ceilng.sol": "696f3f620f5bddb3cea64fda824e3203c780f53db890630f0685794454dc37f9",
+      "artifacts/local/full-videos/observer-v2/src/doom/p_doors.sol": "945bf600ce86d8286718fb75ecaf905a0c4631d79d2dac7260c91c9dc2013f8d",
+      "artifacts/local/full-videos/observer-v2/src/doom/p_enemy.sol": "eff76cce23b0877833a5c446a1a09d8ae01918a6925b6d3265240b144c09dfe7",
+      "artifacts/local/full-videos/observer-v2/src/doom/p_floor.sol": "b7c90baafa0b74fd7ff80cf60dcbc430148f6d6d068ba54ca0fbc7ba1bca7069",
+      "artifacts/local/full-videos/observer-v2/src/doom/p_game_state.sol": "06cbccba214717193fbab7c290e2962c4fb05b3f34c6543247ee1ec8e45d085a",
+      "artifacts/local/full-videos/observer-v2/src/doom/p_heap.sol": "3cc2e0a8c3239523db66c07fea33720f931754baedd312b5ca7cc2ebe763d2e0",
+      "artifacts/local/full-videos/observer-v2/src/doom/p_info.sol": "a48840479115ea8bf849ca5ec448d1b2bec7a6cfe58c5314e140635a898de792",
+      "artifacts/local/full-videos/observer-v2/src/doom/p_inter.sol": "8be27f9bba47beb46b3edf2a8a2674b3cd7218d2abb8ef5f8855803393d067de",
+      "artifacts/local/full-videos/observer-v2/src/doom/p_lights.sol": "6f63cbc6b41fc492a46ce43aef464deb9d08b7fa1dd8b213b546eec3e4f08276",
+      "artifacts/local/full-videos/observer-v2/src/doom/p_map.sol": "6b6d48523a45acab9090dfb0ec3d6dbab4e6de18afa89453df8b5a87088da0f3",
+      "artifacts/local/full-videos/observer-v2/src/doom/p_maputl.sol": "ac5ac60e7e058a5fc537e7042c7254bc0f51c77165149a22e141437b4e0ad0b6",
+      "artifacts/local/full-videos/observer-v2/src/doom/p_mobj.sol": "e6138aceee2be933f2c36e3fc18e6d2baa22ffa6a1197d9db89c744d42d78e56",
+      "artifacts/local/full-videos/observer-v2/src/doom/p_plats.sol": "6904df762b270f840daa99b34d2a5c689dbb2fef3aed3d33c2ac1a3f3e4d5722",
+      "artifacts/local/full-videos/observer-v2/src/doom/p_pspr.sol": "cfa2db3438d689c38d9c957fc4aee598c58740f025d6efead2b5f9671eb0c863",
+      "artifacts/local/full-videos/observer-v2/src/doom/p_setup.sol": "9498e1298bf4e53ccedc484a50d4c7f9f85315f6cb700719d474b721e382243b",
+      "artifacts/local/full-videos/observer-v2/src/doom/p_setup_static.sol": "c8100a42bb0bac190c583bbb2c82168599009f88a766e4c05b9a9231a5f69792",
+      "artifacts/local/full-videos/observer-v2/src/doom/p_sight.sol": "7ed366237fc3fec069ffb6336e95e038004d1f379622cf67f55fb8c6b1a6488c",
+      "artifacts/local/full-videos/observer-v2/src/doom/p_spec.sol": "2363640e75c22c9d017db677dda7148ad221380f0a23639167e145e933fc72b7",
+      "artifacts/local/full-videos/observer-v2/src/doom/p_switch.sol": "5404d359793e05c6c24a7804c07632150009b46f38d03068412d7ac53260dfe2",
+      "artifacts/local/full-videos/observer-v2/src/doom/p_telept.sol": "745f0fa4ed6f0515c398bfd2469c59aac82316965b7bac25263aeb82555d61b8",
+      "artifacts/local/full-videos/observer-v2/src/doom/p_tick.sol": "1993dd0c94853dabc4db554dfa0ca04375cef0a22075400ba0e7b56b525022ab",
+      "artifacts/local/full-videos/observer-v2/src/doom/p_user.sol": "963a46850e1b17171f79dd65bff9b5006ce6f97a935ad2023d1d526a6ec35c37",
+      "artifacts/local/full-videos/observer-v2/src/doom/p_zone_setup.sol": "e0308bd1197fd84a01eb1ee208be73c711851d6b0bc30be1d07a7c61b18b223d",
+      "artifacts/local/full-videos/observer-v2/src/doom/r_bsp.sol": "0ae5df313515692d0b2b970d5d39d107e014629cff2305fb37c14371a9524040",
+      "artifacts/local/full-videos/observer-v2/src/doom/r_data.sol": "ef5f26f230c1bed1a073f73b489613d947b420c220faa6f2c16a6f583045010c",
+      "artifacts/local/full-videos/observer-v2/src/doom/r_data_types.sol": "8587079520cec01c6a682991145d8d5148b26278410bb68d09b6749d5dd6bb81",
+      "artifacts/local/full-videos/observer-v2/src/doom/r_defs.sol": "558d5a9bfd131e816bbe28986e2dad6144a08e5a16ccfed1b199d7558a1ea0e2",
+      "artifacts/local/full-videos/observer-v2/src/doom/r_draw.sol": "523dfe72da844b2afcc300ca0ca23a98f47fc754e49d5c30f451ce113225a6b7",
+      "artifacts/local/full-videos/observer-v2/src/doom/r_main.sol": "df403bf04fdbbcfc68c4fd9c5e19b5201ca711498efc34db406a4010ad3b2af5",
+      "artifacts/local/full-videos/observer-v2/src/doom/r_plane.sol": "c7a5abcbca84dddcd2a3c8bb160a609605c5c1842e73704dff4860df3280e463",
+      "artifacts/local/full-videos/observer-v2/src/doom/r_render_hooks.sol": "f026ccb8fffb68d8fbcb0966103212f52884b86350fe3fb52a401d146f3fb312",
+      "artifacts/local/full-videos/observer-v2/src/doom/r_render_state.sol": "072bd2f73b98e1eb775fc8093e95a69c184f3fa50a89a5d64a7beccd59493398",
+      "artifacts/local/full-videos/observer-v2/src/doom/r_segs.sol": "9d4e4dea06739278aab3698fb422818de6dd7726359c8822d60a162e886621cb",
+      "artifacts/local/full-videos/observer-v2/src/doom/r_sprite_state.sol": "735b3de85cbf455e05d3cb8e992cf4e477960bd4192bbd367f5c66c803b96363",
+      "artifacts/local/full-videos/observer-v2/src/doom/r_state.sol": "1624f9f5ee4c1dde44c11080a5f0b9ed2bbf5a32a06fbdbf02d9b8471018d1d0",
+      "artifacts/local/full-videos/observer-v2/src/doom/r_things.sol": "86705ab6b1f79b7ef07798b881cc547502d9911c97b57dc516a744e17c1977f5",
+      "artifacts/local/full-videos/observer-v2/src/doom/st_lib.sol": "5307f52151fbd73e442a60d8b87cbfbed3d38a28704a81e952f56672de667299",
+      "artifacts/local/full-videos/observer-v2/src/doom/st_stuff.sol": "936cf09f8f0dcc9c0555a9d533d9d1a50f65941462b0d3325a5c7850b5be2e49",
+      "artifacts/local/full-videos/observer-v2/src/doom/tables.sol": "bf14202b419075f6d187653205a37e211d8267c7fc4c0bebf5a8c5713afddf38",
+      "artifacts/local/full-videos/observer-v2/src/doom/v_video.sol": "be75fe69e7cd2486ce93408ec204cdf470ea097569e37fbedd867e9a2f3adf1f",
+      "artifacts/local/full-videos/observer-v2/src/doom/v_video_types.sol": "266890b0c8003e89f78baf8415048d24e4ca14865a1c8518ad77bb6a9f6b4d35",
+      "artifacts/local/full-videos/observer-v2/src/doom/w_zone_cache.sol": "03c07404765de9620b3d1ff15727809cdad911c8a78d822019b63500fa5018c2",
+      "artifacts/local/full-videos/observer-v2/src/doom/wi_stuff.sol": "a4290c7bef956c868d62ffc269e076e90cebb25ae9eb2143bf167c8cabb4a39e",
+      "artifacts/local/full-videos/observer-v2/src/doom/wi_stuff_types.sol": "7d7d56059e363e6311c693b0dde47fb5f10e7c27aaa903d20de2f9a7eaff9e60",
+      "artifacts/local/full-videos/observer-v2/src/doom/z_zone.sol": "b4e75218021d65aaf3389cf78a68663feebc2084c82457821be17247dc8106c5",
+      "artifacts/local/full-videos/observer-v2/src/doom/z_zone_backing.sol": "0c210e49466f8b5c717efef6dd75a43cc1c76f64a2aecee0e491860bed5c4d5e",
+      "artifacts/local/full-videos/observer-v2/src/doom/z_zone_types.sol": "11ab3f95678ba3852ab5f0c2dc9e85e715bec6897e65f04cd1919bba9bb73dbd",
+      "artifacts/local/full-videos/observer-v2/src/doom/z_zone_virtual.sol": "8bc309e89fa4da0667dc50a45adb9f91c58982640e1b3f5f9d38e49893f1e960",
+      "artifacts/local/full-videos/observer-v2/src/evm/DoomGame.sol": "181079358507a7bd40d3b30ea7fb8e067f8e12b364f6a221863a153549ff21f2",
+      "artifacts/local/full-videos/observer-v2/src/evm/DoomRenderer.sol": "5639d82431350ea76c26d43457d26d0c3c0f410eaddf02db6adbcfb03a569ba0",
+      "artifacts/local/full-videos/observer-v2/src/evm/DoomScene.sol": "9ad7c8ccee4c9e05deb5608326baabacfa40f686b8d8445fb8aaa7352ab64569",
+      "artifacts/local/full-videos/observer-v2/src/evm/DoomUI.sol": "c2fa44363eeb962acabb51779fc780b8b6c5d46d5291448d44a585690e9ea9f9",
+      "artifacts/local/full-videos/observer-v2/src/evm/DoomZoneStartup.sol": "2d178494456a7ae3c730310f257ce2aa635d37d18c90cac039cf002cdb3f50dc",
+      "artifacts/local/full-videos/observer-v2/src/evm/FrameProtocol.sol": "4665be3f613b8e817d616d2db1dc4a644325c44a6ade476a35d7d9d003625ace",
+      "artifacts/local/full-videos/observer-v2/src/evm/ResourceTypes.sol": "159865364cfa57aae508cd94c49509cbccabd6aeeba55e92b9fcf816bdec4d6b",
+      "artifacts/local/full-videos/observer-v2/src/support/EpisodeStartupSnapshot.sol": "3f2a274619a786200fe209111e0ca6f2f5cb97537f584dd77a4f3d23e4d3635e",
+      "artifacts/local/full-videos/observer-v2/src/support/FullSpeedrunProbe.sol": "0ff00a87963a878c60d5dad55aaf83250c199b68d26d269cf79043c9a93e385f",
+      "artifacts/local/full-videos/observer-v2/src/support/UltimateStartup.sol": "86152dbc521265c009a1532105abde4d37a55707d29a0ca629728c50dc0462b0",
+      "artifacts/local/full-videos/observer-v2/src/support/UltimateWadResources.sol": "fabdbf3967783eedf0b71f02dc42e514c0133282ad9be880e3fdbaf815f4c5f0",
+      "tools/reference/full_videos/record-short.mjs": "e8e3cc3996a414931630eaab9f58b9b0dbe2bd8d25bf90a500fec3d2d9805214",
+      "tools/reference/full_videos/runtime.mjs": "e0758299f79275e4fd9ba0fcde07552ed46583393f2b84cff4f325712847cd24",
+      "foundry.toml": "afe04c66f0e684b5a936821f6543605a3739f62164ceb4398426db7403452393",
+      "execution-budget.json": "acde01f1b9cf248f9265f1ffcff7181d01d77620a2dfcd9a4d4d0b1c79df2be7"
+    },
+    "engineCommitSHAReason": "Frozen feature HEAD at recorder start; generated observation clone has separate exact source hashes.",
+    "IWADIdentity": {
+      "schemaVersion": 0,
+      "wadSha256": "6fdf361847b46228cfebd9f3af09cd844282ac75f3edbb61ca4cb27103ce2e7f",
+      "bundleSha256": "1154fc21f0fa60e793ffb6da569b2293191dfc7f1791e0c083672b764917d7ba",
+      "paletteSha256": "fd895921b5d0a394612bb29852ed003d44d69f76dec31c0dc6b5d5fc7d63f7bb",
+      "paletteVariant": 0
+    },
+    "inputTapeSHA256": "4a3ffd0a1f92ac2980e9c3b5aafde01a6ec2fb4eaca0fdde61ab85d51e1ea48e",
+    "inputCommandSHA256": "537daff69ff9fc273e77ff97a8375d57a7372b76a61ff3d7e7be1fbe3a8bdf63",
+    "ABI_SHA256": "0b5b98881e450197d9e506e924c9a79e3c3b1ba4ccbd9e5b49e3fade502dd4c5"
+  },
+  "bindings": {
+    "recordingManifest": "artifacts/local/full-videos/E1M5/complete-short-v1/recording.json",
+    "recordingManifestSHA256": "d4b6a9d25c75b50fa52662e26f71fef152fdc89b507588fdce2ae5a8c5d7beb7",
+    "verificationSHA256": "506d3102e9a7c0b840275c2233af4a5b2dcc9d833414cf9be80006a581093825",
+    "mediaManifestSHA256": "9b0708b8b4a3796aa8bc4e5c263f8bf7678812972e32cc49ce7d5cbf2b35374c"
+  }
+}

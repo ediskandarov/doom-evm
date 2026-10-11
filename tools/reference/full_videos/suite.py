@@ -32,12 +32,12 @@ def job(m):
   if halt.is_set():raise RuntimeError('Suite interrupted')
   record=out/'recording.json'
   if not record.exists() or not json.loads(record.read_text())['pass']:
-   cmd=['node',HERE/'record-short.mjs','--map',str(m),'--observer',a.observer,'--output',out]
+   cmd=['node',HERE/('record-short-finale.mjs' if m==8 else 'record-short.mjs'),'--map',str(m),'--observer',a.observer,'--output',out]
    if (out/'checkpoint.json').exists():cmd.append('--resume')
-   elif m in [2,6]:cmd+=['--fork-checkpoint',LOCAL/f'E1M{m}/complete-v2']
+   elif m in [2,6] and (LOCAL/f'E1M{m}/complete-v2/checkpoint.json').exists():cmd+=['--fork-checkpoint',LOCAL/f'E1M{m}/complete-v2']
    run(cmd,log,'EVM recording',windows)
   run(['python3',HERE/'native-frames.py','--map',str(m)],log,'native gameplay',windows)
-  run(['python3',HERE/'native-short-ui.py','--map',str(m)],log,'native UI',windows)
+  run(['python3',HERE/'native-short-ui.py','--map',str(m),*(['--borrow-all-ui','--display-history'] if (out/'native-profile.json').exists() and json.loads((out/'native-profile.json').read_text()).get('displayHistory') else [])],log,'native UI',windows)
   # rollback runner resolves the artifact specified by this recording's identity.
   with rollback_lock:run(['node',HERE/'rollback.mjs',out],log,'storage rollback',windows)
   run(['python3',HERE/'verify-ui.py',out],log,'native UI/melt verification',windows)
