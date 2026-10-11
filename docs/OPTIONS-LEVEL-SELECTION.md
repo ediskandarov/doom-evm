@@ -296,3 +296,107 @@ production corrections; prior failed evidence and goldens remain preserved.
    Run save/restore and death/rebirth owner checks against agreed layouts if those
    commits are integrated. This is targeted post-merge coverage, not a request to
    run historical complete Phase0–4 acceptance.
+
+## Verified core handoff checkpoint and API compatibility follow-up
+
+Core implementation/native/browser evidence is committed at
+`c4412ad` (Options, tests, original C observations, coordination report) and
+`fbd2c97` (source-bound browser release artifacts). The core three-game browser
+run ended2026-10-11 15:55:05.345 UTC: 252 exact Canvas frames,27 production
+map/skill selections,15 mined storage-root rollbacks, all three game installations
+and profile switching. Every first-map skill and representative later-map
+startup matched original C spawn totals, health, inventory and gameplay RNG.
+The original NEW GAME, Nightmare/cancel/Back/Escape, Messages visibility,
+no-render resize, original status refresh and End Game/title restart gates pass.
+This is an isolated feature checkpoint, not main integration or historical final
+acceptance. Its committed certificates remain preserved in
+`artifacts/options-level-selection/`.
+
+Inspection then found that the inherited `setUIFullscreen(bool)` API would change
+UIState.fullscreen while leaving the new menu thermometer value stale; the next
+menu packet would overwrite that API choice. The follow-up adds only a
+menuMode-guarded synchronization of MenuState.screenSize in each existing setter,
+after its unchanged driver/UI guards. It removes an unreachable preference
+binding from the legacy initializer. No rendering function or original native
+profile changes. Both APIs/ABI signatures remain unchanged.
+
+This additional shared adapter dependency must be reconciled by the integrator
+in **Doom.setUIFullscreen and Doom2.setUIFullscreen**, alongside _stepMenu, so
+there is one authoritative EVM setting across both entry points. Focused final
+browser verification also calls each existing setter in both directions, checks
+the Options value before rendering, frozen gameplay, no setter Frame/sequence
+consumption and native-exact restored status pixels. Its separate evidence lives
+in `artifacts/options-level-selection/api-compatibility/`; it does not overwrite
+the verified core certificate or the first failed redraw-assumption evidence.
+
+
+## Final verification and recoverable handoff
+
+The API compatibility compile measured250.52 seconds; compiler0.8.37,
+viaIR/optimizer200/Cancun and default10-billion gas budget are unchanged. Final
+real Chrome/Anvil run: `2026-10-11T16:09:57.450Z` → `2026-10-11T16:20:17.372Z`. It passes258 exact
+receipt Frame/palette → Canvas checkpoints,27 actual new-game map/skill selections,
+15 mined all-storage-root rollback proofs and6 original full-screen API calls
+with zero logs/sequence consumption. All three installed games switch/reopen
+without affecting other game state. Original-C spawn counts, first-tic RNG,
+health, inventory and requested map/skill agree. Nightmare confirmation/cancel,
+Back/Escape, original NEW GAME, existing-game replacement with no Intermission,
+Messages Off/On, reopening/persistence, screen clamps, no-render display refresh,
+End Game and fresh title startup pass. Native status comparison covers92,160
+indexed pixels (three10,240-byte regions per game), including API restoration.
+Maximum successful final Frame gas: 4,767,591,509;
+no peak EVM MSIZE or guaranteed FPS claim. Both owned browser and Anvil, the
+owned HTTP server and temporary Chrome profile were stopped/closed by cleanup.
+
+Reproduction from this feature worktree, sequentially:
+
+```sh
+python3 tools/reference/options/reference.py --check
+python3 tools/reference/options/startup-native.py
+python3 tools/reference/options/status-resize.py
+python3 tools/reference/options/focused.py
+.toolchain/bin/forge build src/evm/Doom.sol src/evm/Doom2.sol src/evm/ResourceStore.sol --offline --no-lint
+node tools/browser-deployment/package.mjs
+node tools/reference/doom2/package.mjs .
+node --test web/menu-input.test.mjs web/input-runtime.test.mjs web/input-loop.test.mjs web/input-app.test.mjs web/install.test.mjs web/input.test.mjs web/doom2-profile.test.mjs web/browser-profiles.test.mjs
+node tools/reference/options/browser.mjs --output-prefix artifacts/local/options/browser-api-final --ultimate-wad artifacts/local/options/DOOM.WAD --doom2-wad artifacts/local/options/DOOM2.WAD
+python3 tools/reference/options/certificate.py --check
+git diff --check
+```
+
+Native/production resource packs are worktree-local copies of already authenticated
+installed inputs. Reproduction requires the exact pinned Freedoom/Ultimate/DOOM II
+IWADs and ignored local full resource packs; no commercial IWAD, raw commercial
+UI/frame payload or video is committed. Final source/ABI/resource and evidence
+hashes are bound in
+`artifacts/options-level-selection/api-compatibility/verification.json` with
+actual source-bound browser, native startup/status and focused reports alongside.
+Core checkpoint certificates under `artifacts/options-level-selection/` remain
+bound to the prior verified checkpoint `fbd2c97`, not relabeled as final sources.
+The failed first redraw assumption remains local and hash-bound in final evidence.
+Previous accepted source, oracle fixtures, certificates and other-owner worktrees
+are preserved.
+
+Implementation and feature verification are complete. Main integration and
+post-merge video/save/respawn regressions remain the integrator's responsibility,
+in the integration order above. Source proposals change6 implementation files:
+m_menu, DoomMenu, Doom, Doom2, DoomUI and EpisodeRuntime; existing Frame/input/WAD
+ABIs, memory policy defaults and renderer/gameplay algorithms are unchanged.
+New read-only inspection APIs are optionsStatus/spawnStatus; setUIFullscreen and
+menuStatus keep their existing signatures. Browser artifacts/pins require merged
+source regeneration. No Save/Load serialization, alternate respawn, wipe,
+recording tool, border implementation, audio or relaxed renderer was introduced.
+
+Branch: `feat/options-menu`. Local Gitmoji commits preserve core implementation,
+release packaging and the small API compatibility follow-up separately. Stop
+here after final commit and clean status; do not merge, push main, or begin another
+goal. No branch has been pushed by this workstream.
+
+
+Available usage attribution is recorded without estimates in
+`artifacts/options-level-selection/api-compatibility/usage-checkpoint.json`:
+get_goal's measured pre-final-commit checkpoint reported347,666 aggregate tokens
+and4,045 elapsed seconds. No token budget was requested. Per-model/cache billing
+and dollar attribution were not supplied; none is estimated. Goal start was
+2026-10-11 15:15:28 UTC; runtime verification end times above are measured,
+with commit/handoff completion recorded by Git/final goal status separately.

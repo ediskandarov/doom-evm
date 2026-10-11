@@ -17,7 +17,7 @@ const port=Number(opt('--port','19281')),httpPort=Number(opt('--http-port','1928
 assert(![18880,8088].includes(port)&&![18880,8088,port].includes(httpPort));
 const sha=bytes=>createHash('sha256').update(bytes).digest('hex'),rpcUrl=`http://127.0.0.1:${port}`,origin=`http://127.0.0.1:${httpPort}`;
 const report={kind:'options-level-selection-real-anvil-chrome',pass:false,startedUtc:new Date().toISOString(),port,httpPort,checks:[],frames:[],sourceHashes:{}};
-for(const p of ['web/install-engine.mjs','web/install-resources.mjs','web/install-storage.mjs','web/install-pins.mjs','web/launcher.mjs','web/menu-app.mjs','web/app.mjs','web/index.html','web/browser-profiles.mjs','web/doom2-profile.mjs','web/doom2-install.mjs','web/doom2-pins.mjs','tools/reference/options/browser.mjs'])report.sourceHashes[p]=sha(await readFile(p));
+for(const p of ['web/install-engine.mjs','web/install-resources.mjs','web/install-storage.mjs','web/install-pins.mjs','web/launcher.mjs','web/menu-app.mjs','web/app.mjs','web/index.html','web/browser-profiles.mjs','web/doom2-profile.mjs','web/doom2-install.mjs','web/doom2-pins.mjs','tools/reference/options/browser.mjs','tools/reference/options/features.mjs'])report.sourceHashes[p]=sha(await readFile(p));
 await mkdir(resolve(prefix,'..'),{recursive:true});
 let node,browser,server,profile,ws,log,id=0;
 const sleep=ms=>new Promise(r=>setTimeout(r,ms));

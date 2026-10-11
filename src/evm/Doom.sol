@@ -282,7 +282,6 @@ contract Doom is IFrameProtocol, WadResources {
         GameContext memory c = DoomGame.load(_resourceView(), gameState);
         UIState memory u;
         DoomUI.initialize(u, c, fullscreen);
-        if (menuMode) u.hideMessages = !menuState.showMessages;
         uiState = u;
     }
 
@@ -290,6 +289,7 @@ contract Doom is IFrameProtocol, WadResources {
     function setUIFullscreen(bool fullscreen) external {
         if (msg.sender != driver) revert NotDriver();
         if (!uiState.enabled) revert UINotEnabled();
+        if (menuMode) menuState.screenSize = fullscreen ? int32(8) : int32(7);
         if (uiState.fullscreen != fullscreen) {
             uiState.fullscreen = fullscreen;
             uiState.refresh = true;

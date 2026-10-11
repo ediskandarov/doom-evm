@@ -68,6 +68,19 @@ export async function verifyFeatures(game,{keys,evaluate,until,readGame,rpc,repo
  await evaluate('window.fixtureClient.transactions.nextEvents(new Uint8Array([0,174,1,174]),{draw:false})');
  assert.equal((await read('optionsStatus()'))[1],11);await keys([],label('deferred no-render size applied'));assert.equal((await hud()).fullscreen,1);
  await keys(['ArrowLeft'],label('restore status-bar after deferred request'));
+ // Preserve the inherited EVM setter: it must update the same authoritative menu value.
+ async function setView(fullscreen){
+  const data='0x'+install.methods['setUIFullscreen(bool)']+word(fullscreen?1:0);
+  const sequence=(await read('inputSeq()'))[0];
+  const hash=await rpc('eth_sendTransaction',[{from:install.config.driver,to:install.config.address,data,gas:'0x2540be400'}]);
+  const receipt=await until(()=>rpc('eth_getTransactionReceipt',[hash]),'original view API');assert.equal(receipt.status,'0x1');assert.equal(receipt.logs.length,0);
+  assert.equal((await read('optionsStatus()'))[1],fullscreen?11:10);assert.equal((await read('inputSeq()'))[0],sequence);
+  (report.viewportAPI??=[]).push({game,fullscreen,transaction:hash,gasUsed:receipt.gasUsed,noLogs:true,sequenceUnchanged:true});
+  await keys([],label('existing fullscreen API '+fullscreen));assert.equal((await hud()).fullscreen,fullscreen?1:0);assert.equal(await readGame(game,'gameStatus()'),before);
+ }
+ await setView(true);await setView(false);
+ assert.deepEqual(Buffer.from(await evaluate('window.__transportProof.latestPixelsHex'),'hex').subarray(320*168),nativeRestored);
+ report.checks.push({label:label('existing setUIFullscreen API and Options remain synchronized with exact native status restoration'),pass:true});
  await keys(['KeyM','Enter'],label('Messages ON'));await keys(['Escape'],label('resume ON'));await keys([],label('forced Messages ON HUD'));assert.equal((await hud()).text,'Messages ON');
  await select(1,2);await keys(['KeyI','KeyD','KeyD','KeyQ','KeyD'],label('ON gameplay message'));assert.equal((await hud()).on,1);assert.equal((await hud()).text,'Degreelessness Mode On');
  await main();await keys(['KeyO','Enter','KeyE','Enter'],label('End Game confirmation'));assert.equal((await menu()).confirmation,1);

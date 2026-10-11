@@ -6,7 +6,7 @@ export default {
   "artifacts": {
     "Doom": {
       "url": "/install-assets/Doom.json",
-      "sha256": "d88c24d600fb8a4f4f4647fad1882f127939a4f203b9f6cc9cd5f324a401361c"
+      "sha256": "1f8791c5eb81a40c7511917c156f157cf4381a61924187a1dd0487d6bbd6e3a6"
     },
     "ResourceStore": {
       "url": "/install-assets/ResourceStore.json",
@@ -78,7 +78,7 @@ export default {
     "src/doom/z_zone_backing.sol": "e63201d3bb45e4c8d0796480d4e9facd4deffd4d8a9dd730bed10ff4a108d0b1",
     "src/doom/z_zone_types.sol": "11ab3f95678ba3852ab5f0c2dc9e85e715bec6897e65f04cd1919bba9bb73dbd",
     "src/doom/z_zone_virtual.sol": "8bc309e89fa4da0667dc50a45adb9f91c58982640e1b3f5f9d38e49893f1e960",
-    "src/evm/Doom.sol": "69e718de03d31050e5ff8f73dfa5d3fe3816dd3fe17409d5f2666e1613c16339",
+    "src/evm/Doom.sol": "6d9bf4e7e68b791522d76f6d8868b48ed4c6947249aeb911b6af6d192f72f6da",
     "src/evm/DoomGame.sol": "d9451a915ab977bae137340e3e6626a270a4b84b8b6ea9449a8c4f0f578296df",
     "src/evm/DoomMenu.sol": "c9c73f4ab11fa0cc3431cc13e4b4102e19012aa1ac749c91b1446d0da6dd34bc",
     "src/evm/DoomRenderer.sol": "5639d82431350ea76c26d43457d26d0c3c0f410eaddf02db6adbcfb03a569ba0",

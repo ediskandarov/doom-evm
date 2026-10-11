@@ -9,8 +9,8 @@ export default {
   "artifacts": {
     "Doom": {
       "url": "/doom2-assets/Doom.json",
-      "sha256": "28e098a25dafb35062535a7bbaf18a8cbfb64371d47b857a101098af8293faaf",
-      "runtimeBytes": 875066
+      "sha256": "5539737db40b2d2d4002d0ec53ff06ce1c43b801535b2bf8d4575639f5cefe31",
+      "runtimeBytes": 876191
     },
     "ResourceStore": {
       "url": "/doom2-assets/ResourceStore.json",
@@ -83,7 +83,7 @@ export default {
     "src/doom/z_zone_backing.sol": "e63201d3bb45e4c8d0796480d4e9facd4deffd4d8a9dd730bed10ff4a108d0b1",
     "src/doom/z_zone_types.sol": "11ab3f95678ba3852ab5f0c2dc9e85e715bec6897e65f04cd1919bba9bb73dbd",
     "src/doom/z_zone_virtual.sol": "8bc309e89fa4da0667dc50a45adb9f91c58982640e1b3f5f9d38e49893f1e960",
-    "src/evm/Doom2.sol": "c73fc8b0b077ffcbd4d174511a868df00ba46d903eb9db6debc4b116af40570f",
+    "src/evm/Doom2.sol": "59a1092d26d130da7429689de665d9eccf7744a0ed388b3eb520e5da882329ff",
     "src/evm/Doom2Startup.sol": "0c0a0d38a1cf8441e19df834f26799d12ee803d4c3a4a3e98e4acde5fae27dca",
     "src/evm/Doom2WadResources.sol": "7384106aef06d449266135e8392a22ba9409ea4b77af423653efdf7dbf6a2274",
     "src/evm/DoomGame.sol": "d9451a915ab977bae137340e3e6626a270a4b84b8b6ea9449a8c4f0f578296df",
