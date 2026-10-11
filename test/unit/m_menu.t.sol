@@ -126,7 +126,8 @@ contract MenuTest {
         M_Menu.M_Responder(m,0,127); require(m.currentMenu == 1, "original skill previous episode");
         M_Menu.M_Responder(m,0,27); require(!m.menuactive, "original Escape closes all menus");
         M_Menu.M_Responder(m,0,27); require(m.menuactive && m.currentMenu == 0, "original Escape reopens main");
-        M_Menu.M_Responder(m,0,173); require(m.itemOn == 1, "up wraps to select level");
+        M_Menu.M_Responder(m,0,173); require(m.itemOn == 2, "up wraps to options");
+        M_Menu.M_Responder(m,0,173); require(m.itemOn == 1, "up reaches select level");
         M_Menu.M_Responder(m,0,13); M_Menu.M_Responder(m,0,173); M_Menu.M_Responder(m,0,13);
         require(m.selectedMap == 9 && m.currentMenu == 2, "nine-map wrap and skill screen");
         M_Menu.M_Responder(m,0,127); require(m.currentMenu == 3 && m.itemOn == 8, "extension remembers selected level");

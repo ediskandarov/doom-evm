@@ -157,7 +157,7 @@ library EpisodeRuntime {
 
     function hudTicker(GameContext memory c, GameflowState memory) private pure {
         EpisodeAux memory a = abi.decode(c.adapterData, (EpisodeAux));
-        HU_Stuff.HU_Ticker(a.ui.hud, c.state.players[0], true);
+        HU_Stuff.HU_Ticker(a.ui.hud, c.state.players[0], !a.ui.hideMessages);
         a.automap.message = c.state.players[a.automap.player].message;
         c.adapterData = abi.encode(a);
     }

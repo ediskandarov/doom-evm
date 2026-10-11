@@ -18,6 +18,7 @@ struct UIState {
     bool enabled;
     bool fullscreen;
     bool refresh;
+    bool hideMessages; // Original showMessages inverse; zero retains all existing callers.
     STState status;
     HudState hud;
 }
@@ -66,13 +67,13 @@ library DoomUI {
     /// @dev Original G_Ticker GS_LEVEL order: P_Ticker, ST_Ticker, then HU_Ticker.
     function tick(UIState memory u, GameContext memory c) internal pure {
         ST_Stuff.ST_Ticker(u.status, c.state, c.definitions);
-        HU_Stuff.HU_Ticker(u.hud, c.state.players[uint32(c.state.consoleplayer)], true);
+        HU_Stuff.HU_Ticker(u.hud, c.state.players[uint32(c.state.consoleplayer)], !u.hideMessages);
     }
 
     function tick(UIState memory u, GameContext memory c, AutomapState memory am) internal pure {
         ST_Stuff.ST_Ticker(u.status, c.state, c.definitions);
         if (am.active) AM_Map.AM_Ticker(am, DoomGame.automapWorld(c, am.player));
-        HU_Stuff.HU_Ticker(u.hud, c.state.players[uint32(c.state.consoleplayer)], true);
+        HU_Stuff.HU_Ticker(u.hud, c.state.players[uint32(c.state.consoleplayer)], !u.hideMessages);
         // AM's string is a mirror of its selected player's pointer, not a queue.
         am.message = c.state.players[am.player].message;
     }
