@@ -1,0 +1,129 @@
+{
+  "schemaVersion": 1,
+  "scope": "Browser-managed production Freedoom installation; local Ultimate and DOOM II identity verification with unavailable production Play",
+  "implementationCommit": "730596452d8fa314e3e1f14ceaabfbf0fc425876",
+  "baselineMain": "59522a545d1311924a28875a098892c5e27c113b",
+  "originalC": "a77dfb96cb91780ca334d0d4cfd86957558007e0",
+  "sourceHashes": {
+    ".gitignore": "d7e0d0fb2b1160b57ec7eaeb2594f003123deb0c5cb33da18548847d63dc3ae4",
+    "docs/browser-deployment/README.md": "fced33826288fcdfaafe65592795d3933bb4932fdb73279f8879ac241da69746",
+    "tools/browser-deployment/check.mjs": "05231b636f9815004c406edf9e39c42f50eee5f359c6cae8dafaa213d3a24b47",
+    "tools/browser-deployment/package.mjs": "ec67c00d33c13f95ad6a7e9f4e792019e92360d37f675df3ba0561ac04d46c14",
+    "tools/browser-deployment/probe.mjs": "d06eabcc86d271a9321e46a210c222c8bc65b6e984b21f4c3dc6c10724b82ca5",
+    "web/app.mjs": "0a20f3223db6033b1f5fcc511a2a9bf42efd87d13f8aa01add2f96ce1a28cb85",
+    "web/index.html": "855848421fb343c3deb55d22bb3a231d4fd02d6d80d41d3e18b8b6b401171efd",
+    "web/install-assets/.gitattributes": "c1ae76ff2ff1ca3b087306d85c9f6292023480e75ffd65305b2894d51197b1b9",
+    "web/install-assets/COPYING-Freedoom.txt": "7c62f2c520769c798774f416637eec4921e5f0aafdac1245ae7c8a8cf65fe102",
+    "web/install-assets/Doom.json": "8f9b86575caff73c00d31fc177785dce77cc183a16c8ac434a89ff4d62975cee",
+    "web/install-assets/ResourceStore.json": "2c73efc4886eddb868a91303fac23dda65911e258399b044ff234c73d1ad9315",
+    "web/install-assets/palette.json": "a9cf61c57f81d5299a6c1229e8eabf1dd74254f10e2d185108c790636ade98ad",
+    "web/install-engine.mjs": "f97223bb86c517c08fe23a391123b2f9497cdb39c9c010e3e472721630c50f0a",
+    "web/install-pins.mjs": "467daaf607a1e10623accc4a250bd94e80386dec144875edb4b1c2226622491d",
+    "web/install-resources.mjs": "6703cc9319a14b385b37ded6f49bf4e4bea231e7a9458024cc6f317537dda32b",
+    "web/install-storage.mjs": "e7f46dd436a9b711234ad66f8f436749dae1fc2c72b7201842469b6bc3574ae5",
+    "web/install.test.mjs": "ea39b7a7f3a7d131b06d507defcafdf7d13000e4dbec975e21b5115c8aa6b917",
+    "web/launcher.mjs": "dd7c9d6be144df3d73d3bcb9198d44a5363868fbe8096f66b716ffa692aa1caf",
+    "web/menu-app.mjs": "698d446e777ef0133091a143e09dff96147f7584105a32ebab2e90115ef58926"
+  },
+  "evidenceHashes": {
+    "artifacts/browser-deployment/accepted-0.png": "ebd4feed25b3cacc6151e4acef246bf94abacc7ac9110593b9473890b1a584cc",
+    "artifacts/browser-deployment/accepted-1.png": "959ea5e72f36e9fd09d2e232219e57b8757c25db26bb890bbb2348c61a454f66",
+    "artifacts/browser-deployment/accepted-2.png": "f7a2146317f84a85c9f9d6826c08e5d4aa03447de5d59706c590d77990e7967d",
+    "artifacts/browser-deployment/accepted-3.png": "8d918a6b176f6ad5f4f038bb21ed76dafafaff4aa2824b55d0c239fb4375c1b3",
+    "artifacts/browser-deployment/accepted-4.png": "aca96e4a46374b6ee335504bb7fc79de81f17b9daa8e7c9f28eea03b33830f6c",
+    "artifacts/browser-deployment/accepted-5.png": "78a75e8eb4db504eeb13d06c1bb2dfe947d8c4aaec4049f9da312579bf831692",
+    "artifacts/browser-deployment/accepted.anvil.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "artifacts/browser-deployment/accepted.installation.json": "d4804dd82661eda986cf5237d8e99dd63af245d5320e8d53fb86e39188b976ac",
+    "artifacts/browser-deployment/accepted.json": "6c1c505da249682d6b02f0353f009aa733b611f136145c32782d37940976e850",
+    "artifacts/browser-deployment/attempt1-0.png": "ebd4feed25b3cacc6151e4acef246bf94abacc7ac9110593b9473890b1a584cc",
+    "artifacts/browser-deployment/attempt1-1.png": "ebd4feed25b3cacc6151e4acef246bf94abacc7ac9110593b9473890b1a584cc",
+    "artifacts/browser-deployment/attempt1-2.png": "ebd4feed25b3cacc6151e4acef246bf94abacc7ac9110593b9473890b1a584cc",
+    "artifacts/browser-deployment/attempt1-3.png": "ebd4feed25b3cacc6151e4acef246bf94abacc7ac9110593b9473890b1a584cc",
+    "artifacts/browser-deployment/attempt1.anvil.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "artifacts/browser-deployment/attempt1.installation.json": "336c28037178b1173cdcac35b5c517a5520c9a6de139c75e0c7a4768008302a2",
+    "artifacts/browser-deployment/attempt1.json": "7bbd011d31ceb9746ed64c96ed119a84e8c071ddff10ae696321c6fddf477816",
+    "artifacts/browser-deployment/attempt2-0.png": "ebd4feed25b3cacc6151e4acef246bf94abacc7ac9110593b9473890b1a584cc",
+    "artifacts/browser-deployment/attempt2-1.png": "959ea5e72f36e9fd09d2e232219e57b8757c25db26bb890bbb2348c61a454f66",
+    "artifacts/browser-deployment/attempt2-2.png": "f7a2146317f84a85c9f9d6826c08e5d4aa03447de5d59706c590d77990e7967d",
+    "artifacts/browser-deployment/attempt2-3.png": "8d918a6b176f6ad5f4f038bb21ed76dafafaff4aa2824b55d0c239fb4375c1b3",
+    "artifacts/browser-deployment/attempt2-4.png": "aca96e4a46374b6ee335504bb7fc79de81f17b9daa8e7c9f28eea03b33830f6c",
+    "artifacts/browser-deployment/attempt2-5.png": "78a75e8eb4db504eeb13d06c1bb2dfe947d8c4aaec4049f9da312579bf831692",
+    "artifacts/browser-deployment/attempt2.anvil.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "artifacts/browser-deployment/attempt2.installation.json": "11781ba0e472e987aeac8259041aae7652c5ade27e4ce96e0922d9a8c372a09e",
+    "artifacts/browser-deployment/attempt2.json": "c57771a3b9cb356600d9156cef120c8016f02b7eccdcb3b4aff86eabc72b885a",
+    "artifacts/browser-deployment/focused-tests.log": "a782e01f86aafbc532c8be8c150f97bf45457a439a05277c0b766c4db79f7996",
+    "artifacts/browser-deployment/locks-launcher.png": "4a91f5840cfce056740a18a168f191ff83a2d464811e004c0abd22a4b5e3d57b",
+    "artifacts/browser-deployment/locks.anvil.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "artifacts/browser-deployment/locks.json": "cc8478b2dbaec254e9e5bf175b2a81f9f7bb85d7421732d41aea84d274affd69",
+    "artifacts/browser-deployment/usage-checkpoint.json": "b76fa6a2a300ae62b76bb4931cf118b3b9ea6f28f6ea920faef9f1598552fc43"
+  },
+  "compiler": {
+    "version": "0.8.37",
+    "viaIR": true,
+    "optimizerRuns": 200,
+    "evmVersion": "cancun",
+    "sourceCount": 78
+  },
+  "runtime": {
+    "anvilVersion": "anvil Version: 1.8.5\nCommit SHA: 51a52c59cffd940f76eddd0b4bb1791aa4b5ac7f\nBuild Timestamp: 2026-10-05T17:07:33.315474000Z (1791220053)\nBuild Profile: dist",
+    "nodeVersion": "v24.11.0",
+    "browser": {
+      "protocolVersion": "1.3",
+      "product": "Chrome/155.0.8059.40",
+      "revision": "@cfaadc5a132d78e1828635aa8405a499f3e14864",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36",
+      "jsVersion": "15.5.35.20"
+    }
+  },
+  "commands": [
+    {
+      "command": "node --test web/install.test.mjs web/menu-input.test.mjs web/input-app.test.mjs web/input-loop.test.mjs web/episode.test.mjs web/input-runtime.test.mjs",
+      "result": "62 passed; 0 failed",
+      "evidence": "artifacts/browser-deployment/focused-tests.log"
+    },
+    {
+      "command": "node tools/browser-deployment/check.mjs --lock-only --output-prefix artifacts/browser-deployment/locks",
+      "result": "4 checks passed; zero additional transactions from stale second installer",
+      "evidence": "artifacts/browser-deployment/locks.json"
+    },
+    {
+      "command": "node tools/browser-deployment/check.mjs --output-prefix artifacts/browser-deployment/accepted",
+      "result": "14 checks and 6 exact Canvas/Frame/Palette comparisons passed",
+      "evidence": "artifacts/browser-deployment/accepted.json"
+    },
+    {
+      "command": "node tools/browser-deployment/package.mjs /Users/eduard/sandbox/doom-evm",
+      "result": "Both artifact identities and all 78 unchanged production Solidity sources verified read-only; authenticated open Freedoom staged",
+      "evidence": "web/install-pins.mjs"
+    },
+    {
+      "command": "git diff --check",
+      "result": "passed; authenticated upstream license CRLF/BOM preserved via matching attributes"
+    }
+  ],
+  "installation": {
+    "address": "0x5ae1f4bb68f8eac39cfdbdfda2b7344ccbd80faf",
+    "resourceChunks": 1755,
+    "uniqueResourceCreates": 1755,
+    "operations": 1757,
+    "receiptManifest": "artifacts/browser-deployment/accepted.installation.json",
+    "receiptManifestSha256": "d4804dd82661eda986cf5237d8e99dd63af245d5320e8d53fb86e39188b976ac",
+    "resourceIdentity": {
+      "schemaVersion": 0,
+      "wadSha256": "7323bcc168c5a45ff10749b339960e98314740a734c30d4b9f3337001f9e703d",
+      "bundleSha256": "d379076f21645cf7cc5acb056663d0faacc4065489a0ca99738479323c9f7a47",
+      "paletteSha256": "fd895921b5d0a394612bb29852ed003d44d69f76dec31c0dc6b5d5fc7d63f7bb",
+      "paletteVariant": 0
+    },
+    "totalGas": "6614091135"
+  },
+  "acceptedStartedUtc": "2026-10-11T09:37:17.034Z",
+  "acceptedEndedUtc": "2026-10-11T09:41:07.169Z",
+  "acceptedElapsedSeconds": 230.135,
+  "failuresPreserved": [
+    "artifacts/browser-deployment/attempt1.json"
+  ],
+  "priorPassingCheckpoint": "artifacts/browser-deployment/attempt2.json",
+  "excluded": "No Computer Use, no full historical acceptance, no DOOM II gameplay/native/EVM speedrun verification, no commercial payload publication, no main writes/merge/push",
+  "stoppedOwnedRuntimes": true
+}

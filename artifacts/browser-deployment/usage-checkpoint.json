@@ -1,0 +1,18 @@
+{
+  "goal": {
+    "goal": {
+      "threadId": "01a12a40-f05b-7913-914b-729ae0d44e84",
+      "objective": "Implement and verify complete browser-managed DOOM deployment, launcher, authenticated resources, resumability and handoff on feat/browser-deployment without modifying main.",
+      "status": "active",
+      "tokensUsed": 163653,
+      "timeUsedSeconds": 1391,
+      "createdAt": 1791710280,
+      "updatedAt": 1791711672
+    },
+    "remainingTokens": null,
+    "completionBudgetReport": null
+  },
+  "clock": {
+    "current_time": "2026-10-11 09:41:41 UTC"
+  }
+}

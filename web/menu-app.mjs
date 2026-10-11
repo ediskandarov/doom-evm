@@ -14,7 +14,7 @@ export async function openMenu(config) {
   const canvas = document.querySelector('#frame'), status = document.querySelector('#status');
   const proof = window.__transportProof = { ready:false, rendererKind:'doom-world-view',gameplayAvailable:true,
     menuProfile:true, frames:[],inputs:[],errors:[],fallbackVerified:false };
-  document.title = 'DOOM EVM · Freedoom';document.body.dataset.menu='true';
+  document.title = 'DOOM EVM · Freedoom';status.hidden=false;document.body.dataset.menu='true';
   for (const selector of ['.eyebrow','h1','.pill','body > p','#step']) document.querySelector(selector).hidden=true;
   canvas.setAttribute('aria-label','DOOM menu and gameplay rendered inside the EVM');canvas.tabIndex=0;
   const debug=document.createElement('details'), summary=document.createElement('summary');
@@ -23,7 +23,7 @@ export async function openMenu(config) {
   let subscription, reconnectTimer, stopped=false, loop, transactions, pendingPresentation=Promise.resolve();
   const hex = bytes => [...bytes].map(n=>n.toString(16).padStart(2,'0')).join('');
   const fail = error => { status.textContent=error.message;proof.errors.push(error.message);debug.open=true; };
-  const rpc=makeRpc(config.rpcUrl), palette=await(await fetch(config.paletteUrl)).json();
+  const rpc=makeRpc(config.rpcUrl), palette=config.palette??await(await fetch(config.paletteUrl)).json();
   const rgb=await validatePalette(palette,config.resourceIdentity,config.paletteKind??'wad');
   proof.paletteKind=palette.kind;proof.paletteSha256=palette.resourceIdentity.paletteSha256;
   let latestBlock=config.deploymentBlock;

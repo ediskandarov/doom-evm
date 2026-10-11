@@ -7,3 +7,6 @@ artifacts/local/
 web/config.local.json
 __pycache__/
 web/palette.local.json
+
+# Redistributable runtime payload staged by release packaging
+web/install-assets/*.wad
