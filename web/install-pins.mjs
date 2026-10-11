@@ -6,7 +6,7 @@ export default {
   "artifacts": {
     "Doom": {
       "url": "/install-assets/Doom.json",
-      "sha256": "1081aefddfc1b59f978c16cf7cac44d2259bc497d7bbe41cd25461d2c3338608"
+      "sha256": "984d4d71ecc9a02aff963d46c9b66eb9e16e0a07f242b7c1224dd5119c7d7187"
     },
     "ResourceStore": {
       "url": "/install-assets/ResourceStore.json",
@@ -18,15 +18,15 @@ export default {
     "src/doom/am_map_types.sol": "7347073682c367c15c918aa51ff924c664b6d05efdbf4f0392d4f404b31a9039",
     "src/doom/d_ticcmd.sol": "508d0332d3e8b83e1b68d37581a3befc100a9974fcaa0900cc44116cd75ff2ef",
     "src/doom/doomstat.sol": "4c40da3914c629017959a0a4c0516d83346900674c92f5e55a766aba1b506fea",
-    "src/doom/f_finale.sol": "a337e7c0b0d5c3fab8b98a40d67c29dd4f63e7ef0d47773d65879f8dc3111c8f",
-    "src/doom/g_game.sol": "ea632f47ca5904819dd0dc254fc547799b56696e08e37d96a503d71da145f89c",
+    "src/doom/f_finale.sol": "4e21a192b8adb1109b51493ab43e770bfc3393b085cf02df53ab589d21c81505",
+    "src/doom/g_game.sol": "fc8aaae0b28dee867499b8cef6ab32d69d900ba0526941cd74b0b73532178b7c",
     "src/doom/hu_lib.sol": "bf11331f06c38565650e93ce5ece611d048d5656ae2c8442b6568de5ce079a06",
     "src/doom/hu_stuff.sol": "fcf57390d8c8e6d5ec935164264870509bb64197179536a39cd2a14dddb9588e",
     "src/doom/info.sol": "4611205149173e42d3b0f1d91820c8042f6bc5fc48fb53aec84ad4bc501dca8e",
     "src/doom/m_bbox.sol": "f4c60efe3627a97d0288fc5cd0283535527b1f51029568534c80bb8fbbf8f272",
     "src/doom/m_cheat.sol": "e79d73bd9e159b0f05639464bf7c9cb7f40dc069780c3459336dfffb50394f82",
     "src/doom/m_fixed.sol": "3f64bef1f62f61faead3a5b8f382bf1c66e1b3739ce4ac8d59a6fcef0451ef9f",
-    "src/doom/m_menu.sol": "53396f97acb67d3a8233b5d5c64aba7b9bf8899e567981f646042d16924f4db1",
+    "src/doom/m_menu.sol": "f4d3c31acace804b478fbaab02032c1852082393c8b78c342c77213fd7a37558",
     "src/doom/m_random.sol": "5267b881138cfb7e0d683449005619513006c70e3ed557f64697b36c4ed40c7b",
     "src/doom/native_zone_layout.sol": "118b2d17165826fb0857d9cb296e2214db2a28917769299a82e70d0c0790f6e8",
     "src/doom/p_ceilng.sol": "696f3f620f5bddb3cea64fda824e3203c780f53db890630f0685794454dc37f9",
@@ -72,8 +72,8 @@ export default {
     "src/doom/v_video.sol": "be75fe69e7cd2486ce93408ec204cdf470ea097569e37fbedd867e9a2f3adf1f",
     "src/doom/v_video_types.sol": "266890b0c8003e89f78baf8415048d24e4ca14865a1c8518ad77bb6a9f6b4d35",
     "src/doom/w_zone_cache.sol": "03c07404765de9620b3d1ff15727809cdad911c8a78d822019b63500fa5018c2",
-    "src/doom/wi_stuff.sol": "a4290c7bef956c868d62ffc269e076e90cebb25ae9eb2143bf167c8cabb4a39e",
-    "src/doom/wi_stuff_types.sol": "7d7d56059e363e6311c693b0dde47fb5f10e7c27aaa903d20de2f9a7eaff9e60",
+    "src/doom/wi_stuff.sol": "d69db1200afb323308915cecc8b8b6c5bd08c996168b936d2f76dbd5b3a8c122",
+    "src/doom/wi_stuff_types.sol": "398e0d19affd77f4af91f9a4ffdc08f046b61151de26a9848b86127414ff6f88",
     "src/doom/z_zone.sol": "b4e75218021d65aaf3389cf78a68663feebc2084c82457821be17247dc8106c5",
     "src/doom/z_zone_backing.sol": "e63201d3bb45e4c8d0796480d4e9facd4deffd4d8a9dd730bed10ff4a108d0b1",
     "src/doom/z_zone_types.sol": "11ab3f95678ba3852ab5f0c2dc9e85e715bec6897e65f04cd1919bba9bb73dbd",
@@ -85,7 +85,7 @@ export default {
     "src/evm/DoomScene.sol": "9ad7c8ccee4c9e05deb5608326baabacfa40f686b8d8445fb8aaa7352ab64569",
     "src/evm/DoomUI.sol": "c2fa44363eeb962acabb51779fc780b8b6c5d46d5291448d44a585690e9ea9f9",
     "src/evm/DoomZoneStartup.sol": "2d178494456a7ae3c730310f257ce2aa635d37d18c90cac039cf002cdb3f50dc",
-    "src/evm/EpisodeRuntime.sol": "7be9205e74af487a1a2722d861465be5e5d155607221cfdf84178cc11680afa8",
+    "src/evm/EpisodeRuntime.sol": "a172a4204d537aab30a774ce3507bc46cfae3c3f162f4fe4b7a30df8e39329c2",
     "src/evm/EpisodeStartup.sol": "bb574f20cdc09e63385261f7e8e203a49a90a15b87903d70dfe43d396bc3255e",
     "src/evm/FrameProtocol.sol": "4665be3f613b8e817d616d2db1dc4a644325c44a6ade476a35d7d9d003625ace",
     "src/evm/InputProtocol.sol": "bd9df1b10f19be3754cef8efcdc109ce54228f4475c50b197cb32b5bab8a7808",

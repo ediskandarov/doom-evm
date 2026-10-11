@@ -28,17 +28,19 @@ export function expectedRuntime(artifact,driver){
  return '0x'+hex(runtime);
 }
 export class BrowserInstaller {
- constructor({storage=new InstallStorage(),onProgress=()=>{},rpcFactory=installerRpc,fetchArtifact=async url=>new Uint8Array(await(await fetch(url)).arrayBuffer())}={}){
-  this.storage=storage;this.onProgress=onProgress;this.rpcFactory=rpcFactory;this.fetchArtifact=fetchArtifact;this.stopped=false;this.profile=PROFILES[0];
+ constructor({storage=new InstallStorage(),onProgress=()=>{},rpcFactory=installerRpc,fetchArtifact=async url=>new Uint8Array(await(await fetch(url)).arrayBuffer()),release=pins,profiles=PROFILES,paletteUrl='/install-assets/palette.json'}={}){
+  this.storage=storage;this.onProgress=onProgress;this.rpcFactory=rpcFactory;this.fetchArtifact=fetchArtifact;this.release=release;this.profiles=profiles;this.paletteUrl=paletteUrl;this.stopped=false;this.profile=profiles[0];
  }
+ memoryPolicy(profile=this.profile){return profile.memoryProfile??profile.memoryPolicy;}
+ memoryPolicyAPI(){return this.profile.memoryStatusAPI??'resourceMemoryPolicy()';}
  progress(stage,completed=0,total=0){this.onProgress({stage,completed,total,address:this.journal?.game?.address});}
  async save(){await this.storage.write(this.key,this.journal);}
  async artifact(name){
-  const pin=pins.artifacts[name],bytes=await this.fetchArtifact(pin.url);
+  const pin=this.release.artifacts[name],bytes=await this.fetchArtifact(pin.url);
   if(await sha256(bytes)!==pin.sha256)throw Error(`Precompiled ${name} artifact authentication failed`);
   return JSON.parse(new TextDecoder().decode(bytes));
  }
- async connect(endpoint,profile=PROFILES[0]){
+ async connect(endpoint,profile=this.profiles[0]){
   this.url=localEndpoint(endpoint);this.rpc=this.rpcFactory(this.url);
   this.progress('Checking local Anvil');
   const [client,chainId,genesis,accounts,block,info]=await Promise.all([
@@ -50,13 +52,13 @@ export class BrowserInstaller {
   if(BigInt(await this.rpc('eth_getBalance',[accounts[0],'latest']))<10n**18n)throw Error('Development account needs at least 1 ETH');
   this.driver=accounts[0].toLowerCase();this.chain={chainId,genesisHash:genesis.hash,client,info};
   this.artifacts={Doom:await this.artifact('Doom'),ResourceStore:await this.artifact('ResourceStore')};
-  this.baseKey=[this.url,chainId,genesis.hash,this.driver,pins.artifacts.Doom.sha256].join('|');
+  this.baseKey=[this.url,chainId,genesis.hash,this.driver,this.release.artifacts.Doom.sha256].join('|');
   await this.selectProfile(profile);
   this.progress('Connected');return this.chain;
  }
  async selectProfile(profile){
-  if(!PROFILES.includes(profile))throw Error('Unknown IWAD profile');
-  this.profile=profile;this.key=this.baseKey+'|'+profile.id+'|memory='+profile.memoryPolicy;
+  if(!this.profiles.includes(profile))throw Error('Unknown IWAD profile');
+  this.profile=profile;this.key=this.baseKey+'|'+profile.id+'|memory='+this.memoryPolicy();
   await this.exclusive(async()=>{
    this.journal=await this.storage.read(this.key)??this.fresh();
    if(this.journal.schemaVersion!==1)throw Error('Unsupported installation journal');
@@ -64,7 +66,7 @@ export class BrowserInstaller {
    await this.reconcileChain();if(profile.available&&!this.journal.anchor&&!this.journal.pending)await this.discoverChain();
   });
  }
- fresh(){return {schemaVersion:1,profile:this.profile.id,memoryPolicy:this.profile.memoryPolicy,chain:this.chain,driver:this.driver,artifactSha256:pins.artifacts.Doom.sha256,resources:{},game:null,pending:null,receipts:[],resetCount:0};}
+ fresh(){return {schemaVersion:1,profile:this.profile.id,memoryPolicy:this.memoryPolicy(),chain:this.chain,driver:this.driver,artifactSha256:this.release.artifacts.Doom.sha256,resources:{},game:null,pending:null,receipts:[],resetCount:0};}
  async reconcileChain(){
   if(this.journal.anchor){
    const block=await this.rpc('eth_getBlockByNumber',[this.journal.anchor.number,false]);
@@ -111,12 +113,12 @@ export class BrowserInstaller {
       const code=await this.rpc('eth_getCode',[address,'latest']);
       chunks.push({address,digest:await sha256(unhex(code.slice(2)))});
      }
-     const paletteResponse=await fetch('/install-assets/palette.json');if(!paletteResponse.ok)throw Error('Release palette missing');
+     const paletteResponse=await fetch(this.paletteUrl);if(!paletteResponse.ok)throw Error('Release palette missing');
      const palette=await paletteResponse.json();
      const identity={schemaVersion:0,wadSha256:profile.wadSha256,bundleSha256:profile.bundleSha256,paletteSha256:'fd895921b5d0a394612bb29852ed003d44d69f76dec31c0dc6b5d5fc7d63f7bb',paletteVariant:0};
      if(await this.call(mined.contractAddress,'resourceIdentity()')!==this.identityData(identity))continue;
      const ready=BigInt(await this.call(mined.contractAddress,'menuMode()'))===1n;
-     if(ready&&Number(BigInt(await this.call(mined.contractAddress,'resourceMemoryPolicy()')))!==profile.memoryPolicy)continue;
+     if(ready&&Number(BigInt(await this.call(mined.contractAddress,this.memoryPolicyAPI())))!==this.memoryPolicy())continue;
      if(!ready&&this.journal.game&&BigInt(await this.call(this.journal.game.address,'menuMode()'))===1n)continue;
      this.journal.game={address:mined.contractAddress,transactionHash:tx.hash,deploymentBlock:mined.blockNumber,identity,chunks,palette:{...palette,resourceIdentity:identity}};
     }
@@ -137,7 +139,7 @@ export class BrowserInstaller {
   const identity=await this.call(game.address,'resourceIdentity()');
   if(identity!==this.identityData(game.identity))throw Error('Installed game resource identity mismatch');
   const ready=BigInt(await this.call(game.address,'menuMode()'))===1n;
-  if(ready&&Number(BigInt(await this.call(game.address,'resourceMemoryPolicy()')))!==this.profile.memoryPolicy)throw Error('Installed memory policy mismatch');
+  if(ready&&Number(BigInt(await this.call(game.address,this.memoryPolicyAPI())))!==this.memoryPolicy())throw Error('Installed memory policy mismatch');
   const receipt=await this.rpc('eth_getTransactionReceipt',[game.transactionHash]);
   if(!receipt||receipt.status!=='0x1'||receipt.contractAddress?.toLowerCase()!==game.address.toLowerCase())throw Error('Game deployment receipt unavailable or invalid');
   // Recheck every resource before declaring an installation usable.
@@ -184,7 +186,7 @@ export class BrowserInstaller {
     this.journal.game={address:receipt.contractAddress,transactionHash:receipt.transactionHash,deploymentBlock:receipt.blockNumber,identity:op.identity,chunks:op.chunks,palette:op.palette};
    }else if(op.kind==='initialize'){
     if(BigInt(await this.call(op.to,'menuMode()'))!==1n)throw Error('Menu initialization verification failed');
-    if(op.memoryPolicy!==undefined&&Number(BigInt(await this.call(op.to,'resourceMemoryPolicy()')))!==op.memoryPolicy)throw Error('Memory profile initialization verification failed');
+    if(op.memoryPolicy!==undefined&&Number(BigInt(await this.call(op.to,this.memoryPolicyAPI())))!==op.memoryPolicy)throw Error('Memory profile initialization verification failed');
    }
    this.journal.receipts.push({kind:op.kind,hash:receipt.transactionHash,blockNumber:receipt.blockNumber,blockHash:receipt.blockHash,gasUsed:receipt.gasUsed});
    this.journal.pending=null;await this.save();return receipt;
@@ -248,14 +250,15 @@ export class BrowserInstaller {
   const game=this.journal.game;
   if(BigInt(await this.call(game.address,'menuMode()'))!==1n){
    this.progress('Initializing EVM menu');
-   await this.send({kind:'initialize',memoryPolicy:profile.memoryPolicy,to:game.address,data:'0x'+this.artifacts.Doom.methods['initializeMenuWithPolicy(bool,uint8)']+word(0)+word(profile.memoryPolicy)});
+   const signature=profile.initializationAPI??'initializeMenuWithPolicy(bool,uint8)';
+   await this.send({kind:'initialize',memoryPolicy:this.memoryPolicy(),to:game.address,data:'0x'+this.artifacts.Doom.methods[signature]+word(0)+word(this.memoryPolicy())});
   }
   const verified=await this.discover();if(!verified.installed)throw Error('Installation verification failed');
   return this.configuration(game);
  }
  configuration(game=this.journal.game){
   if(!game)throw Error('Install a game first');
-  return {profile:this.profile.id,gameName:this.profile.name,memoryPolicy:this.profile.memoryPolicy,rpcUrl:this.url,wsUrl:this.url.replace('http:','ws:'),address:game.address,driver:this.driver,deploymentBlock:game.deploymentBlock,resourceIdentity:game.identity,palette:game.palette,paletteKind:'wad',gasLimit:INSTALL_GAS,rendererKind:'doom-world-view',gameplay:true,productionUI:true,rawKeyboard:true,episodeMode:true,menuMode:true,uiFullscreen:false};
+  return {profile:this.profile.id,gameName:this.profile.name,memoryPolicy:this.memoryPolicy(),rpcUrl:this.url,wsUrl:this.url.replace('http:','ws:'),address:game.address,driver:this.driver,deploymentBlock:game.deploymentBlock,resourceIdentity:game.identity,palette:game.palette,paletteKind:'wad',gasLimit:INSTALL_GAS,rendererKind:'doom-world-view',gameplay:true,productionUI:true,rawKeyboard:true,episodeMode:true,menuMode:true,uiFullscreen:false};
  }
  async exclusive(task){
   if(!globalThis.navigator?.locks)throw Error('Browser Web Locks support is required to prevent concurrent installers');

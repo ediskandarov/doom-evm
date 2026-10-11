@@ -5,10 +5,11 @@ import {createHash} from 'node:crypto';
 import {execFileSync} from 'node:child_process';
 import {resolve} from 'node:path';
 const sha=b=>createHash('sha256').update(b).digest('hex');
+const compiled=resolve(process.argv[2]??'artifacts/local/doom2/production');
 const pins={schemaVersion:1,profile:'doom2',memoryProfile:3,initializationAPI:'initializeMenuWithMemoryProfile(bool,uint8)',compiler:'0.8.37',evmVersion:'cancun',artifacts:{},sources:{}};
 await mkdir('web/doom2-assets',{recursive:true});
 for(const [name,source] of [['Doom','Doom2'],['ResourceStore','ResourceStore']]){
- const artifact=JSON.parse(await readFile(`artifacts/local/doom2/production/out/${source}.sol/${source}.json`));
+ const artifact=JSON.parse(await readFile(`${compiled}/out/${source}.sol/${source}.json`));
  const metadata=typeof artifact.metadata==='string'?JSON.parse(artifact.metadata):artifact.metadata;
  if(!metadata.compiler.version.startsWith(pins.compiler)||metadata.settings.evmVersion!=='cancun'||!metadata.settings.viaIR||metadata.settings.optimizer.runs!==200)throw Error('Compiler policy mismatch');
  for(const [path,identity] of Object.entries(metadata.sources)){

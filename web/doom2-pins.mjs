@@ -9,7 +9,7 @@ export default {
   "artifacts": {
     "Doom": {
       "url": "/doom2-assets/Doom.json",
-      "sha256": "281c981c1e2f2bc4a2fa4a95439369a0ba6f69f781e718cfa47fd5bcfcb5779e",
+      "sha256": "8d0eb2da8ce374c17a7a29d375ce111309b5e0f4747d7234ef5f468d9b76a15b",
       "runtimeBytes": 851408
     },
     "ResourceStore": {

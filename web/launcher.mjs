@@ -1,6 +1,7 @@
 // SPDX-License-Identifier: GPL-2.0-only
-import {BrowserInstaller,localEndpoint} from './install-engine.mjs';
-import {PROFILES,prepareResources,authenticateIWAD} from './install-resources.mjs';
+import {localEndpoint} from './install-engine.mjs';
+import {authenticateIWAD} from './install-resources.mjs';
+import {GAME_PROFILES as PROFILES,prepareGameResources as prepareResources,createGameInstaller} from './browser-profiles.mjs';
 import {openMenu} from './menu-app.mjs';
 export async function openLauncher(){
  const launcher=document.querySelector('#launcher'),status=document.querySelector('#install-status'),connection=document.querySelector('#connection'),profileSelect=document.querySelector('#game-profile'),file=document.querySelector('#iwad'),install=document.querySelector('#install'),play=document.querySelector('#play'),connect=document.querySelector('#connect'),pause=document.querySelector('#install-pause'),progress=document.querySelector('#install-progress'),endpoint=document.querySelector('#rpc-endpoint');
@@ -8,12 +9,13 @@ export async function openLauncher(){
  document.title='DOOM on EVM · Game launcher';
  const proof=window.__installationProof={connected:false,installed:false,events:[],errors:[]};
  let selected=PROFILES[0],resources,busy=false,connected=false,installed=false;
- const installer=new BrowserInstaller({onProgress:event=>{
+ const onProgress=event=>{
   proof.events.push(event);if(proof.events.length>2500)proof.events.shift();
   status.textContent=event.stage+(event.total?` · ${event.completed} / ${event.total}`:'');
   progress.hidden=!event.total;if(event.total){progress.max=event.total;progress.value=event.completed;}
- }});
- window.installationClient={installer,get resources(){return resources;},prepare:prepareResources,profiles:PROFILES};
+ };
+ let installer=createGameInstaller(selected,{onProgress});
+ window.installationClient={get installer(){return installer;},get resources(){return resources;},prepare:prepareResources,profiles:PROFILES};
  const controls=()=>{
   connect.disabled=busy;endpoint.disabled=busy;profileSelect.disabled=busy;file.disabled=busy;
   file.hidden=!!selected.url;document.querySelector('#iwad-label').hidden=file.hidden;
@@ -25,18 +27,19 @@ export async function openLauncher(){
  const task=async run=>{busy=true;controls();try{await run();}catch(error){fail(error);}finally{busy=false;controls();}};
  for(const p of PROFILES){const option=document.createElement('option');option.value=p.id;option.textContent=p.name+(p.available?'':' — unavailable');profileSelect.append(option);}
  const choose=()=>{
-  selected=PROFILES.find(p=>p.id===profileSelect.value);resources=null;file.value='';
+  selected=PROFILES.find(p=>p.id===profileSelect.value);sessionStorage.setItem('doom-evm-selected-game',selected.id);proof.profile=selected.id;resources=null;file.value='';
   installed=false;proof.installed=false;proof.localIWAD=null;
-  document.querySelector('#profile-note').textContent=selected.available?'Episode One · original EVM menu and gameplay':selected.reason;
+  document.querySelector('#profile-note').textContent=selected.id==='doom2'?'MAP01–MAP32 · original EVM menu and gameplay':selected.available?'Episode One · original EVM menu and gameplay':selected.reason;
   status.textContent=selected.available?(installed?'Installation verified. Ready to play.':'Connect to your local Anvil, then install.'):'Profile unavailable. You can check a local IWAD identity.';
   controls();
  };
  profileSelect.addEventListener('change',()=>{choose();if(connected)task(async()=>{
-  await installer.selectProfile(selected);
+  installer=createGameInstaller(selected,{onProgress});await installer.connect(endpoint.value,selected);
   const found=await installer.exclusive(()=>installer.discover());
   installed=found.installed;proof.installed=installed;proof.discovery=found;
   status.textContent=installed?'Installation verified. Ready to play.':`No complete installation.${found.partial?` ${found.partial} reusable resources found.`:''}`;
- });});choose();
+ });});
+ profileSelect.value=PROFILES.find(p=>p.id===sessionStorage.getItem('doom-evm-selected-game'))?.id??PROFILES[0].id;choose();
  file.addEventListener('change',()=>task(async()=>{
   const local=file.files[0];if(!local)return;
   // File API bytes stay in browser memory and are never sent to a server.
@@ -49,7 +52,7 @@ export async function openLauncher(){
  }));
  connect.addEventListener('click',()=>task(async()=>{
   connected=false;installed=false;proof.connected=false;proof.installed=false;
-  localEndpoint(endpoint.value);await installer.connect(endpoint.value,selected);
+  localEndpoint(endpoint.value);installer=createGameInstaller(selected,{onProgress});await installer.connect(endpoint.value,selected);
   const found=await installer.exclusive(()=>installer.discover());
   connected=true;installed=found.installed;proof.connected=true;proof.installed=installed;proof.discovery=found;proof.chain=installer.chain;
   connection.textContent='Connected to local Anvil · 31337 · Cancun';
@@ -75,8 +78,17 @@ export async function openLauncher(){
    // The original menu client exclusively owns gameplay inputs and presentation.
    launcher.hidden=true;document.querySelector('#frame').hidden=false;
    await openMenu(config);
+   document.querySelector('#change-game').hidden=false;
   });
  }));
+ document.querySelector('#change-game').addEventListener('click',async()=>{
+  const button=document.querySelector('#change-game');button.disabled=true;
+  window.fixtureClient?.stopGame();
+  while(window.fixtureClient?.transactions.pending)await new Promise(done=>setTimeout(done,20));
+  // Reload disposes the raw input loop, keyboard bindings and subscriptions.
+  // Contract state/journals persist; selecting another game never reuses this client.
+  location.reload();
+ });
  controls();
  // Explicit connection is required. Never auto-connect to wallets or networks.
 }
