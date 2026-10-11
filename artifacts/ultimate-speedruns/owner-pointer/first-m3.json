@@ -1,0 +1,61 @@
+{
+  "map": "E1M3",
+  "tic": 923,
+  "frame": {
+    "tic": 923,
+    "frameId": "923",
+    "file": "frames/frame-000923.indexed8",
+    "virtualSamples": [
+      {
+        "sourceBlock": 1633,
+        "physicalOffset": 3763387,
+        "headerBlock": 1634,
+        "headerOffset": 3763376,
+        "relative": 11,
+        "fieldOffset": 8,
+        "targetOffset": 11800,
+        "virtualPointer": "0x0000002000002e18",
+        "sourceByte": 0,
+        "drawnPixel": 0,
+        "x": 99,
+        "y": 112,
+        "sampleIndex": 1395,
+        "logicalLength": 1384,
+        "sourceOffset": 1268,
+        "provenance": 5,
+        "ownerSlotIndex": 1475,
+        "addressDomain": "authenticated-lumpcache-owner",
+        "pointerBytesLittleEndian": "182e000020000000",
+        "finalPixel": 0,
+        "drawnValueSurvives": true
+      }
+    ],
+    "indexed8Sha256": "ed2a8572146a31aa34faaef84016b8c854b7010ca00c8cafd570cc958371c5cf",
+    "transactionHash": "0xaaa906f59dcda44bc90f5b24c50deec250c5b053af5a5901dc5a462022b94246",
+    "blockNumber": "0xa2c",
+    "gas": 1049377218,
+    "elapsedMs": 999.5374159999192,
+    "renderGas": 817975351,
+    "beforeStateSha256": "4d3c3c50700cff213f47bd50c8f1a4415504a4e02af74d8b9d9ee057adbd8bb6",
+    "renderedMemoryStateSha256": "53b47846b30103bc5e1aa4d4cfad08cb602364d845863dca7bb9176d349d171a",
+    "validBefore": 35789,
+    "validAfter": 35790,
+    "mappedBefore": 0,
+    "mappedAfter": 36,
+    "savedStateUnchanged": true,
+    "savedDigest": "0x24f1f38138efa217927fe018599e0a3fd2290f029957c06dcc96690f40edef49",
+    "displayStartSeconds": 26.34285714285714,
+    "durationTics": 1,
+    "durationSeconds": 0.02857142857142857
+  },
+  "commonNativePixelsOutsideVirtualExact": 63999,
+  "nativeFinalPixel": {
+    "O2": 2,
+    "O0": 238,
+    "sanitize": 0
+  },
+  "EVMFinalPixel": 0,
+  "all922PreviouslyRenderedHashesPreserved": true,
+  "nativeFrameReportSHA256": "54408b8cd3ef8c2a3a523db16bfbd9bab89eadeb4ce42487739afb51b7099c2f",
+  "limits": "One virtual owner byte3; EVM matches sanitizer at that pixel and differs from O0/O2 process-dependent addresses. This is virtual, not native-equivalent pointer reconstruction. Partial checkpoint evidence, not complete recording acceptance."
+}
