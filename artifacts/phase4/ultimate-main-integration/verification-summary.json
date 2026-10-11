@@ -1,0 +1,52 @@
+{
+  "kind": "ultimate-episode-source-main-integration",
+  "pass": true,
+  "baseline": "51e879247bb3d6d809af8a0516a097f71c3d0756",
+  "sourceTip": "612d4d45b20e9266a7d0fae81d3b1d5f3de6c68b",
+  "mergeCommit": "9728f122b0b4c2f3d14e6297db112ccb950790f4",
+  "strategy": "Normal no-ff merge of direct-descendant feature;46 intended new commits;no conflicts",
+  "fresh": {
+    "affectedBuildRoots": 4,
+    "forgeTestsPassed": 18,
+    "fuzzCasesPerTest": 256,
+    "fuzzTests": 2,
+    "pythonCheckpointGuards": 3,
+    "pythonSyntaxFiles": 41,
+    "nodeSyntaxFiles": 8,
+    "isolatedComponentEVM": true,
+    "fullStorageRollback": true,
+    "productionABIUnchanged": true,
+    "sourceDeliveredBlobsPreserved": 256,
+    "videoSHA256SizeMtimeUnchanged": 14
+  },
+  "inherited": {
+    "maps": 9,
+    "frames": 14475,
+    "gameplaySnapshots": 14484,
+    "genuineExits": 9,
+    "focusedForge": 44,
+    "allPrior6051FrameHashesUnchanged": true,
+    "FreedoomFrames": 279,
+    "FreedoomSnapshots": 280,
+    "nativeVerdict": "RESTRICT",
+    "RelaxedImplemented": false
+  },
+  "presentationStatus": "Ultimate Episode gameplay/full-rate world rendering complete. Final presentation recording pipeline pending: EVM status bar, original intermission, and EVM melt transitions.",
+  "followUpImplemented": false,
+  "deferred": [
+    "14,475-frame replay",
+    "nine MP4 regeneration",
+    "complete native compiler matrix",
+    "full browser/Phase0\u20134 acceptance",
+    "EVM status/WI/finale recording adaptation",
+    "original EVM melt wipe",
+    "independent presentation frame/timing ledger"
+  ],
+  "startedUTC": "2026-10-11T08:20:28Z",
+  "verificationCheckpointUTC": "2026-10-11T08:32:31Z",
+  "availableUsageCheckpoint": {
+    "aggregateTokens": 100920,
+    "goalElapsedSeconds": 705
+  },
+  "publicationPendingAtCheckpoint": true
+}

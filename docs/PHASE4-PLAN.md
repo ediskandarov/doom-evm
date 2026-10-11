@@ -1,5 +1,15 @@
 # Phase 4 progress ledger
 
+Ultimate Episode checkpoint (2026-10-11): **world-rendering source integrated;
+final presentation pending.**
+
+> Ultimate Episode gameplay/full-rate world rendering complete. Final presentation recording pipeline pending: EVM status bar, original intermission, and EVM melt transitions.
+
+The accepted nine-map evidence and historical technical MP4s are preserved.
+Experimental owner/zone pointers remain explicitly opt-in; native compatibility
+remains RESTRICT. See the final source-integration entry for fresh checks,
+reusable UI/gameflow entry points and the separately authorized recording boundary.
+
 Virtual pointer + EVM menu checkpoint (2026-10-10): **both features integrated
 and focused-verified on main**. The normal browser starts in the EVM menu;
 New Game, five skills, direct E1M1–E1M9 selection and Escape/Resume retain their
@@ -1619,3 +1629,154 @@ tokens and573 elapsed seconds. Documentation/publication follow that checkpoint;
 missing cost/usage breakdowns are not estimated. Stop after committing this
 integration record, normal push and clean main/origin synchronization; no later
 feature or memory investigation is started.
+
+## Ultimate Episode speedruns — Source integration (2026-10-11)
+
+> Ultimate Episode gameplay/full-rate world rendering complete. Final presentation recording pipeline pending: EVM status bar, original intermission, and EVM melt transitions.
+
+Implementation and source integration are complete for the declared experimental
+world-rendering domain. Final presentation recording and complete Phase0–4
+acceptance remain pending. The nine current MP4s are historical technical
+recordings, not final publication deliverables.
+
+Baseline: clean main/origin `51e879247bb3d6d809af8a0516a097f71c3d0756`, refreshed
+and synchronized by fast-forward-only preflight. Actual source tip:
+`612d4d45b20e9266a7d0fae81d3b1d5f3de6c68b`, branch
+`feat/ultimate-episode-speedruns`. Main was its direct ancestor; all46 new,
+intended infrastructure/experiment/evidence commits were integrated once with
+normal `--no-ff` merge `9728f122b0b4c2f3d14e6297db112ccb950790f4`.
+The exact source list and256 delivered blob identities are in
+[preflight evidence](../artifacts/phase4/ultimate-main-integration/preflight.json).
+No merge conflicts or integration code corrections occurred. Key source commits:
+`14a997a` owner-slot compatibility, `761f873` reusable owner suite,
+`5290a70` nine-map acceptance, and `612d4d4` frozen-evidence reverification guard.
+Earlier related acquisition/native-domain/recording checkpoints, failures and
+partial results remain in their original history; no already integrated changes
+were cherry-picked again and no feature branch was rewritten.
+
+### Memory compatibility and preserved evidence
+
+Shared engine changes are confined to `z_zone_virtual.sol` and
+`z_zone_backing.sol`: an authenticated `lumpcache[]` owner-slot domain at
+`0x0000002000000000`, LP64 stride8, provenance5. The existing explicit experimental
+bit, current topology, allocated ZONEID, matched catalog/cache lengths, in-range
+owner and reciprocal current `ownerBlocks` identity gate admission. Existing
+provenance0–4 retains precedence; retired, stale, composite and arbitrary external
+owners remain unsupported. The owner-slot address is distinct from its stored
+payload pointer. No map/tic/pixel-specific substitution, relaxed rendering or
+DrawBounds/unknown-byte guard weakening was introduced.
+
+Strict, deterministic and Episode policies and all defaults remain unchanged.
+The video/support adapters select experimental mode only with explicit profile3;
+default profile1 and the production Doom/EVM menu remain unchanged. There is no
+production Ultimate resource/UI wiring in this integration. Allocator algorithms,
+shared state layouts, production ABI, browser/Frame protocols, original C,
+fixtures, native goldens, compiler/hardfork/budgets and earlier certificates are
+preserved. Experimental category4/5 pixels remain deterministic extensions,
+never actual native address-placement equivalence; **RESTRICT** remains the verdict.
+E1M3 stair type/crush and E1M5 platform-low observations require the named
+initial-zero native allocation profile; their alternate-fill failed gates remain
+failed. The faster E1M8 intercept-overflow tape remains incompatible; the verified
+Sedlo tape and preserved native-domain limitations were not changed.
+
+Inherited, accepted source evidence: nine authentic tapes/genuine completions,
+14,475 EVM gameplay frames/tics,14,484 exact whole snapshots,35FPS/4:3 media,
+20 virtual-zone and18 virtual-owner uses,926,399,962 common-native pixels outside
+virtual destinations, all6,051 previous frame hashes/provenance unchanged,
+all four earlier partial-prefix regressions and Freedoom279-frame/280-world
+regression. Per-map manifests retain exact WAD/tape/source/runtime/receipt/media
+identities and measured costs. See [owner episode report](ULTIMATE-OWNER-EPISODE.md),
+[episode manifest](../artifacts/ultimate-speedruns/owner-pointer/episode-summary.json)
+and [media regression](../artifacts/ultimate-speedruns/owner-pointer/media-regression.json).
+These full native/EVM/media execution gates were inherited, not rerun.
+
+Nine current and five earlier MP4 hashes, lengths and modification times were
+checked read-only before and after integration. Files remain in the source
+owner's `/Users/eduard/sandbox/doom-evm-ultimate-speedruns/artifacts/local/ultimate-speedruns`
+tree at the manifest paths (including the E1M8 Sedlo alternative). Git preserves
+metadata/proofs, not commercial IWAD/artwork/full receipt/frame/video payloads;
+Git alone cannot restore those ignored assets. No MP4 was copied into Git,
+regenerated, overwritten or deleted; no accepted indexed hash was modified.
+
+### Fresh integration verification
+
+Fresh evidence is separate in
+[the integration certificate](../artifacts/phase4/ultimate-main-integration/integration.json).
+
+- Build passed for production Doom, UltimateSpeedrunProbe, EpisodeSpeedrunProbe
+  and ResourceStore:83 affected files,222.040s, unchanged solc0.8.37/viaIR/
+  optimizer200/Cancun settings. Runtime sizes853,325/495,731/495,732/57 bytes are
+  inside the unchanged development code-size policy.
+- Focused Forge:18 passed,0 failed/skipped (7 owner-slot,8 existing virtual-zone,
+  3 existing tic52 rejection; both fuzz tests ran256 cases each). Tests exercise the changed owner-address/
+  provenance/current-lifetime/storage boundary, existing virtual-zone behavior,
+  and unchanged Strict/deterministic/Episode tic52 rejection.
+- Recording checkpoint guards:3 passed, covering unpublished future checkpoint
+  retention, corrupt-head refusal and relocated hash-bound recovery. Changed
+  tools parse:41 Python AST files and8 Node modules passed.
+- Ordinary isolated EVM component smoke:ordinary CREATE,
+  eight LE64 owner bytes at `0x0000002000000010` with provenance5, persisted
+  readback, full storage-root/digest/provenance rollback on failed DrawBounds
+  transaction and zero failure logs all passed. The source-owned synthetic
+  owner fixture is a component proof, not another commercial map/resource replay.
+- Git/evidence integrity:all46 source commits are ancestors of main; all256 source
+  delivered files match exact source-tip blobs; nine committed per-map report
+  hashes/counts/completions and implementation source bindings match. Existing
+  protected production/browser/resource/test/evidence paths are unchanged.
+
+No14,475-frame rerun, nine-MP4 regeneration, native compiler matrix, full browser
+or historical Phase0–4 acceptance ran. No new runtime limit, feature, renderer,
+production memory default or presentation placeholder was added. The first owned smoke launch failed on mutually exclusive Anvil CLI flags;
+its preserved helper-only attempt was corrected without engine/test changes. Only owned
+Anvil19021 was used and stopped; reserved18880/8088 and other owners' processes
+were untouched. The source branch/worktree and local technical media received
+no integrator writes. Detailed executed commands, source/hash checks, measured
+logs and inherited-versus-fresh scopes are retained separately.
+
+### Reusable presentation entry points (read-only inventory)
+
+| Capability | Existing EVM entry points | Recording boundary |
+|---|---|---|
+| Classic status bar, health/armor/ammo/weapons/keys/face and palette | `DoomUI.initialize/restart/tick/drawStatus/drawHUD`; `ST_Init/ST_Start/ST_Ticker/ST_Drawer/ST_doPaletteStuff` | Use the existing non-fullscreen320x200 screen with `DoomGame.render(c,10)` (320x168 world plus32-pixel bar), authenticated original UI assets and persisted widget/face history. Current technical probe uses default view11/fullscreen and no ST/HU tickers. |
+| Genuine completion and original statistics | `G_Game.G_DoCompleted`; `WI_Stuff.WI_Start/WI_Ticker/WI_Drawer`; `EpisodeRuntime.tick/draw` | Completion builds kills/items/secrets/time and original PAR from EVM state into `wminfo`; reuse original counter/acceleration/next-location phases, without host statistics or fabricated completion. |
+| E1M8 and secret routing | `G_DoCompleted/G_WorldDone/G_DoWorldDone`; `F_StartFinale/F_Ticker/F_Drawer` | Map8 queues victory/finale instead of ordinary WI; genuine secret exits target E1M9, whose normal exit returns E1M4. Future recording must follow actual gameflow, not invent another level. |
+| Indexed pixels, palette and encoding | Existing `Frame`/`FramePalette`, `VideoState.screens[0..4]`, authenticated `ResourceView`, recorder manifests/35Hz codec clock | Browser/encoder may present EVM indexes/palette only. Maintain4:3 display, authentic tapes and separate gameplay/wipe/WI/finale frame accounting. |
+
+**Missing:** there is no Solidity `f_wipe` or EVM
+`wipe_StartScreen/wipe_EndScreen/wipe_ScreenWipe`. `wipegamestate` is only a
+marker. Pinned `f_wipe.c` captures start/end buffers in screens2/3, transforms
+short pairs into column-major two-pixel slices, uses uneven `M_Random` delays,
+then falls by `y+1` below16 and8 rows per tick, clipped at screen height.
+Original `D_Display` advances its wipe using `I_GetTime` deltas, with no
+`G_Ticker/P_Ticker` in that loop; menus draw over the wipe. This source was read,
+not ported or executed during integration.
+
+The current probe's `advance()` uses `DoomGame.tick`, refuses pending gameactions,
+and `capture()` calls world-only `DoomGame.render` on a temporary copy. A separate
+recording adapter still needs persistent UI/gameflow, EVM wipe state/buffers,
+completion/finale sequencing and a distinct presentation clock. `EpisodeRuntime`
+increments global gametic across game states; additional WI/finale updates must
+not be reported as extra gameplay tics. Wipe frames must not advance gameplay.
+
+Keep declared profile limits: UI borrows authenticated immutable assets;
+pinned `WI_drawAnimatedBack` preserves C's unconditional `if (commercial) return`,
+so counters/RNG advance but visible animated backgrounds are absent in that
+profile. Production Doom/EpisodeStartup remain Freedoom-pinned; separate
+UltimateStartup/UltimateWadResources admit the exact Ultimate IWAD. Future reuse
+must retain that authenticated boundary and existing native/virtual distinctions.
+
+The separately authorized follow-up must record gameplay with the original EVM
+status bar, genuine post-level statistics/finale and EVM melt/end transitions,
+with source-faithful timing and native/virtual pixel labels. No HTML/Canvas,
+ffmpeg or CSS scene/status/wipe rendering, placeholder transition, host-computed
+stats or invented next-level progression is permitted. Preserve all nine current
+technical videos, tapes, snapshots, accepted indexed hashes and manifests;
+write future publication attempts separately. This integration implements none
+of those presentation features and regenerates no MP4.
+
+Measured integration start:2026-10-11 08:20:28 UTC. Verification/end checkpoint
+and available goal-service attribution:2026-10-11 08:32:31 UTC;100,920 aggregate
+tokens and705 goal-service elapsed seconds. Publication follows that
+checkpoint; missing costs/usage breakdowns are not estimated. Stop after normal
+push, clean tree and main/origin synchronization. Enhanced final recordings
+require a separately authorized follow-up Goal and were not started here.

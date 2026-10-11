@@ -1,0 +1,11 @@
+{
+  "integrationHelperAttempts": [
+    {
+      "name": "owner EVM runtime attempt1",
+      "result": "Anvil did not start successfully; no CREATE/engine calls",
+      "reason": "Installed Anvil rejects combining --disable-block-gas-limit with --gas-limit. Corrected helper retains explicit10B gas limit and all other limits.",
+      "productionOrSourceTestChanges": false
+    }
+  ],
+  "firstAttemptRecordNote": "First run command recorder shared owner-evm.json with the runner; command metadata was preserved before retry, and raw runner failure remains in owner-evm-attempt1.log. Final command and EVM report have distinct names."
+}

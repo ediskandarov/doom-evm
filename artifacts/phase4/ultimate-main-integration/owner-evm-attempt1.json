@@ -1,0 +1,10 @@
+{
+  "command": [
+    "node",
+    "artifacts/local/ultimate-main-integration/owner-evm.mjs"
+  ],
+  "startedUTC": "2026-10-11T08:31:52.718691+00:00",
+  "exitCode": 1,
+  "elapsedSeconds": 0.074,
+  "endedUTC": "2026-10-11T08:31:52.792778+00:00"
+}

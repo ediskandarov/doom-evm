@@ -1,0 +1,30 @@
+{
+  "command": [
+    ".toolchain/bin/forge",
+    "test",
+    "--match-path",
+    "test/unit/{VirtualOwnerPointers,VirtualPointers,SpeedrunTic52Backing}.t.sol",
+    "--skip",
+    "Doom.sol",
+    "--skip",
+    "UltimateSpeedrunProbe",
+    "--skip",
+    "EpisodeSpeedrunProbe",
+    "--skip",
+    "GameplayProbe",
+    "--skip",
+    "RendererProbe",
+    "--skip",
+    "WadResourcesProbe",
+    "--skip",
+    "ProductionUI.t.sol",
+    "--skip",
+    "DoomRenderer.t.sol",
+    "--offline",
+    "-vv"
+  ],
+  "startedUTC": "2026-10-11T08:27:45.349340+00:00",
+  "exitCode": 0,
+  "elapsedSeconds": 171.723,
+  "endedUTC": "2026-10-11T08:30:37.073098+00:00"
+}

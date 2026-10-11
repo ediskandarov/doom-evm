@@ -1,0 +1,71 @@
+{
+  "kind": "focused-owner-provenance-component-evm",
+  "pass": true,
+  "startedUTC": "2026-10-11T08:32:10.484Z",
+  "port": 19021,
+  "transactions": [
+    {
+      "type": "0x2",
+      "status": "0x1",
+      "cumulativeGasUsed": "0x593063",
+      "logs": [],
+      "logsBloom": "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "transactionHash": "0x05d53beb14939825fb7d86c03e9ce8e60cc9dccd78dbcffd310cc3446ecd5535",
+      "transactionIndex": "0x0",
+      "blockHash": "0x030c0454bff462396301644291047515654bdb36871c90b1c435fb4991981dd9",
+      "blockNumber": "0x1",
+      "gasUsed": "0x593063",
+      "effectiveGasPrice": "0x77359400",
+      "from": "0xf39fd6e51aad88f6f4ce6ab8827279cfffb92266",
+      "to": null,
+      "contractAddress": "0x5fbdb2315678afecb367f032d93f642f64180aa3",
+      "blockTimestamp": 1791707530
+    },
+    {
+      "type": "0x2",
+      "status": "0x0",
+      "cumulativeGasUsed": "0x4d150",
+      "logs": [],
+      "logsBloom": "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "transactionHash": "0xc524f11535d5f246daae246c4cb0d98cde1d94bb2d5df335d47e242548b466eb",
+      "transactionIndex": "0x0",
+      "blockHash": "0x1c6dfc925ee4cc55293d2f676fa6d31ffbc5be02fe2d0e8eec2ed82f8f942509",
+      "blockNumber": "0x2",
+      "gasUsed": "0x4d150",
+      "effectiveGasPrice": "0x6fc47590",
+      "from": "0xf39fd6e51aad88f6f4ce6ab8827279cfffb92266",
+      "to": "0x5fbdb2315678afecb367f032d93f642f64180aa3",
+      "contractAddress": null,
+      "blockTimestamp": 1791707530
+    }
+  ],
+  "scope": "Synthetic source-owned owner fixture, ordinary CREATE and storage round-trip/DrawBounds rollback; not a replay or new commercial-resource admission proof.",
+  "runtime": {
+    "args": [
+      "--host",
+      "127.0.0.1",
+      "--port",
+      "19021",
+      "--hardfork",
+      "cancun",
+      "--disable-code-size-limit",
+      "--gas-limit",
+      "10000000000",
+      "--memory-limit",
+      "1073741824",
+      "--silent"
+    ],
+    "address": "0x5fbdb2315678afecb367f032d93f642f64180aa3",
+    "runtimeBytes": 24271,
+    "runtimeSha256": "2b7d35db8714a3fe422e13f220f4935e08a7e90c0be0c22c91f891cdd871f7b0"
+  },
+  "ownerAddress": "0x0000002000000010",
+  "provenance": 5,
+  "ownerBytesLE": "1000000020000000",
+  "allSavedFieldsAndProvenanceUnchanged": true,
+  "fullStorageRootRollback": true,
+  "noFailureLogs": true,
+  "ownedRuntimeStopped": true,
+  "endedUTC": "2026-10-11T08:32:10.614Z",
+  "stderr": ""
+}

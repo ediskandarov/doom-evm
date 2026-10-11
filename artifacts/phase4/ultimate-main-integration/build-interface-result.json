@@ -1,0 +1,151 @@
+{
+  "Doom": {
+    "runtimeBytes": 853325,
+    "methodIdentifiers": {
+      "automapDiscovery()": "de271bde",
+      "automapMark(uint8)": "21508164",
+      "automapStatus()": "1581fb2e",
+      "cheatSequence(uint8)": "848fcfd9",
+      "cheatStatus()": "5e2ffcdd",
+      "driver()": "6ecc5d62",
+      "episodeMode()": "094bd674",
+      "episodeStatus()": "b496ea18",
+      "frameId()": "37487efb",
+      "gameStarted()": "5e123ce4",
+      "gameStatus()": "722fed7e",
+      "initializeEpisode(int32,int32,bool)": "da2ebb7a",
+      "initializeGame()": "a0a1f49b",
+      "initializeGameInput(bool)": "c81d0ef4",
+      "initializeGameStrict()": "3b833d62",
+      "initializeGameUI(bool)": "af544bfc",
+      "initializeMenu(bool)": "4d55b9e0",
+      "inputSeq()": "3464285a",
+      "menuMode()": "10acb777",
+      "menuStatus()": "7df5b919",
+      "newEpisodeGame(int32,int32,uint32)": "25729a0f",
+      "playerInventory()": "67af0952",
+      "playerView()": "3db4f035",
+      "rawInput()": "e525d492",
+      "renderFrame()": "09246275",
+      "resourceIdentity()": "7ffcc4b7",
+      "restartEpisode(uint32)": "6fcaecbb",
+      "setEpisodePaused(bool,uint32)": "b4218932",
+      "setUIFullscreen(bool)": "f34bf8ed",
+      "step(uint32,uint32)": "66c324a3",
+      "stepAndRender(uint32,uint32)": "18e65d56",
+      "stepEvents(bytes,uint32)": "b3041722",
+      "stepEventsAndRender(bytes,uint32)": "9a5b61ba",
+      "uiStatus()": "b22c33f8"
+    },
+    "compiler": {
+      "version": "0.8.37+commit.f401782d"
+    },
+    "settings": {
+      "remappings": [],
+      "optimizer": {
+        "enabled": true,
+        "runs": 200
+      },
+      "metadata": {
+        "bytecodeHash": "ipfs"
+      },
+      "compilationTarget": {
+        "src/evm/Doom.sol": "Doom"
+      },
+      "evmVersion": "cancun",
+      "libraries": {},
+      "viaIR": true
+    }
+  },
+  "UltimateSpeedrunProbe": {
+    "runtimeBytes": 495731,
+    "methodIdentifiers": {
+      "advance(bytes)": "8227531f",
+      "capture(uint32)": "872aca2d",
+      "driver()": "6ecc5d62",
+      "frameId()": "37487efb",
+      "initialize()": "8129fc1c",
+      "initializeMap(uint8,int32,int32,bool)": "cc6f329f",
+      "initialized()": "158ef93e",
+      "resourceIdentity()": "7ffcc4b7",
+      "savedDigest()": "20688d22",
+      "snapshot()": "9711715a"
+    },
+    "compiler": {
+      "version": "0.8.37+commit.f401782d"
+    },
+    "settings": {
+      "remappings": [],
+      "optimizer": {
+        "enabled": true,
+        "runs": 200
+      },
+      "metadata": {
+        "bytecodeHash": "ipfs"
+      },
+      "compilationTarget": {
+        "src/support/UltimateSpeedrunProbe.sol": "UltimateSpeedrunProbe"
+      },
+      "evmVersion": "cancun",
+      "libraries": {},
+      "viaIR": true
+    }
+  },
+  "EpisodeSpeedrunProbe": {
+    "runtimeBytes": 495732,
+    "methodIdentifiers": {
+      "advance(bytes)": "8227531f",
+      "capture(uint32)": "872aca2d",
+      "driver()": "6ecc5d62",
+      "frameId()": "37487efb",
+      "initialize()": "8129fc1c",
+      "initializeMap(uint8,int32,int32,bool)": "cc6f329f",
+      "initialized()": "158ef93e",
+      "resourceIdentity()": "7ffcc4b7",
+      "savedDigest()": "20688d22",
+      "snapshot()": "9711715a"
+    },
+    "compiler": {
+      "version": "0.8.37+commit.f401782d"
+    },
+    "settings": {
+      "remappings": [],
+      "optimizer": {
+        "enabled": true,
+        "runs": 200
+      },
+      "metadata": {
+        "bytecodeHash": "ipfs"
+      },
+      "compilationTarget": {
+        "src/support/EpisodeSpeedrunProbe.sol": "EpisodeSpeedrunProbe"
+      },
+      "evmVersion": "cancun",
+      "libraries": {},
+      "viaIR": true
+    }
+  },
+  "ResourceStore": {
+    "runtimeBytes": 57,
+    "methodIdentifiers": {},
+    "compiler": {
+      "version": "0.8.37+commit.f401782d"
+    },
+    "settings": {
+      "remappings": [],
+      "optimizer": {
+        "enabled": true,
+        "runs": 200
+      },
+      "metadata": {
+        "bytecodeHash": "ipfs"
+      },
+      "compilationTarget": {
+        "src/evm/ResourceStore.sol": "ResourceStore"
+      },
+      "evmVersion": "cancun",
+      "libraries": {},
+      "viaIR": true
+    }
+  }
+}

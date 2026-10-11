@@ -1,0 +1,98 @@
+{
+  "pass": true,
+  "preservedSourceFiles": 256,
+  "integratedCommits": 46,
+  "protectedUnchanged": [
+    "AGENTS.md",
+    "original",
+    "foundry.toml",
+    "execution-budget.json",
+    "src/doom/z_zone.sol",
+    "src/doom/z_zone_types.sol",
+    "src/doom/r_draw.sol",
+    "src/evm",
+    "web",
+    "test/fixtures",
+    "artifacts/phase4",
+    "artifacts/speedrun-e1m1",
+    "artifacts/speedrun-e1m1-video",
+    "artifacts/speedrun-tic52",
+    "artifacts/virtual-pointer"
+  ],
+  "episodeEvidence": {
+    "maps": [
+      {
+        "map": "E1M1",
+        "frames": 316,
+        "snapshots": 317,
+        "reportSHA256": "5d20827f6d7e495866549c84e378fbf6f7c8a3c7a7c21c9d098287e665929fb0",
+        "MP4SHA256": "cd2076fe572b27ec7f4a8c22ebb7fd163bf3aaafe422d0a8699a2358672ce96b"
+      },
+      {
+        "map": "E1M2",
+        "frames": 798,
+        "snapshots": 799,
+        "reportSHA256": "129609e239f2d553c8795150e0a3d2a05250f04c9eaf65534b3419f181bee0c9",
+        "MP4SHA256": "ed422d43e6ffdcfbdabad803cee32a639ed7304b2eebdbe55517c14453cc8205"
+      },
+      {
+        "map": "E1M3",
+        "frames": 1291,
+        "snapshots": 1292,
+        "reportSHA256": "451a17130665d715076cb50343a3e24af11ec65cf9bc6c30c277e976a8ee18dd",
+        "MP4SHA256": "3aa31601c39908ff2644f9b6bf6de44a098ff2424041e6d9d14c421127a6c8e6"
+      },
+      {
+        "map": "E1M4",
+        "frames": 767,
+        "snapshots": 768,
+        "reportSHA256": "ac8a273a834dd77c8636e157a861c3f6e39b5a6b7e3c8ee2a81289012ee38c3e",
+        "MP4SHA256": "34a2284901274370d128f06a8ba6f067a56c1b3b16447326ca7f146c4ae99368"
+      },
+      {
+        "map": "E1M5",
+        "frames": 2110,
+        "snapshots": 2111,
+        "reportSHA256": "62ba892707cf31a78689400771d318fd668db272a455a4679c616f7b8a5a176f",
+        "MP4SHA256": "f2802a4af8bfcadc725d834f035f838dd1d25c526cba994d97e4a8d20f996b9d"
+      },
+      {
+        "map": "E1M6",
+        "frames": 3385,
+        "snapshots": 3386,
+        "reportSHA256": "0330431f67eb91a4b58625f43578b6698b8009e425229cf8398c56ba8b9b8f5d",
+        "MP4SHA256": "e11ee0d5097fc837dc994ecebfdb85072f0efd28a4ea6e9f03908136905b5dd1"
+      },
+      {
+        "map": "E1M7",
+        "frames": 2572,
+        "snapshots": 2573,
+        "reportSHA256": "8f08111a837da7c1141fcbc3fdaa24cdfd8d9078a53a7a0c77b7ac0665b28adb",
+        "MP4SHA256": "e8a4335fab2a46d62a833294d1b9fa2606ce7305804ca6499fc1a70ad3c26a34"
+      },
+      {
+        "map": "E1M8",
+        "frames": 1638,
+        "snapshots": 1639,
+        "reportSHA256": "ffe7376a8e5328df723730bf86da8cf64dcba1810311dfe6772ead8a98229f85",
+        "MP4SHA256": "560166cf2e4db368f447dce134d3cadc1348f7f1f06c720ba26900cad3e060f1"
+      },
+      {
+        "map": "E1M9",
+        "frames": 1598,
+        "snapshots": 1599,
+        "reportSHA256": "ddbc107b76e79cfacc4f133cc728bf85025ad8a9c1f3af78e970a8109801f293",
+        "MP4SHA256": "25bd8894f158bf5dd61038049f50c70e498d69d6da3afaeeadfce367dc0213fa"
+      }
+    ],
+    "gameplayFrames": 14475,
+    "exactGameplaySnapshots": 14484,
+    "genuineCompletions": 9,
+    "virtualZoneUses": 20,
+    "virtualOwnerUses": 18,
+    "nativeVerdict": "RESTRICT",
+    "RelaxedImplemented": false,
+    "committedEvidenceManifests": 9
+  },
+  "scope": "Git/hash and metadata consistency only; accepted full frame/receipt/native/media gates inherited, not executed anew."
+}

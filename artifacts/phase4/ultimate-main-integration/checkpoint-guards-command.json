@@ -1,0 +1,10 @@
+{
+  "command": [
+    "python3",
+    "tools/reference/ultimate_speedruns/test_checkpoint_cleanup.py"
+  ],
+  "startedUTC": "2026-10-11T08:23:23.017707+00:00",
+  "exitCode": 0,
+  "elapsedSeconds": 0.204,
+  "endedUTC": "2026-10-11T08:23:23.222154+00:00"
+}

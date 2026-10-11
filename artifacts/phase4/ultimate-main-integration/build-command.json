@@ -1,0 +1,16 @@
+{
+  "command": [
+    ".toolchain/bin/forge",
+    "build",
+    "src/evm/Doom.sol",
+    "src/support/UltimateSpeedrunProbe.sol",
+    "src/support/EpisodeSpeedrunProbe.sol",
+    "src/evm/ResourceStore.sol",
+    "--offline",
+    "--no-lint"
+  ],
+  "startedUTC": "2026-10-11T08:23:21.865528+00:00",
+  "exitCode": 0,
+  "elapsedSeconds": 222.04,
+  "endedUTC": "2026-10-11T08:27:03.906527+00:00"
+}

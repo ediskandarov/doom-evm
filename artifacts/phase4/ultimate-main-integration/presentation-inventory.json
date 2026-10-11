@@ -1,0 +1,60 @@
+{
+  "readOnlyInventory": true,
+  "sourceFidelityPin": "a77dfb96cb91780ca334d0d4cfd86957558007e0",
+  "sourceSha256": {
+    "src/evm/DoomUI.sol": "c2fa44363eeb962acabb51779fc780b8b6c5d46d5291448d44a585690e9ea9f9",
+    "src/evm/EpisodeRuntime.sol": "7be9205e74af487a1a2722d861465be5e5d155607221cfdf84178cc11680afa8",
+    "src/evm/DoomGame.sol": "d9451a915ab977bae137340e3e6626a270a4b84b8b6ea9449a8c4f0f578296df",
+    "src/evm/FrameProtocol.sol": "4665be3f613b8e817d616d2db1dc4a644325c44a6ade476a35d7d9d003625ace",
+    "src/evm/Doom.sol": "7da3e8c4f086c9eec3a7f1ccb194094b3ffaa89fc79762dfc2d5af5791e8e634",
+    "src/support/UltimateSpeedrunProbe.sol": "b273f050f4ca89c9509b073bed44f7d6dfeddeb2c6dc6479d665eb3c0f82ce38",
+    "src/support/UltimateStartup.sol": "86152dbc521265c009a1532105abde4d37a55707d29a0ca629728c50dc0462b0",
+    "src/doom/st_stuff.sol": "936cf09f8f0dcc9c0555a9d533d9d1a50f65941462b0d3325a5c7850b5be2e49",
+    "src/doom/wi_stuff.sol": "a4290c7bef956c868d62ffc269e076e90cebb25ae9eb2143bf167c8cabb4a39e",
+    "src/doom/g_game.sol": "ea632f47ca5904819dd0dc254fc547799b56696e08e37d96a503d71da145f89c",
+    "src/doom/f_finale.sol": "a337e7c0b0d5c3fab8b98a40d67c29dd4f63e7ef0d47773d65879f8dc3111c8f",
+    "src/doom/v_video_types.sol": "266890b0c8003e89f78baf8415048d24e4ca14865a1c8518ad77bb6a9f6b4d35",
+    "original/DOOM/linuxdoom-1.10/f_wipe.c": "eafbc10e5a56ded32deb9e9cd2d25fae4b7ecea16c1a2dc0ed380c8f2d2b2a22",
+    "original/DOOM/linuxdoom-1.10/d_main.c": "a100743fc5e53273e749ffbd3af13f5d995020093f4942b25f6370ab6275ee2a"
+  },
+  "reusable": {
+    "statusBar": [
+      "DoomUI.initialize/restart/tick/drawStatus/drawHUD",
+      "ST_Init/ST_Start/ST_Ticker/ST_Drawer/ST_doPaletteStuff",
+      "DoomGame.render(c,10) yields 320x168 view in 320x200 screen; fullscreen=false retains bottom32 UI pixels"
+    ],
+    "intermission": [
+      "G_DoCompleted creates wminfo from actual kills/items/secrets/leveltime and original pars",
+      "WI_Start/WI_Ticker/WI_Drawer",
+      "EpisodeRuntime.tick/draw with intermission hooks; counters, acceleration and next-location phases"
+    ],
+    "finaleAndRoutes": [
+      "G_DoCompleted map8 queues victory instead of WI",
+      "F_StartFinale/F_Ticker/F_Drawer",
+      "Secret exit targets E1M9; E1M9 normal exit returns E1M4; no invented next level"
+    ],
+    "transport": [
+      "Frame indexed8 and authenticated FramePalette",
+      "VideoState.screens[0..4] includes start/end slots2/3",
+      "Existing reproducible encode/manifests,35Hz timing,4:3display"
+    ]
+  },
+  "missing": [
+    "No src/doom/f_wipe.sol or wipe_StartScreen/wipe_EndScreen/wipe_ScreenWipe EVM implementation; wipegamestate is only state metadata.",
+    "No recording adapter binding Ultimate resource validation, persistent UI/gameflow, wipe buffers and completion sequence.",
+    "Current probe advance uses DoomGame.tick and refuses queued action; capture uses DoomGame.render(c) default11/fullscreen from temporary copy.",
+    "No separate gameplay/wipe/intermission/finale frame ledger or render-only wipe scheduler in current recording pipeline."
+  ],
+  "originalMeltReference": [
+    "Capture screens2/3, restore start into screen0",
+    "Column-major short pairs, two indexed pixels per processed slice",
+    "M_Random-derived uneven initial delays, increasing fall y+1 below16 then8 rows/tic, clipped to screen height",
+    "D_Display advances by I_GetTime deltas without G_Ticker/P_Ticker inside wipe loop; draws menu over wipe"
+  ],
+  "nativeLimits": [
+    "UI borrows immutable WAD graphics under existing declared adaptation; do not claim full native allocation equivalence.",
+    "WI_drawAnimatedBack intentionally preserves pinned C unconditional if(commercial)return; timer and M_Random behavior remain, visible animated background is not provided by this reference profile.",
+    "Production EpisodeStartup/Doom remains Freedoom-pinned; new UltimateStartup/UltimateWadResources authenticates separate exact commercial IWAD. Future reuse must retain resource admission checks.",
+    "Full presentation, EVM wipe, native UI/wipe proof and regenerated final recordings require separately authorized goal."
+  ]
+}

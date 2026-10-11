@@ -1,0 +1,7 @@
+{
+  "pass": true,
+  "productionMethodIdentifiersUnchanged": true,
+  "methodCount": 34,
+  "baseline": "51e879247bb3d6d809af8a0516a097f71c3d0756",
+  "scope": "Production ABI comparison; compiled backing changes covered by build/focused memory checks, no new browser/menu execution claim."
+}

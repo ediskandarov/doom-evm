@@ -1,0 +1,103 @@
+{
+  "readOnly": true,
+  "files": [
+    {
+      "path": "/Users/eduard/sandbox/doom-evm-ultimate-speedruns/artifacts/local/ultimate-speedruns/E1M1/owner-v1/full-rate/speedrun-e1m1.mp4",
+      "sha256": "cd2076fe572b27ec7f4a8c22ebb7fd163bf3aaafe422d0a8699a2358672ce96b",
+      "bytes": 8986014,
+      "mtimeNs": 1791700104783323218,
+      "kind": "nine owner-v1 technical recordings"
+    },
+    {
+      "path": "/Users/eduard/sandbox/doom-evm-ultimate-speedruns/artifacts/local/ultimate-speedruns/E1M1/full-rate/speedrun-e1m1.mp4",
+      "sha256": "406c10fd046c452afe2b31000275b4ab2283e2ba5bc497f95dd2e7665f326478",
+      "bytes": 8986014,
+      "mtimeNs": 1791662815699134250,
+      "kind": "earlier preserved technical recording"
+    },
+    {
+      "path": "/Users/eduard/sandbox/doom-evm-ultimate-speedruns/artifacts/local/ultimate-speedruns/E1M2/owner-v1/full-rate/speedrun-e1m2.mp4",
+      "sha256": "ed422d43e6ffdcfbdabad803cee32a639ed7304b2eebdbe55517c14453cc8205",
+      "bytes": 22197504,
+      "mtimeNs": 1791700894990579596,
+      "kind": "nine owner-v1 technical recordings"
+    },
+    {
+      "path": "/Users/eduard/sandbox/doom-evm-ultimate-speedruns/artifacts/local/ultimate-speedruns/E1M2/full-rate/speedrun-e1m2.mp4",
+      "sha256": "3f71cc6cbaced7be14cd15550db3d2e13e2e150b40c81858aa2ed429ad829ab9",
+      "bytes": 22197504,
+      "mtimeNs": 1791663451084733634,
+      "kind": "earlier preserved technical recording"
+    },
+    {
+      "path": "/Users/eduard/sandbox/doom-evm-ultimate-speedruns/artifacts/local/ultimate-speedruns/E1M3/owner-v1/full-rate/speedrun-e1m3.mp4",
+      "sha256": "3aa31601c39908ff2644f9b6bf6de44a098ff2424041e6d9d14c421127a6c8e6",
+      "bytes": 33107378,
+      "mtimeNs": 1791697390868794834,
+      "kind": "nine owner-v1 technical recordings"
+    },
+    {
+      "path": "/Users/eduard/sandbox/doom-evm-ultimate-speedruns/artifacts/local/ultimate-speedruns/E1M4/owner-v1/full-rate/speedrun-e1m4.mp4",
+      "sha256": "34a2284901274370d128f06a8ba6f067a56c1b3b16447326ca7f146c4ae99368",
+      "bytes": 24403635,
+      "mtimeNs": 1791701608296321497,
+      "kind": "nine owner-v1 technical recordings"
+    },
+    {
+      "path": "/Users/eduard/sandbox/doom-evm-ultimate-speedruns/artifacts/local/ultimate-speedruns/E1M4/full-rate/speedrun-e1m4.mp4",
+      "sha256": "0597c38afe0481047a2c6733064e50a9eeffe7add9b657bb970c2c5beec42196",
+      "bytes": 24403635,
+      "mtimeNs": 1791663677167326728,
+      "kind": "earlier preserved technical recording"
+    },
+    {
+      "path": "/Users/eduard/sandbox/doom-evm-ultimate-speedruns/artifacts/local/ultimate-speedruns/E1M5/owner-v1/full-rate/speedrun-e1m5.mp4",
+      "sha256": "f2802a4af8bfcadc725d834f035f838dd1d25c526cba994d97e4a8d20f996b9d",
+      "bytes": 52529251,
+      "mtimeNs": 1791699773052889150,
+      "kind": "nine owner-v1 technical recordings"
+    },
+    {
+      "path": "/Users/eduard/sandbox/doom-evm-ultimate-speedruns/artifacts/local/ultimate-speedruns/E1M6/owner-v1/full-rate/speedrun-e1m6.mp4",
+      "sha256": "e11ee0d5097fc837dc994ecebfdb85072f0efd28a4ea6e9f03908136905b5dd1",
+      "bytes": 120496933,
+      "mtimeNs": 1791702476308343139,
+      "kind": "nine owner-v1 technical recordings"
+    },
+    {
+      "path": "/Users/eduard/sandbox/doom-evm-ultimate-speedruns/artifacts/local/ultimate-speedruns/E1M7/owner-v1/full-rate/speedrun-e1m7.mp4",
+      "sha256": "e8a4335fab2a46d62a833294d1b9fa2606ce7305804ca6499fc1a70ad3c26a34",
+      "bytes": 64926181,
+      "mtimeNs": 1791704474390720537,
+      "kind": "nine owner-v1 technical recordings"
+    },
+    {
+      "path": "/Users/eduard/sandbox/doom-evm-ultimate-speedruns/artifacts/local/ultimate-speedruns/E1M7/full-rate/speedrun-e1m7.mp4",
+      "sha256": "6dd05aa1e33d80d2662f5d525d9d881ef95554b0095520e2d5e14cacbc2ce8ca",
+      "bytes": 64926181,
+      "mtimeNs": 1791667736690075359,
+      "kind": "earlier preserved technical recording"
+    },
+    {
+      "path": "/Users/eduard/sandbox/doom-evm-ultimate-speedruns/artifacts/local/ultimate-speedruns/E1M8/alternatives/sedlo-046/owner-v1/full-rate/speedrun-e1m8.mp4",
+      "sha256": "560166cf2e4db368f447dce134d3cadc1348f7f1f06c720ba26900cad3e060f1",
+      "bytes": 45310986,
+      "mtimeNs": 1791697664603652001,
+      "kind": "nine owner-v1 technical recordings"
+    },
+    {
+      "path": "/Users/eduard/sandbox/doom-evm-ultimate-speedruns/artifacts/local/ultimate-speedruns/E1M9/owner-v1/full-rate/speedrun-e1m9.mp4",
+      "sha256": "25bd8894f158bf5dd61038049f50c70e498d69d6da3afaeeadfce367dc0213fa",
+      "bytes": 51823555,
+      "mtimeNs": 1791704015016829104,
+      "kind": "nine owner-v1 technical recordings"
+    },
+    {
+      "path": "/Users/eduard/sandbox/doom-evm-ultimate-speedruns/artifacts/local/ultimate-speedruns/E1M9/full-rate/speedrun-e1m9.mp4",
+      "sha256": "25bd8894f158bf5dd61038049f50c70e498d69d6da3afaeeadfce367dc0213fa",
+      "bytes": 51823555,
+      "mtimeNs": 1791669206595202744,
+      "kind": "earlier preserved technical recording"
+    }
+  ]
+}
