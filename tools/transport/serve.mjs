@@ -4,10 +4,11 @@ import { readFile } from 'node:fs/promises';
 import { fileURLToPath } from 'node:url';
 import { resolve, sep } from 'node:path';
 const webRoot=fileURLToPath(new URL('../../web/',import.meta.url));
-export async function serve(port=8080) {
+export async function serve(port=8080,{root=webRoot}={}) {
+  const siteRoot=resolve(root);
   const server=createServer(async(req,res)=>{
-    const path=resolve(webRoot,'.'+new URL(req.url,'http://localhost').pathname.replace(/\/$/,'/index.html'));
-    if(!path.startsWith(webRoot.endsWith(sep)?webRoot:webRoot+sep)) {res.writeHead(403).end();return;}
+    const path=resolve(siteRoot,'.'+new URL(req.url,'http://localhost').pathname.replace(/\/$/,'/index.html'));
+    if(!path.startsWith(siteRoot.endsWith(sep)?siteRoot:siteRoot+sep)) {res.writeHead(403).end();return;}
     try {
       const body=await readFile(path);
       res.setHeader('Content-Type',path.endsWith('.html')?'text/html':path.endsWith('.mjs')?'text/javascript':'application/json');
