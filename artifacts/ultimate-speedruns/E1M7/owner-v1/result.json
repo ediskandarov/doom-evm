@@ -1,0 +1,212 @@
+{
+  "map": "E1M7",
+  "profile": "classic-ultimate-doom-1.9",
+  "experimentalMemoryProfile": "virtual",
+  "demo": {
+    "author": "mhrz",
+    "originalName": "e1m7-113.lmp",
+    "URL": "https://dsdarchive.com/files/demos/doom/56602/e1m7-113.zip",
+    "SHA256": "182931b0afdcace7dffe66c74bdcd546e6e110eed95a725ce79dc7dd4ce5041e"
+  },
+  "IWAD": {
+    "MD5": "c4fe9fd920207691a9f493668e0a2083",
+    "SHA256": "6fdf361847b46228cfebd9f3af09cd844282ac75f3edbb61ca4cb27103ce2e7f"
+  },
+  "nativeReplay": {
+    "tics": 2572,
+    "observations": 2573,
+    "allAllocationProfilesExact": true,
+    "statesSHA256": "7934b68c72fe7acda879a2096c0aa6f9aba212ce5ee6b95d05545c4f86fd710d",
+    "referenceProfile": "four-allocation-profiles"
+  },
+  "EVMGameplay": {
+    "tics": 2572,
+    "observations": 2573,
+    "allSnapshotsExact": true,
+    "exit": {
+      "reached": true,
+      "gameaction": 6,
+      "secretexit": 0,
+      "leveltime": 2572,
+      "inGameSeconds": 73.48571428571428,
+      "nativeExitLine": 810,
+      "finalStoredDSG1Exact": true,
+      "finalStateSha256": "7d191a90bd0597e25981f5873e818c71a16c7d25dee7e1bed1ee7302797dafb8"
+    }
+  },
+  "frames": {
+    "rendered": 2572,
+    "O2Comparisons": 2572,
+    "O2Equal": 2572,
+    "allDeclaredNativeProfilesEqual": 2571,
+    "virtualSampleUses": 3,
+    "virtualDerivedDestinations": 3,
+    "nativeCommonExactWithoutVirtualSamples": 2571
+  },
+  "gas": {
+    "gameplay": 597674311641,
+    "capture": 2326338155744,
+    "renderer": 1777601044188,
+    "totalVerifiedRecording": 2928043988980
+  },
+  "runtime": {
+    "serverArgs": [
+      "--host",
+      "127.0.0.1",
+      "--port",
+      "18647",
+      "--hardfork",
+      "cancun",
+      "--disable-code-size-limit",
+      "--gas-limit",
+      "10000000000",
+      "--memory-limit",
+      "1073741824",
+      "--no-request-size-limit",
+      "--prune-history",
+      "2",
+      "--transaction-block-keeper",
+      "2",
+      "--silent"
+    ],
+    "gasBudget": {
+      "gasLimit": 10000000000,
+      "gasHex": "0x2540be400",
+      "source": "DOOM_GAS_LIMIT"
+    },
+    "startedUTC": "2026-10-11T06:53:51.808Z",
+    "endedUTC": "2026-10-11T07:40:03.099Z",
+    "successfulReplayRPCSeconds": 341.3113184810019,
+    "captureRPCSeconds": 2215.4711772329943,
+    "replaySessionSeconds": 2748.3546097079998,
+    "resumeSessions": []
+  },
+  "media": {
+    "MP4": "artifacts/local/ultimate-speedruns/E1M7/owner-v1/full-rate/speedrun-e1m7.mp4",
+    "SHA256": "e8a4335fab2a46d62a833294d1b9fa2606ce7305804ca6499fc1a70ad3c26a34",
+    "fps": 35,
+    "encodedFrames": 2572,
+    "seconds": 73.48571428571428
+  },
+  "unresolvedFailure": null,
+  "limitations": "Finite native-profile comparisons only. Virtual-derived pixels remain deterministic extensions even when equal to native. Observational renders use a temporary copy; no continuously persisted render history or production UI acceptance.",
+  "sourceHashes": {
+    "artifacts/local/ultimate-speedruns/owner-observer/src/doom/am_map_types.sol": "7347073682c367c15c918aa51ff924c664b6d05efdbf4f0392d4f404b31a9039",
+    "artifacts/local/ultimate-speedruns/owner-observer/src/doom/d_ticcmd.sol": "508d0332d3e8b83e1b68d37581a3befc100a9974fcaa0900cc44116cd75ff2ef",
+    "artifacts/local/ultimate-speedruns/owner-observer/src/doom/g_game.sol": "ea632f47ca5904819dd0dc254fc547799b56696e08e37d96a503d71da145f89c",
+    "artifacts/local/ultimate-speedruns/owner-observer/src/doom/info.sol": "4611205149173e42d3b0f1d91820c8042f6bc5fc48fb53aec84ad4bc501dca8e",
+    "artifacts/local/ultimate-speedruns/owner-observer/src/doom/m_bbox.sol": "f4c60efe3627a97d0288fc5cd0283535527b1f51029568534c80bb8fbbf8f272",
+    "artifacts/local/ultimate-speedruns/owner-observer/src/doom/m_fixed.sol": "3f64bef1f62f61faead3a5b8f382bf1c66e1b3739ce4ac8d59a6fcef0451ef9f",
+    "artifacts/local/ultimate-speedruns/owner-observer/src/doom/m_random.sol": "5267b881138cfb7e0d683449005619513006c70e3ed557f64697b36c4ed40c7b",
+    "artifacts/local/ultimate-speedruns/owner-observer/src/doom/native_zone_layout.sol": "118b2d17165826fb0857d9cb296e2214db2a28917769299a82e70d0c0790f6e8",
+    "artifacts/local/ultimate-speedruns/owner-observer/src/doom/p_ceilng.sol": "696f3f620f5bddb3cea64fda824e3203c780f53db890630f0685794454dc37f9",
+    "artifacts/local/ultimate-speedruns/owner-observer/src/doom/p_doors.sol": "945bf600ce86d8286718fb75ecaf905a0c4631d79d2dac7260c91c9dc2013f8d",
+    "artifacts/local/ultimate-speedruns/owner-observer/src/doom/p_enemy.sol": "eff76cce23b0877833a5c446a1a09d8ae01918a6925b6d3265240b144c09dfe7",
+    "artifacts/local/ultimate-speedruns/owner-observer/src/doom/p_floor.sol": "b7c90baafa0b74fd7ff80cf60dcbc430148f6d6d068ba54ca0fbc7ba1bca7069",
+    "artifacts/local/ultimate-speedruns/owner-observer/src/doom/p_game_state.sol": "06cbccba214717193fbab7c290e2962c4fb05b3f34c6543247ee1ec8e45d085a",
+    "artifacts/local/ultimate-speedruns/owner-observer/src/doom/p_heap.sol": "3cc2e0a8c3239523db66c07fea33720f931754baedd312b5ca7cc2ebe763d2e0",
+    "artifacts/local/ultimate-speedruns/owner-observer/src/doom/p_info.sol": "a48840479115ea8bf849ca5ec448d1b2bec7a6cfe58c5314e140635a898de792",
+    "artifacts/local/ultimate-speedruns/owner-observer/src/doom/p_inter.sol": "8be27f9bba47beb46b3edf2a8a2674b3cd7218d2abb8ef5f8855803393d067de",
+    "artifacts/local/ultimate-speedruns/owner-observer/src/doom/p_lights.sol": "6f63cbc6b41fc492a46ce43aef464deb9d08b7fa1dd8b213b546eec3e4f08276",
+    "artifacts/local/ultimate-speedruns/owner-observer/src/doom/p_map.sol": "6b6d48523a45acab9090dfb0ec3d6dbab4e6de18afa89453df8b5a87088da0f3",
+    "artifacts/local/ultimate-speedruns/owner-observer/src/doom/p_maputl.sol": "ac5ac60e7e058a5fc537e7042c7254bc0f51c77165149a22e141437b4e0ad0b6",
+    "artifacts/local/ultimate-speedruns/owner-observer/src/doom/p_mobj.sol": "e6138aceee2be933f2c36e3fc18e6d2baa22ffa6a1197d9db89c744d42d78e56",
+    "artifacts/local/ultimate-speedruns/owner-observer/src/doom/p_plats.sol": "6904df762b270f840daa99b34d2a5c689dbb2fef3aed3d33c2ac1a3f3e4d5722",
+    "artifacts/local/ultimate-speedruns/owner-observer/src/doom/p_pspr.sol": "cfa2db3438d689c38d9c957fc4aee598c58740f025d6efead2b5f9671eb0c863",
+    "artifacts/local/ultimate-speedruns/owner-observer/src/doom/p_setup.sol": "9498e1298bf4e53ccedc484a50d4c7f9f85315f6cb700719d474b721e382243b",
+    "artifacts/local/ultimate-speedruns/owner-observer/src/doom/p_setup_static.sol": "c8100a42bb0bac190c583bbb2c82168599009f88a766e4c05b9a9231a5f69792",
+    "artifacts/local/ultimate-speedruns/owner-observer/src/doom/p_sight.sol": "7ed366237fc3fec069ffb6336e95e038004d1f379622cf67f55fb8c6b1a6488c",
+    "artifacts/local/ultimate-speedruns/owner-observer/src/doom/p_spec.sol": "2363640e75c22c9d017db677dda7148ad221380f0a23639167e145e933fc72b7",
+    "artifacts/local/ultimate-speedruns/owner-observer/src/doom/p_switch.sol": "5404d359793e05c6c24a7804c07632150009b46f38d03068412d7ac53260dfe2",
+    "artifacts/local/ultimate-speedruns/owner-observer/src/doom/p_telept.sol": "745f0fa4ed6f0515c398bfd2469c59aac82316965b7bac25263aeb82555d61b8",
+    "artifacts/local/ultimate-speedruns/owner-observer/src/doom/p_tick.sol": "1993dd0c94853dabc4db554dfa0ca04375cef0a22075400ba0e7b56b525022ab",
+    "artifacts/local/ultimate-speedruns/owner-observer/src/doom/p_user.sol": "963a46850e1b17171f79dd65bff9b5006ce6f97a935ad2023d1d526a6ec35c37",
+    "artifacts/local/ultimate-speedruns/owner-observer/src/doom/p_zone_setup.sol": "e0308bd1197fd84a01eb1ee208be73c711851d6b0bc30be1d07a7c61b18b223d",
+    "artifacts/local/ultimate-speedruns/owner-observer/src/doom/r_bsp.sol": "0ae5df313515692d0b2b970d5d39d107e014629cff2305fb37c14371a9524040",
+    "artifacts/local/ultimate-speedruns/owner-observer/src/doom/r_data.sol": "ef5f26f230c1bed1a073f73b489613d947b420c220faa6f2c16a6f583045010c",
+    "artifacts/local/ultimate-speedruns/owner-observer/src/doom/r_data_types.sol": "8587079520cec01c6a682991145d8d5148b26278410bb68d09b6749d5dd6bb81",
+    "artifacts/local/ultimate-speedruns/owner-observer/src/doom/r_defs.sol": "558d5a9bfd131e816bbe28986e2dad6144a08e5a16ccfed1b199d7558a1ea0e2",
+    "artifacts/local/ultimate-speedruns/owner-observer/src/doom/r_draw.sol": "523dfe72da844b2afcc300ca0ca23a98f47fc754e49d5c30f451ce113225a6b7",
+    "artifacts/local/ultimate-speedruns/owner-observer/src/doom/r_main.sol": "df403bf04fdbbcfc68c4fd9c5e19b5201ca711498efc34db406a4010ad3b2af5",
+    "artifacts/local/ultimate-speedruns/owner-observer/src/doom/r_plane.sol": "c7a5abcbca84dddcd2a3c8bb160a609605c5c1842e73704dff4860df3280e463",
+    "artifacts/local/ultimate-speedruns/owner-observer/src/doom/r_render_hooks.sol": "f026ccb8fffb68d8fbcb0966103212f52884b86350fe3fb52a401d146f3fb312",
+    "artifacts/local/ultimate-speedruns/owner-observer/src/doom/r_render_state.sol": "072bd2f73b98e1eb775fc8093e95a69c184f3fa50a89a5d64a7beccd59493398",
+    "artifacts/local/ultimate-speedruns/owner-observer/src/doom/r_segs.sol": "9d4e4dea06739278aab3698fb422818de6dd7726359c8822d60a162e886621cb",
+    "artifacts/local/ultimate-speedruns/owner-observer/src/doom/r_sprite_state.sol": "735b3de85cbf455e05d3cb8e992cf4e477960bd4192bbd367f5c66c803b96363",
+    "artifacts/local/ultimate-speedruns/owner-observer/src/doom/r_state.sol": "1624f9f5ee4c1dde44c11080a5f0b9ed2bbf5a32a06fbdbf02d9b8471018d1d0",
+    "artifacts/local/ultimate-speedruns/owner-observer/src/doom/r_things.sol": "86705ab6b1f79b7ef07798b881cc547502d9911c97b57dc516a744e17c1977f5",
+    "artifacts/local/ultimate-speedruns/owner-observer/src/doom/tables.sol": "bf14202b419075f6d187653205a37e211d8267c7fc4c0bebf5a8c5713afddf38",
+    "artifacts/local/ultimate-speedruns/owner-observer/src/doom/w_zone_cache.sol": "03c07404765de9620b3d1ff15727809cdad911c8a78d822019b63500fa5018c2",
+    "artifacts/local/ultimate-speedruns/owner-observer/src/doom/z_zone.sol": "b4e75218021d65aaf3389cf78a68663feebc2084c82457821be17247dc8106c5",
+    "artifacts/local/ultimate-speedruns/owner-observer/src/doom/z_zone_backing.sol": "0c210e49466f8b5c717efef6dd75a43cc1c76f64a2aecee0e491860bed5c4d5e",
+    "artifacts/local/ultimate-speedruns/owner-observer/src/doom/z_zone_types.sol": "11ab3f95678ba3852ab5f0c2dc9e85e715bec6897e65f04cd1919bba9bb73dbd",
+    "artifacts/local/ultimate-speedruns/owner-observer/src/doom/z_zone_virtual.sol": "8bc309e89fa4da0667dc50a45adb9f91c58982640e1b3f5f9d38e49893f1e960",
+    "artifacts/local/ultimate-speedruns/owner-observer/src/evm/DoomGame.sol": "181079358507a7bd40d3b30ea7fb8e067f8e12b364f6a221863a153549ff21f2",
+    "artifacts/local/ultimate-speedruns/owner-observer/src/evm/DoomRenderer.sol": "5639d82431350ea76c26d43457d26d0c3c0f410eaddf02db6adbcfb03a569ba0",
+    "artifacts/local/ultimate-speedruns/owner-observer/src/evm/DoomScene.sol": "9ad7c8ccee4c9e05deb5608326baabacfa40f686b8d8445fb8aaa7352ab64569",
+    "artifacts/local/ultimate-speedruns/owner-observer/src/evm/DoomZoneStartup.sol": "2d178494456a7ae3c730310f257ce2aa635d37d18c90cac039cf002cdb3f50dc",
+    "artifacts/local/ultimate-speedruns/owner-observer/src/evm/FrameProtocol.sol": "4665be3f613b8e817d616d2db1dc4a644325c44a6ade476a35d7d9d003625ace",
+    "artifacts/local/ultimate-speedruns/owner-observer/src/evm/ResourceTypes.sol": "159865364cfa57aae508cd94c49509cbccabd6aeeba55e92b9fcf816bdec4d6b",
+    "artifacts/local/ultimate-speedruns/owner-observer/src/support/EpisodeStartupSnapshot.sol": "3f2a274619a786200fe209111e0ca6f2f5cb97537f584dd77a4f3d23e4d3635e",
+    "artifacts/local/ultimate-speedruns/owner-observer/src/support/UltimateSpeedrunProbe.sol": "68876e406e36abee5de2675330adbecd4f260a3627f7435e9c368087663cf259",
+    "artifacts/local/ultimate-speedruns/owner-observer/src/support/UltimateStartup.sol": "86152dbc521265c009a1532105abde4d37a55707d29a0ca629728c50dc0462b0",
+    "artifacts/local/ultimate-speedruns/owner-observer/src/support/UltimateWadResources.sol": "fabdbf3967783eedf0b71f02dc42e514c0133282ad9be880e3fdbaf815f4c5f0",
+    "foundry.toml": "afe04c66f0e684b5a936821f6543605a3739f62164ceb4398426db7403452393",
+    "execution-budget.json": "acde01f1b9cf248f9265f1ffcff7181d01d77620a2dfcd9a4d4d0b1c79df2be7",
+    "tools/reference/ultimate_speedruns/evm-owner.mjs": "b735339c8556e36a62459220fea8c7a544485fb42782b5087e4e2c7efc542e99",
+    "web/protocol.mjs": "fec5104a0e13b7ca8666200431a1804d53cdb6537c1f0f8f02fb5b69dd70f47e",
+    "tools/reference/speedrun/dsg1.mjs": "3b9a1858116f1eee7663b0eeb9773abc8aaf8261ee929c4ece585c35e9329836",
+    "tools/reference/ultimate_speedruns/native.py": "993ec3e57bf26346fdd40cdffe7313833ddeeed7fe40427180750276f3c91c0e"
+  },
+  "compiler": {
+    "version": "0.8.37+commit.f401782d",
+    "settings": {
+      "remappings": [],
+      "optimizer": {
+        "enabled": true,
+        "runs": 200
+      },
+      "metadata": {
+        "bytecodeHash": "ipfs"
+      },
+      "compilationTarget": {
+        "artifacts/local/ultimate-speedruns/owner-observer/src/support/UltimateSpeedrunProbe.sol": "UltimateSpeedrunProbe"
+      },
+      "evmVersion": "cancun",
+      "libraries": {},
+      "viaIR": true
+    }
+  },
+  "abiSHA256": "db6f7e3236ad2ad25b381dbcb1f0f196304fe3ff7e477f130650941a613bd199",
+  "resourceIdentity": {
+    "schemaVersion": 0,
+    "wadSha256": "6fdf361847b46228cfebd9f3af09cd844282ac75f3edbb61ca4cb27103ce2e7f",
+    "bundleSha256": "1154fc21f0fa60e793ffb6da569b2293191dfc7f1791e0c083672b764917d7ba",
+    "paletteSha256": "fd895921b5d0a394612bb29852ed003d44d69f76dec31c0dc6b5d5fc7d63f7bb",
+    "paletteVariant": 0
+  },
+  "recordedSourceCommit": "afacc66bcd07e9ca4b74f65a997802977f4872af",
+  "ownerPointerProvenance": {
+    "virtualZoneUses": 3,
+    "virtualOwnerUses": 0,
+    "ownerBase": "0x0000002000000000",
+    "stride": 8,
+    "virtualTouchedDestinations": 3,
+    "survivingVirtualDrawUses": 3,
+    "classification": "Counts all actual virtual draw uses; final equal bytes do not establish native provenance"
+  },
+  "supportedPixelDomain": {
+    "verifierSha256": "c1ae18be928e7f53248da7798148d4976b4bb628995ab0ac103de4d3e886ecaa",
+    "pass_": true,
+    "recordingComplete": true,
+    "frames": 2572,
+    "commonNativePixelsChecked": 164607997,
+    "nativeAllocationDependentPixels": 0,
+    "virtualTouchedDestinations": 3,
+    "allCommonNativePixelsOutsideVirtualSourcesExact": true,
+    "wholeFrameCommonNativeExact": 2571,
+    "limits": "Virtual destinations count any provenance4/5 draw use, including overwritten samples; they are not a claim that all final values survive. Allocation-dependent native pixels are outside universal comparison. Every EVM pixel remains receipt-authenticated.",
+    "sourceReportSha256": "eea5957a773ca26bb77402e58f45d76848dba8b2258d0f75c99039ddf7f228b6",
+    "nativeReportSha256": "2683917efa7684a8cfe24c77e9c2a1d1bbab22110405bdd67094faf89d69ba95"
+  }
+}
