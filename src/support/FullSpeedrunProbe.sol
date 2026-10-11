@@ -162,7 +162,17 @@ contract FullSpeedrunProbe is UltimateWadResources, IFrameProtocol {
             if(w.worldDoneRequested)revert InvalidReplay();
             p.buttons[0]=cmd.buttons;p.rndindex=miscRndindex;WI_Stuff.WI_Ticker(w,p);miscRndindex=p.rndindex;
             stage=w.sp_state;count=w.bcnt;
-            if(w.worldDoneRequested)G_Game.G_WorldDone(c.state,f);
+            if(w.worldDoneRequested) {
+                // The recorder's minimal post-exit context must retain original
+                // G_WorldDone profile/secret metadata from authoritative state.
+                // This requests the handoff only; it never calls G_DoWorldDone.
+                c.state.netgame=saved.netgame;c.state.deathmatch=saved.deathmatch;
+                c.state.demoplayback=saved.demoplayback;c.state.consoleplayer=saved.consoleplayer;
+                c.state.playeringame=saved.playeringame;c.state.gameepisode=saved.gameepisode;
+                c.state.gamemap=saved.gamemap;c.state.secretExit=saved.secretExit;
+                c.state.players[0].didsecret=w.wbs.didsecret; // authoritative G_DoCompleted result, including E1M9
+                G_Game.G_WorldDone(c.state,f);
+            }
         } else if(c.state.gamestate==2) {
             F_Finale.F_Ticker(a,f);stage=a.finalestage;count=a.finalecount;
             force=f.wipegamestate==-1;f.wipegamestate=c.state.gamestate;
