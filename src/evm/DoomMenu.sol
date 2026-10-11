@@ -13,7 +13,9 @@ library DoomMenu {
     /// Unknown keys and keyups remain original false-return cases in M_Responder;
     /// this deliberate adapter isolation consumes them while the menu owns input.
     function respond(MenuState memory m, bytes memory events, bool gameStarted)
-        internal pure returns (bool intercepted)
+        internal
+        pure
+        returns (bool intercepted)
     {
         if (events.length > 128 || events.length % 2 != 0) revert InvalidKeyboardEvents();
         for (uint256 i; i < events.length; i += 2) {
@@ -34,7 +36,7 @@ library DoomMenu {
             bool owned = m.menuactive || m.messageToPrint;
             bool consumed = M_Menu.M_Responder(m, kind, key);
             if (owned || consumed || m.menuactive || m.messageToPrint) intercepted = true;
-            if (m.startRequested || m.endRequested) break;
+            if (m.startRequested || m.endRequested || m.saveAction != 0) break;
         }
         M_Menu.M_Ticker(m);
     }

@@ -104,7 +104,8 @@ library DoomSave {
         if (slot.revision != expectedRevision) revert SaveRevisionMismatch();
         if (
             g.gamestate != 0 || g.gameaction != 0 || !i.flow.initialized || !i.flow.usergame || g.netgame
-                || g.demoplayback || g.deathmatch != 0
+                || g.demoplayback || g.deathmatch != 0 || g.renderFramebuffer.length != 64000
+                || (u.enabled && u.status.paletteRGB.length != 768)
         ) revert InvalidSaveState();
         bytes memory data = P_Saveg.P_Archive(g, u, i, e);
         digest = sha256(data);
@@ -145,7 +146,8 @@ library DoomSave {
             g.gametic != slot.gametic || g.leveltime != slot.leveltime || g.gameskill != slot.skill
                 || g.gameepisode != slot.episode || g.gamemap != slot.map || g.gamemode != slot.gamemode
                 || g.gamestate != 0 || g.gameaction != 0 || g.menuactive || i.gamekeydown != 0
-                || !i.flow.initialized || !i.flow.usergame
+                || !i.flow.initialized || !i.flow.usergame || g.renderFramebuffer.length != 64000
+                || (u.enabled && u.status.paletteRGB.length != 768)
         ) revert InvalidSaveState();
     }
 }

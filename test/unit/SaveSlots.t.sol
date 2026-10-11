@@ -84,5 +84,9 @@ contract SaveSlotsTest is SaveArchiveTest {
         inputRuntime.flow.initialized = false;
         (ok,) = address(this).call(abi.encodeCall(this.save, (0, 0)));
         require(!ok, "incomplete setup accepted");
+        inputRuntime.flow.initialized = true;
+        gameState.renderFramebuffer = new bytes(0);
+        (ok,) = address(this).call(abi.encodeCall(this.save, (0, 0)));
+        require(!ok, "missing Frame accepted");
     }
 }
