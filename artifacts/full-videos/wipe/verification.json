@@ -1,0 +1,16 @@
+{
+  "timeUTC": "2026-10-11T09:34:15.684421+00:00",
+  "forgeTests": 8,
+  "failed": 0,
+  "skipped": 0,
+  "forgeLogSHA256": "839b9dd480da642e4044cfb11d0d59c5d4e84191ced78baa083ad944a7ffc09c",
+  "nativeManifestSHA256": "08567bcdae3cf9e3f8ba32a5c3d34179b598d25d0b883b3a1fed32ade12c97a7",
+  "nativeCases": 7,
+  "nativeSteps": 178,
+  "profiles": [
+    "O0",
+    "O2",
+    "ASan/UBSan"
+  ],
+  "scope": "Synthetic framebuffer melt pixels, all column positions, original RNG calls and completion; persistence/rollback; no gameplay/UI/pilot acceptance claim."
+}
