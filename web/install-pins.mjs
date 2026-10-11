@@ -6,7 +6,7 @@ export default {
   "artifacts": {
     "Doom": {
       "url": "/install-assets/Doom.json",
-      "sha256": "1f8791c5eb81a40c7511917c156f157cf4381a61924187a1dd0487d6bbd6e3a6"
+      "sha256": "9bf0ff9ba87733870f4b1251a79818ce787ef5e1e8e3231b06051054f543c6dd"
     },
     "ResourceStore": {
       "url": "/install-assets/ResourceStore.json",
