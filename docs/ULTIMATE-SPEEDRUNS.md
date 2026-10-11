@@ -1,5 +1,27 @@
 # Ultimate DOOM Episode One experimental speedrun results
 
+Latest owner-profile continuation: **all nine authentic maps are complete at
+35 FPS**, with 14,475 rendered EVM frames and gameplay tics, 14,484 exact whole
+snapshots, and genuine exits. The source-justified authenticated WAD owner-slot
+extension resolved all four previous rendering blockers. All five accepted
+recordings and all four partial prefixes are preserved and pass regression;
+original Freedoom also passes. Virtual pixels remain explicitly distinguished
+from native-exact pixels; native compatibility stays RESTRICT. Relaxed was not
+implemented.
+
+[Current episode report](ULTIMATE-OWNER-EPISODE.md),
+[owner investigation](ULTIMATE-OWNER-POINTERS.md) and
+[final evidence manifest](../artifacts/ultimate-speedruns/owner-pointer/episode-summary.json)
+replace the earlier incomplete outcome below. Verified recording/source
+checkpoint: `2f2c6ab1ca7b68db31a66137fa8c30d4cfc66f8b` on the same
+`feat/ultimate-episode-speedruns` worktree; final acceptance metadata is a separate
+commit. Reproduce with the owner-profile commands in
+[the suite README](../tools/reference/ultimate_speedruns/README.md).
+All owned replay, Anvil and monitor processes are stopped after completion.
+No push or main integration occurred. Historical evidence remains immutable.
+
+## Preserved earlier checkpoint
+
 Five authentic DSDA UV Speed recordings are complete at 35 FPS: E1M1, E1M2,
 E1M4, E1M7 and E1M9. All nine selected maps finish native/EVM gameplay with
 14,475 exact original tics and

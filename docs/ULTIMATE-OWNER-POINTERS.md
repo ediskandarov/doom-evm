@@ -1,5 +1,37 @@
 # Continuation: deterministic owner-slot addressing
 
+Final acceptance: **nine complete authentic 35 FPS recordings**, 14,475 EVM
+gameplay tics/frames and 14,484 exact whole snapshots. Every map exits genuinely.
+All 6,051 accepted frame hashes and prior virtual provenance records are
+unchanged; all four preserved partial prefixes match. Original Freedoom's 279
+frames and 280 snapshots also agree. [Episode report](ULTIMATE-OWNER-EPISODE.md)
+and [frozen manifest](../artifacts/ultimate-speedruns/owner-pointer/episode-summary.json)
+contain every map's source identity, proof, gas, timestamps, runtime, sampled
+resource use, native comparison and local MP4 path.
+
+The extension remained confined to authenticated WAD cache owner slots:
+20 virtual-zone draw uses and 18 virtual-owner draw uses across the full
+suite. 926,399,962 common-native pixels outside those destinations
+agree exactly. Absolute native owner addresses vary; the virtual region is
+never a claim about process placement. RESTRICT remains the compatibility
+verdict. No Relaxed profile or arbitrary process-address emulation was added.
+
+All 44 focused final-source Forge tests and the native identity/lifetime gates
+passed. The final input check authenticates all 11 preserved original archives;
+three checkpoint-cleanup guards pass. All nine independent whole-state,
+receipt, supported-pixel and MP4 gates pass, including exact packet timestamps
+and one-tic durations. No full historical acceptance rerun was performed.
+
+No new infrastructure limit increase was required. Telemetry records 295
+samples, minimum free disk 32,373,678,080 bytes, and explicit
+sampled RSS coverage limits. Cleanup freed 9,695,812,652 bytes from
+592 validated superseded files. Latest recovery states, final
+receipts, old five videos and failed/partial attempts remain. Owned localhost
+Anvil, suite and monitor jobs exited; no unrelated runtime was touched.
+Verified recording/source checkpoint: `2f2c6ab1ca7b68db31a66137fa8c30d4cfc66f8b`.
+
+## Recorded continuation scope and milestones
+
 The existing goal remains open, targeting nine complete Episode One recordings.
 Continuation baseline: `8ee6d1f2c403dfb9e7c2aa2016116a578d4724e9`, existing
 `feat/ultimate-episode-speedruns` worktree. Prior reports, five accepted MP4s,
