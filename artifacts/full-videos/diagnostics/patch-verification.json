@@ -1,0 +1,21 @@
+{
+  "verifiedUTC": "2026-10-11T16:23:36.061300+00:00",
+  "scope": "Read-only patch application smoke checks on preserved legacy/frozen sources; no rendering or source mutation.",
+  "checks": [
+    {
+      "patch": "tools/reference/full_videos/diagnostics/evm-pixel-journal.patch",
+      "SHA256": "fbed7ebe54cbf7868fb07fc238b642da05d45d5b2807726a638f04db81859043",
+      "target": "artifacts/local/full-videos/observer-v2",
+      "returncode": 0,
+      "stdout": "patching file 'src/doom/z_zone_types.sol'\npatching file 'src/doom/r_state.sol'\npatching file 'src/doom/z_zone.sol'\npatching file 'src/doom/r_draw.sol'\npatching file 'src/support/FullSpeedrunProbe.sol'\n"
+    },
+    {
+      "patch": "tools/reference/full_videos/diagnostics/native-pixel-journal.patch",
+      "SHA256": "aaa2f5d80380ecb3ea72704895c2e687fa5683245bbdeba245f576dd0829b1a2",
+      "target": "artifacts/local/full-videos/native-O2",
+      "returncode": 0,
+      "stdout": "patching file r_draw.c\npatching file r_data.c\npatching file original-host.c\n"
+    }
+  ],
+  "pass_": true
+}

@@ -1,0 +1,68 @@
+[
+  {
+    "frameId": 2460,
+    "gameplayTic": 2384,
+    "samples": [
+      {
+        "sourceBlock": 1600,
+        "physicalOffset": 3712594,
+        "headerBlock": 1601,
+        "headerOffset": 3712560,
+        "relative": 34,
+        "fieldOffset": 32,
+        "targetOffset": 3711160,
+        "virtualPointer": "0x100038a0b8",
+        "sourceByte": 56,
+        "drawnPixel": 60,
+        "x": 193,
+        "y": 153,
+        "sampleIndex": 1394,
+        "logicalLength": 1356,
+        "sourceOffset": 1267,
+        "provenance": 4,
+        "finalPixel": 60,
+        "drawnValueSurvives": true
+      },
+      {
+        "sourceBlock": 1600,
+        "physicalOffset": 3712594,
+        "headerBlock": 1601,
+        "headerOffset": 3712560,
+        "relative": 34,
+        "fieldOffset": 32,
+        "targetOffset": 3711160,
+        "virtualPointer": "0x100038a0b8",
+        "sourceByte": 56,
+        "drawnPixel": 60,
+        "x": 194,
+        "y": 153,
+        "sampleIndex": 1394,
+        "logicalLength": 1356,
+        "sourceOffset": 1267,
+        "provenance": 4,
+        "finalPixel": 60,
+        "drawnValueSurvives": true
+      },
+      {
+        "sourceBlock": 1600,
+        "physicalOffset": 3712594,
+        "headerBlock": 1601,
+        "headerOffset": 3712560,
+        "relative": 34,
+        "fieldOffset": 32,
+        "targetOffset": 3711160,
+        "virtualPointer": "0x100038a0b8",
+        "sourceByte": 56,
+        "drawnPixel": 60,
+        "x": 195,
+        "y": 153,
+        "sampleIndex": 1394,
+        "logicalLength": 1356,
+        "sourceOffset": 1267,
+        "provenance": 4,
+        "finalPixel": 60,
+        "drawnValueSurvives": true
+      }
+    ]
+  }
+]

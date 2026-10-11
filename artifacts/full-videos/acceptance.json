@@ -1,0 +1,179 @@
+{
+  "pass_": true,
+  "verifiedUTC": "2026-10-11T16:26:29.372795+00:00",
+  "scope": "Nine standalone EVM recordings; finite declared native gameplay/UI/wipe/finale comparisons; independent full-state receipts; status/UI/gameflow/statistics/palette/media/source/input/persistence/rollback/preservation gates. No browser integration, G_WorldDone/startup or full historical suite claim.",
+  "gameplayTics": 14475,
+  "matchingGameplaySnapshots": 14484,
+  "frames": 18175,
+  "gas": 18947598824099,
+  "maps": [
+    {
+      "map": 1,
+      "pass_": true,
+      "recording": "artifacts/local/full-videos/E1M1/pilot-short-v2",
+      "recordingSHA256": "38d0305dfec5440a7fd3354fc0355a9f838a4d26dad6df7d9cf4af8564cabae6",
+      "gameplayTics": 316,
+      "snapshots": 317,
+      "frames": 547,
+      "gas": 324602338892,
+      "gateHashes": {
+        "verification": "819232a0a1d3a87f9567bacafae63b505bf45063f39df923081ba84eb5b8b730",
+        "ui-verification": "d9ade978abdd1ce6a069e62c99ab585d72dc3488cb85a150dbd1aa0860e354d3",
+        "media": "287edd9d314017544831a7de88f2637fead2b1a5f03809e98512177f0d022d3c",
+        "rollback": "a2245ddca5c6bad82d88e3afaa9109dc4ca8ec1a423c0cd925ed2f4cebe54051",
+        "state-verification": "5ce72991640403a4c67581de4cd0f451a2969c36bfd603ef5641d1351aeb3d07",
+        "visual-qa": "9014db3498758a4046422109326b257675075bdb83b2210d3df93aa86e3e5440"
+      }
+    },
+    {
+      "map": 2,
+      "pass_": true,
+      "recording": "artifacts/local/full-videos/E1M2/complete-short-v1",
+      "recordingSHA256": "15cc405c60bbe51e3b7772483faf1056987aa1bd46d0ef39d128649d1a10a024",
+      "gameplayTics": 798,
+      "snapshots": 799,
+      "frames": 1029,
+      "gas": 917395666205,
+      "gateHashes": {
+        "verification": "18b48c3018570b5819d4d094aae75d0a9a82ce958d1d15b093a00ea15376f97d",
+        "ui-verification": "96aea15d7515ece3120707ac25a661572a8af092152a9a013de3dec4cbc619e9",
+        "media": "d27c1af409416078e01caea8ee11c03c8500cc1417404cc82902a8c6bb59302f",
+        "rollback": "e526f004e2716ec2c17b3a04fee05d1f0eb2a11a19c9743983575ead9fcaf805",
+        "state-verification": "df10b127693fd716f044b37d8a04766aac8408eb6fe751d019cfcd0051adc990",
+        "visual-qa": "41e84151f2b30f376f5580def62acd5e87b631c2d96be0e5ee891afc60ee1433"
+      }
+    },
+    {
+      "map": 3,
+      "pass_": true,
+      "recording": "artifacts/local/full-videos/E1M3/complete-short-v1",
+      "recordingSHA256": "03a7fda860ef9030a54be10c4df73303e4281fe3c4fe78a7076d5994b495850e",
+      "gameplayTics": 1291,
+      "snapshots": 1292,
+      "frames": 1522,
+      "gas": 1728806988621,
+      "gateHashes": {
+        "verification": "15e44835f2d2845843ac23a375b49d3c7b2b26b2eadcb138334c7a249f430891",
+        "ui-verification": "a61ea6da6b04ffc2d661cc82a62761793141e1f52132be97eb0b9db9288048b3",
+        "media": "2b1d63fe89cbc2cdcbd472123b07acf8a51e484817e625bfe1901f8a33907a64",
+        "rollback": "e4c7bdb2cdc2118c71ea21dc284be80546f6f178aec414d11c67154456ef1445",
+        "state-verification": "70ee2d4d5504ea906462b43a7189d7475ee8393e553abdfbae0134503ab5b121",
+        "visual-qa": "9355277f11d71b1afeed0e6d31aa596457efaac8cf48ca63b962f7307555000d"
+      }
+    },
+    {
+      "map": 4,
+      "pass_": true,
+      "recording": "artifacts/local/full-videos/E1M4/complete-short-v1",
+      "recordingSHA256": "488984f2e3993cbbb0f5a537f1d23c932efd60f50416acaf254560fbd7447cbf",
+      "gameplayTics": 767,
+      "snapshots": 768,
+      "frames": 1003,
+      "gas": 811950237036,
+      "gateHashes": {
+        "verification": "e202dabd96dcf9488b0d68e119692989d4390a255e3f7ac4fa45430086820acd",
+        "ui-verification": "5fbfd81906b4dc066ee9e41905c80f2688f74456206395d8875f026270963b1f",
+        "media": "c7373a349224131c1b9060b26ac04a4c45aaaa6a9b65e19f2d08cf7752d80307",
+        "rollback": "b717448f7b4a2023e60818a02dc03abaf5c4602ed2278c13078c521357e71d12",
+        "state-verification": "88286799a507d7df78fe781ce4261c08ae64109bd77476e89d2a97c910c4271d",
+        "visual-qa": "3e2d67f48d2a98250f6bb69c6d99c4fc32bb6d207d7b0c850856bee27a481d1f"
+      }
+    },
+    {
+      "map": 5,
+      "pass_": true,
+      "recording": "artifacts/local/full-videos/E1M5/complete-short-v1",
+      "recordingSHA256": "d4b6a9d25c75b50fa52662e26f71fef152fdc89b507588fdce2ae5a8c5d7beb7",
+      "gameplayTics": 2110,
+      "snapshots": 2111,
+      "frames": 2346,
+      "gas": 2635722517898,
+      "gateHashes": {
+        "verification": "eb966c7ffe0f5fa09218a7623f6c6cec53075d7250a11b4898be54c72a888778",
+        "ui-verification": "1a49353eba44554da30e4280024bc3c3f62dff4fdb7c0dc9c7fcc77d8fd19e90",
+        "media": "9b0708b8b4a3796aa8bc4e5c263f8bf7678812972e32cc49ce7d5cbf2b35374c",
+        "rollback": "666b3e94a073ea5ebee0380d267810fb1ff12eff8bf100bd2bf9e7c423a13c0b",
+        "state-verification": "4a6e24661b1a71fa2e046221d2196d5905638fad1f69072df1c3a6a96ce89269",
+        "visual-qa": "7deaf59ceb1ce39f1dd564d06aeb0007a403cdcc2bc1864bd5d863085d704d08"
+      }
+    },
+    {
+      "map": 6,
+      "pass_": true,
+      "recording": "artifacts/local/full-videos/E1M6/complete-short-v1",
+      "recordingSHA256": "2da341a0477cf85a8730bb4052b84ea8c6a1d3a6e65f5626728563677cec568a",
+      "gameplayTics": 3385,
+      "snapshots": 3386,
+      "frames": 3619,
+      "gas": 5459324203074,
+      "gateHashes": {
+        "verification": "9605c14335c1acf74f2563f91dc2b18e9fa9895c504d3d2c827f29e6e0da3aa7",
+        "ui-verification": "63674d75a89e544bfc41fb986b4be63f0cba6b9f38e1ccfc0abd2a3a8e69c2d2",
+        "media": "d95fa27b4b2aab4ade87cf361e5358757b94ef299f98b8fc445ed16c983eaf68",
+        "rollback": "49666fc44ae3c79a9b7caf7f2e9b1a2dc099b1478cf3286919b1097f0830b7c5",
+        "state-verification": "31b5e38574e9f3f5cb31f1cdaa1262a3b73bd26e2ca31659ff3ca8caaed89b1d",
+        "visual-qa": "633348b28a8c2d68328c4f7f9d2b6f541447f277548799677282655c402ab302"
+      }
+    },
+    {
+      "map": 7,
+      "pass_": true,
+      "recording": "artifacts/local/full-videos/E1M7/complete-short-v1",
+      "recordingSHA256": "207b3f85ff22b2b1f59aafa357a335452195022179c8b1aaf98f1e08d19c7a32",
+      "gameplayTics": 2572,
+      "snapshots": 2573,
+      "frames": 2808,
+      "gas": 3305344543682,
+      "gateHashes": {
+        "verification": "14671899b372f87ce1d39d9ea36ae52e29fcb3a6a4c996af9c9688e90f0f0430",
+        "ui-verification": "64ac252eb2d23775fc85a1c301df95ae48fdd31e57c1f3793e7d9e46b284f0e1",
+        "media": "d97f74402382944704f60d71df3b4262df8dbd1745002ec7d1f100afd9a0c4a0",
+        "rollback": "437bae9e63e842a870f5ec5aba01fa7ea8ba461418ba283603239c4ed16b782e",
+        "state-verification": "150ca1f677245e461c71dcd4bb4b5df9818ad7b109c900ad74f9bba521890d22",
+        "visual-qa": "dc110bf4c06e862f418aae3e33097dca164bb896288290fc32181ebba395791e"
+      }
+    },
+    {
+      "map": 8,
+      "pass_": true,
+      "recording": "artifacts/local/full-videos/E1M8/complete-short-v1",
+      "recordingSHA256": "74bef07fe07aa96e93d2f48b433ab17601e03082d59bf90fecfddaabfd162711",
+      "gameplayTics": 1638,
+      "snapshots": 1639,
+      "frames": 3467,
+      "gas": 2068482084762,
+      "gateHashes": {
+        "verification": "9106af73f96f4107b4e091ea3c09715c5b99617c2933a9b65e199fc7965af613",
+        "ui-verification": "33eb31811da2e8fd21fa362ffd25d5d5cd14476fdb826d2615cafb3f7374588a",
+        "media": "cdc8e638c1b4dfa5883a9548b0c4726360ebdfcdba6066f20e6647779d95a4a9",
+        "rollback": "7fe7edd87d96f1afcd4487a34c2422ac31cbec47f40f53f2a6fc0bd60cc29205",
+        "state-verification": "d1d4f7c463f71c25710347d99131c827cf2c9709bce8d3b966e702e06d10381a",
+        "visual-qa": "9d562c3443f704202c752d365e4fb09a5935d9f30784d0fa49679a577c54328f"
+      }
+    },
+    {
+      "map": 9,
+      "pass_": true,
+      "recording": "artifacts/local/full-videos/E1M9/complete-short-v1",
+      "recordingSHA256": "1d65c69ebda4e3cf6e10b1be339128e7d067bad8957db9a077b8747857120f38",
+      "gameplayTics": 1598,
+      "snapshots": 1599,
+      "frames": 1834,
+      "gas": 1695970243929,
+      "gateHashes": {
+        "verification": "315edd16c8e9ce5c06ca50043789033eecdb0ed8d2b3cbfdd5129f446d4a33ef",
+        "ui-verification": "b3b38443038e867d696f2bc111c5e69eb4589045c4abfd76eafd316172ded571",
+        "media": "75e8101535ae0e223730a02642f9e95f2dc52335e571c99a2c8494258bbff490",
+        "rollback": "2eceebc7c832934f2d90c297c99ecda1fdbf2eff1608782b9d2e31296b2d8be5",
+        "state-verification": "ddbe8eb195ab0ee372574201f256bf0fac6196b05ffedc0862034bc95cac4074",
+        "visual-qa": "5d4bbc890c485b98044e84c250daf5afed1b6b03943ac04994e9e4ad5ef69b65"
+      }
+    }
+  ],
+  "preservedLongPilotSHA256": "6d65e321e75f3c787fc31dc758d7460b1f4cd25f27e0b193e1d7f204a82d12f4",
+  "historicalPreservationSHA256": "e29bfe051a6ef18fcf7a18888aedc263a4db4e2a2c2e24a898393d2994c1ad73",
+  "focusedTestsSHA256": "7e67fd1cadd6f6d605b031b95e763941f5cff502681046bb0ac6507dd77dd7fd",
+  "wipeProofSHA256": "c587f96bfd5fc88846a108baa490c400f7e93f57c479400f00732262359523ef",
+  "handoffAdapterAuditSHA256": "fd5403673491a6be7096730e262c9930eb371e3373ac9ae387eb7941a46d2c9d",
+  "allocationDiagnosisSHA256": "f496075f5b657f53c5db1f18c2e4f78bb6cd06697eb249c451db64256052c301"
+}

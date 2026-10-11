@@ -1,0 +1,60 @@
+{
+  "scope": "Compile/source audit only; no G_WorldDone or next-level startup execution verification claimed",
+  "recorderBugOnly": true,
+  "missingGuardMetadata": [
+    "playeringame[0]",
+    "gameepisode",
+    "gamemap"
+  ],
+  "missingSemanticMetadata": [
+    "secretExit",
+    "players[0].didsecret"
+  ],
+  "authoritativeCopies": [
+    "netgame",
+    "deathmatch",
+    "demoplayback",
+    "consoleplayer",
+    "playeringame",
+    "gameepisode",
+    "gamemap",
+    "secretExit",
+    "WI wbs.didsecret from G_DoCompleted"
+  ],
+  "productionAudit": {
+    "src/evm/Doom.sol": "7da3e8c4f086c9eec3a7f1ccb194094b3ffaa89fc79762dfc2d5af5791e8e634",
+    "src/evm/EpisodeRuntime.sol": "7be9205e74af487a1a2722d861465be5e5d155607221cfdf84178cc11680afa8"
+  },
+  "productionConclusion": "Doom._restoreEpisode loads complete saved state and EpisodeRuntime.intermissionTicker retains c.state; no equivalent minimal-context omission",
+  "consumerSourceSHA256": "6bfbab27dfeeaa8073b9674b3a3afcb86f2c508af395bfe1c5327d37b1c49609",
+  "buildLogSHA256": "08e3d614e96ef77cc1bc3539051265dcb004508860b66b44f8b22807d8a12f8e",
+  "compiler": {
+    "version": "0.8.37+commit.f401782d"
+  },
+  "settings": {
+    "remappings": [],
+    "optimizer": {
+      "enabled": true,
+      "runs": 200
+    },
+    "metadata": {
+      "bytecodeHash": "ipfs"
+    },
+    "compilationTarget": {
+      "artifacts/local/full-videos/observer-handoff-metadata/src/support/FullSpeedrunProbe.sol": "FullSpeedrunProbe"
+    },
+    "evmVersion": "cancun",
+    "libraries": {},
+    "viaIR": true
+  },
+  "sourceABI_SHA256": "0b5b98881e450197d9e506e924c9a79e3c3b1ba4ccbd9e5b49e3fade502dd4c5",
+  "recordingEndpoint": {
+    "WI_state": -1,
+    "cnt": 1,
+    "worldDoneRequested": false,
+    "normalRejectedTransactions": 0
+  },
+  "failedDiagnostic": "artifacts/local/full-videos/E1M1/pilot-short-v1",
+  "G_WorldDoneVerified": false,
+  "nextLevelStartupVerified": false
+}

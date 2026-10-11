@@ -1,0 +1,94 @@
+[
+  {
+    "frameId": 501,
+    "gameplayTic": 425,
+    "samples": [
+      {
+        "sourceBlock": 1250,
+        "physicalOffset": 3008529,
+        "headerBlock": 1251,
+        "headerOffset": 3008496,
+        "relative": 33,
+        "fieldOffset": 32,
+        "targetOffset": 3008080,
+        "virtualPointer": "0x10002de650",
+        "sourceByte": 230,
+        "drawnPixel": 8,
+        "x": 212,
+        "y": 106,
+        "sampleIndex": 409,
+        "logicalLength": 376,
+        "sourceOffset": 282,
+        "provenance": 4,
+        "finalPixel": 7,
+        "drawnValueSurvives": false
+      },
+      {
+        "sourceBlock": 1250,
+        "physicalOffset": 3008529,
+        "headerBlock": 1251,
+        "headerOffset": 3008496,
+        "relative": 33,
+        "fieldOffset": 32,
+        "targetOffset": 3008080,
+        "virtualPointer": "0x10002de650",
+        "sourceByte": 230,
+        "drawnPixel": 8,
+        "x": 213,
+        "y": 106,
+        "sampleIndex": 409,
+        "logicalLength": 376,
+        "sourceOffset": 282,
+        "provenance": 4,
+        "finalPixel": 7,
+        "drawnValueSurvives": false
+      },
+      {
+        "sourceBlock": 1250,
+        "physicalOffset": 3008529,
+        "headerBlock": 1251,
+        "headerOffset": 3008496,
+        "relative": 33,
+        "fieldOffset": 32,
+        "targetOffset": 3008080,
+        "virtualPointer": "0x10002de650",
+        "sourceByte": 230,
+        "drawnPixel": 8,
+        "x": 214,
+        "y": 106,
+        "sampleIndex": 409,
+        "logicalLength": 376,
+        "sourceOffset": 282,
+        "provenance": 4,
+        "finalPixel": 7,
+        "drawnValueSurvives": false
+      }
+    ]
+  },
+  {
+    "frameId": 999,
+    "gameplayTic": 923,
+    "samples": [
+      {
+        "sourceBlock": 1633,
+        "physicalOffset": 3763387,
+        "headerBlock": 1634,
+        "headerOffset": 3763376,
+        "relative": 11,
+        "fieldOffset": 8,
+        "targetOffset": 11800,
+        "virtualPointer": "0x2000002e18",
+        "sourceByte": 0,
+        "drawnPixel": 0,
+        "x": 99,
+        "y": 96,
+        "sampleIndex": 1395,
+        "logicalLength": 1384,
+        "sourceOffset": 1268,
+        "provenance": 5,
+        "finalPixel": 0,
+        "drawnValueSurvives": true
+      }
+    ]
+  }
+]

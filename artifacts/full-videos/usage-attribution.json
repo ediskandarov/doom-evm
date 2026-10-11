@@ -1,0 +1,16 @@
+{
+  "measurementBasis": "Goal-manager checkpoint, separate from EVM computational telemetry. No monetary or missing CPU-time estimate.",
+  "snapshot": {
+    "goal": {
+      "threadId": "01a12a41-50d3-7103-95ea-9faaf42fbce2",
+      "objective": "Produce and verify nine complete EVM-rendered Ultimate DOOM Episode One speedrun videos with original status bar, intermission, source-derived wipes, correct gameflow, native references, accounting/provenance manifests, measurements, technical report and Gitmoji commits in the existing feat/full-speedrun-videos worktree; complete verified E1M1 pilot before eight remaining recordings; preserve historical evidence and do not modify, merge or push main.",
+      "status": "active",
+      "tokensUsed": 1273081,
+      "timeUsedSeconds": 25748,
+      "createdAt": 1791710304,
+      "updatedAt": 1791736052
+    },
+    "remainingTokens": null,
+    "completionBudgetReport": null
+  }
+}

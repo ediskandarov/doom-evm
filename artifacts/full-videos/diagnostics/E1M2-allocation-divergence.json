@@ -1,0 +1,301 @@
+{
+  "schemaVersion": 1,
+  "classification": 2,
+  "classificationLabel": "Native reference adapter/profile difference; no EVM rendering defect",
+  "firstDivergentSample": "raw source byte at composite offset512, caused by earlier physical allocation divergence",
+  "cause": "Legacy native adapter borrowed st_stuff/hu_stuff/wi_stuff resources but omitted ST_lib.W_CacheLumpName(STTMINUS). ST_initData -> STlib_init adds a 128-byte/168-byte-rounded physical-zone cache allocation at startup. Corrected separate native reference borrows ST_lib resources consistently.",
+  "IWAD_SHA256": "6fdf361847b46228cfebd9f3af09cd844282ac75f3edbb61ca4cb27103ce2e7f",
+  "originalSourceCommit": "a77dfb96cb91780ca334d0d4cfd86957558007e0",
+  "map": 2,
+  "gameplayTic": 84,
+  "coordinate": [
+    290,
+    106
+  ],
+  "operation": "R_DrawColumn",
+  "texture": {
+    "index": 75,
+    "name": "STEP5",
+    "width": 32,
+    "height": 16,
+    "column": 31,
+    "compositeBytes": 512,
+    "compositeSHA256": "65890b87232d4d67b33f1d25ba3f56b54bddaf371946b9e1eb75af5d66969204"
+  },
+  "parameters": {
+    "yl": 95,
+    "yh": 106,
+    "iscale": 93235,
+    "texturemid": -1002024,
+    "fracAtPixel": 1049146,
+    "maskedSampleIndex": 16,
+    "compositeSourceOffset": 496,
+    "compositeSampleIndex": 512,
+    "centery": 84,
+    "COLORMAP": 11,
+    "COLORMAP_SHA256": "82130e1472cf9e189d76c8991625df5ee6dd146863c7213530a237b4018cc379",
+    "drawOperationOrdinalNative": 458,
+    "drawOperationOrdinalEVM": 458,
+    "viewWidth": 320,
+    "viewHeight": 168,
+    "projection": 10485760,
+    "centeryfrac": 5505024
+  },
+  "firstMallocDivergence": {
+    "oneBasedMallocOrdinal": 2126,
+    "native": {
+      "sequence": 2767,
+      "tic": 0,
+      "phase": "after_R_InitSprites",
+      "op": "malloc",
+      "outer": 1,
+      "file": "w_wad.c",
+      "caller": "W_CacheLumpNum",
+      "line": 490,
+      "request": 128,
+      "requestedTag": 1,
+      "owner": 732,
+      "header": 5521264,
+      "size": 168,
+      "rover": 5521432,
+      "block": {
+        "offset": 5521264,
+        "size": 168,
+        "allocated": 1,
+        "owner": 732,
+        "tagKnown": 1,
+        "tag": 1,
+        "idKnown": 1,
+        "id": 1919505,
+        "prev": 5521000,
+        "next": 5521432
+      }
+    },
+    "evm": {
+      "op": 1,
+      "request": 224,
+      "tag": 50,
+      "owner": 4294967295,
+      "id": 2126,
+      "header": 5521264,
+      "size": 264,
+      "rover": 5521528,
+      "prev": 5521000,
+      "next": 5521528,
+      "phase": 0
+    },
+    "priorMatchingMallocEvents": 2125,
+    "rawAllocationGeometryDeltaBytes": 168
+  },
+  "nativeLegacyMixedUI": {
+    "allocationIdentity": "header-offset:5595256/creation-event:3236",
+    "mallocOrdinal": 2394,
+    "zoneIdMarker": 1919505,
+    "compositeHeaderOffset": 5595256,
+    "compositePayloadOffset": 5595296,
+    "requestedBytes": 512,
+    "roundedPayloadBytes": 512,
+    "allocatedBytes": 552,
+    "nativeAllocationOperation": {
+      "sequence": 3236,
+      "tic": 84,
+      "phase": "before_render",
+      "op": "malloc",
+      "outer": 1,
+      "file": "r_data.c",
+      "caller": "R_GenerateComposite",
+      "line": 246,
+      "request": 512,
+      "requestedTag": 1,
+      "owner": 2381,
+      "header": 5595256,
+      "size": 552,
+      "rover": 5595808,
+      "block": {
+        "offset": 5595256,
+        "size": 552,
+        "allocated": 1,
+        "owner": 2381,
+        "tagKnown": 1,
+        "tag": 1,
+        "idKnown": 1,
+        "id": 1919505,
+        "prev": 5587024,
+        "next": 5595808
+      }
+    },
+    "nextBlockIdentity": "header-offset:5595808/fragment-created-by-event:3236",
+    "nextBlock": {
+      "offset": 5595808,
+      "size": 61513056,
+      "allocated": 0,
+      "owner": -1,
+      "tagKnown": 1,
+      "tag": 0,
+      "idKnown": 0,
+      "id": null,
+      "prev": 5595256,
+      "next": 8
+    },
+    "neighborHeader40BytesHex": "609daa03000000000000000000000000000000000000000008000046010000007860554601000000",
+    "sourceByte": 96,
+    "lookupByte": 103
+  },
+  "EVM": {
+    "blockId": 2393,
+    "compositeHeaderOffset": 5595088,
+    "compositePayloadOffset": 5595128,
+    "requestedBytes": 512,
+    "roundedPayloadBytes": 512,
+    "allocatedBytes": 552,
+    "allocationOperation": {
+      "op": 1,
+      "request": 512,
+      "tag": 1,
+      "owner": 2381,
+      "id": 2393,
+      "header": 5595088,
+      "size": 552,
+      "rover": 5595640,
+      "prev": 5586856,
+      "next": 5595640,
+      "phase": 100084
+    },
+    "nextBlockId": 2394,
+    "nextBlockOffset": 5595640,
+    "nextBlockSize": 61513224,
+    "nextBlockTag": 0,
+    "nextBlockOwner": null,
+    "nextBlockAllocated": false,
+    "neighborHeader40BytesHex": "089eaa0300000000000000000000000000000000000000000800000010000000d05f550010000000",
+    "neighborHeaderProvenance40BytesHex": "01010101020202020404040404040303010101010000000004040404040403030404040404040303",
+    "unknownHeaderByteOffsets": [
+      20,
+      21,
+      22,
+      23
+    ],
+    "sampleProvenance": 1,
+    "sampleField": "current neighboring free-block size byte0; provenance1 original allocator-written integer",
+    "sourceByte": 8,
+    "lookupByte": 8
+  },
+  "nativeConsistentBorrowedUI": {
+    "allocationIdentity": "header-offset:5595088/creation-event:3235",
+    "mallocOrdinal": 2393,
+    "zoneIdMarker": 1919505,
+    "compositeHeaderOffset": 5595088,
+    "compositePayloadOffset": 5595128,
+    "requestedBytes": 512,
+    "roundedPayloadBytes": 512,
+    "allocatedBytes": 552,
+    "nativeAllocationOperation": {
+      "sequence": 3235,
+      "tic": 84,
+      "phase": "before_render",
+      "op": "malloc",
+      "outer": 1,
+      "file": "r_data.c",
+      "caller": "R_GenerateComposite",
+      "line": 246,
+      "request": 512,
+      "requestedTag": 1,
+      "owner": 2381,
+      "header": 5595088,
+      "size": 552,
+      "rover": 5595640,
+      "block": {
+        "offset": 5595088,
+        "size": 552,
+        "allocated": 1,
+        "owner": 2381,
+        "tagKnown": 1,
+        "tag": 1,
+        "idKnown": 1,
+        "id": 1919505,
+        "prev": 5586856,
+        "next": 5595640
+      }
+    },
+    "nextBlockIdentity": "header-offset:5595640/fragment-created-by-event:3235",
+    "nextBlock": {
+      "offset": 5595640,
+      "size": 61513224,
+      "allocated": 0,
+      "owner": -1,
+      "tagKnown": 1,
+      "tag": 0,
+      "idKnown": 0,
+      "id": null,
+      "prev": 5595088,
+      "next": 8
+    },
+    "neighborHeader40BytesHex": "089eaa0300000000000000000000000000000000000000000800804e01000000d05fd54e01000000",
+    "sourceByte": 8,
+    "lookupByte": 8
+  },
+  "correctedNativeMallocEventsCompared": 2397,
+  "correctedAllMallocRequestsOffsetsAndSizesExact": true,
+  "correctedAffectedFrameAll64000PixelsExact": true,
+  "finalRecordingAll1029FramesAndPalettesExact": true,
+  "unchangedEVMFrameSHA256": true,
+  "unchangedEVMSourceAndMemoryProvenance": true,
+  "legacyFailure": {
+    "frames": 11,
+    "pixels": 13,
+    "evidence": "artifacts/local/full-videos/E1M2/complete-short-v1/fresh-native-pixel-differences.json"
+  },
+  "bindings": [
+    {
+      "file": "artifacts/local/full-videos/E1M2/native-pixel-trace-v4/trace.log",
+      "sha256": "1529305e1e5d98e57913a366af0c93c13f63ec5fb88eefd4b6613d749d2b326b"
+    },
+    {
+      "file": "artifacts/local/full-videos/E1M2/native-pixel-trace-v4/zone-events.jsonl",
+      "sha256": "25640007710f86b30b75da0540838727625202527e0b2eca16756d7fe9b21a1a"
+    },
+    {
+      "file": "artifacts/local/full-videos/E1M2/native-pixel-trace-v4/zone-stages.jsonl",
+      "sha256": "3efa0b041f5eb3ca74df90f678b0391eab550bc83b6ca5640d655277e2f4bafa"
+    },
+    {
+      "file": "artifacts/local/full-videos/E1M2/native-pixel-trace-borrowed/trace.log",
+      "sha256": "9b1d0d781377b07174669b6b569fd61631a0c47aaf1f853f9d9f71dc20af8d80"
+    },
+    {
+      "file": "artifacts/local/full-videos/E1M2/native-pixel-trace-borrowed/zone-events.jsonl",
+      "sha256": "3aa17d2e00400b239cb7a729de4fa2e8142632a60192ce4ae6702d72d457355a"
+    },
+    {
+      "file": "artifacts/local/full-videos/E1M2/pixel-journal-startup/pixel-journal.json",
+      "sha256": "02e8389f2c23f7ef50c3827ce7f90e4a216a3c4642b59185757d22d6e5fcfd22"
+    },
+    {
+      "file": "artifacts/local/full-videos/E1M2/pixel-journal-startup/allocation-journal.json",
+      "sha256": "d4fecf95da89e56c265f1e10dafaa4dc0128b347b447360033cf78072cdf27b8"
+    },
+    {
+      "file": "artifacts/local/full-videos/E1M2/complete-short-v1/fresh-native-pixel-differences.json",
+      "sha256": "7c18c1c6fb8f40048c9b640e65b9979da5a22d3bbd67641e02e276916dea537e"
+    },
+    {
+      "file": "artifacts/local/full-videos/E1M2/complete-short-v1/recording.json",
+      "sha256": "15cc405c60bbe51e3b7772483faf1056987aa1bd46d0ef39d128649d1a10a024"
+    },
+    {
+      "file": "artifacts/local/full-videos/E1M2/complete-short-v1/verification-legacy-native.json",
+      "sha256": "1df0dad5390e1550909248667d57a17c4c768a3fec654d053809870444839326"
+    },
+    {
+      "file": "artifacts/local/full-videos/E1M2/native-pixel-order-trace/trace.log",
+      "sha256": "d570a37fa4eac44716981c162792c893a231466b040735b7350036403f026233"
+    },
+    {
+      "file": "artifacts/local/full-videos/E1M2/pixel-journal-order-startup/pixel-journal.json",
+      "sha256": "55e183506eafaec8c3bf805379644d8b4f3f758e95def711581158da3855d402"
+    }
+  ],
+  "nativeHeaderNote": "Native C has pointers/ZONEID, not EVM logical block IDs. Native identities use physical header offsets plus creation events. Pointer bytes depend on process addresses; EVM header unknowns remain explicitly provenance0 and virtual pointer bytes remain4/5. No universal pointer equality claim.",
+  "diagnosticScope": "Journal observer exists only in a separate generated diagnostic clone. No production execution instrumentation or byte patch was applied. Diagnostic gas is excluded from final-recording totals.",
+  "drawOrderScope": "Original nonempty column/span/fuzz/translated world-draw call order; target regular column is operation458 in both executions. UI uses V_DrawPatch separately."
+}

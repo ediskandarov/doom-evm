@@ -1,0 +1,142 @@
+{
+  "measuredUTC": "2026-10-11T15:27:39.026664+00:00",
+  "tools": [
+    {
+      "command": [
+        ".toolchain/bin/anvil",
+        "--version"
+      ],
+      "returncode": 0,
+      "stdout": [
+        "anvil Version: 1.8.5",
+        "Commit SHA: 51a52c59cffd940f76eddd0b4bb1791aa4b5ac7f",
+        "Build Timestamp: 2026-10-05T17:07:33.315474000Z (1791220053)",
+        "Build Profile: dist"
+      ],
+      "stderr": []
+    },
+    {
+      "command": [
+        ".toolchain/bin/forge",
+        "--version"
+      ],
+      "returncode": 0,
+      "stdout": [
+        "forge Version: 1.8.5",
+        "Commit SHA: 51a52c59cffd940f76eddd0b4bb1791aa4b5ac7f",
+        "Build Timestamp: 2026-10-05T17:07:33.315474000Z (1791220053)",
+        "Build Profile: dist"
+      ],
+      "stderr": []
+    },
+    {
+      "command": [
+        ".toolchain/bin/solc",
+        "--version"
+      ],
+      "returncode": 0,
+      "stdout": [
+        "solc, the solidity compiler commandline interface",
+        "Version: 0.8.37+commit.f401782d.Darwin.appleclang"
+      ],
+      "stderr": []
+    },
+    {
+      "command": [
+        "clang",
+        "--version"
+      ],
+      "returncode": 0,
+      "stdout": [
+        "Apple clang version 17.0.0 (clang-1700.0.13.5)",
+        "Target: arm64-apple-darwin24.6.0",
+        "Thread model: posix",
+        "InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin"
+      ],
+      "stderr": []
+    },
+    {
+      "command": [
+        "node",
+        "--version"
+      ],
+      "returncode": 0,
+      "stdout": [
+        "v24.11.0"
+      ],
+      "stderr": []
+    },
+    {
+      "command": [
+        "python3",
+        "--version"
+      ],
+      "returncode": 0,
+      "stdout": [
+        "Python 3.14.2"
+      ],
+      "stderr": []
+    },
+    {
+      "command": [
+        "ffmpeg",
+        "-version"
+      ],
+      "returncode": 0,
+      "stdout": [
+        "ffmpeg version 9.0.1 Copyright (c) 2000-2026 the FFmpeg developers",
+        "built with Apple clang version 17.0.0 (clang-1700.6.4.2)",
+        "configuration: --prefix=/opt/homebrew/Cellar/ffmpeg/9.0.1_1 --enable-shared --enable-pthreads --enable-version3 --cc=clang --host-cflags= --host-ldflags= --enable-ffplay --enable-gpl --enable-libsvtav1 --enable-libopus --enable-libx264 --enable-libmp3lame --enable-libdav1d --enable-libvmaf --enable-libvpx --enable-libx265 --enable-openssl --enable-videotoolbox --enable-audiotoolbox --enable-neon",
+        "libavutil      61.  1.101 / 61.  1.101"
+      ],
+      "stderr": []
+    }
+  ],
+  "compilerSettings": {
+    "solc": "0.8.37+commit.f401782d",
+    "viaIR": true,
+    "optimizer": true,
+    "optimizerRuns": 200,
+    "hardfork": "cancun"
+  },
+  "recordingLimits": {
+    "gas": 10000000000,
+    "EVMmemoryBytes": 1073741824,
+    "localhostOnly": true,
+    "maxRecordingParallelism": 2,
+    "ports": [
+      18941,
+      18942,
+      18943,
+      18944,
+      18945,
+      18946,
+      18947,
+      18948,
+      18949
+    ],
+    "verificationPort": 18959,
+    "requestSizeLimit": "disabled",
+    "RPCrequestDeadlineSeconds": 300,
+    "stateDumpDeadlineSeconds": 900,
+    "historyBlocks": 2
+  },
+  "hostLog": "artifacts/local/full-videos/host.jsonl",
+  "hostLogMeasurementScope": "Periodic owned-process RSS, vm_stat, swap and disk free space; not exclusive system resource attribution.",
+  "IWADSHA256": "6fdf361847b46228cfebd9f3af09cd844282ac75f3edbb61ca4cb27103ce2e7f",
+  "sourceOriginalCommit": "a77dfb96cb91780ca334d0d4cfd86957558007e0",
+  "hostHardware": {
+    "measuredUTC": "2026-10-11T16:10:31.656386+00:00",
+    "model": "Mac15,7",
+    "physicalMemoryBytes": 38654705664,
+    "CPU": "Apple M3 Pro",
+    "OS": "15.7.9",
+    "OSBuild": "24G830",
+    "architecture": "arm64",
+    "measurementCommands": [
+      "sysctl hw.model hw.memsize machdep.cpu.brand_string",
+      "sw_vers",
+      "uname -m"
+    ]
+  }
+}
