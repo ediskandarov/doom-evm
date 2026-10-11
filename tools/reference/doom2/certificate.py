@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """Check frozen source/resource/evidence identities; never substitute for execution gates."""
-import hashlib,json,re,subprocess,datetime
+import hashlib,json,re,subprocess,datetime,sys
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[3];BASE='3cc536dff6c84194bf3784d9183e0d082a2bcf0e'
 sha=lambda b:hashlib.sha256(b).hexdigest();load=lambda p:json.loads((ROOT/p).read_text())
@@ -26,4 +26,8 @@ for p in sorted((ROOT/'artifacts/doom2').rglob('*')):
  if p.is_file() and p.name!='certificate.json':payloads[str(p.relative_to(ROOT))]=sha(p.read_bytes())
 for p in sorted((ROOT/'web/doom2-assets').glob('*.json')):payloads[str(p.relative_to(ROOT))]=sha(p.read_bytes())
 result=dict(pass_=True,verifiedUTC=datetime.datetime.now(datetime.timezone.utc).isoformat(),baseline=BASE,originalCommit='a77dfb96cb91780ca334d0d4cfd86957558007e0',resourceIdentity=pin['resourceIdentity'],protectedBaselineSHA256=identities,evidenceSHA256=payloads,scope='Identity/metadata certificate checked after independent native/EVM/browser/receipt/media acceptance; no complete historical suite or universal DOOM II correctness claim')
-(ROOT/'artifacts/doom2/certificate.json').write_text(json.dumps(result,indent=2)+'\n');print(json.dumps(dict(pass_=True,protectedSources=len(identities),evidenceFiles=len(payloads))))
+if '--check' in sys.argv:
+ existing=load('artifacts/doom2/certificate.json')
+ for key in ['pass_','baseline','originalCommit','resourceIdentity','protectedBaselineSHA256','evidenceSHA256','scope']:assert existing[key]==result[key],'Certificate drift '+key
+else:(ROOT/'artifacts/doom2/certificate.json').write_text(json.dumps(result,indent=2)+'\n')
+print(json.dumps(dict(pass_=True,protectedSources=len(identities),evidenceFiles=len(payloads))))
