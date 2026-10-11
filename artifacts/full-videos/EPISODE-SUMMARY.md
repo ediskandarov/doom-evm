@@ -57,9 +57,9 @@ The deterministic display clock uses one tic per original blocking wipe step;
 no gameplay or input command advances during the wipe. Authentic tape files are
 preserved; final recordings consume their exact gameplay prefixes and separate
 authorized post-exit input appendices. Original WI button-edge acceleration
-reveals the final statistics, holds105 frames, then briefly draws original
+reveals the final statistics, holds 105 frames, then briefly draws original
 Entering/NoState(cnt1). The endpoint is a recording choice; no next level loads.
-E1M8 uses zero-input original finale timing and105 final art frames.
+E1M8 uses zero-input original finale timing and 105 final art frames.
 E1M8 bypasses Intermission and includes the original forced finale-art melt.
 E1M9 marks didsecret and points to E1M4. No next-map gameplay is fabricated.
 
@@ -200,13 +200,13 @@ Log errors include native comparison assertions, requested recoverable stops and
 | Successful transactions | 4572 | 1621 |
 | Measured transaction RPC seconds | 858.1894692930025 | 348.1945279180001 |
 
-Saved 2,951 frames, 364,429,430,961 gas and 509.994941 measured RPC seconds. The old pilot's full recorder wall time is 954.584s; the new appended-UI session is 26.015s. The new full inherited-prefix wall time is unavailable, so these two session windows are not compared as equivalent totals. Both full melts and all317 original gameplay snapshots remain unchanged. The historical3498-frame MP4 remains at `artifacts/local/full-videos/E1M1/pilot-v2/ultimate-e1m1-complete.mp4`.
+Saved 2,951 frames, 364,429,430,961 gas and 509.994941 measured RPC seconds. The old pilot's full recorder wall time is 954.584s; the new appended-UI session is 26.015s. The new full inherited-prefix wall time is unavailable, so these two session windows are not compared as equivalent totals. Both full melts and all 317 original gameplay snapshots remain unchanged. The historical 3498-frame MP4 remains at `artifacts/local/full-videos/E1M1/pilot-v2/ultimate-e1m1-complete.mp4`.
 
 The original Entering endpoint was explicitly read back as WI state=-1,cnt=1,worldDoneRequested=false. A small recorder-only metadata copy fixes the later guard omission but is compiled/source-audited only. Neither G_WorldDone execution nor subsequent level startup is claimed verified. Failed short-pilot, native mixed-cache and full-refresh reference attempts remain diagnostic evidence.
 
 ## Environment and source identities
 
-Measured host: Apple M3 Pro, 38,654,705,664 physical RAM bytes, arm64, macOS 15.7.9 (24G830). Anvil/Forge1.8.5, solc0.8.37+commit.f401782d, viaIR, optimizer200, Cancun. Each owned Anvil uses10,000,000,000 gas and1,073,741,824 EVM memory bytes, disables the code-size and RPC request-body limits, and retains two history blocks. Per-request timeout300s; state dump900s; receipt polling has no separate aggregate deadline. At most two recording jobs run concurrently. Tool version output and full arguments are preserved in environment.json and per-map telemetry.
+Measured host: Apple M3 Pro, 38,654,705,664 physical RAM bytes, arm64, macOS 15.7.9 (24G830). Anvil/Forge 1.8.5, solc 0.8.37+commit.f401782d, viaIR, optimizer 200, Cancun. Each owned Anvil uses 10,000,000,000 gas and 1,073,741,824 EVM memory bytes, disables the code-size and RPC request-body limits, and retains two history blocks. Per-request timeout 300s; state dump 900s; receipt polling has no separate aggregate deadline. At most two recording jobs run concurrently. Tool version output and full arguments are preserved in environment.json and per-map telemetry.
 
 Authenticated IWAD SHA256: `6fdf361847b46228cfebd9f3af09cd844282ac75f3edbb61ca4cb27103ce2e7f`; original C revision: `a77dfb96cb91780ca334d0d4cfd86957558007e0`. The feature HEAD at execution is paired with exact generated source hashes, ABI hash, deployed runtime hash and resource bundle identity; HEAD alone does not identify an observation clone or an uncommitted recorder helper.
 
