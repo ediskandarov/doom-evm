@@ -1,0 +1,121 @@
+{
+  "status": "O0/O2/ASan+UBSan exact",
+  "resourceIdentity": {
+    "schemaVersion": 0,
+    "wadSha256": "10d67824b11025ddd9198e8cfc87ca335ee6e2d3e63af4180fa9b8a471893255",
+    "bundleSha256": "775bc8b01d44c2fb1c3a68a79b9864c2f36ebbb29746d31e9ca600ae226af5ad",
+    "paletteSha256": "fd895921b5d0a394612bb29852ed003d44d69f76dec31c0dc6b5d5fc7d63f7bb",
+    "paletteVariant": 0
+  },
+  "cases": [
+    {
+      "name": "MAP01-skill3",
+      "map": 1,
+      "skill": 3,
+      "nomonsters": false,
+      "summary": {
+        "tics": 192,
+        "leveltime": 192,
+        "prndindex": 115,
+        "x": 63530157,
+        "y": 78205729,
+        "health": 100,
+        "totalKills": 27,
+        "totalItems": 9,
+        "sectors": 59,
+        "blockWidth": 27,
+        "blockHeight": 29,
+        "doorSector": -1,
+        "initialDoorCeiling": -1,
+        "maxDoorCeiling": -1,
+        "finalDoorCeiling": -1,
+        "doorRiseTicks": 0,
+        "doorFallTicks": 0,
+        "doorReversals": 0
+      },
+      "files": {
+        "collision.bin": {
+          "bytes": 17232,
+          "sha256": "2a1156ab0b53956d8facb0025384946f66fdeeefa035d53fe8ca4471e565b8f7"
+        },
+        "flow.bin": {
+          "bytes": 88,
+          "sha256": "9caf1a99738a857ba3a09191ee515a01c99f28469bea135123a5716a7af928a4"
+        },
+        "difficulty.bin": {
+          "bytes": 64,
+          "sha256": "0a6d0f2d1795d2b3450a49d4770357852f37f396f459db48f36d46f56b4c0721"
+        },
+        "world.bin": {
+          "bytes": 32252,
+          "sha256": "5f66b246341f932fbdada7879fa89ce783056ca8f832442042e688e33158d3bd"
+        },
+        "zone.bin": {
+          "bytes": 134124,
+          "sha256": "02ce67b3ff4e66ad6155bd4e2c7e6a523e6a2e2376503d6a826d8c1fcad35e14"
+        }
+      }
+    },
+    {
+      "name": "MAP07-skill3",
+      "map": 7,
+      "skill": 3,
+      "nomonsters": false,
+      "summary": {
+        "tics": 237,
+        "leveltime": 237,
+        "prndindex": 24,
+        "x": -43355322,
+        "y": -10347176,
+        "health": 100,
+        "totalKills": 19,
+        "totalItems": 6,
+        "sectors": 29,
+        "blockWidth": 19,
+        "blockHeight": 16,
+        "doorSector": -1,
+        "initialDoorCeiling": -1,
+        "maxDoorCeiling": -1,
+        "finalDoorCeiling": -1,
+        "doorRiseTicks": 0,
+        "doorFallTicks": 0,
+        "doorReversals": 0
+      },
+      "files": {
+        "collision.bin": {
+          "bytes": 7914,
+          "sha256": "a9b9ed2c57b2603860b2dfbc9023dd19b84223874ae151e7ed14270c740db806"
+        },
+        "flow.bin": {
+          "bytes": 88,
+          "sha256": "b7beefa0792ebd2096423147653378e6a801a711683df708b41b0aecb4f53f58"
+        },
+        "difficulty.bin": {
+          "bytes": 64,
+          "sha256": "0a6d0f2d1795d2b3450a49d4770357852f37f396f459db48f36d46f56b4c0721"
+        },
+        "world.bin": {
+          "bytes": 26012,
+          "sha256": "04fc81ad1e7ff2ebb60945b5354227976237c0586fb8865d5a5ac811bca327ac"
+        },
+        "zone.bin": {
+          "bytes": 135024,
+          "sha256": "f776c026649eb8f4751cea73ce7670aeae0b07bc98ec0eeee3e184bdf17015bc"
+        }
+      }
+    }
+  ],
+  "files": {
+    "MAP01-skill3/collision.bin": "2a1156ab0b53956d8facb0025384946f66fdeeefa035d53fe8ca4471e565b8f7",
+    "MAP01-skill3/flow.bin": "9caf1a99738a857ba3a09191ee515a01c99f28469bea135123a5716a7af928a4",
+    "MAP01-skill3/difficulty.bin": "0a6d0f2d1795d2b3450a49d4770357852f37f396f459db48f36d46f56b4c0721",
+    "MAP01-skill3/world.bin": "5f66b246341f932fbdada7879fa89ce783056ca8f832442042e688e33158d3bd",
+    "MAP01-skill3/zone.bin": "02ce67b3ff4e66ad6155bd4e2c7e6a523e6a2e2376503d6a826d8c1fcad35e14",
+    "MAP07-skill3/collision.bin": "a9b9ed2c57b2603860b2dfbc9023dd19b84223874ae151e7ed14270c740db806",
+    "MAP07-skill3/flow.bin": "b7beefa0792ebd2096423147653378e6a801a711683df708b41b0aecb4f53f58",
+    "MAP07-skill3/difficulty.bin": "0a6d0f2d1795d2b3450a49d4770357852f37f396f459db48f36d46f56b4c0721",
+    "MAP07-skill3/world.bin": "04fc81ad1e7ff2ebb60945b5354227976237c0586fb8865d5a5ac811bca327ac",
+    "MAP07-skill3/zone.bin": "f776c026649eb8f4751cea73ce7670aeae0b07bc98ec0eeee3e184bdf17015bc"
+  },
+  "scope": "Original G_InitNew/G_DoLoadLevel/P_SetupLevel commercial startup; comparison-only native bytes"
+}

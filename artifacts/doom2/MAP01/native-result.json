@@ -1,0 +1,199 @@
+{
+  "pass_": true,
+  "startUnix": 1791713906.1899111,
+  "endUnix": 1791713934.7241442,
+  "upstreamCommit": "a77dfb96cb91780ca334d0d4cfd86957558007e0",
+  "demoSha256": "9181d9609ac7e5b90372be4bc6e04be5e5a68c062fd15941e2922d444659edc1",
+  "wadSha256": "10d67824b11025ddd9198e8cfc87ca335ee6e2d3e63af4180fa9b8a471893255",
+  "settings": {
+    "version": 109,
+    "skill": 3,
+    "episode": 1,
+    "map": 1,
+    "deathmatch": 0,
+    "respawn": 0,
+    "fast": 0,
+    "nomonsters": 0,
+    "consoleplayer": 0,
+    "playeringame": [
+      1,
+      0,
+      0,
+      0
+    ]
+  },
+  "profiles": [
+    {
+      "profile": "O2",
+      "command": [
+        "/Users/eduard/sandbox/doom-evm-doom2-browser/artifacts/local/doom2/native-build-O2/speedrun",
+        "/Users/eduard/Downloads/doom-steam/base/doom2/DOOM2.WAD",
+        "/Users/eduard/sandbox/doom-evm-doom2-browser/artifacts/local/doom2/MAP01/native-O2",
+        "/Users/eduard/sandbox/doom-evm-doom2-browser/artifacts/local/doom2/MAP01/commands.txt",
+        "1",
+        "3",
+        "0"
+      ],
+      "elapsedSeconds": 0.27393404208123684,
+      "returncode": 0,
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "statesSha256": "6e6e94d0741a1135ddf26f6c20564f29751c8ea88c1b33e35005f1b29ad1254c",
+      "compressedStatesSha256": "7cc15fcd18c0e0833a5e4287f1480744468a6b13510fc8d7411fb536a14599a5",
+      "executedTics": 192,
+      "exitEvents": [
+        [
+          192,
+          192,
+          6,
+          0,
+          162
+        ]
+      ]
+    },
+    {
+      "profile": "O0",
+      "command": [
+        "/Users/eduard/sandbox/doom-evm-doom2-browser/artifacts/local/doom2/native-build-O0/speedrun",
+        "/Users/eduard/Downloads/doom-steam/base/doom2/DOOM2.WAD",
+        "/Users/eduard/sandbox/doom-evm-doom2-browser/artifacts/local/doom2/MAP01/native-O0",
+        "/Users/eduard/sandbox/doom-evm-doom2-browser/artifacts/local/doom2/MAP01/commands.txt",
+        "1",
+        "3",
+        "0"
+      ],
+      "elapsedSeconds": 0.28930475004017353,
+      "returncode": 0,
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "statesSha256": "6e6e94d0741a1135ddf26f6c20564f29751c8ea88c1b33e35005f1b29ad1254c",
+      "compressedStatesSha256": "7cc15fcd18c0e0833a5e4287f1480744468a6b13510fc8d7411fb536a14599a5",
+      "executedTics": 192,
+      "exitEvents": [
+        [
+          192,
+          192,
+          6,
+          0,
+          162
+        ]
+      ]
+    },
+    {
+      "profile": "sanitize",
+      "command": [
+        "/Users/eduard/sandbox/doom-evm-doom2-browser/artifacts/local/doom2/native-build-sanitize/speedrun",
+        "/Users/eduard/Downloads/doom-steam/base/doom2/DOOM2.WAD",
+        "/Users/eduard/sandbox/doom-evm-doom2-browser/artifacts/local/doom2/MAP01/native-sanitize",
+        "/Users/eduard/sandbox/doom-evm-doom2-browser/artifacts/local/doom2/MAP01/commands.txt",
+        "1",
+        "3",
+        "0"
+      ],
+      "elapsedSeconds": 0.39523104205727577,
+      "returncode": 0,
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "statesSha256": "6e6e94d0741a1135ddf26f6c20564f29751c8ea88c1b33e35005f1b29ad1254c",
+      "compressedStatesSha256": "7cc15fcd18c0e0833a5e4287f1480744468a6b13510fc8d7411fb536a14599a5",
+      "executedTics": 192,
+      "exitEvents": [
+        [
+          192,
+          192,
+          6,
+          0,
+          162
+        ]
+      ]
+    },
+    {
+      "profile": "sanitize-fill",
+      "command": [
+        "/Users/eduard/sandbox/doom-evm-doom2-browser/artifacts/local/doom2/native-build-sanitize/speedrun",
+        "/Users/eduard/Downloads/doom-steam/base/doom2/DOOM2.WAD",
+        "/Users/eduard/sandbox/doom-evm-doom2-browser/artifacts/local/doom2/MAP01/native-sanitize-fill",
+        "/Users/eduard/sandbox/doom-evm-doom2-browser/artifacts/local/doom2/MAP01/commands.txt",
+        "1",
+        "3",
+        "0"
+      ],
+      "elapsedSeconds": 0.19289225013926625,
+      "returncode": 0,
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "statesSha256": "6e6e94d0741a1135ddf26f6c20564f29751c8ea88c1b33e35005f1b29ad1254c",
+      "compressedStatesSha256": "7cc15fcd18c0e0833a5e4287f1480744468a6b13510fc8d7411fb536a14599a5",
+      "executedTics": 192,
+      "exitEvents": [
+        [
+          192,
+          192,
+          6,
+          0,
+          162
+        ]
+      ]
+    }
+  ],
+  "exitReached": true,
+  "allProfilesExact": true,
+  "failure": null,
+  "executedTics": 192,
+  "leveltime": 192,
+  "inGameSeconds": 5.485714285714286,
+  "finalPlayer": {
+    "leveltime": 192,
+    "gametic": 192,
+    "prndindex": 115,
+    "rndindex": 0,
+    "x": 63530157,
+    "y": 78205729,
+    "z": 2621440,
+    "angle": 704643072,
+    "momx": 288733,
+    "momy": 288515,
+    "momz": 0,
+    "viewz": 5190608,
+    "viewheight": 2686976,
+    "deltaviewheight": 0,
+    "bob": 1048576,
+    "floorz": 2621440,
+    "ceilingz": 7340032,
+    "subsector": 127,
+    "playerHealth": 100,
+    "actorHealth": 100,
+    "armorpoints": 0,
+    "armortype": 0,
+    "readyweapon": 1,
+    "pendingweapon": 10,
+    "usedown": 1,
+    "attackdown": 0,
+    "refire": 0,
+    "state": 153,
+    "tics": 4,
+    "flags": 33557510,
+    "ammoClip": 58,
+    "ammoShell": 0,
+    "ammoCell": 0,
+    "ammoMissile": 0,
+    "weaponState": 10,
+    "weaponTics": 1,
+    "weaponX": 1109088,
+    "weaponY": 2199520,
+    "flashState": -1,
+    "flashTics": 0,
+    "flashX": 1109088,
+    "flashY": 2199520,
+    "thinkerCount": 54,
+    "totalKills": 27,
+    "totalItems": 9,
+    "totalSecrets": 5,
+    "killcount": 0,
+    "itemcount": 0,
+    "secretcount": 0,
+    "damagecount": 0,
+    "bonuscount": 2,
+    "extralight": 0,
+    "fixedcolormap": 0
+  },
+  "statesSha256": "6e6e94d0741a1135ddf26f6c20564f29751c8ea88c1b33e35005f1b29ad1254c",
+  "commandsSha256": "e74975e6f6e5b7e91d9434ae7085130363eb458be4ad9223cc25aa8c008cf031",
+  "levelCommandsSha256": "4619496678f1a1beabb9c087334ac9fdf8332adaf851ae78e2141b88b871445e"
+}

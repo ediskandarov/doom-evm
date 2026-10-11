@@ -95,10 +95,10 @@ library G_Game {
         }
     }
 
-    function episodeOne(GameState memory s) private pure {
+    function supportedMap(GameState memory s) private pure {
         if (
-            (s.gamemode != 0 && s.gamemode != 1 && s.gamemode != 3) || s.gameepisode != 1 || s.gamemap < 1
-                || s.gamemap > 9
+            (s.gamemode != 0 && s.gamemode != 1 && s.gamemode != 2 && s.gamemode != 3) || s.gameepisode != 1 || s.gamemap < 1
+                || s.gamemap > (s.gamemode == 2 ? int32(32) : int32(9))
         ) {
             revert UnsupportedGameflowProfile();
         }
@@ -106,7 +106,7 @@ library G_Game {
 
     function active(GameState memory s, GameflowState memory f, int32 expected) private pure {
         singlePlayer(s);
-        episodeOne(s);
+        supportedMap(s);
         if (!f.initialized || s.gamestate != expected) {
             revert InvalidGameflowTransition(s.gamestate, s.gameaction);
         }
@@ -183,8 +183,8 @@ library G_Game {
         if (map < 1) map = 1;
         if (map > 9 && c.state.gamemode != 2) map = 9;
         if (
-            skill < 0 || episode != 1
-                || (c.state.gamemode != 0 && c.state.gamemode != 1 && c.state.gamemode != 3)
+            skill < 0 || episode != 1 || (c.state.gamemode == 2 && map > 32)
+                || (c.state.gamemode != 0 && c.state.gamemode != 1 && c.state.gamemode != 2 && c.state.gamemode != 3)
         ) {
             revert UnsupportedGameflowProfile();
         }
@@ -218,7 +218,11 @@ library G_Game {
         c.state.gameepisode = episode;
         c.state.gamemap = map;
         c.state.gameskill = skill;
-        c.state.skytexture = h.textureNumForName(c, "SKY1");
+        if (c.state.gamemode == 2) {
+            c.state.skytexture = h.textureNumForName(c, "SKY3");
+            if (map < 12) c.state.skytexture = h.textureNumForName(c, "SKY1");
+            else if (map < 21) c.state.skytexture = h.textureNumForName(c, "SKY2");
+        } else c.state.skytexture = h.textureNumForName(c, "SKY1");
         G_DoLoadLevel(c, f, h);
     }
 
@@ -228,14 +232,15 @@ library G_Game {
         view
     {
         singlePlayer(c.state);
-        episodeOne(c.state);
+        supportedMap(c.state);
         f.initialized = false;
         c.state.skyflatnum = h.flatNumForName(c, "F_SKY1");
         // Original compares gamemode to GameMission_t pack_plut (3), also retail.
         // Preserve that cross-enum comparison and lookup order, even in Episode One.
-        if (c.state.gamemode == 3) {
+        if (c.state.gamemode == 2 || c.state.gamemode == 3) {
             c.state.skytexture = h.textureNumForName(c, "SKY3");
-            c.state.skytexture = h.textureNumForName(c, "SKY1");
+            if (c.state.gamemap < 12) c.state.skytexture = h.textureNumForName(c, "SKY1");
+            else if (c.state.gamemap < 21) c.state.skytexture = h.textureNumForName(c, "SKY2");
         }
         f.levelstarttic = c.state.gametic;
         if (f.wipegamestate == GS_LEVEL) f.wipegamestate = -1;
@@ -301,11 +306,11 @@ library G_Game {
             if (c.state.playeringame[i]) G_PlayerFinishLevel(c.state, i);
         }
         if (f.automapactive) h.automapStop(c, f);
-        if (c.state.gamemap == 8) {
+        if (c.state.gamemode != 2 && c.state.gamemap == 8) {
             c.state.gameaction = GA_VICTORY;
             return;
         }
-        if (c.state.gamemap == 9) {
+        if (c.state.gamemode != 2 && c.state.gamemap == 9) {
             for (uint32 i; i < 4; ++i) {
                 c.state.players[i].didsecret = true;
             }
@@ -314,13 +319,24 @@ library G_Game {
         w.didsecret = c.state.players[0].didsecret;
         w.epsd = c.state.gameepisode - 1;
         w.last = c.state.gamemap - 1;
-        w.next = c.state.secretExit ? int32(8) : (c.state.gamemap == 9 ? int32(3) : c.state.gamemap);
+        if (c.state.gamemode == 2) {
+            // Original switch has no default for an unsupported secret exit: retain w.next.
+            if (c.state.secretExit) {
+                if (c.state.gamemap == 15) w.next = 30;
+                else if (c.state.gamemap == 31) w.next = 31;
+            } else w.next = c.state.gamemap == 31 || c.state.gamemap == 32 ? int32(15) : c.state.gamemap;
+        } else w.next = c.state.secretExit ? int32(8) : (c.state.gamemap == 9 ? int32(3) : c.state.gamemap);
         w.maxkills = c.state.totalkills;
         w.maxitems = c.state.totalitems;
         w.maxsecret = c.state.totalsecret;
         w.maxfrags = 0;
         int32[10] memory pars = [int32(0), 30, 75, 120, 90, 165, 180, 180, 30, 165];
-        w.partime = 35 * pars[uint32(c.state.gamemap)];
+        if (c.state.gamemode == 2) {
+            int32[32] memory cpars = [int32(30),90,120,120,90,150,120,120,270,90,
+                210,150,150,150,210,150,420,150,210,150,
+                240,150,180,150,150,300,330,420,300,180,120,30];
+            w.partime = 35 * cpars[uint32(c.state.gamemap - 1)];
+        } else w.partime = 35 * pars[uint32(c.state.gamemap)];
         w.pnum = c.state.consoleplayer;
         for (uint32 i; i < 4; ++i) {
             w.plyr[i].inGame = c.state.playeringame[i];
@@ -352,7 +368,7 @@ library G_Game {
         view
     {
         active(c.state, f, GS_INTERMISSION);
-        if (f.wminfo.next < 0 || f.wminfo.next > 8) {
+        if (f.wminfo.next < 0 || f.wminfo.next > (c.state.gamemode == 2 ? int32(31) : int32(8))) {
             revert InvalidGameflowTransition(c.state.gamestate, c.state.gameaction);
         }
         c.state.gamestate = GS_LEVEL;
@@ -399,7 +415,7 @@ library G_Game {
                 revert InvalidGameflowTransition(c.state.gamestate, action);
             }
         }
-        episodeOne(c.state);
+        supportedMap(c.state);
         // memcpy: the player's P_PlayerThink may clear special buttons, not the caller's command.
         c.state.players[0].cmd =
             Ticcmd(cmd.forwardmove, cmd.sidemove, cmd.angleturn, cmd.consistancy, cmd.chatchar, cmd.buttons);

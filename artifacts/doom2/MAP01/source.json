@@ -1,0 +1,52 @@
+{
+  "map": "MAP01",
+  "author": "Oree",
+  "engine": "DSDA-Doom v0.26.2cl2",
+  "category": "UV Speed",
+  "downloadUrl": "https://dsdarchive.com/files/demos/doom2/83940/lv1x549.zip",
+  "runUrl": "https://dsdarchive.com/wads/doom2?category=UV+Speed&level=Map+01",
+  "originalName": "lv1x549.lmp",
+  "demoSha256": "9181d9609ac7e5b90372be4bc6e04be5e5a68c062fd15941e2922d444659edc1",
+  "archiveSha256": "bc01a232cd97ca6bc4588db7eb014d6cc64ba8491212a9459ded652895b11ea1",
+  "demoBytes": 2302,
+  "authorNotes": {
+    "lv1x549.txt": "IWAD: DOOM2.WAD\r\nMap: MAP01 \r\nSkill: Ultra-Violence\r\nCategory: UV-Speed \r\nCompatibility Level: 2 \r\nTime: 5.49\r\nAuthor: OreGano\r\nDate: Nov 17, 2023 "
+  },
+  "selection": "Authentic single-player non-TAS DSDA entry; compatibility with pinned original C must be verified, no world-record claim.",
+  "header": {
+    "version": 109,
+    "skill": 3,
+    "episode": 1,
+    "map": 1,
+    "deathmatch": 0,
+    "respawn": 0,
+    "fast": 0,
+    "nomonsters": 0,
+    "consoleplayer": 0,
+    "playeringame": [
+      1,
+      0,
+      0,
+      0
+    ]
+  },
+  "totalDemoTics": 527,
+  "markerOffset": 2121,
+  "footer": {
+    "FEATURES": "Extended HUD\n0x0000000000000002-72ab6243fbef36a9eb955f22ed0b620b\u0000\u0000\u0000\u0000",
+    "PORTNAME": "dsda-doom 0.26.2",
+    "CMDLINE": "-iwad \"DOOM2.WAD\" -complevel 2 "
+  },
+  "dsdaFooterChecksumVerified": true,
+  "originalDecoder": {
+    "file": "g_game.c",
+    "function": "G_ReadDemoTiccmd",
+    "startLine": 1491,
+    "endLine": 1503,
+    "sha256": "77f7b1aeca0bf6da361bf3c29af3cde4f2f291f8deeaa9426017b12dbbdcb345"
+  },
+  "decoderExact": true,
+  "wadSha256": "10d67824b11025ddd9198e8cfc87ca335ee6e2d3e63af4180fa9b8a471893255",
+  "stockLoaderCompatible": false,
+  "recordingWadIdentity": "Not independently known; compatible pinned IWAD replay must be demonstrated."
+}
