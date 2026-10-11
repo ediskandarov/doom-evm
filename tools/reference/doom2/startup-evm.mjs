@@ -20,20 +20,21 @@ const budget=loadGasBudget(), gas=budget.gasHex;
 const bundle=await json('artifacts/local/doom2/wad/bundle.json');
 const blob=await readFile('artifacts/local/doom2/wad/resources.bin'), directory=await readFile('artifacts/local/doom2/wad/directory.bin');
 assert.equal(sha(blob),bundle.blobSha256);
-const native=await json('artifacts/local/doom2/startup/manifest.json');
+const nativeDirectory=resolve(option('--native','artifacts/local/doom2/startup'));
+const native=await json(nativeDirectory+'/manifest.json');
 assert.equal(native.status,'O0/O2/ASan+UBSan exact');
 assert.deepEqual(native.resourceIdentity,bundle.resourceIdentity);
-for(const [name,digest] of Object.entries(native.files))assert.equal(sha(await readFile('artifacts/local/doom2/startup/'+name)),digest);
-const artifact=await json('out/Doom2StartupProbe.sol/Doom2StartupProbe.json'), store=await json('out/ResourceStore.sol/ResourceStore.json');
+for(const [name,digest] of Object.entries(native.files))assert.equal(sha(await readFile(nativeDirectory+'/'+name)),digest);
+const artifact=await json(option('--artifact','out/Doom2StartupProbe.sol/Doom2StartupProbe.json')), store=await json('out/ResourceStore.sol/ResourceStore.json');
 const metadata=typeof artifact.metadata==='string'?JSON.parse(artifact.metadata):artifact.metadata;
 const method=n=>{assert(artifact.methodIdentifiers[n],n);return '0x'+artifact.methodIdentifiers[n];};
 const url=`http://127.0.0.1:${port}`;
 const report={goal:'4.13a',kind:'episode-startup-ordinary-evm',pass:false,startedUtc:new Date().toISOString(),
   resourceIdentity:bundle.resourceIdentity,
-  nativeManifestSha256:sha(await readFile('artifacts/local/doom2/startup/manifest.json')),
+  nativeManifestSha256:sha(await readFile(nativeDirectory+'/manifest.json')),
   compiler:{version:metadata.compiler.version,settings:metadata.settings},executionBudget:budget,
   sourceHashes:{},cases:[],rejections:[],
-  notes:['Shared original blob deployed once by1755 ordinary ResourceStore CREATEs; every runtime byte is checked.',
+  notes:['Shared original blob deployed once by889 ordinary ResourceStore CREATEs; every runtime byte is checked.',
     'Each case creates a fresh authenticated support host, runs synchronous original source-driven startup, and persists typed GameState/GameflowState. No EVM state, allocations or native expected data are injected.',
     'Five digests compare full DSG1 world, collision/grouping/start/scroller state, complete normalized live zone/owner state, flow globals and mutable difficulty. Persisted-state recomputation must match.',
     'World-only startup; no tic, Frame, UI, transition, browser, intermission or finale acceptance.',
@@ -87,11 +88,11 @@ try{
     const b=blob.subarray(p,p+16384),r=await tx(driver,store.bytecode.object+word(32)+tail(b));
     assert.equal(await rpc('eth_getCode',[r.receipt.contractAddress,'latest']),'0x00'+b.toString('hex'));
     addresses.push(r.receipt.contractAddress);deployments.push({index:deployments.length,transaction:r.receipt.transactionHash,gas:r.gas,runtimeSha256:sha(Buffer.concat([Buffer.from([0]),b]))});
-    if(addresses.length%300===0)console.log('Verified resource CREATE',addresses.length,'/1755');
+    if(addresses.length%300===0)console.log('Verified resource CREATE',addresses.length,'/889');
   }
   report.resources={chunks:addresses.length,allRuntimeBytesVerified:true,blobBytes:blob.length,
     cumulativeDeploymentGas:deployments.reduce((n,r)=>n+r.gas,0),uploadMs:performance.now()-uploadStart,receiptsSha256:sha(JSON.stringify(deployments))};
-  await writeFile('artifacts/local/doom2/startup/resource-receipts.json',JSON.stringify(deployments,null,2)+'\n');
+  await writeFile(nativeDirectory+'/resource-receipts.json',JSON.stringify(deployments,null,2)+'\n');
   const array=word(addresses.length)+addresses.map(a=>a.slice(2).padStart(64,'0')).join('');
   const constructor=word(64)+word(64+array.length/2)+array+tail(directory);
   async function deploy(){

@@ -23,6 +23,7 @@ struct MenuState {
     bool startRequested;
     bool messageToPrint;
     bool directSelection;
+    bool commercial; // Explicit DOOM II adapter selection; default Episode One remains unchanged.
 }
 
 /// @custom:source linuxdoom-1.10/m_menu.c, m_menu.h at a77dfb96cb91780ca334d0d4cfd86957558007e0
@@ -67,7 +68,7 @@ library M_Menu {
     function M_NewGame(MenuState memory m) internal pure {
         m.directSelection = false;
         m.selectedMap = 1;
-        M_SetupNextMenu(m, 1);
+        M_SetupNextMenu(m, m.commercial ? uint8(2) : uint8(1));
     }
 
     function M_Episode(MenuState memory m, int32 choice) internal pure {
@@ -97,7 +98,7 @@ library M_Menu {
     function numitems(MenuState memory m) private pure returns (int32) {
         if (m.currentMenu == 0) return m.extended ? int32(2) : int32(6);
         if (m.currentMenu == 1) return m.extended ? int32(1) : int32(4);
-        return m.currentMenu == 2 ? int32(5) : int32(9);
+        return m.currentMenu == 2 ? int32(5) : (m.commercial ? int32(32) : int32(9));
     }
 
     function alpha(MenuState memory m, int32 item) private pure returns (int32) {
@@ -107,7 +108,7 @@ library M_Menu {
         }
         if (m.currentMenu == 1) return int32(uint32(uint8(bytes("ktit")[uint32(item)])));
         if (m.currentMenu == 2) return int32(uint32(uint8(bytes("ihhun")[uint32(item)])));
-        return item + 49;
+        return m.commercial && item >= 9 ? int32(-1) : item + 49;
     }
 
     /// @custom:source m_menu.c M_Responder keyboard/menu branches, M_NewGame/M_Episode/M_ChooseSkill.
@@ -161,7 +162,7 @@ library M_Menu {
         if (ch == 127) {
             m.lastOn[m.currentMenu] = m.itemOn;
             if (m.currentMenu != 0) {
-                M_SetupNextMenu(m, m.currentMenu == 2 ? (m.directSelection ? uint8(3) : uint8(1)) : uint8(0));
+                M_SetupNextMenu(m, m.currentMenu == 2 ? (m.directSelection ? uint8(3) : (m.commercial ? uint8(0) : uint8(1))) : uint8(0));
             }
             return true;
         }
@@ -287,17 +288,21 @@ library M_Menu {
         if (m.extended && m.currentMenu == 0) max = 2;
         if (m.extended && m.currentMenu == 1) max = 1;
         if (m.currentMenu == 3) {
-            x = 80; y = 48; max = 9;
+            x = 80; y = 48; max = m.commercial ? int32(8) : int32(9);
             M_WriteText(v, font, 80, 24, bytes("SELECT LEVEL"));
         }
         for (int32 i; i < max; ++i) {
             if (m.currentMenu == 3) {
-                M_WriteText(v, font, x, y + i * 16, abi.encodePacked("E1M", bytes1(uint8(uint32(i) + 49))));
+                if (m.commercial) {
+                    int32 map = (m.itemOn / 8) * 8 + i + 1;
+                    M_WriteText(v, font, x, y + i * 16, abi.encodePacked("MAP",
+                        bytes1(uint8(uint32(map / 10) + 48)), bytes1(uint8(uint32(map % 10) + 48))));
+                } else M_WriteText(v, font, x, y + i * 16, abi.encodePacked("E1M", bytes1(uint8(uint32(i) + 49))));
             } else if (m.extended && m.currentMenu == 0 && i == 1) {
                 M_WriteText(v, font, x, y + i * 16, bytes("SELECT LEVEL"));
             } else draw(source, v, x, y + i * 16, itemName(m.currentMenu, i));
         }
-        draw(source, v, x - 32, y - 5 + m.itemOn * 16, m.whichSkull == 0 ? bytes8("M_SKULL1") : bytes8("M_SKULL2"));
+        draw(source, v, x - 32, y - 5 + (m.commercial && m.currentMenu == 3 ? m.itemOn % 8 : m.itemOn) * 16, m.whichSkull == 0 ? bytes8("M_SKULL1") : bytes8("M_SKULL2"));
     }
 
     function title(ResourceView memory source) internal view returns (bytes memory pixels) {

@@ -85,8 +85,8 @@ assert.equal(artifact.metadata.settings.evmVersion, 'cancun');
 assert.equal(artifact.metadata.settings.viaIR, true);
 const sourceHashes = {};
 for (const file of Object.keys(artifact.metadata.sources)) sourceHashes[file] = sha(await readFile(file));
-for (const file of ['foundry.toml', 'execution-budget.json', 'tools/reference/ultimate_speedruns/evm.mjs', 'web/protocol.mjs',
-                    'tools/reference/speedrun/dsg1.mjs', 'tools/reference/ultimate_speedruns/native.py']) {
+for (const file of ['foundry.toml', 'execution-budget.json', 'tools/reference/doom2/evm.mjs', 'web/protocol.mjs',
+                    'tools/reference/speedrun/dsg1.mjs', 'tools/reference/doom2/native.py']) {
   sourceHashes[file] = sha(await readFile(file));
 }
 const palette = await json(wadDirectory + '/palette.json');
@@ -212,14 +212,24 @@ async function capture(from, address, tic) {
     const names = 'sourceBlock physicalOffset headerBlock headerOffset relative fieldOffset targetOffset virtualPointer sourceByte drawnPixel x y sampleIndex logicalLength sourceOffset provenance'.split(' ');
     for (let at = 0; at < samples.length; at += 512) {
       const sample = Object.fromEntries(names.map((name, i) => [name, uint(samples, at + i * 32)]));
-      assert.equal(sample.provenance, 4);
+      assert([4,5].includes(sample.provenance));
       assert.equal(sample.physicalOffset, sample.headerOffset + sample.relative);
       assert([8, 24, 32].includes(sample.fieldOffset));
       const byteIndex = sample.relative - sample.fieldOffset;
       assert(byteIndex >= 0 && byteIndex < 8);
       const pointer = BigInt(sample.virtualPointer);
-      if (sample.fieldOffset === 8) assert(pointer === 0n || pointer === 2n);
-      else assert.equal(pointer, 0x0000001000000000n + BigInt(sample.targetOffset));
+      if (sample.provenance === 5) {
+        assert.equal(sample.fieldOffset, 8);
+        assert.equal(sample.targetOffset % 8, 0);
+        sample.ownerSlotIndex = sample.targetOffset / 8;
+        assert(sample.ownerSlotIndex < bundle.lumps.length);
+        sample.addressDomain = 'authenticated-lumpcache-owner';
+        assert.equal(pointer, 0x0000002000000000n + BigInt(sample.targetOffset));
+      } else {
+        sample.addressDomain = 'zone';
+        if (sample.fieldOffset === 8) assert(pointer === 0n || pointer === 2n);
+        else assert.equal(pointer, 0x0000001000000000n + BigInt(sample.targetOffset));
+      }
       assert.equal(sample.sourceByte, Number((pointer >> BigInt(byteIndex * 8)) & 255n));
       sample.virtualPointer = '0x' + pointer.toString(16).padStart(16, '0');
       sample.pointerBytesLittleEndian = Buffer.from(Array.from({length: 8}, (_, i) => Number((pointer >> BigInt(i * 8)) & 255n))).toString('hex');
@@ -343,9 +353,9 @@ try {
     deploymentReceipts.push(receipt); assert.equal(receipt.status, '0x1');
     assert.equal(await rpc('eth_getCode', [receipt.contractAddress, 'latest']), '0x00' + b.toString('hex'));
     chunks.push(receipt.contractAddress);
-    if (chunks.length % 300 === 0) console.log(`Resource CREATE/readback ${chunks.length}/756`);
+    if (chunks.length % 300 === 0) console.log(`Resource CREATE/readback ${chunks.length}/889`);
   }
-  assert.equal(chunks.length, 756);
+  assert.equal(chunks.length, 889);
   const addresses = word(chunks.length) + chunks.map(a => a.slice(2).padStart(64, '0')).join('');
   const constructor = word(64) + word(64 + addresses.length / 2) + addresses + tail(directory);
   const {receipt: deployed} = await send(from, artifact.bytecode.object + constructor);

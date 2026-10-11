@@ -295,7 +295,7 @@ library G_Game {
         p.bonuscount = 0;
     }
 
-    /// @custom:source linuxdoom-1.10/g_game.c G_DoCompleted Episode One branch
+    /// @custom:source linuxdoom-1.10/g_game.c G_DoCompleted Episode One and commercial branches
     function G_DoCompleted(GameContext memory c, GameflowState memory f, GameflowHooks memory h)
         internal
         view
@@ -355,11 +355,22 @@ library G_Game {
         h.intermissionStart(c, f);
     }
 
-    /// @custom:source linuxdoom-1.10/g_game.c G_WorldDone Episode One branch
+    /// @custom:source linuxdoom-1.10/g_game.c G_WorldDone single-player base action
     function G_WorldDone(GameState memory s, GameflowState memory f) internal pure {
         active(s, f, GS_INTERMISSION);
         s.gameaction = GA_WORLDDONE;
         if (s.secretExit) s.players[0].didsecret = true;
+    }
+
+    /// @custom:source linuxdoom-1.10/g_game.c G_WorldDone commercial F_StartFinale call.
+    function G_WorldDone(GameContext memory c, GameflowState memory f, GameflowHooks memory h) internal view {
+        G_WorldDone(c.state, f);
+        if (c.state.gamemode == 2) {
+            int32 map = c.state.gamemap;
+            if (map == 6 || map == 11 || map == 20 || map == 30 || ((map == 15 || map == 31) && c.state.secretExit)) {
+                h.finaleStart(c, f);
+            }
+        }
     }
 
     /// @custom:source linuxdoom-1.10/g_game.c G_DoWorldDone
@@ -367,7 +378,7 @@ library G_Game {
         internal
         view
     {
-        active(c.state, f, GS_INTERMISSION);
+        active(c.state, f, c.state.gamemode == 2 && c.state.gamestate == GS_FINALE ? GS_FINALE : GS_INTERMISSION);
         if (f.wminfo.next < 0 || f.wminfo.next > (c.state.gamemode == 2 ? int32(31) : int32(8))) {
             revert InvalidGameflowTransition(c.state.gamestate, c.state.gameaction);
         }

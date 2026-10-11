@@ -10,9 +10,9 @@ import {R_Data} from "./r_data.sol";
 import {ResourceView} from "./r_data_types.sol";
 
 /// @custom:source linuxdoom-1.10/wi_stuff.c cursor a77dfb96cb91780ca334d0d4cfd86957558007e0
-/// @notice Original single-player Episode One intermission. No world or production adapter dependency.
+/// @notice Original single-player Episode One and commercial intermission. No world or production adapter dependency.
 /// @dev Global/pointer context adaptation, borrowed immutable graphics, explicit G_WorldDone signal.
-/// Audio is excluded. Other episodes, netgame and commercial paths are outside this module's domain.
+/// Audio is excluded. Other episodes and netgame remain outside this module's domain.
 library WI_Stuff {
     error UnsupportedIntermission();
     error InvalidIntermissionState();
@@ -20,7 +20,7 @@ library WI_Stuff {
 
     function _profile(WiInput memory p) private pure {
         if (
-            (p.gamemode != 0 && p.gamemode != 1 && p.gamemode != 3) || !p.playeringame[0] || p.playeringame[1]
+            (p.gamemode != 0 && p.gamemode != 1 && p.gamemode != 2 && p.gamemode != 3) || !p.playeringame[0] || p.playeringame[1]
                 || p.playeringame[2] || p.playeringame[3] || p.rndindex > 255
         ) {
             revert UnsupportedIntermission();
@@ -49,7 +49,7 @@ library WI_Stuff {
     }
 
     function WI_initVariables(WiState memory s, WiStart memory w) internal pure {
-        if (w.epsd != 0 || w.pnum != 0 || w.last < 0 || w.last > 8 || w.next < 0 || w.next > 8) {
+        if (w.epsd != 0 || w.pnum != 0 || w.last < 0 || w.last > (s.commercial ? int32(31) : int32(8)) || w.next < 0 || w.next > (s.commercial ? int32(31) : int32(8))) {
             revert UnsupportedIntermission();
         }
         if (w.maxkills < 0 || w.maxitems < 0 || w.maxsecret < 0 || w.partime < 0) {
@@ -86,8 +86,9 @@ library WI_Stuff {
         ResourceView memory source
     ) internal view {
         _profile(p);
+        s.commercial = p.gamemode == 2;
         WI_initVariables(s, w);
-        WI_loadData(a, v, source);
+        WI_loadData(a, v, source, s.commercial);
         WI_initStats(s, p);
     }
 
@@ -100,19 +101,32 @@ library WI_Stuff {
     }
 
     function WI_loadData(WiGraphics memory a, VideoState memory v, ResourceView memory source) internal view {
-        // Original E1 lookup order, including original unused single-player dependencies.
-        a.bg = _load(source, "WIMAP0");
+        WI_loadData(a, v, source, false);
+    }
+
+    function WI_loadData(WiGraphics memory a, VideoState memory v, ResourceView memory source, bool commercial)
+        internal view
+    {
+        a.commercial = commercial;
+        // Original commercial/E1 lookup order and single-player dependencies.
+        a.bg = _load(source, commercial ? bytes8("INTERPIC") : bytes8("WIMAP0"));
         V.V_DrawPatch(v, 0, 0, 1, a.bg);
-        for (uint256 i; i < 9; ++i) {
-            a.lnames[i] = _load(source, bytes8(abi.encodePacked("WILV0", _digit(i))));
-        }
-        a.yah[0] = _load(source, "WIURH0");
-        a.yah[1] = _load(source, "WIURH1");
-        a.splat = _load(source, "WISPLAT");
-        for (uint256 j; j < 10; ++j) {
-            for (uint256 i; i < 3; ++i) {
-                a.anims[j * 3 + i] =
-                    _load(source, bytes8(abi.encodePacked("WIA00", _digit(j), "0", _digit(i))));
+        if (commercial) {
+            for (uint256 i; i < 32; ++i) {
+                a.lnames[i] = _load(source, bytes8(abi.encodePacked("CWILV", _digit(i / 10), _digit(i % 10))));
+            }
+        } else {
+            for (uint256 i; i < 9; ++i) {
+                a.lnames[i] = _load(source, bytes8(abi.encodePacked("WILV0", _digit(i))));
+            }
+            a.yah[0] = _load(source, "WIURH0");
+            a.yah[1] = _load(source, "WIURH1");
+            a.splat = _load(source, "WISPLAT");
+            for (uint256 j; j < 10; ++j) {
+                for (uint256 i; i < 3; ++i) {
+                    a.anims[j * 3 + i] =
+                        _load(source, bytes8(abi.encodePacked("WIA00", _digit(j), "0", _digit(i))));
+                }
             }
         }
         a.wiminus = _load(source, "WIMINUS");
@@ -153,6 +167,7 @@ library WI_Stuff {
     }
 
     function WI_initAnimatedBack(WiState memory s, WiInput memory p) internal pure {
+        if (p.gamemode == 2) return;
         for (uint256 i; i < 10; ++i) {
             s.animCtr[i] = -1;
             s.animNexttic[i] = s.bcnt + 1 + (_random(p) % 11); // TICRATE/3, ANIM_ALWAYS
@@ -160,6 +175,7 @@ library WI_Stuff {
     }
 
     function WI_updateAnimatedBack(WiState memory s) internal pure {
+        if (s.commercial) return;
         for (uint256 i; i < 10; ++i) {
             if (s.bcnt == s.animNexttic[i]) {
                 if (++s.animCtr[i] >= 3) s.animCtr[i] = 0;
@@ -227,7 +243,10 @@ library WI_Stuff {
                 if (s.cnt_time >= s.wbs.plyr[uint32(s.me)].stime / 35) s.sp_state++;
             }
         } else if (s.sp_state == 10) {
-            if (s.acceleratestage != 0) WI_initShowNextLoc(s, p);
+            if (s.acceleratestage != 0) {
+                if (p.gamemode == 2) WI_initNoState(s);
+                else WI_initShowNextLoc(s, p);
+            }
         } else if ((s.sp_state & 1) != 0) {
             if (--s.cnt_pause == 0) {
                 s.sp_state++;
@@ -280,6 +299,9 @@ library WI_Stuff {
     }
 
     function WI_Ticker(WiState memory s, WiInput memory p) internal pure {
+        // WI_Start binds the mode once. Reject an unadmitted commercial context
+        // or a mid-intermission mode change; preserve the inherited guard tests.
+        if ((p.gamemode == 2) != s.commercial) revert UnsupportedIntermission();
         _profile(p);
         _active(s);
         if (s.bcnt > type(int32).max - 12) revert UndefinedNativeDomain();
@@ -411,6 +433,10 @@ library WI_Stuff {
     function WI_drawShowNextLoc(WiState memory s, WiGraphics memory a, VideoState memory v) internal pure {
         WI_slamBackground(v);
         WI_drawAnimatedBack(s, a, v);
+        if (a.commercial) {
+            if (s.wbs.next != 30) WI_drawEL(s, a, v);
+            return;
+        }
         int32 last = s.wbs.last == 8 ? s.wbs.next - 1 : s.wbs.last;
         bytes[] memory splats = new bytes[](1);
         splats[0] = a.splat;
