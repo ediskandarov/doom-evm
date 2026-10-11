@@ -1,0 +1,468 @@
+{
+  "sources": {
+    "original/DOOM/linuxdoom-1.10/z_zone.c": "80174204a0a2c96e89ceb059e0922238046106be4fd5116f1c0a6a530df9010b",
+    "original/DOOM/linuxdoom-1.10/z_zone.h": "46498575b14b5f5538d0d93f3d7c8325941b76f0e36b435bb895ecaac6f54cca",
+    "tools/reference/ultimate_speedruns/owner-lifecycle.c": "f9b18169f42ee52b68558b821536d2ca8c81c9743a8be145f9aeeb9856cdacd8",
+    "tools/reference/ultimate_speedruns/owner-lifecycle.py": "4e6c3c2ac69cfc18d39299146af7f520feb0487fd61d506c5961f95361add214"
+  },
+  "runs": [
+    {
+      "profile": "O0",
+      "repeat": 0,
+      "buildCommand": [
+        "clang",
+        "-std=gnu11",
+        "-fsigned-char",
+        "-fwrapv",
+        "-fno-strict-aliasing",
+        "-O0",
+        "-I/Users/eduard/sandbox/doom-evm-ultimate-speedruns/original/DOOM/linuxdoom-1.10",
+        "-I/Users/eduard/sandbox/doom-evm-ultimate-speedruns/artifacts/local/ultimate-speedruns/owner-lifecycle",
+        "/Users/eduard/sandbox/doom-evm-ultimate-speedruns/tools/reference/ultimate_speedruns/owner-lifecycle.c",
+        "-o",
+        "/Users/eduard/sandbox/doom-evm-ultimate-speedruns/artifacts/local/ultimate-speedruns/owner-lifecycle/O0"
+      ],
+      "binarySHA256": "7d6d4a47a28931bd9a8e61702bde83cbffc58639927418b2a0098b004cfa1688",
+      "observations": [
+        {
+          "stage": "allocate",
+          "index": 3,
+          "stride": 8,
+          "relative": 24,
+          "headerOffset": 56,
+          "slot": "0x6000018dc1d8",
+          "payload": "0x142008e60",
+          "bytes": "d8c18d0100600000"
+        },
+        {
+          "stage": "cache-hit-retag",
+          "index": 3,
+          "stride": 8,
+          "relative": 24,
+          "headerOffset": 56,
+          "slot": "0x6000018dc1d8",
+          "payload": "0x142008e60",
+          "bytes": "d8c18d0100600000"
+        },
+        {
+          "stage": "recache-different-block",
+          "index": 3,
+          "stride": 8,
+          "relative": 24,
+          "headerOffset": 224,
+          "slot": "0x6000018dc1d8",
+          "payload": "0x142008f08",
+          "bytes": "d8c18d0100600000"
+        },
+        {
+          "stage": "after-tag-purge",
+          "index": 3,
+          "stride": 8,
+          "relative": 24,
+          "headerOffset": 224,
+          "slot": "0x6000018dc1d8",
+          "payload": "0x142008f08",
+          "bytes": "d8c18d0100600000"
+        },
+        {
+          "stage": "before-allocation-purge",
+          "index": 6,
+          "stride": 8,
+          "relative": 48,
+          "headerOffset": 224,
+          "slot": "0x6000018dc1f0",
+          "payload": "0x142008f08",
+          "bytes": "f0c18d0100600000"
+        },
+        {
+          "freeClears": true,
+          "tagPurgeClears": true,
+          "allocationPurgeClears": true
+        }
+      ]
+    },
+    {
+      "profile": "O0",
+      "repeat": 1,
+      "buildCommand": [
+        "clang",
+        "-std=gnu11",
+        "-fsigned-char",
+        "-fwrapv",
+        "-fno-strict-aliasing",
+        "-O0",
+        "-I/Users/eduard/sandbox/doom-evm-ultimate-speedruns/original/DOOM/linuxdoom-1.10",
+        "-I/Users/eduard/sandbox/doom-evm-ultimate-speedruns/artifacts/local/ultimate-speedruns/owner-lifecycle",
+        "/Users/eduard/sandbox/doom-evm-ultimate-speedruns/tools/reference/ultimate_speedruns/owner-lifecycle.c",
+        "-o",
+        "/Users/eduard/sandbox/doom-evm-ultimate-speedruns/artifacts/local/ultimate-speedruns/owner-lifecycle/O0"
+      ],
+      "binarySHA256": "7d6d4a47a28931bd9a8e61702bde83cbffc58639927418b2a0098b004cfa1688",
+      "observations": [
+        {
+          "stage": "allocate",
+          "index": 3,
+          "stride": 8,
+          "relative": 24,
+          "headerOffset": 56,
+          "slot": "0x6000038b41d8",
+          "payload": "0x12c008e60",
+          "bytes": "d8418b0300600000"
+        },
+        {
+          "stage": "cache-hit-retag",
+          "index": 3,
+          "stride": 8,
+          "relative": 24,
+          "headerOffset": 56,
+          "slot": "0x6000038b41d8",
+          "payload": "0x12c008e60",
+          "bytes": "d8418b0300600000"
+        },
+        {
+          "stage": "recache-different-block",
+          "index": 3,
+          "stride": 8,
+          "relative": 24,
+          "headerOffset": 224,
+          "slot": "0x6000038b41d8",
+          "payload": "0x12c008f08",
+          "bytes": "d8418b0300600000"
+        },
+        {
+          "stage": "after-tag-purge",
+          "index": 3,
+          "stride": 8,
+          "relative": 24,
+          "headerOffset": 224,
+          "slot": "0x6000038b41d8",
+          "payload": "0x12c008f08",
+          "bytes": "d8418b0300600000"
+        },
+        {
+          "stage": "before-allocation-purge",
+          "index": 6,
+          "stride": 8,
+          "relative": 48,
+          "headerOffset": 224,
+          "slot": "0x6000038b41f0",
+          "payload": "0x12c008f08",
+          "bytes": "f0418b0300600000"
+        },
+        {
+          "freeClears": true,
+          "tagPurgeClears": true,
+          "allocationPurgeClears": true
+        }
+      ]
+    },
+    {
+      "profile": "O2",
+      "repeat": 0,
+      "buildCommand": [
+        "clang",
+        "-std=gnu11",
+        "-fsigned-char",
+        "-fwrapv",
+        "-fno-strict-aliasing",
+        "-O2",
+        "-I/Users/eduard/sandbox/doom-evm-ultimate-speedruns/original/DOOM/linuxdoom-1.10",
+        "-I/Users/eduard/sandbox/doom-evm-ultimate-speedruns/artifacts/local/ultimate-speedruns/owner-lifecycle",
+        "/Users/eduard/sandbox/doom-evm-ultimate-speedruns/tools/reference/ultimate_speedruns/owner-lifecycle.c",
+        "-o",
+        "/Users/eduard/sandbox/doom-evm-ultimate-speedruns/artifacts/local/ultimate-speedruns/owner-lifecycle/O2"
+      ],
+      "binarySHA256": "ad6cec1d1a34f993b79ace04558a55523db94402b2cab4bcb4e30194d56c1142",
+      "observations": [
+        {
+          "stage": "allocate",
+          "index": 3,
+          "stride": 8,
+          "relative": 24,
+          "headerOffset": 56,
+          "slot": "0x6000034901d8",
+          "payload": "0x150008e60",
+          "bytes": "d801490300600000"
+        },
+        {
+          "stage": "cache-hit-retag",
+          "index": 3,
+          "stride": 8,
+          "relative": 24,
+          "headerOffset": 56,
+          "slot": "0x6000034901d8",
+          "payload": "0x150008e60",
+          "bytes": "d801490300600000"
+        },
+        {
+          "stage": "recache-different-block",
+          "index": 3,
+          "stride": 8,
+          "relative": 24,
+          "headerOffset": 224,
+          "slot": "0x6000034901d8",
+          "payload": "0x150008f08",
+          "bytes": "d801490300600000"
+        },
+        {
+          "stage": "after-tag-purge",
+          "index": 3,
+          "stride": 8,
+          "relative": 24,
+          "headerOffset": 224,
+          "slot": "0x6000034901d8",
+          "payload": "0x150008f08",
+          "bytes": "d801490300600000"
+        },
+        {
+          "stage": "before-allocation-purge",
+          "index": 6,
+          "stride": 8,
+          "relative": 48,
+          "headerOffset": 224,
+          "slot": "0x6000034901f0",
+          "payload": "0x150008f08",
+          "bytes": "f001490300600000"
+        },
+        {
+          "freeClears": true,
+          "tagPurgeClears": true,
+          "allocationPurgeClears": true
+        }
+      ]
+    },
+    {
+      "profile": "O2",
+      "repeat": 1,
+      "buildCommand": [
+        "clang",
+        "-std=gnu11",
+        "-fsigned-char",
+        "-fwrapv",
+        "-fno-strict-aliasing",
+        "-O2",
+        "-I/Users/eduard/sandbox/doom-evm-ultimate-speedruns/original/DOOM/linuxdoom-1.10",
+        "-I/Users/eduard/sandbox/doom-evm-ultimate-speedruns/artifacts/local/ultimate-speedruns/owner-lifecycle",
+        "/Users/eduard/sandbox/doom-evm-ultimate-speedruns/tools/reference/ultimate_speedruns/owner-lifecycle.c",
+        "-o",
+        "/Users/eduard/sandbox/doom-evm-ultimate-speedruns/artifacts/local/ultimate-speedruns/owner-lifecycle/O2"
+      ],
+      "binarySHA256": "ad6cec1d1a34f993b79ace04558a55523db94402b2cab4bcb4e30194d56c1142",
+      "observations": [
+        {
+          "stage": "allocate",
+          "index": 3,
+          "stride": 8,
+          "relative": 24,
+          "headerOffset": 56,
+          "slot": "0x6000020a41d8",
+          "payload": "0x13a808e60",
+          "bytes": "d8410a0200600000"
+        },
+        {
+          "stage": "cache-hit-retag",
+          "index": 3,
+          "stride": 8,
+          "relative": 24,
+          "headerOffset": 56,
+          "slot": "0x6000020a41d8",
+          "payload": "0x13a808e60",
+          "bytes": "d8410a0200600000"
+        },
+        {
+          "stage": "recache-different-block",
+          "index": 3,
+          "stride": 8,
+          "relative": 24,
+          "headerOffset": 224,
+          "slot": "0x6000020a41d8",
+          "payload": "0x13a808f08",
+          "bytes": "d8410a0200600000"
+        },
+        {
+          "stage": "after-tag-purge",
+          "index": 3,
+          "stride": 8,
+          "relative": 24,
+          "headerOffset": 224,
+          "slot": "0x6000020a41d8",
+          "payload": "0x13a808f08",
+          "bytes": "d8410a0200600000"
+        },
+        {
+          "stage": "before-allocation-purge",
+          "index": 6,
+          "stride": 8,
+          "relative": 48,
+          "headerOffset": 224,
+          "slot": "0x6000020a41f0",
+          "payload": "0x13a808f08",
+          "bytes": "f0410a0200600000"
+        },
+        {
+          "freeClears": true,
+          "tagPurgeClears": true,
+          "allocationPurgeClears": true
+        }
+      ]
+    },
+    {
+      "profile": "sanitize",
+      "repeat": 0,
+      "buildCommand": [
+        "clang",
+        "-std=gnu11",
+        "-fsigned-char",
+        "-fwrapv",
+        "-fno-strict-aliasing",
+        "-O2",
+        "-fsanitize=address,undefined",
+        "-fno-sanitize-recover=all",
+        "-fno-omit-frame-pointer",
+        "-I/Users/eduard/sandbox/doom-evm-ultimate-speedruns/original/DOOM/linuxdoom-1.10",
+        "-I/Users/eduard/sandbox/doom-evm-ultimate-speedruns/artifacts/local/ultimate-speedruns/owner-lifecycle",
+        "/Users/eduard/sandbox/doom-evm-ultimate-speedruns/tools/reference/ultimate_speedruns/owner-lifecycle.c",
+        "-o",
+        "/Users/eduard/sandbox/doom-evm-ultimate-speedruns/artifacts/local/ultimate-speedruns/owner-lifecycle/sanitize"
+      ],
+      "binarySHA256": "8d40bb76f13fb79fccf1fb7b514f81f2fa91a680352911d4316ef9a04c43064a",
+      "observations": [
+        {
+          "stage": "allocate",
+          "index": 3,
+          "stride": 8,
+          "relative": 24,
+          "headerOffset": 56,
+          "slot": "0x6060000002d8",
+          "payload": "0x625000000160",
+          "bytes": "d802000060600000"
+        },
+        {
+          "stage": "cache-hit-retag",
+          "index": 3,
+          "stride": 8,
+          "relative": 24,
+          "headerOffset": 56,
+          "slot": "0x6060000002d8",
+          "payload": "0x625000000160",
+          "bytes": "d802000060600000"
+        },
+        {
+          "stage": "recache-different-block",
+          "index": 3,
+          "stride": 8,
+          "relative": 24,
+          "headerOffset": 224,
+          "slot": "0x6060000002d8",
+          "payload": "0x625000000208",
+          "bytes": "d802000060600000"
+        },
+        {
+          "stage": "after-tag-purge",
+          "index": 3,
+          "stride": 8,
+          "relative": 24,
+          "headerOffset": 224,
+          "slot": "0x6060000002d8",
+          "payload": "0x625000000208",
+          "bytes": "d802000060600000"
+        },
+        {
+          "stage": "before-allocation-purge",
+          "index": 6,
+          "stride": 8,
+          "relative": 48,
+          "headerOffset": 224,
+          "slot": "0x6060000002f0",
+          "payload": "0x625000000208",
+          "bytes": "f002000060600000"
+        },
+        {
+          "freeClears": true,
+          "tagPurgeClears": true,
+          "allocationPurgeClears": true
+        }
+      ]
+    },
+    {
+      "profile": "sanitize",
+      "repeat": 1,
+      "buildCommand": [
+        "clang",
+        "-std=gnu11",
+        "-fsigned-char",
+        "-fwrapv",
+        "-fno-strict-aliasing",
+        "-O2",
+        "-fsanitize=address,undefined",
+        "-fno-sanitize-recover=all",
+        "-fno-omit-frame-pointer",
+        "-I/Users/eduard/sandbox/doom-evm-ultimate-speedruns/original/DOOM/linuxdoom-1.10",
+        "-I/Users/eduard/sandbox/doom-evm-ultimate-speedruns/artifacts/local/ultimate-speedruns/owner-lifecycle",
+        "/Users/eduard/sandbox/doom-evm-ultimate-speedruns/tools/reference/ultimate_speedruns/owner-lifecycle.c",
+        "-o",
+        "/Users/eduard/sandbox/doom-evm-ultimate-speedruns/artifacts/local/ultimate-speedruns/owner-lifecycle/sanitize"
+      ],
+      "binarySHA256": "8d40bb76f13fb79fccf1fb7b514f81f2fa91a680352911d4316ef9a04c43064a",
+      "observations": [
+        {
+          "stage": "allocate",
+          "index": 3,
+          "stride": 8,
+          "relative": 24,
+          "headerOffset": 56,
+          "slot": "0x6060000002d8",
+          "payload": "0x625000000160",
+          "bytes": "d802000060600000"
+        },
+        {
+          "stage": "cache-hit-retag",
+          "index": 3,
+          "stride": 8,
+          "relative": 24,
+          "headerOffset": 56,
+          "slot": "0x6060000002d8",
+          "payload": "0x625000000160",
+          "bytes": "d802000060600000"
+        },
+        {
+          "stage": "recache-different-block",
+          "index": 3,
+          "stride": 8,
+          "relative": 24,
+          "headerOffset": 224,
+          "slot": "0x6060000002d8",
+          "payload": "0x625000000208",
+          "bytes": "d802000060600000"
+        },
+        {
+          "stage": "after-tag-purge",
+          "index": 3,
+          "stride": 8,
+          "relative": 24,
+          "headerOffset": 224,
+          "slot": "0x6060000002d8",
+          "payload": "0x625000000208",
+          "bytes": "d802000060600000"
+        },
+        {
+          "stage": "before-allocation-purge",
+          "index": 6,
+          "stride": 8,
+          "relative": 48,
+          "headerOffset": 224,
+          "slot": "0x6060000002f0",
+          "payload": "0x625000000208",
+          "bytes": "f002000060600000"
+        },
+        {
+          "freeClears": true,
+          "tagPurgeClears": true,
+          "allocationPurgeClears": true
+        }
+      ]
+    }
+  ],
+  "pass_": true,
+  "verdict": "RESTRICT; owner identity/stride/lifetime stable; absolute addresses are observations only"
+}
