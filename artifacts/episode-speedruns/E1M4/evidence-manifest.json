@@ -1,0 +1,9 @@
+{
+  "map": "E1M4",
+  "files": {
+    "result.json": "747708d547152ef4648f0d8f75a2f63975df3fd484588fb513d72f42ee20e63a"
+  },
+  "sourceIndex": "../source-index.json",
+  "sourceIndexSha256": "4be1b841642db75f899bd2e88a6cbba52e34a829ae0f8541753cfac54bcda514",
+  "acquisitionAttemptsSha256": "5ef04ebad259174517b54ac61912756940e2b0500720394ac3f87c1597973f23"
+}

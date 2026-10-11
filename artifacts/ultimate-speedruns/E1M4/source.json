@@ -1,0 +1,19 @@
+{
+  "map": "E1M4",
+  "author": "izzybell",
+  "engine": "DSDA-Doom v0.29.4cl3",
+  "category": "UV Speed",
+  "note": "",
+  "downloadUrl": "https://dsdarchive.com/files/demos/doom/113314/e1m4-0021.zip",
+  "runUrl": "https://dsdarchive.com/wads/doom?category=UV+Speed&level=E1M4",
+  "selection": "First listed non-TAS single-player DSDA-Doom complevel3 UV Speed row; not a claim of world-record status.",
+  "originalName": "e1m4-0021.lmp",
+  "demoBytes": 3341,
+  "demoSha256": "1f5427b2776aa7deb83716350eb6d252e4953895aa338c239bf62eeac5d67fdf",
+  "archiveSha256": "1c2a2bb927aee45b6e6998f46bb2e94073469a506cfe3115776f96e75edb9048",
+  "authorNotes": {
+    "e1m4-0021.txt": "Player: izzybell\r\nPort: dsda-doom-0.29.4\r\nIWAD: DOOM.wad\r\nSkill: 4\r\nMap: e1m4\r\nCatagory: UV Speed\r\nTime: 00:21.91\r\n\r\nNotes:\r\nDe-rusting continues, got this on my first attempt and honestly im quite happy with it! I probably\r\ncould've gotten a low 20 if I grabbed the key and keep my speed through the yellow key door but still. Happy with this one."
+  },
+  "IWADMD5": "c4fe9fd920207691a9f493668e0a2083",
+  "IWADSHA256": "6fdf361847b46228cfebd9f3af09cd844282ac75f3edbb61ca4cb27103ce2e7f"
+}

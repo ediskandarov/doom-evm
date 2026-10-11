@@ -1,0 +1,47 @@
+{
+  "map": "E1M8",
+  "author": "Sedlo",
+  "category": "UV Speed",
+  "engine": "DooM v1.9",
+  "downloadUrl": "https://dsdarchive.com/files/demos/doom/30217/e1m8-046.zip",
+  "runUrl": "https://dsdarchive.com/wads/doom?category=UV+Speed&level=E1M8",
+  "originalName": "e1m8-046.lmp",
+  "demoSha256": "a47622d63d3b797280842c86b858cf80a7d85b7b1df03882db08f5f16fb261ef",
+  "archiveSha256": "edd623f07f5bd5c6bb527bd484ae117c53653d5db83a80ac109993a5f3175b6b",
+  "authorNotes": {
+    "e1m8-046.txt": "This is a DooM .LMP \"Competition\" Entry - Please forward it...\r\n\r\nE1M8-046.TXT\r\n\r\n E1M8-046.ZIP\r\n\r\n  E1M8-046.LMP - Ultra Violence\r\n\r\n  Recorded using \"The Ultimate DooM\"\r\n  DooM -PlayDemo with Ultimate DooM\r\n\r\n  Final DooM - Ep.1 Mi.8 - Deimos anomaly  \r\n\r\n  Kills     ??%\r\n  (Items    ??%)          +++++++++\r\n  Secrets   ??%  and Time + 00:46 +\r\n                          +++++++++\r\n\r\n  Description :-)\r\n\r\n  It's a bit hard to survive with just 100/100 when \r\n  you're traped in baron room, especially when\r\n  you give your selfe another goal besides killings, \r\n  to do that with <5% health left on the end of it.\r\n  To get fast exit once I reach teleport.\r\n  Heh, died few times after I killed barons, it's not \r\n  wise to let spectres bite you when you have around \r\n  15/20% health. Anyway, judging by time implement\r\n  in this run I would say it was fairly eazy. \r\n  Defenetly it won't be so hard to beat it for someone \r\n  who cares. I saw it's high 46 and that was enough \r\n  for me. No will for some aditional playings\r\n  on this map. It's fun, but not that fun ;).\r\n\r\n  Marijo \"Sedlo\" Sedlic\r\n  msedlic@inet.hr  "
+  },
+  "selection": "Authentic non-TAS DSDA archive UV Speed alternative after faster ghost-route tape triggered original-C intercept overflow. Compatibility must be proved on the exact supplied classic IWAD.",
+  "header": {
+    "version": 109,
+    "skill": 3,
+    "episode": 1,
+    "map": 8,
+    "deathmatch": 0,
+    "respawn": 0,
+    "fast": 0,
+    "nomonsters": 0,
+    "consoleplayer": 0,
+    "playeringame": [
+      1,
+      0,
+      0,
+      0
+    ]
+  },
+  "totalDemoTics": 1738,
+  "markerOffset": 6965,
+  "footer": {},
+  "dsdaFooterChecksumVerified": null,
+  "originalDecoder": {
+    "file": "g_game.c",
+    "function": "G_ReadDemoTiccmd",
+    "startLine": 1491,
+    "endLine": 1503,
+    "sha256": "77f7b1aeca0bf6da361bf3c29af3cde4f2f291f8deeaa9426017b12dbbdcb345"
+  },
+  "decoderExact": true,
+  "wadSha256": "6fdf361847b46228cfebd9f3af09cd844282ac75f3edbb61ca4cb27103ce2e7f",
+  "stockLoaderCompatible": false,
+  "recordingWadIdentity": "Not independently known; compatible pinned IWAD replay must be demonstrated."
+}

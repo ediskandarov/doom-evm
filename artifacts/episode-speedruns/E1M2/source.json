@@ -1,0 +1,49 @@
+{
+  "map": "E1M2",
+  "runUrl": "https://www.speedrun.com/freedoom_phase_1/runs/ylpjl2nm",
+  "downloadUrl": "https://drive.proton.me/urls/HQTD1QTR4C#S5CiNp36Dwh9",
+  "author": "AZRAEL-II",
+  "leaderboardAuthor": "LANCASTER_",
+  "originalName": "fd1m2-55s490ms.lmp",
+  "demoBytes": 8562,
+  "demoSha256": "810dd601351b6ec54aca26a2ef04cafefbc556ee07c53ce3d870b5ff9abe0306",
+  "archiveSha256": "54e3c359626cafdbad5f46d7cf0ee1d856ac3dc85e09ff05df1d8322ad2df498",
+  "authorNotes": "PWAD        : freedoom1.wad\nPWAD Name   : Freedoom : Phase One\nSkill       : 1\nMap\t    : E1M2 : Communication Centre\nCategory    : PdKM-Speed\nExe         : DSDA-Doom v0.25.2 complevel 3\nRecorded on : 17th March 2025\nTime        : 55s 490ms\nAuthor      : AZRAEL-II\nDescription : Happy new years folks\n",
+  "acquisition": "Official Proton Drive SDK 0.22.2 and crypto 2.2.0; SRP server proof and download integrity verified; no browser or account used.",
+  "header": {
+    "version": 109,
+    "skill": 0,
+    "episode": 1,
+    "map": 2,
+    "deathmatch": 0,
+    "respawn": 0,
+    "fast": 0,
+    "nomonsters": 0,
+    "consoleplayer": 0,
+    "playeringame": [
+      1,
+      0,
+      0,
+      0
+    ]
+  },
+  "totalDemoTics": 2091,
+  "markerOffset": 8377,
+  "footer": {
+    "FEATURES": "Extended HUD\n0x0000000000000002-83de3377cc4502b3d0f308db3921506f\u0000\u0000\u0000\u0000",
+    "PORTNAME": "dsda-doom 0.28.2",
+    "CMDLINE": "-iwad \"freedoom1.wad\" -complevel 3 "
+  },
+  "dsdaFooterChecksumVerified": true,
+  "originalDecoder": {
+    "file": "g_game.c",
+    "function": "G_ReadDemoTiccmd",
+    "startLine": 1491,
+    "endLine": 1503,
+    "sha256": "77f7b1aeca0bf6da361bf3c29af3cde4f2f291f8deeaa9426017b12dbbdcb345"
+  },
+  "decoderExact": true,
+  "wadSha256": "7323bcc168c5a45ff10749b339960e98314740a734c30d4b9f3337001f9e703d",
+  "stockLoaderCompatible": false,
+  "recordingWadIdentity": "Not independently known; compatible pinned IWAD replay must be demonstrated."
+}

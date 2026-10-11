@@ -1,0 +1,51 @@
+{
+  "verified": true,
+  "files": {
+    "source.json": {
+      "bytes": 1954,
+      "sha256": "c82b549588fda4171ff4e57b901db8629783e175b32d021655545eb2b6457405"
+    },
+    "native-build-O0.json": {
+      "bytes": 40693,
+      "sha256": "fd4589a83a2018edff967738a673496b65fb920749404d7c81a568a1ab6b4899"
+    },
+    "native-build-sanitize.json": {
+      "bytes": 40762,
+      "sha256": "2c38d328b2a05271b75cdd245f8576d5d73a577af95df9680579b98489e3d75c"
+    },
+    "author-notes.txt": {
+      "bytes": 310,
+      "sha256": "10bcd31fee1d7cc9e1334d94b187123a3177107ff01fa2aaf6d23a2ddc5a1bc3"
+    },
+    "native-result.json": {
+      "bytes": 5556,
+      "sha256": "e82e40b1e6b88b28ecd73736f38bcee88c6d7d48e40340923e793a62c3ccffed"
+    },
+    "commands.txt": {
+      "bytes": 27726,
+      "sha256": "e87c61ed9bf1d44abe167c9e1ca7d98bbe6a231a270ebf2b86a30804df6f42f3"
+    },
+    "fd1m2-55s490ms.lmp": {
+      "bytes": 8562,
+      "sha256": "810dd601351b6ec54aca26a2ef04cafefbc556ee07c53ce3d870b5ff9abe0306"
+    },
+    "level-commands.txt": {
+      "bytes": 26228,
+      "sha256": "dc993f54de15de8d86b3113f08a113a814f251eedd5c98f692f12f98999833bc"
+    },
+    "native-build-O2.json": {
+      "bytes": 40693,
+      "sha256": "2ba56fd018f07bee5048fd6aeebbe58509e93cb66878b8ff821718517ecdd093"
+    },
+    "native-states.delta.bin.gz": {
+      "bytes": 6366546,
+      "sha256": "b431c117c625a0d0504a33292972a896bb52bc89e706a685a12dfdc42464f4bf"
+    },
+    "native-state-hashes.json": {
+      "bytes": 247597,
+      "sha256": "ffd97c426e2ce3c05014a1a4610da17621a8aeb4465c01a3feffcd3f86e98b94"
+    }
+  },
+  "observations": 1943,
+  "exactProfiles": 4
+}

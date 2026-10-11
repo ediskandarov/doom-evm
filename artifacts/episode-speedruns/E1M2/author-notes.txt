@@ -1,0 +1,10 @@
+PWAD        : freedoom1.wad
+PWAD Name   : Freedoom : Phase One
+Skill       : 1
+Map	    : E1M2 : Communication Centre
+Category    : PdKM-Speed
+Exe         : DSDA-Doom v0.25.2 complevel 3
+Recorded on : 17th March 2025
+Time        : 55s 490ms
+Author      : AZRAEL-II
+Description : Happy new years folks

@@ -1,0 +1,81 @@
+{
+  "map": "E1M8",
+  "status": "blocked-demo-acquisition",
+  "originalDemoCandidates": [
+    {
+      "runId": "me9ok63z",
+      "runUrl": "https://www.speedrun.com/freedoom_phase_1/runs/me9ok63z",
+      "map": "E1M8",
+      "category": "EC-Max (0.12.1)",
+      "author": [
+        "MxCrab"
+      ],
+      "submitted": "2021-01-26T11:47:48Z",
+      "status": {
+        "status": "verified",
+        "examiner": "y8d1wg58",
+        "verify-date": "2021-01-26T11:47:48Z"
+      },
+      "seconds": 63.54,
+      "demoUrls": [
+        "https://www.doomworld.com/applications/core/interface/file/attachment.php?id=109652"
+      ],
+      "comment": "Demo: https://www.doomworld.com/applications/core/interface/file/attachment.php?id=109652\r\n\r\nThis went alright. Luck plays a huge part on this (which is why I stopped). You need 3/4 to be 5 rockets, and then 2 max damage rockets to give the final one as little HP as possible for the ratatatata. \r\n\r\nDefinitely possible to get sub 60s, but I'm not gonna be the one to do it. Better movement through the maze should sort you out though. "
+    },
+    {
+      "runId": "y9n071kz",
+      "runUrl": "https://www.speedrun.com/freedoom_phase_1/runs/y9n071kz",
+      "map": "E1M8",
+      "category": "EC-Max (0.12.1)",
+      "author": [
+        "Shepardus"
+      ],
+      "submitted": "2021-01-26T11:48:56Z",
+      "status": {
+        "status": "verified",
+        "examiner": "y8d1wg58",
+        "verify-date": "2021-01-26T11:48:56Z"
+      },
+      "seconds": 52.37,
+      "demoUrls": [
+        "https://www.doomworld.com/applications/core/interface/file/attachment.php?id=109806"
+      ],
+      "comment": "Demo: https://www.doomworld.com/applications/core/interface/file/attachment.php?id=109806\r\n\r\nA simple boss map with four barons and not much else. Getting a good time is dependent on smooth movement in the sections before the bosses and rocket RNG for the bosses. This run was the best I did with the movement. I unfortunately missed a rocket on one of the barons but made up for it by getting lucky enough to kill it in four hits."
+    }
+  ],
+  "acquisitionAttempts": [
+    {
+      "map": "E1M8",
+      "runId": "me9ok63z",
+      "url": "https://www.doomworld.com/applications/core/interface/file/attachment.php?id=109652",
+      "UTC": "2026-10-10T19:31:27Z",
+      "http": "403",
+      "returncode": 0,
+      "stderr": "",
+      "bytes": 5508
+    },
+    {
+      "map": "E1M8",
+      "runId": "y9n071kz",
+      "url": "https://www.doomworld.com/applications/core/interface/file/attachment.php?id=109806",
+      "UTC": "2026-10-10T19:31:27Z",
+      "http": "403",
+      "returncode": 0,
+      "stderr": "",
+      "bytes": 5508
+    }
+  ],
+  "originalDemoSha256": null,
+  "nativeCompatibility": "Not established: original tape unavailable; indexed demos label Freedoom 0.12.1",
+  "gameplayTics": null,
+  "nativeEVMSnapshotAgreement": null,
+  "EVMFramesRendered": 0,
+  "pixelEquality": "Not tested",
+  "virtualPointerDerivedPixelCount": null,
+  "gasConsumed": 0,
+  "executionTimeSeconds": null,
+  "MP4Path": null,
+  "unresolvedFailure": "Every indexed original demo download returned HTTP 403; no 0.13 compatible downloadable tape found in searched sources.",
+  "startupPath": "EpisodeSpeedrunProbe.initializeMap -> EpisodeStartup.initialize -> DoomGame.load once before G_InitNew; does not call menu first-game startup.",
+  "E1M7MemoryOOG": null
+}

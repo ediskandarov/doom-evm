@@ -1,0 +1,9 @@
+{
+  "map": "E1M5",
+  "files": {
+    "result.json": "05be90fc2136ef3a6cddec6c88ba415238608f05000115aaa01a909eedaebb1f"
+  },
+  "sourceIndex": "../source-index.json",
+  "sourceIndexSha256": "4be1b841642db75f899bd2e88a6cbba52e34a829ae0f8541753cfac54bcda514",
+  "acquisitionAttemptsSha256": "5ef04ebad259174517b54ac61912756940e2b0500720394ac3f87c1597973f23"
+}

@@ -350,3 +350,14 @@ profiles still require additional evidence/representation; they remain unknown
 here. No new heap architecture, map/tic-specific fix, production activation,
 full release acceptance, main merge or push is claimed. Stop at this verified
 feature handoff. The integrator may reconcile it into the Phase4 ledger later.
+
+## Ultimate DOOM owner-slot continuation
+
+The later [owner-pointer investigation](ULTIMATE-OWNER-POINTERS.md) proves a
+separate original-C object domain: host-allocated `lumpcache[]` owner slots.
+The explicit experimental profile now admits their deterministic LP64 slot
+addresses under current topology and reciprocal owner validation, with
+provenance5 and base `0x0000002000000000`. These remain virtual bytes, never
+actual native placement. Other external or zone-resident owner objects remain
+unsupported; existing policy and provenance precedence are preserved. Earlier
+accepted evidence and its historical coverage above remain unchanged.

@@ -1,0 +1,19 @@
+{
+  "map": "E1M5",
+  "author": "trioct",
+  "engine": "DSDA-Doom v0.10.0cl3",
+  "category": "UV Speed",
+  "note": "",
+  "downloadUrl": "https://dsdarchive.com/files/demos/doom/51000/e1m5-100.zip",
+  "runUrl": "https://dsdarchive.com/wads/doom?category=UV+Speed&level=E1M5",
+  "selection": "First listed non-TAS single-player DSDA-Doom complevel3 UV Speed row; not a claim of world-record status.",
+  "originalName": "e1m5-100.lmp",
+  "demoBytes": 9575,
+  "demoSha256": "4a3ffd0a1f92ac2980e9c3b5aafde01a6ec2fb4eaca0fdde61ab85d51e1ea48e",
+  "archiveSha256": "2d25bcb4e1977d8a8da21ce62c037ee1b806d8cb222cda11743ef20ecfc075b6",
+  "authorNotes": {
+    "e1m5-100.txt": "Player: Trioct\r\nIWAD: Doom.wad\r\nPWAD:\r\nMap: E1M5\r\nSkill: 4\r\nCategory: UV-Speed\r\nExe: dsda-doom v0.10.0 -complevel 3\r\nTime: 1:00.29\r\n\r\nComments: I just couldn't get a sub 1 minute. The level has defeated me.\r\n"
+  },
+  "IWADMD5": "c4fe9fd920207691a9f493668e0a2083",
+  "IWADSHA256": "6fdf361847b46228cfebd9f3af09cd844282ac75f3edbb61ca4cb27103ce2e7f"
+}

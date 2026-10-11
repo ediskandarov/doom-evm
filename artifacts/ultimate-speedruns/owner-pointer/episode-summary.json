@@ -1,0 +1,1053 @@
+{
+  "pass_": true,
+  "completeMaps": 9,
+  "gameplayTics": 14475,
+  "snapshots": 14484,
+  "EVMFrames": 14475,
+  "fullRateFPS": 35,
+  "allSupportedCommonNativePixelsOutsideVirtualExact": true,
+  "commonNativePixelsCompared": 926399962,
+  "virtualZoneUses": 20,
+  "virtualOwnerUses": 18,
+  "totalRecordingGas": 16507193671290,
+  "maps": [
+    {
+      "map": "E1M1",
+      "report": "artifacts/ultimate-speedruns/E1M1/owner-v1/result.json",
+      "reportSHA256": "5d20827f6d7e495866549c84e378fbf6f7c8a3c7a7c21c9d098287e665929fb0",
+      "demo": {
+        "author": "aconfusedhuman",
+        "originalName": "e1m1-903.lmp",
+        "URL": "https://dsdarchive.com/files/demos/doom/54454/e1m1-903.zip",
+        "SHA256": "e5766abc098faf496c2b7787668e4c21c0a4ebf819c7667ce59c4ca14dc39288"
+      },
+      "IWAD": {
+        "MD5": "c4fe9fd920207691a9f493668e0a2083",
+        "SHA256": "6fdf361847b46228cfebd9f3af09cd844282ac75f3edbb61ca4cb27103ce2e7f"
+      },
+      "tics": 316,
+      "snapshots": 317,
+      "frames": 316,
+      "supportedPixels": {
+        "verifierSha256": "c1ae18be928e7f53248da7798148d4976b4bb628995ab0ac103de4d3e886ecaa",
+        "pass_": true,
+        "recordingComplete": true,
+        "frames": 316,
+        "commonNativePixelsChecked": 20224000,
+        "nativeAllocationDependentPixels": 0,
+        "virtualTouchedDestinations": 0,
+        "allCommonNativePixelsOutsideVirtualSourcesExact": true,
+        "wholeFrameCommonNativeExact": 316,
+        "limits": "Virtual destinations count any provenance4/5 draw use, including overwritten samples; they are not a claim that all final values survive. Allocation-dependent native pixels are outside universal comparison. Every EVM pixel remains receipt-authenticated.",
+        "sourceReportSha256": "adcfb0cea5b03b32ceeb150c8eeb3daf0f687f1fce2c3d685242cd963a0e7af1",
+        "nativeReportSha256": "b41818e652b4d2159a28510683b2248eaff951a936f57b7c580a6ddff5b1680b"
+      },
+      "virtualProvenance": {
+        "virtualZoneUses": 0,
+        "virtualOwnerUses": 0,
+        "ownerBase": "0x0000002000000000",
+        "stride": 8,
+        "virtualTouchedDestinations": 0,
+        "survivingVirtualDrawUses": 0,
+        "classification": "Counts all actual virtual draw uses; final equal bytes do not establish native provenance"
+      },
+      "gas": {
+        "gameplay": 43713010620,
+        "capture": 205217024031,
+        "renderer": 165398217992,
+        "totalVerifiedRecording": 252562728475
+      },
+      "runtime": {
+        "serverArgs": [
+          "--host",
+          "127.0.0.1",
+          "--port",
+          "18641",
+          "--hardfork",
+          "cancun",
+          "--disable-code-size-limit",
+          "--gas-limit",
+          "10000000000",
+          "--memory-limit",
+          "1073741824",
+          "--no-request-size-limit",
+          "--prune-history",
+          "2",
+          "--transaction-block-keeper",
+          "2",
+          "--silent"
+        ],
+        "gasBudget": {
+          "gasLimit": 10000000000,
+          "gasHex": "0x2540be400",
+          "source": "DOOM_GAS_LIMIT"
+        },
+        "startedUTC": "2026-10-11T06:23:37.235Z",
+        "endedUTC": "2026-10-11T06:28:16.924Z",
+        "successfulReplayRPCSeconds": 33.58026020400006,
+        "captureRPCSeconds": 211.74592411699996,
+        "replaySessionSeconds": 257.00151916699997,
+        "resumeSessions": []
+      },
+      "resourceUsage": {
+        "nodeSampledPeakRSSKiB": 561520,
+        "nodeRSSSamples": 10,
+        "anvilSampledPeakRSSKiB": 105264,
+        "anvilRSSSamples": 10,
+        "sampleIntervalSeconds": 30,
+        "minimumSampledDiskFreeBytes": 35776290816,
+        "limits": "Sampled RSS maxima, not unobserved execution peaks; absolute-path Node matching repaired at 2026-10-11T06:01:41Z. Missing earlier Node RSS not estimated; shared host swap/RAM recorded in telemetry"
+      },
+      "media": {
+        "MP4": "artifacts/local/ultimate-speedruns/E1M1/owner-v1/full-rate/speedrun-e1m1.mp4",
+        "SHA256": "cd2076fe572b27ec7f4a8c22ebb7fd163bf3aaafe422d0a8699a2358672ce96b",
+        "fps": 35,
+        "encodedFrames": 316,
+        "seconds": 9.028571428571428
+      },
+      "mediaClock": {
+        "packets": 316,
+        "timeBase": "1/35000",
+        "allPresentationTimesExact": true,
+        "allPacketDurationsOneTic": true,
+        "FPS": 35
+      },
+      "acceptedRegression": {
+        "frames": 316,
+        "allFrameHashesAndPriorVirtualProvenanceUnchanged": true,
+        "oldMP4SHA256": "406c10fd046c452afe2b31000275b4ab2283e2ba5bc497f95dd2e7665f326478",
+        "newMP4SHA256": "cd2076fe572b27ec7f4a8c22ebb7fd163bf3aaafe422d0a8699a2358672ce96b",
+        "MP4BytesIdentical": false,
+        "pixelChanges": 0
+      },
+      "partialPrefixRegression": null,
+      "unresolvedFailure": null
+    },
+    {
+      "map": "E1M2",
+      "report": "artifacts/ultimate-speedruns/E1M2/owner-v1/result.json",
+      "reportSHA256": "129609e239f2d553c8795150e0a3d2a05250f04c9eaf65534b3419f181bee0c9",
+      "demo": {
+        "author": "trioct",
+        "originalName": "e1m2-2280.lmp",
+        "URL": "https://dsdarchive.com/files/demos/doom/50975/e1m2-2280.zip",
+        "SHA256": "1210cbccd5148091f438d9fb5f8f763b0b49cdb1e3870380521c0b2632fbc15f"
+      },
+      "IWAD": {
+        "MD5": "c4fe9fd920207691a9f493668e0a2083",
+        "SHA256": "6fdf361847b46228cfebd9f3af09cd844282ac75f3edbb61ca4cb27103ce2e7f"
+      },
+      "tics": 798,
+      "snapshots": 799,
+      "frames": 798,
+      "supportedPixels": {
+        "verifierSha256": "c1ae18be928e7f53248da7798148d4976b4bb628995ab0ac103de4d3e886ecaa",
+        "pass_": true,
+        "recordingComplete": true,
+        "frames": 798,
+        "commonNativePixelsChecked": 51072000,
+        "nativeAllocationDependentPixels": 0,
+        "virtualTouchedDestinations": 0,
+        "allCommonNativePixelsOutsideVirtualSourcesExact": true,
+        "wholeFrameCommonNativeExact": 798,
+        "limits": "Virtual destinations count any provenance4/5 draw use, including overwritten samples; they are not a claim that all final values survive. Allocation-dependent native pixels are outside universal comparison. Every EVM pixel remains receipt-authenticated.",
+        "sourceReportSha256": "656b29554960e011985c8da6edca91bdd5417fbdc02b80fb9d4163a9800a1143",
+        "nativeReportSha256": "ab5510291abb9f5f464c143cfcb1014a56f42d0b3b2169b04f9f206e5a2cfb7e"
+      },
+      "virtualProvenance": {
+        "virtualZoneUses": 0,
+        "virtualOwnerUses": 0,
+        "ownerBase": "0x0000002000000000",
+        "stride": 8,
+        "virtualTouchedDestinations": 0,
+        "survivingVirtualDrawUses": 0,
+        "classification": "Counts all actual virtual draw uses; final equal bytes do not establish native provenance"
+      },
+      "gas": {
+        "gameplay": 163148289834,
+        "capture": 613965327376,
+        "renderer": 463256716554,
+        "totalVerifiedRecording": 781124012969
+      },
+      "runtime": {
+        "serverArgs": [
+          "--host",
+          "127.0.0.1",
+          "--port",
+          "18642",
+          "--hardfork",
+          "cancun",
+          "--disable-code-size-limit",
+          "--gas-limit",
+          "10000000000",
+          "--memory-limit",
+          "1073741824",
+          "--no-request-size-limit",
+          "--prune-history",
+          "2",
+          "--transaction-block-keeper",
+          "2",
+          "--silent"
+        ],
+        "gasBudget": {
+          "gasLimit": 10000000000,
+          "gasHex": "0x2540be400",
+          "source": "DOOM_GAS_LIMIT"
+        },
+        "startedUTC": "2026-10-11T06:28:39.458Z",
+        "endedUTC": "2026-10-11T06:41:12.781Z",
+        "successfulReplayRPCSeconds": 98.99437774700151,
+        "captureRPCSeconds": 588.4703186630003,
+        "replaySessionSeconds": 731.0683931670001,
+        "resumeSessions": []
+      },
+      "resourceUsage": {
+        "nodeSampledPeakRSSKiB": 1131808,
+        "nodeRSSSamples": 25,
+        "anvilSampledPeakRSSKiB": 128784,
+        "anvilRSSSamples": 25,
+        "sampleIntervalSeconds": 30,
+        "minimumSampledDiskFreeBytes": 35526836224,
+        "limits": "Sampled RSS maxima, not unobserved execution peaks; absolute-path Node matching repaired at 2026-10-11T06:01:41Z. Missing earlier Node RSS not estimated; shared host swap/RAM recorded in telemetry"
+      },
+      "media": {
+        "MP4": "artifacts/local/ultimate-speedruns/E1M2/owner-v1/full-rate/speedrun-e1m2.mp4",
+        "SHA256": "ed422d43e6ffdcfbdabad803cee32a639ed7304b2eebdbe55517c14453cc8205",
+        "fps": 35,
+        "encodedFrames": 798,
+        "seconds": 22.8
+      },
+      "mediaClock": {
+        "packets": 798,
+        "timeBase": "1/35000",
+        "allPresentationTimesExact": true,
+        "allPacketDurationsOneTic": true,
+        "FPS": 35
+      },
+      "acceptedRegression": {
+        "frames": 798,
+        "allFrameHashesAndPriorVirtualProvenanceUnchanged": true,
+        "oldMP4SHA256": "3f71cc6cbaced7be14cd15550db3d2e13e2e150b40c81858aa2ed429ad829ab9",
+        "newMP4SHA256": "ed422d43e6ffdcfbdabad803cee32a639ed7304b2eebdbe55517c14453cc8205",
+        "MP4BytesIdentical": false,
+        "pixelChanges": 0
+      },
+      "partialPrefixRegression": null,
+      "unresolvedFailure": null
+    },
+    {
+      "map": "E1M3",
+      "report": "artifacts/ultimate-speedruns/E1M3/owner-v1/result.json",
+      "reportSHA256": "451a17130665d715076cb50343a3e24af11ec65cf9bc6c30c277e976a8ee18dd",
+      "demo": {
+        "author": "Jonathan Rimmer",
+        "originalName": "e1m3-036/e1m3-036.lmp",
+        "URL": "https://dsdarchive.com/files/demos/doom/96083/e1m3-036.zip",
+        "SHA256": "d91a896d529672e5bbc011b7607de75308c183643ee204d722e8704e348a9f5e"
+      },
+      "IWAD": {
+        "MD5": "c4fe9fd920207691a9f493668e0a2083",
+        "SHA256": "6fdf361847b46228cfebd9f3af09cd844282ac75f3edbb61ca4cb27103ce2e7f"
+      },
+      "tics": 1291,
+      "snapshots": 1292,
+      "frames": 1291,
+      "supportedPixels": {
+        "verifierSha256": "c1ae18be928e7f53248da7798148d4976b4bb628995ab0ac103de4d3e886ecaa",
+        "pass_": true,
+        "recordingComplete": true,
+        "frames": 1291,
+        "commonNativePixelsChecked": 82623996,
+        "nativeAllocationDependentPixels": 0,
+        "virtualTouchedDestinations": 4,
+        "allCommonNativePixelsOutsideVirtualSourcesExact": true,
+        "wholeFrameCommonNativeExact": 1289,
+        "limits": "Virtual destinations count any provenance4/5 draw use, including overwritten samples; they are not a claim that all final values survive. Allocation-dependent native pixels are outside universal comparison. Every EVM pixel remains receipt-authenticated.",
+        "sourceReportSha256": "e33fd4bf14f4c4b2153bf050568ab491809f74cd0f7f39796eb32a93a481976f",
+        "nativeReportSha256": "54408b8cd3ef8c2a3a523db16bfbd9bab89eadeb4ce42487739afb51b7099c2f"
+      },
+      "virtualProvenance": {
+        "virtualZoneUses": 3,
+        "virtualOwnerUses": 1,
+        "ownerBase": "0x0000002000000000",
+        "stride": 8,
+        "virtualTouchedDestinations": 4,
+        "survivingVirtualDrawUses": 1,
+        "classification": "Counts all actual virtual draw uses; final equal bytes do not establish native provenance"
+      },
+      "gas": {
+        "gameplay": 304260296586,
+        "capture": 1219960243145,
+        "renderer": 938490534673,
+        "totalVerifiedRecording": 1528295660740
+      },
+      "runtime": {
+        "serverArgs": [
+          "--host",
+          "127.0.0.1",
+          "--port",
+          "18643",
+          "--hardfork",
+          "cancun",
+          "--disable-code-size-limit",
+          "--gas-limit",
+          "10000000000",
+          "--memory-limit",
+          "1073741824",
+          "--no-request-size-limit",
+          "--prune-history",
+          "2",
+          "--transaction-block-keeper",
+          "2",
+          "--silent"
+        ],
+        "gasBudget": {
+          "gasLimit": 10000000000,
+          "gasHex": "0x2540be400",
+          "source": "DOOM_GAS_LIMIT"
+        },
+        "startedUTC": "2026-10-11T05:18:03.192Z",
+        "endedUTC": "2026-10-11T05:42:31.368Z",
+        "successfulReplayRPCSeconds": 172.77668387700191,
+        "captureRPCSeconds": 1187.0587971249972,
+        "replaySessionSeconds": 1445.7299249579999,
+        "resumeSessions": []
+      },
+      "resourceUsage": {
+        "nodeSampledPeakRSSKiB": 1474416,
+        "nodeRSSSamples": 51,
+        "anvilSampledPeakRSSKiB": 154272,
+        "anvilRSSSamples": 51,
+        "sampleIntervalSeconds": 30,
+        "minimumSampledDiskFreeBytes": 37127360512,
+        "limits": "Sampled RSS maxima, not unobserved execution peaks; absolute-path Node matching repaired at 2026-10-11T06:01:41Z. Missing earlier Node RSS not estimated; shared host swap/RAM recorded in telemetry"
+      },
+      "media": {
+        "MP4": "artifacts/local/ultimate-speedruns/E1M3/owner-v1/full-rate/speedrun-e1m3.mp4",
+        "SHA256": "3aa31601c39908ff2644f9b6bf6de44a098ff2424041e6d9d14c421127a6c8e6",
+        "fps": 35,
+        "encodedFrames": 1291,
+        "seconds": 36.885714285714286
+      },
+      "mediaClock": {
+        "packets": 1291,
+        "timeBase": "1/35000",
+        "allPresentationTimesExact": true,
+        "allPacketDurationsOneTic": true,
+        "FPS": 35
+      },
+      "acceptedRegression": null,
+      "partialPrefixRegression": {
+        "frames": 922,
+        "allFrameHashesUnchanged": true,
+        "priorManifestSHA256": "f0644c46a8d861b83a2b93c54521612672f73979e314fe8224e8f8ce6d2f4f7f"
+      },
+      "unresolvedFailure": null
+    },
+    {
+      "map": "E1M4",
+      "report": "artifacts/ultimate-speedruns/E1M4/owner-v1/result.json",
+      "reportSHA256": "ac8a273a834dd77c8636e157a861c3f6e39b5a6b7e3c8ee2a81289012ee38c3e",
+      "demo": {
+        "author": "izzybell",
+        "originalName": "e1m4-0021.lmp",
+        "URL": "https://dsdarchive.com/files/demos/doom/113314/e1m4-0021.zip",
+        "SHA256": "1f5427b2776aa7deb83716350eb6d252e4953895aa338c239bf62eeac5d67fdf"
+      },
+      "IWAD": {
+        "MD5": "c4fe9fd920207691a9f493668e0a2083",
+        "SHA256": "6fdf361847b46228cfebd9f3af09cd844282ac75f3edbb61ca4cb27103ce2e7f"
+      },
+      "tics": 767,
+      "snapshots": 768,
+      "frames": 767,
+      "supportedPixels": {
+        "verifierSha256": "c1ae18be928e7f53248da7798148d4976b4bb628995ab0ac103de4d3e886ecaa",
+        "pass_": true,
+        "recordingComplete": true,
+        "frames": 767,
+        "commonNativePixelsChecked": 49088000,
+        "nativeAllocationDependentPixels": 0,
+        "virtualTouchedDestinations": 0,
+        "allCommonNativePixelsOutsideVirtualSourcesExact": true,
+        "wholeFrameCommonNativeExact": 767,
+        "limits": "Virtual destinations count any provenance4/5 draw use, including overwritten samples; they are not a claim that all final values survive. Allocation-dependent native pixels are outside universal comparison. Every EVM pixel remains receipt-authenticated.",
+        "sourceReportSha256": "00a25ae508b4961cbdc6d7c35f6f731ade7c320fb3e5c10a99b9fdccd01e0f39",
+        "nativeReportSha256": "b7e026673c7c2432aeaf9aa332fddff104bee0ddb2f4dab4504bc7e86a35dd0b"
+      },
+      "virtualProvenance": {
+        "virtualZoneUses": 0,
+        "virtualOwnerUses": 0,
+        "ownerBase": "0x0000002000000000",
+        "stride": 8,
+        "virtualTouchedDestinations": 0,
+        "survivingVirtualDrawUses": 0,
+        "classification": "Counts all actual virtual draw uses; final equal bytes do not establish native provenance"
+      },
+      "gas": {
+        "gameplay": 132711462124,
+        "capture": 536195005828,
+        "renderer": 414311481901,
+        "totalVerifiedRecording": 672761828603
+      },
+      "runtime": {
+        "serverArgs": [
+          "--host",
+          "127.0.0.1",
+          "--port",
+          "18644",
+          "--hardfork",
+          "cancun",
+          "--disable-code-size-limit",
+          "--gas-limit",
+          "10000000000",
+          "--memory-limit",
+          "1073741824",
+          "--no-request-size-limit",
+          "--prune-history",
+          "2",
+          "--transaction-block-keeper",
+          "2",
+          "--silent"
+        ],
+        "gasBudget": {
+          "gasLimit": 10000000000,
+          "gasHex": "0x2540be400",
+          "source": "DOOM_GAS_LIMIT"
+        },
+        "startedUTC": "2026-10-11T06:41:54.599Z",
+        "endedUTC": "2026-10-11T06:53:07.738Z",
+        "successfulReplayRPCSeconds": 84.1008203090002,
+        "captureRPCSeconds": 529.256018360001,
+        "replaySessionSeconds": 650.44441925,
+        "resumeSessions": []
+      },
+      "resourceUsage": {
+        "nodeSampledPeakRSSKiB": 1085168,
+        "nodeRSSSamples": 22,
+        "anvilSampledPeakRSSKiB": 125520,
+        "anvilRSSSamples": 22,
+        "sampleIntervalSeconds": 30,
+        "minimumSampledDiskFreeBytes": 35216601088,
+        "limits": "Sampled RSS maxima, not unobserved execution peaks; absolute-path Node matching repaired at 2026-10-11T06:01:41Z. Missing earlier Node RSS not estimated; shared host swap/RAM recorded in telemetry"
+      },
+      "media": {
+        "MP4": "artifacts/local/ultimate-speedruns/E1M4/owner-v1/full-rate/speedrun-e1m4.mp4",
+        "SHA256": "34a2284901274370d128f06a8ba6f067a56c1b3b16447326ca7f146c4ae99368",
+        "fps": 35,
+        "encodedFrames": 767,
+        "seconds": 21.914285714285715
+      },
+      "mediaClock": {
+        "packets": 767,
+        "timeBase": "1/35000",
+        "allPresentationTimesExact": true,
+        "allPacketDurationsOneTic": true,
+        "FPS": 35
+      },
+      "acceptedRegression": {
+        "frames": 767,
+        "allFrameHashesAndPriorVirtualProvenanceUnchanged": true,
+        "oldMP4SHA256": "0597c38afe0481047a2c6733064e50a9eeffe7add9b657bb970c2c5beec42196",
+        "newMP4SHA256": "34a2284901274370d128f06a8ba6f067a56c1b3b16447326ca7f146c4ae99368",
+        "MP4BytesIdentical": false,
+        "pixelChanges": 0
+      },
+      "partialPrefixRegression": null,
+      "unresolvedFailure": null
+    },
+    {
+      "map": "E1M5",
+      "report": "artifacts/ultimate-speedruns/E1M5/owner-v1/result.json",
+      "reportSHA256": "62ba892707cf31a78689400771d318fd668db272a455a4679c616f7b8a5a176f",
+      "demo": {
+        "author": "trioct",
+        "originalName": "e1m5-100.lmp",
+        "URL": "https://dsdarchive.com/files/demos/doom/51000/e1m5-100.zip",
+        "SHA256": "4a3ffd0a1f92ac2980e9c3b5aafde01a6ec2fb4eaca0fdde61ab85d51e1ea48e"
+      },
+      "IWAD": {
+        "MD5": "c4fe9fd920207691a9f493668e0a2083",
+        "SHA256": "6fdf361847b46228cfebd9f3af09cd844282ac75f3edbb61ca4cb27103ce2e7f"
+      },
+      "tics": 2110,
+      "snapshots": 2111,
+      "frames": 2110,
+      "supportedPixels": {
+        "verifierSha256": "c1ae18be928e7f53248da7798148d4976b4bb628995ab0ac103de4d3e886ecaa",
+        "pass_": true,
+        "recordingComplete": true,
+        "frames": 2110,
+        "commonNativePixelsChecked": 135039991,
+        "nativeAllocationDependentPixels": 0,
+        "virtualTouchedDestinations": 9,
+        "allCommonNativePixelsOutsideVirtualSourcesExact": true,
+        "wholeFrameCommonNativeExact": 2107,
+        "limits": "Virtual destinations count any provenance4/5 draw use, including overwritten samples; they are not a claim that all final values survive. Allocation-dependent native pixels are outside universal comparison. Every EVM pixel remains receipt-authenticated.",
+        "sourceReportSha256": "351379feb6e17696c2b43f3961e5ae8aaf9bd025b9d47af34d8937ffc5bb4b77",
+        "nativeReportSha256": "03557c36eb662c87341dbf126f11015de4da788f99e27428f0d5a96ec74261ac"
+      },
+      "virtualProvenance": {
+        "virtualZoneUses": 3,
+        "virtualOwnerUses": 6,
+        "ownerBase": "0x0000002000000000",
+        "stride": 8,
+        "virtualTouchedDestinations": 9,
+        "survivingVirtualDrawUses": 9,
+        "classification": "Counts all actual virtual draw uses; final equal bytes do not establish native provenance"
+      },
+      "gas": {
+        "gameplay": 429995595728,
+        "capture": 1872758177833,
+        "renderer": 1481397445954,
+        "totalVerifiedRecording": 2306674586672
+      },
+      "runtime": {
+        "serverArgs": [
+          "--host",
+          "127.0.0.1",
+          "--port",
+          "18645",
+          "--hardfork",
+          "cancun",
+          "--disable-code-size-limit",
+          "--gas-limit",
+          "10000000000",
+          "--memory-limit",
+          "1073741824",
+          "--no-request-size-limit",
+          "--prune-history",
+          "2",
+          "--transaction-block-keeper",
+          "2",
+          "--silent"
+        ],
+        "gasBudget": {
+          "gasLimit": 10000000000,
+          "gasHex": "0x2540be400",
+          "source": "DOOM_GAS_LIMIT"
+        },
+        "startedUTC": "2026-10-11T05:43:47.054Z",
+        "endedUTC": "2026-10-11T06:21:54.500Z",
+        "successfulReplayRPCSeconds": 252.41893848299702,
+        "captureRPCSeconds": 1873.5830471479999,
+        "replaySessionSeconds": 2265.172609042,
+        "resumeSessions": []
+      },
+      "resourceUsage": {
+        "nodeSampledPeakRSSKiB": 1953824,
+        "nodeRSSSamples": 41,
+        "anvilSampledPeakRSSKiB": 154432,
+        "anvilRSSSamples": 77,
+        "sampleIntervalSeconds": 30,
+        "minimumSampledDiskFreeBytes": 36048896000,
+        "limits": "Sampled RSS maxima, not unobserved execution peaks; absolute-path Node matching repaired at 2026-10-11T06:01:41Z. Missing earlier Node RSS not estimated; shared host swap/RAM recorded in telemetry"
+      },
+      "media": {
+        "MP4": "artifacts/local/ultimate-speedruns/E1M5/owner-v1/full-rate/speedrun-e1m5.mp4",
+        "SHA256": "f2802a4af8bfcadc725d834f035f838dd1d25c526cba994d97e4a8d20f996b9d",
+        "fps": 35,
+        "encodedFrames": 2110,
+        "seconds": 60.285714285714285
+      },
+      "mediaClock": {
+        "packets": 2110,
+        "timeBase": "1/35000",
+        "allPresentationTimesExact": true,
+        "allPacketDurationsOneTic": true,
+        "FPS": 35
+      },
+      "acceptedRegression": null,
+      "partialPrefixRegression": {
+        "frames": 1063,
+        "allFrameHashesUnchanged": true,
+        "priorManifestSHA256": "8e4e964bd8515fb60eee7094bda54ca8bd94b1ef141266e43526400f6a44544d"
+      },
+      "unresolvedFailure": null
+    },
+    {
+      "map": "E1M6",
+      "report": "artifacts/ultimate-speedruns/E1M6/owner-v1/result.json",
+      "reportSHA256": "0330431f67eb91a4b58625f43578b6698b8009e425229cf8398c56ba8b9b8f5d",
+      "demo": {
+        "author": "ShadowCaco33",
+        "originalName": "e1m6-0136.lmp",
+        "URL": "https://dsdarchive.com/files/demos/doom/108200/e1m6-0136.zip",
+        "SHA256": "fa51135c2bee9b4c82c1b0390c6e29755b347237c981b911cef044e4b01e1ea6"
+      },
+      "IWAD": {
+        "MD5": "c4fe9fd920207691a9f493668e0a2083",
+        "SHA256": "6fdf361847b46228cfebd9f3af09cd844282ac75f3edbb61ca4cb27103ce2e7f"
+      },
+      "tics": 3385,
+      "snapshots": 3386,
+      "frames": 3385,
+      "supportedPixels": {
+        "verifierSha256": "c1ae18be928e7f53248da7798148d4976b4bb628995ab0ac103de4d3e886ecaa",
+        "pass_": true,
+        "recordingComplete": true,
+        "frames": 3385,
+        "commonNativePixelsChecked": 216639983,
+        "nativeAllocationDependentPixels": 0,
+        "virtualTouchedDestinations": 17,
+        "allCommonNativePixelsOutsideVirtualSourcesExact": true,
+        "wholeFrameCommonNativeExact": 3378,
+        "limits": "Virtual destinations count any provenance4/5 draw use, including overwritten samples; they are not a claim that all final values survive. Allocation-dependent native pixels are outside universal comparison. Every EVM pixel remains receipt-authenticated.",
+        "sourceReportSha256": "ac6a042e5676750a203178845da7360505cc1d15434b46f61160249fa7a8caca",
+        "nativeReportSha256": "be002c0af2faf6ea0c61efb39b7a0148499ff4f5c4c47c798f87e03b284b4343"
+      },
+      "virtualProvenance": {
+        "virtualZoneUses": 7,
+        "virtualOwnerUses": 10,
+        "ownerBase": "0x0000002000000000",
+        "stride": 8,
+        "virtualTouchedDestinations": 17,
+        "survivingVirtualDrawUses": 11,
+        "classification": "Counts all actual virtual draw uses; final equal bytes do not establish native provenance"
+      },
+      "gas": {
+        "gameplay": 990481414759,
+        "capture": 4002871097699,
+        "renderer": 3075468618580,
+        "totalVerifiedRecording": 4997680669892
+      },
+      "runtime": {
+        "serverArgs": [
+          "--host",
+          "127.0.0.1",
+          "--port",
+          "18646",
+          "--hardfork",
+          "cancun",
+          "--disable-code-size-limit",
+          "--gas-limit",
+          "10000000000",
+          "--memory-limit",
+          "1073741824",
+          "--no-request-size-limit",
+          "--prune-history",
+          "2",
+          "--transaction-block-keeper",
+          "2",
+          "--silent"
+        ],
+        "gasBudget": {
+          "gasLimit": 10000000000,
+          "gasHex": "0x2540be400",
+          "source": "DOOM_GAS_LIMIT"
+        },
+        "startedUTC": "2026-10-11T05:48:20.342Z",
+        "endedUTC": "2026-10-11T07:06:06.304Z",
+        "successfulReplayRPCSeconds": 524.3534705159879,
+        "captureRPCSeconds": 3785.8859007009987,
+        "replaySessionSeconds": 4643.575641625,
+        "resumeSessions": []
+      },
+      "resourceUsage": {
+        "nodeSampledPeakRSSKiB": 4735232,
+        "nodeRSSSamples": 129,
+        "anvilSampledPeakRSSKiB": 201440,
+        "anvilRSSSamples": 156,
+        "sampleIntervalSeconds": 30,
+        "minimumSampledDiskFreeBytes": 34935435264,
+        "limits": "Sampled RSS maxima, not unobserved execution peaks; absolute-path Node matching repaired at 2026-10-11T06:01:41Z. Missing earlier Node RSS not estimated; shared host swap/RAM recorded in telemetry"
+      },
+      "media": {
+        "MP4": "artifacts/local/ultimate-speedruns/E1M6/owner-v1/full-rate/speedrun-e1m6.mp4",
+        "SHA256": "e11ee0d5097fc837dc994ecebfdb85072f0efd28a4ea6e9f03908136905b5dd1",
+        "fps": 35,
+        "encodedFrames": 3385,
+        "seconds": 96.71428571428571
+      },
+      "mediaClock": {
+        "packets": 3385,
+        "timeBase": "1/35000",
+        "allPresentationTimesExact": true,
+        "allPacketDurationsOneTic": true,
+        "FPS": 35
+      },
+      "acceptedRegression": null,
+      "partialPrefixRegression": {
+        "frames": 1735,
+        "allFrameHashesUnchanged": true,
+        "priorManifestSHA256": "4bc5cb766a20a4521929bb1ebf594f48dc43350c5eb35e7ca34eace52bee90e1"
+      },
+      "unresolvedFailure": null
+    },
+    {
+      "map": "E1M7",
+      "report": "artifacts/ultimate-speedruns/E1M7/owner-v1/result.json",
+      "reportSHA256": "8f08111a837da7c1141fcbc3fdaa24cdfd8d9078a53a7a0c77b7ac0665b28adb",
+      "demo": {
+        "author": "mhrz",
+        "originalName": "e1m7-113.lmp",
+        "URL": "https://dsdarchive.com/files/demos/doom/56602/e1m7-113.zip",
+        "SHA256": "182931b0afdcace7dffe66c74bdcd546e6e110eed95a725ce79dc7dd4ce5041e"
+      },
+      "IWAD": {
+        "MD5": "c4fe9fd920207691a9f493668e0a2083",
+        "SHA256": "6fdf361847b46228cfebd9f3af09cd844282ac75f3edbb61ca4cb27103ce2e7f"
+      },
+      "tics": 2572,
+      "snapshots": 2573,
+      "frames": 2572,
+      "supportedPixels": {
+        "verifierSha256": "c1ae18be928e7f53248da7798148d4976b4bb628995ab0ac103de4d3e886ecaa",
+        "pass_": true,
+        "recordingComplete": true,
+        "frames": 2572,
+        "commonNativePixelsChecked": 164607997,
+        "nativeAllocationDependentPixels": 0,
+        "virtualTouchedDestinations": 3,
+        "allCommonNativePixelsOutsideVirtualSourcesExact": true,
+        "wholeFrameCommonNativeExact": 2571,
+        "limits": "Virtual destinations count any provenance4/5 draw use, including overwritten samples; they are not a claim that all final values survive. Allocation-dependent native pixels are outside universal comparison. Every EVM pixel remains receipt-authenticated.",
+        "sourceReportSha256": "eea5957a773ca26bb77402e58f45d76848dba8b2258d0f75c99039ddf7f228b6",
+        "nativeReportSha256": "2683917efa7684a8cfe24c77e9c2a1d1bbab22110405bdd67094faf89d69ba95"
+      },
+      "virtualProvenance": {
+        "virtualZoneUses": 3,
+        "virtualOwnerUses": 0,
+        "ownerBase": "0x0000002000000000",
+        "stride": 8,
+        "virtualTouchedDestinations": 3,
+        "survivingVirtualDrawUses": 3,
+        "classification": "Counts all actual virtual draw uses; final equal bytes do not establish native provenance"
+      },
+      "gas": {
+        "gameplay": 597674311641,
+        "capture": 2326338155744,
+        "renderer": 1777601044188,
+        "totalVerifiedRecording": 2928043988980
+      },
+      "runtime": {
+        "serverArgs": [
+          "--host",
+          "127.0.0.1",
+          "--port",
+          "18647",
+          "--hardfork",
+          "cancun",
+          "--disable-code-size-limit",
+          "--gas-limit",
+          "10000000000",
+          "--memory-limit",
+          "1073741824",
+          "--no-request-size-limit",
+          "--prune-history",
+          "2",
+          "--transaction-block-keeper",
+          "2",
+          "--silent"
+        ],
+        "gasBudget": {
+          "gasLimit": 10000000000,
+          "gasHex": "0x2540be400",
+          "source": "DOOM_GAS_LIMIT"
+        },
+        "startedUTC": "2026-10-11T06:53:51.808Z",
+        "endedUTC": "2026-10-11T07:40:03.099Z",
+        "successfulReplayRPCSeconds": 341.3113184810019,
+        "captureRPCSeconds": 2215.4711772329943,
+        "replaySessionSeconds": 2748.3546097079998,
+        "resumeSessions": []
+      },
+      "resourceUsage": {
+        "nodeSampledPeakRSSKiB": 3662544,
+        "nodeRSSSamples": 92,
+        "anvilSampledPeakRSSKiB": 150032,
+        "anvilRSSSamples": 92,
+        "sampleIntervalSeconds": 30,
+        "minimumSampledDiskFreeBytes": 32589508608,
+        "limits": "Sampled RSS maxima, not unobserved execution peaks; absolute-path Node matching repaired at 2026-10-11T06:01:41Z. Missing earlier Node RSS not estimated; shared host swap/RAM recorded in telemetry"
+      },
+      "media": {
+        "MP4": "artifacts/local/ultimate-speedruns/E1M7/owner-v1/full-rate/speedrun-e1m7.mp4",
+        "SHA256": "e8a4335fab2a46d62a833294d1b9fa2606ce7305804ca6499fc1a70ad3c26a34",
+        "fps": 35,
+        "encodedFrames": 2572,
+        "seconds": 73.48571428571428
+      },
+      "mediaClock": {
+        "packets": 2572,
+        "timeBase": "1/35000",
+        "allPresentationTimesExact": true,
+        "allPacketDurationsOneTic": true,
+        "FPS": 35
+      },
+      "acceptedRegression": {
+        "frames": 2572,
+        "allFrameHashesAndPriorVirtualProvenanceUnchanged": true,
+        "oldMP4SHA256": "6dd05aa1e33d80d2662f5d525d9d881ef95554b0095520e2d5e14cacbc2ce8ca",
+        "newMP4SHA256": "e8a4335fab2a46d62a833294d1b9fa2606ce7305804ca6499fc1a70ad3c26a34",
+        "MP4BytesIdentical": false,
+        "pixelChanges": 0
+      },
+      "partialPrefixRegression": null,
+      "unresolvedFailure": null
+    },
+    {
+      "map": "E1M8",
+      "report": "artifacts/ultimate-speedruns/E1M8/alternatives/sedlo-046/owner-v1/result.json",
+      "reportSHA256": "ffe7376a8e5328df723730bf86da8cf64dcba1810311dfe6772ead8a98229f85",
+      "demo": {
+        "author": "Sedlo",
+        "originalName": "e1m8-046.lmp",
+        "URL": "https://dsdarchive.com/files/demos/doom/30217/e1m8-046.zip",
+        "SHA256": "a47622d63d3b797280842c86b858cf80a7d85b7b1df03882db08f5f16fb261ef"
+      },
+      "IWAD": {
+        "MD5": "c4fe9fd920207691a9f493668e0a2083",
+        "SHA256": "6fdf361847b46228cfebd9f3af09cd844282ac75f3edbb61ca4cb27103ce2e7f"
+      },
+      "tics": 1638,
+      "snapshots": 1639,
+      "frames": 1638,
+      "supportedPixels": {
+        "verifierSha256": "c1ae18be928e7f53248da7798148d4976b4bb628995ab0ac103de4d3e886ecaa",
+        "pass_": true,
+        "recordingComplete": true,
+        "frames": 1638,
+        "commonNativePixelsChecked": 104831997,
+        "nativeAllocationDependentPixels": 0,
+        "virtualTouchedDestinations": 3,
+        "allCommonNativePixelsOutsideVirtualSourcesExact": true,
+        "wholeFrameCommonNativeExact": 1636,
+        "limits": "Virtual destinations count any provenance4/5 draw use, including overwritten samples; they are not a claim that all final values survive. Allocation-dependent native pixels are outside universal comparison. Every EVM pixel remains receipt-authenticated.",
+        "sourceReportSha256": "3e108cb6f78297f51053726fdbf99d6959288430ec4066824362c998b7e15b01",
+        "nativeReportSha256": "7f9462f5a15a0344fc35dc17d4f3d29896f0970e1789c9a14a1715de10b647e1"
+      },
+      "virtualProvenance": {
+        "virtualZoneUses": 2,
+        "virtualOwnerUses": 1,
+        "ownerBase": "0x0000002000000000",
+        "stride": 8,
+        "virtualTouchedDestinations": 3,
+        "survivingVirtualDrawUses": 2,
+        "classification": "Counts all actual virtual draw uses; final equal bytes do not establish native provenance"
+      },
+      "gas": {
+        "gameplay": 238943013740,
+        "capture": 1375029611468,
+        "renderer": 1157718467145,
+        "totalVerifiedRecording": 1617575229351
+      },
+      "runtime": {
+        "serverArgs": [
+          "--host",
+          "127.0.0.1",
+          "--port",
+          "18648",
+          "--hardfork",
+          "cancun",
+          "--disable-code-size-limit",
+          "--gas-limit",
+          "10000000000",
+          "--memory-limit",
+          "1073741824",
+          "--no-request-size-limit",
+          "--prune-history",
+          "2",
+          "--transaction-block-keeper",
+          "2",
+          "--silent"
+        ],
+        "gasBudget": {
+          "gasLimit": 10000000000,
+          "gasHex": "0x2540be400",
+          "source": "DOOM_GAS_LIMIT"
+        },
+        "startedUTC": "2026-10-11T05:18:06.335Z",
+        "endedUTC": "2026-10-11T05:46:54.936Z",
+        "successfulReplayRPCSeconds": 174.40069083700854,
+        "captureRPCSeconds": 1457.6060943980008,
+        "replaySessionSeconds": 1706.3201991669998,
+        "resumeSessions": []
+      },
+      "resourceUsage": {
+        "nodeSampledPeakRSSKiB": 1436432,
+        "nodeRSSSamples": 60,
+        "anvilSampledPeakRSSKiB": 122880,
+        "anvilRSSSamples": 60,
+        "sampleIntervalSeconds": 30,
+        "minimumSampledDiskFreeBytes": 36858183680,
+        "limits": "Sampled RSS maxima, not unobserved execution peaks; absolute-path Node matching repaired at 2026-10-11T06:01:41Z. Missing earlier Node RSS not estimated; shared host swap/RAM recorded in telemetry"
+      },
+      "media": {
+        "MP4": "artifacts/local/ultimate-speedruns/E1M8/alternatives/sedlo-046/owner-v1/full-rate/speedrun-e1m8.mp4",
+        "SHA256": "560166cf2e4db368f447dce134d3cadc1348f7f1f06c720ba26900cad3e060f1",
+        "fps": 35,
+        "encodedFrames": 1638,
+        "seconds": 46.8
+      },
+      "mediaClock": {
+        "packets": 1638,
+        "timeBase": "1/35000",
+        "allPresentationTimesExact": true,
+        "allPacketDurationsOneTic": true,
+        "FPS": 35
+      },
+      "acceptedRegression": null,
+      "partialPrefixRegression": {
+        "frames": 262,
+        "allFrameHashesUnchanged": true,
+        "priorManifestSHA256": "8c0c8b1b386a733e5c9d74528e19e7f33b6968aebe1c988447053a9e719c9b69"
+      },
+      "unresolvedFailure": null
+    },
+    {
+      "map": "E1M9",
+      "report": "artifacts/ultimate-speedruns/E1M9/owner-v1/result.json",
+      "reportSHA256": "ddbc107b76e79cfacc4f133cc728bf85025ad8a9c1f3af78e970a8109801f293",
+      "demo": {
+        "author": "ShadowCaco33",
+        "originalName": "e1m9-0045.lmp",
+        "URL": "https://dsdarchive.com/files/demos/doom/108203/e1m9-0045.zip",
+        "SHA256": "ae640d1a17919e24983afd9d191d75502f0f745b89a52fff808ee41a2761bfb1"
+      },
+      "IWAD": {
+        "MD5": "c4fe9fd920207691a9f493668e0a2083",
+        "SHA256": "6fdf361847b46228cfebd9f3af09cd844282ac75f3edbb61ca4cb27103ce2e7f"
+      },
+      "tics": 1598,
+      "snapshots": 1599,
+      "frames": 1598,
+      "supportedPixels": {
+        "verifierSha256": "c1ae18be928e7f53248da7798148d4976b4bb628995ab0ac103de4d3e886ecaa",
+        "pass_": true,
+        "recordingComplete": true,
+        "frames": 1598,
+        "commonNativePixelsChecked": 102271998,
+        "nativeAllocationDependentPixels": 0,
+        "virtualTouchedDestinations": 2,
+        "allCommonNativePixelsOutsideVirtualSourcesExact": true,
+        "wholeFrameCommonNativeExact": 1597,
+        "limits": "Virtual destinations count any provenance4/5 draw use, including overwritten samples; they are not a claim that all final values survive. Allocation-dependent native pixels are outside universal comparison. Every EVM pixel remains receipt-authenticated.",
+        "sourceReportSha256": "e7a9762e789137f1a5f737598c05e146d942cb8208b5956895272d113a8bdd87",
+        "nativeReportSha256": "6c5cf8d4173effbc3931ac8c9cb64a93fbb1bd21c37877b6dabe0e04d49e6471"
+      },
+      "virtualProvenance": {
+        "virtualZoneUses": 2,
+        "virtualOwnerUses": 0,
+        "ownerBase": "0x0000002000000000",
+        "stride": 8,
+        "virtualTouchedDestinations": 2,
+        "survivingVirtualDrawUses": 2,
+        "classification": "Counts all actual virtual draw uses; final equal bytes do not establish native provenance"
+      },
+      "gas": {
+        "gameplay": 279605994052,
+        "capture": 1139086718576,
+        "renderer": 885192726933,
+        "totalVerifiedRecording": 1422474965608
+      },
+      "runtime": {
+        "serverArgs": [
+          "--host",
+          "127.0.0.1",
+          "--port",
+          "18649",
+          "--hardfork",
+          "cancun",
+          "--disable-code-size-limit",
+          "--gas-limit",
+          "10000000000",
+          "--memory-limit",
+          "1073741824",
+          "--no-request-size-limit",
+          "--prune-history",
+          "2",
+          "--transaction-block-keeper",
+          "2",
+          "--silent"
+        ],
+        "gasBudget": {
+          "gasLimit": 10000000000,
+          "gasHex": "0x2540be400",
+          "source": "DOOM_GAS_LIMIT"
+        },
+        "startedUTC": "2026-10-11T07:09:29.363Z",
+        "endedUTC": "2026-10-11T07:32:51.131Z",
+        "successfulReplayRPCSeconds": 171.50623893300036,
+        "captureRPCSeconds": 1122.4495550499985,
+        "replaySessionSeconds": 1379.566602792,
+        "resumeSessions": []
+      },
+      "resourceUsage": {
+        "nodeSampledPeakRSSKiB": 1934896,
+        "nodeRSSSamples": 47,
+        "anvilSampledPeakRSSKiB": 128592,
+        "anvilRSSSamples": 47,
+        "sampleIntervalSeconds": 30,
+        "minimumSampledDiskFreeBytes": 32772730880,
+        "limits": "Sampled RSS maxima, not unobserved execution peaks; absolute-path Node matching repaired at 2026-10-11T06:01:41Z. Missing earlier Node RSS not estimated; shared host swap/RAM recorded in telemetry"
+      },
+      "media": {
+        "MP4": "artifacts/local/ultimate-speedruns/E1M9/owner-v1/full-rate/speedrun-e1m9.mp4",
+        "SHA256": "25bd8894f158bf5dd61038049f50c70e498d69d6da3afaeeadfce367dc0213fa",
+        "fps": 35,
+        "encodedFrames": 1598,
+        "seconds": 45.65714285714286
+      },
+      "mediaClock": {
+        "packets": 1598,
+        "timeBase": "1/35000",
+        "allPresentationTimesExact": true,
+        "allPacketDurationsOneTic": true,
+        "FPS": 35
+      },
+      "acceptedRegression": {
+        "frames": 1598,
+        "allFrameHashesAndPriorVirtualProvenanceUnchanged": true,
+        "oldMP4SHA256": "25bd8894f158bf5dd61038049f50c70e498d69d6da3afaeeadfce367dc0213fa",
+        "newMP4SHA256": "25bd8894f158bf5dd61038049f50c70e498d69d6da3afaeeadfce367dc0213fa",
+        "MP4BytesIdentical": true,
+        "pixelChanges": 0
+      },
+      "partialPrefixRegression": null,
+      "unresolvedFailure": null
+    }
+  ],
+  "additionalEvidence": [
+    {
+      "path": "artifacts/ultimate-speedruns/E1M1/owner-v1/accepted-regression.json",
+      "SHA256": "4bbaf2a6aea1445449ad94aa7caac88f568b6cdb403e34384061b1fa113e0c3f"
+    },
+    {
+      "path": "artifacts/ultimate-speedruns/E1M2/owner-v1/accepted-regression.json",
+      "SHA256": "541ac5cba550eb25c07026bb12edea17a78199b8f3487ce601453d9cd214264f"
+    },
+    {
+      "path": "artifacts/ultimate-speedruns/E1M4/owner-v1/accepted-regression.json",
+      "SHA256": "2c44c8a10b9a5813c30f48fd62667271f10115e8d52101ff2ef7e2c7cddc800b"
+    },
+    {
+      "path": "artifacts/ultimate-speedruns/E1M7/owner-v1/accepted-regression.json",
+      "SHA256": "7788dfcc03495abaae16f42d9ad7e049b2922e75ea729dd6d86b2ae4c12a06c6"
+    },
+    {
+      "path": "artifacts/ultimate-speedruns/E1M9/owner-v1/accepted-regression.json",
+      "SHA256": "343e6e63743e41605d89b34c1f6848bbd426a914c903f7fe3f694eac1d76ab93"
+    }
+  ],
+  "telemetry": {
+    "path": "artifacts/local/ultimate-speedruns/owner-host-telemetry.jsonl",
+    "SHA256": "04f1155aabd161fac9033b32bc35cba007519ccb1a72eb6eaf123277b8d887f1",
+    "samples": 295,
+    "minimumFreeBytes": 32373678080,
+    "hardwareRAMBytes": 38654705664
+  },
+  "checkpointCleanup": {
+    "path": "artifacts/local/ultimate-speedruns/owner-cleanup.jsonl",
+    "SHA256": "f4b33784828573c10241198ff39426f655fe7a8e7c44dface71124fd23952336",
+    "removedFiles": 592,
+    "bytesFreed": 9695812652
+  },
+  "infrastructureLimitChanges": [],
+  "configuredInfrastructure": "Inherited 10B gas, 1 GiB execution memory, localhost isolated ports, Cancun, --no-request-size-limit, prune-history 2 and transaction-block-keeper 2. No new limit increases required.",
+  "nativeVerdict": "RESTRICT",
+  "RelaxedImplemented": false,
+  "limits": "Finite native profile evidence. Virtual address bytes are deterministic extensions, never actual native process placement. Temporary-copy renders preserve accepted infrastructure; continuous persisted render history/production UI acceptance is outside this suite.",
+  "sourceCommit": "2f2c6ab1ca7b68db31a66137fa8c30d4cfc66f8b",
+  "summaryToolSHA256": "6852829d5927e27316c92d1f7b4af012550ef620fc9d6cffaa052e07b087b93d"
+}

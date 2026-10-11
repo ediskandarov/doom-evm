@@ -1,0 +1,57 @@
+{
+  "map": "E1M3",
+  "DSDALevel": "E1M3s",
+  "author": "scuffed (Distortion in original author note)",
+  "engine": "DSDA-Doom v0.25.6cl3",
+  "category": "UV Speed",
+  "note": "",
+  "downloadUrl": "https://dsdarchive.com/files/demos/doom/72539/e1m3s-041.zip",
+  "runUrl": "https://dsdarchive.com/wads/doom?category=UV+Speed&level=E1M3s",
+  "selection": "One authentic non-TAS single-player secret-exit alternate after normal-exit renderer bounds failure. Actual native replay decides compatibility.",
+  "originalName": "e1m3s-041.lmp",
+  "demoBytes": 6260,
+  "demoSha256": "f74289f75b7d300bd1ed99cc7953ab305fa86f5ecb73053faf65c510a9806609",
+  "archiveSha256": "b7acdf97a1d2b72b5894f844921ee3940ffa22ffea6bfabae82fdd1776094779",
+  "authorNotes": {
+    "e1m3s-041.txt": "Exe: DSDA-Doom v0.25.6 with advanced HUD -complevel 3\r\nIwad: Doom.wad\r\nMap: E1M3s\r\nCategory: UV-Speed\r\nTime: 0:41.51\r\n\r\nAuthor:    Distortion"
+  },
+  "IWADMD5": "c4fe9fd920207691a9f493668e0a2083",
+  "IWADSHA256": "6fdf361847b46228cfebd9f3af09cd844282ac75f3edbb61ca4cb27103ce2e7f",
+  "header": {
+    "version": 109,
+    "skill": 3,
+    "episode": 1,
+    "map": 3,
+    "deathmatch": 0,
+    "respawn": 0,
+    "fast": 0,
+    "nomonsters": 0,
+    "consoleplayer": 0,
+    "playeringame": [
+      1,
+      0,
+      0,
+      0
+    ]
+  },
+  "totalDemoTics": 1514,
+  "markerOffset": 6069,
+  "footer": {
+    "FEATURES": "Extended HUD, Crosshair\n0x000000000000000a-04afe2b13d2c736c505c32387b20a5ce\u0000\u0000\u0000\u0000",
+    "PORTNAME": "dsda-doom 0.25.6",
+    "CMDLINE": "-iwad \"doom.wad\" -complevel 3 "
+  },
+  "dsdaFooterChecksumVerified": true,
+  "originalDecoder": {
+    "file": "g_game.c",
+    "function": "G_ReadDemoTiccmd",
+    "startLine": 1491,
+    "endLine": 1503,
+    "sha256": "77f7b1aeca0bf6da361bf3c29af3cde4f2f291f8deeaa9426017b12dbbdcb345"
+  },
+  "decoderExact": true,
+  "wadSha256": "6fdf361847b46228cfebd9f3af09cd844282ac75f3edbb61ca4cb27103ce2e7f",
+  "stockLoaderCompatible": false,
+  "recordingWadIdentity": "Not independently known; compatible pinned IWAD replay must be demonstrated.",
+  "archiveAuthor": "Distortion"
+}

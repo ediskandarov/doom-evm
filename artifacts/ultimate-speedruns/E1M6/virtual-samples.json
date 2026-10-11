@@ -1,0 +1,24 @@
+[
+  {
+    "tic": 1494,
+    "sourceBlock": 1405,
+    "physicalOffset": 3376739,
+    "headerBlock": 1406,
+    "headerOffset": 3376712,
+    "relative": 27,
+    "fieldOffset": 24,
+    "targetOffset": 3378320,
+    "virtualPointer": "0x0000001000338c90",
+    "sourceByte": 0,
+    "drawnPixel": 0,
+    "x": 211,
+    "y": 122,
+    "sampleIndex": 1659,
+    "logicalLength": 1632,
+    "sourceOffset": 1532,
+    "provenance": 4,
+    "pointerBytesLittleEndian": "908c330010000000",
+    "finalPixel": 79,
+    "drawnValueSurvives": false
+  }
+]

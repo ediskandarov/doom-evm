@@ -1,0 +1,19 @@
+{
+  "map": "E1M7",
+  "author": "mhrz",
+  "engine": "DSDA-Doom v0.19.7cl3",
+  "category": "UV Speed",
+  "note": "",
+  "downloadUrl": "https://dsdarchive.com/files/demos/doom/56602/e1m7-113.zip",
+  "runUrl": "https://dsdarchive.com/wads/doom?category=UV+Speed&level=E1M7",
+  "selection": "First listed non-TAS single-player DSDA-Doom complevel3 UV Speed row; not a claim of world-record status.",
+  "originalName": "e1m7-113.lmp",
+  "demoBytes": 11051,
+  "demoSha256": "182931b0afdcace7dffe66c74bdcd546e6e110eed95a725ce79dc7dd4ce5041e",
+  "archiveSha256": "b0104482eef13890777eb38d369126a3167ea638ff7a4cf7c8e6a8523f2ee5ac",
+  "authorNotes": {
+    "e1m7-113.txt": "Filename   : Doom.wad\r\nTitle      : The Ultimate Doom\r\nMap        : E1M7\r\nCategory   : UV-Speed\r\nExe        : dsda-doom 0.19.7 -complevel 3\r\nTime       : 1:13\r\nAuthor     : mhrz\r\n\r\nComments: Just a few hundred attempts from reaching Dwaze's attempt count :), after checking out some episode 1\r\nmaps to run for UV-Speed and trying some of them I thought they were awful, until I found this run which I\r\ninnocently thought was pretty beatable but it turns out I was wrong. The run isn't that bad until the ending which is just awful, at one point I felt that the only outcome from the ending is to either lose all your time by getting blocked by everything or to just die from not getting there with good enough health, I think my best attempt to the blue door was an 0:54 (compared to the 0:56 in this run) which probably died or ended with an awful time c:, I was also able to finish off one attempt that died at the ending with 1:11 so 1:10 should be \r\npossible with some insane luck and a great ending. My fastest runs before this one were 2 1:14.83's (lol)\r\nand a 1:14.9x so naturally I assumed i'm probably gonna beat it by ticks due to my awful luck, really happy that\r\ndidn't happen :D\r\n"
+  },
+  "IWADMD5": "c4fe9fd920207691a9f493668e0a2083",
+  "IWADSHA256": "6fdf361847b46228cfebd9f3af09cd844282ac75f3edbb61ca4cb27103ce2e7f"
+}

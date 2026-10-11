@@ -1,0 +1,34 @@
+{
+  "measuredUTC": [
+    "2026-10-10T19:55:04Z",
+    "2026-10-10T21:58:32Z"
+  ],
+  "samples": 240,
+  "physicalMemoryBytes": 38654705664,
+  "initialSwap": "vm.swapusage: total = 12288.00M  used = 10725.44M  free = 1562.56M  (encrypted)",
+  "finalSwap": "vm.swapusage: total = 12288.00M  used = 10585.44M  free = 1702.56M  (encrypted)",
+  "beforeDiskPauseMinFreeBytes": 1872162816,
+  "firstPostReclaimMeasurementUTC": "2026-10-10T20:01:44Z",
+  "firstPostReclaimDiskFreeBytes": 40278392832,
+  "minimumPostReclaimDiskFreeBytes": 34726981632,
+  "finalDiskFreeBytes": 35281731584,
+  "maximumCapturedOwnedNodeRSSKiB": 3367152,
+  "maximumCapturedOwnedAnvilRSSKiB": 202816,
+  "cleanup": {
+    "removedFiles": 346,
+    "measuredBytesFreed": 3852982399
+  },
+  "logs": [
+    {
+      "path": "artifacts/local/ultimate-speedruns/host-telemetry.jsonl",
+      "bytes": 562186,
+      "SHA256": "02e1635c0d3a768d126f41ecbc2d7282b817d69facdf353261a356f764abd9a6"
+    },
+    {
+      "path": "artifacts/local/ultimate-speedruns/checkpoint-cleanup.jsonl",
+      "bytes": 135177,
+      "SHA256": "7a73a1960d7fd1bc59977129c0c607637aac81f45079b11a0d4345ab1afafcc6"
+    }
+  ],
+  "limitations": "Captured process RSS samples only, not universal execution high-water memory. Native workers and independent verifier RSS are not fully sampled. Infrastructure changes/configuration are in runtime-notes.json and each map result. No inferred gas-to-memory conversion, unmeasured resource/time estimate, or episode-specific API cost/token attribution."
+}

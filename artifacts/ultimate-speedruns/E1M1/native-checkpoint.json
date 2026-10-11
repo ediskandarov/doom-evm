@@ -1,0 +1,24 @@
+{
+  "verified": true,
+  "observations": 317,
+  "statesSha256": "3f49d29618f5b4c6cc6e8263085e649d3101ff0c125aa0d31d8238fd8cc83588",
+  "profileStates": [
+    {
+      "profile": "O2",
+      "statesSha256": "3f49d29618f5b4c6cc6e8263085e649d3101ff0c125aa0d31d8238fd8cc83588"
+    },
+    {
+      "profile": "O0",
+      "statesSha256": "3f49d29618f5b4c6cc6e8263085e649d3101ff0c125aa0d31d8238fd8cc83588"
+    },
+    {
+      "profile": "sanitize",
+      "statesSha256": "3f49d29618f5b4c6cc6e8263085e649d3101ff0c125aa0d31d8238fd8cc83588"
+    },
+    {
+      "profile": "sanitize-fill",
+      "statesSha256": "3f49d29618f5b4c6cc6e8263085e649d3101ff0c125aa0d31d8238fd8cc83588"
+    }
+  ],
+  "IWADSHA256": "6fdf361847b46228cfebd9f3af09cd844282ac75f3edbb61ca4cb27103ce2e7f"
+}

@@ -1,0 +1,35 @@
+{
+  "resetUTC": "2026-10-10T19:49:19Z",
+  "newWorktree": "/private/tmp/doom-evm-ultimate-speedruns",
+  "branch": "feat/ultimate-episode-speedruns",
+  "baseline": "51e8792",
+  "oldWorktree": "/Users/eduard/sandbox/doom-evm-speedruns-vptr",
+  "oldBranch": "feat/episode-speedruns-vptr",
+  "oldHEAD": "de77c3a",
+  "carriedCommits": [
+    "5c1abec",
+    "6aefc18",
+    "2e509db",
+    "6f2dd2a",
+    "de77c3a"
+  ],
+  "FreedoomPartial": {
+    "verifiedTics": 250,
+    "frames": 250,
+    "failure": "Node maximum string length while checkpointing; genuine engine failure not established",
+    "path": "/Users/eduard/sandbox/doom-evm-speedruns-vptr/artifacts/local/episode-speedruns/E1M2/full-rate",
+    "lastRestorableCheckpoint": 10
+  },
+  "preservation": "Old worktree, all commits, full local outputs and failed attempts retained. Completed raw native state streams losslessly compressed with round-trip hashes under lossless-native-preservation.json.",
+  "commercialWAD": {
+    "source": "/Users/eduard/Downloads/doom-steam/base/DOOM.WAD",
+    "MD5": "c4fe9fd920207691a9f493668e0a2083",
+    "SHA256": "6fdf361847b46228cfebd9f3af09cd844282ac75f3edbb61ca4cb27103ce2e7f"
+  },
+  "newFeaturesConfirmed": [
+    "src/evm/DoomMenu.sol",
+    "src/doom/z_zone_virtual.sol",
+    "src/evm/EpisodeRuntime.sol"
+  ],
+  "runtime": "New profile prefers localhost18641; old owned Anvil stopped in failure cleanup; stopped only old-goal native workers during reset."
+}

@@ -1,0 +1,16 @@
+{
+  "baseline": "51e879247bb3d6d809af8a0516a097f71c3d0756",
+  "branch": "feat/ultimate-episode-speedruns",
+  "worktree": "/private/tmp/doom-evm-ultimate-speedruns",
+  "originalDOOMCommit": "a77dfb96cb91780ca334d0d4cfd86957558007e0",
+  "toolchainLink": "/private/tmp/doom-evm-ultimate-speedruns/.toolchain",
+  "toolchainTarget": "/Users/eduard/sandbox/doom-evm/.toolchain",
+  "FreedoomSHA256": "7323bcc168c5a45ff10749b339960e98314740a734c30d4b9f3337001f9e703d",
+  "UltimateMD5": "c4fe9fd920207691a9f493668e0a2083",
+  "UltimateSHA256": "6fdf361847b46228cfebd9f3af09cd844282ac75f3edbb61ca4cb27103ce2e7f",
+  "resourceProfilesSeparate": true,
+  "oldRecoveryWorktree": "/Users/eduard/sandbox/doom-evm-speedruns-vptr",
+  "oldRecoveryHEAD": "de77c3a033fabbe6511e0db1eca1a53c073fa725",
+  "mainWorktreeModified": false,
+  "commercialPayloadsCommitted": false
+}

@@ -1,0 +1,68 @@
+{
+  "map": "E1M8",
+  "files": [
+    {
+      "path": "artifacts/local/ultimate-speedruns/E1M8/alternatives/sedlo-046/owner-v1/full-rate/evm.json",
+      "bytes": 1993409,
+      "SHA256": "3e108cb6f78297f51053726fdbf99d6959288430ec4066824362c998b7e15b01"
+    },
+    {
+      "path": "artifacts/local/ultimate-speedruns/E1M8/alternatives/sedlo-046/owner-v1/full-rate/verification.json",
+      "bytes": 264552,
+      "SHA256": "2763cf0fcac47fa121eb42b151d4103f499c561e93c3816576ccc80d72a500bb"
+    },
+    {
+      "path": "artifacts/local/ultimate-speedruns/E1M8/alternatives/sedlo-046/owner-v1/full-rate/frame-manifest.json",
+      "bytes": 1969967,
+      "SHA256": "17bc1e3af3d01373931d9672c64bbb5377cef08929a4be121e0b6c0f2e51d4f4"
+    },
+    {
+      "path": "artifacts/local/ultimate-speedruns/E1M8/alternatives/sedlo-046/owner-v1/full-rate/virtual-samples.json",
+      "bytes": 1721,
+      "SHA256": "50189ae4ca3337d7b389d03e9e3dafce5a60754aeffe4dff485f0f4c88452363"
+    },
+    {
+      "path": "artifacts/local/ultimate-speedruns/E1M8/alternatives/sedlo-046/owner-v1/full-rate/pixel-domain.json",
+      "bytes": 255260,
+      "SHA256": "18fd28b44b11d95c242d5463ab671c3e9f1e70fbc8c23cc5539b16be2f592289"
+    },
+    {
+      "path": "artifacts/local/ultimate-speedruns/E1M8/alternatives/sedlo-046/native-result.json",
+      "bytes": 6382,
+      "SHA256": "5093fa7af0962827d0603b5e5994c7485695773e93276b6bec329b0e6b00753a"
+    },
+    {
+      "path": "artifacts/local/ultimate-speedruns/E1M8/alternatives/sedlo-046/native-full/native-frames.json",
+      "bytes": 1801557,
+      "SHA256": "7f9462f5a15a0344fc35dc17d4f3d29896f0970e1789c9a14a1715de10b647e1"
+    },
+    {
+      "path": "artifacts/local/ultimate-speedruns/E1M8/alternatives/sedlo-046/owner-v1/full-rate/evm.deployment-receipts.json.gz",
+      "bytes": 99419,
+      "SHA256": "ef0ce9505f32a0e1a2b08ccf6bb2b550a1b825d30d880c754936c3586cd94afb"
+    },
+    {
+      "path": "artifacts/local/ultimate-speedruns/E1M8/alternatives/sedlo-046/owner-v1/full-rate/evm.capture-receipts.json.gz",
+      "bytes": 49320544,
+      "SHA256": "6111157f52c5179cb585117e21aa9c81fe0f3a24e0ce7f9005250d7d35592eb0"
+    },
+    {
+      "path": "artifacts/local/ultimate-speedruns/E1M8/alternatives/sedlo-046/owner-v1/full-rate/evm.replay-receipts.json.gz",
+      "bytes": 15946545,
+      "SHA256": "1af6720826190bace694f5e122102863b6a094801d72dfa0288f003273b543ee"
+    },
+    {
+      "path": "artifacts/ultimate-speedruns/E1M8/alternatives/sedlo-046/owner-v1/result.json",
+      "bytes": 14616,
+      "SHA256": "ffe7376a8e5328df723730bf86da8cf64dcba1810311dfe6772ead8a98229f85"
+    },
+    {
+      "path": "artifacts/ultimate-speedruns/E1M8/alternatives/sedlo-046/owner-v1/virtual-samples.json",
+      "bytes": 1721,
+      "SHA256": "50189ae4ca3337d7b389d03e9e3dafce5a60754aeffe4dff485f0f4c88452363"
+    }
+  ],
+  "commercialPayloadsLocalOnly": true,
+  "MP4LocalOnly": true,
+  "UTC": "2026-10-11T05:48:11Z"
+}

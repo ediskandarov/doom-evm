@@ -1,0 +1,139 @@
+{
+  "previousTemporaryLocation": "/private/tmp/doom-evm-ultimate-speedruns",
+  "durableLocation": "/Users/eduard/sandbox/doom-evm-ultimate-speedruns",
+  "branch": "feat/ultimate-episode-speedruns",
+  "sourceCommit": "3a96868f18e66a9fbc331e054364159a25012156",
+  "originalCCommit": "a77dfb96cb91780ca334d0d4cfd86957558007e0",
+  "toolchainLink": "../doom-evm/.toolchain",
+  "toolchainTarget": "/Users/eduard/sandbox/doom-evm/.toolchain",
+  "checkpointRelocation": [
+    {
+      "pointer": "artifacts/local/ultimate-speedruns/E1M5/full-rate/evm.checkpoint.json",
+      "beforeSHA256": "5bae732aa24e20579c7e8e428e4c94df251406c956938469264d72b6f3dbd3e6",
+      "afterSHA256": "2d954725ca3fa547c55e53cc284012104009ca75202a7faccf46c01e376050c2",
+      "stateAndReceiptBytesUnchanged": true,
+      "oldPointerPreserved": "artifacts/local/ultimate-speedruns/E1M5/full-rate/evm.checkpoint.pre-relocation.json"
+    },
+    {
+      "pointer": "artifacts/local/ultimate-speedruns/E1M5/gameplay-checkpoint-first-attempt/evm.checkpoint.json",
+      "beforeSHA256": "4b338f932991a495b7042abdaf4ba0c0f83f9421920e480ee082d3623398de2b",
+      "afterSHA256": "517c66a218d118c32fc956a857d5dc41073e34df7d3850574e92483f71cd6aae",
+      "stateAndReceiptBytesUnchanged": true,
+      "oldPointerPreserved": "artifacts/local/ultimate-speedruns/E1M5/gameplay-checkpoint-first-attempt/evm.checkpoint.pre-relocation.json"
+    },
+    {
+      "pointer": "artifacts/local/ultimate-speedruns/E1M5/gameplay/evm.checkpoint.json",
+      "beforeSHA256": "1563db7b6b15fb6f36a7a593764d7b1bf91b8a0fb0ec925d23801347438f7daf",
+      "afterSHA256": "ce7d7d5e216111feb1fd697db27c1e3039f151691182dcb422b5510cf1c53a46",
+      "stateAndReceiptBytesUnchanged": true,
+      "oldPointerPreserved": "artifacts/local/ultimate-speedruns/E1M5/gameplay/evm.checkpoint.pre-relocation.json"
+    },
+    {
+      "pointer": "artifacts/local/ultimate-speedruns/E1M2/full-rate/evm.checkpoint.json",
+      "beforeSHA256": "b8c68f0a3e3f030434942350ecd5ea1a26c3589ff3daab41fd0884ad32512151",
+      "afterSHA256": "05e1c519bdefa168dfe54e5117261554ff648349a8ca3f8f6ce3b2d066b0d9f0",
+      "stateAndReceiptBytesUnchanged": true,
+      "oldPointerPreserved": "artifacts/local/ultimate-speedruns/E1M2/full-rate/evm.checkpoint.pre-relocation.json"
+    },
+    {
+      "pointer": "artifacts/local/ultimate-speedruns/E1M3/full-rate/evm.checkpoint.json",
+      "beforeSHA256": "0205ad6f327942a9807f79fbd20301d62f2ce58972009cb86d0fad18c7dc28b7",
+      "afterSHA256": "63d7078a8b79c3d968cfd27112d10f7035b9dfc6fe488817ae2692b9618469c4",
+      "stateAndReceiptBytesUnchanged": true,
+      "oldPointerPreserved": "artifacts/local/ultimate-speedruns/E1M3/full-rate/evm.checkpoint.pre-relocation.json"
+    },
+    {
+      "pointer": "artifacts/local/ultimate-speedruns/E1M3/gameplay-checkpoint-first-attempt/evm.checkpoint.json",
+      "beforeSHA256": "f330a37bcb6bd7edd86e100078fbffaa3cb869d349cb8a612fbe91aa3acdd44d",
+      "afterSHA256": "15353ac01d8071b5c95f75a32b92d08af9c0cc14d59a21eb370077eeb11411ec",
+      "stateAndReceiptBytesUnchanged": true,
+      "oldPointerPreserved": "artifacts/local/ultimate-speedruns/E1M3/gameplay-checkpoint-first-attempt/evm.checkpoint.pre-relocation.json"
+    },
+    {
+      "pointer": "artifacts/local/ultimate-speedruns/E1M3/gameplay/evm.checkpoint.json",
+      "beforeSHA256": "b7c37bb0af34c9322f891d3c3db1637e921c2115a02d9271319c02a5c0b0cce8",
+      "afterSHA256": "c2b18017d5611f5cf8708850725237cd9f8d1a11597a5e5f8c1a90900df3647e",
+      "stateAndReceiptBytesUnchanged": true,
+      "oldPointerPreserved": "artifacts/local/ultimate-speedruns/E1M3/gameplay/evm.checkpoint.pre-relocation.json"
+    },
+    {
+      "pointer": "artifacts/local/ultimate-speedruns/E1M4/full-rate/evm.checkpoint.json",
+      "beforeSHA256": "5913b837ab2d60c8605a35e57787759d4aed0102a76059e2f0f05ed9509d76cf",
+      "afterSHA256": "22535f6e60f7ca8f184d71b4a0337ef923f1021c4be5f0878d450c2ac9b7bdca",
+      "stateAndReceiptBytesUnchanged": true,
+      "oldPointerPreserved": "artifacts/local/ultimate-speedruns/E1M4/full-rate/evm.checkpoint.pre-relocation.json"
+    },
+    {
+      "pointer": "artifacts/local/ultimate-speedruns/E1M8/alternatives/sedlo-046/full-rate/evm.checkpoint.json",
+      "beforeSHA256": "54165394422afe0038f2bdbba6c1eac987d4bdecfda7143c30d142ffaa3cc78b",
+      "afterSHA256": "8727ec9e6ea3c11ec0086697f5fa6fe53fa9f50a35f856956ee87f882c9ab0bf",
+      "stateAndReceiptBytesUnchanged": true,
+      "oldPointerPreserved": "artifacts/local/ultimate-speedruns/E1M8/alternatives/sedlo-046/full-rate/evm.checkpoint.pre-relocation.json"
+    },
+    {
+      "pointer": "artifacts/local/ultimate-speedruns/E1M8/alternatives/sedlo-046/gameplay-checkpoint-first-attempt/evm.checkpoint.json",
+      "beforeSHA256": "8619622b53ac1531c184b0eff0142e96222c56d2c009a42cc819ccdd16d51610",
+      "afterSHA256": "f313767253fd194a6c6686a6b51f8b826263294ae6c886e7120c1803a41ebc65",
+      "stateAndReceiptBytesUnchanged": true,
+      "oldPointerPreserved": "artifacts/local/ultimate-speedruns/E1M8/alternatives/sedlo-046/gameplay-checkpoint-first-attempt/evm.checkpoint.pre-relocation.json"
+    },
+    {
+      "pointer": "artifacts/local/ultimate-speedruns/E1M8/alternatives/sedlo-046/gameplay/evm.checkpoint.json",
+      "beforeSHA256": "f15213273761f63311768a1bf9e91096681eca5a8958a8d18468148ead4a8823",
+      "afterSHA256": "4dd783e32125c566a14e3e0d8b03ba1d695a4c69506a1b193b521eb5b875a020",
+      "stateAndReceiptBytesUnchanged": true,
+      "oldPointerPreserved": "artifacts/local/ultimate-speedruns/E1M8/alternatives/sedlo-046/gameplay/evm.checkpoint.pre-relocation.json"
+    },
+    {
+      "pointer": "artifacts/local/ultimate-speedruns/E1M1/full-rate/evm.checkpoint.json",
+      "beforeSHA256": "32dc82aba66e405f296d3adcfafc74536e9856a9619a5c5076ccfe85c369dfd9",
+      "afterSHA256": "4a0f70c10a34ee2756363a5ce0e105d407a14e8ea426df6faf97de881cb24a5f",
+      "stateAndReceiptBytesUnchanged": true,
+      "oldPointerPreserved": "artifacts/local/ultimate-speedruns/E1M1/full-rate/evm.checkpoint.pre-relocation.json"
+    },
+    {
+      "pointer": "artifacts/local/ultimate-speedruns/E1M6/full-rate/evm.checkpoint.json",
+      "beforeSHA256": "0eb909269af04fb4fbd9cbf20dcafd632cb09d832c0924f8f8c00dd15def77d8",
+      "afterSHA256": "546caf3ad54f6a3851b9ce5568b46f2fcbf9b4828b35f0217f40d61aac9da0ff",
+      "stateAndReceiptBytesUnchanged": true,
+      "oldPointerPreserved": "artifacts/local/ultimate-speedruns/E1M6/full-rate/evm.checkpoint.pre-relocation.json"
+    },
+    {
+      "pointer": "artifacts/local/ultimate-speedruns/E1M6/gameplay-checkpoint-first-attempt/evm.checkpoint.json",
+      "beforeSHA256": "18795049eaf874074bff20260ba68446c9c4853980739c1302cc4df14143f75b",
+      "afterSHA256": "1899b47b9e551d76782a391600f6e5eb124eec13e65a6bdac4864a7857ba9402",
+      "stateAndReceiptBytesUnchanged": true,
+      "oldPointerPreserved": "artifacts/local/ultimate-speedruns/E1M6/gameplay-checkpoint-first-attempt/evm.checkpoint.pre-relocation.json"
+    },
+    {
+      "pointer": "artifacts/local/ultimate-speedruns/E1M6/gameplay/evm.checkpoint.json",
+      "beforeSHA256": "0f4c49881c266b641495eee29eb67e70f76518949b1cfa41803080168a74b7ba",
+      "afterSHA256": "34aa35abb08c684acb03bea87fe1d84cf893be3bbf784e977c380c402bc709be",
+      "stateAndReceiptBytesUnchanged": true,
+      "oldPointerPreserved": "artifacts/local/ultimate-speedruns/E1M6/gameplay/evm.checkpoint.pre-relocation.json"
+    },
+    {
+      "pointer": "artifacts/local/ultimate-speedruns/E1M7/full-rate/evm.checkpoint.json",
+      "beforeSHA256": "d55ea28e62fd79685655add09dc76abc8f39ecea924d2047c01c7895fd74c566",
+      "afterSHA256": "5719836636ed6fd61e6a91dc4c23b9a8559fd5abca13113f8e06ca48ecfe2cf3",
+      "stateAndReceiptBytesUnchanged": true,
+      "oldPointerPreserved": "artifacts/local/ultimate-speedruns/E1M7/full-rate/evm.checkpoint.pre-relocation.json"
+    },
+    {
+      "pointer": "artifacts/local/ultimate-speedruns/E1M9/full-rate/evm.checkpoint.json",
+      "beforeSHA256": "f8a5192d85ce231553148f59dc0124273b75da0e93715558cb056dfa9dac7634",
+      "afterSHA256": "11101adf9829f12843e816ccafa3fcb83a3f99899401a03bc04cf6efcc90e7b2",
+      "stateAndReceiptBytesUnchanged": true,
+      "oldPointerPreserved": "artifacts/local/ultimate-speedruns/E1M9/full-rate/evm.checkpoint.pre-relocation.json"
+    },
+    {
+      "pointer": "artifacts/local/ultimate-speedruns/E1M9/gameplay/evm.checkpoint.json",
+      "beforeSHA256": "a2f124388d22d3e4545036836a73043fb640e0dd2e227890e5dd3421fe4a6316",
+      "afterSHA256": "5ecc25d66b711bbd1760d6efb0159a959cb8976cd811895c2e806a0c77b69ec8",
+      "stateAndReceiptBytesUnchanged": true,
+      "oldPointerPreserved": "artifacts/local/ultimate-speedruns/E1M9/gameplay/evm.checkpoint.pre-relocation.json"
+    }
+  ],
+  "notes": "Owned stopped worktree renamed on same filesystem. Only its Git/submodule links and checkpoint file-path metadata repaired. Old pointer copies retained. State/receipt/frame/IWAD/source bytes unchanged. Historical native build commands keep their measured temporary paths; use the coordinator in the durable location.",
+  "otherWorktreesModified": false
+}

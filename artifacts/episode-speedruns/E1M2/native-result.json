@@ -1,0 +1,191 @@
+{
+  "pass_": true,
+  "startUnix": 1791660751.8423948,
+  "endUnix": 1791660770.195116,
+  "upstreamCommit": "a77dfb96cb91780ca334d0d4cfd86957558007e0",
+  "demoSha256": "810dd601351b6ec54aca26a2ef04cafefbc556ee07c53ce3d870b5ff9abe0306",
+  "wadSha256": "7323bcc168c5a45ff10749b339960e98314740a734c30d4b9f3337001f9e703d",
+  "settings": {
+    "version": 109,
+    "skill": 0,
+    "episode": 1,
+    "map": 2,
+    "deathmatch": 0,
+    "respawn": 0,
+    "fast": 0,
+    "nomonsters": 0,
+    "consoleplayer": 0,
+    "playeringame": [
+      1,
+      0,
+      0,
+      0
+    ]
+  },
+  "profiles": [
+    {
+      "profile": "O2",
+      "command": [
+        "/Users/eduard/sandbox/doom-evm-speedruns-vptr/artifacts/local/episode-speedruns/native-build-O2/speedrun",
+        "/Users/eduard/sandbox/doom-evm-speedruns-vptr/artifacts/local/freedoom/freedoom1.wad",
+        "/Users/eduard/sandbox/doom-evm-speedruns-vptr/artifacts/local/episode-speedruns/E1M2/native-O2",
+        "/Users/eduard/sandbox/doom-evm-speedruns-vptr/artifacts/local/episode-speedruns/E1M2/commands.txt",
+        "2",
+        "0",
+        "0"
+      ],
+      "elapsedSeconds": 3.608216666150838,
+      "returncode": 0,
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "executedTics": 1942,
+      "exitEvents": [
+        [
+          1942,
+          1942,
+          6,
+          0,
+          737
+        ]
+      ]
+    },
+    {
+      "profile": "O0",
+      "command": [
+        "/Users/eduard/sandbox/doom-evm-speedruns-vptr/artifacts/local/episode-speedruns/native-build-O0/speedrun",
+        "/Users/eduard/sandbox/doom-evm-speedruns-vptr/artifacts/local/freedoom/freedoom1.wad",
+        "/Users/eduard/sandbox/doom-evm-speedruns-vptr/artifacts/local/episode-speedruns/E1M2/native-O0",
+        "/Users/eduard/sandbox/doom-evm-speedruns-vptr/artifacts/local/episode-speedruns/E1M2/commands.txt",
+        "2",
+        "0",
+        "0"
+      ],
+      "elapsedSeconds": 4.53388537466526,
+      "returncode": 0,
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "executedTics": 1942,
+      "exitEvents": [
+        [
+          1942,
+          1942,
+          6,
+          0,
+          737
+        ]
+      ]
+    },
+    {
+      "profile": "sanitize",
+      "command": [
+        "/Users/eduard/sandbox/doom-evm-speedruns-vptr/artifacts/local/episode-speedruns/native-build-sanitize/speedrun",
+        "/Users/eduard/sandbox/doom-evm-speedruns-vptr/artifacts/local/freedoom/freedoom1.wad",
+        "/Users/eduard/sandbox/doom-evm-speedruns-vptr/artifacts/local/episode-speedruns/E1M2/native-sanitize",
+        "/Users/eduard/sandbox/doom-evm-speedruns-vptr/artifacts/local/episode-speedruns/E1M2/commands.txt",
+        "2",
+        "0",
+        "0"
+      ],
+      "elapsedSeconds": 5.180585792288184,
+      "returncode": 0,
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "executedTics": 1942,
+      "exitEvents": [
+        [
+          1942,
+          1942,
+          6,
+          0,
+          737
+        ]
+      ]
+    },
+    {
+      "profile": "sanitize-fill",
+      "command": [
+        "/Users/eduard/sandbox/doom-evm-speedruns-vptr/artifacts/local/episode-speedruns/native-build-sanitize/speedrun",
+        "/Users/eduard/sandbox/doom-evm-speedruns-vptr/artifacts/local/freedoom/freedoom1.wad",
+        "/Users/eduard/sandbox/doom-evm-speedruns-vptr/artifacts/local/episode-speedruns/E1M2/native-sanitize-fill",
+        "/Users/eduard/sandbox/doom-evm-speedruns-vptr/artifacts/local/episode-speedruns/E1M2/commands.txt",
+        "2",
+        "0",
+        "0"
+      ],
+      "elapsedSeconds": 4.844414541963488,
+      "returncode": 0,
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "executedTics": 1942,
+      "exitEvents": [
+        [
+          1942,
+          1942,
+          6,
+          0,
+          737
+        ]
+      ]
+    }
+  ],
+  "exitReached": true,
+  "allProfilesExact": true,
+  "failure": null,
+  "executedTics": 1942,
+  "leveltime": 1942,
+  "inGameSeconds": 55.48571428571429,
+  "finalPlayer": {
+    "leveltime": 1942,
+    "gametic": 1942,
+    "prndindex": 72,
+    "rndindex": 0,
+    "x": 121515853,
+    "y": 80709232,
+    "z": -1048576,
+    "angle": 1174405120,
+    "momx": 55956,
+    "momy": 0,
+    "momz": 0,
+    "viewz": 1155048,
+    "viewheight": 2490368,
+    "deltaviewheight": 327680,
+    "bob": 1048576,
+    "floorz": -1048576,
+    "ceilingz": 7340032,
+    "subsector": 651,
+    "playerHealth": 74,
+    "actorHealth": 74,
+    "armorpoints": 2,
+    "armortype": 1,
+    "readyweapon": 2,
+    "pendingweapon": 10,
+    "usedown": 1,
+    "attackdown": 1,
+    "refire": 0,
+    "state": 152,
+    "tics": 4,
+    "flags": 33557574,
+    "ammoClip": 98,
+    "ammoShell": 50,
+    "ammoCell": 0,
+    "ammoMissile": 0,
+    "weaponState": 26,
+    "weaponTics": 1,
+    "weaponX": 193103,
+    "weaponY": 2224623,
+    "flashState": -1,
+    "flashTics": 0,
+    "flashX": 193103,
+    "flashY": 2224623,
+    "thinkerCount": 234,
+    "totalKills": 59,
+    "totalItems": 64,
+    "totalSecrets": 7,
+    "killcount": 18,
+    "itemcount": 11,
+    "secretcount": 0,
+    "damagecount": 0,
+    "bonuscount": 2,
+    "extralight": 0,
+    "fixedcolormap": 0
+  },
+  "statesSha256": "8f24ad15a6a2c430293de774d52ab8500b0d5e167d94abe34358ece62d2bef9f",
+  "commandsSha256": "e87c61ed9bf1d44abe167c9e1ca7d98bbe6a231a270ebf2b86a30804df6f42f3",
+  "levelCommandsSha256": "dc993f54de15de8d86b3113f08a113a814f251eedd5c98f692f12f98999833bc"
+}

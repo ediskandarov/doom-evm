@@ -1,0 +1,48 @@
+{
+  "baseline": "8ee6d1f2c403dfb9e7c2aa2016116a578d4724e9",
+  "sourceHashes": {
+    "src/doom/z_zone_virtual.sol": "8bc309e89fa4da0667dc50a45adb9f91c58982640e1b3f5f9d38e49893f1e960",
+    "src/doom/z_zone_backing.sol": "e63201d3bb45e4c8d0796480d4e9facd4deffd4d8a9dd730bed10ff4a108d0b1",
+    "test/unit/VirtualOwnerPointers.t.sol": "0e713e2251a1285ad7035e5d473282eb8a3b2c32a485baed966a196e9996c110"
+  },
+  "nativeDrawsPassed": 12,
+  "nativeLifecycleRunsPassed": 6,
+  "finalFocusedTestsPassed": 44,
+  "failedCorrectnessTests": 0,
+  "setupRecovery": "Initial final-source run passed37, two suites failed in setup due missing local phase2-chunks. Existing hash-pinned prepare_chunks.py generated1755 chunks; all7 affected tests then passed. Initial failed log preserved.",
+  "commands": [
+    "source scripts/env.sh",
+    "forge test --match-path 'test/unit/*Virtual*Pointers.t.sol'",
+    "forge test --match-contract 'Virtual.*Test|.*Zone.*Test|.*Backing.*Test|PointerHighBytesTest'",
+    "python3 tools/reference/phase2_data/prepare_chunks.py",
+    "forge test --match-contract '^(DoomZoneStartupTest|PZoneSetupTest)$'"
+  ],
+  "logs": [
+    {
+      "file": "artifacts/local/ultimate-speedruns/owner-forge.log",
+      "SHA256": "d8c9c0a0f8778a4ebb4d5d7c10137aafceb0202eed4b1c8bc193d18ebba06621"
+    },
+    {
+      "file": "artifacts/local/ultimate-speedruns/owner-regression-forge.log",
+      "SHA256": "bd669fa442d2524d42ffccb69eef13dd2c81bbcc62cca9d67d60872e9e3e9d61"
+    },
+    {
+      "file": "artifacts/local/ultimate-speedruns/owner-resource-recovery-forge.log",
+      "SHA256": "6557f3dd77413a7ced2f0df3dd4ab5a73b7938414641748de4f7bad82456e8ae"
+    },
+    {
+      "file": "artifacts/local/ultimate-speedruns/owner-build-formatted.log",
+      "SHA256": "e72c0f12f3530c4f8a86ab76e6e637541be80c4bd77804cd9530fe5feb17ab61"
+    },
+    {
+      "file": "artifacts/local/ultimate-speedruns/owner-store-build.log",
+      "SHA256": "6e78d052398ef93b17cda0faf89c2e1110281d9b0de0bd025761cd0a228196b1"
+    }
+  ],
+  "observerManifestSHA256": "a1eb79c01fe07314765a7054d43a263553eb9ee8a67c3bead401c96d26f4075b",
+  "firstTransaction": "artifacts/ultimate-speedruns/owner-pointer/first-transaction.json",
+  "strictAndOrdinaryPoliciesUnchanged": true,
+  "sharedStateAndABIsUnchanged": true,
+  "RESTRICT": true,
+  "RelaxedImplemented": false
+}

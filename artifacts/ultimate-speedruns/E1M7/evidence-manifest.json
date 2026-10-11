@@ -1,0 +1,68 @@
+{
+  "map": "E1M7",
+  "files": [
+    {
+      "path": "artifacts/local/ultimate-speedruns/E1M7/full-rate/evm.json",
+      "bytes": 3122488,
+      "SHA256": "e173ec80f419286fb49029a26a97b0c200e625ca13b02006e95d0811fc2de4a8"
+    },
+    {
+      "path": "artifacts/local/ultimate-speedruns/E1M7/full-rate/verification.json",
+      "bytes": 415860,
+      "SHA256": "a90ff967e17477d86a25ac6a3f9e58fb48c3fb2a6961b59075a3d5d13cd13553"
+    },
+    {
+      "path": "artifacts/local/ultimate-speedruns/E1M7/full-rate/frame-manifest.json",
+      "bytes": 3091518,
+      "SHA256": "66961da150c941237527abcd5c8575299d26de3f98ecfd284042fc1fce927d83"
+    },
+    {
+      "path": "artifacts/local/ultimate-speedruns/E1M7/full-rate/virtual-samples.json",
+      "bytes": 1587,
+      "SHA256": "e2fddaafc2ee3150ec1f61f6afc21b8653fce77efb18a6cdf7b5e72926b08706"
+    },
+    {
+      "path": "artifacts/local/ultimate-speedruns/E1M7/full-rate/pixel-domain.json",
+      "bytes": 400962,
+      "SHA256": "74f02067fb862f9d8999b7f950c0612065943f20b3d4def80705d03bf50c8e95"
+    },
+    {
+      "path": "artifacts/local/ultimate-speedruns/E1M7/native-result.json",
+      "bytes": 6234,
+      "SHA256": "f30391a255176d85443bcfb8b91fb8757427ae0efada941cd052335155ca968e"
+    },
+    {
+      "path": "artifacts/local/ultimate-speedruns/E1M7/native-full/native-frames.json",
+      "bytes": 2828464,
+      "SHA256": "2683917efa7684a8cfe24c77e9c2a1d1bbab22110405bdd67094faf89d69ba95"
+    },
+    {
+      "path": "artifacts/local/ultimate-speedruns/E1M7/full-rate/evm.deployment-receipts.json.gz",
+      "bytes": 99480,
+      "SHA256": "5b97603dcc81932d412c20512db51455fba6abc86c44f1a45f161b6257bbe80a"
+    },
+    {
+      "path": "artifacts/local/ultimate-speedruns/E1M7/full-rate/evm.capture-receipts.json.gz",
+      "bytes": 69141741,
+      "SHA256": "201f1f1bf232b534ad9c63c39832f0bb33497c1aa5c81b5051669ba949918407"
+    },
+    {
+      "path": "artifacts/local/ultimate-speedruns/E1M7/full-rate/evm.replay-receipts.json.gz",
+      "bytes": 68634822,
+      "SHA256": "8b1bd13ecdcb7f495f58dbf2b825a2b0e06b8b2ac260215d0003a86e1269b6ba"
+    },
+    {
+      "path": "artifacts/ultimate-speedruns/E1M7/result.json",
+      "bytes": 13905,
+      "SHA256": "ae5d6ae21795feb4d9b38570e1561f7a986ad5a931c3458b7312eec516040b66"
+    },
+    {
+      "path": "artifacts/ultimate-speedruns/E1M7/virtual-samples.json",
+      "bytes": 1587,
+      "SHA256": "e2fddaafc2ee3150ec1f61f6afc21b8653fce77efb18a6cdf7b5e72926b08706"
+    }
+  ],
+  "commercialPayloadsLocalOnly": true,
+  "MP4LocalOnly": true,
+  "UTC": "2026-10-10T21:32:57Z"
+}

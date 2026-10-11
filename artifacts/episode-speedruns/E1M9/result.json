@@ -1,0 +1,51 @@
+{
+  "map": "E1M9",
+  "status": "blocked-demo-acquisition",
+  "originalDemoCandidates": [
+    {
+      "runId": "me9oko3z",
+      "runUrl": "https://www.speedrun.com/freedoom_phase_1/runs/me9oko3z",
+      "map": "E1M9",
+      "category": "EC-Max (0.12.1)",
+      "author": [
+        "Shepardus"
+      ],
+      "submitted": "2021-01-26T11:32:44Z",
+      "status": {
+        "status": "verified",
+        "examiner": "y8d1wg58",
+        "verify-date": "2021-01-26T11:32:44Z"
+      },
+      "seconds": 220.94,
+      "demoUrls": [
+        "https://www.doomworld.com/applications/core/interface/file/attachment.php?id=109327"
+      ],
+      "comment": "Demo: https://www.doomworld.com/applications/core/interface/file/attachment.php?id=109327"
+    }
+  ],
+  "acquisitionAttempts": [
+    {
+      "map": "E1M9",
+      "runId": "me9oko3z",
+      "url": "https://www.doomworld.com/applications/core/interface/file/attachment.php?id=109327",
+      "UTC": "2026-10-10T19:31:27Z",
+      "http": "403",
+      "returncode": 0,
+      "stderr": "",
+      "bytes": 5508
+    }
+  ],
+  "originalDemoSha256": null,
+  "nativeCompatibility": "Not established: original tape unavailable; indexed demos label Freedoom 0.12.1",
+  "gameplayTics": null,
+  "nativeEVMSnapshotAgreement": null,
+  "EVMFramesRendered": 0,
+  "pixelEquality": "Not tested",
+  "virtualPointerDerivedPixelCount": null,
+  "gasConsumed": 0,
+  "executionTimeSeconds": null,
+  "MP4Path": null,
+  "unresolvedFailure": "Every indexed original demo download returned HTTP 403; no 0.13 compatible downloadable tape found in searched sources.",
+  "startupPath": "EpisodeSpeedrunProbe.initializeMap -> EpisodeStartup.initialize -> DoomGame.load once before G_InitNew; does not call menu first-game startup.",
+  "E1M7MemoryOOG": null
+}
