@@ -1,0 +1,68 @@
+{
+  "map": "E1M2",
+  "files": [
+    {
+      "path": "artifacts/local/ultimate-speedruns/E1M2/owner-v1/full-rate/evm.json",
+      "bytes": 975497,
+      "SHA256": "656b29554960e011985c8da6edca91bdd5417fbdc02b80fb9d4163a9800a1143"
+    },
+    {
+      "path": "artifacts/local/ultimate-speedruns/E1M2/owner-v1/full-rate/verification.json",
+      "bytes": 128689,
+      "SHA256": "0ea6f45098c96d41abdccd47c0dca47b5824f6fa3d299b1d439500159c183c30"
+    },
+    {
+      "path": "artifacts/local/ultimate-speedruns/E1M2/owner-v1/full-rate/frame-manifest.json",
+      "bytes": 959272,
+      "SHA256": "c64cbbe8fd95b67d511c2a72b763c8ca254ae1bf4540ea456418025d54f52638"
+    },
+    {
+      "path": "artifacts/local/ultimate-speedruns/E1M2/owner-v1/full-rate/virtual-samples.json",
+      "bytes": 3,
+      "SHA256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+    },
+    {
+      "path": "artifacts/local/ultimate-speedruns/E1M2/owner-v1/full-rate/pixel-domain.json",
+      "bytes": 124418,
+      "SHA256": "c2e3fa2dcccc5b6ec73fbf93805fdebde690003167422d581adb1ec9be24dfbd"
+    },
+    {
+      "path": "artifacts/local/ultimate-speedruns/E1M2/native-result.json",
+      "bytes": 6230,
+      "SHA256": "6c5d9453769a6b62107b8fac1853d9565e9e972c6674ef2d4c9fedeac648922c"
+    },
+    {
+      "path": "artifacts/local/ultimate-speedruns/E1M2/native-full/native-frames.json",
+      "bytes": 876610,
+      "SHA256": "ab5510291abb9f5f464c143cfcb1014a56f42d0b3b2169b04f9f206e5a2cfb7e"
+    },
+    {
+      "path": "artifacts/local/ultimate-speedruns/E1M2/owner-v1/full-rate/evm.deployment-receipts.json.gz",
+      "bytes": 99318,
+      "SHA256": "bf53c72d8ba0b6b510bde5a3bdbeadb954e943c1dddbd3afa6044d1c60dffa29"
+    },
+    {
+      "path": "artifacts/local/ultimate-speedruns/E1M2/owner-v1/full-rate/evm.capture-receipts.json.gz",
+      "bytes": 22385927,
+      "SHA256": "1e8d380ca089470c3d253af1d624185f445fd32fb1f4fc75bd5e36f0caa758d1"
+    },
+    {
+      "path": "artifacts/local/ultimate-speedruns/E1M2/owner-v1/full-rate/evm.replay-receipts.json.gz",
+      "bytes": 17055879,
+      "SHA256": "6d92f5a8b9a4d79d715d6fff926343470c1a68b6fa1597af1cdd6f544f42c449"
+    },
+    {
+      "path": "artifacts/ultimate-speedruns/E1M2/owner-v1/result.json",
+      "bytes": 14577,
+      "SHA256": "129609e239f2d553c8795150e0a3d2a05250f04c9eaf65534b3419f181bee0c9"
+    },
+    {
+      "path": "artifacts/ultimate-speedruns/E1M2/owner-v1/virtual-samples.json",
+      "bytes": 3,
+      "SHA256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+    }
+  ],
+  "commercialPayloadsLocalOnly": true,
+  "MP4LocalOnly": true,
+  "UTC": "2026-10-11T06:41:50Z"
+}
