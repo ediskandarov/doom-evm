@@ -129,8 +129,10 @@ the remaining whole tape through a real exit with zero render calls;
 `verify-gameplay.py` rejects any claim that it is a video.
 `checkpoint-blocker.py BASE` requires full independent gameplay, verified
 partial receipts/pixels, exact savedDigest reproduction and current source
-hashes before exporting metadata. Unknown allocated owner-slot addresses and
-native out-of-array intercept corruption remain unsupported. Never loosen a
+hashes before exporting metadata. In the original observer, external owner-slot addresses remain unsupported.
+The explicit owner-v1 extension below supports only proven authenticated WAD
+cache slots. Other unknown pointers and native out-of-array intercept corruption
+remain unsupported. Never loosen a
 gate, invent an owner address, reuse missing frames or patch state to match.
 
 Keep MP4s, commercial resources/geometry/frame payloads and full receipts out
@@ -138,3 +140,53 @@ of Git. Gitmoji commits contain source and small provenance/result/hash
 manifests. Do not push or merge main. See per-map reports and the episode summary
 for the measured outcome; successful renderer execution alone is not proof of
 native-exact bytes.
+
+
+## Explicit experimental owner-slot extension
+
+Read [the source investigation](../../../docs/ULTIMATE-OWNER-POINTERS.md) before
+using this profile. It extends the opt-in virtual-pointer adapter with a
+separate `lumpcache[]` address domain, not arbitrary C process addresses.
+Texture composite and other unproven owner slots remain unknown. Provenance 4
+means zone links; provenance 5 means validated WAD cache owner-slot bytes.
+Neither category establishes actual native pointer-byte equivalence.
+
+```sh
+source scripts/env.sh
+python3 tools/reference/ultimate_speedruns/observer-owner.py
+forge build artifacts/local/ultimate-speedruns/owner-observer/src/support/UltimateSpeedrunProbe.sol src/evm/ResourceStore.sol --out artifacts/local/ultimate-speedruns/owner-observer/out --cache-path artifacts/local/ultimate-speedruns/owner-observer/cache
+python3 tools/reference/ultimate_speedruns/monitor-owner.py
+# Separate shell, same pinned environment:
+python3 tools/reference/ultimate_speedruns/owner-suite.py --maps 3,5,6,8,1,2,4,7,9 --concurrency 2
+```
+
+The suite chooses the already audited native gameplay domain for each tape,
+uses isolated ports 18641–18649, and writes separate `owner-v1/full-rate`
+directories. It preserves previous producers, five accepted recordings and
+partial failure evidence. Existing successful attempts are reverified; interrupted
+attempts resume from their frozen checkpoint identity. Add `--commit` only when
+progressive feature-branch commits are desired. `--wait-for 3,8` can read this
+owner's separately launched jobs' completed reports; it never attaches to a
+runtime. At most two Episode jobs run concurrently.
+
+Each completion independently verifies whole native snapshots, mined frame
+receipts, all virtual sample identities and bytes, supported native pixels,
+palette/PNG/media hashes and genuine exits. Five accepted-map regressions
+require every prior indexed8 frame hash and original virtual provenance record
+to remain identical. Periodic cleanup removes only validated superseded
+owner-v1 checkpoint dumps/duplicate checkpoint receipts; final receipts and the
+newest validated recovery state remain. The monitor records sampled host
+RAM/swap/disk and owned Node/Anvil RSS. Missing measurements are not estimated.
+
+After all nine results pass and owned jobs/monitor have stopped:
+
+```sh
+python3 tools/reference/ultimate_speedruns/owner-episode-summary.py
+```
+
+This final gate binds all nine immutable manifests and MP4s, verifies exact
+35 FPS packet presentation timestamps and durations, checks the five old videos
+are unchanged, compares all four preserved partial prefixes, and exports the
+measured resource/cleanup summary. It also requires the separate preserved
+Freedoom regression proof. [Episode acceptance](../../../docs/ULTIMATE-OWNER-EPISODE.md)
+is generated only after every gate passes. Keep all commercial artifacts local.
