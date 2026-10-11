@@ -411,8 +411,9 @@ contract Doom is IFrameProtocol, WadResources {
     }
 
     /// @dev Title/menu packets advance only M_Ticker. The saved EVM gameplay
-    /// framebuffer is borrowed as the underlay; redraw does not invoke G_Ticker,
+    /// framebuffer is borrowed as the underlay; ordinary redraw does not invoke G_Ticker,
     /// RNG, thinkers, ST/HU tickers, movement, cheat or Intermission responders.
+    /// A previously queued rebirth still dispatches loading before the world freeze.
     function _stepMenu(bytes memory events, uint32 sequence, bool draw) private {
         MenuState memory m = menuState;
         int32 oldSize = m.screenSize;
@@ -458,6 +459,24 @@ contract Doom is IFrameProtocol, WadResources {
         }
         if (gameStarted) gameState.menuactive = m.menuactive;
         if (intercepted) {
+            // Original G_Ticker dispatches rebirth before P_Ticker's menu freeze.
+            // Menu-owned events never become gameplay input on this load tic.
+            if (gameStarted && gameState.players[0].playerstate == PlayerState.reborn) {
+                GameContext memory c = DoomGame.load(_resourceView(), gameState);
+                UIState memory u = uiState;
+                InputRuntimeState memory s = inputRuntime;
+                EpisodeState memory e = episodeState;
+                EpisodeRuntime.tick(c, s, u, e, bytes(""));
+                bytes memory pixels;
+                if (draw) {
+                    pixels = EpisodeRuntime.draw(c, s, u, e);
+                    M_Menu.M_Drawer(m, _resourceView(), pixels);
+                }
+                _saveEpisode(c, s, u, e);
+                inputSeq = sequence;
+                if (draw) _emitFrame(sequence, pixels);
+                return;
+            }
             inputSeq = sequence;
             if (draw) {
                 bytes memory pixels;
@@ -636,6 +655,17 @@ contract Doom is IFrameProtocol, WadResources {
             u.hud.message_counter,
             u.hud.message.lines[u.hud.message.cl].text
         );
+    }
+
+    /// @notice Authoritative original player/death state; does not advance the game.
+    function playerLifecycle() external view returns (
+        PlayerState state, int32 actorState, int32 actorTics, int32 viewheight,
+        int32 damagecount, bool backpack
+    ) {
+        if (!gameStarted) revert GameNotStarted();
+        Player storage p = gameState.players[uint32(gameState.consoleplayer)];
+        Mobj storage mo = gameState.mobjs[p.mo];
+        return (p.playerstate, int32(mo.state), mo.tics, p.viewheight, p.damagecount, p.backpack);
     }
 
     /// @notice Authoritative inventory, used by the original UI widgets.

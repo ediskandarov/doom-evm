@@ -1,0 +1,218 @@
+{
+  "upstream": "a77dfb96cb91780ca334d0d4cfd86957558007e0",
+  "baseline": "ff826659ceff0b3a5637e70109b62eb75a83d611",
+  "profiles": [
+    "O0",
+    "O2",
+    "ASan/UBSan"
+  ],
+  "exactNativeProfiles": true,
+  "wadSha256": "7323bcc168c5a45ff10749b339960e98314740a734c30d4b9f3337001f9e703d",
+  "scope": "Controlled original floor damage during movement, acquired inventory, attack-only, use-to-reborn and two original same-map reloads; post-render full canonical world snapshots and indexed frame/palette digests; borrowed immutable UI/LP64/initialized native zone; excludes dangling collision scratch pointers and melt presentation. Native bytes never enter EVM. Initial pre-tic record remains in local evidence; golden entries begin after first tic.",
+  "entries": [
+    {
+      "seq": 1,
+      "state": "bd52a020c3931514e239cde1b27f99e24d08ee5c16af4ea8b20480a49533c475",
+      "frame": "0000000000000000000000000000000000000000000000000000000000000000",
+      "palette": "0000000000000000000000000000000000000000000000000000000000000000"
+    },
+    {
+      "seq": 2,
+      "state": "717b4f5416cc8bd5bd2a061fe0e04554db5155386b7c629e6d21aaa55d065f1b",
+      "frame": "0000000000000000000000000000000000000000000000000000000000000000",
+      "palette": "0000000000000000000000000000000000000000000000000000000000000000"
+    },
+    {
+      "seq": 3,
+      "state": "87a614b5b805ce9c7aeb3b84c654f1a1e24b544ee7b5db32aac541fa1e793ee9",
+      "frame": "a16921d589cbf05c04adc05a54b5cc1a63b3be7dbf3988a5501e70f1321aa792",
+      "palette": "58cf11f0f1b46dad7c13c2721147cd008f54f2fa8c1f392fdeaef15bd20b6291"
+    },
+    {
+      "seq": 4,
+      "state": "3cc87fef822a2cf88efb1a35469f345c909d1114d943cfb6d3aa9af901d35c37",
+      "frame": "fc7b598a400a4acf543f93990077b15da130ed13d754f9398de3b1d1bdbc2e4b",
+      "palette": "58cf11f0f1b46dad7c13c2721147cd008f54f2fa8c1f392fdeaef15bd20b6291"
+    },
+    {
+      "seq": 5,
+      "state": "6557183acd2a7eaa1ec0884699bd61efcb38c85d7af43982f6b5a7006beb9d8a",
+      "frame": "0000000000000000000000000000000000000000000000000000000000000000",
+      "palette": "0000000000000000000000000000000000000000000000000000000000000000"
+    },
+    {
+      "seq": 6,
+      "state": "3cb9e7f8a69ba677a3bdd046c59aaaf50c4dc23fca2eeb3f534ada04b8731ed8",
+      "frame": "8f664577acaf9b0140dbe728ddbc0ba9e58ad0f03327332adcd0994061ce1104",
+      "palette": "12bafa34214682ae20c2cb6f4e38f21575564de88c4599f3410661e9b7a5c6d3"
+    },
+    {
+      "seq": 7,
+      "state": "166835a02887fc8c05240b8aaf7fec3597ab980669553dacb7bfdb42c0c0f658",
+      "frame": "ea568ea18ff7c728a762e6bdd21e979b0a8438a7acc734642c3acbce7100f9a1",
+      "palette": "12bafa34214682ae20c2cb6f4e38f21575564de88c4599f3410661e9b7a5c6d3"
+    },
+    {
+      "seq": 8,
+      "state": "399f5f05a28d4331220d930ec49b6c631110f40ce8ef848ef1dcb67c7c182e76",
+      "frame": "66672b024cee7e41808c7b6a5e1f6f1e04dde53db910bd20bc0f77a4f84228eb",
+      "palette": "12bafa34214682ae20c2cb6f4e38f21575564de88c4599f3410661e9b7a5c6d3"
+    },
+    {
+      "seq": 9,
+      "state": "9661661ee4a417fb36414936adb661a49a1d8b068d731adc7026f522afc2856d",
+      "frame": "48fd634cac65bfa7c5f3267797977583e5effa4c74a587d0b7a3cd3fbfd805d2",
+      "palette": "12bafa34214682ae20c2cb6f4e38f21575564de88c4599f3410661e9b7a5c6d3"
+    },
+    {
+      "seq": 10,
+      "state": "5bd56e0e6798d55bdef470828a6e22c73aef16f29b11c1a67effc1a7cb16dcc1",
+      "frame": "0000000000000000000000000000000000000000000000000000000000000000",
+      "palette": "0000000000000000000000000000000000000000000000000000000000000000"
+    },
+    {
+      "seq": 11,
+      "state": "3c19ba9aa85dd18e98b4d8f7f725f1f2762df734d0f2087dd879f1c43aa7b72b",
+      "frame": "1de5b8f76159961001cd9de713ca4aef20a34bd1b2b8ad43cd3a7cc9de471556",
+      "palette": "58cf11f0f1b46dad7c13c2721147cd008f54f2fa8c1f392fdeaef15bd20b6291"
+    },
+    {
+      "seq": 12,
+      "state": "445cbe00de261fcf1f8cf0e30409fe7181d27ce7dac210e1ceae5c8ff1555c64",
+      "frame": "34a4b08a45d93556c14d56e747a7e55e8b4ebaf287b16bd9d891e0840a78de2f",
+      "palette": "58cf11f0f1b46dad7c13c2721147cd008f54f2fa8c1f392fdeaef15bd20b6291"
+    },
+    {
+      "seq": 13,
+      "state": "fe0d24effd4b429e6519044a7f94a2ea4c4d2a91796af1112660862ce4aeaadc",
+      "frame": "66672b024cee7e41808c7b6a5e1f6f1e04dde53db910bd20bc0f77a4f84228eb",
+      "palette": "12bafa34214682ae20c2cb6f4e38f21575564de88c4599f3410661e9b7a5c6d3"
+    },
+    {
+      "seq": 14,
+      "state": "75c651379d04563a9596bf71c16fb62784821f9acf642dd57bf815aca0d92a40",
+      "frame": "48fd634cac65bfa7c5f3267797977583e5effa4c74a587d0b7a3cd3fbfd805d2",
+      "palette": "12bafa34214682ae20c2cb6f4e38f21575564de88c4599f3410661e9b7a5c6d3"
+    }
+  ],
+  "hashesSha256": "c496500368fc04d541457cb58622554274b5f70014b654d37eba0ecba9f50aa7",
+  "monster": {
+    "tics": 78,
+    "hashesSha256": "a308cce0d42bcd3ced7def48f8f1ceb8782afeeef2b297295a220683e23a3dc4",
+    "commandsSha256": "c9263fd35de390f48fecad25d4fdc84ddcedb11d65e65616c26327a214d1331e",
+    "scope": "Original possessed actor spawned 64 units east of the real start, original position validation/see state/AI attack; initial player/actor health3. Original lethal shot at tic39, view descent and attacker rotation, attack-only stays dead, use/rebirth and continued movement. Whole post-render canonical world snapshots and seven complete frame/palette hashes."
+  },
+  "builderSha256": "1879aeacadf84eef167225248bce799f3ab9e25c5e541568b2e710e791d87a04",
+  "nativeBuilds": {
+    "O0": "85d0fab4f7a22faf5fc367ce016420b6f7b765ad321f4d0017898104e159b239",
+    "O2": "0668177caba67fa4d60b0c6fc2809e3cfbd82519a80f76ed97e3bebff9395ac8",
+    "sanitize": "569c2d637007404b1ffc7415603704046967e336d00211c4552538150df0ab01"
+  },
+  "rejectedV1": {
+    "fixture": "environment-hashes.bin",
+    "status": "Rejected as a display oracle; retained unchanged with original entries/hashes/build references.",
+    "reason": "Timer-derived ST_Drawer refresh falsely fires at environmental setup on tic11. Seven health-percent widget pixels then differ on tics11/12. All canonical world/palette words remain identical. Production rendering is unchanged.",
+    "source": "d_main.c D_Display redrawsbar/wipe logic at lines224-250; g_game.c G_DoLoadLevel wipegamestate handling at lines472-473.",
+    "reproduce": "DEATH_LEGACY_LEVELTIME_REFRESH=1 with current native host and environment-commands.txt reproduces retained v1 hashes.",
+    "reproductionVerified": true
+  },
+  "environmentDisplay": {
+    "fixture": "environment-display-hashes.bin",
+    "tics": 14,
+    "fullFrames": 10,
+    "hashesSha256": "562db9a0f772f54da7647341a1242c407d3f1a153131e902454970bbbf0585c1",
+    "scope": "Original D_Display initial/load redraw history. Same 14-tic commands and complete canonical state/frame/palette checks as v1. No reduced assertions or production changes.",
+    "entries": [
+      {
+        "seq": 1,
+        "state": "bd52a020c3931514e239cde1b27f99e24d08ee5c16af4ea8b20480a49533c475",
+        "frame": "0000000000000000000000000000000000000000000000000000000000000000",
+        "palette": "0000000000000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "seq": 2,
+        "state": "717b4f5416cc8bd5bd2a061fe0e04554db5155386b7c629e6d21aaa55d065f1b",
+        "frame": "0000000000000000000000000000000000000000000000000000000000000000",
+        "palette": "0000000000000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "seq": 3,
+        "state": "87a614b5b805ce9c7aeb3b84c654f1a1e24b544ee7b5db32aac541fa1e793ee9",
+        "frame": "a16921d589cbf05c04adc05a54b5cc1a63b3be7dbf3988a5501e70f1321aa792",
+        "palette": "58cf11f0f1b46dad7c13c2721147cd008f54f2fa8c1f392fdeaef15bd20b6291"
+      },
+      {
+        "seq": 4,
+        "state": "3cc87fef822a2cf88efb1a35469f345c909d1114d943cfb6d3aa9af901d35c37",
+        "frame": "fc7b598a400a4acf543f93990077b15da130ed13d754f9398de3b1d1bdbc2e4b",
+        "palette": "58cf11f0f1b46dad7c13c2721147cd008f54f2fa8c1f392fdeaef15bd20b6291"
+      },
+      {
+        "seq": 5,
+        "state": "6557183acd2a7eaa1ec0884699bd61efcb38c85d7af43982f6b5a7006beb9d8a",
+        "frame": "0000000000000000000000000000000000000000000000000000000000000000",
+        "palette": "0000000000000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "seq": 6,
+        "state": "3cb9e7f8a69ba677a3bdd046c59aaaf50c4dc23fca2eeb3f534ada04b8731ed8",
+        "frame": "8f664577acaf9b0140dbe728ddbc0ba9e58ad0f03327332adcd0994061ce1104",
+        "palette": "12bafa34214682ae20c2cb6f4e38f21575564de88c4599f3410661e9b7a5c6d3"
+      },
+      {
+        "seq": 7,
+        "state": "166835a02887fc8c05240b8aaf7fec3597ab980669553dacb7bfdb42c0c0f658",
+        "frame": "ea568ea18ff7c728a762e6bdd21e979b0a8438a7acc734642c3acbce7100f9a1",
+        "palette": "12bafa34214682ae20c2cb6f4e38f21575564de88c4599f3410661e9b7a5c6d3"
+      },
+      {
+        "seq": 8,
+        "state": "399f5f05a28d4331220d930ec49b6c631110f40ce8ef848ef1dcb67c7c182e76",
+        "frame": "66672b024cee7e41808c7b6a5e1f6f1e04dde53db910bd20bc0f77a4f84228eb",
+        "palette": "12bafa34214682ae20c2cb6f4e38f21575564de88c4599f3410661e9b7a5c6d3"
+      },
+      {
+        "seq": 9,
+        "state": "9661661ee4a417fb36414936adb661a49a1d8b068d731adc7026f522afc2856d",
+        "frame": "48fd634cac65bfa7c5f3267797977583e5effa4c74a587d0b7a3cd3fbfd805d2",
+        "palette": "12bafa34214682ae20c2cb6f4e38f21575564de88c4599f3410661e9b7a5c6d3"
+      },
+      {
+        "seq": 10,
+        "state": "5bd56e0e6798d55bdef470828a6e22c73aef16f29b11c1a67effc1a7cb16dcc1",
+        "frame": "0000000000000000000000000000000000000000000000000000000000000000",
+        "palette": "0000000000000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "seq": 11,
+        "state": "3c19ba9aa85dd18e98b4d8f7f725f1f2762df734d0f2087dd879f1c43aa7b72b",
+        "frame": "99979b1025099e18439d88d8b2297597ee19e780f75c2d1569a4c7df354fbe2c",
+        "palette": "58cf11f0f1b46dad7c13c2721147cd008f54f2fa8c1f392fdeaef15bd20b6291"
+      },
+      {
+        "seq": 12,
+        "state": "445cbe00de261fcf1f8cf0e30409fe7181d27ce7dac210e1ceae5c8ff1555c64",
+        "frame": "b3db4d809a8fbdaf8287d1fbf71feb86ad724491bb9b2cd66a1bf23a7af430ba",
+        "palette": "58cf11f0f1b46dad7c13c2721147cd008f54f2fa8c1f392fdeaef15bd20b6291"
+      },
+      {
+        "seq": 13,
+        "state": "fe0d24effd4b429e6519044a7f94a2ea4c4d2a91796af1112660862ce4aeaadc",
+        "frame": "66672b024cee7e41808c7b6a5e1f6f1e04dde53db910bd20bc0f77a4f84228eb",
+        "palette": "12bafa34214682ae20c2cb6f4e38f21575564de88c4599f3410661e9b7a5c6d3"
+      },
+      {
+        "seq": 14,
+        "state": "75c651379d04563a9596bf71c16fb62784821f9acf642dd57bf815aca0d92a40",
+        "frame": "48fd634cac65bfa7c5f3267797977583e5effa4c74a587d0b7a3cd3fbfd805d2",
+        "palette": "12bafa34214682ae20c2cb6f4e38f21575564de88c4599f3410661e9b7a5c6d3"
+      }
+    ],
+    "builderSha256": "2f6da9e3179931ea393c6e18608d067212a2e890e97b2a52afc373d95d3611f4",
+    "nativeBuilds": {
+      "O0": "4e78c1f85c311142c1646e02589dfa012318dca028002437bad26815b6b319a6",
+      "O2": "bab05054523514424043f95688ccdfe082cb9f713178b8902ac515611db0a166",
+      "sanitize": "fbd815411c475cf82a807610650dc1617748d3351385a5609ebd1e79e72e9096"
+    }
+  }
+}

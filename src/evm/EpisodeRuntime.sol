@@ -5,6 +5,7 @@ import {GameflowState, GameflowHooks, G_Game} from "../doom/g_game.sol";
 import {P_Info} from "../doom/p_info.sol";
 import {P_Setup} from "../doom/p_setup.sol";
 import {P_Tick} from "../doom/p_tick.sol";
+import {P_Pspr} from "../doom/p_pspr.sol";
 import {Z_Zone} from "../doom/z_zone.sol";
 import {R_Data} from "../doom/r_data.sol";
 import {ST_Stuff} from "../doom/st_stuff.sol";
@@ -28,6 +29,15 @@ struct EpisodeState {
     int32 displayedGamestate;
 }
 
+/// @dev Only the flow fields read/written by the death stop/cheat notification.
+/// G_DeferedInitNew writes these selection fields; no other flow data crosses this boundary.
+struct DeathFlow {
+    bool automapactive;
+    int32 deferredSkill;
+    int32 deferredEpisode;
+    int32 deferredMap;
+}
+
 /// @dev Ephemeral callback payload. Never persisted in gameplay or accepted from a host.
 struct EpisodeAux {
     UIState ui;
@@ -36,6 +46,8 @@ struct EpisodeAux {
     WiState wi;
     FinaleState finale;
     uint256 gamekeydown;
+    // Transient P_Ticker callback context; never added to persisted EpisodeState.
+    DeathFlow deathFlow;
 }
 
 /// @notice Bind the existing original G_Ticker to persistent UI/WI/finale consumers.
@@ -69,10 +81,17 @@ library EpisodeRuntime {
         restoreDifficulty(c, e);
         InputProtocol.respond(s, c, u, events);
         // Build before setup clears keys. G_Ticker copies this command after actions.
-        EpisodeAux memory a = EpisodeAux(u, s.automap, s.cheats, e.wi, e.finale, s.gamekeydown);
+        EpisodeAux memory a;
+        a.ui = u;
+        a.automap = s.automap;
+        a.cheats = s.cheats;
+        a.wi = e.wi;
+        a.finale = e.finale;
+        a.gamekeydown = s.gamekeydown;
         c.adapterData = abi.encode(a);
         c.playerUIEnabled = true;
         c.hooks.startPlayerUI = startPlayerUI;
+        c.hooks.dropWeapon = dropWeapon;
         G_Game.G_Ticker(c, s.flow, hooks(), InputProtocol.build(s, c));
         ++c.state.gametic;
         a = abi.decode(c.adapterData, (EpisodeAux));
@@ -139,8 +158,37 @@ library EpisodeRuntime {
         return R_Data.R_TextureNumForName(c.resources, name);
     }
 
-    function levelTicker(GameContext memory c, GameflowState memory) private view {
+    function levelTicker(GameContext memory c, GameflowState memory f) private view {
+        EpisodeAux memory a = abi.decode(c.adapterData, (EpisodeAux));
+        a.deathFlow = DeathFlow(f.automapactive, f.deferredSkill, f.deferredEpisode, f.deferredMap);
+        c.adapterData = abi.encode(a);
         P_Tick.P_Ticker(c);
+        a = abi.decode(c.adapterData, (EpisodeAux));
+        f.automapactive = a.deathFlow.automapactive;
+        f.deferredSkill = a.deathFlow.deferredSkill;
+        f.deferredEpisode = a.deathFlow.deferredEpisode;
+        f.deferredMap = a.deathFlow.deferredMap;
+    }
+
+    /// @custom:source p_inter.c P_KillMobj player branch, immediately after P_DropWeapon.
+    /// @dev This existing hook is called only at that death boundary. Binding it
+    /// here preserves the original AM_Stop/notification before death-state/RNG work.
+    function dropWeapon(GameContext memory c, uint32 player) private view {
+        P_Pspr.P_DropWeapon(c, player);
+        EpisodeAux memory a = abi.decode(c.adapterData, (EpisodeAux));
+        if (player == uint32(c.state.consoleplayer) && a.automap.active) {
+            GameflowState memory flow;
+            flow.automapactive = a.deathFlow.automapactive;
+            flow.deferredSkill = a.deathFlow.deferredSkill;
+            flow.deferredEpisode = a.deathFlow.deferredEpisode;
+            flow.deferredMap = a.deathFlow.deferredMap;
+            automapStop(c, flow);
+            // automapStop decoded its own aux; persist the changed flow too.
+            EpisodeAux memory stopped = abi.decode(c.adapterData, (EpisodeAux));
+            stopped.deathFlow =
+                DeathFlow(flow.automapactive, flow.deferredSkill, flow.deferredEpisode, flow.deferredMap);
+            c.adapterData = abi.encode(stopped);
+        }
     }
 
     function statusTicker(GameContext memory c, GameflowState memory) private pure {
