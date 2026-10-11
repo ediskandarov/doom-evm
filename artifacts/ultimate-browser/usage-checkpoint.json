@@ -1,0 +1,13 @@
+{
+  "goal": {
+    "threadId": "01a12a74-2368-79a3-a510-7d35e9da4660",
+    "objective": "Complete Ultimate DOOM Browser Deployment on feat/ultimate-browser, with focused tests, isolated Anvil/real Chrome acceptance, documentation, Gitmoji commits, and clean handoff; do not modify or push main.",
+    "status": "active",
+    "tokensUsed": 254716,
+    "timeUsedSeconds": 2551,
+    "createdAt": 1791713656,
+    "updatedAt": 1791716207
+  },
+  "remainingTokens": null,
+  "completionBudgetReport": null
+}

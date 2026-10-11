@@ -3,7 +3,8 @@ pragma solidity 0.8.37;
 
 import {IFrameProtocol} from "./FrameProtocol.sol";
 import {DoomState} from "../doom/doomstat.sol";
-import {WadResources} from "./WadResources.sol";
+import {ProductionWadResources as WadResources} from "./ProductionWadResources.sol";
+import {UltimateStartup} from "../support/UltimateStartup.sol";
 import {DoomRenderer} from "./DoomRenderer.sol";
 import {RenderContext} from "../doom/r_render_state.sol";
 import {DoomGame} from "./DoomGame.sol";
@@ -17,7 +18,7 @@ import {G_Game, GameflowState} from "../doom/g_game.sol";
 import {M_Menu, MenuState} from "../doom/m_menu.sol";
 import {DoomMenu} from "./DoomMenu.sol";
 
-/// @notice Freedoom E1M1 rendering and original gameplay inside the ordinary EVM.
+/// @notice Authenticated Episode One rendering and original gameplay inside the ordinary EVM.
 /// @dev Explicit startup preserves the accepted static renderer before gameplay begins.
 contract Doom is IFrameProtocol, WadResources {
     error NotDriver();
@@ -30,6 +31,7 @@ contract Doom is IFrameProtocol, WadResources {
     error RawInputRequired();
     error RawInputNotEnabled();
     error EpisodeNotEnabled();
+    error UnsupportedMemoryPolicy();
 
     /// @notice EVM-selected RGB8 palette for the matching unchanged indexed8 Frame.
     event FramePalette(
@@ -54,6 +56,10 @@ contract Doom is IFrameProtocol, WadResources {
     bool public episodeMode;
     EpisodeState internal episodeState;
     bool public menuMode;
+    // Existing production Episode policy stays the default. Interactive clients
+    // explicitly choose policy3; strict/native verification can choose policy0.
+    uint8 public resourceMemoryPolicy = 2;
+    event MemoryProfile(uint8 policy);
     MenuState internal menuState;
 
     constructor(address[] memory chunks, bytes memory directory) WadResources(chunks, directory) {}
@@ -61,8 +67,21 @@ contract Doom is IFrameProtocol, WadResources {
     /// @notice Begin the authenticated title/menu profile without initializing or ticking gameplay.
     /// @dev Startup consumes no input or Frame; renderFrame/stepEventsAndRender draws the menu.
     function initializeMenu(bool fullscreen) external {
+        _initializeMenu(fullscreen, 2);
+    }
+
+    /// @notice Explicit backing policy: 0 strict, 1 initialized, 2 Episode, 3 virtual owner-v1.
+    /// @dev No relaxed policy; unknown reads retain the existing backing rejection.
+    function initializeMenuWithPolicy(bool fullscreen, uint8 policy) external {
+        _initializeMenu(fullscreen, policy);
+    }
+
+    function _initializeMenu(bool fullscreen, uint8 policy) private {
         if (msg.sender != driver) revert NotDriver();
         if (gameStarted || menuMode) revert GameAlreadyStarted();
+        if (policy > 3) revert UnsupportedMemoryPolicy();
+        resourceMemoryPolicy = policy;
+        emit MemoryProfile(policy);
         MenuState memory m;
         M_Menu.M_Init(m, true);
         M_Menu.M_StartControlPanel(m);
@@ -93,6 +112,16 @@ contract Doom is IFrameProtocol, WadResources {
         _initializeEpisode(map, skill, fullscreen);
     }
 
+    /// @notice Diagnostic Episode startup with the same explicit policies as the menu.
+    function initializeEpisodeWithPolicy(int32 map, int32 skill, bool fullscreen, uint8 policy) external {
+        if (msg.sender != driver) revert NotDriver();
+        if (gameStarted || menuMode) revert GameAlreadyStarted();
+        if (policy > 3) revert UnsupportedMemoryPolicy();
+        resourceMemoryPolicy = policy;
+        emit MemoryProfile(policy);
+        _initializeEpisode(map, skill, fullscreen);
+    }
+
     function _initializeEpisode(int32 map, int32 skill, bool fullscreen) private {
         (GameContext memory c, UIState memory u, InputRuntimeState memory s, EpisodeState memory e) =
             _newEpisodeContext(map, skill, fullscreen);
@@ -106,8 +135,13 @@ contract Doom is IFrameProtocol, WadResources {
         GameContext memory c, UIState memory u, InputRuntimeState memory s, EpisodeState memory e
     ) {
         GameflowState memory f;
-        (c, f) = EpisodeStartup.initialize(_resourceView(), 1, map, skill, false, true);
-        c.state.nativeZone.canonicalPointerHighBytes = true;
+        if (resourceProfile() == 1) {
+            (c, f) = UltimateStartup.initialize(_resourceView(), 1, map, skill, false, resourceMemoryPolicy != 0);
+        } else {
+            (c, f) = EpisodeStartup.initialize(_resourceView(), 1, map, skill, false, resourceMemoryPolicy != 0);
+        }
+        c.state.nativeZone.canonicalPointerHighBytes = resourceMemoryPolicy >= 2;
+        c.state.nativeZone.experimentalVirtualPointers = resourceMemoryPolicy == 3;
         // Same aliases installed by DoomGame.load, without a second decode.
         c.map = c.state.map;
         c.move = c.state.move;

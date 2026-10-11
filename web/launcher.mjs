@@ -16,8 +16,8 @@ export async function openLauncher(){
  window.installationClient={installer,get resources(){return resources;},prepare:prepareResources,profiles:PROFILES};
  const controls=()=>{
   connect.disabled=busy;endpoint.disabled=busy;profileSelect.disabled=busy;file.disabled=busy;
-  file.hidden=selected.id==='freedoom';document.querySelector('#iwad-label').hidden=file.hidden;
-  install.disabled=busy||!connected||!selected.available||installed;
+  file.hidden=!!selected.url;document.querySelector('#iwad-label').hidden=file.hidden;
+  install.disabled=busy||!connected||!selected.available||installed||(!selected.url&&!resources);
   play.disabled=busy||!connected||!selected.available||!installed;
   pause.hidden=!busy;install.textContent=proof.errors.length?'Retry / resume installation':'Install / resume';
  };
@@ -26,12 +26,17 @@ export async function openLauncher(){
  for(const p of PROFILES){const option=document.createElement('option');option.value=p.id;option.textContent=p.name+(p.available?'':' — unavailable');profileSelect.append(option);}
  const choose=()=>{
   selected=PROFILES.find(p=>p.id===profileSelect.value);resources=null;file.value='';
-  installed=selected.available&&!!installer.journal?.game&&proof.installed;
+  installed=false;proof.installed=false;proof.localIWAD=null;
   document.querySelector('#profile-note').textContent=selected.available?'Episode One · original EVM menu and gameplay':selected.reason;
   status.textContent=selected.available?(installed?'Installation verified. Ready to play.':'Connect to your local Anvil, then install.'):'Profile unavailable. You can check a local IWAD identity.';
   controls();
  };
- profileSelect.addEventListener('change',choose);choose();
+ profileSelect.addEventListener('change',()=>{choose();if(connected)task(async()=>{
+  await installer.selectProfile(selected);
+  const found=await installer.exclusive(()=>installer.discover());
+  installed=found.installed;proof.installed=installed;proof.discovery=found;
+  status.textContent=installed?'Installation verified. Ready to play.':`No complete installation.${found.partial?` ${found.partial} reusable resources found.`:''}`;
+ });});choose();
  file.addEventListener('change',()=>task(async()=>{
   const local=file.files[0];if(!local)return;
   // File API bytes stay in browser memory and are never sent to a server.
@@ -44,7 +49,7 @@ export async function openLauncher(){
  }));
  connect.addEventListener('click',()=>task(async()=>{
   connected=false;installed=false;proof.connected=false;proof.installed=false;
-  localEndpoint(endpoint.value);await installer.connect(endpoint.value);
+  localEndpoint(endpoint.value);await installer.connect(endpoint.value,selected);
   const found=await installer.exclusive(()=>installer.discover());
   connected=true;installed=found.installed;proof.connected=true;proof.installed=installed;proof.discovery=found;proof.chain=installer.chain;
   connection.textContent='Connected to local Anvil · 31337 · Cancun';
@@ -53,6 +58,7 @@ export async function openLauncher(){
  install.addEventListener('click',()=>task(async()=>{
   await installer.exclusive(async()=>{
    if(!resources){
+    if(!selected.url)throw Error('Choose and verify your local IWAD before installation.');
     status.textContent='Preparing authenticated Freedoom resources…';
     const response=await fetch(selected.url);if(!response.ok)throw Error('Freedoom resources unavailable. Ask the website maintainer to prepare the release package.');
     resources=await prepareResources(new Uint8Array(await response.arrayBuffer()),selected);

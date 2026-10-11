@@ -6,7 +6,7 @@ export default {
   "artifacts": {
     "Doom": {
       "url": "/install-assets/Doom.json",
-      "sha256": "8f9b86575caff73c00d31fc177785dce77cc183a16c8ac434a89ff4d62975cee"
+      "sha256": "1081aefddfc1b59f978c16cf7cac44d2259bc497d7bbe41cd25461d2c3338608"
     },
     "ResourceStore": {
       "url": "/install-assets/ResourceStore.json",
@@ -78,7 +78,7 @@ export default {
     "src/doom/z_zone_backing.sol": "e63201d3bb45e4c8d0796480d4e9facd4deffd4d8a9dd730bed10ff4a108d0b1",
     "src/doom/z_zone_types.sol": "11ab3f95678ba3852ab5f0c2dc9e85e715bec6897e65f04cd1919bba9bb73dbd",
     "src/doom/z_zone_virtual.sol": "8bc309e89fa4da0667dc50a45adb9f91c58982640e1b3f5f9d38e49893f1e960",
-    "src/evm/Doom.sol": "7da3e8c4f086c9eec3a7f1ccb194094b3ffaa89fc79762dfc2d5af5791e8e634",
+    "src/evm/Doom.sol": "3ae402de39e33b9c9ff0ae850210bd79a1c76459aee8c491ff83043d2e50aef1",
     "src/evm/DoomGame.sol": "d9451a915ab977bae137340e3e6626a270a4b84b8b6ea9449a8c4f0f578296df",
     "src/evm/DoomMenu.sol": "eaf1a4716982bfa5ce510cfc018d42ddc3d81c96d7e9f15ba725a66b5419897f",
     "src/evm/DoomRenderer.sol": "5639d82431350ea76c26d43457d26d0c3c0f410eaddf02db6adbcfb03a569ba0",
@@ -89,8 +89,9 @@ export default {
     "src/evm/EpisodeStartup.sol": "bb574f20cdc09e63385261f7e8e203a49a90a15b87903d70dfe43d396bc3255e",
     "src/evm/FrameProtocol.sol": "4665be3f613b8e817d616d2db1dc4a644325c44a6ade476a35d7d9d003625ace",
     "src/evm/InputProtocol.sol": "bd9df1b10f19be3754cef8efcdc109ce54228f4475c50b197cb32b5bab8a7808",
+    "src/evm/ProductionWadResources.sol": "a9f77b23b261b3d8bd94cfeb9a5385879966941c6edae2e1319e1620468b1cc3",
     "src/evm/ResourceTypes.sol": "159865364cfa57aae508cd94c49509cbccabd6aeeba55e92b9fcf816bdec4d6b",
-    "src/evm/WadResources.sol": "25a1acc0a44ac35cc29e5f9bd953ba66b85db4f665b732430571b416ef927895",
+    "src/support/UltimateStartup.sol": "86152dbc521265c009a1532105abde4d37a55707d29a0ca629728c50dc0462b0",
     "src/evm/ResourceStore.sol": "5ab3acc5d09f155a4cf25973c847f23e47f386a364704b76996c86be5862e3a8"
   }
 };

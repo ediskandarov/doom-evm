@@ -1,6 +1,7 @@
 // SPDX-License-Identifier: GPL-2.0-only
-// One durable record per local RPC / driver / release. Commercial WAD bytes are
-// intentionally never journaled. IndexedDB atomic commits precede RPC submission.
+// One durable record per local RPC / driver / release / IWAD profile.
+// Pending exact transaction calldata is journaled until completion for safe retry;
+// whole IWAD files are never stored. Atomic commits precede RPC submission.
 export class InstallStorage {
  async open(){
   if(this.db)return;

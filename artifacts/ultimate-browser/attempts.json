@@ -1,0 +1,50 @@
+[
+  {
+    "attempt": "attempt1",
+    "pass_": false,
+    "error": "Error: connect EPERM 127.0.0.1:19091 - Local (0.0.0.0:0)\n    at internalConnect (node:net:1110:16)\n    at defaultTriggerAsyncIdScope (node:internal/async_hooks:472:18)\n    at node:net:1356:9\n    at process.processTicksAndRejections (node:internal/process/task_queues:85:11)",
+    "startedUtc": "2026-10-11T10:18:02.298Z",
+    "endedUtc": "2026-10-11T10:18:02.302Z",
+    "reportSha256": "1fecf2b826af4f5f82fa6650ec9041c64a59fca289d11cf4f6c3e82a701e5982",
+    "localReport": "artifacts/local/ultimate-browser/attempt1.json"
+  },
+  {
+    "attempt": "attempt2",
+    "pass_": false,
+    "error": "Diagnostic config collision; aborted exact owned runtime. Partial screenshots/installation metadata retained locally.",
+    "cleanup": "failed-runtime-cleanup.json"
+  },
+  {
+    "attempt": "attempt3",
+    "pass_": false,
+    "error": "Error: connect EPERM 127.0.0.1:19101 - Local (0.0.0.0:0)\n    at internalConnect (node:net:1110:16)\n    at defaultTriggerAsyncIdScope (node:internal/async_hooks:472:18)\n    at node:net:1356:9\n    at process.processTicksAndRejections (node:internal/process/task_queues:85:11)",
+    "startedUtc": "2026-10-11T10:23:56.699Z",
+    "endedUtc": "2026-10-11T10:23:56.703Z",
+    "reportSha256": "28476633118b5884a4732d4c5e7bdf04088e641bad24db609fe271464637c5db",
+    "localReport": "artifacts/local/ultimate-browser/attempt3.json"
+  },
+  {
+    "attempt": "attempt4",
+    "pass_": false,
+    "error": "Diagnostic config collision; aborted exact owned runtime. Partial screenshots/installation metadata retained locally.",
+    "cleanup": "failed-runtime-cleanup.json"
+  },
+  {
+    "attempt": "attempt5",
+    "pass_": false,
+    "error": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n\n0 !== 1\n\n    at file:///Users/eduard/sandbox/doom-evm-ultimate-browser/tools/browser-deployment/check.mjs:182:90",
+    "startedUtc": "2026-10-11T10:26:51.640Z",
+    "endedUtc": "2026-10-11T10:29:35.884Z",
+    "reportSha256": "1607badb7786ced0747554c9d9f0b6f4cd8846a91f0f4d5a109abcb3ef922852",
+    "localReport": "artifacts/local/ultimate-browser/attempt5.json"
+  },
+  {
+    "attempt": "attempt6",
+    "pass_": false,
+    "error": "Error: Keyboard exit route did not reach exit switch\n    at file:///Users/eduard/sandbox/doom-evm-ultimate-browser/tools/browser-deployment/check.mjs:178:23",
+    "startedUtc": "2026-10-11T10:38:35.566Z",
+    "endedUtc": "2026-10-11T10:41:31.525Z",
+    "reportSha256": "26988eed76e7ad96c1b8b30f221e9fbb15f64a46a00a7c6cb27f792c5496a02e",
+    "localReport": "artifacts/local/ultimate-browser/attempt6.json"
+  }
+]
