@@ -1,5 +1,11 @@
 # Browser deployment integration handoff
 
+The integration checkpoint below is preserved historically. Ultimate production
+admission/startup and browser lifecycle are subsequently implemented on
+`feat/ultimate-browser`; see [the separate feature handoff](../ULTIMATE-BROWSER.md).
+Its explicit interactive policy API leaves Solidity defaults unchanged. DOOM II
+production gameplay remains owned by its separate agent.
+
 Integrated from `feat/browser-deployment` onto clean, synchronized main
 `59522a545d1311924a28875a098892c5e27c113b`. The feature contains exactly
 `730596452d8fa314e3e1f14ceaabfbf0fc425876` and
