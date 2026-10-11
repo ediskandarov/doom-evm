@@ -98,3 +98,26 @@ test('endpoint ownership refreshes a previously connected stale journal',async()
   const count=await installer.exclusive(()=>Object.keys(installer.journal.resources).length);assert.equal(count,1);
  }finally{if(oldLocks)Object.defineProperty(navigator,'locks',oldLocks);else delete navigator.locks;}
 });
+test('profile journals isolate game identity and retain profile configuration',async()=>{
+ const data=new Map(),storage={read:async key=>structuredClone(data.get(key)),write:async(key,value)=>data.set(key,structuredClone(value))};
+ const oldLocks=Object.getOwnPropertyDescriptor(navigator,'locks');
+ Object.defineProperty(navigator,'locks',{configurable:true,value:{request:async(name,options,task)=>task({name})}});
+ try{
+  const i=new BrowserInstaller({storage});i.url='http://localhost:8545';i.baseKey='release';i.chain={chainId:'0x7a69'};i.driver='driver';i.reconcileChain=async()=>{};i.discoverChain=async()=>{};
+  await i.selectProfile(PROFILES[0]);i.journal.game={address:'freedoom',identity:{wadSha256:PROFILES[0].wadSha256}};await i.save();
+  await i.selectProfile(PROFILES[1]);assert.equal(i.journal.game,null);assert.equal(i.journal.profile,'ultimate');
+  i.journal.game={address:'ultimate',identity:{wadSha256:PROFILES[1].wadSha256}};await i.save();
+  assert.equal(i.configuration().gameName,'Ultimate DOOM 1.9');assert.equal(i.configuration().memoryPolicy,3);
+  await i.selectProfile(PROFILES[0]);assert.equal(i.journal.game.address,'freedoom');
+  await i.selectProfile(PROFILES[1]);assert.equal(i.journal.game.address,'ultimate');
+ }finally{if(oldLocks)Object.defineProperty(navigator,'locks',oldLocks);else delete navigator.locks;}
+});
+test('install refuses a mismatched active profile before submitting anything',async()=>{
+ const i=new BrowserInstaller();let sent=false;i.send=async()=>{sent=true;};
+ await assert.rejects(()=>i.install({resourceIdentity:{wadSha256:PROFILES[1].wadSha256}},PROFILES[1]),/Select the installation profile/);
+ assert.equal(sent,false);
+});
+test('discovery refuses a game from another IWAD before reading its identity',async()=>{
+ const i=new BrowserInstaller();i.journal={game:{address:'wrong',identity:{wadSha256:PROFILES[1].wadSha256}}};i.reconcileChain=async()=>{};i.codeMatches=async()=>true;i.artifacts={Doom:{runtime:'0x'}};
+ await assert.rejects(()=>i.discover(),/profile mismatch/);
+});

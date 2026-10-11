@@ -14,7 +14,7 @@ export async function openMenu(config) {
   const canvas = document.querySelector('#frame'), status = document.querySelector('#status');
   const proof = window.__transportProof = { ready:false, rendererKind:'doom-world-view',gameplayAvailable:true,
     menuProfile:true, frames:[],inputs:[],errors:[],fallbackVerified:false };
-  document.title = 'DOOM EVM · Freedoom';status.hidden=false;document.body.dataset.menu='true';
+  document.title = 'DOOM EVM · '+(config.gameName??'Freedoom');status.hidden=false;document.body.dataset.menu='true';
   for (const selector of ['.eyebrow','h1','.pill','body > p','#step']) document.querySelector(selector).hidden=true;
   canvas.setAttribute('aria-label','DOOM menu and gameplay rendered inside the EVM');canvas.tabIndex=0;
   const debug=document.createElement('details'), summary=document.createElement('summary');
