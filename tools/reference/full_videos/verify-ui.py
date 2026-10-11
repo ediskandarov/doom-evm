@@ -3,7 +3,7 @@
 import argparse,json,hashlib,subprocess,collections
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[3];HERE=Path(__file__).parent
-ap=argparse.ArgumentParser();ap.add_argument('recording',type=Path);ap.add_argument('--partial',action='store_true');a=ap.parse_args();out=a.recording.resolve();r=json.loads((out/'recording.json').read_text());m=r['identity']['map'];native=ROOT/f'artifacts/local/full-videos/E1M{m}/native-ui';n=json.loads((native/'manifest.json').read_text());assert n['pass_'];assert set(n['profiles'])=={'O2','O0','sanitize'}
+ap=argparse.ArgumentParser();ap.add_argument('recording',type=Path);ap.add_argument('--partial',action='store_true');a=ap.parse_args();out=a.recording.resolve();r=json.loads((out/'recording.json').read_text());m=r['identity']['map'];native=ROOT/f'artifacts/local/full-videos/E1M{m}'/('native-short-ui-v3' if r['identity'].get('presentationPolicy') else 'native-ui');n=json.loads((native/'manifest.json').read_text());assert n['pass_'];assert set(n['profiles'])=={'O2','O0','sanitize'}
 sha=lambda b:hashlib.sha256(b).hexdigest();ui=[f for f in r['frames'] if f['kind'] in [1,3,4] or f['kind']==2 and f['demoTic']!=1];reference=n['frames'];assert len(ui)==len(reference) if not a.partial else len(ui)<=len(reference)
 checked=[]
 for actual,expected in zip(ui,reference):

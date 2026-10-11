@@ -26,7 +26,13 @@ for f in r['frames']:
   report['commonNativePixelsChecked']+=checked;report['gameplay'][str(tic)]=dict(frameId=f['frameId'],wholeO2Equal=whole,commonPixels=checked,virtualUses=len(f['virtualSamples']))
 counts=collections.Counter(f['kind'] for f in r['frames']);assert sum(counts.values())==len(r['frames']);assert [f['frameId'] for f in r['frames']]==list(range(1,len(r['frames'])+1));assert r['nativeGameplayComparisons']==r['gameplayTics']+1
 if not a.partial:
- assert r['pass'] and r['gameplayTics']==n['executedTics'] and r['demoTics']==len(t['commands']) and r['gameplayCaptures']==n['executedTics'];assert len(report['gameplay'])==n['executedTics']
+ assert r['pass'] and r['gameplayTics']==n['executedTics'] and r['demoTics']==(n['executedTics'] if r['identity'].get('presentationPolicy') else len(t['commands'])) and r['gameplayCaptures']==n['executedTics'];assert len(report['gameplay'])==n['executedTics']
+ if r['identity'].get('presentationPolicy'):
+  assert r['originalTapeConsumedTics']==n['executedTics'] and r['originalTapePreservedTotalTics']==len(t['commands'])
+  recipe=[] if m==8 else [0,1]+[0]*104+[1,0,1]+[0]*9
+  actual=[x['buttons'] for x in r['postExitInputs']]
+  assert all(x['rawHex']==f'000000{b:02x}' for x,b in zip(r['postExitInputs'],actual))
+  assert actual==recipe if m!=8 else all(b==0 for b in actual)
  ui=json.loads((out/'ui-verification.json').read_text());assert ui['pass_'];report['nativeUIFrames']=ui['nativePresentationFrames'];report['nativeExactAllPresentationFrames']=len({x['frameId'] for x in ui['frames']}|{x['frameId'] for x in report['gameplay'].values() if x['wholeO2Equal']});report['finalFrameNativePixelDifferences']=0;report['nativeUIpixelComparisons']=ui['nativePresentationPixels']
  media=json.loads((out/'media.json').read_text());assert media['pass_'] and sha(Path(media['path']).read_bytes())==media['sha256'];assert media['frames']==len(r['frames'])
 report['pass_']=True;(out/('partial-verification.json' if a.partial else 'verification.json')).write_text(json.dumps(report,indent=2)+'\n');print(json.dumps({k:v for k,v in report.items() if k!='gameplay'}))

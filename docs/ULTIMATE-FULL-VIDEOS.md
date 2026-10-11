@@ -143,3 +143,46 @@ identity journal. Solidity starts new logical pools per level. Additional
 current-player/global scalar and pixel coverage must be reported independently
 from any unsupported whole multi-level identity comparison; never mask an
 accepted original-map snapshot field to force this extension to pass.
+
+## Verified abbreviated presentation checkpoint
+
+The original 3,498-frame E1M1 MP4 and all long-pilot evidence remain unchanged.
+Its exported publication metadata is copied to `artifacts/full-videos/pilot-long-v2/`.
+A new pilot at `artifacts/local/full-videos/E1M1/pilot-short-v2/` has **547 frames**,
+**117 Intermission frames**, and **80 full melt frames** (42 entry, 38 exit).
+The final statistics stay visible for exactly105 frames. All547 indexed frames
+and palettes agree with independent original-C O0/O2/sanitizer profiles. All317
+canonical snapshots match the preserved original gameplay; no virtual samples.
+The new silent35 FPS/1280×960/4:3 MP4 is15.628571428571428 seconds, SHA256
+`4a8be58e4d401e6fd628449e2b99874d359e13c213eb3153bab7e17b5566a3ae`.
+
+After the genuine exit: release0, Attack1,104 releases, Attack1, release0, Attack1,
+nine releases. Every command is passed through original WI_checkForAccelerate
+and WI_Ticker inside EVM. The recipe finishes on the original Entering/NoState
+screen with cnt=1. The original timer is untouched. No WI-internal melt is invented.
+These118 commands are a separate explicit input appendix; the full authentic tape
+file and hash remain unchanged, but its post-exit trailer is not executed by this
+abbreviated profile. E1M8 instead runs original finale text timing, forced art melt,
+and105 readable art frames with zero appended buttons. E1M9 keeps the actual
+didsecret/next=E1M4 state. No next-level gameplay is added.
+
+The first short attempt rendered547 correct frames but its next, final handoff
+transaction reverted: the minimal presentation context lacks player/episode
+metadata required by G_WorldDone. The failure and receipt are retained separately
+in `pilot-short-v1`; no failed gate is relabeled. The corrected supported recording
+ends one tic before that unsupported boundary. A legitimate later next-map load
+needs adapter work; this feature does not claim that transition or inject another
+gameplay tick. The earlier native E1M4 multi-level investigation remains archived
+locally and is superseded for the final short presentations.
+
+Final logical-recording gas is324,602,338,892 across1,621 successful transactions,
+a reduction of364,429,430,961 gas and2,951 frames from the long pilot. Summed measured
+transaction RPC time falls from858.189469293s to348.194527918s. The new pilot reuses
+its actual mined genuine-exit checkpoint: deployed bytecode, every resource chunk,
+all saved frame hashes, canonical state and frame counter are read back unchanged.
+It never replaces contract code or writes host-computed state. Inherited receipt
+gas/time is included once in the logical recording total; new-session elapsed
+wall time is reported separately. Full inherited-prefix wall bounds are unavailable
+and are not estimated. Structured old/new measurements and lineage are in
+`artifacts/full-videos/pilot-short-v2/comparison.json`. Storage rollback passes all
+five rejection cases. This verified short pilot gates the remaining eight maps.
