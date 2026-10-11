@@ -208,12 +208,14 @@ library EpisodeRuntime {
         c.adapterData = abi.encode(a);
     }
 
-    function intermissionTicker(GameContext memory c, GameflowState memory f) private pure {
+    function intermissionTicker(GameContext memory c, GameflowState memory f) private view {
         EpisodeAux memory a = abi.decode(c.adapterData, (EpisodeAux));
         WiInput memory p = wiInput(c);
         WI_Stuff.WI_Ticker(a.wi, p);
         commitInput(c, p);
-        if (a.wi.worldDoneRequested) G_Game.G_WorldDone(c.state, f);
+        c.adapterData = abi.encode(a);
+        if (a.wi.worldDoneRequested) G_Game.G_WorldDone(c, f, hooks());
+        a = abi.decode(c.adapterData, (EpisodeAux));
         c.adapterData = abi.encode(a);
     }
 
@@ -225,7 +227,7 @@ library EpisodeRuntime {
 
     function finaleTicker(GameContext memory c, GameflowState memory f) private pure {
         EpisodeAux memory a = abi.decode(c.adapterData, (EpisodeAux));
-        F_Finale.F_Ticker(a.finale, f);
+        F_Finale.F_Ticker(c, a.finale, f);
         c.adapterData = abi.encode(a);
     }
 
@@ -248,7 +250,7 @@ library EpisodeRuntime {
             if (c.state.gamestate == 1 && !e.wi.worldDoneRequested) {
                 WiGraphics memory assets;
                 v.screens[1] = new bytes(64000);
-                WI_Stuff.WI_loadData(assets, v, c.resources.source);
+                WI_Stuff.WI_loadData(assets, v, c.resources.source, c.state.gamemode == 2);
                 WI_Stuff.WI_Drawer(e.wi, assets, v);
             } else if (c.state.gamestate == 2) {
                 F_Finale.F_Drawer(e.finale, c.resources.source, v, c.state.gamemode);

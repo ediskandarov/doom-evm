@@ -1,0 +1,1713 @@
+{
+  "status": "O0/O2/ASan+UBSan exact",
+  "resourceIdentity": {
+    "schemaVersion": 0,
+    "wadSha256": "10d67824b11025ddd9198e8cfc87ca335ee6e2d3e63af4180fa9b8a471893255",
+    "bundleSha256": "775bc8b01d44c2fb1c3a68a79b9864c2f36ebbb29746d31e9ca600ae226af5ad",
+    "paletteSha256": "fd895921b5d0a394612bb29852ed003d44d69f76dec31c0dc6b5d5fc7d63f7bb",
+    "paletteVariant": 0
+  },
+  "cases": [
+    {
+      "name": "MAP01-skill2",
+      "map": 1,
+      "skill": 2,
+      "nomonsters": false,
+      "summary": {
+        "tics": 0,
+        "leveltime": 0,
+        "prndindex": 73,
+        "x": -6291456,
+        "y": 51380224,
+        "health": 100,
+        "totalKills": 19,
+        "totalItems": 9,
+        "sectors": 59,
+        "blockWidth": 27,
+        "blockHeight": 29,
+        "doorSector": -1,
+        "initialDoorCeiling": -1,
+        "maxDoorCeiling": -1,
+        "finalDoorCeiling": -1,
+        "doorRiseTicks": 0,
+        "doorFallTicks": 0,
+        "doorReversals": 0
+      },
+      "files": {
+        "collision.bin": {
+          "bytes": 17232,
+          "sha256": "2a1156ab0b53956d8facb0025384946f66fdeeefa035d53fe8ca4471e565b8f7"
+        },
+        "flow.bin": {
+          "bytes": 88,
+          "sha256": "6728f66f32f14cddf37a7b611c8ecb49a4cf360d2c6ab3bed255a403667ceb0d"
+        },
+        "difficulty.bin": {
+          "bytes": 64,
+          "sha256": "0a6d0f2d1795d2b3450a49d4770357852f37f396f459db48f36d46f56b4c0721"
+        },
+        "world.bin": {
+          "bytes": 30940,
+          "sha256": "ed2aca25c53a9ff2a1815cbea3e305242588a89dda0b8f391b30f6d7c15cd0bf"
+        },
+        "zone.bin": {
+          "bytes": 133836,
+          "sha256": "127c876c63de00e5af193b0c94d41f76399b392266849ac030594be98ffd991d"
+        }
+      }
+    },
+    {
+      "name": "MAP02-skill2",
+      "map": 2,
+      "skill": 2,
+      "nomonsters": false,
+      "summary": {
+        "tics": 0,
+        "leveltime": 0,
+        "prndindex": 244,
+        "x": 72351744,
+        "y": 130023424,
+        "health": 100,
+        "totalKills": 70,
+        "totalItems": 20,
+        "sectors": 97,
+        "blockWidth": 15,
+        "blockHeight": 16,
+        "doorSector": -1,
+        "initialDoorCeiling": -1,
+        "maxDoorCeiling": -1,
+        "finalDoorCeiling": -1,
+        "doorRiseTicks": 0,
+        "doorFallTicks": 0,
+        "doorReversals": 0
+      },
+      "files": {
+        "collision.bin": {
+          "bytes": 13245,
+          "sha256": "6f24a15790a93d5e14c4ca8371c818ce01f0e835909127e346f7dca7f57fa61e"
+        },
+        "flow.bin": {
+          "bytes": 88,
+          "sha256": "0c42aef3def7f6a35c9e665e9f050cbf0da5a39c1bc3f0c3b98d5e45e00ef24b"
+        },
+        "difficulty.bin": {
+          "bytes": 64,
+          "sha256": "0a6d0f2d1795d2b3450a49d4770357852f37f396f459db48f36d46f56b4c0721"
+        },
+        "world.bin": {
+          "bytes": 50352,
+          "sha256": "fbfca08379b80f14ddd7f352d84c7030a82de1f485fb5b943a6d7e05cf0a08e7"
+        },
+        "zone.bin": {
+          "bytes": 137040,
+          "sha256": "e594f29e095ad5f55664d619b59eabb4b6afc81d6173a39ec0f99e1900795ce8"
+        }
+      }
+    },
+    {
+      "name": "MAP03-skill2",
+      "map": 3,
+      "skill": 2,
+      "nomonsters": false,
+      "summary": {
+        "tics": 0,
+        "leveltime": 0,
+        "prndindex": 176,
+        "x": 126877696,
+        "y": 228589568,
+        "health": 100,
+        "totalKills": 56,
+        "totalItems": 9,
+        "sectors": 121,
+        "blockWidth": 24,
+        "blockHeight": 16,
+        "doorSector": -1,
+        "initialDoorCeiling": -1,
+        "maxDoorCeiling": -1,
+        "finalDoorCeiling": -1,
+        "doorRiseTicks": 0,
+        "doorFallTicks": 0,
+        "doorReversals": 0
+      },
+      "files": {
+        "collision.bin": {
+          "bytes": 17643,
+          "sha256": "45bc1b98cc4d582907b1a298b26b7c9f84b78dc153235288d241aec5b34d3e26"
+        },
+        "flow.bin": {
+          "bytes": 88,
+          "sha256": "666d259160a91446ede926eebfe99e2d85dc2caa6c5917ea24596bacb225d76d"
+        },
+        "difficulty.bin": {
+          "bytes": 64,
+          "sha256": "0a6d0f2d1795d2b3450a49d4770357852f37f396f459db48f36d46f56b4c0721"
+        },
+        "world.bin": {
+          "bytes": 51616,
+          "sha256": "bd42a398b73ae5288b2a1f99fa984849f56cf00133a7fc44ec68319007f84d02"
+        },
+        "zone.bin": {
+          "bytes": 135960,
+          "sha256": "1693816d6a7ee373cc77f9eb175eb4eb6a4ecaf914bc5635f4d55159de8ccd3b"
+        }
+      }
+    },
+    {
+      "name": "MAP04-skill2",
+      "map": 4,
+      "skill": 2,
+      "nomonsters": false,
+      "summary": {
+        "tics": 0,
+        "leveltime": 0,
+        "prndindex": 186,
+        "x": -56623104,
+        "y": 108003328,
+        "health": 100,
+        "totalKills": 38,
+        "totalItems": 34,
+        "sectors": 122,
+        "blockWidth": 17,
+        "blockHeight": 14,
+        "doorSector": -1,
+        "initialDoorCeiling": -1,
+        "maxDoorCeiling": -1,
+        "finalDoorCeiling": -1,
+        "doorRiseTicks": 0,
+        "doorFallTicks": 0,
+        "doorReversals": 0
+      },
+      "files": {
+        "collision.bin": {
+          "bytes": 15145,
+          "sha256": "691c2160532dc8ab8eefddbe878326f10028ec9cc140b4f916bfaeafe85cf438"
+        },
+        "flow.bin": {
+          "bytes": 88,
+          "sha256": "a1b8c41b8b6ea059456413bf9620dedfe3176b5c8622e5a4d43dd202749ed52d"
+        },
+        "difficulty.bin": {
+          "bytes": 64,
+          "sha256": "0a6d0f2d1795d2b3450a49d4770357852f37f396f459db48f36d46f56b4c0721"
+        },
+        "world.bin": {
+          "bytes": 49024,
+          "sha256": "b1501943b3699ad00b707364db468c63a0652638098fee1c7c62b7a98601239b"
+        },
+        "zone.bin": {
+          "bytes": 136104,
+          "sha256": "18411a8761f9a4be41caacf19577a59ef5b2f06ed643525a3ac819f729245ea7"
+        }
+      }
+    },
+    {
+      "name": "MAP05-skill2",
+      "map": 5,
+      "skill": 2,
+      "nomonsters": false,
+      "summary": {
+        "tics": 0,
+        "leveltime": 0,
+        "prndindex": 28,
+        "x": 23068672,
+        "y": 28311552,
+        "health": 100,
+        "totalKills": 89,
+        "totalItems": 3,
+        "sectors": 176,
+        "blockWidth": 25,
+        "blockHeight": 17,
+        "doorSector": -1,
+        "initialDoorCeiling": -1,
+        "maxDoorCeiling": -1,
+        "finalDoorCeiling": -1,
+        "doorRiseTicks": 0,
+        "doorFallTicks": 0,
+        "doorReversals": 0
+      },
+      "files": {
+        "collision.bin": {
+          "bytes": 25540,
+          "sha256": "8c92acf5f4b8c3a1c07b77ddc1d4e089e605dbbf126eae661ecac1c6ebb95032"
+        },
+        "flow.bin": {
+          "bytes": 88,
+          "sha256": "073501b221c9ff2806b559cd245d00bc3fa8fcecdcefe4331ce230523cbe4a0f"
+        },
+        "difficulty.bin": {
+          "bytes": 64,
+          "sha256": "0a6d0f2d1795d2b3450a49d4770357852f37f396f459db48f36d46f56b4c0721"
+        },
+        "world.bin": {
+          "bytes": 76264,
+          "sha256": "8aa141238f85c5f91156c5e4f78c9855a8c5cc6337d45b38d10a258b49c1d7bc"
+        },
+        "zone.bin": {
+          "bytes": 138444,
+          "sha256": "ba451485233cfee6d4f770b52ea38ee5dcbc4654f806634a917529792198cb2a"
+        }
+      }
+    },
+    {
+      "name": "MAP06-skill2",
+      "map": 6,
+      "skill": 2,
+      "nomonsters": false,
+      "summary": {
+        "tics": 0,
+        "leveltime": 0,
+        "prndindex": 96,
+        "x": 92274688,
+        "y": 48234496,
+        "health": 100,
+        "totalKills": 90,
+        "totalItems": 17,
+        "sectors": 183,
+        "blockWidth": 30,
+        "blockHeight": 21,
+        "doorSector": -1,
+        "initialDoorCeiling": -1,
+        "maxDoorCeiling": -1,
+        "finalDoorCeiling": -1,
+        "doorRiseTicks": 0,
+        "doorFallTicks": 0,
+        "doorReversals": 0
+      },
+      "files": {
+        "collision.bin": {
+          "bytes": 29807,
+          "sha256": "cc0047a05ee66dcbfe766bc7349da8d580750b5b018f57eb1640829a680f1c10"
+        },
+        "flow.bin": {
+          "bytes": 88,
+          "sha256": "119b2a7134d5ff5f5f935c1b8c05c16c0e42d4e8a0465d385545ee6e072c286d"
+        },
+        "difficulty.bin": {
+          "bytes": 64,
+          "sha256": "0a6d0f2d1795d2b3450a49d4770357852f37f396f459db48f36d46f56b4c0721"
+        },
+        "world.bin": {
+          "bytes": 87156,
+          "sha256": "b29bcff3311bb23508b408e896d5901e859eeed41ee262b1d77e57babaef49eb"
+        },
+        "zone.bin": {
+          "bytes": 139812,
+          "sha256": "660f92b902964f8647b2929ccb29021814decb6bb751649fabc6253b537c3b67"
+        }
+      }
+    },
+    {
+      "name": "MAP07-skill2",
+      "map": 7,
+      "skill": 2,
+      "nomonsters": false,
+      "summary": {
+        "tics": 0,
+        "leveltime": 0,
+        "prndindex": 87,
+        "x": 5242880,
+        "y": -13631488,
+        "health": 100,
+        "totalKills": 12,
+        "totalItems": 6,
+        "sectors": 29,
+        "blockWidth": 19,
+        "blockHeight": 16,
+        "doorSector": -1,
+        "initialDoorCeiling": -1,
+        "maxDoorCeiling": -1,
+        "finalDoorCeiling": -1,
+        "doorRiseTicks": 0,
+        "doorFallTicks": 0,
+        "doorReversals": 0
+      },
+      "files": {
+        "collision.bin": {
+          "bytes": 7914,
+          "sha256": "a9b9ed2c57b2603860b2dfbc9023dd19b84223874ae151e7ed14270c740db806"
+        },
+        "flow.bin": {
+          "bytes": 88,
+          "sha256": "ee5540dbe7c6cf5162b617a002a969d4a28483a551c040d3a8b7cf679632aff1"
+        },
+        "difficulty.bin": {
+          "bytes": 64,
+          "sha256": "0a6d0f2d1795d2b3450a49d4770357852f37f396f459db48f36d46f56b4c0721"
+        },
+        "world.bin": {
+          "bytes": 24864,
+          "sha256": "b754240b16e41504072e967766529c46d75ad575370330b9bc2f0d05d71bcc08"
+        },
+        "zone.bin": {
+          "bytes": 134772,
+          "sha256": "1f613dc13a335cfc9790cf07512e9ced1faeda2b20e7a0132deb01b9b6eb7ed3"
+        }
+      }
+    },
+    {
+      "name": "MAP08-skill2",
+      "map": 8,
+      "skill": 2,
+      "nomonsters": false,
+      "summary": {
+        "tics": 0,
+        "leveltime": 0,
+        "prndindex": 74,
+        "x": 136314880,
+        "y": 174063616,
+        "health": 100,
+        "totalKills": 109,
+        "totalItems": 6,
+        "sectors": 127,
+        "blockWidth": 31,
+        "blockHeight": 30,
+        "doorSector": -1,
+        "initialDoorCeiling": -1,
+        "maxDoorCeiling": -1,
+        "finalDoorCeiling": -1,
+        "doorRiseTicks": 0,
+        "doorFallTicks": 0,
+        "doorReversals": 0
+      },
+      "files": {
+        "collision.bin": {
+          "bytes": 25821,
+          "sha256": "0c20a34e60cb61a1259ad1e335aab43ee40704cd10e3ce36890402da90108c15"
+        },
+        "flow.bin": {
+          "bytes": 88,
+          "sha256": "670778394ba13a5fbd2d135d7796d7ca948f6ae6d9e5875a5a6df67a2f76e77c"
+        },
+        "difficulty.bin": {
+          "bytes": 64,
+          "sha256": "0a6d0f2d1795d2b3450a49d4770357852f37f396f459db48f36d46f56b4c0721"
+        },
+        "world.bin": {
+          "bytes": 70340,
+          "sha256": "e79431d1962e9b9b27a54d82f10a3b8703b91855709aad2503969ea3cede022d"
+        },
+        "zone.bin": {
+          "bytes": 139848,
+          "sha256": "d37dc16b2b37ed5fe1f7ad607357eaf856c410ac76e4b9b52764e5d1144e1660"
+        }
+      }
+    },
+    {
+      "name": "MAP09-skill2",
+      "map": 9,
+      "skill": 2,
+      "nomonsters": false,
+      "summary": {
+        "tics": 0,
+        "leveltime": 0,
+        "prndindex": 214,
+        "x": 14680064,
+        "y": 23068672,
+        "health": 100,
+        "totalKills": 123,
+        "totalItems": 47,
+        "sectors": 131,
+        "blockWidth": 34,
+        "blockHeight": 32,
+        "doorSector": -1,
+        "initialDoorCeiling": -1,
+        "maxDoorCeiling": -1,
+        "finalDoorCeiling": -1,
+        "doorRiseTicks": 0,
+        "doorFallTicks": 0,
+        "doorReversals": 0
+      },
+      "files": {
+        "collision.bin": {
+          "bytes": 28474,
+          "sha256": "98d7e02754800180a58dcabeaa0aa8cebfb8ced4ae2278b6934ad01653ec71d8"
+        },
+        "flow.bin": {
+          "bytes": 88,
+          "sha256": "b3282ae9b0b65e2e32dfcbf1c7c738a502d2c901dc662c810bc1651d484ca74c"
+        },
+        "difficulty.bin": {
+          "bytes": 64,
+          "sha256": "0a6d0f2d1795d2b3450a49d4770357852f37f396f459db48f36d46f56b4c0721"
+        },
+        "world.bin": {
+          "bytes": 83468,
+          "sha256": "f10f286379a4731ee9d23d514468c84e5a3248080b2fc514dc67be9b99873ff4"
+        },
+        "zone.bin": {
+          "bytes": 142296,
+          "sha256": "fc34309638daa330df3d9dadd46048de1e6d3bdfc1fd56e7ab763ee6a6da1ed6"
+        }
+      }
+    },
+    {
+      "name": "MAP10-skill2",
+      "map": 10,
+      "skill": 2,
+      "nomonsters": false,
+      "summary": {
+        "tics": 0,
+        "leveltime": 0,
+        "prndindex": 117,
+        "x": -85983232,
+        "y": 136314880,
+        "health": 100,
+        "totalKills": 152,
+        "totalItems": 100,
+        "sectors": 186,
+        "blockWidth": 33,
+        "blockHeight": 34,
+        "doorSector": -1,
+        "initialDoorCeiling": -1,
+        "maxDoorCeiling": -1,
+        "finalDoorCeiling": -1,
+        "doorRiseTicks": 0,
+        "doorFallTicks": 0,
+        "doorReversals": 0
+      },
+      "files": {
+        "collision.bin": {
+          "bytes": 36973,
+          "sha256": "37cc2a8730586f792ed2b5ed337e424304102d426ded9f3cfe0d3cf06e245d85"
+        },
+        "flow.bin": {
+          "bytes": 88,
+          "sha256": "156cd553b1fa27b67ccdaff67db171af4d5c9fc7f20c9300b7569b492c2d15fc"
+        },
+        "difficulty.bin": {
+          "bytes": 64,
+          "sha256": "0a6d0f2d1795d2b3450a49d4770357852f37f396f459db48f36d46f56b4c0721"
+        },
+        "world.bin": {
+          "bytes": 114252,
+          "sha256": "6e2c825d870a389f77cf31a90bec67ba58b5deda950f4ead6f052b997494710e"
+        },
+        "zone.bin": {
+          "bytes": 145680,
+          "sha256": "d93590029223d9847c16116453cad8bd8291c27cb3259ae38977eb8ae9538733"
+        }
+      }
+    },
+    {
+      "name": "MAP11-skill2",
+      "map": 11,
+      "skill": 2,
+      "nomonsters": false,
+      "summary": {
+        "tics": 0,
+        "leveltime": 0,
+        "prndindex": 44,
+        "x": 29360128,
+        "y": 49283072,
+        "health": 100,
+        "totalKills": 49,
+        "totalItems": 21,
+        "sectors": 143,
+        "blockWidth": 29,
+        "blockHeight": 23,
+        "doorSector": -1,
+        "initialDoorCeiling": -1,
+        "maxDoorCeiling": -1,
+        "finalDoorCeiling": -1,
+        "doorRiseTicks": 0,
+        "doorFallTicks": 0,
+        "doorReversals": 0
+      },
+      "files": {
+        "collision.bin": {
+          "bytes": 25501,
+          "sha256": "c1dbbe9408582e2bc1145e0d2612f146b553c18e272ea1c4fc0ffc9a7fbdb9c4"
+        },
+        "flow.bin": {
+          "bytes": 88,
+          "sha256": "c42084e3bb34fc722a794784d237fec54a645945fc85eec5d3f18f67e023e333"
+        },
+        "difficulty.bin": {
+          "bytes": 64,
+          "sha256": "0a6d0f2d1795d2b3450a49d4770357852f37f396f459db48f36d46f56b4c0721"
+        },
+        "world.bin": {
+          "bytes": 78256,
+          "sha256": "cd534a5aef7b68b10bdc49ad96469b7458877ec27c93ce807647fdd472f29c80"
+        },
+        "zone.bin": {
+          "bytes": 139632,
+          "sha256": "8adb0042fcdb41ad23c7c6d70d3c79ba87905879056ba83b35388e464e8585b1"
+        }
+      }
+    },
+    {
+      "name": "MAP12-skill2",
+      "map": 12,
+      "skill": 2,
+      "nomonsters": false,
+      "summary": {
+        "tics": 0,
+        "leveltime": 0,
+        "prndindex": 228,
+        "x": 119537664,
+        "y": 186646528,
+        "health": 100,
+        "totalKills": 65,
+        "totalItems": 5,
+        "sectors": 162,
+        "blockWidth": 31,
+        "blockHeight": 35,
+        "doorSector": -1,
+        "initialDoorCeiling": -1,
+        "maxDoorCeiling": -1,
+        "finalDoorCeiling": -1,
+        "doorRiseTicks": 0,
+        "doorFallTicks": 0,
+        "doorReversals": 0
+      },
+      "files": {
+        "collision.bin": {
+          "bytes": 33001,
+          "sha256": "9b7c39dd8e37a6de08e751d4bb40db40523d33a531a20683d027b2e95e54e80a"
+        },
+        "flow.bin": {
+          "bytes": 88,
+          "sha256": "a11cd05f9d9acdc6365b0d982ff655126bcaf96d2b66ce36dc9d43774d52dea3"
+        },
+        "difficulty.bin": {
+          "bytes": 64,
+          "sha256": "0a6d0f2d1795d2b3450a49d4770357852f37f396f459db48f36d46f56b4c0721"
+        },
+        "world.bin": {
+          "bytes": 69468,
+          "sha256": "0571f145e08fce8071e11584f6bc67357efcb93d160501a2c975180ca526754c"
+        },
+        "zone.bin": {
+          "bytes": 137940,
+          "sha256": "8286d247a8d54c7c56c2ff6c457e4accca72a1880409aeef5abe574e85628e0a"
+        }
+      }
+    },
+    {
+      "name": "MAP13-skill2",
+      "map": 13,
+      "skill": 2,
+      "nomonsters": false,
+      "summary": {
+        "tics": 0,
+        "leveltime": 0,
+        "prndindex": 171,
+        "x": 57671680,
+        "y": -191889408,
+        "health": 100,
+        "totalKills": 84,
+        "totalItems": 61,
+        "sectors": 247,
+        "blockWidth": 25,
+        "blockHeight": 37,
+        "doorSector": -1,
+        "initialDoorCeiling": -1,
+        "maxDoorCeiling": -1,
+        "finalDoorCeiling": -1,
+        "doorRiseTicks": 0,
+        "doorFallTicks": 0,
+        "doorReversals": 0
+      },
+      "files": {
+        "collision.bin": {
+          "bytes": 41683,
+          "sha256": "a35523d413233e1844e03da9f1e72ef92c90f9783f75edc5914d20ef21d7397d"
+        },
+        "flow.bin": {
+          "bytes": 88,
+          "sha256": "2e6a23caa393b9f00db6bd3b67581ce691138886c1ee59c110e23e2581e9bd1d"
+        },
+        "difficulty.bin": {
+          "bytes": 64,
+          "sha256": "0a6d0f2d1795d2b3450a49d4770357852f37f396f459db48f36d46f56b4c0721"
+        },
+        "world.bin": {
+          "bytes": 108980,
+          "sha256": "3d65ef7ac158d079af39c7d6b90c4ba4a7fe873931330c20702295b0ca93f138"
+        },
+        "zone.bin": {
+          "bytes": 142080,
+          "sha256": "aeefa7120d44d6b11b23f6bf89eca6834a733bf00a66a5d2df957004689697df"
+        }
+      }
+    },
+    {
+      "name": "MAP14-skill2",
+      "map": 14,
+      "skill": 2,
+      "nomonsters": false,
+      "summary": {
+        "tics": 0,
+        "leveltime": 0,
+        "prndindex": 238,
+        "x": -1048576,
+        "y": 23068672,
+        "health": 100,
+        "totalKills": 72,
+        "totalItems": 3,
+        "sectors": 348,
+        "blockWidth": 31,
+        "blockHeight": 28,
+        "doorSector": -1,
+        "initialDoorCeiling": -1,
+        "maxDoorCeiling": -1,
+        "finalDoorCeiling": -1,
+        "doorRiseTicks": 0,
+        "doorFallTicks": 0,
+        "doorReversals": 0
+      },
+      "files": {
+        "collision.bin": {
+          "bytes": 56606,
+          "sha256": "c4e5480a7e2e3a5598c5a45e0c3a2ce73bf59afa4fb8db3b9464e8947e569f05"
+        },
+        "flow.bin": {
+          "bytes": 88,
+          "sha256": "b05715ff8a6549f5be579225fc38e7e34b174ebe18ffcac4505baec654434987"
+        },
+        "difficulty.bin": {
+          "bytes": 64,
+          "sha256": "0a6d0f2d1795d2b3450a49d4770357852f37f396f459db48f36d46f56b4c0721"
+        },
+        "world.bin": {
+          "bytes": 115828,
+          "sha256": "80b74965e75d7819336b4a123a367bc55b28490bd67ea388d514b0a33fe6a160"
+        },
+        "zone.bin": {
+          "bytes": 137256,
+          "sha256": "9bb541821fcee151f92f0d2a4c29ec838f3e8515661fffd62b0463f42e532de9"
+        }
+      }
+    },
+    {
+      "name": "MAP15-skill2",
+      "map": 15,
+      "skill": 2,
+      "nomonsters": false,
+      "summary": {
+        "tics": 0,
+        "leveltime": 0,
+        "prndindex": 42,
+        "x": -23068672,
+        "y": 38797312,
+        "health": 100,
+        "totalKills": 152,
+        "totalItems": 8,
+        "sectors": 301,
+        "blockWidth": 35,
+        "blockHeight": 58,
+        "doorSector": -1,
+        "initialDoorCeiling": -1,
+        "maxDoorCeiling": -1,
+        "finalDoorCeiling": -1,
+        "doorRiseTicks": 0,
+        "doorFallTicks": 0,
+        "doorReversals": 0
+      },
+      "files": {
+        "collision.bin": {
+          "bytes": 66370,
+          "sha256": "9ab0891983d050376b0453e20c6ed07b4d51e7d6d783f420c8284d5a920f46a6"
+        },
+        "flow.bin": {
+          "bytes": 88,
+          "sha256": "9e19888b3c15c4cc5df37266a4c7c20eb8d3f068629ef908ceb54e5739424fd2"
+        },
+        "difficulty.bin": {
+          "bytes": 64,
+          "sha256": "0a6d0f2d1795d2b3450a49d4770357852f37f396f459db48f36d46f56b4c0721"
+        },
+        "world.bin": {
+          "bytes": 148664,
+          "sha256": "63d7eacb9785765fff69f959a128f21800b9e2b28308c74f382e5ef4123a8be0"
+        },
+        "zone.bin": {
+          "bytes": 145284,
+          "sha256": "f96c4e45b50707c9cba60df495267c61639c85d163b10c00e51fee90fdfffbc2"
+        }
+      }
+    },
+    {
+      "name": "MAP16-skill2",
+      "map": 16,
+      "skill": 2,
+      "nomonsters": false,
+      "summary": {
+        "tics": 0,
+        "leveltime": 0,
+        "prndindex": 66,
+        "x": 14680064,
+        "y": 18874368,
+        "health": 100,
+        "totalKills": 118,
+        "totalItems": 5,
+        "sectors": 142,
+        "blockWidth": 38,
+        "blockHeight": 39,
+        "doorSector": -1,
+        "initialDoorCeiling": -1,
+        "maxDoorCeiling": -1,
+        "finalDoorCeiling": -1,
+        "doorRiseTicks": 0,
+        "doorFallTicks": 0,
+        "doorReversals": 0
+      },
+      "files": {
+        "collision.bin": {
+          "bytes": 35609,
+          "sha256": "8adefe9e670f8ef883fcdede206db0838b2984506ec21cea166c154bc7623d13"
+        },
+        "flow.bin": {
+          "bytes": 88,
+          "sha256": "bfc34c4df13df5b7e8cfca870ff584b070efbbe8d61e2a1fb0c6a5722cfccef8"
+        },
+        "difficulty.bin": {
+          "bytes": 64,
+          "sha256": "0a6d0f2d1795d2b3450a49d4770357852f37f396f459db48f36d46f56b4c0721"
+        },
+        "world.bin": {
+          "bytes": 78008,
+          "sha256": "7fbf4f40323b3b915c7b94b586d1b7c37e4620dd7b6c925ff625dcaa1bb10708"
+        },
+        "zone.bin": {
+          "bytes": 139308,
+          "sha256": "28864fba711f76daa7e962ae6dbe7cb606c68b309ebdfc14783a26676a8c47a8"
+        }
+      }
+    },
+    {
+      "name": "MAP17-skill2",
+      "map": 17,
+      "skill": 2,
+      "nomonsters": false,
+      "summary": {
+        "tics": 0,
+        "leveltime": 0,
+        "prndindex": 119,
+        "x": -115343360,
+        "y": -250609664,
+        "health": 100,
+        "totalKills": 87,
+        "totalItems": 112,
+        "sectors": 274,
+        "blockWidth": 27,
+        "blockHeight": 27,
+        "doorSector": -1,
+        "initialDoorCeiling": -1,
+        "maxDoorCeiling": -1,
+        "finalDoorCeiling": -1,
+        "doorRiseTicks": 0,
+        "doorFallTicks": 0,
+        "doorReversals": 0
+      },
+      "files": {
+        "collision.bin": {
+          "bytes": 42005,
+          "sha256": "72c9185f3618cf9da9206a21baf74e862d127faae7ce47dbeb2683602c103959"
+        },
+        "flow.bin": {
+          "bytes": 88,
+          "sha256": "65ae746575962423c17b96df935841c54cda9cdff63eb80d79d2a1ccad77aa7e"
+        },
+        "difficulty.bin": {
+          "bytes": 64,
+          "sha256": "0a6d0f2d1795d2b3450a49d4770357852f37f396f459db48f36d46f56b4c0721"
+        },
+        "world.bin": {
+          "bytes": 131576,
+          "sha256": "82c903bc2c6b5ec26b1f87196b7965a9407e9d3b7734422c27a303b59765ee5f"
+        },
+        "zone.bin": {
+          "bytes": 146220,
+          "sha256": "ea3ffcca97558fbf8bcfb95420a7e0bd0b2831885a471f4f82595acb22ea65b7"
+        }
+      }
+    },
+    {
+      "name": "MAP18-skill2",
+      "map": 18,
+      "skill": 2,
+      "nomonsters": false,
+      "summary": {
+        "tics": 0,
+        "leveltime": 0,
+        "prndindex": 215,
+        "x": -96468992,
+        "y": -56623104,
+        "health": 100,
+        "totalKills": 127,
+        "totalItems": 182,
+        "sectors": 108,
+        "blockWidth": 40,
+        "blockHeight": 36,
+        "doorSector": -1,
+        "initialDoorCeiling": -1,
+        "maxDoorCeiling": -1,
+        "finalDoorCeiling": -1,
+        "doorRiseTicks": 0,
+        "doorFallTicks": 0,
+        "doorReversals": 0
+      },
+      "files": {
+        "collision.bin": {
+          "bytes": 32646,
+          "sha256": "af3079569f0a855a8b8d259dc6b9353430c73ea2513db69c1b2b4d5335153323"
+        },
+        "flow.bin": {
+          "bytes": 88,
+          "sha256": "13ead111930a5062c91fecbe74c3a434c3a9d72e16806dda319297435f392d3b"
+        },
+        "difficulty.bin": {
+          "bytes": 64,
+          "sha256": "0a6d0f2d1795d2b3450a49d4770357852f37f396f459db48f36d46f56b4c0721"
+        },
+        "world.bin": {
+          "bytes": 109848,
+          "sha256": "2c7ca9f8fb5dfbd2a9f5e04f3683396e1e5c04c3e84d5a94a1b563a8d9196ab6"
+        },
+        "zone.bin": {
+          "bytes": 147300,
+          "sha256": "c82f4a6d3ed95eda937f33a15d53b9bf85184883e2bbba743f3ecef01daf5244"
+        }
+      }
+    },
+    {
+      "name": "MAP19-skill2",
+      "map": 19,
+      "skill": 2,
+      "nomonsters": false,
+      "summary": {
+        "tics": 0,
+        "leveltime": 0,
+        "prndindex": 139,
+        "x": 31457280,
+        "y": -142606336,
+        "health": 100,
+        "totalKills": 164,
+        "totalItems": 58,
+        "sectors": 251,
+        "blockWidth": 44,
+        "blockHeight": 48,
+        "doorSector": -1,
+        "initialDoorCeiling": -1,
+        "maxDoorCeiling": -1,
+        "finalDoorCeiling": -1,
+        "doorRiseTicks": 0,
+        "doorFallTicks": 0,
+        "doorReversals": 0
+      },
+      "files": {
+        "collision.bin": {
+          "bytes": 59704,
+          "sha256": "55d5774d3a0be03cb93a21cf17eca6f0a5a2c2bd511387474d23723a3cd43c05"
+        },
+        "flow.bin": {
+          "bytes": 88,
+          "sha256": "b61e408c35ce39c67b31f352853ee1180739d2ace47220c364c54bbc0dfad709"
+        },
+        "difficulty.bin": {
+          "bytes": 64,
+          "sha256": "0a6d0f2d1795d2b3450a49d4770357852f37f396f459db48f36d46f56b4c0721"
+        },
+        "world.bin": {
+          "bytes": 137440,
+          "sha256": "beb6ef21c89fe8183c57812bdb04389c02b0e059d5fe6191706ba808b75af315"
+        },
+        "zone.bin": {
+          "bytes": 146328,
+          "sha256": "88689659537e585b8848369013cc6ef1e53950a38127b1af3e6f84d939cb7afe"
+        }
+      }
+    },
+    {
+      "name": "MAP20-skill2",
+      "map": 20,
+      "skill": 2,
+      "nomonsters": false,
+      "summary": {
+        "tics": 0,
+        "leveltime": 0,
+        "prndindex": 104,
+        "x": 146800640,
+        "y": -254803968,
+        "health": 100,
+        "totalKills": 51,
+        "totalItems": 51,
+        "sectors": 191,
+        "blockWidth": 41,
+        "blockHeight": 50,
+        "doorSector": -1,
+        "initialDoorCeiling": -1,
+        "maxDoorCeiling": -1,
+        "finalDoorCeiling": -1,
+        "doorRiseTicks": 0,
+        "doorFallTicks": 0,
+        "doorReversals": 0
+      },
+      "files": {
+        "collision.bin": {
+          "bytes": 50297,
+          "sha256": "ef3364e3ab705fd686be517cc9c02c6648e50111a74e9e802451a39c62c7eba2"
+        },
+        "flow.bin": {
+          "bytes": 88,
+          "sha256": "523d8ef67f00c071080eec239c4cfa276b9238711ef60eea9a0045f74148940d"
+        },
+        "difficulty.bin": {
+          "bytes": 64,
+          "sha256": "0a6d0f2d1795d2b3450a49d4770357852f37f396f459db48f36d46f56b4c0721"
+        },
+        "world.bin": {
+          "bytes": 96660,
+          "sha256": "c030151b8fa6914435c1df4106bc757784bc90190c8db90bf6df935cd269e777"
+        },
+        "zone.bin": {
+          "bytes": 140640,
+          "sha256": "33041949d3b1d4e86993ee19591a6d7981bfd72fb03a9cfa641fbdf0d2865423"
+        }
+      }
+    },
+    {
+      "name": "MAP21-skill2",
+      "map": 21,
+      "skill": 2,
+      "nomonsters": false,
+      "summary": {
+        "tics": 0,
+        "leveltime": 0,
+        "prndindex": 17,
+        "x": 276824064,
+        "y": 220200960,
+        "health": 100,
+        "totalKills": 84,
+        "totalItems": 18,
+        "sectors": 61,
+        "blockWidth": 28,
+        "blockHeight": 24,
+        "doorSector": -1,
+        "initialDoorCeiling": -1,
+        "maxDoorCeiling": -1,
+        "finalDoorCeiling": -1,
+        "doorRiseTicks": 0,
+        "doorFallTicks": 0,
+        "doorReversals": 0
+      },
+      "files": {
+        "collision.bin": {
+          "bytes": 16074,
+          "sha256": "49a8bacc5e420215dd11cc3cbf1c30a421865c06413320c053715684947c125e"
+        },
+        "flow.bin": {
+          "bytes": 88,
+          "sha256": "c46d93731871b30f06efe33ca12484e3261b52c72024b8df9c5c8f9ad76f4823"
+        },
+        "difficulty.bin": {
+          "bytes": 64,
+          "sha256": "0a6d0f2d1795d2b3450a49d4770357852f37f396f459db48f36d46f56b4c0721"
+        },
+        "world.bin": {
+          "bytes": 49708,
+          "sha256": "822539dc815f9ff113a7a30370bf0c9f24738a8e46da62d48b2c032b59a1ff80"
+        },
+        "zone.bin": {
+          "bytes": 138192,
+          "sha256": "94eb650ef548d854682ec053e14439c0ee53a7cbf66d79a42912456c229792e6"
+        }
+      }
+    },
+    {
+      "name": "MAP22-skill2",
+      "map": 22,
+      "skill": 2,
+      "nomonsters": false,
+      "summary": {
+        "tics": 0,
+        "leveltime": 0,
+        "prndindex": 158,
+        "x": -42991616,
+        "y": -3145728,
+        "health": 100,
+        "totalKills": 41,
+        "totalItems": 7,
+        "sectors": 140,
+        "blockWidth": 19,
+        "blockHeight": 15,
+        "doorSector": -1,
+        "initialDoorCeiling": -1,
+        "maxDoorCeiling": -1,
+        "finalDoorCeiling": -1,
+        "doorRiseTicks": 0,
+        "doorFallTicks": 0,
+        "doorReversals": 0
+      },
+      "files": {
+        "collision.bin": {
+          "bytes": 18022,
+          "sha256": "a260ec468bc935522bda572a4235e3b89d441c8b96c64e8f00e3948d4c347915"
+        },
+        "flow.bin": {
+          "bytes": 88,
+          "sha256": "73cd52a3524d7dadfd5c3bdecbeef837645cd85e5adaab5bd0b05c2cac09c24f"
+        },
+        "difficulty.bin": {
+          "bytes": 64,
+          "sha256": "0a6d0f2d1795d2b3450a49d4770357852f37f396f459db48f36d46f56b4c0721"
+        },
+        "world.bin": {
+          "bytes": 52816,
+          "sha256": "26a4426376df80cdc5001251931e2b808b94fffc1bc1cd635beeb110f3616adc"
+        },
+        "zone.bin": {
+          "bytes": 136068,
+          "sha256": "67b95d12c64dbfee1efcde9bd386e4c0aded8f1275eb75a046aac14da3d15f25"
+        }
+      }
+    },
+    {
+      "name": "MAP23-skill2",
+      "map": 23,
+      "skill": 2,
+      "nomonsters": false,
+      "summary": {
+        "tics": 0,
+        "leveltime": 0,
+        "prndindex": 195,
+        "x": -14680064,
+        "y": 125829120,
+        "health": 100,
+        "totalKills": 77,
+        "totalItems": 20,
+        "sectors": 69,
+        "blockWidth": 35,
+        "blockHeight": 40,
+        "doorSector": -1,
+        "initialDoorCeiling": -1,
+        "maxDoorCeiling": -1,
+        "finalDoorCeiling": -1,
+        "doorRiseTicks": 0,
+        "doorFallTicks": 0,
+        "doorReversals": 0
+      },
+      "files": {
+        "collision.bin": {
+          "bytes": 26136,
+          "sha256": "e0b03221b3a9608a219c15ebe5b678800e6cfd8ae6c875be63fff69a86fbcfa8"
+        },
+        "flow.bin": {
+          "bytes": 88,
+          "sha256": "4a7d30a952e39db03c731ae09844d2c04701c4fab78ef717d4ecb9522f36968f"
+        },
+        "difficulty.bin": {
+          "bytes": 64,
+          "sha256": "0a6d0f2d1795d2b3450a49d4770357852f37f396f459db48f36d46f56b4c0721"
+        },
+        "world.bin": {
+          "bytes": 89836,
+          "sha256": "f0ff61331d3a3677c357b0636472536cb99d0a7357acac6a02131e41bfffb5a2"
+        },
+        "zone.bin": {
+          "bytes": 146256,
+          "sha256": "14e545d068bc8866efc3aa01ea8f8595aadbed9bf9e743f3770c5056a86de656"
+        }
+      }
+    },
+    {
+      "name": "MAP24-skill2",
+      "map": 24,
+      "skill": 2,
+      "nomonsters": false,
+      "summary": {
+        "tics": 0,
+        "leveltime": 0,
+        "prndindex": 200,
+        "x": 10485760,
+        "y": -115343360,
+        "health": 100,
+        "totalKills": 100,
+        "totalItems": 49,
+        "sectors": 181,
+        "blockWidth": 48,
+        "blockHeight": 42,
+        "doorSector": -1,
+        "initialDoorCeiling": -1,
+        "maxDoorCeiling": -1,
+        "finalDoorCeiling": -1,
+        "doorRiseTicks": 0,
+        "doorFallTicks": 0,
+        "doorReversals": 0
+      },
+      "files": {
+        "collision.bin": {
+          "bytes": 50876,
+          "sha256": "a60ea128c3bc89ca152d1464079d202338e23fdab9b69249c34939a1d6773260"
+        },
+        "flow.bin": {
+          "bytes": 88,
+          "sha256": "cd06acafeecf55198f4f380b3cbd5e4d237a660cd19426b7293f8feda6bc9109"
+        },
+        "difficulty.bin": {
+          "bytes": 64,
+          "sha256": "0a6d0f2d1795d2b3450a49d4770357852f37f396f459db48f36d46f56b4c0721"
+        },
+        "world.bin": {
+          "bytes": 115144,
+          "sha256": "cd338ebbb8c3d64e034d2bbccaeb4622e4fa57614142c6508befc1d067e58752"
+        },
+        "zone.bin": {
+          "bytes": 143664,
+          "sha256": "96053d749d240c5b742f79c3cb581d905d3a29a4644ca2e98f906783bc0405f0"
+        }
+      }
+    },
+    {
+      "name": "MAP25-skill2",
+      "map": 25,
+      "skill": 2,
+      "nomonsters": false,
+      "summary": {
+        "tics": 0,
+        "leveltime": 0,
+        "prndindex": 125,
+        "x": -65011712,
+        "y": 35651584,
+        "health": 100,
+        "totalKills": 89,
+        "totalItems": 2,
+        "sectors": 147,
+        "blockWidth": 33,
+        "blockHeight": 57,
+        "doorSector": -1,
+        "initialDoorCeiling": -1,
+        "maxDoorCeiling": -1,
+        "finalDoorCeiling": -1,
+        "doorRiseTicks": 0,
+        "doorFallTicks": 0,
+        "doorReversals": 0
+      },
+      "files": {
+        "collision.bin": {
+          "bytes": 39846,
+          "sha256": "fc37bbada34c6db14353a4f0ea1158bc24b5ee717562d578dc120a10865a277a"
+        },
+        "flow.bin": {
+          "bytes": 88,
+          "sha256": "5c01953a65de354a0920268d2baaf1d32eef39b625e680679df7b46024105e1a"
+        },
+        "difficulty.bin": {
+          "bytes": 64,
+          "sha256": "0a6d0f2d1795d2b3450a49d4770357852f37f396f459db48f36d46f56b4c0721"
+        },
+        "world.bin": {
+          "bytes": 86764,
+          "sha256": "0c6e1c554a73549fcf8bfe69560ace0ca7569989b5eded41c516b9175bf7c0eb"
+        },
+        "zone.bin": {
+          "bytes": 140964,
+          "sha256": "a248e0807b56dab0b544165d3e38211e7c69f25692ef0985f967afc260bf2070"
+        }
+      }
+    },
+    {
+      "name": "MAP26-skill2",
+      "map": 26,
+      "skill": 2,
+      "nomonsters": false,
+      "summary": {
+        "tics": 0,
+        "leveltime": 0,
+        "prndindex": 139,
+        "x": 10485760,
+        "y": -2097152,
+        "health": 100,
+        "totalKills": 53,
+        "totalItems": 58,
+        "sectors": 126,
+        "blockWidth": 36,
+        "blockHeight": 25,
+        "doorSector": -1,
+        "initialDoorCeiling": -1,
+        "maxDoorCeiling": -1,
+        "finalDoorCeiling": -1,
+        "doorRiseTicks": 0,
+        "doorFallTicks": 0,
+        "doorReversals": 0
+      },
+      "files": {
+        "collision.bin": {
+          "bytes": 27445,
+          "sha256": "cc1082c3312e8b1748dfae9369a5f48c16fa00c2a258f4ab40a222bf3ca5c6ea"
+        },
+        "flow.bin": {
+          "bytes": 88,
+          "sha256": "2b4517275afe2ee2e1c2f99979230fd86dbe5797c9b7ceb5ac3a878830e5092c"
+        },
+        "difficulty.bin": {
+          "bytes": 64,
+          "sha256": "0a6d0f2d1795d2b3450a49d4770357852f37f396f459db48f36d46f56b4c0721"
+        },
+        "world.bin": {
+          "bytes": 86380,
+          "sha256": "d5e796ab1a9e25824b899249eea139ead739836a37f3c41e829f6ad923e5098b"
+        },
+        "zone.bin": {
+          "bytes": 141504,
+          "sha256": "d55cea7b284e37a2b7d61af280f06e5131c5ade02126abb8a6fd408542eb47db"
+        }
+      }
+    },
+    {
+      "name": "MAP27-skill2",
+      "map": 27,
+      "skill": 2,
+      "nomonsters": false,
+      "summary": {
+        "tics": 0,
+        "leveltime": 0,
+        "prndindex": 141,
+        "x": -41943040,
+        "y": -134217728,
+        "health": 100,
+        "totalKills": 115,
+        "totalItems": 93,
+        "sectors": 187,
+        "blockWidth": 31,
+        "blockHeight": 36,
+        "doorSector": -1,
+        "initialDoorCeiling": -1,
+        "maxDoorCeiling": -1,
+        "finalDoorCeiling": -1,
+        "doorRiseTicks": 0,
+        "doorFallTicks": 0,
+        "doorReversals": 0
+      },
+      "files": {
+        "collision.bin": {
+          "bytes": 36656,
+          "sha256": "d5b9dea09dcd1120a8f1932c96e63d3e8b28482a5c717994448fd880543bd072"
+        },
+        "flow.bin": {
+          "bytes": 88,
+          "sha256": "01bd534e0b78b22cae91dc1c8c904a4581fb7fd9c18c1670b9e9099f4581c26d"
+        },
+        "difficulty.bin": {
+          "bytes": 64,
+          "sha256": "0a6d0f2d1795d2b3450a49d4770357852f37f396f459db48f36d46f56b4c0721"
+        },
+        "world.bin": {
+          "bytes": 124268,
+          "sha256": "ebb3cb255b37e8ea247075e953bd253e781c9e9f8cee0b64c0487c16f87144c1"
+        },
+        "zone.bin": {
+          "bytes": 148092,
+          "sha256": "5d01827bff2b1d5bedd3bfe59e2da666de8566f9c68c4b2280f1cf18e728955d"
+        }
+      }
+    },
+    {
+      "name": "MAP28-skill2",
+      "map": 28,
+      "skill": 2,
+      "nomonsters": false,
+      "summary": {
+        "tics": 0,
+        "leveltime": 0,
+        "prndindex": 85,
+        "x": 10485760,
+        "y": -6291456,
+        "health": 100,
+        "totalKills": 78,
+        "totalItems": 25,
+        "sectors": 116,
+        "blockWidth": 35,
+        "blockHeight": 40,
+        "doorSector": -1,
+        "initialDoorCeiling": -1,
+        "maxDoorCeiling": -1,
+        "finalDoorCeiling": -1,
+        "doorRiseTicks": 0,
+        "doorFallTicks": 0,
+        "doorReversals": 0
+      },
+      "files": {
+        "collision.bin": {
+          "bytes": 32434,
+          "sha256": "d2a0f3174720344498f7aa410f2eb16e77e2a495424862195390819684c20a3d"
+        },
+        "flow.bin": {
+          "bytes": 88,
+          "sha256": "82d1e76e598d4491d4bdd715fc0c2ec6bf247af0dd8833cb8f13d10a34000d87"
+        },
+        "difficulty.bin": {
+          "bytes": 64,
+          "sha256": "0a6d0f2d1795d2b3450a49d4770357852f37f396f459db48f36d46f56b4c0721"
+        },
+        "world.bin": {
+          "bytes": 79488,
+          "sha256": "205f66867aae3b6108482488feabe0f5e6965d58cc231e65a94309c3acbd0021"
+        },
+        "zone.bin": {
+          "bytes": 140460,
+          "sha256": "903bbf47db7287b96586c38d8f2c072e90336aa3720dfadf70123593a4dc88ad"
+        }
+      }
+    },
+    {
+      "name": "MAP29-skill2",
+      "map": 29,
+      "skill": 2,
+      "nomonsters": false,
+      "summary": {
+        "tics": 0,
+        "leveltime": 0,
+        "prndindex": 150,
+        "x": 73400320,
+        "y": 19922944,
+        "health": 100,
+        "totalKills": 86,
+        "totalItems": 25,
+        "sectors": 205,
+        "blockWidth": 38,
+        "blockHeight": 37,
+        "doorSector": -1,
+        "initialDoorCeiling": -1,
+        "maxDoorCeiling": -1,
+        "finalDoorCeiling": -1,
+        "doorRiseTicks": 0,
+        "doorFallTicks": 0,
+        "doorReversals": 0
+      },
+      "files": {
+        "collision.bin": {
+          "bytes": 43918,
+          "sha256": "b7715ce1ec0caf94d268d7cc987d9d425c5d0893a4ccb0c1f527e75e884cf7a0"
+        },
+        "flow.bin": {
+          "bytes": 88,
+          "sha256": "7d3a864e1f9b3fcf6f6637afb8d0f65cd66f56dfb8f12674a1118c6ba480ffdc"
+        },
+        "difficulty.bin": {
+          "bytes": 64,
+          "sha256": "0a6d0f2d1795d2b3450a49d4770357852f37f396f459db48f36d46f56b4c0721"
+        },
+        "world.bin": {
+          "bytes": 105220,
+          "sha256": "67be9a2a77da737ac29a028819d3636eda96ef505a848b9648ba2b39df5efd78"
+        },
+        "zone.bin": {
+          "bytes": 142224,
+          "sha256": "2a4b3a1d4a67df0e9c71346aff78e84cdf9fa4dea8f181a46f066b376547b5ca"
+        }
+      }
+    },
+    {
+      "name": "MAP30-skill2",
+      "map": 30,
+      "skill": 2,
+      "nomonsters": false,
+      "summary": {
+        "tics": 0,
+        "leveltime": 0,
+        "prndindex": 77,
+        "x": 186646528,
+        "y": -60817408,
+        "health": 100,
+        "totalKills": 0,
+        "totalItems": 6,
+        "sectors": 22,
+        "blockWidth": 22,
+        "blockHeight": 22,
+        "doorSector": -1,
+        "initialDoorCeiling": -1,
+        "maxDoorCeiling": -1,
+        "finalDoorCeiling": -1,
+        "doorRiseTicks": 0,
+        "doorFallTicks": 0,
+        "doorReversals": 0
+      },
+      "files": {
+        "collision.bin": {
+          "bytes": 8437,
+          "sha256": "e009b3d1d487b4f8acc4e6e0af6fb32977189a5f72159df4f570827fd23bbf3f"
+        },
+        "flow.bin": {
+          "bytes": 88,
+          "sha256": "0b6931dc3d5cf15c3ae2c0277a18c7cb0b5c68391e748087995ab663d9bbb8e9"
+        },
+        "difficulty.bin": {
+          "bytes": 64,
+          "sha256": "0a6d0f2d1795d2b3450a49d4770357852f37f396f459db48f36d46f56b4c0721"
+        },
+        "world.bin": {
+          "bytes": 21296,
+          "sha256": "db01dd97c71f868380f226e0c77e723fbfb5bef82f117767e4597e4cdf3011bc"
+        },
+        "zone.bin": {
+          "bytes": 134844,
+          "sha256": "34634c8f2dce8f8cafc3f05647237e1e6d31d06a12e81c00dc67a06d4b6fcaf9"
+        }
+      }
+    },
+    {
+      "name": "MAP31-skill2",
+      "map": 31,
+      "skill": 2,
+      "nomonsters": false,
+      "summary": {
+        "tics": 0,
+        "leveltime": 0,
+        "prndindex": 124,
+        "x": -109051904,
+        "y": -130023424,
+        "health": 100,
+        "totalKills": 74,
+        "totalItems": 64,
+        "sectors": 80,
+        "blockWidth": 69,
+        "blockHeight": 57,
+        "doorSector": -1,
+        "initialDoorCeiling": -1,
+        "maxDoorCeiling": -1,
+        "finalDoorCeiling": -1,
+        "doorRiseTicks": 0,
+        "doorFallTicks": 0,
+        "doorReversals": 0
+      },
+      "files": {
+        "collision.bin": {
+          "bytes": 60164,
+          "sha256": "8d5ab6a7a533982ffe3c9a2486999e8edf313d607028b5f6a8c17d9b278787ec"
+        },
+        "flow.bin": {
+          "bytes": 88,
+          "sha256": "3c87103e4282c67405367f602de4ba08494d964048b1a184a6984e756eb74aaf"
+        },
+        "difficulty.bin": {
+          "bytes": 64,
+          "sha256": "0a6d0f2d1795d2b3450a49d4770357852f37f396f459db48f36d46f56b4c0721"
+        },
+        "world.bin": {
+          "bytes": 83464,
+          "sha256": "de52367044946757f1296cbdd352f078e7a68e8c656d78addc396fe0f59c5b16"
+        },
+        "zone.bin": {
+          "bytes": 140532,
+          "sha256": "125a8466ce3a2a3a90fb452286cb7afd2d672f7df3092a8b9fa714d94c19026f"
+        }
+      }
+    },
+    {
+      "name": "MAP32-skill2",
+      "map": 32,
+      "skill": 2,
+      "nomonsters": false,
+      "summary": {
+        "tics": 0,
+        "leveltime": 0,
+        "prndindex": 108,
+        "x": 29360128,
+        "y": 104857600,
+        "health": 100,
+        "totalKills": 15,
+        "totalItems": 3,
+        "sectors": 20,
+        "blockWidth": 32,
+        "blockHeight": 57,
+        "doorSector": -1,
+        "initialDoorCeiling": -1,
+        "maxDoorCeiling": -1,
+        "finalDoorCeiling": -1,
+        "doorRiseTicks": 0,
+        "doorFallTicks": 0,
+        "doorReversals": 0
+      },
+      "files": {
+        "collision.bin": {
+          "bytes": 26418,
+          "sha256": "63cf46b53367e46fbe3a99501b6888c89c283ccfdedeead9405df8c684485283"
+        },
+        "flow.bin": {
+          "bytes": 88,
+          "sha256": "b35f0f9b25425879fba238f611719608411d894c0cae6dbd0a4c6171b9c48001"
+        },
+        "difficulty.bin": {
+          "bytes": 64,
+          "sha256": "0a6d0f2d1795d2b3450a49d4770357852f37f396f459db48f36d46f56b4c0721"
+        },
+        "world.bin": {
+          "bytes": 33204,
+          "sha256": "764ecba183fd914fdac283dcce838c0f4eff865cbd64d34c7ef62c9953a69092"
+        },
+        "zone.bin": {
+          "bytes": 135312,
+          "sha256": "f100373fca559068da5a2d862b3ec226f29a8eb039e6324559bdd670f7b8371e"
+        }
+      }
+    }
+  ],
+  "files": {
+    "MAP01-skill2/collision.bin": "2a1156ab0b53956d8facb0025384946f66fdeeefa035d53fe8ca4471e565b8f7",
+    "MAP01-skill2/flow.bin": "6728f66f32f14cddf37a7b611c8ecb49a4cf360d2c6ab3bed255a403667ceb0d",
+    "MAP01-skill2/difficulty.bin": "0a6d0f2d1795d2b3450a49d4770357852f37f396f459db48f36d46f56b4c0721",
+    "MAP01-skill2/world.bin": "ed2aca25c53a9ff2a1815cbea3e305242588a89dda0b8f391b30f6d7c15cd0bf",
+    "MAP01-skill2/zone.bin": "127c876c63de00e5af193b0c94d41f76399b392266849ac030594be98ffd991d",
+    "MAP02-skill2/collision.bin": "6f24a15790a93d5e14c4ca8371c818ce01f0e835909127e346f7dca7f57fa61e",
+    "MAP02-skill2/flow.bin": "0c42aef3def7f6a35c9e665e9f050cbf0da5a39c1bc3f0c3b98d5e45e00ef24b",
+    "MAP02-skill2/difficulty.bin": "0a6d0f2d1795d2b3450a49d4770357852f37f396f459db48f36d46f56b4c0721",
+    "MAP02-skill2/world.bin": "fbfca08379b80f14ddd7f352d84c7030a82de1f485fb5b943a6d7e05cf0a08e7",
+    "MAP02-skill2/zone.bin": "e594f29e095ad5f55664d619b59eabb4b6afc81d6173a39ec0f99e1900795ce8",
+    "MAP03-skill2/collision.bin": "45bc1b98cc4d582907b1a298b26b7c9f84b78dc153235288d241aec5b34d3e26",
+    "MAP03-skill2/flow.bin": "666d259160a91446ede926eebfe99e2d85dc2caa6c5917ea24596bacb225d76d",
+    "MAP03-skill2/difficulty.bin": "0a6d0f2d1795d2b3450a49d4770357852f37f396f459db48f36d46f56b4c0721",
+    "MAP03-skill2/world.bin": "bd42a398b73ae5288b2a1f99fa984849f56cf00133a7fc44ec68319007f84d02",
+    "MAP03-skill2/zone.bin": "1693816d6a7ee373cc77f9eb175eb4eb6a4ecaf914bc5635f4d55159de8ccd3b",
+    "MAP04-skill2/collision.bin": "691c2160532dc8ab8eefddbe878326f10028ec9cc140b4f916bfaeafe85cf438",
+    "MAP04-skill2/flow.bin": "a1b8c41b8b6ea059456413bf9620dedfe3176b5c8622e5a4d43dd202749ed52d",
+    "MAP04-skill2/difficulty.bin": "0a6d0f2d1795d2b3450a49d4770357852f37f396f459db48f36d46f56b4c0721",
+    "MAP04-skill2/world.bin": "b1501943b3699ad00b707364db468c63a0652638098fee1c7c62b7a98601239b",
+    "MAP04-skill2/zone.bin": "18411a8761f9a4be41caacf19577a59ef5b2f06ed643525a3ac819f729245ea7",
+    "MAP05-skill2/collision.bin": "8c92acf5f4b8c3a1c07b77ddc1d4e089e605dbbf126eae661ecac1c6ebb95032",
+    "MAP05-skill2/flow.bin": "073501b221c9ff2806b559cd245d00bc3fa8fcecdcefe4331ce230523cbe4a0f",
+    "MAP05-skill2/difficulty.bin": "0a6d0f2d1795d2b3450a49d4770357852f37f396f459db48f36d46f56b4c0721",
+    "MAP05-skill2/world.bin": "8aa141238f85c5f91156c5e4f78c9855a8c5cc6337d45b38d10a258b49c1d7bc",
+    "MAP05-skill2/zone.bin": "ba451485233cfee6d4f770b52ea38ee5dcbc4654f806634a917529792198cb2a",
+    "MAP06-skill2/collision.bin": "cc0047a05ee66dcbfe766bc7349da8d580750b5b018f57eb1640829a680f1c10",
+    "MAP06-skill2/flow.bin": "119b2a7134d5ff5f5f935c1b8c05c16c0e42d4e8a0465d385545ee6e072c286d",
+    "MAP06-skill2/difficulty.bin": "0a6d0f2d1795d2b3450a49d4770357852f37f396f459db48f36d46f56b4c0721",
+    "MAP06-skill2/world.bin": "b29bcff3311bb23508b408e896d5901e859eeed41ee262b1d77e57babaef49eb",
+    "MAP06-skill2/zone.bin": "660f92b902964f8647b2929ccb29021814decb6bb751649fabc6253b537c3b67",
+    "MAP07-skill2/collision.bin": "a9b9ed2c57b2603860b2dfbc9023dd19b84223874ae151e7ed14270c740db806",
+    "MAP07-skill2/flow.bin": "ee5540dbe7c6cf5162b617a002a969d4a28483a551c040d3a8b7cf679632aff1",
+    "MAP07-skill2/difficulty.bin": "0a6d0f2d1795d2b3450a49d4770357852f37f396f459db48f36d46f56b4c0721",
+    "MAP07-skill2/world.bin": "b754240b16e41504072e967766529c46d75ad575370330b9bc2f0d05d71bcc08",
+    "MAP07-skill2/zone.bin": "1f613dc13a335cfc9790cf07512e9ced1faeda2b20e7a0132deb01b9b6eb7ed3",
+    "MAP08-skill2/collision.bin": "0c20a34e60cb61a1259ad1e335aab43ee40704cd10e3ce36890402da90108c15",
+    "MAP08-skill2/flow.bin": "670778394ba13a5fbd2d135d7796d7ca948f6ae6d9e5875a5a6df67a2f76e77c",
+    "MAP08-skill2/difficulty.bin": "0a6d0f2d1795d2b3450a49d4770357852f37f396f459db48f36d46f56b4c0721",
+    "MAP08-skill2/world.bin": "e79431d1962e9b9b27a54d82f10a3b8703b91855709aad2503969ea3cede022d",
+    "MAP08-skill2/zone.bin": "d37dc16b2b37ed5fe1f7ad607357eaf856c410ac76e4b9b52764e5d1144e1660",
+    "MAP09-skill2/collision.bin": "98d7e02754800180a58dcabeaa0aa8cebfb8ced4ae2278b6934ad01653ec71d8",
+    "MAP09-skill2/flow.bin": "b3282ae9b0b65e2e32dfcbf1c7c738a502d2c901dc662c810bc1651d484ca74c",
+    "MAP09-skill2/difficulty.bin": "0a6d0f2d1795d2b3450a49d4770357852f37f396f459db48f36d46f56b4c0721",
+    "MAP09-skill2/world.bin": "f10f286379a4731ee9d23d514468c84e5a3248080b2fc514dc67be9b99873ff4",
+    "MAP09-skill2/zone.bin": "fc34309638daa330df3d9dadd46048de1e6d3bdfc1fd56e7ab763ee6a6da1ed6",
+    "MAP10-skill2/collision.bin": "37cc2a8730586f792ed2b5ed337e424304102d426ded9f3cfe0d3cf06e245d85",
+    "MAP10-skill2/flow.bin": "156cd553b1fa27b67ccdaff67db171af4d5c9fc7f20c9300b7569b492c2d15fc",
+    "MAP10-skill2/difficulty.bin": "0a6d0f2d1795d2b3450a49d4770357852f37f396f459db48f36d46f56b4c0721",
+    "MAP10-skill2/world.bin": "6e2c825d870a389f77cf31a90bec67ba58b5deda950f4ead6f052b997494710e",
+    "MAP10-skill2/zone.bin": "d93590029223d9847c16116453cad8bd8291c27cb3259ae38977eb8ae9538733",
+    "MAP11-skill2/collision.bin": "c1dbbe9408582e2bc1145e0d2612f146b553c18e272ea1c4fc0ffc9a7fbdb9c4",
+    "MAP11-skill2/flow.bin": "c42084e3bb34fc722a794784d237fec54a645945fc85eec5d3f18f67e023e333",
+    "MAP11-skill2/difficulty.bin": "0a6d0f2d1795d2b3450a49d4770357852f37f396f459db48f36d46f56b4c0721",
+    "MAP11-skill2/world.bin": "cd534a5aef7b68b10bdc49ad96469b7458877ec27c93ce807647fdd472f29c80",
+    "MAP11-skill2/zone.bin": "8adb0042fcdb41ad23c7c6d70d3c79ba87905879056ba83b35388e464e8585b1",
+    "MAP12-skill2/collision.bin": "9b7c39dd8e37a6de08e751d4bb40db40523d33a531a20683d027b2e95e54e80a",
+    "MAP12-skill2/flow.bin": "a11cd05f9d9acdc6365b0d982ff655126bcaf96d2b66ce36dc9d43774d52dea3",
+    "MAP12-skill2/difficulty.bin": "0a6d0f2d1795d2b3450a49d4770357852f37f396f459db48f36d46f56b4c0721",
+    "MAP12-skill2/world.bin": "0571f145e08fce8071e11584f6bc67357efcb93d160501a2c975180ca526754c",
+    "MAP12-skill2/zone.bin": "8286d247a8d54c7c56c2ff6c457e4accca72a1880409aeef5abe574e85628e0a",
+    "MAP13-skill2/collision.bin": "a35523d413233e1844e03da9f1e72ef92c90f9783f75edc5914d20ef21d7397d",
+    "MAP13-skill2/flow.bin": "2e6a23caa393b9f00db6bd3b67581ce691138886c1ee59c110e23e2581e9bd1d",
+    "MAP13-skill2/difficulty.bin": "0a6d0f2d1795d2b3450a49d4770357852f37f396f459db48f36d46f56b4c0721",
+    "MAP13-skill2/world.bin": "3d65ef7ac158d079af39c7d6b90c4ba4a7fe873931330c20702295b0ca93f138",
+    "MAP13-skill2/zone.bin": "aeefa7120d44d6b11b23f6bf89eca6834a733bf00a66a5d2df957004689697df",
+    "MAP14-skill2/collision.bin": "c4e5480a7e2e3a5598c5a45e0c3a2ce73bf59afa4fb8db3b9464e8947e569f05",
+    "MAP14-skill2/flow.bin": "b05715ff8a6549f5be579225fc38e7e34b174ebe18ffcac4505baec654434987",
+    "MAP14-skill2/difficulty.bin": "0a6d0f2d1795d2b3450a49d4770357852f37f396f459db48f36d46f56b4c0721",
+    "MAP14-skill2/world.bin": "80b74965e75d7819336b4a123a367bc55b28490bd67ea388d514b0a33fe6a160",
+    "MAP14-skill2/zone.bin": "9bb541821fcee151f92f0d2a4c29ec838f3e8515661fffd62b0463f42e532de9",
+    "MAP15-skill2/collision.bin": "9ab0891983d050376b0453e20c6ed07b4d51e7d6d783f420c8284d5a920f46a6",
+    "MAP15-skill2/flow.bin": "9e19888b3c15c4cc5df37266a4c7c20eb8d3f068629ef908ceb54e5739424fd2",
+    "MAP15-skill2/difficulty.bin": "0a6d0f2d1795d2b3450a49d4770357852f37f396f459db48f36d46f56b4c0721",
+    "MAP15-skill2/world.bin": "63d7eacb9785765fff69f959a128f21800b9e2b28308c74f382e5ef4123a8be0",
+    "MAP15-skill2/zone.bin": "f96c4e45b50707c9cba60df495267c61639c85d163b10c00e51fee90fdfffbc2",
+    "MAP16-skill2/collision.bin": "8adefe9e670f8ef883fcdede206db0838b2984506ec21cea166c154bc7623d13",
+    "MAP16-skill2/flow.bin": "bfc34c4df13df5b7e8cfca870ff584b070efbbe8d61e2a1fb0c6a5722cfccef8",
+    "MAP16-skill2/difficulty.bin": "0a6d0f2d1795d2b3450a49d4770357852f37f396f459db48f36d46f56b4c0721",
+    "MAP16-skill2/world.bin": "7fbf4f40323b3b915c7b94b586d1b7c37e4620dd7b6c925ff625dcaa1bb10708",
+    "MAP16-skill2/zone.bin": "28864fba711f76daa7e962ae6dbe7cb606c68b309ebdfc14783a26676a8c47a8",
+    "MAP17-skill2/collision.bin": "72c9185f3618cf9da9206a21baf74e862d127faae7ce47dbeb2683602c103959",
+    "MAP17-skill2/flow.bin": "65ae746575962423c17b96df935841c54cda9cdff63eb80d79d2a1ccad77aa7e",
+    "MAP17-skill2/difficulty.bin": "0a6d0f2d1795d2b3450a49d4770357852f37f396f459db48f36d46f56b4c0721",
+    "MAP17-skill2/world.bin": "82c903bc2c6b5ec26b1f87196b7965a9407e9d3b7734422c27a303b59765ee5f",
+    "MAP17-skill2/zone.bin": "ea3ffcca97558fbf8bcfb95420a7e0bd0b2831885a471f4f82595acb22ea65b7",
+    "MAP18-skill2/collision.bin": "af3079569f0a855a8b8d259dc6b9353430c73ea2513db69c1b2b4d5335153323",
+    "MAP18-skill2/flow.bin": "13ead111930a5062c91fecbe74c3a434c3a9d72e16806dda319297435f392d3b",
+    "MAP18-skill2/difficulty.bin": "0a6d0f2d1795d2b3450a49d4770357852f37f396f459db48f36d46f56b4c0721",
+    "MAP18-skill2/world.bin": "2c7ca9f8fb5dfbd2a9f5e04f3683396e1e5c04c3e84d5a94a1b563a8d9196ab6",
+    "MAP18-skill2/zone.bin": "c82f4a6d3ed95eda937f33a15d53b9bf85184883e2bbba743f3ecef01daf5244",
+    "MAP19-skill2/collision.bin": "55d5774d3a0be03cb93a21cf17eca6f0a5a2c2bd511387474d23723a3cd43c05",
+    "MAP19-skill2/flow.bin": "b61e408c35ce39c67b31f352853ee1180739d2ace47220c364c54bbc0dfad709",
+    "MAP19-skill2/difficulty.bin": "0a6d0f2d1795d2b3450a49d4770357852f37f396f459db48f36d46f56b4c0721",
+    "MAP19-skill2/world.bin": "beb6ef21c89fe8183c57812bdb04389c02b0e059d5fe6191706ba808b75af315",
+    "MAP19-skill2/zone.bin": "88689659537e585b8848369013cc6ef1e53950a38127b1af3e6f84d939cb7afe",
+    "MAP20-skill2/collision.bin": "ef3364e3ab705fd686be517cc9c02c6648e50111a74e9e802451a39c62c7eba2",
+    "MAP20-skill2/flow.bin": "523d8ef67f00c071080eec239c4cfa276b9238711ef60eea9a0045f74148940d",
+    "MAP20-skill2/difficulty.bin": "0a6d0f2d1795d2b3450a49d4770357852f37f396f459db48f36d46f56b4c0721",
+    "MAP20-skill2/world.bin": "c030151b8fa6914435c1df4106bc757784bc90190c8db90bf6df935cd269e777",
+    "MAP20-skill2/zone.bin": "33041949d3b1d4e86993ee19591a6d7981bfd72fb03a9cfa641fbdf0d2865423",
+    "MAP21-skill2/collision.bin": "49a8bacc5e420215dd11cc3cbf1c30a421865c06413320c053715684947c125e",
+    "MAP21-skill2/flow.bin": "c46d93731871b30f06efe33ca12484e3261b52c72024b8df9c5c8f9ad76f4823",
+    "MAP21-skill2/difficulty.bin": "0a6d0f2d1795d2b3450a49d4770357852f37f396f459db48f36d46f56b4c0721",
+    "MAP21-skill2/world.bin": "822539dc815f9ff113a7a30370bf0c9f24738a8e46da62d48b2c032b59a1ff80",
+    "MAP21-skill2/zone.bin": "94eb650ef548d854682ec053e14439c0ee53a7cbf66d79a42912456c229792e6",
+    "MAP22-skill2/collision.bin": "a260ec468bc935522bda572a4235e3b89d441c8b96c64e8f00e3948d4c347915",
+    "MAP22-skill2/flow.bin": "73cd52a3524d7dadfd5c3bdecbeef837645cd85e5adaab5bd0b05c2cac09c24f",
+    "MAP22-skill2/difficulty.bin": "0a6d0f2d1795d2b3450a49d4770357852f37f396f459db48f36d46f56b4c0721",
+    "MAP22-skill2/world.bin": "26a4426376df80cdc5001251931e2b808b94fffc1bc1cd635beeb110f3616adc",
+    "MAP22-skill2/zone.bin": "67b95d12c64dbfee1efcde9bd386e4c0aded8f1275eb75a046aac14da3d15f25",
+    "MAP23-skill2/collision.bin": "e0b03221b3a9608a219c15ebe5b678800e6cfd8ae6c875be63fff69a86fbcfa8",
+    "MAP23-skill2/flow.bin": "4a7d30a952e39db03c731ae09844d2c04701c4fab78ef717d4ecb9522f36968f",
+    "MAP23-skill2/difficulty.bin": "0a6d0f2d1795d2b3450a49d4770357852f37f396f459db48f36d46f56b4c0721",
+    "MAP23-skill2/world.bin": "f0ff61331d3a3677c357b0636472536cb99d0a7357acac6a02131e41bfffb5a2",
+    "MAP23-skill2/zone.bin": "14e545d068bc8866efc3aa01ea8f8595aadbed9bf9e743f3770c5056a86de656",
+    "MAP24-skill2/collision.bin": "a60ea128c3bc89ca152d1464079d202338e23fdab9b69249c34939a1d6773260",
+    "MAP24-skill2/flow.bin": "cd06acafeecf55198f4f380b3cbd5e4d237a660cd19426b7293f8feda6bc9109",
+    "MAP24-skill2/difficulty.bin": "0a6d0f2d1795d2b3450a49d4770357852f37f396f459db48f36d46f56b4c0721",
+    "MAP24-skill2/world.bin": "cd338ebbb8c3d64e034d2bbccaeb4622e4fa57614142c6508befc1d067e58752",
+    "MAP24-skill2/zone.bin": "96053d749d240c5b742f79c3cb581d905d3a29a4644ca2e98f906783bc0405f0",
+    "MAP25-skill2/collision.bin": "fc37bbada34c6db14353a4f0ea1158bc24b5ee717562d578dc120a10865a277a",
+    "MAP25-skill2/flow.bin": "5c01953a65de354a0920268d2baaf1d32eef39b625e680679df7b46024105e1a",
+    "MAP25-skill2/difficulty.bin": "0a6d0f2d1795d2b3450a49d4770357852f37f396f459db48f36d46f56b4c0721",
+    "MAP25-skill2/world.bin": "0c6e1c554a73549fcf8bfe69560ace0ca7569989b5eded41c516b9175bf7c0eb",
+    "MAP25-skill2/zone.bin": "a248e0807b56dab0b544165d3e38211e7c69f25692ef0985f967afc260bf2070",
+    "MAP26-skill2/collision.bin": "cc1082c3312e8b1748dfae9369a5f48c16fa00c2a258f4ab40a222bf3ca5c6ea",
+    "MAP26-skill2/flow.bin": "2b4517275afe2ee2e1c2f99979230fd86dbe5797c9b7ceb5ac3a878830e5092c",
+    "MAP26-skill2/difficulty.bin": "0a6d0f2d1795d2b3450a49d4770357852f37f396f459db48f36d46f56b4c0721",
+    "MAP26-skill2/world.bin": "d5e796ab1a9e25824b899249eea139ead739836a37f3c41e829f6ad923e5098b",
+    "MAP26-skill2/zone.bin": "d55cea7b284e37a2b7d61af280f06e5131c5ade02126abb8a6fd408542eb47db",
+    "MAP27-skill2/collision.bin": "d5b9dea09dcd1120a8f1932c96e63d3e8b28482a5c717994448fd880543bd072",
+    "MAP27-skill2/flow.bin": "01bd534e0b78b22cae91dc1c8c904a4581fb7fd9c18c1670b9e9099f4581c26d",
+    "MAP27-skill2/difficulty.bin": "0a6d0f2d1795d2b3450a49d4770357852f37f396f459db48f36d46f56b4c0721",
+    "MAP27-skill2/world.bin": "ebb3cb255b37e8ea247075e953bd253e781c9e9f8cee0b64c0487c16f87144c1",
+    "MAP27-skill2/zone.bin": "5d01827bff2b1d5bedd3bfe59e2da666de8566f9c68c4b2280f1cf18e728955d",
+    "MAP28-skill2/collision.bin": "d2a0f3174720344498f7aa410f2eb16e77e2a495424862195390819684c20a3d",
+    "MAP28-skill2/flow.bin": "82d1e76e598d4491d4bdd715fc0c2ec6bf247af0dd8833cb8f13d10a34000d87",
+    "MAP28-skill2/difficulty.bin": "0a6d0f2d1795d2b3450a49d4770357852f37f396f459db48f36d46f56b4c0721",
+    "MAP28-skill2/world.bin": "205f66867aae3b6108482488feabe0f5e6965d58cc231e65a94309c3acbd0021",
+    "MAP28-skill2/zone.bin": "903bbf47db7287b96586c38d8f2c072e90336aa3720dfadf70123593a4dc88ad",
+    "MAP29-skill2/collision.bin": "b7715ce1ec0caf94d268d7cc987d9d425c5d0893a4ccb0c1f527e75e884cf7a0",
+    "MAP29-skill2/flow.bin": "7d3a864e1f9b3fcf6f6637afb8d0f65cd66f56dfb8f12674a1118c6ba480ffdc",
+    "MAP29-skill2/difficulty.bin": "0a6d0f2d1795d2b3450a49d4770357852f37f396f459db48f36d46f56b4c0721",
+    "MAP29-skill2/world.bin": "67be9a2a77da737ac29a028819d3636eda96ef505a848b9648ba2b39df5efd78",
+    "MAP29-skill2/zone.bin": "2a4b3a1d4a67df0e9c71346aff78e84cdf9fa4dea8f181a46f066b376547b5ca",
+    "MAP30-skill2/collision.bin": "e009b3d1d487b4f8acc4e6e0af6fb32977189a5f72159df4f570827fd23bbf3f",
+    "MAP30-skill2/flow.bin": "0b6931dc3d5cf15c3ae2c0277a18c7cb0b5c68391e748087995ab663d9bbb8e9",
+    "MAP30-skill2/difficulty.bin": "0a6d0f2d1795d2b3450a49d4770357852f37f396f459db48f36d46f56b4c0721",
+    "MAP30-skill2/world.bin": "db01dd97c71f868380f226e0c77e723fbfb5bef82f117767e4597e4cdf3011bc",
+    "MAP30-skill2/zone.bin": "34634c8f2dce8f8cafc3f05647237e1e6d31d06a12e81c00dc67a06d4b6fcaf9",
+    "MAP31-skill2/collision.bin": "8d5ab6a7a533982ffe3c9a2486999e8edf313d607028b5f6a8c17d9b278787ec",
+    "MAP31-skill2/flow.bin": "3c87103e4282c67405367f602de4ba08494d964048b1a184a6984e756eb74aaf",
+    "MAP31-skill2/difficulty.bin": "0a6d0f2d1795d2b3450a49d4770357852f37f396f459db48f36d46f56b4c0721",
+    "MAP31-skill2/world.bin": "de52367044946757f1296cbdd352f078e7a68e8c656d78addc396fe0f59c5b16",
+    "MAP31-skill2/zone.bin": "125a8466ce3a2a3a90fb452286cb7afd2d672f7df3092a8b9fa714d94c19026f",
+    "MAP32-skill2/collision.bin": "63cf46b53367e46fbe3a99501b6888c89c283ccfdedeead9405df8c684485283",
+    "MAP32-skill2/flow.bin": "b35f0f9b25425879fba238f611719608411d894c0cae6dbd0a4c6171b9c48001",
+    "MAP32-skill2/difficulty.bin": "0a6d0f2d1795d2b3450a49d4770357852f37f396f459db48f36d46f56b4c0721",
+    "MAP32-skill2/world.bin": "764ecba183fd914fdac283dcce838c0f4eff865cbd64d34c7ef62c9953a69092",
+    "MAP32-skill2/zone.bin": "f100373fca559068da5a2d862b3ec226f29a8eb039e6324559bdd670f7b8371e"
+  },
+  "startUnix": 1791715057.296792,
+  "endUnix": 1791715067.1812632,
+  "scope": "32 commercial map startup observations only; no gameplay ticks, renderer or map completion claim"
+}

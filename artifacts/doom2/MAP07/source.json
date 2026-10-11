@@ -1,0 +1,48 @@
+{
+  "map": "MAP07",
+  "author": "Sedlo",
+  "engine": "DooM2 v1.9",
+  "category": "UV Speed",
+  "runUrl": "https://dsdarchive.com/wads/doom2?category=UV+Speed&level=Map+07",
+  "downloadUrl": "https://dsdarchive.com/files/demos/doom2/30941/lv07-006.zip",
+  "originalName": "lv07-006.lmp",
+  "demoBytes": 2250,
+  "demoSha256": "9337ad9fb8cc0b6d7fc79c5ef00b830528071171979fd005ff5a194fb0f3e951",
+  "archiveSha256": "28d388ae39786937edb9179568dbaf487c6ac1b81e5d5127f07c2e1bcb8a47dd",
+  "authorNotes": {
+    "lv07-006.txt": "This is a DooM .LMP \"Competition\" Entry - Please forward it...\r\n\r\nLV07-006.TXT\r\n\r\n LV07-006.ZIP\r\n\r\n  LV07-006.LMP - Ultra Violence !\r\n\r\n  Recorded using Doom2 Version 1.9\r\n  Doom2 -PlayDemo with Version 1.9\r\n\r\n  Doom2 - Level 07 - Dead Simple\r\n\r\n  Kills      0%\r\n  (Items    16%)           +++++++++\r\n  Secrets    0%  and Time  + 00:06 +\r\n                           +++++++++\r\n\r\n  \r\n  Description :-)\r\n  \r\n  I'm still pretty much without words. I can't belived that I did this.\r\n  Yesterday I decided to finally make something for c-n on this map.\r\n  When I say finally it is becouse I managed this rj twice long time ago.\r\n  It was after I uploaded my tas doom2 run. Adam told me then about trick possibility,\r\n  so I must say now, thanks man.\r\n  I finished in 20 sec in first demo (funny one really, needed four tries to pick \r\n  megasphere :). In second demo (that one few of you probably saw already) \r\n  I fell down from platform. Pitty, that one looked much better than other one.\r\n  Few peoples asked me why I didn't upload 20. Well, you must now one thing about me,\r\n  if I'm not really satisfied with whole run I will never upload demo, never!\r\n  Even if it's something undone, I don't really care. Ok, back on this now.\r\n  Yesterday after few hours I managed, got 8 (attached that demo also). \r\n  After all that time when I suddenly got it I was confused, at first moment I didn't even\r\n  realized that I'm on platform :). Even though I was satisfied with time\r\n  untill I saw with lmpc that it's actually 8.19. Heh, so I continued playing.\r\n  I saw from that demo, that 6 is possible, but that really wasn't my plan. I just \r\n  wanted to make 7 without that confusion part on the end :) and I would be completly \r\n  satisfied. Well, yesterday I wasn't lucky again.\r\n  I did one more time this rj tho, but my reaction was slow, I missed exit switch and I \r\n  fell down :). \r\n  Anyway today I started at 22:00, I had enough quakeworld for one day :).\r\n  Like you see it didn't take long. It came as a real suprise, how the hell I pressed that\r\n  switch beats me, but I'll remember that moment for all time probably. I was freezed\r\n  completly when I noticed 6, I had a feeling like I'm watching that time for century and\r\n  when my brain finally send command to my fingers to press \"q\" first finger that unfreezed \r\n  was one over \"use\" so sorry about that :). What can I say on the end, I got here lot more\r\n  than I expected on begging. I'm dare to say that this is first demo in this cat but it\r\n  could be also last one you'll see ;). Ok, enjoj folks and see ya.\r\n  \r\n   \r\n  \r\n  \r\n  Marijo \"Sedlo\" Sedlic\r\n  msedlic@inet.hr  "
+  },
+  "selection": "DSDA archive original non-TAS single-player UV Speed recording; author includes an additional slower run which is not selected.",
+  "header": {
+    "version": 109,
+    "skill": 3,
+    "episode": 1,
+    "map": 7,
+    "deathmatch": 0,
+    "respawn": 0,
+    "fast": 0,
+    "nomonsters": 0,
+    "consoleplayer": 0,
+    "playeringame": [
+      1,
+      0,
+      0,
+      0
+    ]
+  },
+  "totalDemoTics": 559,
+  "markerOffset": 2249,
+  "footer": {},
+  "dsdaFooterChecksumVerified": null,
+  "originalDecoder": {
+    "file": "g_game.c",
+    "function": "G_ReadDemoTiccmd",
+    "startLine": 1491,
+    "endLine": 1503,
+    "sha256": "77f7b1aeca0bf6da361bf3c29af3cde4f2f291f8deeaa9426017b12dbbdcb345"
+  },
+  "decoderExact": true,
+  "wadSha256": "10d67824b11025ddd9198e8cfc87ca335ee6e2d3e63af4180fa9b8a471893255",
+  "stockLoaderCompatible": false,
+  "recordingWadIdentity": "Not independently known; compatible pinned IWAD replay must be demonstrated."
+}

@@ -1,0 +1,376 @@
+Compiling 113 files with Solc 0.8.37
+Solc 0.8.37 finished in 114.65s
+Compiler run successful with warnings:
+Warning (6335): "at" will be promoted to keyword in the future and will not be allowed as an identifier anymore.
+  --> src/doom/v_video.sol:77:41:
+   |
+77 |     function _short(bytes memory patch, uint256 at) private pure returns (int32) {
+   |                                         ^^^^^^^^^^
+
+Warning (6335): "at" will be promoted to keyword in the future and will not be allowed as an identifier anymore.
+   --> src/doom/v_video.sol:102:13:
+    |
+102 |             uint256 at = 8 + uint32(flipped ? width - 1 - col : col) * 4;
+    |             ^^^^^^^^^^
+
+Warning (6335): "at" will be promoted to keyword in the future and will not be allowed as an identifier anymore.
+  --> src/doom/hu_lib.sol:69:41:
+   |
+69 |     function patchShort(bytes memory p, uint256 at) internal pure returns (int32) {
+   |                                         ^^^^^^^^^^
+
+Warning (6335): "at" will be promoted to keyword in the future and will not be allowed as an identifier anymore.
+   --> src/doom/f_finale.sol:119:9:
+    |
+119 |         uint256 at;
+    |         ^^^^^^^^^^
+
+Warning (6335): "at" will be promoted to keyword in the future and will not be allowed as an identifier anymore.
+  --> src/doom/p_switch.sol:76:9:
+   |
+76 |         uint256 at;
+   |         ^^^^^^^^^^
+
+Warning (6335): "at" will be promoted to keyword in the future and will not be allowed as an identifier anymore.
+   --> src/doom/p_spec.sol:216:9:
+    |
+216 |         uint256 at;
+    |         ^^^^^^^^^^
+
+Warning (6335): "at" will be promoted to keyword in the future and will not be allowed as an identifier anymore.
+   --> src/doom/p_spec.sol:383:9:
+    |
+383 |         uint256 at;
+    |         ^^^^^^^^^^
+
+Warning (6335): "at" will be promoted to keyword in the future and will not be allowed as an identifier anymore.
+   --> src/doom/p_maputl.sol:285:13:
+    |
+285 |             uint32 at = C.NULL;
+    |             ^^^^^^^^^
+
+Warning (6335): "at" will be promoted to keyword in the future and will not be allowed as an identifier anymore.
+   --> src/doom/st_lib.sol:170:36:
+    |
+170 |     function SHORT(bytes memory p, uint256 at) internal pure returns (int32) {
+    |                                    ^^^^^^^^^^
+
+Warning (6335): "at" will be promoted to keyword in the future and will not be allowed as an identifier anymore.
+  --> test/unit/m_menu.t.sol:81:38:
+   |
+81 |     function be32(bytes memory data, uint256 at) private pure returns (int32 n) {
+   |                                      ^^^^^^^^^^
+
+Warning (2319): This declaration shadows a builtin symbol.
+  --> src/doom/z_zone.sol:63:5:
+   |
+63 |     function block(ZoneState memory z, uint32 id) private pure returns (ZoneBlock memory b) {
+   |     ^ (Relevant source part starts here and spans across multiple lines).
+
+Warning (2319): This declaration shadows a builtin symbol.
+   --> src/doom/hu_lib.sol:145:77:
+    |
+145 |     function HUlib_addMessageToSText(HuSText memory s, bytes memory prefix, bytes memory msg) internal pure {
+    |                                                                             ^^^^^^^^^^^^^^^^
+
+Warning (2519): This declaration shadows an existing declaration.
+   --> src/doom/f_finale.sol:105:9:
+    |
+105 |         bytes memory flat = R_Data.W_CacheLumpNum(source, R_Data.W_GetNumForName(source, flat(s)));
+    |         ^^^^^^^^^^^^^^^^^
+Note: The shadowed declaration is here:
+  --> src/doom/f_finale.sol:41:5:
+   |
+41 |     function flat(FinaleState memory s) private pure returns (bytes8) {
+   |     ^ (Relevant source part starts here and spans across multiple lines).
+
+Warning (2519): This declaration shadows an existing declaration.
+   --> src/doom/m_menu.sol:268:13:
+    |
+268 |             int32 y = 100 - height * 4 / 2;
+    |             ^^^^^^^
+Note: The shadowed declaration is here:
+   --> src/doom/m_menu.sol:281:9:
+    |
+281 |         int32 y = m.currentMenu == 0 ? int32(64) : int32(63);
+    |         ^^^^^^^
+
+Warning (2319): This declaration shadows a builtin symbol.
+   --> src/doom/p_maputl.sol:165:21:
+    |
+165 |                     uint32 block = uint32(by * c.state.blockmap.width + bx);
+    |                     ^^^^^^^^^^^^
+
+Warning (2319): This declaration shadows a builtin symbol.
+   --> src/doom/p_enemy.sol:163:13:
+    |
+163 |             int32 tx = actor.x + info(c, id).speed * xspeed(actor.movedir);
+    |             ^^^^^^^^
+
+Warning (2519): This declaration shadows an existing declaration.
+   --> src/doom/p_map.sol:407:17:
+    |
+407 |                 int32 frac = hit.frac - F.FixedDiv(4 * 65536, c.move.attackrange);
+    |                 ^^^^^^^^^^
+Note: The shadowed declaration is here:
+   --> src/doom/p_map.sol:427:13:
+    |
+427 |             int32 frac = hit.frac - F.FixedDiv(10 * 65536, c.move.attackrange);
+    |             ^^^^^^^^^^
+
+Warning (2519): This declaration shadows an existing declaration.
+   --> src/doom/p_map.sol:408:17:
+    |
+408 |                 int32 x = c.path.trace.x + F.FixedMul(c.path.trace.dx, frac);
+    |                 ^^^^^^^
+Note: The shadowed declaration is here:
+   --> src/doom/p_map.sol:428:13:
+    |
+428 |             int32 x = c.path.trace.x + F.FixedMul(c.path.trace.dx, frac);
+    |             ^^^^^^^
+
+Warning (2519): This declaration shadows an existing declaration.
+   --> src/doom/p_map.sol:409:17:
+    |
+409 |                 int32 y = c.path.trace.y + F.FixedMul(c.path.trace.dy, frac);
+    |                 ^^^^^^^
+Note: The shadowed declaration is here:
+   --> src/doom/p_map.sol:429:13:
+    |
+429 |             int32 y = c.path.trace.y + F.FixedMul(c.path.trace.dy, frac);
+    |             ^^^^^^^
+
+Warning (2519): This declaration shadows an existing declaration.
+   --> src/doom/p_map.sol:410:17:
+    |
+410 |                 int32 z = c.move.shootz + F.FixedMul(c.move.aimslope, F.FixedMul(frac, c.move.attackrange));
+    |                 ^^^^^^^
+Note: The shadowed declaration is here:
+   --> src/doom/p_map.sol:430:13:
+    |
+430 |             int32 z = c.move.shootz + F.FixedMul(c.move.aimslope, F.FixedMul(frac, c.move.attackrange));
+    |             ^^^^^^^
+
+Warning (2319): This declaration shadows a builtin symbol.
+   --> src/doom/r_things.sol:145:13:
+    |
+145 |             int32 tx = -(M_Fixed.FixedMul(tr_y, c.rs.viewcos) - M_Fixed.FixedMul(tr_x, c.rs.viewsin));
+    |             ^^^^^^^^
+
+Warning (2319): This declaration shadows a builtin symbol.
+   --> src/doom/r_things.sol:323:13:
+    |
+323 |             int32 tx = p.sx - 160 * 65536 - c.resources.spriteoffset[l];
+    |             ^^^^^^^^
+
+Warning (2519): This declaration shadows an existing declaration.
+   --> src/evm/InputProtocol.sol:145:49:
+    |
+145 |     function build(GameInputState memory state, uint32 held) internal pure returns (Ticcmd memory) {
+    |                                                 ^^^^^^^^^^^
+Note: The shadowed declaration is here:
+   --> src/evm/InputProtocol.sol:117:5:
+    |
+117 |     function held(InputRuntimeState memory s, uint32 key) private pure returns (bool) {
+    |     ^ (Relevant source part starts here and spans across multiple lines).
+
+Warning (2018): Function state mutability can be restricted to pure
+   --> src/doom/p_switch.sol:129:5:
+    |
+129 |     function P_UseSpecialLine(GameContext memory c, uint32 thing, uint32 line, int32 side)
+    |     ^ (Relevant source part starts here and spans across multiple lines).
+
+Warning (2018): Function state mutability can be restricted to pure
+   --> src/doom/p_spec.sol:346:5:
+    |
+346 |     function P_SpawnSpecials(GameContext memory c) internal view {
+    |     ^ (Relevant source part starts here and spans across multiple lines).
+
+Warning (2018): Function state mutability can be restricted to pure
+   --> src/doom/p_spec.sol:598:5:
+    |
+598 |     function P_ShootSpecialLine(GameContext memory c, uint32 thing, uint32 line) internal view {
+    |     ^ (Relevant source part starts here and spans across multiple lines).
+
+Warning (2018): Function state mutability can be restricted to pure
+   --> src/doom/r_plane.sol:123:5:
+    |
+123 |     function R_MapPlane(RenderContext memory ctx, int32 y, int32 x1, int32 x2) internal view {
+    |     ^ (Relevant source part starts here and spans across multiple lines).
+
+Warning (2018): Function state mutability can be restricted to pure
+   --> src/evm/DoomGame.sol:388:5:
+    |
+388 |     function bossFloor(GameContext memory c, int32 tag, FloorType kind) private view returns (bool) {
+    |     ^ (Relevant source part starts here and spans across multiple lines).
+
+Warning (2018): Function state mutability can be restricted to pure
+   --> src/evm/EpisodeRuntime.sol:165:5:
+    |
+165 |     function automapStop(GameContext memory c, GameflowState memory f) private view {
+    |     ^ (Relevant source part starts here and spans across multiple lines).
+
+
+Ran 3 tests for test/doom2/Menu.t.sol:Doom2MenuTest
+[PASS] testAll32MapsReuseOriginalSkillRequests() (gas: 551797)
+[PASS] testCommercialNewGameSkipsEpisodeAndReturnsToMain() (gas: 7905)
+[PASS] testFiveSkillsAndNightmareConfirmationPreserveCommercialMap() (gas: 41757)
+Suite result: ok. 3 passed; 0 failed; 0 skipped; finished in 6.90ms (1.96ms CPU time)
+
+Ran 13 tests for test/doom2/Gameflow.t.sol:Doom2CommercialGameflowTest
+[PASS] testCompletionStatsAreCopiedNotAliased() (gas: 1062287)
+[PASS] testIncomingCommandIsCopiedBeforeWorldTickerClearsSpecial() (gas: 1051219)
+[PASS] testOriginalCCommercialCompletionAndSecretMaps() (gas: 1247052798)
+[PASS] testOriginalCDeathUseAndFollowingTicReload() (gas: 6758200)
+[PASS] testOriginalCLoadLevelAndReborn() (gas: 610759721)
+[PASS] testOriginalCNewGameMaps01Through08() (gas: 973878950)
+[PASS] testOriginalCNewGameMaps09Through16() (gas: 973873558)
+[PASS] testOriginalCNewGameMaps17Through24() (gas: 973597848)
+[PASS] testOriginalCNewGameMaps25Through32() (gas: 973366212)
+[PASS] testOriginalCNightmareFastAndInitPlayer() (gas: 17400808)
+[PASS] testOriginalCPauseMenuAndStateDispatch() (gas: 40109953)
+[PASS] testOriginalCWorldDoneAndInventoryCarryover() (gas: 129430108)
+[PASS] testPauseProducerIsOneShotReplacesButtonsKeepsMovement() (gas: 1022639)
+Suite result: ok. 13 passed; 0 failed; 0 skipped; finished in 875.33ms (968.31ms CPU time)
+
+Ran 5 tests for test/unit/m_menu.t.sol:MenuTest
+[PASS] testEscapeBackspaceAndOriginalHotkeyCycling() (gas: 9388)
+[PASS] testExtendedLevelScreenBoundsAndUniqueSelection() (gas: 305927665)
+[PASS] testMenuOwnsUnknownKeyupsAndWholeStartupPacket() (gas: 16928)
+[PASS] testOriginalMenuNativePixelsAndSkullAnimation() (gas: 312710592)
+[PASS] testOriginalResponderNativeStateAndStorage() (gas: 1635145)
+Suite result: ok. 5 passed; 0 failed; 0 skipped; finished in 1.54s (1.53s CPU time)
+
+Ran 3 tests for test/integration/Finale.t.sol:FinaleTest
+[PASS] testNativeRegisteredFinale() (gas: 392779734)
+[PASS] testNativeRetailFinale() (gas: 392780736)
+[PASS] testNativeSharewareFinale() (gas: 392780284)
+Suite result: ok. 3 passed; 0 failed; 0 skipped; finished in 2.76s (2.76s CPU time)
+
+Ran 7 tests for test/doom2/Finale.t.sol:Doom2CommercialFinaleTest
+[PASS] testCommercialButtonSkipUsesOriginalCounterBoundary() (gas: 149118)
+[PASS] testOriginalCommercialMap11TextPixels() (gas: 278144691)
+[PASS] testOriginalCommercialMap15TextPixels() (gas: 260099530)
+[PASS] testOriginalCommercialMap20TextPixels() (gas: 268231108)
+[PASS] testOriginalCommercialMap30TextPixels() (gas: 274361553)
+[PASS] testOriginalCommercialMap31TextPixels() (gas: 255902774)
+[PASS] testOriginalCommercialMap6TextPixels() (gas: 272769598)
+Suite result: ok. 7 passed; 0 failed; 0 skipped; finished in 4.03s (4.03s CPU time)
+
+Ran 6 tests for test/doom2/Intermission.t.sol:Doom2CommercialIntermissionTest
+[PASS] testOriginalCommercialTitles13Through18() (gas: 315542599)
+[PASS] testOriginalCommercialTitles19Through24() (gas: 311951791)
+[PASS] testOriginalCommercialTitles1Through6() (gas: 314267218)
+[PASS] testOriginalCommercialTitles25Through30() (gas: 316248161)
+[PASS] testOriginalCommercialTitles31Through36() (gas: 306004957)
+[PASS] testOriginalCommercialTitles7Through12() (gas: 315000000)
+Suite result: ok. 6 passed; 0 failed; 0 skipped; finished in 4.22s (4.09s CPU time)
+
+Ran 12 tests for test/intermission/Intermission.t.sol:IntermissionTest
+[PASS] testFrameEventContainsComputedNativePixelsAndSourceAlias() (gas: 139685447)
+[PASS] testMalformedBackgroundResourceRejectsBeforePublishingState() (gas: 41589142)
+[PASS] testMalformedSourceAndUnauthorizedCallsRollBack() (gas: 150020440)
+[PASS] testNativeEveryEnteringTitleAndNode() (gas: 535677228)
+[PASS] testNativeEveryFinishedTitle() (gas: 390994482)
+[PASS] testNativeInputSecretRepeatAndCounterQuirks() (gas: 577921583)
+[PASS] testNativeNaturalCountingEveryTicAndTimeout() (gas: 193988939)
+[PASS] testNativeNumericFormattingAndCandidateFallbacks() (gas: 324928470)
+[PASS] testNativeStateAcrossSeparateStorageCallsAndRollback() (gas: 564092757)
+[PASS] testNativeZeroTotalsAllSupportedModes() (gas: 354765829)
+[PASS] testStartNormalizesCanonicalSnapshotWithoutResettingPointerOrLatches() (gas: 18448)
+[PASS] testUnsupportedAndUndefinedDomainsAreExplicit() (gas: 334798)
+Suite result: ok. 12 passed; 0 failed; 0 skipped; finished in 5.45s (6.90s CPU time)
+
+Ran 9 tests for test/unit/p_pspr.t.sol:PPsprTest
+[PASS] testOriginalCBFGAndSpray() (gas: 449147864)
+[PASS] testOriginalCChaingun() (gas: 448151885)
+[PASS] testOriginalCChainsaw() (gas: 448659886)
+[PASS] testOriginalCFist() (gas: 446770677)
+[PASS] testOriginalCPistol() (gas: 447547731)
+[PASS] testOriginalCPlasma() (gas: 447782831)
+[PASS] testOriginalCRocket() (gas: 447504929)
+[PASS] testOriginalCShotgun() (gas: 447426013)
+[PASS] testOriginalCSuperShotgun() (gas: 447840015)
+Suite result: ok. 9 passed; 0 failed; 0 skipped; finished in 6.24s (6.47s CPU time)
+
+Ran 10 tests for test/unit/Gameflow.t.sol:GameflowTest
+[PASS] testCompletionStatsAreCopiedNotAliased() (gas: 1053830)
+[PASS] testIncomingCommandIsCopiedBeforeWorldTickerClearsSpecial() (gas: 1045375)
+[PASS] testOriginalCCompletionAllEpisodeOneMaps() (gas: 821580734)
+[PASS] testOriginalCDeathUseAndFollowingTicReload() (gas: 9957929)
+[PASS] testOriginalCLoadLevelAndReborn() (gas: 56837921)
+[PASS] testOriginalCNewGameAndDeferredInitialization() (gas: 1609689918)
+[PASS] testOriginalCNightmareFastAndInitPlayer() (gas: 15442107)
+[PASS] testOriginalCPauseMenuAndStateDispatch() (gas: 5002233101)
+[PASS] testOriginalCWorldDoneAndInventoryCarryover() (gas: 175383594)
+[PASS] testPauseProducerIsOneShotReplacesButtonsKeepsMovement() (gas: 1011664)
+Suite result: ok. 10 passed; 0 failed; 0 skipped; finished in 6.25s (806.38ms CPU time)
+
+Ran 64 tests for test/unit/p_enemy.t.sol:PEnemyTest
+[PASS] testNative_A_BabyMetal() (gas: 223214459)
+[PASS] testNative_A_BossDeath() (gas: 529190397)
+[PASS] testNative_A_BrainAwake() (gas: 222283439)
+[PASS] testNative_A_BrainDie() (gas: 222376247)
+[PASS] testNative_A_BrainExplode() (gas: 223312891)
+[PASS] testNative_A_BrainPain() (gas: 222163261)
+[PASS] testNative_A_BrainScream() (gas: 324689585)
+[PASS] testNative_A_BrainSpit() (gas: 222945079)
+[PASS] testNative_A_BruisAttack() (gas: 235809629)
+[PASS] testNative_A_BspiAttack() (gas: 236016096)
+[PASS] testNative_A_CPosAttack() (gas: 235466061)
+[PASS] testNative_A_CPosRefire() (gas: 235087110)
+[PASS] testNative_A_Chase() (gas: 235989491)
+[PASS] testNative_A_CloseShotgun2() (gas: 222375637)
+[PASS] testNative_A_CyberAttack() (gas: 236017416)
+[PASS] testNative_A_Explode() (gas: 222374560)
+[PASS] testNative_A_FaceTarget() (gas: 235010454)
+[PASS] testNative_A_Fall() (gas: 222162741)
+[PASS] testNative_A_FatAttack1() (gas: 224321884)
+[PASS] testNative_A_FatAttack2() (gas: 224327513)
+[PASS] testNative_A_FatAttack3() (gas: 224397572)
+[PASS] testNative_A_FatRaise() (gas: 222248634)
+[PASS] testNative_A_Fire() (gas: 222411659)
+[PASS] testNative_A_FireCrackle() (gas: 222411549)
+[PASS] testNative_A_HeadAttack() (gas: 235902044)
+[PASS] testNative_A_Hoof() (gas: 223214107)
+[PASS] testNative_A_KeenDie() (gas: 222408806)
+[PASS] testNative_A_LoadShotgun2() (gas: 222162183)
+[PASS] testNative_A_Look() (gas: 235539602)
+[PASS] testNative_A_Metal() (gas: 223213315)
+[PASS] testNative_A_OpenShotgun2() (gas: 222161699)
+[PASS] testNative_A_Pain() (gas: 222159653)
+[PASS] testNative_A_PainAttack() (gas: 250349912)
+[PASS] testNative_A_PainDie() (gas: 240425548)
+[PASS] testNative_A_PainShootSkull() (gas: 237463708)
+[PASS] testNative_A_PlayerScream() (gas: 222165662)
+[PASS] testNative_A_PosAttack() (gas: 235465005)
+[PASS] testNative_A_SPosAttack() (gas: 235925756)
+[PASS] testNative_A_SargAttack() (gas: 235137265)
+[PASS] testNative_A_Scream() (gas: 222209118)
+[PASS] testNative_A_SkelFist() (gas: 235140067)
+[PASS] testNative_A_SkelMissile() (gas: 236021916)
+[PASS] testNative_A_SkelWhoosh() (gas: 235018375)
+[PASS] testNative_A_SkullAttack() (gas: 235066482)
+[PASS] testNative_A_SpawnFly() (gas: 224721155)
+[PASS] testNative_A_SpawnSound() (gas: 224722363)
+[PASS] testNative_A_SpidRefire() (gas: 235155614)
+[PASS] testNative_A_StartFire() (gas: 222410801)
+[PASS] testNative_A_Tracer() (gas: 223361275)
+[PASS] testNative_A_TroopAttack() (gas: 235901648)
+[PASS] testNative_A_VileAttack() (gas: 235705163)
+[PASS] testNative_A_VileChase() (gas: 223181557)
+[PASS] testNative_A_VileStart() (gas: 222153009)
+[PASS] testNative_A_VileTarget() (gas: 236175918)
+[PASS] testNative_A_XScream() (gas: 222159389)
+[PASS] testNative_PIT_VileCheck() (gas: 222482496)
+[PASS] testNative_P_CheckMeleeRange() (gas: 234980689)
+[PASS] testNative_P_CheckMissileRange() (gas: 222417192)
+[PASS] testNative_P_LookForPlayers() (gas: 222490993)
+[PASS] testNative_P_Move() (gas: 222503370)
+[PASS] testNative_P_NewChaseDir() (gas: 223019166)
+[PASS] testNative_P_NoiseAlert() (gas: 222422266)
+[PASS] testNative_P_RecursiveSound() (gas: 222413431)
+[PASS] testNative_P_TryWalk() (gas: 222511572)
+Suite result: ok. 64 passed; 0 failed; 0 skipped; finished in 6.26s (42.85s CPU time)
+
+Ran 10 test suites in 6.27s (37.63s CPU time): 132 tests passed, 0 failed, 0 skipped (132 total tests)

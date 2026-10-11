@@ -1,0 +1,1451 @@
+{
+  "goal": "4.13a",
+  "kind": "episode-startup-ordinary-evm",
+  "pass": true,
+  "startedUtc": "2026-10-11T10:42:51.692Z",
+  "resourceIdentity": {
+    "schemaVersion": 0,
+    "wadSha256": "10d67824b11025ddd9198e8cfc87ca335ee6e2d3e63af4180fa9b8a471893255",
+    "bundleSha256": "775bc8b01d44c2fb1c3a68a79b9864c2f36ebbb29746d31e9ca600ae226af5ad",
+    "paletteSha256": "fd895921b5d0a394612bb29852ed003d44d69f76dec31c0dc6b5d5fc7d63f7bb",
+    "paletteVariant": 0
+  },
+  "nativeManifestSha256": "97ebaa79e1ad9daf2eb1415a6d93383ccfffb553759a378373e9949f27abd52e",
+  "compiler": {
+    "version": "0.8.37+commit.f401782d",
+    "settings": {
+      "remappings": [],
+      "optimizer": {
+        "enabled": true,
+        "runs": 200
+      },
+      "metadata": {
+        "bytecodeHash": "ipfs"
+      },
+      "compilationTarget": {
+        "src/support/Doom2StartupProbe.sol": "Doom2StartupProbe"
+      },
+      "evmVersion": "cancun",
+      "libraries": {},
+      "viaIR": true
+    }
+  },
+  "executionBudget": {
+    "gasLimit": 10000000000,
+    "gasHex": "0x2540be400",
+    "source": "/Users/eduard/sandbox/doom-evm-doom2-browser/execution-budget.json"
+  },
+  "sourceHashes": {
+    "src/doom/am_map_types.sol": "7347073682c367c15c918aa51ff924c664b6d05efdbf4f0392d4f404b31a9039",
+    "src/doom/d_ticcmd.sol": "508d0332d3e8b83e1b68d37581a3befc100a9974fcaa0900cc44116cd75ff2ef",
+    "src/doom/g_game.sol": "6aee5fd801e9fff30fb2e89c17b8f95c3eb70925f6d0791759dbb5ab726c9688",
+    "src/doom/info.sol": "4611205149173e42d3b0f1d91820c8042f6bc5fc48fb53aec84ad4bc501dca8e",
+    "src/doom/m_bbox.sol": "f4c60efe3627a97d0288fc5cd0283535527b1f51029568534c80bb8fbbf8f272",
+    "src/doom/m_fixed.sol": "3f64bef1f62f61faead3a5b8f382bf1c66e1b3739ce4ac8d59a6fcef0451ef9f",
+    "src/doom/m_random.sol": "5267b881138cfb7e0d683449005619513006c70e3ed557f64697b36c4ed40c7b",
+    "src/doom/native_zone_layout.sol": "118b2d17165826fb0857d9cb296e2214db2a28917769299a82e70d0c0790f6e8",
+    "src/doom/p_ceilng.sol": "696f3f620f5bddb3cea64fda824e3203c780f53db890630f0685794454dc37f9",
+    "src/doom/p_doors.sol": "945bf600ce86d8286718fb75ecaf905a0c4631d79d2dac7260c91c9dc2013f8d",
+    "src/doom/p_enemy.sol": "eff76cce23b0877833a5c446a1a09d8ae01918a6925b6d3265240b144c09dfe7",
+    "src/doom/p_floor.sol": "b7c90baafa0b74fd7ff80cf60dcbc430148f6d6d068ba54ca0fbc7ba1bca7069",
+    "src/doom/p_game_state.sol": "06cbccba214717193fbab7c290e2962c4fb05b3f34c6543247ee1ec8e45d085a",
+    "src/doom/p_heap.sol": "3cc2e0a8c3239523db66c07fea33720f931754baedd312b5ca7cc2ebe763d2e0",
+    "src/doom/p_info.sol": "a48840479115ea8bf849ca5ec448d1b2bec7a6cfe58c5314e140635a898de792",
+    "src/doom/p_inter.sol": "8be27f9bba47beb46b3edf2a8a2674b3cd7218d2abb8ef5f8855803393d067de",
+    "src/doom/p_lights.sol": "6f63cbc6b41fc492a46ce43aef464deb9d08b7fa1dd8b213b546eec3e4f08276",
+    "src/doom/p_map.sol": "6b6d48523a45acab9090dfb0ec3d6dbab4e6de18afa89453df8b5a87088da0f3",
+    "src/doom/p_maputl.sol": "ac5ac60e7e058a5fc537e7042c7254bc0f51c77165149a22e141437b4e0ad0b6",
+    "src/doom/p_mobj.sol": "e6138aceee2be933f2c36e3fc18e6d2baa22ffa6a1197d9db89c744d42d78e56",
+    "src/doom/p_plats.sol": "6904df762b270f840daa99b34d2a5c689dbb2fef3aed3d33c2ac1a3f3e4d5722",
+    "src/doom/p_pspr.sol": "cfa2db3438d689c38d9c957fc4aee598c58740f025d6efead2b5f9671eb0c863",
+    "src/doom/p_setup.sol": "9498e1298bf4e53ccedc484a50d4c7f9f85315f6cb700719d474b721e382243b",
+    "src/doom/p_setup_static.sol": "c8100a42bb0bac190c583bbb2c82168599009f88a766e4c05b9a9231a5f69792",
+    "src/doom/p_sight.sol": "7ed366237fc3fec069ffb6336e95e038004d1f379622cf67f55fb8c6b1a6488c",
+    "src/doom/p_spec.sol": "2363640e75c22c9d017db677dda7148ad221380f0a23639167e145e933fc72b7",
+    "src/doom/p_switch.sol": "5404d359793e05c6c24a7804c07632150009b46f38d03068412d7ac53260dfe2",
+    "src/doom/p_telept.sol": "745f0fa4ed6f0515c398bfd2469c59aac82316965b7bac25263aeb82555d61b8",
+    "src/doom/p_tick.sol": "1993dd0c94853dabc4db554dfa0ca04375cef0a22075400ba0e7b56b525022ab",
+    "src/doom/p_user.sol": "963a46850e1b17171f79dd65bff9b5006ce6f97a935ad2023d1d526a6ec35c37",
+    "src/doom/p_zone_setup.sol": "e0308bd1197fd84a01eb1ee208be73c711851d6b0bc30be1d07a7c61b18b223d",
+    "src/doom/r_bsp.sol": "0ae5df313515692d0b2b970d5d39d107e014629cff2305fb37c14371a9524040",
+    "src/doom/r_data.sol": "ef5f26f230c1bed1a073f73b489613d947b420c220faa6f2c16a6f583045010c",
+    "src/doom/r_data_types.sol": "0448302d68447c8a5a4c46df4016e8845863e42bf6eaca8bcab8ab0c9707fdf8",
+    "src/doom/r_defs.sol": "558d5a9bfd131e816bbe28986e2dad6144a08e5a16ccfed1b199d7558a1ea0e2",
+    "src/doom/r_draw.sol": "afe958ea0c2962b739bff58b98d8bccc25c48d3d0838cacd46142c242b5d6477",
+    "src/doom/r_main.sol": "df403bf04fdbbcfc68c4fd9c5e19b5201ca711498efc34db406a4010ad3b2af5",
+    "src/doom/r_plane.sol": "c7a5abcbca84dddcd2a3c8bb160a609605c5c1842e73704dff4860df3280e463",
+    "src/doom/r_render_hooks.sol": "f026ccb8fffb68d8fbcb0966103212f52884b86350fe3fb52a401d146f3fb312",
+    "src/doom/r_render_state.sol": "072bd2f73b98e1eb775fc8093e95a69c184f3fa50a89a5d64a7beccd59493398",
+    "src/doom/r_segs.sol": "9d4e4dea06739278aab3698fb422818de6dd7726359c8822d60a162e886621cb",
+    "src/doom/r_sprite_state.sol": "735b3de85cbf455e05d3cb8e992cf4e477960bd4192bbd367f5c66c803b96363",
+    "src/doom/r_state.sol": "80951a13733e3a08f4182937a37def33ffda21eaae4b43a2a1bdba2043adab6b",
+    "src/doom/r_things.sol": "86705ab6b1f79b7ef07798b881cc547502d9911c97b57dc516a744e17c1977f5",
+    "src/doom/tables.sol": "bf14202b419075f6d187653205a37e211d8267c7fc4c0bebf5a8c5713afddf38",
+    "src/doom/w_zone_cache.sol": "03c07404765de9620b3d1ff15727809cdad911c8a78d822019b63500fa5018c2",
+    "src/doom/z_zone.sol": "b4e75218021d65aaf3389cf78a68663feebc2084c82457821be17247dc8106c5",
+    "src/doom/z_zone_backing.sol": "e63201d3bb45e4c8d0796480d4e9facd4deffd4d8a9dd730bed10ff4a108d0b1",
+    "src/doom/z_zone_types.sol": "11ab3f95678ba3852ab5f0c2dc9e85e715bec6897e65f04cd1919bba9bb73dbd",
+    "src/doom/z_zone_virtual.sol": "8bc309e89fa4da0667dc50a45adb9f91c58982640e1b3f5f9d38e49893f1e960",
+    "src/evm/Doom2Startup.sol": "0c0a0d38a1cf8441e19df834f26799d12ee803d4c3a4a3e98e4acde5fae27dca",
+    "src/evm/Doom2WadResources.sol": "7384106aef06d449266135e8392a22ba9409ea4b77af423653efdf7dbf6a2274",
+    "src/evm/DoomGame.sol": "d9451a915ab977bae137340e3e6626a270a4b84b8b6ea9449a8c4f0f578296df",
+    "src/evm/DoomRenderer.sol": "5639d82431350ea76c26d43457d26d0c3c0f410eaddf02db6adbcfb03a569ba0",
+    "src/evm/DoomScene.sol": "9ad7c8ccee4c9e05deb5608326baabacfa40f686b8d8445fb8aaa7352ab64569",
+    "src/evm/DoomZoneStartup.sol": "2d178494456a7ae3c730310f257ce2aa635d37d18c90cac039cf002cdb3f50dc",
+    "src/evm/ResourceTypes.sol": "159865364cfa57aae508cd94c49509cbccabd6aeeba55e92b9fcf816bdec4d6b",
+    "src/support/Doom2StartupProbe.sol": "9129c6480e89f9e4a5c61c0e3851e562f4ff2f49c1c7193a4c42c4fac09642bf",
+    "src/support/EpisodeStartupSnapshot.sol": "3f2a274619a786200fe209111e0ca6f2f5cb97537f584dd77a4f3d23e4d3635e",
+    "tools/reference/doom2/startup-native.py": "4abb509f405db8a023e51144495829b1a525a68e55acb294ba12883313a6f23c",
+    "tools/reference/episode_startup/observe.inc": "3240d15e6599cfe90ea1afd812c12b9360135c36628ad8ce00c11f6e546dfb49",
+    "tools/reference/doom2/startup-evm.mjs": "99f50b3670dfae7b29881227cbe9c401443f8690a31b9c14b14f18e1b47e8a58",
+    "foundry.toml": "afe04c66f0e684b5a936821f6543605a3739f62164ceb4398426db7403452393",
+    "execution-budget.json": "acde01f1b9cf248f9265f1ffcff7181d01d77620a2dfcd9a4d4d0b1c79df2be7"
+  },
+  "cases": [
+    {
+      "name": "MAP01-skill2",
+      "map": 1,
+      "skill": 2,
+      "nomonsters": false,
+      "deployment": {
+        "address": "0x8797847c9d63d8ed9c30b058f408d4257a33b76c",
+        "transaction": "0xd1584fd833772f86010fab9ceca1bb7538531f1d35014d75f37b881ca5fbe7ff",
+        "gas": 185254776,
+        "ms": 47.28491600000052,
+        "runtimeBytes": 378546,
+        "runtimeSha256": "4ded99f9cd0221556a618d8c3d490771d5507361c48fa066bb22ed84b6968b5c"
+      },
+      "transaction": "0x6cec819d50bc68129974f25af269628d646cc782b90e0f52a0d46353917f75da",
+      "gas": 996299799,
+      "ms": 362.07595800000126,
+      "digests": {
+        "world": "ed2aca25c53a9ff2a1815cbea3e305242588a89dda0b8f391b30f6d7c15cd0bf",
+        "collision": "2a1156ab0b53956d8facb0025384946f66fdeeefa035d53fe8ca4471e565b8f7",
+        "zone": "127c876c63de00e5af193b0c94d41f76399b392266849ac030594be98ffd991d",
+        "flow": "6728f66f32f14cddf37a7b611c8ecb49a4cf360d2c6ab3bed255a403667ceb0d",
+        "difficulty": "0a6d0f2d1795d2b3450a49d4770357852f37f396f459db48f36d46f56b4c0721"
+      },
+      "startupStatus": [
+        1,
+        1,
+        2,
+        0,
+        0,
+        44,
+        44,
+        59,
+        1,
+        1
+      ],
+      "persistedWorldExact": true,
+      "emittedFrames": 0
+    },
+    {
+      "name": "MAP02-skill2",
+      "map": 2,
+      "skill": 2,
+      "nomonsters": false,
+      "deployment": {
+        "address": "0xa9ea7f91e63896d852c4fca6124c974adc68af3b",
+        "transaction": "0xb4fadba745b9d9628e072fe78184901978e4c519facb626e4c8d8b9664c377ed",
+        "gas": 185254776,
+        "ms": 46.6607499999991,
+        "runtimeBytes": 378546,
+        "runtimeSha256": "4ded99f9cd0221556a618d8c3d490771d5507361c48fa066bb22ed84b6968b5c"
+      },
+      "transaction": "0xc0cabb9445e1b1602f5916bc0b1b2479ca672a4e174e5574ddec177da693778f",
+      "gas": 1139580748,
+      "ms": 385.16491699999824,
+      "digests": {
+        "world": "fbfca08379b80f14ddd7f352d84c7030a82de1f485fb5b943a6d7e05cf0a08e7",
+        "collision": "6f24a15790a93d5e14c4ca8371c818ce01f0e835909127e346f7dca7f57fa61e",
+        "zone": "e594f29e095ad5f55664d619b59eabb4b6afc81d6173a39ec0f99e1900795ce8",
+        "flow": "0c42aef3def7f6a35c9e665e9f050cbf0da5a39c1bc3f0c3b98d5e45e00ef24b",
+        "difficulty": "0a6d0f2d1795d2b3450a49d4770357852f37f396f459db48f36d46f56b4c0721"
+      },
+      "startupStatus": [
+        1,
+        2,
+        2,
+        0,
+        0,
+        131,
+        133,
+        97,
+        1,
+        1
+      ],
+      "persistedWorldExact": true,
+      "emittedFrames": 0
+    },
+    {
+      "name": "MAP03-skill2",
+      "map": 3,
+      "skill": 2,
+      "nomonsters": false,
+      "deployment": {
+        "address": "0x2d6e6a6430f0121d6949d743df54730b40c5c74f",
+        "transaction": "0x310bc474b10faff294ed8572f54d4f59d8bd685027783aebbce3de1ebde747ce",
+        "gas": 185254776,
+        "ms": 46.835542000000714,
+        "runtimeBytes": 378546,
+        "runtimeSha256": "4ded99f9cd0221556a618d8c3d490771d5507361c48fa066bb22ed84b6968b5c"
+      },
+      "transaction": "0x970169da63e28fe7173cb72620f8bdf825c716bc62058b668a135e4022089613",
+      "gas": 1165140759,
+      "ms": 404.2386669999978,
+      "digests": {
+        "world": "bd42a398b73ae5288b2a1f99fa984849f56cf00133a7fc44ec68319007f84d02",
+        "collision": "45bc1b98cc4d582907b1a298b26b7c9f84b78dc153235288d241aec5b34d3e26",
+        "zone": "1693816d6a7ee373cc77f9eb175eb4eb6a4ecaf914bc5635f4d55159de8ccd3b",
+        "flow": "666d259160a91446ede926eebfe99e2d85dc2caa6c5917ea24596bacb225d76d",
+        "difficulty": "0a6d0f2d1795d2b3450a49d4770357852f37f396f459db48f36d46f56b4c0721"
+      },
+      "startupStatus": [
+        1,
+        3,
+        2,
+        0,
+        0,
+        102,
+        103,
+        121,
+        1,
+        1
+      ],
+      "persistedWorldExact": true,
+      "emittedFrames": 0
+    },
+    {
+      "name": "MAP04-skill2",
+      "map": 4,
+      "skill": 2,
+      "nomonsters": false,
+      "deployment": {
+        "address": "0xbaee9b65349929bd78f9878555bf78027df7f101",
+        "transaction": "0xed75bf242021784e7cdc732b04035e8b69292aa1265959ddf6e568a7814986df",
+        "gas": 185254776,
+        "ms": 46.474583000002895,
+        "runtimeBytes": 378546,
+        "runtimeSha256": "4ded99f9cd0221556a618d8c3d490771d5507361c48fa066bb22ed84b6968b5c"
+      },
+      "transaction": "0x0258cff5033974621b9df80b5ea207ad2fd23bf84d7f488803f89524114ddcca",
+      "gas": 1133234091,
+      "ms": 404.2285840000004,
+      "digests": {
+        "world": "b1501943b3699ad00b707364db468c63a0652638098fee1c7c62b7a98601239b",
+        "collision": "691c2160532dc8ab8eefddbe878326f10028ec9cc140b4f916bfaeafe85cf438",
+        "zone": "18411a8761f9a4be41caacf19577a59ef5b2f06ed643525a3ac819f729245ea7",
+        "flow": "a1b8c41b8b6ea059456413bf9620dedfe3176b5c8622e5a4d43dd202749ed52d",
+        "difficulty": "0a6d0f2d1795d2b3450a49d4770357852f37f396f459db48f36d46f56b4c0721"
+      },
+      "startupStatus": [
+        1,
+        4,
+        2,
+        0,
+        0,
+        103,
+        107,
+        122,
+        1,
+        1
+      ],
+      "persistedWorldExact": true,
+      "emittedFrames": 0
+    },
+    {
+      "name": "MAP05-skill2",
+      "map": 5,
+      "skill": 2,
+      "nomonsters": false,
+      "deployment": {
+        "address": "0xa4f9885550548c6a45b9d18c57b114c06f3c39b8",
+        "transaction": "0x0700a28e54e964cf56bb8f87b7b77074ae346334ae94ecf88348655679de4a77",
+        "gas": 185254776,
+        "ms": 45.626540999997815,
+        "runtimeBytes": 378546,
+        "runtimeSha256": "4ded99f9cd0221556a618d8c3d490771d5507361c48fa066bb22ed84b6968b5c"
+      },
+      "transaction": "0x8a5d510408e49120cc1d6b52278d3450a3b35d2dda187c327d0e1154c68a2b46",
+      "gas": 1413368985,
+      "ms": 470.69608300000255,
+      "digests": {
+        "world": "8aa141238f85c5f91156c5e4f78c9855a8c5cc6337d45b38d10a258b49c1d7bc",
+        "collision": "8c92acf5f4b8c3a1c07b77ddc1d4e089e605dbbf126eae661ecac1c6ebb95032",
+        "zone": "ba451485233cfee6d4f770b52ea38ee5dcbc4654f806634a917529792198cb2a",
+        "flow": "073501b221c9ff2806b559cd245d00bc3fa8fcecdcefe4331ce230523cbe4a0f",
+        "difficulty": "0a6d0f2d1795d2b3450a49d4770357852f37f396f459db48f36d46f56b4c0721"
+      },
+      "startupStatus": [
+        1,
+        5,
+        2,
+        0,
+        0,
+        158,
+        172,
+        176,
+        1,
+        1
+      ],
+      "persistedWorldExact": true,
+      "emittedFrames": 0
+    },
+    {
+      "name": "MAP06-skill2",
+      "map": 6,
+      "skill": 2,
+      "nomonsters": false,
+      "deployment": {
+        "address": "0x449c286ab90639fd9f6604f4f15ec86bce2b8a61",
+        "transaction": "0xb38f3e368d925c5d8ecc1ebc1891a16a9cc41b9f33068068da6bd2f21a9e8ddd",
+        "gas": 185254776,
+        "ms": 46.69333299999926,
+        "runtimeBytes": 378546,
+        "runtimeSha256": "4ded99f9cd0221556a618d8c3d490771d5507361c48fa066bb22ed84b6968b5c"
+      },
+      "transaction": "0x7bc53367b2a141463b8a732c50171ccb8168d30f0f174fbca5f12a97785e83b6",
+      "gas": 1482997312,
+      "ms": 511.0108330000003,
+      "digests": {
+        "world": "b29bcff3311bb23508b408e896d5901e859eeed41ee262b1d77e57babaef49eb",
+        "collision": "cc0047a05ee66dcbfe766bc7349da8d580750b5b018f57eb1640829a680f1c10",
+        "zone": "660f92b902964f8647b2929ccb29021814decb6bb751649fabc6253b537c3b67",
+        "flow": "119b2a7134d5ff5f5f935c1b8c05c16c0e42d4e8a0465d385545ee6e072c286d",
+        "difficulty": "0a6d0f2d1795d2b3450a49d4770357852f37f396f459db48f36d46f56b4c0721"
+      },
+      "startupStatus": [
+        1,
+        6,
+        2,
+        0,
+        0,
+        201,
+        210,
+        183,
+        1,
+        1
+      ],
+      "persistedWorldExact": true,
+      "emittedFrames": 0
+    },
+    {
+      "name": "MAP07-skill2",
+      "map": 7,
+      "skill": 2,
+      "nomonsters": false,
+      "deployment": {
+        "address": "0x512a0e8baeb6ac3d52a11780c92517627005b0b1",
+        "transaction": "0xcd9bc30904c62f32482d3f00150fbc3a5811762cefc5dfc7e72706aa3736273e",
+        "gas": 185254776,
+        "ms": 46.10329199999978,
+        "runtimeBytes": 378546,
+        "runtimeSha256": "4ded99f9cd0221556a618d8c3d490771d5507361c48fa066bb22ed84b6968b5c"
+      },
+      "transaction": "0xf91c0afcf70c15027c5c8ecb601cb7e13c536b84840fb38d97bfc38516451951",
+      "gas": 914985312,
+      "ms": 340.88224999999875,
+      "digests": {
+        "world": "b754240b16e41504072e967766529c46d75ad575370330b9bc2f0d05d71bcc08",
+        "collision": "a9b9ed2c57b2603860b2dfbc9023dd19b84223874ae151e7ed14270c740db806",
+        "zone": "1f613dc13a335cfc9790cf07512e9ced1faeda2b20e7a0132deb01b9b6eb7ed3",
+        "flow": "ee5540dbe7c6cf5162b617a002a969d4a28483a551c040d3a8b7cf679632aff1",
+        "difficulty": "0a6d0f2d1795d2b3450a49d4770357852f37f396f459db48f36d46f56b4c0721"
+      },
+      "startupStatus": [
+        1,
+        7,
+        2,
+        0,
+        0,
+        70,
+        70,
+        29,
+        1,
+        1
+      ],
+      "persistedWorldExact": true,
+      "emittedFrames": 0
+    },
+    {
+      "name": "MAP08-skill2",
+      "map": 8,
+      "skill": 2,
+      "nomonsters": false,
+      "deployment": {
+        "address": "0x63275d081c4a77ae69f76c4952f9747a5559a519",
+        "transaction": "0xebf11c7b331f1c2e031f3b7aef9fc8b193294ac21c9b0d987e143361750d1238",
+        "gas": 185254776,
+        "ms": 46.05516700000226,
+        "runtimeBytes": 378546,
+        "runtimeSha256": "4ded99f9cd0221556a618d8c3d490771d5507361c48fa066bb22ed84b6968b5c"
+      },
+      "transaction": "0xced041570bd226061d3184fea3e8a33532b8609da9b928791e1a5b5f56d18300",
+      "gas": 1254384261,
+      "ms": 427.46441700000287,
+      "digests": {
+        "world": "e79431d1962e9b9b27a54d82f10a3b8703b91855709aad2503969ea3cede022d",
+        "collision": "0c20a34e60cb61a1259ad1e335aab43ee40704cd10e3ce36890402da90108c15",
+        "zone": "d37dc16b2b37ed5fe1f7ad607357eaf856c410ac76e4b9b52764e5d1144e1660",
+        "flow": "670778394ba13a5fbd2d135d7796d7ca948f6ae6d9e5875a5a6df67a2f76e77c",
+        "difficulty": "0a6d0f2d1795d2b3450a49d4770357852f37f396f459db48f36d46f56b4c0721"
+      },
+      "startupStatus": [
+        1,
+        8,
+        2,
+        0,
+        0,
+        197,
+        211,
+        127,
+        1,
+        1
+      ],
+      "persistedWorldExact": true,
+      "emittedFrames": 0
+    },
+    {
+      "name": "MAP09-skill2",
+      "map": 9,
+      "skill": 2,
+      "nomonsters": false,
+      "deployment": {
+        "address": "0x67832b9fc47eb3cdbf7275b95a29740ec58193d2",
+        "transaction": "0x24a85d131403bb76c9fbb165d4be6abbd0ac232f9e0f1366d68971035fd24db3",
+        "gas": 185254776,
+        "ms": 47.00424999999814,
+        "runtimeBytes": 378546,
+        "runtimeSha256": "4ded99f9cd0221556a618d8c3d490771d5507361c48fa066bb22ed84b6968b5c"
+      },
+      "transaction": "0x9fa035b832c5723e9422182b6bd05c849368504a3baf10e739610011cb2d7510",
+      "gas": 1368973354,
+      "ms": 427.1984590000029,
+      "digests": {
+        "world": "f10f286379a4731ee9d23d514468c84e5a3248080b2fc514dc67be9b99873ff4",
+        "collision": "98d7e02754800180a58dcabeaa0aa8cebfb8ced4ae2278b6934ad01653ec71d8",
+        "zone": "fc34309638daa330df3d9dadd46048de1e6d3bdfc1fd56e7ab763ee6a6da1ed6",
+        "flow": "b3282ae9b0b65e2e32dfcbf1c7c738a502d2c901dc662c810bc1651d484ca74c",
+        "difficulty": "0a6d0f2d1795d2b3450a49d4770357852f37f396f459db48f36d46f56b4c0721"
+      },
+      "startupStatus": [
+        1,
+        9,
+        2,
+        0,
+        0,
+        274,
+        279,
+        131,
+        1,
+        1
+      ],
+      "persistedWorldExact": true,
+      "emittedFrames": 0
+    },
+    {
+      "name": "MAP10-skill2",
+      "map": 10,
+      "skill": 2,
+      "nomonsters": false,
+      "deployment": {
+        "address": "0xe3e4631d734e4b3f900afcc396440641ed0df339",
+        "transaction": "0x5ac3eb6fc70832567b7f7218b42a6fb0ef8faa2c7add28b0d9c4c7703c07517f",
+        "gas": 185254776,
+        "ms": 47.087250000000495,
+        "runtimeBytes": 378546,
+        "runtimeSha256": "4ded99f9cd0221556a618d8c3d490771d5507361c48fa066bb22ed84b6968b5c"
+      },
+      "transaction": "0xf14049a658e0ab422c1c7eb01cc46a668e40ff177d3b85f287afb555c27ab507",
+      "gas": 1630155531,
+      "ms": 515.0665829999998,
+      "digests": {
+        "world": "6e2c825d870a389f77cf31a90bec67ba58b5deda950f4ead6f052b997494710e",
+        "collision": "37cc2a8730586f792ed2b5ed337e424304102d426ded9f3cfe0d3cf06e245d85",
+        "zone": "d93590029223d9847c16116453cad8bd8291c27cb3259ae38977eb8ae9538733",
+        "flow": "156cd553b1fa27b67ccdaff67db171af4d5c9fc7f20c9300b7569b492c2d15fc",
+        "difficulty": "0a6d0f2d1795d2b3450a49d4770357852f37f396f459db48f36d46f56b4c0721"
+      },
+      "startupStatus": [
+        1,
+        10,
+        2,
+        0,
+        0,
+        361,
+        373,
+        186,
+        1,
+        1
+      ],
+      "persistedWorldExact": true,
+      "emittedFrames": 0
+    },
+    {
+      "name": "MAP11-skill2",
+      "map": 11,
+      "skill": 2,
+      "nomonsters": false,
+      "deployment": {
+        "address": "0xdf795df2e0ad240a82d773da01a812b96345f9c5",
+        "transaction": "0x08c1623ce86b195fd2fec51da51bcfe9dae0463c7f0fbaf0dfe9350e8fb8da6e",
+        "gas": 185254776,
+        "ms": 46.18274999999994,
+        "runtimeBytes": 378546,
+        "runtimeSha256": "4ded99f9cd0221556a618d8c3d490771d5507361c48fa066bb22ed84b6968b5c"
+      },
+      "transaction": "0x95b62b858a344867fa157015bba1897690ed1996df69555c9efe61db7d27cfbd",
+      "gas": 1380459502,
+      "ms": 466.98149999999805,
+      "digests": {
+        "world": "cd534a5aef7b68b10bdc49ad96469b7458877ec27c93ce807647fdd472f29c80",
+        "collision": "c1dbbe9408582e2bc1145e0d2612f146b553c18e272ea1c4fc0ffc9a7fbdb9c4",
+        "zone": "8adb0042fcdb41ad23c7c6d70d3c79ba87905879056ba83b35388e464e8585b1",
+        "flow": "c42084e3bb34fc722a794784d237fec54a645945fc85eec5d3f18f67e023e333",
+        "difficulty": "0a6d0f2d1795d2b3450a49d4770357852f37f396f459db48f36d46f56b4c0721"
+      },
+      "startupStatus": [
+        1,
+        11,
+        2,
+        0,
+        0,
+        194,
+        205,
+        143,
+        1,
+        1
+      ],
+      "persistedWorldExact": true,
+      "emittedFrames": 0
+    },
+    {
+      "name": "MAP12-skill2",
+      "map": 12,
+      "skill": 2,
+      "nomonsters": false,
+      "deployment": {
+        "address": "0x26320de63415e5aaf2ba617d97c39444edb6f741",
+        "transaction": "0x46a436c77d0f1197b34f5bf444013563f045d5bed5e8663fb77299126b3690a6",
+        "gas": 185254776,
+        "ms": 46.615333999998256,
+        "runtimeBytes": 378546,
+        "runtimeSha256": "4ded99f9cd0221556a618d8c3d490771d5507361c48fa066bb22ed84b6968b5c"
+      },
+      "transaction": "0x450e5314e81e9ebb6f3fd5d1ed39ca3d326757de8139e2f4307e6cb71e49f200",
+      "gas": 1353721775,
+      "ms": 447.32816699999967,
+      "digests": {
+        "world": "0571f145e08fce8071e11584f6bc67357efcb93d160501a2c975180ca526754c",
+        "collision": "9b7c39dd8e37a6de08e751d4bb40db40523d33a531a20683d027b2e95e54e80a",
+        "zone": "8286d247a8d54c7c56c2ff6c457e4accca72a1880409aeef5abe574e85628e0a",
+        "flow": "a11cd05f9d9acdc6365b0d982ff655126bcaf96d2b66ce36dc9d43774d52dea3",
+        "difficulty": "0a6d0f2d1795d2b3450a49d4770357852f37f396f459db48f36d46f56b4c0721"
+      },
+      "startupStatus": [
+        1,
+        12,
+        2,
+        0,
+        0,
+        141,
+        158,
+        162,
+        1,
+        1
+      ],
+      "persistedWorldExact": true,
+      "emittedFrames": 0
+    },
+    {
+      "name": "MAP13-skill2",
+      "map": 13,
+      "skill": 2,
+      "nomonsters": false,
+      "deployment": {
+        "address": "0x2550d6424b46f78f4e31f1ccf88da26dda7826c6",
+        "transaction": "0xd7dda4db79937559a490a446952aa4be3e8b15d3909b1ec6ea7f7b52fde207fc",
+        "gas": 185254776,
+        "ms": 47.199791999999434,
+        "runtimeBytes": 378546,
+        "runtimeSha256": "4ded99f9cd0221556a618d8c3d490771d5507361c48fa066bb22ed84b6968b5c"
+      },
+      "transaction": "0x6d430996ea1add2a6b049271b642c0d6bd01e4e1ac13b5b4b2683bdb5febc996",
+      "gas": 1728985742,
+      "ms": 574.1560000000027,
+      "digests": {
+        "world": "3d65ef7ac158d079af39c7d6b90c4ba4a7fe873931330c20702295b0ca93f138",
+        "collision": "a35523d413233e1844e03da9f1e72ef92c90f9783f75edc5914d20ef21d7397d",
+        "zone": "aeefa7120d44d6b11b23f6bf89eca6834a733bf00a66a5d2df957004689697df",
+        "flow": "2e6a23caa393b9f00db6bd3b67581ce691138886c1ee59c110e23e2581e9bd1d",
+        "difficulty": "0a6d0f2d1795d2b3450a49d4770357852f37f396f459db48f36d46f56b4c0721"
+      },
+      "startupStatus": [
+        1,
+        13,
+        2,
+        0,
+        0,
+        264,
+        273,
+        247,
+        1,
+        1
+      ],
+      "persistedWorldExact": true,
+      "emittedFrames": 0
+    },
+    {
+      "name": "MAP14-skill2",
+      "map": 14,
+      "skill": 2,
+      "nomonsters": false,
+      "deployment": {
+        "address": "0x335796f7a0f72368d1588839e38f163d90c92c80",
+        "transaction": "0xabbc8302cd6c394a530508cec9f54e05d7ab9e581c6624a9f30d80c331804af2",
+        "gas": 185254776,
+        "ms": 45.87145899999814,
+        "runtimeBytes": 378546,
+        "runtimeSha256": "4ded99f9cd0221556a618d8c3d490771d5507361c48fa066bb22ed84b6968b5c"
+      },
+      "transaction": "0x4711610ab76bbe96628d7a55e0184c87756e257fe1f74ae729a1291a3d7c01a6",
+      "gas": 2016407059,
+      "ms": 727.9354170000006,
+      "digests": {
+        "world": "80b74965e75d7819336b4a123a367bc55b28490bd67ea388d514b0a33fe6a160",
+        "collision": "c4e5480a7e2e3a5598c5a45e0c3a2ce73bf59afa4fb8db3b9464e8947e569f05",
+        "zone": "9bb541821fcee151f92f0d2a4c29ec838f3e8515661fffd62b0463f42e532de9",
+        "flow": "b05715ff8a6549f5be579225fc38e7e34b174ebe18ffcac4505baec654434987",
+        "difficulty": "0a6d0f2d1795d2b3450a49d4770357852f37f396f459db48f36d46f56b4c0721"
+      },
+      "startupStatus": [
+        1,
+        14,
+        2,
+        0,
+        0,
+        134,
+        139,
+        348,
+        1,
+        1
+      ],
+      "persistedWorldExact": true,
+      "emittedFrames": 0
+    },
+    {
+      "name": "MAP15-skill2",
+      "map": 15,
+      "skill": 2,
+      "nomonsters": false,
+      "deployment": {
+        "address": "0x97915c43511f8cb4fbe7ea03b96eee940ec4af12",
+        "transaction": "0x0ecd2a09f0c109d6287b43f4a3be1accc222daf1aae8c8155d019ee076433789",
+        "gas": 185254776,
+        "ms": 46.77370900000096,
+        "runtimeBytes": 378546,
+        "runtimeSha256": "4ded99f9cd0221556a618d8c3d490771d5507361c48fa066bb22ed84b6968b5c"
+      },
+      "transaction": "0x2043df86a2c596df944625fd080e038c0609f08a42badeacaa2cc90860edc4da",
+      "gas": 2159390662,
+      "ms": 724.4157500000001,
+      "digests": {
+        "world": "63d7eacb9785765fff69f959a128f21800b9e2b28308c74f382e5ef4123a8be0",
+        "collision": "9ab0891983d050376b0453e20c6ed07b4d51e7d6d783f420c8284d5a920f46a6",
+        "zone": "f96c4e45b50707c9cba60df495267c61639c85d163b10c00e51fee90fdfffbc2",
+        "flow": "9e19888b3c15c4cc5df37266a4c7c20eb8d3f068629ef908ceb54e5739424fd2",
+        "difficulty": "0a6d0f2d1795d2b3450a49d4770357852f37f396f459db48f36d46f56b4c0721"
+      },
+      "startupStatus": [
+        1,
+        15,
+        2,
+        0,
+        0,
+        342,
+        362,
+        301,
+        1,
+        1
+      ],
+      "persistedWorldExact": true,
+      "emittedFrames": 0
+    },
+    {
+      "name": "MAP16-skill2",
+      "map": 16,
+      "skill": 2,
+      "nomonsters": false,
+      "deployment": {
+        "address": "0xa002b84ca3c9e8748209f286ecf99300ca50161a",
+        "transaction": "0x9eff7631729821cf346699334326481010a9a34dcd3d0d78c775a358e7c63b52",
+        "gas": 185254776,
+        "ms": 46.47895900000003,
+        "runtimeBytes": 378546,
+        "runtimeSha256": "4ded99f9cd0221556a618d8c3d490771d5507361c48fa066bb22ed84b6968b5c"
+      },
+      "transaction": "0x3b7bf3251fd55319d6f2609a2e09b4026ebda7eaf0d226ff9a3019e4974436f6",
+      "gas": 1362669921,
+      "ms": 447.09395799999766,
+      "digests": {
+        "world": "7fbf4f40323b3b915c7b94b586d1b7c37e4620dd7b6c925ff625dcaa1bb10708",
+        "collision": "8adefe9e670f8ef883fcdede206db0838b2984506ec21cea166c154bc7623d13",
+        "zone": "28864fba711f76daa7e962ae6dbe7cb606c68b309ebdfc14783a26676a8c47a8",
+        "flow": "bfc34c4df13df5b7e8cfca870ff584b070efbbe8d61e2a1fb0c6a5722cfccef8",
+        "difficulty": "0a6d0f2d1795d2b3450a49d4770357852f37f396f459db48f36d46f56b4c0721"
+      },
+      "startupStatus": [
+        1,
+        16,
+        2,
+        0,
+        0,
+        193,
+        196,
+        142,
+        1,
+        1
+      ],
+      "persistedWorldExact": true,
+      "emittedFrames": 0
+    },
+    {
+      "name": "MAP17-skill2",
+      "map": 17,
+      "skill": 2,
+      "nomonsters": false,
+      "deployment": {
+        "address": "0x039d7496e432c6aea4c24648a59318b3cbe09942",
+        "transaction": "0x08e510e6808469f1ed74c29719b27dfd10a8a4769f66cb71bc713e00c5a2b97d",
+        "gas": 185254776,
+        "ms": 46.79079199999978,
+        "runtimeBytes": 378546,
+        "runtimeSha256": "4ded99f9cd0221556a618d8c3d490771d5507361c48fa066bb22ed84b6968b5c"
+      },
+      "transaction": "0xa63eac853c604b6de166f42223830f13e8ef122c59a63a10ce1d10e76cbd058c",
+      "gas": 1855369159,
+      "ms": 619.5173749999994,
+      "digests": {
+        "world": "82c903bc2c6b5ec26b1f87196b7965a9407e9d3b7734422c27a303b59765ee5f",
+        "collision": "72c9185f3618cf9da9206a21baf74e862d127faae7ce47dbeb2683602c103959",
+        "zone": "ea3ffcca97558fbf8bcfb95420a7e0bd0b2831885a471f4f82595acb22ea65b7",
+        "flow": "65ae746575962423c17b96df935841c54cda9cdff63eb80d79d2a1ccad77aa7e",
+        "difficulty": "0a6d0f2d1795d2b3450a49d4770357852f37f396f459db48f36d46f56b4c0721"
+      },
+      "startupStatus": [
+        1,
+        17,
+        2,
+        0,
+        0,
+        369,
+        388,
+        274,
+        1,
+        1
+      ],
+      "persistedWorldExact": true,
+      "emittedFrames": 0
+    },
+    {
+      "name": "MAP18-skill2",
+      "map": 18,
+      "skill": 2,
+      "nomonsters": false,
+      "deployment": {
+        "address": "0xae7b7a1c6c4d859e19301ccac2c6ed28a4c51288",
+        "transaction": "0x1c41440531929c38ff0d5b71200aba4a4c74617a733e82fe1dd84a8ca4d41fd9",
+        "gas": 185254776,
+        "ms": 46.022000000000844,
+        "runtimeBytes": 378546,
+        "runtimeSha256": "4ded99f9cd0221556a618d8c3d490771d5507361c48fa066bb22ed84b6968b5c"
+      },
+      "transaction": "0xd2b8889c972bfa723268529a8e25e612be6d047c03c38a303f905533543a1ee2",
+      "gas": 1487016822,
+      "ms": 448.2948749999996,
+      "digests": {
+        "world": "2c7ca9f8fb5dfbd2a9f5e04f3683396e1e5c04c3e84d5a94a1b563a8d9196ab6",
+        "collision": "af3079569f0a855a8b8d259dc6b9353430c73ea2513db69c1b2b4d5335153323",
+        "zone": "c82f4a6d3ed95eda937f33a15d53b9bf85184883e2bbba743f3ecef01daf5244",
+        "flow": "13ead111930a5062c91fecbe74c3a434c3a9d72e16806dda319297435f392d3b",
+        "difficulty": "0a6d0f2d1795d2b3450a49d4770357852f37f396f459db48f36d46f56b4c0721"
+      },
+      "startupStatus": [
+        1,
+        18,
+        2,
+        0,
+        0,
+        408,
+        418,
+        108,
+        1,
+        1
+      ],
+      "persistedWorldExact": true,
+      "emittedFrames": 0
+    },
+    {
+      "name": "MAP19-skill2",
+      "map": 19,
+      "skill": 2,
+      "nomonsters": false,
+      "deployment": {
+        "address": "0x7722f5d7964a04672761cdfdc7c17b7ac8f197b7",
+        "transaction": "0x3bed39bce16d48ef0b801f29c8efb2ec386bb6679d5b704cf0a948adc673a982",
+        "gas": 185254776,
+        "ms": 46.82012500000201,
+        "runtimeBytes": 378546,
+        "runtimeSha256": "4ded99f9cd0221556a618d8c3d490771d5507361c48fa066bb22ed84b6968b5c"
+      },
+      "transaction": "0x047b289d1a5fe639506b8176ca29ca9c60199eedc383c6e4b481b5346976b540",
+      "gas": 1895895653,
+      "ms": 618.0146669999995,
+      "digests": {
+        "world": "beb6ef21c89fe8183c57812bdb04389c02b0e059d5fe6191706ba808b75af315",
+        "collision": "55d5774d3a0be03cb93a21cf17eca6f0a5a2c2bd511387474d23723a3cd43c05",
+        "zone": "88689659537e585b8848369013cc6ef1e53950a38127b1af3e6f84d939cb7afe",
+        "flow": "b61e408c35ce39c67b31f352853ee1180739d2ace47220c364c54bbc0dfad709",
+        "difficulty": "0a6d0f2d1795d2b3450a49d4770357852f37f396f459db48f36d46f56b4c0721"
+      },
+      "startupStatus": [
+        1,
+        19,
+        2,
+        0,
+        0,
+        386,
+        391,
+        251,
+        1,
+        1
+      ],
+      "persistedWorldExact": true,
+      "emittedFrames": 0
+    },
+    {
+      "name": "MAP20-skill2",
+      "map": 20,
+      "skill": 2,
+      "nomonsters": false,
+      "deployment": {
+        "address": "0xa7240bcff60eef40f31b8ed5d921bad6db13b199",
+        "transaction": "0x48ae0c6021a10c2b659e53e791d23ee503254981f3e584807cdbb3ea25c4681e",
+        "gas": 185254776,
+        "ms": 46.08412500000122,
+        "runtimeBytes": 378546,
+        "runtimeSha256": "4ded99f9cd0221556a618d8c3d490771d5507361c48fa066bb22ed84b6968b5c"
+      },
+      "transaction": "0xd9cf67f2f08f3d8f503e33c8320b676112b697d2916335a03ea1654e8ead5306",
+      "gas": 1565096160,
+      "ms": 531.1820419999967,
+      "digests": {
+        "world": "c030151b8fa6914435c1df4106bc757784bc90190c8db90bf6df935cd269e777",
+        "collision": "ef3364e3ab705fd686be517cc9c02c6648e50111a74e9e802451a39c62c7eba2",
+        "zone": "33041949d3b1d4e86993ee19591a6d7981bfd72fb03a9cfa641fbdf0d2865423",
+        "flow": "523d8ef67f00c071080eec239c4cfa276b9238711ef60eea9a0045f74148940d",
+        "difficulty": "0a6d0f2d1795d2b3450a49d4770357852f37f396f459db48f36d46f56b4c0721"
+      },
+      "startupStatus": [
+        1,
+        20,
+        2,
+        0,
+        0,
+        215,
+        233,
+        191,
+        1,
+        1
+      ],
+      "persistedWorldExact": true,
+      "emittedFrames": 0
+    },
+    {
+      "name": "MAP21-skill2",
+      "map": 21,
+      "skill": 2,
+      "nomonsters": false,
+      "deployment": {
+        "address": "0x2c56932223cde0d363266f1308c48ff1bf9f9041",
+        "transaction": "0x2fa1de868440c80677d96b260f24c232c429de90d712ed7a467dd49b02621478",
+        "gas": 185254776,
+        "ms": 47.02504200000112,
+        "runtimeBytes": 378546,
+        "runtimeSha256": "4ded99f9cd0221556a618d8c3d490771d5507361c48fa066bb22ed84b6968b5c"
+      },
+      "transaction": "0x57b0bfae212abbcb59a7105db3bf355f4dcbd4a6ed49367a0f5c1b988adbecb9",
+      "gas": 1087340541,
+      "ms": 364.00008399999933,
+      "digests": {
+        "world": "822539dc815f9ff113a7a30370bf0c9f24738a8e46da62d48b2c032b59a1ff80",
+        "collision": "49a8bacc5e420215dd11cc3cbf1c30a421865c06413320c053715684947c125e",
+        "zone": "94eb650ef548d854682ec053e14439c0ee53a7cbf66d79a42912456c229792e6",
+        "flow": "c46d93731871b30f06efe33ca12484e3261b52c72024b8df9c5c8f9ad76f4823",
+        "difficulty": "0a6d0f2d1795d2b3450a49d4770357852f37f396f459db48f36d46f56b4c0721"
+      },
+      "startupStatus": [
+        1,
+        21,
+        2,
+        0,
+        0,
+        162,
+        165,
+        61,
+        1,
+        1
+      ],
+      "persistedWorldExact": true,
+      "emittedFrames": 0
+    },
+    {
+      "name": "MAP22-skill2",
+      "map": 22,
+      "skill": 2,
+      "nomonsters": false,
+      "deployment": {
+        "address": "0xda796117bf6905dd8db2ff1ab4397f6d2c4adda3",
+        "transaction": "0x7dc52bb135e756d758ad05d359b8578c082a699412d7f15904644046f2e2107b",
+        "gas": 185254776,
+        "ms": 45.55041599999822,
+        "runtimeBytes": 378546,
+        "runtimeSha256": "4ded99f9cd0221556a618d8c3d490771d5507361c48fa066bb22ed84b6968b5c"
+      },
+      "transaction": "0x6794d0dfdea384c4389dd94e5e0674621d77c84d091b60822d814749959be0ff",
+      "gas": 1191319312,
+      "ms": 425.52595799999835,
+      "digests": {
+        "world": "26a4426376df80cdc5001251931e2b808b94fffc1bc1cd635beeb110f3616adc",
+        "collision": "a260ec468bc935522bda572a4235e3b89d441c8b96c64e8f00e3948d4c347915",
+        "zone": "67b95d12c64dbfee1efcde9bd386e4c0aded8f1275eb75a046aac14da3d15f25",
+        "flow": "73cd52a3524d7dadfd5c3bdecbeef837645cd85e5adaab5bd0b05c2cac09c24f",
+        "difficulty": "0a6d0f2d1795d2b3450a49d4770357852f37f396f459db48f36d46f56b4c0721"
+      },
+      "startupStatus": [
+        1,
+        22,
+        2,
+        0,
+        0,
+        94,
+        106,
+        140,
+        1,
+        1
+      ],
+      "persistedWorldExact": true,
+      "emittedFrames": 0
+    },
+    {
+      "name": "MAP23-skill2",
+      "map": 23,
+      "skill": 2,
+      "nomonsters": false,
+      "deployment": {
+        "address": "0x88777418972fb3f58489303d763d4daf398a6527",
+        "transaction": "0x391bd713a85aae100bff3ae826a82742e8be9bc66196ee2b255e2d404a82255b",
+        "gas": 185254776,
+        "ms": 46.56470799999806,
+        "runtimeBytes": 378546,
+        "runtimeSha256": "4ded99f9cd0221556a618d8c3d490771d5507361c48fa066bb22ed84b6968b5c"
+      },
+      "transaction": "0x3dbce0af7ada2302d20a01cd6aaa0dce90d348c0c63347c4c03b321df2dae291",
+      "gas": 1258608010,
+      "ms": 404.4379170000029,
+      "digests": {
+        "world": "f0ff61331d3a3677c357b0636472536cb99d0a7357acac6a02131e41bfffb5a2",
+        "collision": "e0b03221b3a9608a219c15ebe5b678800e6cfd8ae6c875be63fff69a86fbcfa8",
+        "zone": "14e545d068bc8866efc3aa01ea8f8595aadbed9bf9e743f3770c5056a86de656",
+        "flow": "4a7d30a952e39db03c731ae09844d2c04701c4fab78ef717d4ecb9522f36968f",
+        "difficulty": "0a6d0f2d1795d2b3450a49d4770357852f37f396f459db48f36d46f56b4c0721"
+      },
+      "startupStatus": [
+        1,
+        23,
+        2,
+        0,
+        0,
+        384,
+        389,
+        69,
+        1,
+        1
+      ],
+      "persistedWorldExact": true,
+      "emittedFrames": 0
+    },
+    {
+      "name": "MAP24-skill2",
+      "map": 24,
+      "skill": 2,
+      "nomonsters": false,
+      "deployment": {
+        "address": "0x37d0ed258f37a966f33b75b5ae7486917a0ae614",
+        "transaction": "0xe26cdb616b9cf1b800ac9d87778deb89b2c6bdb9675de6750092d23c39963e0f",
+        "gas": 185254776,
+        "ms": 46.50833299999795,
+        "runtimeBytes": 378546,
+        "runtimeSha256": "4ded99f9cd0221556a618d8c3d490771d5507361c48fa066bb22ed84b6968b5c"
+      },
+      "transaction": "0x785e8c9c659993b9dd036acea2ca352effb1b3f19a555602c28bdc396c7a4ec2",
+      "gas": 1747517932,
+      "ms": 531.1985829999976,
+      "digests": {
+        "world": "cd338ebbb8c3d64e034d2bbccaeb4622e4fa57614142c6508befc1d067e58752",
+        "collision": "a60ea128c3bc89ca152d1464079d202338e23fdab9b69249c34939a1d6773260",
+        "zone": "96053d749d240c5b742f79c3cb581d905d3a29a4644ca2e98f906783bc0405f0",
+        "flow": "cd06acafeecf55198f4f380b3cbd5e4d237a660cd19426b7293f8feda6bc9109",
+        "difficulty": "0a6d0f2d1795d2b3450a49d4770357852f37f396f459db48f36d46f56b4c0721"
+      },
+      "startupStatus": [
+        1,
+        24,
+        2,
+        0,
+        0,
+        292,
+        317,
+        181,
+        1,
+        1
+      ],
+      "persistedWorldExact": true,
+      "emittedFrames": 0
+    },
+    {
+      "name": "MAP25-skill2",
+      "map": 25,
+      "skill": 2,
+      "nomonsters": false,
+      "deployment": {
+        "address": "0x48288d0e3079a03f6ec1846554cfc58c2696aaee",
+        "transaction": "0xffde74a366bd6477c1b9178420453fe41f0be867db5edccd93f824a54a3fa021",
+        "gas": 185254776,
+        "ms": 46.28079099999741,
+        "runtimeBytes": 378546,
+        "runtimeSha256": "4ded99f9cd0221556a618d8c3d490771d5507361c48fa066bb22ed84b6968b5c"
+      },
+      "transaction": "0x614af2e8aa398547391064b146f6e34180bae62d92151cbf160cdce3328810e2",
+      "gas": 1385889614,
+      "ms": 447.45162499999424,
+      "digests": {
+        "world": "0c6e1c554a73549fcf8bfe69560ace0ca7569989b5eded41c516b9175bf7c0eb",
+        "collision": "fc37bbada34c6db14353a4f0ea1158bc24b5ee717562d578dc120a10865a277a",
+        "zone": "a248e0807b56dab0b544165d3e38211e7c69f25692ef0985f967afc260bf2070",
+        "flow": "5c01953a65de354a0920268d2baaf1d32eef39b625e680679df7b46024105e1a",
+        "difficulty": "0a6d0f2d1795d2b3450a49d4770357852f37f396f459db48f36d46f56b4c0721"
+      },
+      "startupStatus": [
+        1,
+        25,
+        2,
+        0,
+        0,
+        237,
+        242,
+        147,
+        1,
+        1
+      ],
+      "persistedWorldExact": true,
+      "emittedFrames": 0
+    },
+    {
+      "name": "MAP26-skill2",
+      "map": 26,
+      "skill": 2,
+      "nomonsters": false,
+      "deployment": {
+        "address": "0x7c77704007c9996ee591c516f7319828ba49d91e",
+        "transaction": "0xb2e5869f2dce339b71153d166dd9db6c52ab026a0e344461ce85c5a865ca3752",
+        "gas": 185254776,
+        "ms": 46.381334000005154,
+        "runtimeBytes": 378546,
+        "runtimeSha256": "4ded99f9cd0221556a618d8c3d490771d5507361c48fa066bb22ed84b6968b5c"
+      },
+      "transaction": "0x00c8ce5fc8c31b850d4c0aa7537cc44ffda1f7bd43bfd4ed28671dedaf940a99",
+      "gas": 1410252125,
+      "ms": 447.2087920000049,
+      "digests": {
+        "world": "d5e796ab1a9e25824b899249eea139ead739836a37f3c41e829f6ad923e5098b",
+        "collision": "cc1082c3312e8b1748dfae9369a5f48c16fa00c2a258f4ab40a222bf3ca5c6ea",
+        "zone": "d55cea7b284e37a2b7d61af280f06e5131c5ade02126abb8a6fd408542eb47db",
+        "flow": "2b4517275afe2ee2e1c2f99979230fd86dbe5797c9b7ceb5ac3a878830e5092c",
+        "difficulty": "0a6d0f2d1795d2b3450a49d4770357852f37f396f459db48f36d46f56b4c0721"
+      },
+      "startupStatus": [
+        1,
+        26,
+        2,
+        0,
+        0,
+        243,
+        257,
+        126,
+        1,
+        1
+      ],
+      "persistedWorldExact": true,
+      "emittedFrames": 0
+    },
+    {
+      "name": "MAP27-skill2",
+      "map": 27,
+      "skill": 2,
+      "nomonsters": false,
+      "deployment": {
+        "address": "0x081f08945fd17c5470f7bcee23fb57ab1099428e",
+        "transaction": "0x2a21abdbf06fb991e7ec74a650d173d0e4d3af64184f688939d87452377d3c56",
+        "gas": 185254776,
+        "ms": 46.834374999998545,
+        "runtimeBytes": 378546,
+        "runtimeSha256": "4ded99f9cd0221556a618d8c3d490771d5507361c48fa066bb22ed84b6968b5c"
+      },
+      "transaction": "0x6cc5c17a10a457a965494f302a0296e6c0778ef8c10e9a561340bd57a4b9b486",
+      "gas": 1643208830,
+      "ms": 510.77370799999335,
+      "digests": {
+        "world": "ebb3cb255b37e8ea247075e953bd253e781c9e9f8cee0b64c0487c16f87144c1",
+        "collision": "d5b9dea09dcd1120a8f1932c96e63d3e8b28482a5c717994448fd880543bd072",
+        "zone": "5d01827bff2b1d5bedd3bfe59e2da666de8566f9c68c4b2280f1cf18e728955d",
+        "flow": "01bd534e0b78b22cae91dc1c8c904a4581fb7fd9c18c1670b9e9099f4581c26d",
+        "difficulty": "0a6d0f2d1795d2b3450a49d4770357852f37f396f459db48f36d46f56b4c0721"
+      },
+      "startupStatus": [
+        1,
+        27,
+        2,
+        0,
+        0,
+        416,
+        440,
+        187,
+        1,
+        1
+      ],
+      "persistedWorldExact": true,
+      "emittedFrames": 0
+    },
+    {
+      "name": "MAP28-skill2",
+      "map": 28,
+      "skill": 2,
+      "nomonsters": false,
+      "deployment": {
+        "address": "0x5edb3ff1ea450d1ff6d614f24f5c760761f7f688",
+        "transaction": "0x1579eb862161444b9f3b6a0b0f6a6be89ddbd37280b04c9723c5963792e47b1e",
+        "gas": 185254776,
+        "ms": 46.859667000004265,
+        "runtimeBytes": 378546,
+        "runtimeSha256": "4ded99f9cd0221556a618d8c3d490771d5507361c48fa066bb22ed84b6968b5c"
+      },
+      "transaction": "0x153f769859a44715e0bb5f333077fbc18a6207a2ca0e838df6c7b563f6b177fb",
+      "gas": 1351966419,
+      "ms": 448.755333000001,
+      "digests": {
+        "world": "205f66867aae3b6108482488feabe0f5e6965d58cc231e65a94309c3acbd0021",
+        "collision": "d2a0f3174720344498f7aa410f2eb16e77e2a495424862195390819684c20a3d",
+        "zone": "903bbf47db7287b96586c38d8f2c072e90336aa3720dfadf70123593a4dc88ad",
+        "flow": "82d1e76e598d4491d4bdd715fc0c2ec6bf247af0dd8833cb8f13d10a34000d87",
+        "difficulty": "0a6d0f2d1795d2b3450a49d4770357852f37f396f459db48f36d46f56b4c0721"
+      },
+      "startupStatus": [
+        1,
+        28,
+        2,
+        0,
+        0,
+        215,
+        228,
+        116,
+        1,
+        1
+      ],
+      "persistedWorldExact": true,
+      "emittedFrames": 0
+    },
+    {
+      "name": "MAP29-skill2",
+      "map": 29,
+      "skill": 2,
+      "nomonsters": false,
+      "deployment": {
+        "address": "0x98f74b7c96497070ba5052e02832ef9892962e62",
+        "transaction": "0x16fd99f2720b937fbc29d9e521fb7358f313e80de153848eff1da0c3832f5c71",
+        "gas": 185254776,
+        "ms": 46.6295420000024,
+        "runtimeBytes": 378546,
+        "runtimeSha256": "4ded99f9cd0221556a618d8c3d490771d5507361c48fa066bb22ed84b6968b5c"
+      },
+      "transaction": "0x423dd9d0c522b4e70d75a1780837062cb2bbfe36b84e01ad2af8bef490cd5428",
+      "gas": 1686747810,
+      "ms": 553.5469999999987,
+      "digests": {
+        "world": "67be9a2a77da737ac29a028819d3636eda96ef505a848b9648ba2b39df5efd78",
+        "collision": "b7715ce1ec0caf94d268d7cc987d9d425c5d0893a4ccb0c1f527e75e884cf7a0",
+        "zone": "2a4b3a1d4a67df0e9c71346aff78e84cdf9fa4dea8f181a46f066b376547b5ca",
+        "flow": "7d3a864e1f9b3fcf6f6637afb8d0f65cd66f56dfb8f12674a1118c6ba480ffdc",
+        "difficulty": "0a6d0f2d1795d2b3450a49d4770357852f37f396f459db48f36d46f56b4c0721"
+      },
+      "startupStatus": [
+        1,
+        29,
+        2,
+        0,
+        0,
+        240,
+        277,
+        205,
+        1,
+        1
+      ],
+      "persistedWorldExact": true,
+      "emittedFrames": 0
+    },
+    {
+      "name": "MAP30-skill2",
+      "map": 30,
+      "skill": 2,
+      "nomonsters": false,
+      "deployment": {
+        "address": "0xf47e3b0a1952a81f1afc41172762cb7ce8700133",
+        "transaction": "0x49536b4553392ca7589ebca348d4b26b7558efeaab76243de248cd6d3bea0b0c",
+        "gas": 185254776,
+        "ms": 46.357332999999926,
+        "runtimeBytes": 378546,
+        "runtimeSha256": "4ded99f9cd0221556a618d8c3d490771d5507361c48fa066bb22ed84b6968b5c"
+      },
+      "transaction": "0x13feab2878f06479d455c5c953f4d660810cd797adb9f6e1e7799befd4fc6c18",
+      "gas": 867971313,
+      "ms": 341.5587499999965,
+      "digests": {
+        "world": "db01dd97c71f868380f226e0c77e723fbfb5bef82f117767e4597e4cdf3011bc",
+        "collision": "e009b3d1d487b4f8acc4e6e0af6fb32977189a5f72159df4f570827fd23bbf3f",
+        "zone": "34634c8f2dce8f8cafc3f05647237e1e6d31d06a12e81c00dc67a06d4b6fcaf9",
+        "flow": "0b6931dc3d5cf15c3ae2c0277a18c7cb0b5c68391e748087995ab663d9bbb8e9",
+        "difficulty": "0a6d0f2d1795d2b3450a49d4770357852f37f396f459db48f36d46f56b4c0721"
+      },
+      "startupStatus": [
+        1,
+        30,
+        2,
+        0,
+        0,
+        71,
+        72,
+        22,
+        1,
+        1
+      ],
+      "persistedWorldExact": true,
+      "emittedFrames": 0
+    },
+    {
+      "name": "MAP31-skill2",
+      "map": 31,
+      "skill": 2,
+      "nomonsters": false,
+      "deployment": {
+        "address": "0xfc3983de3f7cbe1ba01084469779470ad0bbeffa",
+        "transaction": "0xb7cb95f0c6c88f38f59714ef679a1f902dd32ac2cddeca2aaaf9a6551e70eeed",
+        "gas": 185254776,
+        "ms": 45.44508399999904,
+        "runtimeBytes": 378546,
+        "runtimeSha256": "4ded99f9cd0221556a618d8c3d490771d5507361c48fa066bb22ed84b6968b5c"
+      },
+      "transaction": "0xafc0fefa80285f84be190456d392ac5f7f04b35ede139474f023b3e2d31d2a90",
+      "gas": 1294599974,
+      "ms": 428.00700000000506,
+      "digests": {
+        "world": "de52367044946757f1296cbdd352f078e7a68e8c656d78addc396fe0f59c5b16",
+        "collision": "8d5ab6a7a533982ffe3c9a2486999e8edf313d607028b5f6a8c17d9b278787ec",
+        "zone": "125a8466ce3a2a3a90fb452286cb7afd2d672f7df3092a8b9fa714d94c19026f",
+        "flow": "3c87103e4282c67405367f602de4ba08494d964048b1a184a6984e756eb74aaf",
+        "difficulty": "0a6d0f2d1795d2b3450a49d4770357852f37f396f459db48f36d46f56b4c0721"
+      },
+      "startupStatus": [
+        1,
+        31,
+        2,
+        0,
+        0,
+        227,
+        230,
+        80,
+        1,
+        1
+      ],
+      "persistedWorldExact": true,
+      "emittedFrames": 0
+    },
+    {
+      "name": "MAP32-skill2",
+      "map": 32,
+      "skill": 2,
+      "nomonsters": false,
+      "deployment": {
+        "address": "0xd6b8eb34413f07a1a67a469345cfea6633efd58d",
+        "transaction": "0x82629a9f392567eb3c1fc95415dba0ca80b08672f1342483e5d1ce3d6a297f3b",
+        "gas": 185254776,
+        "ms": 46.88724999999977,
+        "runtimeBytes": 378546,
+        "runtimeSha256": "4ded99f9cd0221556a618d8c3d490771d5507361c48fa066bb22ed84b6968b5c"
+      },
+      "transaction": "0x09076357220e6cecee604fcd2587bbecd893a0f7df11c05ba189daf3b56d1573",
+      "gas": 950958310,
+      "ms": 361.64050000000134,
+      "digests": {
+        "world": "764ecba183fd914fdac283dcce838c0f4eff865cbd64d34c7ef62c9953a69092",
+        "collision": "63cf46b53367e46fbe3a99501b6888c89c283ccfdedeead9405df8c684485283",
+        "zone": "f100373fca559068da5a2d862b3ec226f29a8eb039e6324559bdd670f7b8371e",
+        "flow": "b35f0f9b25425879fba238f611719608411d894c0cae6dbd0a4c6171b9c48001",
+        "difficulty": "0a6d0f2d1795d2b3450a49d4770357852f37f396f459db48f36d46f56b4c0721"
+      },
+      "startupStatus": [
+        1,
+        32,
+        2,
+        0,
+        0,
+        85,
+        85,
+        20,
+        1,
+        1
+      ],
+      "persistedWorldExact": true,
+      "emittedFrames": 0
+    }
+  ],
+  "rejections": [
+    {
+      "error": "NotDriver()",
+      "transaction": "0x15cbec6f87373953038a47bcd8da0717c8730d5f9ec7ba961aa7ad2493aa0878",
+      "gas": 22880,
+      "allStorageRollback": true,
+      "logs": 0
+    },
+    {
+      "error": "UnsupportedSelection(int32,int32,int32)",
+      "transaction": "0x11a4ef2b669d2e1999ebe7b8dd9547779162619892dbdbd3f7395384ec856234",
+      "gas": 9537316,
+      "allStorageRollback": true,
+      "logs": 0
+    },
+    {
+      "error": "UnsupportedSelection(int32,int32,int32)",
+      "transaction": "0x2d36c81b8f6388671b26c20035051ec45d3f9c5410d97e57bf675326427805ed",
+      "gas": 9537327,
+      "allStorageRollback": true,
+      "logs": 0
+    },
+    {
+      "error": "UnsupportedSelection(int32,int32,int32)",
+      "transaction": "0xdc12e7b385570f38af50ec9122e2d5f22d0e60e06ad5925c0797f527e64c300c",
+      "gas": 9537362,
+      "allStorageRollback": true,
+      "logs": 0
+    },
+    {
+      "error": "UnsupportedSelection(int32,int32,int32)",
+      "transaction": "0x5ff76b2a70078ec513cfbc5c16d55a8ef3e7525f4d780e751996fcfbaf330574",
+      "gas": 9537757,
+      "allStorageRollback": true,
+      "logs": 0
+    },
+    {
+      "error": "UnsupportedSelection(int32,int32,int32)",
+      "transaction": "0x34e70f643cb5bb6198c9f10e75d20d283c3c12262ef97ba56eeb36768b8b1880",
+      "gas": 9537408,
+      "allStorageRollback": true,
+      "logs": 0
+    },
+    {
+      "error": "ResourceIdentityMismatch()",
+      "transaction": "0x8493ed19fb173c2887f977215623bf9dc2cdf4e37045d4c9870d4bc18391b9d1",
+      "gas": 9536758,
+      "allStorageRollback": true,
+      "logs": 0
+    },
+    {
+      "error": "ResourceDirectoryMismatch()",
+      "transaction": "0x95efeb9dd2557688f1b5d5c9686b79f6cfe9299237c13bedc7a2b9377017f832",
+      "gas": 24935044,
+      "allStorageRollback": true,
+      "logs": 0
+    },
+    {
+      "error": "ResourceChunksMismatch()",
+      "transaction": "0xc7e59ea6538642d1e46d67e66abef915e1898a318b0ecf469ee9a1c17142a959",
+      "gas": 36075836,
+      "allStorageRollback": true,
+      "logs": 0
+    },
+    {
+      "error": "ResourceChunksMismatch()",
+      "transaction": "0xbeb996782e9adb48aff2ccc8eb7f25688f956d37a0701ba62db68f3ab1304154",
+      "gas": 36025024,
+      "allStorageRollback": true,
+      "logs": 0
+    },
+    {
+      "error": "InjectedPostSetupFailure()",
+      "transaction": "0x783dd62857f166f98c61b35c37d9035253b4ffb75b8c7aa04f4c2f5321b792de",
+      "gas": 1140258458,
+      "allStorageRollback": true,
+      "logs": 0
+    },
+    {
+      "error": "AlreadyInitialized()",
+      "transaction": "0x6ae36aad377f8064f7978a9dd87d14271820f076b09066e316263cc95cc80638",
+      "gas": 24429,
+      "allStorageRollback": true,
+      "logs": 0
+    }
+  ],
+  "notes": [
+    "Shared original blob deployed once by1755 ordinary ResourceStore CREATEs; every runtime byte is checked.",
+    "Each case creates a fresh authenticated support host, runs synchronous original source-driven startup, and persists typed GameState/GameflowState. No EVM state, allocations or native expected data are injected.",
+    "Five digests compare full DSG1 world, collision/grouping/start/scroller state, complete normalized live zone/owner state, flow globals and mutable difficulty. Persisted-state recomputation must match.",
+    "World-only startup; no tic, Frame, UI, transition, browser, intermission or finale acceptance.",
+    "Receipt gas includes identity validation, setup, comparison serialization, typed state storage and proof event. It is support-host startup cost, not production adapter/frame cost. No EVM-memory measurement is claimed."
+  ],
+  "runtime": {
+    "port": 19071,
+    "args": [
+      "--host",
+      "127.0.0.1",
+      "--port",
+      "19071",
+      "--hardfork",
+      "cancun",
+      "--disable-code-size-limit",
+      "--disable-block-gas-limit",
+      "--memory-limit",
+      "1073741824",
+      "--no-request-size-limit",
+      "--silent"
+    ],
+    "client": "anvil/v1.8.5"
+  },
+  "resources": {
+    "chunks": 889,
+    "allRuntimeBytesVerified": true,
+    "blobBytes": 14557275,
+    "cumulativeDeploymentGas": 3186489328,
+    "uploadMs": 19882.694166999998,
+    "receiptsSha256": "d2582de6f1f56a75181655a4194680042046d3ec43d794e8dd1023bfb1e83876"
+  },
+  "rollbackHost": {
+    "address": "0x02121128f1ed0ada5df3a87f42752fce4ad63e59",
+    "transaction": "0x7f32b3d2e531da91c24b63b19ac48b902b86ed4102b271a24ea7f674f94942fd",
+    "gas": 185254776,
+    "ms": 47.60541599999851,
+    "runtimeBytes": 378546,
+    "runtimeSha256": "4ded99f9cd0221556a618d8c3d490771d5507361c48fa066bb22ed84b6968b5c"
+  },
+  "endedUtc": "2026-10-11T10:43:31.108Z",
+  "stoppedOwnedRuntime": true
+}

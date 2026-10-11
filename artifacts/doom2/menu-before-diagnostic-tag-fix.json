@@ -1,0 +1,1706 @@
+{
+  "kind": "evm-menu-production",
+  "pass": true,
+  "startedUtc": "2026-10-11T10:48:59.448Z",
+  "executionBudget": {
+    "gasLimit": 10000000000,
+    "gasHex": "0x2540be400",
+    "source": "/Users/eduard/sandbox/doom-evm-doom2-browser/execution-budget.json"
+  },
+  "compiler": {
+    "version": "0.8.37+commit.f401782d",
+    "settings": {
+      "remappings": [],
+      "optimizer": {
+        "enabled": true,
+        "runs": 200
+      },
+      "metadata": {
+        "bytecodeHash": "ipfs"
+      },
+      "compilationTarget": {
+        "src/evm/Doom2.sol": "Doom2"
+      },
+      "evmVersion": "cancun",
+      "libraries": {},
+      "viaIR": true
+    }
+  },
+  "resourceIdentity": {
+    "schemaVersion": 0,
+    "wadSha256": "10d67824b11025ddd9198e8cfc87ca335ee6e2d3e63af4180fa9b8a471893255",
+    "bundleSha256": "775bc8b01d44c2fb1c3a68a79b9864c2f36ebbb29746d31e9ca600ae226af5ad",
+    "paletteSha256": "fd895921b5d0a394612bb29852ed003d44d69f76dec31c0dc6b5d5fc7d63f7bb",
+    "paletteVariant": 0
+  },
+  "sourceHashes": {
+    "src/doom/am_map.sol": "3c5da949fc635d095659d4333d153408499e89e4178b469cb335e31cf52f6020",
+    "src/doom/am_map_types.sol": "7347073682c367c15c918aa51ff924c664b6d05efdbf4f0392d4f404b31a9039",
+    "src/doom/d_ticcmd.sol": "508d0332d3e8b83e1b68d37581a3befc100a9974fcaa0900cc44116cd75ff2ef",
+    "src/doom/doomstat.sol": "4c40da3914c629017959a0a4c0516d83346900674c92f5e55a766aba1b506fea",
+    "src/doom/f_finale.sol": "b07df3951029ca80b20052f2576951d90f159ba948b83a6ce3810dda77258f73",
+    "src/doom/g_game.sol": "6aee5fd801e9fff30fb2e89c17b8f95c3eb70925f6d0791759dbb5ab726c9688",
+    "src/doom/hu_lib.sol": "bf11331f06c38565650e93ce5ece611d048d5656ae2c8442b6568de5ce079a06",
+    "src/doom/hu_stuff.sol": "fcf57390d8c8e6d5ec935164264870509bb64197179536a39cd2a14dddb9588e",
+    "src/doom/info.sol": "4611205149173e42d3b0f1d91820c8042f6bc5fc48fb53aec84ad4bc501dca8e",
+    "src/doom/m_bbox.sol": "f4c60efe3627a97d0288fc5cd0283535527b1f51029568534c80bb8fbbf8f272",
+    "src/doom/m_cheat.sol": "e79d73bd9e159b0f05639464bf7c9cb7f40dc069780c3459336dfffb50394f82",
+    "src/doom/m_fixed.sol": "3f64bef1f62f61faead3a5b8f382bf1c66e1b3739ce4ac8d59a6fcef0451ef9f",
+    "src/doom/m_menu.sol": "f4d3c31acace804b478fbaab02032c1852082393c8b78c342c77213fd7a37558",
+    "src/doom/m_random.sol": "5267b881138cfb7e0d683449005619513006c70e3ed557f64697b36c4ed40c7b",
+    "src/doom/native_zone_layout.sol": "118b2d17165826fb0857d9cb296e2214db2a28917769299a82e70d0c0790f6e8",
+    "src/doom/p_ceilng.sol": "696f3f620f5bddb3cea64fda824e3203c780f53db890630f0685794454dc37f9",
+    "src/doom/p_doors.sol": "945bf600ce86d8286718fb75ecaf905a0c4631d79d2dac7260c91c9dc2013f8d",
+    "src/doom/p_enemy.sol": "eff76cce23b0877833a5c446a1a09d8ae01918a6925b6d3265240b144c09dfe7",
+    "src/doom/p_floor.sol": "b7c90baafa0b74fd7ff80cf60dcbc430148f6d6d068ba54ca0fbc7ba1bca7069",
+    "src/doom/p_game_state.sol": "06cbccba214717193fbab7c290e2962c4fb05b3f34c6543247ee1ec8e45d085a",
+    "src/doom/p_heap.sol": "3cc2e0a8c3239523db66c07fea33720f931754baedd312b5ca7cc2ebe763d2e0",
+    "src/doom/p_info.sol": "a48840479115ea8bf849ca5ec448d1b2bec7a6cfe58c5314e140635a898de792",
+    "src/doom/p_inter.sol": "8be27f9bba47beb46b3edf2a8a2674b3cd7218d2abb8ef5f8855803393d067de",
+    "src/doom/p_lights.sol": "6f63cbc6b41fc492a46ce43aef464deb9d08b7fa1dd8b213b546eec3e4f08276",
+    "src/doom/p_map.sol": "6b6d48523a45acab9090dfb0ec3d6dbab4e6de18afa89453df8b5a87088da0f3",
+    "src/doom/p_maputl.sol": "ac5ac60e7e058a5fc537e7042c7254bc0f51c77165149a22e141437b4e0ad0b6",
+    "src/doom/p_mobj.sol": "e6138aceee2be933f2c36e3fc18e6d2baa22ffa6a1197d9db89c744d42d78e56",
+    "src/doom/p_plats.sol": "6904df762b270f840daa99b34d2a5c689dbb2fef3aed3d33c2ac1a3f3e4d5722",
+    "src/doom/p_pspr.sol": "cfa2db3438d689c38d9c957fc4aee598c58740f025d6efead2b5f9671eb0c863",
+    "src/doom/p_setup.sol": "9498e1298bf4e53ccedc484a50d4c7f9f85315f6cb700719d474b721e382243b",
+    "src/doom/p_setup_static.sol": "c8100a42bb0bac190c583bbb2c82168599009f88a766e4c05b9a9231a5f69792",
+    "src/doom/p_sight.sol": "7ed366237fc3fec069ffb6336e95e038004d1f379622cf67f55fb8c6b1a6488c",
+    "src/doom/p_spec.sol": "2363640e75c22c9d017db677dda7148ad221380f0a23639167e145e933fc72b7",
+    "src/doom/p_switch.sol": "5404d359793e05c6c24a7804c07632150009b46f38d03068412d7ac53260dfe2",
+    "src/doom/p_telept.sol": "745f0fa4ed6f0515c398bfd2469c59aac82316965b7bac25263aeb82555d61b8",
+    "src/doom/p_tick.sol": "1993dd0c94853dabc4db554dfa0ca04375cef0a22075400ba0e7b56b525022ab",
+    "src/doom/p_user.sol": "963a46850e1b17171f79dd65bff9b5006ce6f97a935ad2023d1d526a6ec35c37",
+    "src/doom/p_zone_setup.sol": "e0308bd1197fd84a01eb1ee208be73c711851d6b0bc30be1d07a7c61b18b223d",
+    "src/doom/r_bsp.sol": "0ae5df313515692d0b2b970d5d39d107e014629cff2305fb37c14371a9524040",
+    "src/doom/r_data.sol": "ef5f26f230c1bed1a073f73b489613d947b420c220faa6f2c16a6f583045010c",
+    "src/doom/r_data_types.sol": "0448302d68447c8a5a4c46df4016e8845863e42bf6eaca8bcab8ab0c9707fdf8",
+    "src/doom/r_defs.sol": "558d5a9bfd131e816bbe28986e2dad6144a08e5a16ccfed1b199d7558a1ea0e2",
+    "src/doom/r_draw.sol": "afe958ea0c2962b739bff58b98d8bccc25c48d3d0838cacd46142c242b5d6477",
+    "src/doom/r_main.sol": "df403bf04fdbbcfc68c4fd9c5e19b5201ca711498efc34db406a4010ad3b2af5",
+    "src/doom/r_plane.sol": "c7a5abcbca84dddcd2a3c8bb160a609605c5c1842e73704dff4860df3280e463",
+    "src/doom/r_render_hooks.sol": "f026ccb8fffb68d8fbcb0966103212f52884b86350fe3fb52a401d146f3fb312",
+    "src/doom/r_render_state.sol": "072bd2f73b98e1eb775fc8093e95a69c184f3fa50a89a5d64a7beccd59493398",
+    "src/doom/r_segs.sol": "9d4e4dea06739278aab3698fb422818de6dd7726359c8822d60a162e886621cb",
+    "src/doom/r_sprite_state.sol": "735b3de85cbf455e05d3cb8e992cf4e477960bd4192bbd367f5c66c803b96363",
+    "src/doom/r_state.sol": "80951a13733e3a08f4182937a37def33ffda21eaae4b43a2a1bdba2043adab6b",
+    "src/doom/r_things.sol": "86705ab6b1f79b7ef07798b881cc547502d9911c97b57dc516a744e17c1977f5",
+    "src/doom/st_cheats.sol": "e35b8253b068f1ad807073bc322e2b62205ef3ffa95bb06f36acef7a79721677",
+    "src/doom/st_lib.sol": "5307f52151fbd73e442a60d8b87cbfbed3d38a28704a81e952f56672de667299",
+    "src/doom/st_stuff.sol": "936cf09f8f0dcc9c0555a9d533d9d1a50f65941462b0d3325a5c7850b5be2e49",
+    "src/doom/tables.sol": "bf14202b419075f6d187653205a37e211d8267c7fc4c0bebf5a8c5713afddf38",
+    "src/doom/v_video.sol": "be75fe69e7cd2486ce93408ec204cdf470ea097569e37fbedd867e9a2f3adf1f",
+    "src/doom/v_video_types.sol": "266890b0c8003e89f78baf8415048d24e4ca14865a1c8518ad77bb6a9f6b4d35",
+    "src/doom/w_zone_cache.sol": "03c07404765de9620b3d1ff15727809cdad911c8a78d822019b63500fa5018c2",
+    "src/doom/wi_stuff.sol": "09fc39b3012e41d19e7cc95f865c0ad236e990589b8f961e8a30642fc693177a",
+    "src/doom/wi_stuff_types.sol": "7c454eccfe7fe8e7505a1cf995385380eca6688b26d90883bb8ee509422c0d2e",
+    "src/doom/z_zone.sol": "b4e75218021d65aaf3389cf78a68663feebc2084c82457821be17247dc8106c5",
+    "src/doom/z_zone_backing.sol": "e63201d3bb45e4c8d0796480d4e9facd4deffd4d8a9dd730bed10ff4a108d0b1",
+    "src/doom/z_zone_types.sol": "11ab3f95678ba3852ab5f0c2dc9e85e715bec6897e65f04cd1919bba9bb73dbd",
+    "src/doom/z_zone_virtual.sol": "8bc309e89fa4da0667dc50a45adb9f91c58982640e1b3f5f9d38e49893f1e960",
+    "src/evm/Doom2.sol": "a608cc4bab7e44ab85d73581079b62bc811e7edd8fa088cab66b8a69bd3904f1",
+    "src/evm/Doom2Startup.sol": "0c0a0d38a1cf8441e19df834f26799d12ee803d4c3a4a3e98e4acde5fae27dca",
+    "src/evm/Doom2WadResources.sol": "7384106aef06d449266135e8392a22ba9409ea4b77af423653efdf7dbf6a2274",
+    "src/evm/DoomGame.sol": "d9451a915ab977bae137340e3e6626a270a4b84b8b6ea9449a8c4f0f578296df",
+    "src/evm/DoomMenu.sol": "eaf1a4716982bfa5ce510cfc018d42ddc3d81c96d7e9f15ba725a66b5419897f",
+    "src/evm/DoomRenderer.sol": "5639d82431350ea76c26d43457d26d0c3c0f410eaddf02db6adbcfb03a569ba0",
+    "src/evm/DoomScene.sol": "9ad7c8ccee4c9e05deb5608326baabacfa40f686b8d8445fb8aaa7352ab64569",
+    "src/evm/DoomUI.sol": "c2fa44363eeb962acabb51779fc780b8b6c5d46d5291448d44a585690e9ea9f9",
+    "src/evm/DoomZoneStartup.sol": "2d178494456a7ae3c730310f257ce2aa635d37d18c90cac039cf002cdb3f50dc",
+    "src/evm/EpisodeRuntime.sol": "a172a4204d537aab30a774ce3507bc46cfae3c3f162f4fe4b7a30df8e39329c2",
+    "src/evm/FrameProtocol.sol": "4665be3f613b8e817d616d2db1dc4a644325c44a6ade476a35d7d9d003625ace",
+    "src/evm/InputProtocol.sol": "bd9df1b10f19be3754cef8efcdc109ce54228f4475c50b197cb32b5bab8a7808",
+    "src/evm/ResourceTypes.sol": "159865364cfa57aae508cd94c49509cbccabd6aeeba55e92b9fcf816bdec4d6b",
+    "tools/reference/menu/evm.mjs": "0419ddc15826e1ef982515da2f75d7563dd19ae0557afe5ad74e0b9079bff30b"
+  },
+  "operations": [
+    {
+      "operation": "CREATE Doom",
+      "address": "0x02121128f1ed0ada5df3a87f42752fce4ad63e59",
+      "transaction": "0x1af9825eec6bc5047a309f0d78b248f8507d0b002b4cb2d2625a0b989be80a50",
+      "gas": 289222981,
+      "runtimeBytes": 850411,
+      "runtimeSha256": "60916ed6fb853c9b05f9d89cbb0e8cf9cb544a04cca605c86460e347877173fc"
+    },
+    {
+      "operation": "CREATE Doom",
+      "address": "0x897945a56464616a525c9e5f11a8d400a72a8f3a",
+      "transaction": "0xdeceb8bb64c0a4caf417b1cde78d2ddd9d90ae7b64c69547724d1dd05275e511",
+      "gas": 289222981,
+      "runtimeBytes": 850411,
+      "runtimeSha256": "60916ed6fb853c9b05f9d89cbb0e8cf9cb544a04cca605c86460e347877173fc"
+    }
+  ],
+  "frames": [
+    {
+      "label": "DOOM II initial EVM menu",
+      "transaction": "0x614ef2eca38c484f4084af3411d39e3403b89f746b72eeae51b923be2d116a15",
+      "inputSeq": 1,
+      "frameId": "1",
+      "pixelSha256": "c9056acd5881f86a32a60238eef609dd937ec6b81aed6da834b61a0ab6a7384c",
+      "paletteSha256": "12bafa34214682ae20c2cb6f4e38f21575564de88c4599f3410661e9b7a5c6d3",
+      "palette": 0,
+      "nativeExact": false,
+      "pixelsPath": "artifacts/local/doom2/menu-attempt2/evm-frame-0.pixels",
+      "gas": 163086668,
+      "milliseconds": 215.84741700000086
+    },
+    {
+      "label": "Commercial New Game goes directly to skills",
+      "transaction": "0x46c2e9d288df9bedd4dd9d8ffdc54af27527d4496a88c906da09d1ee88c00e65",
+      "inputSeq": 2,
+      "frameId": "2",
+      "pixelSha256": "e4e032904f5a47db3d24ebe21b633df07de9261c6f700f19d4b6c7251ff86b29",
+      "paletteSha256": "12bafa34214682ae20c2cb6f4e38f21575564de88c4599f3410661e9b7a5c6d3",
+      "palette": 0,
+      "nativeExact": false,
+      "pixelsPath": "artifacts/local/doom2/menu-attempt2/evm-frame-1.pixels",
+      "gas": 172467408,
+      "milliseconds": 212.91508299999987
+    },
+    {
+      "label": "MAP01 startup retries same sequence",
+      "transaction": "0x697d5b4c5eb54098d0d75f8382f3e02d833c300d2a08030035225b4a59b4e690",
+      "inputSeq": 3,
+      "frameId": "3",
+      "pixelSha256": "249f57f6ef71c4caaa78df8ce6759e17556dc1e1b960ac36b29df765e3c93f25",
+      "paletteSha256": "12bafa34214682ae20c2cb6f4e38f21575564de88c4599f3410661e9b7a5c6d3",
+      "palette": 0,
+      "nativeExact": false,
+      "pixelsPath": "artifacts/local/doom2/menu-attempt2/evm-frame-2.pixels",
+      "gas": 2632551819,
+      "milliseconds": 2280.021625000001
+    },
+    {
+      "label": "MAP01 actual movement",
+      "transaction": "0xecf7d4be016c1e79367bff117e8ecdfa8eb74d777c5b83d84093a22f9d7cb87b",
+      "inputSeq": 4,
+      "frameId": "4",
+      "pixelSha256": "a81104cab7309562ea94a6cd7f1a7d1087a391e0c539fb6f488781135b1d31b5",
+      "paletteSha256": "12bafa34214682ae20c2cb6f4e38f21575564de88c4599f3410661e9b7a5c6d3",
+      "palette": 0,
+      "nativeExact": false,
+      "pixelsPath": "artifacts/local/doom2/menu-attempt2/evm-frame-3.pixels",
+      "gas": 1553919098,
+      "milliseconds": 1771.3801669999993
+    },
+    {
+      "label": "Escape menu pauses gameplay",
+      "transaction": "0x972d9873f9a3c56ab6c1dad85abbd855ffa8f7744779d3bc89e1c28b6dd6244c",
+      "inputSeq": 5,
+      "frameId": "5",
+      "pixelSha256": "e2d2c7700d3a4046bce172a541014bbf6316d5d70e3f0177810439314b7b0600",
+      "paletteSha256": "12bafa34214682ae20c2cb6f4e38f21575564de88c4599f3410661e9b7a5c6d3",
+      "palette": 0,
+      "nativeExact": false,
+      "pixelsPath": "artifacts/local/doom2/menu-attempt2/evm-frame-4.pixels",
+      "gas": 141516065,
+      "milliseconds": 189.6637499999997
+    },
+    {
+      "label": "Menu redraw leaves gameplay persisted",
+      "transaction": "0x6ba9ab67e284ef4b4c61a749dea537e35106f21a7d2f2a7be2b1d9d9d8977d13",
+      "inputSeq": 6,
+      "frameId": "6",
+      "pixelSha256": "e2d2c7700d3a4046bce172a541014bbf6316d5d70e3f0177810439314b7b0600",
+      "paletteSha256": "12bafa34214682ae20c2cb6f4e38f21575564de88c4599f3410661e9b7a5c6d3",
+      "palette": 0,
+      "nativeExact": false,
+      "pixelsPath": "artifacts/local/doom2/menu-attempt2/evm-frame-5.pixels",
+      "gas": 141510425,
+      "milliseconds": 191.03087500000038
+    },
+    {
+      "label": "Escape resumes cached Frame",
+      "transaction": "0x6ae0a9960b4122a1c4f7fc68fed0d1ec1b1121e5267afa9c24809d098f5bb173",
+      "inputSeq": 7,
+      "frameId": "7",
+      "pixelSha256": "a81104cab7309562ea94a6cd7f1a7d1087a391e0c539fb6f488781135b1d31b5",
+      "paletteSha256": "12bafa34214682ae20c2cb6f4e38f21575564de88c4599f3410661e9b7a5c6d3",
+      "palette": 0,
+      "nativeExact": false,
+      "pixelsPath": "artifacts/local/doom2/menu-attempt2/evm-frame-6.pixels",
+      "gas": 14494500,
+      "milliseconds": 22.03925000000163
+    },
+    {
+      "label": "Following gameplay tic resumes",
+      "transaction": "0xc82dda6d620b12e1f05c5bcadad5a4013010b5e997bb390099c906a1d6ad5ec3",
+      "inputSeq": 8,
+      "frameId": "8",
+      "pixelSha256": "1e533cce2ffa8622293af8fac720b3fe758de7426739dc98b7375d443d494645",
+      "paletteSha256": "12bafa34214682ae20c2cb6f4e38f21575564de88c4599f3410661e9b7a5c6d3",
+      "palette": 0,
+      "nativeExact": false,
+      "pixelsPath": "artifacts/local/doom2/menu-attempt2/evm-frame-7.pixels",
+      "gas": 1525390650,
+      "milliseconds": 1848.503417
+    },
+    {
+      "label": "Select MAP01 skill screen",
+      "transaction": "0xfdf20f38d62f7ca2a51c9e3568eb3572f1458e47054e5299dbb4e833d8c3a452",
+      "inputSeq": 10,
+      "frameId": "9",
+      "pixelSha256": "7881bbf8fa572d1b76e5fe51df046f77fd2a1f1ef2b918b8ff127c608fa0f8b7",
+      "paletteSha256": "12bafa34214682ae20c2cb6f4e38f21575564de88c4599f3410661e9b7a5c6d3",
+      "palette": 0,
+      "nativeExact": false,
+      "pixelsPath": "artifacts/local/doom2/menu-attempt2/evm-frame-8.pixels",
+      "gas": 150878601,
+      "milliseconds": 193.09191599999758
+    },
+    {
+      "label": "Start MAP01 skill 0",
+      "transaction": "0xf4b5380d2fe6ed76b551703fb7ee3f84afb3d1b6fa2476842c118f3b914458d1",
+      "inputSeq": 11,
+      "frameId": "10",
+      "pixelSha256": "ad8ece1e0765987497ff223a3bc10219494971d0702f6b869aea017df3aaeceb",
+      "paletteSha256": "12bafa34214682ae20c2cb6f4e38f21575564de88c4599f3410661e9b7a5c6d3",
+      "palette": 0,
+      "nativeExact": false,
+      "pixelsPath": "artifacts/local/doom2/menu-attempt2/evm-frame-9.pixels",
+      "gas": 2183821684,
+      "milliseconds": 2266.980333000003
+    },
+    {
+      "label": "Select MAP01 skill screen",
+      "transaction": "0xd7078d49c9b19ff089d90d9209fc90f16407b35fbc8df0786e5e92ffb436e78f",
+      "inputSeq": 13,
+      "frameId": "11",
+      "pixelSha256": "b0485b1cffad9d8ed8277c27c74e2353cf458ce2d2b4f04c91c609247815c1ce",
+      "paletteSha256": "12bafa34214682ae20c2cb6f4e38f21575564de88c4599f3410661e9b7a5c6d3",
+      "palette": 0,
+      "nativeExact": false,
+      "pixelsPath": "artifacts/local/doom2/menu-attempt2/evm-frame-10.pixels",
+      "gas": 150878523,
+      "milliseconds": 194.3391249999986
+    },
+    {
+      "label": "Start MAP01 skill 1",
+      "transaction": "0x521b0565132e501e2bc934df89a35ff79a73ec8e2f98625f262ccee0105421a9",
+      "inputSeq": 14,
+      "frameId": "12",
+      "pixelSha256": "ad8ece1e0765987497ff223a3bc10219494971d0702f6b869aea017df3aaeceb",
+      "paletteSha256": "12bafa34214682ae20c2cb6f4e38f21575564de88c4599f3410661e9b7a5c6d3",
+      "palette": 0,
+      "nativeExact": false,
+      "pixelsPath": "artifacts/local/doom2/menu-attempt2/evm-frame-11.pixels",
+      "gas": 2183657269,
+      "milliseconds": 2141.714208999998
+    },
+    {
+      "label": "Select MAP01 skill screen",
+      "transaction": "0x616dd294639dc5254532183089fa29cf1a1536f9299a9e46bcc2b5ddbd4eb867",
+      "inputSeq": 16,
+      "frameId": "13",
+      "pixelSha256": "8fab5c5f92a4535113a3061e260bb71a51c56b98b07c05a85b8e1a1669067a8e",
+      "paletteSha256": "12bafa34214682ae20c2cb6f4e38f21575564de88c4599f3410661e9b7a5c6d3",
+      "palette": 0,
+      "nativeExact": false,
+      "pixelsPath": "artifacts/local/doom2/menu-attempt2/evm-frame-12.pixels",
+      "gas": 150878523,
+      "milliseconds": 193.88266699999804
+    },
+    {
+      "label": "Start MAP01 skill 3",
+      "transaction": "0xf83b8867a7f935d3ae39e5a2a3504c313761a433542c8c0b1c70b790868b23fd",
+      "inputSeq": 17,
+      "frameId": "14",
+      "pixelSha256": "28e3226e35a385d3dfb377f2a3b77de34d33916f7126984c9dfc00d1db6efc02",
+      "paletteSha256": "12bafa34214682ae20c2cb6f4e38f21575564de88c4599f3410661e9b7a5c6d3",
+      "palette": 0,
+      "nativeExact": false,
+      "pixelsPath": "artifacts/local/doom2/menu-attempt2/evm-frame-13.pixels",
+      "gas": 2205275290,
+      "milliseconds": 2292.102500000001
+    },
+    {
+      "label": "Select MAP01 skill screen",
+      "transaction": "0x7c61641055d4fb94b154c5339905c193c7cd1f336a743efbb882588edc6e8376",
+      "inputSeq": 19,
+      "frameId": "15",
+      "pixelSha256": "6e0b92d4e50fb81bb2a6a9ba6710585329d30a11784c14c0d72de44f28f79dce",
+      "paletteSha256": "12bafa34214682ae20c2cb6f4e38f21575564de88c4599f3410661e9b7a5c6d3",
+      "palette": 0,
+      "nativeExact": false,
+      "pixelsPath": "artifacts/local/doom2/menu-attempt2/evm-frame-14.pixels",
+      "gas": 150880527,
+      "milliseconds": 211.89816599999904
+    },
+    {
+      "label": "Original Nightmare confirmation",
+      "transaction": "0xc945e98211b8ce69b69436d21ca7e2c8fdcc96bc8d4fd3d4d620c82afc1f35dd",
+      "inputSeq": 20,
+      "frameId": "16",
+      "pixelSha256": "108e0046a27b3e0b61cf8d5b1d5126b67b3a7c2035ef60ccc856d4a7a0dd81ac",
+      "paletteSha256": "12bafa34214682ae20c2cb6f4e38f21575564de88c4599f3410661e9b7a5c6d3",
+      "palette": 0,
+      "nativeExact": false,
+      "pixelsPath": "artifacts/local/doom2/menu-attempt2/evm-frame-15.pixels",
+      "gas": 136530087,
+      "milliseconds": 190.3882500000036
+    },
+    {
+      "label": "Start MAP01 skill 4",
+      "transaction": "0x05d98add0adfa405543f22050cdf7a947cf6c3e8dfbe0fd0c67535e9280bf336",
+      "inputSeq": 21,
+      "frameId": "17",
+      "pixelSha256": "28e3226e35a385d3dfb377f2a3b77de34d33916f7126984c9dfc00d1db6efc02",
+      "paletteSha256": "12bafa34214682ae20c2cb6f4e38f21575564de88c4599f3410661e9b7a5c6d3",
+      "palette": 0,
+      "nativeExact": false,
+      "pixelsPath": "artifacts/local/doom2/menu-attempt2/evm-frame-16.pixels",
+      "gas": 2210183952,
+      "milliseconds": 2271.990375000001
+    },
+    {
+      "label": "Select MAP01 skill screen",
+      "transaction": "0xb437aa877451a7ddfe3f4a20477a66472cb9e64c5b11576db65b4095dadfecc0",
+      "inputSeq": 23,
+      "frameId": "18",
+      "pixelSha256": "acc97cb7c0b648828fd3ee85d57b3f8133de64313354a9648801c4fcd7bfd59a",
+      "paletteSha256": "12bafa34214682ae20c2cb6f4e38f21575564de88c4599f3410661e9b7a5c6d3",
+      "palette": 0,
+      "nativeExact": false,
+      "pixelsPath": "artifacts/local/doom2/menu-attempt2/evm-frame-17.pixels",
+      "gas": 150880527,
+      "milliseconds": 211.06987500000105
+    },
+    {
+      "label": "Start MAP01 skill 2",
+      "transaction": "0x4b96b86713cebc6857ed5ab38dcfa4a733c1304c6e9b2f5c78748fe0fe3fc0e5",
+      "inputSeq": 24,
+      "frameId": "19",
+      "pixelSha256": "28e3226e35a385d3dfb377f2a3b77de34d33916f7126984c9dfc00d1db6efc02",
+      "paletteSha256": "12bafa34214682ae20c2cb6f4e38f21575564de88c4599f3410661e9b7a5c6d3",
+      "palette": 0,
+      "nativeExact": false,
+      "pixelsPath": "artifacts/local/doom2/menu-attempt2/evm-frame-18.pixels",
+      "gas": 2212670991,
+      "milliseconds": 2292.7560410000006
+    },
+    {
+      "label": "Select MAP07 skill screen",
+      "transaction": "0x0d8764b5e066822a4285c3be61139b679ea277cb33bbd5cff45d126e66408835",
+      "inputSeq": 26,
+      "frameId": "20",
+      "pixelSha256": "eb4ecd6a6b76d67a4dffdb3d082d7cb3bfc6b5a68701a113f432fd36edfc447d",
+      "paletteSha256": "12bafa34214682ae20c2cb6f4e38f21575564de88c4599f3410661e9b7a5c6d3",
+      "palette": 0,
+      "nativeExact": false,
+      "pixelsPath": "artifacts/local/doom2/menu-attempt2/evm-frame-19.pixels",
+      "gas": 150894025,
+      "milliseconds": 214.1418749999939
+    },
+    {
+      "label": "Start MAP07 skill 2",
+      "transaction": "0x357ce546cbb57e129b9bbe875a20bc22c12d33f65ea485d5292948bd1fa53f51",
+      "inputSeq": 27,
+      "frameId": "21",
+      "pixelSha256": "b9e242c776e1fe080f54ea3267e94e89c910ac0ad11ddd1b4a680626b83abbb0",
+      "paletteSha256": "12bafa34214682ae20c2cb6f4e38f21575564de88c4599f3410661e9b7a5c6d3",
+      "palette": 0,
+      "nativeExact": false,
+      "pixelsPath": "artifacts/local/doom2/menu-attempt2/evm-frame-20.pixels",
+      "gas": 1362557401,
+      "milliseconds": 1191.199416000003
+    },
+    {
+      "label": "Select MAP15 skill screen",
+      "transaction": "0xcefe05a899b260f16354e19b8cf5f4f2f5340e418cd63f26db0552c1c955cdbc",
+      "inputSeq": 29,
+      "frameId": "22",
+      "pixelSha256": "54d811988fb50431537c4e4ae4a67121ec09c41e8e2132fbde626c99a999edf8",
+      "paletteSha256": "12bafa34214682ae20c2cb6f4e38f21575564de88c4599f3410661e9b7a5c6d3",
+      "palette": 0,
+      "nativeExact": false,
+      "pixelsPath": "artifacts/local/doom2/menu-attempt2/evm-frame-21.pixels",
+      "gas": 150898359,
+      "milliseconds": 192.0590830000001
+    },
+    {
+      "label": "Start MAP15 skill 2",
+      "transaction": "0x10ccd2285d8d8ada4ea1251343ec28ddeb93ec97aa5cb00453b30dda5252e2c3",
+      "inputSeq": 30,
+      "frameId": "23",
+      "pixelSha256": "eb0e54b0fa9e9a9836927bbfeb730aa8283bafd0a0b2132363d95e67ecc2dbff",
+      "paletteSha256": "12bafa34214682ae20c2cb6f4e38f21575564de88c4599f3410661e9b7a5c6d3",
+      "palette": 0,
+      "nativeExact": false,
+      "pixelsPath": "artifacts/local/doom2/menu-attempt2/evm-frame-22.pixels",
+      "gas": 3141178062,
+      "milliseconds": 1813.6067919999987
+    },
+    {
+      "label": "Select MAP31 skill screen",
+      "transaction": "0xd4d09046ece7c62ef73d01b302c09596f4987c765da1c508df59ae2c67606c93",
+      "inputSeq": 32,
+      "frameId": "24",
+      "pixelSha256": "66772a2775dc157be6af5ce04145e73fde02f402182d3132c013a3c2fe820a41",
+      "paletteSha256": "12bafa34214682ae20c2cb6f4e38f21575564de88c4599f3410661e9b7a5c6d3",
+      "palette": 0,
+      "nativeExact": false,
+      "pixelsPath": "artifacts/local/doom2/menu-attempt2/evm-frame-23.pixels",
+      "gas": 150915395,
+      "milliseconds": 190.20241700000042
+    },
+    {
+      "label": "Start MAP31 skill 2",
+      "transaction": "0x3638a38d94ffbfe5c59a8117669cd658ad18d62492907ba85649b5ebcfc78301",
+      "inputSeq": 33,
+      "frameId": "25",
+      "pixelSha256": "c8316a4430656964664701eba4113e96cd0fbf883ceafcba2a965dab27ae60ba",
+      "paletteSha256": "12bafa34214682ae20c2cb6f4e38f21575564de88c4599f3410661e9b7a5c6d3",
+      "palette": 0,
+      "nativeExact": false,
+      "pixelsPath": "artifacts/local/doom2/menu-attempt2/evm-frame-24.pixels",
+      "gas": 2692125719,
+      "milliseconds": 1450.7643749999988
+    },
+    {
+      "label": "Select MAP32 skill screen",
+      "transaction": "0x0d1a1195683f1c4e3102acb69d593f8fc913bd399c2b291063c07dabe899125e",
+      "inputSeq": 35,
+      "frameId": "26",
+      "pixelSha256": "47a6bc1bb8eb4d8f5f22d74b4359ff28c4db912217621bdd989fb7711b35cb0a",
+      "paletteSha256": "12bafa34214682ae20c2cb6f4e38f21575564de88c4599f3410661e9b7a5c6d3",
+      "palette": 0,
+      "nativeExact": false,
+      "pixelsPath": "artifacts/local/doom2/menu-attempt2/evm-frame-25.pixels",
+      "gas": 150885431,
+      "milliseconds": 192.10633399999642
+    },
+    {
+      "label": "Start MAP32 skill 2",
+      "transaction": "0x685862eee30026258550360da5abb3d9be8bd820d39118f3544754d13430e7de",
+      "inputSeq": 36,
+      "frameId": "27",
+      "pixelSha256": "88027d6ba765b184c12fa2351ef2e365dc54cd0dfa9f4b4eb20d97f11e4319ef",
+      "paletteSha256": "12bafa34214682ae20c2cb6f4e38f21575564de88c4599f3410661e9b7a5c6d3",
+      "palette": 0,
+      "nativeExact": false,
+      "pixelsPath": "artifacts/local/doom2/menu-attempt2/evm-frame-26.pixels",
+      "gas": 1895781342,
+      "milliseconds": 1323.4476249999934
+    }
+  ],
+  "inputs": [
+    {
+      "address": "0x02121128f1ed0ada5df3a87f42752fce4ad63e59",
+      "sequence": 1,
+      "events": [],
+      "draw": true,
+      "transaction": "0x614ef2eca38c484f4084af3411d39e3403b89f746b72eeae51b923be2d116a15",
+      "gas": 163086668,
+      "milliseconds": 215.84741700000086
+    },
+    {
+      "address": "0x02121128f1ed0ada5df3a87f42752fce4ad63e59",
+      "sequence": 2,
+      "events": [
+        [
+          0,
+          13
+        ],
+        [
+          1,
+          13
+        ]
+      ],
+      "draw": true,
+      "transaction": "0x46c2e9d288df9bedd4dd9d8ffdc54af27527d4496a88c906da09d1ee88c00e65",
+      "gas": 172467408,
+      "milliseconds": 212.91508299999987
+    },
+    {
+      "address": "0x02121128f1ed0ada5df3a87f42752fce4ad63e59",
+      "sequence": 3,
+      "events": [
+        [
+          0,
+          13
+        ],
+        [
+          1,
+          13
+        ]
+      ],
+      "draw": true,
+      "transaction": "0x697d5b4c5eb54098d0d75f8382f3e02d833c300d2a08030035225b4a59b4e690",
+      "gas": 2632551819,
+      "milliseconds": 2280.021625000001
+    },
+    {
+      "address": "0x02121128f1ed0ada5df3a87f42752fce4ad63e59",
+      "sequence": 4,
+      "events": [
+        [
+          0,
+          119
+        ]
+      ],
+      "draw": true,
+      "transaction": "0xecf7d4be016c1e79367bff117e8ecdfa8eb74d777c5b83d84093a22f9d7cb87b",
+      "gas": 1553919098,
+      "milliseconds": 1771.3801669999993
+    },
+    {
+      "address": "0x02121128f1ed0ada5df3a87f42752fce4ad63e59",
+      "sequence": 5,
+      "events": [
+        [
+          0,
+          27
+        ],
+        [
+          1,
+          27
+        ]
+      ],
+      "draw": true,
+      "transaction": "0x972d9873f9a3c56ab6c1dad85abbd855ffa8f7744779d3bc89e1c28b6dd6244c",
+      "gas": 141516065,
+      "milliseconds": 189.6637499999997
+    },
+    {
+      "address": "0x02121128f1ed0ada5df3a87f42752fce4ad63e59",
+      "sequence": 6,
+      "events": [],
+      "draw": true,
+      "transaction": "0x6ba9ab67e284ef4b4c61a749dea537e35106f21a7d2f2a7be2b1d9d9d8977d13",
+      "gas": 141510425,
+      "milliseconds": 191.03087500000038
+    },
+    {
+      "address": "0x02121128f1ed0ada5df3a87f42752fce4ad63e59",
+      "sequence": 7,
+      "events": [
+        [
+          0,
+          27
+        ],
+        [
+          1,
+          27
+        ]
+      ],
+      "draw": true,
+      "transaction": "0x6ae0a9960b4122a1c4f7fc68fed0d1ec1b1121e5267afa9c24809d098f5bb173",
+      "gas": 14494500,
+      "milliseconds": 22.03925000000163
+    },
+    {
+      "address": "0x02121128f1ed0ada5df3a87f42752fce4ad63e59",
+      "sequence": 8,
+      "events": [],
+      "draw": true,
+      "transaction": "0xc82dda6d620b12e1f05c5bcadad5a4013010b5e997bb390099c906a1d6ad5ec3",
+      "gas": 1525390650,
+      "milliseconds": 1848.503417
+    },
+    {
+      "address": "0x02121128f1ed0ada5df3a87f42752fce4ad63e59",
+      "sequence": 9,
+      "events": [
+        [
+          0,
+          27
+        ],
+        [
+          1,
+          27
+        ],
+        [
+          0,
+          115
+        ],
+        [
+          1,
+          115
+        ],
+        [
+          0,
+          13
+        ],
+        [
+          1,
+          13
+        ]
+      ],
+      "draw": false,
+      "transaction": "0x343aa8da15a2d1f5072d7489b943e274f705cb00b87b413b8e17c1be3b3d064e",
+      "gas": 67516,
+      "milliseconds": 22.100290999998833
+    },
+    {
+      "address": "0x02121128f1ed0ada5df3a87f42752fce4ad63e59",
+      "sequence": 10,
+      "events": [
+        [
+          0,
+          13
+        ],
+        [
+          1,
+          13
+        ]
+      ],
+      "draw": true,
+      "transaction": "0xfdf20f38d62f7ca2a51c9e3568eb3572f1458e47054e5299dbb4e833d8c3a452",
+      "gas": 150878601,
+      "milliseconds": 193.09191599999758
+    },
+    {
+      "address": "0x02121128f1ed0ada5df3a87f42752fce4ad63e59",
+      "sequence": 11,
+      "events": [
+        [
+          0,
+          175
+        ],
+        [
+          1,
+          175
+        ],
+        [
+          0,
+          175
+        ],
+        [
+          1,
+          175
+        ],
+        [
+          0,
+          175
+        ],
+        [
+          1,
+          175
+        ],
+        [
+          0,
+          13
+        ],
+        [
+          1,
+          13
+        ]
+      ],
+      "draw": true,
+      "transaction": "0xf4b5380d2fe6ed76b551703fb7ee3f84afb3d1b6fa2476842c118f3b914458d1",
+      "gas": 2183821684,
+      "milliseconds": 2266.980333000003
+    },
+    {
+      "address": "0x02121128f1ed0ada5df3a87f42752fce4ad63e59",
+      "sequence": 12,
+      "events": [
+        [
+          0,
+          27
+        ],
+        [
+          1,
+          27
+        ],
+        [
+          0,
+          115
+        ],
+        [
+          1,
+          115
+        ],
+        [
+          0,
+          13
+        ],
+        [
+          1,
+          13
+        ]
+      ],
+      "draw": false,
+      "transaction": "0xbdc05249f5b01715a6621d7433a22dd6a9e0d2dd32abfa55461a5a57d65a898f",
+      "gas": 65045,
+      "milliseconds": 22.11254199999894
+    },
+    {
+      "address": "0x02121128f1ed0ada5df3a87f42752fce4ad63e59",
+      "sequence": 13,
+      "events": [
+        [
+          0,
+          13
+        ],
+        [
+          1,
+          13
+        ]
+      ],
+      "draw": true,
+      "transaction": "0xd7078d49c9b19ff089d90d9209fc90f16407b35fbc8df0786e5e92ffb436e78f",
+      "gas": 150878523,
+      "milliseconds": 194.3391249999986
+    },
+    {
+      "address": "0x02121128f1ed0ada5df3a87f42752fce4ad63e59",
+      "sequence": 14,
+      "events": [
+        [
+          0,
+          175
+        ],
+        [
+          1,
+          175
+        ],
+        [
+          0,
+          13
+        ],
+        [
+          1,
+          13
+        ]
+      ],
+      "draw": true,
+      "transaction": "0x521b0565132e501e2bc934df89a35ff79a73ec8e2f98625f262ccee0105421a9",
+      "gas": 2183657269,
+      "milliseconds": 2141.714208999998
+    },
+    {
+      "address": "0x02121128f1ed0ada5df3a87f42752fce4ad63e59",
+      "sequence": 15,
+      "events": [
+        [
+          0,
+          27
+        ],
+        [
+          1,
+          27
+        ],
+        [
+          0,
+          115
+        ],
+        [
+          1,
+          115
+        ],
+        [
+          0,
+          13
+        ],
+        [
+          1,
+          13
+        ]
+      ],
+      "draw": false,
+      "transaction": "0x406b5113ff11a1ba44747994ea1982dd942bfbed89a37efde313ed735afbd005",
+      "gas": 65045,
+      "milliseconds": 21.852500000000873
+    },
+    {
+      "address": "0x02121128f1ed0ada5df3a87f42752fce4ad63e59",
+      "sequence": 16,
+      "events": [
+        [
+          0,
+          13
+        ],
+        [
+          1,
+          13
+        ]
+      ],
+      "draw": true,
+      "transaction": "0x616dd294639dc5254532183089fa29cf1a1536f9299a9e46bcc2b5ddbd4eb867",
+      "gas": 150878523,
+      "milliseconds": 193.88266699999804
+    },
+    {
+      "address": "0x02121128f1ed0ada5df3a87f42752fce4ad63e59",
+      "sequence": 17,
+      "events": [
+        [
+          0,
+          175
+        ],
+        [
+          1,
+          175
+        ],
+        [
+          0,
+          175
+        ],
+        [
+          1,
+          175
+        ],
+        [
+          0,
+          13
+        ],
+        [
+          1,
+          13
+        ]
+      ],
+      "draw": true,
+      "transaction": "0xf83b8867a7f935d3ae39e5a2a3504c313761a433542c8c0b1c70b790868b23fd",
+      "gas": 2205275290,
+      "milliseconds": 2292.102500000001
+    },
+    {
+      "address": "0x02121128f1ed0ada5df3a87f42752fce4ad63e59",
+      "sequence": 18,
+      "events": [
+        [
+          0,
+          27
+        ],
+        [
+          1,
+          27
+        ],
+        [
+          0,
+          115
+        ],
+        [
+          1,
+          115
+        ],
+        [
+          0,
+          13
+        ],
+        [
+          1,
+          13
+        ]
+      ],
+      "draw": false,
+      "transaction": "0xd6f4e708a7ccd50957599a1a25999af505e58bcab79486e47c8f5b13cdc556af",
+      "gas": 65123,
+      "milliseconds": 22.04737500000192
+    },
+    {
+      "address": "0x02121128f1ed0ada5df3a87f42752fce4ad63e59",
+      "sequence": 19,
+      "events": [
+        [
+          0,
+          13
+        ],
+        [
+          1,
+          13
+        ]
+      ],
+      "draw": true,
+      "transaction": "0x7c61641055d4fb94b154c5339905c193c7cd1f336a743efbb882588edc6e8376",
+      "gas": 150880527,
+      "milliseconds": 211.89816599999904
+    },
+    {
+      "address": "0x02121128f1ed0ada5df3a87f42752fce4ad63e59",
+      "sequence": 20,
+      "events": [
+        [
+          0,
+          175
+        ],
+        [
+          1,
+          175
+        ],
+        [
+          0,
+          13
+        ],
+        [
+          1,
+          13
+        ]
+      ],
+      "draw": true,
+      "transaction": "0xc945e98211b8ce69b69436d21ca7e2c8fdcc96bc8d4fd3d4d620c82afc1f35dd",
+      "gas": 136530087,
+      "milliseconds": 190.3882500000036
+    },
+    {
+      "address": "0x02121128f1ed0ada5df3a87f42752fce4ad63e59",
+      "sequence": 21,
+      "events": [
+        [
+          0,
+          121
+        ],
+        [
+          1,
+          121
+        ]
+      ],
+      "draw": true,
+      "transaction": "0x05d98add0adfa405543f22050cdf7a947cf6c3e8dfbe0fd0c67535e9280bf336",
+      "gas": 2210183952,
+      "milliseconds": 2271.990375000001
+    },
+    {
+      "address": "0x02121128f1ed0ada5df3a87f42752fce4ad63e59",
+      "sequence": 22,
+      "events": [
+        [
+          0,
+          27
+        ],
+        [
+          1,
+          27
+        ],
+        [
+          0,
+          115
+        ],
+        [
+          1,
+          115
+        ],
+        [
+          0,
+          13
+        ],
+        [
+          1,
+          13
+        ]
+      ],
+      "draw": false,
+      "transaction": "0xf48ffb4b17bdb316be09c4a7ddced3058ef5c9ddc5c363d22fc34247a17ac463",
+      "gas": 65045,
+      "milliseconds": 22.17099999999482
+    },
+    {
+      "address": "0x02121128f1ed0ada5df3a87f42752fce4ad63e59",
+      "sequence": 23,
+      "events": [
+        [
+          0,
+          13
+        ],
+        [
+          1,
+          13
+        ]
+      ],
+      "draw": true,
+      "transaction": "0xb437aa877451a7ddfe3f4a20477a66472cb9e64c5b11576db65b4095dadfecc0",
+      "gas": 150880527,
+      "milliseconds": 211.06987500000105
+    },
+    {
+      "address": "0x02121128f1ed0ada5df3a87f42752fce4ad63e59",
+      "sequence": 24,
+      "events": [
+        [
+          0,
+          175
+        ],
+        [
+          1,
+          175
+        ],
+        [
+          0,
+          175
+        ],
+        [
+          1,
+          175
+        ],
+        [
+          0,
+          175
+        ],
+        [
+          1,
+          175
+        ],
+        [
+          0,
+          13
+        ],
+        [
+          1,
+          13
+        ]
+      ],
+      "draw": true,
+      "transaction": "0x4b96b86713cebc6857ed5ab38dcfa4a733c1304c6e9b2f5c78748fe0fe3fc0e5",
+      "gas": 2212670991,
+      "milliseconds": 2292.7560410000006
+    },
+    {
+      "address": "0x02121128f1ed0ada5df3a87f42752fce4ad63e59",
+      "sequence": 25,
+      "events": [
+        [
+          0,
+          27
+        ],
+        [
+          1,
+          27
+        ],
+        [
+          0,
+          115
+        ],
+        [
+          1,
+          115
+        ],
+        [
+          0,
+          13
+        ],
+        [
+          1,
+          13
+        ]
+      ],
+      "draw": false,
+      "transaction": "0xb148be577a6d187cf66051bce388c0597ea02483f606000d85257d5dbc72d5d3",
+      "gas": 65045,
+      "milliseconds": 22.130582999998296
+    },
+    {
+      "address": "0x02121128f1ed0ada5df3a87f42752fce4ad63e59",
+      "sequence": 26,
+      "events": [
+        [
+          0,
+          175
+        ],
+        [
+          1,
+          175
+        ],
+        [
+          0,
+          175
+        ],
+        [
+          1,
+          175
+        ],
+        [
+          0,
+          175
+        ],
+        [
+          1,
+          175
+        ],
+        [
+          0,
+          175
+        ],
+        [
+          1,
+          175
+        ],
+        [
+          0,
+          175
+        ],
+        [
+          1,
+          175
+        ],
+        [
+          0,
+          175
+        ],
+        [
+          1,
+          175
+        ],
+        [
+          0,
+          13
+        ],
+        [
+          1,
+          13
+        ]
+      ],
+      "draw": true,
+      "transaction": "0x0d8764b5e066822a4285c3be61139b679ea277cb33bbd5cff45d126e66408835",
+      "gas": 150894025,
+      "milliseconds": 214.1418749999939
+    },
+    {
+      "address": "0x02121128f1ed0ada5df3a87f42752fce4ad63e59",
+      "sequence": 27,
+      "events": [
+        [
+          0,
+          13
+        ],
+        [
+          1,
+          13
+        ]
+      ],
+      "draw": true,
+      "transaction": "0x357ce546cbb57e129b9bbe875a20bc22c12d33f65ea485d5292948bd1fa53f51",
+      "gas": 1362557401,
+      "milliseconds": 1191.199416000003
+    },
+    {
+      "address": "0x02121128f1ed0ada5df3a87f42752fce4ad63e59",
+      "sequence": 28,
+      "events": [
+        [
+          0,
+          27
+        ],
+        [
+          1,
+          27
+        ],
+        [
+          0,
+          115
+        ],
+        [
+          1,
+          115
+        ],
+        [
+          0,
+          13
+        ],
+        [
+          1,
+          13
+        ]
+      ],
+      "draw": false,
+      "transaction": "0xe127c9a7cae1338a07067d762b45c9f6fae31735fa81f8b8032f7fc710f634dd",
+      "gas": 65045,
+      "milliseconds": 22.145916000001307
+    },
+    {
+      "address": "0x02121128f1ed0ada5df3a87f42752fce4ad63e59",
+      "sequence": 29,
+      "events": [
+        [
+          0,
+          175
+        ],
+        [
+          1,
+          175
+        ],
+        [
+          0,
+          175
+        ],
+        [
+          1,
+          175
+        ],
+        [
+          0,
+          175
+        ],
+        [
+          1,
+          175
+        ],
+        [
+          0,
+          175
+        ],
+        [
+          1,
+          175
+        ],
+        [
+          0,
+          175
+        ],
+        [
+          1,
+          175
+        ],
+        [
+          0,
+          175
+        ],
+        [
+          1,
+          175
+        ],
+        [
+          0,
+          175
+        ],
+        [
+          1,
+          175
+        ],
+        [
+          0,
+          175
+        ],
+        [
+          1,
+          175
+        ],
+        [
+          0,
+          13
+        ],
+        [
+          1,
+          13
+        ]
+      ],
+      "draw": true,
+      "transaction": "0xcefe05a899b260f16354e19b8cf5f4f2f5340e418cd63f26db0552c1c955cdbc",
+      "gas": 150898359,
+      "milliseconds": 192.0590830000001
+    },
+    {
+      "address": "0x02121128f1ed0ada5df3a87f42752fce4ad63e59",
+      "sequence": 30,
+      "events": [
+        [
+          0,
+          13
+        ],
+        [
+          1,
+          13
+        ]
+      ],
+      "draw": true,
+      "transaction": "0x10ccd2285d8d8ada4ea1251343ec28ddeb93ec97aa5cb00453b30dda5252e2c3",
+      "gas": 3141178062,
+      "milliseconds": 1813.6067919999987
+    },
+    {
+      "address": "0x02121128f1ed0ada5df3a87f42752fce4ad63e59",
+      "sequence": 31,
+      "events": [
+        [
+          0,
+          27
+        ],
+        [
+          1,
+          27
+        ],
+        [
+          0,
+          115
+        ],
+        [
+          1,
+          115
+        ],
+        [
+          0,
+          13
+        ],
+        [
+          1,
+          13
+        ]
+      ],
+      "draw": false,
+      "transaction": "0x62d3c8ba9c4174d3014501c8cc0e5bef6572084e0afbf029f188a3db60d328a9",
+      "gas": 65045,
+      "milliseconds": 21.90412500000093
+    },
+    {
+      "address": "0x02121128f1ed0ada5df3a87f42752fce4ad63e59",
+      "sequence": 32,
+      "events": [
+        [
+          0,
+          175
+        ],
+        [
+          1,
+          175
+        ],
+        [
+          0,
+          175
+        ],
+        [
+          1,
+          175
+        ],
+        [
+          0,
+          175
+        ],
+        [
+          1,
+          175
+        ],
+        [
+          0,
+          175
+        ],
+        [
+          1,
+          175
+        ],
+        [
+          0,
+          175
+        ],
+        [
+          1,
+          175
+        ],
+        [
+          0,
+          175
+        ],
+        [
+          1,
+          175
+        ],
+        [
+          0,
+          175
+        ],
+        [
+          1,
+          175
+        ],
+        [
+          0,
+          175
+        ],
+        [
+          1,
+          175
+        ],
+        [
+          0,
+          175
+        ],
+        [
+          1,
+          175
+        ],
+        [
+          0,
+          175
+        ],
+        [
+          1,
+          175
+        ],
+        [
+          0,
+          175
+        ],
+        [
+          1,
+          175
+        ],
+        [
+          0,
+          175
+        ],
+        [
+          1,
+          175
+        ],
+        [
+          0,
+          175
+        ],
+        [
+          1,
+          175
+        ],
+        [
+          0,
+          175
+        ],
+        [
+          1,
+          175
+        ],
+        [
+          0,
+          175
+        ],
+        [
+          1,
+          175
+        ],
+        [
+          0,
+          175
+        ],
+        [
+          1,
+          175
+        ],
+        [
+          0,
+          13
+        ],
+        [
+          1,
+          13
+        ]
+      ],
+      "draw": true,
+      "transaction": "0xd4d09046ece7c62ef73d01b302c09596f4987c765da1c508df59ae2c67606c93",
+      "gas": 150915395,
+      "milliseconds": 190.20241700000042
+    },
+    {
+      "address": "0x02121128f1ed0ada5df3a87f42752fce4ad63e59",
+      "sequence": 33,
+      "events": [
+        [
+          0,
+          13
+        ],
+        [
+          1,
+          13
+        ]
+      ],
+      "draw": true,
+      "transaction": "0x3638a38d94ffbfe5c59a8117669cd658ad18d62492907ba85649b5ebcfc78301",
+      "gas": 2692125719,
+      "milliseconds": 1450.7643749999988
+    },
+    {
+      "address": "0x02121128f1ed0ada5df3a87f42752fce4ad63e59",
+      "sequence": 34,
+      "events": [
+        [
+          0,
+          27
+        ],
+        [
+          1,
+          27
+        ],
+        [
+          0,
+          115
+        ],
+        [
+          1,
+          115
+        ],
+        [
+          0,
+          13
+        ],
+        [
+          1,
+          13
+        ]
+      ],
+      "draw": false,
+      "transaction": "0xaceb7807ef1c88c2aaf59acd5337b00054234ea87a7f87688700a2744a680812",
+      "gas": 65123,
+      "milliseconds": 22.13458299999911
+    },
+    {
+      "address": "0x02121128f1ed0ada5df3a87f42752fce4ad63e59",
+      "sequence": 35,
+      "events": [
+        [
+          0,
+          175
+        ],
+        [
+          1,
+          175
+        ],
+        [
+          0,
+          13
+        ],
+        [
+          1,
+          13
+        ]
+      ],
+      "draw": true,
+      "transaction": "0x0d1a1195683f1c4e3102acb69d593f8fc913bd399c2b291063c07dabe899125e",
+      "gas": 150885431,
+      "milliseconds": 192.10633399999642
+    },
+    {
+      "address": "0x02121128f1ed0ada5df3a87f42752fce4ad63e59",
+      "sequence": 36,
+      "events": [
+        [
+          0,
+          13
+        ],
+        [
+          1,
+          13
+        ]
+      ],
+      "draw": true,
+      "transaction": "0x685862eee30026258550360da5abb3d9be8bd820d39118f3544754d13430e7de",
+      "gas": 1895781342,
+      "milliseconds": 1323.4476249999934
+    }
+  ],
+  "rollbacks": [
+    {
+      "label": "profile initializer driver authentication",
+      "transaction": "0x93060d70b91c6cc388996dca0e940342aa916811c492e0774671f5cad825bebc",
+      "storageRoot": "0x3baf7c42987715524614f48bc06c42e660ea3b249ecdf02ebbfae692bc7c3611",
+      "gasLimit": 10000000000,
+      "allStorageUnchanged": true,
+      "noLogs": true
+    },
+    {
+      "label": "unsupported memory profile",
+      "transaction": "0x3c964066b526221d6e5e3523d8c4405b6597bb3e18bab87e07e81c748e34a744",
+      "storageRoot": "0x3baf7c42987715524614f48bc06c42e660ea3b249ecdf02ebbfae692bc7c3611",
+      "gasLimit": 10000000000,
+      "allStorageUnchanged": true,
+      "noLogs": true
+    },
+    {
+      "label": "underfunded fresh MAP01 startup after menu writes",
+      "transaction": "0x10cd22c1bc11f15040addb627727e904bd8a177f30dbe6ffad4292eab89badd3",
+      "storageRoot": "0x6b07a089c6d0bdc5ed37a1e3f313ccdf92d314aa72d0aad6f2856e33b95612ce",
+      "gasLimit": 100000000,
+      "allStorageUnchanged": true,
+      "noLogs": true
+    },
+    {
+      "label": "unsupported commercial map",
+      "transaction": "0xb04650a2f23be77bed6fbd6090e3b54acf04443f3088a1b6d25744345507cb70",
+      "storageRoot": "0xf4f68fca4848ccf3e1a440fc4fb99ab366e45e7c28b024bac51362baa219311f",
+      "gasLimit": 10000000000,
+      "allStorageUnchanged": true,
+      "noLogs": true
+    }
+  ],
+  "selections": [
+    {
+      "map": 1,
+      "skill": 0,
+      "leveltime": 1,
+      "noIntermission": true,
+      "policyPersisted": true
+    },
+    {
+      "map": 1,
+      "skill": 1,
+      "leveltime": 1,
+      "noIntermission": true,
+      "policyPersisted": true
+    },
+    {
+      "map": 1,
+      "skill": 3,
+      "leveltime": 1,
+      "noIntermission": true,
+      "policyPersisted": true
+    },
+    {
+      "map": 1,
+      "skill": 4,
+      "leveltime": 1,
+      "noIntermission": true,
+      "policyPersisted": true
+    },
+    {
+      "map": 1,
+      "skill": 2,
+      "leveltime": 1,
+      "noIntermission": true,
+      "policyPersisted": true
+    },
+    {
+      "map": 7,
+      "skill": 2,
+      "leveltime": 1,
+      "noIntermission": true,
+      "policyPersisted": true
+    },
+    {
+      "map": 15,
+      "skill": 2,
+      "leveltime": 1,
+      "noIntermission": true,
+      "policyPersisted": true
+    },
+    {
+      "map": 31,
+      "skill": 2,
+      "leveltime": 1,
+      "noIntermission": true,
+      "policyPersisted": true
+    },
+    {
+      "map": 32,
+      "skill": 2,
+      "leveltime": 1,
+      "noIntermission": true,
+      "policyPersisted": true
+    }
+  ],
+  "runtime": {
+    "port": 19071,
+    "args": [
+      "--host",
+      "127.0.0.1",
+      "--port",
+      "19071",
+      "--hardfork",
+      "cancun",
+      "--disable-code-size-limit",
+      "--disable-block-gas-limit",
+      "--no-request-size-limit",
+      "--memory-limit",
+      "1073741824",
+      "--prune-history",
+      "64",
+      "--silent"
+    ],
+    "client": "anvil/v1.8.5"
+  },
+  "resources": {
+    "chunks": 889,
+    "allRuntimeBytesExact": true,
+    "cumulativeGas": 3186489328,
+    "receiptsSha256": "5e0f06c7fccd8e2c2fe588282d7c70f2820b5bac673b761585f1296e4a5beb00"
+  },
+  "defaultPolicyPreserved": true,
+  "endedUtc": "2026-10-11T10:49:46.740Z",
+  "stoppedOwnedAnvil": true
+}

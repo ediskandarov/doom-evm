@@ -1,0 +1,17 @@
+{
+  "profile": "classic-doom2-1.9",
+  "MD5": "25e1459ca71d321525f84628f45ca8cd",
+  "resourceIdentity": {
+    "schemaVersion": 0,
+    "wadSha256": "10d67824b11025ddd9198e8cfc87ca335ee6e2d3e63af4180fa9b8a471893255",
+    "bundleSha256": "775bc8b01d44c2fb1c3a68a79b9864c2f36ebbb29746d31e9ca600ae226af5ad",
+    "paletteSha256": "fd895921b5d0a394612bb29852ed003d44d69f76dec31c0dc6b5d5fc7d63f7bb",
+    "paletteVariant": 0
+  },
+  "blobBytes": 14557275,
+  "lumps": 2919,
+  "chunks": 889,
+  "lastChunkRuntimeBytes": 8284,
+  "directorySha256": "2d91a39dcf822b968a3719ef79bc2a7880b634432522300c575a76b970022515",
+  "chunkHashesSha256": "903d131f726847ec2afc79d24fa0a1c08d7c03fbacb135d23808d9a5b4a299c9"
+}

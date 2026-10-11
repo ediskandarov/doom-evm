@@ -27,7 +27,7 @@ struct WiStart {
 }
 
 /// @dev Explicit original player/global boundary; caller commits latches and rndindex.
-/// gamemode: shareware=0, registered=1, retail=3. Only player 0 is active.
+/// gamemode: shareware=0, registered=1, commercial=2, retail=3. Only player 0 is active.
 struct WiInput {
     int32 gamemode;
     bool[4] playeringame;
@@ -58,13 +58,15 @@ struct WiState {
     int32[10] animNexttic;
     int32[10] animCtr;
     bool started; // adapter lifecycle guard
+    bool commercial; // Adapter caches original gamemode for pure animation/drawing calls.
     bool worldDoneRequested; // original WI_End -> G_WorldDone boundary, no progression here
 }
 
 /// @dev Borrow original authenticated patch bytes per memory context; never persist them.
 struct WiGraphics {
     bytes bg;
-    bytes[9] lnames;
+    bytes[32] lnames;
+    bool commercial;
     bytes[2] yah;
     bytes splat;
     bytes[30] anims;

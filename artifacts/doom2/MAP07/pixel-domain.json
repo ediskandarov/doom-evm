@@ -1,0 +1,1438 @@
+{
+  "verifierSha256": "f57a2cefa89713d5e9bc6cb974eeb04f48003797ac07b23e6a5db1ed5b737e79",
+  "pass_": true,
+  "recordingComplete": true,
+  "frames": 237,
+  "commonNativePixelsChecked": 15168000,
+  "nativeAllocationDependentPixels": 0,
+  "virtualTouchedDestinations": 0,
+  "allCommonNativePixelsOutsideVirtualSourcesExact": true,
+  "wholeFrameCommonNativeExact": 237,
+  "limits": "Virtual destinations count any provenance4 draw use, including overwritten samples; they are not a claim that all final values survive. Allocation-dependent native pixels are outside universal comparison. Every EVM pixel remains receipt-authenticated.",
+  "rows": [
+    {
+      "tic": 1,
+      "commonNativePixelsChecked": 64000,
+      "nativeAllocationDependentPixels": 0,
+      "virtualTouchedDestinations": 0
+    },
+    {
+      "tic": 2,
+      "commonNativePixelsChecked": 64000,
+      "nativeAllocationDependentPixels": 0,
+      "virtualTouchedDestinations": 0
+    },
+    {
+      "tic": 3,
+      "commonNativePixelsChecked": 64000,
+      "nativeAllocationDependentPixels": 0,
+      "virtualTouchedDestinations": 0
+    },
+    {
+      "tic": 4,
+      "commonNativePixelsChecked": 64000,
+      "nativeAllocationDependentPixels": 0,
+      "virtualTouchedDestinations": 0
+    },
+    {
+      "tic": 5,
+      "commonNativePixelsChecked": 64000,
+      "nativeAllocationDependentPixels": 0,
+      "virtualTouchedDestinations": 0
+    },
+    {
+      "tic": 6,
+      "commonNativePixelsChecked": 64000,
+      "nativeAllocationDependentPixels": 0,
+      "virtualTouchedDestinations": 0
+    },
+    {
+      "tic": 7,
+      "commonNativePixelsChecked": 64000,
+      "nativeAllocationDependentPixels": 0,
+      "virtualTouchedDestinations": 0
+    },
+    {
+      "tic": 8,
+      "commonNativePixelsChecked": 64000,
+      "nativeAllocationDependentPixels": 0,
+      "virtualTouchedDestinations": 0
+    },
+    {
+      "tic": 9,
+      "commonNativePixelsChecked": 64000,
+      "nativeAllocationDependentPixels": 0,
+      "virtualTouchedDestinations": 0
+    },
+    {
+      "tic": 10,
+      "commonNativePixelsChecked": 64000,
+      "nativeAllocationDependentPixels": 0,
+      "virtualTouchedDestinations": 0
+    },
+    {
+      "tic": 11,
+      "commonNativePixelsChecked": 64000,
+      "nativeAllocationDependentPixels": 0,
+      "virtualTouchedDestinations": 0
+    },
+    {
+      "tic": 12,
+      "commonNativePixelsChecked": 64000,
+      "nativeAllocationDependentPixels": 0,
+      "virtualTouchedDestinations": 0
+    },
+    {
+      "tic": 13,
+      "commonNativePixelsChecked": 64000,
+      "nativeAllocationDependentPixels": 0,
+      "virtualTouchedDestinations": 0
+    },
+    {
+      "tic": 14,
+      "commonNativePixelsChecked": 64000,
+      "nativeAllocationDependentPixels": 0,
+      "virtualTouchedDestinations": 0
+    },
+    {
+      "tic": 15,
+      "commonNativePixelsChecked": 64000,
+      "nativeAllocationDependentPixels": 0,
+      "virtualTouchedDestinations": 0
+    },
+    {
+      "tic": 16,
+      "commonNativePixelsChecked": 64000,
+      "nativeAllocationDependentPixels": 0,
+      "virtualTouchedDestinations": 0
+    },
+    {
+      "tic": 17,
+      "commonNativePixelsChecked": 64000,
+      "nativeAllocationDependentPixels": 0,
+      "virtualTouchedDestinations": 0
+    },
+    {
+      "tic": 18,
+      "commonNativePixelsChecked": 64000,
+      "nativeAllocationDependentPixels": 0,
+      "virtualTouchedDestinations": 0
+    },
+    {
+      "tic": 19,
+      "commonNativePixelsChecked": 64000,
+      "nativeAllocationDependentPixels": 0,
+      "virtualTouchedDestinations": 0
+    },
+    {
+      "tic": 20,
+      "commonNativePixelsChecked": 64000,
+      "nativeAllocationDependentPixels": 0,
+      "virtualTouchedDestinations": 0
+    },
+    {
+      "tic": 21,
+      "commonNativePixelsChecked": 64000,
+      "nativeAllocationDependentPixels": 0,
+      "virtualTouchedDestinations": 0
+    },
+    {
+      "tic": 22,
+      "commonNativePixelsChecked": 64000,
+      "nativeAllocationDependentPixels": 0,
+      "virtualTouchedDestinations": 0
+    },
+    {
+      "tic": 23,
+      "commonNativePixelsChecked": 64000,
+      "nativeAllocationDependentPixels": 0,
+      "virtualTouchedDestinations": 0
+    },
+    {
+      "tic": 24,
+      "commonNativePixelsChecked": 64000,
+      "nativeAllocationDependentPixels": 0,
+      "virtualTouchedDestinations": 0
+    },
+    {
+      "tic": 25,
+      "commonNativePixelsChecked": 64000,
+      "nativeAllocationDependentPixels": 0,
+      "virtualTouchedDestinations": 0
+    },
+    {
+      "tic": 26,
+      "commonNativePixelsChecked": 64000,
+      "nativeAllocationDependentPixels": 0,
+      "virtualTouchedDestinations": 0
+    },
+    {
+      "tic": 27,
+      "commonNativePixelsChecked": 64000,
+      "nativeAllocationDependentPixels": 0,
+      "virtualTouchedDestinations": 0
+    },
+    {
+      "tic": 28,
+      "commonNativePixelsChecked": 64000,
+      "nativeAllocationDependentPixels": 0,
+      "virtualTouchedDestinations": 0
+    },
+    {
+      "tic": 29,
+      "commonNativePixelsChecked": 64000,
+      "nativeAllocationDependentPixels": 0,
+      "virtualTouchedDestinations": 0
+    },
+    {
+      "tic": 30,
+      "commonNativePixelsChecked": 64000,
+      "nativeAllocationDependentPixels": 0,
+      "virtualTouchedDestinations": 0
+    },
+    {
+      "tic": 31,
+      "commonNativePixelsChecked": 64000,
+      "nativeAllocationDependentPixels": 0,
+      "virtualTouchedDestinations": 0
+    },
+    {
+      "tic": 32,
+      "commonNativePixelsChecked": 64000,
+      "nativeAllocationDependentPixels": 0,
+      "virtualTouchedDestinations": 0
+    },
+    {
+      "tic": 33,
+      "commonNativePixelsChecked": 64000,
+      "nativeAllocationDependentPixels": 0,
+      "virtualTouchedDestinations": 0
+    },
+    {
+      "tic": 34,
+      "commonNativePixelsChecked": 64000,
+      "nativeAllocationDependentPixels": 0,
+      "virtualTouchedDestinations": 0
+    },
+    {
+      "tic": 35,
+      "commonNativePixelsChecked": 64000,
+      "nativeAllocationDependentPixels": 0,
+      "virtualTouchedDestinations": 0
+    },
+    {
+      "tic": 36,
+      "commonNativePixelsChecked": 64000,
+      "nativeAllocationDependentPixels": 0,
+      "virtualTouchedDestinations": 0
+    },
+    {
+      "tic": 37,
+      "commonNativePixelsChecked": 64000,
+      "nativeAllocationDependentPixels": 0,
+      "virtualTouchedDestinations": 0
+    },
+    {
+      "tic": 38,
+      "commonNativePixelsChecked": 64000,
+      "nativeAllocationDependentPixels": 0,
+      "virtualTouchedDestinations": 0
+    },
+    {
+      "tic": 39,
+      "commonNativePixelsChecked": 64000,
+      "nativeAllocationDependentPixels": 0,
+      "virtualTouchedDestinations": 0
+    },
+    {
+      "tic": 40,
+      "commonNativePixelsChecked": 64000,
+      "nativeAllocationDependentPixels": 0,
+      "virtualTouchedDestinations": 0
+    },
+    {
+      "tic": 41,
+      "commonNativePixelsChecked": 64000,
+      "nativeAllocationDependentPixels": 0,
+      "virtualTouchedDestinations": 0
+    },
+    {
+      "tic": 42,
+      "commonNativePixelsChecked": 64000,
+      "nativeAllocationDependentPixels": 0,
+      "virtualTouchedDestinations": 0
+    },
+    {
+      "tic": 43,
+      "commonNativePixelsChecked": 64000,
+      "nativeAllocationDependentPixels": 0,
+      "virtualTouchedDestinations": 0
+    },
+    {
+      "tic": 44,
+      "commonNativePixelsChecked": 64000,
+      "nativeAllocationDependentPixels": 0,
+      "virtualTouchedDestinations": 0
+    },
+    {
+      "tic": 45,
+      "commonNativePixelsChecked": 64000,
+      "nativeAllocationDependentPixels": 0,
+      "virtualTouchedDestinations": 0
+    },
+    {
+      "tic": 46,
+      "commonNativePixelsChecked": 64000,
+      "nativeAllocationDependentPixels": 0,
+      "virtualTouchedDestinations": 0
+    },
+    {
+      "tic": 47,
+      "commonNativePixelsChecked": 64000,
+      "nativeAllocationDependentPixels": 0,
+      "virtualTouchedDestinations": 0
+    },
+    {
+      "tic": 48,
+      "commonNativePixelsChecked": 64000,
+      "nativeAllocationDependentPixels": 0,
+      "virtualTouchedDestinations": 0
+    },
+    {
+      "tic": 49,
+      "commonNativePixelsChecked": 64000,
+      "nativeAllocationDependentPixels": 0,
+      "virtualTouchedDestinations": 0
+    },
+    {
+      "tic": 50,
+      "commonNativePixelsChecked": 64000,
+      "nativeAllocationDependentPixels": 0,
+      "virtualTouchedDestinations": 0
+    },
+    {
+      "tic": 51,
+      "commonNativePixelsChecked": 64000,
+      "nativeAllocationDependentPixels": 0,
+      "virtualTouchedDestinations": 0
+    },
+    {
+      "tic": 52,
+      "commonNativePixelsChecked": 64000,
+      "nativeAllocationDependentPixels": 0,
+      "virtualTouchedDestinations": 0
+    },
+    {
+      "tic": 53,
+      "commonNativePixelsChecked": 64000,
+      "nativeAllocationDependentPixels": 0,
+      "virtualTouchedDestinations": 0
+    },
+    {
+      "tic": 54,
+      "commonNativePixelsChecked": 64000,
+      "nativeAllocationDependentPixels": 0,
+      "virtualTouchedDestinations": 0
+    },
+    {
+      "tic": 55,
+      "commonNativePixelsChecked": 64000,
+      "nativeAllocationDependentPixels": 0,
+      "virtualTouchedDestinations": 0
+    },
+    {
+      "tic": 56,
+      "commonNativePixelsChecked": 64000,
+      "nativeAllocationDependentPixels": 0,
+      "virtualTouchedDestinations": 0
+    },
+    {
+      "tic": 57,
+      "commonNativePixelsChecked": 64000,
+      "nativeAllocationDependentPixels": 0,
+      "virtualTouchedDestinations": 0
+    },
+    {
+      "tic": 58,
+      "commonNativePixelsChecked": 64000,
+      "nativeAllocationDependentPixels": 0,
+      "virtualTouchedDestinations": 0
+    },
+    {
+      "tic": 59,
+      "commonNativePixelsChecked": 64000,
+      "nativeAllocationDependentPixels": 0,
+      "virtualTouchedDestinations": 0
+    },
+    {
+      "tic": 60,
+      "commonNativePixelsChecked": 64000,
+      "nativeAllocationDependentPixels": 0,
+      "virtualTouchedDestinations": 0
+    },
+    {
+      "tic": 61,
+      "commonNativePixelsChecked": 64000,
+      "nativeAllocationDependentPixels": 0,
+      "virtualTouchedDestinations": 0
+    },
+    {
+      "tic": 62,
+      "commonNativePixelsChecked": 64000,
+      "nativeAllocationDependentPixels": 0,
+      "virtualTouchedDestinations": 0
+    },
+    {
+      "tic": 63,
+      "commonNativePixelsChecked": 64000,
+      "nativeAllocationDependentPixels": 0,
+      "virtualTouchedDestinations": 0
+    },
+    {
+      "tic": 64,
+      "commonNativePixelsChecked": 64000,
+      "nativeAllocationDependentPixels": 0,
+      "virtualTouchedDestinations": 0
+    },
+    {
+      "tic": 65,
+      "commonNativePixelsChecked": 64000,
+      "nativeAllocationDependentPixels": 0,
+      "virtualTouchedDestinations": 0
+    },
+    {
+      "tic": 66,
+      "commonNativePixelsChecked": 64000,
+      "nativeAllocationDependentPixels": 0,
+      "virtualTouchedDestinations": 0
+    },
+    {
+      "tic": 67,
+      "commonNativePixelsChecked": 64000,
+      "nativeAllocationDependentPixels": 0,
+      "virtualTouchedDestinations": 0
+    },
+    {
+      "tic": 68,
+      "commonNativePixelsChecked": 64000,
+      "nativeAllocationDependentPixels": 0,
+      "virtualTouchedDestinations": 0
+    },
+    {
+      "tic": 69,
+      "commonNativePixelsChecked": 64000,
+      "nativeAllocationDependentPixels": 0,
+      "virtualTouchedDestinations": 0
+    },
+    {
+      "tic": 70,
+      "commonNativePixelsChecked": 64000,
+      "nativeAllocationDependentPixels": 0,
+      "virtualTouchedDestinations": 0
+    },
+    {
+      "tic": 71,
+      "commonNativePixelsChecked": 64000,
+      "nativeAllocationDependentPixels": 0,
+      "virtualTouchedDestinations": 0
+    },
+    {
+      "tic": 72,
+      "commonNativePixelsChecked": 64000,
+      "nativeAllocationDependentPixels": 0,
+      "virtualTouchedDestinations": 0
+    },
+    {
+      "tic": 73,
+      "commonNativePixelsChecked": 64000,
+      "nativeAllocationDependentPixels": 0,
+      "virtualTouchedDestinations": 0
+    },
+    {
+      "tic": 74,
+      "commonNativePixelsChecked": 64000,
+      "nativeAllocationDependentPixels": 0,
+      "virtualTouchedDestinations": 0
+    },
+    {
+      "tic": 75,
+      "commonNativePixelsChecked": 64000,
+      "nativeAllocationDependentPixels": 0,
+      "virtualTouchedDestinations": 0
+    },
+    {
+      "tic": 76,
+      "commonNativePixelsChecked": 64000,
+      "nativeAllocationDependentPixels": 0,
+      "virtualTouchedDestinations": 0
+    },
+    {
+      "tic": 77,
+      "commonNativePixelsChecked": 64000,
+      "nativeAllocationDependentPixels": 0,
+      "virtualTouchedDestinations": 0
+    },
+    {
+      "tic": 78,
+      "commonNativePixelsChecked": 64000,
+      "nativeAllocationDependentPixels": 0,
+      "virtualTouchedDestinations": 0
+    },
+    {
+      "tic": 79,
+      "commonNativePixelsChecked": 64000,
+      "nativeAllocationDependentPixels": 0,
+      "virtualTouchedDestinations": 0
+    },
+    {
+      "tic": 80,
+      "commonNativePixelsChecked": 64000,
+      "nativeAllocationDependentPixels": 0,
+      "virtualTouchedDestinations": 0
+    },
+    {
+      "tic": 81,
+      "commonNativePixelsChecked": 64000,
+      "nativeAllocationDependentPixels": 0,
+      "virtualTouchedDestinations": 0
+    },
+    {
+      "tic": 82,
+      "commonNativePixelsChecked": 64000,
+      "nativeAllocationDependentPixels": 0,
+      "virtualTouchedDestinations": 0
+    },
+    {
+      "tic": 83,
+      "commonNativePixelsChecked": 64000,
+      "nativeAllocationDependentPixels": 0,
+      "virtualTouchedDestinations": 0
+    },
+    {
+      "tic": 84,
+      "commonNativePixelsChecked": 64000,
+      "nativeAllocationDependentPixels": 0,
+      "virtualTouchedDestinations": 0
+    },
+    {
+      "tic": 85,
+      "commonNativePixelsChecked": 64000,
+      "nativeAllocationDependentPixels": 0,
+      "virtualTouchedDestinations": 0
+    },
+    {
+      "tic": 86,
+      "commonNativePixelsChecked": 64000,
+      "nativeAllocationDependentPixels": 0,
+      "virtualTouchedDestinations": 0
+    },
+    {
+      "tic": 87,
+      "commonNativePixelsChecked": 64000,
+      "nativeAllocationDependentPixels": 0,
+      "virtualTouchedDestinations": 0
+    },
+    {
+      "tic": 88,
+      "commonNativePixelsChecked": 64000,
+      "nativeAllocationDependentPixels": 0,
+      "virtualTouchedDestinations": 0
+    },
+    {
+      "tic": 89,
+      "commonNativePixelsChecked": 64000,
+      "nativeAllocationDependentPixels": 0,
+      "virtualTouchedDestinations": 0
+    },
+    {
+      "tic": 90,
+      "commonNativePixelsChecked": 64000,
+      "nativeAllocationDependentPixels": 0,
+      "virtualTouchedDestinations": 0
+    },
+    {
+      "tic": 91,
+      "commonNativePixelsChecked": 64000,
+      "nativeAllocationDependentPixels": 0,
+      "virtualTouchedDestinations": 0
+    },
+    {
+      "tic": 92,
+      "commonNativePixelsChecked": 64000,
+      "nativeAllocationDependentPixels": 0,
+      "virtualTouchedDestinations": 0
+    },
+    {
+      "tic": 93,
+      "commonNativePixelsChecked": 64000,
+      "nativeAllocationDependentPixels": 0,
+      "virtualTouchedDestinations": 0
+    },
+    {
+      "tic": 94,
+      "commonNativePixelsChecked": 64000,
+      "nativeAllocationDependentPixels": 0,
+      "virtualTouchedDestinations": 0
+    },
+    {
+      "tic": 95,
+      "commonNativePixelsChecked": 64000,
+      "nativeAllocationDependentPixels": 0,
+      "virtualTouchedDestinations": 0
+    },
+    {
+      "tic": 96,
+      "commonNativePixelsChecked": 64000,
+      "nativeAllocationDependentPixels": 0,
+      "virtualTouchedDestinations": 0
+    },
+    {
+      "tic": 97,
+      "commonNativePixelsChecked": 64000,
+      "nativeAllocationDependentPixels": 0,
+      "virtualTouchedDestinations": 0
+    },
+    {
+      "tic": 98,
+      "commonNativePixelsChecked": 64000,
+      "nativeAllocationDependentPixels": 0,
+      "virtualTouchedDestinations": 0
+    },
+    {
+      "tic": 99,
+      "commonNativePixelsChecked": 64000,
+      "nativeAllocationDependentPixels": 0,
+      "virtualTouchedDestinations": 0
+    },
+    {
+      "tic": 100,
+      "commonNativePixelsChecked": 64000,
+      "nativeAllocationDependentPixels": 0,
+      "virtualTouchedDestinations": 0
+    },
+    {
+      "tic": 101,
+      "commonNativePixelsChecked": 64000,
+      "nativeAllocationDependentPixels": 0,
+      "virtualTouchedDestinations": 0
+    },
+    {
+      "tic": 102,
+      "commonNativePixelsChecked": 64000,
+      "nativeAllocationDependentPixels": 0,
+      "virtualTouchedDestinations": 0
+    },
+    {
+      "tic": 103,
+      "commonNativePixelsChecked": 64000,
+      "nativeAllocationDependentPixels": 0,
+      "virtualTouchedDestinations": 0
+    },
+    {
+      "tic": 104,
+      "commonNativePixelsChecked": 64000,
+      "nativeAllocationDependentPixels": 0,
+      "virtualTouchedDestinations": 0
+    },
+    {
+      "tic": 105,
+      "commonNativePixelsChecked": 64000,
+      "nativeAllocationDependentPixels": 0,
+      "virtualTouchedDestinations": 0
+    },
+    {
+      "tic": 106,
+      "commonNativePixelsChecked": 64000,
+      "nativeAllocationDependentPixels": 0,
+      "virtualTouchedDestinations": 0
+    },
+    {
+      "tic": 107,
+      "commonNativePixelsChecked": 64000,
+      "nativeAllocationDependentPixels": 0,
+      "virtualTouchedDestinations": 0
+    },
+    {
+      "tic": 108,
+      "commonNativePixelsChecked": 64000,
+      "nativeAllocationDependentPixels": 0,
+      "virtualTouchedDestinations": 0
+    },
+    {
+      "tic": 109,
+      "commonNativePixelsChecked": 64000,
+      "nativeAllocationDependentPixels": 0,
+      "virtualTouchedDestinations": 0
+    },
+    {
+      "tic": 110,
+      "commonNativePixelsChecked": 64000,
+      "nativeAllocationDependentPixels": 0,
+      "virtualTouchedDestinations": 0
+    },
+    {
+      "tic": 111,
+      "commonNativePixelsChecked": 64000,
+      "nativeAllocationDependentPixels": 0,
+      "virtualTouchedDestinations": 0
+    },
+    {
+      "tic": 112,
+      "commonNativePixelsChecked": 64000,
+      "nativeAllocationDependentPixels": 0,
+      "virtualTouchedDestinations": 0
+    },
+    {
+      "tic": 113,
+      "commonNativePixelsChecked": 64000,
+      "nativeAllocationDependentPixels": 0,
+      "virtualTouchedDestinations": 0
+    },
+    {
+      "tic": 114,
+      "commonNativePixelsChecked": 64000,
+      "nativeAllocationDependentPixels": 0,
+      "virtualTouchedDestinations": 0
+    },
+    {
+      "tic": 115,
+      "commonNativePixelsChecked": 64000,
+      "nativeAllocationDependentPixels": 0,
+      "virtualTouchedDestinations": 0
+    },
+    {
+      "tic": 116,
+      "commonNativePixelsChecked": 64000,
+      "nativeAllocationDependentPixels": 0,
+      "virtualTouchedDestinations": 0
+    },
+    {
+      "tic": 117,
+      "commonNativePixelsChecked": 64000,
+      "nativeAllocationDependentPixels": 0,
+      "virtualTouchedDestinations": 0
+    },
+    {
+      "tic": 118,
+      "commonNativePixelsChecked": 64000,
+      "nativeAllocationDependentPixels": 0,
+      "virtualTouchedDestinations": 0
+    },
+    {
+      "tic": 119,
+      "commonNativePixelsChecked": 64000,
+      "nativeAllocationDependentPixels": 0,
+      "virtualTouchedDestinations": 0
+    },
+    {
+      "tic": 120,
+      "commonNativePixelsChecked": 64000,
+      "nativeAllocationDependentPixels": 0,
+      "virtualTouchedDestinations": 0
+    },
+    {
+      "tic": 121,
+      "commonNativePixelsChecked": 64000,
+      "nativeAllocationDependentPixels": 0,
+      "virtualTouchedDestinations": 0
+    },
+    {
+      "tic": 122,
+      "commonNativePixelsChecked": 64000,
+      "nativeAllocationDependentPixels": 0,
+      "virtualTouchedDestinations": 0
+    },
+    {
+      "tic": 123,
+      "commonNativePixelsChecked": 64000,
+      "nativeAllocationDependentPixels": 0,
+      "virtualTouchedDestinations": 0
+    },
+    {
+      "tic": 124,
+      "commonNativePixelsChecked": 64000,
+      "nativeAllocationDependentPixels": 0,
+      "virtualTouchedDestinations": 0
+    },
+    {
+      "tic": 125,
+      "commonNativePixelsChecked": 64000,
+      "nativeAllocationDependentPixels": 0,
+      "virtualTouchedDestinations": 0
+    },
+    {
+      "tic": 126,
+      "commonNativePixelsChecked": 64000,
+      "nativeAllocationDependentPixels": 0,
+      "virtualTouchedDestinations": 0
+    },
+    {
+      "tic": 127,
+      "commonNativePixelsChecked": 64000,
+      "nativeAllocationDependentPixels": 0,
+      "virtualTouchedDestinations": 0
+    },
+    {
+      "tic": 128,
+      "commonNativePixelsChecked": 64000,
+      "nativeAllocationDependentPixels": 0,
+      "virtualTouchedDestinations": 0
+    },
+    {
+      "tic": 129,
+      "commonNativePixelsChecked": 64000,
+      "nativeAllocationDependentPixels": 0,
+      "virtualTouchedDestinations": 0
+    },
+    {
+      "tic": 130,
+      "commonNativePixelsChecked": 64000,
+      "nativeAllocationDependentPixels": 0,
+      "virtualTouchedDestinations": 0
+    },
+    {
+      "tic": 131,
+      "commonNativePixelsChecked": 64000,
+      "nativeAllocationDependentPixels": 0,
+      "virtualTouchedDestinations": 0
+    },
+    {
+      "tic": 132,
+      "commonNativePixelsChecked": 64000,
+      "nativeAllocationDependentPixels": 0,
+      "virtualTouchedDestinations": 0
+    },
+    {
+      "tic": 133,
+      "commonNativePixelsChecked": 64000,
+      "nativeAllocationDependentPixels": 0,
+      "virtualTouchedDestinations": 0
+    },
+    {
+      "tic": 134,
+      "commonNativePixelsChecked": 64000,
+      "nativeAllocationDependentPixels": 0,
+      "virtualTouchedDestinations": 0
+    },
+    {
+      "tic": 135,
+      "commonNativePixelsChecked": 64000,
+      "nativeAllocationDependentPixels": 0,
+      "virtualTouchedDestinations": 0
+    },
+    {
+      "tic": 136,
+      "commonNativePixelsChecked": 64000,
+      "nativeAllocationDependentPixels": 0,
+      "virtualTouchedDestinations": 0
+    },
+    {
+      "tic": 137,
+      "commonNativePixelsChecked": 64000,
+      "nativeAllocationDependentPixels": 0,
+      "virtualTouchedDestinations": 0
+    },
+    {
+      "tic": 138,
+      "commonNativePixelsChecked": 64000,
+      "nativeAllocationDependentPixels": 0,
+      "virtualTouchedDestinations": 0
+    },
+    {
+      "tic": 139,
+      "commonNativePixelsChecked": 64000,
+      "nativeAllocationDependentPixels": 0,
+      "virtualTouchedDestinations": 0
+    },
+    {
+      "tic": 140,
+      "commonNativePixelsChecked": 64000,
+      "nativeAllocationDependentPixels": 0,
+      "virtualTouchedDestinations": 0
+    },
+    {
+      "tic": 141,
+      "commonNativePixelsChecked": 64000,
+      "nativeAllocationDependentPixels": 0,
+      "virtualTouchedDestinations": 0
+    },
+    {
+      "tic": 142,
+      "commonNativePixelsChecked": 64000,
+      "nativeAllocationDependentPixels": 0,
+      "virtualTouchedDestinations": 0
+    },
+    {
+      "tic": 143,
+      "commonNativePixelsChecked": 64000,
+      "nativeAllocationDependentPixels": 0,
+      "virtualTouchedDestinations": 0
+    },
+    {
+      "tic": 144,
+      "commonNativePixelsChecked": 64000,
+      "nativeAllocationDependentPixels": 0,
+      "virtualTouchedDestinations": 0
+    },
+    {
+      "tic": 145,
+      "commonNativePixelsChecked": 64000,
+      "nativeAllocationDependentPixels": 0,
+      "virtualTouchedDestinations": 0
+    },
+    {
+      "tic": 146,
+      "commonNativePixelsChecked": 64000,
+      "nativeAllocationDependentPixels": 0,
+      "virtualTouchedDestinations": 0
+    },
+    {
+      "tic": 147,
+      "commonNativePixelsChecked": 64000,
+      "nativeAllocationDependentPixels": 0,
+      "virtualTouchedDestinations": 0
+    },
+    {
+      "tic": 148,
+      "commonNativePixelsChecked": 64000,
+      "nativeAllocationDependentPixels": 0,
+      "virtualTouchedDestinations": 0
+    },
+    {
+      "tic": 149,
+      "commonNativePixelsChecked": 64000,
+      "nativeAllocationDependentPixels": 0,
+      "virtualTouchedDestinations": 0
+    },
+    {
+      "tic": 150,
+      "commonNativePixelsChecked": 64000,
+      "nativeAllocationDependentPixels": 0,
+      "virtualTouchedDestinations": 0
+    },
+    {
+      "tic": 151,
+      "commonNativePixelsChecked": 64000,
+      "nativeAllocationDependentPixels": 0,
+      "virtualTouchedDestinations": 0
+    },
+    {
+      "tic": 152,
+      "commonNativePixelsChecked": 64000,
+      "nativeAllocationDependentPixels": 0,
+      "virtualTouchedDestinations": 0
+    },
+    {
+      "tic": 153,
+      "commonNativePixelsChecked": 64000,
+      "nativeAllocationDependentPixels": 0,
+      "virtualTouchedDestinations": 0
+    },
+    {
+      "tic": 154,
+      "commonNativePixelsChecked": 64000,
+      "nativeAllocationDependentPixels": 0,
+      "virtualTouchedDestinations": 0
+    },
+    {
+      "tic": 155,
+      "commonNativePixelsChecked": 64000,
+      "nativeAllocationDependentPixels": 0,
+      "virtualTouchedDestinations": 0
+    },
+    {
+      "tic": 156,
+      "commonNativePixelsChecked": 64000,
+      "nativeAllocationDependentPixels": 0,
+      "virtualTouchedDestinations": 0
+    },
+    {
+      "tic": 157,
+      "commonNativePixelsChecked": 64000,
+      "nativeAllocationDependentPixels": 0,
+      "virtualTouchedDestinations": 0
+    },
+    {
+      "tic": 158,
+      "commonNativePixelsChecked": 64000,
+      "nativeAllocationDependentPixels": 0,
+      "virtualTouchedDestinations": 0
+    },
+    {
+      "tic": 159,
+      "commonNativePixelsChecked": 64000,
+      "nativeAllocationDependentPixels": 0,
+      "virtualTouchedDestinations": 0
+    },
+    {
+      "tic": 160,
+      "commonNativePixelsChecked": 64000,
+      "nativeAllocationDependentPixels": 0,
+      "virtualTouchedDestinations": 0
+    },
+    {
+      "tic": 161,
+      "commonNativePixelsChecked": 64000,
+      "nativeAllocationDependentPixels": 0,
+      "virtualTouchedDestinations": 0
+    },
+    {
+      "tic": 162,
+      "commonNativePixelsChecked": 64000,
+      "nativeAllocationDependentPixels": 0,
+      "virtualTouchedDestinations": 0
+    },
+    {
+      "tic": 163,
+      "commonNativePixelsChecked": 64000,
+      "nativeAllocationDependentPixels": 0,
+      "virtualTouchedDestinations": 0
+    },
+    {
+      "tic": 164,
+      "commonNativePixelsChecked": 64000,
+      "nativeAllocationDependentPixels": 0,
+      "virtualTouchedDestinations": 0
+    },
+    {
+      "tic": 165,
+      "commonNativePixelsChecked": 64000,
+      "nativeAllocationDependentPixels": 0,
+      "virtualTouchedDestinations": 0
+    },
+    {
+      "tic": 166,
+      "commonNativePixelsChecked": 64000,
+      "nativeAllocationDependentPixels": 0,
+      "virtualTouchedDestinations": 0
+    },
+    {
+      "tic": 167,
+      "commonNativePixelsChecked": 64000,
+      "nativeAllocationDependentPixels": 0,
+      "virtualTouchedDestinations": 0
+    },
+    {
+      "tic": 168,
+      "commonNativePixelsChecked": 64000,
+      "nativeAllocationDependentPixels": 0,
+      "virtualTouchedDestinations": 0
+    },
+    {
+      "tic": 169,
+      "commonNativePixelsChecked": 64000,
+      "nativeAllocationDependentPixels": 0,
+      "virtualTouchedDestinations": 0
+    },
+    {
+      "tic": 170,
+      "commonNativePixelsChecked": 64000,
+      "nativeAllocationDependentPixels": 0,
+      "virtualTouchedDestinations": 0
+    },
+    {
+      "tic": 171,
+      "commonNativePixelsChecked": 64000,
+      "nativeAllocationDependentPixels": 0,
+      "virtualTouchedDestinations": 0
+    },
+    {
+      "tic": 172,
+      "commonNativePixelsChecked": 64000,
+      "nativeAllocationDependentPixels": 0,
+      "virtualTouchedDestinations": 0
+    },
+    {
+      "tic": 173,
+      "commonNativePixelsChecked": 64000,
+      "nativeAllocationDependentPixels": 0,
+      "virtualTouchedDestinations": 0
+    },
+    {
+      "tic": 174,
+      "commonNativePixelsChecked": 64000,
+      "nativeAllocationDependentPixels": 0,
+      "virtualTouchedDestinations": 0
+    },
+    {
+      "tic": 175,
+      "commonNativePixelsChecked": 64000,
+      "nativeAllocationDependentPixels": 0,
+      "virtualTouchedDestinations": 0
+    },
+    {
+      "tic": 176,
+      "commonNativePixelsChecked": 64000,
+      "nativeAllocationDependentPixels": 0,
+      "virtualTouchedDestinations": 0
+    },
+    {
+      "tic": 177,
+      "commonNativePixelsChecked": 64000,
+      "nativeAllocationDependentPixels": 0,
+      "virtualTouchedDestinations": 0
+    },
+    {
+      "tic": 178,
+      "commonNativePixelsChecked": 64000,
+      "nativeAllocationDependentPixels": 0,
+      "virtualTouchedDestinations": 0
+    },
+    {
+      "tic": 179,
+      "commonNativePixelsChecked": 64000,
+      "nativeAllocationDependentPixels": 0,
+      "virtualTouchedDestinations": 0
+    },
+    {
+      "tic": 180,
+      "commonNativePixelsChecked": 64000,
+      "nativeAllocationDependentPixels": 0,
+      "virtualTouchedDestinations": 0
+    },
+    {
+      "tic": 181,
+      "commonNativePixelsChecked": 64000,
+      "nativeAllocationDependentPixels": 0,
+      "virtualTouchedDestinations": 0
+    },
+    {
+      "tic": 182,
+      "commonNativePixelsChecked": 64000,
+      "nativeAllocationDependentPixels": 0,
+      "virtualTouchedDestinations": 0
+    },
+    {
+      "tic": 183,
+      "commonNativePixelsChecked": 64000,
+      "nativeAllocationDependentPixels": 0,
+      "virtualTouchedDestinations": 0
+    },
+    {
+      "tic": 184,
+      "commonNativePixelsChecked": 64000,
+      "nativeAllocationDependentPixels": 0,
+      "virtualTouchedDestinations": 0
+    },
+    {
+      "tic": 185,
+      "commonNativePixelsChecked": 64000,
+      "nativeAllocationDependentPixels": 0,
+      "virtualTouchedDestinations": 0
+    },
+    {
+      "tic": 186,
+      "commonNativePixelsChecked": 64000,
+      "nativeAllocationDependentPixels": 0,
+      "virtualTouchedDestinations": 0
+    },
+    {
+      "tic": 187,
+      "commonNativePixelsChecked": 64000,
+      "nativeAllocationDependentPixels": 0,
+      "virtualTouchedDestinations": 0
+    },
+    {
+      "tic": 188,
+      "commonNativePixelsChecked": 64000,
+      "nativeAllocationDependentPixels": 0,
+      "virtualTouchedDestinations": 0
+    },
+    {
+      "tic": 189,
+      "commonNativePixelsChecked": 64000,
+      "nativeAllocationDependentPixels": 0,
+      "virtualTouchedDestinations": 0
+    },
+    {
+      "tic": 190,
+      "commonNativePixelsChecked": 64000,
+      "nativeAllocationDependentPixels": 0,
+      "virtualTouchedDestinations": 0
+    },
+    {
+      "tic": 191,
+      "commonNativePixelsChecked": 64000,
+      "nativeAllocationDependentPixels": 0,
+      "virtualTouchedDestinations": 0
+    },
+    {
+      "tic": 192,
+      "commonNativePixelsChecked": 64000,
+      "nativeAllocationDependentPixels": 0,
+      "virtualTouchedDestinations": 0
+    },
+    {
+      "tic": 193,
+      "commonNativePixelsChecked": 64000,
+      "nativeAllocationDependentPixels": 0,
+      "virtualTouchedDestinations": 0
+    },
+    {
+      "tic": 194,
+      "commonNativePixelsChecked": 64000,
+      "nativeAllocationDependentPixels": 0,
+      "virtualTouchedDestinations": 0
+    },
+    {
+      "tic": 195,
+      "commonNativePixelsChecked": 64000,
+      "nativeAllocationDependentPixels": 0,
+      "virtualTouchedDestinations": 0
+    },
+    {
+      "tic": 196,
+      "commonNativePixelsChecked": 64000,
+      "nativeAllocationDependentPixels": 0,
+      "virtualTouchedDestinations": 0
+    },
+    {
+      "tic": 197,
+      "commonNativePixelsChecked": 64000,
+      "nativeAllocationDependentPixels": 0,
+      "virtualTouchedDestinations": 0
+    },
+    {
+      "tic": 198,
+      "commonNativePixelsChecked": 64000,
+      "nativeAllocationDependentPixels": 0,
+      "virtualTouchedDestinations": 0
+    },
+    {
+      "tic": 199,
+      "commonNativePixelsChecked": 64000,
+      "nativeAllocationDependentPixels": 0,
+      "virtualTouchedDestinations": 0
+    },
+    {
+      "tic": 200,
+      "commonNativePixelsChecked": 64000,
+      "nativeAllocationDependentPixels": 0,
+      "virtualTouchedDestinations": 0
+    },
+    {
+      "tic": 201,
+      "commonNativePixelsChecked": 64000,
+      "nativeAllocationDependentPixels": 0,
+      "virtualTouchedDestinations": 0
+    },
+    {
+      "tic": 202,
+      "commonNativePixelsChecked": 64000,
+      "nativeAllocationDependentPixels": 0,
+      "virtualTouchedDestinations": 0
+    },
+    {
+      "tic": 203,
+      "commonNativePixelsChecked": 64000,
+      "nativeAllocationDependentPixels": 0,
+      "virtualTouchedDestinations": 0
+    },
+    {
+      "tic": 204,
+      "commonNativePixelsChecked": 64000,
+      "nativeAllocationDependentPixels": 0,
+      "virtualTouchedDestinations": 0
+    },
+    {
+      "tic": 205,
+      "commonNativePixelsChecked": 64000,
+      "nativeAllocationDependentPixels": 0,
+      "virtualTouchedDestinations": 0
+    },
+    {
+      "tic": 206,
+      "commonNativePixelsChecked": 64000,
+      "nativeAllocationDependentPixels": 0,
+      "virtualTouchedDestinations": 0
+    },
+    {
+      "tic": 207,
+      "commonNativePixelsChecked": 64000,
+      "nativeAllocationDependentPixels": 0,
+      "virtualTouchedDestinations": 0
+    },
+    {
+      "tic": 208,
+      "commonNativePixelsChecked": 64000,
+      "nativeAllocationDependentPixels": 0,
+      "virtualTouchedDestinations": 0
+    },
+    {
+      "tic": 209,
+      "commonNativePixelsChecked": 64000,
+      "nativeAllocationDependentPixels": 0,
+      "virtualTouchedDestinations": 0
+    },
+    {
+      "tic": 210,
+      "commonNativePixelsChecked": 64000,
+      "nativeAllocationDependentPixels": 0,
+      "virtualTouchedDestinations": 0
+    },
+    {
+      "tic": 211,
+      "commonNativePixelsChecked": 64000,
+      "nativeAllocationDependentPixels": 0,
+      "virtualTouchedDestinations": 0
+    },
+    {
+      "tic": 212,
+      "commonNativePixelsChecked": 64000,
+      "nativeAllocationDependentPixels": 0,
+      "virtualTouchedDestinations": 0
+    },
+    {
+      "tic": 213,
+      "commonNativePixelsChecked": 64000,
+      "nativeAllocationDependentPixels": 0,
+      "virtualTouchedDestinations": 0
+    },
+    {
+      "tic": 214,
+      "commonNativePixelsChecked": 64000,
+      "nativeAllocationDependentPixels": 0,
+      "virtualTouchedDestinations": 0
+    },
+    {
+      "tic": 215,
+      "commonNativePixelsChecked": 64000,
+      "nativeAllocationDependentPixels": 0,
+      "virtualTouchedDestinations": 0
+    },
+    {
+      "tic": 216,
+      "commonNativePixelsChecked": 64000,
+      "nativeAllocationDependentPixels": 0,
+      "virtualTouchedDestinations": 0
+    },
+    {
+      "tic": 217,
+      "commonNativePixelsChecked": 64000,
+      "nativeAllocationDependentPixels": 0,
+      "virtualTouchedDestinations": 0
+    },
+    {
+      "tic": 218,
+      "commonNativePixelsChecked": 64000,
+      "nativeAllocationDependentPixels": 0,
+      "virtualTouchedDestinations": 0
+    },
+    {
+      "tic": 219,
+      "commonNativePixelsChecked": 64000,
+      "nativeAllocationDependentPixels": 0,
+      "virtualTouchedDestinations": 0
+    },
+    {
+      "tic": 220,
+      "commonNativePixelsChecked": 64000,
+      "nativeAllocationDependentPixels": 0,
+      "virtualTouchedDestinations": 0
+    },
+    {
+      "tic": 221,
+      "commonNativePixelsChecked": 64000,
+      "nativeAllocationDependentPixels": 0,
+      "virtualTouchedDestinations": 0
+    },
+    {
+      "tic": 222,
+      "commonNativePixelsChecked": 64000,
+      "nativeAllocationDependentPixels": 0,
+      "virtualTouchedDestinations": 0
+    },
+    {
+      "tic": 223,
+      "commonNativePixelsChecked": 64000,
+      "nativeAllocationDependentPixels": 0,
+      "virtualTouchedDestinations": 0
+    },
+    {
+      "tic": 224,
+      "commonNativePixelsChecked": 64000,
+      "nativeAllocationDependentPixels": 0,
+      "virtualTouchedDestinations": 0
+    },
+    {
+      "tic": 225,
+      "commonNativePixelsChecked": 64000,
+      "nativeAllocationDependentPixels": 0,
+      "virtualTouchedDestinations": 0
+    },
+    {
+      "tic": 226,
+      "commonNativePixelsChecked": 64000,
+      "nativeAllocationDependentPixels": 0,
+      "virtualTouchedDestinations": 0
+    },
+    {
+      "tic": 227,
+      "commonNativePixelsChecked": 64000,
+      "nativeAllocationDependentPixels": 0,
+      "virtualTouchedDestinations": 0
+    },
+    {
+      "tic": 228,
+      "commonNativePixelsChecked": 64000,
+      "nativeAllocationDependentPixels": 0,
+      "virtualTouchedDestinations": 0
+    },
+    {
+      "tic": 229,
+      "commonNativePixelsChecked": 64000,
+      "nativeAllocationDependentPixels": 0,
+      "virtualTouchedDestinations": 0
+    },
+    {
+      "tic": 230,
+      "commonNativePixelsChecked": 64000,
+      "nativeAllocationDependentPixels": 0,
+      "virtualTouchedDestinations": 0
+    },
+    {
+      "tic": 231,
+      "commonNativePixelsChecked": 64000,
+      "nativeAllocationDependentPixels": 0,
+      "virtualTouchedDestinations": 0
+    },
+    {
+      "tic": 232,
+      "commonNativePixelsChecked": 64000,
+      "nativeAllocationDependentPixels": 0,
+      "virtualTouchedDestinations": 0
+    },
+    {
+      "tic": 233,
+      "commonNativePixelsChecked": 64000,
+      "nativeAllocationDependentPixels": 0,
+      "virtualTouchedDestinations": 0
+    },
+    {
+      "tic": 234,
+      "commonNativePixelsChecked": 64000,
+      "nativeAllocationDependentPixels": 0,
+      "virtualTouchedDestinations": 0
+    },
+    {
+      "tic": 235,
+      "commonNativePixelsChecked": 64000,
+      "nativeAllocationDependentPixels": 0,
+      "virtualTouchedDestinations": 0
+    },
+    {
+      "tic": 236,
+      "commonNativePixelsChecked": 64000,
+      "nativeAllocationDependentPixels": 0,
+      "virtualTouchedDestinations": 0
+    },
+    {
+      "tic": 237,
+      "commonNativePixelsChecked": 64000,
+      "nativeAllocationDependentPixels": 0,
+      "virtualTouchedDestinations": 0
+    }
+  ],
+  "sourceReportSha256": "6ea5028bdd62c457e2ecdf288bdfb2d93af3536dc7ecadc988452fc6acccc35b",
+  "nativeReportSha256": "f107c89737298fe4d37640f3e8f80eaaba57d77a9aefb83a21ed89d32a1606a8"
+}

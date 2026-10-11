@@ -1,0 +1,24 @@
+{
+  "pass_": true,
+  "startUTC": "2026-10-11T11:11:56.311971+00:00",
+  "endUTC": "2026-10-11T11:11:57.242620+00:00",
+  "seconds": 0.9305290002375841,
+  "command": [
+    "node",
+    "--test",
+    "web/budget.test.mjs",
+    "web/doom2-profile.test.mjs",
+    "web/episode.test.mjs",
+    "web/input-app.test.mjs",
+    "web/input-loop.test.mjs",
+    "web/input-runtime.test.mjs",
+    "web/input.test.mjs",
+    "web/install.test.mjs",
+    "web/menu-input.test.mjs",
+    "tools/transport/protocol.test.mjs",
+    "tools/transport/palette.test.mjs",
+    "tools/transport/ui-palette.test.mjs",
+    "tools/transport/lifecycle.test.mjs"
+  ],
+  "logSHA256": "89602111abf3cf27fbfdac63f903f78cc5f3abebddf567bcbee7a3821aa00f96"
+}
