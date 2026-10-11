@@ -1,0 +1,14 @@
+{
+  "source": "get_goal tool, measured checkpoint before final commit; not final per-model billing",
+  "observedUtc": "2026-10-11T16:22:53Z",
+  "tokensUsed": 347666,
+  "timeUsedSeconds": 4045,
+  "goalStartedUnix": 1791731728,
+  "goalCheckpointUnix": 1791735773,
+  "tokenBudget": null,
+  "missingAttribution": [
+    "per-model tokens",
+    "cache tokens",
+    "dollars"
+  ]
+}

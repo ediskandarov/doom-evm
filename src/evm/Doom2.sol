@@ -77,6 +77,7 @@ contract Doom2 is IFrameProtocol, WadResources {
         if (gameStarted || menuMode) revert GameAlreadyStarted();
         MenuState memory m;
         M_Menu.M_Init(m, true);
+        m.screenSize = fullscreen ? int32(8) : int32(7);
         m.commercial = true;
         M_Menu.M_StartControlPanel(m);
         menuState = m;
@@ -103,6 +104,11 @@ contract Doom2 is IFrameProtocol, WadResources {
         MenuState storage m = menuState;
         return (menuMode, m.menuactive, m.currentMenu, m.itemOn, m.whichSkull,
             m.skullAnimCounter, m.selectedMap, m.selectedSkill, m.messageToPrint);
+    }
+
+    /// @notice Authoritative supported Options state; ABI addition leaves menuStatus unchanged.
+    function optionsStatus() external view returns (bool messages, int32 screenblocks, bool usergame) {
+        return (menuState.showMessages, menuState.screenSize + 3, gameStarted);
     }
 
     /// @notice Opt into the commercial MAP01–MAP32 lifecycle and original keyboard input.
@@ -136,6 +142,7 @@ contract Doom2 is IFrameProtocol, WadResources {
         c.resources.texturetranslation = c.state.texturetranslation;
         c.resources.flattranslation = c.state.flattranslation;
         DoomUI.initialize(u, c, fullscreen);
+        if (menuMode) u.hideMessages = !menuState.showMessages;
         InputProtocol.initialize(s);
         s.flow = f;
         EpisodeRuntime.saveDifficulty(c, e);
@@ -268,6 +275,7 @@ contract Doom2 is IFrameProtocol, WadResources {
     function setUIFullscreen(bool fullscreen) external {
         if (msg.sender != driver) revert NotDriver();
         if (!uiState.enabled) revert UINotEnabled();
+        if (menuMode) menuState.screenSize = fullscreen ? int32(8) : int32(7);
         if (uiState.fullscreen != fullscreen) {
             uiState.fullscreen = fullscreen;
             uiState.refresh = true;
@@ -392,9 +400,28 @@ contract Doom2 is IFrameProtocol, WadResources {
     /// RNG, thinkers, ST/HU tickers, movement, cheat or Intermission responders.
     function _stepMenu(bytes memory events, uint32 sequence, bool draw) private {
         MenuState memory m = menuState;
+        int32 oldSize = m.screenSize;
         bool intercepted = DoomMenu.respond(m, events, gameStarted);
         if (intercepted) inputRuntime.gamekeydown = 0;
         menuState = m;
+        uiState.hideMessages = !m.showMessages;
+        uiState.fullscreen = m.screenSize == 8;
+        if (oldSize != m.screenSize) uiState.refresh = true;
+        if (m.messagesChanged && gameStarted) {
+            gameState.players[0].message = m.showMessages ? "Messages ON" : "Messages OFF";
+            uiState.hud.message_dontfuckwithme = true;
+        }
+        if (m.endRequested) {
+            menuState.endRequested = false;
+            gameStarted = false;
+            gameState.menuactive = false;
+            gameState.gameaction = 0;
+            gameState.gamestate = 3; // D_AdvanceDemo GS_DEMOSCREEN, bounded title-only adapter.
+            uiState.hud.message.on = false;
+            UIState memory titleUI = uiState;
+            DoomUI.basePalette(titleUI, _resourceView());
+            uiState = titleUI;
+        }
         if (m.startRequested) {
             menuState.startRequested = false;
             if (!gameStarted) {
@@ -418,7 +445,17 @@ contract Doom2 is IFrameProtocol, WadResources {
         if (intercepted) {
             inputSeq = sequence;
             if (draw) {
-                bytes memory pixels = gameStarted ? gameState.renderFramebuffer : M_Menu.title(_resourceView());
+                bytes memory pixels;
+                if (gameStarted && uiState.refresh) {
+                    // Apply the supported R_SetViewSize request on display, without G_Ticker or an exit.
+                    GameContext memory c = DoomGame.load(_resourceView(), gameState);
+                    UIState memory u = uiState;
+                    InputRuntimeState memory s = inputRuntime;
+                    EpisodeState memory e = episodeState;
+                    u.refresh = true;
+                    pixels = EpisodeRuntime.draw(c, s, u, e);
+                    _saveEpisode(c, s, u, e);
+                } else pixels = gameStarted ? gameState.renderFramebuffer : M_Menu.title(_resourceView());
                 M_Menu.M_Drawer(m, _resourceView(), pixels);
                 _emitFrame(sequence, pixels);
             }
@@ -595,6 +632,12 @@ contract Doom2 is IFrameProtocol, WadResources {
         if (!gameStarted) revert GameNotStarted();
         Player storage p = gameState.players[uint32(gameState.consoleplayer)];
         return (p.ammo, p.maxammo, p.cards, p.weaponowned);
+    }
+
+    /// @notice Original skill-filtered map totals, actor count and startup RNG observation.
+    function spawnStatus() external view returns (int32 kills, int32 items, int32 secrets, uint32 actors, uint32 random) {
+        if (!gameStarted) revert GameNotStarted();
+        return (gameState.totalkills, gameState.totalitems, gameState.totalsecret, gameState.mobjCount, gameState.prndindex);
     }
 
     /// @notice Small status view for clients; the authoritative world remains contract storage.

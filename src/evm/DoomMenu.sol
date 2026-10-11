@@ -19,6 +19,8 @@ library DoomMenu {
         for (uint256 i; i < events.length; i += 2) {
             if (uint8(events[i]) > 1) revert InvalidKeyboardEvents();
         }
+        m.usergame = gameStarted;
+        m.messagesChanged = false;
         intercepted = m.menuactive || m.messageToPrint || !gameStarted;
         for (uint256 i; i < events.length; i += 2) {
             int32 kind = int32(uint32(uint8(events[i])));
@@ -32,7 +34,7 @@ library DoomMenu {
             bool owned = m.menuactive || m.messageToPrint;
             bool consumed = M_Menu.M_Responder(m, kind, key);
             if (owned || consumed || m.menuactive || m.messageToPrint) intercepted = true;
-            if (m.startRequested) break;
+            if (m.startRequested || m.endRequested) break;
         }
         M_Menu.M_Ticker(m);
     }
