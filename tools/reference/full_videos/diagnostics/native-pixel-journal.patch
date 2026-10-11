@@ -1,0 +1,123 @@
+--- a/r_draw.c
++++ b/r_draw.c
+@@ -32,6 +32,10 @@
+ 
+ #include "i_system.h"
+ #include "z_zone.h"
++typedef struct {int size;memblock_t blocklist;memblock_t *rover;} memzone_t;
++extern memzone_t *mainzone;
++static unsigned diagnosticDrawOrder;
++extern byte **texturecomposite;extern int numtextures;extern int *texturecompositesize;void DiagnosticTexture(int,int);
+ #include "w_wad.h"
+ 
+ #include "r_local.h"
+@@ -106,7 +110,8 @@
+ //  be used. It has also been used with Wolfenstein 3D.
+ // 
+ void R_DrawColumn (void) 
+-{ 
++{
++ ++diagnosticDrawOrder; 
+     int			count; 
+     byte*		dest; 
+     fixed_t		frac;
+@@ -142,7 +147,7 @@
+     {
+ 	// Re-map color indices from wall texture column
+ 	//  using a lighting/special effects LUT.
+-	*dest = dc_colormap[dc_source[(frac>>FRACBITS)&127]];
++	*dest = dc_colormap[dc_source[(frac>>FRACBITS)&127]]; if(dest-screens[0]==34210){for(int t=0;t<numtextures;t++){byte *c=texturecomposite[t];if(c && dc_source>=c && dc_source<c+texturecompositesize[t]){fprintf(stderr,"TEXTURE id=%d name=%.8s width=%d height=%d compositeSize=%d sourceOffset=%ld column=%ld colormap=%ld\n",t,"<see identity>",0,0,texturecompositesize[t],(long)(dc_source-c),0L,(long)(dc_colormap-colormaps)/256);DiagnosticTexture(t,(int)(dc_source-c));FILE *f=fopen(getenv("TRACE_COMPOSITE"),"wb");fwrite(c,1,texturecompositesize[t],f);fclose(f);f=fopen(getenv("TRACE_COLORMAP"),"wb");fwrite(dc_colormap,1,256,f);fclose(f);}}memblock_t *b=mainzone->blocklist.next;while(b!=&mainzone->blocklist){if((byte*)b+sizeof(*b)<=dc_source && dc_source<(byte*)b+b->size){fprintf(stderr,"ZONE sourceheader=%ld sourceoffset=%ld sourcesize=%d nextheader=%ld nextsize=%d\n",(long)((byte*)b-(byte*)mainzone),(long)(dc_source-((byte*)b+sizeof(*b))),b->size,(long)((byte*)b->next-(byte*)mainzone),b->next->size);FILE *hf=fopen(getenv("TRACE_HEADER"),"wb");fwrite(b->next,1,40,hf);fclose(hf);ZoneStage("pixel_290_106");break;}b=b->next;}} if(dest-screens[0]==34210)fprintf(stderr,"COLUMN order=%u x=%d yl=%d yh=%d frac=%d scale=%d mid=%d index=%d byte=%u pixel=%u\n",diagnosticDrawOrder,dc_x,dc_yl,dc_yh,frac,dc_iscale,dc_texturemid,(frac>>FRACBITS)&127,dc_source[(frac>>FRACBITS)&127],*dest);
+ 	
+ 	dest += SCREENWIDTH; 
+ 	frac += fracstep;
+@@ -212,7 +217,8 @@
+ 
+ 
+ void R_DrawColumnLow (void) 
+-{ 
++{
++ ++diagnosticDrawOrder; 
+     int			count; 
+     byte*		dest; 
+     byte*		dest2;
+@@ -286,7 +292,8 @@
+ //  i.e. spectres and invisible players.
+ //
+ void R_DrawFuzzColumn (void) 
+-{ 
++{
++ ++diagnosticDrawOrder; 
+     int			count; 
+     byte*		dest; 
+     fixed_t		frac;
+@@ -358,7 +365,7 @@
+ 	//  a pixel that is either one column
+ 	//  left or right of the current one.
+ 	// Add index from colormap to index.
+-	*dest = colormaps[6*256+dest[fuzzoffset[fuzzpos]]]; 
++	*dest = colormaps[6*256+dest[fuzzoffset[fuzzpos]]]; if(dest-screens[0]==34210)fprintf(stderr,"FUZZ pos=%d neighbor=%u pixel=%u\n",fuzzpos,dest[fuzzoffset[fuzzpos]],*dest); 
+ 
+ 	// Clamp table lookup index.
+ 	if (++fuzzpos == FUZZTABLE) 
+@@ -386,7 +393,8 @@
+ byte*	translationtables;
+ 
+ void R_DrawTranslatedColumn (void) 
+-{ 
++{
++ ++diagnosticDrawOrder; 
+     int			count; 
+     byte*		dest; 
+     fixed_t		frac;
+@@ -521,7 +529,8 @@
+ //
+ // Draws the actual span.
+ void R_DrawSpan (void) 
+-{ 
++{
++ ++diagnosticDrawOrder; 
+     fixed_t		xfrac;
+     fixed_t		yfrac; 
+     byte*		dest; 
+@@ -556,7 +565,7 @@
+ 
+ 	// Lookup pixel from flat texture tile,
+ 	//  re-index using light/colormap.
+-	*dest++ = ds_colormap[ds_source[spot]];
++	if(dest-screens[0]==34210)fprintf(stderr,"SPAN spot=%d byte=%u pixel=%u\n",spot,ds_source[spot],ds_colormap[ds_source[spot]]); *dest++ = ds_colormap[ds_source[spot]];
+ 
+ 	// Next step in u,v.
+ 	xfrac += ds_xstep; 
+@@ -644,7 +653,8 @@
+ // Again..
+ //
+ void R_DrawSpanLow (void) 
+-{ 
++{
++ ++diagnosticDrawOrder; 
+     fixed_t		xfrac;
+     fixed_t		yfrac; 
+     byte*		dest; 
+--- a/r_data.c
++++ b/r_data.c
+@@ -850,3 +850,5 @@
+ 
+ 
+ 
++
++void DiagnosticTexture(int t,int off){fprintf(stderr,"IDENTITY id=%d name=%.8s width=%d height=%d column=%d\n",t,textures[t]->name,textures[t]->width,textures[t]->height,off/textures[t]->height);}
+--- a/original-host.c
++++ b/original-host.c
+@@ -212,7 +212,11 @@
+             else for(int i=0;i<320;i++)M_Random();
+           }
+           if(gametic==capture || (!capture && gameaction==ga_completed)) {
+-            HU_Erase();ST_Drawer(false,true);R_RenderPlayerView(players);HU_Drawer();
++            if(capture && getenv("FULL_PREVIOUS_SCREEN")) {
++              FILE *prior=fopen(getenv("FULL_PREVIOUS_SCREEN"),"rb");if(!prior)I_Error("native previous-screen file");
++              if(fread(screens[0],1,64000,prior)!=64000 || fgetc(prior)!=EOF)I_Error("native previous-screen size");fclose(prior);
++            }
++            ZoneStage("before_status");HU_Erase();ST_Drawer(false,true);ZoneStage("before_render");R_RenderPlayerView(players);ZoneStage("after_render");HU_Drawer();
+             if(capture){char name[100];snprintf(name,sizeof(name),"gameplay-%06d.indexed8",gametic);writefile(argv[2],name,screens[0],64000);snprintf(name,sizeof(name),"gameplay-%06d.palette",gametic);writefile(argv[2],name,ui_rgb,768);break;}
+             // Preserve the last original world as the source of the exit wipe. No extra video frame.
+           }

@@ -1,0 +1,145 @@
+--- a/src/doom/z_zone_types.sol
++++ b/src/doom/z_zone_types.sol
+@@ -23,6 +23,7 @@
+ /// callers reserve deterministic namespaces. Payload bytes are separate from this
+ /// allocation ledger. Reading pointer or padding bytes is never silently invented.
+ struct ZoneState {
++    bytes diagnosticTrace;uint32 diagnosticCount;
+     uint32 byteLength;
+     uint32 rover;
+     uint32 blockCount;
+--- a/src/doom/r_state.sol
++++ b/src/doom/r_state.sol
+@@ -6,6 +6,7 @@
+ /// @custom:source linuxdoom-1.10/r_state.h, r_main.c globals at a77dfb96cb91780ca334d0d4cfd86957558007e0
+ /// @dev Solidity memory-to-memory assignment aliases this struct and its byte buffer.
+ struct RenderState {
++    uint32 diagnosticDrawOrder;
+     bytes virtualSamples;
+     int32 viewx;
+     int32 viewy;
+--- a/src/doom/z_zone.sol
++++ b/src/doom/z_zone.sol
+@@ -12,6 +12,14 @@
+     error AllocationFailed(uint32 size);
+     error CorruptHeap();
+ 
++    // Observation-only fixed buffer: does not change allocator geometry/order.
++    function diagnostic(ZoneState memory z,uint32 op,uint32 request,uint32 tag,uint32 owner,uint32 id) private pure {
++        if(z.diagnosticTrace.length==0)z.diagnosticTrace=new bytes(8192*40);
++        if(z.diagnosticCount>=8192)revert InvalidZone();
++        uint32[10] memory row=[op,request,tag,owner,id,z.blocks[id].offset,z.blocks[id].size,z.blocks[z.rover].offset,z.blocks[z.blocks[id].prev].offset,z.blocks[z.blocks[id].next].offset];
++        uint256 at=uint256(z.diagnosticCount++)*40;
++        for(uint256 i;i<10;++i)for(uint256 b;b<4;++b)z.diagnosticTrace[at+i*4+b]=bytes1(uint8(row[i]>>((3-b)*8)));
++    }
+     function Z_Init(uint32 byteLength, uint32 ownerCount) internal pure returns (ZoneState memory z) {
+         if (byteLength < C.NATIVE_ZONE_BYTES + C.NATIVE_HEADER_BYTES || byteLength > uint32(type(int32).max))
+         {
+@@ -125,10 +133,12 @@
+         z.rover = z.blocks[base].next;
+         z.blocks[base].id = C.ZONEID;
+         z.blocks[base].idKnown = true;
++        diagnostic(z,1,payloadSize,tag,owner,base);
+     }
+ 
+     function Z_Free(ZoneState memory z, uint32 id) internal pure {
+         ZoneBlock memory b = block(z, id);
++        diagnostic(z,2,0,b.tag,b.owner,id);
+         if (id == 0 || !b.allocated || !b.idKnown || b.id != C.ZONEID) revert InvalidBlock();
+         if (b.owner != C.NULL) z.ownerBlocks[b.owner] = C.NULL;
+         b.owner = C.NULL;
+@@ -171,6 +181,7 @@
+         if (id == 0 || !b.allocated || !b.idKnown || b.id != C.ZONEID) revert InvalidBlock();
+         if (tag >= C.PU_PURGELEVEL && b.owner == C.NULL) revert OwnerRequired();
+         b.tag = tag;
++        diagnostic(z,3,0,tag,b.owner,id);
+     }
+ 
+     function Z_ChangeTag2(ZoneState memory z, uint32 id, uint8 tag) internal pure {
+--- a/src/doom/r_draw.sol
++++ b/src/doom/r_draw.sol
+@@ -53,6 +53,7 @@
+     }
+ 
+     function _column(RenderState memory rs, DrawColumn memory dc, bool low, bool translated) private pure {
++        ++rs.diagnosticDrawOrder;
+         if (dc.yh < dc.yl) return;
+         if (dc.yl < 0 || dc.yh >= int256(rs.ylookup.length) || dc.x < 0 || dc.colormap.length != 256) {
+             revert DrawBounds();
+@@ -94,6 +95,15 @@
+                 }
+             }
+             if (translated) color = uint8(dc.translation[color]);
++            if(dest==34210)rs.virtualSamples=bytes.concat(rs.virtualSamples,abi.encode(int256(dc.x),int256(dc.yl),int256(dc.yh),int256(dc.iscale),int256(dc.texturemid),int256(frac),index,uint256(color),uint256(uint8(dc.colormap[color])),uint256(dc.sourceOffset),uint256(dc.source.length),int256(rs.centery),uint256(dc.sampleZone.blocks[dc.sourceBlock].offset),uint256(dc.sampleZone.blocks[dc.sourceBlock].size),uint256(dc.sampleZone.blocks[dc.sampleZone.blocks[dc.sourceBlock].next].size),uint256(uint8(dc.tailProvenance[uint256(index)-dc.source.length]))));
++            if(dest==34210){
++                rs.virtualSamples=bytes.concat(rs.virtualSamples,abi.encode(uint256(rs.diagnosticDrawOrder),uint256(1),int256(rs.centerx),int256(rs.centery),int256(rs.projection),int256(rs.centeryfrac),uint256(rs.width),uint256(rs.height),uint256(0),uint256(0),uint256(0),uint256(0),uint256(0),uint256(0),uint256(0),uint256(0)));
++                uint32 src=dc.sourceBlock;uint32 next=dc.sampleZone.blocks[src].next;
++                bytes memory header=new bytes(64);bytes memory mask=new bytes(64);
++                for(uint256 h;h<40;++h){header[h]=dc.sourceTail[h];mask[h]=dc.tailProvenance[h];}
++                bytes32 secondHeader;bytes32 secondMask;for(uint256 h;h<8;++h){secondHeader|=bytes32(uint256(uint8(header[32+h]))<<((31-h)*8));secondMask|=bytes32(uint256(uint8(mask[32+h]))<<((31-h)*8));}
++                rs.virtualSamples=bytes.concat(rs.virtualSamples,abi.encode(sha256(dc.source),sha256(dc.colormap),uint256(src),uint256(dc.sampleZone.blocks[src].owner),uint256(dc.lumpOwnerCount),uint256(next),uint256(dc.sampleZone.blocks[next].offset),uint256(dc.sampleZone.blocks[next].size),uint256(dc.sampleZone.blocks[next].tag),uint256(dc.sampleZone.blocks[next].owner),dc.sampleZone.blocks[next].allocated,uint256(dc.sampleZone.blocks[src].payloadExtent),bytes32(header),secondHeader,bytes32(mask),secondMask));
++            }
+             rs.framebuffer[dest] = dc.colormap[color];
+             if (low) rs.framebuffer[dest2] = dc.colormap[color];
+             dest += 320;
+@@ -108,6 +118,7 @@
+         internal
+         pure
+     {
++        ++rs.diagnosticDrawOrder;
+         if (dc.yl == 0) dc.yl = 1;
+         if (dc.yh == int32(uint32(rs.height)) - 1) dc.yh = int32(uint32(rs.height)) - 2;
+         if (dc.yh < dc.yl) return;
+@@ -140,6 +151,7 @@
+     }
+ 
+     function _span(RenderState memory rs, DrawSpan memory ds, bool low) private pure {
++        ++rs.diagnosticDrawOrder;
+         if (
+             ds.x1 < 0 || ds.x2 < ds.x1 || ds.y < 0 || uint32(ds.y) >= rs.ylookup.length
+                 || ds.source.length < 4096 || ds.colormap.length != 256
+--- a/src/support/FullSpeedrunProbe.sol
++++ b/src/support/FullSpeedrunProbe.sol
+@@ -44,6 +44,8 @@
+     bool public wipeActive;
+     error InvalidReplay();
+     event VirtualSamples(uint32 indexed tic,bytes samples);
++    event DiagnosticAlloc(uint32 indexed tic,bytes trace);
++    event DiagnosticZone(uint32 indexed tic,bytes data);
+     event Observation(uint32 tic,bytes state);
+     event FramePalette(uint64 indexed frameId,int32 bank,bytes rgb);
+     event Presentation(uint64 indexed frameId,uint8 kind,uint32 demoTic,uint32 gameplayTic,
+@@ -55,10 +57,15 @@
+         (GameContext memory c,)=UltimateStartup.initialize(_resourceView(),1,map,skill,nomonsters,true);
+         c.state.nativeZone.canonicalPointerHighBytes=true;
+         c.state.nativeZone.experimentalVirtualPointers=true;
+-        UIState memory u; DoomUI.initialize(u,c,false); ui=u; saved=c.state;
++        UIState memory u; DoomUI.initialize(u,c,false); ui=u;diagnosticDrain(c.state,0); saved=c.state;
+         GameflowState memory f;f.initialized=true;f.viewactive=true;flow=f;
+         initialized=true;
+         emit Observation(0,Snapshot.observe(c.state));
++    }
++    function diagnosticDrain(GameState memory s,uint32 tic) private {
++        bytes memory raw=s.nativeZone.diagnosticTrace;uint256 n=uint256(s.nativeZone.diagnosticCount)*40;bytes memory used=new bytes(n);
++        for(uint256 i;i<n;++i)used[i]=raw[i];emit DiagnosticAlloc(tic,used);emit DiagnosticZone(tic,Snapshot.zone(s.nativeZone));
++        s.nativeZone.diagnosticTrace=new bytes(0);s.nativeZone.diagnosticCount=0;
+     }
+     function command(bytes calldata raw) private pure returns(Ticcmd memory cmd) {
+         if(raw.length!=4)revert InvalidReplay();
+@@ -71,7 +78,7 @@
+         DoomGame.tick(c,command(raw));
+         UIState memory u=ui;uint32 canonicalRnd=c.state.rndindex;
+         c.state.rndindex=miscRndindex;DoomUI.tick(u,c);miscRndindex=c.state.rndindex;
+-        c.state.rndindex=canonicalRnd;ui=u;saved=c.state;++demoTics;
++        c.state.rndindex=canonicalRnd;ui=u;diagnosticDrain(c.state,uint32(c.state.gametic));saved=c.state;++demoTics;
+         emit Observation(uint32(c.state.gametic),Snapshot.observe(c.state));
+     }
+     function publish(bytes memory pixels,uint8 kind,int32 state,int32 stage,int32 count,bytes memory stats) private {
+@@ -119,6 +126,7 @@
+         UIState memory u=ui;DoomUI.erase(u);DoomUI.drawStatus(u,c);
+         bytes memory pixels=DoomGame.render(c,10);DoomUI.drawHUD(u,c.resources.source,pixels);ui=u;
+         emit VirtualSamples(tic,c.resources.virtualSamples);
++        c.state.nativeZone=c.resources.nativeZone;diagnosticDrain(c.state,100000+tic);
+         display(pixels,0,0,0,0,"",false);
+     }
+     function wiStart(GameContext memory c,GameflowState memory f) private view {

@@ -11,7 +11,7 @@ ROOT=Path(__file__).resolve().parents[3];HERE=Path(__file__).parent
 sys.path.insert(0,str(HERE.parent/'speedrun'));import replay
 from replay import renderer,PUNITS,ref
 spec=importlib.util.spec_from_file_location('full_ui_reference',HERE.parent/'ui/reference.py');ui=importlib.util.module_from_spec(spec);spec.loader.exec_module(ui)
-ap=argparse.ArgumentParser();ap.add_argument('--output',type=Path,required=True);ap.add_argument('--opt',default='O2');ap.add_argument('--sanitize',action='store_true');a=ap.parse_args();out=a.output.resolve()
+ap=argparse.ArgumentParser();ap.add_argument('--output',type=Path,required=True);ap.add_argument('--opt',default='O2');ap.add_argument('--sanitize',action='store_true');ap.add_argument('--borrow-all-ui',action='store_true');ap.add_argument('--display-history',action='store_true');a=ap.parse_args();out=a.output.resolve()
 replay.build_replay(out,a.opt,a.sanitize)
 host=(out/'original-host.c').read_text()
 for text in ['byte *screens[5];\n','void V_MarkRect(int x,int y,int width,int height) { (void)x;(void)y;(void)width;(void)height; }\n','void V_DrawPatch(int x,int y,int screen,patch_t *patch) { I_Error("Unexpected border draw"); }\n','void ST_Start(void) {}\n','void HU_Start(void) {}\n']:
@@ -52,7 +52,7 @@ loop=r'''
     }
     int tail_count=0,final_hold=0,stats_hold=0;
     while(fscanf(commands,"%d %d %d %d %d",&forward,&side,&angle,&buttons,&render)==5 || (!capture && post && gamestate==GS_FINALE && final_hold<105)) {
-        if(feof(commands)){forward=side=angle=buttons=0;tail_count++;} else demo_tic++;
+        if(feof(commands)){forward=side=angle=buttons=0;tail_count++;} else if(!(gamemap==8 && (post || gameaction==ga_completed)))demo_tic++;
         if(gameaction==ga_completed) {G_DoCompleted();post=1;if(gameaction==ga_victory)F_StartFinale();}
         if(post && gameaction==ga_worlddone)I_Error("tape requires a next gameplay level outside standalone profile");
         players[0].cmd=(ticcmd_t){.forwardmove=forward,.sidemove=side,.angleturn=angle,.buttons=buttons};
@@ -83,7 +83,7 @@ loop=r'''
           } else if(gamestate==GS_FINALE) {
             F_Ticker();stage=finalestage;count=finalecount;
             if(wipegamestate==-1){transition=true;wipe_StartScreen(0,0,320,200);}
-            F_Drawer();if(feof(commands) && finalestage==1)final_hold++;
+            F_Drawer();if(feof(commands) && finalestage==1 && !transition)final_hold++;
           } else I_Error("unsupported presentation state");
           if(transition)I_SetPalette(UIWCacheName("PLAYPAL",PU_CACHE));
           finish_display(gamestate==GS_INTERMISSION?3:4,stage,count,transition);wipegamestate=gamestate;
@@ -93,11 +93,26 @@ loop=r'''
     }
     fclose(commands);fclose(ticks);fclose(world);fclose(diagnostics);
 '''
+if a.display_history:
+ loop=loop.replace('else if(!(gamemap==8 && (post || gameaction==ga_completed)))demo_tic++;','else demo_tic++;')
+ assert a.borrow_all_ui,'Display history requires consistent borrowed UI resources'
+ loop=loop.replace('if(!capture) {', '{',1).replace('for(int i=0;i<35;i++)frame(1,0,0);','if(!capture)for(int i=0;i<35;i++)frame(1,0,0);',1)
+ display=r'''
+          if(gametic==capture || (!capture && gameaction==ga_completed)) {
+            const char *name=getenv("FULL_PREVIOUS_SCREEN");
+            if(name){FILE *prior=fopen(name,"rb");if(!prior)I_Error("native previous-screen file");
+              if(fread(screens[0],1,64000,prior)!=64000 || fgetc(prior)!=EOF)I_Error("native previous-screen size");fclose(prior);}
+          }
+          HU_Erase();ST_Drawer(false,gametic==1);
+          if(gametic!=capture && (capture || gameaction!=ga_completed))HU_Drawer();
+'''
+ loop=loop.replace('P_Ticker();ST_Ticker();HU_Ticker();gametic++;gameplay_tic=gametic;', 'P_Ticker();ST_Ticker();HU_Ticker();gametic++;gameplay_tic=gametic;'+display)
+ loop=loop.replace('HU_Erase();ST_Drawer(false,true);R_RenderPlayerView(players);HU_Drawer();','R_RenderPlayerView(players);HU_Drawer();')
 host=host[:loopstart]+loop+host[loopend:];(out/'original-host.c').write_text(host)
 units=[]
 for name in ['st_stuff.c','st_lib.c','hu_stuff.c','hu_lib.c','v_video.c','wi_stuff.c']:
  text=(ref.SOURCE/name).read_text()
- if name in ['st_stuff.c','hu_stuff.c','wi_stuff.c']:
+ if name in ['st_stuff.c','hu_stuff.c','wi_stuff.c']+(['st_lib.c'] if a.borrow_all_ui else []):
   text='#define W_CacheLumpName UIWCacheName\n#define W_CacheLumpNum UIWCacheNum\n'+text
   text=text.replace('#include "z_zone.h"','#include "z_zone.h"\n#undef Z_ChangeTag\n#define Z_ChangeTag(p,t) ((void)0)')
  if name=='st_stuff.c':text='#define Z_Malloc UIAlloc\n'+text+'\nvoid UIStatusWords(int *a){a[0]=st_clock;a[1]=st_faceindex;a[2]=st_facecount;a[3]=st_palette;}\n'
@@ -123,5 +138,5 @@ if a.sanitize:flags+=['-fno-sanitize=array-bounds']
 cmd=['clang',*flags,'-ffunction-sections','-fdata-sections','-I'+str(out),*[str(out/name) for name in renderer.UNITS+PUNITS+units],str(out/'game_functions.c'),str(out/'episode-host.c'),'-I'+str(HERE.parent/'gameplay'),'-Wl,-dead_strip','-o',str(out/'full-native')]
 p=subprocess.run(cmd,capture_output=True,text=True);(out/'full-build.log').write_text(p.stdout+p.stderr)
 assert p.returncode==0,p.stderr
-manifest.update(command=cmd,generatedSources={str(p.relative_to(out)):hashlib.sha256(p.read_bytes()).hexdigest() for p in out.glob('*') if p.suffix in ['.c','.h','.inc']},scope='Borrowed original UI buffers; canonical no-UI world observations normalize only miscellaneous rndindex; real ST/HU/WI/finale/wipe original functions; gameplay prefix single-render history; native profile LP64 initialized-zone with preserved platform adaptations.')
+manifest.update(displayHistory=a.display_history,nativeUIResourceProfile='all UI including ST_lib borrowed' if a.borrow_all_ui else 'legacy mixed UI: ST_lib uses physical zone',command=cmd,generatedSources={str(p.relative_to(out)):hashlib.sha256(p.read_bytes()).hexdigest() for p in out.glob('*') if p.suffix in ['.c','.h','.inc']},scope='Borrowed original UI buffers; canonical no-UI world observations normalize only miscellaneous rndindex; real ST/HU/WI/finale/wipe original functions; gameplay prefix single-render history; native profile LP64 initialized-zone with preserved platform adaptations.')
 (out/'full-manifest.json').write_text(json.dumps(manifest,indent=2)+'\n');print(out/'full-native')
