@@ -1,0 +1,248 @@
+{
+  "pass_": true,
+  "timeUTC": "2026-10-11T10:06:09.834125+00:00",
+  "scope": "Read-only archive/input/canonical source copy and all nine owner-v1 historical indexed frames, manifests, provenance metadata and preflight-hashed MP4s. No historical file was rewritten.",
+  "historicalIndexedFramesVerified": 14475,
+  "historicalVirtualUses": 38,
+  "preservedMediaAndManifests": [
+    {
+      "path": "/Users/eduard/sandbox/doom-evm-ultimate-speedruns/artifacts/local/ultimate-speedruns/E1M1/owner-v1/full-rate/frame-manifest.json",
+      "sha256": "54c4272fa7284aecb9f38bb43b55494faee3a7098a87d89638a8a9f3e14ecb06",
+      "bytes": 382211
+    },
+    {
+      "path": "/Users/eduard/sandbox/doom-evm-ultimate-speedruns/artifacts/local/ultimate-speedruns/E1M1/owner-v1/full-rate/evm.json",
+      "sha256": "adcfb0cea5b03b32ceeb150c8eeb3daf0f687f1fce2c3d685242cd963a0e7af1",
+      "bytes": 394765
+    },
+    {
+      "path": "/Users/eduard/sandbox/doom-evm-ultimate-speedruns/artifacts/local/ultimate-speedruns/E1M1/full-rate/speedrun-e1m1.mp4",
+      "sha256": "406c10fd046c452afe2b31000275b4ab2283e2ba5bc497f95dd2e7665f326478",
+      "bytes": 8986014
+    },
+    {
+      "path": "/Users/eduard/sandbox/doom-evm-ultimate-speedruns/artifacts/local/ultimate-speedruns/E1M1/owner-v1/full-rate/speedrun-e1m1.mp4",
+      "sha256": "cd2076fe572b27ec7f4a8c22ebb7fd163bf3aaafe422d0a8699a2358672ce96b",
+      "bytes": 8986014
+    },
+    {
+      "path": "/Users/eduard/sandbox/doom-evm-ultimate-speedruns/artifacts/local/ultimate-speedruns/E1M2/owner-v1/full-rate/frame-manifest.json",
+      "sha256": "c64cbbe8fd95b67d511c2a72b763c8ca254ae1bf4540ea456418025d54f52638",
+      "bytes": 959272
+    },
+    {
+      "path": "/Users/eduard/sandbox/doom-evm-ultimate-speedruns/artifacts/local/ultimate-speedruns/E1M2/owner-v1/full-rate/evm.json",
+      "sha256": "656b29554960e011985c8da6edca91bdd5417fbdc02b80fb9d4163a9800a1143",
+      "bytes": 975497
+    },
+    {
+      "path": "/Users/eduard/sandbox/doom-evm-ultimate-speedruns/artifacts/local/ultimate-speedruns/E1M2/full-rate/speedrun-e1m2.mp4",
+      "sha256": "3f71cc6cbaced7be14cd15550db3d2e13e2e150b40c81858aa2ed429ad829ab9",
+      "bytes": 22197504
+    },
+    {
+      "path": "/Users/eduard/sandbox/doom-evm-ultimate-speedruns/artifacts/local/ultimate-speedruns/E1M2/owner-v1/full-rate/speedrun-e1m2.mp4",
+      "sha256": "ed422d43e6ffdcfbdabad803cee32a639ed7304b2eebdbe55517c14453cc8205",
+      "bytes": 22197504
+    },
+    {
+      "path": "/Users/eduard/sandbox/doom-evm-ultimate-speedruns/artifacts/local/ultimate-speedruns/E1M3/owner-v1/full-rate/frame-manifest.json",
+      "sha256": "bc034627baadeda65cd919439397413065cbf16f960808f4e502e7ace61ce245",
+      "bytes": 1553985
+    },
+    {
+      "path": "/Users/eduard/sandbox/doom-evm-ultimate-speedruns/artifacts/local/ultimate-speedruns/E1M3/owner-v1/full-rate/evm.json",
+      "sha256": "e33fd4bf14f4c4b2153bf050568ab491809f74cd0f7f39796eb32a93a481976f",
+      "bytes": 1579727
+    },
+    {
+      "path": "/Users/eduard/sandbox/doom-evm-ultimate-speedruns/artifacts/local/ultimate-speedruns/E1M3/owner-v1/full-rate/speedrun-e1m3.mp4",
+      "sha256": "3aa31601c39908ff2644f9b6bf6de44a098ff2424041e6d9d14c421127a6c8e6",
+      "bytes": 33107378
+    },
+    {
+      "path": "/Users/eduard/sandbox/doom-evm-ultimate-speedruns/artifacts/local/ultimate-speedruns/E1M4/owner-v1/full-rate/frame-manifest.json",
+      "sha256": "eab020a607010ecdb61a6ccff650e7f85db10d5dfa486c2f5c5ec1f08f4ebaf9",
+      "bytes": 921924
+    },
+    {
+      "path": "/Users/eduard/sandbox/doom-evm-ultimate-speedruns/artifacts/local/ultimate-speedruns/E1M4/owner-v1/full-rate/evm.json",
+      "sha256": "00a25ae508b4961cbdc6d7c35f6f731ade7c320fb3e5c10a99b9fdccd01e0f39",
+      "bytes": 938020
+    },
+    {
+      "path": "/Users/eduard/sandbox/doom-evm-ultimate-speedruns/artifacts/local/ultimate-speedruns/E1M4/full-rate/speedrun-e1m4.mp4",
+      "sha256": "0597c38afe0481047a2c6733064e50a9eeffe7add9b657bb970c2c5beec42196",
+      "bytes": 24403635
+    },
+    {
+      "path": "/Users/eduard/sandbox/doom-evm-ultimate-speedruns/artifacts/local/ultimate-speedruns/E1M4/owner-v1/full-rate/speedrun-e1m4.mp4",
+      "sha256": "34a2284901274370d128f06a8ba6f067a56c1b3b16447326ca7f146c4ae99368",
+      "bytes": 24403635
+    },
+    {
+      "path": "/Users/eduard/sandbox/doom-evm-ultimate-speedruns/artifacts/local/ultimate-speedruns/E1M5/owner-v1/full-rate/frame-manifest.json",
+      "sha256": "9f2beaa0d2be52af7aa8d73f705cef58f386c6728573ec44416c57b5ace41e8c",
+      "bytes": 2540982
+    },
+    {
+      "path": "/Users/eduard/sandbox/doom-evm-ultimate-speedruns/artifacts/local/ultimate-speedruns/E1M5/owner-v1/full-rate/evm.json",
+      "sha256": "351379feb6e17696c2b43f3961e5ae8aaf9bd025b9d47af34d8937ffc5bb4b77",
+      "bytes": 2572151
+    },
+    {
+      "path": "/Users/eduard/sandbox/doom-evm-ultimate-speedruns/artifacts/local/ultimate-speedruns/E1M5/owner-v1/full-rate/speedrun-e1m5.mp4",
+      "sha256": "f2802a4af8bfcadc725d834f035f838dd1d25c526cba994d97e4a8d20f996b9d",
+      "bytes": 52529251
+    },
+    {
+      "path": "/Users/eduard/sandbox/doom-evm-ultimate-speedruns/artifacts/local/ultimate-speedruns/E1M6/owner-v1/full-rate/frame-manifest.json",
+      "sha256": "ecb30d29cd52c6823036e4539feac6e44f3c168e4484e3e5952eb1f43d35a943",
+      "bytes": 4080862
+    },
+    {
+      "path": "/Users/eduard/sandbox/doom-evm-ultimate-speedruns/artifacts/local/ultimate-speedruns/E1M6/owner-v1/full-rate/evm.json",
+      "sha256": "ac6a042e5676750a203178845da7360505cc1d15434b46f61160249fa7a8caca",
+      "bytes": 4119256
+    },
+    {
+      "path": "/Users/eduard/sandbox/doom-evm-ultimate-speedruns/artifacts/local/ultimate-speedruns/E1M6/owner-v1/full-rate/speedrun-e1m6.mp4",
+      "sha256": "e11ee0d5097fc837dc994ecebfdb85072f0efd28a4ea6e9f03908136905b5dd1",
+      "bytes": 120496933
+    },
+    {
+      "path": "/Users/eduard/sandbox/doom-evm-ultimate-speedruns/artifacts/local/ultimate-speedruns/E1M7/owner-v1/full-rate/frame-manifest.json",
+      "sha256": "74e8cd5763a06f5f30eab768524943d1aafc4744110e432ba9709643aff99bbb",
+      "bytes": 3091692
+    },
+    {
+      "path": "/Users/eduard/sandbox/doom-evm-ultimate-speedruns/artifacts/local/ultimate-speedruns/E1M7/owner-v1/full-rate/evm.json",
+      "sha256": "eea5957a773ca26bb77402e58f45d76848dba8b2258d0f75c99039ddf7f228b6",
+      "bytes": 3123029
+    },
+    {
+      "path": "/Users/eduard/sandbox/doom-evm-ultimate-speedruns/artifacts/local/ultimate-speedruns/E1M7/full-rate/speedrun-e1m7.mp4",
+      "sha256": "6dd05aa1e33d80d2662f5d525d9d881ef95554b0095520e2d5e14cacbc2ce8ca",
+      "bytes": 64926181
+    },
+    {
+      "path": "/Users/eduard/sandbox/doom-evm-ultimate-speedruns/artifacts/local/ultimate-speedruns/E1M7/owner-v1/full-rate/speedrun-e1m7.mp4",
+      "sha256": "e8a4335fab2a46d62a833294d1b9fa2606ce7305804ca6499fc1a70ad3c26a34",
+      "bytes": 64926181
+    },
+    {
+      "path": "/Users/eduard/sandbox/doom-evm-ultimate-speedruns/artifacts/local/ultimate-speedruns/E1M8/alternatives/sedlo-046/owner-v1/full-rate/frame-manifest.json",
+      "sha256": "17bc1e3af3d01373931d9672c64bbb5377cef08929a4be121e0b6c0f2e51d4f4",
+      "bytes": 1969967
+    },
+    {
+      "path": "/Users/eduard/sandbox/doom-evm-ultimate-speedruns/artifacts/local/ultimate-speedruns/E1M8/alternatives/sedlo-046/owner-v1/full-rate/evm.json",
+      "sha256": "3e108cb6f78297f51053726fdbf99d6959288430ec4066824362c998b7e15b01",
+      "bytes": 1993409
+    },
+    {
+      "path": "/Users/eduard/sandbox/doom-evm-ultimate-speedruns/artifacts/local/ultimate-speedruns/E1M8/alternatives/sedlo-046/owner-v1/full-rate/speedrun-e1m8.mp4",
+      "sha256": "560166cf2e4db368f447dce134d3cadc1348f7f1f06c720ba26900cad3e060f1",
+      "bytes": 45310986
+    },
+    {
+      "path": "/Users/eduard/sandbox/doom-evm-ultimate-speedruns/artifacts/local/ultimate-speedruns/E1M9/owner-v1/full-rate/frame-manifest.json",
+      "sha256": "be966ca499d05d617a09286f3a5fd3775d8337cbd311bd782cba47c02bd3c88a",
+      "bytes": 1920613
+    },
+    {
+      "path": "/Users/eduard/sandbox/doom-evm-ultimate-speedruns/artifacts/local/ultimate-speedruns/E1M9/owner-v1/full-rate/evm.json",
+      "sha256": "e7a9762e789137f1a5f737598c05e146d942cb8208b5956895272d113a8bdd87",
+      "bytes": 1943764
+    },
+    {
+      "path": "/Users/eduard/sandbox/doom-evm-ultimate-speedruns/artifacts/local/ultimate-speedruns/E1M9/full-rate/speedrun-e1m9.mp4",
+      "sha256": "25bd8894f158bf5dd61038049f50c70e498d69d6da3afaeeadfce367dc0213fa",
+      "bytes": 51823555
+    },
+    {
+      "path": "/Users/eduard/sandbox/doom-evm-ultimate-speedruns/artifacts/local/ultimate-speedruns/E1M9/encoding-movie-timescale-first-attempt/speedrun-e1m9.mp4",
+      "sha256": "409a42b68afd601ad224993e5447030ac6b27ecf168ac8f56a2efe6a7dd7a4a3",
+      "bytes": 51823555
+    },
+    {
+      "path": "/Users/eduard/sandbox/doom-evm-ultimate-speedruns/artifacts/local/ultimate-speedruns/E1M9/owner-v1/full-rate/speedrun-e1m9.mp4",
+      "sha256": "25bd8894f158bf5dd61038049f50c70e498d69d6da3afaeeadfce367dc0213fa",
+      "bytes": 51823555
+    }
+  ],
+  "originalInputs": [
+    {
+      "map": 1,
+      "originalName": "e1m1-903.lmp",
+      "archiveSHA256": "8fcc186514e522dd61edc19aed6943c983afe1bff2f27480d3ba699ee7268f2e",
+      "inputSHA256": "e5766abc098faf496c2b7787668e4c21c0a4ebf819c7667ce59c4ca14dc39288",
+      "historicalFrames": 316,
+      "historicalManifestSHA256": "54c4272fa7284aecb9f38bb43b55494faee3a7098a87d89638a8a9f3e14ecb06"
+    },
+    {
+      "map": 2,
+      "originalName": "e1m2-2280.lmp",
+      "archiveSHA256": "2ede1def22094b92e27396af92aa8703e0812dd4bac5c64c9775b2dbf205c166",
+      "inputSHA256": "1210cbccd5148091f438d9fb5f8f763b0b49cdb1e3870380521c0b2632fbc15f",
+      "historicalFrames": 798,
+      "historicalManifestSHA256": "c64cbbe8fd95b67d511c2a72b763c8ca254ae1bf4540ea456418025d54f52638"
+    },
+    {
+      "map": 3,
+      "originalName": "e1m3-036/e1m3-036.lmp",
+      "archiveSHA256": "edc169c6d4e8f952cc9134de7b99716c338e8abcdff11e457b9d57cdd7440eb0",
+      "inputSHA256": "d91a896d529672e5bbc011b7607de75308c183643ee204d722e8704e348a9f5e",
+      "historicalFrames": 1291,
+      "historicalManifestSHA256": "bc034627baadeda65cd919439397413065cbf16f960808f4e502e7ace61ce245"
+    },
+    {
+      "map": 4,
+      "originalName": "e1m4-0021.lmp",
+      "archiveSHA256": "1c2a2bb927aee45b6e6998f46bb2e94073469a506cfe3115776f96e75edb9048",
+      "inputSHA256": "1f5427b2776aa7deb83716350eb6d252e4953895aa338c239bf62eeac5d67fdf",
+      "historicalFrames": 767,
+      "historicalManifestSHA256": "eab020a607010ecdb61a6ccff650e7f85db10d5dfa486c2f5c5ec1f08f4ebaf9"
+    },
+    {
+      "map": 5,
+      "originalName": "e1m5-100.lmp",
+      "archiveSHA256": "2d25bcb4e1977d8a8da21ce62c037ee1b806d8cb222cda11743ef20ecfc075b6",
+      "inputSHA256": "4a3ffd0a1f92ac2980e9c3b5aafde01a6ec2fb4eaca0fdde61ab85d51e1ea48e",
+      "historicalFrames": 2110,
+      "historicalManifestSHA256": "9f2beaa0d2be52af7aa8d73f705cef58f386c6728573ec44416c57b5ace41e8c"
+    },
+    {
+      "map": 6,
+      "originalName": "e1m6-0136.lmp",
+      "archiveSHA256": "94ab9ab505baa1ac55cd970dcad83f35a53a4437a1d96f8191b4bfbe05a481e5",
+      "inputSHA256": "fa51135c2bee9b4c82c1b0390c6e29755b347237c981b911cef044e4b01e1ea6",
+      "historicalFrames": 3385,
+      "historicalManifestSHA256": "ecb30d29cd52c6823036e4539feac6e44f3c168e4484e3e5952eb1f43d35a943"
+    },
+    {
+      "map": 7,
+      "originalName": "e1m7-113.lmp",
+      "archiveSHA256": "b0104482eef13890777eb38d369126a3167ea638ff7a4cf7c8e6a8523f2ee5ac",
+      "inputSHA256": "182931b0afdcace7dffe66c74bdcd546e6e110eed95a725ce79dc7dd4ce5041e",
+      "historicalFrames": 2572,
+      "historicalManifestSHA256": "74e8cd5763a06f5f30eab768524943d1aafc4744110e432ba9709643aff99bbb"
+    },
+    {
+      "map": 8,
+      "originalName": "e1m8-046.lmp",
+      "archiveSHA256": "edd623f07f5bd5c6bb527bd484ae117c53653d5db83a80ac109993a5f3175b6b",
+      "inputSHA256": "a47622d63d3b797280842c86b858cf80a7d85b7b1df03882db08f5f16fb261ef",
+      "historicalFrames": 1638,
+      "historicalManifestSHA256": "17bc1e3af3d01373931d9672c64bbb5377cef08929a4be121e0b6c0f2e51d4f4"
+    },
+    {
+      "map": 9,
+      "originalName": "e1m9-0045.lmp",
+      "archiveSHA256": "a618a1dddd141db230f500d6055dfa08febb68f670efa7cc0963aa0e7c89f352",
+      "inputSHA256": "ae640d1a17919e24983afd9d191d75502f0f745b89a52fff808ee41a2761bfb1",
+      "historicalFrames": 1598,
+      "historicalManifestSHA256": "be966ca499d05d617a09286f3a5fd3775d8337cbd311bd782cba47c02bd3c88a"
+    }
+  ]
+}

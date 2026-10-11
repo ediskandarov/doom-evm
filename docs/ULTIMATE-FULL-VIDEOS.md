@@ -93,3 +93,53 @@ active-session bounds remain explicitly unavailable. No expensive instrumentatio
 is added solely for optional metrics.
 Integration: independent feature only; production integration deferred.
 Acceptance: pending all gates, beginning with E1M1.
+
+
+## Verified E1M1 pilot
+
+The corrected pilot passes: all 3,498 final EVM frames and palettes match the
+independent original-C reference in the declared profile. All 316 gameplay targets,
+317 canonical snapshots, 80 melt frames, 3,068 WI frames and 35 title frames pass.
+The complete 3,280-tic input tape is consumed; 105 additional zero-input WI tics
+hold its original ending screen. Five mined rejection checks pass; restore and
+all saved/presentation digests, snapshots, counters and logs are verified.
+
+MP4: `artifacts/local/full-videos/E1M1/pilot-v2/ultimate-e1m1-complete.mp4`,
+35 FPS, 1280×960 square-pixel 4:3, 3,498 encoded frames, 99.94285714285714s,
+SHA256 `6d65e321e75f3c787fc31dc758d7460b1f4cd25f27e0b193e1d7f204a82d12f4`.
+Visual QA inspects title, gameplay/bar/HUD, melt and completed statistics.
+Measured final recording gas: 689,031,769,853 in 4,572 successful transactions.
+Recorder UTC interval: 954.584s; actual summed transaction RPC time: 858.189469293s;
+render RPC throughput: 4.360271546 frames/s. These measurements exclude native
+preparation, encoding and failed pilot attempts; EVM-only CPU time is unavailable.
+Structured metadata is in `artifacts/full-videos/E1M1-telemetry.json` and its
+per-map manifests. No virtual samples are used in this pilot.
+
+Focused inherited dependency checks: 50 tests passed and four WI transaction
+harness tests initially failed because default dynamic linking tried to read an
+unavailable artifact path. Their existing historical `--no-dynamic-test-linking`
+option fixes the harness; all four then pass. First failure evidence is retained.
+Total focused coverage: 54 tests; no assertion/golden/shared config changed.
+
+Read-only historical preservation passes for nine archives/input tapes, all
+14,475 old indexed frames and 38 virtual uses, preflight-bound old MP4s and
+manifests. Commercial files stay local. Pilot acceptance unlocks remaining
+recordings. Main is unchanged.
+
+## E1M4 tape progression discovered by native preparation
+
+E1M4's exact original tape requests early WI acceleration, reaches G_WorldDone
+at tic782, and has one further original gameplay command at tic783. That command
+legitimately loads E1M5 and advances it once. The v2 standalone WI-only gate
+rejects this unsupported endpoint; the failure is preserved. An independent v3
+consumer now reuses original G_DoWorldDone/P_Setup and retains a separate
+EVM-derived progression world after the last main-map render. Canonical E1M4
+saved gameplay remains frozen at its genuine767-tic exit. No gameplay command
+is invented; a later display hold republishes its EVM-generated next-level screen
+without another gameplay tic. Its next-level native/EVM proof is pending.
+
+Native progression diagnostics retain the original physical-lifetime thinker
+identity journal. Solidity starts new logical pools per level. Additional
+current-player/global scalar and pixel coverage must be reported independently
+from any unsupported whole multi-level identity comparison; never mask an
+accepted original-map snapshot field to force this extension to pass.

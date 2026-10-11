@@ -1,0 +1,29 @@
+{
+  "timeUTC": "2026-10-11T09:54:51.527376+00:00",
+  "complete": false,
+  "pilotAccepted": false,
+  "gameplayFramesExact": 316,
+  "matchingGameplaySnapshots": 317,
+  "gameplayPaletteExact": true,
+  "rollbackCases": 5,
+  "failedGate": "Exit wipe RNG must equal native198; observed188. WI_Start ten M_Random calls were dropped at adapter handoff.",
+  "correctedSourceCommit": "75441d8",
+  "files": [
+    {
+      "path": "artifacts/local/full-videos/E1M1/pilot-clock-fixed/recording.json",
+      "sha256": "4493282a1b69e360e9c37a8cd4d75ac5a0870e8b4393999b1129b36a89f5b2bc"
+    },
+    {
+      "path": "artifacts/local/full-videos/E1M1/pilot-clock-fixed/partial-verification.json",
+      "sha256": "46daa8e2546eb22b31716ce774a171fcfc5419e2c270d77eca9ed40f291f18ad"
+    },
+    {
+      "path": "artifacts/local/full-videos/E1M1/pilot-clock-fixed/rollback.json",
+      "sha256": "f7253e831f0b6709bdead292162c539c8bbd0f6153bfeacfd1c73c167787b482"
+    },
+    {
+      "path": "artifacts/local/full-videos/failed-v1-ui-gate.log",
+      "sha256": "da9f8882bb7f382193056cb8ba0ccddf4c124f8b8109969cb4e3bddc6b896296"
+    }
+  ]
+}

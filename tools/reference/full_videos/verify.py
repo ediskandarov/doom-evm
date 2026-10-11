@@ -7,7 +7,7 @@ sha=lambda b:hashlib.sha256(b).hexdigest()
 ap=argparse.ArgumentParser();ap.add_argument('recording',type=Path);ap.add_argument('--partial',action='store_true');a=ap.parse_args();out=a.recording.resolve();r=json.loads((out/'recording.json').read_text());m=r['identity']['map'];native=ROOT/f'artifacts/local/full-videos/E1M{m}/native';g=json.loads((native/'gameplay.json').read_text());base=ROOT/f'artifacts/local/ultimate-speedruns/E1M{m}'
 if m==8:base=base/'alternatives/sedlo-046'
 n=json.loads((base/'native-result.json').read_text());assert sha((base/'source-download').read_bytes())==r['identity']['demoSha256'];t=json.loads((base/'tape.json').read_text());raw=b''.join(bytes.fromhex(x['rawHex']) for x in t['commands']);assert sha(raw)==r['identity']['commandBytesSha256'];assert raw==(base/'source-download').read_bytes()[13:13+len(raw)]
-report=dict(map=m,scope='Finite native comparison with explicit virtual destinations; no universal native pointer-pixel equality.',gameplay={},nativeUIFrames=0,wipeFrames=r['wipeFrames'],commonNativePixelsChecked=0,virtualZoneUses=0,virtualOwnerUses=0,wholeNativeFramesEqual=0,frames=r['totalVideoFrames'],pass_=False)
+report=dict(map=m,scope='Finite native comparison with explicit virtual destinations; no universal native pointer-pixel equality.',gameplay={},nativeUIFrames=0,wipeFrames=r['wipeFrames'],commonNativePixelsChecked=0,virtualZoneUses=0,virtualOwnerUses=0,wholeNativeFramesEqual=0,frames=r.get('totalVideoFrames',len(r['frames'])),pass_=False)
 for tx in r['transactions']:
  b=(out/tx['file']).read_bytes();assert sha(b)==tx['receiptSha256'];receipt=json.loads(gzip.decompress(b));assert receipt['transactionHash']==tx['hash'];assert receipt['status']=='0x1'
 for f in r['frames']:

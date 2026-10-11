@@ -1,0 +1,10 @@
+{
+  "firstRunPassed": 50,
+  "firstRunHarnessFailures": 4,
+  "recheckPassed": 4,
+  "recheckFailures": 0,
+  "totalFocusedTestsVerified": 54,
+  "sharedConfigUnchanged": true,
+  "assertionsAndGoldensUnchanged": true,
+  "scope": "ST widgets/state/palette, WI/native/state/storage/rollback, finale, V video, RNG and new melt; no full historical suite."
+}
