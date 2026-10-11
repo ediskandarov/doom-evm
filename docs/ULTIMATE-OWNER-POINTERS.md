@@ -141,3 +141,12 @@ recording, fixture or resource was modified. [Regression proof](../artifacts/ult
 records source/report/receipt/accepted-manifest hashes and actual gas.
 The regression runtime has stopped. The separate two-job Ultimate suite remains
 active; this milestone does not claim nine-map completion.
+
+## Resource telemetry coverage
+
+The monitor initially matched relative-path Node launches. Coordinator-launched
+E1M5/E1M6 runners used absolute paths: host/Anvil telemetry continued, but their
+Node RSS was absent until matching was repaired at2026-10-11T06:01:41Z.
+Earlier missing Node measurements are not estimated. Final resource statistics
+are explicitly sampled maxima with sample counts, not unobserved peaks. All
+prior telemetry is preserved; only this goal's monitor was restarted.
