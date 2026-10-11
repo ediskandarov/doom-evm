@@ -1,0 +1,7 @@
+{
+  "checkpointUTC": "2026-10-11T11:13:45.667359+00:00",
+  "aggregateGoalTokens": 427708,
+  "aggregateGoalSeconds": 3474,
+  "goalCreatedUnix": 1791713683,
+  "attribution": "Measured goal-tool checkpoint after implementation commit and final real-browser acceptance; aggregate tokens/time, not monetary estimates. Approval/subtask/money breakdown unavailable."
+}

@@ -1,0 +1,119 @@
+✖ missing Chrome exits cleanly and removes its Anvil, server, and temporary profile (13.33125ms)
+✔ palette validates RGB bytes, kind and identity independent of key order (8.093958ms)
+✔ strict ABI decode and palette expansion only (1.048834ms)
+✔ duplicates, out-of-order delivery, gaps and removed logs (0.299667ms)
+✔ palette is bound to frame/transaction/address/block with exact RGB8 ABI (2.670167ms)
+✔ slow older palette receipt cannot overwrite newer Canvas presentation (0.73425ms)
+✔ missing/duplicate/reverted receipt palettes fail and invalidated sessions do not paint (1.95175ms)
+✔ legacy presentation retains synchronous raw palette and needs no receipt RPC (0.213208ms)
+✔ browser uses exact configured decimal/hex budgets without a fixed ceiling (0.92175ms)
+✔ old browser configs discover budget from node block metadata (0.106958ms)
+✔ invalid configured/node budgets fail without silently substituting a fixed limit (3.187416ms)
+✔ DOOM II adapter authenticates exact packing and resource dimensions (155.151417ms)
+✔ DOOM II release profile explicitly requests virtual pointers without changing shared installer (8.874ms)
+✔ DOOM II discovery refuses a ready installation using a different memory policy (0.185625ms)
+✔ episode startup confirms state without consuming sequence; resume reuses deployment (1.947875ms)
+✔ new game, restart and pause share the exclusive sequenced Frame channel (2.180209ms)
+✔ reverted episode control keeps sequence; invalid selection sends nothing (0.415666ms)
+✔ pending control excludes keyboard input until its mined receipt settles (0.484333ms)
+✔ old static DOM/autotest remains zero-button WS→receipt→Canvas flow (113.023833ms)
+✔ capable deployment still does not initialize merely loading/autotesting (77.329792ms)
+✔ actual Start/Stop wiring samples DOM keyboard, pauses on blur, and resumes without duplicate initialize (21.047959ms)
+✔ native-zone capable autotest remains static; explicit Start serializes preparation and initialization (71.411792ms)
+✔ native-zone prepared reload starts without preparing again (1.505042ms)
+✔ nativeZone atomic app needs one startup transaction and retains static/held-frame transport (61.683833ms)
+✔ old static app without gas config discovers node budget and preserves zero-input Frames (44.811041ms)
+✔ UI profile starts original UI explicitly with selected view and keeps sequence/Frame ABI (1.77125ms)
+✔ legacy deployment reads only its counter and keeps static zero-button ABI (0.566875ms)
+✔ explicit start initializes once, preserves static counter, and reload/resume reuses initialized state (4.821958ms)
+✔ single transaction lock rejects overlap during receipt wait (0.715667ms)
+✔ connection side effects occur only after valid exclusive command reservation (0.440042ms)
+✔ definite revert releases lock and does not consume input sequence (0.350792ms)
+✔ send uncertainty halts all subsequent inputs (0.18825ms)
+✔ receipt uncertainty halts all subsequent inputs (0.123584ms)
+✔ mined invalid Frame consumes counter and invalidates display channel (0.423166ms)
+✔ multiple Frame logs invalidate channel while WS/receipt duplicate is accepted once (0.466083ms)
+✔ chain invalidation during pending transaction prevents receipt display (0.523584ms)
+✔ initialization requires actual confirmed gameStarted and blocks concurrent start (0.527333ms)
+✔ uint32 sequence exhaustion and invalid packet fail before transaction submission (0.137ms)
+✔ loop samples held keys once per accepted tic with no in-flight backlog (0.411292ms)
+✔ stop during pending tic clears keys and prevents any successor transaction (0.151ms)
+✔ stop during initialization settles initialization but does not send a tic (0.108291ms)
+✔ loop error stops and clears held input; successful resume needs explicit Start (0.127916ms)
+✔ blur and visibility stop active loop while inactive keys retain browser behavior (0.332208ms)
+✔ metadata must be canonical uint32/bool ABI words (0.175083ms)
+✔ native-zone Start prepares then initializes under one lock without counters or Frames (0.170125ms)
+✔ prepared but uninitialized reload skips preparation and preserves legacy ABI calls (0.103708ms)
+✔ Stop during preparation settles it, defers initialization, and resume does not prepare twice (0.1385ms)
+✔ prepare revert releases channel while prepare uncertainty prevents initialization (0.133958ms)
+✔ initialization revert after preparation permits resume without duplicate preparation (0.260209ms)
+✔ preparation must confirm a canonical flag, unchanged counter, and no Frame (0.462916ms)
+✔ direct staged Start invalidated during pending preparation never submits initialization (0.151542ms)
+✔ nativeZone atomic default uses one initialize and never queries or calls preparation ABI (0.126208ms)
+✔ native translation preserves unshifted original key numbers and raw repeat/order (2.893792ms)
+✔ ordered event batches retain backlog and encode exact bounded dynamic ABI (0.313625ms)
+✔ raw startup is explicit; rendered/no-render packets share sequence and transaction lock (1.792334ms)
+✔ stop during a pending raw tic settles it then flushes releases in one no-render tic (1.10875ms)
+✔ raw failures retain packet and stop without automatic mutation retry (4.078708ms)
+✔ raw blur creates releases, preserves pending events and blocks inactive input (0.746875ms)
+✔ all valid packets encode exact existing uint32,uint32 ABI (19.252291ms)
+✔ reserved and malformed packets/sequences rejected (2.109541ms)
+✔ held keys, alias release, modifiers and original lowest-digit priority (0.611166ms)
+✔ all logical keyboard bits map independently (0.274583ms)
+✔ binding handles repeats, focus loss, visibility and disposal (0.445208ms)
+✔ localhost policy rejects remote origins, public RPC, credentials and misleading hostnames (0.686083ms)
+✔ authenticated precompiled artifact rejects any changed byte (4.890666ms)
+✖ pack existing Freedoom pipeline exactly; reject wrong and corrupted IWADs (0.897ms)
+✔ immutable runtime binds driver and checks bounds (0.666792ms)
+✔ uncertain nonce conflict cannot be blindly replayed (0.294042ms)
+✔ consumed nonce with missing receipt refuses replay (0.099667ms)
+✔ reset with identical chain ID archives journal when anchor differs (0.481708ms)
+✔ unused uncertain operation retries exact durable nonce and payload (0.116291ms)
+✔ known unmined operation is awaited and never resubmitted (0.086666ms)
+✔ canonical receipt for initialization completes journal after reload (0.383875ms)
+✔ receipt from an orphaned block cannot complete an operation (0.1255ms)
+✔ endpoint ownership refreshes a previously connected stale journal (0.191875ms)
+✔ every production player defaults to EVM menu with explicit legacy opt-out (0.579083ms)
+✔ automatic menu startup consumes neither a game nor sequence and reuses persisted menu (1.124333ms)
+✔ title events retain exact shared raw ABI and malformed packets send nothing (0.444917ms)
+✔ pending menu navigation excludes overlapping input and mined revert keeps sequence (0.304125ms)
+✔ uncertain menu submission blocks subsequent mutation (1.076459ms)
+✔ existing legacy game cannot silently switch startup profile (1.927459ms)
+ℹ tests 81
+ℹ suites 0
+ℹ pass 79
+ℹ fail 2
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 503.0565
+
+✖ failing tests:
+
+test at tools/transport/lifecycle.test.mjs:17:1
+✖ missing Chrome exits cleanly and removes its Anvil, server, and temporary profile (13.33125ms)
+  Error: listen EPERM: operation not permitted 127.0.0.1:18551
+      at Server.setupListenHandle [as _listen2] (node:net:1918:21)
+      at listenInCluster (node:net:1997:12)
+      at node:net:2206:7
+      at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+    code: 'EPERM',
+    errno: -1,
+    syscall: 'listen',
+    address: '127.0.0.1',
+    port: 18551
+  }
+
+test at web/install.test.mjs:17:1
+✖ pack existing Freedoom pipeline exactly; reject wrong and corrupted IWADs (0.897ms)
+  Error: ENOENT: no such file or directory, open 'web/install-assets/freedoom1.wad'
+      at async open (node:internal/fs/promises:642:25)
+      at async readFile (node:internal/fs/promises:1279:14)
+      at async TestContext.<anonymous> (file:///Users/eduard/sandbox/doom-evm-doom2-browser/web/install.test.mjs:18:29)
+      at async Test.run (node:internal/test_runner/test:1113:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:788:7) {
+    errno: -2,
+    code: 'ENOENT',
+    syscall: 'open',
+    path: 'web/install-assets/freedoom1.wad'
+  }

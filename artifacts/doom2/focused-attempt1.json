@@ -1,0 +1,11 @@
+{
+  "pass_": false,
+  "passed": 111,
+  "failed": 2,
+  "logSHA256": "22fcbb24990ea7733446e96d2b5738624d93f863e9d274f4e9229970dde6b6ea",
+  "logPath": "artifacts/local/doom2/focused.log",
+  "failures": [
+    "New commercial initialization batch exhausts 1 GiB; split independent test transactions without dropping cases.",
+    "Inherited unadmitted commercial WI context requires preserved rejection; bind mode at WI_Start and reject mid-context drift."
+  ]
+}

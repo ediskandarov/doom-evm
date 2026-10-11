@@ -1,0 +1,105 @@
+[
+  {
+    "path": "artifacts/local/doom2/MAP01/strict/evm.json",
+    "sha256": "23cd92fe21ce05a15f27848c55885b3e33b2d8bd83e3cfc31b98963c8e199088",
+    "pass_": false,
+    "error": "Error: connect EPERM 127.0.0.1:19071 - Local (0.0.0.0:0)",
+    "verifiedTics": 0,
+    "renderedFrames": 0,
+    "renderFailure": null,
+    "runtimeStopped": true
+  },
+  {
+    "path": "artifacts/local/doom2/MAP01/strict-attempt1/evm.json",
+    "sha256": "c8b0235a44bf2e135238bfca9f0d5453a3fff552e3c66902383846120c7c8a9b",
+    "pass_": false,
+    "error": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n\n889 !== 756\n",
+    "verifiedTics": 0,
+    "renderedFrames": 0,
+    "renderFailure": null,
+    "runtimeStopped": true
+  },
+  {
+    "path": "artifacts/local/doom2/MAP01/strict-attempt2/evm.json",
+    "sha256": "7dbabafcd9ab932d8e121ef55f8c3d32c04872181a9dd38283e057b2cf8c9e48",
+    "pass_": false,
+    "error": "Error: EVM render reverted at tic 75 (430088527 gas; error data preserved in report)",
+    "verifiedTics": 75,
+    "renderedFrames": 74,
+    "renderFailure": {
+      "tic": 75,
+      "transactionHash": "0xcad0ce529144b2d484a8d9164b1e883dee7c1d0d0159762eb9c22e069f944edb",
+      "gas": 430088527,
+      "elapsedMs": 429.51437499999884,
+      "rpcError": {
+        "code": 3,
+        "message": "execution reverted: custom error 0x5b9a48fe",
+        "data": "0x5b9a48fe"
+      },
+      "rollback": {
+        "allSavedFieldsUnchanged": true,
+        "savedDigest": "0xed08db782b157627cb4a80fdfa2d08b472343422dc93c71916459da2cfbf8d65",
+        "nativeWorldExact": true,
+        "frameCounterUnchanged": true,
+        "noLogs": true
+      },
+      "errorDataSha256": "52427ac685a61427b2ed4122ce53a8e6973f9c44b826d8778a279c0ec66fb0e1"
+    },
+    "runtimeStopped": true
+  },
+  {
+    "path": "artifacts/local/doom2/MAP01/episode-attempt1/evm.json",
+    "sha256": "b250d5aefa3ab04da740d83af7102ba4a712e46228e31d76dcba3af2b80218cb",
+    "pass_": false,
+    "error": "Error: EVM render reverted at tic 75 (472044535 gas; error data preserved in report)",
+    "verifiedTics": 75,
+    "renderedFrames": 74,
+    "renderFailure": {
+      "tic": 75,
+      "transactionHash": "0xcad0ce529144b2d484a8d9164b1e883dee7c1d0d0159762eb9c22e069f944edb",
+      "gas": 472044535,
+      "elapsedMs": 541.6782089999906,
+      "rpcError": {
+        "code": 3,
+        "message": "execution reverted: custom error 0x5b9a48fe",
+        "data": "0x5b9a48fe"
+      },
+      "rollback": {
+        "allSavedFieldsUnchanged": true,
+        "savedDigest": "0x756a9fb960cec59e82fea1db0c2c23b03430e871c93dbbb95e83c7fde3afe3e4",
+        "nativeWorldExact": true,
+        "frameCounterUnchanged": true,
+        "noLogs": true
+      },
+      "errorDataSha256": "52427ac685a61427b2ed4122ce53a8e6973f9c44b826d8778a279c0ec66fb0e1"
+    },
+    "runtimeStopped": true
+  },
+  {
+    "path": "artifacts/local/doom2/browser-attempt1/real.json",
+    "sha256": "f8e6ddda3cf61a834e21a0a101590e4c603a87d3759cf8121d6100d47f35dbb3",
+    "pass_": false,
+    "error": "Error: connect EPERM 127.0.0.1:19073 - Local (0.0.0.0:0)\n    at internalConnect (node:net:1110:16)\n    at defaultTriggerAsyncIdScope (node:internal/async_hooks:472:18)\n    at node:net:1356:9\n    at process.processTicksAndRejections (node:internal/process/task_queues:85:11)",
+    "verifiedTics": null,
+    "renderedFrames": 0,
+    "renderFailure": null,
+    "runtimeStopped": true
+  },
+  {
+    "path": "artifacts/local/doom2/menu-attempt1/evm.json",
+    "sha256": "dbbc1e343c9ab2ffaced97c2cdee47b2c12c14710455f8d98f040559662d35ca",
+    "pass_": false,
+    "error": "Error: connect EPERM 127.0.0.1:19071 - Local (0.0.0.0:0)\n    at internalConnect (node:net:1110:16)\n    at defaultTriggerAsyncIdScope (node:internal/async_hooks:472:18)\n    at node:net:1356:9\n    at process.processTicksAndRejections (node:internal/process/task_queues:85:11)",
+    "verifiedTics": null,
+    "renderedFrames": 0,
+    "renderFailure": null,
+    "runtimeStopped": true
+  },
+  {
+    "path": "artifacts/local/doom2/browser-final/cleanup.json",
+    "pass_": false,
+    "error": "Verification site copied the synthetic18551 diagnostic config left by inherited lifecycle cleanup test; launcher bypassed before installation. No gameplay acceptance claimed.",
+    "ownedProcessesStopped": 9,
+    "fix": "Staging excludes diagnostic overrides and WAD payloads; Node wrapper restores its prior overrides. Shared launcher source unchanged."
+  }
+]
