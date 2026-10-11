@@ -1,0 +1,18 @@
+{
+  "command": [
+    "node",
+    "--test",
+    "web/install.test.mjs",
+    "web/menu-input.test.mjs",
+    "web/input-app.test.mjs",
+    "web/input-loop.test.mjs",
+    "web/episode.test.mjs",
+    "web/input-runtime.test.mjs"
+  ],
+  "cwd": ".",
+  "startedUtc": "2026-10-11T09:53:37.449535+00:00",
+  "endedUtc": "2026-10-11T09:53:37.887602+00:00",
+  "elapsedSeconds": 0.43800529185682535,
+  "exitCode": 0,
+  "rawOutput": "/Users/eduard/sandbox/doom-evm/artifacts/phase4/browser-deployment-main/focused-node.log"
+}

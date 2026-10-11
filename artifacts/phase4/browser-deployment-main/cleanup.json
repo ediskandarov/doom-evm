@@ -1,0 +1,33 @@
+{
+  "checkedUtc": "2026-10-11T10:04:03.002793+00:00",
+  "ownedPorts": [
+    {
+      "port": 19031,
+      "connectEx": 1,
+      "closed": true
+    },
+    {
+      "port": 19032,
+      "connectEx": 1,
+      "closed": true
+    },
+    {
+      "port": 19033,
+      "connectEx": 1,
+      "closed": true
+    },
+    {
+      "port": 19034,
+      "connectEx": 1,
+      "closed": true
+    }
+  ],
+  "runnersStoppedOwnedRuntimes": true,
+  "reservedPortsUntouched": [
+    18880,
+    8088
+  ],
+  "writesOutsideMainWorktree": false,
+  "commercialPayloadsCommitted": false,
+  "videoWorktreeModified": false
+}

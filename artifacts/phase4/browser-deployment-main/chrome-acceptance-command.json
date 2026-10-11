@@ -1,0 +1,18 @@
+{
+  "command": [
+    "node",
+    "tools/browser-deployment/check.mjs",
+    "--port",
+    "19031",
+    "--http-port",
+    "19032",
+    "--output-prefix",
+    "/Users/eduard/sandbox/doom-evm/artifacts/phase4/browser-deployment-main/fresh"
+  ],
+  "cwd": "artifacts/local/browser-deployment-main/runtime",
+  "startedUtc": "2026-10-11T09:53:42.857517+00:00",
+  "endedUtc": "2026-10-11T09:57:39.079601+00:00",
+  "elapsedSeconds": 236.22139366576448,
+  "exitCode": 0,
+  "rawOutput": "/Users/eduard/sandbox/doom-evm/artifacts/phase4/browser-deployment-main/chrome-acceptance.log"
+}

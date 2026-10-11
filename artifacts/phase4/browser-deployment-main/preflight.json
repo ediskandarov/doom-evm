@@ -1,0 +1,30 @@
+{
+  "kind": "browser-deployment-main-preflight",
+  "startUtc": "2026-10-11T09:51:04Z",
+  "startAttribution": "first measured UTC clock checkpoint; earlier tool preparation is not included; this ordinary task has no new goal-service token attribution",
+  "baseline": "59522a545d1311924a28875a098892c5e27c113b",
+  "originMainBefore": "59522a545d1311924a28875a098892c5e27c113b",
+  "sourceTip": "a19716983df0ef1504010957a474a93f30e5bb6c",
+  "mergeBase": "59522a545d1311924a28875a098892c5e27c113b",
+  "sourceCommits": [
+    "730596452d8fa314e3e1f14ceaabfbf0fc425876",
+    "a19716983df0ef1504010957a474a93f30e5bb6c"
+  ],
+  "mergeCommit": "96bd1bbd8d27a47f29cc24f05c7833afde728f6f",
+  "conflicts": [],
+  "initialWorktreeClean": true,
+  "strategy": "normal --no-ff merge; exactly two commits descend directly from latest synchronized main",
+  "runtimeCopy": "/Users/eduard/sandbox/doom-evm/artifacts/local/browser-deployment-main/runtime",
+  "runtimeCopyTrackedFiles": 33,
+  "freedoomWadSha256": "7323bcc168c5a45ff10749b339960e98314740a734c30d4b9f3337001f9e703d",
+  "ownedPlannedPorts": [
+    19031,
+    19032
+  ],
+  "reservedPorts": [
+    18880,
+    8088
+  ],
+  "scope": "browser installer/menu integration only; production commercial Play remains unavailable pending review; no video worktree writes",
+  "stopCondition": "focused fresh acceptance, additive ledger/evidence commit, normal push, clean synchronized main"
+}

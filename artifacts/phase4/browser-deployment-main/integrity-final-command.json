@@ -1,0 +1,12 @@
+{
+  "command": [
+    "python3",
+    "artifacts/phase4/browser-deployment-main/check-integrity.py"
+  ],
+  "cwd": ".",
+  "startedUtc": "2026-10-11T09:54:37.578935+00:00",
+  "endedUtc": "2026-10-11T09:54:38.767997+00:00",
+  "elapsedSeconds": 1.1890032920055091,
+  "exitCode": 0,
+  "rawOutput": "/Users/eduard/sandbox/doom-evm/artifacts/phase4/browser-deployment-main/integrity-final.log"
+}

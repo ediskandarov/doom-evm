@@ -1,0 +1,18 @@
+{
+  "pass": true,
+  "parsedModules": [
+    "tools/browser-deployment/check.mjs",
+    "tools/browser-deployment/package.mjs",
+    "tools/browser-deployment/probe.mjs",
+    "web/app.mjs",
+    "web/install-engine.mjs",
+    "web/install-pins.mjs",
+    "web/install-resources.mjs",
+    "web/install-storage.mjs",
+    "web/install.test.mjs",
+    "web/launcher.mjs",
+    "web/menu-app.mjs"
+  ],
+  "count": 11,
+  "note": "Module parse checks only; focused Node tests are recorded separately."
+}

@@ -1,0 +1,16 @@
+{
+  "attempts": [
+    {
+      "command": "integrity-attempt1-command.json",
+      "result": "failed local evidence helper: ResourceStore has no immutableReferences key because it has no immutables; release artifact and EVM code were not changed",
+      "resolution": "normalize absent and empty immutableReferences maps equally, then rerun metadata/artifact/source check",
+      "productionChanges": false
+    },
+    {
+      "command": "initial publication evidence check",
+      "result": "local helper expected the whole old ledger as one contiguous span; a new top checkpoint separates the unchanged heading from unchanged historical body",
+      "resolution": "verify original heading and complete contiguous original body separately, preserving all historical bytes; no source assertion/production change",
+      "productionChanges": false
+    }
+  ]
+}

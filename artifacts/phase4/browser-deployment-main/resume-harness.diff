@@ -1,0 +1,44 @@
+--- source/tools/browser-deployment/check.mjs
++++ integration/resume-check.mjs
+@@ -17,6 +17,8 @@
+ const sha=bytes=>createHash('sha256').update(bytes).digest('hex'),rpcUrl=`http://127.0.0.1:${port}`,origin=`http://127.0.0.1:${httpPort}`;
+ const report={kind:'browser-managed-installation-real-anvil-chrome',pass:false,startedUtc:new Date().toISOString(),port,httpPort,checks:[],frames:[],sourceHashes:{}};
+ for(const p of ['web/install-engine.mjs','web/install-resources.mjs','web/install-storage.mjs','web/install-pins.mjs','web/launcher.mjs','web/menu-app.mjs','web/app.mjs','web/index.html','tools/browser-deployment/check.mjs'])report.sourceHashes[p]=sha(await readFile(p));
++report.integrationHarness='Copied source check with one additional reload Play/Escape/movement gate; all inherited assertions preserved';
++report.sourceHashes['tools/browser-deployment/resume-check.mjs']=sha(await readFile('tools/browser-deployment/resume-check.mjs'));
+ await mkdir(resolve(prefix,'..'),{recursive:true});
+ let node,browser,server,profile,ws,log,id=0;
+ const sleep=ms=>new Promise(r=>setTimeout(r,ms));
+@@ -144,6 +146,32 @@
+   assert.equal(await rpc('eth_getTransactionCount',[from,'latest']),nonceBefore);
+   report.checks.push({label:'Local File API authentication '+id,pass:true,md5,sha256:sha(bytes),bytes:bytes.length,productionUnavailable:true,noTransactions:true});
+  }
++ // Integration-only additional boundary: real Play after browser reload.
++ // All inherited assertions above/below remain unchanged.
++ await reload();await connected();assert.equal(await rpc('eth_getTransactionCount',[from,'latest']),nonceBefore);
++ const resumeView=await playerView(),resumeBlock=BigInt(await rpc('eth_blockNumber'));
++ const resumeResources=await evaluate('JSON.stringify(window.installationClient.installer.journal.resources)');
++ await click('play');await until(async()=>{const p=await evaluate('window.__transportProof');if(p?.errors.length)throw Error(p.errors.join('\n'));return p?.ready;},'reload Play');
++ await settle();const reopened=await canvas('Reload Play preserves E1M1 and opens original menu');
++ assert.equal(reopened.state.map,1);assert.equal(reopened.menu.active,1);
++ assert.equal(await evaluate('window.fixtureClient.config.address'),address);
++ assert.equal(await playerView(),resumeView);
++ await evaluate('window.fixtureClient.startGame();true');await until(()=>evaluate('!!window.__tick&&!window.fixtureClient.loop.starting'),'resume input loop');
++ assert.equal((await keys(['Escape'],'Escape resumes saved E1M1')).menu.active,0);
++ const resumedBefore=await playerView();
++ await evaluate("window.dispatchEvent(new KeyboardEvent('keydown',{code:'ArrowUp',bubbles:true,cancelable:true}));window.__tick()");
++ await canvas('Player moves again after browser reload');const resumedAfter=await playerView();
++ assert.notEqual(resumedBefore.slice(0,130),resumedAfter.slice(0,130));
++ await keys(['ArrowUp'],'Release movement after reload');
++ assert.equal(await evaluate('JSON.stringify(window.installationClient.installer.journal.resources)'),resumeResources);
++ assert.equal(await evaluate('window.installationClient.installer.journal.game.address'),address);
++ const resumedTxs=[];
++ for(let n=resumeBlock+1n;n<=BigInt(await rpc('eth_blockNumber'));n++){
++  const block=await rpc('eth_getBlockByNumber',['0x'+n.toString(16),true]);
++  for(const tx of block.transactions){assert.equal(tx.to?.toLowerCase(),address.toLowerCase());resumedTxs.push({hash:tx.hash,to:tx.to});}
++ }
++ assert(resumedTxs.length>0);
++ report.checks.push({label:'Reload Play/Escape resumes saved player and real movement without any CREATE or resource redeployment',pass:true,address,playerViewBeforeReopen:resumeView,resumedBefore,resumedAfter,allTransactionsTargetSameGame:resumedTxs,resourceJournalUnchanged:true});
+  // Same chainId, same endpoint, actual reset: previous installation must vanish.
+  const chainId=await rpc('eth_chainId');await rpc('anvil_reset');assert.equal(await rpc('eth_chainId'),chainId);
+  await reload();await connected();assert.equal(await evaluate('window.__installationProof.installed'),false);assert.equal(await evaluate('window.installationClient.installer.journal.game'),null);

@@ -1,0 +1,23 @@
+{
+  "inspection": "read-only commercial production boundary inventory",
+  "sourceSha256": {
+    "src/evm/Doom.sol": "7da3e8c4f086c9eec3a7f1ccb194094b3ffaa89fc79762dfc2d5af5791e8e634",
+    "src/evm/WadResources.sol": "25a1acc0a44ac35cc29e5f9bd953ba66b85db4f665b732430571b416ef927895",
+    "src/evm/EpisodeStartup.sol": "bb574f20cdc09e63385261f7e8e203a49a90a15b87903d70dfe43d396bc3255e",
+    "src/evm/EpisodeRuntime.sol": "7be9205e74af487a1a2722d861465be5e5d155607221cfdf84178cc11680afa8",
+    "src/evm/DoomUI.sol": "c2fa44363eeb962acabb51779fc780b8b6c5d46d5291448d44a585690e9ea9f9",
+    "src/support/UltimateWadResources.sol": "fabdbf3967783eedf0b71f02dc42e514c0133282ad9be880e3fdbaf815f4c5f0",
+    "src/support/UltimateStartup.sol": "86152dbc521265c009a1532105abde4d37a55707d29a0ca629728c50dc0462b0",
+    "src/support/UltimateSpeedrunProbe.sol": "b273f050f4ca89c9509b073bed44f7d6dfeddeb2c6dc6479d665eb3c0f82ce38",
+    "src/doom/g_game.sol": "ea632f47ca5904819dd0dc254fc547799b56696e08e37d96a503d71da145f89c",
+    "src/doom/wi_stuff.sol": "a4290c7bef956c868d62ffc269e076e90cebb25ae9eb2143bf167c8cabb4a39e",
+    "src/doom/f_finale.sol": "a337e7c0b0d5c3fab8b98a40d67c29dd4f63e7ef0d47773d65879f8dc3111c8f",
+    "src/doom/m_menu.sol": "53396f97acb67d3a8233b5d5c64aba7b9bf8899e567981f646042d16924f4db1"
+  },
+  "ultimate": "Current Doom constructor and startup admit exact Freedoom only; separate Ultimate support is an observational world-speedrun adapter, not menu/UI/input/lifecycle ABI. A browser-only change cannot replace EVM resource/startup admission.",
+  "doom2": "No authenticated packed resource profile/production adapter; commercial gamemode 2 rejected by G_Game init/lifecycle, WI_Stuff and F_Finale; menu is Episode One/nine-map domain. Needs separately scoped mode/profile/native-EVM verification.",
+  "browserOnlyWiringSufficient": false,
+  "commercialPlayEnabled": false,
+  "productionEditsMade": false,
+  "memoryDefaultsChanged": false
+}

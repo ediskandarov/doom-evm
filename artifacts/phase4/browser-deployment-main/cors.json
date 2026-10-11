@@ -1,0 +1,19 @@
+{
+  "pass": true,
+  "target": "http://127.0.0.1:19031",
+  "rows": [
+    {
+      "requestOrigin": "http://127.0.0.1:19032",
+      "status": 200,
+      "allowOrigin": "http://127.0.0.1:19032",
+      "client": "anvil/v1.8.5"
+    },
+    {
+      "requestOrigin": "https://untrusted.example",
+      "status": 200,
+      "allowOrigin": "http://127.0.0.1:19032",
+      "client": "anvil/v1.8.5"
+    }
+  ],
+  "scope": "Exact-origin browser CORS on owned localhost Anvil; HTTP tools are not blocked by CORS."
+}

@@ -1,0 +1,18 @@
+{
+  "command": [
+    "node",
+    "tools/browser-deployment/resume-check.mjs",
+    "--port",
+    "19033",
+    "--http-port",
+    "19034",
+    "--output-prefix",
+    "/Users/eduard/sandbox/doom-evm/artifacts/phase4/browser-deployment-main/resume"
+  ],
+  "cwd": "artifacts/local/browser-deployment-main/runtime",
+  "startedUtc": "2026-10-11T09:59:17.030908+00:00",
+  "endedUtc": "2026-10-11T10:03:17.144805+00:00",
+  "elapsedSeconds": 240.11322358297184,
+  "exitCode": 0,
+  "rawOutput": "/Users/eduard/sandbox/doom-evm/artifacts/phase4/browser-deployment-main/chrome-resume.log"
+}

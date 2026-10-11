@@ -1,0 +1,49 @@
+{
+  "pass": true,
+  "links": [
+    {
+      "from": "docs/browser-deployment/INTEGRATION.md",
+      "target": "docs/PHASE4-PLAN.md"
+    },
+    {
+      "from": "docs/browser-deployment/REPORT.md",
+      "target": "artifacts/browser-deployment/verification.json"
+    },
+    {
+      "from": "docs/browser-deployment/REPORT.md",
+      "target": "artifacts/browser-deployment/accepted.json"
+    },
+    {
+      "from": "docs/browser-deployment/REPORT.md",
+      "target": "artifacts/browser-deployment/accepted.installation.json"
+    },
+    {
+      "from": "docs/browser-deployment/REPORT.md",
+      "target": "artifacts/browser-deployment/locks.json"
+    },
+    {
+      "from": "docs/browser-deployment/REPORT.md",
+      "target": "artifacts/browser-deployment/locks-launcher.png"
+    },
+    {
+      "from": "docs/browser-deployment/REPORT.md",
+      "target": "artifacts/browser-deployment/accepted-0.png"
+    },
+    {
+      "from": "docs/browser-deployment/REPORT.md",
+      "target": "artifacts/browser-deployment/accepted-3.png"
+    },
+    {
+      "from": "docs/browser-deployment/REPORT.md",
+      "target": "artifacts/browser-deployment/focused-tests.log"
+    },
+    {
+      "from": "docs/browser-deployment/REPORT.md",
+      "target": "docs/browser-deployment/README.md"
+    },
+    {
+      "from": "docs/browser-deployment/REPORT.md",
+      "target": "artifacts/browser-deployment/usage-checkpoint.json"
+    }
+  ]
+}

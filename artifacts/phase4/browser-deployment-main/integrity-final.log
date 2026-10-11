@@ -1,0 +1,24 @@
+{
+  "pass": true,
+  "baseline": "59522a545d1311924a28875a098892c5e27c113b",
+  "sourceTip": "a19716983df0ef1504010957a474a93f30e5bb6c",
+  "verifiedMain": "96bd1bbd8d27a47f29cc24f05c7833afde728f6f",
+  "deliveredFilesExact": 51,
+  "pinnedProductionSourcesExact": 78,
+  "sourceAndHistoricalEvidenceHashesExact": true,
+  "engineTestsOriginalCSettingsAndInstructionsUnchanged": true,
+  "artifacts": {
+    "Doom": {
+      "sha256": "8f9b86575caff73c00d31fc177785dce77cc183a16c8ac434a89ff4d62975cee",
+      "runtimeBytes": 853325,
+      "compilerSources": 77,
+      "matchesCurrentCompiledArtifact": true
+    },
+    "ResourceStore": {
+      "sha256": "2c73efc4886eddb868a91303fac23dda65911e258399b044ff234c73d1ad9315",
+      "runtimeBytes": 57,
+      "compilerSources": 1,
+      "matchesCurrentCompiledArtifact": true
+    }
+  }
+}

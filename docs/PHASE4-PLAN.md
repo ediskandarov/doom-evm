@@ -1,5 +1,12 @@
 # Phase 4 progress ledger
 
+Browser Deployment checkpoint (2026-10-11): **integrated and focused-verified**.
+Fresh browser-managed Freedoom installation reaches the existing EVM menu,
+New Game and actual player movement. Reload/Play resumes the same contract and
+player without resource redeployment; interrupted installations recover.
+Ultimate DOOM and DOOM II remain locally authenticated, with production Play
+unavailable. See the final integration entry and browser deployment handoff.
+
 Ultimate Episode checkpoint (2026-10-11): **world-rendering source integrated;
 final presentation pending.**
 
@@ -1780,3 +1787,138 @@ tokens and705 goal-service elapsed seconds. Publication follows that
 checkpoint; missing costs/usage breakdowns are not estimated. Stop after normal
 push, clean tree and main/origin synchronization. Enhanced final recordings
 require a separately authorized follow-up Goal and were not started here.
+
+
+## Browser Deployment — Main integration (2026-10-11)
+
+Implementation: **complete for local Freedoom Episode One deployment**.
+Integration: **complete**. Focused integration verification: **passed**.
+Commercial-game production acceptance: **unavailable / not claimed**.
+
+Clean baseline and synchronized origin/main:
+`59522a545d1311924a28875a098892c5e27c113b`.
+Source `feat/browser-deployment` descends directly from that baseline and contains
+exactly the two intended, previously unintegrated commits:
+
+- `730596452d8fa314e3e1f14ceaabfbf0fc425876` — resumable browser installation.
+- `a19716983df0ef1504010957a474a93f30e5bb6c` — acceptance evidence and handoff.
+
+Normal `--no-ff` merge:
+`96bd1bbd8d27a47f29cc24f05c7833afde728f6f`. **No conflicts**; all 51 delivered
+files are byte-identical to the source tip. No feature commit, existing evidence,
+production Solidity, original C, compiler setting or existing test was rewritten.
+The publication commit containing this entry is a separate Gitmoji evidence commit
+on top of that merge; inspect main's first-parent history for its exact SHA.
+
+The installation launcher is the default website path when an optional diagnostic
+configuration is absent. Play passes the authenticated installed deployment to
+`openMenu`; the original EVM New Game/skill/map menus, Escape/Resume, raw input,
+sequence/storage behavior, Status Bar/HUD, indexed Frames and EVM-selected palette
+remain intact. The launcher adds installation controls, not an HTML gameplay menu.
+Existing explicit diagnostic configurations remain supported. The default RPC
+is HTTP localhost; connection is explicit and requests no wallet/private keys.
+
+### Inherited feature evidence (preserved, not newly attributed)
+
+[Source report](browser-deployment/REPORT.md),
+[reproduction guide](browser-deployment/README.md) and
+[source manifest](../artifacts/browser-deployment/verification.json) retain:
+
+- 62 passing focused Node tests.
+- Real Chrome/Anvil installation, original menu/New Game/movement,
+  interruption/uncertain transaction/pending receipt recovery, reload and
+  missing-journal discovery, same-chainId reset/restart detection.
+- Six exact full Canvas comparisons against mined EVM Frame/FramePalette.
+- Separate real-browser concurrency evidence: stale installer refresh/reuse
+  without duplicate transactions and active endpoint lock exclusion.
+- The failed first keyboard harness and earlier passing checkpoint remain
+  historical attempts; neither was relabeled as current acceptance.
+
+### Fresh verification on integrated main
+
+Separate evidence: [integration manifest](../artifacts/phase4/browser-deployment-main/integration.json).
+Verified code checkpoint is merge `96bd1bb`; subsequent publication only adds
+ledger, handoff and evidence. Executed:
+
+- **62 Node tests passed, zero failed**, covering installer authentication,
+  locality, nonce/receipt/journal/reset/lock behavior and affected menu/input/
+  Episode/legacy transport dependencies. Original assertions are unchanged.
+- **11 changed JavaScript modules parsed** successfully.
+- All 78 pinned production source SHA-256 values and compiler metadata Keccak
+  values matched. Reduced Doom/ResourceStore creation/runtime bytes, immutable
+  maps and selectors matched main's compiled artifacts exactly: Solidity 0.8.37,
+  viaIR, optimizer 200, Cancun. Doom runtime is **853,325 bytes**, ResourceStore
+  runtime **57 bytes**. No Solidity source changed, so a rebuild was unnecessary.
+- Fresh ordinary browser-managed installation on isolated Anvil/Chrome passed
+  **14 scoped checks and six exact Canvas comparisons**. It mined 1,755 resource
+  CREATEs, one Doom CREATE and one menu initialization, using **6,614,091,135 gas**.
+  New Game reached E1M1 and keyboard movement changed stored player position.
+- Recovery passed after pausing eight resource uploads, losing a real mined send
+  response, blocking browser RPC, and reloading with a genuinely unmined operation.
+  Reload and missing-journal discovery preserved the sender nonce. Both commercial
+  files authenticated through the local File API; Install/Play stayed disabled
+  and submitted no transactions. Same-chainId reset and a fresh node rejected
+  stale installations.
+- A goal-local copy of the unchanged runner adds one explicit **reload → Play →
+  original EVM menu → Escape → movement** boundary. A second disposable run
+  passed all 14 inherited checks plus that additional check, with **10 exact
+  Canvas comparisons**. The reopened player view matched stored state exactly;
+  subsequent movement changed x/y. All resumed transactions targeted the same
+  game contract, with no CREATE and an unchanged resource journal. This additional
+  gate justified its separate fresh installation; it adds no production code.
+- Exact-origin CORS headers allowed the owned localhost site and did not admit an
+  arbitrary website origin. The installer rejects remote website/RPC origins.
+  No real credentials were used; no commercial payload was committed.
+- Feature ancestry, source/evidence hashes, historical ledger preservation,
+  documentation links and Git whitespace checks passed. Menu/gameplay/resumed
+  screenshots were visually inspected as well as compared pixel-for-pixel.
+
+The local integrity helper initially assumed ResourceStore included an immutable
+map key. Its absent/empty-map handling was corrected and the full artifact/source
+check passed; failed command/output is preserved separately. No engine failure
+or assertion weakening was involved. The source report's earlier 848,394-byte
+runtime prose remains historical; the fresh pinned artifact measurement above is
+853,325 bytes.
+
+### Ownership, deferred verification and remaining dependencies
+
+Runtime source copies live only under this main worktree's ignored
+`artifacts/local/browser-deployment-main/runtime`. Owned Anvil/site ports
+19031/19032 and 19033/19034 were checked free before use and closed afterward;
+owned Chrome processes/profiles were cleaned up. Reserved 18880/8088, other
+worktrees/branches/processes, the full-video agent and all MP4 files were untouched.
+The site payload staged here is authenticated redistributable Freedoom only.
+
+Commercial availability is a production boundary, not an IWAD hash verdict.
+[The exact read-only requirements](browser-deployment/INTEGRATION.md) are bound to
+inspected source hashes in the integration evidence:
+
+- **Ultimate:** production Doom/WadResources and EpisodeStartup admit Freedoom
+  only; UltimateWadResources/UltimateStartup exist in a separate observational
+  speedrun adapter. A new verified production profile/artifact must connect exact
+  Ultimate resource admission/startup to existing menu, UI, raw input, persistent
+  session and Episode lifecycle, then make installer/discovery/journals explicitly
+  profile-aware. Retain declared memory policy and verify genuine gameplay,
+  transitions, UI and reload/recovery before enabling Play. Browser-only wiring
+  cannot change the existing EVM constructor/startup checks.
+- **DOOM II:** no packed authenticated resource profile/production adapter exists.
+  Commercial gamemode 2 is outside current G_Game initialization/lifecycle,
+  WI_Stuff and F_Finale domains, and menu/startup support is Episode One/nine maps.
+  MAP01–MAP32 resources/startup, original commercial map/secret progression and
+  menu/intermission/finale behavior require separately authorized native/EVM
+  compatibility work. No DOOM II engine development occurred here.
+
+No full inherited Phase 0–4 suite, native recompilation, complete episode/frame
+replay, commercial gameplay acceptance or new video recording was run. Those
+remain deferred to their respective goals/final acceptance. Existing memory
+profiles/defaults and explicit experimental virtual-pointer opt-in are unchanged.
+The Ultimate final-presentation pipeline remains pending under its separate Goal;
+no incomplete video work was merged.
+
+Measured verification window starts at the first available UTC clock checkpoint
+`2026-10-11T09:51:04Z`. Browser runs took **236.221 seconds** and **240.113 seconds**;
+command-level start/end times and the final evidence checkpoint are recorded in
+this integration manifest. This ordinary integration task has no new goal-service
+usage attribution; earlier goals' token counts are not reused or estimated.
+
+Stop after normal push, clean main and verified origin/main synchronization.

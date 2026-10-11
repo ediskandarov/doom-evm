@@ -1,0 +1,529 @@
+{
+  "kind": "browser-managed-installation-real-anvil-chrome",
+  "pass": true,
+  "startedUtc": "2026-10-11T09:59:17.069Z",
+  "port": 19033,
+  "httpPort": 19034,
+  "checks": [
+    {
+      "label": "No automatic RPC connection or wallet request",
+      "pass": true
+    },
+    {
+      "label": "Partial resource upload interrupted after 8 chunks",
+      "pass": true,
+      "resources": 8,
+      "receipts": 8,
+      "pending": null
+    },
+    {
+      "label": "Real submitted transaction loses response",
+      "pass": true,
+      "nonce": "0xb",
+      "kind": "chunk"
+    },
+    {
+      "label": "Reload reconciles mined unknown-hash operation without duplicate CREATE",
+      "pass": true,
+      "resources": 12
+    },
+    {
+      "label": "Real browser RPC disconnect and retry preserve completed resources",
+      "pass": true,
+      "resources": 12
+    },
+    {
+      "label": "Reload preserves actual unmined transaction; resume reconciles after mining",
+      "pass": true,
+      "transaction": "0x5370a04773a0972836dc6297a7bf35cd246defd4704c2dc4394e46c950d413ec"
+    },
+    {
+      "label": "Browser-only fresh Freedoom resource/game deployment and initialization",
+      "pass": true
+    },
+    {
+      "label": "Original keyboard New Game and actual moving gameplay",
+      "pass": true,
+      "beforePlayerView": "0xfffffffffffffffffffffffffffffffffffffffffffffffffffffffffe6000000000000000000000000000000000000000000000000000000000000001000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000290000000000000000000000000000000000000000000000000000000000000000003d",
+      "afterPlayerView": "0xfffffffffffffffffffffffffffffffffffffffffffffffffffffffffe60c7ff000000000000000000000000000000000000000000000000000000000100001300000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000b53f000000000000000000000000000000000000000000000000000000000000001100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000290608000000000000000000000000000000000000000000000000000000000000003d"
+    },
+    {
+      "label": "Reload discovers installation without transactions or deployment",
+      "pass": true,
+      "address": "0x5ae1f4bb68f8eac39cfdbdfda2b7344ccbd80faf",
+      "nonce": "0x6e4"
+    },
+    {
+      "label": "Missing local journal discovers and verifies on-chain installation without transactions",
+      "pass": true,
+      "address": "0x5ae1f4bb68f8eac39cfdbdfda2b7344ccbd80faf"
+    },
+    {
+      "label": "Local File API authentication ultimate",
+      "pass": true,
+      "md5": "c4fe9fd920207691a9f493668e0a2083",
+      "sha256": "6fdf361847b46228cfebd9f3af09cd844282ac75f3edbb61ca4cb27103ce2e7f",
+      "bytes": 12408292,
+      "productionUnavailable": true,
+      "noTransactions": true
+    },
+    {
+      "label": "Local File API authentication doom2",
+      "pass": true,
+      "md5": "25e1459ca71d321525f84628f45ca8cd",
+      "sha256": "10d67824b11025ddd9198e8cfc87ca335ee6e2d3e63af4180fa9b8a471893255",
+      "bytes": 14604584,
+      "productionUnavailable": true,
+      "noTransactions": true
+    },
+    {
+      "label": "Reload Play/Escape resumes saved player and real movement without any CREATE or resource redeployment",
+      "pass": true,
+      "address": "0x5ae1f4bb68f8eac39cfdbdfda2b7344ccbd80faf",
+      "playerViewBeforeReopen": "0xfffffffffffffffffffffffffffffffffffffffffffffffffffffffffe617d3e000000000000000000000000000000000000000000000000000000000100002400000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000a441000000000000000000000000000000000000000000000000000000000000000f0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000029096b000000000000000000000000000000000000000000000000000000000000003d",
+      "resumedBefore": "0xfffffffffffffffffffffffffffffffffffffffffffffffffffffffffe617d3e000000000000000000000000000000000000000000000000000000000100002400000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000a441000000000000000000000000000000000000000000000000000000000000000f0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000029096b000000000000000000000000000000000000000000000000000000000000003d",
+      "resumedAfter": "0xfffffffffffffffffffffffffffffffffffffffffffffffffffffffffe62e97e0000000000000000000000000000000000000000000000000000000001000046000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000014a1a000000000000000000000000000000000000000000000000000000000000001e0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000029345e000000000000000000000000000000000000000000000000000000000000003d",
+      "allTransactionsTargetSameGame": [
+        {
+          "hash": "0x399383dbcec3248811a00892f4789aa1c280be653e5e43ab3dc27b05d0c6a759",
+          "to": "0x5ae1f4bb68f8eac39cfdbdfda2b7344ccbd80faf"
+        },
+        {
+          "hash": "0xd2e49ab37c91435c5f0b7596689ae6d99db5b7bf54028f18e64fd6a1d21a0b5a",
+          "to": "0x5ae1f4bb68f8eac39cfdbdfda2b7344ccbd80faf"
+        },
+        {
+          "hash": "0xa40c6bb85511c31312df636976603869306ec00245be32dd5dab89c3988f30d7",
+          "to": "0x5ae1f4bb68f8eac39cfdbdfda2b7344ccbd80faf"
+        },
+        {
+          "hash": "0x2bd0da94fc88365376aa240cb1493288e6060e85f832a1113c23f2b239ecbede",
+          "to": "0x5ae1f4bb68f8eac39cfdbdfda2b7344ccbd80faf"
+        },
+        {
+          "hash": "0xdf468924af390d146abba6ceecd830e517789e6d71471c8911dabdd77672b1c2",
+          "to": "0x5ae1f4bb68f8eac39cfdbdfda2b7344ccbd80faf"
+        }
+      ],
+      "resourceJournalUnchanged": true
+    },
+    {
+      "label": "Same-chainId Anvil reset rejects stale installation",
+      "pass": true,
+      "chainId": "0x7a69"
+    },
+    {
+      "label": "Anvil restart preserves no false installation",
+      "pass": true
+    }
+  ],
+  "frames": [
+    {
+      "label": "Installed EVM main menu",
+      "transaction": "0xbfc033c693f8d0e8bc30275f41ac0273edca4b43f58c670b07c384e107ba7b98",
+      "gasUsed": "0xa06ec57",
+      "pixelSha256": "8fc18043939d3e723f830a0b9ffc9e8d019dd07716a36e1672d43774b80c732a",
+      "rgbaSha256": "362b809002912f2a5b3f33135153ce0667d455edacb4b7c8a33de098b0b9a57c",
+      "allCanvasPixelsExact": true,
+      "menu": {
+        "enabled": 1,
+        "active": 1,
+        "screen": 0,
+        "item": 0,
+        "skull": 0,
+        "animation": 8,
+        "map": 1,
+        "skill": 0,
+        "confirmation": 0
+      },
+      "state": {
+        "map": 0,
+        "skill": 0,
+        "state": 0,
+        "action": 0,
+        "paused": 0,
+        "last": 0,
+        "next": 0,
+        "wiStage": 0,
+        "wiTic": 0,
+        "finaleStage": 0,
+        "finaleTic": 0
+      },
+      "screenshot": "/Users/eduard/sandbox/doom-evm/artifacts/phase4/browser-deployment-main/resume-0.png"
+    },
+    {
+      "label": "New Game episode selection",
+      "transaction": "0x6f197df3bfef5b004481a563452bf6402dced3af11c98abaa0c02af0994dee55",
+      "gasUsed": "0x9fba50e",
+      "pixelSha256": "c22377b6874a68b1ae161e365da6d1fa0c3a0b3cf289801280d5ef8b290d5026",
+      "rgbaSha256": "2da6c5e8160494bc98a3255a62ed9a9545bc64d2887b01d326dcf14daec5c03c",
+      "allCanvasPixelsExact": true,
+      "menu": {
+        "enabled": 1,
+        "active": 1,
+        "screen": 1,
+        "item": 0,
+        "skull": 0,
+        "animation": 7,
+        "map": 1,
+        "skill": 0,
+        "confirmation": 0
+      },
+      "state": {
+        "map": 0,
+        "skill": 0,
+        "state": 0,
+        "action": 0,
+        "paused": 0,
+        "last": 0,
+        "next": 0,
+        "wiStage": 0,
+        "wiTic": 0,
+        "finaleStage": 0,
+        "finaleTic": 0
+      },
+      "screenshot": "/Users/eduard/sandbox/doom-evm/artifacts/phase4/browser-deployment-main/resume-1.png"
+    },
+    {
+      "label": "Original skill screen",
+      "transaction": "0xdf945ce5520c5bf55403ceaeaaf17209393a252537e98d7cee4f30e5baf12aff",
+      "gasUsed": "0xaa684b6",
+      "pixelSha256": "080105db7663d173d7a7a1fa0e9c5e1ce1998f926b2db783c9f8e7003f1b49c3",
+      "rgbaSha256": "392a0e95ac523aed4ea2ad9ecf792db360208f85b0eea6f22f5380a54e896443",
+      "allCanvasPixelsExact": true,
+      "menu": {
+        "enabled": 1,
+        "active": 1,
+        "screen": 2,
+        "item": 2,
+        "skull": 0,
+        "animation": 6,
+        "map": 1,
+        "skill": 0,
+        "confirmation": 0
+      },
+      "state": {
+        "map": 0,
+        "skill": 0,
+        "state": 0,
+        "action": 0,
+        "paused": 0,
+        "last": 0,
+        "next": 0,
+        "wiStage": 0,
+        "wiTic": 0,
+        "finaleStage": 0,
+        "finaleTic": 0
+      },
+      "screenshot": "/Users/eduard/sandbox/doom-evm/artifacts/phase4/browser-deployment-main/resume-2.png"
+    },
+    {
+      "label": "New Game actual E1M1 gameplay",
+      "transaction": "0xe4ae74f29d0d4219784d34f370eae27eb9f34db02ff5607d9a9656eac3103e71",
+      "gasUsed": "0xdad30efd",
+      "pixelSha256": "a297ba2dfa2d1eae509b975c96471640802a189389ea15ad741c399218782d54",
+      "rgbaSha256": "e774efbe632c754d4fd0e1488d0a573d2b79b26c3817f08ceaf5c8243b4a0dc5",
+      "allCanvasPixelsExact": true,
+      "menu": {
+        "enabled": 1,
+        "active": 0,
+        "screen": 2,
+        "item": 2,
+        "skull": 0,
+        "animation": 5,
+        "map": 1,
+        "skill": 2,
+        "confirmation": 0
+      },
+      "state": {
+        "map": 1,
+        "skill": 2,
+        "state": 0,
+        "action": 0,
+        "paused": 0,
+        "last": 0,
+        "next": 0,
+        "wiStage": 0,
+        "wiTic": 0,
+        "finaleStage": 0,
+        "finaleTic": 0
+      },
+      "screenshot": "/Users/eduard/sandbox/doom-evm/artifacts/phase4/browser-deployment-main/resume-3.png"
+    },
+    {
+      "label": "Held movement gameplay",
+      "transaction": "0x5b04af3f6493846c2e4bc1088c7d365521f86d069407ceedbeada05e327af685",
+      "gasUsed": "0x5178e138",
+      "pixelSha256": "f9ecfcdb9cd0d75dccdee10476d06d8e98f940dff01f4e4b6169e0dc55a9138e",
+      "rgbaSha256": "07dd349eff2b87cee8b7e79aae4cfb2f5b4ed66a477c2669a2be95e403e57865",
+      "allCanvasPixelsExact": true,
+      "menu": {
+        "enabled": 1,
+        "active": 0,
+        "screen": 2,
+        "item": 2,
+        "skull": 0,
+        "animation": 4,
+        "map": 1,
+        "skill": 2,
+        "confirmation": 0
+      },
+      "state": {
+        "map": 1,
+        "skill": 2,
+        "state": 0,
+        "action": 0,
+        "paused": 0,
+        "last": 0,
+        "next": 0,
+        "wiStage": 0,
+        "wiTic": 0,
+        "finaleStage": 0,
+        "finaleTic": 0
+      },
+      "screenshot": "/Users/eduard/sandbox/doom-evm/artifacts/phase4/browser-deployment-main/resume-4.png"
+    },
+    {
+      "label": "Release movement",
+      "transaction": "0x3d05fdd16e9d521e81b561de81d176df2849d5ab6c7c84b6a5587a3913757866",
+      "gasUsed": "0x54863be3",
+      "pixelSha256": "2dd6569bd40f58f560c7a0363a0e9c9c2ac6021f3e3911dd4c08130c575c147c",
+      "rgbaSha256": "45cc774604afbea428798cb2df01cf56ab2599a82b763853a5cc10a3b2f46ec0",
+      "allCanvasPixelsExact": true,
+      "menu": {
+        "enabled": 1,
+        "active": 0,
+        "screen": 2,
+        "item": 2,
+        "skull": 0,
+        "animation": 3,
+        "map": 1,
+        "skill": 2,
+        "confirmation": 0
+      },
+      "state": {
+        "map": 1,
+        "skill": 2,
+        "state": 0,
+        "action": 0,
+        "paused": 0,
+        "last": 0,
+        "next": 0,
+        "wiStage": 0,
+        "wiTic": 0,
+        "finaleStage": 0,
+        "finaleTic": 0
+      },
+      "screenshot": "/Users/eduard/sandbox/doom-evm/artifacts/phase4/browser-deployment-main/resume-5.png"
+    },
+    {
+      "label": "Reload Play preserves E1M1 and opens original menu",
+      "transaction": "0xd2e49ab37c91435c5f0b7596689ae6d99db5b7bf54028f18e64fd6a1d21a0b5a",
+      "gasUsed": "0x8b24138",
+      "pixelSha256": "faf902971db8995582bceff4a0a747c00e588fb768ae626f11c71b1a9545680f",
+      "rgbaSha256": "239c6e6bd061a5285a1533c0e1464e91ef636634c98d203b34e8dcef1711291f",
+      "allCanvasPixelsExact": true,
+      "menu": {
+        "enabled": 1,
+        "active": 1,
+        "screen": 0,
+        "item": 0,
+        "skull": 0,
+        "animation": 1,
+        "map": 1,
+        "skill": 2,
+        "confirmation": 0
+      },
+      "state": {
+        "map": 1,
+        "skill": 2,
+        "state": 0,
+        "action": 0,
+        "paused": 0,
+        "last": 0,
+        "next": 0,
+        "wiStage": 0,
+        "wiTic": 0,
+        "finaleStage": 0,
+        "finaleTic": 0
+      },
+      "screenshot": "/Users/eduard/sandbox/doom-evm/artifacts/phase4/browser-deployment-main/resume-6.png"
+    },
+    {
+      "label": "Escape resumes saved E1M1",
+      "transaction": "0xa40c6bb85511c31312df636976603869306ec00245be32dd5dab89c3988f30d7",
+      "gasUsed": "0x10511f8",
+      "pixelSha256": "2dd6569bd40f58f560c7a0363a0e9c9c2ac6021f3e3911dd4c08130c575c147c",
+      "rgbaSha256": "45cc774604afbea428798cb2df01cf56ab2599a82b763853a5cc10a3b2f46ec0",
+      "allCanvasPixelsExact": true,
+      "menu": {
+        "enabled": 1,
+        "active": 0,
+        "screen": 0,
+        "item": 0,
+        "skull": 1,
+        "animation": 8,
+        "map": 1,
+        "skill": 2,
+        "confirmation": 0
+      },
+      "state": {
+        "map": 1,
+        "skill": 2,
+        "state": 0,
+        "action": 0,
+        "paused": 0,
+        "last": 0,
+        "next": 0,
+        "wiStage": 0,
+        "wiTic": 0,
+        "finaleStage": 0,
+        "finaleTic": 0
+      },
+      "screenshot": "/Users/eduard/sandbox/doom-evm/artifacts/phase4/browser-deployment-main/resume-7.png"
+    },
+    {
+      "label": "Player moves again after browser reload",
+      "transaction": "0x2bd0da94fc88365376aa240cb1493288e6060e85f832a1113c23f2b239ecbede",
+      "gasUsed": "0x562bb806",
+      "pixelSha256": "cb6d9ffa7700da86cc7654b79026d4fb07704c1ae352883ecbe6d00717603863",
+      "rgbaSha256": "6a05b49b8acc7f444d6e9aed612e0bb094b8edc6faeecb1e489533ebef538c88",
+      "allCanvasPixelsExact": true,
+      "menu": {
+        "enabled": 1,
+        "active": 0,
+        "screen": 0,
+        "item": 0,
+        "skull": 1,
+        "animation": 7,
+        "map": 1,
+        "skill": 2,
+        "confirmation": 0
+      },
+      "state": {
+        "map": 1,
+        "skill": 2,
+        "state": 0,
+        "action": 0,
+        "paused": 0,
+        "last": 0,
+        "next": 0,
+        "wiStage": 0,
+        "wiTic": 0,
+        "finaleStage": 0,
+        "finaleTic": 0
+      },
+      "screenshot": "/Users/eduard/sandbox/doom-evm/artifacts/phase4/browser-deployment-main/resume-8.png"
+    },
+    {
+      "label": "Release movement after reload",
+      "transaction": "0xdf468924af390d146abba6ceecd830e517789e6d71471c8911dabdd77672b1c2",
+      "gasUsed": "0x5141f90f",
+      "pixelSha256": "041d0efa3f2ec2d097974d1ef2c673159c3a4e0ba08bf75e1540a208c7783d2e",
+      "rgbaSha256": "164b50ba15bef0eb221372a29b7d3646f1b729452d63bcfa91e16636f3c999d6",
+      "allCanvasPixelsExact": true,
+      "menu": {
+        "enabled": 1,
+        "active": 0,
+        "screen": 0,
+        "item": 0,
+        "skull": 1,
+        "animation": 6,
+        "map": 1,
+        "skill": 2,
+        "confirmation": 0
+      },
+      "state": {
+        "map": 1,
+        "skill": 2,
+        "state": 0,
+        "action": 0,
+        "paused": 0,
+        "last": 0,
+        "next": 0,
+        "wiStage": 0,
+        "wiTic": 0,
+        "finaleStage": 0,
+        "finaleTic": 0
+      },
+      "screenshot": "/Users/eduard/sandbox/doom-evm/artifacts/phase4/browser-deployment-main/resume-9.png"
+    }
+  ],
+  "sourceHashes": {
+    "web/install-engine.mjs": "f97223bb86c517c08fe23a391123b2f9497cdb39c9c010e3e472721630c50f0a",
+    "web/install-resources.mjs": "6703cc9319a14b385b37ded6f49bf4e4bea231e7a9458024cc6f317537dda32b",
+    "web/install-storage.mjs": "e7f46dd436a9b711234ad66f8f436749dae1fc2c72b7201842469b6bc3574ae5",
+    "web/install-pins.mjs": "467daaf607a1e10623accc4a250bd94e80386dec144875edb4b1c2226622491d",
+    "web/launcher.mjs": "dd7c9d6be144df3d73d3bcb9198d44a5363868fbe8096f66b716ffa692aa1caf",
+    "web/menu-app.mjs": "698d446e777ef0133091a143e09dff96147f7584105a32ebab2e90115ef58926",
+    "web/app.mjs": "0a20f3223db6033b1f5fcc511a2a9bf42efd87d13f8aa01add2f96ce1a28cb85",
+    "web/index.html": "855848421fb343c3deb55d22bb3a231d4fd02d6d80d41d3e18b8b6b401171efd",
+    "tools/browser-deployment/check.mjs": "05231b636f9815004c406edf9e39c42f50eee5f359c6cae8dafaa213d3a24b47",
+    "tools/browser-deployment/resume-check.mjs": "3869ce7263b86d71ace6b136c33d7ff9eb9416a2b6540f2b0d4f327729a8c35b"
+  },
+  "integrationHarness": "Copied source check with one additional reload Play/Escape/movement gate; all inherited assertions preserved",
+  "runtime": {
+    "args": [
+      "--host",
+      "127.0.0.1",
+      "--port",
+      "19033",
+      "--hardfork",
+      "cancun",
+      "--disable-code-size-limit",
+      "--no-request-size-limit",
+      "--memory-limit",
+      "1073741824",
+      "--gas-limit",
+      "10000000000",
+      "--allow-origin",
+      "http://127.0.0.1:19034",
+      "--silent"
+    ],
+    "info": {
+      "currentBlockNumber": "0x0",
+      "currentBlockTimestamp": 1791712757,
+      "currentBlockHash": "0x5f322bed0bc5653d45ad11d167842b75713f18061504e844141e89faffe329a3",
+      "hardFork": "Cancun",
+      "transactionOrder": "fees",
+      "environment": {
+        "baseFee": "0x3b9aca00",
+        "chainId": 31337,
+        "gasLimit": "0x2540be400",
+        "gasPrice": "0x77359400"
+      },
+      "forkConfig": {
+        "forkUrl": null,
+        "forkBlockNumber": null,
+        "forkRetryBackoff": null
+      },
+      "network": "ethereum"
+    },
+    "client": "anvil/v1.8.5"
+  },
+  "installation": {
+    "address": "0x5ae1f4bb68f8eac39cfdbdfda2b7344ccbd80faf",
+    "resourceChunks": 1755,
+    "uniqueResourceCreates": 1755,
+    "operations": 1757,
+    "receiptManifest": "/Users/eduard/sandbox/doom-evm/artifacts/phase4/browser-deployment-main/resume.installation.json",
+    "receiptManifestSha256": "40de0fd8dd5be1d412abc8dbd0cd722db38235eb16e0593a766b353fecbd4ebf",
+    "resourceIdentity": {
+      "schemaVersion": 0,
+      "wadSha256": "7323bcc168c5a45ff10749b339960e98314740a734c30d4b9f3337001f9e703d",
+      "bundleSha256": "d379076f21645cf7cc5acb056663d0faacc4065489a0ca99738479323c9f7a47",
+      "paletteSha256": "fd895921b5d0a394612bb29852ed003d44d69f76dec31c0dc6b5d5fc7d63f7bb",
+      "paletteVariant": 0
+    },
+    "totalGas": "6614091135"
+  },
+  "browser": {
+    "protocolVersion": "1.3",
+    "product": "Chrome/155.0.8059.40",
+    "revision": "@cfaadc5a132d78e1828635aa8405a499f3e14864",
+    "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36",
+    "jsVersion": "15.5.35.20"
+  },
+  "endedUtc": "2026-10-11T10:03:17.139Z",
+  "stoppedOwnedRuntimes": true
+}
