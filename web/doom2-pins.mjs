@@ -9,8 +9,8 @@ export default {
   "artifacts": {
     "Doom": {
       "url": "/doom2-assets/Doom.json",
-      "sha256": "0288b65a0b9fad8b66c001e5ab10a7822142f36539c05ccb18e4010a6a6be756",
-      "runtimeBytes": 876852
+      "sha256": "cbb088180073187415f13218fdd39133ab2e0c2e32402a8471fd22d3809eee3d",
+      "runtimeBytes": 886293
     },
     "ResourceStore": {
       "url": "/doom2-assets/ResourceStore.json",
@@ -83,7 +83,7 @@ export default {
     "src/doom/z_zone_backing.sol": "e63201d3bb45e4c8d0796480d4e9facd4deffd4d8a9dd730bed10ff4a108d0b1",
     "src/doom/z_zone_types.sol": "11ab3f95678ba3852ab5f0c2dc9e85e715bec6897e65f04cd1919bba9bb73dbd",
     "src/doom/z_zone_virtual.sol": "8bc309e89fa4da0667dc50a45adb9f91c58982640e1b3f5f9d38e49893f1e960",
-    "src/evm/Doom2.sol": "59a1092d26d130da7429689de665d9eccf7744a0ed388b3eb520e5da882329ff",
+    "src/evm/Doom2.sol": "63bd5bdfcce5a4c13f095fd63609ac9cb71be26ddb731e6d637809c034ada44c",
     "src/evm/Doom2Startup.sol": "0c0a0d38a1cf8441e19df834f26799d12ee803d4c3a4a3e98e4acde5fae27dca",
     "src/evm/Doom2WadResources.sol": "7384106aef06d449266135e8392a22ba9409ea4b77af423653efdf7dbf6a2274",
     "src/evm/DoomGame.sol": "d9451a915ab977bae137340e3e6626a270a4b84b8b6ea9449a8c4f0f578296df",
@@ -92,7 +92,7 @@ export default {
     "src/evm/DoomScene.sol": "9ad7c8ccee4c9e05deb5608326baabacfa40f686b8d8445fb8aaa7352ab64569",
     "src/evm/DoomUI.sol": "2b66f6d024e16f3c202ea6da84ec5875af4d7ea809c2f29cbf65310fdf24bb38",
     "src/evm/DoomZoneStartup.sol": "2d178494456a7ae3c730310f257ce2aa635d37d18c90cac039cf002cdb3f50dc",
-    "src/evm/EpisodeRuntime.sol": "876c1a7c83bb644631f9e3d5af73a4bb383d255e3c93cbd224b910a91973cde5",
+    "src/evm/EpisodeRuntime.sol": "bfaebfc40839503e25060faef833756da6931c9de7326ef74740eacefb1d7e57",
     "src/evm/FrameProtocol.sol": "4665be3f613b8e817d616d2db1dc4a644325c44a6ade476a35d7d9d003625ace",
     "src/evm/InputProtocol.sol": "bd9df1b10f19be3754cef8efcdc109ce54228f4475c50b197cb32b5bab8a7808",
     "src/evm/ResourceTypes.sol": "159865364cfa57aae508cd94c49509cbccabd6aeeba55e92b9fcf816bdec4d6b",
