@@ -1,0 +1,47 @@
+{
+  "kind": "retained failures and corrections; never relabel failed evidence as passed",
+  "attempts": [
+    {
+      "label": "native result parser",
+      "retainedPath": "artifacts/local/save-load/native/O0/save-run.log",
+      "sha256": "aa1dc3b0b989c25fc9c68819c7f02fb50f02787744c4ea778c139790073dc9bd",
+      "resolution": "Native process output lacked a separating newline; corrected result parser."
+    },
+    {
+      "label": "unmodified LP64 archive alignment",
+      "retainedPath": "artifacts/local/save-load/native-v2/sanitize/save-run.log",
+      "sha256": "8c35904921c2208876fd1591ce9e5a3cdc8a784f031ef260cf67fe8c35c5ebcd",
+      "resolution": "Original four-byte archive alignment fails LP64 UBSan. Declared align8 uintptr_t adaptation, original repository untouched."
+    },
+    {
+      "label": "native menu extraction prototype",
+      "retainedPath": "artifacts/local/save-load/menu-native/O0/build.log",
+      "sha256": "d5addca03f946f9be24aa0f116b3ea127dd23a8a44304663781d968b5e2380eb",
+      "resolution": "Generated extraction lacked M_DoSave forward declaration; corrected harness prototype."
+    },
+    {
+      "label": "browser sandbox",
+      "retainedPath": "artifacts/local/save-load/browser.json",
+      "sha256": "176e78c7d53a0c84a12eefa3ab51b42806184aadf4018867a1a6aa993d78f408",
+      "resolution": "Local socket access denied in sandbox; reran using approved isolated runtime."
+    },
+    {
+      "label": "incorrect production F2/F3 symbols",
+      "retainedPath": "artifacts/local/save-load/browser-real.json",
+      "sha256": "cad9ae29f4a8af164092cb92a7a986ea4b72df4b9b45deb928c6762e87500ab8",
+      "resolution": "Real Chrome found F2 opening Load. Fixed numeric symbols to pinned KEY_F2=188 and KEY_F3=189; added source/key packet regression and rebuilt both production releases."
+    },
+    {
+      "label": "pre-game memory observation",
+      "retainedPath": "artifacts/local/save-load/memory-real/report.json",
+      "sha256": "c2a2e753cbee58d2b8506bae06fbcb674fefe7da5f09c463e703f28cbedc1429",
+      "resolution": "Harness queried gameplay-only views before gameStarted; changed title observation to menuStatus. Production unchanged."
+    }
+  ],
+  "interruptedWork": [
+    {
+      "command": ".toolchain/bin/forge test --match-path test/unit/p_saveg.t.sol",
+      "result": "Default root discovery began compiling123 files; interrupted before tests and used the isolated focused import root. No full historical acceptance run."
+    }
+  ]
+}
