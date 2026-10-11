@@ -129,3 +129,15 @@ No new gas/memory/hardfork/compiler limit change has been needed at this
 milestone: inherited localhost Anvil10B gas,1GiB memory, unlimited request size,
 and pruned2-block history remain explicit. Original Freedoom279-frame and
 five accepted Ultimate recording regressions remain pending full verification.
+
+## Preserved Freedoom regression
+
+The new frozen observer engine replays all279 authentic original Freedoom
+E1M1 tics on its own localhost port18649. Independent verification binds
+all280 whole DSG1 worlds and all279 mined Frame receipts to the preserved
+native tape and accepted virtual-profile manifest. Every indexed8 frame hash,
+including the tic52 virtual link sample, is identical. No original accepted
+recording, fixture or resource was modified. [Regression proof](../artifacts/ultimate-speedruns/owner-pointer/freedoom-regression.json)
+records source/report/receipt/accepted-manifest hashes and actual gas.
+The regression runtime has stopped. The separate two-job Ultimate suite remains
+active; this milestone does not claim nine-map completion.
