@@ -20,6 +20,11 @@ for m in range(1,10):
  assert sha(ROOT/r['media']['MP4'])==r['media']['SHA256']
  args=r['runtime']['serverArgs'];assert args[args.index('--gas-limit')+1]=='10000000000' and args[args.index('--memory-limit')+1]=='1073741824', 'Record actual infrastructure changes before final summary'
  assert args[args.index('--hardfork')+1]=='cancun' and args[args.index('--host')+1]=='127.0.0.1' and '--no-request-size-limit' in args
+ partialPreserved=None
+ if m in [3,5,6,8]:
+  prior=load(base/'full-rate/frame-manifest.json');current=load(local/'frame-manifest.json')
+  assert [(f['tic'],f['indexed8Sha256']) for f in prior['frames']]==[(f['tic'],f['indexed8Sha256']) for f in current['frames'][:len(prior['frames'])]]
+  partialPreserved=dict(frames=len(prior['frames']),allFrameHashesUnchanged=True,priorManifestSHA256=sha(base/'full-rate/frame-manifest.json'))
  preserved=None
  if m in [1,2,4,7,9]:
   reg=load(local/'accepted-regression.json');assert reg['pass_'] and reg['frames']==r['frames']['rendered']
@@ -37,7 +42,7 @@ for m in range(1,10):
   values=[p['rssKiB'] for h in samples for p in h['processes'] if '--port '+str(evm['port'])+' ' in p['ownedCommand'] and (p['ownedCommand'].startswith('node ') if kind=='node' else '/bin/anvil ' in p['ownedCommand'])]
   peaks[kind+'SampledPeakRSSKiB']=max(values) if values else None
   peaks[kind+'RSSSamples']=len(values)
- row=dict(map=f'E1M{m}',report=str((safe/'result.json').relative_to(ROOT)),reportSHA256=sha(safe/'result.json'),demo=r['demo'],IWAD=r['IWAD'],tics=r['EVMGameplay']['tics'],snapshots=r['EVMGameplay']['observations'],frames=r['frames']['rendered'],supportedPixels=r['supportedPixelDomain'],virtualProvenance=r['ownerPointerProvenance'],gas=r['gas'],runtime=r['runtime'],resourceUsage=dict(**peaks,sampleIntervalSeconds=30,minimumSampledDiskFreeBytes=min(h['disk']['free'] for h in samples) if samples else None,limits='Sampled RSS maxima, not unobserved execution peaks; absolute-path Node matching repaired at2026-10-11T06:01:41Z. Missing earlier Node RSS not estimated; shared host swap/RAM recorded in telemetry'),media=r['media'],acceptedRegression=preserved,unresolvedFailure=None)
+ row=dict(map=f'E1M{m}',report=str((safe/'result.json').relative_to(ROOT)),reportSHA256=sha(safe/'result.json'),demo=r['demo'],IWAD=r['IWAD'],tics=r['EVMGameplay']['tics'],snapshots=r['EVMGameplay']['observations'],frames=r['frames']['rendered'],supportedPixels=r['supportedPixelDomain'],virtualProvenance=r['ownerPointerProvenance'],gas=r['gas'],runtime=r['runtime'],resourceUsage=dict(**peaks,sampleIntervalSeconds=30,minimumSampledDiskFreeBytes=min(h['disk']['free'] for h in samples) if samples else None,limits='Sampled RSS maxima, not unobserved execution peaks; absolute-path Node matching repaired at2026-10-11T06:01:41Z. Missing earlier Node RSS not estimated; shared host swap/RAM recorded in telemetry'),media=r['media'],acceptedRegression=preserved,partialPrefixRegression=partialPreserved,unresolvedFailure=None)
  rows.append(row)
 assert sum(r['tics'] for r in rows)==sum(r['frames'] for r in rows)==14475
 assert sum(r['snapshots'] for r in rows)==14484
