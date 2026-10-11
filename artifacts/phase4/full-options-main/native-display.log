@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "/Users/eduard/sandbox/doom-evm/tools/reference/full_options/native.py", line 34, in <module>
+    size_body,size_span=options.extract((SOURCE/'m_menu.c').read_text(),'M_SizeDisplay')
+                        ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/eduard/sandbox/doom-evm/tools/reference/options/reference.py", line 28, in extract
+    endLine=text[:end].count('\n')+1, sha256=ref.sha(body.encode()))
+                                             ^^^^^^^
+AttributeError: module 'reference' has no attribute 'sha'

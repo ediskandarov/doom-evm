@@ -1,0 +1,20 @@
+{
+  "command": [
+    ".toolchain/bin/forge",
+    "build",
+    "artifacts/local/full-options-main/observer/src/support/FullSpeedrunProbe.sol",
+    "src/evm/ResourceStore.sol",
+    "--out",
+    "artifacts/local/full-options-main/observer/out",
+    "--cache-path",
+    "artifacts/local/full-options-main/observer/cache",
+    "--offline",
+    "--no-lint"
+  ],
+  "cwd": ".",
+  "startedUtc": "2026-10-11T16:44:20.277768+00:00",
+  "endedUtc": "2026-10-11T16:44:20.625809+00:00",
+  "elapsedSeconds": 0.3479880839586258,
+  "exitCode": 1,
+  "rawOutput": "/Users/eduard/sandbox/doom-evm/artifacts/phase4/full-options-main/build-consumer.log"
+}

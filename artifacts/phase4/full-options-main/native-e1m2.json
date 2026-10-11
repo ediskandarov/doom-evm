@@ -1,0 +1,248 @@
+{
+  "scope": "Focused corrected borrowed-UI E1M2 tic84 regression; no historical rerender.\n\nReuse the freshly built native consumers and unchanged EVM recorder on main.\nPreserve the mixed-profile168-byte STTMINUS diagnostic rather than editing it.\n",
+  "startedUtc": "2026-10-11T16:57:17.750496+00:00",
+  "profiles": {
+    "O2": {
+      "binarySha256": "52970caa0034e1aef4cca7f7cc77bbe4872d8ba1a2fdd321bb1354d4d1a3f97b",
+      "frames": {
+        "1": {
+          "pixelsSha256": "ab477909be9f01c32649095b8188469ff2a6e8181ebdd5f1ea3eeabbd8f3dea2",
+          "paletteSha256": "12bafa34214682ae20c2cb6f4e38f21575564de88c4599f3410661e9b7a5c6d3"
+        },
+        "20": {
+          "pixelsSha256": "1067370a30a0c09a6e611d42bb6dcea76ba4893f21a318dfed7ffbbc29e25d85",
+          "paletteSha256": "12bafa34214682ae20c2cb6f4e38f21575564de88c4599f3410661e9b7a5c6d3"
+        },
+        "84": {
+          "pixelsSha256": "0dae63e5a9c0f0fd41e1cf3d25e5d03d60916751928bd59cf75b610108a32c03",
+          "paletteSha256": "12bafa34214682ae20c2cb6f4e38f21575564de88c4599f3410661e9b7a5c6d3"
+        }
+      }
+    },
+    "O0": {
+      "binarySha256": "b3ebc0475007388b807d12caf56f071e3ad1f72b09e623d6773f40133967dbde",
+      "frames": {
+        "1": {
+          "pixelsSha256": "ab477909be9f01c32649095b8188469ff2a6e8181ebdd5f1ea3eeabbd8f3dea2",
+          "paletteSha256": "12bafa34214682ae20c2cb6f4e38f21575564de88c4599f3410661e9b7a5c6d3"
+        },
+        "20": {
+          "pixelsSha256": "1067370a30a0c09a6e611d42bb6dcea76ba4893f21a318dfed7ffbbc29e25d85",
+          "paletteSha256": "12bafa34214682ae20c2cb6f4e38f21575564de88c4599f3410661e9b7a5c6d3"
+        },
+        "84": {
+          "pixelsSha256": "0dae63e5a9c0f0fd41e1cf3d25e5d03d60916751928bd59cf75b610108a32c03",
+          "paletteSha256": "12bafa34214682ae20c2cb6f4e38f21575564de88c4599f3410661e9b7a5c6d3"
+        }
+      }
+    },
+    "sanitize": {
+      "binarySha256": "af311d1969bb68765929f3656b2a561d2a0b42ff0ba5d03070887d94a506acb9",
+      "frames": {
+        "1": {
+          "pixelsSha256": "ab477909be9f01c32649095b8188469ff2a6e8181ebdd5f1ea3eeabbd8f3dea2",
+          "paletteSha256": "12bafa34214682ae20c2cb6f4e38f21575564de88c4599f3410661e9b7a5c6d3"
+        },
+        "20": {
+          "pixelsSha256": "1067370a30a0c09a6e611d42bb6dcea76ba4893f21a318dfed7ffbbc29e25d85",
+          "paletteSha256": "12bafa34214682ae20c2cb6f4e38f21575564de88c4599f3410661e9b7a5c6d3"
+        },
+        "84": {
+          "pixelsSha256": "0dae63e5a9c0f0fd41e1cf3d25e5d03d60916751928bd59cf75b610108a32c03",
+          "paletteSha256": "12bafa34214682ae20c2cb6f4e38f21575564de88c4599f3410661e9b7a5c6d3"
+        }
+      }
+    }
+  },
+  "pass_": true,
+  "entryWipe": {
+    "seed": 1,
+    "startSHA256": "19945e866b5a776ce233392a4b862fbc8b7db0ff6032238ee97b5dc4f122f23a",
+    "endSHA256": "ab477909be9f01c32649095b8188469ff2a6e8181ebdd5f1ea3eeabbd8f3dea2",
+    "sourceSHA256": "6fd7511995be23ab1d8a2b8ccef9cb2f90043e2832e9396012d3aaaa3f2f5448",
+    "originalWipeSHA256": "eafbc10e5a56ded32deb9e9cd2d25fae4b7ecea16c1a2dc0ed380c8f2d2b2a22",
+    "originalRNGSHA256": "8d89f5cfcbbd0170e46b55538c4c272b3cf5b5d7dce91023b8aa8d9b922b21ee",
+    "command": [
+      "clang",
+      "-std=c99",
+      "-O2",
+      "-fwrapv",
+      "/Users/eduard/sandbox/doom-evm/artifacts/local/full-options-main/e1m2-native/entry-wipe/wipe.c",
+      "/Users/eduard/sandbox/doom-evm/original/DOOM/linuxdoom-1.10/m_random.c",
+      "-o",
+      "/Users/eduard/sandbox/doom-evm/artifacts/local/full-options-main/e1m2-native/entry-wipe/wipe-native"
+    ],
+    "frames": [
+      {
+        "file": "001-65.indexed8",
+        "sha256": "0f213cc58d8ccc7b9e8e071ef929c9c8f90e47933f2f466c92c6d9392bdcf1a5"
+      },
+      {
+        "file": "002-65.indexed8",
+        "sha256": "b2fcebaf3ee777fa127dda6c06583db648b124217d37b81cd0edec604b61b809"
+      },
+      {
+        "file": "003-65.indexed8",
+        "sha256": "28891366376d2c97365c46a869f1a8dcf71fca9e9b6a8a46f65debefeba632b4"
+      },
+      {
+        "file": "004-65.indexed8",
+        "sha256": "303decf9c91fce5e50632a48636b56692ba6bd6f6b63ed7116d4e68c380a61bd"
+      },
+      {
+        "file": "005-65.indexed8",
+        "sha256": "d51c4d2d82902fcde79ce8d7162b6028b6c22af9c2d85d7abb5734bbc4792d70"
+      },
+      {
+        "file": "006-65.indexed8",
+        "sha256": "520e14583e63a464204355479b4c68cfd75b4382e4da368b4a0cf715658f6670"
+      },
+      {
+        "file": "007-65.indexed8",
+        "sha256": "1ac6fa272d505b94ca41e34fba892e58482c20437947778b26b83d0ad948fe01"
+      },
+      {
+        "file": "008-65.indexed8",
+        "sha256": "6c4a3f8f519687d15661bbb15bb5f39edb4559aecaa35a922a90d152330ed332"
+      },
+      {
+        "file": "009-65.indexed8",
+        "sha256": "77c845fc2a878ae9b4a1bcf8d871beb56e440d82c4a3d26cfc210680c02e06f8"
+      },
+      {
+        "file": "010-65.indexed8",
+        "sha256": "7162e1455d5e2a28a1ebfc8d55842d844edbf5a103580803135c55058bf5b4bf"
+      },
+      {
+        "file": "011-65.indexed8",
+        "sha256": "b7563160a1d738684a11f8dae6e8cd05839c81077a6766cf0dd15ff7ae9fca73"
+      },
+      {
+        "file": "012-65.indexed8",
+        "sha256": "9d728aabc7983ebd17fc9170b3f24e706417bd1ad518ec542f439e98a99a7842"
+      },
+      {
+        "file": "013-65.indexed8",
+        "sha256": "427d0db33f9db44010862a31d20bb6ee72a6ec1553b85a5bfbe792beb71c8d47"
+      },
+      {
+        "file": "014-65.indexed8",
+        "sha256": "9974d434f1ec13f97d2249f3b4d95aad6643b5f491f1fda0c79339704a8617df"
+      },
+      {
+        "file": "015-65.indexed8",
+        "sha256": "30681ce8be6a24ab06e75e6e9f3618a5b3b16d1f51c7dd582928059159b519c5"
+      },
+      {
+        "file": "016-65.indexed8",
+        "sha256": "1e3098f38740a0d8dd6e56f62ae18b73ebea7fb3ce53d66d311d0a902d14c1be"
+      },
+      {
+        "file": "017-65.indexed8",
+        "sha256": "62af4fc44d2db1ebaa71a658974f87e0b796643a70cbb71d5e38913c49dbfe06"
+      },
+      {
+        "file": "018-65.indexed8",
+        "sha256": "cb08376c1745f79073100075894b2bb9424716ef6c252dd9c22221d2ca12f4f8"
+      },
+      {
+        "file": "019-65.indexed8",
+        "sha256": "5fe326a34c0a496ad09d0ae11603c04412697aba1f702c57e7d6fe769b34b2ce"
+      },
+      {
+        "file": "020-65.indexed8",
+        "sha256": "5532b55d7163c0649d6c3a67ed1bd8c7a247a7a81ba40c17e55b224523002ed6"
+      },
+      {
+        "file": "021-65.indexed8",
+        "sha256": "de3aa0c402e0d7afa18e6a4aaa1fa37ff1a0b593d94d2a1528629656bc8df901"
+      },
+      {
+        "file": "022-65.indexed8",
+        "sha256": "a6380150fcb561d70ff1d5db9c549b817de5e08222ff79202e361b80a501d4b8"
+      },
+      {
+        "file": "023-65.indexed8",
+        "sha256": "4186e46108a4ed677ade251e0a9e9518a678ad1dea4f2a9d282c9c3dd90d6531"
+      },
+      {
+        "file": "024-65.indexed8",
+        "sha256": "b55e07b590d10b631550e40f84c44931d9968dc4f1085677abe230bb8e0ae5bd"
+      },
+      {
+        "file": "025-65.indexed8",
+        "sha256": "bfa0a53e8667442a92fe06031d21f985cb0cea15dc03304f8c759393d4ad4197"
+      },
+      {
+        "file": "026-65.indexed8",
+        "sha256": "232677f2aba48dcb1e0dc7e9e86c647b1f165bab64b8bc8c59f15f8ae5c4313c"
+      },
+      {
+        "file": "027-65.indexed8",
+        "sha256": "f6ca16344581ae62a26d8c95c77125d5218b14acb21f9013a99aa39c57012f36"
+      },
+      {
+        "file": "028-65.indexed8",
+        "sha256": "d1dc2be011818b702aefd521deb8bd5e3f8d59d1b6792ed1c8c591b7c361814d"
+      },
+      {
+        "file": "029-65.indexed8",
+        "sha256": "d7eaa5ffb36ba458fad7f74c1e86a777e3a4842b50047b30a9915c9a4ff3e47c"
+      },
+      {
+        "file": "030-65.indexed8",
+        "sha256": "a26fdf712203ec6233c7eeac3e43e845aef1de831c8d31f95f4c25caadb1d194"
+      },
+      {
+        "file": "031-65.indexed8",
+        "sha256": "25e351bbd1a5b59ddb16c45309370891d48240b56b3e0f896475da306ba5ab7a"
+      },
+      {
+        "file": "032-65.indexed8",
+        "sha256": "d21413cb436be6edec960f56b3c8454100b6090ce24e7c84d5a10b0de65a6a24"
+      },
+      {
+        "file": "033-65.indexed8",
+        "sha256": "19c1058e7b451b1c2c1c06380ca9a6f30bbda5cbeec94fb5f77a4efea131d07f"
+      },
+      {
+        "file": "034-65.indexed8",
+        "sha256": "4d5e4e560d533ca1d49baf493c45692b636223c17530485e4d54b955f598a6ba"
+      },
+      {
+        "file": "035-65.indexed8",
+        "sha256": "339f99d10aa58e3ec9861b3f2dc423e39f6c795d4ef87121c5d2a6d2e292bdff"
+      },
+      {
+        "file": "036-65.indexed8",
+        "sha256": "edfc80b4880a1fb5fb74f6e825d8aa52af1a08b23f58ec723761423e8c8327bb"
+      },
+      {
+        "file": "037-65.indexed8",
+        "sha256": "4a1327f3ab66ff40effcf84fa9573e931a7ca5e9037cef8bfb12392b02c6fe8e"
+      },
+      {
+        "file": "038-65.indexed8",
+        "sha256": "0ef2d6ea13a3e1d0d70947c4965d7a6ea572be6029c611dd569db5f5cfc2ecd1"
+      },
+      {
+        "file": "039-65.indexed8",
+        "sha256": "60f08352416ec4c856939091e65e2678dc74f41dfe0d12b00c5297a6c4fa5919"
+      },
+      {
+        "file": "040-65.indexed8",
+        "sha256": "1c56ce992c79620a56570280eef1bfbf84e5bb1bc1840fce2e8dae1b7fa98f60"
+      },
+      {
+        "file": "041-65.indexed8",
+        "sha256": "ab477909be9f01c32649095b8188469ff2a6e8181ebdd5f1ea3eeabbd8f3dea2"
+      },
+      {
+        "file": "042-65.indexed8",
+        "sha256": "ab477909be9f01c32649095b8188469ff2a6e8181ebdd5f1ea3eeabbd8f3dea2"
+      }
+    ]
+  },
+  "endedUtc": "2026-10-11T16:57:18.786303+00:00",
+  "runnerSha256": "ca7eaac48605301e99be5d3e0b899c9b56d59500adeb4b320482833e96172c79"
+}

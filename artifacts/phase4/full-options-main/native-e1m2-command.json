@@ -1,0 +1,12 @@
+{
+  "command": [
+    "python3",
+    "tools/reference/full_options/e1m2.py"
+  ],
+  "cwd": ".",
+  "startedUtc": "2026-10-11T16:57:17.713898+00:00",
+  "endedUtc": "2026-10-11T16:57:18.792000+00:00",
+  "elapsedSeconds": 1.0780584579333663,
+  "exitCode": 0,
+  "rawOutput": "/Users/eduard/sandbox/doom-evm/artifacts/phase4/full-options-main/native-e1m2.log"
+}

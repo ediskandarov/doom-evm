@@ -1,5 +1,16 @@
 # Phase 4 progress ledger
 
+Full Video + Options checkpoint (2026-10-11): **source integrated; focused
+combined verification passed**. Nine complete standalone Ultimate presentations
+are accepted as inherited evidence (18,175 frames /18,173 finite native-equal,
+two virtual-derived exceptions). Original supported Options and map→skill startup
+are integrated for all three games. Fresh52 Forge/72 Node,210 exact Chrome Canvas
+checkpoints and323 native-equal sampled EVM frames verify the affected boundaries.
+The earlier “final presentation pending” entries remain historical; standalone
+recording delivery is complete. G_WorldDone/following startup remain unverified by
+those recordings; production browser melt orchestration remains separate.
+See [combined handoff](FULL-VIDEO-OPTIONS-INTEGRATION.md).
+
 Three-game Browser checkpoint (2026-10-11): **source integrated, shared production
 wiring complete, focused acceptance passed**. Freedoom 0.13.0, Ultimate DOOM 1.9
 Episode One and DOOM II 1.9 now Install/Resume/Play through one deployment manager
@@ -2012,3 +2023,84 @@ The parallel video worktree/branch/processes remain untouched and unmerged.
 Measured publication checkpoint: 2026-10-11 12:03:21 UTC; 2,167 wall seconds
 since first measured preflight, goal-service 240,647 aggregate tokens / 2,155 elapsed
 seconds. Missing attribution/cost is not estimated. Final Git publication follows.
+
+## Full Video and Options combined integration — 2026-10-11
+
+Baseline411e6049f9e2ad496d45264facbb6fdafc3dbfa7 was clean and synchronized with
+origin/main. Normal merges preserve all13 feature commits; Full Video first,
+Options second. No Git conflicts or unrelated feature history. Palette-effects,
+Save/Load and Death/Respawn branches are not integrated.
+
+| Workstream | Implementation | Source integration | Verification | Source checkpoint | Integration merge |
+| --- | --- | --- | --- | --- | --- |
+| Complete Ultimate Episode One videos | Complete standalone nine-map presentation/tooling | Complete | Source acceptance preserved; focused combined boundaries pass |486e896633e0f6726ae842a03429e258ded45843 |ec32f9eb91d416f73ed53f78bbcd16fadf50d97c |
+| Original Options / map and skill selection | Complete within declared bounds | Complete | Source handoff preserved; focused three-game and display checks pass |184ea6624e6ea37a18f1d265ece66a172e6be609 |fb62949c829ca10f9e11ecd28096291d12ad4d3a |
+
+Inherited Full Video:18,175 EVM-generated frames,14,484 exact gameplay snapshots,
+18,173 finite native-equal frames, nine genuine exits,35FPS/4:3, original ST/HU,
+melt, WI/finale and palette;18,947,598,824,099 gas /39,472 successful transactions.
+Two virtual-derived frame exceptions remain exceptions;25 direct virtual samples
+occur in11 frames. Finite native compatibility remains RESTRICT. Both the mixed
+STTMINUS profile/168-byte allocation diagnosis and corrected borrowed-UI/display
+references remain unchanged, including failed recordings, goldens and diagnostics.
+All27 bound historical MP4s retain SHA256/size/mtime at original locations; no
+commercial IWAD/asset/raw frame or MP4 is committed or regenerated.
+
+Inherited Options:34 Forge/72 Node,258 Chrome frame checks and15 rollbacks.
+Supported: SELECT LEVEL→map→original five-skill menu→start (including MAP32 and
+Nightmare), End Game, Messages, size10/11 and original Status Bar restoration.
+Smaller bordered views, Low Detail, Mouse Sensitivity and F11 Gamma remain
+unsupported. Original Doom/Doom2 adapter and shared UI changes retain exact source
+content; both browser artifacts/pins are regenerated against the combined build.
+No integration-specific production renderer/gameplay/memory changes were needed.
+
+Fresh combined verification: affected production/recorder compile;52 Forge
+(34 Options/menu/HUD/input/lifecycle +14 wipe/finale/gameflow +4 WI storage/Frame/
+rollback);72 Node;63 native startup executions /21 cases;36 native ST refresh
+steps reproduce41 changed background pixels for Freedoom and37 for each
+commercial IWAD. Actual isolated Chrome/Anvil:23 checks,210 exact Canvas Frames,
+15 map/skill selections,15 all-storage rollback proofs; three authenticated games,
+movement, Options settings/persistence/API coherence, switching/reload and resource
+reuse. Source Solidity defaults2 remain unchanged; browser explicitly selects3.
+
+Fresh isolated real EVM: unchanged merged recorder and verification-only Options
+composition each reproduce genuine E1M1 exit at316tics and317 exact snapshots.
+Options→view11→resume→view10→resume→exit→melt→accelerated WI has native-exact
+fullscreen/restored-bar/transition output, frozen gameplay during display and
+original authoritative kills/items/secrets/time/par.287 emitted frames include
+279 whole-frame native-equal frames; eight menu overlays are transport-verified,
+with native menu drawing covered separately. E1M8 text/1570-tic threshold/art/melt
+fixtures pass; this is not a fresh genuine E1M8 exit replay. Corrected borrowed-UI
+E1M2 first84 commands produce85 exact snapshots /44 native-equal frames, including
+final pixel(290,106)=8. Total fresh native-equal sampled Frames323;24 mined
+rollback proofs across the browser/presentation/E1M2 gates. Gameplay/UI/wipe/finale
+counts remain distinct; no additional presentation clock is called gameplay.
+
+One fuller view11 native gate failed because the new comparison host omitted
+original D_Display R_ExecuteSetViewSize. First divergence was Options resume at
+tic20,52,543 pixels beginning(0,0). Applying the original host display step yields
+exactly the already-mined EVM framebuffer and the final combined gate passes.
+Failed reference/raw evidence and the prior successful bar checkpoint remain
+separate. No production pixels, original C, existing assertions or historical
+expected hashes were changed. Isolated helper generation/import/type failures
+are preserved separately from engine results.
+
+Deferred: G_WorldDone/subsequent startup through standalone recordings, production
+browser melt orchestration, complete inherited Phase0–4 acceptance, all nine
+complete speedrun rerenders and the two complete DOOM II replay reruns. Source
+E1M3/E1M5 initial-zero-zone restrictions, adversarial-fill failures, virtual pixel
+provenance and MAP30 cast rejection remain explicit. Palette-effects/visual-gap
+recommendations, Save/Load, Death/Respawn, audio/music and multiplayer are separate.
+Only checked-free dedicated19371/19372/19373/19374 runtimes were used and stopped;
+other worktrees/processes and reserved18880/8088 were untouched.
+
+[Combined report](FULL-VIDEO-OPTIONS-INTEGRATION.md),
+[Full Video report](ULTIMATE-FULL-VIDEOS.md),
+[nine recording locations](../artifacts/full-videos/EPISODE-SUMMARY.md),
+[Options report](OPTIONS-LEVEL-SELECTION.md),
+[fresh verification bindings](../artifacts/phase4/full-options-main/integration.json).
+
+Verified integration tools/browser-package commit:
+`8351c8df91e44ec0292b3b0aa5e32fee26749cee`. Measured publication checkpoint
+2026-10-11 17:15:47UTC:410,594 aggregate goal tokens /2,460 elapsed service seconds;
+no missing cost/attribution estimate. Final evidence publication/push follows.

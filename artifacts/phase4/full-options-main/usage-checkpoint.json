@@ -1,0 +1,13 @@
+{
+  "measuredUTC": "2026-10-11 17:15:47 UTC",
+  "goal": {
+    "threadId": "01a12538-3400-7b12-bd2f-ea5dbe642e8b",
+    "objective": "Integrate Full Video and Options with focused cross-feature native/EVM rendering verification, preserve history and evidence, update ledger, commit and push synchronized clean main.",
+    "status": "active",
+    "tokensUsed": 410594,
+    "timeUsedSeconds": 2460,
+    "createdAt": 1791736477,
+    "updatedAt": 1791738938
+  },
+  "note": "Measured available aggregate goal attribution; no model/cache cost or missing time is estimated. Final completion usage is reported after push."
+}

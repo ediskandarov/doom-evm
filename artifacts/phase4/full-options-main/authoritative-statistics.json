@@ -1,0 +1,26 @@
+[
+  {
+    "consumer": "unmodified-recorder",
+    "frame": 84,
+    "statisticsFromAuthoritativeExitExact": true,
+    "kills": 3,
+    "items": 2,
+    "secrets": 0,
+    "timeTics": 316,
+    "parTics": 1050,
+    "nextMap": 2,
+    "noExternalStatistics": true
+  },
+  {
+    "consumer": "options-stress",
+    "frame": 94,
+    "statisticsFromAuthoritativeExitExact": true,
+    "kills": 3,
+    "items": 2,
+    "secrets": 0,
+    "timeTics": 316,
+    "parTics": 1050,
+    "nextMap": 2,
+    "noExternalStatistics": true
+  }
+]

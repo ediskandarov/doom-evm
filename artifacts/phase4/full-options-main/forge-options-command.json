@@ -1,0 +1,12 @@
+{
+  "command": [
+    "python3",
+    "tools/reference/options/focused.py"
+  ],
+  "cwd": ".",
+  "startedUtc": "2026-10-11T16:44:39.930862+00:00",
+  "endedUtc": "2026-10-11T16:46:24.759430+00:00",
+  "elapsedSeconds": 104.82847766578197,
+  "exitCode": 0,
+  "rawOutput": "/Users/eduard/sandbox/doom-evm/artifacts/phase4/full-options-main/forge-options.log"
+}

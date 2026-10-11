@@ -1,0 +1,159 @@
+{
+  "startedUtc": "2026-10-11T16:37:42Z",
+  "profiles": [
+    {
+      "profile": "O0",
+      "command": [
+        "clang",
+        "-std=c11",
+        "-fwrapv",
+        "-ffunction-sections",
+        "-fdata-sections",
+        "-include",
+        "/Users/eduard/sandbox/doom-evm/original/DOOM/linuxdoom-1.10/doomdef.h",
+        "-I",
+        "/Users/eduard/sandbox/doom-evm/tools/reference/statusbar",
+        "-I",
+        "/Users/eduard/sandbox/doom-evm/original/DOOM/linuxdoom-1.10",
+        "-O0",
+        "/Users/eduard/sandbox/doom-evm/tools/reference/statusbar/host.c",
+        "/Users/eduard/sandbox/doom-evm/original/DOOM/linuxdoom-1.10/st_lib.c",
+        "/Users/eduard/sandbox/doom-evm/original/DOOM/linuxdoom-1.10/v_video.c",
+        "/Users/eduard/sandbox/doom-evm/original/DOOM/linuxdoom-1.10/m_bbox.c",
+        "/Users/eduard/sandbox/doom-evm/original/DOOM/linuxdoom-1.10/m_random.c",
+        "/Users/eduard/sandbox/doom-evm/original/DOOM/linuxdoom-1.10/r_main.c",
+        "/Users/eduard/sandbox/doom-evm/original/DOOM/linuxdoom-1.10/tables.c",
+        "/Users/eduard/sandbox/doom-evm/original/DOOM/linuxdoom-1.10/d_items.c",
+        "/Users/eduard/sandbox/doom-evm/original/DOOM/linuxdoom-1.10/m_cheat.c",
+        "-Wl,-dead_strip",
+        "-o",
+        "/Users/eduard/sandbox/doom-evm/artifacts/local/options/status-resize-native/O0"
+      ],
+      "binarySha256": "0a43c8e23bd1fd00f1c4dbdce8f8d1ee74634f1d4255786e17a7e94714c1b0d3",
+      "outputs": {
+        "freedoom": "450d77667a8341023fdedc81bca1692662f669f5899feb8bcf0a75e3cc7f0879",
+        "ultimate": "3b2fa648af8cfe80743674f5e01a34aaa674c6ca7d66684740773e9a17a7ee29",
+        "doom2": "3b2fa648af8cfe80743674f5e01a34aaa674c6ca7d66684740773e9a17a7ee29"
+      }
+    },
+    {
+      "profile": "O2",
+      "command": [
+        "clang",
+        "-std=c11",
+        "-fwrapv",
+        "-ffunction-sections",
+        "-fdata-sections",
+        "-include",
+        "/Users/eduard/sandbox/doom-evm/original/DOOM/linuxdoom-1.10/doomdef.h",
+        "-I",
+        "/Users/eduard/sandbox/doom-evm/tools/reference/statusbar",
+        "-I",
+        "/Users/eduard/sandbox/doom-evm/original/DOOM/linuxdoom-1.10",
+        "-O2",
+        "/Users/eduard/sandbox/doom-evm/tools/reference/statusbar/host.c",
+        "/Users/eduard/sandbox/doom-evm/original/DOOM/linuxdoom-1.10/st_lib.c",
+        "/Users/eduard/sandbox/doom-evm/original/DOOM/linuxdoom-1.10/v_video.c",
+        "/Users/eduard/sandbox/doom-evm/original/DOOM/linuxdoom-1.10/m_bbox.c",
+        "/Users/eduard/sandbox/doom-evm/original/DOOM/linuxdoom-1.10/m_random.c",
+        "/Users/eduard/sandbox/doom-evm/original/DOOM/linuxdoom-1.10/r_main.c",
+        "/Users/eduard/sandbox/doom-evm/original/DOOM/linuxdoom-1.10/tables.c",
+        "/Users/eduard/sandbox/doom-evm/original/DOOM/linuxdoom-1.10/d_items.c",
+        "/Users/eduard/sandbox/doom-evm/original/DOOM/linuxdoom-1.10/m_cheat.c",
+        "-Wl,-dead_strip",
+        "-o",
+        "/Users/eduard/sandbox/doom-evm/artifacts/local/options/status-resize-native/O2"
+      ],
+      "binarySha256": "4be8295d695909998612856c7541365d35a28c27e5599c9cbf7ceb9fdd34e5f4",
+      "outputs": {
+        "freedoom": "450d77667a8341023fdedc81bca1692662f669f5899feb8bcf0a75e3cc7f0879",
+        "ultimate": "3b2fa648af8cfe80743674f5e01a34aaa674c6ca7d66684740773e9a17a7ee29",
+        "doom2": "3b2fa648af8cfe80743674f5e01a34aaa674c6ca7d66684740773e9a17a7ee29"
+      }
+    },
+    {
+      "profile": "sanitized",
+      "command": [
+        "clang",
+        "-std=c11",
+        "-fwrapv",
+        "-ffunction-sections",
+        "-fdata-sections",
+        "-include",
+        "/Users/eduard/sandbox/doom-evm/original/DOOM/linuxdoom-1.10/doomdef.h",
+        "-I",
+        "/Users/eduard/sandbox/doom-evm/tools/reference/statusbar",
+        "-I",
+        "/Users/eduard/sandbox/doom-evm/original/DOOM/linuxdoom-1.10",
+        "-O1",
+        "-g",
+        "-fsanitize=address,undefined",
+        "-fno-sanitize=array-bounds",
+        "-fno-sanitize-recover=all",
+        "/Users/eduard/sandbox/doom-evm/tools/reference/statusbar/host.c",
+        "/Users/eduard/sandbox/doom-evm/original/DOOM/linuxdoom-1.10/st_lib.c",
+        "/Users/eduard/sandbox/doom-evm/original/DOOM/linuxdoom-1.10/v_video.c",
+        "/Users/eduard/sandbox/doom-evm/original/DOOM/linuxdoom-1.10/m_bbox.c",
+        "/Users/eduard/sandbox/doom-evm/original/DOOM/linuxdoom-1.10/m_random.c",
+        "/Users/eduard/sandbox/doom-evm/original/DOOM/linuxdoom-1.10/r_main.c",
+        "/Users/eduard/sandbox/doom-evm/original/DOOM/linuxdoom-1.10/tables.c",
+        "/Users/eduard/sandbox/doom-evm/original/DOOM/linuxdoom-1.10/d_items.c",
+        "/Users/eduard/sandbox/doom-evm/original/DOOM/linuxdoom-1.10/m_cheat.c",
+        "-Wl,-dead_strip",
+        "-o",
+        "/Users/eduard/sandbox/doom-evm/artifacts/local/options/status-resize-native/sanitized"
+      ],
+      "binarySha256": "a77c02e4f8899e0a00bf3491600eb198aaf4cfa13a0266e720befebd0da00ba9",
+      "outputs": {
+        "freedoom": "450d77667a8341023fdedc81bca1692662f669f5899feb8bcf0a75e3cc7f0879",
+        "ultimate": "3b2fa648af8cfe80743674f5e01a34aaa674c6ca7d66684740773e9a17a7ee29",
+        "doom2": "3b2fa648af8cfe80743674f5e01a34aaa674c6ca7d66684740773e9a17a7ee29"
+      }
+    }
+  ],
+  "games": {
+    "freedoom": {
+      "wadSha256": "7323bcc168c5a45ff10749b339960e98314740a734c30d4b9f3337001f9e703d",
+      "outputs": {
+        "prior.pixels": "7793001238f2e738d33aa96df41810a7fd87cca2ffb627e8484459dc284bd608",
+        "restored.pixels": "b087572825fb8a0f0bae1f3b69d29078ea736fa1d75c9cb8af2bda260154df8e"
+      },
+      "originalRefreshChangedPixels": 41,
+      "face": 40
+    },
+    "ultimate": {
+      "wadSha256": "6fdf361847b46228cfebd9f3af09cd844282ac75f3edbb61ca4cb27103ce2e7f",
+      "outputs": {
+        "prior.pixels": "b663541d542b6d5d5dbbb3febbc8a3750dba46363cb54ae637cec1923bf2fc3d",
+        "restored.pixels": "5dc9f6f418008db1a8d1ff5b0e11339a195d8f835df3f7d50efde8bcab6ffac2"
+      },
+      "originalRefreshChangedPixels": 37,
+      "face": 40
+    },
+    "doom2": {
+      "wadSha256": "10d67824b11025ddd9198e8cfc87ca335ee6e2d3e63af4180fa9b8a471893255",
+      "outputs": {
+        "prior.pixels": "b663541d542b6d5d5dbbb3febbc8a3750dba46363cb54ae637cec1923bf2fc3d",
+        "restored.pixels": "5dc9f6f418008db1a8d1ff5b0e11339a195d8f835df3f7d50efde8bcab6ffac2"
+      },
+      "originalRefreshChangedPixels": 37,
+      "face": 40
+    }
+  },
+  "pass_": true,
+  "sourceSha256": {
+    "original/DOOM/linuxdoom-1.10/st_lib.c": "da10b839e317054a44108bf2401ec7c1c6a8eb9371ba45e42446037a69efba6b",
+    "original/DOOM/linuxdoom-1.10/v_video.c": "52fb89efb1e6de3842c197b32009d620dcd1578f7111a7502abe6110a925e5eb",
+    "original/DOOM/linuxdoom-1.10/m_bbox.c": "98f3aea4f43d4d75fe452a25a65678fbd8368cfef3928b869767996e2165f42c",
+    "original/DOOM/linuxdoom-1.10/m_random.c": "8d89f5cfcbbd0170e46b55538c4c272b3cf5b5d7dce91023b8aa8d9b922b21ee",
+    "original/DOOM/linuxdoom-1.10/r_main.c": "2aae43cf807929a8758f71ed0205fc08017556541ba8df2ea9167c003d0dec5a",
+    "original/DOOM/linuxdoom-1.10/tables.c": "db8759f4311654c63785dcffb8f73a00a61cfe2713e4284c238dea420b6e5f89",
+    "original/DOOM/linuxdoom-1.10/d_items.c": "76531d5366de1157cf3d8510ef749617cfc46b6e721845bda4324cd697028fe6",
+    "original/DOOM/linuxdoom-1.10/m_cheat.c": "e4baaf3be54d0c06b72d6c4af48c62ecbdde23f052bd421f4fed27689815973e",
+    "original/DOOM/linuxdoom-1.10/st_stuff.c": "aaff5a9391d93d4d459a4a98594d67da410e88b360e3bdc20e96cb2bcba5f0d9",
+    "tools/reference/statusbar/host.c": "7c89d8ec524d515248d7076a0d393f71e7defcad73bdd5be9d7e0d67b59d2711",
+    "tools/reference/statusbar/values.h": "cc120a73936c60689dbf38a789f0046cf49fd373344d4c699cc32b8085535761",
+    "tools/reference/options/status-resize.py": "dd36b150bf0a4454a72bdc9814252a9d81b7e63891351e139e35d7559103524c"
+  },
+  "endedUtc": "2026-10-11T16:37:44Z"
+}

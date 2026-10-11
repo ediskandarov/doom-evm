@@ -1,0 +1,26 @@
+[
+  {
+    "file": "web/install-assets/Doom.json",
+    "creationBytecodeExactSourceOptions": false,
+    "runtimeExactSourceOptions": false,
+    "methodSelectorsExactSourceOptions": true,
+    "immutableOffsetsExactSourceOptions": true,
+    "changedKeys": [
+      "bytecode",
+      "runtime",
+      "immutableReferences"
+    ]
+  },
+  {
+    "file": "web/doom2-assets/Doom.json",
+    "creationBytecodeExactSourceOptions": false,
+    "runtimeExactSourceOptions": false,
+    "methodSelectorsExactSourceOptions": true,
+    "immutableOffsetsExactSourceOptions": true,
+    "changedKeys": [
+      "bytecode",
+      "runtime",
+      "immutableReferences"
+    ]
+  }
+]

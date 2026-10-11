@@ -1,0 +1,12 @@
+{
+  "pass": true,
+  "parsedFiles": [
+    "tools/reference/full_options/evm.mjs",
+    "tools/reference/full_options/e1m2.mjs",
+    "tools/reference/full_options/browser.mjs",
+    "tools/reference/full_options/browser-features.mjs",
+    "tools/reference/full_options/e1m2.py",
+    "tools/reference/full_options/native.py",
+    "tools/reference/full_options/prepare.py"
+  ]
+}

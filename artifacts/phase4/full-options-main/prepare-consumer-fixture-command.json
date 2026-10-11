@@ -1,0 +1,12 @@
+{
+  "command": [
+    "python3",
+    "tools/reference/full_options/prepare.py"
+  ],
+  "cwd": ".",
+  "startedUtc": "2026-10-11T16:48:06.413702+00:00",
+  "endedUtc": "2026-10-11T16:48:06.497252+00:00",
+  "elapsedSeconds": 0.08350262511521578,
+  "exitCode": 0,
+  "rawOutput": "/Users/eduard/sandbox/doom-evm/artifacts/phase4/full-options-main/prepare-consumer-fixture.log"
+}

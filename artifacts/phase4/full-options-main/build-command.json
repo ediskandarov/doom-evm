@@ -1,0 +1,18 @@
+{
+  "command": [
+    ".toolchain/bin/forge",
+    "build",
+    "src/evm/Doom.sol",
+    "src/evm/Doom2.sol",
+    "src/evm/ResourceStore.sol",
+    "src/support/FullSpeedrunProbe.sol",
+    "--offline",
+    "--no-lint"
+  ],
+  "cwd": ".",
+  "startedUtc": "2026-10-11T16:37:01.577105+00:00",
+  "endedUtc": "2026-10-11T16:41:57.509093+00:00",
+  "elapsedSeconds": 295.9318651249632,
+  "exitCode": 0,
+  "rawOutput": "/Users/eduard/sandbox/doom-evm/artifacts/phase4/full-options-main/build.log"
+}

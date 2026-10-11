@@ -1,0 +1,874 @@
+{
+  "features": [
+    {
+      "branch": "feat/full-speedrun-videos",
+      "tip": "486e896633e0f6726ae842a03429e258ded45843",
+      "preservedFiles": [
+        {
+          "file": "artifacts/full-videos/E1M1-telemetry.json",
+          "sha256": "78fbf56ade7393920d086107077151be00a69e1dcabc2ce1bc98d65ecbbd0d50",
+          "exactFeatureContent": true
+        },
+        {
+          "file": "artifacts/full-videos/E1M1/checks.json",
+          "sha256": "3be6d8796860185df0adedd54cff0b9cbf4d94460643a36fd6a3d9cbe30041bc",
+          "exactFeatureContent": true
+        },
+        {
+          "file": "artifacts/full-videos/E1M1/manifest.json",
+          "sha256": "24a3a8678681f133babe87cb77c1b7bd865e703c217cab961550ad44a31ee061",
+          "exactFeatureContent": true
+        },
+        {
+          "file": "artifacts/full-videos/E1M1/virtual-samples.json",
+          "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+          "exactFeatureContent": true
+        },
+        {
+          "file": "artifacts/full-videos/E1M2-telemetry.json",
+          "sha256": "09f7012940bf544ca3a2460ce43d728268ec7adaaa13b96b2aa6593e15868c26",
+          "exactFeatureContent": true
+        },
+        {
+          "file": "artifacts/full-videos/E1M2/checks.json",
+          "sha256": "25b86691d37a746954eea359281c7ff88089d2a0c368c0056190bbfa1a3ac0a3",
+          "exactFeatureContent": true
+        },
+        {
+          "file": "artifacts/full-videos/E1M2/manifest.json",
+          "sha256": "8c67201d6adf8d310ed4bcc8c4b6398cbea968e53ac2a842f74193f8254f48ff",
+          "exactFeatureContent": true
+        },
+        {
+          "file": "artifacts/full-videos/E1M2/virtual-samples.json",
+          "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+          "exactFeatureContent": true
+        },
+        {
+          "file": "artifacts/full-videos/E1M3-telemetry.json",
+          "sha256": "abed4b70134e453c377ea26e0362a578eaa7c0bd52d4f290a23bf1b54c66e6b7",
+          "exactFeatureContent": true
+        },
+        {
+          "file": "artifacts/full-videos/E1M3/checks.json",
+          "sha256": "0ebbe9d2bd22bd44c6a1d31a73474bae905f17fb7449dc66e60aee879fc0c405",
+          "exactFeatureContent": true
+        },
+        {
+          "file": "artifacts/full-videos/E1M3/manifest.json",
+          "sha256": "f35c443bf8e66014c98313b8ff3369b26db12ab628dc733994c7b51390bb8780",
+          "exactFeatureContent": true
+        },
+        {
+          "file": "artifacts/full-videos/E1M3/virtual-samples.json",
+          "sha256": "f5ece7bab97d82f025af3a865f59f777d7fe808b136ac620e96d993c6f050c0c",
+          "exactFeatureContent": true
+        },
+        {
+          "file": "artifacts/full-videos/E1M4-telemetry.json",
+          "sha256": "a6640f491f6b0a33efee95e8be42ebfe4e79982fafb712d9f373468424ab3849",
+          "exactFeatureContent": true
+        },
+        {
+          "file": "artifacts/full-videos/E1M4/checks.json",
+          "sha256": "e9b0ec376916cd6874f1d79b52708ba226d5cb8a2df47e1c6d46755bc1ca22f1",
+          "exactFeatureContent": true
+        },
+        {
+          "file": "artifacts/full-videos/E1M4/manifest.json",
+          "sha256": "4c0005e8d4105cba3e8e9f769fa1fa56bababfb00cd9c3b90f32e9207ef512a3",
+          "exactFeatureContent": true
+        },
+        {
+          "file": "artifacts/full-videos/E1M4/virtual-samples.json",
+          "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+          "exactFeatureContent": true
+        },
+        {
+          "file": "artifacts/full-videos/E1M5-telemetry.json",
+          "sha256": "2aceda1cf6369e2a5550dec965b9698a7636b11e7e59491708e3c43677449b80",
+          "exactFeatureContent": true
+        },
+        {
+          "file": "artifacts/full-videos/E1M5/checks.json",
+          "sha256": "41025df26f2fdd5de5fa925475ad50f8afb5b9d5d342b52ebcff12f4c13869fe",
+          "exactFeatureContent": true
+        },
+        {
+          "file": "artifacts/full-videos/E1M5/manifest.json",
+          "sha256": "c87b5345d7a862159efccfd6c1dcf3c0655eae2053abeac5174b2806de577dd6",
+          "exactFeatureContent": true
+        },
+        {
+          "file": "artifacts/full-videos/E1M5/virtual-samples.json",
+          "sha256": "302810f8850c98650e5da667466acdb740c0a61de7c2466c07a9ed0b69046921",
+          "exactFeatureContent": true
+        },
+        {
+          "file": "artifacts/full-videos/E1M6-telemetry.json",
+          "sha256": "4d4ac018ecdb2593c581fdf522deeafca04a80f1c5a07ac05bf8ae999068d76b",
+          "exactFeatureContent": true
+        },
+        {
+          "file": "artifacts/full-videos/E1M6/checks.json",
+          "sha256": "85c89f002490b9795a1c4b00e82888a27bad18aba21dec42343a5a87575f26f0",
+          "exactFeatureContent": true
+        },
+        {
+          "file": "artifacts/full-videos/E1M6/manifest.json",
+          "sha256": "3224f449ebd1f1fe3421059f3b1221e0194fedeabd74fa058069b295b6c59290",
+          "exactFeatureContent": true
+        },
+        {
+          "file": "artifacts/full-videos/E1M6/virtual-samples.json",
+          "sha256": "9da3791e9205556d41541da3e6941f318dbb2cc1bf67f0d786886d7e10aabcb1",
+          "exactFeatureContent": true
+        },
+        {
+          "file": "artifacts/full-videos/E1M7-telemetry.json",
+          "sha256": "1481bbba23e415dd97c4f309a33d6d2f3336a66a39426c6ea311ccb89c737826",
+          "exactFeatureContent": true
+        },
+        {
+          "file": "artifacts/full-videos/E1M7/checks.json",
+          "sha256": "c264e89d1ab62bef172db8a7e34e6064718d1b17a19fb36abe8cadd316029302",
+          "exactFeatureContent": true
+        },
+        {
+          "file": "artifacts/full-videos/E1M7/manifest.json",
+          "sha256": "5c356362fbbe805f55d109d6bd3cfd67d2defd24b217d808178109179dfdd4e5",
+          "exactFeatureContent": true
+        },
+        {
+          "file": "artifacts/full-videos/E1M7/virtual-samples.json",
+          "sha256": "573ae5999ed1230a596e5fbf72a8f886480014a496533822e64575aa51bac5fc",
+          "exactFeatureContent": true
+        },
+        {
+          "file": "artifacts/full-videos/E1M8-telemetry.json",
+          "sha256": "652e145eb18812077947a21da9dc8191db0fd0831c7fe3acfb1dda98855ad936",
+          "exactFeatureContent": true
+        },
+        {
+          "file": "artifacts/full-videos/E1M8/checks.json",
+          "sha256": "04298f92bdf8b667455f8dbc50f31fac2b729d3629b92b1827245c9751355250",
+          "exactFeatureContent": true
+        },
+        {
+          "file": "artifacts/full-videos/E1M8/manifest.json",
+          "sha256": "905a26b38f7d97950fb2d8d7dabd024b2d07b4c56afb16c80492766289d2b9d1",
+          "exactFeatureContent": true
+        },
+        {
+          "file": "artifacts/full-videos/E1M8/virtual-samples.json",
+          "sha256": "f89f148572a1029b4747f268219a35486098a161f65900b92bf084681d65f158",
+          "exactFeatureContent": true
+        },
+        {
+          "file": "artifacts/full-videos/E1M9-telemetry.json",
+          "sha256": "6cb459b2ca48303aebc2114a242de48a7aef25908528437065e7b6703cfe7faa",
+          "exactFeatureContent": true
+        },
+        {
+          "file": "artifacts/full-videos/E1M9/checks.json",
+          "sha256": "a76851b2da597ce4859f2a5eaf2840287ff74b2b3ed96ed5740ce9a8c0048f6f",
+          "exactFeatureContent": true
+        },
+        {
+          "file": "artifacts/full-videos/E1M9/manifest.json",
+          "sha256": "201f4f18389de5365b9d279a8472380628d0760426ae9297c54698be4b011ed5",
+          "exactFeatureContent": true
+        },
+        {
+          "file": "artifacts/full-videos/E1M9/virtual-samples.json",
+          "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+          "exactFeatureContent": true
+        },
+        {
+          "file": "artifacts/full-videos/EPISODE-SUMMARY.md",
+          "sha256": "9f4cd9db1b49dfa9ff52b877fe1c74ca888af1b0ced7d57d5b3fb87b6ecdf656",
+          "exactFeatureContent": true
+        },
+        {
+          "file": "artifacts/full-videos/acceptance.json",
+          "sha256": "fee21381ae6cf053bc946a3c5e820e1c14b0fefd257dedb82e579e65bbdbcaa8",
+          "exactFeatureContent": true
+        },
+        {
+          "file": "artifacts/full-videos/attempt-inventory.json",
+          "sha256": "72dfa842d252af2273737f3fde6f353e7984f81b606bab55c9c33708f51acb9f",
+          "exactFeatureContent": true
+        },
+        {
+          "file": "artifacts/full-videos/changed-files.txt",
+          "sha256": "e865c2bfba8dc644e04ad3ea4a941725484a893dfeac7a423a07aba370f82581",
+          "exactFeatureContent": true
+        },
+        {
+          "file": "artifacts/full-videos/checkpoint-four/E1M1-telemetry.json",
+          "sha256": "7820f852231ab2409da2aa44f5ac5387a46f201cb1f9aaf29626c8129f5431ef",
+          "exactFeatureContent": true
+        },
+        {
+          "file": "artifacts/full-videos/checkpoint-four/E1M2-telemetry.json",
+          "sha256": "5aec4b65a34deb4f0b2ea2233c7589ed55b53671cc9b5c64cdfc74ebc554ccb8",
+          "exactFeatureContent": true
+        },
+        {
+          "file": "artifacts/full-videos/checkpoint-four/E1M3-telemetry.json",
+          "sha256": "06da499c2db05ae403ad59ed1c27dd06da9d8e465d0892be6e7cab574f5f8f8a",
+          "exactFeatureContent": true
+        },
+        {
+          "file": "artifacts/full-videos/checkpoint-four/E1M4-telemetry.json",
+          "sha256": "70e7ff2f26c0ed5fd7e6d4efd04143d35c0681a71d0ce4bf441963e689e9c256",
+          "exactFeatureContent": true
+        },
+        {
+          "file": "artifacts/full-videos/checkpoint-four/episode-telemetry.json",
+          "sha256": "52fbf2f88282ee0362300123abc949dad0554b4845f145f85b050a004c641d98",
+          "exactFeatureContent": true
+        },
+        {
+          "file": "artifacts/full-videos/checkpoint-six/E1M1-telemetry.json",
+          "sha256": "7820f852231ab2409da2aa44f5ac5387a46f201cb1f9aaf29626c8129f5431ef",
+          "exactFeatureContent": true
+        },
+        {
+          "file": "artifacts/full-videos/checkpoint-six/E1M2-telemetry.json",
+          "sha256": "5aec4b65a34deb4f0b2ea2233c7589ed55b53671cc9b5c64cdfc74ebc554ccb8",
+          "exactFeatureContent": true
+        },
+        {
+          "file": "artifacts/full-videos/checkpoint-six/E1M3-telemetry.json",
+          "sha256": "06da499c2db05ae403ad59ed1c27dd06da9d8e465d0892be6e7cab574f5f8f8a",
+          "exactFeatureContent": true
+        },
+        {
+          "file": "artifacts/full-videos/checkpoint-six/E1M4-telemetry.json",
+          "sha256": "70e7ff2f26c0ed5fd7e6d4efd04143d35c0681a71d0ce4bf441963e689e9c256",
+          "exactFeatureContent": true
+        },
+        {
+          "file": "artifacts/full-videos/checkpoint-six/E1M5-telemetry.json",
+          "sha256": "ff163108f71389e8f567be303352ca08ace064af6af3180c91171bb772149665",
+          "exactFeatureContent": true
+        },
+        {
+          "file": "artifacts/full-videos/checkpoint-six/E1M6-telemetry.json",
+          "sha256": "d55ac2524a45f3287d290b55e4ca77746fd7f1746b6f530017a1c416b848dea4",
+          "exactFeatureContent": true
+        },
+        {
+          "file": "artifacts/full-videos/checkpoint-six/episode-telemetry.json",
+          "sha256": "62bc5502bd0351f3946691567b5b7b003b541c5bdbb724c6f90f03c2deb1910b",
+          "exactFeatureContent": true
+        },
+        {
+          "file": "artifacts/full-videos/diagnostics/E1M2-allocation-divergence.json",
+          "sha256": "f496075f5b657f53c5db1f18c2e4f78bb6cd06697eb249c451db64256052c301",
+          "exactFeatureContent": true
+        },
+        {
+          "file": "artifacts/full-videos/diagnostics/patch-verification.json",
+          "sha256": "e12314763b7dbb458128172be7b09d10fcd8d26dde1c7c2062645155f092ec4e",
+          "exactFeatureContent": true
+        },
+        {
+          "file": "artifacts/full-videos/environment.json",
+          "sha256": "f00c6abb58f7fce89bf7d92f007e164ccc8c3250f5670ef982f40d8816dbb458",
+          "exactFeatureContent": true
+        },
+        {
+          "file": "artifacts/full-videos/episode-telemetry.json",
+          "sha256": "bc7f13581a60f17f51d144a2479685645b60c3e961f7e92ac40872de8eb07ef0",
+          "exactFeatureContent": true
+        },
+        {
+          "file": "artifacts/full-videos/focused/focused-forge.json",
+          "sha256": "1e4a9313ede1485b95bc60771f7d8eac63f2288ba497f0d0c7870a0164c557cc",
+          "exactFeatureContent": true
+        },
+        {
+          "file": "artifacts/full-videos/focused/intermission-linking-recheck.json",
+          "sha256": "e8b0838e7c1e17aeb1b3068a68ddc048a305ad2655e0462154b0fe5596412748",
+          "exactFeatureContent": true
+        },
+        {
+          "file": "artifacts/full-videos/focused/summary.json",
+          "sha256": "7e67fd1cadd6f6d605b031b95e763941f5cff502681046bb0ac6507dd77dd7fd",
+          "exactFeatureContent": true
+        },
+        {
+          "file": "artifacts/full-videos/handoff-metadata-audit.json",
+          "sha256": "fd5403673491a6be7096730e262c9930eb371e3373ac9ae387eb7941a46d2c9d",
+          "exactFeatureContent": true
+        },
+        {
+          "file": "artifacts/full-videos/historical-preservation.json",
+          "sha256": "e29bfe051a6ef18fcf7a18888aedc263a4db4e2a2c2e24a898393d2994c1ad73",
+          "exactFeatureContent": true
+        },
+        {
+          "file": "artifacts/full-videos/host-summary.json",
+          "sha256": "9af7668fc8f1c2fbe5d25af53562ca65bed06bd22eab6c267fe9429867e012f6",
+          "exactFeatureContent": true
+        },
+        {
+          "file": "artifacts/full-videos/pilot-long-v2/E1M1-telemetry.json",
+          "sha256": "5d0ca9dc5bd785e0e6123923f65c8e4bc54f975dfb87334d8fa39d52674f31e7",
+          "exactFeatureContent": true
+        },
+        {
+          "file": "artifacts/full-videos/pilot-long-v2/E1M1/checks.json",
+          "sha256": "90c693176ef16a2c3a3815278e47021616169de95a44c1fe0641aeae36cfec40",
+          "exactFeatureContent": true
+        },
+        {
+          "file": "artifacts/full-videos/pilot-long-v2/E1M1/manifest.json",
+          "sha256": "de816722013f3dcdae05e3db91a38cf7728d4879a882c8c4b599b277857fcca7",
+          "exactFeatureContent": true
+        },
+        {
+          "file": "artifacts/full-videos/pilot-long-v2/E1M1/virtual-samples.json",
+          "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+          "exactFeatureContent": true
+        },
+        {
+          "file": "artifacts/full-videos/pilot-long-v2/episode-telemetry.json",
+          "sha256": "2d77590738654fcdf7ad6d8d31e592673abd89a4f5c74f437e56290307eee2c9",
+          "exactFeatureContent": true
+        },
+        {
+          "file": "artifacts/full-videos/pilot-short-v2/E1M1-telemetry.json",
+          "sha256": "a7d2fa3527996c5c29ec0b70f048c46a7a3a896656bca984bcc8b994db5fa3df",
+          "exactFeatureContent": true
+        },
+        {
+          "file": "artifacts/full-videos/pilot-short-v2/E1M1/checks.json",
+          "sha256": "775e68a564e42814922e3da8863d5bcda8259999c80623fa7fb4c1b2dbbcf743",
+          "exactFeatureContent": true
+        },
+        {
+          "file": "artifacts/full-videos/pilot-short-v2/E1M1/manifest.json",
+          "sha256": "cf3a33bad6491e07d273f28f293d46538b6f174f261986811f32e79deae6a55d",
+          "exactFeatureContent": true
+        },
+        {
+          "file": "artifacts/full-videos/pilot-short-v2/E1M1/virtual-samples.json",
+          "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+          "exactFeatureContent": true
+        },
+        {
+          "file": "artifacts/full-videos/pilot-short-v2/comparison.json",
+          "sha256": "4ec0594c821c7e88004263eb62700f6fc84fcfbc109bd5d2412710c88b5ffca3",
+          "exactFeatureContent": true
+        },
+        {
+          "file": "artifacts/full-videos/pilot-short-v2/episode-telemetry.json",
+          "sha256": "daaf8f963045a7765613d9b36c1f3ea75fce0fad5d8f648dda29797cb13c5c19",
+          "exactFeatureContent": true
+        },
+        {
+          "file": "artifacts/full-videos/pilot-v1/checkpoint.json",
+          "sha256": "c1cd4e6726dfaf3556b0e1a3bc6b646cbd242cc2811962ad0a126867cd5a75fc",
+          "exactFeatureContent": true
+        },
+        {
+          "file": "artifacts/full-videos/usage-attribution.json",
+          "sha256": "dd85254d76cc2d2c6901d6d9480189eaf4576482976a0c06a406e77f08189a63",
+          "exactFeatureContent": true
+        },
+        {
+          "file": "artifacts/full-videos/wipe/verification.json",
+          "sha256": "c587f96bfd5fc88846a108baa490c400f7e93f57c479400f00732262359523ef",
+          "exactFeatureContent": true
+        },
+        {
+          "file": "docs/ULTIMATE-FULL-VIDEOS.md",
+          "sha256": "6cf643e89fb8fc7bc7a3f23478f50a39e53b26615781d061156b2aea31ab60a6",
+          "exactFeatureContent": true
+        },
+        {
+          "file": "src/doom/f_wipe.sol",
+          "sha256": "12e3ead7d43142647ee9ee1f33be25ca6bf372116b432474dc315952464e95a7",
+          "exactFeatureContent": true
+        },
+        {
+          "file": "src/support/FullSpeedrunProbe.sol",
+          "sha256": "6bfbab27dfeeaa8073b9674b3a3afcb86f2c508af395bfe1c5327d37b1c49609",
+          "exactFeatureContent": true
+        },
+        {
+          "file": "test/fixtures/full_wipe/0-1.bin",
+          "sha256": "e30cc589d65ea5435f7ee4fbd86635c37c2a3550199b5968b34af6959bf25545",
+          "exactFeatureContent": true
+        },
+        {
+          "file": "test/fixtures/full_wipe/0-3.bin",
+          "sha256": "8cc04f3121c63b5359db2b940c5dbfd0596318f3ecc62139c8eac9b64f0345b2",
+          "exactFeatureContent": true
+        },
+        {
+          "file": "test/fixtures/full_wipe/1-1.bin",
+          "sha256": "b77a7158519ec533e302ccb9f479cddff6ffbde6b07f20defeaeb5634a4b6f34",
+          "exactFeatureContent": true
+        },
+        {
+          "file": "test/fixtures/full_wipe/127-1.bin",
+          "sha256": "4c2e43d4e4781813170e7548ec02de424f93020b768bdae9d5fedc4d33f6340a",
+          "exactFeatureContent": true
+        },
+        {
+          "file": "test/fixtures/full_wipe/127-7.bin",
+          "sha256": "f8d80a996c9210e4859f15d715d84eda4d118e6c2466e9ff6c72248a87585f57",
+          "exactFeatureContent": true
+        },
+        {
+          "file": "test/fixtures/full_wipe/255-1.bin",
+          "sha256": "9924bba6c69a62aba821d411a112fd5df512bf253f82d3883c75b837aa518be5",
+          "exactFeatureContent": true
+        },
+        {
+          "file": "test/fixtures/full_wipe/255-200.bin",
+          "sha256": "5a044c90c37b22ef97db04cea8f7175d69663f8fe98d9fccdb5ea693003b20c8",
+          "exactFeatureContent": true
+        },
+        {
+          "file": "test/fixtures/full_wipe/manifest.json",
+          "sha256": "08567bcdae3cf9e3f8ba32a5c3d34179b598d25d0b883b3a1fed32ade12c97a7",
+          "exactFeatureContent": true
+        },
+        {
+          "file": "test/unit/f_wipe.t.sol",
+          "sha256": "9897304e7a3cbd435eb9fefeeb9f78162e41f24fb220122f73ed79be4fe81235",
+          "exactFeatureContent": true
+        },
+        {
+          "file": "tools/reference/full_videos/README.md",
+          "sha256": "6ddfb9e5028b90c56f7273f5951428afa2f4301eebae72c8f04f6eaaf5683f82",
+          "exactFeatureContent": true
+        },
+        {
+          "file": "tools/reference/full_videos/acceptance.py",
+          "sha256": "b7fac65053d15d59938ce18bd760c5ec3c21d180d89adf9356e7d0331095be20",
+          "exactFeatureContent": true
+        },
+        {
+          "file": "tools/reference/full_videos/attempts.py",
+          "sha256": "a1b16213ae8ed6f2752df5c311aa94339d8c5aefdd9df199ac19791a5acee092",
+          "exactFeatureContent": true
+        },
+        {
+          "file": "tools/reference/full_videos/diagnostics/README.md",
+          "sha256": "87cbd70bdb89cb9157c9e05307e1d0efd1db968b226cf0e2f33c583c0e4809a4",
+          "exactFeatureContent": true
+        },
+        {
+          "file": "tools/reference/full_videos/diagnostics/evm-pixel-journal.patch",
+          "sha256": "fbed7ebe54cbf7868fb07fc238b642da05d45d5b2807726a638f04db81859043",
+          "exactFeatureContent": true
+        },
+        {
+          "file": "tools/reference/full_videos/diagnostics/native-pixel-journal.patch",
+          "sha256": "aaa2f5d80380ecb3ea72704895c2e687fa5683245bbdeba245f576dd0829b1a2",
+          "exactFeatureContent": true
+        },
+        {
+          "file": "tools/reference/full_videos/encode.py",
+          "sha256": "7d9afc149edd7ef9ae286320548f649699f9b5047da5198426b50b1db1887fb6",
+          "exactFeatureContent": true
+        },
+        {
+          "file": "tools/reference/full_videos/episode-report.py",
+          "sha256": "fe32be6142f41c6548b10f6cacf8dc974362a1f189ea0616a6311533cbe7f570",
+          "exactFeatureContent": true
+        },
+        {
+          "file": "tools/reference/full_videos/export.py",
+          "sha256": "f0b05611d9a014b60e938469e9b98962a40489081617333ecf3d5536b398d038",
+          "exactFeatureContent": true
+        },
+        {
+          "file": "tools/reference/full_videos/history.py",
+          "sha256": "d743f596e7437fe8ba5508434bc58000e3ecf76bc03a3683bbb587597b6be0ec",
+          "exactFeatureContent": true
+        },
+        {
+          "file": "tools/reference/full_videos/host-summary.py",
+          "sha256": "14dd8be6ce84bdc2ac7e6e48f3f626663c73c37958fa0d667209c5701429a2cb",
+          "exactFeatureContent": true
+        },
+        {
+          "file": "tools/reference/full_videos/monitor.py",
+          "sha256": "adc87776ef3c373df80e199425b1ad5f33201c0868aae472127257079b79f7dd",
+          "exactFeatureContent": true
+        },
+        {
+          "file": "tools/reference/full_videos/native-borrowed-suite.py",
+          "sha256": "92a361ef0a5fd431a6e6383d128d61d30a2ad9f64e3cd1cbee58055e9d908965",
+          "exactFeatureContent": true
+        },
+        {
+          "file": "tools/reference/full_videos/native-build-short.py",
+          "sha256": "c77e4d98ebcfc2886b401ac016a15c2de9e901175ac3cf2529b665ad5ec17e00",
+          "exactFeatureContent": true
+        },
+        {
+          "file": "tools/reference/full_videos/native-build.py",
+          "sha256": "0833f6ed03cd746a874ae467e965344a2e0f6f03d51541a8145646b34b2f62d2",
+          "exactFeatureContent": true
+        },
+        {
+          "file": "tools/reference/full_videos/native-frames.py",
+          "sha256": "afe8d77697e04f1c120ba78e7cf0710a8182529c24ab4f198f9110c2c606ec5d",
+          "exactFeatureContent": true
+        },
+        {
+          "file": "tools/reference/full_videos/native-short-ui.py",
+          "sha256": "5e0b96979be1ea437d6b20bb9821a2022778b61c5c5f0d375086b8c476214559",
+          "exactFeatureContent": true
+        },
+        {
+          "file": "tools/reference/full_videos/native-suite.py",
+          "sha256": "8b19596124e65bd96dbf222a5d8f1ce11bde85de063d9f053fb3fb18e8702c95",
+          "exactFeatureContent": true
+        },
+        {
+          "file": "tools/reference/full_videos/native-ui.py",
+          "sha256": "d40034432e2acde4a28752113c20b12373d7bfaa8adbd5acce6aebee73b7a50d",
+          "exactFeatureContent": true
+        },
+        {
+          "file": "tools/reference/full_videos/pixel-trace.mjs",
+          "sha256": "13d517e43ef1f87fd29d5cbeb28c5783b2b5520c50a7b4115da1d97f231efd2e",
+          "exactFeatureContent": true
+        },
+        {
+          "file": "tools/reference/full_videos/prepare.py",
+          "sha256": "c89b526b74ba1045e92cab45f7433c47702da2a266aaa3c19dcf74b53c8c4fde",
+          "exactFeatureContent": true
+        },
+        {
+          "file": "tools/reference/full_videos/record-short-finale.mjs",
+          "sha256": "47bd56377d94af50ce5719bdcc939561e430c5c7e5ed2dd2a52b2900aaaf7f92",
+          "exactFeatureContent": true
+        },
+        {
+          "file": "tools/reference/full_videos/record-short.mjs",
+          "sha256": "e8e3cc3996a414931630eaab9f58b9b0dbe2bd8d25bf90a500fec3d2d9805214",
+          "exactFeatureContent": true
+        },
+        {
+          "file": "tools/reference/full_videos/record.mjs",
+          "sha256": "acca25ed6d0d3ea98010eaf4f3cb05d85bb36fa5bf68db8eb07a9e45f7ab8f56",
+          "exactFeatureContent": true
+        },
+        {
+          "file": "tools/reference/full_videos/rollback.mjs",
+          "sha256": "1542f6100f7c974f38f8e56eba9c23239f392e5fddd9f7946b08b415f94d8439",
+          "exactFeatureContent": true
+        },
+        {
+          "file": "tools/reference/full_videos/runtime.mjs",
+          "sha256": "e0758299f79275e4fd9ba0fcde07552ed46583393f2b84cff4f325712847cd24",
+          "exactFeatureContent": true
+        },
+        {
+          "file": "tools/reference/full_videos/suite.py",
+          "sha256": "49656a8d7fb06333fcd7f791bf23a64f35fbcc8f0a350a4e194ee894b5e5468a",
+          "exactFeatureContent": true
+        },
+        {
+          "file": "tools/reference/full_videos/telemetry.py",
+          "sha256": "5285838f930deb4d00e835d23a26df8605a328e00587ce6f5a53df37fa03dc37",
+          "exactFeatureContent": true
+        },
+        {
+          "file": "tools/reference/full_videos/verify-states.mjs",
+          "sha256": "6c947d7546daba0b37cb8836afbde26ff1a678249af94e73e1f7964a15945703",
+          "exactFeatureContent": true
+        },
+        {
+          "file": "tools/reference/full_videos/verify-ui.py",
+          "sha256": "d912024bdf3e294847f37e4e37d3b30b2e7a15ad9764cf6b1de3985e82bbe706",
+          "exactFeatureContent": true
+        },
+        {
+          "file": "tools/reference/full_videos/verify.py",
+          "sha256": "6ba275e4c0d9e741bbb63e1dfaf95f45f43f53ad27e867d994b56136d696fcdc",
+          "exactFeatureContent": true
+        },
+        {
+          "file": "tools/reference/full_videos/visual-qa.py",
+          "sha256": "58982848f15a48cba02ab29f6c4daaebb5d162c03b8922cd310821cbcd84b24e",
+          "exactFeatureContent": true
+        },
+        {
+          "file": "tools/reference/full_videos/wipe-frames.py",
+          "sha256": "b5b740a10e779010b86c590c497744ec9a83481304d73e5d6705469bc43a8684",
+          "exactFeatureContent": true
+        },
+        {
+          "file": "tools/reference/full_videos/wipe-native.py",
+          "sha256": "8e09778b3c56ecd449877f69144907c19824e0a40deb1fe2dbcbda13c1dd252b",
+          "exactFeatureContent": true
+        }
+      ]
+    },
+    {
+      "branch": "feat/options-menu",
+      "tip": "184ea6624e6ea37a18f1d265ece66a172e6be609",
+      "preservedFiles": [
+        {
+          "file": "artifacts/options-level-selection/api-compatibility/browser.json",
+          "sha256": "176a225d8361838eab0dcffcdd78400332dbcd2137b550cdb7548f1047a10df8",
+          "exactFeatureContent": true
+        },
+        {
+          "file": "artifacts/options-level-selection/api-compatibility/focused.json",
+          "sha256": "fcca64d176895c92cb77fe4182e6d3a0dc8fceaf214781ca0597a437df24b18d",
+          "exactFeatureContent": true
+        },
+        {
+          "file": "artifacts/options-level-selection/api-compatibility/handoff.json",
+          "sha256": "2170a7154586fe5939f5471dd5dda0f39204283e88e1f2d725df3cae5c847a0d",
+          "exactFeatureContent": true
+        },
+        {
+          "file": "artifacts/options-level-selection/api-compatibility/native-startup.json",
+          "sha256": "f156406b614828818c779267d356cfd8be30b386001b195edc27277702028ef0",
+          "exactFeatureContent": true
+        },
+        {
+          "file": "artifacts/options-level-selection/api-compatibility/native-status-resize.json",
+          "sha256": "8629eba852bb812f7e1568a6e2b3d8c0d97c32035fff0f1428a479f017025844",
+          "exactFeatureContent": true
+        },
+        {
+          "file": "artifacts/options-level-selection/api-compatibility/usage-checkpoint.json",
+          "sha256": "c3df523c0571fedae7848f5052361eefe48301f5bec95f3e6a7e26577d85edf2",
+          "exactFeatureContent": true
+        },
+        {
+          "file": "artifacts/options-level-selection/api-compatibility/verification.json",
+          "sha256": "29e233d5cf73dbba967abcff9446d12e82b27a0c7729c1d25ae7e6af82112aac",
+          "exactFeatureContent": true
+        },
+        {
+          "file": "artifacts/options-level-selection/browser.json",
+          "sha256": "d8ad81e439ad89c8bed48afccb712d53e97f66f471d1d22afc94f3434d7b74dd",
+          "exactFeatureContent": true
+        },
+        {
+          "file": "artifacts/options-level-selection/focused.json",
+          "sha256": "fcca64d176895c92cb77fe4182e6d3a0dc8fceaf214781ca0597a437df24b18d",
+          "exactFeatureContent": true
+        },
+        {
+          "file": "artifacts/options-level-selection/native-startup.json",
+          "sha256": "f156406b614828818c779267d356cfd8be30b386001b195edc27277702028ef0",
+          "exactFeatureContent": true
+        },
+        {
+          "file": "artifacts/options-level-selection/native-status-resize.json",
+          "sha256": "8629eba852bb812f7e1568a6e2b3d8c0d97c32035fff0f1428a479f017025844",
+          "exactFeatureContent": true
+        },
+        {
+          "file": "artifacts/options-level-selection/verification.json",
+          "sha256": "9e4fd9cab465e891782bc555f19f73199d43849a9b0e3decfd3ed97dbee8dded",
+          "exactFeatureContent": true
+        },
+        {
+          "file": "docs/OPTIONS-LEVEL-SELECTION.md",
+          "sha256": "b0c136f1eb97f04832f6c1e4404c93b96d4f1d0002b1d9dae53296b01690a065",
+          "exactFeatureContent": true
+        },
+        {
+          "file": "src/doom/m_menu.sol",
+          "sha256": "43b17ce0df92eabe20e97a69ee04051678c89ca6f9de4c2bc25d48f4fe888f69",
+          "exactFeatureContent": true
+        },
+        {
+          "file": "src/evm/Doom.sol",
+          "sha256": "6d9bf4e7e68b791522d76f6d8868b48ed4c6947249aeb911b6af6d192f72f6da",
+          "exactFeatureContent": true
+        },
+        {
+          "file": "src/evm/Doom2.sol",
+          "sha256": "59a1092d26d130da7429689de665d9eccf7744a0ed388b3eb520e5da882329ff",
+          "exactFeatureContent": true
+        },
+        {
+          "file": "src/evm/DoomMenu.sol",
+          "sha256": "c9c73f4ab11fa0cc3431cc13e4b4102e19012aa1ac749c91b1446d0da6dd34bc",
+          "exactFeatureContent": true
+        },
+        {
+          "file": "src/evm/DoomUI.sol",
+          "sha256": "2b66f6d024e16f3c202ea6da84ec5875af4d7ea809c2f29cbf65310fdf24bb38",
+          "exactFeatureContent": true
+        },
+        {
+          "file": "src/evm/EpisodeRuntime.sol",
+          "sha256": "876c1a7c83bb644631f9e3d5af73a4bb383d255e3c93cbd224b910a91973cde5",
+          "exactFeatureContent": true
+        },
+        {
+          "file": "test/fixtures/options_menu/COPYING-Freedoom.txt",
+          "sha256": "7c62f2c520769c798774f416637eec4921e5f0aafdac1245ae7c8a8cf65fe102",
+          "exactFeatureContent": true
+        },
+        {
+          "file": "test/fixtures/options_menu/directory.bin",
+          "sha256": "b9f0de6bfe609974b9a40339badac1d245ec43982e2b1f7a666543dfd856ac8d",
+          "exactFeatureContent": true
+        },
+        {
+          "file": "test/fixtures/options_menu/endgame.bin",
+          "sha256": "e04188129ffe2523dabdfe62ce7cc8fd7697918ef503736f1e29951f61196d0e",
+          "exactFeatureContent": true
+        },
+        {
+          "file": "test/fixtures/options_menu/manifest.json",
+          "sha256": "bff0b4efdc7948bc1851d36260a144baf3efd7b146e09654e90378b699303f81",
+          "exactFeatureContent": true
+        },
+        {
+          "file": "test/fixtures/options_menu/options-hashes.bin",
+          "sha256": "ba82698206d784855a10bec4d62a30fdc929e397c892157f3fa45b984aeaccd8",
+          "exactFeatureContent": true
+        },
+        {
+          "file": "test/fixtures/options_menu/options-responder.bin",
+          "sha256": "9ad4e9da1071a8e48e1895a6bf12d8410dc1bd7f2db52e16e084bbb97a5f6a74",
+          "exactFeatureContent": true
+        },
+        {
+          "file": "test/fixtures/options_menu/resources.bin",
+          "sha256": "39320ab1a753afeb539df99b14b0895d09e7b46e7fbcaad0cc63d69d62167d07",
+          "exactFeatureContent": true
+        },
+        {
+          "file": "test/unit/OptionsMenu.t.sol",
+          "sha256": "48f2079bf229e4221840255b7273bad767b29968cc1b65a38b2a6effd191ed60",
+          "exactFeatureContent": true
+        },
+        {
+          "file": "test/unit/m_menu.t.sol",
+          "sha256": "f995bc60f25e9f881f6d21a74f5e5c9122469373c78105d7f8056a2c4240bc05",
+          "exactFeatureContent": true
+        },
+        {
+          "file": "tools/reference/options/browser.mjs",
+          "sha256": "e3862642b70822f5ad02ac613d2e8cf37a44cbc7dad46ae7effcb11ac8433494",
+          "exactFeatureContent": true
+        },
+        {
+          "file": "tools/reference/options/certificate.py",
+          "sha256": "213f42e24e4014122706ffb5be61ba98e622d5d1f4567488d7e9721a6706837f",
+          "exactFeatureContent": true
+        },
+        {
+          "file": "tools/reference/options/features.mjs",
+          "sha256": "e32db2e61fe617a1849a849af5442c3bad99e2b189db77daae46527d143d5d9b",
+          "exactFeatureContent": true
+        },
+        {
+          "file": "tools/reference/options/focused.py",
+          "sha256": "1bf1496b5d4c6e72bd9496ccf4011a1ca0fd2e563861407038723e32bf173a6d",
+          "exactFeatureContent": true
+        },
+        {
+          "file": "tools/reference/options/host.c",
+          "sha256": "4abc5f760ea65c2455f23c56a8752f5c94c9d4c09d35b160670abd54fcbd86cf",
+          "exactFeatureContent": true
+        },
+        {
+          "file": "tools/reference/options/reference.py",
+          "sha256": "cd5c5bc9eeb623e5dedf341ffafba8fb390c781e0fa6380f1c0766ac128c6691",
+          "exactFeatureContent": true
+        },
+        {
+          "file": "tools/reference/options/startup-native.py",
+          "sha256": "da8a5af1527caafd040aa992386af439fbe491d27ddc15d98f79c9ae10d841af",
+          "exactFeatureContent": true
+        },
+        {
+          "file": "tools/reference/options/status-resize.py",
+          "sha256": "dd36b150bf0a4454a72bdc9814252a9d81b7e63891351e139e35d7559103524c",
+          "exactFeatureContent": true
+        }
+      ]
+    }
+  ],
+  "protectedBoundaries": [
+    {
+      "file": "src/doom/z_zone_backing.sol",
+      "sha256": "e63201d3bb45e4c8d0796480d4e9facd4deffd4d8a9dd730bed10ff4a108d0b1",
+      "exactBaseline": true
+    },
+    {
+      "file": "src/doom/z_zone_virtual.sol",
+      "sha256": "8bc309e89fa4da0667dc50a45adb9f91c58982640e1b3f5f9d38e49893f1e960",
+      "exactBaseline": true
+    },
+    {
+      "file": "src/doom/z_zone_types.sol",
+      "sha256": "11ab3f95678ba3852ab5f0c2dc9e85e715bec6897e65f04cd1919bba9bb73dbd",
+      "exactBaseline": true
+    },
+    {
+      "file": "src/doom/r_draw.sol",
+      "sha256": "afe958ea0c2962b739bff58b98d8bccc25c48d3d0838cacd46142c242b5d6477",
+      "exactBaseline": true
+    },
+    {
+      "file": "src/evm/DoomGame.sol",
+      "sha256": "d9451a915ab977bae137340e3e6626a270a4b84b8b6ea9449a8c4f0f578296df",
+      "exactBaseline": true
+    },
+    {
+      "file": "foundry.toml",
+      "sha256": "afe04c66f0e684b5a936821f6543605a3739f62164ceb4398426db7403452393",
+      "exactBaseline": true
+    },
+    {
+      "file": "execution-budget.json",
+      "sha256": "acde01f1b9cf248f9265f1ffcff7181d01d77620a2dfcd9a4d4d0b1c79df2be7",
+      "exactBaseline": true
+    },
+    {
+      "file": "AGENTS.md",
+      "sha256": "2d6db59d58f7d8304ef2e0c4064f9c62223f820a8988e4207473552ae1be11c4",
+      "exactBaseline": true
+    },
+    {
+      "file": "web/launcher.mjs",
+      "sha256": "a49a7575288038739bcf8abec097fb1b28cf9974b008a4b3fc54cbff6774b40d",
+      "exactBaseline": true
+    },
+    {
+      "file": "web/install-engine.mjs",
+      "sha256": "9a800267c142aaa091fd58b2aaca443f4f96b9fdca4c67771093e89c5f3741b7",
+      "exactBaseline": true
+    },
+    {
+      "file": "web/browser-profiles.mjs",
+      "sha256": "c32fc60a6f1a3f8ba39089f0f30621e352ae5744ffffdb2333ed39bd59597643",
+      "exactBaseline": true
+    },
+    {
+      "file": "web/protocol.mjs",
+      "sha256": "fec5104a0e13b7ca8666200431a1804d53cdb6537c1f0f8f02fb5b69dd70f47e",
+      "exactBaseline": true
+    },
+    {
+      "file": "web/ui-palette.mjs",
+      "sha256": "31614c2e32d7105ee075758bb73f5c7cc5f5944a240edaee26e6c374cb415645",
+      "exactBaseline": true
+    }
+  ],
+  "originalCCommit": "a77dfb96cb91780ca334d0d4cfd86957558007e0"
+}

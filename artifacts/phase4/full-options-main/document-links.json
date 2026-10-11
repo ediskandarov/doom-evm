@@ -1,0 +1,37 @@
+[
+  {
+    "document": "docs/FULL-VIDEO-OPTIONS-INTEGRATION.md",
+    "target": "../artifacts/phase4/full-options-main/integration.json",
+    "exists": true
+  },
+  {
+    "document": "docs/FULL-VIDEO-OPTIONS-INTEGRATION.md",
+    "target": "../artifacts/full-videos/EPISODE-SUMMARY.md",
+    "exists": true
+  },
+  {
+    "document": "docs/FULL-VIDEO-OPTIONS-INTEGRATION.md",
+    "target": "ULTIMATE-FULL-VIDEOS.md",
+    "exists": true
+  },
+  {
+    "document": "docs/FULL-VIDEO-OPTIONS-INTEGRATION.md",
+    "target": "OPTIONS-LEVEL-SELECTION.md",
+    "exists": true
+  },
+  {
+    "document": "docs/FULL-VIDEO-OPTIONS-INTEGRATION.md",
+    "target": "../artifacts/options-level-selection/api-compatibility/handoff.json",
+    "exists": true
+  },
+  {
+    "document": "docs/FULL-VIDEO-OPTIONS-INTEGRATION.md",
+    "target": "../artifacts/full-videos/diagnostics/E1M2-allocation-divergence.json",
+    "exists": true
+  },
+  {
+    "document": "tools/reference/full_options/README.md",
+    "target": "../../../docs/FULL-VIDEO-OPTIONS-INTEGRATION.md",
+    "exists": true
+  }
+]

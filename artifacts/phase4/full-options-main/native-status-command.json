@@ -1,0 +1,12 @@
+{
+  "command": [
+    "python3",
+    "tools/reference/options/status-resize.py"
+  ],
+  "cwd": ".",
+  "startedUtc": "2026-10-11T16:37:42.675701+00:00",
+  "endedUtc": "2026-10-11T16:37:44.898510+00:00",
+  "elapsedSeconds": 2.22242454206571,
+  "exitCode": 0,
+  "rawOutput": "/Users/eduard/sandbox/doom-evm/artifacts/phase4/full-options-main/native-status.log"
+}

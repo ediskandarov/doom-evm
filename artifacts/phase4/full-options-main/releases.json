@@ -1,0 +1,28 @@
+[
+  {
+    "profile": "episode",
+    "releaseSha256": "9bf0ff9ba87733870f4b1251a79818ce787ef5e1e8e3231b06051054f543c6dd",
+    "runtimeBytes": 895029,
+    "runtimeSha256": "d3d807bfa4b6f15c08c926ead23ad33e0d395c24a7c39732ff45c0a4cd7e0ce8",
+    "releaseChangedFromSourceCheckpoint": true,
+    "keys": [
+      "bytecode",
+      "runtime",
+      "immutableReferences",
+      "methods"
+    ]
+  },
+  {
+    "profile": "commercial",
+    "releaseSha256": "0288b65a0b9fad8b66c001e5ab10a7822142f36539c05ccb18e4010a6a6be756",
+    "runtimeBytes": 876852,
+    "runtimeSha256": "8c3beafc2b91420681f1371e7088050f646e72487ea5f690c9556dddd8cff546",
+    "releaseChangedFromSourceCheckpoint": true,
+    "keys": [
+      "bytecode",
+      "runtime",
+      "immutableReferences",
+      "methods"
+    ]
+  }
+]

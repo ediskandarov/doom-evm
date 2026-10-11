@@ -1,0 +1,4 @@
+{
+  "executedRunnerSha256": "ca7eaac48605301e99be5d3e0b899c9b56d59500adeb4b320482833e96172c79",
+  "change": "Trim one generated blank line trailing whitespace; no executable change or repeated EVM gate."
+}

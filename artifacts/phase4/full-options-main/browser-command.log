@@ -1,0 +1,226 @@
+PASS Canvas freedoom original EVM menu
+PASS Canvas freedoom episode menu
+PASS Canvas freedoom original skill menu
+PASS Canvas freedoom actual first-map gameplay
+PASS Canvas freedoom held movement
+PASS Canvas freedoom open main
+PASS Canvas freedoom SELECT LEVEL
+PASS Canvas freedoom map 1 → original skills
+PASS Canvas freedoom skill 2
+PASS native/EVM map skill freedoom 1 2
+PASS Canvas freedoom open main
+PASS Canvas freedoom SELECT LEVEL
+PASS Canvas freedoom map 1 → original skills
+PASS Canvas freedoom skill 4
+PASS Canvas freedoom Nightmare confirmed
+PASS native/EVM map skill freedoom 1 4
+PASS Canvas freedoom open main
+PASS Canvas freedoom last-map skill selection
+PASS Canvas freedoom skill Back to list
+PASS Canvas freedoom list Back to main
+PASS Canvas freedoom Nightmare cancellation prompt
+PASS Canvas freedoom Nightmare cancel
+PASS Canvas freedoom original inventory cheat
+PASS Canvas freedoom open main
+PASS Canvas freedoom SELECT LEVEL
+PASS Canvas freedoom map 9 → original skills
+PASS Canvas freedoom skill 2
+PASS native/EVM map skill freedoom 9 2
+PASS Canvas freedoom open main
+PASS Canvas freedoom original NEW GAME
+PASS Canvas freedoom original E1 episode
+PASS Canvas freedoom original first-map startup
+PASS Canvas freedoom open main
+PASS Canvas freedoom Options
+PASS Canvas freedoom Messages OFF
+PASS Canvas freedoom close Options
+PASS Canvas freedoom forced Messages OFF HUD
+PASS Canvas freedoom open main
+PASS Canvas freedoom SELECT LEVEL
+PASS Canvas freedoom map 1 → original skills
+PASS Canvas freedoom skill 2
+PASS native/EVM map skill freedoom 1 2
+PASS Canvas freedoom OFF gameplay message
+PASS Canvas freedoom open main
+PASS Canvas freedoom reopen persists OFF
+PASS Canvas freedoom screen slider
+PASS Canvas freedoom full-screen viewport
+PASS Canvas freedoom upper size clamp
+PASS Canvas freedoom status bar and lower size clamp
+PASS Canvas freedoom deferred no-render size applied
+PASS Canvas freedoom restore status-bar after deferred request
+PASS Canvas freedoom existing fullscreen API true
+PASS Canvas freedoom existing fullscreen API false
+PASS Canvas freedoom Messages ON
+PASS Canvas freedoom resume ON
+PASS Canvas freedoom forced Messages ON HUD
+PASS Canvas freedoom open main
+PASS Canvas freedoom SELECT LEVEL
+PASS Canvas freedoom map 1 → original skills
+PASS Canvas freedoom skill 2
+PASS native/EVM map skill freedoom 1 2
+PASS Canvas freedoom ON gameplay message
+PASS Canvas freedoom open main
+PASS Canvas freedoom End Game confirmation
+PASS Canvas freedoom End Game cancel
+PASS Canvas freedoom open main
+PASS Canvas freedoom Options rollback boundary
+PASS Canvas freedoom same sequence size retry
+PASS Canvas freedoom End Game confirmed title
+PASS Canvas freedoom title End Game guarded
+PASS Canvas freedoom Back
+PASS Canvas freedoom original NEW GAME
+PASS Canvas freedoom original E1 episode
+PASS Canvas freedoom original first-map startup
+PASS Canvas ultimate original EVM menu
+PASS Canvas ultimate episode menu
+PASS Canvas ultimate original skill menu
+PASS Canvas ultimate actual first-map gameplay
+PASS Canvas ultimate held movement
+PASS Canvas ultimate open main
+PASS Canvas ultimate SELECT LEVEL
+PASS Canvas ultimate map 1 → original skills
+PASS Canvas ultimate skill 2
+PASS native/EVM map skill ultimate 1 2
+PASS Canvas ultimate open main
+PASS Canvas ultimate SELECT LEVEL
+PASS Canvas ultimate map 1 → original skills
+PASS Canvas ultimate skill 4
+PASS Canvas ultimate Nightmare confirmed
+PASS native/EVM map skill ultimate 1 4
+PASS Canvas ultimate open main
+PASS Canvas ultimate last-map skill selection
+PASS Canvas ultimate skill Back to list
+PASS Canvas ultimate list Back to main
+PASS Canvas ultimate Nightmare cancellation prompt
+PASS Canvas ultimate Nightmare cancel
+PASS Canvas ultimate original inventory cheat
+PASS Canvas ultimate open main
+PASS Canvas ultimate SELECT LEVEL
+PASS Canvas ultimate map 9 → original skills
+PASS Canvas ultimate skill 2
+PASS native/EVM map skill ultimate 9 2
+PASS Canvas ultimate open main
+PASS Canvas ultimate original NEW GAME
+PASS Canvas ultimate original E1 episode
+PASS Canvas ultimate original first-map startup
+PASS Canvas ultimate open main
+PASS Canvas ultimate Options
+PASS Canvas ultimate Messages OFF
+PASS Canvas ultimate close Options
+PASS Canvas ultimate forced Messages OFF HUD
+PASS Canvas ultimate open main
+PASS Canvas ultimate SELECT LEVEL
+PASS Canvas ultimate map 1 → original skills
+PASS Canvas ultimate skill 2
+PASS native/EVM map skill ultimate 1 2
+PASS Canvas ultimate OFF gameplay message
+PASS Canvas ultimate open main
+PASS Canvas ultimate reopen persists OFF
+PASS Canvas ultimate screen slider
+PASS Canvas ultimate full-screen viewport
+PASS Canvas ultimate upper size clamp
+PASS Canvas ultimate status bar and lower size clamp
+PASS Canvas ultimate deferred no-render size applied
+PASS Canvas ultimate restore status-bar after deferred request
+PASS Canvas ultimate existing fullscreen API true
+PASS Canvas ultimate existing fullscreen API false
+PASS Canvas ultimate Messages ON
+PASS Canvas ultimate resume ON
+PASS Canvas ultimate forced Messages ON HUD
+PASS Canvas ultimate open main
+PASS Canvas ultimate SELECT LEVEL
+PASS Canvas ultimate map 1 → original skills
+PASS Canvas ultimate skill 2
+PASS native/EVM map skill ultimate 1 2
+PASS Canvas ultimate ON gameplay message
+PASS Canvas ultimate open main
+PASS Canvas ultimate End Game confirmation
+PASS Canvas ultimate End Game cancel
+PASS Canvas ultimate open main
+PASS Canvas ultimate Options rollback boundary
+PASS Canvas ultimate same sequence size retry
+PASS Canvas ultimate End Game confirmed title
+PASS Canvas ultimate title End Game guarded
+PASS Canvas ultimate Back
+PASS Canvas ultimate original NEW GAME
+PASS Canvas ultimate original E1 episode
+PASS Canvas ultimate original first-map startup
+PASS Canvas doom2 original EVM menu
+PASS Canvas doom2 original skill menu
+PASS Canvas doom2 actual first-map gameplay
+PASS Canvas doom2 held movement
+PASS Canvas doom2 open main
+PASS Canvas doom2 SELECT LEVEL
+PASS Canvas doom2 map 1 → original skills
+PASS Canvas doom2 skill 2
+PASS native/EVM map skill doom2 1 2
+PASS Canvas doom2 open main
+PASS Canvas doom2 SELECT LEVEL
+PASS Canvas doom2 map 1 → original skills
+PASS Canvas doom2 skill 4
+PASS Canvas doom2 Nightmare confirmed
+PASS native/EVM map skill doom2 1 4
+PASS Canvas doom2 open main
+PASS Canvas doom2 last-map skill selection
+PASS Canvas doom2 skill Back to list
+PASS Canvas doom2 list Back to main
+PASS Canvas doom2 Nightmare cancellation prompt
+PASS Canvas doom2 Nightmare cancel
+PASS Canvas doom2 original inventory cheat
+PASS Canvas doom2 open main
+PASS Canvas doom2 SELECT LEVEL
+PASS Canvas doom2 map 32 → original skills
+PASS Canvas doom2 skill 2
+PASS native/EVM map skill doom2 32 2
+PASS Canvas doom2 open main
+PASS Canvas doom2 original NEW GAME
+PASS Canvas doom2 original first-map startup
+PASS Canvas doom2 open main
+PASS Canvas doom2 Options
+PASS Canvas doom2 Messages OFF
+PASS Canvas doom2 close Options
+PASS Canvas doom2 forced Messages OFF HUD
+PASS Canvas doom2 open main
+PASS Canvas doom2 SELECT LEVEL
+PASS Canvas doom2 map 1 → original skills
+PASS Canvas doom2 skill 2
+PASS native/EVM map skill doom2 1 2
+PASS Canvas doom2 OFF gameplay message
+PASS Canvas doom2 open main
+PASS Canvas doom2 reopen persists OFF
+PASS Canvas doom2 screen slider
+PASS Canvas doom2 full-screen viewport
+PASS Canvas doom2 upper size clamp
+PASS Canvas doom2 status bar and lower size clamp
+PASS Canvas doom2 deferred no-render size applied
+PASS Canvas doom2 restore status-bar after deferred request
+PASS Canvas doom2 existing fullscreen API true
+PASS Canvas doom2 existing fullscreen API false
+PASS Canvas doom2 Messages ON
+PASS Canvas doom2 resume ON
+PASS Canvas doom2 forced Messages ON HUD
+PASS Canvas doom2 open main
+PASS Canvas doom2 SELECT LEVEL
+PASS Canvas doom2 map 1 → original skills
+PASS Canvas doom2 skill 2
+PASS native/EVM map skill doom2 1 2
+PASS Canvas doom2 ON gameplay message
+PASS Canvas doom2 open main
+PASS Canvas doom2 End Game confirmation
+PASS Canvas doom2 End Game cancel
+PASS Canvas doom2 open main
+PASS Canvas doom2 Options rollback boundary
+PASS Canvas doom2 same sequence size retry
+PASS Canvas doom2 End Game confirmed title
+PASS Canvas doom2 title End Game guarded
+PASS Canvas doom2 Back
+PASS Canvas doom2 original NEW GAME
+PASS Canvas doom2 original first-map startup
+PASS Canvas freedoom original EVM menu
+PASS Canvas freedoom resume saved gameplay
+PASS Canvas ultimate original EVM menu
+PASS Canvas ultimate resume saved gameplay
+PASS Canvas doom2 original EVM menu
+PASS Canvas doom2 resume saved gameplay
+Report artifacts/local/full-options-main/browser-final.json

@@ -1,0 +1,93 @@
+Compiling 3 files with Solc 0.8.37
+Solc 0.8.37 finished in 16.22s
+Compiler run successful with warnings:
+Warning (6335): "at" will be promoted to keyword in the future and will not be allowed as an identifier anymore.
+  --> src/doom/v_video.sol:77:41:
+   |
+77 |     function _short(bytes memory patch, uint256 at) private pure returns (int32) {
+   |                                         ^^^^^^^^^^
+
+Warning (6335): "at" will be promoted to keyword in the future and will not be allowed as an identifier anymore.
+   --> src/doom/v_video.sol:102:13:
+    |
+102 |             uint256 at = 8 + uint32(flipped ? width - 1 - col : col) * 4;
+    |             ^^^^^^^^^^
+
+Warning (6335): "at" will be promoted to keyword in the future and will not be allowed as an identifier anymore.
+  --> src/doom/hu_lib.sol:69:41:
+   |
+69 |     function patchShort(bytes memory p, uint256 at) internal pure returns (int32) {
+   |                                         ^^^^^^^^^^
+
+Warning (6335): "at" will be promoted to keyword in the future and will not be allowed as an identifier anymore.
+   --> src/doom/f_finale.sol:119:9:
+    |
+119 |         uint256 at;
+    |         ^^^^^^^^^^
+
+Warning (6335): "at" will be promoted to keyword in the future and will not be allowed as an identifier anymore.
+  --> test/unit/f_wipe.t.sol:41:35:
+   |
+41 |     function word(bytes memory b, uint256 at) private pure returns (uint32 v) {
+   |                                   ^^^^^^^^^^
+
+Warning (6335): "at" will be promoted to keyword in the future and will not be allowed as an identifier anymore.
+  --> test/unit/f_wipe.t.sol:47:35:
+   |
+47 |     function hash(bytes memory b, uint256 at) private pure returns (bytes32 h) {
+   |                                   ^^^^^^^^^^
+
+Warning (6335): "at" will be promoted to keyword in the future and will not be allowed as an identifier anymore.
+  --> test/unit/f_wipe.t.sol:66:14:
+   |
+66 |         for (uint256 at; at < e.length; at += 72) {
+   |              ^^^^^^^^^^
+
+Warning (2319): This declaration shadows a builtin symbol.
+  --> src/doom/z_zone.sol:63:5:
+   |
+63 |     function block(ZoneState memory z, uint32 id) private pure returns (ZoneBlock memory b) {
+   |     ^ (Relevant source part starts here and spans across multiple lines).
+
+Warning (2319): This declaration shadows a builtin symbol.
+   --> src/doom/hu_lib.sol:145:77:
+    |
+145 |     function HUlib_addMessageToSText(HuSText memory s, bytes memory prefix, bytes memory msg) internal pure {
+    |                                                                             ^^^^^^^^^^^^^^^^
+
+Warning (2519): This declaration shadows an existing declaration.
+   --> src/doom/f_finale.sol:105:9:
+    |
+105 |         bytes memory flat = R_Data.W_CacheLumpNum(source, R_Data.W_GetNumForName(source, flat(s)));
+    |         ^^^^^^^^^^^^^^^^^
+Note: The shadowed declaration is here:
+  --> src/doom/f_finale.sol:41:5:
+   |
+41 |     function flat(FinaleState memory s) private pure returns (bytes8) {
+   |     ^ (Relevant source part starts here and spans across multiple lines).
+
+
+Ran 3 tests for test/integration/Finale.t.sol:FinaleTest
+[PASS] testNativeRegisteredFinale() (gas: 392779734)
+[PASS] testNativeRetailFinale() (gas: 392780736)
+[PASS] testNativeSharewareFinale() (gas: 392780284)
+Suite result: ok. 3 passed; 0 failed; 0 skipped; finished in 1.00s (2.99s CPU time)
+
+Ran 3 tests for test/unit/GameflowTransactions.t.sol:GameflowTransactionsTest
+[PASS] testInvalidStartupStateActionsAndSetupRollback() (gas: 1307902939)
+[PASS] testSecretRouteAndFinaleAcrossCommittedCalls() (gas: 534353580)
+[PASS] testStoragePauseResumeAndDeferredNightmareAcrossCalls() (gas: 684845402)
+Suite result: ok. 3 passed; 0 failed; 0 skipped; finished in 1.55s (1.27s CPU time)
+
+Ran 8 tests for test/unit/f_wipe.t.sol:WipeTest
+[PASS] testNativeLargeBatchCompletionDelay() (gas: 502316419)
+[PASS] testNativeSeed0() (gas: 495251992)
+[PASS] testNativeSeed1() (gas: 496064051)
+[PASS] testNativeSeed127() (gas: 489114880)
+[PASS] testNativeSeed255() (gas: 487889098)
+[PASS] testNativeSevenTicks() (gas: 492871204)
+[PASS] testNativeThreeTicks() (gas: 492844900)
+[PASS] testStoragePersistenceAndRollback() (gas: 319416023)
+Suite result: ok. 8 passed; 0 failed; 0 skipped; finished in 1.55s (10.19s CPU time)
+
+Ran 3 test suites in 1.55s (4.10s CPU time): 14 tests passed, 0 failed, 0 skipped (14 total tests)

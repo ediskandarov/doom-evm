@@ -1,0 +1,12 @@
+{
+  "command": [
+    "python3",
+    "tools/reference/options/startup-native.py"
+  ],
+  "cwd": ".",
+  "startedUtc": "2026-10-11T16:44:07.230664+00:00",
+  "endedUtc": "2026-10-11T16:44:49.992767+00:00",
+  "elapsedSeconds": 42.762050540652126,
+  "exitCode": 0,
+  "rawOutput": "/Users/eduard/sandbox/doom-evm/artifacts/phase4/full-options-main/native-startup.log"
+}

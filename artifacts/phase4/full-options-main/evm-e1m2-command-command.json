@@ -1,0 +1,12 @@
+{
+  "command": [
+    "node",
+    "tools/reference/full_options/e1m2.mjs"
+  ],
+  "cwd": ".",
+  "startedUtc": "2026-10-11T16:58:00.111356+00:00",
+  "endedUtc": "2026-10-11T16:58:36.797250+00:00",
+  "elapsedSeconds": 36.68582633277401,
+  "exitCode": 0,
+  "rawOutput": "/Users/eduard/sandbox/doom-evm/artifacts/phase4/full-options-main/evm-e1m2-command.log"
+}

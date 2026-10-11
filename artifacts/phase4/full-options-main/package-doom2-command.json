@@ -1,0 +1,13 @@
+{
+  "command": [
+    "node",
+    "tools/reference/doom2/package.mjs",
+    "."
+  ],
+  "cwd": ".",
+  "startedUtc": "2026-10-11T16:44:39.058201+00:00",
+  "endedUtc": "2026-10-11T16:44:39.860848+00:00",
+  "elapsedSeconds": 0.8026202083565295,
+  "exitCode": 0,
+  "rawOutput": "/Users/eduard/sandbox/doom-evm/artifacts/phase4/full-options-main/package-doom2.log"
+}

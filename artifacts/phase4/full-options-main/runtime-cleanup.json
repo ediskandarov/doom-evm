@@ -1,0 +1,22 @@
+{
+  "checkedUtc": "2026-10-11T17:11:39.667497+00:00",
+  "ports": [
+    {
+      "port": 19371,
+      "closed": true
+    },
+    {
+      "port": 19372,
+      "closed": true
+    },
+    {
+      "port": 19373,
+      "closed": true
+    },
+    {
+      "port": 19374,
+      "closed": true
+    }
+  ],
+  "ownership": "Only goal-created children were stopped; no external PID was signaled."
+}

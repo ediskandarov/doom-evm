@@ -1,0 +1,20 @@
+{
+  "command": [
+    "node",
+    "--test",
+    "web/menu-input.test.mjs",
+    "web/input-runtime.test.mjs",
+    "web/input-loop.test.mjs",
+    "web/input-app.test.mjs",
+    "web/install.test.mjs",
+    "web/input.test.mjs",
+    "web/doom2-profile.test.mjs",
+    "web/browser-profiles.test.mjs"
+  ],
+  "cwd": ".",
+  "startedUtc": "2026-10-11T16:37:43.820692+00:00",
+  "endedUtc": "2026-10-11T16:37:44.309171+00:00",
+  "elapsedSeconds": 0.48842841666191816,
+  "exitCode": 0,
+  "rawOutput": "/Users/eduard/sandbox/doom-evm/artifacts/phase4/full-options-main/node.log"
+}

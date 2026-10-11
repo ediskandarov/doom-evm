@@ -1,0 +1,12 @@
+{
+  "command": [
+    "node",
+    "tools/reference/full_options/evm.mjs"
+  ],
+  "cwd": ".",
+  "startedUtc": "2026-10-11T17:01:00.825739+00:00",
+  "endedUtc": "2026-10-11T17:03:01.903944+00:00",
+  "elapsedSeconds": 121.0422656671144,
+  "exitCode": 0,
+  "rawOutput": "/Users/eduard/sandbox/doom-evm/artifacts/phase4/full-options-main/evm-size-corrected-command.log"
+}

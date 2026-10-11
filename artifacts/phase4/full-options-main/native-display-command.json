@@ -1,0 +1,12 @@
+{
+  "command": [
+    "python3",
+    "tools/reference/full_options/native.py"
+  ],
+  "cwd": ".",
+  "startedUtc": "2026-10-11T16:47:48.050336+00:00",
+  "endedUtc": "2026-10-11T16:47:48.108701+00:00",
+  "elapsedSeconds": 0.05831170780584216,
+  "exitCode": 1,
+  "rawOutput": "/Users/eduard/sandbox/doom-evm/artifacts/phase4/full-options-main/native-display.log"
+}

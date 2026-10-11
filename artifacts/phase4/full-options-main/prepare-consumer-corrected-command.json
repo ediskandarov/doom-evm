@@ -1,0 +1,12 @@
+{
+  "command": [
+    "python3",
+    "tools/reference/full_options/prepare.py"
+  ],
+  "cwd": ".",
+  "startedUtc": "2026-10-11T16:44:37.001507+00:00",
+  "endedUtc": "2026-10-11T16:44:37.050784+00:00",
+  "elapsedSeconds": 0.04922370798885822,
+  "exitCode": 0,
+  "rawOutput": "/Users/eduard/sandbox/doom-evm/artifacts/phase4/full-options-main/prepare-consumer-corrected.log"
+}

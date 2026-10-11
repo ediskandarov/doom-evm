@@ -1,0 +1,86 @@
+--- src/support/FullSpeedrunProbe.sol
++++ artifacts/local/full-options-main/observer/src/support/FullSpeedrunProbe.sol
+@@ -20,11 +20,15 @@
+ /// @notice Separate presentation consumer. Never accepts gameplay state or pixels from a host.
+ /// @dev Canonical gameplay keeps the historical no-UI miscellaneous RNG counter;
+ /// presentation retains the native ST/WI/wipe miscellaneous stream separately.
++import {M_Menu, MenuState} from "../doom/m_menu.sol";
++import {DoomMenu} from "../evm/DoomMenu.sol";
+ contract FullSpeedrunProbe is UltimateWadResources, IFrameProtocol {
+     address public immutable driver=msg.sender;
+     bool public initialized;
+     GameState private saved;
+     UIState private ui;
++    MenuState private testMenu;
++    bool private testFinale;
+     WiState private wi;
+     WiInput private wiInput;
+     FinaleState private finale;
+@@ -56,6 +60,7 @@
+         c.state.nativeZone.experimentalVirtualPointers=true;
+         UIState memory u; DoomUI.initialize(u,c,false); ui=u; saved=c.state;
+         GameflowState memory f;f.initialized=true;f.viewactive=true;flow=f;
++        MenuState memory m; M_Menu.M_Init(m,true); testMenu=m;
+         initialized=true;
+         emit Observation(0,Snapshot.observe(c.state));
+     }
+@@ -65,7 +70,7 @@
+         cmd.angleturn=int16(uint16(uint8(raw[2]))<<8);cmd.buttons=uint8(raw[3]);
+     }
+     function advance(bytes calldata raw) external owner {
+-        if(wipeActive || postExit || saved.gameaction!=0)revert InvalidReplay();
++        if(wipeActive || postExit || testMenu.menuactive || saved.gameaction!=0)revert InvalidReplay();
+         GameState memory s=saved;GameContext memory c=DoomGame.load(_resourceView(),s);
+         DoomGame.tick(c,command(raw));
+         UIState memory u=ui;uint32 canonicalRnd=c.state.rndindex;
+@@ -116,7 +121,7 @@
+         GameState memory s=saved;GameContext memory c=DoomGame.load(_resourceView(),s);
+         c.state.renderFramebuffer=screen;
+         UIState memory u=ui;DoomUI.erase(u);DoomUI.drawStatus(u,c);
+-        bytes memory pixels=DoomGame.render(c,10);DoomUI.drawHUD(u,c.resources.source,pixels);ui=u;
++        bytes memory pixels=DoomGame.render(c,u.fullscreen ? 11 : 10);DoomUI.drawHUD(u,c.resources.source,pixels);ui=u;
+         // Observer insertion point: all generated provenance is emitted here.
+         display(pixels,0,0,0,0,"",false);
+     }
+@@ -186,6 +191,41 @@
+         // Canonical saved gameplay never advances or changes after exit. Presentation copy only.
+         display(v.screens[0],c.state.gamestate==1?3:4,c.state.gamestate,stage,count,abi.encode(w.wbs),force);
+     }
++    /// @dev Diagnostic-only composition of accepted production Options hooks.
++    function optionEvents(bytes calldata events) external owner {
++        if(wipeActive || postExit || demoTics==0)revert InvalidReplay();
++        MenuState memory m=testMenu;int32 old=m.screenSize;
++        if(!DoomMenu.respond(m,events,true) || m.startRequested || m.endRequested)revert InvalidReplay();
++        UIState memory u=ui;u.hideMessages=!m.showMessages;u.fullscreen=m.screenSize==8;
++        if(old!=m.screenSize)u.refresh=true;
++        if(m.messagesChanged)revert InvalidReplay(); // Messages covered on production adapters.
++        bytes memory pixels=screen;
++        if(u.refresh){
++            GameState memory state=saved;GameContext memory c=DoomGame.load(_resourceView(),state);
++            c.state.renderFramebuffer=screen;DoomUI.erase(u);DoomUI.drawStatus(u,c);
++            pixels=DoomGame.render(c,u.fullscreen ? 11 : 10);DoomUI.drawHUD(u,c.resources.source,pixels);
++        }
++        screen=pixels;ui=u;testMenu=m; // Preserve base before original menu overlay.
++        M_Menu.M_Drawer(m,_resourceView(),pixels);
++        ++menuFrames;publish(pixels,1,0,int32(uint32(m.currentMenu)),m.screenSize,"");
++    }
++    function testOptionsStatus() external view returns(bool,int32,bool){
++        return(testMenu.menuactive,testMenu.screenSize+3,testMenu.showMessages);
++    }
++    /// @dev Fixture-only F_StartFinale entry; never represents a real level exit.
++    function beginFinaleFixture() external owner {
++        if(saved.gamemap!=8 || demoTics!=0 || postExit || wipeActive)revert InvalidReplay();
++        GameContext memory c;c.state=saved;GameflowState memory f=flow;FinaleState memory a;
++        F_Finale.F_StartFinale(c,f,a);finale=a;flow=f;postExit=true;testFinale=true;
++        UIState memory u=ui;DoomUI.basePalette(u,_resourceView());ui=u;
++    }
++    /// @dev Sample the original UI clock without rendering every intermediate text frame.
++    function finaleClockFixture(uint32 ticks) external owner {
++        if(!testFinale || wipeActive || ticks==0 || ticks>2000)revert InvalidReplay();
++        FinaleState memory a=finale;GameflowState memory f=flow;
++        for(uint32 i;i<ticks;++i){F_Finale.F_Ticker(a,f);if(f.wipegamestate==-1)revert InvalidReplay();}
++        finale=a;flow=f;
++    }
+     function presentationState() external view returns(bytes memory) {return abi.encode(wi,wiInput,finale,flow,miscRndindex,wipeActive);}
+     function snapshot() external view returns(bytes memory) {GameState memory s=saved;return Snapshot.observe(s);}
+     function savedDigest() external view returns(bytes32) {return sha256(abi.encode(saved));}

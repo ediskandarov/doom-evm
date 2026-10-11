@@ -1,0 +1,22 @@
+{
+  "command": [
+    "node",
+    "tools/reference/full_options/browser.mjs",
+    "--port",
+    "19371",
+    "--http-port",
+    "19372",
+    "--output-prefix",
+    "artifacts/local/full-options-main/browser-final",
+    "--ultimate-wad",
+    "artifacts/local/options/DOOM.WAD",
+    "--doom2-wad",
+    "artifacts/local/options/DOOM2.WAD"
+  ],
+  "cwd": ".",
+  "startedUtc": "2026-10-11T16:48:10.207398+00:00",
+  "endedUtc": "2026-10-11T16:58:09.609375+00:00",
+  "elapsedSeconds": 599.4023187090643,
+  "exitCode": 0,
+  "rawOutput": "/Users/eduard/sandbox/doom-evm/artifacts/phase4/full-options-main/browser-command.log"
+}

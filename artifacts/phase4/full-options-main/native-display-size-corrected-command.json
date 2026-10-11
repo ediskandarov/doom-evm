@@ -1,0 +1,12 @@
+{
+  "command": [
+    "python3",
+    "tools/reference/full_options/native.py"
+  ],
+  "cwd": ".",
+  "startedUtc": "2026-10-11T16:59:30.079210+00:00",
+  "endedUtc": "2026-10-11T17:00:04.692422+00:00",
+  "elapsedSeconds": 34.6131924581714,
+  "exitCode": 0,
+  "rawOutput": "/Users/eduard/sandbox/doom-evm/artifacts/phase4/full-options-main/native-display-size-corrected.log"
+}

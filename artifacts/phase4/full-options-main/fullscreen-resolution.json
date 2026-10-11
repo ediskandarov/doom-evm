@@ -1,0 +1,23 @@
+{
+  "label": "actual accepted Options packet 27",
+  "firstDivergentDisplay": 49,
+  "gameplayTic": 20,
+  "differences": 52543,
+  "first": {
+    "x": 0,
+    "y": 0,
+    "evm": 136,
+    "native": 137
+  },
+  "evmFrameSha256": "827af4df5a5edd69946a2fdff300c606a3ed6d457e8f9d826b6094c24633ef41",
+  "nativeFrameSha256": "0325c0e45f4ca12c57f654fa6412328e53b210a7ca437bb8e35f324645e61af3",
+  "finding": "Comparison-only host omitted original D_Display R_ExecuteSetViewSize after R_SetViewSize. No EVM or original-C change. Native view remained10 for requested11. Prior bar-only checkpoint preserved; failed fuller view attempt preserved.",
+  "rawLogSha256": "3ee904b4cdf097e6bfa0a116bf4002f90ab9e796c9e9eaefc23a830b6f5149f8",
+  "rawLogBytes": 177881,
+  "rawLogPath": "artifacts/local/full-options-main/evm-fullscreen-failure.log",
+  "correctedNativeEqualsAlreadyMinedEVM": true,
+  "correctedNativeSha256": "827af4df5a5edd69946a2fdff300c606a3ed6d457e8f9d826b6094c24633ef41",
+  "productionChanged": false,
+  "originalCChanged": false,
+  "acceptedGoldensChanged": false
+}

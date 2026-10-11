@@ -1,0 +1,17 @@
+{
+  "fullscreen": {
+    "file": "artifacts/local/full-options-main/fullscreen.png",
+    "sha256": "453658dc9b1d01bf200d63131a6a186f81e32744142b398283be30f41a9af385",
+    "visualReview": "Reviewed original fullscreen/Intermission/CREDIT appearance where selected; all indexed comparisons remain authoritative."
+  },
+  "intermission": {
+    "file": "artifacts/local/full-options-main/intermission.png",
+    "sha256": "768a05b963f2f8cf09b2b37d2d2858b205ea4259b3035619df41ea80597f07ab",
+    "visualReview": "Reviewed original fullscreen/Intermission/CREDIT appearance where selected; all indexed comparisons remain authoritative."
+  },
+  "finale-art": {
+    "file": "artifacts/local/full-options-main/finale-art.png",
+    "sha256": "d32c175b11dc072c3baaa248f921db50a90b18baba8a3fc04acdae5911e47f1d",
+    "visualReview": "Reviewed original fullscreen/Intermission/CREDIT appearance where selected; all indexed comparisons remain authoritative."
+  }
+}
