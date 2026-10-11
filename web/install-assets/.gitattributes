@@ -1,0 +1,2 @@
+# Preserve the authenticated upstream license bytes, including CRLF and BOM.
+COPYING-Freedoom.txt -text -whitespace

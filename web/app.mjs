@@ -11,7 +11,12 @@ const fail = error => { status.textContent = error.message; (window.__transportP
 const hex = bytes => [...bytes].map(x => x.toString(16).padStart(2, '0')).join('');
 let subscription, reconnectTimer, stopped = false, transactions, loop, binding;
 try {
-  const config = await (await fetch('/config.local.json')).json();
+  const response = await fetch('/config.local.json');
+  if (response.status === 404) {
+    await (await import('./launcher.mjs')).openLauncher();
+  } else {
+  if (response.status >= 400) throw Error('Configuration HTTP '+response.status);
+  const config = await response.json();
   if (usesEVMMenu(config)) {
     await (await import('./menu-app.mjs')).openMenu(config);
   } else {
@@ -197,6 +202,7 @@ try {
     await nextFrame(); await nextFrame({ disconnect: true });
     proof.rgbaSha256 = hex(new Uint8Array(await crypto.subtle.digest('SHA-256', canvas.getContext('2d').getImageData(0, 0, 320, 200).data)));
     proof.done = true;
+  }
   }
   }
 } catch (error) { loop?.stop(); fail(error); }
