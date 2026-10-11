@@ -8,6 +8,9 @@ import {NativeZoneLayout as N} from "./native_zone_layout.sol";
 /// The ledger records their current identities, not historical pointer bytes.
 library Z_ZoneVirtual {
     uint64 internal constant VIRTUAL_ZONE_BASE = 0x0000001000000000;
+    // Original w_wad.c lumpcache is a separate malloc object of void* slots.
+    // Region chosen by object domain, never observed native addresses/pixels.
+    uint64 internal constant VIRTUAL_LUMPCACHE_BASE = 0x0000002000000000;
     uint64 internal constant ADDRESS_LIMIT = uint64(1) << 48;
 
     function validMapping(uint32 length) internal pure returns (bool) {
@@ -81,6 +84,41 @@ library Z_ZoneVirtual {
         if (!b.allocated) return (0, true); // source-written NULL, not base+zero
         if (b.owner == C.NULL) return (2, true); // original (void*)2 marker
         return (0, false); // external OR zone-resident owner slot: neither address is recorded
+    }
+
+    /// @dev Caller has validated the current ring and resource owner namespace.
+    /// memblock_t.user is &lumpcache[owner], NOT the payload stored in that slot.
+    /// Composite owners and arbitrary external objects are deliberately excluded.
+    function lumpOwnerFromValidatedHeader(ZoneState memory z, uint32 id, uint32 lumpCount)
+        internal
+        pure
+        returns (uint64 value, bool known)
+    {
+        if (
+            !z.experimentalVirtualPointers || !validMapping(z.byteLength) || id == 0 || id >= z.blockCount
+                || id >= z.blocks.length || lumpCount == 0
+                || uint256(VIRTUAL_ZONE_BASE) + z.byteLength > VIRTUAL_LUMPCACHE_BASE
+                || uint256(VIRTUAL_LUMPCACHE_BASE) + uint256(lumpCount) * N.PRIMITIVE_POINTER > ADDRESS_LIMIT
+        ) return (0, false);
+        ZoneBlock memory b = z.blocks[id];
+        if (
+            !b.allocated || !b.idKnown || b.id != C.ZONEID || b.owner >= lumpCount
+                || b.owner >= z.ownerBlocks.length || z.ownerBlocks[b.owner] != id
+        ) return (0, false);
+        return (VIRTUAL_LUMPCACHE_BASE + uint64(b.owner) * N.PRIMITIVE_POINTER, true);
+    }
+
+    function lumpOwnerByteFromValidatedHeader(
+        ZoneState memory z,
+        uint32 id,
+        uint32 relative,
+        uint32 lumpCount
+    ) internal pure returns (bytes1 value, bool known) {
+        if (relative < N.MEMBLOCK_USER_OFFSET || relative >= N.MEMBLOCK_USER_OFFSET + N.PRIMITIVE_POINTER) {
+            return (0, false);
+        }
+        (uint64 pointer, bool supported) = lumpOwnerFromValidatedHeader(z, id, lumpCount);
+        return (bytes1(uint8(pointer >> ((relative - N.MEMBLOCK_USER_OFFSET) * 8))), supported);
     }
 
     function byteFromValidatedHeader(ZoneState memory z, uint32 id, uint32 relative)

@@ -94,3 +94,38 @@ identity is not currently retained and they remain unsupported. Identifiable
 globals (C), transient/external objects (E) likewise remain unknown. Existing
 NULL and unowned2 sentinel representations (D) remain supported. Relaxed
 Rendering is deliberately deferred under the latest user instruction.
+
+## Implementation and focused verification milestone
+
+`Z_ZoneVirtual` adds only authenticated-lump owner addressing and its LE64
+byte reader. `Z_ZoneBacking` dispatches after all existing provenance choices;
+category5 is translated to knownness only at the existing draw-reader boundary.
+Current topology, allocated ZONEID, catalog/cache lengths, owner range and
+reciprocal ownerBlocks identity are mandatory. No allocator, draw arithmetic,
+DrawBounds, shared state/type/ABI, IWAD or native fixture was changed.
+
+44 final-source focused Forge tests passed: original allocation/startup/setup,
+backing/composite/initialization/pointer-high policies, existing virtual pointers,
+and new owner identity/byte order/disabled-policy/lifetime/overwrite/storage/
+rollback cases. The first run had two setup failures from missing local pinned
+code chunks; existing prepare_chunks.py restored1755 hash-pinned chunks and
+all7 affected tests then passed. Both logs are retained. No full historical
+acceptance suite was run.
+
+[Implementation checkpoint](../artifacts/ultimate-speedruns/owner-pointer/implementation-checkpoint.json)
+records commands, source and log hashes. [First mined owner event](../artifacts/ultimate-speedruns/owner-pointer/first-transaction.json)
+proves E1M8 tic263 succeeds, samples owner1927 at virtual address
+`0x0000002000003c38`, and preserves saved state. Its sampled byte5 is zero;
+the draw is later overwritten, so the final indexed8 frame equals all three
+native captures. This does not establish native pointer-byte equality.
+
+Separate `observer-owner.py`, `evm-owner[/-domain].mjs`, `verify-owner[/-domain].py`
+and `pixel-owner-domain.py` preserve hash-bound old producers. New owner-v1
+recordings retain every actual provenance4/5 draw use and mined receipt.
+`owner-suite.py` manages independent resume/verification/35FPS encoding and
+progressive feature commits, with at most two map jobs, occupied-port rejection,
+validated newest-checkpoint retention, and cleanup of superseded dumps only.
+No new gas/memory/hardfork/compiler limit change has been needed at this
+milestone: inherited localhost Anvil10B gas,1GiB memory, unlimited request size,
+and pruned2-block history remain explicit. Original Freedoom279-frame and
+five accepted Ultimate recording regressions remain pending full verification.

@@ -85,11 +85,13 @@ library Z_ZoneBacking {
     {
         (data, known) = tailWithProvenance(resources, sourceBlock, logicalLength, length);
         for (uint256 i; i < known.length; ++i) {
-            if (known[i] == 0x02 || known[i] == 0x03 || known[i] == 0x04) known[i] = 0x01;
+            if (known[i] == 0x02 || known[i] == 0x03 || known[i] == 0x04 || known[i] == 0x05) {
+                known[i] = 0x01;
+            }
         }
     }
 
-    /// @notice 0=unknown, 1=source-written, 2=initial zero, 3=bounded pointer high byte, 4=experimental virtual pointer.
+    /// @notice 0=unknown, 1=source-written, 2=initial zero, 3=bounded pointer high byte, 4=virtual zone pointer, 5=virtual authenticated lump owner slot.
     /// @dev Initialization never establishes provenance for a pointer, an
     /// unmodeled written body, a reused body or a byte outside the initial zone.
     function tailWithProvenance(
@@ -145,6 +147,17 @@ library Z_ZoneBacking {
                     if (isKnown) {
                         data[work.cursor] = value;
                         known[work.cursor] = 0x04;
+                    } else if (
+                        resources.source.lumps.length <= type(uint32).max
+                            && resources.lumpcache.length == resources.source.lumps.length
+                    ) {
+                        (value, isKnown) = Z_ZoneVirtual.lumpOwnerByteFromValidatedHeader(
+                            work.zone, work.id, work.relative, uint32(resources.source.lumps.length)
+                        );
+                        if (isKnown) {
+                            data[work.cursor] = value;
+                            known[work.cursor] = 0x05;
+                        }
                     }
                 }
                 ++work.cursor;
