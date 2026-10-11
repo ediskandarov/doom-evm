@@ -190,3 +190,11 @@ are unchanged, compares all four preserved partial prefixes, and exports the
 measured resource/cleanup summary. It also requires the separate preserved
 Freedoom regression proof. [Episode acceptance](../../../docs/ULTIMATE-OWNER-EPISODE.md)
 is generated only after every gate passes. Keep all commercial artifacts local.
+
+
+For explicit comparison of regenerated and accepted MP4 container bytes, run
+`python3 tools/reference/ultimate_speedruns/owner-media-regression.py` after the
+final episode gate. It verifies identical compressed video and all non-clock
+atom payloads; only proven version-zero movie/track/edit duration fields may
+differ. It exports a separate proof bound to the immutable episode summary,
+without modifying original videos or accepted evidence.

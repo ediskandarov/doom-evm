@@ -1,0 +1,226 @@
+{
+  "pass_": true,
+  "episodeSummarySHA256": "59c946dc798460ac8bed31fdfc5662a4e92ed7d79821672f816151da0ebcd794",
+  "maps": [
+    {
+      "map": "E1M1",
+      "oldPath": "artifacts/local/ultimate-speedruns/E1M1/full-rate/speedrun-e1m1.mp4",
+      "newPath": "artifacts/local/ultimate-speedruns/E1M1/owner-v1/full-rate/speedrun-e1m1.mp4",
+      "oldSHA256": "406c10fd046c452afe2b31000275b4ab2283e2ba5bc497f95dd2e7665f326478",
+      "newSHA256": "cd2076fe572b27ec7f4a8c22ebb7fd163bf3aaafe422d0a8699a2358672ce96b",
+      "MP4BytesIdentical": false,
+      "compressedVideoPayloadIdentical": true,
+      "videoPayloadSHA256": "fb5a63cdd53e2aad67f615071bc76e1a29c970ac57ce5a58600ac05d8fceae55",
+      "allOtherAtomPayloadsIdentical": true,
+      "changedClockAtoms": [
+        {
+          "atom": "/moov/mvhd",
+          "changedByteOffsets": [
+            22,
+            23,
+            25,
+            26,
+            27
+          ]
+        },
+        {
+          "atom": "/moov/trak/tkhd",
+          "changedByteOffsets": [
+            29,
+            30,
+            31
+          ]
+        },
+        {
+          "atom": "/moov/trak/edts/elst",
+          "changedByteOffsets": [
+            17,
+            18,
+            19
+          ]
+        }
+      ],
+      "oldMovieClock": {
+        "timescale": 1000,
+        "durationUnits": 9029
+      },
+      "newMovieClock": {
+        "timescale": 35000,
+        "durationUnits": 316000
+      },
+      "indexedPixelChanges": 0,
+      "virtualProvenanceChanges": 0
+    },
+    {
+      "map": "E1M2",
+      "oldPath": "artifacts/local/ultimate-speedruns/E1M2/full-rate/speedrun-e1m2.mp4",
+      "newPath": "artifacts/local/ultimate-speedruns/E1M2/owner-v1/full-rate/speedrun-e1m2.mp4",
+      "oldSHA256": "3f71cc6cbaced7be14cd15550db3d2e13e2e150b40c81858aa2ed429ad829ab9",
+      "newSHA256": "ed422d43e6ffdcfbdabad803cee32a639ed7304b2eebdbe55517c14453cc8205",
+      "MP4BytesIdentical": false,
+      "compressedVideoPayloadIdentical": true,
+      "videoPayloadSHA256": "a5613926cc2660ee4be3eff2bf3d3dd7ed3e7a9a1ed6d15576ffd207d8fc8fe0",
+      "allOtherAtomPayloadsIdentical": true,
+      "changedClockAtoms": [
+        {
+          "atom": "/moov/mvhd",
+          "changedByteOffsets": [
+            22,
+            23,
+            25,
+            26,
+            27
+          ]
+        },
+        {
+          "atom": "/moov/trak/tkhd",
+          "changedByteOffsets": [
+            29,
+            30,
+            31
+          ]
+        },
+        {
+          "atom": "/moov/trak/edts/elst",
+          "changedByteOffsets": [
+            17,
+            18,
+            19
+          ]
+        }
+      ],
+      "oldMovieClock": {
+        "timescale": 1000,
+        "durationUnits": 22800
+      },
+      "newMovieClock": {
+        "timescale": 35000,
+        "durationUnits": 798000
+      },
+      "indexedPixelChanges": 0,
+      "virtualProvenanceChanges": 0
+    },
+    {
+      "map": "E1M4",
+      "oldPath": "artifacts/local/ultimate-speedruns/E1M4/full-rate/speedrun-e1m4.mp4",
+      "newPath": "artifacts/local/ultimate-speedruns/E1M4/owner-v1/full-rate/speedrun-e1m4.mp4",
+      "oldSHA256": "0597c38afe0481047a2c6733064e50a9eeffe7add9b657bb970c2c5beec42196",
+      "newSHA256": "34a2284901274370d128f06a8ba6f067a56c1b3b16447326ca7f146c4ae99368",
+      "MP4BytesIdentical": false,
+      "compressedVideoPayloadIdentical": true,
+      "videoPayloadSHA256": "7db58dc3b15e5f5623dd4b010f8aff3e7f62c3ee8c65b121280057e94655c933",
+      "allOtherAtomPayloadsIdentical": true,
+      "changedClockAtoms": [
+        {
+          "atom": "/moov/mvhd",
+          "changedByteOffsets": [
+            22,
+            23,
+            25,
+            26,
+            27
+          ]
+        },
+        {
+          "atom": "/moov/trak/tkhd",
+          "changedByteOffsets": [
+            29,
+            30,
+            31
+          ]
+        },
+        {
+          "atom": "/moov/trak/edts/elst",
+          "changedByteOffsets": [
+            17,
+            18,
+            19
+          ]
+        }
+      ],
+      "oldMovieClock": {
+        "timescale": 1000,
+        "durationUnits": 21915
+      },
+      "newMovieClock": {
+        "timescale": 35000,
+        "durationUnits": 767000
+      },
+      "indexedPixelChanges": 0,
+      "virtualProvenanceChanges": 0
+    },
+    {
+      "map": "E1M7",
+      "oldPath": "artifacts/local/ultimate-speedruns/E1M7/full-rate/speedrun-e1m7.mp4",
+      "newPath": "artifacts/local/ultimate-speedruns/E1M7/owner-v1/full-rate/speedrun-e1m7.mp4",
+      "oldSHA256": "6dd05aa1e33d80d2662f5d525d9d881ef95554b0095520e2d5e14cacbc2ce8ca",
+      "newSHA256": "e8a4335fab2a46d62a833294d1b9fa2606ce7305804ca6499fc1a70ad3c26a34",
+      "MP4BytesIdentical": false,
+      "compressedVideoPayloadIdentical": true,
+      "videoPayloadSHA256": "fea45c1aa0420baea8ff72992ef7b2ef3546b3497ba9578e7b96954e8e3c75c1",
+      "allOtherAtomPayloadsIdentical": true,
+      "changedClockAtoms": [
+        {
+          "atom": "/moov/mvhd",
+          "changedByteOffsets": [
+            22,
+            23,
+            25,
+            26,
+            27
+          ]
+        },
+        {
+          "atom": "/moov/trak/tkhd",
+          "changedByteOffsets": [
+            29,
+            30,
+            31
+          ]
+        },
+        {
+          "atom": "/moov/trak/edts/elst",
+          "changedByteOffsets": [
+            17,
+            18,
+            19
+          ]
+        }
+      ],
+      "oldMovieClock": {
+        "timescale": 1000,
+        "durationUnits": 73486
+      },
+      "newMovieClock": {
+        "timescale": 35000,
+        "durationUnits": 2572000
+      },
+      "indexedPixelChanges": 0,
+      "virtualProvenanceChanges": 0
+    },
+    {
+      "map": "E1M9",
+      "oldPath": "artifacts/local/ultimate-speedruns/E1M9/full-rate/speedrun-e1m9.mp4",
+      "newPath": "artifacts/local/ultimate-speedruns/E1M9/owner-v1/full-rate/speedrun-e1m9.mp4",
+      "oldSHA256": "25bd8894f158bf5dd61038049f50c70e498d69d6da3afaeeadfce367dc0213fa",
+      "newSHA256": "25bd8894f158bf5dd61038049f50c70e498d69d6da3afaeeadfce367dc0213fa",
+      "MP4BytesIdentical": true,
+      "compressedVideoPayloadIdentical": true,
+      "videoPayloadSHA256": "e326bcf21fa61b37628240e449adbb54672bd6436c019e8cc14aead4c3b9cc10",
+      "allOtherAtomPayloadsIdentical": true,
+      "changedClockAtoms": [],
+      "oldMovieClock": {
+        "timescale": 35000,
+        "durationUnits": 1598000
+      },
+      "newMovieClock": {
+        "timescale": 35000,
+        "durationUnits": 1598000
+      },
+      "indexedPixelChanges": 0,
+      "virtualProvenanceChanges": 0
+    }
+  ],
+  "explanation": "E1M1/E1M2/E1M4/E1M7 re-express movie/track/edit durations from 1000 Hz millisecond-rounded headers to exact 35000 Hz tic units. Every compressed video payload and all other atom payloads are identical. E1M9 files are wholly identical. Original files remain untouched; indexed pixels and provenance changes are zero.",
+  "toolSHA256": "4abe016ef9554235b85c963ba796ec4609a04fb19cead309b431cecd3a59cb72"
+}

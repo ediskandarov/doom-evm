@@ -20,7 +20,12 @@ The general owner-slot solution adds a separate authenticated `lumpcache[]` virt
 
 Total verified recording gas: 16,507,193,671,290. Each map report preserves startup/deployment/replay/capture gas, exact compiler/source/runtime identities, transaction and resource hashes, start/end and RPC durations, local limits, native profile and media proof. Sampled host RSS, swap and disk usage are hash-bound in the [episode manifest](../artifacts/ultimate-speedruns/owner-pointer/episode-summary.json). Checkpoint cleanup freed 9,695,812,652 bytes from 592 superseded files; newest validated recovery state and final receipts remain. No new infrastructure limit increase was required.
 
-The five previous MP4s were not overwritten. Their new regression recordings have zero indexed-pixel/provenance changes. The summary records both media hashes and whether encoded bytes are identical. New owner pixels on formerly blocked frames have no prior accepted EVM counterpart; their native comparison and virtual category are explicit in each report.
+The five previous MP4s were not overwritten. Their new regression recordings have zero indexed-pixel/provenance changes. The summary records both media hashes and whether encoded bytes are identical.
+[Media container regression proof](../artifacts/ultimate-speedruns/owner-pointer/media-regression.json)
+shows every compressed video payload and codec/timing sample table is identical.
+E1M1/E1M2/E1M4/E1M7 differ only in movie/track/edit clock headers: millisecond-rounded
+1000 Hz durations are re-expressed as exact 35000 Hz tic units. E1M9 is wholly
+byte-identical. No indexed pixels or provenance categories changed. New owner pixels on formerly blocked frames have no prior accepted EVM counterpart; their native comparison and virtual category are explicit in each report.
 
 Implementation: `14a997a`; reusable suite: `761f873`; native proof: `6d3f366`; Freedoom regression: `33364f0`. Focused 44-test verification passed, including restored worktree-local pinned test chunks; no full historical acceptance rerun. [Source investigation](ULTIMATE-OWNER-POINTERS.md) and [frozen evidence](../artifacts/ultimate-speedruns/owner-pointer/episode-summary.json) preserve the architecture, commands, limits and compatibility boundaries.
 
