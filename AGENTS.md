@@ -41,6 +41,14 @@
 - Preserve accepted tests, fixtures, certificates and telemetry. Add separate evidence for new checkpoints. Never delete tests, weaken assertions or alter native goldens/original C merely to obtain a pass; failed gates remain failed.
 - Retain pinned compiler/viaIR settings, EVM hardfork, shared ABIs and execution budgets unless an explicitly authorized, measured change is required. Use local source-preserving fixes for compiler issues.
 
+## Compilation cache reuse
+
+- Before an expensive Forge build, inspect the owning worktree's `cache/solidity-files-cache.json` and `out/` for compatible artifacts. Foundry needs both directories; copying only its cache index does not provide compiled bytecode. The solc executable cache in `.toolchain` is a separate concern.
+- Reuse another worktree's cache read-only by copying both directories into a new goal-local directory, then pass `--out <goal-cache>/out --cache-path <goal-cache>/cache`. Never point a writing Forge process at another owner's directories, and never share a writable output/cache between concurrent builds.
+- Keep the pinned solc, optimizer, viaIR and EVM settings. Let Forge validate source/dependency hashes and rebuild changed roots; do not edit cache hashes, use stale artifacts directly, or disable compilation to hide changes. Verify packaged artifacts against compiler metadata source hashes.
+- `--match-path` selects tests to execute; it does not by itself exclude unrelated production/support roots from compilation. Use explicit affected roots and reviewed `--skip` filters. Imported dependencies still compile when necessary.
+- Record compiler file counts, actual elapsed time and pass/fail results. A warm unchanged build should report `No files changed, compilation skipped`; changed source should trigger compilation. Cache reuse reduces repeated work, but viaIR compilation of changed large roots can still take minutes. Check the owned process's CPU/progress before treating a long compile as stalled; never terminate another owner's process.
+
 ## C-to-Solidity source fidelity
 
 - Reference `original/DOOM/linuxdoom-1.10` at `a77dfb96cb91780ca334d0d4cfd86957558007e0`. Follow [PORTING.md](PORTING.md) and [the Phase 0–3 plan](docs/03-IMPLEMENTATION-PLAN.md).
