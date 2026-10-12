@@ -88,7 +88,8 @@ def main():
             target = Path(args.output)
             if target.exists():
                 raise ValueError('Refusing to overwrite existing phase ledger; use a new output and review')
-            config = recover(args.logs or [Path.home()/'.codex/sessions', Path.home()/'.codex/archived_sessions'], args.project)
+            from discovery import default_roots
+            config = recover(args.logs or default_roots(), args.project)
         else:
             target = Path(args.file);config = load_windows(target)
             at = timestamp(args.at) if args.at else now()
