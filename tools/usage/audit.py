@@ -379,7 +379,7 @@ def export(report, rows, output):
     for name, data in tables.items():
         columns = list(dict.fromkeys(k for row in data for k in row))
         with (output/name).open('w', newline='') as stream:
-            writer = csv.DictWriter(stream, fieldnames=columns); writer.writeheader()
+            writer = csv.DictWriter(stream, fieldnames=columns, lineterminator='\n'); writer.writeheader()
             writer.writerows({k: json.dumps(v, sort_keys=True) if isinstance(v, (list, dict)) else v for k, v in row.items()} for row in data)
 
 
