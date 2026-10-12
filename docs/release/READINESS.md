@@ -196,3 +196,22 @@ reported `tokensUsed: 328297` and `timeUsedSeconds: 2265`. These are the tool's
 goal-level counters, not per-model billing attribution; token splits and cost
 were unavailable and are not estimated. Final commit/clean-tree confirmation
 follows this checkpoint and is reported at handoff.
+
+## README wording and community credits follow-up
+
+Started 2026-10-12 07:30:49 UTC at feature baseline
+`de6e1be707d2dcc901a25c3dc0af144b523ad32d`. Same owner/worktree. Scope is the
+owner's verbatim opening and explicit speedrunning-community credit, keeping
+the GIF immediately after the introduction. Only README and this checkpoint
+record are owned; no engine/media/interface changes or runtime dependencies.
+Gate: exact wording, attribution links, preservation and whitespace checks.
+Stop after a Gitmoji commit and clean feature tree; no merge or push.
+
+Verified 2026-10-12T07:32:32.262636+00:00: opening matches the owner's supplied text exactly,
+GIF placement is retained, and explicit community/DSDA/featured-runner credit
+links to preserved author/tape provenance. 159 Markdown documents and
+895 local links/current anchors passed the release checker; 4,184
+protected baseline blobs and pinned source/artifact identities are unchanged.
+Only README and this report changed; no engine build or EVM rerun was needed.
+Local check: `artifacts/local/public-release/readme-opening-audit.json`.
+Per-model usage/cost attribution is unavailable for this follow-up.

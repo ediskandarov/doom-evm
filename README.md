@@ -1,12 +1,12 @@
 # DOOM on EVM
 
-DOOM gameplay and rendering, ported from the original C to Solidity and executed
-inside a local Ethereum Virtual Machine. Movement, monsters, weapons, collision,
-visibility and pixels all run in the EVM. The browser sends keys and displays
-the result.
+DOOM runs inside the Ethereum Virtual Machine.
 
-An unnecessarily expensive way to run DOOM. Built for fun; checked against the
-original C with considerable seriousness.
+The original DOOM engine was ported to Solidity, including gameplay, BSP rendering, and the less glamorous parts of memory management.
+
+Is this a sensible way to run DOOM? No.
+
+Does it work? Yes.
 
 <a href="docs/media/README.md"><img src="docs/media/ultimate-e1m1.gif" width="640" alt="Ultimate DOOM E1M1 Hangar gameplay rendered inside the EVM, with the original status bar"></a>
 
@@ -116,6 +116,12 @@ Based on id Software's original [`linuxdoom-1.10`](UPSTREAM.md), pinned to
 `a77dfb96cb91780ca334d0d4cfd86957558007e0`. Code: [GPL-2.0-only](LICENSE).
 Freedoom contributors provide the redistributable game assets
 under their [BSD license](test/fixtures/wad/COPYING.txt).
-Original demo authors and archive provenance are credited in the per-run reports.
+
+Thanks to the **DOOM speedrunning community** and the demo archivists at **DSDA**.
+Their recorded inputs let us compare the Solidity port against original C and
+produce the speedrun demonstrations. The README run is by **aconfusedhuman**;
+[runner credits and tape provenance](artifacts/full-videos/EPISODE-SUMMARY.md#gameplay-identities-and-authoritative-statistics)
+are retained with the verification evidence and in the per-run reports.
+
 DOOM and its commercial assets belong to their respective owners; this is an
 independent hobby project.
