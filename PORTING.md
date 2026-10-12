@@ -1,5 +1,19 @@
 # Porting map
 
+Current release overview: [compatibility and completeness](docs/COMPATIBILITY.md).
+The Phase 0–3 rows and measurements below retain their historical acceptance
+scope. Later integrated additions include the EVM menu/Options and map selector,
+DOOM II adapter and commercial flow, single-player death/rebirth, and noncanonical
+Exact EVM Snapshot Save/Load. Their current evidence is indexed in the compatibility
+guide; implementation is not a claim of exhaustive original-feature coverage.
+
+| Later source mapping | Current scope |
+|---|---|
+| `m_menu.c` → `src/doom/m_menu.sol`, `src/evm/DoomMenu.sol` | Original-derived menu/responders, supported Options and six-slot UI; Select Level is an explicit extension. [Options evidence](docs/OPTIONS-LEVEL-SELECTION.md). |
+| `f_wipe.c` → `src/doom/f_wipe.sol` | Native-verified recording consumer and component tests; not reachable from the production browser contracts. [Integration limits](docs/FULL-VIDEO-OPTIONS-INTEGRATION.md). |
+| Commercial `g_game.c`, `wi_stuff.c`, `f_finale.c` branches → same-named libraries plus `src/evm/Doom2.sol` | MAP01–32 startup, bounded gameplay/flow/UI evidence, MAP30 text with unsupported cast boundary. [DOOM II report](docs/doom2/REPORT.md). |
+| `g_game.c` death/rebirth dispatch → `src/evm/EpisodeRuntime.sol` hooks | Single-player original lifecycle integrated with exact snapshots; [combined verification](docs/DEATH-SAVE-LOAD-INTEGRATION.md). |
+
 Baseline: `original/DOOM/linuxdoom-1.10`, upstream `a77dfb96cb91780ca334d0d4cfd86957558007e0`. The complete static E1M1 renderer is implemented and matches all eight original-C world-view frames byte for byte. Phase 2 is accepted: ordinary deployment, Frame delivery, browser verification and every inherited regression gate pass. Phase 3 gameplay is integrated with completed native/kernel/production/browser proofs; M2/M3 passed all required gates; see the [Phase 3 report](docs/PHASE3-REPORT.md). See the [Phase 3 ledger](docs/PHASE3-PLAN.md) and [source/feature audit](docs/PHASE3-FEATURE-MATRIX.md); historical Phase 2 acceptance remains [separate](docs/PHASE2-REPORT.md).
 
 | Upstream source | Solidity destination | Status and deliberate adaptation |

@@ -1,0 +1,14 @@
+{
+  "encoder": "ffmpeg version 9.0.1 Copyright (c) 2000-2026 the FFmpeg developers",
+  "source": {
+    "path": "/Users/eduard/sandbox/doom-evm-speedrun/artifacts/local/speedrun-e1m1-video/speedrun-e1m1.mp4",
+    "sha256": "cbc0f78a4b0da044e688cb2d5186ebd59c180cf95b5f94b773df0798c851d939",
+    "bytes": 2360559
+  },
+  "derivative": {
+    "path": "docs/media/freedoom-evm.gif",
+    "sha256": "135c1f806574c4daace7ddb793b25beaa224b1488d301934a2d17852288ee480",
+    "bytes": 1899005
+  },
+  "newGameplayExecutedForMedia": false
+}

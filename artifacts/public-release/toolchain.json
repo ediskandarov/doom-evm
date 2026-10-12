@@ -1,0 +1,17 @@
+{
+  "forge": "forge Version: 1.8.5\nCommit SHA: 51a52c59cffd940f76eddd0b4bb1791aa4b5ac7f\nBuild Timestamp: 2026-10-05T17:07:33.315474000Z (1791220053)\nBuild Profile: dist",
+  "cast": "cast Version: 1.8.5\nCommit SHA: 51a52c59cffd940f76eddd0b4bb1791aa4b5ac7f\nBuild Timestamp: 2026-10-05T17:07:33.315474000Z (1791220053)\nBuild Profile: dist",
+  "anvil": "anvil Version: 1.8.5\nCommit SHA: 51a52c59cffd940f76eddd0b4bb1791aa4b5ac7f\nBuild Timestamp: 2026-10-05T17:07:33.315474000Z (1791220053)\nBuild Profile: dist",
+  "solc": "solc, the solidity compiler commandline interface\nVersion: 0.8.37+commit.f401782d.Darwin.appleclang",
+  "node": "v24.11.0",
+  "python": "3.14.2",
+  "host": "macOS-15.7.9-arm64-arm-64bit-Mach-O",
+  "upstream_commit": "a77dfb96cb91780ca334d0d4cfd86957558007e0",
+  "compiler_settings": {
+    "solc": ".toolchain/bin/solc",
+    "via_ir": true,
+    "optimizer": true,
+    "optimizer_runs": 200,
+    "evm_version": "cancun"
+  }
+}
