@@ -1,5 +1,15 @@
 # Phase 4 progress ledger
 
+Death/Respawn + Save/Load checkpoint (2026-10-12): **source integrated; focused
+combined-state verification passed**. All three games retain original death/rebirth
+and six-slot **Exact EVM Snapshots for user convenience, explicitly noncanonical**.
+Canonical Save/Load research is preserved; its proposed architecture was deliberately
+not selected or implemented. Fresh33 Forge/80 Node,397 Canvas/receipt pixel checks,
+18 mined rollback proofs and126 native frame/palette comparisons support the
+combined boundary. Successful reload/load/continue is checked separately after
+preserved helper failures. Full historical acceptance remains deferred.
+See [combined handoff](DEATH-SAVE-LOAD-INTEGRATION.md).
+
 Full Video + Options checkpoint (2026-10-11): **source integrated; focused
 combined verification passed**. Nine complete standalone Ultimate presentations
 are accepted as inherited evidence (18,175 frames /18,173 finite native-equal,
@@ -2104,3 +2114,74 @@ Verified integration tools/browser-package commit:
 `8351c8df91e44ec0292b3b0aa5e32fee26749cee`. Measured publication checkpoint
 2026-10-11 17:15:47UTC:410,594 aggregate goal tokens /2,460 elapsed service seconds;
 no missing cost/attribution estimate. Final evidence publication/push follows.
+
+
+## Death/Respawn + Exact EVM Save/Load integration — 2026-10-12
+
+Implementation: completed source features. Integration: normal merges, Death first,
+Save second. Verification: focused combined main passed; full Phase0–4 acceptance
+deferred. Product decision: six-slot Exact EVM Snapshot Save/Load remains exposed
+for convenience through original-style EVM menus and is **noncanonical**. The
+canonical semantic archive/action-lifecycle proposal remains research only.
+No implementation of that proposal is approved by this checkpoint.
+
+Source Death tip `b1527763e8b37309c12d083e4db342fd47f8f5e3`, checkpoints
+`3b3fd156`/`14251b6e`; merge `3999675710548c420cca76c855eba67a1fe21caf`.
+Source Save tip `028466fb2f253a2bd53fbc41d486d3a84b1557e6`, implementation
+`d3c33c47`/`8e19aced`/`01b09cdbc31e774b7da9937f3a9c67b3ad3d958b`; merge
+`359020c5a8d074271331abe7a55ed77562010192`.028466fb adds eight research-only
+files over01b09cdb; production implementation is unchanged. Verified focused
+tests/tools: `ae6ae6f63f1652dc200a78bcf69ef945b220f821`.
+
+The original first uncommitted Save merge was aborted at the user's request;
+Death/history remained. The corrected merge preserves all checkpoints/reports.
+Solidity adapters merged cleanly. Four generated release conflicts were rebuilt
+and source/ABI/immutable-bound. Doom/Doom2 runtimes927,930/905,156 bytes. The
+133-node four-root schema is unchanged; callback DeathFlow is transient. Root
+restoration retains references/thinkers/allocator/RNG/history; slot registry and
+monotonic transport counters are separate. Save/load is an immediate no-tic
+extension; restored queued rebirth still dispatches on its next original tick.
+AGENTS cache guidance is adopted verbatim without weaker verification rules.
+
+Fresh33 Forge executions and80 Node checks pass. Fresh original C O0/O2/sanitizer
+reproduces276 canonical golden worlds/51 frame-palette comparisons. Real Chrome
+Freedoom/Ultimate E1M1 and DOOM II MAP07 UV perform active save→genuine death→load,
+complete root/frame replay, save→same-map/skill rebirth→load, dead snapshot restore,
+six slots/overwrite/isolation, Options/Select Level/cross-map restoration. All18
+failed write transactions preserve entire storage roots/no logs. Native gameplay
+traces pass3,411 tic/61,398 field-family comparisons and126 full frame/palette
+comparisons over27 unique actual EVM receipt checkpoints. All397 executed Canvas
+checks match receipt pixels; the wrong-menu helper frame is transport-correct,
+not a successful load. Successful reload supplements all three installed games,
+restores exact roots/output, continues held-input movement and redeploys no resources.
+
+Primary whole-run pass=false is retained: F3 was sent under an open main menu.
+Further helpers initially used a stopped keyboard loop and an older frame than
+loop startup's EVM output. Correct the runner's navigation/startup/checkpoint,
+preserve those attempts, then pass the bounded reload gate. No production pixel,
+original C, existing test, assertion or historical golden changed.
+
+Fresh Freedoom raw production save/load/overwrite:654,019,922/146,140,569/
+156,363,532 gas; measured MSIZE2,324,992/1,858,848/2,324,992 bytes. Ordinary Chrome
+payloads:928,064 Freedoom,461,888 Ultimate,347,072–406,560 DOOM II MAP07/MAP01;
+per-game gas ranges and scope in the linked report. Other commercial memory
+maxima remain inherited. Payload cap8MiB/six slots; physical storage high-water,
+maximum map/history costs and engine migration remain limitations.
+
+Inherited: Death89 Forge/44 Node/six browser cycles; Save25 Forge/67 Node/five
+native/EVM worlds; research99 native lifecycle runs. They are preserved, not freshly
+rerun. RESTRICT native fidelity, explicit virtual profile3/default2/unknown guards,
+27 untouched historical MP4s, all94 nonoverlapping feature files and16 protected
+boundaries are bound in fresh evidence. No commercial WAD/MP4/asset is added.
+Source worktrees and original C remain unchanged; only owned19511/19512/19513
+runtimes were used/stopped. No save-survival claim across a fresh chain reset.
+
+Deferred: complete Phase0–4 acceptance, all full speedrun/video reruns, unselected
+canonical architecture, palette-effects/visual-gap work, unsupported Options,
+MAP30 cast, production browser melt and standalone next-level transition gaps,
+audio/music/multiplayer. No next goal is started.
+
+[Combined report](DEATH-SAVE-LOAD-INTEGRATION.md),
+[Death report](DEATH-RESPAWN.md), [Exact Save report](SAVE-LOAD.md),
+[preserved canonical research](SAVE-LOAD-CANONICAL-DISCOVERY.md),
+[fresh checkpoint](../artifacts/phase4/death-save-main/integration.json).

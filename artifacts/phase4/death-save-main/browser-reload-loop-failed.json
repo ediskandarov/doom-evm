@@ -1,0 +1,315 @@
+{
+  "kind": "combined-exact-save-death-real-anvil-chrome",
+  "pass": false,
+  "startedUtc": "2026-10-12T05:35:44.010Z",
+  "port": 19511,
+  "httpPort": 19512,
+  "checks": [
+    {
+      "label": "All three profiles available; no automatic RPC or wallet connection",
+      "pass": true
+    },
+    {
+      "label": "freedoom authenticated browser CREATE/install; Solidity default 2, explicit initializer 3",
+      "pass": true,
+      "address": "0x5ae1f4bb68f8eac39cfdbdfda2b7344ccbd80faf",
+      "identity": {
+        "schemaVersion": 0,
+        "wadSha256": "7323bcc168c5a45ff10749b339960e98314740a734c30d4b9f3337001f9e703d",
+        "bundleSha256": "d379076f21645cf7cc5acb056663d0faacc4065489a0ca99738479323c9f7a47",
+        "paletteSha256": "fd895921b5d0a394612bb29852ed003d44d69f76dec31c0dc6b5d5fc7d63f7bb",
+        "paletteVariant": 0
+      },
+      "defaultPolicy": 2,
+      "initializationTransaction": "0x022fd2d2bb2e9229920c6c2bad8d879e32e29704bb578f34444281d5ae213b4b"
+    },
+    {
+      "label": "freedoom genuine keyboard first-map movement and explicit persisted memory profile",
+      "pass": true,
+      "beforePlayerView": "0xfffffffffffffffffffffffffffffffffffffffffffffffffffffffffe6000000000000000000000000000000000000000000000000000000000000001000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000290000000000000000000000000000000000000000000000000000000000000000003d",
+      "afterPlayerView": "0xfffffffffffffffffffffffffffffffffffffffffffffffffffffffffe60c7ff000000000000000000000000000000000000000000000000000000000100001300000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000b53f000000000000000000000000000000000000000000000000000000000000001100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000290608000000000000000000000000000000000000000000000000000000000000003d"
+    }
+  ],
+  "frames": [
+    {
+      "label": "freedoom original EVM menu",
+      "transaction": "0xbfc033c693f8d0e8bc30275f41ac0273edca4b43f58c670b07c384e107ba7b98",
+      "gasUsed": "0xa60270c",
+      "pixelSha256": "eca337dda5e19d827748a7edb807e16f43aac409081e74f943fdc99841c53dce",
+      "rgbaSha256": "51639b5c783185c6bb665681d786a857a8a4904accf934b1480ad75e31a4908a",
+      "allCanvasPixelsExact": true,
+      "indexed": "artifacts/local/death-save-main/browser-reload-0.indexed.bin",
+      "rgb": "artifacts/local/death-save-main/browser-reload-0.rgb.bin",
+      "menu": {
+        "enabled": 1,
+        "active": 1,
+        "screen": 0,
+        "item": 0,
+        "skull": 0,
+        "animation": 8,
+        "map": 1,
+        "skill": 0,
+        "confirmation": 0
+      },
+      "state": {
+        "map": 0,
+        "skill": 0,
+        "state": 0,
+        "action": 0,
+        "paused": 0,
+        "last": 0,
+        "next": 0,
+        "wiStage": 0,
+        "wiTic": 0,
+        "finaleStage": 0,
+        "finaleTic": 0
+      },
+      "screenshot": "artifacts/local/death-save-main/browser-reload-0.png",
+      "screenshotSha256": "433f71b50b3665d91144870cd7001d9fe66df151854360cca3a0aa9eed5e02e8"
+    },
+    {
+      "label": "freedoom episode menu",
+      "transaction": "0x6f197df3bfef5b004481a563452bf6402dced3af11c98abaa0c02af0994dee55",
+      "gasUsed": "0x9fd5ad8",
+      "pixelSha256": "c22377b6874a68b1ae161e365da6d1fa0c3a0b3cf289801280d5ef8b290d5026",
+      "rgbaSha256": "2da6c5e8160494bc98a3255a62ed9a9545bc64d2887b01d326dcf14daec5c03c",
+      "allCanvasPixelsExact": true,
+      "indexed": "artifacts/local/death-save-main/browser-reload-1.indexed.bin",
+      "rgb": "artifacts/local/death-save-main/browser-reload-1.rgb.bin",
+      "menu": {
+        "enabled": 1,
+        "active": 1,
+        "screen": 1,
+        "item": 0,
+        "skull": 0,
+        "animation": 7,
+        "map": 1,
+        "skill": 0,
+        "confirmation": 0
+      },
+      "state": {
+        "map": 0,
+        "skill": 0,
+        "state": 0,
+        "action": 0,
+        "paused": 0,
+        "last": 0,
+        "next": 0,
+        "wiStage": 0,
+        "wiTic": 0,
+        "finaleStage": 0,
+        "finaleTic": 0
+      },
+      "screenshot": "artifacts/local/death-save-main/browser-reload-1.png",
+      "screenshotSha256": "a14f913d94484d86efec7decb254b05e385914db04bc53152cb5283de6d68b7a"
+    },
+    {
+      "label": "freedoom original skill menu",
+      "transaction": "0xdf945ce5520c5bf55403ceaeaaf17209393a252537e98d7cee4f30e5baf12aff",
+      "gasUsed": "0xaa83cb6",
+      "pixelSha256": "080105db7663d173d7a7a1fa0e9c5e1ce1998f926b2db783c9f8e7003f1b49c3",
+      "rgbaSha256": "392a0e95ac523aed4ea2ad9ecf792db360208f85b0eea6f22f5380a54e896443",
+      "allCanvasPixelsExact": true,
+      "indexed": "artifacts/local/death-save-main/browser-reload-2.indexed.bin",
+      "rgb": "artifacts/local/death-save-main/browser-reload-2.rgb.bin",
+      "menu": {
+        "enabled": 1,
+        "active": 1,
+        "screen": 2,
+        "item": 2,
+        "skull": 0,
+        "animation": 6,
+        "map": 1,
+        "skill": 0,
+        "confirmation": 0
+      },
+      "state": {
+        "map": 0,
+        "skill": 0,
+        "state": 0,
+        "action": 0,
+        "paused": 0,
+        "last": 0,
+        "next": 0,
+        "wiStage": 0,
+        "wiTic": 0,
+        "finaleStage": 0,
+        "finaleTic": 0
+      },
+      "screenshot": "artifacts/local/death-save-main/browser-reload-2.png",
+      "screenshotSha256": "b9709de49c9062f2064dcbd974ee553d6f6dd037eb61600a7fe3a10f359e6a6f"
+    },
+    {
+      "label": "freedoom actual first-map gameplay",
+      "transaction": "0xe4ae74f29d0d4219784d34f370eae27eb9f34db02ff5607d9a9656eac3103e71",
+      "gasUsed": "0xf202d34f",
+      "pixelSha256": "a297ba2dfa2d1eae509b975c96471640802a189389ea15ad741c399218782d54",
+      "rgbaSha256": "e774efbe632c754d4fd0e1488d0a573d2b79b26c3817f08ceaf5c8243b4a0dc5",
+      "allCanvasPixelsExact": true,
+      "indexed": "artifacts/local/death-save-main/browser-reload-3.indexed.bin",
+      "rgb": "artifacts/local/death-save-main/browser-reload-3.rgb.bin",
+      "menu": {
+        "enabled": 1,
+        "active": 0,
+        "screen": 2,
+        "item": 2,
+        "skull": 0,
+        "animation": 5,
+        "map": 1,
+        "skill": 2,
+        "confirmation": 0
+      },
+      "state": {
+        "map": 1,
+        "skill": 2,
+        "state": 0,
+        "action": 0,
+        "paused": 0,
+        "last": 0,
+        "next": 0,
+        "wiStage": 0,
+        "wiTic": 0,
+        "finaleStage": 0,
+        "finaleTic": 0
+      },
+      "screenshot": "artifacts/local/death-save-main/browser-reload-3.png",
+      "screenshotSha256": "7ebdc68219d221b3953d9716940ea1e31d380869f327a9b0b3017ba2633d05ed"
+    },
+    {
+      "label": "freedoom held movement",
+      "transaction": "0x5b04af3f6493846c2e4bc1088c7d365521f86d069407ceedbeada05e327af685",
+      "gasUsed": "0x658dde74",
+      "pixelSha256": "f9ecfcdb9cd0d75dccdee10476d06d8e98f940dff01f4e4b6169e0dc55a9138e",
+      "rgbaSha256": "07dd349eff2b87cee8b7e79aae4cfb2f5b4ed66a477c2669a2be95e403e57865",
+      "allCanvasPixelsExact": true,
+      "indexed": "artifacts/local/death-save-main/browser-reload-4.indexed.bin",
+      "rgb": "artifacts/local/death-save-main/browser-reload-4.rgb.bin",
+      "menu": {
+        "enabled": 1,
+        "active": 0,
+        "screen": 2,
+        "item": 2,
+        "skull": 0,
+        "animation": 4,
+        "map": 1,
+        "skill": 2,
+        "confirmation": 0
+      },
+      "state": {
+        "map": 1,
+        "skill": 2,
+        "state": 0,
+        "action": 0,
+        "paused": 0,
+        "last": 0,
+        "next": 0,
+        "wiStage": 0,
+        "wiTic": 0,
+        "finaleStage": 0,
+        "finaleTic": 0
+      },
+      "screenshot": "artifacts/local/death-save-main/browser-reload-4.png",
+      "screenshotSha256": "c161d92222d9455550a2b0418d3e227e3771e3e4d2a985b08ab837f90aaaccad"
+    },
+    {
+      "label": "freedoom supplemental Save menu",
+      "transaction": "0x9e426d43f173a6edae73487be4f096cf7cfa3ab8afb5e544750dd2c8b68ef9f9",
+      "gasUsed": "0x6be29cbf",
+      "pixelSha256": "2dd6569bd40f58f560c7a0363a0e9c9c2ac6021f3e3911dd4c08130c575c147c",
+      "rgbaSha256": "45cc774604afbea428798cb2df01cf56ab2599a82b763853a5cc10a3b2f46ec0",
+      "allCanvasPixelsExact": true,
+      "indexed": "artifacts/local/death-save-main/browser-reload-5.indexed.bin",
+      "rgb": "artifacts/local/death-save-main/browser-reload-5.rgb.bin",
+      "menu": {
+        "enabled": 1,
+        "active": 0,
+        "screen": 2,
+        "item": 2,
+        "skull": 0,
+        "animation": 3,
+        "map": 1,
+        "skill": 2,
+        "confirmation": 0
+      },
+      "state": {
+        "map": 1,
+        "skill": 2,
+        "state": 0,
+        "action": 0,
+        "paused": 0,
+        "last": 0,
+        "next": 0,
+        "wiStage": 0,
+        "wiTic": 0,
+        "finaleStage": 0,
+        "finaleTic": 0
+      },
+      "screenshot": "artifacts/local/death-save-main/browser-reload-5.png",
+      "screenshotSha256": "904c2ab794856bdb0851d2326dbe23b2c3f2e6412b2173b6da6b6f06afea7052"
+    }
+  ],
+  "sourceHashes": {
+    "web/install-engine.mjs": "9a800267c142aaa091fd58b2aaca443f4f96b9fdca4c67771093e89c5f3741b7",
+    "web/install-resources.mjs": "0d00a9bcda798ee5c933183651d7cc1756d6f355ea8c982f6bd80812cdba3e24",
+    "web/install-storage.mjs": "c9ed032f1dc701f250d47f4f985c217fb5aa3450be9a78a3415b235f200b60ac",
+    "web/install-pins.mjs": "c9767e086035882429e36806bb2abbd51fdec348fc83ebf2f6b53926023bb5ad",
+    "web/launcher.mjs": "a49a7575288038739bcf8abec097fb1b28cf9974b008a4b3fc54cbff6774b40d",
+    "web/menu-app.mjs": "ce46750e2b5b2a5092d8109fb04ed3aff3c0edcc6e2499ed4177f31674ec1659",
+    "web/app.mjs": "0a20f3223db6033b1f5fcc511a2a9bf42efd87d13f8aa01add2f96ce1a28cb85",
+    "web/index.html": "a783a3304bd03b5735b638a928344ea64d0fd670ef77d68f243c2f89c43b5949",
+    "web/browser-profiles.mjs": "c32fc60a6f1a3f8ba39089f0f30621e352ae5744ffffdb2333ed39bd59597643",
+    "web/doom2-profile.mjs": "8aec3d6428f164d8d8615eb940d7060bf82d0ae488da0e04c980d97d92cb2651",
+    "web/doom2-install.mjs": "db60b1e302db6f06d3e4d1db6b75bfb93dcae819484fb284dc87e1e084e719cc",
+    "web/doom2-pins.mjs": "f024ee0461849c44f72308d85bdf33d7f14ae36935efc0616a1b45cd14b3013e",
+    "tools/reference/death_save/browser.mjs": "4e897448d8ac8b4a6a283e2dabf4c02a7862e95be78536e415f3981200c97982",
+    "tools/reference/death_save/browser-features.mjs": "1c8ec0da20babebda2ed26669aa0d1545939668960042e74a07cbe82bb21c2cd",
+    "tools/reference/save_load/browser-features.mjs": "1768abe6d5f6643cf7aaaf8fde456f1e2e59019a786b5c7d0d09a0d676369be5"
+  },
+  "runtime": {
+    "args": [
+      "--host",
+      "127.0.0.1",
+      "--port",
+      "19511",
+      "--hardfork",
+      "cancun",
+      "--disable-code-size-limit",
+      "--no-request-size-limit",
+      "--memory-limit",
+      "1073741824",
+      "--gas-limit",
+      "10000000000",
+      "--allow-origin",
+      "http://127.0.0.1:19512",
+      "--silent"
+    ],
+    "info": {
+      "currentBlockNumber": "0x0",
+      "currentBlockTimestamp": 1791783344,
+      "currentBlockHash": "0xa3145ecc69c579cc478d0d3c405d30001fdf9133b4f462bda876b2fb9adbade7",
+      "hardFork": "Cancun",
+      "transactionOrder": "fees",
+      "environment": {
+        "baseFee": "0x3b9aca00",
+        "chainId": 31337,
+        "gasLimit": "0x2540be400",
+        "gasPrice": "0x77359400"
+      },
+      "forkConfig": {
+        "forkUrl": null,
+        "forkBlockNumber": null,
+        "forkRetryBackoff": null
+      },
+      "network": "ethereum"
+    },
+    "client": "anvil/v1.8.5"
+  },
+  "error": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n\n2 !== 6\n\n    at verifyReloadSetup (file:///Users/eduard/sandbox/doom-evm/tools/reference/death_save/reload-features.mjs:8:59)\n    at async file:///Users/eduard/sandbox/doom-evm/tools/reference/death_save/browser.mjs:132:3",
+  "endedUtc": "2026-10-12T05:39:19.931Z",
+  "stoppedOwnedRuntimes": true,
+  "rawLocalReport": {
+    "path": "artifacts/local/death-save-main/browser-reload.json",
+    "sha256": "d4ff3b3cc7d753f6c8f908dddb038ac4091898d6ef58d2b3a75eaac102126b4e",
+    "diagnosticStateKeptLocal": true
+  }
+}

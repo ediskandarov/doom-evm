@@ -1,0 +1,31 @@
+{
+  "command": [
+    ".toolchain/bin/forge",
+    "test",
+    "--offline",
+    "--no-dynamic-test-linking",
+    "--gas-limit",
+    "200000000000",
+    "--json"
+  ],
+  "tests": [
+    "test/unit/p_saveg.t.sol",
+    "test/unit/SaveSlots.t.sol",
+    "test/unit/SaveMenu.t.sol",
+    "test/unit/m_menu.t.sol",
+    "test/unit/OptionsMenu.t.sol",
+    "test/doom2/Menu.t.sol",
+    "test/death_respawn/DeathRespawn.t.sol",
+    "test/death_respawn/CombinedSaveRespawn.t.sol"
+  ],
+  "startedUtc": "2026-10-12T05:11:07.803383+00:00",
+  "endedUtc": "2026-10-12T05:19:19.123316+00:00",
+  "seconds": 491.3190070828423,
+  "exitCode": 0,
+  "environments": {
+    "FOUNDRY_SRC": "artifacts/local/death-save-main/tests/empty-src",
+    "FOUNDRY_TEST": "artifacts/local/death-save-main/tests/imports",
+    "FOUNDRY_OUT": "artifacts/local/death-save-main/tests/out",
+    "FOUNDRY_CACHE_PATH": "artifacts/local/death-save-main/tests/cache"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "command": [
+    "node",
+    "--test",
+    "tools/reference/save_load/keybindings.test.mjs",
+    "web/menu-input.test.mjs",
+    "web/input.test.mjs",
+    "web/input-loop.test.mjs",
+    "web/input-runtime.test.mjs",
+    "web/input-app.test.mjs",
+    "web/browser-profiles.test.mjs",
+    "tools/reference/gameplay/production-memory.test.mjs",
+    "tools/reference/phase2_data/instrument.test.mjs",
+    "web/install.test.mjs",
+    "web/doom2-profile.test.mjs"
+  ],
+  "exitCode": 0,
+  "seconds": 0.671516583301127,
+  "startedUtc": "2026-10-12T05:13:59.956967+00:00",
+  "endedUtc": "2026-10-12T05:14:00.628489+00:00"
+}

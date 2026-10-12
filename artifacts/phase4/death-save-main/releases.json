@@ -1,0 +1,56 @@
+{
+  "Doom": {
+    "artifact": "web/install-assets/Doom.json",
+    "artifactSha256": "8cdb345fbfc40d5d058b27a9e626bc8030ab8a85d736e27dbf916434b9eed4e1",
+    "runtimeSha256": "eeab79f7d3931d12108dfd01f7c2a10288008da55f0aa3a1e9afc6fc5882990d",
+    "runtimeBytes": 927930,
+    "pins": "web/install-pins.mjs",
+    "pinsSha256": "c9767e086035882429e36806bb2abbd51fdec348fc83ebf2f6b53926023bb5ad",
+    "compiler": {
+      "version": "0.8.37+commit.f401782d"
+    },
+    "settings": {
+      "remappings": [],
+      "optimizer": {
+        "enabled": true,
+        "runs": 200
+      },
+      "metadata": {
+        "bytecodeHash": "ipfs"
+      },
+      "compilationTarget": {
+        "src/evm/Doom.sol": "Doom"
+      },
+      "evmVersion": "cancun",
+      "libraries": {},
+      "viaIR": true
+    }
+  },
+  "Doom2": {
+    "artifact": "web/doom2-assets/Doom.json",
+    "artifactSha256": "3f9065a4aa169004ceaeb1716b41cb6f4e53ac9d31458e77147708d36ff47d3b",
+    "runtimeSha256": "2a90565baa2772f3881f8ed02c87012afd0c5fb3903ac9027b65826ad7317f40",
+    "runtimeBytes": 905156,
+    "pins": "web/doom2-pins.mjs",
+    "pinsSha256": "f024ee0461849c44f72308d85bdf33d7f14ae36935efc0616a1b45cd14b3013e",
+    "compiler": {
+      "version": "0.8.37+commit.f401782d"
+    },
+    "settings": {
+      "remappings": [],
+      "optimizer": {
+        "enabled": true,
+        "runs": 200
+      },
+      "metadata": {
+        "bytecodeHash": "ipfs"
+      },
+      "compilationTarget": {
+        "src/evm/Doom2.sol": "Doom2"
+      },
+      "evmVersion": "cancun",
+      "libraries": {},
+      "viaIR": true
+    }
+  }
+}

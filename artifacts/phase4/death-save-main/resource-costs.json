@@ -1,0 +1,69 @@
+{
+  "freedoom": {
+    "payloadBytes": [
+      928064
+    ],
+    "gas": {
+      "save": {
+        "count": 6,
+        "min": 654276471,
+        "max": 662468700
+      },
+      "overwrite": {
+        "count": 9,
+        "min": 156657544,
+        "max": 169445834
+      },
+      "load": {
+        "count": 8,
+        "min": 141424476,
+        "max": 192713437
+      }
+    }
+  },
+  "ultimate": {
+    "payloadBytes": [
+      461888
+    ],
+    "gas": {
+      "save": {
+        "count": 6,
+        "min": 312234745,
+        "max": 318748660
+      },
+      "overwrite": {
+        "count": 9,
+        "min": 78468316,
+        "max": 91487260
+      },
+      "load": {
+        "count": 8,
+        "min": 70339627,
+        "max": 92905879
+      }
+    }
+  },
+  "doom2": {
+    "payloadBytes": [
+      347072,
+      406560
+    ],
+    "gas": {
+      "save": {
+        "count": 6,
+        "min": 245281242,
+        "max": 296531630
+      },
+      "overwrite": {
+        "count": 9,
+        "min": 68176611,
+        "max": 81942110
+      },
+      "load": {
+        "count": 8,
+        "min": 52485884,
+        "max": 83756662
+      }
+    }
+  }
+}

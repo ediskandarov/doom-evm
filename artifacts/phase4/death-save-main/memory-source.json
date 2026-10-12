@@ -1,0 +1,9 @@
+{
+  "kind": "Create an observation-only production save/load MSIZE-marker clone.",
+  "originalSourceSha256": "5bbbd3bdb17a23be46649f9cff16a7ddcc5442de6bbb8f3a7238e8833e2e4769",
+  "cloneSourceSha256": "fdb443a15a99c10e02460174f2691f1990531be119230df43c38842c7d09564b",
+  "changes": [
+    "Contract name/import paths only; end-of-save/load observer events and private GAS marker."
+  ],
+  "scope": "Current call-frame MSIZE through observer boundary, after production Frame encoding; excludes following observer encoding and separate precompile frames."
+}

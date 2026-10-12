@@ -1,0 +1,20 @@
+{
+  "command": [
+    ".toolchain/bin/forge",
+    "build",
+    "artifacts/local/death-save-main/memory/DoomSaveMemoryProbe.sol",
+    "--offline",
+    "--no-lint",
+    "--skip",
+    "test",
+    "script",
+    "--out",
+    "artifacts/local/death-save-main/production/out",
+    "--cache-path",
+    "artifacts/local/death-save-main/production/cache"
+  ],
+  "startedUtc": "2026-10-12T05:20:57.898408+00:00",
+  "seconds": 131.610592499841,
+  "exitCode": 0,
+  "endedUtc": "2026-10-12T05:23:09.509234+00:00"
+}

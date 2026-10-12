@@ -1,0 +1,21 @@
+{
+  "checkedUtc": "2026-10-12T06:01:07.807Z",
+  "checks": [
+    {
+      "port": 19511,
+      "closed": true
+    },
+    {
+      "port": 19512,
+      "closed": true
+    },
+    {
+      "port": 19513,
+      "closed": true
+    }
+  ],
+  "reservedPortsUntouched": [
+    18880,
+    8088
+  ]
+}

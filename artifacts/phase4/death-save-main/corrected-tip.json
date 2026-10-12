@@ -1,0 +1,19 @@
+{
+  "checkedUtc": "2026-10-12T05:08:02.254612+00:00",
+  "implementation": "01b09cdbc31e774b7da9937f3a9c67b3ad3d958b",
+  "tip": "028466fb2f253a2bd53fbc41d486d3a84b1557e6",
+  "descends": true,
+  "researchOnly": true,
+  "productionSourceUnchanged": true,
+  "files": [
+    "artifacts/save-load-canonical/attempts.json",
+    "artifacts/save-load-canonical/evidence.json",
+    "artifacts/save-load-canonical/native-lifecycle.json",
+    "artifacts/save-load-canonical/scope.json",
+    "docs/SAVE-LOAD-CANONICAL-DISCOVERY.md",
+    "tools/reference/save_load_research/host.c",
+    "tools/reference/save_load_research/lifecycle.py",
+    "tools/reference/save_load_research/publish.py"
+  ],
+  "main": "3999675710548c420cca76c855eba67a1fe21caf"
+}

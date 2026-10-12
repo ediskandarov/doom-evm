@@ -1,0 +1,145 @@
+{
+  "overallPass": true,
+  "frozenUtc": "2026-10-12T06:12:59.677239+00:00",
+  "baseline": "ff826659ceff0b3a5637e70109b62eb75a83d611",
+  "deathTip": "b1527763e8b37309c12d083e4db342fd47f8f5e3",
+  "saveTip": "028466fb2f253a2bd53fbc41d486d3a84b1557e6",
+  "implementationTip": "01b09cdbc31e774b7da9937f3a9c67b3ad3d958b",
+  "mergeOrder": [
+    "death-respawn",
+    "save-load"
+  ],
+  "merges": [
+    "3999675710548c420cca76c855eba67a1fe21caf",
+    "359020c5a8d074271331abe7a55ed77562010192"
+  ],
+  "codeCheckpoint": "ae6ae6f63f1652dc200a78bcf69ef945b220f821",
+  "sourceCommits": [
+    "3b3fd15607d9f48846a8cf0da4ae1ea8bf21b420",
+    "14251b6e998fecccaab8c265f92ef4ad8c933109",
+    "b1527763e8b37309c12d083e4db342fd47f8f5e3",
+    "d3c33c471f026e1e915893821b497ccc9b9d09b3",
+    "8e19acedae378f851403feb73ac23091513faeed",
+    "01b09cdbc31e774b7da9937f3a9c67b3ad3d958b",
+    "028466fb2f253a2bd53fbc41d486d3a84b1557e6"
+  ],
+  "productDecision": {
+    "implementation": "Six-slot Exact EVM Snapshot for user convenience",
+    "noncanonical": true,
+    "canonicalResearchPreserved": true,
+    "canonicalImplemented": false
+  },
+  "conflicts": {
+    "solidity": "Auto-merged;source behaviors retained, no new production semantics",
+    "generated": [
+      "web/install-assets/Doom.json",
+      "web/install-pins.mjs",
+      "web/doom2-assets/Doom.json",
+      "web/doom2-pins.mjs"
+    ],
+    "resolution": "Regenerated combined build;metadata/source/ABI/immutable identities verified"
+  },
+  "fresh": {
+    "forgeExecutions": 33,
+    "newCombinedForgeCases": 4,
+    "nodeTests": 80,
+    "nativeGoldenWorldComparisons": 276,
+    "nativeGoldenFramePaletteComparisons": 51,
+    "primaryCompletedThreeGameCases": true,
+    "primaryOverallPass": false,
+    "reloadOverallPass": true,
+    "primaryCanvasChecks": 338,
+    "reloadCanvasChecks": 59,
+    "totalCanvasChecks": 397,
+    "minedAllStorageRollbacks": 18,
+    "nativeTicComparisons": 3411,
+    "nativeFieldFamilyComparisons": 61398,
+    "nativeCompleteFramePaletteComparisons": 126,
+    "uniqueNativeComparedEvmCheckpoints": 27,
+    "memoryMeasurements": "production-memory.json"
+  },
+  "inherited": {
+    "death": {
+      "forge": 89,
+      "node": 44,
+      "browserDeathRebirthCycles": 6
+    },
+    "save": {
+      "forge": 25,
+      "node": 67,
+      "nativeEvmScenarios": 5
+    },
+    "canonicalResearch": {
+      "nativeRuns": 99
+    }
+  },
+  "limitations": [
+    "Exact snapshots intentionally differ from canonical C save timing, quantization, RNG/reference loss and binary format",
+    "Native fidelity RESTRICT;explicit virtual profile3/default2/unknown rejection unchanged",
+    "No fresh-chain save survival without backup; no schema/engine migration or cross-contract import",
+    "Large map/history archive gas/storage ceilings not swept;8MiB cap not universal10B proof",
+    "Complete inherited Phase0\u20134/full-video/speedrun replays deferred",
+    "Palette-effects/visual-gap recommendations,unsupported Options,MAP30 cast,audio/music/multiplayer excluded",
+    "Prior standalone next-level startup and production-browser melt gaps unchanged"
+  ],
+  "runtimePorts": [
+    19511,
+    19512,
+    19513
+  ],
+  "usageAtExplicitPause": {
+    "status": "paused",
+    "tokensUsed": 117706,
+    "timeUsedSeconds": 242,
+    "scope": "Earlier available counter only;resume work not attributed by paused service; no missing attribution estimated"
+  },
+  "bindings": {
+    "AGENTS.md": "f0a333edae2273c1d7b69358e5444dbdd35e31d4b1edbf21e86bb770e924d250",
+    "PORTING.md": "f327b13d6bc7243609ec0601d598e0d17085691ecf7299c566c0e7edfc44b381",
+    "artifacts/phase4/death-save-main/attempts.json": "ff1a10a2c285809c4aa915fc4e417922c6fd2a71732968bafe7359a80e8e4400",
+    "artifacts/phase4/death-save-main/browser-first-abort.json": "b8312ee5a807fb15354acab031a419dd2c1d529ea5f1f026f8f940141ea3fb23",
+    "artifacts/phase4/death-save-main/browser-first-helper.mjs": "69618e47b44031d2f6a33dbaf2716ec14746eadf75d5117f0325223ab6a4d05e",
+    "artifacts/phase4/death-save-main/browser-primary-executed.mjs.gz": "4939bc09957510107c2f5a0b76a868b737eb011c7ed6f1e770f60c6f20896f3b",
+    "artifacts/phase4/death-save-main/browser-primary.json": "7dc41fcbc51c4d7aaf53d615ffae3add866935b2baea5a62eaf1e6826c8d1537",
+    "artifacts/phase4/death-save-main/browser-reload-loop-failed.json": "3652d571024083e60607dec7a91b781f1f85cca1793cea13f40ffdad6eee336f",
+    "artifacts/phase4/death-save-main/browser-reload-stale-frame-failed.json": "30e12f56649205d1bec2dec3c029ad71335e6a47d0f419e0cf5fc18a2cc77b51",
+    "artifacts/phase4/death-save-main/browser-reload-v2-executed.mjs.gz": "a90604af2e138f74587924e7c6f7e21d15f9bf11a0022024b894400b531ac988",
+    "artifacts/phase4/death-save-main/browser-reload.json": "5800c639412a6b277b5a6c09e6fdaac386ff5eeded187267269fbd57c2436270",
+    "artifacts/phase4/death-save-main/corrected-tip.json": "0d6de99d9b9bd073444e8d6f566941df4b282bb945c8c6949967c712a07378d9",
+    "artifacts/phase4/death-save-main/forge-run.json": "2e88cde9e8f1e0ef9ac283758a4b9da3bb6204b85ba5a08f49b53b54f2500765",
+    "artifacts/phase4/death-save-main/forge.json": "dbc6a92fc2e5823761ce0605514ce994d0765bb57ffa3084ca0f8d1f10ef0a94",
+    "artifacts/phase4/death-save-main/media-preserved.json": "58458c60c78828b870866d03f58d5ee19641b442747824ac5d628ff8f0c77d65",
+    "artifacts/phase4/death-save-main/memory-build.json": "4ebea2b10b7ec26d776bb7b9f2c1a4ae05eb5881d3ce89f763b6e9eb8306d822",
+    "artifacts/phase4/death-save-main/memory-executed.mjs.gz": "66b222c31c91e030d7bad146a8a07e2192700afc8f070f2a59b24addd95988af",
+    "artifacts/phase4/death-save-main/memory-source.json": "1d13d4dbe5cef7b055f4c953360c83f959ed5d63cca818f2031924f94ac6ee15",
+    "artifacts/phase4/death-save-main/native-browser.json": "78c87d6b05cdbd0504169629e08089b8f4be52f217cbd9f8cccef199e6f1bd2e",
+    "artifacts/phase4/death-save-main/native-builds.json": "3d997f531ee7bfe785ab31587dcb0b430f0f3e92049aa4b7077cae118f2a22f5",
+    "artifacts/phase4/death-save-main/native-fixtures.json": "8d1632a2ea001b6c7508ab48a695ba259c1e9e439c2bfa7daed44f3604a57965",
+    "artifacts/phase4/death-save-main/node.json": "a8f5e6e13ab6ed8535c6b559582d3c582eb0d9a167c6a6e3285e5a8a07305d45",
+    "artifacts/phase4/death-save-main/node.log": "5b7d4c8f1ca6f93381296bf57541332afda6921ee824ce101759d60fd488dc68",
+    "artifacts/phase4/death-save-main/preflight.json": "24aed48d65e64a70cfee49b84ecc2f6ba7828c4fcddac7071f885bf919e07327",
+    "artifacts/phase4/death-save-main/preservation.json": "1b77f228f94d8ca073660528b6025ac84e917744f5afe1be19ca7a3968945a02",
+    "artifacts/phase4/death-save-main/production-build.json": "9e8a569e8bac1c6a4297e6277d933e03840d99376ac02590d8b4870003ba9593",
+    "artifacts/phase4/death-save-main/production-build.log": "2b7929927d5eaba4c72fbece9dfd86f8f8452c67994745303065e7369b62dda3",
+    "artifacts/phase4/death-save-main/production-memory.json": "3f65daa64a459d4906188e5edc45daf68212a819b009a5501f131db70252b8e4",
+    "artifacts/phase4/death-save-main/releases.json": "8c34e0cad883dace9d9b9fc034ce8f79f428192360708aba9d0bb77f2893b614",
+    "artifacts/phase4/death-save-main/reload-features-v2-executed.mjs.gz": "2a67591e69c1830037226b23e6482c500ee18f354bd1996ea5343a7213f2c928",
+    "artifacts/phase4/death-save-main/resource-costs.json": "82c6bbdc81714c39bd9d9700d2bcb6bb2cf9d9dc48356844db4c35fda1dc544b",
+    "artifacts/phase4/death-save-main/runtime-cleanup.json": "d1cca7c856deb45e69f93f0dd9beee7f8dfff7c1a84dee9905725fe199faa0e3",
+    "artifacts/phase4/death-save-main/verify.py": "b8713cb565923f5cb69ba43e3b0f0bbe1949c575e6be80ee6153e4debe251830",
+    "docs/DEATH-SAVE-LOAD-INTEGRATION.md": "67d37900f8d21a1fc7477d70877486f8c222ba82fba601b37db3599366d6d9a0",
+    "docs/PHASE4-PLAN.md": "a0a332c14db357e89e0266e4dfe7c435556e91d8573d523fd26740275f4ce439",
+    "test/death_respawn/CombinedSaveRespawn.t.sol": "756b7012a67db3779e0b7c8ea57aec3b311d551a9e1ea50a9fb70cfaf9d2e9f4",
+    "tools/reference/death_save/README.md": "bf3a656f1ad71f132837d332b6ac17072a16c2f8567748a719b6ba478d4767f4",
+    "tools/reference/death_save/browser-features.mjs": "1c8ec0da20babebda2ed26669aa0d1545939668960042e74a07cbe82bb21c2cd",
+    "tools/reference/death_save/browser.mjs": "60245a19794e4304c041864e20d96bc98ee248bf4a5f3f78bc588f94314524d4",
+    "tools/reference/death_save/memory-prepare.py": "1c06fa277e3b7e5c4ef58ca6f45aa2cc221cf8693435355299291c5d1c17d645",
+    "tools/reference/death_save/memory.mjs": "9132082d309374a5477031ace7b9bafcbc82813bf07de831bb80f1e1cd54b28a",
+    "tools/reference/death_save/native.py": "9e1c970a44d1752dbe3d4da90d97b9c34f85910181917eccfa3a48eeba62c1fc",
+    "tools/reference/death_save/reload-features.mjs": "d04b1d5b92d74740a1d9c659851f03adb4209fa524d716cd1703aa02240431c0",
+    "web/doom2-assets/Doom.json": "3f9065a4aa169004ceaeb1716b41cb6f4e53ac9d31458e77147708d36ff47d3b",
+    "web/doom2-pins.mjs": "f024ee0461849c44f72308d85bdf33d7f14ae36935efc0616a1b45cd14b3013e",
+    "web/install-assets/Doom.json": "8cdb345fbfc40d5d058b27a9e626bc8030ab8a85d736e27dbf916434b9eed4e1",
+    "web/install-pins.mjs": "c9767e086035882429e36806bb2abbd51fdec348fc83ebf2f6b53926023bb5ad"
+  }
+}

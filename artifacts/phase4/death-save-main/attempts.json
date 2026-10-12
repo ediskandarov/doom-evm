@@ -1,0 +1,26 @@
+{
+  "sourceReportsUnchanged": true,
+  "productionChangesRequired": false,
+  "attempts": [
+    {
+      "report": "browser-first-abort.json",
+      "scope": "Canceled fresh-native setup before completed acceptance; original End Game/New Game makes the isolated native prefix appropriate. Only owned processes stopped."
+    },
+    {
+      "report": "browser-primary.json",
+      "scope": "All three completed combined death/save cases, slot isolation, root/frame replay,18 rollback proofs and338 primary Canvas checks; later reload navigation fails. F3 under active original main menu is ignored; following Enter selects level. Overall original pass=false preserved."
+    },
+    {
+      "report": "browser-reload-loop-failed.json",
+      "scope": "Supplemental keyboard loop still stopped by harness; F2 was not dispatched. Resume the existing loop as the source runner does."
+    },
+    {
+      "report": "browser-reload-stale-frame-failed.json",
+      "scope": "Loop startup produced a newer EVM framebuffer; helper compared save output to the older recorded movement frame. Take a fresh ordinary gameplay Frame before snapshot."
+    },
+    {
+      "report": "browser-reload.json",
+      "scope": "Corrected bounded gate: close reopened main menu, assert Load screen5, restore exact cached output/full roots, actual held-key movement; all three games pass."
+    }
+  ]
+}

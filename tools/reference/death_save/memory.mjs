@@ -72,5 +72,5 @@ try{
 finally{
  if(child?.pid&&child.exitCode===null&&child.signalCode===null)await new Promise(done=>{child.once('exit',done);child.kill('SIGTERM');setTimeout(()=>{if(child.exitCode===null)child.kill('SIGKILL');},3000).unref();});
  report.endedUtc=new Date().toISOString();report.stoppedOwnedRuntime=!!child;await writeFile(dir+'/report.json',JSON.stringify(report,null,2)+'\n');
- 
+
 }

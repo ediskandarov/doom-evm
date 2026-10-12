@@ -1,0 +1,82 @@
+{
+  "rows": [
+    {
+      "command": [
+        "python3",
+        "tools/reference/death_respawn/native.py",
+        "--output",
+        "artifacts/local/death-save-main/native/episode-/O0",
+        "--opt",
+        "O0"
+      ],
+      "exitCode": 0,
+      "seconds": 5.210067625157535
+    },
+    {
+      "command": [
+        "python3",
+        "tools/reference/death_respawn/native.py",
+        "--output",
+        "artifacts/local/death-save-main/native/episode-/O2",
+        "--opt",
+        "O2"
+      ],
+      "exitCode": 0,
+      "seconds": 9.192402166780084
+    },
+    {
+      "command": [
+        "python3",
+        "tools/reference/death_respawn/native.py",
+        "--output",
+        "artifacts/local/death-save-main/native/episode-/sanitize",
+        "--opt",
+        "O2",
+        "--sanitize"
+      ],
+      "exitCode": 0,
+      "seconds": 16.913365290965885
+    },
+    {
+      "command": [
+        "python3",
+        "tools/reference/death_respawn/native.py",
+        "--output",
+        "artifacts/local/death-save-main/native/commercial-/O0",
+        "--opt",
+        "O0",
+        "--commercial"
+      ],
+      "exitCode": 0,
+      "seconds": 5.1506134159862995
+    },
+    {
+      "command": [
+        "python3",
+        "tools/reference/death_respawn/native.py",
+        "--output",
+        "artifacts/local/death-save-main/native/commercial-/O2",
+        "--opt",
+        "O2",
+        "--commercial"
+      ],
+      "exitCode": 0,
+      "seconds": 9.26049212506041
+    },
+    {
+      "command": [
+        "python3",
+        "tools/reference/death_respawn/native.py",
+        "--output",
+        "artifacts/local/death-save-main/native/commercial-/sanitize",
+        "--opt",
+        "O2",
+        "--sanitize",
+        "--commercial"
+      ],
+      "exitCode": 0,
+      "seconds": 16.9284914592281
+    }
+  ],
+  "endedUtc": "2026-10-12T05:15:34.571183+00:00"
+}

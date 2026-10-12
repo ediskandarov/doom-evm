@@ -1,0 +1,104 @@
+{
+  "pass": true,
+  "startedUtc": "2026-10-12T05:22:34.436071+00:00",
+  "scope": "Fresh finite original-C comparisons; exact EVM restores replay native prefixes.\n\nThis does not use the lossy original C save-file semantics as the EVM oracle.\nNo native state/pixels are imported into EVM. Original files/goldens stay intact.\n",
+  "cases": [
+    {
+      "profile": "O0",
+      "case": "environment",
+      "worldSnapshots": 14,
+      "framesAndPalettes": 10,
+      "goldenSha256": "562db9a0f772f54da7647341a1242c407d3f1a153131e902454970bbbf0585c1",
+      "command": [
+        "/Users/eduard/sandbox/doom-evm/artifacts/local/death-save-main/native/episode-/O0/death-respawn",
+        "/Users/eduard/sandbox/doom-evm/artifacts/local/freedoom/freedoom1.wad",
+        "/Users/eduard/sandbox/doom-evm/artifacts/local/death-save-main/native-fixtures/O0/environment",
+        "/Users/eduard/sandbox/doom-evm/test/fixtures/death_respawn/environment-commands.txt",
+        "1",
+        "3",
+        "0"
+      ]
+    },
+    {
+      "profile": "O0",
+      "case": "monster",
+      "worldSnapshots": 78,
+      "framesAndPalettes": 7,
+      "goldenSha256": "a308cce0d42bcd3ced7def48f8f1ceb8782afeeef2b297295a220683e23a3dc4",
+      "command": [
+        "/Users/eduard/sandbox/doom-evm/artifacts/local/death-save-main/native/episode-/O0/death-respawn",
+        "/Users/eduard/sandbox/doom-evm/artifacts/local/freedoom/freedoom1.wad",
+        "/Users/eduard/sandbox/doom-evm/artifacts/local/death-save-main/native-fixtures/O0/monster",
+        "/Users/eduard/sandbox/doom-evm/test/fixtures/death_respawn/monster-commands.txt",
+        "1",
+        "3",
+        "0"
+      ]
+    },
+    {
+      "profile": "O2",
+      "case": "environment",
+      "worldSnapshots": 14,
+      "framesAndPalettes": 10,
+      "goldenSha256": "562db9a0f772f54da7647341a1242c407d3f1a153131e902454970bbbf0585c1",
+      "command": [
+        "/Users/eduard/sandbox/doom-evm/artifacts/local/death-save-main/native/episode-/O2/death-respawn",
+        "/Users/eduard/sandbox/doom-evm/artifacts/local/freedoom/freedoom1.wad",
+        "/Users/eduard/sandbox/doom-evm/artifacts/local/death-save-main/native-fixtures/O2/environment",
+        "/Users/eduard/sandbox/doom-evm/test/fixtures/death_respawn/environment-commands.txt",
+        "1",
+        "3",
+        "0"
+      ]
+    },
+    {
+      "profile": "O2",
+      "case": "monster",
+      "worldSnapshots": 78,
+      "framesAndPalettes": 7,
+      "goldenSha256": "a308cce0d42bcd3ced7def48f8f1ceb8782afeeef2b297295a220683e23a3dc4",
+      "command": [
+        "/Users/eduard/sandbox/doom-evm/artifacts/local/death-save-main/native/episode-/O2/death-respawn",
+        "/Users/eduard/sandbox/doom-evm/artifacts/local/freedoom/freedoom1.wad",
+        "/Users/eduard/sandbox/doom-evm/artifacts/local/death-save-main/native-fixtures/O2/monster",
+        "/Users/eduard/sandbox/doom-evm/test/fixtures/death_respawn/monster-commands.txt",
+        "1",
+        "3",
+        "0"
+      ]
+    },
+    {
+      "profile": "sanitize",
+      "case": "environment",
+      "worldSnapshots": 14,
+      "framesAndPalettes": 10,
+      "goldenSha256": "562db9a0f772f54da7647341a1242c407d3f1a153131e902454970bbbf0585c1",
+      "command": [
+        "/Users/eduard/sandbox/doom-evm/artifacts/local/death-save-main/native/episode-/sanitize/death-respawn",
+        "/Users/eduard/sandbox/doom-evm/artifacts/local/freedoom/freedoom1.wad",
+        "/Users/eduard/sandbox/doom-evm/artifacts/local/death-save-main/native-fixtures/sanitize/environment",
+        "/Users/eduard/sandbox/doom-evm/test/fixtures/death_respawn/environment-commands.txt",
+        "1",
+        "3",
+        "0"
+      ]
+    },
+    {
+      "profile": "sanitize",
+      "case": "monster",
+      "worldSnapshots": 78,
+      "framesAndPalettes": 7,
+      "goldenSha256": "a308cce0d42bcd3ced7def48f8f1ceb8782afeeef2b297295a220683e23a3dc4",
+      "command": [
+        "/Users/eduard/sandbox/doom-evm/artifacts/local/death-save-main/native/episode-/sanitize/death-respawn",
+        "/Users/eduard/sandbox/doom-evm/artifacts/local/freedoom/freedoom1.wad",
+        "/Users/eduard/sandbox/doom-evm/artifacts/local/death-save-main/native-fixtures/sanitize/monster",
+        "/Users/eduard/sandbox/doom-evm/test/fixtures/death_respawn/monster-commands.txt",
+        "1",
+        "3",
+        "0"
+      ]
+    }
+  ],
+  "endedUtc": "2026-10-12T05:22:36.544527+00:00"
+}
