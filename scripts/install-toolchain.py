@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """Install checksum-pinned binaries locally, never alter global Foundry/Solidity."""
-import hashlib, io, json, os, pathlib, platform, subprocess, tarfile, urllib.request
+import hashlib, io, json, os, pathlib, platform, subprocess, tarfile, tempfile, urllib.request
 ROOT = pathlib.Path(__file__).resolve().parents[1]
 lock = json.loads((ROOT / 'toolchain.lock.json').read_text())
 arch = {'aarch64': 'arm64', 'x86_64': 'amd64'}.get(platform.machine(), platform.machine())
@@ -9,6 +9,20 @@ if key not in lock['platforms']:
     raise SystemExit(f'No pinned binary set for {key}; do not substitute a compiler silently.')
 bindir = ROOT / '.toolchain' / 'bin'
 bindir.mkdir(parents=True, exist_ok=True)
+
+def install_binary(name, data):
+    # Replace the inode, not an executable's live contents. In-place writes can
+    # invalidate macOS code-signing caches and affect already running tools.
+    fd, temporary = tempfile.mkstemp(prefix=f'.{name}-', dir=bindir)
+    try:
+        with os.fdopen(fd, 'wb') as output:
+            output.write(data)
+            os.fchmod(output.fileno(), 0o755)
+        os.replace(temporary, bindir / name)
+    finally:
+        if os.path.exists(temporary):
+            os.unlink(temporary)
+
 downloads = {}
 for tool, spec in lock['platforms'][key].items():
     print(f'Downloading {tool} for {key}', flush=True)
@@ -23,11 +37,9 @@ for tool, data in downloads.items():
         with tarfile.open(fileobj=io.BytesIO(data), mode='r:gz') as archive:
             for name in ('forge', 'cast', 'anvil', 'chisel'):
                 member = next(m for m in archive.getmembers() if pathlib.PurePosixPath(m.name).name == name and m.isfile())
-                (bindir / name).write_bytes(archive.extractfile(member).read())
-                (bindir / name).chmod(0o755)
+                install_binary(name, archive.extractfile(member).read())
     else:
-        (bindir / 'solc').write_bytes(data)
-        (bindir / 'solc').chmod(0o755)
+        install_binary('solc', data)
 for name in ('forge', 'anvil', 'solc'):
     output = subprocess.check_output([str(bindir / name), '--version'], text=True)
     expected = lock['solc'] if name == 'solc' else lock['foundry']
