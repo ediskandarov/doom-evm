@@ -16,6 +16,7 @@ import {EpisodeRuntime, EpisodeState} from "./EpisodeRuntime.sol";
 import {G_Game, GameflowState} from "../doom/g_game.sol";
 import {M_Menu, MenuState} from "../doom/m_menu.sol";
 import {DoomMenu} from "./DoomMenu.sol";
+import {DoomSave, SaveSlot, SaveSlotMetadata} from "./DoomSave.sol";
 
 /// @notice Classic DOOM II MAP01–MAP32 rendering and original gameplay inside the ordinary EVM.
 /// @dev Explicit startup preserves the accepted static renderer before gameplay begins.
@@ -58,6 +59,9 @@ contract Doom2 is IFrameProtocol, WadResources {
     bool public experimentalVirtualPointers;
     uint8 public selectedMemoryProfile = 2; // Same default as the inherited production menu.
     MenuState internal menuState;
+    SaveSlot[6] internal saveSlots;
+    event GameSaved(uint8 indexed slot, uint64 revision, bytes32 digest, uint32 byteLength);
+    event GameLoaded(uint8 indexed slot, uint64 revision, bytes32 digest);
 
     constructor(address[] memory chunks, bytes memory directory) WadResources(chunks, directory) {}
 
@@ -77,6 +81,8 @@ contract Doom2 is IFrameProtocol, WadResources {
         if (gameStarted || menuMode) revert GameAlreadyStarted();
         MenuState memory m;
         M_Menu.M_Init(m, true);
+        m.savesEnabled = true;
+        M_Menu.M_LoadSaveFont(m, _resourceView());
         m.screenSize = fullscreen ? int32(8) : int32(7);
         m.commercial = true;
         M_Menu.M_StartControlPanel(m);
@@ -92,18 +98,141 @@ contract Doom2 is IFrameProtocol, WadResources {
     }
 
     /// @notice Inspect actual persisted policy; default selection is profile2, never implicit virtual.
-    function memoryStatus() external view returns (uint8 profile, bool started, bool initializedBytes, bool boundedHighBytes, bool virtualPointers) {
-        return (selectedMemoryProfile, gameStarted, gameState.nativeZone.deterministicInitialization,
-            gameState.nativeZone.canonicalPointerHighBytes, gameState.nativeZone.experimentalVirtualPointers);
+    function memoryStatus()
+        external
+        view
+        returns (
+            uint8 profile,
+            bool started,
+            bool initializedBytes,
+            bool boundedHighBytes,
+            bool virtualPointers
+        )
+    {
+        return (
+            selectedMemoryProfile,
+            gameStarted,
+            gameState.nativeZone.deterministicInitialization,
+            gameState.nativeZone.canonicalPointerHighBytes,
+            gameState.nativeZone.experimentalVirtualPointers
+        );
     }
 
-    function menuStatus() external view returns (
-        bool enabled, bool active, uint8 screen, int32 item, int32 skull,
-        int32 animation, int32 map, int32 skill, bool confirmation
-    ) {
+    function menuStatus()
+        external
+        view
+        returns (
+            bool enabled,
+            bool active,
+            uint8 screen,
+            int32 item,
+            int32 skull,
+            int32 animation,
+            int32 map,
+            int32 skill,
+            bool confirmation
+        )
+    {
         MenuState storage m = menuState;
-        return (menuMode, m.menuactive, m.currentMenu, m.itemOn, m.whichSkull,
-            m.skullAnimCounter, m.selectedMap, m.selectedSkill, m.messageToPrint);
+        return (
+            menuMode,
+            m.menuactive,
+            m.currentMenu,
+            m.itemOn,
+            m.whichSkull,
+            m.skullAnimCounter,
+            m.selectedMap,
+            m.selectedSkill,
+            m.messageToPrint
+        );
+    }
+
+    /// @notice Original six slots; metadata never decodes a snapshot or ticks gameplay.
+    function readSaveSlot(uint8 slot) external view returns (SaveSlotMetadata memory) {
+        if (slot >= 6) revert DoomSave.InvalidSaveSlot();
+        return
+            DoomSave.metadata(
+                saveSlots[slot], DoomSave.resourceHash(resourceIdentity()), selectedMemoryProfile
+            );
+    }
+
+    function listSaveSlots() external view returns (SaveSlotMetadata[6] memory metadata) {
+        bytes32 resource = DoomSave.resourceHash(resourceIdentity());
+        for (uint8 slot; slot < 6; ++slot) {
+            metadata[slot] = DoomSave.metadata(saveSlots[slot], resource, selectedMemoryProfile);
+        }
+    }
+
+    function saveGame(uint8 slot, bytes calldata description, uint64 revision, uint32 sequence) external {
+        _saveLoadDriver(sequence);
+        _saveGame(slot, description, revision, sequence, true);
+    }
+
+    function loadGame(uint8 slot, uint64 revision, uint32 sequence) external {
+        _saveLoadDriver(sequence);
+        _loadGame(slot, revision, sequence, true);
+    }
+
+    function _saveLoadDriver(uint32 sequence) private view {
+        if (msg.sender != driver) revert NotDriver();
+        if (!episodeMode || !menuMode || !rawInput) revert EpisodeNotEnabled();
+        if (inputSeq == type(uint32).max || sequence != inputSeq + 1) revert BadSequence();
+    }
+
+    function _saveGame(uint8 slot, bytes memory description, uint64 revision, uint32 sequence, bool draw)
+        private
+    {
+        if (slot >= 6) revert DoomSave.InvalidSaveSlot();
+        if (!gameStarted) revert GameNotStarted();
+        MenuState memory m = menuState;
+        M_Menu.M_LoadSaveFont(m, _resourceView());
+        description = M_Menu.M_ValidateSaveDescription(m, description);
+        // Menu/held-device state belongs to this control transaction. Preserve
+        // player command/latches, simulation/UI clocks, RNG and render histories.
+        _closeMenu();
+        menuState.saveStringEnter = false;
+        menuState.saveAction = 0;
+        bytes32 digest = DoomSave.save(
+            saveSlots[slot],
+            gameState,
+            uiState,
+            inputRuntime,
+            episodeState,
+            description,
+            revision,
+            DoomSave.resourceHash(resourceIdentity()),
+            selectedMemoryProfile
+        );
+        inputSeq = sequence;
+        emit GameSaved(slot, saveSlots[slot].revision, digest, uint32(saveSlots[slot].data.length));
+        if (draw) _emitFrame(sequence, gameState.renderFramebuffer);
+    }
+
+    function _loadGame(uint8 slot, uint64 revision, uint32 sequence, bool draw) private {
+        if (slot >= 6) revert DoomSave.InvalidSaveSlot();
+        DoomSave.load(
+            saveSlots[slot],
+            gameState,
+            uiState,
+            inputRuntime,
+            episodeState,
+            revision,
+            DoomSave.resourceHash(resourceIdentity()),
+            selectedMemoryProfile
+        );
+        gameStarted = true;
+        _closeMenu();
+        menuState.saveStringEnter = false;
+        menuState.saveAction = 0;
+        // Options are part of the saved UI state; retain a single authoritative
+        // preference when the next packet passes through the existing menu path.
+        menuState.screenSize = uiState.fullscreen ? int32(8) : int32(7);
+        menuState.showMessages = !uiState.hideMessages;
+        inputSeq = sequence;
+        emit GameLoaded(slot, revision, saveSlots[slot].digest);
+        // This is authenticated saved EVM output, not a render/tic. The next
+        // ordinary packet rebinds resources/hooks through unchanged DoomGame.load.
+        if (draw) _emitFrame(sequence, gameState.renderFramebuffer);
     }
 
     /// @notice Authoritative supported Options state; ABI addition leaves menuStatus unchanged.
@@ -127,9 +256,11 @@ contract Doom2 is IFrameProtocol, WadResources {
     /// @dev Retain the authenticated startup context for an atomic menu selection.
     /// Storing then reloading it in the same call needlessly decoded a second
     /// complete resource/context graph, exceeding the fixed memory limit on E1M7.
-    function _newEpisodeContext(int32 map, int32 skill, bool fullscreen) private view returns (
-        GameContext memory c, UIState memory u, InputRuntimeState memory s, EpisodeState memory e
-    ) {
+    function _newEpisodeContext(int32 map, int32 skill, bool fullscreen)
+        private
+        view
+        returns (GameContext memory c, UIState memory u, InputRuntimeState memory s, EpisodeState memory e)
+    {
         GameflowState memory f;
         (c, f) = EpisodeStartup.initialize(_resourceView(), 1, map, skill, false, selectedMemoryProfile != 0);
         c.state.nativeZone.canonicalPointerHighBytes = selectedMemoryProfile >= 2;
@@ -148,7 +279,12 @@ contract Doom2 is IFrameProtocol, WadResources {
         EpisodeRuntime.saveDifficulty(c, e);
     }
 
-    function _saveEpisode(GameContext memory c, InputRuntimeState memory s, UIState memory u, EpisodeState memory e) private {
+    function _saveEpisode(
+        GameContext memory c,
+        InputRuntimeState memory s,
+        UIState memory u,
+        EpisodeState memory e
+    ) private {
         gameState = c.state;
         uiState = u;
         inputRuntime = s;
@@ -402,6 +538,18 @@ contract Doom2 is IFrameProtocol, WadResources {
     function _stepMenu(bytes memory events, uint32 sequence, bool draw) private {
         MenuState memory m = menuState;
         int32 oldSize = m.screenSize;
+        m.canSave = gameStarted && gameState.gamestate == 0 && gameState.gameaction == 0;
+        bytes32 resource = DoomSave.resourceHash(resourceIdentity());
+        for (uint8 slot; slot < 6; ++slot) {
+            SaveSlot storage saved = saveSlots[slot];
+            M_Menu.M_ReadSaveStrings(
+                m,
+                slot,
+                saved.description,
+                DoomSave.compatible(saved, resource, selectedMemoryProfile),
+                saved.revision
+            );
+        }
         bool intercepted = DoomMenu.respond(m, events, gameStarted);
         if (intercepted) inputRuntime.gamekeydown = 0;
         menuState = m;
@@ -411,6 +559,15 @@ contract Doom2 is IFrameProtocol, WadResources {
         if (m.messagesChanged && gameStarted) {
             gameState.players[0].message = m.showMessages ? "Messages ON" : "Messages OFF";
             uiState.hud.message_dontfuckwithme = true;
+        }
+        if (m.saveAction != 0) {
+            menuState.saveAction = 0;
+            if (m.saveAction == 1) {
+                _saveGame(m.saveSlot, m.saveDescription, m.saveRevisions[m.saveSlot], sequence, draw);
+            } else {
+                _loadGame(m.saveSlot, m.saveRevisions[m.saveSlot], sequence, draw);
+            }
+            return;
         }
         if (m.endRequested) {
             menuState.endRequested = false;
@@ -474,11 +631,15 @@ contract Doom2 is IFrameProtocol, WadResources {
                     u.refresh = true;
                     pixels = EpisodeRuntime.draw(c, s, u, e);
                     _saveEpisode(c, s, u, e);
-                } else pixels = gameStarted ? gameState.renderFramebuffer : M_Menu.title(_resourceView());
+                } else {
+                    pixels = gameStarted ? gameState.renderFramebuffer : M_Menu.title(_resourceView());
+                }
                 M_Menu.M_Drawer(m, _resourceView(), pixels);
                 _emitFrame(sequence, pixels);
             }
-        } else _stepEpisode(events, sequence, draw);
+        } else {
+            _stepEpisode(events, sequence, draw);
+        }
     }
 
     function _stepEpisode(bytes memory events, uint32 sequence, bool draw) private {
@@ -491,8 +652,13 @@ contract Doom2 is IFrameProtocol, WadResources {
     }
 
     function _finishEpisode(
-        GameContext memory c, InputRuntimeState memory s, UIState memory u, EpisodeState memory e,
-        bytes memory events, uint32 sequence, bool draw
+        GameContext memory c,
+        InputRuntimeState memory s,
+        UIState memory u,
+        EpisodeState memory e,
+        bytes memory events,
+        uint32 sequence,
+        bool draw
     ) private {
         EpisodeRuntime.tick(c, s, u, e, events);
         bytes memory pixels;
@@ -665,9 +831,19 @@ contract Doom2 is IFrameProtocol, WadResources {
     }
 
     /// @notice Original skill-filtered map totals, actor count and startup RNG observation.
-    function spawnStatus() external view returns (int32 kills, int32 items, int32 secrets, uint32 actors, uint32 random) {
+    function spawnStatus()
+        external
+        view
+        returns (int32 kills, int32 items, int32 secrets, uint32 actors, uint32 random)
+    {
         if (!gameStarted) revert GameNotStarted();
-        return (gameState.totalkills, gameState.totalitems, gameState.totalsecret, gameState.mobjCount, gameState.prndindex);
+        return (
+            gameState.totalkills,
+            gameState.totalitems,
+            gameState.totalsecret,
+            gameState.mobjCount,
+            gameState.prndindex
+        );
     }
 
     /// @notice Small status view for clients; the authoritative world remains contract storage.

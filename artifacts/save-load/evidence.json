@@ -1,0 +1,45 @@
+{
+  "kind": "Publish compact Save/Load evidence without commercial assets or runtime journals.",
+  "reports": {
+    "architecture-cost": {
+      "path": "artifacts/save-load/architecture-cost.json",
+      "sha256": "762da73df61b425ebb0ee33cd1093541692f24298c6afa33502ad82da695713a"
+    },
+    "native-archive": {
+      "path": "artifacts/save-load/native-archive.json",
+      "sha256": "cbe1f05184e68f4f67acb701edfb6c807b747a122deae7bc14eceb671bbbcd3e"
+    },
+    "native-continuation": {
+      "path": "artifacts/save-load/native-continuation.json",
+      "sha256": "61c06be1641070aa9eb0cd7696541a696d400aa90c4f1e74433ce3e2a9299565"
+    },
+    "evm-continuation": {
+      "path": "artifacts/save-load/evm-continuation.json",
+      "sha256": "d438cf3ad490c9201f26f5db1b1b493bd7b5aff12b76d4377e04a69b444c319b"
+    },
+    "production-memory": {
+      "path": "artifacts/save-load/production-memory.json",
+      "sha256": "6c3815285cb2a91f4a295af4bb5d88aab33e01dbc8a9845f8c06a1f656ccb55e"
+    },
+    "focused": {
+      "path": "artifacts/save-load/focused.json",
+      "sha256": "eabc2b617cfea0c921b220bfd44083cea516610f8a4292c93fed87e9e73ab2e2"
+    },
+    "browser": {
+      "path": "artifacts/save-load/browser.json",
+      "sha256": "1c8fe4d47755aca405d0872b5ec4fcb6f94c80c3385025738aeab736551384ad"
+    },
+    "release": {
+      "path": "artifacts/save-load/release.json",
+      "sha256": "376c427cce3e560b632f9e09b8496416bc3630c6365afad7749e71cefc9c693b"
+    },
+    "attempts": {
+      "path": "artifacts/save-load/attempts.json",
+      "sha256": "9061f3e1e40fa13dad024564d9d2cfac2c40e02c9eaf0b9175504bcb2332a582"
+    },
+    "schema": {
+      "path": "artifacts/save-load/schema.json",
+      "sha256": "ba7e9e73cf372c286b5ead869fd69754db608b7259a4178bc4129615f188679c"
+    }
+  }
+}

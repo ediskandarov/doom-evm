@@ -1,0 +1,412 @@
+{
+  "kind": "production save-load gas/time and source-mapped memory boundary",
+  "pass": true,
+  "startedUtc": "2026-10-11T19:28:17.643Z",
+  "port": 19397,
+  "gasLimit": 10000000000,
+  "memoryLimit": 1073741824,
+  "clone": {
+    "kind": "Create an observation-only production save/load MSIZE-marker clone.",
+    "originalSourceSha256": "f9895e9b5c5695aaee72a6d62951bce9f31e625eaa686e082a4947897f5568e7",
+    "cloneSourceSha256": "43f5b8305009a438284ee9aedec17a56d85a009aa9446d55f6de2c9783693195",
+    "changes": [
+      "Contract name/import paths only; end-of-save/load observer events and private GAS marker."
+    ],
+    "scope": "Current call-frame MSIZE through observer boundary, after production Frame encoding; excludes following observer encoding and separate precompile frames."
+  },
+  "instrumentation": {
+    "functionName": "memorySize",
+    "sourceId": 0,
+    "sourceSha256": "43f5b8305009a438284ee9aedec17a56d85a009aa9446d55f6de2c9783693195",
+    "originalRuntimeSha256": "4f6ac82ecc1b48f6997d43775dd1e7bdc75c2586f4e5f70d60265f040689b39b",
+    "instrumentedRuntimeSha256": "f1819aaae3384cb1b206dee29201060c1be9f15e435a024df1c00adcda9a492d",
+    "runtimeBytes": 914631,
+    "runtimeOffsetInCreation": 2095,
+    "patches": [
+      {
+        "pc": 2131,
+        "sourceStart": 33698,
+        "sourceLength": 9,
+        "line": 872,
+        "sourceText": "gasleft()",
+        "before": "GAS 0x5a",
+        "after": "MSIZE 0x59"
+      },
+      {
+        "pc": 128920,
+        "sourceStart": 33698,
+        "sourceLength": 9,
+        "line": 872,
+        "sourceText": "gasleft()",
+        "before": "GAS 0x5a",
+        "after": "MSIZE 0x59"
+      },
+      {
+        "pc": 382039,
+        "sourceStart": 33698,
+        "sourceLength": 9,
+        "line": 872,
+        "sourceText": "gasleft()",
+        "before": "GAS 0x5a",
+        "after": "MSIZE 0x59"
+      },
+      {
+        "pc": 382849,
+        "sourceStart": 33698,
+        "sourceLength": 9,
+        "line": 872,
+        "sourceText": "gasleft()",
+        "before": "GAS 0x5a",
+        "after": "MSIZE 0x59"
+      }
+    ],
+    "semantics": "Separate probe deployment only. GAS→MSIZE, identical2gas and +1stack effect, unchanged bytecode layout/jump destinations. Operation gas and output digests must match ordinary uninstrumented deployment."
+  },
+  "resourceIdentity": {
+    "schemaVersion": 0,
+    "wadSha256": "7323bcc168c5a45ff10749b339960e98314740a734c30d4b9f3337001f9e703d",
+    "bundleSha256": "d379076f21645cf7cc5acb056663d0faacc4065489a0ca99738479323c9f7a47",
+    "paletteSha256": "fd895921b5d0a394612bb29852ed003d44d69f76dec31c0dc6b5d5fc7d63f7bb",
+    "paletteVariant": 0
+  },
+  "transactions": [
+    {
+      "label": "CREATE",
+      "hash": "0x90185131e8037c12de3a8114825e7bb780cfdf64ea79ced2a8e0b81b10967cc4",
+      "gas": 341059914,
+      "seconds": 0.08239187500000117
+    },
+    {
+      "label": "CREATE",
+      "hash": "0xeafa3a2c8f6b4f757093d9123b0a0589da81a1b25c0593013077fa41c5bd17c5",
+      "gas": 340912007,
+      "seconds": 0.0739162079999951
+    },
+    {
+      "label": "CREATE",
+      "hash": "0x9a90e10d7b51515cedd3d96d96ec530f8b0917519dcdc9b5d699ccf7b03ee698",
+      "gas": 340912007,
+      "seconds": 0.05255029099999956
+    },
+    {
+      "label": "menu policy3",
+      "hash": "0x368320cec78713a90913b1dd4018ddb823cf57259a2568d35534595b6d26bafa",
+      "gas": 139860418,
+      "seconds": 0.16950729200000206
+    },
+    {
+      "label": "menu policy3",
+      "hash": "0xe7c9d3e1cd98659255fcaf791641de2381bcbd9a87ab869e9be610874da98b8a",
+      "gas": 139860418,
+      "seconds": 0.16949312500000088
+    },
+    {
+      "label": "menu policy3",
+      "hash": "0x7f89a55f9c201c28c1894fc5101c99df70dcb7bd5bc62d32cff45cf4586bad6e",
+      "gas": 139860418,
+      "seconds": 0.16910679099999834
+    },
+    {
+      "label": "original menu startup",
+      "hash": "0xee215f50ff5818fb6e997303fa1794c9d58df2b3f5ed048139608e24846dc8cd",
+      "gas": 4053623070,
+      "seconds": 2.3308262079999986
+    },
+    {
+      "label": "original menu startup",
+      "hash": "0x9850a6f36f8ad720f11ed284674d09fcdc57fa72c18990f47817fdcfced4ac9c",
+      "gas": 4053623070,
+      "seconds": 2.349893249999994
+    },
+    {
+      "label": "original menu startup",
+      "hash": "0x82e6a589957fcdf980b81d164dbe4654c816dc258f6ff66ce4893bf2d13ab31d",
+      "gas": 4053623070,
+      "seconds": 2.3343968749999986
+    },
+    {
+      "label": "movement",
+      "hash": "0x52d609e2fcea760055b910bbc196e3e060c5015454fd4c72dc508f3ff9169742",
+      "gas": 1706255531,
+      "seconds": 1.530877999999997
+    },
+    {
+      "label": "movement",
+      "hash": "0x8fec7d30f4023fb7991c04c8963162d9b14b9ea5d6fd85482f3944e6920bc677",
+      "gas": 1706255564,
+      "seconds": 1.531760666999995
+    },
+    {
+      "label": "movement",
+      "hash": "0x2f99164d3fccb8f4f750aa136d52e725ff970235353a924f77703ec92299831b",
+      "gas": 1706255564,
+      "seconds": 1.5312352910000044
+    },
+    {
+      "label": "movement release",
+      "hash": "0x74dd5cd02b8cc2d40422cca76a99b51738781ac45778b0792199ae8706c2bf03",
+      "gas": 1812393131,
+      "seconds": 1.673241415999997
+    },
+    {
+      "label": "movement release",
+      "hash": "0xc46c79067dc0a416ef35bd74ed2844b3257a5e1e29a1c6413781542e66d3781b",
+      "gas": 1812393164,
+      "seconds": 1.6560262909999948
+    },
+    {
+      "label": "movement release",
+      "hash": "0xa1b4136b1b115ff486ef4357248b5e28f2296b5ccda5deba82ee0e206595944d",
+      "gas": 1812393164,
+      "seconds": 1.6565709169999974
+    },
+    {
+      "label": "save",
+      "hash": "0xb0504d497a968bf6e88884a7a51cce152c73420fc98699d74302385e3c82ece1",
+      "gas": 654020187,
+      "seconds": 0.10808291699999972
+    },
+    {
+      "label": "save",
+      "hash": "0xc9ae8f4bd98aa60528526ebfd2032a12f779f450a1168f53c94fe945034fb566",
+      "gas": 654021516,
+      "seconds": 0.10721604099999968
+    },
+    {
+      "label": "save",
+      "hash": "0xae73b8cf6f37e1a523eed700a8a7355bfa6256964de7c20b543d392211457ef0",
+      "gas": 654021516,
+      "seconds": 0.10769404199999554
+    },
+    {
+      "label": "combat",
+      "hash": "0x60a002ae430f55e9c272e15f8c523cadfece5bb47097238253707e7533f6a665",
+      "gas": 1881459514,
+      "seconds": 1.7616808749999981
+    },
+    {
+      "label": "combat",
+      "hash": "0x302c11df8efea9dd1ad11173f7ffaf7f6e3076e81a09ce671c48e7787686ecc9",
+      "gas": 1881459547,
+      "seconds": 1.7893222499999974
+    },
+    {
+      "label": "combat",
+      "hash": "0x76ee15328742dd470f8cf07a84e79980b16ac7c48917081cebd4aba3c6121630",
+      "gas": 1881459547,
+      "seconds": 1.7603014999999942
+    },
+    {
+      "label": "combat release",
+      "hash": "0x73be59874e6d31ea274ad56a9340b314b10279c089d034b7d6128f5be666be30",
+      "gas": 1689311247,
+      "seconds": 1.5248964580000028
+    },
+    {
+      "label": "combat release",
+      "hash": "0x1d64b2b49d4350263beaf4a61808fd852b2a4379c1fc14cff41aff9eb366a9a7",
+      "gas": 1689311280,
+      "seconds": 1.528921915999992
+    },
+    {
+      "label": "combat release",
+      "hash": "0x0c9f16ce217db8ea9d34bbf840bdd98ca09c1eefdad080ca79d10ced3d2a8201",
+      "gas": 1689311280,
+      "seconds": 1.5294809580000002
+    },
+    {
+      "label": "load",
+      "hash": "0xee8a2f3b1777ca89c7fb57088c5fb6d43b28d0da6e62cbca4cc1ef7b7f59342d",
+      "gas": 146140798,
+      "seconds": 0.10693437499999708
+    },
+    {
+      "label": "load",
+      "hash": "0x211ed46af37600520894997d397012d6df859d0af8a82c5488d0f964b0abcf6b",
+      "gas": 146142127,
+      "seconds": 0.10831954199999745
+    },
+    {
+      "label": "load",
+      "hash": "0x631c6016192029991de0075eebcc94faf829777926a7a7e1e81dfc4c96d95046",
+      "gas": 146142127,
+      "seconds": 0.10707029200000398
+    },
+    {
+      "label": "overwrite",
+      "hash": "0x0b6948af965e051ce64c6bf3167d299672b8eb6deaf4d7f72c81589b3804965c",
+      "gas": 156363797,
+      "seconds": 0.10707083399999828
+    },
+    {
+      "label": "overwrite",
+      "hash": "0x0a5cfc3631397a8789efcc934cd8f4139b53a056394060a770c3ab068dbda748",
+      "gas": 156365126,
+      "seconds": 0.10772929100001057
+    },
+    {
+      "label": "overwrite",
+      "hash": "0x168f333742dc92526dff7f612ab376db535750265b84e9f25764016fff00a00f",
+      "gas": 156365126,
+      "seconds": 0.10767266699999163
+    }
+  ],
+  "measurements": [
+    {
+      "operation": "save",
+      "revision": 1,
+      "byteLength": 928064,
+      "payloadWords": 29002,
+      "description": "MEMORY CHECK",
+      "digest": "ff938b3428485438a857f5a2224927b6a939420b345acff9d7f3f8e78539ad82",
+      "productionGas": 654020187,
+      "seconds": 0.10808291699999972,
+      "observerGas": 654021516,
+      "highWaterBytes": 2325024,
+      "productionObserverStateAndFrameEqual": true,
+      "gasMsizeIdenticalGas": true
+    },
+    {
+      "operation": "load",
+      "revision": 1,
+      "byteLength": 928064,
+      "payloadWords": 29002,
+      "description": "MEMORY CHECK",
+      "digest": "ff938b3428485438a857f5a2224927b6a939420b345acff9d7f3f8e78539ad82",
+      "productionGas": 146140798,
+      "seconds": 0.10693437499999708,
+      "observerGas": 146142127,
+      "highWaterBytes": 1858880,
+      "productionObserverStateAndFrameEqual": true,
+      "gasMsizeIdenticalGas": true
+    },
+    {
+      "operation": "overwrite",
+      "revision": 2,
+      "byteLength": 928064,
+      "payloadWords": 29002,
+      "description": "MEMORY CHECK",
+      "digest": "ff938b3428485438a857f5a2224927b6a939420b345acff9d7f3f8e78539ad82",
+      "productionGas": 156363797,
+      "seconds": 0.10707083399999828,
+      "observerGas": 156365126,
+      "highWaterBytes": 2325024,
+      "productionObserverStateAndFrameEqual": true,
+      "gasMsizeIdenticalGas": true
+    }
+  ],
+  "sourceHashes": {
+    "src/doom/am_map.sol": "3c5da949fc635d095659d4333d153408499e89e4178b469cb335e31cf52f6020",
+    "src/doom/am_map_types.sol": "7347073682c367c15c918aa51ff924c664b6d05efdbf4f0392d4f404b31a9039",
+    "src/doom/d_ticcmd.sol": "508d0332d3e8b83e1b68d37581a3befc100a9974fcaa0900cc44116cd75ff2ef",
+    "src/doom/doomstat.sol": "4c40da3914c629017959a0a4c0516d83346900674c92f5e55a766aba1b506fea",
+    "src/doom/f_finale.sol": "4e21a192b8adb1109b51493ab43e770bfc3393b085cf02df53ab589d21c81505",
+    "src/doom/g_game.sol": "fc8aaae0b28dee867499b8cef6ab32d69d900ba0526941cd74b0b73532178b7c",
+    "src/doom/hu_lib.sol": "bf11331f06c38565650e93ce5ece611d048d5656ae2c8442b6568de5ce079a06",
+    "src/doom/hu_stuff.sol": "fcf57390d8c8e6d5ec935164264870509bb64197179536a39cd2a14dddb9588e",
+    "src/doom/info.sol": "4611205149173e42d3b0f1d91820c8042f6bc5fc48fb53aec84ad4bc501dca8e",
+    "src/doom/m_bbox.sol": "f4c60efe3627a97d0288fc5cd0283535527b1f51029568534c80bb8fbbf8f272",
+    "src/doom/m_cheat.sol": "e79d73bd9e159b0f05639464bf7c9cb7f40dc069780c3459336dfffb50394f82",
+    "src/doom/m_fixed.sol": "3f64bef1f62f61faead3a5b8f382bf1c66e1b3739ce4ac8d59a6fcef0451ef9f",
+    "src/doom/m_menu.sol": "79d3fadc4e9252637fdf247db668653168d9df77b648672d34d2f7dfb161b554",
+    "src/doom/m_random.sol": "5267b881138cfb7e0d683449005619513006c70e3ed557f64697b36c4ed40c7b",
+    "src/doom/native_zone_layout.sol": "118b2d17165826fb0857d9cb296e2214db2a28917769299a82e70d0c0790f6e8",
+    "src/doom/p_ceilng.sol": "696f3f620f5bddb3cea64fda824e3203c780f53db890630f0685794454dc37f9",
+    "src/doom/p_doors.sol": "945bf600ce86d8286718fb75ecaf905a0c4631d79d2dac7260c91c9dc2013f8d",
+    "src/doom/p_enemy.sol": "eff76cce23b0877833a5c446a1a09d8ae01918a6925b6d3265240b144c09dfe7",
+    "src/doom/p_floor.sol": "b7c90baafa0b74fd7ff80cf60dcbc430148f6d6d068ba54ca0fbc7ba1bca7069",
+    "src/doom/p_game_state.sol": "06cbccba214717193fbab7c290e2962c4fb05b3f34c6543247ee1ec8e45d085a",
+    "src/doom/p_heap.sol": "3cc2e0a8c3239523db66c07fea33720f931754baedd312b5ca7cc2ebe763d2e0",
+    "src/doom/p_info.sol": "a48840479115ea8bf849ca5ec448d1b2bec7a6cfe58c5314e140635a898de792",
+    "src/doom/p_inter.sol": "8be27f9bba47beb46b3edf2a8a2674b3cd7218d2abb8ef5f8855803393d067de",
+    "src/doom/p_lights.sol": "6f63cbc6b41fc492a46ce43aef464deb9d08b7fa1dd8b213b546eec3e4f08276",
+    "src/doom/p_map.sol": "6b6d48523a45acab9090dfb0ec3d6dbab4e6de18afa89453df8b5a87088da0f3",
+    "src/doom/p_maputl.sol": "ac5ac60e7e058a5fc537e7042c7254bc0f51c77165149a22e141437b4e0ad0b6",
+    "src/doom/p_mobj.sol": "e6138aceee2be933f2c36e3fc18e6d2baa22ffa6a1197d9db89c744d42d78e56",
+    "src/doom/p_plats.sol": "6904df762b270f840daa99b34d2a5c689dbb2fef3aed3d33c2ac1a3f3e4d5722",
+    "src/doom/p_pspr.sol": "cfa2db3438d689c38d9c957fc4aee598c58740f025d6efead2b5f9671eb0c863",
+    "src/doom/p_saveg.sol": "4e59c56c3636ff61713764d86a37f436ad750582323dbce09aae728b71741cc0",
+    "src/doom/p_setup.sol": "9498e1298bf4e53ccedc484a50d4c7f9f85315f6cb700719d474b721e382243b",
+    "src/doom/p_setup_static.sol": "c8100a42bb0bac190c583bbb2c82168599009f88a766e4c05b9a9231a5f69792",
+    "src/doom/p_sight.sol": "7ed366237fc3fec069ffb6336e95e038004d1f379622cf67f55fb8c6b1a6488c",
+    "src/doom/p_spec.sol": "2363640e75c22c9d017db677dda7148ad221380f0a23639167e145e933fc72b7",
+    "src/doom/p_switch.sol": "5404d359793e05c6c24a7804c07632150009b46f38d03068412d7ac53260dfe2",
+    "src/doom/p_telept.sol": "745f0fa4ed6f0515c398bfd2469c59aac82316965b7bac25263aeb82555d61b8",
+    "src/doom/p_tick.sol": "1993dd0c94853dabc4db554dfa0ca04375cef0a22075400ba0e7b56b525022ab",
+    "src/doom/p_user.sol": "963a46850e1b17171f79dd65bff9b5006ce6f97a935ad2023d1d526a6ec35c37",
+    "src/doom/p_zone_setup.sol": "e0308bd1197fd84a01eb1ee208be73c711851d6b0bc30be1d07a7c61b18b223d",
+    "src/doom/r_bsp.sol": "0ae5df313515692d0b2b970d5d39d107e014629cff2305fb37c14371a9524040",
+    "src/doom/r_data.sol": "ef5f26f230c1bed1a073f73b489613d947b420c220faa6f2c16a6f583045010c",
+    "src/doom/r_data_types.sol": "0448302d68447c8a5a4c46df4016e8845863e42bf6eaca8bcab8ab0c9707fdf8",
+    "src/doom/r_defs.sol": "558d5a9bfd131e816bbe28986e2dad6144a08e5a16ccfed1b199d7558a1ea0e2",
+    "src/doom/r_draw.sol": "afe958ea0c2962b739bff58b98d8bccc25c48d3d0838cacd46142c242b5d6477",
+    "src/doom/r_main.sol": "df403bf04fdbbcfc68c4fd9c5e19b5201ca711498efc34db406a4010ad3b2af5",
+    "src/doom/r_plane.sol": "c7a5abcbca84dddcd2a3c8bb160a609605c5c1842e73704dff4860df3280e463",
+    "src/doom/r_render_hooks.sol": "f026ccb8fffb68d8fbcb0966103212f52884b86350fe3fb52a401d146f3fb312",
+    "src/doom/r_render_state.sol": "072bd2f73b98e1eb775fc8093e95a69c184f3fa50a89a5d64a7beccd59493398",
+    "src/doom/r_segs.sol": "9d4e4dea06739278aab3698fb422818de6dd7726359c8822d60a162e886621cb",
+    "src/doom/r_sprite_state.sol": "735b3de85cbf455e05d3cb8e992cf4e477960bd4192bbd367f5c66c803b96363",
+    "src/doom/r_state.sol": "80951a13733e3a08f4182937a37def33ffda21eaae4b43a2a1bdba2043adab6b",
+    "src/doom/r_things.sol": "86705ab6b1f79b7ef07798b881cc547502d9911c97b57dc516a744e17c1977f5",
+    "src/doom/st_cheats.sol": "e35b8253b068f1ad807073bc322e2b62205ef3ffa95bb06f36acef7a79721677",
+    "src/doom/st_lib.sol": "5307f52151fbd73e442a60d8b87cbfbed3d38a28704a81e952f56672de667299",
+    "src/doom/st_stuff.sol": "936cf09f8f0dcc9c0555a9d533d9d1a50f65941462b0d3325a5c7850b5be2e49",
+    "src/doom/tables.sol": "bf14202b419075f6d187653205a37e211d8267c7fc4c0bebf5a8c5713afddf38",
+    "src/doom/v_video.sol": "be75fe69e7cd2486ce93408ec204cdf470ea097569e37fbedd867e9a2f3adf1f",
+    "src/doom/v_video_types.sol": "266890b0c8003e89f78baf8415048d24e4ca14865a1c8518ad77bb6a9f6b4d35",
+    "src/doom/w_zone_cache.sol": "03c07404765de9620b3d1ff15727809cdad911c8a78d822019b63500fa5018c2",
+    "src/doom/wi_stuff.sol": "d69db1200afb323308915cecc8b8b6c5bd08c996168b936d2f76dbd5b3a8c122",
+    "src/doom/wi_stuff_types.sol": "398e0d19affd77f4af91f9a4ffdc08f046b61151de26a9848b86127414ff6f88",
+    "src/doom/z_zone.sol": "b4e75218021d65aaf3389cf78a68663feebc2084c82457821be17247dc8106c5",
+    "src/doom/z_zone_backing.sol": "e63201d3bb45e4c8d0796480d4e9facd4deffd4d8a9dd730bed10ff4a108d0b1",
+    "src/doom/z_zone_types.sol": "11ab3f95678ba3852ab5f0c2dc9e85e715bec6897e65f04cd1919bba9bb73dbd",
+    "src/doom/z_zone_virtual.sol": "8bc309e89fa4da0667dc50a45adb9f91c58982640e1b3f5f9d38e49893f1e960",
+    "src/evm/Doom.sol": "f9895e9b5c5695aaee72a6d62951bce9f31e625eaa686e082a4947897f5568e7",
+    "src/evm/DoomGame.sol": "d9451a915ab977bae137340e3e6626a270a4b84b8b6ea9449a8c4f0f578296df",
+    "src/evm/DoomMenu.sol": "c1ae6c66e7e016a844be3010e75b3beaeac35972bbe266f5b0e2b572e1663d44",
+    "src/evm/DoomRenderer.sol": "5639d82431350ea76c26d43457d26d0c3c0f410eaddf02db6adbcfb03a569ba0",
+    "src/evm/DoomSave.sol": "5c684e49835a18bf3728062755a9a2ebe671a4d131f10146cdfdde33bc2c5681",
+    "src/evm/DoomScene.sol": "9ad7c8ccee4c9e05deb5608326baabacfa40f686b8d8445fb8aaa7352ab64569",
+    "src/evm/DoomUI.sol": "2b66f6d024e16f3c202ea6da84ec5875af4d7ea809c2f29cbf65310fdf24bb38",
+    "src/evm/DoomZoneStartup.sol": "2d178494456a7ae3c730310f257ce2aa635d37d18c90cac039cf002cdb3f50dc",
+    "src/evm/EpisodeRuntime.sol": "876c1a7c83bb644631f9e3d5af73a4bb383d255e3c93cbd224b910a91973cde5",
+    "src/evm/EpisodeStartup.sol": "bb574f20cdc09e63385261f7e8e203a49a90a15b87903d70dfe43d396bc3255e",
+    "src/evm/FrameProtocol.sol": "4665be3f613b8e817d616d2db1dc4a644325c44a6ade476a35d7d9d003625ace",
+    "src/evm/InputProtocol.sol": "bd9df1b10f19be3754cef8efcdc109ce54228f4475c50b197cb32b5bab8a7808",
+    "src/evm/ProductionWadResources.sol": "a9f77b23b261b3d8bd94cfeb9a5385879966941c6edae2e1319e1620468b1cc3",
+    "src/evm/ResourceTypes.sol": "159865364cfa57aae508cd94c49509cbccabd6aeeba55e92b9fcf816bdec4d6b",
+    "src/evm/SaveSchema.sol": "0740a562a0b2e511859f29252dbad6005582cd022f9079a10922b22be870206c",
+    "src/support/UltimateStartup.sol": "86152dbc521265c009a1532105abde4d37a55707d29a0ca629728c50dc0462b0"
+  },
+  "notes": [
+    "Ordinary CREATE only. Production has no instrumentation. Separate clone adds only end-of-save/load observers; GAS and MSIZE clones must match gas, root digests, state, frames and palettes.",
+    "Memory is current EVM call frame MSIZE immediately after production save/load and Frame/Palette encoding, before following observer encoding; SHA256 precompile has a separate frame.",
+    "Payload words plus slot headers describe reachable logical storage; trie/database bytes and unreachable old restore tails are not measured.",
+    "Wall time includes local RPC and transaction mining. Costs exclude the original keyboard/menu navigation packets."
+  ],
+  "runtime": {
+    "ownedPid": 47725,
+    "args": [
+      "--host",
+      "127.0.0.1",
+      "--port",
+      "19397",
+      "--hardfork",
+      "cancun",
+      "--disable-code-size-limit",
+      "--gas-limit",
+      "10000000000",
+      "--memory-limit",
+      "1073741824",
+      "--no-request-size-limit",
+      "--prune-history",
+      "2",
+      "--transaction-block-keeper",
+      "2",
+      "--silent"
+    ]
+  },
+  "endedUtc": "2026-10-11T19:29:28.444Z",
+  "stoppedOwnedRuntime": true,
+  "rawReportSha256": "bacfd651aa85259f930e95e5be4064040d86b7fed4d1cf798af98c8fedf116d0"
+}

@@ -1,0 +1,66 @@
+{
+  "kind": "Run focused Save/Load and affected dependency checks without historical acceptance.",
+  "pass": true,
+  "startedUtc": "2026-10-11T19:27:32.254671+00:00",
+  "commands": [
+    {
+      "argv": [
+        ".toolchain/bin/forge",
+        "test",
+        "--json"
+      ],
+      "exitCode": 0,
+      "startedUtc": "2026-10-11T19:27:32.254735+00:00",
+      "endedUtc": "2026-10-11T19:27:40.042034+00:00",
+      "stdoutSha256": "02d4432f2f2da4926fcb626dcba0cecd544d31289a76910fdf42d251e93d2237",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "passedTests": 25
+    },
+    {
+      "argv": [
+        "node",
+        "--test",
+        "--test-reporter=tap",
+        "tools/reference/save_load/keybindings.test.mjs",
+        "web/menu-input.test.mjs",
+        "web/input.test.mjs",
+        "web/input-loop.test.mjs",
+        "web/browser-profiles.test.mjs",
+        "tools/reference/gameplay/production-memory.test.mjs",
+        "tools/reference/phase2_data/instrument.test.mjs",
+        "web/install.test.mjs",
+        "web/doom2-profile.test.mjs"
+      ],
+      "exitCode": 0,
+      "startedUtc": "2026-10-11T19:27:40.042207+00:00",
+      "endedUtc": "2026-10-11T19:27:40.314353+00:00",
+      "stdoutSha256": "91729d6ce9758688fc770411890b1ac1c994bd9bd0ac0fc703df08778f3c19a0",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "passedTests": 67
+    },
+    {
+      "argv": [
+        "python3",
+        "tools/reference/save_load/schema.py",
+        "--check"
+      ],
+      "exitCode": 0,
+      "startedUtc": "2026-10-11T19:27:40.314472+00:00",
+      "endedUtc": "2026-10-11T19:27:40.783390+00:00",
+      "stdoutSha256": "c4d3fb7a856a9390fe461954a3763400618ee5763a1955a4c4aadb67cdf9b57d",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "sourceHashes": {
+    "test/unit/p_saveg.t.sol": "996e69a99075cd9c2aa3d3c93d1b9f4678e534b70e03ba7e4823bd07e6a45fec",
+    "test/unit/SaveSlots.t.sol": "1873b1469ff49d23c37bc2d0a36f7f549753940db5cc2a4f4df7e90d5bd875af",
+    "test/unit/SaveMenu.t.sol": "8d9fa2bc10e6a553ce53afdba1e961bd3ef268e3917c0a497cf74dc0cf4e0e7c",
+    "test/unit/m_menu.t.sol": "f995bc60f25e9f881f6d21a74f5e5c9122469373c78105d7f8056a2c4240bc05",
+    "test/unit/OptionsMenu.t.sol": "48f2079bf229e4221840255b7273bad767b29968cc1b65a38b2a6effd191ed60",
+    "test/doom2/Menu.t.sol": "49f75763953c86e6e4ba33efe4f77d3d6ad43d210637b3f79f1dc64db27e055a",
+    "foundry.toml": "afe04c66f0e684b5a936821f6543605a3739f62164ceb4398426db7403452393",
+    "tools/reference/save_load/focused.py": "492f2ce5d5a48186058eb9f04e2d8a276dfa9ba1526fd75b7136f5eadb6e711e",
+    "tools/reference/save_load/keybindings.test.mjs": "215e88e63f694092631cb7316f35f7a93ea6db0ca6ef7e06fe51c0c1fd34edfd"
+  },
+  "endedUtc": "2026-10-11T19:27:40.783705+00:00"
+}

@@ -1,0 +1,312 @@
+{
+  "kind": "save-load-actual-state-architecture-cost-gate",
+  "pass": true,
+  "startedUtc": "2026-10-11T17:51:46.595Z",
+  "port": 19391,
+  "gasLimit": 10000000000,
+  "resourceIdentity": {
+    "schemaVersion": 0,
+    "wadSha256": "7323bcc168c5a45ff10749b339960e98314740a734c30d4b9f3337001f9e703d",
+    "bundleSha256": "d379076f21645cf7cc5acb056663d0faacc4065489a0ca99738479323c9f7a47",
+    "paletteSha256": "fd895921b5d0a394612bb29852ed003d44d69f76dec31c0dc6b5d5fc7d63f7bb",
+    "paletteVariant": 0
+  },
+  "measurements": [
+    {
+      "kind": 0,
+      "name": "typed storage roots",
+      "bytesLength": 0,
+      "saveGas": 616928015,
+      "operationGas": 616902460,
+      "saveSeconds": 0.12794437499999914,
+      "restoreGas": 162297768,
+      "restoreSeconds": 0.10688779200000136,
+      "exactRestore": true,
+      "overwriteGas": 162292609,
+      "overwriteSeconds": 0.12892399999999907
+    },
+    {
+      "kind": 1,
+      "name": "ABI bytes storage",
+      "bytesLength": 5639104,
+      "saveGas": 3173637247,
+      "operationGas": 3173611871,
+      "saveSeconds": 0.3406168749999997,
+      "restoreGas": 777811976,
+      "restoreSeconds": 0.3877941250000003,
+      "exactRestore": true,
+      "overwriteGas": 711748545,
+      "overwriteSeconds": 0.385059291000005
+    },
+    {
+      "kind": 2,
+      "name": "packed schema storage",
+      "bytesLength": 859296,
+      "saveGas": 584309294,
+      "operationGas": 584283918,
+      "saveSeconds": 0.1713260420000006,
+      "restoreGas": 123304814,
+      "restoreSeconds": 0.12930020800000055,
+      "exactRestore": true,
+      "packedPayloadWords": 26853,
+      "overwriteGas": 129653992,
+      "overwriteSeconds": 0.14977249999999911
+    },
+    {
+      "kind": 3,
+      "name": "packed immutable code",
+      "bytesLength": 859296,
+      "saveGas": 246943470,
+      "operationGas": 246918094,
+      "saveSeconds": 0.10771870900000068,
+      "restoreGas": 64952649,
+      "restoreSeconds": 0.06492258399999992,
+      "exactRestore": true,
+      "immutableChunks": 53,
+      "overwriteGas": 246906470,
+      "overwriteSeconds": 0.08642725000000064
+    }
+  ],
+  "transactions": [
+    {
+      "label": "probe CREATE",
+      "hash": "0x87eb9d90ecb578591eb20330bdcc6c294113723e466b1b420cade2f5d50020ab",
+      "status": "0x1",
+      "gasUsed": 239429336,
+      "seconds": 0.04790716600000451
+    },
+    {
+      "label": "actual EVM initialization",
+      "hash": "0x412c9651fe241b255ed9e3bbd83ed530c31a489648944d4d57f0e1236e504579",
+      "status": "0x1",
+      "gasUsed": 2362635608,
+      "seconds": 0.8955380409999998
+    },
+    {
+      "label": "save typed storage roots",
+      "hash": "0x8f5ab98259d59938ed86437de460ed6904a1811f9397e9a82dc25cc9f2c69977",
+      "status": "0x1",
+      "gasUsed": 616928015,
+      "seconds": 0.12794437499999914
+    },
+    {
+      "label": "diverge typed storage roots",
+      "hash": "0x3dda56be4f21311089acd09a9a5ac06ab6b21b626cd03f325dbbf95481d96d62",
+      "status": "0x1",
+      "gasUsed": 38671,
+      "seconds": 0.022156291999999668
+    },
+    {
+      "label": "restore typed storage roots",
+      "hash": "0x31b0051a1181408b94aff3ee13ab9a04ec2b183d9d6891faeb6fa51d22fd9b11",
+      "status": "0x1",
+      "gasUsed": 162297768,
+      "seconds": 0.10688779200000136
+    },
+    {
+      "label": "overwrite typed storage roots",
+      "hash": "0x7b2a4fb21155898ff60b8c77a881db1d9e8a1f6ae5d0fbab39c72de443c45d73",
+      "status": "0x1",
+      "gasUsed": 162292609,
+      "seconds": 0.12892399999999907
+    },
+    {
+      "label": "save ABI bytes storage",
+      "hash": "0x119b08d6b49c2983329f834214b52a312f8e1286c47085a76eff58477abe6328",
+      "status": "0x1",
+      "gasUsed": 3173637247,
+      "seconds": 0.3406168749999997
+    },
+    {
+      "label": "diverge ABI bytes storage",
+      "hash": "0xc3fff1937b040a1fd5d5546e898a4c040b51f5deabbd587e4cbaf7044ec4365f",
+      "status": "0x1",
+      "gasUsed": 38671,
+      "seconds": 0.06476429199999983
+    },
+    {
+      "label": "restore ABI bytes storage",
+      "hash": "0xe3a3e8c471aac73c68bee7072688e6f86e64e4bfe6026c9427511a466b6f6b25",
+      "status": "0x1",
+      "gasUsed": 777811976,
+      "seconds": 0.3877941250000003
+    },
+    {
+      "label": "overwrite ABI bytes storage",
+      "hash": "0x6b1064524fd6ea0bbb6068bb2c7b2e55a0e7136c8b77e141c2df1517d1292c59",
+      "status": "0x1",
+      "gasUsed": 711748545,
+      "seconds": 0.385059291000005
+    },
+    {
+      "label": "save packed schema storage",
+      "hash": "0x5a6219b33ac92e9f0a4888a834fd5504c26c72f941d5847d86b22b853ee5a8e8",
+      "status": "0x1",
+      "gasUsed": 584309294,
+      "seconds": 0.1713260420000006
+    },
+    {
+      "label": "diverge packed schema storage",
+      "hash": "0x6f04ff2dd62d3f8614c4e3c53142be21ad959c807c1d09bc0ca291c748b3bdf3",
+      "status": "0x1",
+      "gasUsed": 38671,
+      "seconds": 0.04234112499999901
+    },
+    {
+      "label": "restore packed schema storage",
+      "hash": "0xeef59cc93e53d51424bb48f4652668dbc4bf5936886be076584a272be91ad7de",
+      "status": "0x1",
+      "gasUsed": 123304814,
+      "seconds": 0.12930020800000055
+    },
+    {
+      "label": "overwrite packed schema storage",
+      "hash": "0xf2c9e589b2472a7f4ebb346b4ecfe205c15433babbbc50a9fb02247514078eb9",
+      "status": "0x1",
+      "gasUsed": 129653992,
+      "seconds": 0.14977249999999911
+    },
+    {
+      "label": "save packed immutable code",
+      "hash": "0x68d6eebbe49b4d59ac2764c88d57e666896f55d987d4803c3aec1b53cdc2e39e",
+      "status": "0x1",
+      "gasUsed": 246943470,
+      "seconds": 0.10771870900000068
+    },
+    {
+      "label": "diverge packed immutable code",
+      "hash": "0xe9067d08ffbf18bceff48af23121bfb2d9b0b54033207ddaebb7f72022c83f57",
+      "status": "0x1",
+      "gasUsed": 38671,
+      "seconds": 0.021837665999999444
+    },
+    {
+      "label": "restore packed immutable code",
+      "hash": "0xa15bd1ee2a6fccb634fa3dba5d98502e76e6a2842aa63a74e9ebf6d993321923",
+      "status": "0x1",
+      "gasUsed": 64952649,
+      "seconds": 0.06492258399999992
+    },
+    {
+      "label": "overwrite packed immutable code",
+      "hash": "0x6374a9c524a29bc5ab923ee86bde3540c7b788d04c2ec144e890e8933f0b3043",
+      "status": "0x1",
+      "gasUsed": 246906470,
+      "seconds": 0.08642725000000064
+    }
+  ],
+  "sourceHashes": {
+    "src/doom/am_map.sol": "3c5da949fc635d095659d4333d153408499e89e4178b469cb335e31cf52f6020",
+    "src/doom/am_map_types.sol": "7347073682c367c15c918aa51ff924c664b6d05efdbf4f0392d4f404b31a9039",
+    "src/doom/d_ticcmd.sol": "508d0332d3e8b83e1b68d37581a3befc100a9974fcaa0900cc44116cd75ff2ef",
+    "src/doom/f_finale.sol": "4e21a192b8adb1109b51493ab43e770bfc3393b085cf02df53ab589d21c81505",
+    "src/doom/g_game.sol": "fc8aaae0b28dee867499b8cef6ab32d69d900ba0526941cd74b0b73532178b7c",
+    "src/doom/hu_lib.sol": "bf11331f06c38565650e93ce5ece611d048d5656ae2c8442b6568de5ce079a06",
+    "src/doom/hu_stuff.sol": "fcf57390d8c8e6d5ec935164264870509bb64197179536a39cd2a14dddb9588e",
+    "src/doom/info.sol": "4611205149173e42d3b0f1d91820c8042f6bc5fc48fb53aec84ad4bc501dca8e",
+    "src/doom/m_bbox.sol": "f4c60efe3627a97d0288fc5cd0283535527b1f51029568534c80bb8fbbf8f272",
+    "src/doom/m_cheat.sol": "e79d73bd9e159b0f05639464bf7c9cb7f40dc069780c3459336dfffb50394f82",
+    "src/doom/m_fixed.sol": "3f64bef1f62f61faead3a5b8f382bf1c66e1b3739ce4ac8d59a6fcef0451ef9f",
+    "src/doom/m_random.sol": "5267b881138cfb7e0d683449005619513006c70e3ed557f64697b36c4ed40c7b",
+    "src/doom/native_zone_layout.sol": "118b2d17165826fb0857d9cb296e2214db2a28917769299a82e70d0c0790f6e8",
+    "src/doom/p_ceilng.sol": "696f3f620f5bddb3cea64fda824e3203c780f53db890630f0685794454dc37f9",
+    "src/doom/p_doors.sol": "945bf600ce86d8286718fb75ecaf905a0c4631d79d2dac7260c91c9dc2013f8d",
+    "src/doom/p_enemy.sol": "eff76cce23b0877833a5c446a1a09d8ae01918a6925b6d3265240b144c09dfe7",
+    "src/doom/p_floor.sol": "b7c90baafa0b74fd7ff80cf60dcbc430148f6d6d068ba54ca0fbc7ba1bca7069",
+    "src/doom/p_game_state.sol": "06cbccba214717193fbab7c290e2962c4fb05b3f34c6543247ee1ec8e45d085a",
+    "src/doom/p_heap.sol": "3cc2e0a8c3239523db66c07fea33720f931754baedd312b5ca7cc2ebe763d2e0",
+    "src/doom/p_info.sol": "a48840479115ea8bf849ca5ec448d1b2bec7a6cfe58c5314e140635a898de792",
+    "src/doom/p_inter.sol": "8be27f9bba47beb46b3edf2a8a2674b3cd7218d2abb8ef5f8855803393d067de",
+    "src/doom/p_lights.sol": "6f63cbc6b41fc492a46ce43aef464deb9d08b7fa1dd8b213b546eec3e4f08276",
+    "src/doom/p_map.sol": "6b6d48523a45acab9090dfb0ec3d6dbab4e6de18afa89453df8b5a87088da0f3",
+    "src/doom/p_maputl.sol": "ac5ac60e7e058a5fc537e7042c7254bc0f51c77165149a22e141437b4e0ad0b6",
+    "src/doom/p_mobj.sol": "e6138aceee2be933f2c36e3fc18e6d2baa22ffa6a1197d9db89c744d42d78e56",
+    "src/doom/p_plats.sol": "6904df762b270f840daa99b34d2a5c689dbb2fef3aed3d33c2ac1a3f3e4d5722",
+    "src/doom/p_pspr.sol": "cfa2db3438d689c38d9c957fc4aee598c58740f025d6efead2b5f9671eb0c863",
+    "src/doom/p_saveg.sol": "f40712140dc6ce73f473968d69d985b0ae2fb08c1f8097b36e83e53a73c81aec",
+    "src/doom/p_setup.sol": "9498e1298bf4e53ccedc484a50d4c7f9f85315f6cb700719d474b721e382243b",
+    "src/doom/p_setup_static.sol": "c8100a42bb0bac190c583bbb2c82168599009f88a766e4c05b9a9231a5f69792",
+    "src/doom/p_sight.sol": "7ed366237fc3fec069ffb6336e95e038004d1f379622cf67f55fb8c6b1a6488c",
+    "src/doom/p_spec.sol": "2363640e75c22c9d017db677dda7148ad221380f0a23639167e145e933fc72b7",
+    "src/doom/p_switch.sol": "5404d359793e05c6c24a7804c07632150009b46f38d03068412d7ac53260dfe2",
+    "src/doom/p_telept.sol": "745f0fa4ed6f0515c398bfd2469c59aac82316965b7bac25263aeb82555d61b8",
+    "src/doom/p_tick.sol": "1993dd0c94853dabc4db554dfa0ca04375cef0a22075400ba0e7b56b525022ab",
+    "src/doom/p_user.sol": "963a46850e1b17171f79dd65bff9b5006ce6f97a935ad2023d1d526a6ec35c37",
+    "src/doom/p_zone_setup.sol": "e0308bd1197fd84a01eb1ee208be73c711851d6b0bc30be1d07a7c61b18b223d",
+    "src/doom/r_bsp.sol": "0ae5df313515692d0b2b970d5d39d107e014629cff2305fb37c14371a9524040",
+    "src/doom/r_data.sol": "ef5f26f230c1bed1a073f73b489613d947b420c220faa6f2c16a6f583045010c",
+    "src/doom/r_data_types.sol": "0448302d68447c8a5a4c46df4016e8845863e42bf6eaca8bcab8ab0c9707fdf8",
+    "src/doom/r_defs.sol": "558d5a9bfd131e816bbe28986e2dad6144a08e5a16ccfed1b199d7558a1ea0e2",
+    "src/doom/r_draw.sol": "afe958ea0c2962b739bff58b98d8bccc25c48d3d0838cacd46142c242b5d6477",
+    "src/doom/r_main.sol": "df403bf04fdbbcfc68c4fd9c5e19b5201ca711498efc34db406a4010ad3b2af5",
+    "src/doom/r_plane.sol": "c7a5abcbca84dddcd2a3c8bb160a609605c5c1842e73704dff4860df3280e463",
+    "src/doom/r_render_hooks.sol": "f026ccb8fffb68d8fbcb0966103212f52884b86350fe3fb52a401d146f3fb312",
+    "src/doom/r_render_state.sol": "072bd2f73b98e1eb775fc8093e95a69c184f3fa50a89a5d64a7beccd59493398",
+    "src/doom/r_segs.sol": "9d4e4dea06739278aab3698fb422818de6dd7726359c8822d60a162e886621cb",
+    "src/doom/r_sprite_state.sol": "735b3de85cbf455e05d3cb8e992cf4e477960bd4192bbd367f5c66c803b96363",
+    "src/doom/r_state.sol": "80951a13733e3a08f4182937a37def33ffda21eaae4b43a2a1bdba2043adab6b",
+    "src/doom/r_things.sol": "86705ab6b1f79b7ef07798b881cc547502d9911c97b57dc516a744e17c1977f5",
+    "src/doom/st_cheats.sol": "e35b8253b068f1ad807073bc322e2b62205ef3ffa95bb06f36acef7a79721677",
+    "src/doom/st_lib.sol": "5307f52151fbd73e442a60d8b87cbfbed3d38a28704a81e952f56672de667299",
+    "src/doom/st_stuff.sol": "936cf09f8f0dcc9c0555a9d533d9d1a50f65941462b0d3325a5c7850b5be2e49",
+    "src/doom/tables.sol": "bf14202b419075f6d187653205a37e211d8267c7fc4c0bebf5a8c5713afddf38",
+    "src/doom/v_video.sol": "be75fe69e7cd2486ce93408ec204cdf470ea097569e37fbedd867e9a2f3adf1f",
+    "src/doom/v_video_types.sol": "266890b0c8003e89f78baf8415048d24e4ca14865a1c8518ad77bb6a9f6b4d35",
+    "src/doom/w_zone_cache.sol": "03c07404765de9620b3d1ff15727809cdad911c8a78d822019b63500fa5018c2",
+    "src/doom/wi_stuff.sol": "d69db1200afb323308915cecc8b8b6c5bd08c996168b936d2f76dbd5b3a8c122",
+    "src/doom/wi_stuff_types.sol": "398e0d19affd77f4af91f9a4ffdc08f046b61151de26a9848b86127414ff6f88",
+    "src/doom/z_zone.sol": "b4e75218021d65aaf3389cf78a68663feebc2084c82457821be17247dc8106c5",
+    "src/doom/z_zone_backing.sol": "e63201d3bb45e4c8d0796480d4e9facd4deffd4d8a9dd730bed10ff4a108d0b1",
+    "src/doom/z_zone_types.sol": "11ab3f95678ba3852ab5f0c2dc9e85e715bec6897e65f04cd1919bba9bb73dbd",
+    "src/doom/z_zone_virtual.sol": "8bc309e89fa4da0667dc50a45adb9f91c58982640e1b3f5f9d38e49893f1e960",
+    "src/evm/DoomGame.sol": "d9451a915ab977bae137340e3e6626a270a4b84b8b6ea9449a8c4f0f578296df",
+    "src/evm/DoomRenderer.sol": "5639d82431350ea76c26d43457d26d0c3c0f410eaddf02db6adbcfb03a569ba0",
+    "src/evm/DoomScene.sol": "9ad7c8ccee4c9e05deb5608326baabacfa40f686b8d8445fb8aaa7352ab64569",
+    "src/evm/DoomUI.sol": "2b66f6d024e16f3c202ea6da84ec5875af4d7ea809c2f29cbf65310fdf24bb38",
+    "src/evm/DoomZoneStartup.sol": "2d178494456a7ae3c730310f257ce2aa635d37d18c90cac039cf002cdb3f50dc",
+    "src/evm/EpisodeRuntime.sol": "876c1a7c83bb644631f9e3d5af73a4bb383d255e3c93cbd224b910a91973cde5",
+    "src/evm/EpisodeStartup.sol": "bb574f20cdc09e63385261f7e8e203a49a90a15b87903d70dfe43d396bc3255e",
+    "src/evm/InputProtocol.sol": "bd9df1b10f19be3754cef8efcdc109ce54228f4475c50b197cb32b5bab8a7808",
+    "src/evm/ProductionWadResources.sol": "a9f77b23b261b3d8bd94cfeb9a5385879966941c6edae2e1319e1620468b1cc3",
+    "src/evm/ResourceStore.sol": "5ab3acc5d09f155a4cf25973c847f23e47f386a364704b76996c86be5862e3a8",
+    "src/evm/ResourceTypes.sol": "159865364cfa57aae508cd94c49509cbccabd6aeeba55e92b9fcf816bdec4d6b",
+    "src/evm/SaveSchema.sol": "0740a562a0b2e511859f29252dbad6005582cd022f9079a10922b22be870206c",
+    "src/support/SaveCostProbe.sol": "102ac22e31aa585dea2d0624b9af8b5bad29c355890f210ad678dce547ba7f1d"
+  },
+  "notes": [
+    "Same initialized authentic Freedoom E1M1 world for every architecture. No Anvil state import or snapshot/revert.",
+    "Typed root copies, ABI bytes, packed schema words and packed immutable16KiB code chunks compared.",
+    "All resources and engines use ordinary CREATE; restore must retain the exact packed-root digest.",
+    "Transaction wall time includes RPC/mining. This gate does not measure peak EVM MSIZE; final instrumentation is separate."
+  ],
+  "runtime": {
+    "ownedPid": 46250,
+    "args": [
+      "--host",
+      "127.0.0.1",
+      "--port",
+      "19391",
+      "--hardfork",
+      "cancun",
+      "--disable-code-size-limit",
+      "--gas-limit",
+      "10000000000",
+      "--memory-limit",
+      "1073741824",
+      "--no-request-size-limit",
+      "--prune-history",
+      "2",
+      "--transaction-block-keeper",
+      "2",
+      "--silent"
+    ]
+  },
+  "endedUtc": "2026-10-11T17:52:29.935Z",
+  "stoppedOwnedRuntime": true,
+  "rawReportSha256": "0b621afbcc04c35c6c97bda2579636035ed0e6b808815aa673754fe9e51d4db3",
+  "measurementArtifact": {
+    "path": "artifacts/save-load/SaveCostProbe-artifact.json.gz",
+    "sha256": "f1735be598f012e27001ad1423a43b82854e22ab39d412f38e24f517b9bfcd6d",
+    "scope": "Pre-format measurement artifact; source identities retained in metadata/report. Final production costs measured independently."
+  }
+}
