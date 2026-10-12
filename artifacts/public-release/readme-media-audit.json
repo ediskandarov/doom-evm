@@ -1,0 +1,86 @@
+{
+  "pass": true,
+  "verifiedUTC": "2026-10-12T07:27:08.189884+00:00",
+  "previousReleaseCommit": "947e788c863a1ed181584db3de03425769d0b575",
+  "unchangedPreviousReleaseBlobs": 4218,
+  "preservedPathAndSHA256Digest": "cd75e284c20bc8864595536b766b730961c47c9177d49dd04b2ded6c9a66d59f",
+  "allowedCurrentDocumentUpdates": [
+    "README.md",
+    "docs/media/README.md",
+    "docs/release/INVENTORY.md",
+    "docs/release/READINESS.md"
+  ],
+  "sourceMP4HashAndMtimeUnchanged": true,
+  "priorFreedoomDerivativeUnchanged": true,
+  "gifImmediatelyAfterUnchangedIntroduction": true,
+  "documentationAndOriginalBaselineAudit": {
+    "baseline": "1b728fe3f8307a49f71437d5af75a4935df81492",
+    "pass": true,
+    "inventory": {
+      "(root)": 14,
+      "artifacts": 1960,
+      "docs": 110,
+      "original": 1,
+      "schemas": 8,
+      "scripts": 13,
+      "src": 116,
+      "test": 1391,
+      "tools": 538,
+      "web": 39
+    },
+    "preservation": {
+      "unchangedBaselineFiles": 4184,
+      "pathAndSHA256Digest": "700996d0afa00e3c9b71b451cb56555abe1489e8af26753c2f5fbf3d54e148f9",
+      "allowedEdits": [
+        ".gitignore",
+        "PORTING.md",
+        "README.md",
+        "docs/browser-deployment/README.md",
+        "scripts/install-toolchain.py"
+      ]
+    },
+    "upstream": "a77dfb96cb91780ca334d0d4cfd86957558007e0",
+    "trackedIWADsAndMP4s": 0,
+    "packages": [
+      {
+        "pins": "web/install-pins.mjs",
+        "sourceCount": 82,
+        "artifacts": {
+          "Doom": {
+            "url": "/install-assets/Doom.json",
+            "sha256": "8cdb345fbfc40d5d058b27a9e626bc8030ab8a85d736e27dbf916434b9eed4e1"
+          },
+          "ResourceStore": {
+            "url": "/install-assets/ResourceStore.json",
+            "sha256": "2c73efc4886eddb868a91303fac23dda65911e258399b044ff234c73d1ad9315"
+          }
+        },
+        "compiledCompared": false
+      },
+      {
+        "pins": "web/doom2-pins.mjs",
+        "sourceCount": 81,
+        "artifacts": {
+          "Doom": {
+            "url": "/doom2-assets/Doom.json",
+            "sha256": "3f9065a4aa169004ceaeb1716b41cb6f4e53ac9d31458e77147708d36ff47d3b",
+            "runtimeBytes": 905156
+          },
+          "ResourceStore": {
+            "url": "/doom2-assets/ResourceStore.json",
+            "sha256": "2c73efc4886eddb868a91303fac23dda65911e258399b044ff234c73d1ad9315",
+            "runtimeBytes": 57
+          }
+        },
+        "compiledCompared": false
+      }
+    ],
+    "documentation": {
+      "filesChecked": 159,
+      "localLinksChecked": 894,
+      "currentDocumentAnchorsChecked": true,
+      "externalLinks": "Not covered by this local checker"
+    }
+  },
+  "mediaEvidenceSHA256": "8014b1eea35c70502c2362081940c70b34c1e2b818adc24a8e73e2890c7700c5"
+}

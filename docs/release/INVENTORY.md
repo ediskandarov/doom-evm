@@ -1,5 +1,9 @@
 # Release cleanup inventory
 
+The later [README media correction](README-MEDIA.md) adds the requested Ultimate
+DOOM preview. The initial Freedoom derivative and its evidence remain archived;
+the inventory decisions below describe the original release checkpoint.
+
 Inventory baseline: `1b728fe3f8307a49f71437d5af75a4935df81492`.
 All tracked paths were enumerated, executable/source duplicates hashed, imports
 traced from production/browser roots, and apparent orphans checked against tests,

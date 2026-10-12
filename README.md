@@ -8,14 +8,14 @@ the result.
 An unnecessarily expensive way to run DOOM. Built for fun; checked against the
 original C with considerable seriousness.
 
+<a href="docs/media/README.md"><img src="docs/media/ultimate-e1m1.gif" width="640" alt="Ultimate DOOM E1M1 Hangar gameplay rendered inside the EVM, with the original status bar"></a>
+
+*Five seconds of Ultimate DOOM's Hangar, from an existing verified EVM recording.
+Playback follows game time, not real-time EVM performance.
+[Recording provenance](docs/media/README.md).*
+
 [Play locally](#quick-start) · [Architecture](docs/ARCHITECTURE.md) ·
 [Compatibility](docs/COMPATIBILITY.md) · [Documentation](docs/README.md)
-
-<a href="docs/media/README.md"><img src="docs/media/freedoom-evm.gif" width="640" alt="Freedoom E1M1 speedrun rendered inside the EVM"></a>
-
-*Existing verified Freedoom E1M1 recording, shown at game time. Its 56 EVM captures
-sample a 279-tic run; this animation is not real-time EVM performance.
-[Recording provenance](docs/media/README.md).*
 
 ## A few measured consequences
 
@@ -114,7 +114,7 @@ the [documentation index](docs/README.md) keeps the engineering archive accessib
 
 Based on id Software's original [`linuxdoom-1.10`](UPSTREAM.md), pinned to
 `a77dfb96cb91780ca334d0d4cfd86957558007e0`. Code: [GPL-2.0-only](LICENSE).
-Freedoom contributors provide the redistributable game assets and demo artwork
+Freedoom contributors provide the redistributable game assets
 under their [BSD license](test/fixtures/wad/COPYING.txt).
 Original demo authors and archive provenance are credited in the per-run reports.
 DOOM and its commercial assets belong to their respective owners; this is an

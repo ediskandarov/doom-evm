@@ -1,0 +1,121 @@
+{
+  "startedUTC": "2026-10-12T07:14:03Z",
+  "baseline": "947e788c863a1ed181584db3de03425769d0b575",
+  "scope": "README media correction only; existing verified Ultimate E1M1 MP4 read-only; no EVM rendering, engine/runtime or historical evidence changes.",
+  "owner": "feat/public-release at /private/tmp/doom-evm-public-release",
+  "stopCondition": "Verified source/media identities, current provenance/links, Gitmoji commit and clean feature worktree; no merge or push.",
+  "source": {
+    "path": "/Users/eduard/sandbox/doom-evm-full-videos/artifacts/local/full-videos/E1M1/pilot-v2/ultimate-e1m1-complete.mp4",
+    "sha256": "6d65e321e75f3c787fc31dc758d7460b1f4cd25f27e0b193e1d7f204a82d12f4",
+    "bytes": 15996505,
+    "mtimeNs": 1791713689528770703
+  },
+  "verificationUTC": "2026-10-12T07:24:11.859329+00:00",
+  "sourceUnmodified": true,
+  "sourceDisplay": {
+    "width": 1280,
+    "height": 960,
+    "aspectRatio": "4:3",
+    "fps": 35,
+    "frames": 3498,
+    "durationSeconds": 99.942857
+  },
+  "certificate": {
+    "manifest": "artifacts/full-videos/pilot-long-v2/E1M1/manifest.json",
+    "manifestSHA256": "de816722013f3dcdae05e3db91a38cf7728d4879a882c8c4b599b277857fcca7",
+    "checks": "artifacts/full-videos/pilot-long-v2/E1M1/checks.json",
+    "checksSHA256": "90c693176ef16a2c3a3815278e47021616169de95a44c1fe0641aeae36cfec40",
+    "pass": true,
+    "identity": {
+      "map": 1,
+      "engineCommitSHA": "75441d8a92bc6580a9714c8d85d393c1abc9e042",
+      "demoSha256": "e5766abc098faf496c2b7787668e4c21c0a4ebf819c7667ce59c4ca14dc39288",
+      "commandBytesSha256": "d669506ed68fdb6abea3403359a0da6810dfb556991c00db4c28dce3760dcbe9",
+      "nativeStateSha256": "3f49d29618f5b4c6cc6e8263085e649d3101ff0c125aa0d31d8238fd8cc83588",
+      "resourceIdentity": {
+        "schemaVersion": 0,
+        "wadSha256": "6fdf361847b46228cfebd9f3af09cd844282ac75f3edbb61ca4cb27103ce2e7f",
+        "bundleSha256": "1154fc21f0fa60e793ffb6da569b2293191dfc7f1791e0c083672b764917d7ba",
+        "paletteSha256": "fd895921b5d0a394612bb29852ed003d44d69f76dec31c0dc6b5d5fc7d63f7bb",
+        "paletteVariant": 0
+      },
+      "abiSha256": "0b5b98881e450197d9e506e924c9a79e3c3b1ba4ccbd9e5b49e3fade502dd4c5",
+      "gasLimit": 10000000000,
+      "memory": 1073741824
+    }
+  },
+  "segment": {
+    "startSeconds": 2.2,
+    "endSeconds": 7.2,
+    "durationSeconds": 5,
+    "sourceFrameIndexStart": 77,
+    "sourceFrameIndexEndExclusive": 252,
+    "allSourceFramesGameplay": true,
+    "cropped": false,
+    "statusBarPreserved": true
+  },
+  "gif": {
+    "path": "docs/media/ultimate-e1m1.gif",
+    "sha256": "b811b92aab89e3fe4bbe93b8e051279f9de7a535a7b5aa94bd742eba91275288",
+    "bytes": 7627269,
+    "width": 640,
+    "height": 480,
+    "aspectRatio": "4:3",
+    "frames": 88,
+    "durationMilliseconds": 5030,
+    "nominalPresentationFPS": "35/2",
+    "frameDelayMilliseconds": [
+      50,
+      60
+    ],
+    "loop": 0,
+    "paletteColors": 256
+  },
+  "command": [
+    "ffmpeg",
+    "-nostdin",
+    "-v",
+    "error",
+    "-ss",
+    "2.2",
+    "-i",
+    "/Users/eduard/sandbox/doom-evm-full-videos/artifacts/local/full-videos/E1M1/pilot-v2/ultimate-e1m1-complete.mp4",
+    "-t",
+    "5",
+    "-filter_complex",
+    "fps=35/2,scale=640:480:flags=neighbor,setsar=1,split[a][b];[a]palettegen=max_colors=256:stats_mode=full[p];[b][p]paletteuse=dither=none",
+    "-loop",
+    "0",
+    "docs/media/ultimate-e1m1.gif"
+  ],
+  "encoder": "ffmpeg version 9.0.1 Copyright (c) 2000-2026 the FFmpeg developers",
+  "presentationQuality": {
+    "measurement": "Y:0.990208 (20.091379) U:0.985569 (18.406967) V:0.986517 (18.702281) All:0.987431 (19.007158)",
+    "comparison": "Decoded source MP4 at the same 640x480 size and selected presentation frame rate; not a native framebuffer proof.",
+    "command": [
+      "ffmpeg",
+      "-nostdin",
+      "-v",
+      "info",
+      "-ss",
+      "2.2",
+      "-t",
+      "5",
+      "-i",
+      "/Users/eduard/sandbox/doom-evm-full-videos/artifacts/local/full-videos/E1M1/pilot-v2/ultimate-e1m1-complete.mp4",
+      "-i",
+      "artifacts/local/readme-media-update/ultimate-e1m1.gif",
+      "-filter_complex",
+      "[0:v]fps=35/2,scale=640:480:flags=neighbor,setsar=1,format=yuv444p,settb=1/3500,setpts=N*200[a];[1:v]format=yuv444p,settb=1/3500,setpts=N*200[b];[a][b]ssim=shortest=1",
+      "-an",
+      "-f",
+      "null",
+      "-"
+    ],
+    "visualInspection": "Original contact sheet and selected output gameplay/status-bar frames inspected. No crop or altered source timing.",
+    "losslessAlternative": "Pillow re-encoding preserved all 88 decoded frames/durations but increased size; original FFmpeg output selected."
+  },
+  "newEVMFramesRendered": 0,
+  "runtimesStarted": 0,
+  "historicalEvidenceModified": false
+}

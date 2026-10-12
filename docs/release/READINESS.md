@@ -1,5 +1,10 @@
 # Public release preparation
 
+The initial release checkpoint below used a Freedoom preview. The subsequent
+[README media correction](README-MEDIA.md) replaces the public demonstration
+with the owner's specified verified Ultimate DOOM E1M1 recording. Initial
+verification records and their media remain preserved.
+
 ## Scope and baseline
 
 Started: 2026-10-12 06:25:08 UTC. Owner: release-preparation agent, branch
