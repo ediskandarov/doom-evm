@@ -1,0 +1,12 @@
+Downloading foundry for darwin_arm64
+Downloading solc for darwin_arm64
+forge Version: 1.8.5
+Commit SHA: 51a52c59cffd940f76eddd0b4bb1791aa4b5ac7f
+Build Timestamp: 2026-10-05T17:07:33.315474000Z (1791220053)
+Build Profile: dist
+anvil Version: 1.8.5
+Commit SHA: 51a52c59cffd940f76eddd0b4bb1791aa4b5ac7f
+Build Timestamp: 2026-10-05T17:07:33.315474000Z (1791220053)
+Build Profile: dist
+solc, the solidity compiler commandline interface
+Version: 0.8.37+commit.f401782d.Darwin.appleclang

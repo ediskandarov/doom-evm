@@ -1,0 +1,23 @@
+{
+  "command": [
+    ".toolchain/bin/forge",
+    "build",
+    "src/evm/Doom.sol",
+    "src/evm/Doom2.sol",
+    "src/evm/ResourceStore.sol",
+    "--offline",
+    "--no-lint",
+    "--skip",
+    "test",
+    "script",
+    "--out",
+    "artifacts/local/public-release/production/out",
+    "--cache-path",
+    "artifacts/local/public-release/production/cache"
+  ],
+  "startedUTC": "2026-10-12T06:31:39.706656+00:00",
+  "endedUTC": "2026-10-12T06:35:52.013883+00:00",
+  "elapsedSeconds": 252.30517408438027,
+  "exitCode": 0,
+  "cacheCopiedFrom": "/Users/eduard/sandbox/doom-evm/artifacts/local/death-save-main/production"
+}

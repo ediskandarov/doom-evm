@@ -1,0 +1,7 @@
+test_checksum_failure_preserves_all_existing_binaries (test_install_toolchain.InstallToolchainTest.test_checksum_failure_preserves_all_existing_binaries) ... ok
+test_install_and_repeat_leave_existing_inode_intact (test_install_toolchain.InstallToolchainTest.test_install_and_repeat_leave_existing_inode_intact) ... ok
+
+----------------------------------------------------------------------
+Ran 2 tests in 1.640s
+
+OK

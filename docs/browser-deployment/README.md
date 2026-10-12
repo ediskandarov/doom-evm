@@ -1,5 +1,10 @@
 # Play from the browser
 
+Start with the [macOS getting-started guide](../GETTING-STARTED.md) for prerequisites
+and the tested SteamCMD IWAD procedure. The [current compatibility matrix](../COMPATIBILITY.md)
+separates available features from finite acceptance coverage. All 32 DOOM II maps
+have startup coverage; full gameplay replay acceptance covers MAP01 and MAP07.
+
 This checkout includes authenticated, precompiled production contracts. Players do not compile Solidity, run deployment scripts, configure contract addresses or provide private keys. The browser deploys ordinary CREATE transactions from an unlocked local Anvil development account. Existing Frame/input/resource selectors remain compatible; policy initialization and inspection APIs are additive.
 
 The launcher plays **Freedoom 0.13.0, Ultimate DOOM 1.9 (Episode One), and DOOM II 1.9 (MAP01–MAP32)** through the same production menu/UI runtime. Ultimate requires a locally supplied exact `DOOM.WAD` with MD5 `c4fe9fd920207691a9f493668e0a2083`; commercial files and extracted artwork are never shipped with the website or uploaded to a website server. The file is authenticated and packed in browser memory, then resource transactions go only to the selected localhost Anvil. IndexedDB temporarily retains the exact pending transaction calldata for safe recovery; completed journals retain hashes/addresses/receipts, not the IWAD file.
@@ -17,15 +22,11 @@ source scripts/env.sh
 node tools/wad/download.ts artifacts/local/freedoom
 ```
 
-The committed `web/install-assets` and `web/doom2-assets` contract artifacts need no player build. If rebuilding a release, build only the affected production roots and run the release packager:
-
-```sh
-forge build src/evm/Doom.sol src/evm/Doom2.sol src/evm/ResourceStore.sol
-node tools/browser-deployment/package.mjs .
-node tools/reference/doom2/package.mjs .
-```
-
-`package.mjs` checks the pinned compiler/viaIR/Cancun/optimizer policy and every Solidity source hash against compiler metadata, then writes reduced authenticated browser artifacts, their release pins, the exact open Freedoom WAD and license. It never deploys contracts. For a package with the committed artifacts, stage the authenticated Freedoom file and license without rebuilding:
+The committed `web/install-assets` and `web/doom2-assets` contract artifacts need
+no player build. Maintainers should use the [production build and combined
+packaging commands](../DEVELOPMENT.md#build-the-browser-contracts), which validate
+compiler metadata and source hashes. For the committed release, stage the
+authenticated Freedoom file; its license is already included:
 
 ```sh
 cp artifacts/local/freedoom/freedoom1.wad web/install-assets/freedoom1.wad
@@ -69,7 +70,13 @@ A fresh Anvil restart or reset changes actual chain state even if chain ID stays
 
 If RPC disconnects during submission, restore the same node and retry. Do not manually replay deployment transactions. If Anvil reports a revert, keep the journal and correct its execution limits before retrying. Pending external transactions must be resolved on the user's owned node before installation continues. Only one tab may install on an endpoint at a time.
 
-## Verify this goal
+## Verify deployment
+
+Download and stage Freedoom above before the focused tests. See
+[Development and verification](../DEVELOPMENT.md) for native resource prerequisites,
+production builds and broader checks. The original single-profile
+`check.mjs` is historical: its unavailable-DOOM-II assertions do not describe
+the current launcher. Use the three-game runner below for the current release.
 
 Focused tests:
 

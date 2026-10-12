@@ -1,0 +1,182 @@
+✔ shared policy defaults to10B and agrees with direct Forge fallback (0.663458ms)
+✔ explicit DOOM override wins and child Forge/Node policy is normalized (0.199584ms)
+✔ Python and Node agree for defaults, higher and historical overrides (156.053083ms)
+✔ malformed, zero, fractional and inexact budgets fail before execution (331.096125ms)
+✔ shell setup propagates one override in both Bash and Zsh (51.1015ms)
+node:fs:560
+  return binding.open(
+                 ^
+
+Error: ENOENT: no such file or directory, open 'artifacts/local/freedoom/freedoom1.wad'
+    at Object.openSync (node:fs:560:18)
+    at readFileSync (node:fs:444:35)
+    at file:///private/tmp/doom-evm-public-release/tools/wad/episode.test.ts:10:15
+    at ModuleJob.run (node:internal/modules/esm/module_job:377:25)
+    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:691:26)
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5) {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'artifacts/local/freedoom/freedoom1.wad'
+}
+
+Node.js v24.11.0
+✖ tools/wad/episode.test.ts (142.704333ms)
+✔ complete minimal classic IWAD validates each resource family (1.70725ms)
+✔ directory last-match uses original strncpy padding; raw names, duplicates and markers preserved (0.323458ms)
+✔ rejects invalid WAD envelope without allocating from hostile counts (0.952208ms)
+✔ rejects vertex record remainder (0.267833ms)
+✔ rejects signed vertex reference (0.185542ms)
+✔ rejects oversized side reference (0.156084ms)
+✔ rejects invalid negative side (0.142916ms)
+✔ rejects two-sided absent back (0.84ms)
+✔ rejects missing front side (1.147208ms)
+✔ rejects side sector index (0.631959ms)
+✔ rejects seg vertex index (0.544542ms)
+✔ rejects seg line index (0.168667ms)
+✔ rejects seg side domain (0.141875ms)
+✔ rejects seg absent back (0.133875ms)
+✔ rejects subsector span (0.122208ms)
+✔ rejects negative firstseg (0.113208ms)
+✔ rejects empty subsector (0.108958ms)
+✔ rejects node child index (0.112625ms)
+✔ rejects leaf child index (0.124792ms)
+✔ rejects BSP cycle (0.132667ms)
+✔ rejects REJECT matrix (0.121291ms)
+✔ rejects BLOCKMAP dimensions (0.126708ms)
+✔ rejects BLOCKMAP negative offset (0.408208ms)
+✔ rejects BLOCKMAP header offset (0.114292ms)
+✔ rejects BLOCKMAP initial zero (0.104083ms)
+✔ rejects BLOCKMAP linedef (0.111292ms)
+✔ rejects BLOCKMAP terminator (0.114042ms)
+✔ rejects PLAYPAL stride (0.160875ms)
+✔ rejects COLORMAP count (0.1175ms)
+✔ rejects PNAMES count (0.123541ms)
+✔ rejects PNAMES missing patch (0.130833ms)
+✔ rejects TEXTURE count (0.097792ms)
+✔ rejects TEXTURE offset (0.100417ms)
+✔ rejects TEXTURE dimensions (0.1015ms)
+✔ rejects TEXTURE patch count (0.097083ms)
+✔ rejects TEXTURE patch index (0.116542ms)
+✔ rejects patch column offset (0.104834ms)
+✔ rejects patch length (0.300542ms)
+✔ rejects patch terminator (0.74675ms)
+✔ rejects flat length (0.449875ms)
+✔ rejects missing sector flat (0.385833ms)
+✔ rejects missing sidedef texture (0.305125ms)
+✔ rejects extended map layouts and retains classic zero-node map (0.53025ms)
+✔ snapshot raw bytes and record signedness retain upstream disk ABI (2.484333ms)
+✔ canonical manifest is recursive, compact ASCII JSON with sorted keys (0.153625ms)
+✔ v0 palette schema rejects unknown fields, missing identity, malformed hex and booleans (1.669916ms)
+✔ BSP detects multi-node and disconnected cycles while permitting shared children (0.364083ms)
+✔ near-end offsets and counts reject one-byte truncations, not only integer extremes (0.850291ms)
+✔ original absolute patch post offsets permit clipping without tall-patch normalization (0.330667ms)
+✔ BSP root cannot overlap NF_SUBSECTOR flag (49.132167ms)
+✔ WAD magic compares all eight bits of each byte (0.267875ms)
+✔ three production games select their authenticated release and explicit policy API (57.53125ms)
+✔ shared explicit DOOM II initialization keeps exactly two arguments (7.063875ms)
+✔ DOOM II profile key and explicit initializer survive shared deployment manager adaptation (0.597791ms)
+✔ browser uses exact configured decimal/hex budgets without a fixed ceiling (0.750875ms)
+✔ old browser configs discover budget from node block metadata (0.091208ms)
+✔ invalid configured/node budgets fail without silently substituting a fixed limit (0.879958ms)
+✔ DOOM II adapter authenticates exact packing and resource dimensions (126.829208ms)
+✔ DOOM II release profile explicitly requests virtual pointers without changing shared installer (8.610625ms)
+✔ DOOM II discovery refuses a ready installation using a different memory policy (0.195541ms)
+✔ episode startup confirms state without consuming sequence; resume reuses deployment (1.388916ms)
+✔ new game, restart and pause share the exclusive sequenced Frame channel (0.773334ms)
+✔ reverted episode control keeps sequence; invalid selection sends nothing (0.33225ms)
+✔ pending control excludes keyboard input until its mined receipt settles (0.187042ms)
+✔ old static DOM/autotest remains zero-button WS→receipt→Canvas flow (103.069708ms)
+✔ capable deployment still does not initialize merely loading/autotesting (66.096583ms)
+✔ actual Start/Stop wiring samples DOM keyboard, pauses on blur, and resumes without duplicate initialize (20.059958ms)
+✔ native-zone capable autotest remains static; explicit Start serializes preparation and initialization (64.978458ms)
+✔ native-zone prepared reload starts without preparing again (1.284ms)
+✔ nativeZone atomic app needs one startup transaction and retains static/held-frame transport (58.2615ms)
+✔ old static app without gas config discovers node budget and preserves zero-input Frames (43.915ms)
+✔ UI profile starts original UI explicitly with selected view and keeps sequence/Frame ABI (3.411959ms)
+✔ legacy deployment reads only its counter and keeps static zero-button ABI (0.48625ms)
+✔ explicit start initializes once, preserves static counter, and reload/resume reuses initialized state (0.802208ms)
+✔ single transaction lock rejects overlap during receipt wait (1.20775ms)
+✔ connection side effects occur only after valid exclusive command reservation (0.651959ms)
+✔ definite revert releases lock and does not consume input sequence (0.429125ms)
+✔ send uncertainty halts all subsequent inputs (0.448709ms)
+✔ receipt uncertainty halts all subsequent inputs (0.296209ms)
+✔ mined invalid Frame consumes counter and invalidates display channel (0.365417ms)
+✔ multiple Frame logs invalidate channel while WS/receipt duplicate is accepted once (0.67775ms)
+✔ chain invalidation during pending transaction prevents receipt display (0.547208ms)
+✔ initialization requires actual confirmed gameStarted and blocks concurrent start (0.481083ms)
+✔ uint32 sequence exhaustion and invalid packet fail before transaction submission (0.246167ms)
+✔ loop samples held keys once per accepted tic with no in-flight backlog (1.215625ms)
+✔ stop during pending tic clears keys and prevents any successor transaction (0.578084ms)
+✔ stop during initialization settles initialization but does not send a tic (0.332208ms)
+✔ loop error stops and clears held input; successful resume needs explicit Start (0.591042ms)
+✔ blur and visibility stop active loop while inactive keys retain browser behavior (0.658583ms)
+✔ metadata must be canonical uint32/bool ABI words (0.234917ms)
+✔ native-zone Start prepares then initializes under one lock without counters or Frames (0.206083ms)
+✔ prepared but uninitialized reload skips preparation and preserves legacy ABI calls (0.114667ms)
+✔ Stop during preparation settles it, defers initialization, and resume does not prepare twice (0.164334ms)
+✔ prepare revert releases channel while prepare uncertainty prevents initialization (0.137292ms)
+✔ initialization revert after preparation permits resume without duplicate preparation (0.126917ms)
+✔ preparation must confirm a canonical flag, unchanged counter, and no Frame (0.266708ms)
+✔ direct staged Start invalidated during pending preparation never submits initialization (0.123416ms)
+✔ nativeZone atomic default uses one initialize and never queries or calls preparation ABI (0.1115ms)
+✔ native translation preserves unshifted original key numbers and raw repeat/order (1.00425ms)
+✔ ordered event batches retain backlog and encode exact bounded dynamic ABI (0.545125ms)
+✔ raw startup is explicit; rendered/no-render packets share sequence and transaction lock (1.628375ms)
+✔ stop during a pending raw tic settles it then flushes releases in one no-render tic (1.459375ms)
+✔ raw failures retain packet and stop without automatic mutation retry (0.956917ms)
+✔ raw blur creates releases, preserves pending events and blocks inactive input (0.212875ms)
+✔ all valid packets encode exact existing uint32,uint32 ABI (16.869417ms)
+✔ reserved and malformed packets/sequences rejected (0.250875ms)
+✔ held keys, alias release, modifiers and original lowest-digit priority (0.162875ms)
+✔ all logical keyboard bits map independently (0.159083ms)
+✔ binding handles repeats, focus loss, visibility and disposal (0.226875ms)
+✔ localhost policy rejects remote origins, public RPC, credentials and misleading hostnames (0.608542ms)
+✔ authenticated precompiled artifact rejects any changed byte (4.723291ms)
+✖ pack existing Freedoom pipeline exactly; reject wrong and corrupted IWADs (0.520584ms)
+✔ immutable runtime binds driver and checks bounds (0.580084ms)
+✔ uncertain nonce conflict cannot be blindly replayed (0.341417ms)
+✔ consumed nonce with missing receipt refuses replay (0.09675ms)
+✔ reset with identical chain ID archives journal when anchor differs (0.443666ms)
+✔ unused uncertain operation retries exact durable nonce and payload (0.116458ms)
+✔ known unmined operation is awaited and never resubmitted (0.091084ms)
+✔ canonical receipt for initialization completes journal after reload (0.128709ms)
+✔ receipt from an orphaned block cannot complete an operation (0.100208ms)
+✔ endpoint ownership refreshes a previously connected stale journal (0.176667ms)
+✔ profile journals isolate game identity and retain profile configuration (0.3005ms)
+✔ install refuses a mismatched active profile before submitting anything (0.143208ms)
+✔ discovery refuses a game from another IWAD before reading its identity (0.135042ms)
+✔ every production player defaults to EVM menu with explicit legacy opt-out (0.4025ms)
+✔ automatic menu startup consumes neither a game nor sequence and reuses persisted menu (1.069167ms)
+✔ title events retain exact shared raw ABI and malformed packets send nothing (0.364333ms)
+✔ pending menu navigation excludes overlapping input and mined revert keeps sequence (0.287125ms)
+✔ uncertain menu submission blocks subsequent mutation (2.407ms)
+✔ existing legacy game cannot silently switch startup profile (0.148459ms)
+ℹ tests 136
+ℹ suites 0
+ℹ pass 134
+ℹ fail 2
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 629.001125
+
+✖ failing tests:
+
+test at tools/wad/episode.test.ts:1:1
+✖ tools/wad/episode.test.ts (142.704333ms)
+  'test failed'
+
+test at web/install.test.mjs:17:1
+✖ pack existing Freedoom pipeline exactly; reject wrong and corrupted IWADs (0.520584ms)
+  Error: ENOENT: no such file or directory, open 'web/install-assets/freedoom1.wad'
+      at async open (node:internal/fs/promises:642:25)
+      at async readFile (node:internal/fs/promises:1279:14)
+      at async TestContext.<anonymous> (file:///private/tmp/doom-evm-public-release/web/install.test.mjs:18:29)
+      at async Test.run (node:internal/test_runner/test:1113:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:788:7) {
+    errno: -2,
+    code: 'ENOENT',
+    syscall: 'open',
+    path: 'web/install-assets/freedoom1.wad'
+  }

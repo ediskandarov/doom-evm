@@ -1,0 +1,15 @@
+{
+  "artifacts": {
+    "Doom": {
+      "url": "/install-assets/Doom.json",
+      "sha256": "8cdb345fbfc40d5d058b27a9e626bc8030ab8a85d736e27dbf916434b9eed4e1"
+    },
+    "ResourceStore": {
+      "url": "/install-assets/ResourceStore.json",
+      "sha256": "2c73efc4886eddb868a91303fac23dda65911e258399b044ff234c73d1ad9315"
+    }
+  },
+  "sources": 82,
+  "freedoomSha256": "7323bcc168c5a45ff10749b339960e98314740a734c30d4b9f3337001f9e703d"
+}
+{"artifacts":{"Doom":{"url":"/doom2-assets/Doom.json","sha256":"3f9065a4aa169004ceaeb1716b41cb6f4e53ac9d31458e77147708d36ff47d3b","runtimeBytes":905156},"ResourceStore":{"url":"/doom2-assets/ResourceStore.json","sha256":"2c73efc4886eddb868a91303fac23dda65911e258399b044ff234c73d1ad9315","runtimeBytes":57}},"sources":81}

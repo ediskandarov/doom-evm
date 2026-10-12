@@ -1,0 +1,83 @@
+{
+  "startedUtc": "2026-10-12T06:57:29.993661+00:00",
+  "commands": [
+    [
+      ".toolchain/bin/anvil",
+      "--host",
+      "127.0.0.1",
+      "--port",
+      "19674",
+      "--chain-id",
+      "31337",
+      "--hardfork",
+      "cancun",
+      "--disable-code-size-limit",
+      "--no-request-size-limit",
+      "--memory-limit",
+      "1073741824",
+      "--gas-limit",
+      "10000000000",
+      "--allow-origin",
+      "http://127.0.0.1:19673"
+    ],
+    [
+      "/opt/homebrew/opt/python@3.14/bin/python3.14",
+      "-m",
+      "http.server",
+      "19673",
+      "--bind",
+      "127.0.0.1",
+      "--directory",
+      "web"
+    ]
+  ],
+  "pass": true,
+  "http": [
+    {
+      "path": "index.html",
+      "status": 200,
+      "contentType": "text/html",
+      "sha256": "a783a3304bd03b5735b638a928344ea64d0fd670ef77d68f243c2f89c43b5949"
+    },
+    {
+      "path": "launcher.mjs",
+      "status": 200,
+      "contentType": "text/javascript",
+      "sha256": "a49a7575288038739bcf8abec097fb1b28cf9974b008a4b3fc54cbff6774b40d"
+    },
+    {
+      "path": "install-pins.mjs",
+      "status": 200,
+      "contentType": "text/javascript",
+      "sha256": "c9767e086035882429e36806bb2abbd51fdec348fc83ebf2f6b53926023bb5ad"
+    },
+    {
+      "path": "doom2-pins.mjs",
+      "status": 200,
+      "contentType": "text/javascript",
+      "sha256": "f024ee0461849c44f72308d85bdf33d7f14ae36935efc0616a1b45cd14b3013e"
+    },
+    {
+      "path": "install-assets/Doom.json",
+      "status": 200,
+      "contentType": "application/json",
+      "sha256": "8cdb345fbfc40d5d058b27a9e626bc8030ab8a85d736e27dbf916434b9eed4e1"
+    },
+    {
+      "path": "doom2-assets/Doom.json",
+      "status": 200,
+      "contentType": "application/json",
+      "sha256": "3f9065a4aa169004ceaeb1716b41cb6f4e53ac9d31458e77147708d36ff47d3b"
+    },
+    {
+      "path": "install-assets/freedoom1.wad",
+      "status": 200,
+      "contentType": "application/x-doom",
+      "sha256": "7323bcc168c5a45ff10749b339960e98314740a734c30d4b9f3337001f9e703d"
+    }
+  ],
+  "chainId": "0x7a69",
+  "blockGasLimit": "0x2540be400",
+  "endedUtc": "2026-10-12T06:57:30.181766+00:00",
+  "stoppedOwnedRuntimes": true
+}

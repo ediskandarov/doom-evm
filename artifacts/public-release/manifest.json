@@ -1,0 +1,95 @@
+{
+  "baseline": "1b728fe3f8307a49f71437d5af75a4935df81492",
+  "evidence": {
+    "README.md": {
+      "sha256": "93731974ac49ba283757f763688b137dc4ebbadaec762090e82eb2346bf8b026",
+      "bytes": 2129
+    },
+    "audit.json": {
+      "sha256": "ab01785100c132d21a328b901e94d74306c75993841675eba257749727482a72",
+      "bytes": 1903
+    },
+    "browser-summary.json": {
+      "sha256": "0105389c9fb0824cf32d69d3de7503c77df7ab5d285d6967553b84b77e4913cc",
+      "bytes": 44111
+    },
+    "build-warm.json": {
+      "sha256": "7718951d52a5e92d06964e66ca6df14d4aea56db3b99a8a9443e760092d961e1",
+      "bytes": 550
+    },
+    "build-warm.log": {
+      "sha256": "ebe83663236b4ed5f022b5a7ca1ab749d1980765e47d5347b77a686aa1f21c3c",
+      "bytes": 38
+    },
+    "build.json": {
+      "sha256": "da44f707058d368b05a9192848347078765169638c08e79e7de62ab5fcec94cb",
+      "bytes": 617
+    },
+    "build.log": {
+      "sha256": "a2e6664f09cd9f79b1631262a73c5fed06cbee977fda3b463fba0a746dc4cf44",
+      "bytes": 8587
+    },
+    "download.log": {
+      "sha256": "a56ee9a47ee4ec00b9cc0460021cc2768946c80ee688515c951f2b59ca389c19",
+      "bytes": 348
+    },
+    "historical-runner-failure.json": {
+      "sha256": "99c2eb965ca58244816d850bd231a74e5e6144f7efcb0ab30c8d50d2a6d1a59c",
+      "bytes": 11687
+    },
+    "install-toolchain-atomic.log": {
+      "sha256": "50462a5e4e55d5143b09874348fe1011a3987c4d840019421fdf1bec3eb547e4",
+      "bytes": 481
+    },
+    "install-toolchain.log": {
+      "sha256": "3bbbfa9a791715cd93e98a121ed7299af0fa01ef478d56a5027d99a15a7a25bf",
+      "bytes": 1025
+    },
+    "installer-tests.log": {
+      "sha256": "864e16dc48f2cddcde27156f840cd8e9138f423bc7dc605a8d7dc918866b544f",
+      "bytes": 416
+    },
+    "media.json": {
+      "sha256": "f277e4d49670f7b4bda766c932fd5cd53bf6de15ec1cd18cfd4365989bf43cac",
+      "bytes": 526
+    },
+    "native-resources.log": {
+      "sha256": "564bc5b6d35098bfb33594c4b1787b493aa5b3b63a615ab198eb6cd2e119b572",
+      "bytes": 94
+    },
+    "node-missing-assets.log": {
+      "sha256": "60fcb7f2b17eded8865a21060dea7b00a78e3d4836cd2dd8cb58c49e381a8b14",
+      "bytes": 11920
+    },
+    "node-missing-native.log": {
+      "sha256": "fc3cb073e53304e42e8f4cf9a55d865b6f15cfd8cd7bf34f97eca2c9cee980b2",
+      "bytes": 13337
+    },
+    "node.log": {
+      "sha256": "9b84bb76d60ec4487964caee8d6e1921fb9fcb4b2d1028db70f0665d69a48bf9",
+      "bytes": 12169
+    },
+    "package.log": {
+      "sha256": "2a748d1b673f1ac9e1a99fe67de251494fe6ecd865a0056cfbd9760adf367289",
+      "bytes": 760
+    },
+    "quickstart.json": {
+      "sha256": "6787e46ac54ad1f00fb0eea909f558ff32ed871cfc5c98afeb24410459b1b28e",
+      "bytes": 2168
+    },
+    "resource-identity.log": {
+      "sha256": "6979bf973d20c583865823678be89a4831c7314444a712243dff5cfa568a176c",
+      "bytes": 111
+    },
+    "toolchain.json": {
+      "sha256": "b7bc741ee4244c8b92a94136b4067e4c41098c9261c9c8b9d292b43e4abc359d",
+      "bytes": 952
+    }
+  },
+  "changedInfrastructure": {
+    "scripts/install-toolchain.py": "787769ffe89f0101b124a6aa8571f5de9f7dd78ffbcd927d07c9b99fe33344ba",
+    "test/tooling/test_install_toolchain.py": "e1ee4e834c279069b28d3cc5b8555bdeba8a7f8391a73eb2620aada66e3b0d2b",
+    "tools/release/check.py": "77359567d7a6fe18aa66d6a7bd18c0756a7de3c68a78a24ed8f56460639b8055"
+  },
+  "note": "This manifest excludes itself. Full local browser reports are hash-bound by their metadata summaries; commercial media and resources remain local."
+}

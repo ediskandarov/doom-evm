@@ -1,133 +1,121 @@
-# DOOM on EVM 👹
+# DOOM on EVM
 
-Original DOOM gameplay and rendering now run inside the local EVM. **Phase 3 M2/M3 is verified**: movement/collisions, weapons, monster AI,
-damage, doors and world interactions, with 2,355 native-equivalent gameplay tics,
-31 exact frames, complete independent production replay and real Chrome pixels.
-The browser submits input and displays EVM Frame pixels.
+DOOM gameplay and rendering, ported from the original C to Solidity and executed
+inside a local Ethereum Virtual Machine. Movement, monsters, weapons, collision,
+visibility and pixels all run in the EVM. The browser sends keys and displays
+the result.
 
-The frozen Phase 3 acceptance profile is Freedoom E1M1, one player, medium skill and full-screen
-world view. This is a readable port of original `linuxdoom-1.10` to Solidity/Yul;
-full original DOOM, automatic level progression, menus/HUD/audio and multiplayer
-remain outside that historical profile. Episode One functional integration is
-documented separately below. See the [Phase 3 report](docs/PHASE3-REPORT.md)
-and [feature matrix](docs/PHASE3-FEATURE-MATRIX.md).
+An unnecessarily expensive way to run DOOM. Built for fun; checked against the
+original C with considerable seriousness.
 
-## Press start
+[Play locally](#quick-start) · [Architecture](docs/ARCHITECTURE.md) ·
+[Compatibility](docs/COMPATIBILITY.md) · [Documentation](docs/README.md)
 
-Prerequisites: Git, Python 3.10+, Node **24.11.0**, and Chrome/Chromium for the browser check. Foundry installation is checksum-pinned for macOS arm64 and Linux amd64/arm64. The native reference gate currently requires Apple clang **17.0.0 (clang-1700.0.13.5)** on **arm64-apple-darwin24.6.0**; other native profiles need review. This run was verified on macOS arm64.
+<a href="docs/media/README.md"><img src="docs/media/freedoom-evm.gif" width="640" alt="Freedoom E1M1 speedrun rendered inside the EVM"></a>
+
+*Existing verified Freedoom E1M1 recording, shown at game time. Its 56 EVM captures
+sample a 279-tic run; this animation is not real-time EVM performance.
+[Recording provenance](docs/media/README.md).*
+
+## A few measured consequences
+
+The separate, accepted **nine-map Ultimate DOOM Episode One recording suite** produced:
+
+| Measurement | Result |
+|---|---:|
+| EVM-generated frames | 18,175 |
+| Complete indexed framebuffers equal to the declared native profile | 18,173 |
+| Gas, including recording/observation transactions | 18,947,598,824,099 |
+| Frames per summed rendering-RPC second | 1.094161 |
+
+The videos are encoded at **35 FPS**. Computing them was slower. Two frames have
+declared virtual-pointer-derived differences; matching values elsewhere do not
+prove native pointer equality. These are finite, profile-bound comparisons,
+not universal DOOM compatibility. [Evidence and measurement scope](docs/COMPATIBILITY.md#what-the-recording-numbers-establish).
+
+## What you can play
+
+| Game | Browser profile | Verification boundary |
+|---|---|---|
+| Freedoom 0.13.0 | Episode One, E1M1–E1M9 | Open assets; episode resources, replays and bounded UI/gameflow proofs |
+| Ultimate DOOM 1.9 | Episode One, E1M1–E1M9 | Bring `DOOM.WAD`; nine standalone recordings plus browser checks |
+| DOOM II 1.9 | MAP01–MAP32 selectable | Bring `DOOM2.WAD`; all-map startup, full recorded gameplay on MAP01 and MAP07 |
+
+Menus, Status Bar/HUD, automap, keyboard cheats, supported Options, death/respawn
+and six-slot **Exact EVM Snapshot** Save/Load are available. Exact snapshots
+deliberately differ from original DOOM save semantics. [Full support matrix](docs/COMPATIBILITY.md).
+
+## Quick start
+
+Verified on **macOS arm64**. Install Git, Python 3.10+, **Node 24.11.0** and Chrome.
+From a fresh checkout:
 
 ```sh
-git submodule update --init --recursive
+git clone --recurse-submodules https://github.com/ediskandarov/doom-evm.git
+cd doom-evm
 python3 scripts/install-toolchain.py
-export PATH="$PWD/.toolchain/bin:$PATH"
+source scripts/env.sh
 python3 scripts/check-toolchain.py
-python3 scripts/verify-phase2.py
-```
-
-Tools install under ignored `.toolchain/`; global Foundry is left alone. No npm dependencies are required. Set `CHROME_BIN` if Chrome is not at its standard macOS path. The full verifier downloads and checks the pinned Freedoom archive, builds the original C oracle, preserves every Phase 0 gate, starts and stops temporary localhost nodes and a headless browser, and writes fresh results to `artifacts/local/`. The original `python3 scripts/verify-phase0.py` command remains available.
-
-## Play Episode One
-
-The opt-in Episode application connects all nine Freedoom maps, original gameflow,
-Status Bar/HUD, keyboard cheats, Automap, intermission and the E1 ending. This is
-functional integration; full episode input replay and exhaustive release
-acceptance remain separate. See the [integration report](docs/PHASE4-EPISODE-COMPLETION.md)
-for the verified scope and explicit native memory profile.
-
-Prepare the pinned resources and build the production root without running the
-historical verification suite:
-
-```sh
-source scripts/env.sh
 node tools/wad/download.ts artifacts/local/freedoom
-node tools/wad/episode-pack.ts pack artifacts/local/freedoom/freedoom1.wad artifacts/local/wad
-forge build src/evm/Doom.sol --skip test --skip GameplayProbe --skip RendererProbe --skip WadResourcesProbe --skip EpisodeStartupProbe --skip IntermissionProbe --skip CheatProbe --skip AutomapProbe --skip VideoProbe --skip EpisodeResourcesProbe
-node tools/reference/episode_completion/evm.mjs --play --output-prefix artifacts/local/episode-play
+cp artifacts/local/freedoom/freedoom1.wad web/install-assets/freedoom1.wad
 ```
 
-Open <http://127.0.0.1:18762>, choose E1M1–E1M9 and click **New Game**. WASD moves,
-arrows turn, Shift runs, Ctrl fires, Space/E uses doors, and 1–8 select weapons.
-Tab opens the Automap; type original cheat codes, including IDCLEV.
-Fire or Use advances intermission. **Restart** reloads the current level;
-**Pause/Resume** pauses the EVM game. **Stop input** and blur release keyboard
-input. The launcher refuses occupied ports and Ctrl-C stops its own Anvil and
-HTTP server. All gameplay and game-screen pixels come from the EVM.
-
-## Play the accepted E1M1 mode
-
-After the verifier prepares the resources:
+Start a dedicated local Anvil on a free port:
 
 ```sh
-source scripts/env.sh
-python3 tools/reference/gameplay/production.py --output artifacts/local/gameplay-production-native-final
-node tools/reference/gameplay/production.mjs --native-zone \
-  --native artifacts/local/gameplay-production-native-final \
-  --output-prefix artifacts/local/gameplay-production-new --keep-node
-cp artifacts/local/gameplay-production-new.config.json web/config.local.json
-cp artifacts/local/gameplay-production-new.palette.json web/palette.local.json
-node tools/transport/serve.mjs
+.toolchain/bin/anvil --host 127.0.0.1 --port 18991 --chain-id 31337 \
+  --hardfork cancun --disable-code-size-limit --no-request-size-limit \
+  --memory-limit 1073741824 --gas-limit 10000000000 \
+  --allow-origin http://127.0.0.1:18992
 ```
 
-Open <http://127.0.0.1:8080>, click Start, and use arrows/WASD, Ctrl to fire,
-Space to use, and Shift to run. Stop or blur releases input. Transactions advance
-original simulation tics; 35 tics/s is simulated game time, not an FPS promise.
-Serialize writers sharing the same unlocked Anvil sender.
-
-The local execution budget defaults to **10 billion gas** and is configurable
-through `execution-budget.json` or `DOOM_GAS_LIMIT`. Actual atomic initialization
-uses **1,621,885,757 gas** in the verified profile. Startup stays one transaction;
-compiler, code and memory settings are preserved.
-
-## Run the real static view
-
-After the verifier prepares the pinned resources:
+In another terminal, from the repository root:
 
 ```sh
-# Terminal 1: deploy, verify, and keep the local node running
-node tools/renderer/verify.mjs --keep-alive
-# Terminal 2
-node tools/transport/serve.mjs
+python3 -m http.server 18992 --bind 127.0.0.1 --directory web
 ```
 
-Open <http://127.0.0.1:8080> and click **Run DOOM**. Each click renders the static
-E1M1 view in a new transaction. Ctrl-C in the first terminal stops its Anvil.
-See [the deployment/browser report](docs/PHASE2-E2E.md) for pixels, receipts,
-gas, memory, timings and the precise static scope.
+Open **<http://127.0.0.1:18992>**, set RPC to `http://127.0.0.1:18991`, then
+**Connect → choose a game → Install / resume → Play**. The browser deploys the
+included authenticated contracts and resources. No Solidity build, wallet or
+private key entry is needed to play. Installation can take several minutes.
 
-![Freedoom E1M1 rendered inside the EVM](tools/renderer/evidence/renderer.frames/full-angle0/frame.png)
+WASD/arrows move and turn, Shift runs, Ctrl fires, Space/E uses, Tab opens the
+automap, Escape opens the menu. [Setup, controls and recovery](docs/browser-deployment/README.md).
+For commercial games, use the [tested macOS SteamCMD setup and IWAD import guide](docs/GETTING-STARTED.md#commercial-iwads-on-macos).
+Commercial IWADs are not included.
 
-## Transport test pattern
+## How it works
 
-```sh
-# Terminal 1
-./scripts/start-anvil.sh
-# Terminal 2
-node tools/transport/benchmark.mjs --rpc http://127.0.0.1:8545 --ws ws://127.0.0.1:8545
-node tools/transport/serve.mjs
-```
+Raw authenticated WAD resources → immutable EVM resource contracts →
+original-source Solidity simulation and renderer → indexed `Frame` and
+`FramePalette` logs → browser Canvas. The native C oracle is used for comparison;
+its gameplay state and pixels are never production inputs.
+[Architecture](docs/ARCHITECTURE.md) · [C → Solidity mapping](PORTING.md).
 
-Open <http://127.0.0.1:8080>. The moving grayscale pattern is synthetic and generated inside Solidity. It is our transport test, not a Doom screenshot.
+## Limits, deliberately visible
 
-For the same mock frame using actual Freedoom colors after running the verifier:
+- **Local Anvil only:** large contracts, a 10-billion-gas budget and relaxed local
+  limits. This does not run on public Ethereum or ordinary mainnet settings.
+- **Restricted native fidelity:** interactive play explicitly uses experimental
+  virtual-pointer policy 3. It cannot reproduce arbitrary native heap addresses
+  or all undefined C behavior. Unknown/unproven memory reads still revert.
+- **Partial original feature coverage:** sound, music and multiplayer are out of
+  scope. Other DOOM episodes, arbitrary WADs, several original controls and
+  DOOM II's MAP30 cast sequence are unsupported. Recording wipes do not imply
+  production browser wipes; all-map startup does not imply all-map playthrough.
 
-```sh
-node tools/transport/benchmark.mjs --rpc http://127.0.0.1:8545 --palette artifacts/local/wad/palette.json
-```
+## Verification and credits
 
-Reload the browser. The image is still a transport test, now colored by PLAYPAL.
+Native comparisons, receipt/frame hashes, speedrun certificates and failed
+diagnostics remain reproducible at their recorded revisions. Current checks and
+historical reproduction entry points are in [Development and verification](docs/DEVELOPMENT.md);
+the [documentation index](docs/README.md) keeps the engineering archive accessible.
 
-## Mission briefing
-
-- [Local Codex usage collector and historical article metrics](docs/CODEX-USAGE.md)
-- [Phase 3 acceptance report](docs/PHASE3-REPORT.md), [progress ledger](docs/PHASE3-PLAN.md), and [feature coverage](docs/PHASE3-FEATURE-MATRIX.md)
-- [Phase 2 acceptance ledger](docs/PHASE2-REPORT.md) and [frozen renderer interfaces](docs/PHASE2-INTERFACES.md)
-- [Phase 1 report and acceptance evidence](docs/PHASE1-REPORT.md)
-- [Phase 0 report and acceptance evidence](docs/PHASE0-REPORT.md)
-- [Toolchain and measured Anvil limits](TOOLCHAIN.md)
-- [C → Solidity map and progress](PORTING.md)
-- [Phase 1 interfaces](docs/PHASE1-INTERFACES.md), [Phase 0 interfaces](docs/PHASE0-INTERFACES.md), [schemas](docs/SCHEMAS.md)
-- [Architecture decisions](docs/01-IDEA-AND-DECISIONS.md), [technical specification](docs/02-TECHNICAL-SPECIFICATION.md), [implementation plan](docs/03-IMPLEMENTATION-PLAN.md)
-- [Transport experiment](docs/EVENT-TRANSPORT.md), [stack experiment](docs/STACK-PRESSURE.md)
-- [Pinned upstream and attribution](UPSTREAM.md), [GPL-2.0 license](LICENSE)
-
-No proprietary WAD assets are included. Freedoom fixtures carry their own license and checksums; the full WAD stays in ignored local artifacts.
+Based on id Software's original [`linuxdoom-1.10`](UPSTREAM.md), pinned to
+`a77dfb96cb91780ca334d0d4cfd86957558007e0`. Code: [GPL-2.0-only](LICENSE).
+Freedoom contributors provide the redistributable game assets and demo artwork
+under their [BSD license](test/fixtures/wad/COPYING.txt).
+Original demo authors and archive provenance are credited in the per-run reports.
+DOOM and its commercial assets belong to their respective owners; this is an
+independent hobby project.

@@ -8,5 +8,6 @@ web/config.local.json
 __pycache__/
 web/palette.local.json
 
-# Redistributable runtime payload staged by release packaging
-web/install-assets/*.wad
+# Local IWADs and recordings are never release source files.
+*.[wW][aA][dD]
+*.[mM][pP]4

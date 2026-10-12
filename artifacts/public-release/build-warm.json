@@ -1,0 +1,23 @@
+{
+  "command": [
+    ".toolchain/bin/forge",
+    "build",
+    "src/evm/Doom.sol",
+    "src/evm/Doom2.sol",
+    "src/evm/ResourceStore.sol",
+    "--offline",
+    "--no-lint",
+    "--skip",
+    "test",
+    "script",
+    "--out",
+    "artifacts/local/public-release/production/out",
+    "--cache-path",
+    "artifacts/local/public-release/production/cache"
+  ],
+  "startedUtc": "2026-10-12T06:58:16.844316+00:00",
+  "endedUtc": "2026-10-12T06:58:16.918671+00:00",
+  "elapsedSeconds": 0.07438191585242748,
+  "exitCode": 0,
+  "compilationSkipped": true
+}
