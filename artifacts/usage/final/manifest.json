@@ -1,0 +1,92 @@
+{
+  "baseline": "4c7ed9c9c9bc706cff416bbb1a224b4a45117347",
+  "collector_commit": "5e9f1d747168fbafa20b323bf64444a4b8f50c51",
+  "cutoff_exclusive": "2026-10-12T08:01:42.000Z",
+  "files": [
+    {
+      "path": "README.md",
+      "bytes": 4332,
+      "sha256": "e6e59540711b1f0e2ab2738666637c55e9b63253abba4df23f9c856cf7d2b7c0"
+    },
+    {
+      "path": "by_agent_kind.csv",
+      "bytes": 681,
+      "sha256": "2918502211b1204b26b482bde4c9fb124862ad9c65bdaa9b7addbf55ef9d4fad"
+    },
+    {
+      "path": "by_goal.csv",
+      "bytes": 10666,
+      "sha256": "a306565dc0a9aa62650ec90b5d0bdb7cfefb164b7e2379a97b461b990e0787a2"
+    },
+    {
+      "path": "by_model.csv",
+      "bytes": 809,
+      "sha256": "fb105a286eb70cc7e75f87b5dd49f22cdefa846011a6d5861da86627d6044b4b"
+    },
+    {
+      "path": "by_phase.csv",
+      "bytes": 1708,
+      "sha256": "67dfe40ca9adaaa73931b7271ff27a46a94f78902d836e0a43ad86d91c4f874d"
+    },
+    {
+      "path": "by_workstream.csv",
+      "bytes": 4731,
+      "sha256": "214f81f3a31d60d7b2193be84678fc440161fc78a2ceea5d41a091bdfda85baa"
+    },
+    {
+      "path": "by_worktree_group.csv",
+      "bytes": 5469,
+      "sha256": "f8061e7fa4290a1d1b6f720d561c2546e7c6de6d77fd26c8e127ccf09d84ea97"
+    },
+    {
+      "path": "coverage-summary.json",
+      "bytes": 2762,
+      "sha256": "8ecc48c67266108d4104ec65e245b13d12c025e290024e220e15762b23a4d83f"
+    },
+    {
+      "path": "local-source-assessment.json",
+      "bytes": 23317,
+      "sha256": "1cd4b953f3633df1fd38184fe5912e6a414d66a32d5fe5b8a3b5aab259570f1b"
+    },
+    {
+      "path": "reconciliation.json",
+      "bytes": 3537,
+      "sha256": "d29dc5e41165c01fc29cc2270c43faf1222b7de527de002501dbadfad30dd61a"
+    },
+    {
+      "path": "records.csv",
+      "bytes": 4568986,
+      "sha256": "4ea0c393698bbafc1e14d7433d36d68b671fe24c0c46772dac9181ab533771e6"
+    },
+    {
+      "path": "sessions.csv",
+      "bytes": 26304,
+      "sha256": "e5975397c32cf1df12b88feda6f3f58c6db63683415f0d3bc164d3c27e287456"
+    },
+    {
+      "path": "sources.json",
+      "bytes": 46193,
+      "sha256": "a12c8e75cf1ba70288713a6c219144cce4d868ed846811dc79cdf54cec68546c"
+    },
+    {
+      "path": "turn_intervals.csv",
+      "bytes": 108509,
+      "sha256": "78f9c1cd5b6d70b6c3eb524e6c89f15a7bf2c474a31973f71be0b4189901c15f"
+    },
+    {
+      "path": "usage.json",
+      "bytes": 566287,
+      "sha256": "a13f3dbf3e2f034c439668de2e350faad4e7c403fd799f420250df9352c2ce2e"
+    },
+    {
+      "path": "verification.json",
+      "bytes": 5779,
+      "sha256": "d02a3e11b7538cc819b28974dfa1fdd9bc5415d643c4d3f9c731e2190074823a"
+    },
+    {
+      "path": "worktree_coverage.csv",
+      "bytes": 17106,
+      "sha256": "352c61145b579d363a8697a47e286bb5a79bc0460c5af11f522a53f1c4c52e41"
+    }
+  ]
+}

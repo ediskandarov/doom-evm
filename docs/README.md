@@ -11,6 +11,7 @@ integrated release; engineering reports below describe their own checkpoints.
 | Build, test or reproduce evidence | [Development and verification](DEVELOPMENT.md) |
 | Find the original-C function mapping | [Porting map](../PORTING.md) |
 | Inspect the release cleanup and verification | [Release readiness](release/READINESS.md), [inventory](release/INVENTORY.md) |
+| Audit measured development usage | [Final Codex usage report](metrics/CODEX-USAGE-FINAL.md) |
 
 ## Engineering archive
 

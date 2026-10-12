@@ -1,0 +1,4 @@
+model,records,input_tokens,input_tokens_missing_records,cached_input_tokens,cached_input_tokens_missing_records,cache_write_input_tokens,cache_write_input_tokens_missing_records,output_tokens,output_tokens_missing_records,reasoning_tokens,reasoning_tokens_missing_records,total_tokens,total_tokens_missing_records,non_cached_input_tokens,non_cached_input_tokens_missing_records,first_usage,last_usage
+codex-auto-review,390,29868448,0,27080192,0,0,0,39003,0,15766,0,29907451,0,2788256,0,2026-10-10T05:09:21.794Z,2026-10-12T07:32:59.224Z
+gpt-6-astra,1649,172392674,0,168617984,0,0,0,983134,0,255885,0,173375808,0,3774690,0,2026-10-09T09:06:34.477Z,2026-10-12T08:01:04.066Z
+gpt-6.1-sol,5245,879745936,0,861937536,0,0,0,4758405,0,2286954,0,884504341,0,17808400,0,2026-10-09T14:10:37.636Z,2026-10-12T06:18:45.284Z

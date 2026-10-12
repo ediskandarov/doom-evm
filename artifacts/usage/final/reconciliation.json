@@ -1,0 +1,115 @@
+{
+  "status": "pass",
+  "method": "independent direct token_usage_record parser; no collect.account_thread or audit.scan accounting",
+  "records": 7284,
+  "totals": {
+    "input_tokens": 1082007058,
+    "cached_input_tokens": 1057635712,
+    "output_tokens": 5780542,
+    "total_tokens": 1087787600,
+    "cache_write_input_tokens": 0,
+    "reasoning_tokens": 2558605,
+    "non_cached_input_tokens": 24371346
+  },
+  "duplicate_response_events": 0,
+  "conflicting_response_ids": 0,
+  "compaction_backups_without_direct_usage_record": 0,
+  "historical_source_prefixes_verified": 10,
+  "historical_report_sha256": "d4904b62b2ba243231841ff01b6f16a04a9974f64b63868c12a31f1800cd95f0",
+  "historical_metrics_csv_sha256": "d6071129ab5f1f73654cc17c3e651d9ddf367ab375e981f7d8f3c2a5248d655d",
+  "historical_reconciliation": [
+    {
+      "phase": "phase0",
+      "old_records": 154,
+      "recovered_records": 154,
+      "original": {
+        "input_tokens": 11909177,
+        "cached_input_tokens": 11620608,
+        "output_tokens": 69292,
+        "total_tokens": 11978469,
+        "cache_write_input_tokens": 0,
+        "reasoning_tokens": 8895
+      },
+      "recovered": {
+        "input_tokens": 11909177,
+        "cached_input_tokens": 11620608,
+        "output_tokens": 69292,
+        "total_tokens": 11978469,
+        "cache_write_input_tokens": 0,
+        "reasoning_tokens": 8895,
+        "non_cached_input_tokens": 288569
+      },
+      "difference": {
+        "input_tokens": 0,
+        "cached_input_tokens": 0,
+        "output_tokens": 0,
+        "total_tokens": 0,
+        "cache_write_input_tokens": 0,
+        "reasoning_tokens": 0
+      },
+      "confidence": "exact raw structured-record reproduction"
+    },
+    {
+      "phase": "phase1",
+      "old_records": 191,
+      "recovered_records": 191,
+      "original": {
+        "input_tokens": 13954577,
+        "cached_input_tokens": 13629696,
+        "output_tokens": 88519,
+        "total_tokens": 14043096,
+        "cache_write_input_tokens": 0,
+        "reasoning_tokens": 14701
+      },
+      "recovered": {
+        "input_tokens": 13954577,
+        "cached_input_tokens": 13629696,
+        "output_tokens": 88519,
+        "total_tokens": 14043096,
+        "cache_write_input_tokens": 0,
+        "reasoning_tokens": 14701,
+        "non_cached_input_tokens": 324881
+      },
+      "difference": {
+        "input_tokens": 0,
+        "cached_input_tokens": 0,
+        "output_tokens": 0,
+        "total_tokens": 0,
+        "cache_write_input_tokens": 0,
+        "reasoning_tokens": 0
+      },
+      "confidence": "exact raw structured-record reproduction"
+    },
+    {
+      "phase": "phase2",
+      "old_records": 868,
+      "recovered_records": 868,
+      "original": {
+        "input_tokens": 99331154,
+        "cached_input_tokens": 97628672,
+        "output_tokens": 477186,
+        "total_tokens": 99808340,
+        "cache_write_input_tokens": 0,
+        "reasoning_tokens": 135777
+      },
+      "recovered": {
+        "input_tokens": 99331154,
+        "cached_input_tokens": 97628672,
+        "output_tokens": 477186,
+        "total_tokens": 99808340,
+        "cache_write_input_tokens": 0,
+        "reasoning_tokens": 135777,
+        "non_cached_input_tokens": 1702482
+      },
+      "difference": {
+        "input_tokens": 0,
+        "cached_input_tokens": 0,
+        "output_tokens": 0,
+        "total_tokens": 0,
+        "cache_write_input_tokens": 0,
+        "reasoning_tokens": 0
+      },
+      "confidence": "exact raw structured-record reproduction"
+    }
+  ]
+}

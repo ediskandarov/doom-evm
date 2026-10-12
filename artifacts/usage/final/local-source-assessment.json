@@ -1,0 +1,625 @@
+{
+  "discovery": {
+    "default_codex_home_present": true,
+    "CODEX_HOME_environment_set": false,
+    "configured_CODEX_HOME_matches_default": true,
+    "shell_startup_alternate_homes_found": 0,
+    "additional_home_codex_directories_found": 0,
+    "project_local_codex_directories_found": 0,
+    "app_support_locations_inspected": 2,
+    "additional_rollout_roots_found": 0,
+    "active_rollouts": 74,
+    "archived_rollouts": 5,
+    "state_database_threads": 79,
+    "state_threads_with_missing_rollout": 0,
+    "explicit_spawn_edges": 15,
+    "unrelated_sources_with_DOOM_task_context_anchors": 0,
+    "uncertain_project_attribution_sources_identified": 0
+  },
+  "metadata_inspected": [
+    "default sessions and archived_sessions",
+    "Codex config CODEX_HOME entry",
+    "shell startup CODEX_HOME declarations",
+    "local app project/workspace metadata",
+    "session index",
+    "state database thread metadata and spawn edges",
+    "goals database",
+    "thread-history database schema",
+    "application log database token-related record schema",
+    "app support and home/project-local Codex locations"
+  ],
+  "database_reconciliation": [
+    {
+      "thread_id": "01a11fdf-1d25-7201-abb8-1afdaaab6b9c",
+      "database_tokens_used": 217719677,
+      "structured_response_total": 220473810,
+      "compaction_response_tokens": 2754133,
+      "difference": 2754133,
+      "assessment": "difference equals independently identified compaction usage",
+      "comparable": true
+    },
+    {
+      "thread_id": "01a11ff3-0ce5-7802-a5b5-a9243cca6778",
+      "database_tokens_used": 1328092,
+      "structured_response_total": 1328092,
+      "compaction_response_tokens": 0,
+      "difference": 0,
+      "assessment": "difference equals independently identified compaction usage",
+      "comparable": true
+    },
+    {
+      "thread_id": "01a11ff3-4412-7eb0-87e9-7487533aa875",
+      "database_tokens_used": 1856294,
+      "structured_response_total": 1856294,
+      "compaction_response_tokens": 0,
+      "difference": 0,
+      "assessment": "difference equals independently identified compaction usage",
+      "comparable": true
+    },
+    {
+      "thread_id": "01a11ff3-7ca3-7df1-a272-958d18ac6e2d",
+      "database_tokens_used": 1607017,
+      "structured_response_total": 1607017,
+      "compaction_response_tokens": 0,
+      "difference": 0,
+      "assessment": "difference equals independently identified compaction usage",
+      "comparable": true
+    },
+    {
+      "thread_id": "01a12040-c93c-7f01-ad15-92712cdafa23",
+      "database_tokens_used": 3818991,
+      "structured_response_total": 3818991,
+      "compaction_response_tokens": 0,
+      "difference": 0,
+      "assessment": "difference equals independently identified compaction usage",
+      "comparable": true
+    },
+    {
+      "thread_id": "01a12040-f004-73d3-9b83-d0bd90cb5219",
+      "database_tokens_used": 1294088,
+      "structured_response_total": 1294088,
+      "compaction_response_tokens": 0,
+      "difference": 0,
+      "assessment": "difference equals independently identified compaction usage",
+      "comparable": true
+    },
+    {
+      "thread_id": "01a12041-1dc0-7720-a32b-2836d969b872",
+      "database_tokens_used": 2038766,
+      "structured_response_total": 2038766,
+      "compaction_response_tokens": 0,
+      "difference": 0,
+      "assessment": "difference equals independently identified compaction usage",
+      "comparable": true
+    },
+    {
+      "thread_id": "01a1205f-6624-7051-8c98-9cad0087104d",
+      "database_tokens_used": 20894092,
+      "structured_response_total": 21110260,
+      "compaction_response_tokens": 216168,
+      "difference": 216168,
+      "assessment": "difference equals independently identified compaction usage",
+      "comparable": true
+    },
+    {
+      "thread_id": "01a1205f-8ff5-77f3-82ef-2d5ce22efad0",
+      "database_tokens_used": 23828884,
+      "structured_response_total": 24042591,
+      "compaction_response_tokens": 213707,
+      "difference": 213707,
+      "assessment": "difference equals independently identified compaction usage",
+      "comparable": true
+    },
+    {
+      "thread_id": "01a1205f-b192-7750-bb4f-3f1aa2c27c66",
+      "database_tokens_used": 15424559,
+      "structured_response_total": 15642123,
+      "compaction_response_tokens": 217564,
+      "difference": 217564,
+      "assessment": "difference equals independently identified compaction usage",
+      "comparable": true
+    },
+    {
+      "thread_id": "01a12100-bebb-7983-bd5b-a7005384dce2",
+      "database_tokens_used": 63522581,
+      "structured_response_total": 64237891,
+      "compaction_response_tokens": 715310,
+      "difference": 715310,
+      "assessment": "difference equals independently identified compaction usage",
+      "comparable": true
+    },
+    {
+      "thread_id": "01a12100-d7fc-7d42-aa77-2ab63e05e57d",
+      "database_tokens_used": 74363615,
+      "structured_response_total": 75039769,
+      "compaction_response_tokens": 676154,
+      "difference": 676154,
+      "assessment": "difference equals independently identified compaction usage",
+      "comparable": true
+    },
+    {
+      "thread_id": "01a12103-593b-78f0-84aa-254e0f6f4475",
+      "database_tokens_used": 77764335,
+      "structured_response_total": 78449019,
+      "compaction_response_tokens": 684684,
+      "difference": 684684,
+      "assessment": "difference equals independently identified compaction usage",
+      "comparable": true
+    },
+    {
+      "thread_id": "01a12245-790b-7993-99b2-a90257287933",
+      "database_tokens_used": 1278856,
+      "structured_response_total": 1278856,
+      "compaction_response_tokens": 0,
+      "difference": 0,
+      "assessment": "difference equals independently identified compaction usage",
+      "comparable": true
+    },
+    {
+      "thread_id": "01a12437-2482-7eb3-b6c4-3e93fca77ba9",
+      "database_tokens_used": 394758,
+      "structured_response_total": 394758,
+      "compaction_response_tokens": 0,
+      "difference": 0,
+      "assessment": "difference equals independently identified compaction usage",
+      "comparable": true
+    },
+    {
+      "thread_id": "01a12469-5a92-74f1-b81c-b2184855521d",
+      "database_tokens_used": 3580147,
+      "structured_response_total": 3580147,
+      "compaction_response_tokens": 0,
+      "difference": 0,
+      "assessment": "difference equals independently identified compaction usage",
+      "comparable": true
+    },
+    {
+      "thread_id": "01a124c9-84f0-7843-8777-f7aae881b90d",
+      "database_tokens_used": 135040,
+      "structured_response_total": 135040,
+      "compaction_response_tokens": 0,
+      "difference": 0,
+      "assessment": "difference equals independently identified compaction usage",
+      "comparable": true
+    },
+    {
+      "thread_id": "01a124ca-941c-7773-9fe2-2a5ad194943c",
+      "database_tokens_used": 6154179,
+      "structured_response_total": 6366542,
+      "compaction_response_tokens": 212363,
+      "difference": 212363,
+      "assessment": "difference equals independently identified compaction usage",
+      "comparable": true
+    },
+    {
+      "thread_id": "01a124ce-c551-73b2-be60-15dc74048171",
+      "database_tokens_used": 887567,
+      "structured_response_total": 887567,
+      "compaction_response_tokens": 0,
+      "difference": 0,
+      "assessment": "difference equals independently identified compaction usage",
+      "comparable": true
+    },
+    {
+      "thread_id": "01a124ce-c58e-7783-bc7f-02ed05738c07",
+      "database_tokens_used": 0,
+      "structured_response_total": 0,
+      "compaction_response_tokens": 0,
+      "difference": 0,
+      "assessment": "difference equals independently identified compaction usage",
+      "comparable": true
+    },
+    {
+      "thread_id": "01a124da-9c24-7702-bd61-b8a300603a39",
+      "database_tokens_used": 165084,
+      "structured_response_total": 165084,
+      "compaction_response_tokens": 0,
+      "difference": 0,
+      "assessment": "difference equals independently identified compaction usage",
+      "comparable": true
+    },
+    {
+      "thread_id": "01a124e5-33d1-7c91-8b10-26df7a98c7c8",
+      "database_tokens_used": 6009798,
+      "structured_response_total": 6009798,
+      "compaction_response_tokens": 0,
+      "difference": 0,
+      "assessment": "difference equals independently identified compaction usage",
+      "comparable": true
+    },
+    {
+      "thread_id": "01a124e5-8100-75b3-8de1-3992194387b7",
+      "database_tokens_used": 5561638,
+      "structured_response_total": 5561638,
+      "compaction_response_tokens": 0,
+      "difference": 0,
+      "assessment": "difference equals independently identified compaction usage",
+      "comparable": true
+    },
+    {
+      "thread_id": "01a124e6-5a78-7cf3-b2cd-f86c9f1b0eb0",
+      "database_tokens_used": 3188285,
+      "structured_response_total": 3188285,
+      "compaction_response_tokens": 0,
+      "difference": 0,
+      "assessment": "difference equals independently identified compaction usage",
+      "comparable": true
+    },
+    {
+      "thread_id": "01a12538-3400-7b12-bd2f-ea5dbe642e8b",
+      "database_tokens_used": 99552310,
+      "structured_response_total": 101226227,
+      "compaction_response_tokens": 1673917,
+      "difference": 1673917,
+      "assessment": "difference equals independently identified compaction usage",
+      "comparable": true
+    },
+    {
+      "thread_id": "01a12544-7040-7df2-8909-bc787dea9bd4",
+      "database_tokens_used": 4787057,
+      "structured_response_total": 4787057,
+      "compaction_response_tokens": 0,
+      "difference": 0,
+      "assessment": "difference equals independently identified compaction usage",
+      "comparable": true
+    },
+    {
+      "thread_id": "01a12544-adad-7200-bb86-ec859109f6b1",
+      "database_tokens_used": 6410950,
+      "structured_response_total": 6410950,
+      "compaction_response_tokens": 0,
+      "difference": 0,
+      "assessment": "difference equals independently identified compaction usage",
+      "comparable": true
+    },
+    {
+      "thread_id": "01a12544-e338-7862-b908-e445bdd92bd5",
+      "database_tokens_used": 4810895,
+      "structured_response_total": 4810895,
+      "compaction_response_tokens": 0,
+      "difference": 0,
+      "assessment": "difference equals independently identified compaction usage",
+      "comparable": true
+    },
+    {
+      "thread_id": "01a12588-ed5c-7f80-a345-14f4a9270f2f",
+      "database_tokens_used": 9806357,
+      "structured_response_total": 9806357,
+      "compaction_response_tokens": 0,
+      "difference": 0,
+      "assessment": "difference equals independently identified compaction usage",
+      "comparable": true
+    },
+    {
+      "thread_id": "01a1258d-213d-7c61-ab20-c972b2f3bab5",
+      "database_tokens_used": 13695050,
+      "structured_response_total": 13695050,
+      "compaction_response_tokens": 0,
+      "difference": 0,
+      "assessment": "difference equals independently identified compaction usage",
+      "comparable": true
+    },
+    {
+      "thread_id": "01a1258d-665d-7940-82e2-54cddf302547",
+      "database_tokens_used": 11370515,
+      "structured_response_total": 11370515,
+      "compaction_response_tokens": 0,
+      "difference": 0,
+      "assessment": "difference equals independently identified compaction usage",
+      "comparable": true
+    },
+    {
+      "thread_id": "01a1258d-9e1e-72e2-9cf7-8d00adf1d89f",
+      "database_tokens_used": 12485777,
+      "structured_response_total": 12485777,
+      "compaction_response_tokens": 0,
+      "difference": 0,
+      "assessment": "difference equals independently identified compaction usage",
+      "comparable": true
+    },
+    {
+      "thread_id": "01a125de-5f1a-7f43-840e-9d3ef9766d16",
+      "database_tokens_used": 0,
+      "structured_response_total": 0,
+      "compaction_response_tokens": 0,
+      "difference": 0,
+      "assessment": "difference equals independently identified compaction usage",
+      "comparable": true
+    },
+    {
+      "thread_id": "01a12649-dd56-7071-98c4-2b48d0e90adb",
+      "database_tokens_used": 31014782,
+      "structured_response_total": 31413740,
+      "compaction_response_tokens": 398958,
+      "difference": 398958,
+      "assessment": "difference equals independently identified compaction usage",
+      "comparable": true
+    },
+    {
+      "thread_id": "01a1264f-384d-73d1-925a-b612d2ce6f92",
+      "database_tokens_used": 9947014,
+      "structured_response_total": 9947014,
+      "compaction_response_tokens": 0,
+      "difference": 0,
+      "assessment": "difference equals independently identified compaction usage",
+      "comparable": true
+    },
+    {
+      "thread_id": "01a12659-3a09-7560-a55f-8341fea6d8d4",
+      "database_tokens_used": 1461179,
+      "structured_response_total": 1461179,
+      "compaction_response_tokens": 0,
+      "difference": 0,
+      "assessment": "difference equals independently identified compaction usage",
+      "comparable": true
+    },
+    {
+      "thread_id": "01a12679-63c3-7311-a2eb-2536eddc2bb1",
+      "database_tokens_used": 224955,
+      "structured_response_total": 224955,
+      "compaction_response_tokens": 0,
+      "difference": 0,
+      "assessment": "difference equals independently identified compaction usage",
+      "comparable": true
+    },
+    {
+      "thread_id": "01a126a1-f64b-77d0-88a2-05b9a635da70",
+      "database_tokens_used": 36338,
+      "structured_response_total": 36338,
+      "compaction_response_tokens": 0,
+      "difference": 0,
+      "assessment": "difference equals independently identified compaction usage",
+      "comparable": true
+    },
+    {
+      "thread_id": "01a126b1-b738-7f01-a2a3-107a65ffdf18",
+      "database_tokens_used": 1646998,
+      "structured_response_total": 1646998,
+      "compaction_response_tokens": 0,
+      "difference": 0,
+      "assessment": "difference equals independently identified compaction usage",
+      "comparable": true
+    },
+    {
+      "thread_id": "01a126c5-eb18-7e91-b9a4-51e348365031",
+      "database_tokens_used": 4177325,
+      "structured_response_total": 4177325,
+      "compaction_response_tokens": 0,
+      "difference": 0,
+      "assessment": "difference equals independently identified compaction usage",
+      "comparable": true
+    },
+    {
+      "thread_id": "01a126d3-a789-7cf2-bf49-b5072613cb98",
+      "database_tokens_used": 81194,
+      "structured_response_total": 81194,
+      "compaction_response_tokens": 0,
+      "difference": 0,
+      "assessment": "difference equals independently identified compaction usage",
+      "comparable": true
+    },
+    {
+      "thread_id": "01a126d3-e324-7d32-a269-38476a49c8da",
+      "database_tokens_used": 9983538,
+      "structured_response_total": 9983538,
+      "compaction_response_tokens": 0,
+      "difference": 0,
+      "assessment": "difference equals independently identified compaction usage",
+      "comparable": true
+    },
+    {
+      "thread_id": "01a126e7-5dda-7d03-a09a-9f3ace41ddc4",
+      "database_tokens_used": 16687146,
+      "structured_response_total": 16687146,
+      "compaction_response_tokens": 0,
+      "difference": 0,
+      "assessment": "difference equals independently identified compaction usage",
+      "comparable": true
+    },
+    {
+      "thread_id": "01a126fd-7b66-75c1-ac01-c77f8681f235",
+      "database_tokens_used": 8513256,
+      "structured_response_total": 8513256,
+      "compaction_response_tokens": 0,
+      "difference": 0,
+      "assessment": "difference equals independently identified compaction usage",
+      "comparable": true
+    },
+    {
+      "thread_id": "01a12743-936d-7cb2-9964-84611f7a7de2",
+      "database_tokens_used": 1223807,
+      "structured_response_total": 1223807,
+      "compaction_response_tokens": 0,
+      "difference": 0,
+      "assessment": "difference equals independently identified compaction usage",
+      "comparable": true
+    },
+    {
+      "thread_id": "01a12745-ec89-71c1-b7e8-e32c60dd8dc2",
+      "database_tokens_used": 68028484,
+      "structured_response_total": 68991661,
+      "compaction_response_tokens": 963177,
+      "difference": 963177,
+      "assessment": "difference equals independently identified compaction usage",
+      "comparable": true
+    },
+    {
+      "thread_id": "01a12747-24e7-7631-b5cd-2cd46ce83f3e",
+      "database_tokens_used": 7099793,
+      "structured_response_total": 7099793,
+      "compaction_response_tokens": 0,
+      "difference": 0,
+      "assessment": "difference equals independently identified compaction usage",
+      "comparable": true
+    },
+    {
+      "thread_id": "01a127b8-177d-7990-8b20-9a03236f811e",
+      "database_tokens_used": 3374132,
+      "structured_response_total": 3374132,
+      "compaction_response_tokens": 0,
+      "difference": 0,
+      "assessment": "difference equals independently identified compaction usage",
+      "comparable": true
+    },
+    {
+      "thread_id": "01a1295d-8109-7331-8cee-d1512c40e82c",
+      "database_tokens_used": 4701269,
+      "structured_response_total": 4701269,
+      "compaction_response_tokens": 0,
+      "difference": 0,
+      "assessment": "difference equals independently identified compaction usage",
+      "comparable": true
+    },
+    {
+      "thread_id": "01a129d1-8579-7220-8d5f-5171907a69a4",
+      "database_tokens_used": 402783,
+      "structured_response_total": 402783,
+      "compaction_response_tokens": 0,
+      "difference": 0,
+      "assessment": "difference equals independently identified compaction usage",
+      "comparable": true
+    },
+    {
+      "thread_id": "01a12a40-f05b-7913-914b-729ae0d44e84",
+      "database_tokens_used": 5649252,
+      "structured_response_total": 5649252,
+      "compaction_response_tokens": 0,
+      "difference": 0,
+      "assessment": "difference equals independently identified compaction usage",
+      "comparable": true
+    },
+    {
+      "thread_id": "01a12a41-50d3-7103-95ea-9faaf42fbce2",
+      "database_tokens_used": 61698508,
+      "structured_response_total": 62396212,
+      "compaction_response_tokens": 697704,
+      "difference": 697704,
+      "assessment": "difference equals independently identified compaction usage",
+      "comparable": true
+    },
+    {
+      "thread_id": "01a12a5f-5a45-7510-93c3-3c615089a626",
+      "database_tokens_used": 437457,
+      "structured_response_total": 437457,
+      "compaction_response_tokens": 0,
+      "difference": 0,
+      "assessment": "difference equals independently identified compaction usage",
+      "comparable": true
+    },
+    {
+      "thread_id": "01a12a74-2368-79a3-a510-7d35e9da4660",
+      "database_tokens_used": 12043434,
+      "structured_response_total": 12043434,
+      "compaction_response_tokens": 0,
+      "difference": 0,
+      "assessment": "difference equals independently identified compaction usage",
+      "comparable": true
+    },
+    {
+      "thread_id": "01a12a74-d408-7d71-9f8d-c44c98d556be",
+      "database_tokens_used": 20385492,
+      "structured_response_total": 20385492,
+      "compaction_response_tokens": 0,
+      "difference": 0,
+      "assessment": "difference equals independently identified compaction usage",
+      "comparable": true
+    },
+    {
+      "thread_id": "01a12ab7-b926-7323-963f-3ce9358b239a",
+      "database_tokens_used": 1009184,
+      "structured_response_total": 1009184,
+      "compaction_response_tokens": 0,
+      "difference": 0,
+      "assessment": "difference equals independently identified compaction usage",
+      "comparable": true
+    },
+    {
+      "thread_id": "01a12b82-2aaa-7621-bf8f-3de530ed0c54",
+      "database_tokens_used": 3595308,
+      "structured_response_total": 3595308,
+      "compaction_response_tokens": 0,
+      "difference": 0,
+      "assessment": "difference equals independently identified compaction usage",
+      "comparable": true
+    },
+    {
+      "thread_id": "01a12b83-39aa-7072-b2fa-61723d743bc8",
+      "database_tokens_used": 20320811,
+      "structured_response_total": 20320811,
+      "compaction_response_tokens": 0,
+      "difference": 0,
+      "assessment": "difference equals independently identified compaction usage",
+      "comparable": true
+    },
+    {
+      "thread_id": "01a12bc0-b8e6-7fa2-a513-1d9f6f7e0ea4",
+      "database_tokens_used": 33750342,
+      "structured_response_total": 34068806,
+      "compaction_response_tokens": 318464,
+      "difference": 318464,
+      "assessment": "difference equals independently identified compaction usage",
+      "comparable": true
+    },
+    {
+      "thread_id": "01a12bc1-0b75-7ea0-9ad1-d4e84d1a5a5c",
+      "database_tokens_used": 35750433,
+      "structured_response_total": 36519254,
+      "compaction_response_tokens": 768821,
+      "difference": 768821,
+      "assessment": "difference equals independently identified compaction usage",
+      "comparable": true
+    },
+    {
+      "thread_id": "01a12bd1-0854-7322-9ffc-4f3e2d253685",
+      "database_tokens_used": 1074785,
+      "structured_response_total": 1074785,
+      "compaction_response_tokens": 0,
+      "difference": 0,
+      "assessment": "difference equals independently identified compaction usage",
+      "comparable": true
+    },
+    {
+      "thread_id": "01a12c8a-fe51-72c3-8adf-453cfbdad998",
+      "database_tokens_used": 2092763,
+      "structured_response_total": 2092763,
+      "compaction_response_tokens": 0,
+      "difference": 0,
+      "assessment": "difference equals independently identified compaction usage",
+      "comparable": true
+    },
+    {
+      "thread_id": "01a12ec8-fbb1-77f2-85b9-b6ad1b03af28",
+      "database_tokens_used": 14026439,
+      "structured_response_total": 14228635,
+      "compaction_response_tokens": 370724,
+      "difference": 202196,
+      "assessment": "different snapshot times; live audit thread, not a like-for-like comparison",
+      "comparable": false
+    },
+    {
+      "thread_id": "01a12ec8-fe4f-7a92-8f4f-edbc72f1af56",
+      "database_tokens_used": 498098,
+      "structured_response_total": 498098,
+      "compaction_response_tokens": 0,
+      "difference": 0,
+      "assessment": "difference equals independently identified compaction usage",
+      "comparable": true
+    },
+    {
+      "thread_id": "01a12ee6-d779-70b3-af79-ce7cb6b9a98d",
+      "database_tokens_used": 402727,
+      "structured_response_total": 402727,
+      "compaction_response_tokens": 0,
+      "difference": 0,
+      "assessment": "difference equals independently identified compaction usage",
+      "comparable": true
+    }
+  ],
+  "accounting_rule": "Database thread totals, log context-size counters and goal counters are not summed into structured response usage. All 64 quiescent project thread counters reconcile after adding the compaction subset already included by the response ledger. The live audit thread is not comparable across timestamps.",
+  "limits": [
+    "No other local CODEX_HOME was found in inspected configuration or likely locations; arbitrary unconfigured/off-device/removed stores cannot be ruled out.",
+    "SQLite databases were inspected through ignored local copies; no database transcript or account field is exported.",
+    "Application log post-sampling counters describe context/compaction limits, not additive request usage.",
+    "No project rollout date before 2026-10-09 is available; missing earlier experiments or non-Codex planning cannot be measured."
+  ]
+}
