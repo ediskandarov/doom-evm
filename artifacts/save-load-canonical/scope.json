@@ -1,0 +1,20 @@
+{
+  "baseline": "01b09cdbc31e774b7da9937f3a9c67b3ad3d958b",
+  "productionOriginalTestsAndEarlierEvidenceUnchanged": true,
+  "checkedPaths": [
+    "src",
+    "web",
+    "test",
+    "original",
+    "foundry.toml",
+    "PORTING.md",
+    "docs/SAVE-LOAD.md",
+    "artifacts/save-load",
+    "tools/reference/save_load"
+  ],
+  "newFilesOnly": [
+    "docs/SAVE-LOAD-CANONICAL-DISCOVERY.md",
+    "tools/reference/save_load_research/",
+    "artifacts/save-load-canonical/"
+  ]
+}
