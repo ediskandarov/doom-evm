@@ -24,14 +24,25 @@ only completed phase windows and aggregate/chronological metrics.
 
 Reruns replace snapshots; they never append totals from an earlier collection.
 `--logs` accepts a JSONL file or directory and can be repeated. The default scans
-`~/.codex/sessions` and `~/.codex/archived_sessions`. `--project` defaults to the
-working directory. First owning metadata selects matching project rollouts;
-explicit parent-thread links include agents in separate worktrees. Other projects
-are excluded. Paths are represented by hashes, with consumed-byte SHA-256 and
+`~/.codex/sessions` and `~/.codex/archived_sessions`, plus both directories under
+an alternate `CODEX_HOME` environment value. `--project` defaults to the working
+directory. Discovery uses registered Git worktrees, a shared Git common directory,
+or the repository identity in the first owning metadata record; explicit parent
+links then include child agents. Recorded repository identity supports renamed or
+deleted worktrees. A similar directory name or timestamp alone is insufficient.
+Other projects are excluded. Paths are represented by hashes, with consumed-byte SHA-256 and
 snapshot sizes for provenance. Reads stop at each file's initial size; an
 incomplete live tail is counted as missing and retried on the next snapshot.
 
 ## Accounting rules
+
+The [public-release audit](../../docs/metrics/CODEX-USAGE-FINAL.md) adds a bounded
+snapshot, reviewed goal/worktree attribution, an independent raw-event verifier,
+and a complete worktree coverage matrix. Historical exports remain unchanged.
+See [audit reproduction](../../docs/metrics/CODEX-USAGE-FINAL.md#reproduction)
+for the exact commands. `audit.py` is specific to the reviewed release snapshot;
+`collect.py` remains the lightweight general entry point. Automatic review agents
+now retain the `/guardian` identity instead of being mislabeled as `/root`.
 
 The observed local format is Codex CLI 0.162.0. These internal logs are not a
 stable public schema; unknown record types are ignored, malformed lines counted,

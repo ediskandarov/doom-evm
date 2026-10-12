@@ -1,0 +1,1324 @@
+{
+  "cutoff_exclusive": "2026-10-12T08:01:42.000Z",
+  "sources": [
+    {
+      "source_id": "09a1cf823f97010b8b51",
+      "location_kind": "active-or-explicit",
+      "decision": "project",
+      "thread_id": "01a12a41-50d3-7103-95ea-9faaf42fbce2",
+      "cli_version": "0.162.1",
+      "selection_evidence": [
+        "registered_worktree_or_project_cwd",
+        "shared_git_common_directory",
+        "recorded_repository_identity"
+      ],
+      "parsed_records": 3118,
+      "diagnostics": {},
+      "snapshot_bytes": 13520853,
+      "initial_size_bytes": 13520853,
+      "snapshot_sha256": "55f228ca30efa8f10ed798a87e0f3e4c52ca3a13faf5f4ea653d7dc90da5876b"
+    },
+    {
+      "source_id": "0cb39ac076dd9f662455",
+      "location_kind": "active-or-explicit",
+      "decision": "project",
+      "thread_id": "01a12544-e338-7862-b908-e445bdd92bd5",
+      "cli_version": "0.162.1",
+      "selection_evidence": [
+        "registered_worktree_or_project_cwd",
+        "shared_git_common_directory",
+        "recorded_repository_identity"
+      ],
+      "parsed_records": 387,
+      "diagnostics": {},
+      "snapshot_bytes": 1262513,
+      "initial_size_bytes": 1262513,
+      "snapshot_sha256": "1238f804f36daa9d7c4797f17eb6b66fbe82bc552bc58fc5ff8d050c01679e9e"
+    },
+    {
+      "source_id": "0d462e1ab912d06ad960",
+      "location_kind": "active-or-explicit",
+      "decision": "project",
+      "thread_id": "01a126b1-b738-7f01-a2a3-107a65ffdf18",
+      "cli_version": "0.162.1",
+      "selection_evidence": [
+        "registered_worktree_or_project_cwd",
+        "shared_git_common_directory",
+        "recorded_repository_identity",
+        "explicit_parent_thread"
+      ],
+      "parsed_records": 279,
+      "diagnostics": {},
+      "snapshot_bytes": 830421,
+      "initial_size_bytes": 830421,
+      "snapshot_sha256": "261d7130c87af445777e1b954ffce9523424ca287599be8fa288d05de492fa78"
+    },
+    {
+      "source_id": "139cf934a67377e4f4e9",
+      "location_kind": "active-or-explicit",
+      "decision": "project",
+      "thread_id": "01a127b8-177d-7990-8b20-9a03236f811e",
+      "cli_version": "0.162.1",
+      "selection_evidence": [
+        "registered_worktree_or_project_cwd",
+        "shared_git_common_directory",
+        "recorded_repository_identity",
+        "explicit_parent_thread"
+      ],
+      "parsed_records": 468,
+      "diagnostics": {},
+      "snapshot_bytes": 1345073,
+      "initial_size_bytes": 1345073,
+      "snapshot_sha256": "3c982ee4e055b3379c80e8080116f1ffe01953dc08f2fc9286ede993872afe23"
+    },
+    {
+      "source_id": "15f43451d19511390b8c",
+      "location_kind": "active-or-explicit",
+      "decision": "project",
+      "thread_id": "01a124ca-941c-7773-9fe2-2a5ad194943c",
+      "cli_version": "0.162.1",
+      "selection_evidence": [
+        "registered_worktree_or_project_cwd",
+        "shared_git_common_directory",
+        "recorded_repository_identity"
+      ],
+      "parsed_records": 466,
+      "diagnostics": {},
+      "snapshot_bytes": 2213468,
+      "initial_size_bytes": 2213468,
+      "snapshot_sha256": "b236b6df6c89d8c33f8f6458d8a6a79b183d307a8f8522b56caed864fde3b6ce"
+    },
+    {
+      "source_id": "1793a53ec80a11341c13",
+      "location_kind": "active-or-explicit",
+      "decision": "project",
+      "thread_id": "01a12c8a-fe51-72c3-8adf-453cfbdad998",
+      "cli_version": "0.162.1",
+      "selection_evidence": [
+        "registered_worktree_or_project_cwd",
+        "shared_git_common_directory",
+        "recorded_repository_identity",
+        "explicit_parent_thread"
+      ],
+      "parsed_records": 322,
+      "diagnostics": {},
+      "snapshot_bytes": 985318,
+      "initial_size_bytes": 985318,
+      "snapshot_sha256": "a9e574ee1cfb04856e18cf302e836297282c33493dd56efb53a4858806afc816"
+    },
+    {
+      "source_id": "184ba026729bf30fb240",
+      "location_kind": "active-or-explicit",
+      "decision": "project",
+      "thread_id": "01a126e7-5dda-7d03-a09a-9f3ace41ddc4",
+      "cli_version": "0.162.1",
+      "selection_evidence": [
+        "registered_worktree_or_project_cwd",
+        "shared_git_common_directory",
+        "recorded_repository_identity"
+      ],
+      "parsed_records": 788,
+      "diagnostics": {},
+      "snapshot_bytes": 2965522,
+      "initial_size_bytes": 2965522,
+      "snapshot_sha256": "a3248b6b51e13083c60fd75ff1163699af2ee84d33f9ee83591b12fdb38b39c3"
+    },
+    {
+      "source_id": "19f727d7a4d45d71431f",
+      "location_kind": "archived",
+      "decision": "unrelated",
+      "thread_id": null,
+      "cli_version": "0.162.0-alpha.17.2",
+      "selection_evidence": [],
+      "parsed_records": 61,
+      "diagnostics": {},
+      "snapshot_bytes": 379697,
+      "initial_size_bytes": 379697,
+      "snapshot_sha256": "55da2ab63aefbd12e7e47a72e4184f6f81a8c708dd72cda3d54d0aaa87f05164"
+    },
+    {
+      "source_id": "1ed6f7e1170b7f7f2ad1",
+      "location_kind": "active-or-explicit",
+      "decision": "project",
+      "thread_id": "01a12100-d7fc-7d42-aa77-2ab63e05e57d",
+      "cli_version": "0.162.0",
+      "selection_evidence": [
+        "registered_worktree_or_project_cwd",
+        "shared_git_common_directory",
+        "recorded_repository_identity",
+        "explicit_parent_thread"
+      ],
+      "parsed_records": 3984,
+      "diagnostics": {},
+      "snapshot_bytes": 8797844,
+      "initial_size_bytes": 8797844,
+      "snapshot_sha256": "bb3f1bb5a13941364c3ea6f4db7ba91de97de1807abd2c6e97f9412263c648c0"
+    },
+    {
+      "source_id": "21b4f9d02fcd68aa1da6",
+      "location_kind": "active-or-explicit",
+      "decision": "project",
+      "thread_id": "01a12747-24e7-7631-b5cd-2cd46ce83f3e",
+      "cli_version": "0.162.1",
+      "selection_evidence": [
+        "registered_worktree_or_project_cwd",
+        "shared_git_common_directory",
+        "recorded_repository_identity",
+        "explicit_parent_thread"
+      ],
+      "parsed_records": 773,
+      "diagnostics": {},
+      "snapshot_bytes": 2037021,
+      "initial_size_bytes": 2037021,
+      "snapshot_sha256": "34bb3568c35af178213be2e72ad4d103759782a0ef7abef04eb3cb82139d41f8"
+    },
+    {
+      "source_id": "2403fee970f4f7f23d5b",
+      "location_kind": "active-or-explicit",
+      "decision": "unrelated",
+      "thread_id": null,
+      "cli_version": "0.160.0",
+      "selection_evidence": [],
+      "parsed_records": 58,
+      "diagnostics": {},
+      "snapshot_bytes": 395763,
+      "initial_size_bytes": 395763,
+      "snapshot_sha256": "eee10352a1caad32753723438c31a332315f7a48ffcb84f6ed18f78bfdae0ea8"
+    },
+    {
+      "source_id": "24df6fd79933d4c9fe23",
+      "location_kind": "active-or-explicit",
+      "decision": "unrelated",
+      "thread_id": null,
+      "cli_version": "0.162.0-alpha.17.2",
+      "selection_evidence": [],
+      "parsed_records": 5107,
+      "diagnostics": {},
+      "snapshot_bytes": 270434048,
+      "initial_size_bytes": 270434048,
+      "snapshot_sha256": "7583def7afdbdd3137fa34dc10d5854a0dee25b0147a7812ae9d9a050a2f29c0"
+    },
+    {
+      "source_id": "334ec3d8c84ce157bde0",
+      "location_kind": "active-or-explicit",
+      "decision": "project",
+      "thread_id": "01a12ab7-b926-7323-963f-3ce9358b239a",
+      "cli_version": "0.162.1",
+      "selection_evidence": [
+        "registered_worktree_or_project_cwd",
+        "shared_git_common_directory",
+        "recorded_repository_identity",
+        "explicit_parent_thread"
+      ],
+      "parsed_records": 199,
+      "diagnostics": {},
+      "snapshot_bytes": 672712,
+      "initial_size_bytes": 672712,
+      "snapshot_sha256": "b3503df01c35f267aa69499254d749bf0b63a8032d462c75222d057790e480b6"
+    },
+    {
+      "source_id": "3599536ffbc7dc4574a9",
+      "location_kind": "active-or-explicit",
+      "decision": "project",
+      "thread_id": "01a124e6-5a78-7cf3-b2cd-f86c9f1b0eb0",
+      "cli_version": "0.162.1",
+      "selection_evidence": [
+        "registered_worktree_or_project_cwd",
+        "shared_git_common_directory",
+        "recorded_repository_identity"
+      ],
+      "parsed_records": 264,
+      "diagnostics": {},
+      "snapshot_bytes": 1096130,
+      "initial_size_bytes": 1096130,
+      "snapshot_sha256": "d0cf9fea8211bca5372059f49f4bbad391723ae89432b5b42d93757eeb1107be"
+    },
+    {
+      "source_id": "362d2d0039c525867fed",
+      "location_kind": "active-or-explicit",
+      "decision": "project",
+      "thread_id": "01a124da-9c24-7702-bd61-b8a300603a39",
+      "cli_version": "0.162.1",
+      "selection_evidence": [
+        "registered_worktree_or_project_cwd",
+        "shared_git_common_directory",
+        "recorded_repository_identity",
+        "explicit_parent_thread"
+      ],
+      "parsed_records": 65,
+      "diagnostics": {},
+      "snapshot_bytes": 290739,
+      "initial_size_bytes": 290739,
+      "snapshot_sha256": "c23549385483f06b97c3d1f5b006c543cc88e1e5e2ce93eaeec2d20df2fdc477"
+    },
+    {
+      "source_id": "3869b68ce098e8fbfa83",
+      "location_kind": "active-or-explicit",
+      "decision": "project",
+      "thread_id": "01a126c5-eb18-7e91-b9a4-51e348365031",
+      "cli_version": "0.162.1",
+      "selection_evidence": [
+        "registered_worktree_or_project_cwd",
+        "shared_git_common_directory",
+        "recorded_repository_identity",
+        "explicit_parent_thread"
+      ],
+      "parsed_records": 290,
+      "diagnostics": {},
+      "snapshot_bytes": 1570286,
+      "initial_size_bytes": 1570286,
+      "snapshot_sha256": "95038850847b784feb254fae3565df637c9ee43a521c21fb000a07091d58a04e"
+    },
+    {
+      "source_id": "38d0915340a035501ecd",
+      "location_kind": "archived",
+      "decision": "unrelated",
+      "thread_id": null,
+      "cli_version": "0.160.0",
+      "selection_evidence": [],
+      "parsed_records": 45,
+      "diagnostics": {},
+      "snapshot_bytes": 264105,
+      "initial_size_bytes": 264105,
+      "snapshot_sha256": "756431d9014b04175f4c7319df2c651fab17cc708a7eab58c2593bc57708ff19"
+    },
+    {
+      "source_id": "3bf682a4d0eca8db765f",
+      "location_kind": "active-or-explicit",
+      "decision": "project",
+      "thread_id": "01a12040-c93c-7f01-ad15-92712cdafa23",
+      "cli_version": "0.162.0",
+      "selection_evidence": [
+        "registered_worktree_or_project_cwd",
+        "shared_git_common_directory",
+        "recorded_repository_identity",
+        "explicit_parent_thread"
+      ],
+      "parsed_records": 408,
+      "diagnostics": {},
+      "snapshot_bytes": 1022089,
+      "initial_size_bytes": 1022089,
+      "snapshot_sha256": "f003918355d5257354a0b3ceda446243a7a4fb5607cebd555cc85bacc47d2147"
+    },
+    {
+      "source_id": "4b9aa7f58f98a29298b7",
+      "location_kind": "active-or-explicit",
+      "decision": "project",
+      "thread_id": "01a12103-593b-78f0-84aa-254e0f6f4475",
+      "cli_version": "0.162.0",
+      "selection_evidence": [
+        "registered_worktree_or_project_cwd",
+        "shared_git_common_directory",
+        "recorded_repository_identity",
+        "explicit_parent_thread"
+      ],
+      "parsed_records": 3325,
+      "diagnostics": {},
+      "snapshot_bytes": 7516824,
+      "initial_size_bytes": 7516824,
+      "snapshot_sha256": "4de09b4d7cf817a22b0758094af44fd394a001aa1cc114e5e76d110807b8c1b8"
+    },
+    {
+      "source_id": "509eb856bbf5ea4b0222",
+      "location_kind": "active-or-explicit",
+      "decision": "project",
+      "thread_id": "01a12588-ed5c-7f80-a345-14f4a9270f2f",
+      "cli_version": "0.162.1",
+      "selection_evidence": [
+        "registered_worktree_or_project_cwd",
+        "shared_git_common_directory",
+        "recorded_repository_identity"
+      ],
+      "parsed_records": 536,
+      "diagnostics": {},
+      "snapshot_bytes": 2258081,
+      "initial_size_bytes": 2258081,
+      "snapshot_sha256": "decdde1c0b08f5532b17724a27b3b1845367fa675e0c079a852c2adc6fc30fe9"
+    },
+    {
+      "source_id": "52d67513b1140895459a",
+      "location_kind": "active-or-explicit",
+      "decision": "project",
+      "thread_id": "01a1264f-384d-73d1-925a-b612d2ce6f92",
+      "cli_version": "0.162.1",
+      "selection_evidence": [
+        "registered_worktree_or_project_cwd",
+        "shared_git_common_directory",
+        "recorded_repository_identity"
+      ],
+      "parsed_records": 573,
+      "diagnostics": {},
+      "snapshot_bytes": 2816375,
+      "initial_size_bytes": 2816375,
+      "snapshot_sha256": "ad4ea293c4cebf9851a6563dc45b678869e2cc7eac298487b5429ba5e119eddf"
+    },
+    {
+      "source_id": "53788fdc2f9036a667f3",
+      "location_kind": "active-or-explicit",
+      "decision": "project",
+      "thread_id": "01a12544-adad-7200-bb86-ec859109f6b1",
+      "cli_version": "0.162.1",
+      "selection_evidence": [
+        "registered_worktree_or_project_cwd",
+        "shared_git_common_directory",
+        "recorded_repository_identity"
+      ],
+      "parsed_records": 461,
+      "diagnostics": {},
+      "snapshot_bytes": 1417820,
+      "initial_size_bytes": 1417820,
+      "snapshot_sha256": "250f87a32f55e8e263679b42fac0241638b28a8a98eb8b2b3d6fcc078dfc61d6"
+    },
+    {
+      "source_id": "5423c880fc473581e80f",
+      "location_kind": "active-or-explicit",
+      "decision": "project",
+      "thread_id": "01a1258d-213d-7c61-ab20-c972b2f3bab5",
+      "cli_version": "0.162.1",
+      "selection_evidence": [
+        "registered_worktree_or_project_cwd",
+        "shared_git_common_directory",
+        "recorded_repository_identity"
+      ],
+      "parsed_records": 805,
+      "diagnostics": {},
+      "snapshot_bytes": 3643758,
+      "initial_size_bytes": 3643758,
+      "snapshot_sha256": "a8ba5602dc435bc8124c260be5ae1446af4332d74e57c5dbefec35f998e4a6da"
+    },
+    {
+      "source_id": "565bacfd05eea55eb5ab",
+      "location_kind": "active-or-explicit",
+      "decision": "unrelated",
+      "thread_id": null,
+      "cli_version": "0.160.0",
+      "selection_evidence": [],
+      "parsed_records": 145,
+      "diagnostics": {},
+      "snapshot_bytes": 455608,
+      "initial_size_bytes": 455608,
+      "snapshot_sha256": "d8b0734ad971397c0b8c0f84e8801752c89527f57df919fa1afc5b1d951888fb"
+    },
+    {
+      "source_id": "56c98046c6bfa54cb528",
+      "location_kind": "active-or-explicit",
+      "decision": "project",
+      "thread_id": "01a12649-dd56-7071-98c4-2b48d0e90adb",
+      "cli_version": "0.162.1",
+      "selection_evidence": [
+        "registered_worktree_or_project_cwd",
+        "shared_git_common_directory",
+        "recorded_repository_identity"
+      ],
+      "parsed_records": 1727,
+      "diagnostics": {},
+      "snapshot_bytes": 5894295,
+      "initial_size_bytes": 5894295,
+      "snapshot_sha256": "0101bcf0bb7faf1ec5d98137662f12a232c6f6b6e3afc8ff6a1f5f7a5f204546"
+    },
+    {
+      "source_id": "578ecb28a7fffbbf1f10",
+      "location_kind": "active-or-explicit",
+      "decision": "project",
+      "thread_id": "01a126fd-7b66-75c1-ac01-c77f8681f235",
+      "cli_version": "0.162.1",
+      "selection_evidence": [
+        "registered_worktree_or_project_cwd",
+        "shared_git_common_directory",
+        "recorded_repository_identity"
+      ],
+      "parsed_records": 555,
+      "diagnostics": {},
+      "snapshot_bytes": 2319557,
+      "initial_size_bytes": 2319557,
+      "snapshot_sha256": "7093b56d8d26286691801aa41dd3bf36fc572f7611720ecd812bf88fe900635c"
+    },
+    {
+      "source_id": "580d68b3d29fd2b51ad4",
+      "location_kind": "active-or-explicit",
+      "decision": "project",
+      "thread_id": "01a11ff3-0ce5-7802-a5b5-a9243cca6778",
+      "cli_version": "0.162.0",
+      "selection_evidence": [
+        "registered_worktree_or_project_cwd",
+        "shared_git_common_directory",
+        "explicit_parent_thread"
+      ],
+      "parsed_records": 207,
+      "diagnostics": {},
+      "snapshot_bytes": 672174,
+      "initial_size_bytes": 672174,
+      "snapshot_sha256": "f35a6dd2e2982038eedd43ae66a61ae47200587eb977524353730667f7f659dd"
+    },
+    {
+      "source_id": "583b711453678f56dd53",
+      "location_kind": "active-or-explicit",
+      "decision": "project",
+      "thread_id": "01a12745-ec89-71c1-b7e8-e32c60dd8dc2",
+      "cli_version": "0.162.1",
+      "selection_evidence": [
+        "registered_worktree_or_project_cwd",
+        "shared_git_common_directory",
+        "recorded_repository_identity"
+      ],
+      "parsed_records": 4241,
+      "diagnostics": {},
+      "snapshot_bytes": 14306809,
+      "initial_size_bytes": 14306809,
+      "snapshot_sha256": "70f7cf5f5deffda50e4580bac5a97d45d46fd635e30a3bb4f0d7fe80f0c93566"
+    },
+    {
+      "source_id": "5bb10d9b17e26160a18a",
+      "location_kind": "active-or-explicit",
+      "decision": "project",
+      "thread_id": "01a1295d-8109-7331-8cee-d1512c40e82c",
+      "cli_version": "0.162.1",
+      "selection_evidence": [
+        "registered_worktree_or_project_cwd",
+        "shared_git_common_directory",
+        "recorded_repository_identity",
+        "explicit_parent_thread"
+      ],
+      "parsed_records": 652,
+      "diagnostics": {},
+      "snapshot_bytes": 1639325,
+      "initial_size_bytes": 1639325,
+      "snapshot_sha256": "ae527ee86fb5f038874efcaec3ec1748fb27e5dfc4a1ce20fe7d3a4f5bbb4898"
+    },
+    {
+      "source_id": "6092db58dcddde97b2f1",
+      "location_kind": "active-or-explicit",
+      "decision": "project",
+      "thread_id": "01a124e5-8100-75b3-8de1-3992194387b7",
+      "cli_version": "0.162.1",
+      "selection_evidence": [
+        "registered_worktree_or_project_cwd",
+        "shared_git_common_directory",
+        "recorded_repository_identity"
+      ],
+      "parsed_records": 391,
+      "diagnostics": {},
+      "snapshot_bytes": 1441302,
+      "initial_size_bytes": 1441302,
+      "snapshot_sha256": "88030b61b657bfff9fa7898e544a479c1dcd7d7c83713f313c85b9e496fa6034"
+    },
+    {
+      "source_id": "6c5cbca5e855ad418be4",
+      "location_kind": "active-or-explicit",
+      "decision": "project",
+      "thread_id": "01a12a40-f05b-7913-914b-729ae0d44e84",
+      "cli_version": "0.162.1",
+      "selection_evidence": [
+        "registered_worktree_or_project_cwd",
+        "shared_git_common_directory",
+        "recorded_repository_identity"
+      ],
+      "parsed_records": 423,
+      "diagnostics": {},
+      "snapshot_bytes": 1741591,
+      "initial_size_bytes": 1741591,
+      "snapshot_sha256": "ad7094a8608dc4d03993b31ddd928d4e2136eda62a5078d0e0f465a061b30799"
+    },
+    {
+      "source_id": "6e1f397d46af7855ffa6",
+      "location_kind": "active-or-explicit",
+      "decision": "project",
+      "thread_id": "01a12b82-2aaa-7621-bf8f-3de530ed0c54",
+      "cli_version": "0.162.1",
+      "selection_evidence": [
+        "registered_worktree_or_project_cwd",
+        "shared_git_common_directory",
+        "recorded_repository_identity"
+      ],
+      "parsed_records": 241,
+      "diagnostics": {},
+      "snapshot_bytes": 1333686,
+      "initial_size_bytes": 1333686,
+      "snapshot_sha256": "f02fa9b55e675776297879f30d773b4627a87b8cc39e605963e4f0b7c16fdd4c"
+    },
+    {
+      "source_id": "737b22f7491abf6f5adb",
+      "location_kind": "active-or-explicit",
+      "decision": "project",
+      "thread_id": "01a124ce-c58e-7783-bc7f-02ed05738c07",
+      "cli_version": "0.162.1",
+      "selection_evidence": [
+        "registered_worktree_or_project_cwd",
+        "shared_git_common_directory",
+        "recorded_repository_identity",
+        "explicit_parent_thread"
+      ],
+      "parsed_records": 3,
+      "diagnostics": {},
+      "snapshot_bytes": 86228,
+      "initial_size_bytes": 86228,
+      "snapshot_sha256": "26cf7fd387695c302eab7ecec2ae76bc00e95c57979080ad92f5844fa96b5642"
+    },
+    {
+      "source_id": "740796e2ffc82bd11e60",
+      "location_kind": "active-or-explicit",
+      "decision": "project",
+      "thread_id": "01a12ee6-d779-70b3-af79-ce7cb6b9a98d",
+      "cli_version": "0.162.1",
+      "selection_evidence": [
+        "registered_worktree_or_project_cwd",
+        "shared_git_common_directory",
+        "recorded_repository_identity",
+        "explicit_parent_thread"
+      ],
+      "parsed_records": 122,
+      "diagnostics": {},
+      "snapshot_bytes": 433299,
+      "initial_size_bytes": 433299,
+      "snapshot_sha256": "a932646ca5b91d2a379e10fddacdec62dc727397ea6142f0dafcc15efcbe30bb"
+    },
+    {
+      "source_id": "74a4eec0ead444f12fa3",
+      "location_kind": "active-or-explicit",
+      "decision": "project",
+      "thread_id": "01a1258d-9e1e-72e2-9cf7-8d00adf1d89f",
+      "cli_version": "0.162.1",
+      "selection_evidence": [
+        "registered_worktree_or_project_cwd",
+        "shared_git_common_directory",
+        "recorded_repository_identity"
+      ],
+      "parsed_records": 663,
+      "diagnostics": {},
+      "snapshot_bytes": 2920964,
+      "initial_size_bytes": 2920964,
+      "snapshot_sha256": "a5a9f4836e04dbee25b723cdef9960d7d82fd3c3479d6beb91556c153aa01f35"
+    },
+    {
+      "source_id": "7adce6c952748507e1f2",
+      "location_kind": "active-or-explicit",
+      "decision": "unrelated",
+      "thread_id": null,
+      "cli_version": "0.160.0",
+      "selection_evidence": [],
+      "parsed_records": 578,
+      "diagnostics": {},
+      "snapshot_bytes": 2713107,
+      "initial_size_bytes": 2713107,
+      "snapshot_sha256": "513216f5e554ef554733da58fd1291326584c6cdb8c24c586670cc582c8ded50"
+    },
+    {
+      "source_id": "7cf176bd0096b5f70d4d",
+      "location_kind": "active-or-explicit",
+      "decision": "project",
+      "thread_id": "01a124e5-33d1-7c91-8b10-26df7a98c7c8",
+      "cli_version": "0.162.1",
+      "selection_evidence": [
+        "registered_worktree_or_project_cwd",
+        "shared_git_common_directory",
+        "recorded_repository_identity"
+      ],
+      "parsed_records": 432,
+      "diagnostics": {},
+      "snapshot_bytes": 1559141,
+      "initial_size_bytes": 1559141,
+      "snapshot_sha256": "15aa57ea297b4191441ce320ba7a97298c83f745cfad1d22345c1833e05bbd0f"
+    },
+    {
+      "source_id": "7e2e6d73a44eb6c72c87",
+      "location_kind": "active-or-explicit",
+      "decision": "project",
+      "thread_id": "01a12538-3400-7b12-bd2f-ea5dbe642e8b",
+      "cli_version": "0.162.1",
+      "selection_evidence": [
+        "registered_worktree_or_project_cwd",
+        "shared_git_common_directory",
+        "recorded_repository_identity"
+      ],
+      "parsed_records": 5567,
+      "diagnostics": {},
+      "snapshot_bytes": 22115738,
+      "initial_size_bytes": 22115738,
+      "snapshot_sha256": "55a3e0a92c321c2c55c175996f3cfbe4ed43bbd018ef9adace4307fffe69a73f"
+    },
+    {
+      "source_id": "7ee6ef2bce50abf7337e",
+      "location_kind": "archived",
+      "decision": "unrelated",
+      "thread_id": null,
+      "cli_version": "0.160.0",
+      "selection_evidence": [],
+      "parsed_records": 28,
+      "diagnostics": {},
+      "snapshot_bytes": 117691,
+      "initial_size_bytes": 117691,
+      "snapshot_sha256": "2fdd474cb8d87074e2c68accb45b62d5bdfb1466e4d8f2b04a97bb66be9ef7dc"
+    },
+    {
+      "source_id": "811d32e7fe3036c900fc",
+      "location_kind": "active-or-explicit",
+      "decision": "unrelated",
+      "thread_id": null,
+      "cli_version": "0.162.0-alpha.17.2",
+      "selection_evidence": [],
+      "parsed_records": 224,
+      "diagnostics": {},
+      "snapshot_bytes": 1579576,
+      "initial_size_bytes": 1579576,
+      "snapshot_sha256": "29d68d6e75891dd36b1f09eb912f834a9623f915c1966af65b939a3346e54b57"
+    },
+    {
+      "source_id": "815dd0f4091c733467be",
+      "location_kind": "active-or-explicit",
+      "decision": "project",
+      "thread_id": "01a12bc1-0b75-7ea0-9ad1-d4e84d1a5a5c",
+      "cli_version": "0.162.1",
+      "selection_evidence": [
+        "registered_worktree_or_project_cwd",
+        "shared_git_common_directory",
+        "recorded_repository_identity"
+      ],
+      "parsed_records": 1818,
+      "diagnostics": {},
+      "snapshot_bytes": 8684526,
+      "initial_size_bytes": 8684526,
+      "snapshot_sha256": "685517096d46327c06e0aca71d58ba0d5f3c1a309f5c8207460a50bf4cca3840"
+    },
+    {
+      "source_id": "8340ec1e90fb8003ad31",
+      "location_kind": "active-or-explicit",
+      "decision": "project",
+      "thread_id": "01a12041-1dc0-7720-a32b-2836d969b872",
+      "cli_version": "0.162.0",
+      "selection_evidence": [
+        "registered_worktree_or_project_cwd",
+        "shared_git_common_directory",
+        "recorded_repository_identity",
+        "explicit_parent_thread"
+      ],
+      "parsed_records": 256,
+      "diagnostics": {},
+      "snapshot_bytes": 809324,
+      "initial_size_bytes": 809324,
+      "snapshot_sha256": "f36755f6674c6fa54474e5065cdd6325b6f168429048e4b9baaeb4b35c72ce15"
+    },
+    {
+      "source_id": "837cf1a29307cf1e4b9d",
+      "location_kind": "active-or-explicit",
+      "decision": "project",
+      "thread_id": "01a124c9-84f0-7843-8777-f7aae881b90d",
+      "cli_version": "0.162.1",
+      "selection_evidence": [
+        "registered_worktree_or_project_cwd",
+        "shared_git_common_directory",
+        "recorded_repository_identity"
+      ],
+      "parsed_records": 59,
+      "diagnostics": {},
+      "snapshot_bytes": 508650,
+      "initial_size_bytes": 508650,
+      "snapshot_sha256": "97999be10770db85d08d87266e67f930385de203938880ebb84791efe8a20ed9"
+    },
+    {
+      "source_id": "84a62f6e48da8ebe666b",
+      "location_kind": "active-or-explicit",
+      "decision": "project",
+      "thread_id": "01a11ff3-7ca3-7df1-a272-958d18ac6e2d",
+      "cli_version": "0.162.0",
+      "selection_evidence": [
+        "registered_worktree_or_project_cwd",
+        "shared_git_common_directory",
+        "explicit_parent_thread"
+      ],
+      "parsed_records": 254,
+      "diagnostics": {},
+      "snapshot_bytes": 762255,
+      "initial_size_bytes": 762255,
+      "snapshot_sha256": "4c2068421b28fc5ba91a73f34ca2918b4cbac1fd4bc55b892569f4ce387fe922"
+    },
+    {
+      "source_id": "89eca516f03b3bd44dae",
+      "location_kind": "active-or-explicit",
+      "decision": "unrelated",
+      "thread_id": null,
+      "cli_version": "0.160.0",
+      "selection_evidence": [],
+      "parsed_records": 465,
+      "diagnostics": {},
+      "snapshot_bytes": 1101149,
+      "initial_size_bytes": 1101149,
+      "snapshot_sha256": "f6f526f77ccaaee3475dd2a1d991ee8f24d71a303edd460e1da85c7815f0f20c"
+    },
+    {
+      "source_id": "8b07835ad377a28267fe",
+      "location_kind": "active-or-explicit",
+      "decision": "project",
+      "thread_id": "01a1258d-665d-7940-82e2-54cddf302547",
+      "cli_version": "0.162.1",
+      "selection_evidence": [
+        "registered_worktree_or_project_cwd",
+        "shared_git_common_directory",
+        "recorded_repository_identity"
+      ],
+      "parsed_records": 521,
+      "diagnostics": {},
+      "snapshot_bytes": 2597257,
+      "initial_size_bytes": 2597257,
+      "snapshot_sha256": "687c61b6b8eb67876f369dff431f1a2b5cfdb5417ec2c2793cd7c89aacbafdf0"
+    },
+    {
+      "source_id": "8ea24123aab48dff6dd2",
+      "location_kind": "active-or-explicit",
+      "decision": "project",
+      "thread_id": "01a1205f-b192-7750-bb4f-3f1aa2c27c66",
+      "cli_version": "0.162.0",
+      "selection_evidence": [
+        "registered_worktree_or_project_cwd",
+        "shared_git_common_directory",
+        "recorded_repository_identity",
+        "explicit_parent_thread"
+      ],
+      "parsed_records": 983,
+      "diagnostics": {},
+      "snapshot_bytes": 2934333,
+      "initial_size_bytes": 2934333,
+      "snapshot_sha256": "91b112ec4b428dc430e7530f03c5d226422f5be91b599b09cffdfaa36932bfce"
+    },
+    {
+      "source_id": "8ebca7e5a5249e3cd474",
+      "location_kind": "active-or-explicit",
+      "decision": "unrelated",
+      "thread_id": null,
+      "cli_version": "0.160.0",
+      "selection_evidence": [],
+      "parsed_records": 656,
+      "diagnostics": {},
+      "snapshot_bytes": 8551733,
+      "initial_size_bytes": 8551733,
+      "snapshot_sha256": "98e865987e8af8872db12c44a1c64a5cbb009f6b8280b7d4cc55692524f9ed4e"
+    },
+    {
+      "source_id": "9b49efa9354ddfe7b0a4",
+      "location_kind": "active-or-explicit",
+      "decision": "project",
+      "thread_id": "01a12a74-2368-79a3-a510-7d35e9da4660",
+      "cli_version": "0.162.1",
+      "selection_evidence": [
+        "registered_worktree_or_project_cwd",
+        "shared_git_common_directory",
+        "recorded_repository_identity"
+      ],
+      "parsed_records": 709,
+      "diagnostics": {},
+      "snapshot_bytes": 2788150,
+      "initial_size_bytes": 2788150,
+      "snapshot_sha256": "95fc1e1977fee30dcabf56a91bc7a7e2266f21a720578c1f17a1a0545d20f7aa"
+    },
+    {
+      "source_id": "a3a6d41140928b4c30ec",
+      "location_kind": "active-or-explicit",
+      "decision": "project",
+      "thread_id": "01a124ce-c551-73b2-be60-15dc74048171",
+      "cli_version": "0.162.1",
+      "selection_evidence": [
+        "registered_worktree_or_project_cwd",
+        "shared_git_common_directory",
+        "recorded_repository_identity",
+        "explicit_parent_thread"
+      ],
+      "parsed_records": 147,
+      "diagnostics": {},
+      "snapshot_bytes": 464697,
+      "initial_size_bytes": 464697,
+      "snapshot_sha256": "34284cb804f4dd822f7797b782842bfc5bb3c17a00a9421eda4a15851d487d37"
+    },
+    {
+      "source_id": "a3d8135bdc81d5b5b885",
+      "location_kind": "active-or-explicit",
+      "decision": "project",
+      "thread_id": "01a12ec8-fbb1-77f2-85b9-b6ad1b03af28",
+      "cli_version": "0.162.1",
+      "selection_evidence": [
+        "registered_worktree_or_project_cwd",
+        "shared_git_common_directory",
+        "recorded_repository_identity"
+      ],
+      "parsed_records": 1130,
+      "diagnostics": {},
+      "snapshot_bytes": 6398071,
+      "initial_size_bytes": 6398071,
+      "snapshot_sha256": "ef799777316aeb703c10cb5dab463b67a1e2fe4a23bb4d3cd57bf85228b4d2ed"
+    },
+    {
+      "source_id": "a63b6d8ea8645200cf2f",
+      "location_kind": "active-or-explicit",
+      "decision": "project",
+      "thread_id": "01a12a5f-5a45-7510-93c3-3c615089a626",
+      "cli_version": "0.162.1",
+      "selection_evidence": [
+        "registered_worktree_or_project_cwd",
+        "shared_git_common_directory",
+        "recorded_repository_identity",
+        "explicit_parent_thread"
+      ],
+      "parsed_records": 110,
+      "diagnostics": {},
+      "snapshot_bytes": 462829,
+      "initial_size_bytes": 462829,
+      "snapshot_sha256": "dde227d19783dcb9c2c6664b607eabcb6fe9da4131764b93f4485fb9c2f1e4fa"
+    },
+    {
+      "source_id": "a6e0698366ec59032c76",
+      "location_kind": "active-or-explicit",
+      "decision": "after-cutoff",
+      "thread_id": null,
+      "cli_version": "0.162.1",
+      "selection_evidence": [],
+      "parsed_records": 30,
+      "diagnostics": {},
+      "snapshot_bytes": 172466,
+      "initial_size_bytes": 172466,
+      "snapshot_sha256": "18f33e05a241335298443156d909b549c90c3e2fafe413f0104a6829208cba80"
+    },
+    {
+      "source_id": "aa1624475b953229f152",
+      "location_kind": "active-or-explicit",
+      "decision": "project",
+      "thread_id": "01a11fdf-1d25-7201-abb8-1afdaaab6b9c",
+      "cli_version": "0.162.0",
+      "selection_evidence": [
+        "registered_worktree_or_project_cwd",
+        "shared_git_common_directory"
+      ],
+      "parsed_records": 12874,
+      "diagnostics": {},
+      "snapshot_bytes": 33390795,
+      "initial_size_bytes": 33390795,
+      "snapshot_sha256": "2670de4cda712d5a6b776e8954a0e3d9066ca5ad6d75bbda9d8d5380393d02f7"
+    },
+    {
+      "source_id": "aec3b033aa9c63dbfd89",
+      "location_kind": "active-or-explicit",
+      "decision": "project",
+      "thread_id": "01a12743-936d-7cb2-9964-84611f7a7de2",
+      "cli_version": "0.162.1",
+      "selection_evidence": [
+        "registered_worktree_or_project_cwd",
+        "shared_git_common_directory",
+        "recorded_repository_identity",
+        "explicit_parent_thread"
+      ],
+      "parsed_records": 221,
+      "diagnostics": {},
+      "snapshot_bytes": 713237,
+      "initial_size_bytes": 713237,
+      "snapshot_sha256": "93aa587ae6da5a09c834ad87a37e81b9c4da2f5f8e7ee81a6141237eafdcfdbe"
+    },
+    {
+      "source_id": "b2dd60997d729777366a",
+      "location_kind": "active-or-explicit",
+      "decision": "project",
+      "thread_id": "01a12245-790b-7993-99b2-a90257287933",
+      "cli_version": "0.162.1",
+      "selection_evidence": [
+        "registered_worktree_or_project_cwd",
+        "shared_git_common_directory",
+        "recorded_repository_identity",
+        "explicit_parent_thread"
+      ],
+      "parsed_records": 150,
+      "diagnostics": {},
+      "snapshot_bytes": 741772,
+      "initial_size_bytes": 741772,
+      "snapshot_sha256": "65641fe0af90d7a1ef2562581f284cf8927d584ad117118d6ede25d8b95c8105"
+    },
+    {
+      "source_id": "b3c2aef3481a8c6d9ae5",
+      "location_kind": "active-or-explicit",
+      "decision": "unrelated",
+      "thread_id": null,
+      "cli_version": "0.160.0",
+      "selection_evidence": [],
+      "parsed_records": 290,
+      "diagnostics": {},
+      "snapshot_bytes": 3107235,
+      "initial_size_bytes": 3107235,
+      "snapshot_sha256": "80c4d051827f1fba27c9367afa0e8a2682317047534109f1d4a0f05b1b830aa6"
+    },
+    {
+      "source_id": "b51bdaf62635eea48824",
+      "location_kind": "active-or-explicit",
+      "decision": "project",
+      "thread_id": "01a12659-3a09-7560-a55f-8341fea6d8d4",
+      "cli_version": "0.162.1",
+      "selection_evidence": [
+        "registered_worktree_or_project_cwd",
+        "shared_git_common_directory",
+        "recorded_repository_identity",
+        "explicit_parent_thread"
+      ],
+      "parsed_records": 233,
+      "diagnostics": {},
+      "snapshot_bytes": 694256,
+      "initial_size_bytes": 694256,
+      "snapshot_sha256": "36ecc1006121ae37549cd0abe6da6b41fe071d834a6eb67d831479c9fd27f79c"
+    },
+    {
+      "source_id": "b73c6261763814302e34",
+      "location_kind": "active-or-explicit",
+      "decision": "project",
+      "thread_id": "01a12bc0-b8e6-7fa2-a513-1d9f6f7e0ea4",
+      "cli_version": "0.162.1",
+      "selection_evidence": [
+        "registered_worktree_or_project_cwd",
+        "shared_git_common_directory",
+        "recorded_repository_identity"
+      ],
+      "parsed_records": 1686,
+      "diagnostics": {},
+      "snapshot_bytes": 5842675,
+      "initial_size_bytes": 5842675,
+      "snapshot_sha256": "be31a2d27263492b6823f407eb8c2b117315bbdec7ab5a5a8afe3b2fde668827"
+    },
+    {
+      "source_id": "b9baa744bc489997e48c",
+      "location_kind": "active-or-explicit",
+      "decision": "project",
+      "thread_id": "01a129d1-8579-7220-8d5f-5171907a69a4",
+      "cli_version": "0.162.1",
+      "selection_evidence": [
+        "registered_worktree_or_project_cwd",
+        "shared_git_common_directory",
+        "recorded_repository_identity",
+        "explicit_parent_thread"
+      ],
+      "parsed_records": 131,
+      "diagnostics": {},
+      "snapshot_bytes": 442130,
+      "initial_size_bytes": 442130,
+      "snapshot_sha256": "c9f2a0db851012e2a9f906e3f939c4161a23c456c409ae66bc2249adc9cb7273"
+    },
+    {
+      "source_id": "be100c68efc53384a941",
+      "location_kind": "active-or-explicit",
+      "decision": "project",
+      "thread_id": "01a12679-63c3-7311-a2eb-2536eddc2bb1",
+      "cli_version": "0.162.1",
+      "selection_evidence": [
+        "registered_worktree_or_project_cwd",
+        "shared_git_common_directory",
+        "recorded_repository_identity",
+        "explicit_parent_thread"
+      ],
+      "parsed_records": 72,
+      "diagnostics": {},
+      "snapshot_bytes": 317803,
+      "initial_size_bytes": 317803,
+      "snapshot_sha256": "af5cc81caf3212323aa93c3eb8aa65715472120a5095e194a649922310e44cde"
+    },
+    {
+      "source_id": "be10573865d61ddc8084",
+      "location_kind": "active-or-explicit",
+      "decision": "project",
+      "thread_id": "01a12437-2482-7eb3-b6c4-3e93fca77ba9",
+      "cli_version": "0.162.1",
+      "selection_evidence": [
+        "registered_worktree_or_project_cwd",
+        "shared_git_common_directory",
+        "recorded_repository_identity",
+        "explicit_parent_thread"
+      ],
+      "parsed_records": 99,
+      "diagnostics": {},
+      "snapshot_bytes": 399439,
+      "initial_size_bytes": 399439,
+      "snapshot_sha256": "0b06583426c5814ea00bd623428f4973e12ebcce631a61fc6dcff3527d07a363"
+    },
+    {
+      "source_id": "c0970f7c0218a5ecc80e",
+      "location_kind": "active-or-explicit",
+      "decision": "project",
+      "thread_id": "01a12b83-39aa-7072-b2fa-61723d743bc8",
+      "cli_version": "0.162.1",
+      "selection_evidence": [
+        "registered_worktree_or_project_cwd",
+        "shared_git_common_directory",
+        "recorded_repository_identity"
+      ],
+      "parsed_records": 945,
+      "diagnostics": {},
+      "snapshot_bytes": 3346166,
+      "initial_size_bytes": 3346166,
+      "snapshot_sha256": "025944b3064b2b8a601c34235bfbd7466ae3ae4a3b68e6a843895fc61e06e009"
+    },
+    {
+      "source_id": "c1c5247188cdc854e053",
+      "location_kind": "active-or-explicit",
+      "decision": "project",
+      "thread_id": "01a12040-f004-73d3-9b83-d0bd90cb5219",
+      "cli_version": "0.162.0",
+      "selection_evidence": [
+        "registered_worktree_or_project_cwd",
+        "shared_git_common_directory",
+        "recorded_repository_identity",
+        "explicit_parent_thread"
+      ],
+      "parsed_records": 224,
+      "diagnostics": {},
+      "snapshot_bytes": 538440,
+      "initial_size_bytes": 538440,
+      "snapshot_sha256": "f7c5c537883e1a37da989a11697a8ce26f563df36b394adb4e7656f049ce4a54"
+    },
+    {
+      "source_id": "c29bc6357cc245fe7880",
+      "location_kind": "active-or-explicit",
+      "decision": "project",
+      "thread_id": "01a12100-bebb-7983-bd5b-a7005384dce2",
+      "cli_version": "0.162.0",
+      "selection_evidence": [
+        "registered_worktree_or_project_cwd",
+        "shared_git_common_directory",
+        "recorded_repository_identity",
+        "explicit_parent_thread"
+      ],
+      "parsed_records": 2954,
+      "diagnostics": {},
+      "snapshot_bytes": 7892827,
+      "initial_size_bytes": 7892827,
+      "snapshot_sha256": "0b0993ff5d4587ba121c5382aab2c25251bea78521a4e457a35b00d7f2d178fb"
+    },
+    {
+      "source_id": "c29f51c0206214527f38",
+      "location_kind": "active-or-explicit",
+      "decision": "project",
+      "thread_id": "01a12544-7040-7df2-8909-bc787dea9bd4",
+      "cli_version": "0.162.1",
+      "selection_evidence": [
+        "registered_worktree_or_project_cwd",
+        "shared_git_common_directory",
+        "recorded_repository_identity"
+      ],
+      "parsed_records": 403,
+      "diagnostics": {},
+      "snapshot_bytes": 1320754,
+      "initial_size_bytes": 1320754,
+      "snapshot_sha256": "176de5ddb198a81e39d67a15cbf68474445ed87c41c6c2f21db1ef16c03af5c0"
+    },
+    {
+      "source_id": "cad5b043f953e30fa769",
+      "location_kind": "active-or-explicit",
+      "decision": "project",
+      "thread_id": "01a125de-5f1a-7f43-840e-9d3ef9766d16",
+      "cli_version": "0.162.0-alpha.17.2",
+      "selection_evidence": [
+        "registered_worktree_or_project_cwd",
+        "shared_git_common_directory",
+        "recorded_repository_identity",
+        "explicit_parent_thread"
+      ],
+      "parsed_records": 3,
+      "diagnostics": {},
+      "snapshot_bytes": 86264,
+      "initial_size_bytes": 86264,
+      "snapshot_sha256": "ff2ffed4938e5ca46d429ed03c56121ac428c8460eaabb6808589edf5c7795c7"
+    },
+    {
+      "source_id": "d0298bb6db1c27fbc939",
+      "location_kind": "active-or-explicit",
+      "decision": "project",
+      "thread_id": "01a12469-5a92-74f1-b81c-b2184855521d",
+      "cli_version": "0.162.1",
+      "selection_evidence": [
+        "registered_worktree_or_project_cwd",
+        "shared_git_common_directory",
+        "recorded_repository_identity",
+        "explicit_parent_thread"
+      ],
+      "parsed_records": 497,
+      "diagnostics": {},
+      "snapshot_bytes": 1317651,
+      "initial_size_bytes": 1317651,
+      "snapshot_sha256": "34187e95f175526cfcfe669dd25c138b735353753c51c160a9f0798e7694bca0"
+    },
+    {
+      "source_id": "d1844129328bc5bde0a6",
+      "location_kind": "active-or-explicit",
+      "decision": "project",
+      "thread_id": "01a1205f-8ff5-77f3-82ef-2d5ce22efad0",
+      "cli_version": "0.162.0",
+      "selection_evidence": [
+        "registered_worktree_or_project_cwd",
+        "shared_git_common_directory",
+        "recorded_repository_identity",
+        "explicit_parent_thread"
+      ],
+      "parsed_records": 1533,
+      "diagnostics": {},
+      "snapshot_bytes": 4077825,
+      "initial_size_bytes": 4077825,
+      "snapshot_sha256": "bf32c8a180d95e4f7e5fc111d29752095b3065e1f6f77c683c83c7d099651e63"
+    },
+    {
+      "source_id": "dc8a68ee3e7a80ea051e",
+      "location_kind": "archived",
+      "decision": "unrelated",
+      "thread_id": null,
+      "cli_version": "0.160.0",
+      "selection_evidence": [],
+      "parsed_records": 63,
+      "diagnostics": {},
+      "snapshot_bytes": 332137,
+      "initial_size_bytes": 332137,
+      "snapshot_sha256": "18bd6130b4f39f8a8fa70b609cf10f78908e7a87ad6da769d5a7ed0c14704430"
+    },
+    {
+      "source_id": "e265de7994d38111f059",
+      "location_kind": "active-or-explicit",
+      "decision": "project",
+      "thread_id": "01a11ff3-4412-7eb0-87e9-7487533aa875",
+      "cli_version": "0.162.0",
+      "selection_evidence": [
+        "registered_worktree_or_project_cwd",
+        "shared_git_common_directory",
+        "explicit_parent_thread"
+      ],
+      "parsed_records": 273,
+      "diagnostics": {},
+      "snapshot_bytes": 827172,
+      "initial_size_bytes": 827172,
+      "snapshot_sha256": "a916a6f6f8ec3deb3a3a34ff5d1e772b697469740a38c2b7e20940a2a47fea2f"
+    },
+    {
+      "source_id": "e325af27019de315ab82",
+      "location_kind": "active-or-explicit",
+      "decision": "project",
+      "thread_id": "01a12a74-d408-7d71-9f8d-c44c98d556be",
+      "cli_version": "0.162.1",
+      "selection_evidence": [
+        "registered_worktree_or_project_cwd",
+        "shared_git_common_directory",
+        "recorded_repository_identity"
+      ],
+      "parsed_records": 804,
+      "diagnostics": {},
+      "snapshot_bytes": 4781965,
+      "initial_size_bytes": 4781965,
+      "snapshot_sha256": "1f408108edb1219cc92a1f9591de2b0ff36eafcb27e85a7a42330b7c498df914"
+    },
+    {
+      "source_id": "e4ade85100b092652b28",
+      "location_kind": "active-or-explicit",
+      "decision": "project",
+      "thread_id": "01a126d3-a789-7cf2-bf49-b5072613cb98",
+      "cli_version": "0.162.1",
+      "selection_evidence": [
+        "registered_worktree_or_project_cwd",
+        "shared_git_common_directory",
+        "recorded_repository_identity",
+        "explicit_parent_thread"
+      ],
+      "parsed_records": 46,
+      "diagnostics": {},
+      "snapshot_bytes": 206029,
+      "initial_size_bytes": 206029,
+      "snapshot_sha256": "e0ad74d3dba9e1b5ac76262e30dd2d520c326b12c5ed575656594ac32a5cf2c1"
+    },
+    {
+      "source_id": "e8555414444f1abd81d1",
+      "location_kind": "active-or-explicit",
+      "decision": "project",
+      "thread_id": "01a12bd1-0854-7322-9ffc-4f3e2d253685",
+      "cli_version": "0.162.1",
+      "selection_evidence": [
+        "registered_worktree_or_project_cwd",
+        "shared_git_common_directory",
+        "recorded_repository_identity",
+        "explicit_parent_thread"
+      ],
+      "parsed_records": 191,
+      "diagnostics": {},
+      "snapshot_bytes": 693065,
+      "initial_size_bytes": 693065,
+      "snapshot_sha256": "1386941f13fa5f84b284e5d6cc1ae7e281e27912b29611f28e1d87fb60c85c2a"
+    },
+    {
+      "source_id": "eb9cc7d26028808b8350",
+      "location_kind": "active-or-explicit",
+      "decision": "project",
+      "thread_id": "01a126a1-f64b-77d0-88a2-05b9a635da70",
+      "cli_version": "0.162.1",
+      "selection_evidence": [
+        "registered_worktree_or_project_cwd",
+        "shared_git_common_directory",
+        "recorded_repository_identity",
+        "explicit_parent_thread"
+      ],
+      "parsed_records": 30,
+      "diagnostics": {},
+      "snapshot_bytes": 160658,
+      "initial_size_bytes": 160658,
+      "snapshot_sha256": "71cd9ea7d41ad6492771a1d21bff43c15470a908a8d99d499d94f48dd4b23112"
+    },
+    {
+      "source_id": "ecc1b3625b7a54a4d6a6",
+      "location_kind": "archived",
+      "decision": "unrelated",
+      "thread_id": null,
+      "cli_version": "0.160.0",
+      "selection_evidence": [],
+      "parsed_records": 58,
+      "diagnostics": {},
+      "snapshot_bytes": 1203549,
+      "initial_size_bytes": 1203549,
+      "snapshot_sha256": "17969418e477ace4784190777248ad672daf398d9aab1bc7c2105d5c81e0c8d7"
+    },
+    {
+      "source_id": "f7e60ab522563e94e7ba",
+      "location_kind": "active-or-explicit",
+      "decision": "project",
+      "thread_id": "01a1205f-6624-7051-8c98-9cad0087104d",
+      "cli_version": "0.162.0",
+      "selection_evidence": [
+        "registered_worktree_or_project_cwd",
+        "shared_git_common_directory",
+        "recorded_repository_identity",
+        "explicit_parent_thread"
+      ],
+      "parsed_records": 1374,
+      "diagnostics": {},
+      "snapshot_bytes": 3583052,
+      "initial_size_bytes": 3583052,
+      "snapshot_sha256": "94f78d465fa304a069dfa0f1dc70f6e70bf0bfddaa6646fd15519e43c28ebb43"
+    },
+    {
+      "source_id": "ff0289496073060f9d3a",
+      "location_kind": "active-or-explicit",
+      "decision": "project",
+      "thread_id": "01a12ec8-fe4f-7a92-8f4f-edbc72f1af56",
+      "cli_version": "0.162.1",
+      "selection_evidence": [
+        "registered_worktree_or_project_cwd",
+        "shared_git_common_directory",
+        "recorded_repository_identity",
+        "explicit_parent_thread"
+      ],
+      "parsed_records": 131,
+      "diagnostics": {},
+      "snapshot_bytes": 482530,
+      "initial_size_bytes": 482530,
+      "snapshot_sha256": "ba541f94c35e60c5bc4d22276ca3d272f9b89bede445b53eb72227f9f316a3c3"
+    },
+    {
+      "source_id": "ffb4a759c0cd2e88a104",
+      "location_kind": "active-or-explicit",
+      "decision": "project",
+      "thread_id": "01a126d3-e324-7d32-a269-38476a49c8da",
+      "cli_version": "0.162.1",
+      "selection_evidence": [
+        "registered_worktree_or_project_cwd",
+        "shared_git_common_directory",
+        "recorded_repository_identity"
+      ],
+      "parsed_records": 616,
+      "diagnostics": {},
+      "snapshot_bytes": 1925388,
+      "initial_size_bytes": 1925388,
+      "snapshot_sha256": "4325555cfa74e92bffc668854fbf89934d7dfd2eb443da0e4f9272b12d86e598"
+    }
+  ]
+}

@@ -1,0 +1,545 @@
+{
+  "version": 1,
+  "cutoff": "2026-10-12T08:01:42.000Z",
+  "cutoff_reason": "Audit start; exclude this audit and later usage. Response events are included only before this timestamp.",
+  "goal_labels": {
+    "1791537022": "Phase 0: feasibility and infrastructure",
+    "1791541952": "Phase 1: assets, numeric fidelity and native reference",
+    "1791544307": "Phase 2: renderer",
+    "1791555028": "Phase 3: gameplay and native equivalence",
+    "1791608319": "Abandoned memory audit setup",
+    "1791608494": "Goal 4.0: telemetry and activity audit",
+    "1791618856": "Video primitives",
+    "1791618568": "Paused memory audit setup",
+    "1791618696": "Memory architecture audit",
+    "1791620369": "Status bar",
+    "1791620394": "Single-player gameflow",
+    "1791620445": "HUD",
+    "1791625824": "Integrate HUD and gameflow",
+    "1791626450": "Integrate status bar",
+    "1791629710": "Integrate cheats, automap and resources",
+    "1791633819": "Integrate production UI",
+    "1791637975": "Integrate episode startup",
+    "1791640126": "Integrate intermission and input runtime",
+    "1791650543": "Integrate episode completion and speedrun",
+    "1791660099": "Integrate virtual pointers and main menu",
+    "1791706846": "Integrate Ultimate speedruns and prepare deployment",
+    "1791718045": "Integrate three-game browser support",
+    "1791736477": "Integrate videos and options",
+    "1791748666": "Integrate death/respawn and exact Save/Load",
+    "1791626613": "Cheats setup (paused)",
+    "1791627335": "Original cheat codes",
+    "1791626636": "Automap setup (paused)",
+    "1791627350": "Original automap",
+    "1791626646": "Episode resources setup (paused)",
+    "1791627364": "Episode One resources",
+    "1791631119": "Production UI integration",
+    "1791635366": "Cheats and automap runtime integration",
+    "1791635522": "Episode runtime foundation",
+    "1791635557": "Episode intermission",
+    "1791643901": "Episode One completion",
+    "1791651833": "Native C memory compatibility audit",
+    "1791644169": "Freedoom E1M1 speedrun",
+    "1791646694": "EVM speedrun recording",
+    "1791652800": "Full-rate tic-52 investigation (paused)",
+    "1791654196": "Original main menu",
+    "1791655546": "Deterministic virtual pointers",
+    "1791660276": "Episode speedruns (scope expanded to Ultimate)",
+    "1791710280": "Browser-managed deployment",
+    "1791710304": "Full Ultimate DOOM speedrun videos",
+    "1791713656": "Ultimate DOOM browser deployment",
+    "1791713683": "DOOM II compatibility and browser support",
+    "1791731333": "Visual feature completeness audit",
+    "1791731728": "Options and level selection",
+    "1791735429": "Death/respawn discovery",
+    "1791740468": "Death/respawn implementation",
+    "1791735455": "Save/Load discovery",
+    "1791740446": "Exact EVM Save/Load implementation",
+    "1791749022": "Canonical Save/Load research",
+    "1791786308": "Public Release Readiness"
+  },
+  "sessions": {
+    "01a11fdf-1d25-7201-abb8-1afdaaab6b9c": {
+      "workstream": "Core engine, original phases and verification",
+      "evidence": {
+        "kind": "owning_session_metadata_and_reviewed_task_context",
+        "line": 1
+      }
+    },
+    "01a124c9-84f0-7843-8777-f7aae881b90d": {
+      "workstream": "Memory audit setup",
+      "evidence": {
+        "kind": "owning_session_metadata_and_reviewed_task_context",
+        "line": 1
+      }
+    },
+    "01a124ca-941c-7773-9fe2-2a5ad194943c": {
+      "workstream": "Memory architecture audit",
+      "evidence": {
+        "kind": "owning_session_metadata_and_reviewed_task_context",
+        "line": 1
+      }
+    },
+    "01a124e5-33d1-7c91-8b10-26df7a98c7c8": {
+      "workstream": "Status bar",
+      "evidence": {
+        "kind": "owning_session_metadata_and_reviewed_task_context",
+        "line": 1
+      }
+    },
+    "01a124e5-8100-75b3-8de1-3992194387b7": {
+      "workstream": "Gameflow",
+      "evidence": {
+        "kind": "owning_session_metadata_and_reviewed_task_context",
+        "line": 1
+      }
+    },
+    "01a124e6-5a78-7cf3-b2cd-f86c9f1b0eb0": {
+      "workstream": "HUD",
+      "evidence": {
+        "kind": "owning_session_metadata_and_reviewed_task_context",
+        "line": 1
+      }
+    },
+    "01a12538-3400-7b12-bd2f-ea5dbe642e8b": {
+      "workstream": "Feature integration",
+      "evidence": {
+        "kind": "owning_session_metadata_and_reviewed_task_context",
+        "line": 1
+      }
+    },
+    "01a12544-7040-7df2-8909-bc787dea9bd4": {
+      "workstream": "Cheats",
+      "evidence": {
+        "kind": "owning_session_metadata_and_reviewed_task_context",
+        "line": 1
+      }
+    },
+    "01a12544-adad-7200-bb86-ec859109f6b1": {
+      "workstream": "Automap",
+      "evidence": {
+        "kind": "owning_session_metadata_and_reviewed_task_context",
+        "line": 1
+      }
+    },
+    "01a12544-e338-7862-b908-e445bdd92bd5": {
+      "workstream": "Episode One resources",
+      "evidence": {
+        "kind": "owning_session_metadata_and_reviewed_task_context",
+        "line": 1
+      }
+    },
+    "01a12588-ed5c-7f80-a345-14f4a9270f2f": {
+      "workstream": "Production UI",
+      "evidence": {
+        "kind": "owning_session_metadata_and_reviewed_task_context",
+        "line": 1
+      }
+    },
+    "01a1258d-213d-7c61-ab20-c972b2f3bab5": {
+      "workstream": "Input runtime discovery and integration",
+      "evidence": {
+        "kind": "owning_session_metadata_and_reviewed_task_context",
+        "line": 1
+      }
+    },
+    "01a1258d-665d-7940-82e2-54cddf302547": {
+      "workstream": "Episode runtime discovery and startup",
+      "evidence": {
+        "kind": "owning_session_metadata_and_reviewed_task_context",
+        "line": 1
+      }
+    },
+    "01a1258d-9e1e-72e2-9cf7-8d00adf1d89f": {
+      "workstream": "Intermission discovery and implementation",
+      "evidence": {
+        "kind": "owning_session_metadata_and_reviewed_task_context",
+        "line": 1
+      }
+    },
+    "01a12649-dd56-7071-98c4-2b48d0e90adb": {
+      "workstream": "Episode One completion and memory audit",
+      "evidence": {
+        "kind": "owning_session_metadata_and_reviewed_task_context",
+        "line": 1
+      }
+    },
+    "01a1264f-384d-73d1-925a-b612d2ce6f92": {
+      "workstream": "Freedoom E1M1 replay and video",
+      "evidence": {
+        "kind": "owning_session_metadata_and_reviewed_task_context",
+        "line": 1
+      }
+    },
+    "01a126d3-e324-7d32-a269-38476a49c8da": {
+      "workstream": "Full-rate tic-52 investigation",
+      "evidence": {
+        "kind": "owning_session_metadata_and_reviewed_task_context",
+        "line": 1
+      }
+    },
+    "01a126e7-5dda-7d03-a09a-9f3ace41ddc4": {
+      "workstream": "Original main menu",
+      "evidence": {
+        "kind": "owning_session_metadata_and_reviewed_task_context",
+        "line": 1
+      }
+    },
+    "01a126fd-7b66-75c1-ac01-c77f8681f235": {
+      "workstream": "Virtual pointer modeling",
+      "evidence": {
+        "kind": "owning_session_metadata_and_reviewed_task_context",
+        "line": 1
+      }
+    },
+    "01a12745-ec89-71c1-b7e8-e32c60dd8dc2": {
+      "workstream": "Episode speedruns: Freedoom and Ultimate",
+      "evidence": {
+        "kind": "owning_session_metadata_and_reviewed_task_context",
+        "line": 1
+      }
+    },
+    "01a12a40-f05b-7913-914b-729ae0d44e84": {
+      "workstream": "Browser-managed deployment",
+      "evidence": {
+        "kind": "owning_session_metadata_and_reviewed_task_context",
+        "line": 1
+      }
+    },
+    "01a12a41-50d3-7103-95ea-9faaf42fbce2": {
+      "workstream": "Full Speedrun Videos",
+      "evidence": {
+        "kind": "owning_session_metadata_and_reviewed_task_context",
+        "line": 1
+      }
+    },
+    "01a12a74-2368-79a3-a510-7d35e9da4660": {
+      "workstream": "Ultimate DOOM browser deployment",
+      "evidence": {
+        "kind": "owning_session_metadata_and_reviewed_task_context",
+        "line": 1
+      }
+    },
+    "01a12a74-d408-7d71-9f8d-c44c98d556be": {
+      "workstream": "DOOM II development",
+      "evidence": {
+        "kind": "owning_session_metadata_and_reviewed_task_context",
+        "line": 1
+      }
+    },
+    "01a12b82-2aaa-7621-bf8f-3de530ed0c54": {
+      "workstream": "Visual completeness audit",
+      "evidence": {
+        "kind": "owning_session_metadata_and_reviewed_task_context",
+        "line": 1
+      }
+    },
+    "01a12b83-39aa-7072-b2fa-61723d743bc8": {
+      "workstream": "Options menu",
+      "evidence": {
+        "kind": "owning_session_metadata_and_reviewed_task_context",
+        "line": 1
+      }
+    },
+    "01a12bc0-b8e6-7fa2-a513-1d9f6f7e0ea4": {
+      "workstream": "Death/Respawn",
+      "evidence": {
+        "kind": "owning_session_metadata_and_reviewed_task_context",
+        "line": 1
+      }
+    },
+    "01a12bc1-0b75-7ea0-9ad1-d4e84d1a5a5c": {
+      "workstream": "Save/Load discovery and exact snapshots",
+      "evidence": {
+        "kind": "owning_session_metadata_and_reviewed_task_context",
+        "line": 1
+      }
+    },
+    "01a12ec8-fbb1-77f2-85b9-b6ad1b03af28": {
+      "workstream": "Public Release Readiness",
+      "evidence": {
+        "kind": "owning_session_metadata_and_reviewed_task_context",
+        "line": 1
+      }
+    }
+  },
+  "task_boundaries": [
+    {
+      "session_id": "01a12bc1-0b75-7ea0-9ad1-d4e84d1a5a5c",
+      "start": "2026-10-11T20:03:32.356Z",
+      "workstream": "Canonical Save/Load research",
+      "line": 1304
+    },
+    {
+      "session_id": "01a12745-ec89-71c1-b7e8-e32c60dd8dc2",
+      "start": "2026-10-10T19:42:45.793Z",
+      "workstream": "Ultimate DOOM episode verification",
+      "line": 553
+    }
+  ],
+  "worktree_ownership": [
+    {
+      "thread_id": "01a11ff3-0ce5-7802-a5b5-a9243cca6778",
+      "worktrees": [
+        "doom-evm-stack"
+      ],
+      "evidence": [
+        {
+          "worktree": "doom-evm-stack",
+          "line": 56,
+          "timestamp": "2026-10-09T09:16:29.723Z"
+        }
+      ],
+      "interpretation": "reviewed goal-owned worktrees; setup/handoff follows the goal; multiple worktrees share an unsplit session bucket"
+    },
+    {
+      "thread_id": "01a11ff3-4412-7eb0-87e9-7487533aa875",
+      "worktrees": [
+        "doom-evm-transport"
+      ],
+      "evidence": [
+        {
+          "worktree": "doom-evm-transport",
+          "line": 57,
+          "timestamp": "2026-10-09T09:16:45.033Z"
+        }
+      ],
+      "interpretation": "reviewed goal-owned worktrees; setup/handoff follows the goal; multiple worktrees share an unsplit session bucket"
+    },
+    {
+      "thread_id": "01a11ff3-7ca3-7df1-a272-958d18ac6e2d",
+      "worktrees": [
+        "doom-evm-schemas"
+      ],
+      "evidence": [
+        {
+          "worktree": "doom-evm-schemas",
+          "line": 58,
+          "timestamp": "2026-10-09T09:16:59.425Z"
+        }
+      ],
+      "interpretation": "reviewed goal-owned worktrees; setup/handoff follows the goal; multiple worktrees share an unsplit session bucket"
+    },
+    {
+      "thread_id": "01a12040-c93c-7f01-ad15-92712cdafa23",
+      "worktrees": [
+        "doom-evm-reference"
+      ],
+      "evidence": [
+        {
+          "worktree": "doom-evm-reference",
+          "line": 23,
+          "timestamp": "2026-10-09T10:41:24.368Z"
+        }
+      ],
+      "interpretation": "reviewed goal-owned worktrees; setup/handoff follows the goal; multiple worktrees share an unsplit session bucket"
+    },
+    {
+      "thread_id": "01a12040-f004-73d3-9b83-d0bd90cb5219",
+      "worktrees": [
+        "doom-evm-numeric"
+      ],
+      "evidence": [
+        {
+          "worktree": "doom-evm-numeric",
+          "line": 24,
+          "timestamp": "2026-10-09T10:41:34.891Z"
+        }
+      ],
+      "interpretation": "reviewed goal-owned worktrees; setup/handoff follows the goal; multiple worktrees share an unsplit session bucket"
+    },
+    {
+      "thread_id": "01a12041-1dc0-7720-a32b-2836d969b872",
+      "worktrees": [
+        "doom-evm-assets"
+      ],
+      "evidence": [
+        {
+          "worktree": "doom-evm-assets",
+          "line": 25,
+          "timestamp": "2026-10-09T10:41:48.765Z"
+        }
+      ],
+      "interpretation": "reviewed goal-owned worktrees; setup/handoff follows the goal; multiple worktrees share an unsplit session bucket"
+    },
+    {
+      "thread_id": "01a1205f-6624-7051-8c98-9cad0087104d",
+      "worktrees": [
+        "doom-evm-p2-geometry",
+        "doom-evm-p2-bsp",
+        "doom-evm-p2-planes",
+        "doom-evm-p2-gates",
+        "doom-evm-p2-e2e"
+      ],
+      "evidence": [
+        {
+          "worktree": "doom-evm-p2-geometry",
+          "line": 20,
+          "timestamp": "2026-10-09T11:14:51.192Z"
+        },
+        {
+          "worktree": "doom-evm-p2-bsp",
+          "line": 318,
+          "timestamp": "2026-10-09T11:39:33.228Z"
+        },
+        {
+          "worktree": "doom-evm-p2-planes",
+          "line": 698,
+          "timestamp": "2026-10-09T12:13:14.453Z"
+        },
+        {
+          "worktree": "doom-evm-p2-gates",
+          "line": 1027,
+          "timestamp": "2026-10-09T12:34:22.185Z"
+        },
+        {
+          "worktree": "doom-evm-p2-e2e",
+          "line": 1134,
+          "timestamp": "2026-10-09T12:40:45.499Z"
+        }
+      ],
+      "interpretation": "reviewed goal-owned worktrees; setup/handoff follows the goal; multiple worktrees share an unsplit session bucket"
+    },
+    {
+      "thread_id": "01a1205f-8ff5-77f3-82ef-2d5ce22efad0",
+      "worktrees": [
+        "doom-evm-p2-data",
+        "doom-evm-p2-source",
+        "doom-evm-p2-sprites",
+        "doom-evm-p2-e2e"
+      ],
+      "evidence": [
+        {
+          "worktree": "doom-evm-p2-data",
+          "line": 21,
+          "timestamp": "2026-10-09T11:15:03.817Z"
+        },
+        {
+          "worktree": "doom-evm-p2-source",
+          "line": 801,
+          "timestamp": "2026-10-09T12:06:07.272Z"
+        },
+        {
+          "worktree": "doom-evm-p2-sprites",
+          "line": 909,
+          "timestamp": "2026-10-09T12:14:14.599Z"
+        },
+        {
+          "worktree": "doom-evm-p2-e2e",
+          "line": 1263,
+          "timestamp": "2026-10-09T12:34:07.474Z"
+        }
+      ],
+      "interpretation": "reviewed goal-owned worktrees; setup/handoff follows the goal; multiple worktrees share an unsplit session bucket"
+    },
+    {
+      "thread_id": "01a1205f-b192-7750-bb4f-3f1aa2c27c66",
+      "worktrees": [
+        "doom-evm-p2-draw",
+        "doom-evm-p2-segs",
+        "doom-evm-p2-e2e"
+      ],
+      "evidence": [
+        {
+          "worktree": "doom-evm-p2-draw",
+          "line": 22,
+          "timestamp": "2026-10-09T11:15:10.482Z"
+        },
+        {
+          "worktree": "doom-evm-p2-segs",
+          "line": 290,
+          "timestamp": "2026-10-09T12:00:24.805Z"
+        },
+        {
+          "worktree": "doom-evm-p2-e2e",
+          "line": 910,
+          "timestamp": "2026-10-09T12:49:25.782Z"
+        }
+      ],
+      "interpretation": "reviewed goal-owned worktrees; setup/handoff follows the goal; multiple worktrees share an unsplit session bucket"
+    },
+    {
+      "thread_id": "01a124ca-941c-7773-9fe2-2a5ad194943c",
+      "worktrees": [
+        "doom-evm-memory-audit"
+      ],
+      "evidence": [
+        {
+          "worktree": "doom-evm-memory-audit",
+          "line": 32,
+          "timestamp": "2026-10-10T07:51:36.682Z"
+        }
+      ],
+      "interpretation": "reviewed goal-owned worktrees; setup/handoff follows the goal; multiple worktrees share an unsplit session bucket"
+    },
+    {
+      "thread_id": "01a1258d-213d-7c61-ab20-c972b2f3bab5",
+      "worktrees": [
+        "doom-evm-discovery-input",
+        "doom-evm-input-runtime"
+      ],
+      "evidence": [
+        {
+          "worktree": "doom-evm-input-runtime",
+          "line": 183,
+          "timestamp": "2026-10-10T12:29:47.265Z"
+        }
+      ],
+      "interpretation": "reviewed goal-owned worktrees; setup/handoff follows the goal; multiple worktrees share an unsplit session bucket"
+    },
+    {
+      "thread_id": "01a1258d-665d-7940-82e2-54cddf302547",
+      "worktrees": [
+        "doom-evm-discovery-episode",
+        "doom-evm-episode-startup"
+      ],
+      "evidence": [
+        {
+          "worktree": "doom-evm-episode-startup",
+          "line": 200,
+          "timestamp": "2026-10-10T12:32:12.551Z"
+        }
+      ],
+      "interpretation": "reviewed goal-owned worktrees; setup/handoff follows the goal; multiple worktrees share an unsplit session bucket"
+    },
+    {
+      "thread_id": "01a12745-ec89-71c1-b7e8-e32c60dd8dc2",
+      "worktrees": [
+        "doom-evm-speedruns-vptr",
+        "doom-evm-ultimate-speedruns"
+      ],
+      "evidence": [
+        {
+          "worktree": "doom-evm-speedruns-vptr",
+          "line": 136,
+          "timestamp": "2026-10-10T19:27:56.577Z"
+        },
+        {
+          "worktree": "doom-evm-ultimate-speedruns",
+          "line": 665,
+          "timestamp": "2026-10-10T19:47:58.606Z"
+        }
+      ],
+      "interpretation": "reviewed goal-owned worktrees; setup/handoff follows the goal; multiple worktrees share an unsplit session bucket"
+    },
+    {
+      "thread_id": "01a12ec8-fbb1-77f2-85b9-b6ad1b03af28",
+      "worktrees": [
+        "doom-evm-public-release"
+      ],
+      "evidence": [
+        {
+          "worktree": "doom-evm-public-release",
+          "line": 28,
+          "timestamp": "2026-10-12T06:25:26.643Z"
+        }
+      ],
+      "interpretation": "reviewed goal-owned worktrees; setup/handoff follows the goal; multiple worktrees share an unsplit session bucket"
+    }
+  ],
+  "related_only_worktrees": [
+    "doom-evm-browser-deploy",
+    "doom-evm-game-launcher",
+    "doom-evm-playground"
+  ]
+}

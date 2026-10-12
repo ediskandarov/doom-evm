@@ -64,9 +64,13 @@ def sum_counts(rows):
     return result
 
 
-def read_lines(path, diagnostics, receipt=None):
+def read_lines(path, diagnostics, receipt=None, max_bytes=None):
     """Bound reads to initial size. A live writer's incomplete tail is not a record."""
     size = path.stat().st_size
+    if max_bytes is not None:
+        if size < max_bytes:
+            raise ValueError('source is shorter than the requested snapshot')
+        size = max_bytes
     sha = hashlib.sha256()
     with path.open('rb') as stream:
         remaining = size
@@ -92,42 +96,10 @@ def read_lines(path, diagnostics, receipt=None):
 
 
 def inventory(roots, project):
-    """Only first metadata owns a rollout; later metadata can be inherited history."""
-    files = {}
-    for location in roots:
-        location = Path(location).expanduser()
-        paths = [location] if location.is_file() else location.rglob('*.jsonl')
-        for path in paths:
-            path = path.resolve()
-            if path in files:
-                continue
-            diag = collections.Counter()
-            for _, record in read_lines(path, diag):
-                if record.get('type') != 'session_meta':
-                    continue
-                p = record.get('payload') or {}
-                if not isinstance(p, dict) or not isinstance(p.get('id'), str):
-                    break
-                source = p.get('source')
-                spawn = source.get('subagent', {}).get('thread_spawn', {}) if isinstance(source, dict) else {}
-                files[path] = {
-                    'thread_id': p['id'], 'session_id': p.get('session_id') or p['id'],
-                    'parent_thread_id': p.get('parent_thread_id') or spawn.get('parent_thread_id'),
-                    'agent': p.get('agent_path') or spawn.get('agent_path') or ('unknown-child' if p.get('forked_from_id') else '/root'),
-                    'cwd': p.get('cwd'), 'cli_version': p.get('cli_version'),
-                    'fork_ordinal': p.get('subagent_history_start_ordinal'),
-                    'forked': bool(p.get('forked_from_id') or p.get('parent_thread_id') or spawn),
-                }
-                break
-    project = Path(project).resolve()
-    selected = {m['thread_id'] for m in files.values() if m['cwd'] and
-                (Path(m['cwd']).resolve() == project or project in Path(m['cwd']).resolve().parents)}
-    while True:
-        children = {m['thread_id'] for m in files.values() if m['parent_thread_id'] in selected}
-        if children <= selected:
-            break
-        selected |= children
-    return {p: m for p, m in files.items() if m['thread_id'] in selected}, len(files)
+    """Select the repository's worktrees and recorded identities, then explicit children."""
+    from discovery import discover
+    selected, files, rejected, _ = discover(roots, project)
+    return selected, len(files) + len(rejected)
 
 
 def load_windows(path):
@@ -167,7 +139,7 @@ def phase_interval(start, end, session, windows):
     return 'ambiguous-boundary' if crossing or len(names) != 1 else names.pop()
 
 
-def parse_rollout(path, meta, diagnostics):
+def parse_rollout(path, meta, diagnostics, max_bytes=None):
     events, models = [], []
     model = 'unknown'
     turn_id = None
@@ -177,7 +149,7 @@ def parse_rollout(path, meta, diagnostics):
     revision = 0
     receipt = {}
     own_start = meta['fork_ordinal'] if type(meta['fork_ordinal']) is int else None
-    for ordinal, r in read_lines(path, diagnostics, receipt):
+    for ordinal, r in read_lines(path, diagnostics, receipt, max_bytes):
         p = r.get('payload')
         if not isinstance(p, dict):
             continue
@@ -361,7 +333,7 @@ def collect(roots, project, config, closed_only=False):
         if current:
             segments.append(segment(current))
     unique_models = {(m['thread_id'], m['turn_id'], m['timestamp'], m['model']): m for m in models}
-    report = {'version': REPORT_VERSION, 'collected_at': now(), 'scope': 'project-matched rollouts and explicitly linked child threads',
+    report = {'version': REPORT_VERSION, 'collected_at': now(), 'scope': 'repository worktrees, recorded repository identities and explicitly linked child threads',
             'selection': 'closed_phase_windows' if closed_only else 'all_observed_usage',
             'units': 'tokens; cached input and reasoning are subsets, not additional totals',
             'attribution': 'response event timestamps in half-open phase windows; configured model, not proof of backend routing',
@@ -414,7 +386,8 @@ def main():
     args = parser.parse_args()
     if args.watch is not None and args.watch < 1:
         parser.error('--watch must be at least one second')
-    roots = args.logs or [Path.home()/'.codex/sessions', Path.home()/'.codex/archived_sessions']
+    from discovery import default_roots
+    roots = args.logs or default_roots()
     try:
         while True:
             result = collect(roots, args.project, load_windows(args.phases), args.closed_only)

@@ -1,0 +1,68 @@
+{
+  "discovered_files": 79,
+  "successfully_parsed_files": 79,
+  "project_files": 65,
+  "rejected_files": 0,
+  "decisions": {
+    "project": 65,
+    "unrelated": 13,
+    "after-cutoff": 1
+  },
+  "parse_diagnostics": {},
+  "adapter_diagnostics": {
+    "models_recovered_from_late_same_turn_context": 14,
+    "unbounded_fork_counters_excluded": 145
+  },
+  "duplicate_project_session_files": 0,
+  "duplicate_response_copies": 0,
+  "conflicting_response_ids": 0,
+  "sessions_without_usage": 2,
+  "sessions_with_unclosed_turns": 7,
+  "accounting_diagnostics": {
+    "cumulative_events_not_added": 7588
+  },
+  "source_manifest": "sources.json",
+  "token_ledger": "records.csv",
+  "project_sessions": 65,
+  "project_sessions_with_usage": 63,
+  "sessions_with_usage_quality_flags": 9,
+  "unclosed_turn_starts_with_usage": 10,
+  "unclosed_turns_with_explicit_abort": 8,
+  "uncertain_project_attribution_sources_identified": 0,
+  "usage_outside_recovered_goal_windows": {
+    "goal_id": "unassigned",
+    "goal": "Outside recovered goal windows",
+    "records": 545,
+    "input_tokens": 76871076,
+    "input_tokens_missing_records": 0,
+    "cached_input_tokens": 74647808,
+    "cached_input_tokens_missing_records": 0,
+    "cache_write_input_tokens": 0,
+    "cache_write_input_tokens_missing_records": 0,
+    "output_tokens": 462603,
+    "output_tokens_missing_records": 0,
+    "reasoning_tokens": 188855,
+    "reasoning_tokens_missing_records": 0,
+    "total_tokens": 77333679,
+    "total_tokens_missing_records": 0,
+    "non_cached_input_tokens": 2223268,
+    "non_cached_input_tokens_missing_records": 0,
+    "first_usage": "2026-10-09T09:06:34.477Z",
+    "last_usage": "2026-10-12T08:01:04.066Z"
+  },
+  "shared_worktree_group_total_tokens": 170430177,
+  "missing_date_ranges": null,
+  "missing_date_ranges_status": "No known absent whole project day within observed October 9\u201312 span; earlier/off-device/deleted/unflushed intervals cannot be enumerated or treated as zero.",
+  "unmeasured_missing_tokens": null,
+  "unknown_active_compute_seconds": null,
+  "unknown_human_approval_wait_seconds": null,
+  "collector_limits": [
+    "Recorded configured models do not prove backend routing.",
+    "Exact phase/task splitting within an in-flight inference is unavailable.",
+    "Original directory ownership cannot always be split within a multi-worktree session.",
+    "Only known local stores were inspected; no claim about arbitrary unconfigured or remote stores.",
+    "Cumulative-only reset ambiguity is conservatively withheld; mixed response/cumulative ledgers are not added.",
+    "This release snapshot uses only direct response records; no estimated or goal-counter tokens contribute.",
+    "Current audit usage at/after the fixed cutoff is excluded."
+  ]
+}
