@@ -1,0 +1,1127 @@
+{
+  "freedoom": {
+    "pass": true,
+    "deployment": {
+      "address": "0x5ae1f4bb68f8eac39cfdbdfda2b7344ccbd80faf",
+      "hash": "0x3b94782863c1c9302e60d30d48bb545820760762a0198800919c4c4af3c83511",
+      "gas": 345040914,
+      "runtimeBytes": 933187,
+      "runtimeSha256": "955a445140351757a7798ea31a2d7830ba27d49a0632e4704a95256ed9da6b91"
+    },
+    "resourceIdentity": {
+      "schemaVersion": 0,
+      "wadSha256": "7323bcc168c5a45ff10749b339960e98314740a734c30d4b9f3337001f9e703d",
+      "bundleSha256": "d379076f21645cf7cc5acb056663d0faacc4065489a0ca99738479323c9f7a47",
+      "paletteSha256": "fd895921b5d0a394612bb29852ed003d44d69f76dec31c0dc6b5d5fc7d63f7bb",
+      "paletteVariant": 0
+    },
+    "browser": {
+      "protocolVersion": "1.3",
+      "product": "Chrome/155.0.8059.40",
+      "revision": "@cfaadc5a132d78e1828635aa8405a499f3e14864",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36",
+      "jsVersion": "15.5.35.20"
+    },
+    "wipe": {
+      "steps": 42,
+      "seed": 1,
+      "allNativeFramesExact": true,
+      "nativeManifestSha256": "4d37ff83e50b97cf612697a7af7ba44cb7a62bacd6d1e78a4b36be20e1560853",
+      "totalGas": 6001486856,
+      "totalWallMs": 8176.671875,
+      "firstTransactionMs": 2620.9452500000043,
+      "continuationSteps": [
+        {
+          "milliseconds": 80.2888329999987,
+          "gas": 46703914
+        },
+        {
+          "milliseconds": 77.4643750000032,
+          "gas": 47711227
+        },
+        {
+          "milliseconds": 79.45287500000268,
+          "gas": 47491013
+        },
+        {
+          "milliseconds": 84.76466699999582,
+          "gas": 47105201
+        },
+        {
+          "milliseconds": 102.4095840000009,
+          "gas": 46586836
+        },
+        {
+          "milliseconds": 77.91570800000045,
+          "gas": 46643949
+        },
+        {
+          "milliseconds": 79.1697920000006,
+          "gas": 46188516
+        },
+        {
+          "milliseconds": 78.1732090000005,
+          "gas": 45508684
+        },
+        {
+          "milliseconds": 62.60929100000067,
+          "gas": 45083845
+        },
+        {
+          "milliseconds": 78.18945800000074,
+          "gas": 44346456
+        },
+        {
+          "milliseconds": 61.97308300000441,
+          "gas": 43355358
+        },
+        {
+          "milliseconds": 64.33666699999594,
+          "gas": 42350198
+        },
+        {
+          "milliseconds": 62.34520899999916,
+          "gas": 41332584
+        },
+        {
+          "milliseconds": 61.94474999999511,
+          "gas": 40297916
+        },
+        {
+          "milliseconds": 61.26441600000544,
+          "gas": 39246294
+        },
+        {
+          "milliseconds": 61.29245799999626,
+          "gas": 38227414
+        },
+        {
+          "milliseconds": 57.83466600000247,
+          "gas": 37208534
+        },
+        {
+          "milliseconds": 58.30954200000269,
+          "gas": 36189654
+        },
+        {
+          "milliseconds": 56.144249999997555,
+          "gas": 35170774
+        },
+        {
+          "milliseconds": 54.998333000003186,
+          "gas": 34151894
+        },
+        {
+          "milliseconds": 55.71587500000169,
+          "gas": 33133014
+        },
+        {
+          "milliseconds": 55.241125000000466,
+          "gas": 32120283
+        },
+        {
+          "milliseconds": 55.845792000000074,
+          "gas": 31205436
+        },
+        {
+          "milliseconds": 55.52870800000528,
+          "gas": 30469195
+        },
+        {
+          "milliseconds": 54.98945800000365,
+          "gas": 29851083
+        },
+        {
+          "milliseconds": 55.862583000001905,
+          "gas": 29327413
+        },
+        {
+          "milliseconds": 55.385667000002286,
+          "gas": 28897421
+        },
+        {
+          "milliseconds": 55.70737499999814,
+          "gas": 28552568
+        },
+        {
+          "milliseconds": 54.92766599999595,
+          "gas": 28306692
+        },
+        {
+          "milliseconds": 56.935083999997005,
+          "gas": 28134385
+        },
+        {
+          "milliseconds": 54.610249999997905,
+          "gas": 27987942
+        },
+        {
+          "milliseconds": 55.07658300000185,
+          "gas": 27873346
+        },
+        {
+          "milliseconds": 56.88037500000064,
+          "gas": 27781662
+        },
+        {
+          "milliseconds": 55.77458399999887,
+          "gas": 27706764
+        },
+        {
+          "milliseconds": 57.38958399999683,
+          "gas": 27650008
+        },
+        {
+          "milliseconds": 55.46929200000159,
+          "gas": 27607718
+        },
+        {
+          "milliseconds": 54.36820799999987,
+          "gas": 43566677
+        }
+      ],
+      "worldAndUITicsFrozen": true,
+      "finalExact": true
+    },
+    "uninterruptedWipe": {
+      "steps": 42,
+      "seed": 1,
+      "totalWallMs": 5848.135374999998,
+      "totalGas": 5558949315,
+      "transactions": [
+        {
+          "milliseconds": 2576.099750000001,
+          "gas": 4028678230
+        },
+        {
+          "milliseconds": 78.54079199999978,
+          "gas": 39770061
+        },
+        {
+          "milliseconds": 63.994917000003625,
+          "gas": 41948252
+        },
+        {
+          "milliseconds": 77.71450000000186,
+          "gas": 43309951
+        },
+        {
+          "milliseconds": 63.71533399999316,
+          "gas": 44813273
+        },
+        {
+          "milliseconds": 78.0815830000065,
+          "gas": 46734714
+        },
+        {
+          "milliseconds": 80.58333300000231,
+          "gas": 47711227
+        },
+        {
+          "milliseconds": 78.37695799999346,
+          "gas": 47482613
+        },
+        {
+          "milliseconds": 76.41254099999787,
+          "gas": 47102401
+        },
+        {
+          "milliseconds": 79.16795800000546,
+          "gas": 46581236
+        },
+        {
+          "milliseconds": 76.88362500000221,
+          "gas": 46683149
+        },
+        {
+          "milliseconds": 77.51479200000176,
+          "gas": 46205316
+        },
+        {
+          "milliseconds": 78.38845800000126,
+          "gas": 45517084
+        },
+        {
+          "milliseconds": 79.44287499999336,
+          "gas": 45081045
+        },
+        {
+          "milliseconds": 64.61991700000362,
+          "gas": 44346456
+        },
+        {
+          "milliseconds": 62.1765000000014,
+          "gas": 43352558
+        },
+        {
+          "milliseconds": 78.69445799999812,
+          "gas": 42350198
+        },
+        {
+          "milliseconds": 62.51745899999514,
+          "gas": 41332584
+        },
+        {
+          "milliseconds": 62.18916700000409,
+          "gas": 40297916
+        },
+        {
+          "milliseconds": 62.86420799999905,
+          "gas": 39243494
+        },
+        {
+          "milliseconds": 57.77166699999361,
+          "gas": 38227414
+        },
+        {
+          "milliseconds": 58.97562499999185,
+          "gas": 37205734
+        },
+        {
+          "milliseconds": 57.78045900000143,
+          "gas": 36186854
+        },
+        {
+          "milliseconds": 57.312707999997656,
+          "gas": 35170774
+        },
+        {
+          "milliseconds": 58.60070799999812,
+          "gas": 34151894
+        },
+        {
+          "milliseconds": 55.28079100001196,
+          "gas": 33133014
+        },
+        {
+          "milliseconds": 55.51487500000803,
+          "gas": 32120283
+        },
+        {
+          "milliseconds": 55.55570900000748,
+          "gas": 31205436
+        },
+        {
+          "milliseconds": 56.48733400000492,
+          "gas": 30469195
+        },
+        {
+          "milliseconds": 56.51929100000416,
+          "gas": 29851083
+        },
+        {
+          "milliseconds": 57.45508300000802,
+          "gas": 29327413
+        },
+        {
+          "milliseconds": 56.62358299999323,
+          "gas": 28894621
+        },
+        {
+          "milliseconds": 56.24749999999767,
+          "gas": 28549768
+        },
+        {
+          "milliseconds": 56.66866699999082,
+          "gas": 28306692
+        },
+        {
+          "milliseconds": 56.117417000001296,
+          "gas": 28134385
+        },
+        {
+          "milliseconds": 59.72583300000406,
+          "gas": 27987942
+        },
+        {
+          "milliseconds": 57.48958300000231,
+          "gas": 27873346
+        },
+        {
+          "milliseconds": 56.479000000006636,
+          "gas": 27781662
+        },
+        {
+          "milliseconds": 55.98820799999521,
+          "gas": 27706764
+        },
+        {
+          "milliseconds": 56.21562499999709,
+          "gas": 27650008
+        },
+        {
+          "milliseconds": 55.94616700000188,
+          "gas": 27607718
+        },
+        {
+          "milliseconds": 56.77975000000151,
+          "gas": 42865557
+        }
+      ],
+      "allNativeFramesExact": true,
+      "worldFrozen": true,
+      "nativeManifestSha256": "70aeb3adf346bbebb9aaa7bd9f04de73f870305177db560fa4c702f9e3588d88"
+    },
+    "costComparison": {
+      "firstWipeNewGameGas": 4470920651,
+      "legacyNewGameGas": 4060274214,
+      "firstFrameDeltaGas": 410646437,
+      "legacyNewGameWallMs": 2432.412500000006,
+      "presentationOnlyGas": 1530566205,
+      "firstEndpointExactlyMatchesLegacy": true
+    },
+    "canvasReadbacks": 92,
+    "rollbacks": 8,
+    "cleanupCompleted": true
+  },
+  "ultimate": {
+    "pass": true,
+    "deployment": {
+      "address": "0xaad4f7bb5fb661181d500829e60010043833a85b",
+      "hash": "0xa8ef6d59b1f99323e01ab99365b29a0d0496807126d3ecb4a3188de1e6803c88",
+      "gas": 287549778,
+      "runtimeBytes": 933187,
+      "runtimeSha256": "955a445140351757a7798ea31a2d7830ba27d49a0632e4704a95256ed9da6b91"
+    },
+    "resourceIdentity": {
+      "schemaVersion": 0,
+      "wadSha256": "6fdf361847b46228cfebd9f3af09cd844282ac75f3edbb61ca4cb27103ce2e7f",
+      "bundleSha256": "1154fc21f0fa60e793ffb6da569b2293191dfc7f1791e0c083672b764917d7ba",
+      "paletteSha256": "fd895921b5d0a394612bb29852ed003d44d69f76dec31c0dc6b5d5fc7d63f7bb",
+      "paletteVariant": 0
+    },
+    "browser": {
+      "protocolVersion": "1.3",
+      "product": "Chrome/155.0.8059.40",
+      "revision": "@cfaadc5a132d78e1828635aa8405a499f3e14864",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36",
+      "jsVersion": "15.5.35.20"
+    },
+    "wipe": {
+      "steps": 42,
+      "seed": 1,
+      "allNativeFramesExact": true,
+      "nativeManifestSha256": "bdd03dea2379ce02a4b83ba1f47f2c36f395c3c3f0c7a9270d6b0cf71274b0f0",
+      "totalGas": 3606719923,
+      "totalWallMs": 6841.7510839999995,
+      "firstTransactionMs": 1846.4231250000012,
+      "continuationSteps": [
+        {
+          "milliseconds": 81.01833399999668,
+          "gas": 42133444
+        },
+        {
+          "milliseconds": 78.59775000000081,
+          "gas": 43115557
+        },
+        {
+          "milliseconds": 79.78900000000067,
+          "gas": 42900143
+        },
+        {
+          "milliseconds": 64.88475000000108,
+          "gas": 42509531
+        },
+        {
+          "milliseconds": 61.95033300000068,
+          "gas": 41991166
+        },
+        {
+          "milliseconds": 61.74712500000169,
+          "gas": 42109879
+        },
+        {
+          "milliseconds": 60.375332999999955,
+          "gas": 41629246
+        },
+        {
+          "milliseconds": 61.52741699999751,
+          "gas": 40932614
+        },
+        {
+          "milliseconds": 60.09887499999968,
+          "gas": 40488175
+        },
+        {
+          "milliseconds": 58.005333000000974,
+          "gas": 39750786
+        },
+        {
+          "milliseconds": 56.842124999999214,
+          "gas": 38759688
+        },
+        {
+          "milliseconds": 56.88120799999888,
+          "gas": 37754528
+        },
+        {
+          "milliseconds": 54.73066699999981,
+          "gas": 36741714
+        },
+        {
+          "milliseconds": 55.169458000000304,
+          "gas": 35702246
+        },
+        {
+          "milliseconds": 55.66191700000127,
+          "gas": 34650624
+        },
+        {
+          "milliseconds": 56.84454199999891,
+          "gas": 33631744
+        },
+        {
+          "milliseconds": 55.21320899999773,
+          "gas": 32612864
+        },
+        {
+          "milliseconds": 55.525916000002326,
+          "gas": 31593984
+        },
+        {
+          "milliseconds": 56.677042000002984,
+          "gas": 30575104
+        },
+        {
+          "milliseconds": 57.50954100000308,
+          "gas": 29556224
+        },
+        {
+          "milliseconds": 59.57229200000074,
+          "gas": 28537344
+        },
+        {
+          "milliseconds": 60.896583999998256,
+          "gas": 27524613
+        },
+        {
+          "milliseconds": 56.81529199999932,
+          "gas": 26609766
+        },
+        {
+          "milliseconds": 56.81525000000329,
+          "gas": 25873525
+        },
+        {
+          "milliseconds": 57.80845899999986,
+          "gas": 25255413
+        },
+        {
+          "milliseconds": 57.59966699999859,
+          "gas": 24731743
+        },
+        {
+          "milliseconds": 57.793000000001484,
+          "gas": 24301751
+        },
+        {
+          "milliseconds": 56.875208000001294,
+          "gas": 23956898
+        },
+        {
+          "milliseconds": 55.91508299999987,
+          "gas": 23711022
+        },
+        {
+          "milliseconds": 39.84454099999857,
+          "gas": 23538715
+        },
+        {
+          "milliseconds": 56.93158300000141,
+          "gas": 23392272
+        },
+        {
+          "milliseconds": 58.36433300000135,
+          "gas": 23277676
+        },
+        {
+          "milliseconds": 42.21600000000035,
+          "gas": 23185992
+        },
+        {
+          "milliseconds": 40.072792000002664,
+          "gas": 23111094
+        },
+        {
+          "milliseconds": 56.10295799999949,
+          "gas": 23054338
+        },
+        {
+          "milliseconds": 54.59633300000132,
+          "gas": 23012048
+        },
+        {
+          "milliseconds": 41.93408400000044,
+          "gas": 39894607
+        }
+      ],
+      "worldAndUITicsFrozen": true,
+      "finalExact": true
+    },
+    "uninterruptedWipe": {
+      "steps": 42,
+      "seed": 1,
+      "totalWallMs": 4698.968542000002,
+      "totalGas": 3322377864,
+      "transactions": [
+        {
+          "milliseconds": 1747.7973749999983,
+          "gas": 1980036769
+        },
+        {
+          "milliseconds": 59.05999999999767,
+          "gas": 35143591
+        },
+        {
+          "milliseconds": 56.631541999995534,
+          "gas": 37327382
+        },
+        {
+          "milliseconds": 55.690834000000905,
+          "gas": 38565881
+        },
+        {
+          "milliseconds": 57.380833000002895,
+          "gas": 40198003
+        },
+        {
+          "milliseconds": 61.86341700000048,
+          "gas": 42091444
+        },
+        {
+          "milliseconds": 63.238375000000815,
+          "gas": 43104357
+        },
+        {
+          "milliseconds": 77.43979099999706,
+          "gas": 42888943
+        },
+        {
+          "milliseconds": 64.73316700000578,
+          "gas": 42492731
+        },
+        {
+          "milliseconds": 79.70324999999866,
+          "gas": 41979966
+        },
+        {
+          "milliseconds": 60.118374999998196,
+          "gas": 42051079
+        },
+        {
+          "milliseconds": 59.46166700000322,
+          "gas": 41601246
+        },
+        {
+          "milliseconds": 58.47345800000039,
+          "gas": 40929814
+        },
+        {
+          "milliseconds": 62.50933300000179,
+          "gas": 40482575
+        },
+        {
+          "milliseconds": 60.645041999996465,
+          "gas": 39747986
+        },
+        {
+          "milliseconds": 58.9476250000007,
+          "gas": 38754088
+        },
+        {
+          "milliseconds": 55.90704099999857,
+          "gas": 37743328
+        },
+        {
+          "milliseconds": 56.1484580000033,
+          "gas": 36741714
+        },
+        {
+          "milliseconds": 55.96237499999552,
+          "gas": 35702246
+        },
+        {
+          "milliseconds": 56.19929199999751,
+          "gas": 34650624
+        },
+        {
+          "milliseconds": 54.33037499999773,
+          "gas": 33631744
+        },
+        {
+          "milliseconds": 54.53399999999965,
+          "gas": 32612864
+        },
+        {
+          "milliseconds": 54.0121669999935,
+          "gas": 31593984
+        },
+        {
+          "milliseconds": 56.565999999998894,
+          "gas": 30575104
+        },
+        {
+          "milliseconds": 57.577917000002344,
+          "gas": 29547824
+        },
+        {
+          "milliseconds": 55.720500000003085,
+          "gas": 28531744
+        },
+        {
+          "milliseconds": 55.93741699999373,
+          "gas": 27524613
+        },
+        {
+          "milliseconds": 55.011042000005546,
+          "gas": 26606966
+        },
+        {
+          "milliseconds": 54.78970899999695,
+          "gas": 25873525
+        },
+        {
+          "milliseconds": 55.15104200000496,
+          "gas": 25252613
+        },
+        {
+          "milliseconds": 57.45162500000151,
+          "gas": 24731743
+        },
+        {
+          "milliseconds": 57.77437500000087,
+          "gas": 24301751
+        },
+        {
+          "milliseconds": 56.44683300000179,
+          "gas": 23956898
+        },
+        {
+          "milliseconds": 55.17579100000148,
+          "gas": 23711022
+        },
+        {
+          "milliseconds": 56.3873339999991,
+          "gas": 23538715
+        },
+        {
+          "milliseconds": 58.34904199999437,
+          "gas": 23392272
+        },
+        {
+          "milliseconds": 56.51512499999808,
+          "gas": 23277676
+        },
+        {
+          "milliseconds": 41.9363749999975,
+          "gas": 23185992
+        },
+        {
+          "milliseconds": 56.43179200000304,
+          "gas": 23111094
+        },
+        {
+          "milliseconds": 56.01433299999917,
+          "gas": 23054338
+        },
+        {
+          "milliseconds": 40.483875000005355,
+          "gas": 23012048
+        },
+        {
+          "milliseconds": 56.51720800000476,
+          "gas": 39119567
+        }
+      ],
+      "allNativeFramesExact": true,
+      "worldFrozen": true,
+      "nativeManifestSha256": "4f76f767f82484436eed113271cd7e2cb96cbed7feec6a5968e773cecc387968"
+    },
+    "costComparison": {
+      "firstWipeNewGameGas": 2263236988,
+      "legacyNewGameGas": 1921109259,
+      "firstFrameDeltaGas": 342127729,
+      "legacyNewGameWallMs": 1640.390625,
+      "presentationOnlyGas": 1343482935,
+      "firstEndpointExactlyMatchesLegacy": true
+    },
+    "canvasReadbacks": 92,
+    "rollbacks": 8,
+    "cleanupCompleted": true
+  },
+  "doom2": {
+    "pass": true,
+    "deployment": {
+      "address": "0x02121128f1ed0ada5df3a87f42752fce4ad63e59",
+      "hash": "0xde0823fb58953bd7f5e44a4391c07543039bb34072f54bf0cc8690c9c069e941",
+      "gas": 303135671,
+      "runtimeBytes": 913213,
+      "runtimeSha256": "ce8eae03fecaa0165ace42c9dc91674d51b4221a8a6df1823c789e649103f880"
+    },
+    "resourceIdentity": {
+      "schemaVersion": 0,
+      "wadSha256": "10d67824b11025ddd9198e8cfc87ca335ee6e2d3e63af4180fa9b8a471893255",
+      "bundleSha256": "775bc8b01d44c2fb1c3a68a79b9864c2f36ebbb29746d31e9ca600ae226af5ad",
+      "paletteSha256": "fd895921b5d0a394612bb29852ed003d44d69f76dec31c0dc6b5d5fc7d63f7bb",
+      "paletteVariant": 0
+    },
+    "browser": {
+      "protocolVersion": "1.3",
+      "product": "Chrome/155.0.8059.40",
+      "revision": "@cfaadc5a132d78e1828635aa8405a499f3e14864",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36",
+      "jsVersion": "15.5.35.20"
+    },
+    "wipe": {
+      "steps": 42,
+      "seed": 1,
+      "allNativeFramesExact": true,
+      "nativeManifestSha256": "7974a1f2e76a643daf056b1fc5abe1fcd0e147281157b995256b62adf20c5d57",
+      "totalGas": 4414519720,
+      "totalWallMs": 7611.901207999999,
+      "firstTransactionMs": 2578.5292500000032,
+      "continuationSteps": [
+        {
+          "milliseconds": 62.37895900000149,
+          "gas": 44064446
+        },
+        {
+          "milliseconds": 63.39691699999821,
+          "gas": 45052159
+        },
+        {
+          "milliseconds": 61.323457999998936,
+          "gas": 44847945
+        },
+        {
+          "milliseconds": 61.95104099999662,
+          "gas": 44457333
+        },
+        {
+          "milliseconds": 61.97099999999773,
+          "gas": 43938968
+        },
+        {
+          "milliseconds": 61.45979199999783,
+          "gas": 44066081
+        },
+        {
+          "milliseconds": 63.28266699999949,
+          "gas": 43577048
+        },
+        {
+          "milliseconds": 63.16591700000208,
+          "gas": 42880416
+        },
+        {
+          "milliseconds": 63.06745800000135,
+          "gas": 42435977
+        },
+        {
+          "milliseconds": 61.378458000002865,
+          "gas": 41698588
+        },
+        {
+          "milliseconds": 59.254124999999476,
+          "gas": 40707490
+        },
+        {
+          "milliseconds": 60.14374999999927,
+          "gas": 39702330
+        },
+        {
+          "milliseconds": 58.708082999997714,
+          "gas": 38689516
+        },
+        {
+          "milliseconds": 56.606292000000394,
+          "gas": 37650048
+        },
+        {
+          "milliseconds": 56.20866599999863,
+          "gas": 36598426
+        },
+        {
+          "milliseconds": 57.09883300000001,
+          "gas": 35579546
+        },
+        {
+          "milliseconds": 57.37708399999974,
+          "gas": 34560666
+        },
+        {
+          "milliseconds": 55.126500000002125,
+          "gas": 33541786
+        },
+        {
+          "milliseconds": 81.3092919999981,
+          "gas": 32522906
+        },
+        {
+          "milliseconds": 57.23741599999994,
+          "gas": 31504026
+        },
+        {
+          "milliseconds": 57.956709000001865,
+          "gas": 30485146
+        },
+        {
+          "milliseconds": 55.60170800000196,
+          "gas": 29472415
+        },
+        {
+          "milliseconds": 57.64416600000186,
+          "gas": 28557568
+        },
+        {
+          "milliseconds": 56.69812499999898,
+          "gas": 27821327
+        },
+        {
+          "milliseconds": 56.265416000002006,
+          "gas": 27203215
+        },
+        {
+          "milliseconds": 56.81991599999674,
+          "gas": 26679545
+        },
+        {
+          "milliseconds": 58.143707999999606,
+          "gas": 26249553
+        },
+        {
+          "milliseconds": 82.34662499999831,
+          "gas": 25904700
+        },
+        {
+          "milliseconds": 57.56316599999991,
+          "gas": 25658824
+        },
+        {
+          "milliseconds": 56.65358399999968,
+          "gas": 25486517
+        },
+        {
+          "milliseconds": 56.83929200000057,
+          "gas": 25340074
+        },
+        {
+          "milliseconds": 55.61733300000196,
+          "gas": 25225478
+        },
+        {
+          "milliseconds": 58.3145829999994,
+          "gas": 25133794
+        },
+        {
+          "milliseconds": 58.054457999998704,
+          "gas": 25058896
+        },
+        {
+          "milliseconds": 57.04512500000055,
+          "gas": 25002140
+        },
+        {
+          "milliseconds": 55.60524999999325,
+          "gas": 24959850
+        },
+        {
+          "milliseconds": 57.61870900000213,
+          "gas": 41452857
+        }
+      ],
+      "worldAndUITicsFrozen": true,
+      "finalExact": true
+    },
+    "uninterruptedWipe": {
+      "steps": 42,
+      "seed": 1,
+      "totalWallMs": 5611.842125000003,
+      "totalGas": 3964018837,
+      "transactions": [
+        {
+          "milliseconds": 2442.6832920000015,
+          "gas": 2542071892
+        },
+        {
+          "milliseconds": 58.3515830000033,
+          "gas": 37085793
+        },
+        {
+          "milliseconds": 59.21875,
+          "gas": 39289184
+        },
+        {
+          "milliseconds": 59.5838750000039,
+          "gas": 40513683
+        },
+        {
+          "milliseconds": 61.18720800000301,
+          "gas": 42131805
+        },
+        {
+          "milliseconds": 62.81541699999798,
+          "gas": 44070046
+        },
+        {
+          "milliseconds": 66.20687500000349,
+          "gas": 45057759
+        },
+        {
+          "milliseconds": 63.526292000002286,
+          "gas": 44839545
+        },
+        {
+          "milliseconds": 79.48937499999738,
+          "gas": 44451733
+        },
+        {
+          "milliseconds": 65.06866699999955,
+          "gas": 43933368
+        },
+        {
+          "milliseconds": 103.65041700000438,
+          "gas": 44018481
+        },
+        {
+          "milliseconds": 79.93379199999617,
+          "gas": 43565848
+        },
+        {
+          "milliseconds": 78.40333300000202,
+          "gas": 42877616
+        },
+        {
+          "milliseconds": 63.74016699999629,
+          "gas": 42433177
+        },
+        {
+          "milliseconds": 60.576292000005196,
+          "gas": 41698588
+        },
+        {
+          "milliseconds": 59.87799999999697,
+          "gas": 40704690
+        },
+        {
+          "milliseconds": 58.06629199999588,
+          "gas": 39699530
+        },
+        {
+          "milliseconds": 58.21016600000439,
+          "gas": 38689516
+        },
+        {
+          "milliseconds": 59.83420800000022,
+          "gas": 37650048
+        },
+        {
+          "milliseconds": 57.08941699999559,
+          "gas": 36595626
+        },
+        {
+          "milliseconds": 57.57170800000313,
+          "gas": 35579546
+        },
+        {
+          "milliseconds": 55.84808299999713,
+          "gas": 34557866
+        },
+        {
+          "milliseconds": 56.76800000000367,
+          "gas": 33524986
+        },
+        {
+          "milliseconds": 54.153832999996666,
+          "gas": 32511706
+        },
+        {
+          "milliseconds": 56.96020899999712,
+          "gas": 31504026
+        },
+        {
+          "milliseconds": 55.90812499999447,
+          "gas": 30482346
+        },
+        {
+          "milliseconds": 58.25129200000083,
+          "gas": 29469615
+        },
+        {
+          "milliseconds": 56.84029200000077,
+          "gas": 28557568
+        },
+        {
+          "milliseconds": 55.49262499999895,
+          "gas": 27821327
+        },
+        {
+          "milliseconds": 57.36170899999706,
+          "gas": 27203215
+        },
+        {
+          "milliseconds": 57.791292000001704,
+          "gas": 26679545
+        },
+        {
+          "milliseconds": 55.88554199999635,
+          "gas": 26249553
+        },
+        {
+          "milliseconds": 56.372292000000016,
+          "gas": 25904700
+        },
+        {
+          "milliseconds": 59.5411249999961,
+          "gas": 25658824
+        },
+        {
+          "milliseconds": 54.968291999997746,
+          "gas": 25486517
+        },
+        {
+          "milliseconds": 56.99216599999636,
+          "gas": 25340074
+        },
+        {
+          "milliseconds": 57.175999999999476,
+          "gas": 25225478
+        },
+        {
+          "milliseconds": 56.19612500000221,
+          "gas": 25133794
+        },
+        {
+          "milliseconds": 57.43000000000029,
+          "gas": 25058896
+        },
+        {
+          "milliseconds": 57.054707999996026,
+          "gas": 25002140
+        },
+        {
+          "milliseconds": 56.18712499999674,
+          "gas": 24959850
+        },
+        {
+          "milliseconds": 58.60270899999887,
+          "gas": 40729337
+        }
+      ],
+      "allNativeFramesExact": true,
+      "worldFrozen": true,
+      "nativeManifestSha256": "c5e626a3e78b5b59496fd765dfe33ac0aa24409869654a9d4097e63bb0a4107e"
+    },
+    "costComparison": {
+      "firstWipeNewGameGas": 2991936055,
+      "legacyNewGameGas": 2635878060,
+      "firstFrameDeltaGas": 356057995,
+      "legacyNewGameWallMs": 2340.036957999997,
+      "presentationOnlyGas": 1422583665,
+      "firstEndpointExactlyMatchesLegacy": true
+    },
+    "canvasReadbacks": 91,
+    "rollbacks": 8,
+    "cleanupCompleted": true
+  }
+}

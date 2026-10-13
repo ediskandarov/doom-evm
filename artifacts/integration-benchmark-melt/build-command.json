@@ -1,0 +1,20 @@
+{
+  "command": [
+    ".toolchain/bin/forge",
+    "build",
+    "src/evm/Doom.sol",
+    "src/evm/Doom2.sol",
+    "src/evm/ResourceStore.sol",
+    "--out",
+    "artifacts/local/integration-benchmark-melt/build/out",
+    "--cache-path",
+    "artifacts/local/integration-benchmark-melt/build/cache",
+    "--skip",
+    "test",
+    "script",
+    "--no-lint"
+  ],
+  "start": 1791909330.649148,
+  "end": 1791909606.099804,
+  "exit": 0
+}

@@ -1,0 +1,154 @@
+{
+  "sourceCommit": "f8d33781d2d3cd456d6a28016062b0328c23afd1",
+  "pass": true,
+  "diagnostic": false,
+  "comparisonProof": {
+    "transactionsPerRun": 56,
+    "allOperationsGasFramePaletteStateEqual": true,
+    "finalDoomContractStorageProof": {
+      "capturedPrimaryRuns": 1,
+      "capturedSupplementalBrowserRuns": 0,
+      "allCapturedRootsEqual": true,
+      "root": "0xccc511cfb8ec494fff6855ba00b4d2256d65f9c987bb1264b17bbf716be12ae8",
+      "primaryRunsWithoutCapturedStorageRoot": []
+    },
+    "finalFullChainStateRootEqual": true,
+    "beaconContractStorageRootsDiffer": false,
+    "transactionContentIdenticalAcrossModes": true,
+    "transactionHashesIdenticalAcrossModes": true,
+    "finalFingerprints": [
+      {
+        "mode": "direct",
+        "index": 1,
+        "stateRoot": "0x2116165b261fae391887b4cbe55d7498d173ab88829a5ab2078b8bafcc0f844a",
+        "blockHash": "0xedbb7c4c5e106ee88e706be50710503033ed430f9df46aab0fe97eb2ed083ac7",
+        "block": "0x3dd",
+        "timestamp": "0x6ace66b5",
+        "gameStorageHash": "0xccc511cfb8ec494fff6855ba00b4d2256d65f9c987bb1264b17bbf716be12ae8",
+        "gameCodeHash": "0xb434512ff43648eefc86c24b2a550461357ee1bde21d4c2a220d04efa6fcfa18",
+        "beaconStorageHash": "0x152954ad415ac2d8ba0f97313dbfd77a467bf61727b9ec7fceaba8a87baa1533",
+        "driverBalance": "0x218e9ccd6b4d42e718a",
+        "inputSequence": "0x0000000000000000000000000000000000000000000000000000000000000061",
+        "menu": "0x000000000000000000000000000000000000000000000000000000000000000100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000002000000000000000000000000000000000000000000000000000000000000000200000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000002000000000000000000000000000000000000000000000000000000000000000100000000000000000000000000000000000000000000000000000000000000020000000000000000000000000000000000000000000000000000000000000000",
+        "started": "0x0000000000000000000000000000000000000000000000000000000000000001",
+        "memory": "0x0000000000000000000000000000000000000000000000000000000000000003",
+        "nonce": "0x3dd"
+      }
+    ]
+  },
+  "runs": [
+    {
+      "mode": "direct",
+      "index": 1,
+      "frames": 50,
+      "transactions": 50,
+      "elapsedMs": 96295.215084,
+      "windowStartMs": 123772.422291,
+      "windowEndMs": 220067.637375,
+      "gameplayFPS": 0.5192365992057251,
+      "transactionsPerSecond": 0.5192365992057251,
+      "ticsPerSecond": 0.5192365992057251,
+      "slowdownFrom35Hz": 67.4066505588,
+      "frameIntervalsMs": {
+        "count": 49,
+        "mean": 1928.7583945510203,
+        "median": 1962.1453749999928,
+        "p95": 2283.9926584000054,
+        "min": 1204.2301250000019,
+        "max": 2364.303583000001
+      },
+      "transactionReceiptLatencyMs": {
+        "count": 50,
+        "mean": 1925.2675535000003,
+        "median": 1959.9788545000047,
+        "p95": 2281.2773296500104,
+        "min": 1203.5667079999985,
+        "max": 2363.526375000016
+      },
+      "gasPerFrame": {
+        "count": 50,
+        "mean": 1654653543.76,
+        "median": 1680625071.5,
+        "p95": 1925034570.8,
+        "min": 1087230557,
+        "max": 1974434021
+      },
+      "uniquePixelHashes": 50,
+      "cpu": {
+        "scope": "entire mode workload including menu setup and warmup; cumulative process CPU time / monotonic elapsed time",
+        "samples": 108,
+        "elapsedMs": 106426.233416,
+        "meanPercent": 98.09611469751087,
+        "peakIntervalPercent": 100.06853033190275,
+        "peakRssKiB": 639440
+      },
+      "componentsMs": {
+        "sendRpc": {
+          "count": 50,
+          "mean": 0.3306142399975215,
+          "median": 0.33179199999722186,
+          "p95": 0.4121062499776599,
+          "min": 0.2293329999956768,
+          "max": 0.4781659999862313
+        },
+        "sendResponseToReceipt": {
+          "count": 50,
+          "mean": 1924.9369392600026,
+          "median": 1959.675271,
+          "p95": 2280.964041850001,
+          "min": 1203.2539580000157,
+          "max": 2363.2255410000216
+        }
+      }
+    }
+  ],
+  "aggregate": {
+    "direct": {
+      "repetitions": 1,
+      "frames": 50,
+      "transactions": 50,
+      "elapsedMs": 96295.215084,
+      "gameplayFPS": 0.5192365992057251,
+      "transactionsPerSecond": 0.5192365992057251,
+      "ticsPerSecond": 0.5192365992057251,
+      "slowdownFrom35Hz": 67.4066505588,
+      "frameIntervalsMs": {
+        "count": 49,
+        "mean": 1928.7583945510203,
+        "median": 1962.1453749999928,
+        "p95": 2283.9926584000054,
+        "min": 1204.2301250000019,
+        "max": 2364.303583000001
+      },
+      "transactionReceiptLatencyMs": {
+        "count": 50,
+        "mean": 1925.2675535000003,
+        "median": 1959.9788545000047,
+        "p95": 2281.2773296500104,
+        "min": 1203.5667079999985,
+        "max": 2363.526375000016
+      },
+      "gasPerFrame": {
+        "count": 50,
+        "mean": 1654653543.76,
+        "median": 1680625071.5,
+        "p95": 1925034570.8,
+        "min": 1087230557,
+        "max": 1974434021
+      },
+      "anvilMeanCpuPercent": 98.09611469751087,
+      "anvilPeakIntervalCpuPercent": 100.06853033190275,
+      "peakRssKiB": 639440,
+      "componentsMs": {
+        "sendRpc": {
+          "mean": 0.3306142399975215,
+          "medianOfRunMedians": 0.33179199999722186
+        },
+        "sendResponseToReceipt": {
+          "mean": 1924.9369392600026,
+          "medianOfRunMedians": 1959.675271
+        }
+      }
+    }
+  }
+}

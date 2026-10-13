@@ -1,0 +1,41 @@
+{
+  "schemaVersion": 1,
+  "pass": true,
+  "sourceIntegrationCommit": "f8d33781d2d3cd456d6a28016062b0328c23afd1",
+  "branches": {
+    "research/doom2-browser-fps": "c4905b3e34d661be661e9adcb1dcd45611a8bd4d",
+    "feat/browser-melt-wipe": "ed1f5c27328b4809e57aec50d0bfdea997aebcec"
+  },
+  "forgePassed": 78,
+  "nodePassed": 86,
+  "nativeWipeFrames": 252,
+  "canvasReadbacks": 275,
+  "uniqueObservedCanvasReceipts": 266,
+  "storageRollbackChecks": 24,
+  "measuredGameplayFrames": 100,
+  "threeFreshRuntimeProfilesPassed": true,
+  "freshCompilerArtifactsMatchShippedPackages": true,
+  "freshCompilerMetadataSourcesAuthenticated": {
+    "Doom": 83,
+    "Doom2": 82
+  },
+  "historicalBenchmarkAndFeatureSourcePreserved": true,
+  "originalCArticleMediaHistoricalRecordingsUnchanged": true,
+  "mainLocalConfigPreserved": true,
+  "runtimeCleanupCompleted": true,
+  "remotePush": false,
+  "usageCheckpoint": {
+    "utc": "2026-10-13T17:13:49Z",
+    "goalTokensUsed": 174999,
+    "goalElapsedSeconds": 2880,
+    "scope": "available goal-service counters at verification checkpoint; no billing estimate"
+  },
+  "startedUtc": "2026-10-13T16:25:48Z",
+  "logNormalization": {
+    "build.log": {
+      "rawSha256": "b38ad2579d70aa3a848bf953bc7e2a260f82e4972c5f35f12e258a63b0e03188",
+      "operation": "remove trailing empty line for git whitespace check; all compiler output retained",
+      "originalRawPath": "artifacts/local/integration-benchmark-melt/build.log"
+    }
+  }
+}

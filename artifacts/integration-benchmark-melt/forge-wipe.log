@@ -1,0 +1,54 @@
+Compiling 11 files with Solc 0.8.37
+Solc 0.8.37 finished in 3.03s
+Compiler run successful with warnings:
+Warning (6335): "at" will be promoted to keyword in the future and will not be allowed as an identifier anymore.
+  --> src/doom/v_video.sol:77:41:
+   |
+77 |     function _short(bytes memory patch, uint256 at) private pure returns (int32) {
+   |                                         ^^^^^^^^^^
+
+Warning (6335): "at" will be promoted to keyword in the future and will not be allowed as an identifier anymore.
+   --> src/doom/v_video.sol:102:13:
+    |
+102 |             uint256 at = 8 + uint32(flipped ? width - 1 - col : col) * 4;
+    |             ^^^^^^^^^^
+
+Warning (6335): "at" will be promoted to keyword in the future and will not be allowed as an identifier anymore.
+  --> test/unit/f_wipe.t.sol:41:35:
+   |
+41 |     function word(bytes memory b, uint256 at) private pure returns (uint32 v) {
+   |                                   ^^^^^^^^^^
+
+Warning (6335): "at" will be promoted to keyword in the future and will not be allowed as an identifier anymore.
+  --> test/unit/f_wipe.t.sol:47:35:
+   |
+47 |     function hash(bytes memory b, uint256 at) private pure returns (bytes32 h) {
+   |                                   ^^^^^^^^^^
+
+Warning (6335): "at" will be promoted to keyword in the future and will not be allowed as an identifier anymore.
+  --> test/unit/f_wipe.t.sol:66:14:
+   |
+66 |         for (uint256 at; at < e.length; at += 72) {
+   |              ^^^^^^^^^^
+
+
+Ran 8 tests for test/unit/f_wipe.t.sol:WipeTest
+[PASS] testNativeLargeBatchCompletionDelay() (gas: 502316419)
+[PASS] testNativeSeed0() (gas: 495251992)
+[PASS] testNativeSeed1() (gas: 496064051)
+[PASS] testNativeSeed127() (gas: 489114880)
+[PASS] testNativeSeed255() (gas: 487889098)
+[PASS] testNativeSevenTicks() (gas: 492871204)
+[PASS] testNativeThreeTicks() (gas: 492844900)
+[PASS] testStoragePersistenceAndRollback() (gas: 319416023)
+Suite result: ok. 8 passed; 0 failed; 0 skipped; finished in 1.45s (10.49s CPU time)
+
+Ran 5 tests for test/unit/DoomWipe.t.sol:DoomWipeTest
+[PASS] testLegacyNoOptInAndNoPreviousScreen() (gas: 133997525)
+[PASS] testOptInPersistentProgressFinalAndFrozenTics() (gas: 1814693089)
+[PASS] testOriginalCommercialAndForcedFinaleMatrix() (gas: 5777133461)
+[PASS] testOriginalLevelIntermissionFinaleMatrix() (gas: 5777133648)
+[PASS] testRollbackDuplicateAndRacingInput() (gas: 502461359)
+Suite result: ok. 5 passed; 0 failed; 0 skipped; finished in 5.24s (13.53s CPU time)
+
+Ran 2 test suites in 5.25s (6.69s CPU time): 13 tests passed, 0 failed, 0 skipped (13 total tests)

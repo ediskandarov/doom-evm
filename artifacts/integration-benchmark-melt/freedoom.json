@@ -1,0 +1,1696 @@
+{
+  "kind": "production-browser-evm-melt",
+  "profile": "freedoom",
+  "pass": true,
+  "startedUtc": "2026-10-13T16:43:44.097Z",
+  "executionBudget": {
+    "gasLimit": 10000000000,
+    "gasHex": "0x2540be400",
+    "source": "/Users/eduard/sandbox/doom-evm/execution-budget.json"
+  },
+  "compiler": {
+    "version": "0.8.37+commit.f401782d",
+    "settings": {
+      "remappings": [],
+      "optimizer": {
+        "enabled": true,
+        "runs": 200
+      },
+      "metadata": {
+        "bytecodeHash": "ipfs"
+      },
+      "compilationTarget": {
+        "src/evm/Doom.sol": "Doom"
+      },
+      "evmVersion": "cancun",
+      "libraries": {},
+      "viaIR": true
+    }
+  },
+  "resourceIdentity": {
+    "schemaVersion": 0,
+    "wadSha256": "7323bcc168c5a45ff10749b339960e98314740a734c30d4b9f3337001f9e703d",
+    "bundleSha256": "d379076f21645cf7cc5acb056663d0faacc4065489a0ca99738479323c9f7a47",
+    "paletteSha256": "fd895921b5d0a394612bb29852ed003d44d69f76dec31c0dc6b5d5fc7d63f7bb",
+    "paletteVariant": 0
+  },
+  "sourceHashes": {
+    "src/doom/am_map.sol": "3c5da949fc635d095659d4333d153408499e89e4178b469cb335e31cf52f6020",
+    "src/doom/am_map_types.sol": "7347073682c367c15c918aa51ff924c664b6d05efdbf4f0392d4f404b31a9039",
+    "src/doom/d_ticcmd.sol": "508d0332d3e8b83e1b68d37581a3befc100a9974fcaa0900cc44116cd75ff2ef",
+    "src/doom/doomstat.sol": "4c40da3914c629017959a0a4c0516d83346900674c92f5e55a766aba1b506fea",
+    "src/doom/f_finale.sol": "4e21a192b8adb1109b51493ab43e770bfc3393b085cf02df53ab589d21c81505",
+    "src/doom/f_wipe.sol": "12e3ead7d43142647ee9ee1f33be25ca6bf372116b432474dc315952464e95a7",
+    "src/doom/g_game.sol": "fc8aaae0b28dee867499b8cef6ab32d69d900ba0526941cd74b0b73532178b7c",
+    "src/doom/hu_lib.sol": "bf11331f06c38565650e93ce5ece611d048d5656ae2c8442b6568de5ce079a06",
+    "src/doom/hu_stuff.sol": "fcf57390d8c8e6d5ec935164264870509bb64197179536a39cd2a14dddb9588e",
+    "src/doom/info.sol": "4611205149173e42d3b0f1d91820c8042f6bc5fc48fb53aec84ad4bc501dca8e",
+    "src/doom/m_bbox.sol": "f4c60efe3627a97d0288fc5cd0283535527b1f51029568534c80bb8fbbf8f272",
+    "src/doom/m_cheat.sol": "e79d73bd9e159b0f05639464bf7c9cb7f40dc069780c3459336dfffb50394f82",
+    "src/doom/m_fixed.sol": "3f64bef1f62f61faead3a5b8f382bf1c66e1b3739ce4ac8d59a6fcef0451ef9f",
+    "src/doom/m_menu.sol": "79d3fadc4e9252637fdf247db668653168d9df77b648672d34d2f7dfb161b554",
+    "src/doom/m_random.sol": "5267b881138cfb7e0d683449005619513006c70e3ed557f64697b36c4ed40c7b",
+    "src/doom/native_zone_layout.sol": "118b2d17165826fb0857d9cb296e2214db2a28917769299a82e70d0c0790f6e8",
+    "src/doom/p_ceilng.sol": "696f3f620f5bddb3cea64fda824e3203c780f53db890630f0685794454dc37f9",
+    "src/doom/p_doors.sol": "945bf600ce86d8286718fb75ecaf905a0c4631d79d2dac7260c91c9dc2013f8d",
+    "src/doom/p_enemy.sol": "eff76cce23b0877833a5c446a1a09d8ae01918a6925b6d3265240b144c09dfe7",
+    "src/doom/p_floor.sol": "b7c90baafa0b74fd7ff80cf60dcbc430148f6d6d068ba54ca0fbc7ba1bca7069",
+    "src/doom/p_game_state.sol": "06cbccba214717193fbab7c290e2962c4fb05b3f34c6543247ee1ec8e45d085a",
+    "src/doom/p_heap.sol": "3cc2e0a8c3239523db66c07fea33720f931754baedd312b5ca7cc2ebe763d2e0",
+    "src/doom/p_info.sol": "a48840479115ea8bf849ca5ec448d1b2bec7a6cfe58c5314e140635a898de792",
+    "src/doom/p_inter.sol": "8be27f9bba47beb46b3edf2a8a2674b3cd7218d2abb8ef5f8855803393d067de",
+    "src/doom/p_lights.sol": "6f63cbc6b41fc492a46ce43aef464deb9d08b7fa1dd8b213b546eec3e4f08276",
+    "src/doom/p_map.sol": "6b6d48523a45acab9090dfb0ec3d6dbab4e6de18afa89453df8b5a87088da0f3",
+    "src/doom/p_maputl.sol": "ac5ac60e7e058a5fc537e7042c7254bc0f51c77165149a22e141437b4e0ad0b6",
+    "src/doom/p_mobj.sol": "e6138aceee2be933f2c36e3fc18e6d2baa22ffa6a1197d9db89c744d42d78e56",
+    "src/doom/p_plats.sol": "6904df762b270f840daa99b34d2a5c689dbb2fef3aed3d33c2ac1a3f3e4d5722",
+    "src/doom/p_pspr.sol": "cfa2db3438d689c38d9c957fc4aee598c58740f025d6efead2b5f9671eb0c863",
+    "src/doom/p_saveg.sol": "4e59c56c3636ff61713764d86a37f436ad750582323dbce09aae728b71741cc0",
+    "src/doom/p_setup.sol": "9498e1298bf4e53ccedc484a50d4c7f9f85315f6cb700719d474b721e382243b",
+    "src/doom/p_setup_static.sol": "c8100a42bb0bac190c583bbb2c82168599009f88a766e4c05b9a9231a5f69792",
+    "src/doom/p_sight.sol": "7ed366237fc3fec069ffb6336e95e038004d1f379622cf67f55fb8c6b1a6488c",
+    "src/doom/p_spec.sol": "2363640e75c22c9d017db677dda7148ad221380f0a23639167e145e933fc72b7",
+    "src/doom/p_switch.sol": "5404d359793e05c6c24a7804c07632150009b46f38d03068412d7ac53260dfe2",
+    "src/doom/p_telept.sol": "745f0fa4ed6f0515c398bfd2469c59aac82316965b7bac25263aeb82555d61b8",
+    "src/doom/p_tick.sol": "1993dd0c94853dabc4db554dfa0ca04375cef0a22075400ba0e7b56b525022ab",
+    "src/doom/p_user.sol": "963a46850e1b17171f79dd65bff9b5006ce6f97a935ad2023d1d526a6ec35c37",
+    "src/doom/p_zone_setup.sol": "e0308bd1197fd84a01eb1ee208be73c711851d6b0bc30be1d07a7c61b18b223d",
+    "src/doom/r_bsp.sol": "0ae5df313515692d0b2b970d5d39d107e014629cff2305fb37c14371a9524040",
+    "src/doom/r_data.sol": "ef5f26f230c1bed1a073f73b489613d947b420c220faa6f2c16a6f583045010c",
+    "src/doom/r_data_types.sol": "0448302d68447c8a5a4c46df4016e8845863e42bf6eaca8bcab8ab0c9707fdf8",
+    "src/doom/r_defs.sol": "558d5a9bfd131e816bbe28986e2dad6144a08e5a16ccfed1b199d7558a1ea0e2",
+    "src/doom/r_draw.sol": "afe958ea0c2962b739bff58b98d8bccc25c48d3d0838cacd46142c242b5d6477",
+    "src/doom/r_main.sol": "df403bf04fdbbcfc68c4fd9c5e19b5201ca711498efc34db406a4010ad3b2af5",
+    "src/doom/r_plane.sol": "c7a5abcbca84dddcd2a3c8bb160a609605c5c1842e73704dff4860df3280e463",
+    "src/doom/r_render_hooks.sol": "f026ccb8fffb68d8fbcb0966103212f52884b86350fe3fb52a401d146f3fb312",
+    "src/doom/r_render_state.sol": "072bd2f73b98e1eb775fc8093e95a69c184f3fa50a89a5d64a7beccd59493398",
+    "src/doom/r_segs.sol": "9d4e4dea06739278aab3698fb422818de6dd7726359c8822d60a162e886621cb",
+    "src/doom/r_sprite_state.sol": "735b3de85cbf455e05d3cb8e992cf4e477960bd4192bbd367f5c66c803b96363",
+    "src/doom/r_state.sol": "80951a13733e3a08f4182937a37def33ffda21eaae4b43a2a1bdba2043adab6b",
+    "src/doom/r_things.sol": "86705ab6b1f79b7ef07798b881cc547502d9911c97b57dc516a744e17c1977f5",
+    "src/doom/st_cheats.sol": "e35b8253b068f1ad807073bc322e2b62205ef3ffa95bb06f36acef7a79721677",
+    "src/doom/st_lib.sol": "5307f52151fbd73e442a60d8b87cbfbed3d38a28704a81e952f56672de667299",
+    "src/doom/st_stuff.sol": "936cf09f8f0dcc9c0555a9d533d9d1a50f65941462b0d3325a5c7850b5be2e49",
+    "src/doom/tables.sol": "bf14202b419075f6d187653205a37e211d8267c7fc4c0bebf5a8c5713afddf38",
+    "src/doom/v_video.sol": "be75fe69e7cd2486ce93408ec204cdf470ea097569e37fbedd867e9a2f3adf1f",
+    "src/doom/v_video_types.sol": "266890b0c8003e89f78baf8415048d24e4ca14865a1c8518ad77bb6a9f6b4d35",
+    "src/doom/w_zone_cache.sol": "03c07404765de9620b3d1ff15727809cdad911c8a78d822019b63500fa5018c2",
+    "src/doom/wi_stuff.sol": "d69db1200afb323308915cecc8b8b6c5bd08c996168b936d2f76dbd5b3a8c122",
+    "src/doom/wi_stuff_types.sol": "398e0d19affd77f4af91f9a4ffdc08f046b61151de26a9848b86127414ff6f88",
+    "src/doom/z_zone.sol": "b4e75218021d65aaf3389cf78a68663feebc2084c82457821be17247dc8106c5",
+    "src/doom/z_zone_backing.sol": "e63201d3bb45e4c8d0796480d4e9facd4deffd4d8a9dd730bed10ff4a108d0b1",
+    "src/doom/z_zone_types.sol": "11ab3f95678ba3852ab5f0c2dc9e85e715bec6897e65f04cd1919bba9bb73dbd",
+    "src/doom/z_zone_virtual.sol": "8bc309e89fa4da0667dc50a45adb9f91c58982640e1b3f5f9d38e49893f1e960",
+    "src/evm/Doom.sol": "8c49c6d9701e2cb105331bf6f857f9d7beda78020a58c7da0e39b89332da6070",
+    "src/evm/DoomGame.sol": "d9451a915ab977bae137340e3e6626a270a4b84b8b6ea9449a8c4f0f578296df",
+    "src/evm/DoomMenu.sol": "c1ae6c66e7e016a844be3010e75b3beaeac35972bbe266f5b0e2b572e1663d44",
+    "src/evm/DoomRenderer.sol": "5639d82431350ea76c26d43457d26d0c3c0f410eaddf02db6adbcfb03a569ba0",
+    "src/evm/DoomSave.sol": "5c684e49835a18bf3728062755a9a2ebe671a4d131f10146cdfdde33bc2c5681",
+    "src/evm/DoomScene.sol": "9ad7c8ccee4c9e05deb5608326baabacfa40f686b8d8445fb8aaa7352ab64569",
+    "src/evm/DoomUI.sol": "2b66f6d024e16f3c202ea6da84ec5875af4d7ea809c2f29cbf65310fdf24bb38",
+    "src/evm/DoomWipe.sol": "e29d5d7a27e63b3aea35302afd3f9cb59d11c6eaacae1d4aba78cecb6cad8291",
+    "src/evm/DoomZoneStartup.sol": "2d178494456a7ae3c730310f257ce2aa635d37d18c90cac039cf002cdb3f50dc",
+    "src/evm/EpisodeRuntime.sol": "bfaebfc40839503e25060faef833756da6931c9de7326ef74740eacefb1d7e57",
+    "src/evm/EpisodeStartup.sol": "bb574f20cdc09e63385261f7e8e203a49a90a15b87903d70dfe43d396bc3255e",
+    "src/evm/FrameProtocol.sol": "4665be3f613b8e817d616d2db1dc4a644325c44a6ade476a35d7d9d003625ace",
+    "src/evm/InputProtocol.sol": "bd9df1b10f19be3754cef8efcdc109ce54228f4475c50b197cb32b5bab8a7808",
+    "src/evm/ProductionWadResources.sol": "a9f77b23b261b3d8bd94cfeb9a5385879966941c6edae2e1319e1620468b1cc3",
+    "src/evm/ResourceTypes.sol": "159865364cfa57aae508cd94c49509cbccabd6aeeba55e92b9fcf816bdec4d6b",
+    "src/evm/SaveSchema.sol": "0740a562a0b2e511859f29252dbad6005582cd022f9079a10922b22be870206c",
+    "src/support/UltimateStartup.sol": "86152dbc521265c009a1532105abde4d37a55707d29a0ca629728c50dc0462b0",
+    "web/menu-app.mjs": "293d3d2b2d4fff6e16a6baab37da9708ee8cf2c59312d0c3f2203212c6188147",
+    "web/menu-input.mjs": "e941bab163090b3c3f0ac9ccfc9bd948dfbcad4dbd441b3690fc5ceb3aac48ef",
+    "web/wipe-input.mjs": "adc632af81d04c38b659f2d20f83e37afde31ebcfd4deae98b3480c52353ea14",
+    "web/input-loop.mjs": "b584a054557f6ea9c35667e6d0f9b06d0a1bc3e6bf4aa7d8d54fa2d843cb8ae2",
+    "web/protocol.mjs": "703eae264eb9d3b8dac8c3cb00afb7910ef2ef0740341d41be55055524fcebbc",
+    "tools/transport/melt-browser-check.mjs": "a78c497ccb1036def5301537d191942b9f3226d2cce72d874ff90719b2dde719"
+  },
+  "operations": [],
+  "frames": [
+    {
+      "label": "Automatic title menu",
+      "hash": "0x80e45241d80564bdde8916f95d43ac3d8b78e9e4fd79688f81bb2cf4bdeea954",
+      "frameId": "1",
+      "sequence": 1,
+      "indexedSha256": "eca337dda5e19d827748a7edb807e16f43aac409081e74f943fdc99841c53dce",
+      "paletteSha256": "12bafa34214682ae20c2cb6f4e38f21575564de88c4599f3410661e9b7a5c6d3",
+      "palette": 0,
+      "rgbaSha256": "51639b5c783185c6bb665681d786a857a8a4904accf934b1480ad75e31a4908a",
+      "allCanvasPixelsExact": true,
+      "gas": 218628518
+    },
+    {
+      "label": "New Game selection",
+      "hash": "0xde28ce0dab42d678e4bf00425d8da86d955baaa20f18f8fda34e7d4555e751a1",
+      "frameId": "2",
+      "sequence": 2,
+      "indexedSha256": "c22377b6874a68b1ae161e365da6d1fa0c3a0b3cf289801280d5ef8b290d5026",
+      "paletteSha256": "12bafa34214682ae20c2cb6f4e38f21575564de88c4599f3410661e9b7a5c6d3",
+      "palette": 0,
+      "rgbaSha256": "2da6c5e8160494bc98a3255a62ed9a9545bc64d2887b01d326dcf14daec5c03c",
+      "allCanvasPixelsExact": true,
+      "gas": 173247956
+    },
+    {
+      "label": "Original skill selection",
+      "hash": "0x566c2eb1b3983f43dca1e8dbef92182944b144405f4449f4ef04364d09bcef60",
+      "frameId": "3",
+      "sequence": 3,
+      "indexedSha256": "080105db7663d173d7a7a1fa0e9c5e1ce1998f926b2db783c9f8e7003f1b49c3",
+      "paletteSha256": "12bafa34214682ae20c2cb6f4e38f21575564de88c4599f3410661e9b7a5c6d3",
+      "palette": 0,
+      "rgbaSha256": "392a0e95ac523aed4ea2ad9ecf792db360208f85b0eea6f22f5380a54e896443",
+      "allCanvasPixelsExact": true,
+      "gas": 185012498
+    },
+    {
+      "label": "Pre-wipe start screen",
+      "hash": "0x566c2eb1b3983f43dca1e8dbef92182944b144405f4449f4ef04364d09bcef60",
+      "frameId": "3",
+      "sequence": 3,
+      "indexedSha256": "080105db7663d173d7a7a1fa0e9c5e1ce1998f926b2db783c9f8e7003f1b49c3",
+      "paletteSha256": "12bafa34214682ae20c2cb6f4e38f21575564de88c4599f3410661e9b7a5c6d3",
+      "palette": 0,
+      "rgbaSha256": "392a0e95ac523aed4ea2ad9ecf792db360208f85b0eea6f22f5380a54e896443",
+      "allCanvasPixelsExact": true,
+      "gas": 185012498
+    },
+    {
+      "label": "First EVM melt from real menu New Game",
+      "hash": "0x232aa71a9290efa178f4195dbb5c3baa135425f4e3801d054e81b767ea4fffe1",
+      "frameId": "4",
+      "sequence": 4,
+      "indexedSha256": "886be5878802dd58791d74705bc3a5fd4bfb407f38993bb42457bc848d68a4a8",
+      "paletteSha256": "12bafa34214682ae20c2cb6f4e38f21575564de88c4599f3410661e9b7a5c6d3",
+      "palette": 0,
+      "rgbaSha256": "81c55914777dc1944551bdc9ef07770251be0721e19264ea52b412c9b43facb7",
+      "allCanvasPixelsExact": true,
+      "gas": 4470920651
+    },
+    {
+      "label": "Reload resumed exact persistent wipe",
+      "hash": "0x174eed4659663c41dbd1c064239ce907520c704921d5968f24953631d8f2d9fd",
+      "frameId": "6",
+      "sequence": 6,
+      "indexedSha256": "403c53272de4c325439e6e00b79c59388b1b550736b99b7f079b340876a65766",
+      "paletteSha256": "12bafa34214682ae20c2cb6f4e38f21575564de88c4599f3410661e9b7a5c6d3",
+      "palette": 0,
+      "rgbaSha256": "0e497d9a39db07b3b4a52a4f64eeb6e2abb36248957e2acfaeb88b24d0ebe1cf",
+      "allCanvasPixelsExact": true,
+      "gas": 41892252
+    },
+    {
+      "label": "Known unmined wipe recovered after original mining",
+      "hash": "0xf329679f64850ba66f411d7f23716b92b9241e159ecb9a01c16e0ea602739c3d",
+      "frameId": "8",
+      "sequence": 8,
+      "indexedSha256": "e81342695a588a01f886374a210b2fc2027dc2512d23270c5b83790b27cff0da",
+      "paletteSha256": "12bafa34214682ae20c2cb6f4e38f21575564de88c4599f3410661e9b7a5c6d3",
+      "palette": 0,
+      "rgbaSha256": "aa21010c1439f9c10f18b62da3ace441eeba29c553246c407436fcab792ffd3b",
+      "allCanvasPixelsExact": true,
+      "gas": 44790873
+    },
+    {
+      "label": "EVM melt presentation step",
+      "hash": "0xb0f672da0ac352a30cf87fef29105e78fe8d9a944d1d34064881f22d883f32be",
+      "frameId": "9",
+      "sequence": 9,
+      "indexedSha256": "ba9314b02bb155ff1271e631adfe119fc532ba73fd9986b185a8575e796a2cbf",
+      "paletteSha256": "12bafa34214682ae20c2cb6f4e38f21575564de88c4599f3410661e9b7a5c6d3",
+      "palette": 0,
+      "rgbaSha256": "f3384592551ff1be00e3733989765afa7348d788d7b79d627cbfd961b814d104",
+      "allCanvasPixelsExact": true,
+      "gas": 46703914
+    },
+    {
+      "label": "EVM melt presentation step",
+      "hash": "0xcf30c7f9368faaf2d0a6b7a16bd709333246e582bc86142a889222be8435bb73",
+      "frameId": "10",
+      "sequence": 10,
+      "indexedSha256": "4f042eb7d824274c30a61c7e2289cc01cfea8681ae49b65da222711253588a66",
+      "paletteSha256": "12bafa34214682ae20c2cb6f4e38f21575564de88c4599f3410661e9b7a5c6d3",
+      "palette": 0,
+      "rgbaSha256": "93a37d3b8d09e32ad4a8fd72960eb359fc2abf7bfc12c38c39abe13d7efed29e",
+      "allCanvasPixelsExact": true,
+      "gas": 47711227
+    },
+    {
+      "label": "EVM melt presentation step",
+      "hash": "0x15c2b2d872d44a4a89873423ae3093c33f6686ca1c6e12c84dfcf43c104cc278",
+      "frameId": "11",
+      "sequence": 11,
+      "indexedSha256": "990f077c2547d7b010fe6223a8852b07f50925e6323975a69886bfa17f08248e",
+      "paletteSha256": "12bafa34214682ae20c2cb6f4e38f21575564de88c4599f3410661e9b7a5c6d3",
+      "palette": 0,
+      "rgbaSha256": "bc82fe5dd014284f1795720fc5ac4adeac42cbe464abda6b12495751bc53cb33",
+      "allCanvasPixelsExact": true,
+      "gas": 47491013
+    },
+    {
+      "label": "EVM melt presentation step",
+      "hash": "0x982f03593cdee9cc7b258e8a70ce0438cfea2d3bbdd8f571b9f10b05401c434b",
+      "frameId": "12",
+      "sequence": 12,
+      "indexedSha256": "6e66e916372c346a8618feed5a5127f6bcea4393bc1fc0e6253aa6fab9f1a899",
+      "paletteSha256": "12bafa34214682ae20c2cb6f4e38f21575564de88c4599f3410661e9b7a5c6d3",
+      "palette": 0,
+      "rgbaSha256": "bc079d5d7789bbadbca0c537d65143ee457e736258ec4fa47efd38a23383e144",
+      "allCanvasPixelsExact": true,
+      "gas": 47105201
+    },
+    {
+      "label": "EVM melt presentation step",
+      "hash": "0xab7493d057af871eda5c44c9baec37a70ed570db788f33cf45905b970ef720ec",
+      "frameId": "13",
+      "sequence": 13,
+      "indexedSha256": "8fa03b9a7413c385a4343724bdffa48e59748944fd71ba63785158ae0da34059",
+      "paletteSha256": "12bafa34214682ae20c2cb6f4e38f21575564de88c4599f3410661e9b7a5c6d3",
+      "palette": 0,
+      "rgbaSha256": "135a637877eb33d3a1a75dcf065ee4cca441533191b22000105681770ea7be91",
+      "allCanvasPixelsExact": true,
+      "gas": 46586836
+    },
+    {
+      "label": "EVM melt presentation step",
+      "hash": "0x6555111a7630d5913166ab59803ed1901845e137dc9a00559c01cde612cb3945",
+      "frameId": "14",
+      "sequence": 14,
+      "indexedSha256": "3208cf8d1c3f054223c25ffc8632e2cf17773177bc9aa160399a57e89a0ec70d",
+      "paletteSha256": "12bafa34214682ae20c2cb6f4e38f21575564de88c4599f3410661e9b7a5c6d3",
+      "palette": 0,
+      "rgbaSha256": "b3840c33be7c3a6d42aefe237a8fb9f38319c100c5a378c56227a23a74f99082",
+      "allCanvasPixelsExact": true,
+      "gas": 46643949
+    },
+    {
+      "label": "EVM melt presentation step",
+      "hash": "0x4d9582e27ea66ebc1c0f7eacd7d5c1356ef0073d74956b655a4ad3cb64e0b7f6",
+      "frameId": "15",
+      "sequence": 15,
+      "indexedSha256": "42ff44fd1eda17bb70875ea79624cf36e269b316314bdc07fecc4c2fa7b22bd6",
+      "paletteSha256": "12bafa34214682ae20c2cb6f4e38f21575564de88c4599f3410661e9b7a5c6d3",
+      "palette": 0,
+      "rgbaSha256": "f4209c36c9d8904c6b1251d72bc3a8043f013f9e3b335657552d604c8fb1108e",
+      "allCanvasPixelsExact": true,
+      "gas": 46188516
+    },
+    {
+      "label": "EVM melt presentation step",
+      "hash": "0x6165c40c3539e56c3de6ae730fa329bffffded6f36aed43f85abd80fd423edad",
+      "frameId": "16",
+      "sequence": 16,
+      "indexedSha256": "c3a04ea3bee19889bf7934c7a835dc8be20fc81ada4820cddf34a7fe5087b540",
+      "paletteSha256": "12bafa34214682ae20c2cb6f4e38f21575564de88c4599f3410661e9b7a5c6d3",
+      "palette": 0,
+      "rgbaSha256": "e079df0bb33ff86d8b2743dc85c9c145a64279d34155c4378754ea694e3b4a65",
+      "allCanvasPixelsExact": true,
+      "gas": 45508684
+    },
+    {
+      "label": "EVM melt presentation step",
+      "hash": "0x112a73fa85ff3c7e89b160df465a8bb28aa12ed9cf6327bfc03d49fec2e10f66",
+      "frameId": "17",
+      "sequence": 17,
+      "indexedSha256": "91851b795d723442515947541b3fb8f0dc9c227fcc4e73908a8bcab72980d81a",
+      "paletteSha256": "12bafa34214682ae20c2cb6f4e38f21575564de88c4599f3410661e9b7a5c6d3",
+      "palette": 0,
+      "rgbaSha256": "a78468fa833d7a38c0aff147ebad59b68fc9871687c7c08d5c4dbc6fcda9b65e",
+      "allCanvasPixelsExact": true,
+      "gas": 45083845
+    },
+    {
+      "label": "EVM melt presentation step",
+      "hash": "0x2caf4cddc20d203f9440a1aa753ffa041d09a3ba15aa015684fe325c0980d84e",
+      "frameId": "18",
+      "sequence": 18,
+      "indexedSha256": "983484759164736e6cff601203d1da5a5884e36a0b0ceda2f4b4332a3395f16a",
+      "paletteSha256": "12bafa34214682ae20c2cb6f4e38f21575564de88c4599f3410661e9b7a5c6d3",
+      "palette": 0,
+      "rgbaSha256": "b5ebdf5a7bd738ae54ce39ae919739794bcf9211d9037f15aeaf5cf46d656474",
+      "allCanvasPixelsExact": true,
+      "gas": 44346456
+    },
+    {
+      "label": "EVM melt presentation step",
+      "hash": "0x33152c401b29653bdcb4f38a662261fa2b28b995ba300fd6aae02ed50270bcbe",
+      "frameId": "19",
+      "sequence": 19,
+      "indexedSha256": "9edabac1c30c9ee162b91966c81e8d6941ef071749a5519eb97d8ba936294bbd",
+      "paletteSha256": "12bafa34214682ae20c2cb6f4e38f21575564de88c4599f3410661e9b7a5c6d3",
+      "palette": 0,
+      "rgbaSha256": "2aed8e65179f008c64a509cc3f9627717a9aa22179f03db0681bf5053c378f1c",
+      "allCanvasPixelsExact": true,
+      "gas": 43355358
+    },
+    {
+      "label": "EVM melt presentation step",
+      "hash": "0x6a696f4cc9e57af861376cd6ed6197eb1baeae09563d2c5a2ac6efce2aaccbd3",
+      "frameId": "20",
+      "sequence": 20,
+      "indexedSha256": "605aad7f533d5bb8232faf5f8427c934498230e03937bb5d80db2951076f6b7a",
+      "paletteSha256": "12bafa34214682ae20c2cb6f4e38f21575564de88c4599f3410661e9b7a5c6d3",
+      "palette": 0,
+      "rgbaSha256": "a06d79e820b769ddf5b973a0d46d84e6e495a547498ee8811ec2c337adb44bab",
+      "allCanvasPixelsExact": true,
+      "gas": 42350198
+    },
+    {
+      "label": "EVM melt presentation step",
+      "hash": "0xbb939e042f8c6702a74bd6e0dc758396289109c088947c0286a96fea08cdfe64",
+      "frameId": "21",
+      "sequence": 21,
+      "indexedSha256": "ce28dd10850c21ea00242a5d59b449ccefea11302de5e343e4b4fb93104e64f7",
+      "paletteSha256": "12bafa34214682ae20c2cb6f4e38f21575564de88c4599f3410661e9b7a5c6d3",
+      "palette": 0,
+      "rgbaSha256": "6005241f0d183f50a7a2b7230df9e6ef781b1f1498a91a3981b1b5ce08831257",
+      "allCanvasPixelsExact": true,
+      "gas": 41332584
+    },
+    {
+      "label": "EVM melt presentation step",
+      "hash": "0xbe1908bcb44a2d2e7680043104201801ba0ae7e6a1f9978369022213a64ca765",
+      "frameId": "22",
+      "sequence": 22,
+      "indexedSha256": "ad019f387d5c8d928306a8fd851651f776b3837d9c2aaecdadba4d0345ade0ea",
+      "paletteSha256": "12bafa34214682ae20c2cb6f4e38f21575564de88c4599f3410661e9b7a5c6d3",
+      "palette": 0,
+      "rgbaSha256": "3d79fd4d1384a63fb73ce7726a0ad473682ae865018d3cc7d93a054992c6edca",
+      "allCanvasPixelsExact": true,
+      "gas": 40297916
+    },
+    {
+      "label": "EVM melt presentation step",
+      "hash": "0xe551652ca062662464a388808f2e4a12d604a877555fd29f82fd67b621827e62",
+      "frameId": "23",
+      "sequence": 23,
+      "indexedSha256": "cddb7d8766fce9eb6ae0d42731ce67a4f3bd8ed51969773a730e46190a20a042",
+      "paletteSha256": "12bafa34214682ae20c2cb6f4e38f21575564de88c4599f3410661e9b7a5c6d3",
+      "palette": 0,
+      "rgbaSha256": "8f599706738242c58f27d2543323272556d3abfb7e4a8f7975f025d42e193708",
+      "allCanvasPixelsExact": true,
+      "gas": 39246294
+    },
+    {
+      "label": "EVM melt presentation step",
+      "hash": "0x1491715fca2dd2565cccfa9b55eb1e3e799743f20291274de8711ded8feb110f",
+      "frameId": "24",
+      "sequence": 24,
+      "indexedSha256": "afea91be3fa89cc90553623b60fc3e3079ada275d0e4bee28c5b5aa3e472773d",
+      "paletteSha256": "12bafa34214682ae20c2cb6f4e38f21575564de88c4599f3410661e9b7a5c6d3",
+      "palette": 0,
+      "rgbaSha256": "a97198d891450b10f9f5c0d9ee95a391caa785ab148742faf40bdda6cefe9a9d",
+      "allCanvasPixelsExact": true,
+      "gas": 38227414
+    },
+    {
+      "label": "EVM melt presentation step",
+      "hash": "0x4d86b0a1aeba93f10821049b05c53f949380b908adf0ddb06c48babbfb0284bd",
+      "frameId": "25",
+      "sequence": 25,
+      "indexedSha256": "119fc27ef0a1e33d980a21643ed2dc569f0b3706deba8c956641f9ab87bc2f49",
+      "paletteSha256": "12bafa34214682ae20c2cb6f4e38f21575564de88c4599f3410661e9b7a5c6d3",
+      "palette": 0,
+      "rgbaSha256": "d27199fcc064fafd5c64692cf2543ae1b5edbc210c3d00a0807d73384283623a",
+      "allCanvasPixelsExact": true,
+      "gas": 37208534
+    },
+    {
+      "label": "EVM melt presentation step",
+      "hash": "0x3302805379eafe057cb31db50cec2619d19c01249456416cb5930fd81ed51265",
+      "frameId": "26",
+      "sequence": 26,
+      "indexedSha256": "7970cb135ed52c9f0e0cb29b7c1faed464e198be872d41d3d9ff97537e49feab",
+      "paletteSha256": "12bafa34214682ae20c2cb6f4e38f21575564de88c4599f3410661e9b7a5c6d3",
+      "palette": 0,
+      "rgbaSha256": "092d79de9161ecf564df8c467f97335f17da847eda48f664200724f7829a10a7",
+      "allCanvasPixelsExact": true,
+      "gas": 36189654
+    },
+    {
+      "label": "EVM melt presentation step",
+      "hash": "0x215da70c708d28a770973cd66c85bfc1c39236ddd30a005078ca4c5995769a2e",
+      "frameId": "27",
+      "sequence": 27,
+      "indexedSha256": "a7e896df76544c6f0e25474cfe9e9424662687c87801ef463228d0d7485250e5",
+      "paletteSha256": "12bafa34214682ae20c2cb6f4e38f21575564de88c4599f3410661e9b7a5c6d3",
+      "palette": 0,
+      "rgbaSha256": "5fd8f027e9a8a15e8a29ebdf0892dc7702e6f3803cbf29ee9422cedfc89c37da",
+      "allCanvasPixelsExact": true,
+      "gas": 35170774
+    },
+    {
+      "label": "EVM melt presentation step",
+      "hash": "0x936b47357ea41299aaec5c1ab717ad249d92ee1646c508ffc879673cb8803daa",
+      "frameId": "28",
+      "sequence": 28,
+      "indexedSha256": "b8758047e8404b5cc81614fa679c329e8f0f6ad6c13c26d5422c777571745cbc",
+      "paletteSha256": "12bafa34214682ae20c2cb6f4e38f21575564de88c4599f3410661e9b7a5c6d3",
+      "palette": 0,
+      "rgbaSha256": "65d6f87d86a4cf4609dad32f68bd5869de2d2f0f9bf1b9d16a4a0f7e934e1df3",
+      "allCanvasPixelsExact": true,
+      "gas": 34151894
+    },
+    {
+      "label": "EVM melt presentation step",
+      "hash": "0x95a3458f8e53a8c916f3b3f00848b82876b155c2195ceb5b12b62e76e2bae55a",
+      "frameId": "29",
+      "sequence": 29,
+      "indexedSha256": "cda7725e681b02f6ea60677ffaa73442d93f50615f1a800f2bffd96758ffc2ce",
+      "paletteSha256": "12bafa34214682ae20c2cb6f4e38f21575564de88c4599f3410661e9b7a5c6d3",
+      "palette": 0,
+      "rgbaSha256": "e81035f6daf6d99068e869cdc912d226d3452e32d90ee48bd37307b4a9a70958",
+      "allCanvasPixelsExact": true,
+      "gas": 33133014
+    },
+    {
+      "label": "EVM melt presentation step",
+      "hash": "0x263974e87f8f89bbf7cbc72d965826ca3747cd67a9f418f84a040cb009586dd6",
+      "frameId": "30",
+      "sequence": 30,
+      "indexedSha256": "b946b4ecf25bcac7d1696e475cbd3657c5c44e027affca7b13c254a77cecfd7f",
+      "paletteSha256": "12bafa34214682ae20c2cb6f4e38f21575564de88c4599f3410661e9b7a5c6d3",
+      "palette": 0,
+      "rgbaSha256": "709d86903e13ea1eb0ab9e37fac32dbf994eb544635fd892d4338ecacd508dfb",
+      "allCanvasPixelsExact": true,
+      "gas": 32120283
+    },
+    {
+      "label": "EVM melt presentation step",
+      "hash": "0xce5be43d5c4366e39430083caf4e37ca9f09afdfa28354b0d23801525e03cfd0",
+      "frameId": "31",
+      "sequence": 31,
+      "indexedSha256": "f91a812a5d0e77a657245d40f81dd6c70a19c2727fa30e6faf0028467d0bed91",
+      "paletteSha256": "12bafa34214682ae20c2cb6f4e38f21575564de88c4599f3410661e9b7a5c6d3",
+      "palette": 0,
+      "rgbaSha256": "3abd31e8211fa1dcfb4d9a963a3dc42d9f70e28d461bd84b318e435dfead3da8",
+      "allCanvasPixelsExact": true,
+      "gas": 31205436
+    },
+    {
+      "label": "EVM melt presentation step",
+      "hash": "0x0bff8289e8dfa6f050bc73d610ff80758ed0852ebc0e4a2555474362189d6b87",
+      "frameId": "32",
+      "sequence": 32,
+      "indexedSha256": "1352904e747bf051a3deb8ff51b43583b5e61a8d8e8c448e2d45a2d96bae2767",
+      "paletteSha256": "12bafa34214682ae20c2cb6f4e38f21575564de88c4599f3410661e9b7a5c6d3",
+      "palette": 0,
+      "rgbaSha256": "cc5e6e7a1f9d06fde7eb565c34ae9db1fb67fc7c2ac889151e0e68114ab8671d",
+      "allCanvasPixelsExact": true,
+      "gas": 30469195
+    },
+    {
+      "label": "EVM melt presentation step",
+      "hash": "0x97b3f90e72a127f2f2dd8bbdcad31ce1dd8ada84e69f85da3656c59ec7c45a84",
+      "frameId": "33",
+      "sequence": 33,
+      "indexedSha256": "9c2df744f3ea95476bf61fa4fbc6c63498bb16e5746fc652c801a2fe7b8ec574",
+      "paletteSha256": "12bafa34214682ae20c2cb6f4e38f21575564de88c4599f3410661e9b7a5c6d3",
+      "palette": 0,
+      "rgbaSha256": "c32400c20659fa5aabf39157be26edb9de2c213cc864b39b6c7a13778c36a68c",
+      "allCanvasPixelsExact": true,
+      "gas": 29851083
+    },
+    {
+      "label": "EVM melt presentation step",
+      "hash": "0x217ca21005c36716f5cc9b94de3bd3a96a96adbdd72270ece5c0175a3e0927f2",
+      "frameId": "34",
+      "sequence": 34,
+      "indexedSha256": "80f1efff21b4406dc762b15a3439fe716396bd50dfc73fbf31bad2c1c962d510",
+      "paletteSha256": "12bafa34214682ae20c2cb6f4e38f21575564de88c4599f3410661e9b7a5c6d3",
+      "palette": 0,
+      "rgbaSha256": "a776c2f98c96bb25ed2d7bdafaeff3ed97adafa8525e8c8e24dec34d7477b774",
+      "allCanvasPixelsExact": true,
+      "gas": 29327413
+    },
+    {
+      "label": "EVM melt presentation step",
+      "hash": "0x0feb6274518f86201db26580779899ac753f960abfd6c3b6d1df0d785938a497",
+      "frameId": "35",
+      "sequence": 35,
+      "indexedSha256": "078677b5b662e333d200c54f8dfeb5ca489ef80bc1966879dd950c99fd2f454a",
+      "paletteSha256": "12bafa34214682ae20c2cb6f4e38f21575564de88c4599f3410661e9b7a5c6d3",
+      "palette": 0,
+      "rgbaSha256": "79ed9531106cd32ba2055208ce165a58603c6e5e33c0cbf262c39d57c86d7baf",
+      "allCanvasPixelsExact": true,
+      "gas": 28897421
+    },
+    {
+      "label": "EVM melt presentation step",
+      "hash": "0x67339f0ed544fd47bb9c3968c3b416b939faf9938b49d4799c2a1c408790e10e",
+      "frameId": "36",
+      "sequence": 36,
+      "indexedSha256": "0f3f9e19eb563107da684e094999a0207b3f24331580045dda72700ea7835f69",
+      "paletteSha256": "12bafa34214682ae20c2cb6f4e38f21575564de88c4599f3410661e9b7a5c6d3",
+      "palette": 0,
+      "rgbaSha256": "ed9c32384d0210a317cf0491dcf62d358dc1507cd8f0655e6d5874fd3edcb4c7",
+      "allCanvasPixelsExact": true,
+      "gas": 28552568
+    },
+    {
+      "label": "EVM melt presentation step",
+      "hash": "0x486d6c023e7816665379cb7467e2cb21c39209797c95e0905de67b361f100ab4",
+      "frameId": "37",
+      "sequence": 37,
+      "indexedSha256": "298e292774c0758a04a99a79636e180fc74099e971f76a16ef57d1f221635721",
+      "paletteSha256": "12bafa34214682ae20c2cb6f4e38f21575564de88c4599f3410661e9b7a5c6d3",
+      "palette": 0,
+      "rgbaSha256": "1a13448092c37c226f33c88a42e20ffad05de45e53d75333798e342c00d6d0b3",
+      "allCanvasPixelsExact": true,
+      "gas": 28306692
+    },
+    {
+      "label": "EVM melt presentation step",
+      "hash": "0x3a966f60cc3fa287321787ba9f1462f8da92a4cc44ee0187ea8892bb499753bd",
+      "frameId": "38",
+      "sequence": 38,
+      "indexedSha256": "d167181e1a1e7c441f371c72a0b6408f56928f14a7eda2506d8b041431bccc40",
+      "paletteSha256": "12bafa34214682ae20c2cb6f4e38f21575564de88c4599f3410661e9b7a5c6d3",
+      "palette": 0,
+      "rgbaSha256": "f3596eae2ac445e0c726ab0aea6c4886d08c4b4c916104853d842b795b286c8e",
+      "allCanvasPixelsExact": true,
+      "gas": 28134385
+    },
+    {
+      "label": "EVM melt presentation step",
+      "hash": "0x6ed9059d995a64db308347189254ba8efc34cefae4d0b95f4658b7e76a724d9c",
+      "frameId": "39",
+      "sequence": 39,
+      "indexedSha256": "387388230d6e5a2851ed8930c04bd515e9954420e5a747fabada6e3ff95278fa",
+      "paletteSha256": "12bafa34214682ae20c2cb6f4e38f21575564de88c4599f3410661e9b7a5c6d3",
+      "palette": 0,
+      "rgbaSha256": "0abd840aa17ef10b6d51b74ef49b21bb86b8481bad3eefa02cff562f60242f3a",
+      "allCanvasPixelsExact": true,
+      "gas": 27987942
+    },
+    {
+      "label": "EVM melt presentation step",
+      "hash": "0xb1c6118d80958a5cfc3c32f094979c47941c4a76270127f2498add0aba8d9aa3",
+      "frameId": "40",
+      "sequence": 40,
+      "indexedSha256": "261fe6c5dc6a2ce9963f4de3762a66b344ef8d79ab311cb1d544d505907a2abc",
+      "paletteSha256": "12bafa34214682ae20c2cb6f4e38f21575564de88c4599f3410661e9b7a5c6d3",
+      "palette": 0,
+      "rgbaSha256": "cd1d89b8a2dab8499bcc3454abe624930e191778cb031ffb5a3f4302ce82ab68",
+      "allCanvasPixelsExact": true,
+      "gas": 27873346
+    },
+    {
+      "label": "EVM melt presentation step",
+      "hash": "0xf7e827a6e92670e5e1b45db0bda2e403446298e384ad6f9672256c702e1d829c",
+      "frameId": "41",
+      "sequence": 41,
+      "indexedSha256": "31c0b2ee45d9df50e70c7a644e4cf65d1ef300a0d550fc27338fbdb88b2f15ae",
+      "paletteSha256": "12bafa34214682ae20c2cb6f4e38f21575564de88c4599f3410661e9b7a5c6d3",
+      "palette": 0,
+      "rgbaSha256": "a61e1b4cd0e371a12b0b85cf2b857bb999adc4849a2fb31e2ed27de5df5a277c",
+      "allCanvasPixelsExact": true,
+      "gas": 27781662
+    },
+    {
+      "label": "EVM melt presentation step",
+      "hash": "0xf86811aaf24b604b7268c4cc8f3385b9cc2a0c5a339f85ec68b99d17c199d708",
+      "frameId": "42",
+      "sequence": 42,
+      "indexedSha256": "85998d0a8374dc356c9d91889d0f6d64300923a7c850f0cf06f310e415bb18b2",
+      "paletteSha256": "12bafa34214682ae20c2cb6f4e38f21575564de88c4599f3410661e9b7a5c6d3",
+      "palette": 0,
+      "rgbaSha256": "a260504576b984b9b6b5507bc9e99e958500ae8fed5c930d975a42f9fc408430",
+      "allCanvasPixelsExact": true,
+      "gas": 27706764
+    },
+    {
+      "label": "EVM melt presentation step",
+      "hash": "0xb57b5c2f784955533b0820857215b70153c834317f1ba1af6d1e4e0e4374b773",
+      "frameId": "43",
+      "sequence": 43,
+      "indexedSha256": "ea0a3fccdde4f9155a140f705f1e37219d2d6222425185ee49533fe019e515a6",
+      "paletteSha256": "12bafa34214682ae20c2cb6f4e38f21575564de88c4599f3410661e9b7a5c6d3",
+      "palette": 0,
+      "rgbaSha256": "f65149531f463e09105b443623b2902b532b89b474038e94fc780ba5bc8a65dc",
+      "allCanvasPixelsExact": true,
+      "gas": 27650008
+    },
+    {
+      "label": "EVM melt presentation step",
+      "hash": "0xc38619272fe46f66c69d3e64c30916370c12c6375f5ce3a56f2547091ec17267",
+      "frameId": "44",
+      "sequence": 44,
+      "indexedSha256": "a297ba2dfa2d1eae509b975c96471640802a189389ea15ad741c399218782d54",
+      "paletteSha256": "12bafa34214682ae20c2cb6f4e38f21575564de88c4599f3410661e9b7a5c6d3",
+      "palette": 0,
+      "rgbaSha256": "e774efbe632c754d4fd0e1488d0a573d2b79b26c3817f08ceaf5c8243b4a0dc5",
+      "allCanvasPixelsExact": true,
+      "gas": 27607718
+    },
+    {
+      "label": "EVM melt presentation step",
+      "hash": "0xff19398dc1b2292f77942d35b9ac3a242a3af7ce50910541c7acc56a06457c1e",
+      "frameId": "45",
+      "sequence": 45,
+      "indexedSha256": "a297ba2dfa2d1eae509b975c96471640802a189389ea15ad741c399218782d54",
+      "paletteSha256": "12bafa34214682ae20c2cb6f4e38f21575564de88c4599f3410661e9b7a5c6d3",
+      "palette": 0,
+      "rgbaSha256": "e774efbe632c754d4fd0e1488d0a573d2b79b26c3817f08ceaf5c8243b4a0dc5",
+      "allCanvasPixelsExact": true,
+      "gas": 43566677
+    },
+    {
+      "label": "Exact final EVM endpoint",
+      "hash": "0xff19398dc1b2292f77942d35b9ac3a242a3af7ce50910541c7acc56a06457c1e",
+      "frameId": "45",
+      "sequence": 45,
+      "indexedSha256": "a297ba2dfa2d1eae509b975c96471640802a189389ea15ad741c399218782d54",
+      "paletteSha256": "12bafa34214682ae20c2cb6f4e38f21575564de88c4599f3410661e9b7a5c6d3",
+      "palette": 0,
+      "rgbaSha256": "e774efbe632c754d4fd0e1488d0a573d2b79b26c3817f08ceaf5c8243b4a0dc5",
+      "allCanvasPixelsExact": true,
+      "gas": 43566677
+    },
+    {
+      "label": "Normal gameplay resumes",
+      "hash": "0xecf990450199261a4be3435bb6da4c244d546756eaf8cb05577333fd96333c68",
+      "frameId": "46",
+      "sequence": 46,
+      "indexedSha256": "f9ecfcdb9cd0d75dccdee10476d06d8e98f940dff01f4e4b6169e0dc55a9138e",
+      "paletteSha256": "12bafa34214682ae20c2cb6f4e38f21575564de88c4599f3410661e9b7a5c6d3",
+      "palette": 0,
+      "rgbaSha256": "07dd349eff2b87cee8b7e79aae4cfb2f5b4ed66a477c2669a2be95e403e57865",
+      "allCanvasPixelsExact": true,
+      "gas": 1712889131
+    },
+    {
+      "label": "Gameplay menu opens without wipe",
+      "hash": "0x294a79a2d9c3f2fe28366bcb0218df9ddf6adcd4ee60d8a0d457261c8915f3b5",
+      "frameId": "48",
+      "sequence": 48,
+      "indexedSha256": "635158f93b36b137d66cea0834d3989c277ccbae53da18e92e5080ce632c7d6c",
+      "paletteSha256": "12bafa34214682ae20c2cb6f4e38f21575564de88c4599f3410661e9b7a5c6d3",
+      "palette": 0,
+      "rgbaSha256": "836ef485f57882c784f2954c2b054e7b7ac8cdd78a734a68da9e4cd5e4649ee4",
+      "allCanvasPixelsExact": true,
+      "gas": 157558798
+    },
+    {
+      "label": "Gameplay menu closes without wipe",
+      "hash": "0xee7431100be75c318e1a219ec5f1dd3c86c81c21c5eaac50c1f1418761eb2445",
+      "frameId": "49",
+      "sequence": 49,
+      "indexedSha256": "2dd6569bd40f58f560c7a0363a0e9c9c2ac6021f3e3911dd4c08130c575c147c",
+      "paletteSha256": "12bafa34214682ae20c2cb6f4e38f21575564de88c4599f3410661e9b7a5c6d3",
+      "palette": 0,
+      "rgbaSha256": "45cc774604afbea428798cb2df01cf56ab2599a82b763853a5cc10a3b2f46ec0",
+      "allCanvasPixelsExact": true,
+      "gas": 23035164
+    },
+    {
+      "label": "Menu before same-state forced New Game",
+      "hash": "0xbeebddf9d37744b9753ad5164e893b383fda507f012cf0fb787be22749e4d06f",
+      "frameId": "51",
+      "sequence": 51,
+      "indexedSha256": "53762ded005e14c7685305b74acb9f98dc96cbdd69f9d96c95b310b38a98c9a4",
+      "paletteSha256": "12bafa34214682ae20c2cb6f4e38f21575564de88c4599f3410661e9b7a5c6d3",
+      "palette": 0,
+      "rgbaSha256": "31272242cdc15aebe126521b992896da30aecedcc31b5ed46e259b1ead754fc4",
+      "allCanvasPixelsExact": true,
+      "gas": 162656072
+    },
+    {
+      "label": "Forced same-state EVM wipe",
+      "hash": "0xfbddd36445315a30fc0f53f2b5d04cf242944a137805f9ba4f3ae8cdb9383bb4",
+      "frameId": "52",
+      "sequence": 52,
+      "indexedSha256": "33d646757291cc862426a182565615a26a171c5072404a9220e695e725a36276",
+      "paletteSha256": "12bafa34214682ae20c2cb6f4e38f21575564de88c4599f3410661e9b7a5c6d3",
+      "palette": 0,
+      "rgbaSha256": "c27ed4b264fa2d536a8ee2529a013dfedb11751f5f68635bfa48c667873b7884",
+      "allCanvasPixelsExact": true,
+      "gas": 4028678230
+    },
+    {
+      "label": "Uninterrupted forced wipe",
+      "hash": "0x68ca64a1394ef617b1dc950d67d73c1e8e991cf3acd380f356e3f716cfee6145",
+      "frameId": "53",
+      "sequence": 53,
+      "indexedSha256": "ad80bd38514d958bc6273cb702a44da57baf9a1624ddd5659a01a387353f4f82",
+      "paletteSha256": "12bafa34214682ae20c2cb6f4e38f21575564de88c4599f3410661e9b7a5c6d3",
+      "palette": 0,
+      "rgbaSha256": "70b0d11de67f18aa568a58f3bbaff2381b11f4a75dd4cabec1afeaea2c0f5e65",
+      "allCanvasPixelsExact": true,
+      "gas": 39770061
+    },
+    {
+      "label": "Uninterrupted forced wipe",
+      "hash": "0xf13fe44b98542dc57ce50ca009e739f8d93f16b794acb01efaa31300c24efe86",
+      "frameId": "54",
+      "sequence": 54,
+      "indexedSha256": "914ea2d7ddc61d827f7760104923141ba0e24c5d936e801be1ff0ec6eea5eaf7",
+      "paletteSha256": "12bafa34214682ae20c2cb6f4e38f21575564de88c4599f3410661e9b7a5c6d3",
+      "palette": 0,
+      "rgbaSha256": "a1c6567a0df6e1e6365097c7d2c4ce1a4f637713c899fe6254150c0822e2a6e3",
+      "allCanvasPixelsExact": true,
+      "gas": 41948252
+    },
+    {
+      "label": "Uninterrupted forced wipe",
+      "hash": "0x72a45891fa98612afecaabc591c630d45795a96605385e276c225d552368e212",
+      "frameId": "55",
+      "sequence": 55,
+      "indexedSha256": "6c9e84b715dc527ea8eacaf5f8284feacc934f9ba228ebb622e7c953d3165e60",
+      "paletteSha256": "12bafa34214682ae20c2cb6f4e38f21575564de88c4599f3410661e9b7a5c6d3",
+      "palette": 0,
+      "rgbaSha256": "f3c8f61adc83b32ae3fbbb8b9aa74145a75060f51b0787831d8e6d3f182281cc",
+      "allCanvasPixelsExact": true,
+      "gas": 43309951
+    },
+    {
+      "label": "Uninterrupted forced wipe",
+      "hash": "0xa1a80fce11f00281760282f5301f92bdb87165c5069d222dfe80814a12efb3dd",
+      "frameId": "56",
+      "sequence": 56,
+      "indexedSha256": "b3832a8714872cc9df216363a7d47b1cb2f445d5cf57dff5a732efe8390b9826",
+      "paletteSha256": "12bafa34214682ae20c2cb6f4e38f21575564de88c4599f3410661e9b7a5c6d3",
+      "palette": 0,
+      "rgbaSha256": "6d1080303fdb168c4c439dae6cda7f3e416fb4cad5bd44cf86bf92a6bbe5a985",
+      "allCanvasPixelsExact": true,
+      "gas": 44813273
+    },
+    {
+      "label": "Uninterrupted forced wipe",
+      "hash": "0x871191c56c8b73a28f1fb975503e25ab7e4491f87feebdf2a85dd2c35ec7acc0",
+      "frameId": "57",
+      "sequence": 57,
+      "indexedSha256": "da3739801e25fb06b60946c45bb0befc1eebfdf3f0334024fbaffca1f152b321",
+      "paletteSha256": "12bafa34214682ae20c2cb6f4e38f21575564de88c4599f3410661e9b7a5c6d3",
+      "palette": 0,
+      "rgbaSha256": "c0bb30f16c8593bee9811fe752d4326573221f98728b55473cc9a1a971c97ec2",
+      "allCanvasPixelsExact": true,
+      "gas": 46734714
+    },
+    {
+      "label": "Uninterrupted forced wipe",
+      "hash": "0xc56db4dcff16cc2c2547469be0153f10806abfe70b57c4424636294d40fdb4b4",
+      "frameId": "58",
+      "sequence": 58,
+      "indexedSha256": "920d89addb4125e95fd5ad2346c321f6f85bccf08b585c9fb7eaf897e6ab1432",
+      "paletteSha256": "12bafa34214682ae20c2cb6f4e38f21575564de88c4599f3410661e9b7a5c6d3",
+      "palette": 0,
+      "rgbaSha256": "da8f94fe3792f112ca8798e910e435800ad52a88d28a238c66999f26a5357080",
+      "allCanvasPixelsExact": true,
+      "gas": 47711227
+    },
+    {
+      "label": "Uninterrupted forced wipe",
+      "hash": "0x73da6d3f5e1050d08d9d2ebd663357a18c3d30739871395a61083b963b06febd",
+      "frameId": "59",
+      "sequence": 59,
+      "indexedSha256": "e05d44bd12a81d6c41663926434b43fd95babdc737c30f2b1990c1dbd784f23b",
+      "paletteSha256": "12bafa34214682ae20c2cb6f4e38f21575564de88c4599f3410661e9b7a5c6d3",
+      "palette": 0,
+      "rgbaSha256": "346e61514aa84c397e371d590698540a00c1e293ddfe3d2c07e5a17cba2402f9",
+      "allCanvasPixelsExact": true,
+      "gas": 47482613
+    },
+    {
+      "label": "Uninterrupted forced wipe",
+      "hash": "0x6e96fe5bab6bd1a651bd513dffebe2936676227510f7f48b780ca93f486d1953",
+      "frameId": "60",
+      "sequence": 60,
+      "indexedSha256": "a5f025335d80c6c06f945e0724efd02ded69faa5b201a7b5612e8127239c7500",
+      "paletteSha256": "12bafa34214682ae20c2cb6f4e38f21575564de88c4599f3410661e9b7a5c6d3",
+      "palette": 0,
+      "rgbaSha256": "baa185e5c54852dfcab9c10a07b546eea8b037ed1ab9e5f2853043735a2d82ea",
+      "allCanvasPixelsExact": true,
+      "gas": 47102401
+    },
+    {
+      "label": "Uninterrupted forced wipe",
+      "hash": "0xe2bfaf0b15ca6b8be6fcc919a0bebc76ec4f36b72e664e3365b19ac9fdc439b3",
+      "frameId": "61",
+      "sequence": 61,
+      "indexedSha256": "27c82701d39e042f26a7209e407a9eecacf30f9e63ab1b5c24343d4530c351c4",
+      "paletteSha256": "12bafa34214682ae20c2cb6f4e38f21575564de88c4599f3410661e9b7a5c6d3",
+      "palette": 0,
+      "rgbaSha256": "14645b82ead17fd5f1272f9ef5ba31b44d6470ece95933be8fff10f29bfaef81",
+      "allCanvasPixelsExact": true,
+      "gas": 46581236
+    },
+    {
+      "label": "Uninterrupted forced wipe",
+      "hash": "0x22d556f2b21db6c117a50358416459bc59a91e17a927bfab77515b7fdd1860bc",
+      "frameId": "62",
+      "sequence": 62,
+      "indexedSha256": "3b110563d3e70fbb67b445d674893d97e6d7f56e0b758df71ecd19f8104fe3f1",
+      "paletteSha256": "12bafa34214682ae20c2cb6f4e38f21575564de88c4599f3410661e9b7a5c6d3",
+      "palette": 0,
+      "rgbaSha256": "4dadd6c4697c33d955843050b74579c8149e0065b04dd9f6b3f5f68e7868df97",
+      "allCanvasPixelsExact": true,
+      "gas": 46683149
+    },
+    {
+      "label": "Uninterrupted forced wipe",
+      "hash": "0xa4bae5178544ca0da01638de30f4d9573af3f9ba8461d3702a8c31093f0f8c15",
+      "frameId": "63",
+      "sequence": 63,
+      "indexedSha256": "d7a7a5593ecbdf932230944ba47e324ef8be36ba162578c6256823aefb15dbe2",
+      "paletteSha256": "12bafa34214682ae20c2cb6f4e38f21575564de88c4599f3410661e9b7a5c6d3",
+      "palette": 0,
+      "rgbaSha256": "d3a2ed900b601dee21ee1532f46c62486b05d38a8063a1171e0d9cbb638c7e2d",
+      "allCanvasPixelsExact": true,
+      "gas": 46205316
+    },
+    {
+      "label": "Uninterrupted forced wipe",
+      "hash": "0xdbfa33ac3ea83b79b37615555f565196e7ee04f2548adf6dbf9919dab922c17d",
+      "frameId": "64",
+      "sequence": 64,
+      "indexedSha256": "ccfa6ee67d540e65029958f0c1a7a225d55e3da42f13ceb71f3feac93159a476",
+      "paletteSha256": "12bafa34214682ae20c2cb6f4e38f21575564de88c4599f3410661e9b7a5c6d3",
+      "palette": 0,
+      "rgbaSha256": "15452403afbb390d368101c2e4d85b9a17b97ab74e51b953507f7a5f01df6742",
+      "allCanvasPixelsExact": true,
+      "gas": 45517084
+    },
+    {
+      "label": "Uninterrupted forced wipe",
+      "hash": "0xa7a2f39ac7034dfcd5c1dc69c8888d31e29484eea9deefdc7bfaa6a3583f28c0",
+      "frameId": "65",
+      "sequence": 65,
+      "indexedSha256": "d28b304776583cf996902158b9e43c18c122885e07eebf0c5fc8fd3284353f0f",
+      "paletteSha256": "12bafa34214682ae20c2cb6f4e38f21575564de88c4599f3410661e9b7a5c6d3",
+      "palette": 0,
+      "rgbaSha256": "6dd54c6174a7dd31bef3f9c2684a100410a99ffad9b203b9b79cc150d8d9c47a",
+      "allCanvasPixelsExact": true,
+      "gas": 45081045
+    },
+    {
+      "label": "Uninterrupted forced wipe",
+      "hash": "0x0d057db8873dbc2a248e8e83e598a921147e2edb8c00a9f5c0db7f5c7e096dd8",
+      "frameId": "66",
+      "sequence": 66,
+      "indexedSha256": "c651093ec36f7c010e0fc96e5e5413eb2722c3dae1aece77357816cd27d9577b",
+      "paletteSha256": "12bafa34214682ae20c2cb6f4e38f21575564de88c4599f3410661e9b7a5c6d3",
+      "palette": 0,
+      "rgbaSha256": "32af8edaf4f35eacd3a78dcc9969944eb7ccea3da9beb4226bc259191179d203",
+      "allCanvasPixelsExact": true,
+      "gas": 44346456
+    },
+    {
+      "label": "Uninterrupted forced wipe",
+      "hash": "0x4099806a16a411126c9dd7a5f1943fefd456980e72ac977f7ddaebc9f9cb488b",
+      "frameId": "67",
+      "sequence": 67,
+      "indexedSha256": "4173884899ead48f4100561ebc90293ee8c10035a28e576fd00af3a4b24ea1e8",
+      "paletteSha256": "12bafa34214682ae20c2cb6f4e38f21575564de88c4599f3410661e9b7a5c6d3",
+      "palette": 0,
+      "rgbaSha256": "b727aac5388445dc797995845d4f0a1e531d6de5809325d79c726f53d78bbd05",
+      "allCanvasPixelsExact": true,
+      "gas": 43352558
+    },
+    {
+      "label": "Uninterrupted forced wipe",
+      "hash": "0x20ab43e25d20dc0be72b9dc2d466b5d5920fffaee01baf79886ee04a6fb3fa62",
+      "frameId": "68",
+      "sequence": 68,
+      "indexedSha256": "3cd27a4cdafa9ff723a105e05b323ebfcc4ec243da34dda951c93d7be6032610",
+      "paletteSha256": "12bafa34214682ae20c2cb6f4e38f21575564de88c4599f3410661e9b7a5c6d3",
+      "palette": 0,
+      "rgbaSha256": "2dee2021af6a2857b90a057ebef93adf1e73558153e913dd5b93eed19eb36ab6",
+      "allCanvasPixelsExact": true,
+      "gas": 42350198
+    },
+    {
+      "label": "Uninterrupted forced wipe",
+      "hash": "0xace0520dc07917fbc10c3bab10ae54fadfdd6b91fa611664b6bc7b195b14113f",
+      "frameId": "69",
+      "sequence": 69,
+      "indexedSha256": "a7f4e8972d6d9425e083f4b3713cdc50e15bdb9d0af98c82c4595d43697fd0ae",
+      "paletteSha256": "12bafa34214682ae20c2cb6f4e38f21575564de88c4599f3410661e9b7a5c6d3",
+      "palette": 0,
+      "rgbaSha256": "6be576f44d064aaab64dcc31158ff92cad7fe0f1c02ce250cfc936e090b0be59",
+      "allCanvasPixelsExact": true,
+      "gas": 41332584
+    },
+    {
+      "label": "Uninterrupted forced wipe",
+      "hash": "0x47cd9e354c905b9aea141a8d6152c7fb7bdceed5e5c06727f70cbaa65807e783",
+      "frameId": "70",
+      "sequence": 70,
+      "indexedSha256": "ce2f176b4ce7b699ce47fd4edc170f49b4f43d49c4063ef43b5da58922e7a5fa",
+      "paletteSha256": "12bafa34214682ae20c2cb6f4e38f21575564de88c4599f3410661e9b7a5c6d3",
+      "palette": 0,
+      "rgbaSha256": "4757a195bfc9a7e32d7c147c5d084f41efebc1ea6fc873fac62abeb458901e07",
+      "allCanvasPixelsExact": true,
+      "gas": 40297916
+    },
+    {
+      "label": "Uninterrupted forced wipe",
+      "hash": "0x1e8f0855d1f6da1244a6a84b11f809fa5423c93027027d4e37e12ebef1904707",
+      "frameId": "71",
+      "sequence": 71,
+      "indexedSha256": "c7cb42f6f07aee98f135285d31045943e39d4110f48abd31e5d3a1087c85e934",
+      "paletteSha256": "12bafa34214682ae20c2cb6f4e38f21575564de88c4599f3410661e9b7a5c6d3",
+      "palette": 0,
+      "rgbaSha256": "002c27eba318ca0c04912a02b24c8a65dcb5519c3ff17b452342da75a4231a98",
+      "allCanvasPixelsExact": true,
+      "gas": 39243494
+    },
+    {
+      "label": "Uninterrupted forced wipe",
+      "hash": "0x3d6cd27cb31fdd86d5ea12f78e1112af62766eda71bc972cc3d500627b1102e3",
+      "frameId": "72",
+      "sequence": 72,
+      "indexedSha256": "e32631d122c8621d65e4d8c90e0c6fbaf5c6b16f3e0e0b75b9da5ef6cd5e9002",
+      "paletteSha256": "12bafa34214682ae20c2cb6f4e38f21575564de88c4599f3410661e9b7a5c6d3",
+      "palette": 0,
+      "rgbaSha256": "321cf80386fa59f46805b2feca5490b150058e63e7a8e45e3a98b18f10361804",
+      "allCanvasPixelsExact": true,
+      "gas": 38227414
+    },
+    {
+      "label": "Uninterrupted forced wipe",
+      "hash": "0xb2810416f39a9325c9a45121be0396c26b4805df78f789f4daf60180a51adbd8",
+      "frameId": "73",
+      "sequence": 73,
+      "indexedSha256": "9f85ec22a1bc921cf6fab0c18a9793ac7edb9729678fbb4e68faa5f555217be0",
+      "paletteSha256": "12bafa34214682ae20c2cb6f4e38f21575564de88c4599f3410661e9b7a5c6d3",
+      "palette": 0,
+      "rgbaSha256": "b4fa8fd682e4dee2fdadb27ea3dc04b168ec4a0b163778c0ad9912276e4f0a6a",
+      "allCanvasPixelsExact": true,
+      "gas": 37205734
+    },
+    {
+      "label": "Uninterrupted forced wipe",
+      "hash": "0xcd04beaf0b088021687d1f3102ef9ff6b5e2e232f1a4c62da2c2fb5d8fb9bc91",
+      "frameId": "74",
+      "sequence": 74,
+      "indexedSha256": "556a59021e1783fe502cb7b57550a3918906c7ec7f18dbf540a4c4145fc4b07b",
+      "paletteSha256": "12bafa34214682ae20c2cb6f4e38f21575564de88c4599f3410661e9b7a5c6d3",
+      "palette": 0,
+      "rgbaSha256": "7efc82482acc0ccd8f833bc8ae8f9b79e3b29169da09dceec140e934f899edfd",
+      "allCanvasPixelsExact": true,
+      "gas": 36186854
+    },
+    {
+      "label": "Uninterrupted forced wipe",
+      "hash": "0x126d44a4f21b642d9a0f36e1e7d08f1bdcc9ccd3784b360f9b53126b135fe256",
+      "frameId": "75",
+      "sequence": 75,
+      "indexedSha256": "322150a0bdac1fc01d4d1ad74f75f7444a513cfec982eec091db9dfffbcabc77",
+      "paletteSha256": "12bafa34214682ae20c2cb6f4e38f21575564de88c4599f3410661e9b7a5c6d3",
+      "palette": 0,
+      "rgbaSha256": "fee6f751431f848689ed54d06657a563fbbeebaee47fdac8af532b1f82b57971",
+      "allCanvasPixelsExact": true,
+      "gas": 35170774
+    },
+    {
+      "label": "Uninterrupted forced wipe",
+      "hash": "0xf4d2fe5ee3d303c5a98611b094027edab45d68e632d3fecd5d984c9737d90cce",
+      "frameId": "76",
+      "sequence": 76,
+      "indexedSha256": "ffd6de696491247dda0eaa302a53df494c37d4eb6e7ed243bf27e7ef38455844",
+      "paletteSha256": "12bafa34214682ae20c2cb6f4e38f21575564de88c4599f3410661e9b7a5c6d3",
+      "palette": 0,
+      "rgbaSha256": "7de9c3c24713df30d26b3d23dd0ba9fb98435bc764d7556d4f78a3726d44c96d",
+      "allCanvasPixelsExact": true,
+      "gas": 34151894
+    },
+    {
+      "label": "Uninterrupted forced wipe",
+      "hash": "0x2407d82ac0317144d0deabea51d1489a08d624f2a8d3858fead839b08c85d17c",
+      "frameId": "77",
+      "sequence": 77,
+      "indexedSha256": "0d5bd77df5d6578566e3cc668d8a7476ae1c9df56a7ca7259182aa482d190bac",
+      "paletteSha256": "12bafa34214682ae20c2cb6f4e38f21575564de88c4599f3410661e9b7a5c6d3",
+      "palette": 0,
+      "rgbaSha256": "bffb1d41c6dda1471c67460f68056538747b3cd8b12532804807e0c953e5e08e",
+      "allCanvasPixelsExact": true,
+      "gas": 33133014
+    },
+    {
+      "label": "Uninterrupted forced wipe",
+      "hash": "0xb27007aa6e9f6d927ab7972c8fb20297905aad2400e3526b93c1245ae1084335",
+      "frameId": "78",
+      "sequence": 78,
+      "indexedSha256": "735520699e7c4e80d8d6f51196740da72d019eb652674195d7387c563ab87580",
+      "paletteSha256": "12bafa34214682ae20c2cb6f4e38f21575564de88c4599f3410661e9b7a5c6d3",
+      "palette": 0,
+      "rgbaSha256": "f702be1978606ca21ca317bca19f789ef64b11080fbd1ef520bb2dc8fab5adcb",
+      "allCanvasPixelsExact": true,
+      "gas": 32120283
+    },
+    {
+      "label": "Uninterrupted forced wipe",
+      "hash": "0x2b7b0a10efaeea9f7688ac5cc42c208c933051fc139e64db64a56b84b4f713a2",
+      "frameId": "79",
+      "sequence": 79,
+      "indexedSha256": "86548baad3dcc7b74fbb41ed3eb2a4654f4e9d7a6fec1d33c9179b823d9828e1",
+      "paletteSha256": "12bafa34214682ae20c2cb6f4e38f21575564de88c4599f3410661e9b7a5c6d3",
+      "palette": 0,
+      "rgbaSha256": "9ab22c45c056bb95c24aa521fa8dc1262d1ab3b582e3179d2c503b9e0ba63ddd",
+      "allCanvasPixelsExact": true,
+      "gas": 31205436
+    },
+    {
+      "label": "Uninterrupted forced wipe",
+      "hash": "0x0b28a08f6e54d47a69fc44b7106904692778186e081be0e4b966f63d48e275dc",
+      "frameId": "80",
+      "sequence": 80,
+      "indexedSha256": "fa5235c6dfb4d90b19b7bff6aa636018bebfe22a99004dc819ecdf75e707661b",
+      "paletteSha256": "12bafa34214682ae20c2cb6f4e38f21575564de88c4599f3410661e9b7a5c6d3",
+      "palette": 0,
+      "rgbaSha256": "7c351a8f34ffaa6d54d57c8d809572963d3c6a0de6cb5dc26614c191c35ed0ec",
+      "allCanvasPixelsExact": true,
+      "gas": 30469195
+    },
+    {
+      "label": "Uninterrupted forced wipe",
+      "hash": "0x57ed78918a8cef0dd0a23d7e420cc18c5ace805988a2d84ca77a8b871973aeae",
+      "frameId": "81",
+      "sequence": 81,
+      "indexedSha256": "1565d75137c5a2b3323a0fe3a8b2005ac9b9a1f6d6c389545db34e311ba6fd16",
+      "paletteSha256": "12bafa34214682ae20c2cb6f4e38f21575564de88c4599f3410661e9b7a5c6d3",
+      "palette": 0,
+      "rgbaSha256": "d23db10919de54777b857b3daaf4c5f929d67803b1da4305950eb60042585105",
+      "allCanvasPixelsExact": true,
+      "gas": 29851083
+    },
+    {
+      "label": "Uninterrupted forced wipe",
+      "hash": "0x230ae4635354ee7d7fede90f9fee15c6651dddba450ab5ccf472474caf75b9de",
+      "frameId": "82",
+      "sequence": 82,
+      "indexedSha256": "2738c0dc61be5488f3c353fc83516e8ea71a6cc9e7491acbb6581f23b6fea008",
+      "paletteSha256": "12bafa34214682ae20c2cb6f4e38f21575564de88c4599f3410661e9b7a5c6d3",
+      "palette": 0,
+      "rgbaSha256": "ccfe56f1831b592132af6e3521cf512556fb7e5cf04ed7c734a2c1f4989d242d",
+      "allCanvasPixelsExact": true,
+      "gas": 29327413
+    },
+    {
+      "label": "Uninterrupted forced wipe",
+      "hash": "0xf5e12042c330c40446327195f1bfed82267698675362e046ff95672f545d14ea",
+      "frameId": "83",
+      "sequence": 83,
+      "indexedSha256": "49702aa14e46c787c813ad203bde264cd73b219ad67ac2935a8d06ce04b74cd3",
+      "paletteSha256": "12bafa34214682ae20c2cb6f4e38f21575564de88c4599f3410661e9b7a5c6d3",
+      "palette": 0,
+      "rgbaSha256": "99bd907234cd9656fb0fd865410d11b9b8f21ce886ed4ef10c41c41cc86a8613",
+      "allCanvasPixelsExact": true,
+      "gas": 28894621
+    },
+    {
+      "label": "Uninterrupted forced wipe",
+      "hash": "0xad9f5ebb3eb8f6da2c5f62b651d033b0fe17d1c4b4b5582a2bdaa10312d52d71",
+      "frameId": "84",
+      "sequence": 84,
+      "indexedSha256": "cb90d858c6315a302e997df8d6a27b29e38ed768918da7f25d23d8bf135c4b7a",
+      "paletteSha256": "12bafa34214682ae20c2cb6f4e38f21575564de88c4599f3410661e9b7a5c6d3",
+      "palette": 0,
+      "rgbaSha256": "e9309ab6f6b896169935bb98ff3e35edd59f8d0221b791de67fa1b0394cf1b21",
+      "allCanvasPixelsExact": true,
+      "gas": 28549768
+    },
+    {
+      "label": "Uninterrupted forced wipe",
+      "hash": "0x191f2d0f4b765d04956489a0472700a229a677fc9fd0640ba5825c2212806970",
+      "frameId": "85",
+      "sequence": 85,
+      "indexedSha256": "c9ba2213abfea9dd6f4a9861722c2e5b616205b9ef7b78d7687a5421f7e57b01",
+      "paletteSha256": "12bafa34214682ae20c2cb6f4e38f21575564de88c4599f3410661e9b7a5c6d3",
+      "palette": 0,
+      "rgbaSha256": "5586118809a04e895ed463520af41c69ac33874c4bdd9985196b457427c5b5b4",
+      "allCanvasPixelsExact": true,
+      "gas": 28306692
+    },
+    {
+      "label": "Uninterrupted forced wipe",
+      "hash": "0x4edb395f4534f9d31a2c300509de221658a99b9a8763ea6a69b3f6656f8017b5",
+      "frameId": "86",
+      "sequence": 86,
+      "indexedSha256": "c898fde9edec5ffc2fabbcffb85d0def8f56cb6d5dd80d8ba129e3defdd0aa8a",
+      "paletteSha256": "12bafa34214682ae20c2cb6f4e38f21575564de88c4599f3410661e9b7a5c6d3",
+      "palette": 0,
+      "rgbaSha256": "8da111a6d0ae83ed968465343bf930b3ce4e63b290cf7d6e100c6ca8e8aee097",
+      "allCanvasPixelsExact": true,
+      "gas": 28134385
+    },
+    {
+      "label": "Uninterrupted forced wipe",
+      "hash": "0x51d0bfe29561c498d74951593dab9828cc34b75d24967475e39df604d5967aa8",
+      "frameId": "87",
+      "sequence": 87,
+      "indexedSha256": "2afb798fcd7940c6bee37d15b98873bc0277857c762b1ae9dbb57c95bb2d1464",
+      "paletteSha256": "12bafa34214682ae20c2cb6f4e38f21575564de88c4599f3410661e9b7a5c6d3",
+      "palette": 0,
+      "rgbaSha256": "015a407e31215ddf90a0390d4841314e7c56c0f0d0df9f9cfe8f3404dc30fad2",
+      "allCanvasPixelsExact": true,
+      "gas": 27987942
+    },
+    {
+      "label": "Uninterrupted forced wipe",
+      "hash": "0x29e6271303111e07525568cece2abcd5636887f2f073f481b46fe6a80b705740",
+      "frameId": "88",
+      "sequence": 88,
+      "indexedSha256": "a282991f43b190f5691b21a7834b779ec8a7372a66dd630030e82d42d1919d0f",
+      "paletteSha256": "12bafa34214682ae20c2cb6f4e38f21575564de88c4599f3410661e9b7a5c6d3",
+      "palette": 0,
+      "rgbaSha256": "ef46fa4a6df9a1d529239ce6e321bc8cf8037db0631f814489e4f4bfa38b02c7",
+      "allCanvasPixelsExact": true,
+      "gas": 27873346
+    },
+    {
+      "label": "Uninterrupted forced wipe",
+      "hash": "0x22864f4b0f82d9a4a163d450d9549186788030af03c0e9d0d9eaf655a1a79666",
+      "frameId": "89",
+      "sequence": 89,
+      "indexedSha256": "f01bffe396f3cafedbcc2e47d20e9ceb4e43e9fd5409ccd3e2c8c70c2179c8e8",
+      "paletteSha256": "12bafa34214682ae20c2cb6f4e38f21575564de88c4599f3410661e9b7a5c6d3",
+      "palette": 0,
+      "rgbaSha256": "d3c005ede7f5fea33d5d9baca797fe5599146d3c8412cddc52ef54e864cc2834",
+      "allCanvasPixelsExact": true,
+      "gas": 27781662
+    },
+    {
+      "label": "Uninterrupted forced wipe",
+      "hash": "0xeedfa4fe33f51556ebec16bbc37abb95c883784f0c55fc0b6299ffbc691015b3",
+      "frameId": "90",
+      "sequence": 90,
+      "indexedSha256": "5a1f0fd869db73939891d86999100aa06ae104088ea75c246869455c9fbe82a8",
+      "paletteSha256": "12bafa34214682ae20c2cb6f4e38f21575564de88c4599f3410661e9b7a5c6d3",
+      "palette": 0,
+      "rgbaSha256": "2a8c82a6b037ba956f0e0ab7aa9135be4c6af101131e8129924862be5bac4fb5",
+      "allCanvasPixelsExact": true,
+      "gas": 27706764
+    },
+    {
+      "label": "Uninterrupted forced wipe",
+      "hash": "0xd2f589ba537fea1e0ab75846c0ebfce4c13748bf3357e987875e081f19fea06f",
+      "frameId": "91",
+      "sequence": 91,
+      "indexedSha256": "86cc8db021e98a73be21e5b3bc5c4d283ca3c7a83e8624320abcd9a47a19c557",
+      "paletteSha256": "12bafa34214682ae20c2cb6f4e38f21575564de88c4599f3410661e9b7a5c6d3",
+      "palette": 0,
+      "rgbaSha256": "dcf69dac5e2fa451bff9bbc833f8861917b0328c93ec4d665d945e9bb9a704dd",
+      "allCanvasPixelsExact": true,
+      "gas": 27650008
+    },
+    {
+      "label": "Uninterrupted forced wipe",
+      "hash": "0xfadc80789dec3ccd8b608c856779bc3230f160e7f69b9b3dd5f29c965f992c1e",
+      "frameId": "92",
+      "sequence": 92,
+      "indexedSha256": "66672b024cee7e41808c7b6a5e1f6f1e04dde53db910bd20bc0f77a4f84228eb",
+      "paletteSha256": "12bafa34214682ae20c2cb6f4e38f21575564de88c4599f3410661e9b7a5c6d3",
+      "palette": 0,
+      "rgbaSha256": "5db3e3b9565f553eaac57fbfe4234cfe54febe0b5b37aa91df3eb51a09fd1e3c",
+      "allCanvasPixelsExact": true,
+      "gas": 27607718
+    },
+    {
+      "label": "Uninterrupted forced wipe",
+      "hash": "0xa3c8f15b386c54b6ad2403d005b9308f6163e405c6219be9a1c53ae74033a63f",
+      "frameId": "93",
+      "sequence": 93,
+      "indexedSha256": "66672b024cee7e41808c7b6a5e1f6f1e04dde53db910bd20bc0f77a4f84228eb",
+      "paletteSha256": "12bafa34214682ae20c2cb6f4e38f21575564de88c4599f3410661e9b7a5c6d3",
+      "palette": 0,
+      "rgbaSha256": "5db3e3b9565f553eaac57fbfe4234cfe54febe0b5b37aa91df3eb51a09fd1e3c",
+      "allCanvasPixelsExact": true,
+      "gas": 42865557
+    },
+    {
+      "label": "Forced wipe exact endpoint",
+      "hash": "0xa3c8f15b386c54b6ad2403d005b9308f6163e405c6219be9a1c53ae74033a63f",
+      "frameId": "93",
+      "sequence": 93,
+      "indexedSha256": "66672b024cee7e41808c7b6a5e1f6f1e04dde53db910bd20bc0f77a4f84228eb",
+      "paletteSha256": "12bafa34214682ae20c2cb6f4e38f21575564de88c4599f3410661e9b7a5c6d3",
+      "palette": 0,
+      "rgbaSha256": "5db3e3b9565f553eaac57fbfe4234cfe54febe0b5b37aa91df3eb51a09fd1e3c",
+      "allCanvasPixelsExact": true,
+      "gas": 42865557
+    }
+  ],
+  "inputs": [],
+  "rollbacks": [
+    {
+      "label": "duplicate presentation request",
+      "transaction": "0xf986bbfa1f2be9a49fd388cc37e7ed1069662f04bc444f0ec5be951149cc48a7",
+      "storageRoot": "0x7545540f1929192b60046fdd7e130c2ae85d441d3dbfb23fd0e1e555b5373ea5",
+      "gasLimit": 10000000000,
+      "allStorageUnchanged": true,
+      "noLogs": true
+    },
+    {
+      "label": "racing player input",
+      "transaction": "0xfc00c8cea65981f4fc639109286e3b274ac90cd804f41324365477871eb51cce",
+      "storageRoot": "0x7545540f1929192b60046fdd7e130c2ae85d441d3dbfb23fd0e1e555b5373ea5",
+      "gasLimit": 10000000000,
+      "allStorageUnchanged": true,
+      "noLogs": true
+    },
+    {
+      "label": "palette/UI control during wipe",
+      "transaction": "0x0b83cd0cbc375f6000d35afb15d144e3462c1f116887adbb03c20a105b2e6f9e",
+      "storageRoot": "0x7545540f1929192b60046fdd7e130c2ae85d441d3dbfb23fd0e1e555b5373ea5",
+      "gasLimit": 10000000000,
+      "allStorageUnchanged": true,
+      "noLogs": true
+    },
+    {
+      "label": "snapshot save during wipe",
+      "transaction": "0xf48d41aea89878c284586f0b72cb757b3d91f0fc5c9a581ba4f5861fba97f0a4",
+      "storageRoot": "0x7545540f1929192b60046fdd7e130c2ae85d441d3dbfb23fd0e1e555b5373ea5",
+      "gasLimit": 10000000000,
+      "allStorageUnchanged": true,
+      "noLogs": true
+    },
+    {
+      "label": "snapshot load during wipe",
+      "transaction": "0x7c06bcc52d0e0e99510a88ea88f1879572b4c8d8f922fd44dd9bb371b007fa65",
+      "storageRoot": "0x7545540f1929192b60046fdd7e130c2ae85d441d3dbfb23fd0e1e555b5373ea5",
+      "gasLimit": 10000000000,
+      "allStorageUnchanged": true,
+      "noLogs": true
+    },
+    {
+      "label": "restart during wipe",
+      "transaction": "0x232e01dc238f32948d262e7cdfd8c0ed8fe03abd4edfbf391f569fa55e70bbbd",
+      "storageRoot": "0x7545540f1929192b60046fdd7e130c2ae85d441d3dbfb23fd0e1e555b5373ea5",
+      "gasLimit": 10000000000,
+      "allStorageUnchanged": true,
+      "noLogs": true
+    },
+    {
+      "label": "wrong driver",
+      "transaction": "0x57f2b8d1eb7b7154ecb627a6c62b3c348aaeb2d5fa7099e0b26c3fcb08fc5410",
+      "storageRoot": "0x7545540f1929192b60046fdd7e130c2ae85d441d3dbfb23fd0e1e555b5373ea5",
+      "gasLimit": 10000000000,
+      "allStorageUnchanged": true,
+      "noLogs": true
+    },
+    {
+      "label": "underfunded presentation rollback",
+      "transaction": "0x6b61af11e19178fc4d27c38579ed9c25779d3a058932c889d711c10a00e071d9",
+      "storageRoot": "0x7545540f1929192b60046fdd7e130c2ae85d441d3dbfb23fd0e1e555b5373ea5",
+      "gasLimit": 1000000,
+      "allStorageUnchanged": true,
+      "noLogs": true
+    }
+  ],
+  "selections": [],
+  "runtime": {
+    "port": 19221,
+    "args": [
+      "--host",
+      "127.0.0.1",
+      "--port",
+      "19221",
+      "--hardfork",
+      "cancun",
+      "--disable-code-size-limit",
+      "--disable-block-gas-limit",
+      "--no-request-size-limit",
+      "--memory-limit",
+      "1073741824",
+      "--silent"
+    ],
+    "client": "anvil/v1.8.5"
+  },
+  "resources": {
+    "chunks": 1755,
+    "allRuntimeBytesExact": true,
+    "totalGas": 6271928016,
+    "receiptsSha256": "e3d8bb8713526a8199e28f73ee7a6b36ad22d7beb0625313ab93da3151c2c3bd"
+  },
+  "deployment": {
+    "address": "0x5ae1f4bb68f8eac39cfdbdfda2b7344ccbd80faf",
+    "hash": "0x3b94782863c1c9302e60d30d48bb545820760762a0198800919c4c4af3c83511",
+    "gas": 345040914,
+    "runtimeBytes": 933187,
+    "runtimeSha256": "955a445140351757a7798ea31a2d7830ba27d49a0632e4704a95256ed9da6b91"
+  },
+  "browserAutoOptIn": true,
+  "explicitPauseNoWorldTics": true,
+  "reloadRecoveredWithoutDuplicate": true,
+  "knownUnminedReloadNoRetry": true,
+  "wipe": {
+    "steps": 42,
+    "seed": 1,
+    "allNativeFramesExact": true,
+    "nativeManifestSha256": "4d37ff83e50b97cf612697a7af7ba44cb7a62bacd6d1e78a4b36be20e1560853",
+    "totalGas": 6001486856,
+    "totalWallMs": 8176.671875,
+    "firstTransactionMs": 2620.9452500000043,
+    "continuationSteps": [
+      {
+        "milliseconds": 80.2888329999987,
+        "gas": 46703914
+      },
+      {
+        "milliseconds": 77.4643750000032,
+        "gas": 47711227
+      },
+      {
+        "milliseconds": 79.45287500000268,
+        "gas": 47491013
+      },
+      {
+        "milliseconds": 84.76466699999582,
+        "gas": 47105201
+      },
+      {
+        "milliseconds": 102.4095840000009,
+        "gas": 46586836
+      },
+      {
+        "milliseconds": 77.91570800000045,
+        "gas": 46643949
+      },
+      {
+        "milliseconds": 79.1697920000006,
+        "gas": 46188516
+      },
+      {
+        "milliseconds": 78.1732090000005,
+        "gas": 45508684
+      },
+      {
+        "milliseconds": 62.60929100000067,
+        "gas": 45083845
+      },
+      {
+        "milliseconds": 78.18945800000074,
+        "gas": 44346456
+      },
+      {
+        "milliseconds": 61.97308300000441,
+        "gas": 43355358
+      },
+      {
+        "milliseconds": 64.33666699999594,
+        "gas": 42350198
+      },
+      {
+        "milliseconds": 62.34520899999916,
+        "gas": 41332584
+      },
+      {
+        "milliseconds": 61.94474999999511,
+        "gas": 40297916
+      },
+      {
+        "milliseconds": 61.26441600000544,
+        "gas": 39246294
+      },
+      {
+        "milliseconds": 61.29245799999626,
+        "gas": 38227414
+      },
+      {
+        "milliseconds": 57.83466600000247,
+        "gas": 37208534
+      },
+      {
+        "milliseconds": 58.30954200000269,
+        "gas": 36189654
+      },
+      {
+        "milliseconds": 56.144249999997555,
+        "gas": 35170774
+      },
+      {
+        "milliseconds": 54.998333000003186,
+        "gas": 34151894
+      },
+      {
+        "milliseconds": 55.71587500000169,
+        "gas": 33133014
+      },
+      {
+        "milliseconds": 55.241125000000466,
+        "gas": 32120283
+      },
+      {
+        "milliseconds": 55.845792000000074,
+        "gas": 31205436
+      },
+      {
+        "milliseconds": 55.52870800000528,
+        "gas": 30469195
+      },
+      {
+        "milliseconds": 54.98945800000365,
+        "gas": 29851083
+      },
+      {
+        "milliseconds": 55.862583000001905,
+        "gas": 29327413
+      },
+      {
+        "milliseconds": 55.385667000002286,
+        "gas": 28897421
+      },
+      {
+        "milliseconds": 55.70737499999814,
+        "gas": 28552568
+      },
+      {
+        "milliseconds": 54.92766599999595,
+        "gas": 28306692
+      },
+      {
+        "milliseconds": 56.935083999997005,
+        "gas": 28134385
+      },
+      {
+        "milliseconds": 54.610249999997905,
+        "gas": 27987942
+      },
+      {
+        "milliseconds": 55.07658300000185,
+        "gas": 27873346
+      },
+      {
+        "milliseconds": 56.88037500000064,
+        "gas": 27781662
+      },
+      {
+        "milliseconds": 55.77458399999887,
+        "gas": 27706764
+      },
+      {
+        "milliseconds": 57.38958399999683,
+        "gas": 27650008
+      },
+      {
+        "milliseconds": 55.46929200000159,
+        "gas": 27607718
+      },
+      {
+        "milliseconds": 54.36820799999987,
+        "gas": 43566677
+      }
+    ],
+    "worldAndUITicsFrozen": true,
+    "finalExact": true
+  },
+  "normalGameplayAndMenu": true,
+  "uninterruptedWipe": {
+    "steps": 42,
+    "seed": 1,
+    "totalWallMs": 5848.135374999998,
+    "totalGas": 5558949315,
+    "transactions": [
+      {
+        "milliseconds": 2576.099750000001,
+        "gas": 4028678230
+      },
+      {
+        "milliseconds": 78.54079199999978,
+        "gas": 39770061
+      },
+      {
+        "milliseconds": 63.994917000003625,
+        "gas": 41948252
+      },
+      {
+        "milliseconds": 77.71450000000186,
+        "gas": 43309951
+      },
+      {
+        "milliseconds": 63.71533399999316,
+        "gas": 44813273
+      },
+      {
+        "milliseconds": 78.0815830000065,
+        "gas": 46734714
+      },
+      {
+        "milliseconds": 80.58333300000231,
+        "gas": 47711227
+      },
+      {
+        "milliseconds": 78.37695799999346,
+        "gas": 47482613
+      },
+      {
+        "milliseconds": 76.41254099999787,
+        "gas": 47102401
+      },
+      {
+        "milliseconds": 79.16795800000546,
+        "gas": 46581236
+      },
+      {
+        "milliseconds": 76.88362500000221,
+        "gas": 46683149
+      },
+      {
+        "milliseconds": 77.51479200000176,
+        "gas": 46205316
+      },
+      {
+        "milliseconds": 78.38845800000126,
+        "gas": 45517084
+      },
+      {
+        "milliseconds": 79.44287499999336,
+        "gas": 45081045
+      },
+      {
+        "milliseconds": 64.61991700000362,
+        "gas": 44346456
+      },
+      {
+        "milliseconds": 62.1765000000014,
+        "gas": 43352558
+      },
+      {
+        "milliseconds": 78.69445799999812,
+        "gas": 42350198
+      },
+      {
+        "milliseconds": 62.51745899999514,
+        "gas": 41332584
+      },
+      {
+        "milliseconds": 62.18916700000409,
+        "gas": 40297916
+      },
+      {
+        "milliseconds": 62.86420799999905,
+        "gas": 39243494
+      },
+      {
+        "milliseconds": 57.77166699999361,
+        "gas": 38227414
+      },
+      {
+        "milliseconds": 58.97562499999185,
+        "gas": 37205734
+      },
+      {
+        "milliseconds": 57.78045900000143,
+        "gas": 36186854
+      },
+      {
+        "milliseconds": 57.312707999997656,
+        "gas": 35170774
+      },
+      {
+        "milliseconds": 58.60070799999812,
+        "gas": 34151894
+      },
+      {
+        "milliseconds": 55.28079100001196,
+        "gas": 33133014
+      },
+      {
+        "milliseconds": 55.51487500000803,
+        "gas": 32120283
+      },
+      {
+        "milliseconds": 55.55570900000748,
+        "gas": 31205436
+      },
+      {
+        "milliseconds": 56.48733400000492,
+        "gas": 30469195
+      },
+      {
+        "milliseconds": 56.51929100000416,
+        "gas": 29851083
+      },
+      {
+        "milliseconds": 57.45508300000802,
+        "gas": 29327413
+      },
+      {
+        "milliseconds": 56.62358299999323,
+        "gas": 28894621
+      },
+      {
+        "milliseconds": 56.24749999999767,
+        "gas": 28549768
+      },
+      {
+        "milliseconds": 56.66866699999082,
+        "gas": 28306692
+      },
+      {
+        "milliseconds": 56.117417000001296,
+        "gas": 28134385
+      },
+      {
+        "milliseconds": 59.72583300000406,
+        "gas": 27987942
+      },
+      {
+        "milliseconds": 57.48958300000231,
+        "gas": 27873346
+      },
+      {
+        "milliseconds": 56.479000000006636,
+        "gas": 27781662
+      },
+      {
+        "milliseconds": 55.98820799999521,
+        "gas": 27706764
+      },
+      {
+        "milliseconds": 56.21562499999709,
+        "gas": 27650008
+      },
+      {
+        "milliseconds": 55.94616700000188,
+        "gas": 27607718
+      },
+      {
+        "milliseconds": 56.77975000000151,
+        "gas": 42865557
+      }
+    ],
+    "allNativeFramesExact": true,
+    "worldFrozen": true,
+    "nativeManifestSha256": "70aeb3adf346bbebb9aaa7bd9f04de73f870305177db560fa4c702f9e3588d88"
+  },
+  "costComparison": {
+    "firstWipeNewGameGas": 4470920651,
+    "legacyNewGameGas": 4060274214,
+    "firstFrameDeltaGas": 410646437,
+    "legacyNewGameWallMs": 2432.412500000006,
+    "presentationOnlyGas": 1530566205,
+    "firstEndpointExactlyMatchesLegacy": true
+  },
+  "browser": {
+    "protocolVersion": "1.3",
+    "product": "Chrome/155.0.8059.40",
+    "revision": "@cfaadc5a132d78e1828635aa8405a499f3e14864",
+    "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36",
+    "jsVersion": "15.5.35.20"
+  },
+  "endedUtc": "2026-10-13T16:44:58.730Z",
+  "stoppedOwnedRuntimes": true
+}

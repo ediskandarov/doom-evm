@@ -1,0 +1,18 @@
+{
+  "pass": true,
+  "baseline": "2e0a7db94e9abcaa1a5d982e1b080d4348e268b2",
+  "benchmarkFeature": "c4905b3e34d661be661e9adcb1dcd45611a8bd4d",
+  "wipeFeature": "ed1f5c27328b4809e57aec50d0bfdea997aebcec",
+  "benchmarkMerge": "8f7ae377749f6dc76832dc52a41c5a447943c581",
+  "sourceIntegrationMerge": "f8d33781d2d3cd456d6a28016062b0328c23afd1",
+  "conflicts": [],
+  "featureEvidenceHashesVerified": true,
+  "underlyingForgeNodeBrowserResultsInspected": true,
+  "featureProductionSourcePreserved": true,
+  "historicalBenchmarkPreserved": true,
+  "originalCAndEssayMediaUnchanged": true,
+  "wipeAlgorithm": "unchanged src/doom/f_wipe.sol; EVM-only pixels",
+  "browserScope": "real menu title-to-gameplay and forced same-state New Game on three profiles; other routes partial adapter/inherited proofs",
+  "ordinaryPathChanged": "opt-in retains 64000-byte displayed framebuffer and checks transition state; browser uses journal and wipeStatus RPC",
+  "nativeOracleRegeneration": "O0/O2/ASan+UBSan agree; all seven existing fixture bytes unchanged"
+}

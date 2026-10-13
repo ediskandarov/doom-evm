@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "pass": false,
+  "startedUtc": "2026-10-13T17:00:06.272Z",
+  "sourceCommit": "f8d33781d2d3cd456d6a28016062b0328c23afd1",
+  "branch": "main",
+  "parameters": {
+    "mode": "direct",
+    "count": 50,
+    "reps": 1,
+    "warmup": 3,
+    "port": 19881,
+    "httpPort": 18089,
+    "requireAC": true,
+    "meltEnabledInDirect": false,
+    "receiptPolicy": "production receipt waiter: 20 ms after absent receipt",
+    "browserNoticeGate": false
+  },
+  "runs": [],
+  "harness": {
+    "path": "artifacts/benchmarks/doom2-map01-melt-followup/run.mjs",
+    "sha256": "e51d09967493e088cade69322679d24aaf6970acaa471f47df549ac577c82e19",
+    "derivedFrom": "c4905b3e34d661be661e9adcb1dcd45611a8bd4d/artifacts/benchmarks/doom2-map01-performance/run.mjs"
+  },
+  "error": "Error: Refuse existing web/config.local.json; use a clean goal-owned website/worktree\n    at file:///Users/eduard/sandbox/doom-evm/artifacts/benchmarks/doom2-map01-melt-followup/run.mjs:145:53",
+  "endedUtc": "2026-10-13T17:00:06.304Z"
+}

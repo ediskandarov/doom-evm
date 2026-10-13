@@ -1,0 +1,127 @@
+{
+  "pass": true,
+  "scope": "one sequential 50-frame direct mined run per arm, same integrated source; not a post-integration browser FPS benchmark",
+  "sourceCommit": "f8d33781d2d3cd456d6a28016062b0328c23afd1",
+  "framesPerArm": 50,
+  "measuredWorldPixelsPaletteAndExposedGameplayStatesEqual": true,
+  "equalFramePairs": {
+    "worldSha256": 50,
+    "statusBarSha256": 13,
+    "pixelSha256": 13,
+    "paletteSha256": 50,
+    "state": 50
+  },
+  "eventPacketsEqualIgnoringSequence": true,
+  "presentationContinuationsExcludedFromOptinThroughput": 41,
+  "metrics": {
+    "optout": {
+      "repetitions": 1,
+      "frames": 50,
+      "transactions": 50,
+      "elapsedMs": 97662.761209,
+      "gameplayFPS": 0.5119658647885158,
+      "transactionsPerSecond": 0.5119658647885158,
+      "ticsPerSecond": 0.5119658647885158,
+      "slowdownFrom35Hz": 68.3639328463,
+      "frameIntervalsMs": {
+        "count": 49,
+        "mean": 1957.1236011836736,
+        "median": 1997.4464159999916,
+        "p95": 2311.4727999999886,
+        "min": 1213.2615839999926,
+        "max": 2331.491417000012
+      },
+      "transactionReceiptLatencyMs": {
+        "count": 50,
+        "mean": 1952.4725724600016,
+        "median": 1988.6271244999953,
+        "p95": 2309.3050161500023,
+        "min": 1212.5454999999783,
+        "max": 2330.488834000018
+      },
+      "gasPerFrame": {
+        "count": 50,
+        "mean": 1645386253.82,
+        "median": 1671350558,
+        "p95": 1915777696.75,
+        "min": 1077970049,
+        "max": 1965159502
+      },
+      "anvilMeanCpuPercent": 98.24173679487123,
+      "anvilPeakIntervalCpuPercent": 100.99975174260992,
+      "peakRssKiB": 341152,
+      "componentsMs": {
+        "sendRpc": {
+          "mean": 0.3722774800012121,
+          "medianOfRunMedians": 0.3521255000086967
+        },
+        "sendResponseToReceipt": {
+          "mean": 1952.1002949800004,
+          "medianOfRunMedians": 1988.2580409999937
+        }
+      }
+    },
+    "optin": {
+      "repetitions": 1,
+      "frames": 50,
+      "transactions": 50,
+      "elapsedMs": 96295.215084,
+      "gameplayFPS": 0.5192365992057251,
+      "transactionsPerSecond": 0.5192365992057251,
+      "ticsPerSecond": 0.5192365992057251,
+      "slowdownFrom35Hz": 67.4066505588,
+      "frameIntervalsMs": {
+        "count": 49,
+        "mean": 1928.7583945510203,
+        "median": 1962.1453749999928,
+        "p95": 2283.9926584000054,
+        "min": 1204.2301250000019,
+        "max": 2364.303583000001
+      },
+      "transactionReceiptLatencyMs": {
+        "count": 50,
+        "mean": 1925.2675535000003,
+        "median": 1959.9788545000047,
+        "p95": 2281.2773296500104,
+        "min": 1203.5667079999985,
+        "max": 2363.526375000016
+      },
+      "gasPerFrame": {
+        "count": 50,
+        "mean": 1654653543.76,
+        "median": 1680625071.5,
+        "p95": 1925034570.8,
+        "min": 1087230557,
+        "max": 1974434021
+      },
+      "anvilMeanCpuPercent": 98.09611469751087,
+      "anvilPeakIntervalCpuPercent": 100.06853033190275,
+      "peakRssKiB": 639440,
+      "componentsMs": {
+        "sendRpc": {
+          "mean": 0.3306142399975215,
+          "medianOfRunMedians": 0.33179199999722186
+        },
+        "sendResponseToReceipt": {
+          "mean": 1924.9369392600026,
+          "medianOfRunMedians": 1959.675271
+        }
+      }
+    }
+  },
+  "gasDeltaPerFrameMean": 9267289.940000057,
+  "gasIncreasePercent": 0.563228841767987,
+  "observedThroughputChangePercent": 1.4201599984039248,
+  "power": {
+    "optout": {
+      "powerBefore": "Now drawing from 'Battery Power'\n -InternalBattery-0 (id=34799715)\t92%; discharging; 8:40 remaining present: true",
+      "powerAfter": "Now drawing from 'Battery Power'\n -InternalBattery-0 (id=34799715)\t91%; discharging; 8:20 remaining present: true"
+    },
+    "optin": {
+      "powerBefore": "Now drawing from 'Battery Power'\n -InternalBattery-0 (id=34799715)\t90%; discharging; 7:50 remaining present: true",
+      "powerAfter": "Now drawing from 'Battery Power'\n -InternalBattery-0 (id=34799715)\t89%; discharging; 7:30 remaining present: true"
+    }
+  },
+  "limitation": "Battery power, sequential one-run arms, no statistical/causal throughput verdict; browser journal/status RPC overhead not timed",
+  "historicalGasPerFrame": 1645383449.42
+}
