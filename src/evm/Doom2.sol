@@ -2,6 +2,7 @@
 pragma solidity 0.8.37;
 
 import {IFrameProtocol} from "./FrameProtocol.sol";
+import {DoomWipe} from "./DoomWipe.sol";
 import {DoomState} from "../doom/doomstat.sol";
 import {Doom2WadResources as WadResources} from "./Doom2WadResources.sol";
 import {DoomRenderer} from "./DoomRenderer.sol";
@@ -20,7 +21,7 @@ import {DoomSave, SaveSlot, SaveSlotMetadata} from "./DoomSave.sol";
 
 /// @notice Classic DOOM II MAP01–MAP32 rendering and original gameplay inside the ordinary EVM.
 /// @dev Explicit startup preserves the accepted static renderer before gameplay begins.
-contract Doom2 is IFrameProtocol, WadResources {
+contract Doom2 is IFrameProtocol, WadResources, DoomWipe {
     error NotDriver();
     error BadSequence();
     error UnsupportedButtons();
@@ -69,6 +70,7 @@ contract Doom2 is IFrameProtocol, WadResources {
     /// @dev Startup consumes no input or Frame; renderFrame/stepEventsAndRender draws the menu.
     /// @notice Explicit opt-in; preserves initializeMenu's existing memory policy.
     function initializeMenuWithMemoryProfile(bool fullscreen, uint8 profile) external {
+        _requireNoWipe();
         if (msg.sender != driver) revert NotDriver();
         if (profile > 3) revert UnsupportedButtons();
         selectedMemoryProfile = profile;
@@ -174,6 +176,7 @@ contract Doom2 is IFrameProtocol, WadResources {
     }
 
     function _saveLoadDriver(uint32 sequence) private view {
+        _requireNoWipe();
         if (msg.sender != driver) revert NotDriver();
         if (!episodeMode || !menuMode || !rawInput) revert EpisodeNotEnabled();
         if (inputSeq == type(uint32).max || sequence != inputSeq + 1) revert BadSequence();
@@ -205,7 +208,11 @@ contract Doom2 is IFrameProtocol, WadResources {
         );
         inputSeq = sequence;
         emit GameSaved(slot, saveSlots[slot].revision, digest, uint32(saveSlots[slot].data.length));
-        if (draw) _emitFrame(sequence, gameState.renderFramebuffer);
+        if (draw) {
+            _restoreWipeDisplay(gameState.renderFramebuffer, gameState.gamestate);
+            if (_meltEnabled()) inputRuntime.flow.wipegamestate = gameState.gamestate;
+            _publishFrame(sequence, gameState.renderFramebuffer);
+        }
     }
 
     function _loadGame(uint8 slot, uint64 revision, uint32 sequence, bool draw) private {
@@ -232,7 +239,11 @@ contract Doom2 is IFrameProtocol, WadResources {
         emit GameLoaded(slot, revision, saveSlots[slot].digest);
         // This is authenticated saved EVM output, not a render/tic. The next
         // ordinary packet rebinds resources/hooks through unchanged DoomGame.load.
-        if (draw) _emitFrame(sequence, gameState.renderFramebuffer);
+        if (draw) {
+            _restoreWipeDisplay(gameState.renderFramebuffer, gameState.gamestate);
+            if (_meltEnabled()) inputRuntime.flow.wipegamestate = gameState.gamestate;
+            _publishFrame(sequence, gameState.renderFramebuffer);
+        }
     }
 
     /// @notice Authoritative supported Options state; ABI addition leaves menuStatus unchanged.
@@ -327,6 +338,7 @@ contract Doom2 is IFrameProtocol, WadResources {
     }
 
     function _episodeDriver() private view {
+        _requireNoWipe();
         if (msg.sender != driver) revert NotDriver();
         if (!episodeMode) revert EpisodeNotEnabled();
         if (!gameStarted) revert GameNotStarted();
@@ -409,6 +421,7 @@ contract Doom2 is IFrameProtocol, WadResources {
 
     /// @notice Select original view size 10 or 11 for the next drawn frame, without advancing a tic.
     function setUIFullscreen(bool fullscreen) external {
+        _requireNoWipe();
         if (msg.sender != driver) revert NotDriver();
         if (!uiState.enabled) revert UINotEnabled();
         if (menuMode) menuState.screenSize = fullscreen ? int32(8) : int32(7);
@@ -451,6 +464,7 @@ contract Doom2 is IFrameProtocol, WadResources {
     }
 
     function _step(uint32 buttons, uint32 sequence, bool draw) private {
+        _requireNoWipe();
         if (msg.sender != driver) revert NotDriver();
         if (rawInput) revert RawInputRequired();
         if (inputSeq == type(uint32).max || sequence != inputSeq + 1) revert BadSequence();
@@ -494,6 +508,7 @@ contract Doom2 is IFrameProtocol, WadResources {
     /// GA_NEWGAME and selected skill/episode/map remain pending for Episode Runtime.
     /// No full G_Ticker action dispatch or map substitution occurs in this goal.
     function _stepEvents(bytes memory events, uint32 sequence, bool draw) private {
+        _requireNoWipe();
         if (msg.sender != driver) revert NotDriver();
         if (!rawInput) revert RawInputNotEnabled();
         if (inputSeq == type(uint32).max || sequence != inputSeq + 1) revert BadSequence();
@@ -758,7 +773,45 @@ contract Doom2 is IFrameProtocol, WadResources {
         flagsSha256 = sha256(flags);
     }
 
+    function _wipeDriver() internal view override returns (address) {
+        return driver;
+    }
+
+    function _wipeSequence() internal view override returns (uint32) {
+        return inputSeq;
+    }
+
+    function _wipeCommitRandom(uint32 random) internal override {
+        gameState.rndindex = random;
+    }
+
+    function _wipeOverlay(bytes memory pixels) internal view override {
+        if (menuMode) {
+            MenuState memory m = menuState;
+            M_Menu.M_Drawer(m, _resourceView(), pixels);
+        }
+    }
+
+    function _wipePublish(uint32 sequence, bytes memory pixels) internal override {
+        inputSeq = sequence;
+        _publishFrame(sequence, pixels);
+    }
+
     function _emitFrame(uint32 sequence, bytes memory pixels) private {
+        if (pixels.length != 320 * 200) revert InvalidFrame();
+        if (episodeMode && _meltEnabled()) {
+            pixels = _displayWipe(
+                pixels,
+                gameStarted ? gameState.gamestate : int32(3),
+                inputRuntime.flow.wipegamestate == -1,
+                gameState.rndindex
+            );
+            inputRuntime.flow.wipegamestate = gameStarted ? gameState.gamestate : int32(3);
+        }
+        _publishFrame(sequence, pixels);
+    }
+
+    function _publishFrame(uint32 sequence, bytes memory pixels) private {
         if (pixels.length != 320 * 200) revert InvalidFrame();
         ++frameId;
         if (uiState.enabled) {
@@ -809,10 +862,18 @@ contract Doom2 is IFrameProtocol, WadResources {
     }
 
     /// @notice Authoritative original player/death state; does not advance the game.
-    function playerLifecycle() external view returns (
-        PlayerState state, int32 actorState, int32 actorTics, int32 viewheight,
-        int32 damagecount, bool backpack
-    ) {
+    function playerLifecycle()
+        external
+        view
+        returns (
+            PlayerState state,
+            int32 actorState,
+            int32 actorTics,
+            int32 viewheight,
+            int32 damagecount,
+            bool backpack
+        )
+    {
         if (!gameStarted) revert GameNotStarted();
         Player storage p = gameState.players[uint32(gameState.consoleplayer)];
         Mobj storage mo = gameState.mobjs[p.mo];

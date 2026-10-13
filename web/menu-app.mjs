@@ -6,6 +6,7 @@ import { validatePalette } from './palette.mjs';
 import { RawKeyboardInput, bindKeyboard } from './input.mjs';
 import { GameplayLoop } from './input-loop.mjs';
 import { MenuTransactions } from './menu-input.mjs';
+import { heldKeyReleases, suspendWipeKeys } from './wipe-input.mjs';
 
 export async function openMenu(config) {
   // The normal production player uses the menu/raw/Episode profile by default.
@@ -20,7 +21,12 @@ export async function openMenu(config) {
   const debug=document.createElement('details'), summary=document.createElement('summary');
   debug.id='debug';summary.textContent='Debug';debug.append(summary);status.before(debug);debug.append(status);
   const metrics=document.createElement('pre');metrics.id='debug-metrics';debug.append(metrics);
-  let subscription, reconnectTimer, stopped=false, loop, transactions, pendingPresentation=Promise.resolve();
+  const wipeNotice=document.createElement('div'), wipeText=document.createElement('span');
+  wipeNotice.id='wipe-notice';wipeNotice.hidden=true;wipeNotice.setAttribute('aria-live','polite');
+  const pauseWipe=document.createElement('button'), resumeWipe=document.createElement('button');
+  pauseWipe.type=resumeWipe.type='button';pauseWipe.textContent='Pause transition';resumeWipe.textContent='Continue transition';
+  wipeNotice.append(wipeText,pauseWipe,resumeWipe);canvas.after(wipeNotice);
+  let subscription, reconnectTimer, stopped=false, loop, transactions, pendingPresentation=Promise.resolve(), wipePaused=false;
   const hex = bytes => [...bytes].map(n=>n.toString(16).padStart(2,'0')).join('');
   const fail = error => { status.textContent=error.message;proof.errors.push(error.message);debug.open=true; };
   const rpc=makeRpc(config.rpcUrl), palette=config.palette??await(await fetch(config.paletteUrl)).json();
@@ -44,13 +50,18 @@ export async function openMenu(config) {
   });
   await subscription.connect();await backfill(rpc,config.address,config.deploymentBlock,inbox);
   const update=()=>{proof.gameStarted=transactions?.started??false;proof.gameplayRunning=loop?.running??false;
+    proof.wipe=transactions?.wipe??null;wipeNotice.hidden=!proof.wipe?.active;
+    wipeText.textContent=`EVM melt · step ${proof.wipe?.progress??0}. Each frame requires a transaction; this can take minutes. Gameplay input is suspended. `;
+    pauseWipe.disabled=!loop?.running;resumeWipe.disabled=!!loop?.running||!!transactions?.pending||!transactions?.canSend;
     metrics.textContent=`Gas budget: ${transactions?.gas??'loading'}\nInput sequence: ${transactions?.sequence??0}\nPending: ${transactions?.pending??false}`;};
   transactions=new MenuTransactions(rpc,config,inbox,{onState:update,onFrame:input=>{proof.inputs.push(input);proof.duplicates=inbox.duplicates;}});
   await transactions.load();proof.gasLimit=transactions.gas;proof.gasBudgetSource=transactions.gasSource;
   const keyboard=new RawKeyboardInput();
   loop=new GameplayLoop(transactions,keyboard,{onState:update,onError:fail});
-  const binding=bindKeyboard(window,keyboard,document,{enabled:()=>loop.running&&!stopped,onReset:()=>loop.stop()});
-  const resume=()=>{if(!document.hidden&&!stopped&&!loop.running&&!loop.starting&&!transactions.pending)loop.start().catch(fail);};
+  const binding=bindKeyboard(window,keyboard,document,{enabled:()=>loop.running&&!stopped&&!transactions.wipe?.active,onReset:()=>loop.stop()});
+  pauseWipe.addEventListener('click',()=>{wipePaused=true;loop.stop();});
+  resumeWipe.addEventListener('click',()=>{wipePaused=false;loop.start().catch(fail);});
+  const resume=()=>{if(!wipePaused&&!document.hidden&&!stopped&&!loop.running&&!loop.starting&&!transactions.pending)loop.start().catch(fail);};
   window.addEventListener('focus',resume);document.addEventListener('visibilitychange',()=>{if(!document.hidden)resume();});
   canvas.addEventListener('pointerdown',()=>{canvas.focus();resume();});
   const startGame=async({run=true}={})=>{if(stopped)throw Error('Session invalidated');if(run)return loop.start();
@@ -58,8 +69,10 @@ export async function openMenu(config) {
   const nextFrame=async({disconnect=false,buttons=0}={})=>{
     if(stopped)throw Error('Session invalidated');if(loop.running)throw Error('Stop continuous input before a manual frame');
     if(buttons!==0)throw Error('Use raw keyboard events for this deployment');
-    const packet=keyboard.packet();const result=await transactions.nextEvents(packet,{beforeSend:disconnect?()=>subscription.close():undefined});
-    keyboard.acknowledge(packet.length);await pendingPresentation;
+    if(disconnect&&transactions.wipe?.active)subscription.close();
+    const packet=keyboard.packet();const active=transactions.wipe?.active;
+    const result=active?await transactions.nextWipe():await transactions.nextEvents(packet,{beforeSend:disconnect?()=>subscription.close():undefined});
+    if(!active)keyboard.acknowledge(packet.length);else suspendWipeKeys(keyboard);await pendingPresentation;
     if(disconnect){proof.fallbackVerified=proof.frames.at(-1).source==='receipt';await subscription.connect();proof.backfilled=await backfill(rpc,config.address,config.deploymentBlock,inbox);}
     proof.menu=await transactions.menuStatus();proof.duplicates=inbox.duplicates;return result;
   };
@@ -68,7 +81,8 @@ export async function openMenu(config) {
   window.fixtureClient={nextFrame,config,inbox,startGame,episodeControl,stopGame:()=>loop.stop(),keyboard,transactions,loop};
   // Page load renders the EVM menu without an HTML launcher; reload reopens it.
   await transactions.startGame();const current=await transactions.menuStatus();
-  if(transactions.started&&!current.active&&!current.confirmation)keyboard.events.push(0,27,1,27);
+  if(transactions.wipe?.active)keyboard.events.push(...await heldKeyReleases(rpc,config.address));
+  if(transactions.started&&!current.active&&!current.confirmation&&!transactions.wipe?.active)keyboard.events.push(0,27,1,27);
   await nextFrame();proof.ready=true;await loop.start();
   window.addEventListener('pagehide',()=>{binding.dispose();loop.stop();stopped=true;clearTimeout(reconnectTimer);subscription.close();},{once:true});
 }
