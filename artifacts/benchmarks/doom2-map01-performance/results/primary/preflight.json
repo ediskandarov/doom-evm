@@ -1,0 +1,9 @@
+{
+  "browser": "../ac/preflight.json",
+  "direct": "../matched-direct-ac/preflight.json",
+  "supplementalProof": "../production-poll-ac/preflight.json",
+  "allEngineResourceCompilerPinsEqual": true,
+  "allAnvilStartupArgumentsEqual": true,
+  "allExposedLogicalBaselineViewsEqual": true,
+  "initialDoomStorageProofEqualForDirectAndSupplementalBrowser": true
+}

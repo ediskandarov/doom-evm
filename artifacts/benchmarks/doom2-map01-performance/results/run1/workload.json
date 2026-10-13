@@ -1,0 +1,286 @@
+[
+  {
+    "phase": "setup",
+    "keys": [
+      [
+        "keydown",
+        "Enter"
+      ],
+      [
+        "keyup",
+        "Enter"
+      ]
+    ]
+  },
+  {
+    "phase": "setup",
+    "keys": [
+      [
+        "keydown",
+        "Enter"
+      ],
+      [
+        "keyup",
+        "Enter"
+      ]
+    ]
+  },
+  {
+    "phase": "warmup",
+    "keys": []
+  },
+  {
+    "phase": "warmup",
+    "keys": []
+  },
+  {
+    "phase": "warmup",
+    "keys": []
+  },
+  {
+    "phase": "measure",
+    "keys": [
+      [
+        "keydown",
+        "ArrowUp"
+      ]
+    ]
+  },
+  {
+    "phase": "measure",
+    "keys": []
+  },
+  {
+    "phase": "measure",
+    "keys": []
+  },
+  {
+    "phase": "measure",
+    "keys": []
+  },
+  {
+    "phase": "measure",
+    "keys": []
+  },
+  {
+    "phase": "measure",
+    "keys": []
+  },
+  {
+    "phase": "measure",
+    "keys": []
+  },
+  {
+    "phase": "measure",
+    "keys": []
+  },
+  {
+    "phase": "measure",
+    "keys": []
+  },
+  {
+    "phase": "measure",
+    "keys": []
+  },
+  {
+    "phase": "measure",
+    "keys": []
+  },
+  {
+    "phase": "measure",
+    "keys": []
+  },
+  {
+    "phase": "measure",
+    "keys": [
+      [
+        "keydown",
+        "ArrowRight"
+      ]
+    ]
+  },
+  {
+    "phase": "measure",
+    "keys": []
+  },
+  {
+    "phase": "measure",
+    "keys": []
+  },
+  {
+    "phase": "measure",
+    "keys": []
+  },
+  {
+    "phase": "measure",
+    "keys": []
+  },
+  {
+    "phase": "measure",
+    "keys": []
+  },
+  {
+    "phase": "measure",
+    "keys": []
+  },
+  {
+    "phase": "measure",
+    "keys": []
+  },
+  {
+    "phase": "measure",
+    "keys": []
+  },
+  {
+    "phase": "measure",
+    "keys": []
+  },
+  {
+    "phase": "measure",
+    "keys": []
+  },
+  {
+    "phase": "measure",
+    "keys": []
+  },
+  {
+    "phase": "measure",
+    "keys": [
+      [
+        "keyup",
+        "ArrowUp"
+      ]
+    ]
+  },
+  {
+    "phase": "measure",
+    "keys": []
+  },
+  {
+    "phase": "measure",
+    "keys": []
+  },
+  {
+    "phase": "measure",
+    "keys": []
+  },
+  {
+    "phase": "measure",
+    "keys": []
+  },
+  {
+    "phase": "measure",
+    "keys": []
+  },
+  {
+    "phase": "measure",
+    "keys": []
+  },
+  {
+    "phase": "measure",
+    "keys": []
+  },
+  {
+    "phase": "measure",
+    "keys": [
+      [
+        "keyup",
+        "ArrowRight"
+      ],
+      [
+        "keydown",
+        "ArrowUp"
+      ],
+      [
+        "keydown",
+        "ArrowLeft"
+      ]
+    ]
+  },
+  {
+    "phase": "measure",
+    "keys": []
+  },
+  {
+    "phase": "measure",
+    "keys": []
+  },
+  {
+    "phase": "measure",
+    "keys": []
+  },
+  {
+    "phase": "measure",
+    "keys": []
+  },
+  {
+    "phase": "measure",
+    "keys": []
+  },
+  {
+    "phase": "measure",
+    "keys": []
+  },
+  {
+    "phase": "measure",
+    "keys": []
+  },
+  {
+    "phase": "measure",
+    "keys": [
+      [
+        "keyup",
+        "ArrowLeft"
+      ],
+      [
+        "keydown",
+        "ControlLeft"
+      ]
+    ]
+  },
+  {
+    "phase": "measure",
+    "keys": []
+  },
+  {
+    "phase": "measure",
+    "keys": []
+  },
+  {
+    "phase": "measure",
+    "keys": []
+  },
+  {
+    "phase": "measure",
+    "keys": []
+  },
+  {
+    "phase": "measure",
+    "keys": []
+  },
+  {
+    "phase": "measure",
+    "keys": []
+  },
+  {
+    "phase": "measure",
+    "keys": []
+  },
+  {
+    "phase": "measure",
+    "keys": []
+  },
+  {
+    "phase": "measure",
+    "keys": [
+      [
+        "keyup",
+        "ArrowUp"
+      ],
+      [
+        "keyup",
+        "ControlLeft"
+      ]
+    ]
+  }
+]
