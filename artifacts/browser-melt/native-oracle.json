@@ -1,0 +1,104 @@
+{
+  "sourceSha256": "eafbc10e5a56ded32deb9e9cd2d25fae4b7ecea16c1a2dc0ed380c8f2d2b2a22",
+  "extractionSha256": "f681a5317993ebf552910e0af3c39ca3739f9593acb2d972272eabae31383d8f",
+  "sourceStartLine": 50,
+  "adaptations": [
+    "Verbatim original f_wipe functions; C global pointers explicitly supplied; libc buffer allocation; I_ReadScreen/V_DrawBlock copies; dirtybox separately checked by Solidity consumer; deterministic synthetic start/end; no WAD artwork."
+  ],
+  "profiles": [
+    {
+      "profile": "O0",
+      "command": [
+        "clang",
+        "-std=c99",
+        "-fwrapv",
+        "-O0",
+        "/var/folders/s1/n2td_1bs17v7fyxf3t0mwsdc0000gn/T/tmpjfhy6gf1/driver.c",
+        "/Users/eduard/sandbox/doom-evm-browser-melt/original/DOOM/linuxdoom-1.10/m_random.c",
+        "-o",
+        "/var/folders/s1/n2td_1bs17v7fyxf3t0mwsdc0000gn/T/tmpjfhy6gf1/O0"
+      ]
+    },
+    {
+      "profile": "O2",
+      "command": [
+        "clang",
+        "-std=c99",
+        "-fwrapv",
+        "-O2",
+        "/var/folders/s1/n2td_1bs17v7fyxf3t0mwsdc0000gn/T/tmpjfhy6gf1/driver.c",
+        "/Users/eduard/sandbox/doom-evm-browser-melt/original/DOOM/linuxdoom-1.10/m_random.c",
+        "-o",
+        "/var/folders/s1/n2td_1bs17v7fyxf3t0mwsdc0000gn/T/tmpjfhy6gf1/O2"
+      ]
+    },
+    {
+      "profile": "sanitize",
+      "command": [
+        "clang",
+        "-std=c99",
+        "-fwrapv",
+        "-O2",
+        "-fsanitize=address,undefined",
+        "-fno-sanitize-recover=all",
+        "/var/folders/s1/n2td_1bs17v7fyxf3t0mwsdc0000gn/T/tmpjfhy6gf1/driver.c",
+        "/Users/eduard/sandbox/doom-evm-browser-melt/original/DOOM/linuxdoom-1.10/m_random.c",
+        "-o",
+        "/var/folders/s1/n2td_1bs17v7fyxf3t0mwsdc0000gn/T/tmpjfhy6gf1/sanitize"
+      ]
+    }
+  ],
+  "cases": [
+    {
+      "seed": 0,
+      "ticksPerStep": 1,
+      "steps": 37,
+      "rawSha256": "7062b89c1f11dd73e22d3cb3122fd47f426842bc2ae422a3d6835b56bf6ae335",
+      "recordsSha256": "e30cc589d65ea5435f7ee4fbd86635c37c2a3550199b5968b34af6959bf25545"
+    },
+    {
+      "seed": 1,
+      "ticksPerStep": 1,
+      "steps": 42,
+      "rawSha256": "c90d927dca4b92bdd2875d6516a9a732b21a64f70a9155e51010052a995ae160",
+      "recordsSha256": "b77a7158519ec533e302ccb9f479cddff6ffbde6b07f20defeaeb5634a4b6f34"
+    },
+    {
+      "seed": 127,
+      "ticksPerStep": 1,
+      "steps": 42,
+      "rawSha256": "4bc2852008cd94cc34aedf445c4d1eab2e510fc4952dbe1a3e34586929d96440",
+      "recordsSha256": "4c2e43d4e4781813170e7548ec02de424f93020b768bdae9d5fedc4d33f6340a"
+    },
+    {
+      "seed": 255,
+      "ticksPerStep": 1,
+      "steps": 35,
+      "rawSha256": "ffbfd5276f5fecfc37a15e3ffff21e53ce971c8f21417a77591d5f4432040541",
+      "recordsSha256": "9924bba6c69a62aba821d411a112fd5df512bf253f82d3883c75b837aa518be5"
+    },
+    {
+      "seed": 0,
+      "ticksPerStep": 3,
+      "steps": 13,
+      "rawSha256": "0d5b5a17f9dda80f4edcfd767ff4bf45dbf9d662e00275fcbc2ab2398c0c5e13",
+      "recordsSha256": "8cc04f3121c63b5359db2b940c5dbfd0596318f3ecc62139c8eac9b64f0345b2"
+    },
+    {
+      "seed": 127,
+      "ticksPerStep": 7,
+      "steps": 7,
+      "rawSha256": "a7188e782a2a47a26f1f47763b7d53a41fdd1f76ec32f8d9507dde457c64e733",
+      "recordsSha256": "f8d80a996c9210e4859f15d715d84eda4d118e6c2466e9ff6c72248a87585f57"
+    },
+    {
+      "seed": 255,
+      "ticksPerStep": 200,
+      "steps": 2,
+      "rawSha256": "761419d2114728ab14afaf6d0bc63a9f7600fe0abe962d02e8a84ac6e3a26e0c",
+      "recordsSha256": "5a044c90c37b22ef97db04cea8f7175d69663f8fe98d9fccdb5ea693003b20c8"
+    }
+  ],
+  "compiler": "Apple clang version 17.0.0 (clang-1700.0.13.5)",
+  "pass": true
+}

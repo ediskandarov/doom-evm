@@ -3,6 +3,7 @@
 import { FRAME_TOPIC, decodeFrame, receipt } from './protocol.mjs';
 import { inputStepData, eventStepData } from './input.mjs';
 import { resolveGasBudget } from './budget.mjs';
+import { suspendWipeKeys } from './wipe-input.mjs';
 
 // Generated with pinned cast sig. Existing Frame/step ABI remains unchanged.
 export const GAME_STARTED_SELECTOR = '0x5e123ce4';
@@ -69,13 +70,15 @@ export class InputTransactions {
   }
   invalidate() { this.invalidated = true; this._state(); }
 
-  async _send(data) {
+  async _send(data, transaction = {}, onHash = () => {}, onSettled = () => {}) {
     // A transport failure may follow submission: retain the lock until a reload
     // reconciles counters. Only an actual mined receipt settles the transaction.
     this.uncertain = true;
-    const hash = await this.rpc('eth_sendTransaction', [{ from: this.config.driver, to: this.config.address, data, gas: this.gas }]);
+    const hash = await this.rpc('eth_sendTransaction', [{ from: this.config.driver, to: this.config.address, data, gas: this.gas, ...transaction }]);
+    onHash(hash);
     const mined = await this.waitReceipt(this.rpc, hash);
     if (mined?.status !== '0x0' && mined?.status !== '0x1') throw Error('Malformed transaction receipt');
+    onSettled();
     this.uncertain = false;
     if (mined.status === '0x0') throw Error('Transaction reverted');
     return mined;
@@ -191,11 +194,12 @@ export class InputTransactions {
           && log.topics?.[0]?.toLowerCase() === FRAME_TOPIC);
         if (logs.length !== (draw ? 1 : 0)) throw Error(draw
           ? 'Frame transaction must emit exactly one Frame' : 'No-render transaction must emit no Frame');
-        if (!draw) return mined;
+        if (!draw) { await this._afterStep?.(); return mined; }
         const frame = decodeFrame(logs[0]);
         if (frame.inputSeq !== sequence) throw Error('Frame input sequence mismatch');
         this.inbox.accept(logs[0], 'receipt');
         this.onFrame({ ...input, sequence, transactionHash: mined.transactionHash, frameId: String(frame.frameId) });
+        await this._afterStep?.();
       } catch (error) { this.invalidated = true; throw error; }
       return mined;
     } finally { this.busy = this.uncertain; this.pending = false; this._state(); }
@@ -218,7 +222,7 @@ export class GameplayLoop {
     if (this.keyboard.raw) this._flushReleases().catch(this.onError);
   }
   async _flushReleases() {
-    if (this.failed || this.running || !this.transactions.started || !this.transactions.canSend) return;
+    if (this.failed || this.running || this.transactions.wipe?.active || !this.transactions.started || !this.transactions.canSend) return;
     while (!this.running && this.keyboard.events.length && this.transactions.canSend) {
       const events = this.keyboard.packet();
       await this.transactions.nextEvents(events, { draw: false });
@@ -244,7 +248,10 @@ export class GameplayLoop {
     if (!this.running || epoch !== this.epoch) return;
     const started = this.now();
     try {
-      if (this.keyboard.raw) {
+      if (this.transactions.wipe?.active) {
+        suspendWipeKeys(this.keyboard);
+        await this.transactions.nextWipe();
+      } else if (this.keyboard.raw) {
         const events = this.keyboard.packet();
         await this.transactions.nextEvents(events);
         this.keyboard.acknowledge(events.length);

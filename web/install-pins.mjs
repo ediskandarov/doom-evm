@@ -6,7 +6,7 @@ export default {
   "artifacts": {
     "Doom": {
       "url": "/install-assets/Doom.json",
-      "sha256": "8cdb345fbfc40d5d058b27a9e626bc8030ab8a85d736e27dbf916434b9eed4e1"
+      "sha256": "11c0698b357af608c391a77f4434f43ee0fda08444c14587af2953c60a1de30c"
     },
     "ResourceStore": {
       "url": "/install-assets/ResourceStore.json",
@@ -19,6 +19,7 @@ export default {
     "src/doom/d_ticcmd.sol": "508d0332d3e8b83e1b68d37581a3befc100a9974fcaa0900cc44116cd75ff2ef",
     "src/doom/doomstat.sol": "4c40da3914c629017959a0a4c0516d83346900674c92f5e55a766aba1b506fea",
     "src/doom/f_finale.sol": "4e21a192b8adb1109b51493ab43e770bfc3393b085cf02df53ab589d21c81505",
+    "src/doom/f_wipe.sol": "12e3ead7d43142647ee9ee1f33be25ca6bf372116b432474dc315952464e95a7",
     "src/doom/g_game.sol": "fc8aaae0b28dee867499b8cef6ab32d69d900ba0526941cd74b0b73532178b7c",
     "src/doom/hu_lib.sol": "bf11331f06c38565650e93ce5ece611d048d5656ae2c8442b6568de5ce079a06",
     "src/doom/hu_stuff.sol": "fcf57390d8c8e6d5ec935164264870509bb64197179536a39cd2a14dddb9588e",
@@ -79,13 +80,14 @@ export default {
     "src/doom/z_zone_backing.sol": "e63201d3bb45e4c8d0796480d4e9facd4deffd4d8a9dd730bed10ff4a108d0b1",
     "src/doom/z_zone_types.sol": "11ab3f95678ba3852ab5f0c2dc9e85e715bec6897e65f04cd1919bba9bb73dbd",
     "src/doom/z_zone_virtual.sol": "8bc309e89fa4da0667dc50a45adb9f91c58982640e1b3f5f9d38e49893f1e960",
-    "src/evm/Doom.sol": "5bbbd3bdb17a23be46649f9cff16a7ddcc5442de6bbb8f3a7238e8833e2e4769",
+    "src/evm/Doom.sol": "8c49c6d9701e2cb105331bf6f857f9d7beda78020a58c7da0e39b89332da6070",
     "src/evm/DoomGame.sol": "d9451a915ab977bae137340e3e6626a270a4b84b8b6ea9449a8c4f0f578296df",
     "src/evm/DoomMenu.sol": "c1ae6c66e7e016a844be3010e75b3beaeac35972bbe266f5b0e2b572e1663d44",
     "src/evm/DoomRenderer.sol": "5639d82431350ea76c26d43457d26d0c3c0f410eaddf02db6adbcfb03a569ba0",
     "src/evm/DoomSave.sol": "5c684e49835a18bf3728062755a9a2ebe671a4d131f10146cdfdde33bc2c5681",
     "src/evm/DoomScene.sol": "9ad7c8ccee4c9e05deb5608326baabacfa40f686b8d8445fb8aaa7352ab64569",
     "src/evm/DoomUI.sol": "2b66f6d024e16f3c202ea6da84ec5875af4d7ea809c2f29cbf65310fdf24bb38",
+    "src/evm/DoomWipe.sol": "e29d5d7a27e63b3aea35302afd3f9cb59d11c6eaacae1d4aba78cecb6cad8291",
     "src/evm/DoomZoneStartup.sol": "2d178494456a7ae3c730310f257ce2aa635d37d18c90cac039cf002cdb3f50dc",
     "src/evm/EpisodeRuntime.sol": "bfaebfc40839503e25060faef833756da6931c9de7326ef74740eacefb1d7e57",
     "src/evm/EpisodeStartup.sol": "bb574f20cdc09e63385261f7e8e203a49a90a15b87903d70dfe43d396bc3255e",

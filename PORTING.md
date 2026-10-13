@@ -10,7 +10,7 @@ guide; implementation is not a claim of exhaustive original-feature coverage.
 | Later source mapping | Current scope |
 |---|---|
 | `m_menu.c` → `src/doom/m_menu.sol`, `src/evm/DoomMenu.sol` | Original-derived menu/responders, supported Options and six-slot UI; Select Level is an explicit extension. [Options evidence](docs/OPTIONS-LEVEL-SELECTION.md). |
-| `f_wipe.c` → `src/doom/f_wipe.sol` | Native-verified recording consumer and component tests; not reachable from the production browser contracts. [Integration limits](docs/FULL-VIDEO-OPTIONS-INTEGRATION.md). |
+| `f_wipe.c` → `src/doom/f_wipe.sol` | Native-verified recording consumer and component tests; additive opt-in production browser transaction adapter in `src/evm/DoomWipe.sol`. [Browser integration and fidelity limits](docs/BROWSER-MELT-WIPE.md). |
 | Commercial `g_game.c`, `wi_stuff.c`, `f_finale.c` branches → same-named libraries plus `src/evm/Doom2.sol` | MAP01–32 startup, bounded gameplay/flow/UI evidence, MAP30 text with unsupported cast boundary. [DOOM II report](docs/doom2/REPORT.md). |
 | `g_game.c` death/rebirth dispatch → `src/evm/EpisodeRuntime.sol` hooks | Single-player original lifecycle integrated with exact snapshots; [combined verification](docs/DEATH-SAVE-LOAD-INTEGRATION.md). |
 

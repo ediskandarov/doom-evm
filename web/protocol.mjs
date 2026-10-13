@@ -35,7 +35,7 @@ export function makeRpc(url) {
     const response = await fetch(url, { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ jsonrpc: '2.0', id: ++id, method, params }), signal: AbortSignal.timeout(30000) });
     if (!response.ok) throw Error(`RPC HTTP ${response.status}`);
     const result = await response.json();
-    if (result.error) throw Error(`${method}: ${JSON.stringify(result.error)}`);
+    if (result.error) throw Object.assign(Error(`${method}: ${JSON.stringify(result.error)}`), { rpcError: result.error });
     return result.result;
   };
 }

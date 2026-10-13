@@ -5,12 +5,14 @@ import {MenuTransactions,usesEVMMenu,INITIALIZE_MENU_SELECTOR,MENU_MODE_SELECTOR
 import {GAME_STARTED_SELECTOR,LAST_INPUT_SELECTOR} from './input-loop.mjs';
 import {EVENTS_STEP_SELECTOR,EVENTS_NO_RENDER_SELECTOR} from './input.mjs';
 import {FrameInbox,FRAME_TOPIC} from './protocol.mjs';
+import {WIPE_STATUS_SELECTOR} from './wipe-input.mjs';
 const word=n=>BigInt(n).toString(16).padStart(64,'0');
 function fixture(){
   const state={ready:false,started:false,sequence:0,sent:[],status:'0x1',wait:null,startOnNext:false,unknown:false};
   const rpc=async(method,params)=>{
     if(method==='eth_call'){
       const data=params[0].data;
+      if(data===WIPE_STATUS_SELECTOR)return '0x'; // Previously deployed contract has no wipe API.
       if(data===MENU_MODE_SELECTOR)return '0x'+word(state.ready);
       if(data===GAME_STARTED_SELECTOR)return '0x'+word(state.started);
       if(data===LAST_INPUT_SELECTOR)return '0x'+word(state.sequence);
