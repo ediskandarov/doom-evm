@@ -1,0 +1,34 @@
+{
+  "owner": "/root",
+  "branch": "research/doom2-browser-fps",
+  "sourceCommit": "2e0a7db94e9abcaa1a5d982e1b080d4348e268b2",
+  "goalStartedUtc": "2026-10-13T13:57:28Z",
+  "finalMeasurementEndedUtc": "2026-10-13T15:02:21.122Z",
+  "verifiedWorkEndedUtc": "2026-10-13T15:19:16.106319+00:00",
+  "usageCheckpoint": {
+    "observedUtc": "2026-10-13T15:18:10+00:00",
+    "toolReportedTokensUsed": 331430,
+    "toolReportedElapsedSeconds": 4841,
+    "budget": null,
+    "attribution": "Root agent only; no subagents. Tool-reported counters, not a billing/cost estimate."
+  },
+  "scope": [
+    "docs/benchmarks/DOOM2-MAP01-PERFORMANCE.md",
+    "artifacts/benchmarks/doom2-map01-performance/"
+  ],
+  "verification": {
+    "primaryMeasuredFrames": 300,
+    "primaryRepetitionsPerMode": 3,
+    "perFrameOperationGasPixelPaletteAndExposedStateEqual": true,
+    "capturedFullDoomStorageRoots": 4,
+    "allCapturedStorageRootsEqual": true,
+    "primaryBrowserStorageRootsNotCaptured": 3,
+    "focusedExistingNodeTestsPassed": 33,
+    "engineCompilerFilesRebuilt": 0,
+    "independentStatisticsPayloadLinksSyntaxHashes": "passed",
+    "benchmarkPorts19880And18088": "verified no listeners",
+    "fullChainRootEqualityDiagnostic": "failed; retained; timestamp-dependent Cancun protocol storage differs"
+  },
+  "stopCondition": "Artifacts verified; focused Gitmoji commit next. No further benchmark, engine optimization, article change, main merge or push.",
+  "runtimeCleanup": "Owned Chrome/Anvil/server children stopped; external environments preserved."
+}

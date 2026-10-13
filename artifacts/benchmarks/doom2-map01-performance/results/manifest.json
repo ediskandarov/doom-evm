@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "pass": false,
+  "startedUtc": "2026-10-13T14:02:42.043Z",
+  "sourceCommit": "2e0a7db94e9abcaa1a5d982e1b080d4348e268b2",
+  "branch": "research/doom2-browser-fps",
+  "parameters": {
+    "mode": "all",
+    "count": 50,
+    "reps": 3,
+    "warmup": 3,
+    "port": 19880,
+    "httpPort": 18088
+  },
+  "runs": [],
+  "error": "Error: connect EPERM 127.0.0.1:19880 - Local (0.0.0.0:0)\n    at internalConnect (node:net:1110:16)\n    at defaultTriggerAsyncIdScope (node:internal/async_hooks:472:18)\n    at node:net:1356:9\n    at process.processTicksAndRejections (node:internal/process/task_queues:85:11)",
+  "endedUtc": "2026-10-13T14:02:42.069Z"
+}

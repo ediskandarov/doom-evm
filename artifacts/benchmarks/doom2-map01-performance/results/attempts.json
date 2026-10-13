@@ -1,0 +1,17 @@
+{
+  "primarySelection": "All 3 valid original AC browser repetitions plus all 3 final matched-production-poll direct repetitions; whole cohorts retained; no sample selection",
+  "attempts": [
+    {"path": "manifest.json", "classification": "excluded preflight", "reason": "Sandbox denied localhost port probe; no deployment or timed samples"},
+    {"path": "run1", "classification": "excluded preflight", "reason": "Installation and source/artifact authentication passed; harness used nonexistent lastInputSeq getter before measurement; corrected to inputSeq"},
+    {"path": "run2", "classification": "excluded interrupted battery attempt", "reason": "User plugged laptop into AC and requested full restart; partial browser timings recovered and sanitized; no data used in primary comparison"},
+    {"path": "ac", "classification": "primary browser cohort and separate direct diagnostic", "reason": "3 complete AC browser repetitions use production polling and all are retained; direct client used continuous receipt polling, so its 3 runs are separately reported, not attributed to browser overhead"},
+    {"path": "ac/global-root-check.failed.log", "classification": "failed broader diagnostic gate", "reason": "Whole-chain state roots differ despite matching transaction/Frame/gas/exposed-state identities; subsequent eth_getProof checks match DOOM storage/code while timestamp-dependent Cancun beacon storage differs; failure retained"},
+    {"path": "production-poll-ac", "classification": "incomplete aligned cohort; supplemental proof only", "reason": "Browser 1 and direct 1/2 completed; browser 2 hit unexpected-loop-stop guard. That version did not save a partial probe, so exact trigger/partial sample count are unavailable and no partial timings are counted. Completed browser 1 provides full DOOM storage proof only, outside primary throughput pooling. Complete direct 1/2 are retained as supplemental data, not selected into primary"},
+    {"path": "matched-direct-ac", "classification": "primary direct cohort", "reason": "All 3 final direct repetitions complete, on AC, same authenticated engine/configuration/workload, shared production receipt waiter; headless installation only, no foreground control"},
+    {"classification": "corrected interpretation", "reason": "The high-CPU Node PID 81556 recorded around first AC direct runs was this goal's controller doing untimed verification, not an external competitor. Eligibility was not revoked on that incorrect initial classification"}
+  ],
+  "engineChanges": false,
+  "executionLimitChanges": false,
+  "acceptedOutliersDiscarded": 0,
+  "incompleteAttemptLimit": "One interrupted aligned browser attempt has no saved partial probe; retained failure manifest explicitly identifies that measurement-record limitation"
+}

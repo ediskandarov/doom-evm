@@ -1,0 +1,69 @@
+{
+  "operations": [
+    "Remove rgbHex resource palette payload fields",
+    "Correct the ps printed CPU field name; retain its number",
+    "JSON serialization only; no measurement values or samples discarded"
+  ],
+  "changes": [
+    {
+      "file": "ac/browser-1.json",
+      "beforeSha256": "571d802baca933a142f61303abc064e39caa6e7a66023b9d9eac57791733c897",
+      "afterSha256": "c2306a6237d7ea47f1ff82d20ef178bf5d35ecdd1ae232ab8c1f91ed2b910c12"
+    },
+    {
+      "file": "ac/browser-2.json",
+      "beforeSha256": "3a2d2c44e7641c4d1b85e1a161f7b247bd7b35f113d60be6016833e9c473f21e",
+      "afterSha256": "c6d6af3f44a932641c5e290b9dba69c9c25c91187f659e81a790834ad6d24abb"
+    },
+    {
+      "file": "ac/browser-3.json",
+      "beforeSha256": "709ed5e3c310fe4d9c6690e11bef00f0a548b8387ee7b6f116101589d6a06fed",
+      "afterSha256": "cee5a9a7a52c59de027c97bd661384e9a198b28ee590658ae2c578a15b7ffed8"
+    },
+    {
+      "file": "ac/direct-1.json",
+      "beforeSha256": "df641bfb66c5d9c7690a8b8279a26c478136c6dcff5c1f89803c2b16146b060a",
+      "afterSha256": "86d3acbae11b2913a9b9d19e1ca25255e4464d6acf0fa4163dd00f6db74c39dc"
+    },
+    {
+      "file": "ac/direct-2.json",
+      "beforeSha256": "4f4760a19095242d5b0465263dcad0c877dea8442b58560d0e63daee437487ec",
+      "afterSha256": "6defad3cebfbb41d8a6efed37b63b15699298b40a30094190efd5745270c63f2"
+    },
+    {
+      "file": "ac/direct-3.json",
+      "beforeSha256": "39637a8f631b9c5dcf5fe3c5b17406ae0580b2fee7adb1f2c3ef47517db920ff",
+      "afterSha256": "655de1df8ee0ce89b04ff8487dd68a149621e0e8689384fca0b47a54edd1537f"
+    },
+    {
+      "file": "ac/manifest.json",
+      "beforeSha256": "91f30be4b86ca086ad52f8ec822f40a3ef85d633b54a4e7252d66916b193679f",
+      "afterSha256": "d74fc63ae5e821cd72d02bb218d8e80537bba5d28fbb955393fe545a58ab9ac6"
+    },
+    {
+      "file": "ac/preflight.json",
+      "beforeSha256": "abdb40c9284819ee80caa55f4a9eba6d6eb4b42ae19db60975b23f0e4f44f3b2",
+      "afterSha256": "26c00ba0f9a023d70014fc487728292beb6a51c87278a5b90676deaaf1c9ed12"
+    },
+    {
+      "file": "production-poll-ac/manifest.json",
+      "beforeSha256": "839a0b1d5abc8d7a937f9e1425a1750bab934586b173fcfb75a23fa903bfbad5",
+      "afterSha256": "0a672b385e0c69fe4b3c11517fd9915cf99f531629f02db1995096d577ef815e"
+    },
+    {
+      "file": "production-poll-ac/preflight.json",
+      "beforeSha256": "786957878d67c644dc9d324c891871a0e220f4a9f644d05ea4a1f013d85fd024",
+      "afterSha256": "39c90e007947e9ef76674a29c0dd0d84a27ab8365231c73fcf58f1fb85cfd52c"
+    },
+    {
+      "file": "run1/manifest.json",
+      "beforeSha256": "cafad5089045a3bec92c6d0cf9d2c71b2cbc34499122f91974dd1a390df94786",
+      "afterSha256": "06a0540dc30c95df356fda8d86276a77164ddb2559aff276e822bf9f1aea6352"
+    },
+    {
+      "file": "run2/preflight.json",
+      "beforeSha256": "548ee3e0cbf38115480982a0a270955aea38d9626a85abbbae56383ad7cdf26b",
+      "afterSha256": "7c2dd6787e64a967f707c28392b51a0afe2f5f87a22d1e3d36c840e63137ad0f"
+    }
+  ]
+}

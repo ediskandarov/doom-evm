@@ -1,0 +1,20 @@
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: Final full storage root differs
++ actual - expected
+
++ '0xcabcc639ef03070949b32da102158c4b4095d56c82e6608449fa7eae5f54ad39'
+- '0x14a60f08f0a97e1206862d221436b51283be95ac90b05fe981f5a5780baafb76'
+
+    at file:///Users/eduard/sandbox/doom-evm-browser-fps/artifacts/benchmarks/doom2-map01-performance/analyze.mjs:48:10 {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: '0xcabcc639ef03070949b32da102158c4b4095d56c82e6608449fa7eae5f54ad39',
+  expected: '0x14a60f08f0a97e1206862d221436b51283be95ac90b05fe981f5a5780baafb76',
+  operator: 'strictEqual',
+  diff: 'simple'
+}
+
+Node.js v24.11.0
