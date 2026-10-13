@@ -1,5 +1,19 @@
 # Phase 4 progress ledger
 
+Benchmark + Browser Melt checkpoint (2026-10-13): **locally integrated and focused
+combined acceptance passed**. Benchmark feature `c4905b3` and Melt feature `ed1f5c2`
+are preserved by merges `8f7ae37` and `f8d3378`. Fresh evidence `8a2ef53`: 78 Forge,
+86 Node, native oracle unchanged, three fresh Chrome profiles, 252 native-equal wipe
+updates, 275 Canvas readbacks/266 distinct observed receipts and 24 storage rollback
+checks. New Game/title and forced same-level wipes are Chrome verified; exit/finale
+routes retain narrower adapter/inherited evidence. Redeploy Doom/Doom2 and matching
+browser packages; existing deployments are not upgraded. Historical 0.549523 browser /
+0.548165 direct MAP01 FPS stays pre-integration. The focused 50-frame-per-arm direct
+battery comparison adds 0.563229% mean gas with opt-in; no reliable throughput verdict.
+See [integration report](INTEGRATION-BENCHMARK-MELT-WIPE.md). Earlier checkpoints below
+retain their original historical scope. No push, essay/media edit or full recording
+suite rerun; no later development goal started.
+
 Death/Respawn + Save/Load checkpoint (2026-10-12): **source integrated; focused
 combined-state verification passed**. All three games retain original death/rebirth
 and six-slot **Exact EVM Snapshots for user convenience, explicitly noncanonical**.
